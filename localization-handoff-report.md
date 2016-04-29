@@ -6,14 +6,14 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8865025f8f905bfd73fbd97e40855b8467a9e082/Azure-RMSDocs/index.md) | HandedOffSuccess | [Details](#e1175da572ad6985c44f16a1addafe16bf2fe9a1162)
+ [Azure-RMSDocs\rms-client\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/3d82e1f778416caaf4ab4b0095cf2499d83c5190/Azure-RMSDocs/rms-client/TOC.md) | HandedOffSuccess | [Details](#6917113b50b3bb765557de5b7023affc12bdfb95359)
 
 ## Item Details
-##### <a name='e1175da572ad6985c44f16a1addafe16bf2fe9a1162'></a> Source: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8865025f8f905bfd73fbd97e40855b8467a9e082/Azure-RMSDocs/index.md)
+##### <a name='6917113b50b3bb765557de5b7023affc12bdfb95359'></a> Source: [Azure-RMSDocs\rms-client\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/3d82e1f778416caaf4ab4b0095cf2499d83c5190/Azure-RMSDocs/rms-client/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/c7369c97a6d900e92f071c7d4f12de4cee0d4c42/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf)
-* Handoff Datetime: 2016-04-28 22:48:21
+* Handoff File: [TOC.cacfe166ad1ecfe5d611cff0117fd584e54c7ef9.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/3aa484393b7069fd5498b09efbf6ba24373abcc8/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/TOC.cacfe166ad1ecfe5d611cff0117fd584e54c7ef9.de-de.xlf)
+* Handoff Datetime: 2016-04-29 22:47:38
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
