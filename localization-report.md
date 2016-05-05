@@ -5,13 +5,13 @@
  -------- | ----- 
  Total Files | 433
 [ Handoff Failed Files ](#handoff-failed-list)| 1
-[ Handoff Success Files ](#handoff-success-list)| 307
+[ Handoff Success Files ](#handoff-success-list)| 303
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 59
 [ Handback Failed Files ](#handback-failed-list)| 0
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 0
 [ In Sync Handback Files ](#insync-handback-success-list)| 1
-[ Ignored Files ](#ignored-list)| 65
+[ Ignored Files ](#ignored-list)| 69
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
  Source File | Status | Details 
@@ -21,9 +21,6 @@
 ## <a name='handoff-success-list'></a> Handoff Success File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\deploy-use\activate-azure-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-azure-classic.md) | HandedOffSuccess | [Details](#08060992f86af4d2f376573a4208c555823d45bf5)
- [Azure-RMSDocs\deploy-use\activate-office365-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-office365-classic.md) | HandedOffSuccess | [Details](#525deb7651adcae6f94a3317ee364bd5ca41d8106)
- [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-office365-preview.md) | HandedOffSuccess | [Details](#6729c5afe43bc395414714b69a7a52dc728074227)
  [Azure-RMSDocs\deploy-use\activate-service.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-service.md) | HandedOffSuccess | [Details](#6a7d8a7c00e4568ff73aa387444a0d146bebe9698)
  [Azure-RMSDocs\deploy-use\administer-powershell.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/administer-powershell.md) | HandedOffSuccess | [Details](#bf1f684bc394ec3a1025f8c9ed3e57d07c5981259)
  [Azure-RMSDocs\deploy-use\configure-applications.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/configure-applications.md) | HandedOffSuccess | [Details](#8fe934c51e852791d19fbb336deaf9cd7be9817b10)
@@ -61,7 +58,6 @@
  [Azure-RMSDocs\develop\android-code.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/acc140931b5f834ce1d70c851d90c334a03010dc/Azure-RMSDocs/develop/android-code.md) | HandedOffSuccess | [Details](#acd0692102c43baff0a92360e0ddbe1259ad9b4f45)
  [Azure-RMSDocs\develop\android-sdk.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5d9328bc5480f88ffc6b7d78f2cc3904cb319a0a/Azure-RMSDocs/develop/android-sdk.md) | HandedOffSuccess | [Details](#fe76b16899b2dc68af41abbd5be4b9a385b1721b46)
  [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/1e65d86075cc3f180bbfc742249f6d89f4cf3211/Azure-RMSDocs/develop/api-reference-2-1.md) | HandedOffSuccess | [Details](#f919e295493411b3c5c00709c10c36c7196ca4bd47)
- [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c6fe7fc191afc7aed2c486a71c2b1a2fe012bb4d/Azure-RMSDocs/develop/api-reference-4-2.md) | HandedOffSuccess | [Details](#f336c35d1bd3fd704dda05de1d46d487da61feaf48)
  [Azure-RMSDocs\develop\application-id.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/2d4fb87a53280b42d1b42d3a6a1086db9aa87299/Azure-RMSDocs/develop/application-id.md) | HandedOffSuccess | [Details](#4d0c5b0bdd6f3c50a382cb3ca330b4d9d4add28749)
  [Azure-RMSDocs\develop\application-types.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/32f1f7779e214b5d8848da5a4771b585862ff7eb/Azure-RMSDocs/develop/application-types.md) | HandedOffSuccess | [Details](#1500714b36a1c3881d158e31e87cec39f99cd7f750)
  [Azure-RMSDocs\develop\authentication-integration.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/authentication-integration.md) | HandedOffSuccess | [Details](#261abdeaa0aa70ae7240b6ceddc9d09440f0b48e51)
@@ -411,8 +407,12 @@
  [.localization-config](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/.localization-config) | Ignored | [Details](#7c16d785f9f0c83f0ad49b8f03a8ec1d5b9f36382)
  [.openpublishing.build.ps1](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/.openpublishing.build.ps1) | Ignored | [Details](#9103b6933f2481864ecb6a66b76ba730e7f133b43)
  [.openpublishing.publish.config.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/.openpublishing.publish.config.json) | Ignored | [Details](#f8e874dd3e6ed3aa9e13c3be1c8ca388d3cf72ac4)
+ [Azure-RMSDocs\deploy-use\activate-azure-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-azure-classic.md) | Ignored | [Details](#56f4c7081de95d010364d04e7fab12ff9f7007ee5)
+ [Azure-RMSDocs\deploy-use\activate-office365-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-office365-classic.md) | Ignored | [Details](#400c63faa08d890dafc6595a3cf154ff5423cb3d6)
+ [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-office365-preview.md) | Ignored | [Details](#3c64a2e0a0ce4630df48885a4a25255cdc135cc57)
  [Azure-RMSDocs\deploy-use\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/docfx.json) | Ignored | [Details](#c1317eaaf0f38e0cbfed40b88a7c7a4a4ea58b3724)
  [Azure-RMSDocs\deploy-use\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda29)
+ [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/develop/api-reference-4-2.md) | Ignored | [Details](#b0d928505dea8febc12fe77affb6e00ec1757cc948)
  [Azure-RMSDocs\develop\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/develop/docfx.json) | Ignored | [Details](#50c6711539106c08a3af2aff41bce2851853725a63)
  [Azure-RMSDocs\develop\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/develop/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda84)
  [Azure-RMSDocs\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/docfx.json) | Ignored | [Details](#b6356ce03d1c87042588b039dfc12ec494f3b5f0108)
@@ -533,36 +533,36 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='08060992f86af4d2f376573a4208c555823d45bf5'></a> Source: [Azure-RMSDocs\deploy-use\activate-azure-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-azure-classic.md)
-* Status: HandedOffSuccess
+##### <a name='56f4c7081de95d010364d04e7fab12ff9f7007ee5'></a> Source: [Azure-RMSDocs\deploy-use\activate-azure-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-azure-classic.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [activate-azure-classic.a18dfb858f503ee4a964470871380d76430c83c7.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/6a086d5adc7f14c6d5b7201330d0e2db8f04dcc0/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/activate-azure-classic.a18dfb858f503ee4a964470871380d76430c83c7.de-de.xlf)
-* Handoff Datetime: 2016-04-27 21:24:40
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='525deb7651adcae6f94a3317ee364bd5ca41d8106'></a> Source: [Azure-RMSDocs\deploy-use\activate-office365-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-office365-classic.md)
-* Status: HandedOffSuccess
+##### <a name='400c63faa08d890dafc6595a3cf154ff5423cb3d6'></a> Source: [Azure-RMSDocs\deploy-use\activate-office365-classic.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-office365-classic.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [activate-office365-classic.bdfe0f2918b988276b7b38dbc7cdb695c4b87df8.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/6a086d5adc7f14c6d5b7201330d0e2db8f04dcc0/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/activate-office365-classic.bdfe0f2918b988276b7b38dbc7cdb695c4b87df8.de-de.xlf)
-* Handoff Datetime: 2016-04-27 21:24:40
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6729c5afe43bc395414714b69a7a52dc728074227'></a> Source: [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/activate-office365-preview.md)
-* Status: HandedOffSuccess
+##### <a name='3c64a2e0a0ce4630df48885a4a25255cdc135cc57'></a> Source: [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/deploy-use/activate-office365-preview.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/6a086d5adc7f14c6d5b7201330d0e2db8f04dcc0/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.de-de.xlf)
-* Handoff Datetime: 2016-04-27 21:24:40
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
@@ -1050,12 +1050,12 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f336c35d1bd3fd704dda05de1d46d487da61feaf48'></a> Source: [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c6fe7fc191afc7aed2c486a71c2b1a2fe012bb4d/Azure-RMSDocs/develop/api-reference-4-2.md)
-* Status: HandedOffSuccess
+##### <a name='b0d928505dea8febc12fe77affb6e00ec1757cc948'></a> Source: [Azure-RMSDocs\develop\api-reference-4-2.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f6d1db64d5e0c2da7f883f39c4a5940e3d651602/Azure-RMSDocs/develop/api-reference-4-2.md)
+* Status: Ignored
 * Target File: 
-* Handoff File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/801d087d8138f8e32e18106508f955f9629f1b9d/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.de-de.xlf)
-* Handoff Datetime: 2016-05-04 23:46:37
-* Handoff Reason: Include
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
