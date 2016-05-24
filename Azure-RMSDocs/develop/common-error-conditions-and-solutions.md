@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ac6453e1-e24f-480e-99bd-02ba9a49f468
-
+ms.assetid: A5B95EB8-3528-4CFF-86FC-166613A5F4A3
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Häufige Fehlerbedingungen und Lösungen
 Dieses Thema umfasst die häufigsten Fehlermeldungen, die auftreten können, wenn Sie die Rights Management Services SDK 2.1-Entwicklertools verwenden. Darüber hinaus stellt es eine empfohlene Aktion zum Beheben des Fehlers bereit, sofern zutreffend.
 
@@ -76,6 +74,6 @@ Dies sind die Signaturschlüssel und die zugehörigen Werte (Hierarchie **DWORD*
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

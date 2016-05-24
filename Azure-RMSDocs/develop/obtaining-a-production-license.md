@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 013f9d75-0b66-44a8-9b01-d05b44a5ea0c
-
+ms.assetid: 6749817E-FF34-4384-BF63-39AEA5C372CA
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Bezug einer Produktionslizenz
 
 Bevor Sie eine mithilfe der Rights Management Services SDK 2.1 entwickelte Anwendung freigeben können, müssen Sie einen Produktionslizenzvertrag beantragen, um ein Produktionszertifikat zu beziehen.
@@ -43,8 +41,6 @@ Weitere Informationen über Schlüssel finden Sie unter [Testen Ihrer rechtlich 
 Sie können das Zertifikat beziehen, indem Sie einen Produktionslizenzvertrag beantragen.
 
 ## Anfordern eines Produktionslizenzvertrags
-
-![](../media/wedge.gif)
 
 -   Senden Sie eine E-Mail mit folgenden Angaben an [RMLA@microsoft.com](mailto:rmla@microsoft.com):
 
@@ -93,6 +89,6 @@ Sie können das Zertifikat beziehen, indem Sie einen Produktionslizenzvertrag be
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
