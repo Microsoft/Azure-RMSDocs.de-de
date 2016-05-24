@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 376c08d9-51e8-46c9-b2d2-426f648f7e4d
-
+ms.assetid: F5CD72F6-D49A-4121-866F-3182CD980875
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Wechseln zur Produktionsumgebung
 
 In diesem Abschnitt werden Sie durch das Freigeben Ihrer getesteten Anwendung für eine Produktionsumgebung geführt.
@@ -53,7 +51,7 @@ In den unten angegebenen Themen werden Sie durch den Prozess geführt.
   Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für die rechtlich geschützte Anwendung.
  
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Übersicht](ad-rms-overview.md)
 * [Vorgehensweise](how-to-use-msipc.md)
@@ -62,6 +60,6 @@ In den unten angegebenen Themen werden Sie durch den Prozess geführt.
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

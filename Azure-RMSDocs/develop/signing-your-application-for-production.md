@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c73fde39-6e16-470c-800e-59ab04c78f5f
-
+ms.assetid: 09BA148C-7D1E-43C8-92EA-24BBB6EFDB19
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Signieren Ihrer Anwendung für die Produktion
 
 In diesem Thema werden Sie durch das Signieren Ihrer Anwendung für den Produktionsmodus geführt.
@@ -67,7 +65,7 @@ Legen Sie sie in demselben Verzeichnis ab, in dem *GenManifest.exe* und Ihre Anw
 
     -   Sie sollten die Datei „*NameIhrerApp*.exe.man“ immer in demselben Verzeichnis wie „*NameIhrerApp*.exe“ ablegen.
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Vorgehensweise](how-to-use-msipc.md)
 * [Testen Ihrer rechtlich geschützten Anwendung](running-your-first-application.md)
@@ -79,6 +77,6 @@ Legen Sie sie in demselben Verzeichnis ab, in dem *GenManifest.exe* und Ihre Anw
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

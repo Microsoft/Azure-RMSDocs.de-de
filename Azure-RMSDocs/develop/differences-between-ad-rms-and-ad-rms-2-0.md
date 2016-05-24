@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ee4989d6-3903-4ed2-ac62-d5692e2ef494
-
+ms.assetid: 622D5C6E-07D5-4C71-A99D-9823C1FE6936
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Vorteile dieses SDKs
 Dieses Thema beschreibt, warum Rights Management Services SDK 2.1 eine deutliche Verbesserung gegenüber des ursprünglichen [Active Directory Rights Management Services-SDKs](https://msdn.microsoft.com/library/Cc530379) in Bezug auf erforderlichen Entwicklungsaufwand zum Erstellen einer Rechte-fähigen Anwendung ist.
 
@@ -53,6 +51,6 @@ Das AD RMS-SDK, das Funktionen nutzt, die vom Client in „Msdrm.dll“ bereitge
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: deb9a110-c098-4834-8319-05d5a28a0ccd
-
+ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Unterstützte Dateiformate
 
 Die Datei-API unterstützt native Formate und das PFile-Format.
@@ -39,7 +37,7 @@ Die aktuelle Version der Datei-API unterstützt den nativen Schutz für MS Offic
 
 Administratoren können Registrierungsschlüssel festlegen, um zu konfigurieren, ob und wie Dateien basierend auf ihrer Dateinamenerweiterung geschützt werden sollten. Weitere Informationen zur Konfiguration des Dateischutzes beim Verwenden der Datei-API finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Hinweise für Entwickler](developer-notes.md)
 * [Datei-API-Konfiguration](file-api-configuration.md)
@@ -51,6 +49,6 @@ Administratoren können Registrierungsschlüssel festlegen, um zu konfigurieren,
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
