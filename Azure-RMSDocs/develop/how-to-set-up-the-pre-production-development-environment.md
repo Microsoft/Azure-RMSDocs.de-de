@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: bdb24446-d69f-435b-be39-a036540f7378
-
+ms.assetid: 4629ACAA-2A83-4697-B769-D649114D35E1
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Einrichten der Entwicklungsumgebung für die Präproduktion
 
 In diesem Abschnitt werden Sie durch die Einrichtung Ihrer rechtlich geschützten Anwendung und deren Ausführung in einer Test- oder Präproduktionsumgebung geführt. In den folgenden Themen wird beschrieben, wie Sie Ihre Präproduktionsumgebung für die Entwicklung einrichten. Die Informationen sind in der Reihenfolge angegeben, in der Sie die Aufgaben ggf. durchführen können.
@@ -41,7 +39,7 @@ In diesem Abschnitt werden Sie durch die Einrichtung Ihrer rechtlich geschützte
 |[Debuggen einer rechtlich geschützten Anwendung](debugging-applications-that-use-ad-rms.md)|Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.|
 
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Übersicht](ad-rms-overview.md)
 * [Vorgehensweise](how-to-use-msipc.md)
@@ -50,6 +48,6 @@ In diesem Abschnitt werden Sie durch die Einrichtung Ihrer rechtlich geschützte
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

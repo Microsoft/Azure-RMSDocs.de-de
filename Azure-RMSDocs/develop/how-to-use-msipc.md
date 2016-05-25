@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 03d4fa22-0de4-400f-935d-e347d5890680
-
+ms.assetid: 186A9740-D812-4440-B28A-6968B2D8898C
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Vorgehensweise
 
 In den folgenden Themen werden Sie durch die Hauptaufgaben der Nutzung des Rights Management Services SDK 2.1 zum Implementieren des Informationsschutzes für Ihre Anwendung geführt.
@@ -38,7 +36,7 @@ In den folgenden Themen werden Sie durch die Hauptaufgaben der Nutzung des Right
   In diesem Abschnitt werden Sie durch das Freigeben Ihrer getesteten Anwendung für eine Produktionsumgebung geführt.
  
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Übersicht](ad-rms-overview.md)
 * [Vorgehensweise](how-to-use-msipc.md)
@@ -47,6 +45,6 @@ In den folgenden Themen werden Sie durch die Hauptaufgaben der Nutzung des Right
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

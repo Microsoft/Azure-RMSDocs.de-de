@@ -2,7 +2,7 @@
 # required metadata
 
 title: Grundlegendes zu Nutzungseinschränkungen | Azure RMS
-description:
+description: Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 361bbc29-821f-4577-ace6-0aec799039a9
-
+ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Grundlegendes zu Nutzungseinschränkungen
+# Grundlegendes zu Nutzungseinschränkungen
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
 
@@ -51,7 +50,7 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
     Eine Anleitung, wie Sie bestimmte Rechte durchsetzen, finden Sie unter [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md).
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Entwicklerkonzepte](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
@@ -64,6 +63,6 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

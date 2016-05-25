@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 1a2ae9f2-709f-47fe-b16c-76140dd27740
-
+ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Erste Schritte
 
 Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen einen schnellen Einstieg in die Erstellung einer ersten Anwendung. Beginnen Sie wie folgt mit dem Erstellen der rechtlich geschützten Anwendung:
@@ -61,6 +59,6 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
   |[Communityressourcen](community-resources.md)|Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 43b611a8-2cc0-49a8-9db9-e81321c38f7a
-
+ms.assetid: 834B7242-31D3-4275-A892-CFE95A61E29E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Testen Ihrer rechtlich geschützten Anwendung
 
 Dieses Thema beschreibt die erforderlichen Schritte, um die rechtlich geschützte Rights Management Services SDK 2.1-Anwendung zu testen.
@@ -107,7 +105,7 @@ Sie können die Anwendung aus einem beliebigen Verzeichnis ausführen. Die Anwen
 
     Informationen zum Konfigurieren des Clients auf Ihrem Computer finden Sie unter [Konfigurieren des Clients](how-to-configure-the-ad-rms-client-2-0.md). Weitere Informationen zum Installieren eines RMS-Servers finden Sie unter [Installieren und Konfigurieren des Servers](how-to-install-and-configure-an-rms-server.md).
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Vorgehensweise](how-to-use-msipc.md)
 * [Konfigurieren des Clients](how-to-configure-the-ad-rms-client-2-0.md)
@@ -125,6 +123,6 @@ Sie können die Anwendung aus einem beliebigen Verzeichnis ausführen. Die Anwen
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 9217d66f-b4a7-4ad2-a4ed-ab2c36deab71
-
+ms.assetid: 968C804C-22BE-4DCA-B0E5-9D0E5E6A0FA9
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Codebeispiele
 
 Dieses Thema enthält eine Reihe von Beispielen unter Verwendung des Rights Management Services SDK 2.1, das im MSDN Download Center verfügbar ist.
@@ -48,7 +46,7 @@ Dieses Thema enthält eine Reihe von Beispielen unter Verwendung des Rights Mana
 
   **Hinweis** Dieses Beispiel funktioniert auch mit nachfolgenden Versionen des RMS SDK, also über 2.0 hinaus.
  
-### Verwandte Themen
+## Verwandte Themen
 
 * [Übersicht](ad-rms-overview.md)
 * [Interop-Bibliothek](https://Code.MSDN.Microsoft.Com/AD-RMS-SDK-20-Interop-eb3fbce7)
@@ -59,6 +57,6 @@ Dieses Thema enthält eine Reihe von Beispielen unter Verwendung des Rights Mana
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
