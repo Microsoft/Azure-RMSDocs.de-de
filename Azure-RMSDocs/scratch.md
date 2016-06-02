@@ -28,7 +28,7 @@ ms.suite: ems
 
 # Überschrift der ersten Ebene
 
-Siehe Markdown für diese Datei [in Github](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md); Siehe Markdownreferenz in den [Stilvorgaben des EM-Pilotprojekts](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931). 
+Das Markdown für diese Datei finden Sie [in Github](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/master/Azure-RMSDocs/scratch.md). Die Markdownreferenz finden Sie in den [Stilvorgaben des EM-Pilotprojekts](https://worldready.cloudapp.net/Styleguide/Edit?id=2781&topicid=36931). 
 
 ## Überschrift der zweiten Ebene
 ### Überschrift der dritten Ebene
@@ -165,6 +165,18 @@ Dies ist ein Beispiel für `in-line code`.
 [Schaltflächenlinks](/azure-rms/index.html)
 
 ### Selector
+
+Einführungstext: [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
+
+Einführungstext: > [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [bar](./develop/developer-notes.md)
+
+
+
+
 > [!div class="op_single_selector"]
 - [foo](./develop/developers-guide.md)
 - [bar](./develop/developer-notes.md)
@@ -179,6 +191,6 @@ Dies ist ein Beispiel für `in-line code`.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
