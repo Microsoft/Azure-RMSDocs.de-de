@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Szenario - Dateien auf einer Dateiserverfreigabe schützen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management zum Schutz aller von Ihnen gewünschten Dateien auf einem Dateiserver verwendet. Dies stellt sicher, dass nur Mitarbeiter Ihrer Organisation darauf zugreifen können, selbst wenn die Dateien kopiert und an einem Ort gespeichert werden, der nicht unter der Kontrolle Ihrer IT-Abteilung liegt, oder wenn sie per E-Mail an andere Benutzer gesendet werden.
 
 Diese Anweisungen verwenden eine der Standardvorlagen, die den Zugriff auf alle Mitarbeiter mit allen Nutzungsrechten beschränkt. Bei Bedarf können Sie jedoch die Zugriffs- und Nutzungsrechte weiter einschränken, indem Sie anstatt einer Standardvorlage eine benutzerdefinierte Vorlage konfigurieren.
@@ -39,7 +42,7 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 -   Der Schutz wird regelmäßig erneut auf alle Dateien angewendet, um sicherzustellen, dass alle Änderungen an den Vorlagen für Benutzerrechterichtlinien auf die geschützten Dateien angewendet werden.
 
 ## Anweisungen zur Bereitstellung
-![](../media/AzRMS_AdminBanner.png)
+![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
@@ -50,7 +53,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |---------------|--------------------------------|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und Azure Rights Management geschützt wurden.|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Eine der folgenden Komponenten:<br /><br />Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage "&lt;Organisationsname&gt; – Vertraulich" nicht archiviert.<br /><br />Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Eine der folgenden Komponenten:<br /><br />– Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage &lt;Organisationsname&gt; – Vertraulich nicht archiviert<br /><br />– Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |Sie haben das RMS-Schutztool heruntergeladen und die erforderlichen Komponenten für Azure RMS konfiguriert.|Anweisungen zum Herunterladen des Tools und zum Erfüllen der Voraussetzungen: [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Informationen zum Konfigurieren zusätzlich erforderlicher Komponenten für Azure RMS wie dem Dienstprinzipalkonto: [About_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -70,7 +73,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
     ```
     Get-RMSTemplate
     ```
-    Um die Standardvorlage zu verwenden, die Zugriff auf alle Mitarbeiter mit allen Nutzungsrechten einschränkt, suchen Sie nach dem Vorlagennamen **&lt;Organisationsname&gt; – Vertraulich**. Verwenden Sie beispielsweise **VanArsdel, Ltd – Vertraulich**.
+    Suchen Sie nach dem Vorlagennamen **&lt;Organisationsname&gt; – Vertraulich**, um die Standardvorlage zu verwenden, die Zugriff auf alle Mitarbeiter mit allen Nutzungsrechten einschränkt. Verwenden Sie beispielsweise **VanArsdel, Ltd – Vertraulich**.
 
 4.  Befolgen Sie die schrittweisen Anweisungen unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx).
 
@@ -99,9 +102,9 @@ Verwenden Sie die folgende Vorlage, und kopieren Sie die Anweisungen für die En
 
 Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer nach Ihren Anpassungen aussehen können.
 
-![](../media/AzRMS_UsersBanner.png)
+![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### Bearbeiten von &lt;Dateityp&gt; aus &lt;Dateiserverfreigabe&gt;
+### So bearbeiten Sie einen &lt;Dateityp&gt; aus der &lt;Dateiserverfreigabe&gt;
 
 1.  Doppelklicken Sie auf die Datei, um sie zu öffnen. Sie werden möglicherweise zur Eingabe Ihrer Anmeldeinformationen aufgefordert.
 
@@ -111,7 +114,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 4.  Um die Datei zu bearbeiten, speichern Sie sie zuerst, und entfernen Sie die Dateinamenerweiterung ".pfile":
 
-    -   &lt;Anweisungen zum Speichern der Datei und zum Entfernen der Dateinamenerweiterung ".pfile"&gt;
+    -   &lt;Anweisungen zum Speichern der Datei und zum Entfernen der Dateinamenerweiterung „.pfile“&gt;
 
 5.  Sie können die Datei jetzt wie gewohnt bearbeiten und speichern.
 
@@ -125,10 +128,10 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
 -   Wenden Sie sich an den Helpdesk:
 
-    -   *&lt;Kontaktdetails&gt;*
+    -   *&lt;Kontaktinformationen&gt;*
 
-### Beispiel einer angepassten Benutzerdokumentation
-![](../media/AzRMS_ExampleBanner.png)
+### Beispiel für eine angepasste Benutzerdokumentation
+![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
 #### Bearbeiten von CAD-Zeichnungen aus der ProjectNextGen-Freigabe
 
@@ -158,6 +161,6 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

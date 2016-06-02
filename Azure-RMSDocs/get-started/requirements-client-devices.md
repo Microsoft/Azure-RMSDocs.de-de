@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS-Anforderungen: Clientgeräte, die Azure RMS unterstützen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Verwenden Sie die folgenden Abschnitte, um zu identifizieren, welche Geräte Azure Rights Management (Azure RMS) unterstützen.
 
 ## Computer
@@ -59,6 +62,6 @@ Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Manage
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

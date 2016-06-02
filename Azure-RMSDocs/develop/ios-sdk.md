@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 23f64fc8-d0f3-49ee-8d8a-b34ef26878a7
-
+ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Einrichten von iOS und OS X
+# Einrichten von iOS und OS X
 
 iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
 
@@ -37,7 +36,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring_your_development_environment)
--   [Siehe auch](#see_also)
+-   [Weitere Informationen](#see_also)
 
 ## Voraussetzungen
 
@@ -67,41 +66,41 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 -   Um ein neues Projekt zu erstellen, klicken Sie im Menü **Datei** auf **Neu** und dann auf **Projekt**.
 -   Wählen Sie **Single View Application**.
 
-    ![](../media/iOS-Project.png)
+    ![Erstellen eines neuen Projekts](../media/iOS-Project.png)
 
 -   Geben Sie einen Namen und einen Bezeichner für das neue Projekt ein.
 
-    ![](../media/iOS-project-options.png)
+    ![Benennen Sie Ihr Projekt](../media/iOS-project-options.png)
 
 -   Klicken Sie auf **Weiter**, und wählen Sie den Speicherort für das Projekt aus.
 -   Um das **MSRightsManagement**-Framework für iOS-Frameworks hinzuzufügen, ziehen Sie den Ordner ".framework" aus dem SDK-Installationsordner in den Abschnitt **Frameworks** des **Projektnavigators**.
 
-    ![](../media/ios-add-dependencies-01a.png)
+    ![Legen Sie einen Speicherort fest](../media/ios-add-dependencies-01a.png)
 
 -   Aktivieren Sie das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
 
     Auf diese Weise bleibt der Verweis auf den SDK-Installationsordner erhalten, anstatt eine Kopie zu erstellen.
 
-    ![](../media/iOS-create-groups.png)
+    ![Legen Sie den Verweis auf den SDK-Installationsordner fest](../media/iOS-create-groups.png)
 
 -   Um das MS RMS SDK 4.2 für das Ressourcenpaket hinzuzufügen, ziehen Sie die Datei MSRightsManagementResources.bundle aus dem Ordner "MSRightsManagement.framework/Resources" in den Abschnitt **Frameworks** des Projektnavigators.
 
-    ![](../media/iOS-add-resource-bundle-02a.png)
+    ![Hinzufügen einer Ressourcengruppe](../media/iOS-add-resource-bundle-02a.png)
 
 -   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
 -   Das SDK basiert auf anderen Frameworks wie: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** und **Security**. Um diese Frameworks hinzuzufügen, wechseln Sie zum Abschnitt **Linked Frameworks and Libraries** des Zielbereichs **Zusammenfassung**. Erweitern Sie diesen Abschnitt, um die Frameworks hinzuzufügen.
 
     Die Frameworks **UIKit** und **Foundation** sind erforderlich und in der Regel standardmäßig vorhanden.
 
-    ![](../media/iOS-add-libraries.png)
+    ![Hinzufügen von Ressourcen](../media/iOS-add-libraries.png)
 
 -   Fügen Sie im Zielbereich unter **Buildeinstellungen** das Flag **-ObjC** zu **Other Linker Flags** hinzu.
 
-    ![](../media/iOS-linker-flags.png)
+    ![Hinzufügen von Buildeinstellungen](../media/iOS-linker-flags.png)
 
 -   Der **Projektnavigator** sollte jetzt in etwa diese Struktur haben.
 
-    ![](../media/iOS-verify-setup-01a.png)
+    ![Prüfen des Projekts](../media/iOS-verify-setup-01a.png)
 
 -   Sie können jetzt Ihre eigenen neuen iOS/OS X-Apps erstellen.
 
@@ -123,6 +122,6 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

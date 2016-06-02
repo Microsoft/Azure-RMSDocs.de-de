@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt.
 
 Dieses Szenario eignet sich für folgende Fälle:
@@ -39,7 +42,7 @@ Dieses Szenario eignet sich für folgende Fälle:
 -   Der Mitarbeiter möchte unter Umständen wissen, wann dieses Dokument von einem externen Benutzer geöffnet wird.
 
 ## Anweisungen zur Bereitstellung
-![](../media/AzRMS_AdminBanner.png)
+![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mit der Benutzerdokumentation fortfahren.
 
@@ -59,7 +62,7 @@ Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und f�
 
 1.  Ersetzen Sie *&lt;Name des Office-Dokumenttyps&gt;* durch den Dokumenttyp, der von Ihren Benutzern gesendet wird. Verwenden Sie anstelle von "Word-Dokument" oder "Excel-Tabelle" Formulierungen, die konkret sind und sich auf die Workflows beziehen, wie z. B. "Preisliste", "Lieferzeiten" und "Angebot erstellen". Mit dieser präziseren Wortwahl wird die Wahrscheinlichkeit erhöht, dass beim Verwenden der Dokumente die Anweisungen befolgt werden.
 
-2.  Ersetzen Sie auch die *&lt;Kontaktdetails&gt;* durch Anweisungen dazu, wie sich Ihre Benutzer an den Helpdesk wenden können, beispielsweise über einen Link zur Website, eine E-Mail-Adresse oder eine Telefonnummer.
+2.  Ersetzen Sie die *&lt;Kontaktdetails&gt;* durch Anweisungen dazu, wie sich Benutzer an das Helpdesk wenden können, z.B. über einen Link zur Website, eine E-Mail-Adresse oder eine Telefonnummer.
 
 3.  **Zudem können Sie folgende Änderungen vornehmen:**
 
@@ -71,38 +74,37 @@ Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und f�
 
     -   Die Schritte beinhalten nicht das Festlegen eines Ablaufdatums. Falls die Informationen nach einem bestimmten Datum nicht mehr verwendet werden sollen, können Sie einen weiteren Schritt zum Festlegen eines geeigneten Ablaufzeitpunkts hinzufügen, z.B. 90 Tage nach dem Senden der E-Mail.
 
-    > [!NOTE]
-    > Weitere Informationen zu den einzelnen Optionen, die Benutzer auswählen können, finden Sie unter [Optionen des Dialogfelds für die Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574738.aspx).
+    > [!NOTE]Weitere Informationen zu den einzelnen Optionen, die Benutzer auswählen können, finden Sie unter [Optionen des Dialogfelds für die Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574738.aspx).
 
 4.  Nehmen Sie jegliche sonstigen Änderungen an den Anweisungen vor, und senden Sie sie an diese Benutzer.
 
 Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer nach Ihren Anpassungen aussehen können.
 
-![](../media/AzRMS_UsersBanner.png)
+![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### Vorgehensweise bei der Freigabe von &lt;Name des Office-Dokumenttyps&gt;
+### So geben Sie den &lt;Namen des Office-Dokumenttyps frei&gt;
 
 1.  Erstellen Sie Ihre E-Mail-Nachricht durch Angabe der E-Mail-Adresse oder -Adressen, geben Sie Ihre Nachricht ein, und fügen Sie den *&lt;Namen des Office-Dokumenttyps&gt;* an. Klicken Sie dann auf der Registerkarte **NACHRICHT** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Ein Screenshot, der anzeigt, wie ein Office-Dokument mithilfe von Outlook freigegeben wird](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  Wählen Sie im Dialogfeld **Geschützt freigeben** **Anzeigender Benutzer – Nur Anzeigen**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![Dialogfeld „Geschützt freigeben“ –„Viewer“ – „Nur Anzeigen“](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Wählen Sie **Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**aus.
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![Dialogfeld „Geschützt freigeben“ – sofort wiederrufen](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Wählen Sie **E-Mail verschicken, sobald jemand diese Dokumente öffnet**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![Dialogfeld „Geschützt freigeben“ – E-Mail an mich senden](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Klicken Sie auf **Jetzt senden**.
 
-Wenn ein Empfänger der Zeilen **An**, **Cc**oder **Bcc** diese E-Mail erhält, erscheint eine Nachricht mit Anweisungen, wie der angefügte *&lt;Name des Office-Dokumenttyps&gt;*gelesen werden kann. Die Person kann das Dokument auf vielen Geräten lesen, einschließlich iPads, iPhones, Android-Tablets und -Telefonen, Mac- und Windows-Computern.
+Wenn ein Empfänger der Zeilen **An**, **Cc** oder **Bcc** diese E-Mail erhält, erscheint eine Nachricht mit Anweisungen, wie der angefügte *&lt;Name des Office-Dokumenttyps&gt;* gelesen werden kann. Die Person kann das Dokument auf vielen Geräten lesen, einschließlich iPads, iPhones, Android-Tablets und -Telefonen, Mac- und Windows-Computern.
 
-Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms.com/) , um zu prüfen, ob und wann der angefügte &lt;Name des Office-Dokumenttyps&gt; geöffnet wurde. Sie können mit einem Telefonanruf bei der Person nachfassen, sobald Sie feststellen, dass diese &lt;Name des Office-Dokumenttyps&gt; geöffnet hat.
+Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms.com/), um zu prüfen, ob und wann der angefügte &lt;Name des Office-Dokumenttyps&gt; geöffnet wird. Sie können mit einem Telefonanruf bei der Person nachfassen, sobald Sie feststellen, dass diese den &lt;Namen des Office-Dokumenttyps&gt; geöffnet hat.
 
 **Benötigen Sie Unterstützung?**
 
@@ -114,28 +116,28 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 -   Wenden Sie sich an den Helpdesk:
 
-    -   *&lt;Kontaktdetails&gt;*
+    -   *&lt;Kontaktinformationen&gt;*
 
 ### Beispiel für eine angepasste Benutzerdokumentation
-![](../media/AzRMS_ExampleBanner.png)
+![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
 #### Vorgehensweise bei der Freigabe einer Preisliste für den Kunden
 
 1.  Erstellen Sie Ihre E-Mail-Nachricht durch Angabe der E-Mail-Adresse oder -Adressen des Kunden, geben Sie Ihre Nachricht ein, und fügen Sie die aktuelle Preisliste an. Klicken Sie dann auf der Registerkarte **NACHRICHT** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Ein Screenshot, der anzeigt, wie ein Office-Dokument mithilfe von Outlook freigegeben wird](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  Wählen Sie im Dialogfeld **Geschützt freigeben** **Anzeigender Benutzer – Nur Anzeigen**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![Dialogfeld „Geschützt freigeben“ –„Viewer“ – „Nur Anzeigen“](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Wählen Sie **Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**aus.
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![Dialogfeld „Geschützt freigeben“ – sofort wiederrufen](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Wählen Sie **E-Mail verschicken, sobald jemand diese Dokumente öffnet**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![Dialogfeld „Geschützt freigeben“ – E-Mail an mich senden](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Klicken Sie auf **Jetzt senden**.
 
@@ -157,6 +159,6 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -2,7 +2,7 @@
 # required metadata
 
 title: Verwenden der Verschlüsselung | Azure RMS
-description:
+description: gibt Ihnen eine Orientierung über unsere Verschlüsselungspakete
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 088c98f9-f06e-4aae-8fac-bc7605e545f5
-
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Verwenden der Verschlüsselung
+# Verwenden der Verschlüsselung
 
 Dieses Thema erläutert unsere Verschlüsselungspakete und zeigt einige Codeausschnitte für deren Verwendung.
 
@@ -107,6 +106,6 @@ Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralte
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

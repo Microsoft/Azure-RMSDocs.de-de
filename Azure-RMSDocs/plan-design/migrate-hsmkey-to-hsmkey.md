@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS
+title: Schritt 2&colon; Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -27,12 +27,15 @@ ms.suite: ems
 
 # Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
+
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel durchführen möchten. 
 
 Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
 
 > [!NOTE]
-> Für diese Anweisungen wird angenommen, dass Ihr AD RMS-Schlüssel modulgeschützt ist. Dies ist der Normalfall. Wenn Ihr AD RMS-Schlüssel mit OCS geschützt ist, wenden Sie sich an [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key), bevor Sie diese Anweisungen verwenden.
+> Für diese Anweisungen wird angenommen, dass Ihr AD RMS-Schlüssel modulgeschützt ist. Dies ist der Normalfall. Ist Ihr AD RMS-Schlüssel OCS-geschützt, wenden Sie sich bitte an [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key), bevor Sie diese Anweisungen ausführen.
 
 Das Verfahren zum Importieren des HSM-Schlüssels und der AD RMS-Konfiguration in Azure RMS, um den von Ihnen verwalteten Azure RMS-Mandantenschlüssel (BYOK) zu erhalten, gliedert sich in zwei Phasen.
 
@@ -69,10 +72,10 @@ Nun, da Sie Ihren HSM-Schlüssel für Azure RMS vorbereitet haben, können Sie d
     Disconnect-AadrmService
     ```
 
-Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration) fortfahren.
+Sie können jetzt mit [Schritt 3: Aktivieren Sie Ihren RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

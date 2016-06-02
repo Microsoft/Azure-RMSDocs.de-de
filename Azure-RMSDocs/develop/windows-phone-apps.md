@@ -2,7 +2,7 @@
 # required metadata
 
 title: Einrichten von Windows Phone | Azure RMS
-description:
+description: Windows Phone-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 71119aa7-ffc6-46e0-82ae-0b3b614c2cad
-
+ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Einrichten von Windows Phone
+# Windows Phone-Setup
 
 
 Windows Phone-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Informationsschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
@@ -34,7 +33,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 
 -   [Voraussetzungen](#prerequisites)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring_your_development_environment)
--   [Siehe auch](#see_also)
+-   [Weitere Informationen](#see_also)
 
 ## Voraussetzungen
 
@@ -58,16 +57,16 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
 -   Klicken Sie auf **Datei**. Klicken Sie im Menü **Datei** auf **Neu** und dann auf **Projekt**.
 -   Wählen Sie im Dialogfeld **Neues Projekt** die Option **Visual C\#** und dann **Leere App (Windows Phone)** aus, und klicken Sie dann auf **OK**.
 
-    ![](../media/wpsetup-newproj.png)
+    ![Erstellen eines neuen Projekts](../media/wpsetup-newproj.png)
 
 -   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie dann **Verweis hinzufügen** aus, um das Dialogfeld **Verweis hinzufügen** zu öffnen.
 
-    ![](../media/wpsetup-addref.png)
+    ![Hinzufügen eines Verweises](../media/wpsetup-addref.png)
 
 -   Klicken Sie auf **Durchsuchen** unten links im Dialogfeld **Verweis hinzufügen**, und wählen Sie die *Microsoft.RightsManagment.dll*-Datei aus, die sich in dem Ordner befindet, in dem Sie das Paket extrahiert haben.
--   **Verwaltete Apps** – Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
 
-    ![](../media/wpsetup-refmngr.png)
+    ![Hinzufügen von Erweiterungen](../media/wpsetup-refmngr.png)
 
 -   **Hinzufügen von Funktionen** – Ihre Anwendung benötigt die Funktion „Internet (Client & Server)“, um das SDK verwenden zu können. Um diese Funktion zu Ihrer App hinzuzufügen, öffnen Sie die Datei *Package.appxmanifest* im Projekt, und navigieren Sie zur Registerkarte **Funktionen**.
 
@@ -97,6 +96,6 @@ Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

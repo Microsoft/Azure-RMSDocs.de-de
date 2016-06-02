@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Verwenden Sie die folgenden Verfahren, wenn Sie beschlossen haben, [Ihren eigenen Mandantenschlüssel zu verwalten](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) und ihn über das Internet zu übertragen, statt zu einer Microsoft-Einrichtung zu reisen, um den Mandantenschlüssel persönlich zu übertragen:
 
 
@@ -45,7 +48,7 @@ Laden Sie auf der Arbeitsstation mit Internetverbindung das Windows PowerShell-M
 > [!NOTE]
 > Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, führen Sie den folgenden Befehl aus, um zu überprüfen, ob Ihre Version mindestens 2.1.0.0 ist: `(Get-Module aadrm -ListAvailable).Version`
 
-Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md)..
 
 ### Schritt 2: Rufen Sie Ihre Azure Active Directory-Mandanten-ID ab
 Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen** , und führen Sie dann die folgenden Befehle aus:
@@ -82,15 +85,15 @@ Wechseln Sie zum Microsoft Download Center, und [laden Sie das BYOK-Toolset](htt
 |Asien|AzureRMS-BYOK-tools-AsiaPacific.zip|
 Das Toolset enthält Folgendes:
 
--   Ein KEK-Paket (Schlüsselaustauschschlüssel) mit einem Namen, der mit **BYOK-KEK-pkg-** beginnt.
+-   ein KEK-Paket (Key Exchange Key; Schlüsselaustauschschlüssel) mit einem Namen, der mit **BYOK-KEK-pkg-** beginnt.
 
--   Ein Security World-Paket mit einem Namen, der mit **BYOK-SecurityWorld-pkg-** beginnt.
+-   ein Security World-Paket mit einem Namen, der mit **BYOK-SecurityWorld-pkg-** beginnt.
 
--   Ein Python-Skript namens **verifykeypackage.py**.
+-   ein Python-Skript namens **verifykeypackage.py**.
 
 -   Eine ausführbare Befehlszeilendatei namens **KeyTransferRemote.exe**, eine Metadatendatei namens **KeyTransferRemote.exe.config** und die zugehörigen DLLs.
 
--   Ein Visual C++ Redistributable Package namens **vcredist_x64.exe**.
+-   ein Visual C++ Redistributable Package namens **vcredist_x64.exe**.
 
 Kopieren Sie das Paket auf ein USB-Laufwerk oder einen anderen mobilen Speicher.
 
@@ -109,7 +112,7 @@ Stellen Sie sicher, dass sich die Thales-Tools im Pfad **(%nfast_home%\bin** und
 ```
 set PATH=%PATH%;”%nfast_home%\bin”;”%nfast_home%\python\bin”
 ```
-Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang des Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang der Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)..
 
 ### Schritt 2: Installieren Sie das BYOK-Toolset auf der nicht verbundenen Arbeitsstation
 Kopieren Sie das BYOK-Toolsetpaket von dem USB-Laufwerk oder dem anderen mobilen Speicher, und gehen Sie dann wie folgt vor:
@@ -135,7 +138,7 @@ Starten Sie eine Eingabeaufforderung, und führen Sie das Thales-Programm „new
 ```
 new-world.exe --initialize --cipher-suite=DLf1024s160mRijndael --module=1 --acs-quorum=2/3
 ```
-Dieses Programm erstellt eine **Security World**-Datei unter „%NFAST_KMDATA%\local\world“, die dem Ordner „C:\ProgramData\nCipher\Key Management Data\local“ entspricht. Sie können verschiedene Werte für das Quorum verwenden, aber in unserem Beispiel werden Sie aufgefordert, für jeden Wert drei leere Karten und PINs einzugeben. Anschließend benötigen Sie zwei Karten, um administrativen Zugriff auf die Security World (das angegebene Quorum) zu erhalten.  Diese Karten werden dann zum **Administrator Card Set** für die neue Security World. Sie können zu diesem Zeitpunkt das Kennwort oder die PIN für jede ACS-Karte angeben, oder dies später mit einem Befehl hinzufügen.
+Dieses Programm erstellt eine **Security World**-Datei unter „%NFAST_KMDATA%\local\world“. Dies entspricht dem Ordner „C:\ProgramData\nCipher\Key Management Data\local“. Sie können verschiedene Werte für das Quorum verwenden, aber in unserem Beispiel werden Sie aufgefordert, für jeden Wert drei leere Karten und PINs einzugeben. Anschließend benötigen Sie zwei Karten, um administrativen Zugriff auf die Security World (das angegebene Quorum) zu erhalten.  Diese Karten werden dann zum **Administrator Card Set** für die neue Security World. Sie können zu diesem Zeitpunkt das Kennwort oder die PIN für jede ACS-Karte angeben, oder dies später mit einem Befehl hinzufügen.
 
 > [!TIP]
 > Sie können den aktuellen Konfigurationsstatus Ihres HSMs mit dem Befehl `nkminfo` überprüfen.
@@ -185,7 +188,7 @@ Dieser Schritt ist optional, wird aber empfohlen, damit Sie Folgendes überprüf
 
 2.  Vergewissern Sie sich, dass Folgendes angezeigt wird, was eine erfolgreiche Überprüfung anzeigt: **Ergebnis:  ERFOLG (SUCCESS)**
 
-Dieses Skript überprüft die Kette der Signaturgeber bis hinauf zum Thales-Stammschlüssel. Der Hash dieses Stammschlüssels ist in das Skript eingebettet, und sein Wert sollte **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**sein. Sie können diesen Wert auch gesondert überprüfen, indem Sie die [Thales-Website](http://www.thalesesec.com/)besuchen.
+Dieses Skript überprüft die Kette der Signaturgeber bis hinauf zum Thales-Stammschlüssel. Der Hash dieses Stammschlüssels ist in das Skript eingebettet, und sein Wert sollte **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**sein. Sie können diesen Wert auch gesondert bestätigen, indem Sie die [Thales-Website](http://www.thalesesec.com/)besuchen..
 
 Sie sind jetzt bereit, um einen neuen Schlüssel zu erstellen, der dann Ihr RMS-Mandantenschlüssel ist.
 
@@ -270,7 +273,7 @@ Wenn Sie diesen Befehl ausführen, ersetzen Sie *contosokey* durch den Wert, den
 
 Sie werden aufgefordert, Ihre Security World ACS-Karten einzustecken und, falls festgelegt, das Kennwort oder die PIN.
 
-Wenn der Befehl abgeschlossen wird, wird **Ergebnis: ERFOLG** angezeigt, und die Kopie Ihres Mandantenschlüssels mit verringerten Berechtigungen befindet sich in der Datei mit dem Namen „key_xferacId_*&lt;contosokey&gt;*“.
+Wenn der Befehl abgeschlossen wird, wird **Ergebnis: ERFOLG** angezeigt, und die Kopie Ihres Mandantenschlüssels mit verringerten Berechtigungen befindet sich in der Datei mit dem Namen „key_xferacId_*&lt;contosokey&gt;*“..
 
 ### Schritt 2: Untersuchen Sie die neue Kopie des Schlüssels
 Führen Sie optional die Thales-Hilfsprogramme aus, um die minimalen Berechtigungen des neuen Mandantenschlüssels sicherzustellen:
@@ -380,6 +383,6 @@ Sie haben jetzt alle Schritte abgeschlossen, die für „Bring Your Own Key“ �
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

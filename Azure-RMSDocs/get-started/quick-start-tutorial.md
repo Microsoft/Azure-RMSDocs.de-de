@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Quick Start-Lernprogramm für Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Wechseln zu: 
 > [!div class="op_single_selector"]
 - [Schritt 1: Aktivieren von Azure RMS](tutorial-step1.md)
@@ -36,7 +39,7 @@ Wechseln zu:
 
 Verwenden Sie dieses Tutorial, um Microsoft Azure Rights Management (auch bekannt als Azure RMS) in 5 Schritten und weniger als 15 Minuten für Ihre Organisation zu testen. In diesem Tutorial aktivieren Sie den Dienst, versenden ein E-Mail-Dokument vertraulich und sicher an einen Empfänger in einer anderen Organisation und verfolgen, wann das Dokument geöffnet wird. Während der Übermittlung per E-Mail ist das vertrauliche Dokument verschlüsselt und kann nur vom jeweiligen Empfänger gelesen werden. Es gelten die vom Absender festgelegten Berechtigungen.
 
-![](../media/AzRMS_QuickStartStepsAll.PNG)
+![Azure RMS Schnellstart-Tutorial – alle Schritte](../media/AzRMS_QuickStartStepsAll.PNG)
 
 Dieses Tutorial richtet sich an IT-Administratoren und Berater, die Azure Rights Management als Datenschutzlösung für eine Organisation evaluieren. In einer Produktionsumgebung führt der Administrator die Schritte zum Aktivieren des Diensts und der Endbenutzer die Schritte zum Senden des Dokuments aus. Beide Vorgehensweisen sind Teil dieses Tutorials und veranschaulichen das End-to-End-Szenario für das sichere Versenden vertraulicher Dokumente an Empfänger, die einer anderen Organisation angehören. Falls beim Durcharbeiten dieses Tutorials Probleme auftreten, senden Sie eine E-Mail an [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) . Wir helfen Ihnen gerne weiter.
 
@@ -52,13 +55,12 @@ Voraussetzungen für dieses Tutorial:
 
 Los geht’s!
 
->[!div class="step-by-step"]
-[Schritt 1 »](tutorial-step1.md)
+>[!div class="step-by-step"] [Schritt 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,9 +26,11 @@ ms.suite: ems
 ---
 
 # Unterstützung von Azure Rights Management durch Anwendungen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Die folgenden Informationen sollen Ihnen dabei helfen zu verstehen, wie die am häufigsten verwendeten Anwendungen Ihrer Endbenutzer (z.B. Office-Anwendungen, Word, Excel, PowerPoint und Outlook) und die Dienste (z.B. Exchange und SharePoint) Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] verwenden können, um die Daten Ihrer Organisation besser zu schützen. 
-> [!NOTE]
-> Informationen zum Überprüfen der Anwendungen und Versionen, die [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) unterstützt, finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+> [!NOTE] Informationen zum Überprüfen der Anwendungen und Versionen, die [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) unterstützt, finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 In manchen Fällen wird Informationsschutz automatisch gemäß den von Ihnen konfigurierten Richtlinien angewendet. Dies ist beispielsweise bei SharePoint-Bibliotheken, klassifizierten Dateien und Exchange-Transportregeln der Fall. In anderen Fällen müssen Benutzer Informationsschutz selbst aus ihren Anwendungen heraus anwenden, entweder durch Auswählen einer Vorlage oder durch Auswahl bestimmter Optionen. Dies ist beispielsweise der Fall, wenn Benutzer eine Datei per E-Mail teilen oder eine Datei direkt schützen, indem sie den Zugriff oder die Verwendung auf ausgewählte Benutzer bzw. auf Benutzer außerhalb der Organisation einschränken.
 
@@ -38,8 +40,16 @@ In den Fällen, in denen Benutzer Informationsschutz selber anwenden müssen, st
 
 Informationen dazu, wie diese Anwendungen für Azure RMS konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
 
-> [!TIP]
-> Beispiele und Screenshots von Anwendungen, für die Azure RMS verwendet wird, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](what-admins-users-see.md).
+> [!TIP] Beispiele und Screenshots von Anwendungen, die Azure RMS verwenden, finden Sie unter [Azure RMS in Aktion: Was Administratoren und Benutzer sehen](what-admins-users-see.md).
+
+Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiel: 
+
+- Exchange Online und Exchange Server verwenden die dienstseitige Indizierung, sodass die RMS-geschützten E-Mails eines Benutzers automatisch in ihren Suchergebnissen angezeigt werden. 
+
+- SharePoint Online und SharePoint-Server wenden den RMS-Schutz auf Dateien nur beim Download an. D.h., dass sich diese Dokumentenschutzlösung nicht auf die Indizierung und die Suchergebnisse auf SharePoint auswirkt. Wenn Sie jedoch ein Dokument haben, das Sie in SharePoint speichern möchten, und das nicht in den Suchergebnissen zurückgegeben werden sollte, schützen Sie die Datei mit RMS, bevor sie in SharePoint hochgeladen wird.
+
+- Die Windows-Desktopsuche verwendet einen gemeinsam genutzten Index zwischen verschiedenen Benutzern des Geräts. Damit die Daten in den geschützten Dokumenten sicher bleiben, indiziert sie keine RMS-geschützten Dateien. Das bedeutet, dass Sie sicher sein können, dass Ihre Dateien mit sensiblen Daten nicht in den Suchergebnissen anderer Benutzer angezeigt werden, die sich an Ihrem PC anmelden oder eine Verbindung zu ihm herstellen könnten, obwohl Ihre Suchergebnisse keine Dateien enthalten, die Sie geschützt haben. 
+
 
 
 ## Nächste Schritte
@@ -56,6 +66,6 @@ Informieren Sie sich darüber, wie Azure RMS von den folgenden Komponenten unter
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

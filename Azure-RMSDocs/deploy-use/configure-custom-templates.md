@@ -26,17 +26,20 @@ ms.suite: ems
 ---
 
 # Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 [Nachdem Sie Azure Rights Management (Azure RMS) aktiviert haben](activate-service.md), sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Richtlinien auf vertrauliche Dateien erleichtern, mit denen der Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränkt wird. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
 
 -   Schreibgeschützte Anzeige geschützter Inhalte
 
-    -   Anzeigename: **<Unternehmensname> – Nur vertrauliche Ansicht**
+    -   Anzeigename: **&lt;Organisationsname&gt; – Nur vertrauliche Ansicht**
 
     -   Bestimmte Berechtigung: Inhalt anzeigen
 
 -   Lese- oder Änderungsberechtigungen für geschützten Inhalt
 
-    -   Anzeigename: **<Unternehmensname> – Vertraulich**
+    -   Anzeigename: **&lt;Organisationsname&gt; – Vertraulich**
 
     -   Bestimmte Berechtigungen: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
 
@@ -69,6 +72,6 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

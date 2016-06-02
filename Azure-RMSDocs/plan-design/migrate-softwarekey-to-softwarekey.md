@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS
+title: Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
+
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 
 
 Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
@@ -41,7 +44,7 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     > [!TIP]
     > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm -ListAvailable).Version`
 
-    Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+    Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md)..
 
 2.  Starten Sie Windows PowerShell mit der Option **Als Administrator ausführen** , und stellen Sie mit dem Cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) eine Verbindung mit dem Azure RMS-Dienst her:
 
@@ -67,10 +70,10 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     Disconnect-AadrmService
     ```
 
-Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration) fortfahren.
+Sie können jetzt mit [Schritt 3: Aktivieren Sie Ihren RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

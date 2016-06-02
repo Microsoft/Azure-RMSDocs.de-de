@@ -29,6 +29,9 @@ ms.suite: ems
 
 # Möglichkeiten der Kontrolle über die für RMS für Einzelpersonen erstellten Konten durch Administratoren
 
+*Gilt für: Azure Rights Management*
+
+
 Wenn Sie das „RMS für Einzelpersonen“-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten, können Sie immer noch die Benutzerkonten im Azure-Verzeichnis, das für Ihre Organisation erstellt wurde, auf die folgenden Arten kontrollieren:
 
 -   Implementieren Sie Verzeichnisintegrationslösungen für Azure Active Directory und Ihre Active Directory-Domänendienste-Infrastruktur. Sie können Konten und Kennwörter synchronisieren, sodass Benutzer keine neuen Konten für die Verwendung von Rights Management erstellen müssen, und Ihre lokalen Kennwortrichtlinien gelten weiterhin auch für die neuen Azure-Benutzerkonten. Sie können auch Kennwörter synchronisieren, sodass Benutzer sich kein anderes Kennwort für die Verwendung von Rights Management merken müssen.
@@ -46,9 +49,9 @@ Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran 
 
 ## Nächste Schritte
 
-Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md).
+Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md)..
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

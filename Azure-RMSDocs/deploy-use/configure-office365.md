@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Office 365: Konfigurationen für Clients und Onlinedienste | Azure RMS
+title: Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Office 365: Konfigurationen für Clients und Onlinedienste
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Da Office 365 systemeigene Unterstützung für Azure RMS bietet, ist keine Clientcomputerkonfiguration erforderlich, um die Features für die Verwaltung von Informationsrechten (IRM) für Anwendungen wie Word, Excel, PowerPoint, Outlook und die Outlook Web App zu unterstützen. Die Benutzer müssen sich lediglich bei ihren Office-Anwendungen mit ihren [!INCLUDE[o365_1](../includes/o365_1_md.md)]-Anmeldeinformationen anmelden, und sie können Dateien und E-Mails schützen sowie von anderen geschützte Dateien und E-Mails verwenden.
 
 Wir empfehlen jedoch, dass Sie diese Anwendungen durch die Rights Management-Freigabeanwendung ergänzen, damit Ihre Benutzer von dem Office-Add-In profitieren können. Weitere Informationen finden Sie unter [Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients](configure-sharing-app.md).
@@ -36,7 +39,7 @@ Um Exchange Online für die Unterstützung von Azure RMS zu konfigurieren, müss
 > [!NOTE]
 > Sie können Exchange Online derzeit nicht für die Unterstützung von Azure RMS konfigurieren, wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) für Azure RMS anstelle der Standardkonfiguration mit einem von Microsoft verwalteten Mandantenschlüssel verwenden. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md).
 >
-> Wenn Sie versuchen, Exchange Online konfigurieren, wenn Azure RMS mit BYOK arbeitet, missling der Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
+> Wenn Sie versuchen, Exchange Online zu konfigurieren, wenn Azure RMS BYOK verwendet, tritt beim Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) ein Fehler mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]** auf.
 
 Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müssen, um Exchange Online für die Verwendung von Azure RMS zu aktivieren:
 
@@ -46,7 +49,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Set-ExecutionPolicy RemoteSigned
     ```
 
-2.  Melden Sie in Ihrer Windows PowerShell-Sitzung bei Exchange Online mit einem Konto an, das für den Remoteshellzugriff aktiviert ist. Standardmäßig sind alle Konten, die in Exchange Online erstellt werden, für den Remoteshellzugriff aktiviert. Diese Einstellung kann über den Befehl [Set-User <UserIdentity> -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) deaktiviert (und wieder aktiviert) werden.
+2.  Melden Sie in Ihrer Windows PowerShell-Sitzung bei Exchange Online mit einem Konto an, das für den Remoteshellzugriff aktiviert ist. Standardmäßig sind alle Konten, die in Exchange Online erstellt werden, für den Remoteshellzugriff aktiviert. Diese Einstellung kann über den Befehl [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) deaktiviert (und wieder aktiviert) werden.
 
     Um sich anzumelden, geben Sie Folgendes ein:
 
@@ -117,7 +120,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Remove-PSSession $Session
     ```
 
-Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe von Azure RMS schützen. Wählen Sie in Outlook Web App im erweiterten Menü ( **...** ) den Befehl**Berechtigungen festlegen**und dann **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
+Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe von Azure RMS schützen. Wählen Sie in Outlook Web App im erweiterten Menü (**...**) **Berechtigungen festlegen** und anschließend **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
 
 > [!IMPORTANT]
 > Bei Erstellung neuer [benutzerdefinierter Vorlagen](configure-custom-templates.md) für Azure RMS oder Aktualisierung der Vorlagen müssen Sie jedes Mal den folgenden Exchange Online-PowerShell-Befehl ausführen (falls erforderlich, führen Sie die Schritte 2 und 3 zuerst aus), um diese Änderungen mit Exchange Online zu synchronisieren: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -162,13 +165,13 @@ Nachdem Sie den IRM-Dienst für SharePoint Online aktiviert haben, kann die OneD
 #### Konfiguration für Benutzer
 Geben Sie Benutzern diese Anleitungen, damit sie ihr OneDrive for Business konfigurieren und ihre Geschäftsdateien mit IRM schützen können.
 
-1.  Klicken Sie in OneDrive auf das Symbol **Einstellungen** , um das Menü "Einstellungen" zu öffnen, und klicken Sie dann auf **Website-Inhalte**.
+1.  Klicken Sie in OneDrive auf das Symbol **Einstellungen**, um das Menü „Einstellungen“ zu öffnen, und klicken Sie anschließend auf **Website-Inhalte**.
 
-2.  Bewegen Sie den Mauszeiger über der Kachel **Dokumente** , wählen Sie die Auslassungspunkte (**...**), und klicken Sie dann auf **EINSTELLUNGEN**.
+2.  Zeigen Sie mit dem Mauszeiger auf die Kachel **Dokumente**, wählen Sie die Auslassungspunkte (**...**), und klicken Sie anschließend auf **EINSTELLUNGEN.**
 
 3.  Klicken Sie auf der Seite **Einstellungen** im Bereich **Berechtigungen und Verwaltung** auf **Information Rights Management**.
 
-4.  Aktivieren Sie auf der Seite **Information Rights Management-Einstellungen** das Kontrollkästchen **Berechtigungen für diese Bibliothek beim Herunterladen einschränken** . Geben Sie den gewünschten Namen und eine Beschreibung für die Berechtigungen ein, und klicken Sie optional auf **OPTIONEN ANZEIGEN** , um optionale Konfigurationen zu konfigurieren. Klicken Sie dann auf **OK**.
+4.  Aktivieren Sie auf der Seite **Information Rights Management-Einstellungen** das Kontrollkästchen **Berechtigungen für diese Bibliothek beim Herunterladen einschränken**. Geben Sie den gewünschten Namen und eine Beschreibung für die Berechtigungen ein, und klicken Sie optional auf **OPTIONEN ANZEIGEN**, um optionale Konfigurationen zu konfigurieren. Klicken Sie anschließend auf **OK**..
 
     Weitere Informationen zu den Konfigurationsoptionen finden Sie in den Anweisungen in [Anwenden der Verwaltung von Informationsrechten (IRM) auf eine Liste oder Bibliothek](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) in der Office-Dokumentation.
 
@@ -550,13 +553,13 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 
     1.  Suche Sie nach `$sharepointAdminCenterUrl`, und ersetzen Sie den Beispielwert durch die URL Ihres eigenen SharePoint Admin Centers.
 
-        Sie finden diesen Wert als Basis-URL, wenn Sie zum SharePoint Admin Center wechseln, wobei dieser folgendes Format hat: https:/*<Mandantenname>*-admin.sharepoint.com
+        Sie finden diesen Wert als Basis-URL, wenn Sie zum SharePoint Admin Center wechseln, wobei diese folgendes Format hat: https://*&lt;Mandantenname&gt;*-admin.sharepoint.com
 
         Wenn der Mandantenname beispielsweise "contoso" ist, geben Sie an: **https://contoso-admin.sharepoint.com**
 
     2.  Suche Sie nach `$tenantAdmin`, und ersetzen Sie den Beispielwert durch Ihr eigenes, vollqualifiziertes globales Administratorkonto für Office 365.
 
-        Dieser Wert ist mit dem identisch, mit dem Sie sich beim Office 365-Verwaltungsportal als globaler Administrator anmelden, und hat folgendes Format: Benutzername@*<Name_der_Mandantendomäne>*.com
+        Dieser Wert ist mit dem identisch, mit dem Sie sich beim Office 365-Verwaltungsportal als der globale Administrator anmelden, und hat folgendes Format: Benutzername@*&lt;Mandantendomänenname&gt;*.com
 
         Wenn der globale Office 365-Administratorbenutzername für die Mandantendomäne "contoso.com" beispielsweise "admin" ist, würden Sie angeben: **admin@contoso.com**
 
@@ -564,7 +567,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 
         Alternativ finden Sie Informationen in den Kommentaren in dem Skript dazu, wie Sie dieses Array ersetzen, indem Sie eine CSV-Datei importieren, die alle URLs enthält, die Sie konfigurieren müssen.  Wir haben ein weiteres Beispielskript bereitgestellt, mit dem Sie automatisch nach den URLs suchen und diese extrahieren können, mit denen die CSV-Datei aufzufüllen ist. Wenn Sie dazu bereit sind, erweitern Sie sofort nach diesen Schritten den Abschnitt [Zusätzliches Skript zur Ausgabe aller OneDrive for Business-URLs in eine CSV-Datei](#BKMK_Script_OD4B_URLS).
 
-        Die Web-URL für das OneDrive for Business des Benutzers hat folgendes Format: https://*<Mandantenname>*-my.sharepoint.com/personal/*<Benutzername>*_*<Mandantenname>*_com
+        Die Web-URL für das OneDrive for Business des Benutzers hat folgendes Format: https://*&lt;Mandantenname&gt;*-my.sharepoint.com/personal/*&lt;Benutzername&gt;*_*&lt;Mandantenname&gt;*_com
 
         Wenn der Benutzer im "contoso"-Mandanten beispielsweise den Benutzernamen "rsimone" hat, würden Sie angeben: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
@@ -581,7 +584,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 > [!TIP]
 > Sie können dieses Skript auch verwenden, um IRM für eine SharePoint Online-Bibliothek zu konfigurieren. Für diese Konfiguration möchte Sie vermutlich die zusätzliche Option **Benutzer dürfen keine Dokumente hochladen, die IRM nicht unterstützen** aktivieren, um sicherzustellen, dass die Bibliothek nur geschützte Dokumente enthält.    Fügen Sie hierzu dem Befehl "Set-IrmConfiguration" im Skript den `-IrmReject`-Parameter hinzu.
 >
-> Außerdem müssten Sie die `$webUrls`-Variable ändern (z. B. **https://contoso.sharepoint.com**) sowie die `$listTitle`-Variable (z. B. **$Reports**).
+> Außerdem müssten Sie die `$webUrls`-Variable ändern (z.B. **https://contoso.sharepoint.com**) sowie die `$listTitle`-Variable (z.B. **$Reports**)).
 
 Wenn Sie IRM für OneDrive for Business-Bibliotheken eines Benutzers deaktivieren müssen, finden Sie Informationen im Abschnitt [Skript zum Deaktivieren von IRM für OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 
@@ -1108,6 +1111,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

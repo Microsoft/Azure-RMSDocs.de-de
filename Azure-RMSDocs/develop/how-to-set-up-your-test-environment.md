@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 4d32682c-754d-4e30-977d-95b08e0662cc
-
+ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Einrichten der Testumgebung
 
 Ihre rechtlich geschützte Anwendung kann mit anderen Serveroptionen getestet werden.
@@ -46,12 +44,12 @@ Um die rechtlich geschützte Anwendung zu testen, führen Sie sie auf einem RMS-
 
 Weitere Informationen zur AD RMS-Zertifikathierarchie finden Sie unter [Grundlegendes zu Zertifikatketten](understanding-certificate-chains.md).
 
-Es gibt zwei Optionen zum Testen der Anwendung auf einem RMS-Server:
+Es gibt zwei Optionen, um Ihre Anwendung für einen RMS-Server zu testen.
 
--   Sie können die Anwendung in der AD RMS ISV-Umgebung für einen Computer ausführen. Wenn Sie Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausführen und Hyper-V installiert haben, können Sie die AD RMS ISV-Umgebung für einen Computer bereitstellen. Richten Sie zu diesem Zweck mit der VHD-Datei für AD RMS für einen Computer einen virtuellen Computer ein. Die AD RMS ISV-Umgebung für einen Computer bietet einen für die Präproduktion konfigurierten RMS-Server sowie den installierten Active Directory Rights Management Services Client 2.1. Registrierungseinstellungen für den RMS-Server und den Client sind bereits konfiguriert. Um die Anwendung zu testen, führen Sie sie auf dem virtuellen Computer aus, auf dem die Umgebung für einen Computer bereitgestellt wird.
+-   **Sie können Ihre Anwendung in der Einzelplatzumgebung von AD RMS ISV ausführen**. Wenn Sie Windows Server 2012, Windows Server 2008 R2 oder Windows Server 2008 ausführen und Hyper-V installiert haben, können Sie die AD RMS ISV-Umgebung für einen Computer bereitstellen. Richten Sie zu diesem Zweck mit der VHD-Datei für AD RMS für einen Computer einen virtuellen Computer ein. Die AD RMS ISV-Umgebung für einen Computer bietet einen für die Präproduktion konfigurierten RMS-Server sowie den installierten Active Directory Rights Management Services Client 2.1. Registrierungseinstellungen für den RMS-Server und den Client sind bereits konfiguriert. Um die Anwendung zu testen, führen Sie sie auf dem virtuellen Computer aus, auf dem die Umgebung für einen Computer bereitgestellt wird.
 -   **Sie können die Anwendung auf einem für die Präproduktion konfigurierten RMS-Server ausführen, der in Ihrem Netzwerk bereitgestellt wurde**. In diesem Fall müssen Sie auch den AD RMS-Client 2.1 auf dem Computer installieren und konfigurieren, auf dem die Anwendung ausgeführt wird. Informationen hierzu finden Sie unter [Konfigurieren des Clients](how-to-configure-the-ad-rms-client-2-0.md). Informationen dazu, wie Sie einen RMS-Server bereitstellen und für die Präproduktion konfigurieren, finden Sie unter [Installieren und Konfigurieren des Servers](how-to-install-and-configure-an-rms-server.md).
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Vorgehensweise](how-to-use-msipc.md)
 * [Downloadseite für Begleitmaterial zum AD RMS SDK-Webinar](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
@@ -67,6 +65,6 @@ Es gibt zwei Optionen zum Testen der Anwendung auf einem RMS-Server:
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

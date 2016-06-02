@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Szenario – Schutz Ihrer wertvollsten Dateien
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff. Dies sind in der Regel Dateien, auf die nur wenige Personen Zugriff haben sollten. Hierzu zählen beispielsweise die Rezepte der bekanntesten Lebensmittelprodukte Ihres Unternehmens oder Übernahmepläne, die nicht vor einem bestimmten Datum veröffentlicht werden dürfen.
 
 Die Anweisungen sind unter den folgenden Umständen geeignet:
@@ -43,7 +46,7 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 -   Der Administrator muss in der Lage sein, nachzuverfolgen, wer wann auf die Dateien zugreift, und den Zugriff bei Bedarf zu widerrufen.
 
 ## Anweisungen zur Bereitstellung
-![](../media/AzRMS_AdminBanner.png)
+![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
@@ -52,7 +55,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
 |---------------|--------------------------------|
-|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet:<br /><br />Eine E-Mail-aktivierte Gruppe namens **Privilegierter Zugriff**, der die wenigen Personen angehören, die Zugriff auf diese streng vertraulichen Dokumente haben sollen<br /><br />Eine E-Mail-aktivierte Gruppe namens **IT-Compliance-Manager**, der die Personen angehören, zu deren Aufgabe eDiscovery, Überwachung und Überprüfung zählt<br /><br />Eine E-Mail-aktivierte Gruppe namens **RMS-Administratoren**, der alle Administratoren angehören, die Azure RMS konfigurieren|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet:<br /><br />– Eine E-Mail-aktivierte Gruppe namens **Privilegierter Zugriff**, der die wenigen Personen angehören, die Zugriff auf diese streng vertraulichen Dokumente haben sollen<br /><br />– Eine E-Mail-aktivierte Gruppe namens **IT-Compliance-Manager**, der die Personen angehören, zu deren Aufgabe eDiscovery, Überwachung und Überprüfung zählt<br /><br />– Eine E-Mail-aktivierte Gruppe namens **RMS-Administratoren**, der alle Administratoren angehören, die Azure RMS konfigurieren|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Die Rights Management-Freigabeanwendung wird auf Ihrem Windows-Computer bereitgestellt, damit Sie diese Dateien wie im nächsten Abschnitt beschrieben lokal schützen können.|[Herunterladen und Installieren der Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
@@ -91,8 +94,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 Weitere Informationen zum direkten Schutz von Dateien finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP]
-> Wenn die Anzahl der zu schützenden Dateien für den manuellen Prozess zu groß ist, können Sie die Dateien mit dem [RMS-Schutztool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) in einem Durchgang mit der Vorlage schützen.
+> [!TIP] Wenn die Anzahl der zu schützenden Dateien für den manuellen Prozess zu groß ist, können Sie die Dateien mit dem [RMS-Schutztool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) in einem Durchgang mit der Vorlage schützen.
 
 ### So überwachen und sperren Sie die Dateien (falls erforderlich)
 
@@ -115,7 +117,7 @@ Verwenden Sie die folgende Vorlage, kopieren Sie die Ankündigung, und fügen Si
 
 Die Beispieldokumentation veranschaulicht, wie diese Ankündigung für Benutzer nach Ihren Anpassungen aussehen könnte.
 
-![](../media/AzRMS_UsersBanner.png)
+![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
 ### IT-Ankündigung: Schutz der geheimsten Dokumente von &lt;Organisationsname&gt;
 Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, sodass nur &lt;Benutzer mit eingeschränktem Zugriff&gt; auf diese Dateien zugreifen und sie ändern können. Zum Schutz vor nicht autorisiertem Zugriff fordert die Anwendung bei jedem Aufruf der Dateien automatisch eine Autorisierung an. Sie benötigen daher zum Öffnen eine Internetverbindung und müssen möglicherweise Ihre Anmeldeinformationen eingeben:
@@ -130,8 +132,8 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 -   Wenn Sie keinen Zugriff auf diese Dateien haben oder verdächtige Änderungen in den Dateien feststellen, nutzen Sie die angegebenen &lt;Maßnahmen und Kontaktdetails&gt;.
 
-#### Beispiel einer angepassten Benutzerdokumentation
-![](../media/AzRMS_ExampleBanner.png)
+#### Beispiel für eine angepasste Benutzerdokumentation
+![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
 ##### IT-Ankündigung: Schutz der geheimsten Dokumente von VanArsdel
 Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, sodass nur die in der Empfängerzeile angegebenen Personen Zugriff auf diese Dateien haben und sie ändern können. Zum Schutz vor nicht autorisiertem Zugriff fordert die Anwendung bei jedem Aufruf der Dateien automatisch eine Autorisierung an. Sie benötigen daher zum Öffnen eine Internetverbindung und müssen möglicherweise Ihre Anmeldeinformationen eingeben:
@@ -150,6 +152,6 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

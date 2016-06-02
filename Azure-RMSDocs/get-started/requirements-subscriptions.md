@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Um Azure Rights Management (RMS) zu verwenden, muss die Organisation mindestens eines der folgenden Abonnements mit einer ausreichenden Anzahl von Lizenzen für Benutzer und Dienste besitzen, die E-Mail-Nachrichten und Dateien schützen. Wenn Sie einen Dienst verwenden, der Schutz auf Benutzer anwendet (Besitzer der Dateien oder E-Mail-Nachrichten), benötigt jeder dieser Benutzer eine dieser Lizenzen. Benutzer, die diese geschützten Daten lediglich nutzen (z. B. lesen und bearbeiten), benötigen keine Lizenz.
 
 -   Office 365
@@ -94,6 +97,6 @@ Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Man
 ## Nächste Schritte
 Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

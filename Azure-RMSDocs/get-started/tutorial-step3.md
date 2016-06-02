@@ -4,29 +4,32 @@
 title: Azure RMS Quick Start-Lernprogramm – Schritt 3 | Azure RMS
 description: Dies ist der dritte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können.
 keywords:
-author: Cabailey
+author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
 
 # Azure RMS Quick Start – Schritt 3: Versenden eines geschützten Dokuments per E-Mail
+
+*Gilt für: Azure Rights Management, Office 365*
+
 
 Wechseln zu: 
 > [!div class="op_single_selector"]
@@ -42,7 +45,7 @@ Für diesen Schritt erstellen und speichern Sie zuerst ein Word-Dokument, das Si
 
 Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
-![](../media/AzRMS_Tutorial_3_Screenshots.png)
+![Azure RMS Schnellstart-Tutorial Schritt 3](../media/AzRMS_Tutorial_3_Screenshots.png)
 
 ### So geben Sie Ihr Dokument sicher per E-Mail frei
 
@@ -80,10 +83,9 @@ Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfän
 |Optionen im Dialogfeld **Geschützt freigeben**|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"]
-[« Schritt 2](tutorial-step2.md)
+>[!div class="step-by-step"] [« Schritt 2](tutorial-step2.md)
 [Schritt 4 »](tutorial-step4.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

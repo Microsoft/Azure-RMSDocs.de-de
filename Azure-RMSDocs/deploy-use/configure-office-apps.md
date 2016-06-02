@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Office-Apps: Konfiguration für Clients
 
+*Gilt für: Azure Rights Management, Office 365*
+
+
 Ermitteln Sie anhand dieser Informationen, was zu tun ist, damit die von Ihren Endbenutzern verwendeten Office-Apps zusammen mit Azure Rights Management (Azure RMS) funktionieren.
 
 ## Office 2016 und Office 2013
@@ -41,6 +44,6 @@ Weitere Informationen zur Rights Management-Freigabeanwendung finden Sie unter [
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

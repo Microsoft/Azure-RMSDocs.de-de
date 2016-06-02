@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 9728c135-0e7f-4f5c-95ba-1db79e418080
-
+ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Android-Setup
+# Android-Setup
 
 Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.
 
@@ -34,7 +33,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring_your_development_environment_)
--   [Siehe auch](#see_also)
+-   [Weitere Informationen](#see_also)
 
 ## Voraussetzungen
 
@@ -73,28 +72,28 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 -   Öffnen Sie die Eclipse-Entwicklungsumgebung.
 -   Um ein neues Android-Anwendungsprojekt zu erstellen, klicken Sie im Menü **File** auf **New**, klicken Sie auf **Project**, und wählen Sie dann **Android Application Project** aus.
 
-    ![](../media/Android-setup-01c.png)
+    ![Erstellen einer neuen Android-Anwendung](../media/Android-setup-01c.png)
 
 -   Geben Sie den Namen der Anwendung ein. Projektname und Paketname werden auf der Grundlage des Anwendungsnamens eingetragen.
 -   Klicken Sie auf **Weiter**, und wählen Sie aus, wo der Arbeitsbereich erstellt werden soll.
 
-    ![](../media/Android-setup-02a.jpg)
+    ![Eingeben des Anwendungsnamens](../media/Android-setup-02a.jpg)
 
 -   Klicken Sie auf **Next**, und wählen Sie ein Symbol für Ihre App aus.
 
-    ![](../media/Android-setup-03.png)
+    ![Auswählen eines Symbols für Ihre App](../media/Android-setup-03.png)
 
 -   Klicken Sie auf **Next**, und wählen Sie **Blank Activity** aus, um die Aktivität zu erstellen.
 
-    ![](../media/Android-setup-04.png)
+    ![Erstellen der Aktivität](../media/Android-setup-04.png)
 
 -   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *Activity\_main* können Sie den Standardnamen *MainActivity* übernehmen.
 
-    ![](../media/Android-setup-05a.jpg)
+    ![Angeben eines Namens für die Aktivität](../media/Android-setup-05a.jpg)
 
 -   Klicken Sie auf **Fertig stellen**.
 
-    ![](../media/Android-setup-06.jpg)
+    ![Beenden der Erstellung](../media/Android-setup-06.jpg)
 
 -   Das Projekt wurde zusammen mit der Hauptaktivitätsklasse *MainActivity.java* erstellt.
 
@@ -105,21 +104,21 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **File** auf **Import**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
 
-    ![](../media/Android-setup-07.png)
+    ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
 
 -   Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben, und wählen Sie ihn aus. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
 
-    ![](../media/Android-setup-08c.jpg)
+    ![Navigieren zum Auswählen des Ordners](../media/Android-setup-08c.jpg)
 
 -   Wenn Sie auf **Finish** klicken, wird das SDK-Projekt als gleichgeordnetes Element der zuvor erstellten Anwendung angezeigt.
 
-    ![](../media/Android-setup-09.jpg)
+    ![Das SDK-Projekt wird als Ihrer Anwendung gleichgeordnet angezeigt](../media/Android-setup-09.jpg)
 
 -   Klicken Sie mit der rechten Maustaste auf das Symbol **Project**, und zeigen Sie die Eigenschaften für das Projekt an.
 -   Navigieren Sie zu der Registerkarte **Android**.
 -   Klicken Sie auf **Add**, und wählen Sie dann die Bibliothek *com.microsoft.rightsmanagement* im Arbeitsbereich aus.
 
-    ![](../media/Android-setup-10b.jpg)
+    ![Hinzufügen der Bibliothek](../media/Android-setup-10b.jpg)
 
 -   Klicken Sie auf **OK**.
 
@@ -127,7 +126,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
 
-    ![](../media/Android-setup-11d.jpg)
+    ![Hinzufügen der Berechtigungen](../media/Android-setup-11d.jpg)
 
 -   Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
 
@@ -152,13 +151,13 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-[Android-API-Referenz](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+[Android-API-Referenz](android-namespaces.md)
 
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

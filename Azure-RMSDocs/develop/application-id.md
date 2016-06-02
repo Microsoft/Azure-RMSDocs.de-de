@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 834c5943-a724-4322-9035-060c1112fe22
-
+ms.assetid: 0fe9dc-bc91-4018-b28d-2db293a3eaa2
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Gewusst wie: Abrufen einer Azure-Anwendungs-ID
 
 Um eine RMS-fähige App mit dem MS RMS SDK 4.2 erstellen zu können, müssen Sie eine Dienstnutzungsvereinbarung mit dem RMS-Team treffen.
@@ -39,14 +37,14 @@ Zum Erstellen und Freigeben einer RMS-fähigen App mit dem MS RMS SDK 4.2 ist er
 Gehen Sie wie folgt vor, um Ihre App-ID zu erstellen und Ihre Nutzungsvereinbarung mit dem RMS-Team zu unterzeichnen.
 
 -   Befolgen Sie die Hinweise im Thema [Erstellen einer App-ID in Azure](https://msdn.microsoft.com/en-us/library/azure/dn132599.aspx), um Ihre App-ID zu erstellen.
--   Schreiben Sie das RMS-Team an, um den RMLA-Prozess initiieren, indem Sie Ihre „App-ID“ an <askipteam@microsoft.com> senden.
+-   Schreiben Sie das RMS-Team an, um den RMLA-Prozess zu initiieren, indem Sie Ihre „App-ID“ an <askipteam@microsoft.com> senden..
 -   Unterzeichnen Sie die RMLA, und senden Sie sie zurück an das RMS-Team.
 -   Nachdem Sie eine unterzeichnete RMLA besitzen, sollten Sie die Anwendungs-ID beim Aufruf der Authentifizierungsbibliothek im *ClientID*-Parameter übergeben.
 
     Dies zeigt der Authentifizierungsaufruf in unserem Thema [Codebeispiele iOS/OS X](ios-os-x-code-examples.md).
 
 
-    // Retrieve token using ADAL
+    // Abrufen eines Tokens mithilfe von ADAL
         [context acquireTokenWithResource:authenticationParameters.resource
                                  clientId:appClientId
                               redirectUri:redirectURI
@@ -64,6 +62,6 @@ Gehen Sie wie folgt vor, um Ihre App-ID zu erstellen und Ihre Nutzungsvereinbaru
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

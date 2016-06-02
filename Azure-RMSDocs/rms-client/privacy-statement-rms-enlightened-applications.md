@@ -4,8 +4,8 @@
 title: Datenschutzerklärung für Microsoft Rights Management in für RMS aktivierten Anwendungen | Azure RMS
 description:
 keywords:
-author: 
-manager: mbaldwin
+author: msmbaldwin
+manager: msmbaldwin
 ms.date: 04/28/2016
 ms.topic: article
 ms.prod: azure
@@ -29,7 +29,7 @@ ms.suite: ems
 Gilt für: Die in Anwendungen integrierte Funktion „Microsoft Rights Management“.
 
 > [!NOTE]
-> Diese Datenschutzerklärung steht in weiteren Sprachen im [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=41668)zum Abruf bereit.
+> Diese Datenschutzerklärung steht in weiteren Sprachen im [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=41668) zum Abruf bereit..
 
 Microsoft ist bestrebt, Ihre Privatsphäre zu schützen, während wir gleichzeitig Produkte bereitstellen, die Ihnen die gewünschte Leistung und Benutzerfreundlichkeit für Ihre persönliche Datenverarbeitung bieten. In dieser Datenschutzerklärung werden viele der Datensammlungs- und Nutzungspraktiken der Clientsoftware oder des Diensts Microsoft Rights Management sowie aller anderen Microsoft-Produkte oder -Dienste erläutert, in denen diese Hinweise angezeigt werden bzw. in denen auf diese Hinweise verwiesen wird.
 
@@ -53,7 +53,7 @@ Wir legen keine Anmeldeinformationen, Lesebestätigungen und/oder Standardgerät
 Die von für Microsoft Rights Management aktivierten Anwendungen gesammelten oder an Microsoft gesendeten Daten können in den USA oder jedem anderen Land, in dem Microsoft, seine verbundenen Unternehmen, Niederlassungen oder Dienstanbieter Einrichtungen unterhalten, gespeichert und verarbeitet werden. Microsoft hält sich bezüglich der Erfassung, Nutzung und Speicherung von Daten aus der Europäischen Union, dem Europäischen Wirtschaftsraum und der Schweiz an die Bestimmungen des US-amerikanischen Handelsministeriums (Safe Harbor).
 
 ## Microsoft Update
-Wenn Sie für Microsoft Rights Management aktivierte Anwendungen in Verbindung mit Windows verwenden, können Sie auf Wunsch an Microsoft Update teilnehmen. Microsoft Update (MU) ist ein Dienst, mit dem Updates für Microsoft-Software bereitgestellt werden, wozu auch der Microsoft Rights Management-Client für Windows gehört. Details dazu, welche Informationen gesammelt werden, wie diese verwendet werden und wie Sie Ihre Einstellungen ändern können, finden Sie in der [Datenschutzerklärung zu den Update-Diensten](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).
+Wenn Sie für Microsoft Rights Management aktivierte Anwendungen in Verbindung mit Windows verwenden, können Sie auf Wunsch an Microsoft Update teilnehmen. Microsoft Update (MU) ist ein Dienst, mit dem Updates für Microsoft-Software bereitgestellt werden, wozu auch der Microsoft Rights Management-Client für Windows gehört. Details dazu, welche Informationen gesammelt werden, wie diese verwendet werden und wie Sie Ihre Einstellungen ändern können, finden Sie in den [Datenschutzbestimmungen der Update Services](http://go.microsoft.com/fwlink/?linkid=50142) ( ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).).
 
 Auswahl/Kontrolle: Bei der automatischen Installation gelten für Anwendungen mit Microsoft Rights Management dieselben MU-Einstellungen wie für den Windows-Desktop. Bei benutzerseitigen Installationen erhalten Sie während der Installation ggf. eine Eingabeaufforderung, mit der Sie MU aktivieren können, sofern MU nicht aktiviert ist. Wenn Sie beschließen, diese MU-Einstellungen zu aktivieren, gelten sie für alle Windows-basierten Anwendungen.
 
@@ -65,6 +65,6 @@ Diese Datenschutzbestimmungen werden von Zeit zu Zeit aktualisiert, um Änderung
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

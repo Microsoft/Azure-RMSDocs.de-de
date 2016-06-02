@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Szenario und der unterstützende Benutzerdokumentation wird Azure Rights Management verwendet, um Office-Dokumente in [Arbeitsordnern](https://technet.microsoft.com/library/dn265974.aspx) dauerhaft zu schützen. Arbeitsordner verwenden einen Rollendienst für Dateiserver, die unter Windows Server ausgeführt werden. Sie bieten Benutzern eine konsistente Möglichkeit, um auf ihren PCs und Geräten auf ihre Arbeitsdateien zuzugreifen. Arbeitsordner bieten eine eigene Verschlüsselung zum Schutz der Dateien. Dieser Schutz geht jedoch verloren, wenn die Dateien aus den Arbeitsordnern verschoben werden. Dies ist beispielsweise der Fall, wenn Benutzer die synchronisierten Dateien kopieren und in einem Speicher ablegen, der nicht der Kontrolle der IT-Abteilung unterliegt, oder wenn sie die Dateien anderen Personen per E-Mail senden.
 
 Der zusätzliche Schutz durch Azure Rights Management trägt dazu bei, versehentliche Datenverluste zu verhindern. Damit wird unterbunden, dass Dateien von Personen außerhalb Ihrer Organisation angezeigt werden. Zu diesem Zweck können Sie eine der integrierten Standardvorlagen für Benutzerrechterichtlinien verwenden. Bevor Sie dieses Szenario jedoch bereitstellen, sollten Sie erwägen, ob Benutzer diese Dateien möglicherweise legitim an Personen außerhalb der Organisation weiterleiten müssen. Dies ist beispielsweise der Fall, wenn ein Benutzer nach der Arbeit an einer Preisliste die endgültige Version per E-Mail an einen Kunden in einer anderen Organisation sendet. Wenn Sie die Rights Management-Standardvorlage für Arbeitsordner verwenden, kann der Kunden in der anderen Organisation das per E-Mail gesendete Dokument nicht lesen. Um dies zu ermöglichen, können Sie eine benutzerdefinierte Vorlage erstellen, mit der Benutzer eine neue Benutzerrechterichtlinie auf die Datei anwenden können. Diese ersetzt die ursprüngliche Beschränkung für alle Mitarbeiter durch die Beschränkung für den in der E-Mail angegebenen Empfänger.
@@ -46,7 +49,7 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 -   Für Dateien, die für Personen freigegeben werden müssen, die nicht in der Vorlage für Benutzerrechterichtlinien angegeben sind (z. B. Benutzer in einer anderen Organisation), müssen Benutzer eine neue Benutzerrechterichtlinie anwenden, um den Schutz durch die ursprüngliche Benutzerrechterichtlinie zu ersetzen.
 
 ## Anweisungen zur Bereitstellung
-![](../media/AzRMS_AdminBanner.png)
+![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
@@ -57,7 +60,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |---------------|--------------------------------|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die Arbeitsordner verwenden.|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Eine der folgenden Komponenten:<br /><br />Um eine Standardvorlage für alle Benutzer zu verwenden, mit der Benutzer keine neue Benutzerrechterichtlinien anwenden dürfen: Sie haben die Standardvorlage **&lt;Organisationsname&gt; – Vertraulich** nicht archiviert.<br /><br />Um eine benutzerdefinierte Vorlage zu verwenden, mit der Benutzer eine neue Benutzerrechterichtlinie anwenden können: Sie verwenden die folgenden Anweisungen, um eine benutzerdefinierte Vorlage zu erstellen.|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Eine der folgenden Komponenten:<br /><br />– Um eine Standardvorlage für alle Benutzer zu verwenden, mit der Benutzer keine neue Benutzerrechterichtlinien anwenden dürfen: Sie haben die Standardvorlage **&lt;Organisationsname&gt; – Vertraulich** nicht archiviert<br /><br />– Um eine benutzerdefinierte Vorlage zu verwenden, mit der Benutzer eine neue Benutzerrechterichtlinie anwenden können: Sie verwenden die folgenden Anweisungen, um eine benutzerdefinierte Vorlage zu erstellen|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Der Rights Management-Verbindungsdienst ist installiert, für den Windows Server-Computer autorisiert und für die **FCI Server**-Rolle konfiguriert.|[Bereitstellen des Azure Rights Management-Verbindungsdiensts](https://technet.microsoft.com/library/dn375964.aspx)|
 |Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
@@ -101,7 +104,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
     2.  Wählen Sie für die Aktion die **RMS-Verschlüsselung** und eine Vorlage:
 
-        -   Wenn Sie keine benutzerdefinierte Vorlage erstellt haben, da Sie nicht möchten, dass Benutzer Dateien für Personen außerhalb der Organisation freigeben, wählen Sie den Vorlagennamen **&lt;Organisationsname&gt; – Vertraulich**. Verwenden Sie beispielsweise **VanArsdel, Ltd – Vertraulich**.
+        -   Wenn Sie keine benutzerdefinierte Vorlage erstellt haben, da Sie nicht möchten, dass Benutzer Dateien für Personen außerhalb der Organisation freigeben können, wählen Sie den Vorlagennamen **&lt;Organisationsname&gt; – Vertraulich** aus. Verwenden Sie beispielsweise **VanArsdel, Ltd – Vertraulich**.
 
         -   Wenn Sie eine benutzerdefinierte Vorlage mithilfe der zuvor beschriebenen Anweisungen erstellt haben, wählen Sie diese Vorlage aus. Wählen Sie beispielsweise **Durch Arbeitsordner geschützte Inhalte** aus.
 
@@ -125,6 +128,6 @@ Wenn Sie die benutzerdefinierte Vorlage wie für dieses Szenario beschrieben kon
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

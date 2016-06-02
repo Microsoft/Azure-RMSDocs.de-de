@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Funktionsweise von Azure RMS Hinter den Kulissen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Es ist wichtig, hinsichtlich der Funktionsweise von Azure RMS zu verstehen, dass der Rechteverwaltungsdienst (und Microsoft) Ihre Daten als Teil des Informationsschutzvorgangs weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. Durch Azure RMS werden die Daten in einem Dokument einfach nicht lesbar für Personen, die keine autorisierten Benutzer und Dienste sind:
 
 -   Die Daten werden auf der Anwendungsebene verschlüsselt und enthalten eine Richtlinie, die die autorisierte Verwendung für dieses Dokument definiert.
@@ -37,7 +40,7 @@ Die folgende Abbildung zeigt die Funktionsweise dieses Vorgangs als Übersicht. 
 
 Während des gesamten Schutzvorgangs (wenn Azure RMS Daten verschlüsselt und entschlüsselt, autorisiert und Einschränkungen durchsetzt) wird die geheime Formel niemals an Azure gesendet.
 
-![](../media/AzRMS_SecretColaFormula_final.png)
+![Schützen einer Datei mit Azure RMS (Funktionsweise)](../media/AzRMS_SecretColaFormula_final.png)
 
 Eine ausführliche Beschreibung der Funktionsweise finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsaufnahme](#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) in diesem Artikel.
 
@@ -63,7 +66,7 @@ So werden die kryptografischen Schlüssel gespeichert und geschützt:
 
 - Der Inhaltsschlüssel wird mit dem RSA-Schlüssel der Organisation (der „Azure RMS-Mandantenschlüssel“) als Teil der Richtlinie im Dokument geschützt, und die Richtlinie wird auch vom Autor des Dokuments signiert. Dieser Mandantenschlüssel gilt für alle Dokumente und E-Mails, die von Azure RMS für die Organisation geschützt werden, und dieser Schlüssel kann von einem Azure RMS-Administrator nur geändert werden, wenn die Organisation einen Mandantenschlüssel verwendet, der kundenverwaltet ist (bezeichnet als „Bring-Your-Own-Key“ oder BYOK). 
 
-    Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und zu BYOK finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
+    Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und zu BYOK finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md)..
 
 - Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit der DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
@@ -80,13 +83,13 @@ Nach der Initialisierung der Benutzerumgebung kann der Benutzer Dokumente schüt
 ### Initialisieren der Benutzerumgebung
 Bevor ein Benutzer Inhalte schützen oder geschützte Inhalte auf einem Windows-Computer nutzen kann, muss die Benutzerumgebung auf dem Gerät vorbereitet werden. Dies ist ein einmaliger Vorgang. Er geschieht automatisch ohne Benutzereingriff, wenn ein Benutzer versucht, Inhalte zu schützen oder geschützte Inhalte zu nutzen:
 
-![](../media/AzRMS.png)
+![RMS-Clientaktivierung – Schritt 1](../media/AzRMS.png)
 
 **Das geschieht in Schritt 1**: Der RMS-Client auf dem Computer stellt zunächst eine Verbindung mit Azure RMS her und authentifiziert den Benutzer mithilfe seines Azure Active Directory-Kontos.
 
 Wenn das Konto des Benutzers einen Verbund mit Azure Active Directory aufweist, erfolgt diese Authentifizierung automatisch, und der Benutzer wird nicht zur Eingabe von Anmeldeinformationen aufgefordert.
 
-![](../media/AzRMS_useractivation2.png)
+![RMS-Clientaktivierung – Schritt 2](../media/AzRMS_useractivation2.png)
 
 **Das geschieht in Schritt 2**: Nachdem der Benutzer authentifiziert wurde, wird die Verbindung automatisch an den RMS-Mandanten der Organisation umgeleitet, der Zertifikate ausstellt, mit denen sich der Benutzer bei Azure RMS authentifiziert, um geschützte Inhalte zu nutzen und Inhalte offline zu schützen.
 
@@ -95,17 +98,17 @@ Eine Kopie des Zertifikats des Benutzers wird in Azure RMS gespeichert, damit di
 ### Inhaltsschutz
 Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Aktionen für ein ungeschütztes Dokument aus:
 
-![](../media/AzRMS_documentprotection1.png)
+![RMS-Dokumentenschutz – Schritt 1](../media/AzRMS_documentprotection1.png)
 
 **Das geschieht in Schritt 1**: Der RMS-Client erstellt einen zufälligen Schlüssel (den Inhaltsschlüssel) und verschlüsselt das Dokument mithilfe dieses Schlüssels mit dem symmetrischen Verschlüsselungsalgorithmus AES.
 
-![](../media/AzRMS_documentprotection2.png)
+![RMS-Dokumentenschutz – Schritt 2](../media/AzRMS_documentprotection2.png)
 
 **Das geschieht in Schritt 2**: Der RMS-Client erstellt dann ein Zertifikat, das eine Richtlinie für das Dokument enthält. Diese basiert entweder auf einer Vorlage oder auf der Angabe bestimmter Rechte für das Dokument. Diese Richtlinie umfasst die Rechte für verschiedene Benutzer oder Gruppen und andere Einschränkungen, z. B. ein Ablaufdatum.
 
 Der RMS-Client verwendet dann den Schlüssel der Organisation, der abgerufen wurde, als die Benutzerumgebung initialisiert wurde. Er verwendet diesen Schlüssel zum Verschlüsseln der Richtlinie und des symmetrischen Inhaltsschlüssels. Der RMS-Client signiert die Richtlinie außerdem mit dem Zertifikat des Benutzers, das abgerufen wurde, als die Benutzerumgebung initialisiert wurde.
 
-![](../media/AzRMS_documentprotection3.png)
+![RMS-Dokumentenschutz – Schritt 3](../media/AzRMS_documentprotection3.png)
 
 **Das geschieht in Schritt 3**: Schließlich bettet der RMS-Client die Richtlinie in eine Datei mit dem Text des zuvor verschlüsselten Dokuments ein. Zusammen ergibt dies ein geschütztes Dokument.
 
@@ -114,17 +117,17 @@ Dieses Dokument kann an einem beliebigen Ort gespeichert oder mithilfe einer bel
 ### Inhaltsnutzung
 Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Client im ersten Schritt Zugriff auf den Azure RMS-Dienst an:
 
-![](../media/AzRMS_documentconsumption1.png)
+![RMS-Dokumentennutzung – Schritt 1](../media/AzRMS_documentconsumption1.png)
 
 **Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an Azure RMS. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt.
 
-![](../media/AzRMS_documentconsumption2.png)
+![RMS-Dokumentennutzung – Schritt 2](../media/AzRMS_documentconsumption2.png)
 
 **Das geschieht in Schritt 2**: Der Dienst extrahiert dann den AES-Inhaltsschlüssel aus der entschlüsselten Richtlinie. Dieser Schlüssel wird dann mit öffentlichen RSA-Schlüssel des Benutzers verschlüsselt, der mit der Anforderung abgerufen wurde.
 
 Der erneut verschlüsselte Inhaltsschlüssel wird dann in eine verschlüsselte Nutzungslizenz mit der Liste der Benutzerberechtigungen eingebettet, die dann an den RMS-Client zurückgegeben wird.
 
-![](../media/AzRMS_documentconsumption3.png)
+![RMS-Dokumentennutzung – Schritt 3](../media/AzRMS_documentconsumption3.png)
 
 **Das geschieht in Schritt 3**: Schließlich verwendet der RMS-Client die verschlüsselte Nutzungslizenz und entschlüsselt diese mit dem privaten Schlüssel seines eigenen Benutzers. Auf diese Weise kann der RMS-Client den Text des Dokuments nach Bedarf entschlüsseln und auf dem Bildschirm darstellen.
 
@@ -145,14 +148,14 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 
 Wenn Sie weitere Informationen zu Azure RMS benötigen, lesen Sie die weiteren Themen im Abschnitt **Verstehen und Kennenlernen**, z. B. [So unterstützen Anwendungen Azure Rights Management](applications-support.md), um zu erfahren, wie Ihre vorhandenen Anwendungen zur Bereitstellung einer Datenschutzlösung in Azure RMS integriert werden können. 
 
-Lesen Sie [Terminologie für Azure Rights Management](../get-started/terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie Azure RMS konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es ohne weitere Vorbereitung gleich selbst ausprobieren möchten, verwenden Sie das [Schnellstart-Lernprogramm für Azure Rights Management](../get-started/quick-start-tutorial.md).
+Lesen Sie [Terminologie für Azure Rights Management](../get-started/terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie Azure RMS konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es gleich selbst ausprobieren möchten, verwenden Sie das [Schnellstart-Tutorial für Azure Rights Management](../get-started/quick-start-tutorial.md)..
 
 Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS für Ihre Organisation zu beginnen, sollten Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) für die Bereitstellungsschritte und sowie für Links zu praktischen Anweisungen verwenden.
 
 > [!TIP]
-> Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Informationen und Support für Azure Rights Management](../get-started/information-support.md).
+> Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Information and support for Azure Rights Management](../get-started/information-support.md) (Informationen und Support für Azure Rights Management)..
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

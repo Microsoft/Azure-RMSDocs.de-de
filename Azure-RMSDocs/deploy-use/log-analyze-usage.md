@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Protokollieren und Analysieren der Nutzung von Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Thema wird erläutert, wie Sie die Verwendungsprotokollierung bei Azure Rights Management (Azure RMS) verwenden können. Der Azure Rights Management-Dienst kann jede Anforderung protokollieren, die für Ihre Organisation durchgeführt wird. Hierzu gehören die Anforderungen von Benutzern, die von Rights Management-Administratoren in Ihrer Organisation ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Rights Management-Bereitstellung unterstützt wird.
 
 Sie können dann mithilfe der Azure Rights Management-Protokolle die folgenden Geschäftsszenarios unterstützen:
@@ -44,8 +47,7 @@ Sie können dann mithilfe der Azure Rights Management-Protokolle die folgenden G
 
     Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie Azure Rights Management mit Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die mit Azure Rights Management geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie Azure Rights Management-Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe von Azure Rights Management schützen.
 
-> [!NOTE]
-> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für Azure Rights Management interessiert sind und nicht nachverfolgen möchten, wie die Benutzer Rights Management verwenden, können Sie das [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx)-Cmdlet von Windows PowerShell für Azure Rights Management nutzen.
+> [!NOTE] Wenn Sie nur an der Protokollierung von administrativen Aufgaben für Azure Rights Management interessiert sind und nicht nachverfolgen möchten, wie die Benutzer Rights Management verwenden, können Sie das Cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) von Windows PowerShell für Azure Rights Management nutzen.
 > 
 > Sie können auch das klassische Azure-Portal für allgemeine Verwendungsberichte verwenden. Hierzu gehören **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. Klicken Sie für den Zugriff auf diese Berichte im klassischen Azure-Portal auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.
 
@@ -54,8 +56,7 @@ In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollie
 ## Aktivieren der Verwendungsprotokollierung von Azure Rights Management
 Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure RMS-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
 
-> [!NOTE]
-> Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
+> [!NOTE] Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
 > 
 > Haben Sie Verwendungsprotokollierung für Azure RMS vor Februar 2016 verwendet, haben Sie ein Abonnement für Azure und ausreichend Speicherplatz auf Azure benötigt, was nun nicht mehr der Fall ist.
 
@@ -151,7 +152,7 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |owner-email|String|Die E-Mail-Adresse des Besitzers des Dokuments.|alice@contoso.com|
 |issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com|
 |Template-id|String|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|Der Dateiname des geschützten Dokuments.|TopSecretDocument.docx|
+|File-name|String|Der Dateiname des geschützten Dokuments. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.|TopSecretDocument.docx|
 |Date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.|2015-10-15T21:37:00|
 |c-info|String|Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
@@ -228,6 +229,6 @@ Weitere Informationen zum Verwenden von Windows PowerShell für Azure Rights Man
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

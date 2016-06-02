@@ -6,13 +6,12 @@ description: Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betrie
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
-
 # optional metadata
 
 #ROBOTS:
@@ -27,17 +26,21 @@ ms.suite: ems
 
 # API-Referenz
 
-Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. Weitere Informationen zu bestimmten Plattformen finden Sie unter [Neuheiten](release-notes.md).
+Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. Weitere Einzelheiten finden Sie unter [What‘s new](release-notes.md) (Neuheiten).
 
-[Android-API-Referenz](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement): API-Referenz für das Android-Betriebssystem.
+### Apple
+- [iOS/OS X-API-Referenz](/rights-management/sdk/4.2/api/iOS/iOS): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
 
-[Linux-API-Referenz](linux-c-api-reference.md): Die API-Referenz für unsere Unterstützung von Betriebssystemen mit Linux-Bezug wird auf GitHub gehostet: [RMS SDK für C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
+### Google
+- [Android-Namespaces](android-namespaces.md)
 
-[iOS/OS X-API-Referenz](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/iOS/iOS): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
+### Linux
+- [Linux-API-Referenz](linux-c-api-reference.md): Die API-Referenz für unsere Unterstützung von Betriebssystemen mit Linux-Bezug wird auf GitHub gehostet: [RMS SDK für C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
-[Windows-API-Referenz](https://stage.docs.microsoft.com/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
+### Microsoft
+- [Windows-API-Referenz](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
 
-## Verwandte Themen ##
+## Verwandte Themen
 
 * [Erste Schritte](get-started.md)
  
@@ -45,6 +48,6 @@ Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. We
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

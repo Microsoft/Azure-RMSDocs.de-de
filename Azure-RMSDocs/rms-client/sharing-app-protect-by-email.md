@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+
 Wenn Sie eine Datei schützen, die Sie per E-Mail freigeben, wird eine neue Version der ursprünglichen Datei erstellt. Die ursprüngliche Datei bleibt ungeschützt und die neue Version ist geschützt und wird automatisch an die E-Mail-Nachricht angefügt, die Sie senden.
 
 In einigen Fällen (für Dateien, die mit Microsoft Word, Excel und PowerPoint erstellt wurden) erstellt die RMS-Freigabeanwendung zwei Versionen der Datei, die an die E-Mail-Nachricht angefügt wird. Die zweite Version der Datei hat die Dateierweiterung **.ppdf** und ist eine PDF-Schattenkopie der Datei. Diese Version der Datei sorgt dafür, dass Empfänger die Datei immer lesen können, selbst wenn sie nicht die gleiche Anwendung installiert haben, mit der Sie die Datei erstellt haben. Dies ist häufig der Fall, wenn Mitarbeiter ihre E-Mails auf mobilen Geräten lesen und ihre E-Mail-Anlagen angezeigt werden sollen. Zum Öffnen wird lediglich die RMS-Freigabeanwendung benötigt. Dann können sie die angefügte Datei lesen, aber nicht bearbeiten, solange sie nicht die andere Version der Datei mit einer Anwendung öffnen, die RMS unterstützt.
@@ -34,17 +37,17 @@ Wenn Ihr Unternehmen Azure RMS verwendet, können Sie die Dateien nachverfolgen,
 
 -   Wählen Sie eine Option aus, um E-Mails zu erhalten, wenn jemand versucht, diese geschützten Anlagen zu öffnen. Jedes Mal, wenn auf die Datei zugegriffen wird, werden Sie benachrichtigt, wer wann versucht hat, die Datei zu öffnen, und ob der Vorgang erfolgreich war (sich der Benutzer erfolgreich authentifiziert hat).
 
--   Verwenden Sie die Website für die Dokumentationsbestandsverfolgung. Sie können die Freigabe der Datei auch Aufheben, indem Sie den Zugriff darauf auf der Website "Dokumentenbestandsverfolgung" zurückziehen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).
+-   Verwenden Sie die Website für die Dokumentationsbestandsverfolgung. Sie können die Freigabe der Datei auch Aufheben, indem Sie den Zugriff darauf auf der Website "Dokumentenbestandsverfolgung" zurückziehen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md)..
 
 ## Mit Outlook: So schützen Sie eine per E-Mail freigegebene Datei
 
-1.  Erstellen Sie Ihre E-Mail-Nachricht, und fügen Sie die Datei an. Klicken Sie dann auf der Registerkarte **Nachricht** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
+1.  Erstellen Sie Ihre E-Mail-Nachricht, und fügen Sie die Datei an. Klicken Sie dann auf der Registerkarte **Nachricht** in der Gruppe **RMS** auf **Geschützt freigeben** und dann erneut auf **Geschützt freigeben** :
 
-    ![](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
+    ![Outlook-Add-In für die RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    Wenn diese Schaltfläche nicht angezeigt wird, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
+    Wenn diese Schaltfläche nicht angezeigt wird, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
 
-2.  Geben Sie die gewünschten Optionen im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie dann auf **Jetzt senden**.
+2.  Geben Sie die gewünschten Optionen im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie anschließend auf **Jetzt senden**..
 
 ### Andere Möglichkeiten zum Schützen einer per E-Mail freigegebenen Datei
 Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich stehen Ihnen folgende Möglichkeiten zur Verfügung:
@@ -59,21 +62,21 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
     -   Datei-Explorer: Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Mit RMS schützen** und dann **Geschützt freigeben** aus:
 
-        ![](../media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
+        ![Menüoption „Geschützt freigeben“](../media/ADRMS_MSRMSApp_ShareProtectedMenu.png)
 
     -   Office-Anwendungen Word, Excel und PowerPoint: Stellen Sie sicher, dass Sie die Datei zuerst gespeichert haben. Klicken Sie dann auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
 
-        ![](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
+        ![Office-Symbolleisten-Add-In](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    Wenn diese Optionen zum Schutz nicht angezeigt werden, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
+    Wenn diese Optionen zum Schutz nicht angezeigt werden, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
 
-2.  Geben Sie die gewünschten Optionen für diese Datei im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie dann auf **Senden**.
+2.  Geben Sie die gewünschten Optionen für diese Datei im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie anschließend auf **Senden**..
 
 3.  Möglicherweise sehen Sie kurzzeitig ein Dialogfeld, in dem der Dateischutz bestätigt wird, und dann sehen Sie eine automatisch erstellten E-Mail-Nachricht, die den Empfänger über den Schutz der Anlagen mit Microsoft RMS benachrichtigt und ihn dazu auffordert, sich anzumelden. Wenn der Benutzer auf dem Link zur Anmeldung klickt, werden ihm Anweisungen und Links angezeigt, die ihm beim Öffnen des geschützten Anhangs helfen.
 
     Beispiel:
 
-    ![](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![E-Mail-Nachricht für Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Vielleicht stellen Sie sich folgende Frage: [Wie sieht die automatisch erstellte PPDF-Datei aus?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)
 
@@ -89,13 +92,12 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

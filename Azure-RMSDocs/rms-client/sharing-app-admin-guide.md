@@ -26,20 +26,23 @@ ms.suite: ems
 ---
 
 
-# Rights Management-Freigabeanwendung – Administratorhandbuch
+# Administratorhandbuch der Rights Management-Freigabeanwendung
 
-Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in der [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) vorhanden sind:
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
-Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt.  Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-## Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung
+Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management sharing application user guide](sharing-app-user-guide.md) (Rights Management-Freigabeanwendung – Benutzerhandbuch) oder in der [FAQ for Microsoft Rights Management Sharing Application for Windows](http://go.microsoft.com/fwlink/?LinkId=303971) (Häufig gestellte Fragen für die Microsoft Rights Management-Freigabeanwendung für Windows) vorhanden sind..
+
+Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt.  Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie über AD RMS verfügen und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md)..
+
+## Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.
 Die Windows-Version des RMS-Freigabeanwendung unterstützt eine skriptbasierte Installation, sodass sie auch für Unternehmensbereitstellungen geeignet ist.
 
-Die einzige Voraussetzung für Installationen besteht darin, dass der Computer mindestens Windows 7 Service Pack 1 ausführt und dass mindestens das Microsoft-Framework Version 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [es zur Installation über das Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718).
+Die einzige Voraussetzung für Installationen besteht darin, dass der Computer mindestens Windows 7 Service Pack 1 ausführt und dass mindestens das Microsoft-Framework Version 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [es zur Installation vom Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718)..
 
 ### So laden Sie die RMS-Freigabeanwendung für die automatische Bereitstellung herunter
 
-1.  Klicken Sie auf der Seite [Microsoft Rights Management-Freigabeanwendung für Windows](http://www.microsoft.com/download/details.aspx?id=40857) im Microsoft Download Center auf **Herunterladen**.
+1.  Klicken Sie auf der Seite [Microsoft Rights Management-Freigabeanwendung für Windows](http://www.microsoft.com/download/details.aspx?id=40857) im Microsoft Download Center auf **Herunterladen**..
 
 2.  Wählen Sie die benötigten Dateien aus, und laden Sie sie herunter. Es sind zwei Client-Installationspakete verfügbar: eines für Windows 64 Bit (Microsoft Rights Management-Freigabeanwendung x64.zip) und eines für Windows 32 Bit (Microsoft Rights Management-Freigabeanwendung x86.zip).
 
@@ -76,7 +79,7 @@ Verwenden Sie die folgenden Verfahren, um die Befehle, die zum Bereitstellen der
 > [!NOTE]
 > Wenn Ihre Organisation in diesen Szenarien AD RMS verwendet, können die Benutzer geschützte Inhalte von anderen Organisationen, die Azure RMS verwenden, erhalten, aber die Benutzer können keine geschützten Inhalte an Benutzer in einer Organisation senden, die Azure RMS verwendet. Wenn Ihre Organisation aber Azure RMS ausführt, können die Benutzer geschützte Inhalte an andere bzw. von anderen Organisationen senden und empfangen.
 
-Um die Installation für jedes Verfahren abzuschließen, muss der Computer neu gestartet werden. Sie können einen automatischen Neustart initiieren, indem Sie einen Befehl wie **shutdown /i** verwenden.
+Um die Installation für jedes Verfahren abzuschließen, muss der Computer neu gestartet werden. Sie können einen automatischen Neustart initiieren, indem Sie einen Befehl wie **shutdown /i** verwenden..
 
 ### So stellen Sie die RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS bereit
 
@@ -94,7 +97,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
     1.  Melden Sie sich an einem Computer mit einem lokalen Administratorkonto an.
 
-    2.  Laden Sie auf diesem Computer [den Microsoft Online Services-Anmelde-Assistenten herunter, und installieren Sie ihn](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Laden Sie auf diesem Computer [den Microsoft Online Services-Anmelde-Assistenten herunter, und installieren Sie ihn](http://www.microsoft.com/download/details.aspx?id=28177)..
 
     3.  Führen Sie den folgenden Befehl aus, damit die Zertifizierungsdienst-URL, die Sie dann kopieren und für den nächsten Schritt speichern können, auf dem Bildschirm angezeigt wird:
 
@@ -204,7 +207,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
 ### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS
 
--   Um den Erfolg des Befehls "Setup.exe" auf den einzelnen Computern zu überprüfen, suchen Sie die Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie dann den Exitcode.
+-   Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
     Eine erfolgreiche Installation hat einen Exitcode von 0. Jede andere Zahl weist auf eine fehlerhafte Installation hin.
 
@@ -212,7 +215,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
 ### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Azure RMS
 
-1.  Um den Erfolg des Befehls "Setup.exe" auf den einzelnen Computern zu überprüfen, suchen Sie die Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie dann den Exitcode.
+1.  Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
     Eine erfolgreiche Installation hat einen Exitcode von 0. Jede andere Zahl weist auf eine fehlerhafte Installation hin.
 
@@ -234,7 +237,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
 ### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Active Directory RMS
 
-1.  Um den Erfolg des Befehls "Setup.exe" auf den einzelnen Computern zu überprüfen, suchen Sie die Installationsprotokolldatei im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie dann den Exitcode.
+1.  Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer die Installationsprotokolldatei im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
     Eine erfolgreiche Installation hat einen Exitcode von 0. Jede andere Zahl weist auf eine fehlerhafte Installation hin.
 
@@ -261,7 +264,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
-        DefaultUser="&lt;Standardbenutzer&gt;"
+        DefaultUser = "&lt;Default_user&gt;"
 
 ### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
 
@@ -319,9 +322,9 @@ Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich si
 ## Unterdrücken automatischer Updates
 Standardmäßig werden Benutzer benachrichtigt, wenn es eine neuere Version der RMS-Freigabeanwendung gibt, und dazu aufgefordert, sie herunterzuladen. Sie können diese Benachrichtigung unterdrücken, indem Sie den folgenden Registrierungsschlüssel bearbeiten:
 
-1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**.
+1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**..
 
-2.  Wählen Sie **RmsSharingApp**aus, erstellen Sie einen neuen DWORD-Wert mit **AllowUpdatePrompt**, und legen Sie den Wert auf **0**fest.
+2.  Wählen Sie **RmsSharingApp**aus, erstellen Sie einen neuen DWORD-Wert mit **AllowUpdatePrompt**, und legen Sie den Wert auf **0**fest..
 
 Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das folgende Verfahren verwenden, um neue Versionen der RMS-Freigabeanwendung vor der Bereitstellung für alle Benutzer zu testen:
 
@@ -332,9 +335,9 @@ Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das f
 3.  Wenn die Tests abgeschlossen sind und alle Probleme gelöst wurden, können Sie die neueste Version allen Benutzern mithilfe der Anweisungen zur automatischen Bereitstellung in diesem Handbuch bereitstellen.
 
 ## Nur Azure RMS: Konfigurieren der Dokumentenverfolgung
-Wenn Sie ein [Abonnement haben, das Dokumentenverfolgung unterstützt](https://technet.microsoft.com/en-us/dn858608), ist die Website für die Dokumentenverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert.  Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
+Wenn Sie ein [Abonnement haben, das Dokumentenverfolgung unterstützt](https://technet.microsoft.com/en-us/dn858608), ist die Website für die Dokumentenverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert.  Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist..
 
-Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure RMS-Moduls für Windows PowerShell.  Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure RMS-Moduls für Windows PowerShell.  Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md)..
 
 > [!TIP]
 > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
@@ -355,20 +358,20 @@ Die folgenden URLs werden für die Dokumentenverfolgung verwendet und müssen zu
 ## Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
 Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Domänen haben, möglicherweise aufgrund einer Fusion oder Übernahme, müssen Sie den folgenden Registrierungsschlüssel bearbeiten:
 
-1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**.
+1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**..
 
 2.  Wählen Sie **RmsSharingApp** aus, erstellen Sie einen neuen mehrteiligen Zeichenfolgenwert namens **FederatedDomains**, und fügen Sie die Domänen und alle Unterdomänen hinzu, die Ihre Organisation verwendet. Platzhalter werden nicht unterstützt.
 
-    Beispiel: Das Unternehmen Coho Vineyard &amp; Winery verfügt über die Standard-E-Mail-Domäne **cohovineyardandwinery.com**, aber durch Fusionen verwendet es auch die E-Mail-Domänen **cohowinery.com**, **eastcoast.cohowinery.com**und **cohovineyard**. Für den **FederatedDomains**-Wert gibt der Administrator **cohowinery.com; eastcoast.cohowinery.com; cohovineyard** ein.
+    Beispiel: Das Unternehmen Coho Vineyard &amp; Winery verfügt über die Standard-E-Mail-Domäne **cohovineyardandwinery.com**, aber durch Fusionen verwendet es auch die E-Mail-Domänen **cohowinery.com**, **eastcoast.cohowinery.com** und **cohovineyard**. Für den **FederatedDomains**-Wert gibt der Administrator **cohowinery.com; eastcoast.cohowinery.com; cohovineyard** ein.
 
 Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglicherweise keine Inhalte nutzen, die von anderen Benutzern in ihrer Organisation geschützt wurden. Diese Bearbeitung der Registrierung ist nicht erforderlich, wenn Sie Azure RMS verwenden.
 
 
 ## Nächste Schritte
-Weitere technische Informationen einschließlich einer Erläuterung des Unterschieds zwischen den Schutzebenen (systemeigene und generische), der unterstützten Dateitypen und Dateinameerweiterungen und einer Anleitung zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md).
+Weitere technische Informationen einschließlich einer Erläuterung des Unterschieds zwischen den Schutzebenen (native und generische), der unterstützten Dateitypen und Dateinamenerweiterungen und einer Anleitung zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md)..
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

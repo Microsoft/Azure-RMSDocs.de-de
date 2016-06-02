@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS
+title: Schritt 2&colon; Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
 
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
+
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel durchführen möchten. 
 
 Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
@@ -50,7 +53,7 @@ Sie müssen zuerst den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC) a
     ```
     KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath <TPD> -ProtectionPassword -KeyIdentifier <KeyID> -ExchangeKeyPackage <BYOK-KEK-pka-Region> -NewSecurityWorldPackage <BYOK-SecurityWorld-pkg-Region>
     ```
-    Beispiel für Nordamerika: **KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath E:\contosokey1.xml -ProtectionPassword -KeyIdentifier contosorms1key –- -ExchangeKeyPackage &lt;BYOK-KEK-pka-NA-1&gt; -NewSecurityWorldPackage &lt;BYOK-SecurityWorld-pkg-NA-1&gt;**
+    Für Nordamerika z.B.: **KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath E:\contosokey1.xml -ProtectionPassword -KeyIdentifier contosorms1key –- -ExchangeKeyPackage &lt;BYOK-KEK-pka-NA-1&gt; -NewSecurityWorldPackage &lt;BYOK-SecurityWorld-pkg-NA-1&gt;**
 
     Zusätzliche Informationen:
 
@@ -66,9 +69,9 @@ Sie müssen zuerst den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC) a
 
     Mit diesem Befehl ergibt sich Folgendes:
 
-    -   Eine HSM-Schlüsseldatei: %NFAST_KMDATA%\local\key_mscapi_&lt;Schlüssel-ID&gt;
+    -   Eine HSM-Schlüsseldatei: %NFAST_KMDATA%\local\key_mscapi_&lt;SchlüsselID&gt;
 
-    -   RMS-Konfigurationsdatendatei mit entferntem SLC: %NFAST_KMDATA%\local\no_key_tpd_&lt;Schlüssel-ID&gt;.xml
+    -   Eine RMS-Konfigurationsdatendatei mit entferntem SLC: %NFAST_KMDATA%\local\no_key_tpd_&gt;SchlüsselID&lt;.xml
 
 3.  Wenn mehrere RMS-Konfigurationsdatendateien vorliegen, wiederholen Sie Schritt 2 für die restlichen Dateien.
 
@@ -86,7 +89,7 @@ Nachdem Sie nun Ihren HSM-Schlüssel an Azure RMS übertragen haben, können Sie
 
 ## Teil 3: Importieren der Konfigurationsdaten in Azure RMS
 
-1.  Kopieren Sie auf der Arbeitsstation mit Internetverbindung und in der Windows PowerShell-Sitzung die RMS-Konfigurationsdateien mit entferntem SLC (aus der nicht verbundenen Arbeitsstation, %NFAST_KMDATA%\local\no_key_tpd_<Schlüssel-ID>.xml).
+1.  Kopieren Sie auf der Arbeitsstation mit Internetverbindung und in der Windows PowerShell-Sitzung die RMS-Konfigurationsdateien mit entferntem SLC (aus der nicht verbundenen Arbeitsstation, %NFAST_KMDATA%\local\no_key_tpd_&lt;SchlüsselID&gt;.xml).
 
 2.  Laden Sie die erste Datei hoch. Wenn Sie mehr als eine XML-Datei haben, weil Sie mehrere vertrauenswürdige Veröffentlichungsdomänen hatten, wählen Sie die Datei aus, die die exportierte vertrauenswürdige Veröffentlichungsdomäne enthält, die dem HSM-Schlüssel entspricht, den Sie in Azure RMS verwenden möchten, um Inhalte nach der Migration zu schützen. Verwenden Sie den folgenden Befehl:
 
@@ -105,11 +108,11 @@ Nachdem Sie nun Ihren HSM-Schlüssel an Azure RMS übertragen haben, können Sie
     Disconnect-AadrmService
     ```
 
-Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration) fortfahren.
+Sie können jetzt mit [Schritt 3: Aktivieren Sie Ihren RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

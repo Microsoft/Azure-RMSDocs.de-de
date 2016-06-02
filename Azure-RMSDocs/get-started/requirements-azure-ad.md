@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Azure RMS-Anforderungen: Azure AD-Verzeichnis
 
+*Gilt für: Azure Rights Management, Office 365*
+
+
 Sie benötigen ein Azure AD-Verzeichnis, um Azure Rights Management (Azure RMS) verwenden zu können. Für die Anmeldung am klassischen Azure-Portal, in dem Sie z. B. Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie Ihr Organisationskonto für dieses Verzeichnis.
 
 Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden: Folgen Sie den Anweisungen auf der [Seite für die ersten Schritten mit Azure](https://account.windowsazure.com/organization).
@@ -39,8 +42,7 @@ Weitere Informationen finden Sie in den folgenden Ressourcen in der Azure Active
 
 Wenn Sie das Azure AD-Verzeichnis in Ihre lokalen AD-Gesamtstrukturen integrieren möchten, helfen Ihnen die Informationen unter [Integrieren Ihrer lokalen Identitäten in Azure Active Directory](/active-directory/active-directory-aadconnect) weiter.
 
-> [!NOTE]
-> Wenn Sie über mobile Geräte oder Mac-Computer verfügen, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden, müssen Sie wie folgt vorgehen:
+> [!NOTE] Wenn Sie über mobile Geräte oder Mac-Computer verfügen, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden, müssen Sie wie folgt vorgehen:
 > 
 > -   Sie müssen AD FS mit einer Mindestserverversion von **Windows Server 2012 R2** oder einem alternativen Authentifizierungsanbieter verwenden, der das OAuth 2.0-Protokoll verwendet.
 
@@ -78,6 +80,6 @@ Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Manage
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

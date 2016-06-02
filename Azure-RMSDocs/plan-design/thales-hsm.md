@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Weitere Informationen zu Thales HSMs und Microsoft-Ergänzungen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Azure RMS verwendet Thales HSMs zum Schützen Ihrer Schlüssel, wenn Sie Ihren eigenen Mandantenschlüssel verwalten (Szenario „Bring Your Own Key“ (BYOK)).
 
 Thales e-Security ist ein weltweit führender Anbieter von Datenverschlüsselungs- und Cyber-Sicherheitslösungen für Finanzdienstleister, High-Tech-Unternehmen sowie Kunden in den Bereichen Fertigung, Behörden/Verwaltung und Technologie. Nach einer Unternehmensgeschichte von 40 erfolgreichen Jahren beim Schutz von Unternehmens- und Regierungsinformationen werden Thales-Lösungen von vier der fünf größten Energie- und Luftfahrtunternehmen sowie 22 NATO-Ländern eingesetzt und schützen mehr als 80 %aller Zahlungstransaktionen weltweit.
@@ -36,6 +39,6 @@ Weitere Informationen finden Sie unter [Thales HSMs und Azure RMS](http://www.th
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

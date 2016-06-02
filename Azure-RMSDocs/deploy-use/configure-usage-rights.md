@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/19/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Konfigurieren von Nutzungsrechten für Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Wenn Sie Schutz für Dateien oder E-Mails mithilfe von Azure Rights Management (Azure RMS) festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie benutzerdefinierte Vorlagen für Azure RMS konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Im klassischen Azure-Portal können Sie beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren:
 
 Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwendete Anwendung zu konfigurieren und um zu verstehen, wie diese Rechte von den Anwendungen interpretiert werden.
@@ -47,8 +50,6 @@ Ermöglicht es dem Benutzer, den Inhalt in der Anwendung zu ändern, neu anzuord
 **Name in den AD RMS-Vorlagen**: *Bearbeiten*
 
 **API-Konstante oder -Wert**: *Nicht zutreffend*
-
-In Office-Anwendungen ermöglicht dieses Recht es den Benutzern auch, das Dokument zu speichern.
 
 ---
 
@@ -90,7 +91,7 @@ Dieses Recht ist im SDK verfügbar, ist als eine Ad-hoc-Richtlinie im RMS-Schutz
 
 ### Speichern unter, Exportieren
 
-Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). Je nach Anwendung kann die Datei ohne Schutz gespeichert werden.
+Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). Office-Dokumente müssen nicht geschützt gespeichert werden.
 
 **Richtliniencodierung**: EXPORT
 
@@ -108,7 +109,7 @@ Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen
 
 ### Weiterleiten
 
-Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen von Empfängern in den Zeilen *An* und *Cc* .
+Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen von Empfängern in den Zeilen *An* und *Cc* . Dieses Recht wird nicht auf Dokumente sondern nur auf E-Mails angewendet.
 
 **Richtliniencodierung**: FORWARD
 
@@ -206,55 +207,24 @@ Ermöglicht es dem Benutzer, das Dokument zu öffnen und den Inhalt zu sehen.
 
 ---
 
-### Rechte anzeigen
+### Kopieren
 
-Ermöglicht es dem Benutzer, die auf das Dokument angewendete Richtlinie anzuzeigen.
+Aktiviert Optionen zum Kopieren von Daten (einschließlich Screenshots) aus dem Dokument in dasselbe oder ein anderes Dokument.
 
-**Richtliniencodierung**: VIEWRIGHTSDATA
+**Richtliniencodierung**: EXTRACT
 
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht implementiert.
+**Implementierung in benutzerdefinierten Office-Rechten:** Als die benutzerdefinierte Richtlinienoption *Benutzern mit Lesezugriff das Kopieren des Inhalts erlauben*.
 
-**Name im klassischen Azure-Portal**: *Zugewiesene Rechte anzeigen*
+**Name im klassischen Azure-Portal:** *Inhalt kopieren und extrahieren*
 
-**Name in den AD RMS-Vorlagen**: *Rechte anzeigen*
+**Name in den AD RMS-Vorlagen:** *Extrahieren*
 
-**API-Konstante oder -Wert**: IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**API-Konstante oder -Wert:** IPC_GENERIC_EXTRACTL"EXTRACT"
 
----
-
-### Allgemeiner Name: Rechte anzeigen
-
-Ermöglicht es dem Benutzer, die auf das Dokument angewendete Richtlinie anzuzeigen.
-
-**Richtliniencodierung**: VIEWRIGHTSDATA
-
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht implementiert.
-
-**Name im klassischen Azure-Portal**: *Zugewiesene Rechte anzeigen*
-
-**Name in den AD RMS-Vorlagen**: *Rechte anzeigen*
-
-**API-Konstante oder -Wert**: IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
-
-Von einigen Anwendungen ignoriert.
+In einigen Anwendungen ermöglicht es auch, dass das gesamte Dokument ungeschützt gespeichert werden kann.
 
 ---
 
-### Rechte ändern
-
-Ermöglicht es dem Benutzer, die auf das Dokument angewendete Richtlinie zu ändern. Beinhaltet das Entfernen des Schutzes.
-
-**Richtliniencodierung**: EDITRIGHTSDATA
-
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht implementiert.
-
-**Name im klassischen Azure-Portal**: *Rechte ändern*
-
-**Name in den AD RMS-Vorlagen**: *Rechte bearbeiten*
-
-**API-Konstante oder -Wert**: IPC_WRITE_RIGHTSL"EDITRIGHTSDATA"
-
----
 
 ### Makros zulassen
 
@@ -294,14 +264,14 @@ In den Standardvorlagen sind folgende Rechte enthalten:
 
 |Anzeigename|Enthaltene Rechte (allgemeiner Name)|
 |----------------|---------------------------------|
-|<*Unternehmensname*> *– Nur vertrauliche Ansicht*|Anzeigen, Öffnen, Lesen|
-|<*Unternehmensname*> *– Vertraulich*|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
+|&lt;*Name der Organisation*&gt; *– Nur vertrauliche Ansicht*|Anzeigen, Öffnen, Lesen|
+|&lt;*Name der Organisation*&gt; *– Vertraulich*|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
 
 ## Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

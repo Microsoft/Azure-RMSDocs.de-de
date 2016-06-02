@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Migrationsphase 1 – serverseitige Konfiguration für AD RMS
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
 Verwenden Sie die folgende Informationen für Phase 1 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 1 bis 4 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
@@ -44,8 +47,7 @@ Dieser Schritt ist ein zweistufiger Vorgang:
 ### Exportieren der Konfigurationsdaten aus AD RMS
 Führen Sie das folgende Verfahren auf allen AD RMS-Clustern für alle vertrauenswürdigen Veröffentlichungsdomänen aus, die Inhalt für Ihre Organisation geschützt haben. Auf reinen Lizenzierungsclustern müssen Sie es nicht ausführen.
 
-> [!NOTE]
-> Wenn Sie Windows Server 2003 Rights Management nutzen, befolgen Sie anstelle dieser Anweisungen das Verfahren [Exportieren von SLC, TUD, TPD und privatem RMS-Schlüssel](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) im Artikel [Migration von Windows RMS auf AD RMS in einer anderen Infrastruktur](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx).
+> [!NOTE] Wenn Sie Windows Server 2003 Rights Management nutzen, befolgen Sie anstelle dieser Anweisungen das Verfahren [Export SLC, TUD, TPD and RMS private key](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) (Exportieren von SLC, TUD, TPD und dem privaten RMS-Schlüssel) im Artikel [Migrating from Windows RMS to AD RMS in a Different Infrastructure](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) (Migration von Windows RMS auf AD RMS in einer anderen Infrastruktur).
 
 #### So exportieren Sie die Konfigurationsdaten (Informationen zu vertrauenswürdigen Veröffentlichungsdomänen)
 
@@ -78,8 +80,7 @@ Die aktuelle AD RMS-Bereitstellung wird eine der folgenden Konfigurationen für 
 
 -   Kennwortschutz mithilfe eines externen Kryptografieanbieters.
 
-> [!NOTE]
-> Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](http://technet.microsoft.com/library/jj651024.aspx).
+> [!NOTE] Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](http://technet.microsoft.com/library/jj651024.aspx).
 
 Folgende zwei Optionen sind für die Azure RMS-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) verwaltet. Ein Szenario, in dem Sie Ihren eigenen Azure RMS-Mandantenschlüssel verwalten, wird auch als "Bring Your Own Key" (BYOK) bezeichnet und erfordert ein Hardwaresicherheitsmodul (HSM) von Thales. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md).
 
@@ -90,15 +91,14 @@ Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migra
 
 |Aktuelle AD RMS-Bereitstellung|Gewählte Azure RMS-Mandantenschlüsseltopologie|Migrationsanweisungen|
 |-----------------------------|----------------------------------------|--------------------------|
-|Kennwortschutz in der AD RMS-Datenbank|Microsoft-verwaltet|Gehen Sie das Verfahren **Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dies ist der einfachste Migrationspfad, bei dem Sie nur Ihre Konfigurationsdaten an Azure RMS übertragen müssen.|
-|HSM-Schutz mithilfe eines Thales nShield-Hardwaresicherheitsmoduls (HSM)|Kundenverwaltet (BYOK)|Gehen Sie das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dies erfordert das BYOK-Toolset, und es müssen zwei Gruppen von Schritten ausgeführt werden, um erst den Schlüssel aus Ihrem lokalen HSM an die Azure RMS-HSMs zu übertragen und dann Ihre Konfigurationsdaten an Azure RMS zu übertragen.|
+|Kennwortschutz in der AD RMS-Datenbank|Microsoft-verwaltet|Gehen Sie das Verfahren zur **Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dies ist der einfachste Migrationspfad, bei dem Sie nur Ihre Konfigurationsdaten an Azure RMS übertragen müssen.|
+|HSM-Schutz mithilfe eines Thales nShield-Hardwaresicherheitsmoduls (HSM)|Kundenverwaltet (BYOK)|Gehen Sie das Verfahren zur **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.<br /><br />Dies erfordert das BYOK-Toolset, und es müssen zwei Gruppen von Schritten ausgeführt werden, um erst den Schlüssel aus Ihrem lokalen HSM an die Azure RMS-HSMs zu übertragen und dann Ihre Konfigurationsdaten an Azure RMS zu übertragen.|
 |Kennwortschutz in der AD RMS-Datenbank|Kundenverwaltet (BYOK)|Gehen Sie das Verfahren **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln** unter dieser Tabelle durch.<br /><br />Dies erfordert das BYOK-Toolset, und es müssen drei Gruppen von Schritten ausgeführt werden, um erst den Softwareschlüssel zu extrahieren und in ein lokales HSM zu importieren, dann den Schlüssel aus Ihrem lokalen HSM an die Azure RMS-HSMs zu übertragen und schließlich Ihre Konfigurationsdaten an Azure RMS zu übertragen.|
 |HSM-Schutz mithilfe eines Hardwaresicherheitsmoduls (HSM) von einem anderen Lieferanten als Thales|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres HSM, um Anweisungen zur Übertragung Ihres Schlüssels aus diesem HSM in ein Thales nShield-Hardwaresicherheitsmodul (HSM) zu erhalten. Gehen Sie anschließend die Anweisungen für das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.|
 |Kennwortschutz mithilfe eines externen Kryptografieanbieters|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres Kryptografieanbieters, um Anweisungen zur Übertragung Ihres Schlüssels in ein Thales nShield-Hardwaresicherheitsmodul (HSM) zu erhalten. Gehen Sie anschließend die Anweisungen für das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.|
 Bevor Sie mit diesen Verfahren beginnen, stellen Sie sicher, dass Sie auf die XML-Dateien, die Sie zuvor beim Exportieren der vertrauenswürdigen Veröffentlichungsdomänen erstellt haben, zugreifen können. Diese können z. B. auf einem USB-Stick gespeichert sein, den Sie von Ihrem AD RMS-Server abziehen und an eine Arbeitsstation mit Internetverbindung anschließen.
 
-> [!NOTE]
-> Verwenden Sie ungeachtet der Speichermethode bewährte Sicherheitsmethoden zum Schutz dieser Dateien, da diese Daten Ihren privaten Schlüssel enthalten.
+> [!NOTE] Verwenden Sie ungeachtet der Speichermethode bewährte Sicherheitsmethoden zum Schutz dieser Dateien, da diese Daten Ihren privaten Schlüssel enthalten.
 
 
 Um Schritt 2 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad aus: 
@@ -109,13 +109,9 @@ Um Schritt 2 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad
 - [Softwareschlüssel zu HSM-Schlüssel](migrate-softwarekey-to-hsmkey.md)
 
 
-<<<<<<< HEAD
-## Schritt 3: Aktivieren Ihres Azure RMS-Mandanten
-Sämtliche Anweisungen zu diesem Schritt finden Sie im Artikel [Aktivieren von Azure Rights Management](../deploy-use/activate-azure-classic.md).
-=======
 ## Schritt 3: Aktivieren des RMS-Mandanten
 Sämtliche Anweisungen zu diesem Schritt finden Sie im Artikel [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
->>>>>>> 32b7eccb741760c33bf45a2ce253454827c6d6ba
+
 
 > [!TIP]
 > Wenn Sie über ein Office 365-Abonnement verfügen, können Sie Azure RMS über das Office 365 Admin Center oder das klassische Azure-Portal aktivieren. Die Verwendung des klassischen Azure-Portals wird empfohlen, da Sie den nächsten Schritt in diesem Verwaltungsportal ausführen.
@@ -137,8 +133,7 @@ Sie können die für Ihre Organisation automatisch erstellte Gruppe sehen, wenn 
 
 -   Exportieren Sie die Vorlage mithilfe des Cmdlets [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) in eine XML-Datei, die Sie so bearbeiten können, dass die Gruppe "AllStaff" und die Rechte den vorhandenen Gruppen und Berechtigungen hinzugefügt werden. Importieren Sie anschließend diese Änderung über das Cmdlet [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) in Azure RMS zurück.
 
-> [!NOTE]
-> Die äquivalente Gruppe "AllStaff" ist nicht exakt mit der Gruppe JEDER in AD RMS identisch: Die Gruppe "AllStaff" enthält alle Benutzer aus Ihrem Azure-Mandanten, während die Gruppe JEDER alle authentifizierten Benutzer enthält, die sich auch außerhalb Ihrer Organisation befinden können.
+> [!NOTE] Die äquivalente Gruppe „AllStaff“ ist nicht exakt mit der Gruppe ANYONE in AD RMS identisch: Die Gruppe „AllStaff“ enthält alle Benutzer aus Ihrem Azure-Mandanten, während die Gruppe ANYONE alle authentifizierten Benutzer enthält, die sich auch außerhalb Ihrer Organisation befinden können.
 > 
 > Wegen dieses Unterschieds zwischen den beiden Gruppen müssen Sie möglicherweise zusätzlich zur Gruppe „AllStaff“ noch externe Benutzer hinzufügen. Externe E-Mail-Adressen für Gruppen werden derzeit nicht unterstützt.
 
@@ -190,6 +185,6 @@ Wechseln Sie zu [Phase 2: Clientseitige Konfiguration](migrate-from-ad-rms-phase
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

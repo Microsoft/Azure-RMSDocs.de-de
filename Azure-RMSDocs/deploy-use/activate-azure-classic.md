@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,28 +27,35 @@ ms.suite: ems
 
 # Aktivieren von Azure Rights Management über das klassische Azure-Portal
 
+*Gilt für: Azure Rights Management*
+
+
 Verwenden Sie diese Anleitung, wenn Sie Zugriff auf das Azure-Portal haben. Dies ist beispielsweise möglich, wenn Sie über ein Abonnement für die Enterprise Mobility Suite verfügen.
 
 > [!TIP]
 > Zweiminütiges Video [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms) (Aktivieren von Azure RMS)
 
-1.  Nachdem Sie sich für Ihr Azure-Konto registriert haben, [melden Sie sich am klassischen Azure-Portal an](http://go.microsoft.com/fwlink/p/?LinkID=275081).
+1.  Nachdem Sie sich für Ihr Azure-Konto registriert haben, [melden Sie sich im klassischen Azure-Portal an](http://go.microsoft.com/fwlink/p/?LinkID=275081)..
 
-2.  Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**.
+2.  Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**..
 
-3.  Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
+3.  Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**..
 
 4.  Wählen Sie das Verzeichnis aus, für das Sie [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] verwalten möchten, klicken Sie auf **AKTIVIEREN**, und bestätigen Sie Ihre Aktion.
 
-    > [!NOTE]
-    > Wenn ein Aktivierungsfehler angezeigt wird, kann das die Ursache haben, dass Ihr Serviceplan oder Ihre Produktversion keine Unterstützung für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] bietet.
-    >
-    > Verwenden Sie die Informationen unter [Cloud-Abonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md), um die RMS-Unterstützung zu bestätigen. Wenn Sie Hilfe zu diesem Problem benötigen, senden Sie eine E-Mail-Nachricht an das [Askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+---
 
-Der **RECHTEVERWALTUNGSSTATUS** sollte nun **Aktiv** anzeigen, und die Option **AKTIVIEREN** wird durch **DEAKTIVIEREN**ersetzt.
+   HINWEIS: Wenn ein Aktivierungsfehler angezeigt wird, kann der Grund dafür sein, dass Ihr Serviceplan oder Ihre Produktversion Rights Management nicht beinhaltet. [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+
+   Verwenden Sie die Informationen unter [Cloud-Abonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md), um die RMS-Unterstützung zu bestätigen. Wenn Sie Hilfe zu diesem Problem benötigen, senden Sie eine E-Mail-Nachricht an das [Askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS)..
+
+---
+
+
+Der **RIGHTS MANAGEMENT-STATUS** sollte nun **Aktiv** anzeigen, und die Option **AKTIVIEREN** wurde durch **DEAKTIVIEREN**ersetzt..
 
 ## Rights Management-Statuswerte und -Beschreibungen im klassischen Azure-Portal
-Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst aktiviert und einsatzbereit ist, wird darüber hinaus möglicherweise **Inaktiv**, **Nicht verfügbar**oder **Nicht autorisiert**angezeigt.
+Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst aktiviert und einsatzbereit ist, wird darüber hinaus möglicherweise **Inaktiv**, **Nicht verfügbar**oder **Nicht autorisiert**angezeigt..
 
 |Statuswert|Beschreibung|
 |----------------|---------------|
@@ -58,8 +65,8 @@ Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst
 |**Nicht autorisiert**|Sie sind nicht berechtigt, den Status des [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] Services anzuzeigen. Ihr Konto ist z. B. gesperrt, oder Sie sind nicht der globale Administrator für den ausgewählten Mandanten.|
 
 ## Nächste Schritte
-Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
+Zurück zu [Aktivieren von Azure Rights Management](activate-service.md)..
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

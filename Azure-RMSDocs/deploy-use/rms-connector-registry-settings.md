@@ -28,13 +28,16 @@ ms.suite: ems
 
 # Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
+*Gilt für: Azure Rights Management, Office 365*
+
+
 Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Servern mit Exchange, SharePoint oder Windows Server, mit denen die Server für die Verwendung des [RMS-Verbindungsdiensts](deploy-rms-connector.md) konfiguriert werden, manuell hinzufügen oder überprüfen möchten. Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst.
 
 Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *MicrosoftRMSURL* ist die URL des Microsoft RMS-Diensts Ihrer Organisation. So finden Sie diesen Wert
 
-    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, helfen Ihnen die Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md) weiter.
+    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, helfen Ihnen die Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md) weiter..
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
@@ -149,7 +152,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 - https://*ConnectorFQDN*
 
 
-## SharePoint 2013-Registrierungseinstellungen
+## Registrierungseinstellungen für SharePoint 2016 oder SharePoint 2013
 
 **Registrierungspfad:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -219,6 +222,6 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

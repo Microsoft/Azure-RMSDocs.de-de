@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Verwenden Sie die Informationen in diesem Artikel, um Ihren Rights Management (RMS)-Mandantenschlüssel für Azure RMS zu planen und zu verwalten. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten.  Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
 
 > [!NOTE]
@@ -62,11 +65,11 @@ Wenn Sie sich entschließen, dass Microsoft Ihren Mandantenschlüssel verwalten 
 
 Die folgenden Diagramme zeigen und vergleichen diese zwei Optionen. Das erste Diagramm zeigt, wie niedrig der Verwaltungsaufwand in der Standardkonfiguration ist, wenn Microsoft den Mandantenschlüssel verwaltet.
 
-![](../media/RMS_BYOK_cloud.png)
+![Lebenszyklus des Azure RMS-Mandantenschlüssels – verwaltet von Microsoft, Standardeinstellung](../media/RMS_BYOK_cloud.png)
 
 Das zweite Diagramm zeigt die zusätzlichen Schritte, die erforderlich sind, wenn Sie Ihren eigenen Mandantenschlüssel verwalten.
 
-![](../media/RMS_BYOK_onprem.png)
+![Lebenszyklus des Azure RMS-Mandantenschlüssels – verwaltet von Ihnen, BYOK](../media/RMS_BYOK_onprem.png)
 
 Wenn Sie sich entschließen, Ihren Mandantenschlüssel von Microsoft verwalten zu lassen, müssen Sie nichts weiter unternehmen, damit der Schlüssel generiert wird. Sie können direkt unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) fortfahren.
 
@@ -90,7 +93,7 @@ In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring
 |Ein Abonnement, das Azure RMS unterstützt.|Weitere Informationen zu den verfügbaren Abonnements finden Sie unter [Cloud-Abonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).|
 |Sie verwenden nicht RMS for Individuals oder Exchange Online. Oder, falls Sie doch Exchange Online verwenden, verstehen und akzeptieren Sie die Einschränkungen, die bei der Verwendung von BYOK mit dieser Konfiguration einhergehen.|Weitere Informationen zu diesen und anderen Einschränkungen für BYOK finden Sie unter [BYOK – Preise und Einschränkungen](byok-price-restrictions.md) .<br /><br />**Wichtig**: Derzeit ist BYOK nicht mit Exchange Online kompatibel.|
 |Thales HSM, Smartcards und unterstützende Software.<br /><br />**Hinweis**: Wenn Sie von AD RMS zu Azure RMS mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, müssen die Thales-Treiber mindestens in der Version 11.62 vorliegen.|Sie benötigen Zugriff auf ein Thales Hardwaresicherheitsmodul sowie grundlegende Kenntnisse zum Betrieb von Thales HSMs. Eine Liste der kompatiblen Modelle bzw. Informationen zum Kauf eines HSM, wenn Sie noch keins besitzen, finden Sie unter [Thales Hardwaresicherheitsmodul](http://www.thales-esecurity.com/msrms/buy) .|
-|Wenn Sie Ihren Mandantenschlüssel über das Internet übertragen statt physisch in Redmond (USA) abgeben möchten: Es bestehen drei Anforderungen:<br /><br />Anforderung 1: Eine offline arbeitende x64-Arbeitsstation mit einem Windows-Betriebssystem der Mindestversion Windows 7 und Thales nShield-Software der Mindestversion 11.62.<br /><br />Wenn diese Arbeitsstation Windows 7 ausführt, müssen Sie [Microsoft .NET Framework 4.5 installieren](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Anforderung 2: Eine Arbeitsstation, die eine Internetverbindung hat und über ein Windows-Betriebssystem der Mindestversion Windows 7 verfügt.<br /><br />Anforderung 3: Ein USB-Laufwerk oder anderes mobiles Speichergerät mit mindestens 16 MB freiem Speicherplatz.|Diese Voraussetzungen sind nicht erforderlich, wenn Sie nach Redmond reisen und Ihren Mandantenschlüssel persönlich überbringen.<br /><br />Aus Sicherheitsgründen empfehlen wir, dass die erste Arbeitsstation nicht mit einem Netzwerk verbunden ist. Dies ist jedoch nicht programmtechnisch erforderlich.<br /><br />Hinweis: In den folgenden Anleitungen wird diese erste Arbeitsstation als **nicht verbundene Arbeitsstation** bezeichnet.<br /><br />Wenn Ihr Mandantenschlüssel für ein Produktionsnetzwerk bestimmt ist, empfehlen wir zusätzlich, dass Sie eine zweite getrennte Arbeitsstation verwenden, um das Toolset herunterzuladen und den Mandantenschlüssel hochzuladen. Zu Testzwecken können Sie aber dieselbe Arbeitsstation wie die erste verwenden.<br /><br />Hinweis: In den folgenden Anleitungen wird diese zweite Arbeitsstation als **Arbeitsstation mit Internetverbindung** bezeichnet.|
+|Wenn Sie Ihren Mandantenschlüssel über das Internet übertragen statt physisch in Redmond (USA) abgeben möchten: Es bestehen drei Anforderungen:<br /><br />1: Eine offline arbeitende x64-Arbeitsstation mit einem Windows-Betriebssystem der Mindestversion Windows 7 und Thales nShield-Software der Mindestversion 11.62.<br /><br />Wenn diese Arbeitsstation Windows 7 ausführt, müssen Sie [Microsoft .NET Framework 4.5 installieren](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2: Eine Arbeitsstation, die mit dem Internet verbunden ist und über ein Windows-Betriebssystem der Mindestversion Windows 7 verfügt.<br /><br />3: Ein USB-Laufwerk oder anderes mobiles Speichergerät mit mindestens 16 MB freiem Speicherplatz.|Diese Voraussetzungen sind nicht erforderlich, wenn Sie nach Redmond reisen und Ihren Mandantenschlüssel persönlich überbringen.<br /><br />Aus Sicherheitsgründen empfehlen wir, dass die erste Arbeitsstation nicht mit einem Netzwerk verbunden ist. Dies ist jedoch nicht programmtechnisch erforderlich.<br /><br />Hinweis: In den folgenden Anleitungen wird diese erste Arbeitsstation als **nicht verbundene Arbeitsstation** bezeichnet.<br /><br />Wenn Ihr Mandantenschlüssel für ein Produktionsnetzwerk bestimmt ist, empfehlen wir zusätzlich, dass Sie eine zweite getrennte Arbeitsstation verwenden, um das Toolset herunterzuladen und den Mandantenschlüssel hochzuladen. Zu Testzwecken können Sie aber dieselbe Arbeitsstation wie die erste verwenden.<br /><br />Hinweis: In den folgenden Anleitungen wird diese zweite Arbeitsstation als **Arbeitsstation mit Internetverbindung** bezeichnet.|
 
 Die Verfahren zum Generieren und Verwenden Ihres eigenen Mandantenschlüssels hängen davon ab, ob Sie dies über das Internet oder persönlich vornehmen möchten:
 
@@ -135,7 +138,7 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
     Wenn Sie sich zur Verwaltung des eigenen Mandantenschlüssels entschlossen haben, enthält die Protokollierung Informationen über die Nutzung Ihres Mandantenschlüssels. Im folgenden Beispiel sehen Sie eine in Excel angezeigte Protokolldatei, in der die Anforderungstypen **Decrypt** und **SignDigest** anzeigen, dass der Mandantenschlüssel verwendet wird.
 
-    ![](../media/RMS_Logging.gif)
+    ![Protokolldatei in Excel, in der der Mandantenschlüssel verwendet wird.](../media/RMS_Logging.gif)
 
     Weitere Informationen zur Nutzungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -145,6 +148,6 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

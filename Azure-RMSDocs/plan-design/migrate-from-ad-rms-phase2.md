@@ -26,7 +26,10 @@ ms.suite: ems
 
 ---
 # Migrationsphase 2: Clientseitige Konfiguration
-Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf Schritt 5 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
+Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf Schritt 5 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md)..
 
 
 ## Schritt 5: Neukonfigurieren von Clients zur Verwendung von Azure RMS
@@ -46,7 +49,7 @@ Für Windows-Clients:
 
 Für Clients für mobile Geräte und Mac-Computer:
 
--   Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx)bereitgestellt haben.
+-   Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx) erstellt haben..
 
 #### Von den Migrationsskripts vorgenommene Änderungen
 In diesem Abschnitt werden die Änderungen beschrieben, die von den Migrationsskripts vorgenommen werden. Sie können diese Informationen nur zu Referenzzwecken, zur Problembehandlung oder auch dann verwenden, wenn Sie diese Änderungen selbst vornehmen möchten.
@@ -91,10 +94,10 @@ Redirect_OnPrem.cmd:
 
     -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
 
-    Jeder Eintrag hat den REG_SZ-Wert **https://OldRMSserverURL/_wmcs/licensing** mit den Daten im folgenden Format: **https://<IhreMandanten-URL>/_wmcs/licensing**.
+    Jeder Eintrag weist den REG_SZ-Wert **https://OldRMSserverURL/_wmcs/licensing** mit Daten im folgenden Format auf: **https://&lt;IhreMandantenURL&gt;/_wmcs/licensing**..
 
     > [!NOTE]
-    > *<IhreMandanten-URL>* weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**.
+    > *&lt;YourTenantURL&gt;* weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**..
     > 
     > Beispiel: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
     > 
@@ -102,8 +105,8 @@ Redirect_OnPrem.cmd:
 
 
 ## Nächste Schritte
-Fahren Sie mit [Phase 3: Unterstützung der Dienstekonfiguration](migrate-from-ad-rms-phase3.md) fort, um die Migration fortzusetzen.
+Wechseln Sie zu dem Artikel [phase 3 - supporting services configuration](migrate-from-ad-rms-phase3.md) (Migrationsphase 3: Unterstützung der Dienstekonfiguration), um die Migration fortzusetzen..
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

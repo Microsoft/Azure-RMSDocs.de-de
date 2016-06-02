@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -28,12 +28,14 @@ ms.suite: ems
 
 
 # PowerShell-Referenz für benutzerdefinierte Vorlagen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Alle Vorgänge, die Sie im klassischen Azure-Portal zum Erstellen und Verwalten von Vorlagen ausführen können, können Sie auch mithilfe von PowerShell über die Befehlszeile durchführen. Darüber hinaus können Sie Vorlagen exportieren und importieren, sodass Sie Vorlagen zwischen Mandanten kopieren oder Massenbearbeitungen komplexer Eigenschaften in Vorlagen, z. B. von mehrsprachigen Namen und Beschreibungen, ausführen können.
 
 Sie können das Exportieren und Importieren auch zum Sichern und Wiederherstellen der benutzerdefinierten Vorlagen verwenden. Als bewährte Methode wird empfohlen, regelmäßig eine Sicherungskopie der benutzerdefinierten Vorlagen zu erstellen. So können Sie jederzeit leicht zur vorherigen Version zurückwechseln, falls Sie einmal eine unbeabsichtigte Änderung vornehmen sollten.
 
-> [!IMPORTANT]
-> Um Windows PowerShell zum Erstellen und Verwalten von Azure RMS-Rechterichtlinienvorlagen zu verwenden, benötigen Sie mindestens Version 2.0.0.0 des [Windows PowerShell-Moduls für Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
+> [!IMPORTANT] Sie benötigen mindestens Version 2.0.0.0 des [Windows PowerShell-Moduls für Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721), um Windows PowerShell zum Erstellen und Verwalten von Vorlagen für Azure RMS-Benutzerrechterichtlinien zu verwenden.
 > 
 > Wenn Sie dieses PowerShell-Modul bereits zuvor installiert hatten, führen Sie den folgenden Befehl in einem PowerShell-Fenster aus, um die Versionsnummer zu überprüfen: `(Get-Module aadrm -ListAvailable).Version`
 
@@ -43,13 +45,13 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
 -   [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx)
 
--   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
+-   [Expodert-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
 
 -   [Get-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727079.aspx)
 
 -   [Get-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727081.aspx)
 
--   [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
+-   [Impodert-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
 
 -   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)
 
@@ -62,6 +64,6 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 ## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

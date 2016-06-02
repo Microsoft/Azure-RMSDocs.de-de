@@ -26,12 +26,15 @@ ms.suite: ems
 ---
 
 # Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+
 Das Rights Management-Team aktualisiert die Rights Management-Freigabeanwendung regelmäßig, um Fixes und neue Funktionen zu implementieren. Verwenden Sie die folgenden Informationen, um zu sehen, welche Neuerungen oder Änderungen eine Version bietet. Die neueste Version ist zuerst aufgeführt.
 
 Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 > [!NOTE]
-> Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)..
 
 ## Version 1.0.2004.0
 **Veröffentlicht**: 11.12.2015
@@ -59,7 +62,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   Unterstützung für mehrstufige Authentifizierung (MFA) für Azure RMS, wodurch auch die Abhängigkeit vom Microsoft Anmelde-Assistenten für Anwendungen, die eine moderne Authentifizierung verwenden, entfernt wird.
 
-    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md)..
 
 ## Version 1.0.1784.0
 **Veröffentlicht**: 30.07.2015
@@ -81,7 +84,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 **Neue Features**:
 
--   Unterstützung für Dokumentnachverfolgung und -widerruf. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).
+-   Unterstützung für Dokumentnachverfolgung und -widerruf. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md)..
 
 -   Vorlagenunterstützung, wenn Sie **Geschützt freigeben**auswählen:
 
@@ -91,7 +94,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
     -   Es werden keine Optionen für **Nutzung auf allen Geräten zulassen** und **Nutzungsbeschränkungen erzwingen**mehr angezeigt. Stattdessen wird je nach Dateityp automatisch **Generischer Schutz** ausgewählt.
 
-    Weitere Informationen finden Sie unter [Dialogfeldoptionen für die Rights Management-Freigabeanwendung](sharing-app-dialog-box.md).
+    Weitere Informationen finden Sie unter [Dialogfeldoptionen für die Rights Management-Freigabeanwendung](sharing-app-dialog-box.md)..
 
 ## Version 1.0.1667.0
 **Veröffentlicht**: 19.01.2015
@@ -106,10 +109,10 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 **Neue Features**:
 
--   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
+-   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md)..
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

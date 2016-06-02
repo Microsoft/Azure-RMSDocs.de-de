@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,10 +26,13 @@ ms.suite: ems
 ---
 
 # Häufig gestellte Fragen zu Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Einige häufig gestellte Fragen zu Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], das auch als Azure RMS bezeichnet wird:
 
 ## Was benötige ich, um Azure RMS bereitzustellen, und wie stelle ich das an?
-Überprüfen Sie zunächst [Anforderungen für Azure Rights Management](requirements-azure-rms.md). Darin sind Informationen über Cloud-Abonnementoptionen enthalten, und es wird gezeigt, wie Sie Ihre lokalen Server mit Azure RMS verwenden können, welche Bereitstellungsszenarien zurzeit nicht unterstützt werden und welche Geräte und Anwendungen Azure RMS unterstützen. Zudem enthält das Thema einen Link für den Fall, dass Sie eine Liste von IP-Adressen und Domänennamen für Firewalls oder Proxyserver benötigen. Es kann darüber hinaus sinnvoll sein, die anderen Artikel im Abschnitt „Erste Schritte“ und im Abschnitt **Verstehen & Erkunden** anzusehen, um ein grundlegendes Verständnis dafür zu entwickeln, wie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] den Schutz der Daten Ihrer Organisation unterstützen kann, wie es sich im Vergleich zur lokalen Version von Active Directory Rights Management verhält und welche Begriffe und Abkürzungen für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] spezifisch sind.
+Überprüfen Sie zunächst [Anforderungen für Azure Rights Management](requirements-azure-rms.md). Darin sind Informationen über Cloud-Abonnementoptionen enthalten, und es wird gezeigt, wie Sie Ihre lokalen Server mit Azure RMS verwenden können, welche Bereitstellungsszenarien zurzeit nicht unterstützt werden und welche Geräte und Anwendungen Azure RMS unterstützen. Zudem enthält das Thema einen Link für den Fall, dass Sie eine Liste von IP-Adressen und Domänennamen für Firewalls oder Proxyserver benötigen. Sie sollten sich darüber hinaus die anderen Artikel im Abschnitt **Erste Schritte** und im Abschnitt **Verstehen & Erkunden** ansehen, um ein grundlegendes Verständnis dafür zu entwickeln, wie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] den Schutz der Daten Ihrer Organisation unterstützen kann, wie es mit Anwendungen funktioniert, wie es sich im Vergleich zur lokalen Version von Active Directory Rights Management verhält und welche Begriffe und Abkürzungen für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] spezifisch sind.
 
 ## Müssen sich Dateien in der Cloud befinden, um von Azure RMS geschützt werden zu können?
 Nein, das ist ein weit verbreitetes Missverständnis. Für den Datenschutzprozess des Azure Rights Management-Diensts (und von Microsoft) gilt, dass er Ihre Daten weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. 
@@ -39,7 +42,7 @@ Weitere Informationen finden Sie unter [Funktionsweise von Azure RMS. Details](.
 ## Kann ich Azure RMS in meine lokalen Server integrieren?
 Ja. Azure RMS kann in Ihre lokalen Server, etwa Exchange Server, SharePoint und Windows-Dateiserver, integriert werden. Dazu verwenden Sie den [Rights Management-Connector](../deploy-use/deploy-rms-connector.md). Wenn Sie nur an der Nutzung der Dateiklassifizierungsinfrastruktur (FCI, File Classification Infrastructure) mit Windows Server interessiert sind, können Sie auch die [RMS Protection-Cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx) verwenden. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
 
-Azure RMS generiert und verwaltet XrML-Zertifikate automatisch nach Bedarf, sodass es keine lokale PKI verwendet. Weitere Informationen zur Verwendung von Zertifikaten in Azure RMS finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsaufnahme](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) unter [Funktionsweise von Azure RMS](../understand-explore/how-does-it-work.md) .
+Azure RMS generiert und verwaltet XrML-Zertifikate automatisch nach Bedarf, sodass es keine lokale PKI verwendet. Weitere Informationen zur Verwendung von Zertifikaten in Azure RMS finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsaufnahme](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) unter [Funktionsweise von Azure RMS](../understand-explore/how-does-it-work.md).
 
 ## Ich habe eine Hybridbereitstellung von Exchange mit einigen Benutzern auf Exchange Online und anderen auf Exchange Server – wird dies von Azure RMS unterstützt?
 Ja, und das Gute ist, dass Benutzer über zwei Exchange-Bereitstellungen hinweg E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Führen Sie für diese Konfiguration folgende Schritte aus: [Aktivieren von Azure RMS](../deploy-use/activate-service.md) , [Aktivieren von IRM für Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)und [Bereitstellen und Konfigurieren des RMS-Connectors](../deploy-use/deploy-rms-connector.md) für Exchange Server.
@@ -88,6 +91,10 @@ Azure RMS kann alle Dateitypen unterstützen. Für Text-, Bild-, Microsoft Offic
 
 Eine Liste der Dateinamenerweiterungen, für die Azure RMS systemeigene Unterstützung bietet, finden Sie im Abschnitt [Unterstützte Dateitypen und Dateinamenerweiterungen](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) des [Administratorhandbuchs der Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md). Nicht aufgeführte Dateinamenerweiterungen werden mithilfe der RMS-Freigabeanwendung unterstützt, die automatisch generischen Schutz auf diese Dateien anwendet.
 
+## Wenn ich ein RMS-geschütztes Office-Dokument öffne, wird die dazugehörige temporäre Datei ebenfalls von RMS geschützt?
+
+Nein. Die dazugehörige temporäre Datei enthält in diesem Szenario keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei soll die temporäre Datei offensichtlich nicht freigegeben werden und verbleibt auf dem Gerät, geschützt durch lokale Sicherheitskontrollen wie BitLocker und EFS.
+
 ## Ab wann wird Migration von AD RMS unterstützt?
 Zunächst hat Azure RMS Migration von einer lokalen Bereitstellung von Rights Management, z. B. AD RMS, nicht unterstützt. Eine solche Migration wird aber jetzt unterstützt.
 
@@ -99,7 +106,7 @@ Lassen Sie sich durch diese aktuelle Einschränkung nicht von der Azure RMS-Bere
 Wenn Ihre Unternehmensrichtlinien jedoch erfordern, dass Sie ein Hardwaresicherheitsmodul (HSM) verwenden, und dies würde Ihre Azure RMS-Bereitstellung blockieren, können Sie alternativ jetzt Azure RMS mit BYOK bereitstellen, mit verminderter RMS-Funktionalität für Exchange. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md) in [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
 ## Eine Funktion, die ich suche, scheint nicht mit SharePoint-geschützten Bibliotheken zu funktionieren – ist die Unterstützung dieser Funktion geplant?
-Derzeit unterstützt SharePoint RMS-geschützte Dokumente durch Verwenden von IRM-geschützten Bibliotheken, die weder benutzerdefinierte Vorlagen, noch Dokumentnachverfolgung noch einige andere Funktionen unterstützen.  Weitere Informationen finden Sie im Abschnitt [SharePoint Online und SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) im Artikel [Office-Anwendungen und -Dienste](../understand-explore/office-apps-services-support.md).
+Derzeit unterstützt SharePoint RMS-geschützte Dokumente durch Verwenden von IRM-geschützten Bibliotheken, die weder benutzerdefinierte Vorlagen, noch Dokumentnachverfolgung noch einige andere Funktionen unterstützen. Weitere Informationen finden Sie im Abschnitt [SharePoint Online und SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) im Artikel [Office-Anwendungen und -Dienste](../understand-explore/office-apps-services-support.md).
 
 Wenn Sie an einer bestimmten Funktion interessiert sind, die noch nicht unterstützt wird, sollten Sie die Ankündigungen im [RMS Team Blog](http://blogs.technet.com/b/rms/)verfolgen.
 
@@ -144,7 +151,7 @@ Azure RMS unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn 
 
 **Sicherheit, Compliance und Überwachung:**
 
-Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md) . Zusätzlich:
+Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md). Zusätzlich:
 
 -   Informationen zu externen Zertifizierungen für Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
@@ -179,12 +186,11 @@ Darüber hinaus gibt es häufig gestellte Fragen (FAQs) für Endbenutzer:
 
 Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge in den Ankündigungen zu den monatlichen Dokumentationsaktualisierungen im Blog des [RMS-Teams (Microsoft Rights Management)](http://blogs.technet.com/b/rms/) aufgelistet.
 
-> [!TIP]
-> Sie können das [docs-Tag](http://blogs.technet.com/b/rms/archive/tags/docs/) im Blog verwenden, um diese Dokumentationsankündigungen leichter zu finden.
+> [!TIP]Sie können das [docs-Tag](http://blogs.technet.com/b/rms/archive/tags/docs/) im Blog verwenden, um diese Dokumentationsankündigungen leichter zu finden.
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

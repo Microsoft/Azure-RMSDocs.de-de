@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Kopieren einer Vorlage
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Wenn Sie eine neue Vorlage erstellen möchten, die über sehr ähnliche Einstellungen verfügt wie eine bereits vorhandene Vorlage, wählen Sie die Originalvorlage auf der Seite **VORLAGEN** aus, klicken Sie auf **KOPIEREN**, geben Sie einen eindeutigen Namen an, und nehmen Sie dann die erforderlichen Änderungen vor.
 
 > [!IMPORTANT]
@@ -39,6 +42,6 @@ Sie können sowohl benutzerdefinierte Vorlagen als auch die Standardvorlagen kop
 ## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

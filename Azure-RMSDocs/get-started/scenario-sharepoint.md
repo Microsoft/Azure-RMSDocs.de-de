@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Szenario – Beibehalten der Kontrolle über in SharePoint gespeicherte Dokumente
+
+*Gilt für: Azure Rights Management, Office 365*
+
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um sicherzustellen, dass in SharePoint gespeicherte Office-Dokumente mithilfe geschützter Bibliotheken unter Ihrer Kontrolle bleiben. Die Dokumente werden beispielsweise automatisch vor durch Benutzer versehentlich oder beabsichtigt verursachte Datenlecks geschützt, und Sie können den Zugriff auf Inhalte blockieren, auch nachdem sie heruntergeladen oder synchronisiert wurden. Die Dateien, die Sie schützen möchten, dienen möglicherweise der internen Zusammenarbeit an Entwurfsdokumenten, Plänen oder sonstigem Lieferumfang. Wenn Sie geschützte Bibliotheken für SharePoint konfigurieren, werden die darin gespeicherten Office-Dateien von Azure Rights Management geschützt.
 
 Die Anweisungen sind unter den folgenden Umständen geeignet:
@@ -37,7 +40,7 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 -   Mitarbeiter müssen diese Dokumente nicht an Personen außerhalb Ihrer Organisation weitergeben.
 
 ## Anweisungen zur Bereitstellung
-![](../media/AzRMS_AdminBanner.png)
+![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt und die unterstützenden Verfahren vorhanden sind, bevor Sie mit der Benutzerdokumentation fortfahren.
 
@@ -73,16 +76,16 @@ Verwenden Sie die folgende Vorlage, kopieren Sie die Ankündigung, und fügen Si
 
 2.  Wenn Sie die Option **Gruppenschutz zulassen. Standardgruppe** konfiguriert haben, ersetzen Sie *&lt;Gruppenname&gt;* durch den Namen der konfigurierten Gruppe. Geben Sie außerdem den Grund für &lt;Grund, warum diese Gruppe Zugriffsberechtigungen für die Zusammenarbeit an den Dateien hat, aber nicht in der SharePoint-Bibliothek&gt; an. Wenn Sie diese Option nicht konfiguriert haben, löschen Sie diesen Satz.
 
-3.  Ersetzen Sie auch die *&lt;Kontaktdetails&gt;* durch Anweisungen dazu, wie sich Ihre Benutzer an das Helpdesk wenden können, beispielsweise über einen Link zur Website, eine E-Mail-Adresse oder eine Telefonnummer.
+3.  Ersetzen Sie die *&lt;Kontaktdetails&gt;* durch Anweisungen dazu, wie sich Benutzer an das Helpdesk wenden können, z.B. über einen Link zur Website, eine E-Mail-Adresse oder eine Telefonnummer.
 
 4.  Nehmen Sie jegliche sonstigen Änderungen an der Ankündigung vor, und senden Sie sie anschließend an diese Benutzer.
 
 Die Beispieldokumentation veranschaulicht, wie diese Ankündigung für Benutzer nach Ihren Anpassungen aussehen könnte.
 
-![](../media/AzRMS_UsersBanner.png)
+![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
 ### IT-Ankündigung: Änderungen an der Website &lt;Name der SharePoint-Bibliothek&gt;
-Die SharePoint-Website **&lt;Name der SharePoint-Bibliothek&gt;** ist jetzt für die sichere Zusammenarbeit konfiguriert. Dies bedeutet, dass von nun an nur Mitglieder der Gruppe &lt;Gruppenname&gt; auf die Dokumente dieser Website zugreifen können. Das gilt auch, wenn Sie sie lokal speichern oder per E-Mail an Dritte senden. Die einzige Ausnahme besteht darin, dass Sie die Dokumente mit Mitgliedern der Gruppe &lt;Gruppenname&gt; teilen können, nachdem Sie die Dokumente heruntergeladen haben, um &lt;Grund, warum diese Gruppe Zugriffsrechte für die Zusammenarbeit an den Dateien hat, aber nicht in der SharePoint-Bibliothek&gt;. Beim Bearbeiten eines dieser Dokumente wird oben ein gelbes Banner mit Informationen darüber angezeigt, dass dieses Dokument geschützt ist und wer darauf zugreifen kann.
+Die SharePoint-Website **&lt;Name der SharePoint-Bibliothek&gt;** ist jetzt für die sichere Zusammenarbeit konfiguriert. Dies bedeutet, dass von nun an nur Mitglieder der Gruppe &lt;Gruppenname&gt; auf die Dokumente dieser Website zugreifen können. Das gilt auch, wenn Sie sie lokal speichern oder per E-Mail an Dritte senden. Die einzige Ausnahme besteht darin, dass Sie die Dokumente an alle Mitgliedern der Gruppe &lt;Gruppenname&gt; freigeben können, nachdem Sie die Dokumente heruntergeladen haben, um &lt;Grund, warum diese Gruppe Zugriffsrechte für die Zusammenarbeit an den Dateien hat, aber nicht in der SharePoint-Bibliothek&gt;. Beim Bearbeiten eines dieser Dokumente wird oben ein gelbes Banner mit Informationen darüber angezeigt, dass dieses Dokument geschützt ist und wer darauf zugreifen kann.
 
 Diese Änderung hilft, unsere vertraulichen Unternehmensdaten vor einem Zugriff durch nicht berechtigte Personen zu schützen. Wenn Sie mit einem Mobilgerät auf diese geschützten Dokumente zugreifen, können Sie sie lediglich anzeigen. Zum Bearbeiten müssen Sie ein Desktopgerät verwenden.
 
@@ -93,7 +96,7 @@ Sie können nur Dokumente auf die Website &lt;Name der SharePoint-Website&gt; ho
 -   Wenden Sie sich an das Helpdesk: &lt;Kontaktdetails&gt;
 
 ### Beispielbenutzerdokumentation
-![](../media/AzRMS_ExampleBanner.png)
+![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
 #### IT-Ankündigung: Änderungen an der Website „Vertriebsprognosen und Berichte“
 Die SharePoint-Website **Vertriebsprognosen und Berichte**ist jetzt für die sichere Zusammenarbeit konfiguriert. Das heißt: Von nun an können nur Mitglieder unseres Vertriebs- und Marketingteams auf die Dokumente auf dieser Website zugreifen. Das gilt auch, wenn Sie sie lokal speichern oder per E-Mail an Dritte senden. Dabei gibt eine Ausnahme. Nachdem Sie die Dokumente heruntergeladen haben, können Sie sie mit Angehörigen der Finanzabteilung teilen, damit diese die monatlichen Prognosezahlen extrahieren können. Beim Bearbeiten eines dieser Dokumente wird oben ein gelbes Banner mit Informationen darüber angezeigt, dass dieses Dokument geschützt ist und wer darauf zugreifen kann.
@@ -108,6 +111,6 @@ Sie können nur Dokumente auf die Website „Vertriebsprognosen und Berichte“ 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

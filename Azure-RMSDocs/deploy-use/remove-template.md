@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Entfernen (Archivieren) von Vorlagen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Die Standardvorlagen können nicht gelöscht werden. Sie können jedoch archiviert werden, damit sie Benutzern nicht angezeigt werden.
 
 Wenn Sie eine benutzerdefinierte Vorlage veröffentlicht haben, diese aber für Benutzer ausblenden möchten, können Sie die Vorlage bearbeiten und dann auf der Seite **KONFIGURIEREN** die Optionen **ARCHIVIEREN** und **SPEICHERN** auswählen. Alternativ können Sie sie auf der Seite **VORLAGEN** auswählen, und auf **ARCHIVIEREN**klicken.
@@ -44,6 +47,6 @@ Der Status ändert sich von **Veröffentlicht** zu **Archiviert**. Wenn Sie sich
 ## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

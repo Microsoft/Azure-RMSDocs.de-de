@@ -28,7 +28,10 @@ ms.suite: ems
 
 # Migrationsphase 3: Unterstützung der Dienstekonfiguration
 
-Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
+
+Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md)..
 
 
 ## Schritt 6: Konfigurieren der IRM-Integration mit Exchange Online
@@ -49,7 +52,7 @@ Wenn Sie die Funktion zur Verwaltung von Informationsrechten (IRM) von Exchange 
 Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz von E-Mail-Nachrichten in Azure RMS importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle TPD-URLs an den RMS-Verbindungsdienst umzuleiten.
 
 > [!NOTE]
-> Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md).
+> Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md)..
 
 ### Deaktivieren von IRM auf Exchange Servern und Entfernen der AD RMS-Konfiguration
 
@@ -79,19 +82,19 @@ Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, z.B. indem Sie eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben.
+6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, indem Sie z.B. eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben..
 
 ### Deaktivieren von IRM auf SharePoint Servern und Entfernen der AD RMS-Konfiguration
 
 1.  Stellen Sie sicher, dass keine Dokumente aus RMS-geschützten Bibliotheken ausgecheckt sind. Wenn dies der Fall ist, kann am Ende dieses Verfahrens nicht mehr darauf zugegriffen werden.
 
-2.  Klicken Sie auf der Website der Microsoft SharePoint-Zentraladministration im Abschnitt **Schnellstart** auf **Sicherheit**.
+2.  Klicken Sie auf der Website der Microsoft SharePoint-Zentraladministration im Abschnitt **Schnellstart** auf **Sicherheit**..
 
-3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**.
+3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**..
 
-4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **Verwenden Sie IRM nicht auf diesem Server**, und klicken Sie dann auf **OK**.
+4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **IRM nicht auf diesem Server verwenden** aus, und klicken Sie anschließend auf **OK**..
 
-5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners „\ProgramData\Microsoft\MSIPC\Server\<SID des Kontos, das SharePoint Server ausführt>“.
+5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners \ProgramData\Microsoft\MSIPC\Server\*&lt;SID des Kontos, das SharePoint Server ausführt&gt;*.
 
 #### Installieren und Konfigurieren des RMS-Verbindungsdiensts
 
@@ -216,8 +219,8 @@ Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exch
 Nachdem Sie diese Verfahren ausgeführt haben, können Sie den Abschnitt **Nächste Schritte** im Artikel [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md) lesen.
 
 ## Nächste Schritte
-Fahren Sie mit [Phase 4: Aufgaben nach der Migration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.
+Wechseln Sie zu dem Artikel [phase 4 - post migration tasks](migrate-from-ad-rms-phase4.md) (Migrationsphase 4: Aufgaben nach der Migration), um die Migration fortzusetzen..
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -27,7 +27,10 @@ ms.reviewer: mbaldwin
 
 # Erste Schritte mit Azure Rights Management
 
+*Gilt für: Azure Rights Management, Office 365*
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=Apr16_HO4-->
 
 

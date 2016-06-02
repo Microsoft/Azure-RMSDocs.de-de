@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Generieren und Übertragen Ihres Mandantenschlüssels – persönlich
 
+*Gilt für: Azure Rights Management, Office 365*
+
+
 Verwenden Sie die folgenden Verfahren, wenn Sie sich für die [Verwaltung Ihres eigenen Mandantenschlüssels](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) entschieden haben und ihn nicht über das Internet, sondern persönlich übertragen möchten.
 
 ## Generieren Ihres Mandantenschlüssels
@@ -39,7 +42,7 @@ Um Ihren eigenen Mandantenschlüssel zu generieren, befolgen Sie diese 3 Schritt
 -   [Schritt 3: Erstellen Sie einen neuen Schlüssel](#step-3-create-a-new-key)
 
 ### Schritt 1: Bereiten Sie eine Arbeitsstation mit Thales HSM vor
-Installieren Sie die unterstützende nCipher-Software (Thales) auf einem Windows-Computer. Schließen Sie ein Thales HSM an diesen Computer an. Stellen Sie sicher, dass sich die Thales-Tools in Ihrem Pfad befinden. Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang des Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
+Installieren Sie die unterstützende nCipher-Software (Thales) auf einem Windows-Computer. Schließen Sie ein Thales HSM an diesen Computer an. Stellen Sie sicher, dass sich die Thales-Tools in Ihrem Pfad befinden. Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang der Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)..
 
 ### Schritt 2: Erstellen Sie eine Security World
 Starten Sie eine Eingabeaufforderung, und führen Sie das Thales-Programm „new-world“ aus.
@@ -153,6 +156,6 @@ Sie haben die erforderlichen Schritte der persönlichen Übertragung für „Bri
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

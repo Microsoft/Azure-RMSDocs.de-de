@@ -2,7 +2,7 @@
 # required metadata
 
 title: Nachverfolgung von Inhalten | Azure RMS
-description:
+description: Grundlegende Leitfäden zum Implementieren der Dokumentnachverfolgung
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ca08e01f-690d-46f4-ae0f-a880cc29dabc
-
+ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
 
 #ROBOTS:
@@ -25,9 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Nachverfolgung von Inhalten
-
-\[Einige Informationen beziehen sich auf Vorabversionen von Produkten, die sich vor der kommerziellen Veröffentlichung grundlegend ändern können. Microsoft übernimmt keine Garantien, ausdrücklich oder konkludent, in Bezug auf die hier bereitgestellten Informationen.\]
+# Nachverfolgung von Inhalten
 
 Dieses Thema enthält grundlegende Leitfäden zum Implementieren der Dokumentnachverfolgung von Inhalten, die durch Rights Management Services SDK 2.1 geschützt sind.
 
@@ -120,7 +117,7 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
                               sendLicenseRegistrationNotificationEmail);
 
 
-### Verwandte Themen
+## Verwandte Themen
 
 
 * [**Lizenzmetadaten-Eigenschaftstypen**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)
@@ -137,6 +134,6 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

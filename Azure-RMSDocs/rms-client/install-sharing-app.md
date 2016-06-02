@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Herunterladen und Installieren der Rights Management-Freigabeanwendung
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+
 Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu installieren. Wenn Sie es jedoch nicht sind und Office 2010 verwenden, bestehen einige Einschränkungen. Weitere Informationen finden Sie im Abschnitt [Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden](#if-you-are-not-a-local-administrator-and-use-office-2010) auf dieser Seite.
 
 ## So laden Sie die Rights Management-Freigabeanwendung herunter und installieren sie
@@ -34,7 +37,7 @@ Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu ins
 
 2.  Klicken Sie im Abschnitt **Computer** auf das Symbol für **RMS-App für Windows** , und speichern Sie die Datei **Setup.exe** , um die Microsoft Rights Management-Freigabeanwendung zu installieren.
 
-3.  Doppelklicken Sie auf die heruntergeladene Datei „Setup.exe“. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.
+3.  Doppelklicken Sie auf die heruntergeladene Datei „Setup.exe“. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**..
 
 4.  Klicken Sie auf der Seite **Microsoft RMS-Setup** auf **Weiter**, und warten Sie, bis die Installation abgeschlossen wurde.
 
@@ -65,13 +68,13 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

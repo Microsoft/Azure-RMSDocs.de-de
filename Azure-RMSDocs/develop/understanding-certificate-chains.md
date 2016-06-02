@@ -2,7 +2,7 @@
 # required metadata
 
 title: Grundlegendes zu Zertifikatketten | Azure RMS
-description:
+description: Eine rechtefähige Anwendung erfordert ein öffentliches Schlüsselpaar und eine Zertifikatkette, die wieder zurück zu einem Microsoft-Zertifikat an der Stammzertifizierungsstelle führt.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 14694cb0-adc4-4c2f-aff5-22aa132777df
-
+ms.assetid: 6AEA2162-82BF-4867-9285-111CD3FCD2F6
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Grundlegendes zu Zertifikatketten
+# Grundlegendes zu Zertifikatketten
 
 Das Entwickeln einer rechtefähigen Anwendung erfordert ein öffentliches Schlüsselpaar und eine Zertifikatkette, die wieder zu einem Microsoft-Zertifikat an der Stammzertifizierungsstelle führt.
 
@@ -49,7 +48,7 @@ Wenn Sie die Anwendung freigeben möchten, unabhängig davon, ob Sie ein Pre-Pro
 
 Weitere Informationen zum Verwenden von Zertifikatketten und der Anwendungssignierung finden Sie unter [Wechseln zur Produktionsumgebung](switching-to-the-production-environment.md).
 
-### Verwandte Themen
+## Verwandte Themen
 
 * [Entwicklerkonzepte](ad-rms-concepts-nav.md)
 * [Wechseln zur Produktionsumgebung](switching-to-the-production-environment.md)
@@ -58,6 +57,6 @@ Weitere Informationen zum Verwenden von Zertifikatketten und der Anwendungssigni
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

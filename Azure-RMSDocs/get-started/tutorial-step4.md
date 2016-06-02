@@ -1,32 +1,20 @@
 ---
-# required metadata
+# erforderliche Metadaten
 
-title: Azure RMS Quick Start-Lernprogramm – Schritt 4 | Azure RMS
-description: Dies ist der vierte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können.
-keywords:
-author: Cabailey
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: get-started-article
-ms.prod: azure
-ms.service: rights-management
-ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
+Titel: Azure RMS Schnellstart-Tutorial Schritt 4 | Azure RMS-Beschreibung: Der vierte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können.
+keywords: author: cabailey manager: mbaldwin ms.date: 04/28/2016 ms.topic: get-started-article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
 
-# optional metadata
+# optionale Metadaten
 
-ROBOTS: 
-audience:
-ms.devlang:
-ms.reviewer: esaggese
-ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ROBOTS: audience: ms.devlang: ms.reviewer: esaggese ms.suite: ems ms.tgt_pltfrm: ms.technology: ms.custom:
 
 ---
 
 
 # Azure RMS Quick Start – Schritt 4: Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen
+
+*Gilt für: Azure Rights Management, Office 365*
+
 
 Wechseln zu: 
 > [!div class="op_single_selector"]
@@ -38,18 +26,18 @@ Wechseln zu:
 - [Schritt 5: Nachverfolgen des Dokuments](tutorial-step5.md)
 
 
-![](../media/AzRMS_QuickStartSteps4.PNG)
+![Azure RMS Schnellstart-Tutorial Schritt 4](../media/AzRMS_QuickStartSteps4.PNG)
 
 Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf verschiedenen Geräten lesen. Die Geräte umfassen iPads, iPhones, Android-Tablets und -Smartphones sowie Macintosh- und Windows-Computer.
 
 Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. Die E-Mail wird den Empfängern mit dem folgenden vorangehenden Text angezeigt:
 
-**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms),
-      **um sie zu öffnen.**
+**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms)
+      **, um sie zu öffnen.**
 
 Sobald der Empfänger auf den Link klickt, wird er weitergeleitet und erhält Anweisungen zur Installation der RMS-Freigabe-App und ggf. zur Registrierung für ein kostenloses Konto. Das kostenlose Konto gewährt Zugriff auf ein RMS for Individuals-Abonnement, mit dem autorisierte Benutzer ein geschütztes Dokument immer lesen können, auch wenn ihre Organisation nicht über Azure RMS verfügt. Sie können die geschützte Anlage dann mithilfe der folgenden Anweisungen lesen.
 
-![](../media/AzRMS_Tutorial_4_Screenshots.png)
+![Screenshots zu Schritt 4 des Tutorials](../media/AzRMS_Tutorial_4_Screenshots.png)
 
 ### So zeigen Sie die Anlage des geschützten Dokuments an
 
@@ -72,10 +60,9 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 |Informationen zu den beiden Versionen der an die E-Mail angehängten Datei|[Erläuterung zur automatisch erstellten PPDF-Datei](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
 
 
->[!div class="step-by-step"]
-[« Schritt 3](tutorial-step3.md)
+>[!div class="step-by-step"] [« Schritt 3](tutorial-step3.md)
 [Schritt 5 »](tutorial-step5.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

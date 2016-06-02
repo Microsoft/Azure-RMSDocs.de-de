@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Rights Management-Freigabeanwendung für Windows
+
+*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+
 Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freigabe-App“ bezeichnet) ist eine kostenlose, herunterladbare Anwendung für Unternehmen, die [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) oder [Azure Rights Management](../understand-explore/azure-rights-management.md) (Azure RMS) verwenden. Sie ist für Unternehmen konzipiert, die keine eigene Informationsschutz-Infrastruktur einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure RMS geschützt sind.
 
 -   [Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen](sharing-app-version-release-history.md)
@@ -35,13 +38,13 @@ Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freiga
 -   [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 > [!TIP]
-> Es gibt auch eine Rights Management-Freigabe-App für Mac-Computer und mobile Geräte. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für mobile und Mac-Plattformen](http://technet.microsoft.com/dn451248).
+> Es gibt auch eine Rights Management-Freigabe-App für Mac-Computer und mobile Geräte. Weitere Informationen finden Sie unter [FAQ for Rights Management Sharing Application for Mobile and Mac Platforms](http://technet.microsoft.com/dn451248) (Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für mobile und Mac-Plattformen)..
 
 ## Weitere Informationen
 [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für Windows](http://technet.microsoft.com/dn467883)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

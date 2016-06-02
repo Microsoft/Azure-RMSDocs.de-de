@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Konfigurieren von Anwendungen für Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 > [!NOTE]
 > Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Rights Management bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung von Rights Management für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
 >
@@ -55,10 +58,10 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
     -   [Die RMS-Freigabeanwendung für mobile Plattformen: Installation und Verwaltung](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
-Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
+Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Connectors](deploy-rms-connector.md).
 
 > [!TIP]
-> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung von Azure RMS konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](../understand-explore/what-admins-users-see.md).
+> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung von Azure RMS konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was Administratoren und Benutzer sehen](../understand-explore/what-admins-users-see.md).
 
 
 Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die RMS-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des RMS SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des RMS SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
@@ -77,6 +80,6 @@ Nachdem Sie Ihre Anwendungen für die Unterstützung von Azure Rights Management
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management
+
+*Gilt für: Azure Rights Management, Office 365*
+
 Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitgestellt haben, bieten Sie Ihren Benutzern, Administratoren und Ihrem Helpdesk Hilfe und Anleitung:
 
 -   **Endbenutzerinformationen:**
@@ -40,13 +43,13 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
 -   **Administratorinformationen:**
 
-    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
+    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md)..
 
 -   **Helpdesk-Informationen:**
 
     Eines der nützlichsten Helpdesktools ist der [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Helpdesk-Operatoren können das Tool mit der Azure RMS-Administratoroption ausführen und Benutzer dazu auffordern, es mit der Azure RMS-Benutzeroption auszuführen. Dieses Tool unterstützt Sie nicht nur bei der Fehlersuche, sondern behebt gefundene Probleme und zeichnet, sofern der Fehler nicht behoben werden konnte, Ablaufverfolgungsprotokolle auf.
 
-    Stellen Sie bei legitimen Anfragen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung der Azure RMS-[Administratorfunktion](configure-super-users.md) angefordert werden kann.
+    Stellen Sie bei legitimen Anfragen für den Vollzugriff auf geschützte Dokumente sicher – z.B. bei einer Anfrage von der Rechtsabteilung oder einem Vorgesetzten nach einem Mitarbeiteraustritt–, dass der Helpdesk über Prozesse verfügt, mit denen diese Vollzugriffe mithilfe der Azure RMS-[Administratorfunktion](configure-super-users.md) angefordert werden können..
 
     Darüber hinaus finden Sie im Folgenden einige der möglicherweise auftretenden Probleme:
 
@@ -56,7 +59,7 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
     -   **Probleme beim Schützen oder Nutzen von Inhalten:**
 
-        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die von ihnen verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die von Azure RMS unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die von ihnen verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die von Azure RMS unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md)..
 
         Wenn Benutzern beim Versuch, Inhalte zu schützen oder zu öffnen, eine Fehlermeldung angezeigt wird, fordern Sie sie auf, den [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) als Azure RMS-Benutzer auszuführen.
 
@@ -69,9 +72,9 @@ Die Rights Management (RMS)-Freigabeanwendung ist für Benutzer erforderlich, da
 
 Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
 
-Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)..
 
-Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
+Informationen zu mobilen Geräte finden Sie unter [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248) (Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen)..
 
 > [!TIP]
 > Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
@@ -99,7 +102,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 1.  Erstellen Sie in Outlook eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **&lt;Firmenname&gt; – Vertraulich** oder **&lt;Firmenname&gt; – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**..
 
 3.  Senden Sie die Nachricht.
 
@@ -109,7 +112,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf  **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Firmenname&gt; – Vertraulich** oder **&lt;Firmenname&gt; – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf  **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**..
 
 3.  Senden Sie die Nachricht.
 
@@ -118,6 +121,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

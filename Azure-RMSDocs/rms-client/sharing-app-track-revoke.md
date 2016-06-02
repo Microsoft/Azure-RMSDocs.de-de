@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
+
+*Gilt für: Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+
 Wenn Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben und Ihre Organisation nicht Active Directory Rights Management Services, sondern Azure Rights Management verwendet, können Sie verfolgen, wie die Benutzer die geschützten Dokumente verwenden. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden. Verwenden Sie hierfür die **Website zum Nachverfolgen von Dokumenten**, auf die Sie von Windows-Computern, Mac-Computern und sogar mit Tablets und Smartphones zugreifen können.
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
@@ -40,19 +43,19 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 -   Wenn Sie E-Mail-Benachrichtigungen konfigurieren möchten: Klicken Sie auf **Einstellungen** , und geben Sie an, wie und ob Sie bei einem Zugriff auf das Dokument per E-Mail benachrichtigt werden möchten.
 
--   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
+-   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen..
 
 ## Verwenden von Office für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
--   Bei den Office-Anwendungen wie Word, Excel und PowerPoint: Klicken Sie auf der Registerkarte **Start** ihn der Gruppe **RMS** auf **Geschützt freigeben**, und klicken Sie dann auf **Verwendung nachverfolgen**.
+-   Bei den Office-Anwendungen wie Word, Excel und PowerPoint: Klicken Sie auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben**, und klicken Sie anschließend auf **Verwendung nachverfolgen**..
 
-    ![](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
+    ![Verwendung nachverfolgen von Office-Anwendungen bei Verwendung der RMS-Freigabeanwendung ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
 -   In Outlook: Klicken Sie auf der Registerkarte **Start** in der Gruppe  **RMS** auf **Verwendung nachverfolgen**:
 
-    ![](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
+    ![Auswählen von Verwendung nachverfolgen in Outlook bei der Verwendung der RMS-Freigabeanwendung ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
+Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
 
 ### Weitere Methoden zum Nachverfolgen von und zum Widerrufen des Zugriffs auf Dokumente
 Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mithilfe von Office-Anwendungen gibt es auch die folgenden Alternativen:
@@ -65,7 +68,7 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
 #### Verwenden eines Webbrowsers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
--   Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562).
+-   Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562)..
 
     Unterstützte Browser: Wir empfehlen Internet Explorer in der neuesten Version 10, Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
 
@@ -83,26 +86,25 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
 -   Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Mit RMS schützen** und dann **Verwendung nachverfolgen** aus:
 
-    ![](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
+    ![Auswählen von Verwendung nachverfolgen im Explorer bei der Verwendung der RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
 #### Verwenden einer Outlook-E-Mail-Nachricht für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
 -   Klicken Sie in einer E-Mail-Nachricht auf der Registerkarte **Nachricht** in der Gruppe  **RMS** auf **Geschützt freigeben**und dann auf **Verwendung nachverfolgen**:
 
-    ![](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
+    ![Auswählen von Verwendungsnachverfolgung in Outlook bei der Verwendung der RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
 ## Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

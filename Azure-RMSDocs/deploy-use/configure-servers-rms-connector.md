@@ -27,7 +27,10 @@ ms.suite: ems
 
 # Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
-Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
+*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
+
+Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Connectors](deploy-rms-connector.md).
 
 Stellen Sie zunächst sicher, dass Sie den RMS-Verbindungsdienst installiert und konfiguriert haben und dass Sie alle [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für die Server, die den Verbindungsdienst verwenden können, überprüft haben.
 
@@ -89,7 +92,7 @@ Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, 
 
 ### Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst
 
-1.  Wenn Sie das Skript für das Serverkonfigurationstool für den Microsoft RMS-Connector (GenConnectorConfig.ps1) noch nicht heruntergeladen haben, tun Sie dies im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Wenn Sie das Skript für das Serverkonfigurationstool für den Microsoft RMS-Connector (GenConnectorConfig.ps1) noch nicht heruntergeladen haben, tun Sie dies vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106) aus.
 
 2.  Speichern Sie die Datei „GenConnectorConfig.ps1“ auf dem Computer, auf dem Sie das Tool ausführen möchten. Wenn Sie das Tool lokal ausführen, muss dies der Server sein, den Sie für die Kommunikation mit dem RMS-Verbindungsdienst konfigurieren möchten. Andernfalls können Sie sie auf einem beliebigen Computer speichern.
 
@@ -168,6 +171,10 @@ Sie müssen auf diesen Servern außerdem eine Version des RMS-Clients installier
 
 3.  Aktivieren Sie die IRM-Funktion in Exchange. Weitere Informationen finden Sie unter [Information Rights Management-Prozeduren](https://technet.microsoft.com/library/dd351212%28v=exchg.150%29.aspx) in der Exchange-Bibliothek.
 
+    > [!NOTE]
+    > Standardmäßig wird nach dem Ausführen von **Set-IRMConfiguration -InternalLicensingEnabled $true** IRM für Outlook Web App und mobile Geräte automatisch aktiviert, zusätzlich zur Aktivierung von IRM für Postfächer. Administratoren können IRM jedoch auf unterschiedlichen Ebenen deaktivieren. Beispielsweise für einen Clientzugriffsserver, das virtuelle Verzeichnis oder die Postfachrichtlinie von Outlook Web App und eine Postfachrichtlinie für mobile Geräte. Wenn Benutzern keine der Azure RMS-Vorlagen in Outlook Web App (nach einem Tag Wartezeit) oder auf mobilen Geräten (wenn sie die Vorlagen im Outlook-Client sehen) angezeigt wird, überprüfen Sie die relevanten Einstellungen, um sicherzustellen, dass IRM nicht deaktiviert ist. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren von Information Rights Management auf Clientzugriffsservern](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) in der Exchange-Dokumentation. 
+
+
 ## Konfigurieren eines SharePoint-Servers für die Verwendung des Verbindungsdiensts
 Die folgenden SharePoint-Rollen kommunizieren mit dem RMS-Connector:
 
@@ -175,18 +182,20 @@ Die folgenden SharePoint-Rollen kommunizieren mit dem RMS-Connector:
 
 Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdienst verwenden, müssen sie eine der folgenden Softwareversionen ausführen:
 
+-   SharePoint Server 2016
+
 -   SharePoint Server 2013
 
 -   SharePoint Server 2010
 
-Auf einem SharePoint 2013-Server muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Verbindungsdienst unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396) herunter.
+Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396) herunter.
 
 > [!WARNING]
 > Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher haben.
 >
 > Sie können die Clientversion überprüfen, indem Sie die Versionsnummer der Datei „MSIPC.dll“ prüfen, die sich in **\Programme\Active Directory Rights Management Services Client 2.1** befindet. Das Dialogfeld „Eigenschaften“ zeigt die Versionsnummer des MSIPC 2.1-Clients.
 
-Auf diesen Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert sein, die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Die Mindestversion, die in Windows Server 2008 unterstützt wird, ist in dem Hotfix enthalten, das Sie herunterladen können von [RSA-Schlüssellänge wurde für AD RMS in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627272), und die Mindestversion für Windows Server 2008 R2 kann heruntergeladen werden von [RSA-Schlüssellänge für AD RMS in Windows 7 oder Windows Server 2008 R2 wurde auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627273). Windows Server 2012 und Windows Server 2012 R2 verfügen über systemeigene Unterstützung für Kryptografiemodus 2.
+Auf Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert sein, die die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Die Mindestversion, die in Windows Server 2008 unterstützt wird, ist in dem Hotfix enthalten, das Sie herunterladen können von [RSA-Schlüssellänge wurde für AD RMS in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627272), und die Mindestversion für Windows Server 2008 R2 kann heruntergeladen werden von [RSA-Schlüssellänge für AD RMS in Windows 7 oder Windows Server 2008 R2 wurde auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627273). Windows Server 2012 und Windows Server 2012 R2 verfügen über systemeigene Unterstützung für Kryptografiemodus 2.
 
 ### So konfigurieren Sie SharePoint-Server für die Verwendung des Verbindungsdiensts
 
@@ -196,19 +205,19 @@ Auf diesen Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients insta
 
     -   Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus. Weitere Informationen finden Sie unter [Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in diesem Artikel.
 
-        Um beispielsweise das Tool lokal zum Konfigurieren eines Servers mit ausgeführtem SharePoint 2013 auszuführen:
+        Um beispielsweise das Tool lokal zum Konfigurieren eines Servers auszuführen, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   Wenn Sie SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Verbindungsdienst](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen manuell den Servern hinzuzufügen. 
+    -   Wenn Sie SharePoint 2016 oder SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Connector](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen den Servern manuell hinzuzufügen. 
 
 3.  Aktivieren Sie IRM in SharePoint. Weitere Informationen finden Sie unter [Verfahren zur Verwaltung von Informationsrechten](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in der SharePoint-Bibliothek.
 
     Wenn Sie diese Anleitungen befolgen, müssen Sie SharePoint für die Verwendung des Verbindungsdiensts konfigurieren, indem Sie **Diesen RMS-Server verwenden** angeben und dann die URL des Verbindungsdiensts mit Lastenausgleich eingeben, die Sie konfiguriert haben. Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Wenn Ihr Connector beispielsweise den Namen „https://connector.contoso.com“ hat, sieht Ihre Konfiguration wie im folgenden Bild aus:
 
-    ![](../media/AzRMS_SharePointConnector.png)
+    ![Konfigurieren von SharePoint Server für den RMS-Connector](../media/AzRMS_SharePointConnector.png)
 
     Nachdem in einer SharePoint-Farm IRM aktiviert ist, können Sie IRM für einzelne Bibliotheken aktivieren, indem Sie die Option **Verwaltung von Informationsrechten** auf der Seite **Bibliothekseinstellungen** für jede der Bibliotheken verwenden.
 
@@ -252,6 +261,6 @@ Zusätzlich können Sie ggf. noch Folgendes verwenden, um den RMS-Verbindungsdie
 Sie können die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten. 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
