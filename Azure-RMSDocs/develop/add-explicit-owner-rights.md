@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Hinzufügen expliziter Besitzerrechte
 
 In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
@@ -32,7 +32,7 @@ In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt w
 
 Wenn Ihre Anwendung ein Lizenzhandle mit [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch) erstellt, muss sie dem Besitzer auch explizit Vollzugriff (Berechtigungen) gewähren.
 
-**Hinweis** Wenn ein Benutzer über [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden dem Besitzer nicht alle Berechtigungen gewährt.
+**Hinweis** Wenn ein Benutzer über [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden dem Besitzer damit nicht alle Berechtigungen gewährt.
 
  
 ## Szenario: Zuweisen von Rechten zu einer Lizenz
@@ -117,6 +117,6 @@ Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

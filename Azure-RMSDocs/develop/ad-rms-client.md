@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Client
 
 In diesem Thema werden der Zweck und die Funktion des Active Directory Rights Management Services Client 2.1 beschrieben.
@@ -51,6 +51,6 @@ Weitere Informationen finden Sie in der [TechNet-Dokumentation zum RMS Client 2.
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

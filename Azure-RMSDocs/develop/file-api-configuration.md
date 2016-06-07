@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Datei-API-Konfiguration
 
 
@@ -75,7 +75,7 @@ Legen Sie den Wert *Encryption* im Schlüssel zum Angeben des Schutzverhaltens f
 - *Pfile*: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
 
 
-> [AZURE.NOTE] Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption`-Wert z. B. auf „Pfile“ festgelegt wird, werden DOCX-Dateien weiterhin mit dem systemeigenen Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung DOCX.
+> [AZURE.NOTE] Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption`-Wert z. B. auf „Pfile&quot; festgelegt wird, werden DOCX-Dateien weiterhin mit dem nativen Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung DOCX.
 
 Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten.
 
@@ -89,7 +89,7 @@ Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert is
 
 ### Datei-API – Dateiunterstützungsdetails
 
-Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hinzugefügt werden. Zum Beispiel wird eine beliebige Erweiterung &lt;ext&gt; (nicht Office), \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung NATIVE lautet.
+Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hinzugefügt werden. Beispielsweise wird für eine beliebige Erweiterung &lt;ext&gt; (nicht Office) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung „NATIVE“ lautet.
 
 **Office-Dateien**
 
@@ -161,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

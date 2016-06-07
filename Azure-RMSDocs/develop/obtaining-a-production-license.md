@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Bezug einer Produktionslizenz
 
 Bevor Sie eine mithilfe der Rights Management Services SDK 2.1 entwickelte Anwendung freigeben können, müssen Sie einen Produktionslizenzvertrag beantragen, um ein Produktionszertifikat zu beziehen.
@@ -89,6 +89,6 @@ Sie können das Zertifikat beziehen, indem Sie einen Produktionslizenzvertrag be
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

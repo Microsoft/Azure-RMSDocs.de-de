@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Bereitstellen der Anwendung
 
 
@@ -44,8 +44,7 @@ Der AD RMS-Client 2.1 ist eine Software, die entwickelt wurde, damit auf Ihren C
 
 Der AD RMS-Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der AD RMS-Client 2.1 wird als optionaler Download bereitgestellt, der mit Bestätigung und Annahme des Lizenzvertrags mit der Software von Drittanbietern frei verteilt werden kann, um Clients Zugriff auf Inhalte zu ermöglichen, die durch Nutzung und Bereitstellung von RMS-Servern in Ihrer Umgebung geschützt wurden.
 
-> [!IMPORTANT]
-> Die AD RMS-Client 2.1-Architektur ist speziell und muss der Architektur des Zielbetriebssystems entsprechen.
+> [!IMPORTANT] Die AD RMS-Client 2.1-Architektur ist speziell und muss der Architektur des Zielbetriebssystems entsprechen.
 
 
 ## Installationsoptionen für den AD RMS-Client 2.1
@@ -103,6 +102,6 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

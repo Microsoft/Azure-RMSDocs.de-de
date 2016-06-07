@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Einrichten der Entwicklungsumgebung für die Präproduktion
 
 In diesem Abschnitt werden Sie durch die Einrichtung Ihrer rechtlich geschützten Anwendung und deren Ausführung in einer Test- oder Präproduktionsumgebung geführt. In den folgenden Themen wird beschrieben, wie Sie Ihre Präproduktionsumgebung für die Entwicklung einrichten. Die Informationen sind in der Reihenfolge angegeben, in der Sie die Aufgaben ggf. durchführen können.
@@ -48,6 +48,6 @@ In diesem Abschnitt werden Sie durch die Einrichtung Ihrer rechtlich geschützte
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

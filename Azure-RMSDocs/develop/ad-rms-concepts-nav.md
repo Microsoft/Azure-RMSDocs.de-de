@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Entwicklerkonzepte
 
 In den Themen dieses Abschnitts werden wichtige Konzepte in RMS erläutert.
@@ -46,6 +46,6 @@ In den Themen dieses Abschnitts werden wichtige Konzepte in RMS erläutert.
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Testen Ihrer rechtlich geschützten Anwendung
 
 Dieses Thema beschreibt die erforderlichen Schritte, um die rechtlich geschützte Rights Management Services SDK 2.1-Anwendung zu testen.
@@ -55,7 +55,7 @@ Erstellen einer rechtlich geschützte Anwendung. Optionen finden Sie im vorangeg
 
 Generieren Sie vor der Ausführung der Anwendung ein Manifest.
 
-**Hinweis**: Wenn die Anwendung den Server-API-Modus (**IPC\_API\_MODE\_SERVER**) verwendet, ist kein Anwendungsmanifest erforderlich. Sie können Ihre Anwendung mit einem AD RMS-Produktionsserver testen. Beim Wechsel zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu Servermodusanwendungen finden Sie unter [Anwendungstypen](application-types.md).
+**Hinweis** Wenn die Anwendung den Server-API-Modus (**IPC\_API\_MODE\_SERVER**) verwendet, ist kein Anwendungsmanifest erforderlich. Sie können Ihre Anwendung mit einem AD RMS-Produktionsserver testen. Beim Wechsel zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu Servermodusanwendungen finden Sie unter [Anwendungstypen](application-types.md).
 
  
 
@@ -81,7 +81,7 @@ Um die Anwendungsmanifestdatei mithilfe der Präproduktions-Zertifikatskette zu 
 
 2.  Benennen Sie im Anwendungsordner die Manifestkonfigurationsdatei "YourAppName.isv.mcf" in den Namen der Anwendung um, und fügen Sie die Dateinamenerweiterung .mcf an. Beispiel: Wenn die Anwendung MyApp.exe heißt, benennen Sie "YourAppName.isv.mcf" in "MyApp.exe.mcf" um.
 
-3.  Verwenden Sie einen Text-Editor, um Ihre Anwendung der Manifestkonfigurationsdatei hinzuzufügen. Ersetzen Sie hierzu den Platzhalter &lt;YourAppName&gt;.exe in der Modulliste in Ihrer MCF-Datei durch den Namen der Anwendung, beispielsweise "MyApp.exe".
+3.  Verwenden Sie einen Text-Editor, um Ihre Anwendung der Manifestkonfigurationsdatei hinzuzufügen. Ersetzen Sie hierzu den Platzhaltertext „&lt;YourAppName&gt;.exe“ in der Modulliste in Ihrer MCF-Datei durch den Namen der Anwendung, beispielsweise „MyApp.exe“.
 
     Der Signiervorgang generiert einen Fehler, wenn die MCF-Datei unverändert verwendet wird.
 
@@ -123,6 +123,6 @@ Sie können die Anwendung aus einem beliebigen Verzeichnis ausführen. Die Anwen
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

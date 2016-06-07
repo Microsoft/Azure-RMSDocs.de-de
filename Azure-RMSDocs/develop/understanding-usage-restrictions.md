@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Grundlegendes zu Nutzungseinschränkungen
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
@@ -63,6 +63,6 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

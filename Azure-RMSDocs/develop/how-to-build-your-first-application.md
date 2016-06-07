@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # IPCHelloWorld – Beispielanwendung
 
 Dieses Thema enthält eine Anleitung zum Erstellen einer rechtlich geschützten Beispielanwendung.
@@ -71,7 +71,7 @@ Der folgende Codeausschnitt listet die verfügbaren RMS-Vorlagen vom RMS-Standar
 
 
 
-Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Struktur, die durch die *PcTil*-Variable bezeichnet wird, und zeigt dann die Vorlagen an.
+Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Struktur, die durch die *pcTil*-Variable bezeichnet wird, und zeigt dann die Vorlagen an.
 
 
 
@@ -216,12 +216,12 @@ Bevor Sie fertig sind, müssen Sie auch alle reservierten Ressourcen freizugeben
 * [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [Webinar\_Collateral.ZIP](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
+* [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
  
 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

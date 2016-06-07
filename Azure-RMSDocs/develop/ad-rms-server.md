@@ -23,9 +23,9 @@ ms.suite: ems
 #ms.custom:
 
 ---
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 
 # AD RMS-Server
-
 Dieses Thema beschreibt den Zweck und die Funktionen des RMS-Servers.
 
 Die Serverkomponente von Rights Management Services (RMS) wird durch eine Reihe von Webdiensten implementiert, die in [Microsoft-Internetinformationsdienste](http://www.iis.net/overview) (IIS) ausgeführt werden. Sie können auch die cloudbasierte Implementierung über RMS in Azure verwenden. Weitere Informationen zur Verwendung von Azure Rights Management Services finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
@@ -65,6 +65,6 @@ Dieser Dienst wird auf dem Stammzertifizierungsserver ausgeführt.
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

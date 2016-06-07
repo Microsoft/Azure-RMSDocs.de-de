@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Verwenden der Verschlüsselung
 
 Dieses Thema erläutert unsere Verschlüsselungspakete und zeigt einige Codeausschnitte für deren Verwendung.
@@ -50,7 +50,7 @@ Es folgend einige einfache Codeausschnitte, die die Verwendung der neuen Lizenze
 
 ## Veraltete Algorithmen
 
-Wir verwenden das **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**-Flag nicht mehr in unserer API. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen, aber bereits entwickelte Anwendungen, die es verwenden, sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen.
+Das Flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** wird in unserer API nicht länger zur Verfügung gestellt. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen, aber bereits entwickelte Anwendungen, die es verwenden, sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen.
 
 Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Beispiele finden Sie in den folgenden Codeausschnitten.
 
@@ -106,6 +106,6 @@ Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralte
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

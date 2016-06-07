@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Installieren des SDK
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+# Installieren des SDKs
 
 In diesem Thema werden Sie durch die Installation der Entwicklertools geführt.
 
@@ -53,6 +53,6 @@ Weitere Informationen zu den Dateien, die mit „setup\_sdk.exe“ auf Ihrem Sys
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

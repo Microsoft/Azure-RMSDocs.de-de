@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Konfigurieren von Visual Studio
 
 Dieses Thema enthält Informationen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des Rights Management Services SDK 2.1.
@@ -85,6 +85,6 @@ Diese Anweisungen gelten für die Erstellung einer systemeigenen 32-Bit-Anwendun
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
