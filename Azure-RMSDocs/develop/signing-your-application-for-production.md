@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 # Signieren Ihrer Anwendung für die Produktion
 
 In diesem Thema werden Sie durch das Signieren Ihrer Anwendung für den Produktionsmodus geführt.
@@ -77,6 +77,6 @@ Legen Sie sie in demselben Verzeichnis ab, in dem *GenManifest.exe* und Ihre Anw
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
