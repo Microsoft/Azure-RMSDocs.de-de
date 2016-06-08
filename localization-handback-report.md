@@ -1,39 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 2
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\develop\getting-started-with-ad-rms-2-0.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/getting-started-with-ad-rms-2-0.md) | InSyncHandedBackSuccess | [Details](#701a814016956c32632f776cc3c039fa468beefa68)
- [Azure-RMSDocs\develop\signing-your-application-for-production.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/signing-your-application-for-production.md) | InSyncHandedBackSuccess | [Details](#142fee332d08e4743e8fcac9cd758a1b5d8f8fe096)
 
 ## Item Details
-##### <a name='701a814016956c32632f776cc3c039fa468beefa68'></a> Source: [Azure-RMSDocs\develop\getting-started-with-ad-rms-2-0.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/getting-started-with-ad-rms-2-0.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\getting-started-with-ad-rms-2-0.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/0c05a4b0cb31ef5c49b02992357d9f3585d98ead/Azure-RMSDocs/develop/getting-started-with-ad-rms-2-0.md)
-* Handoff File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/f224f7348624c757af1c84993d491292e9066791/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf)
-* Handoff Datetime: 2016-06-02 02:09:42
-* Handoff Reason: Include
-* Archive File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d4eabd5986452cdcac66505f67b9bf1ea60b958e/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf)
-* Archive Datetime: 2016-06-02 03:13:19
-* Handback File: [getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/b780ad98b5967336d8485a74384cfdf7702094e1/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/getting-started-with-ad-rms-2-0.ea2db894ddfb123d7a11829d073480489c257733.de-de.xlf)
-* Handback Datetime: 2016-06-08 08:32:21
-* [Back to Top](#report-top)
-
-##### <a name='142fee332d08e4743e8fcac9cd758a1b5d8f8fe096'></a> Source: [Azure-RMSDocs\develop\signing-your-application-for-production.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ac6afddc2b39d6209ef1b89d8d84011942cdba5a/Azure-RMSDocs/develop/signing-your-application-for-production.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\develop\signing-your-application-for-production.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/0c05a4b0cb31ef5c49b02992357d9f3585d98ead/Azure-RMSDocs/develop/signing-your-application-for-production.md)
-* Handoff File: [signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/f224f7348624c757af1c84993d491292e9066791/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf)
-* Handoff Datetime: 2016-06-02 02:09:42
-* Handoff Reason: Include
-* Archive File: [signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/d4eabd5986452cdcac66505f67b9bf1ea60b958e/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf)
-* Archive Datetime: 2016-06-02 03:13:19
-* Handback File: [signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/b780ad98b5967336d8485a74384cfdf7702094e1/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/signing-your-application-for-production.9aa6ed6fe62e8261611d086f4ae0107239126034.de-de.xlf)
-* Handback Datetime: 2016-06-08 08:32:21
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
