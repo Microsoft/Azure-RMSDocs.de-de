@@ -23,8 +23,8 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
-# Vorteile dieses SDKs
+** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+# Vorteile dieses SDK
 Dieses Thema beschreibt, warum Rights Management Services SDK 2.1 eine deutliche Verbesserung gegenüber des ursprünglichen [Active Directory Rights Management Services-SDKs](https://msdn.microsoft.com/library/Cc530379) in Bezug auf erforderlichen Entwicklungsaufwand zum Erstellen einer Rechte-fähigen Anwendung ist.
 
 **API-Oberfläche** – Die API-Oberfläche wurde erheblich durch Abstraktion reduziert, sodass Sie von vielen Details der Back-End-Implementierung befreit sind. Von einer API-Oberfläche mit 84 Funktionen für RMS SDK enthält das RMS-SDK 2.1 nur 20 API-Funktionen. Die meisten Anwendungen müssen nur einen kleinen Teil dieser API-Oberfläche verwenden.
@@ -51,6 +51,6 @@ Das AD RMS-SDK, das Funktionen nutzt, die vom Client in „Msdrm.dll“ bereitge
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
