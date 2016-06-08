@@ -248,9 +248,6 @@
   "701a814016956c32632f776cc3c039fa468beefa": [
     "Azure-RMSDocs\\develop\\getting-started-with-ad-rms-2-0.md"
   ],
-  "398132769d64ab56c354a5f159b7df257bee5c2e": [
-    "Azure-RMSDocs\\develop\\getting-started-with-ad-rms-2-0.md"
-  ],
   "e75ec6c04afd171552697f79deb33ad2cfe2c4e1": [
     "Azure-RMSDocs\\develop\\how-to-build-your-first-application.md"
   ],
@@ -327,9 +324,6 @@
     "Azure-RMSDocs\\develop\\setup-developer-environment.md"
   ],
   "142fee332d08e4743e8fcac9cd758a1b5d8f8fe0": [
-    "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
-  ],
-  "7ff5c24120c60bfded7603e3257be03430c307c6": [
     "Azure-RMSDocs\\develop\\signing-your-application-for-production.md"
   ],
   "28d4c2d709f91fc2e82e7404747ed757a1899e3b": [
