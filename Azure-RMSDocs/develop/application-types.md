@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+
 # Anwendungstypen
 
 
@@ -36,7 +36,6 @@ Die folgenden Anwendungstypen werden derzeit von Rights Management Services SDK 
 Bei einer einfachen Anwendung kann es sich um ein Befehlszeilenprogramm handeln, das zum Verschlüsseln einer gegebenen Datei erstellt wird. Ein Beispiel für eine einfache rechtlich geschützte Anwendung finden Sie unter [IPCHelloWorld – Beispielanwendung](how-to-build-your-first-application.md).
 
 ### Servermodusanwendungen
-
 
 Der *Servermodus* ist für nicht interaktive Anwendungen vorgesehen, die RMS-geschützte Inhalte nutzen, schützen oder verarbeiten. Ein Beispiel wäre eine Anwendung zur *Verhinderung von Datenverlusten*, die als Dienst auf einem Dateiserver ausgeführt wird und automatisch vertrauliche Dokumente schützt. Ein Beispiel für diesen Anwendungstyp finden Sie unter [IpcDlp Beispiel](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) .
 
@@ -60,19 +59,12 @@ Weitere Informationen zum Schutz Ihrer Anwendung finden Sie unter [Grundlegendes
 
 ## Verwandte Themen
 
-* [Entwicklerkonzepte](ad-rms-concepts-nav.md)
 * [IpcDlp-Beispiel](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCHelloWorld – Beispielanwendung](how-to-build-your-first-application.md)
 * [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md)
 * [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md)
- 
-
- 
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

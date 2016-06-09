@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+
 # Unterstützte Dateiformate
 
 Die Datei-API unterstützt native Formate und das PFile-Format.
@@ -46,9 +46,6 @@ Administratoren können Registrierungsschlüssel festlegen, um zu konfigurieren,
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -49,9 +49,7 @@ Informationen zu den Laufzeitanforderungen für ein bestimmtes Programmierelemen
 |[Erste Schritte](getting-started-with-ad-rms-2-0.md)|Die RMS SDK 2.1-Plattform ermöglicht Entwicklern das Erstellen von Anwendungen, die den RMS-Datenschutz nutzen.|
 |[Anmerkungen zu dieser Version](release-notes-rtm.md)|Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.|
 |[Codebeispiele](samples.md)|Dieses Thema enthält eine Reihe von Beispiele unter Verwendung des RMS SDK 2.1, das im MSDN Download Center verfügbar ist.|
-|[Vorgehensweise](how-to-use-msipc.md)|Schrittweise Anleitung für Szenarien und Aufgaben unter Verwendung des RMS SDK 2.1.|
 |[Hinweise für Entwickler](developer-notes.md)|Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarios.|
-|[Entwicklerkonzepte](ad-rms-concepts-nav.md)|In den Themen dieses Abschnitts werden wichtige Konzepte in RMS erläutert.|
 |[API-Referenz](/rights-management/sdk/2.1/api/win/constants)|In diesem Abschnitt wird das Referenzmaterial für alle API-Elemente abgedeckt.|
 
  
@@ -66,6 +64,6 @@ Informationen zu den Laufzeitanforderungen für ein bestimmtes Programmierelemen
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
