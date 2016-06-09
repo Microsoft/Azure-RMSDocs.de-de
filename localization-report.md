@@ -2009,14 +2009,14 @@
 
 ##### <a name='19f536e8d0353c7b0ccbd4de3df646352dc2d748124'></a> Source: [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/tutorial-step4.md)
 * Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/868027eb1fb8c10f86a4c9123802239b879ff204/Azure-RMSDocs/get-started/tutorial-step4.md)
+* Target File: [Azure-RMSDocs\get-started\tutorial-step4.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/a916913265c142e5cb8acc5dcfca7749d45aac99/Azure-RMSDocs/get-started/tutorial-step4.md)
 * Handoff File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/5a339260ca0018975a4e3e3f3b221e905e638d72/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf)
 * Handoff Datetime: 2016-05-12 00:51:10
 * Handoff Reason: Include
 * Archive File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/8deae0d52560f1cd44ea0bffd2047482b564176e/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf)
 * Archive Datetime: 2016-05-21 18:37:56
-* Handback File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/d57104af72232d401ec0c520ec428bea6b2074ea/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf)
-* Handback Datetime: 2016-06-02 02:39:51
+* Handback File: [tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/21fb50d5f1cd94c0b92fc9601682120fb6fcdab2/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/tutorial-step4.4a68451cdfff18d376d01b124ad246b857ddea99.de-de.xlf)
+* Handback Datetime: 2016-06-09 18:10:02
 * [Back to Top](#report-top)
 
 ##### <a name='9c335e054d4aed1a8cca654420a580d02a4c849f125'></a> Source: [Azure-RMSDocs\get-started\tutorial-step5.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ed50d87138c428fadfd22cd5b3ef3c7f7e421848/Azure-RMSDocs/get-started/tutorial-step5.md)
