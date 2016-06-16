@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+
 # Rights Management Services SDK 2.1
 
 ## Zweck
@@ -50,7 +50,7 @@ Informationen zu den Laufzeitanforderungen für ein bestimmtes Programmierelemen
 |[Anmerkungen zu dieser Version](release-notes-rtm.md)|Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.|
 |[Codebeispiele](samples.md)|Dieses Thema enthält eine Reihe von Beispiele unter Verwendung des RMS SDK 2.1, das im MSDN Download Center verfügbar ist.|
 |[Hinweise für Entwickler](developer-notes.md)|Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarios.|
-|[API-Referenz](/rights-management/sdk/2.1/api/win/constants)|In diesem Abschnitt wird das Referenzmaterial für alle API-Elemente abgedeckt.|
+|[API-Referenz](api-reference-2-1.md)|In diesem Abschnitt wird das Referenzmaterial für alle API-Elemente abgedeckt.|
 
  
 
