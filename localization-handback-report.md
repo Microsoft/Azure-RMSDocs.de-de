@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\develop\microsoft-information-protection-and-control-client-portal.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/82632b7d9ca6d59ae3f033ca872567c1f0f50188/Azure-RMSDocs/develop/microsoft-information-protection-and-control-client-portal.md) | InSyncHandedBackSuccess | [Details](#866a8f1ec80ecb5b91fcc2915d11f5ef61543c3284)
 
 ## Item Details
+##### <a name='866a8f1ec80ecb5b91fcc2915d11f5ef61543c3284'></a> Source: [Azure-RMSDocs\develop\microsoft-information-protection-and-control-client-portal.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/82632b7d9ca6d59ae3f033ca872567c1f0f50188/Azure-RMSDocs/develop/microsoft-information-protection-and-control-client-portal.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\microsoft-information-protection-and-control-client-portal.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/4daa3e7ac56146660944dad5edf9338329cc5ca2/Azure-RMSDocs/develop/microsoft-information-protection-and-control-client-portal.md)
+* Handoff File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/4b474b3273165cdcfbae83b3ec05e4b722ec9ee9/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
+* Handoff Datetime: 2016-06-14 00:36:33
+* Handoff Reason: Include
+* Archive File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/03f120929c10804e643ccbafad857fda962586ab/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
+* Archive Datetime: 2016-06-16 13:06:48
+* Handback File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/0424045dda448875d82fb82cf45690db4fbd7b15/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
+* Handback Datetime: 2016-06-16 16:03:17
+* Bilingual File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/637266450d7f7dac7fe1eb733d5e5f47cb14a24d/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
+* Bilingual Datetime: 2016-06-16 10:18:39
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
