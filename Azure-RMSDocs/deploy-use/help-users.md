@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,21 +35,20 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
     Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt völlig neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [benutzerdefinierte Vorlagen](configure-custom-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
 
-    > [!TIP]
-    > Beispielvideos für Endbenutzer:
+    > [!TIP] Beispielvideos für Endbenutzer:
     >
     > -   [Azure RMS-Benutzererfahrung](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Administratorinformationen:**
 
-    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md)..
+    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
 -   **Helpdesk-Informationen:**
 
     Eines der nützlichsten Helpdesktools ist der [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Helpdesk-Operatoren können das Tool mit der Azure RMS-Administratoroption ausführen und Benutzer dazu auffordern, es mit der Azure RMS-Benutzeroption auszuführen. Dieses Tool unterstützt Sie nicht nur bei der Fehlersuche, sondern behebt gefundene Probleme und zeichnet, sofern der Fehler nicht behoben werden konnte, Ablaufverfolgungsprotokolle auf.
 
-    Stellen Sie bei legitimen Anfragen für den Vollzugriff auf geschützte Dokumente sicher – z.B. bei einer Anfrage von der Rechtsabteilung oder einem Vorgesetzten nach einem Mitarbeiteraustritt–, dass der Helpdesk über Prozesse verfügt, mit denen diese Vollzugriffe mithilfe der Azure RMS-[Administratorfunktion](configure-super-users.md) angefordert werden können..
+    Stellen Sie bei legitimen Anfragen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung der Azure RMS-[Administratorfunktion](configure-super-users.md) angefordert werden kann.
 
     Darüber hinaus finden Sie im Folgenden einige der möglicherweise auftretenden Probleme:
 
@@ -59,7 +58,7 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
     -   **Probleme beim Schützen oder Nutzen von Inhalten:**
 
-        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die von ihnen verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die von Azure RMS unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md)..
+        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die von ihnen verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die von Azure RMS unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
         Wenn Benutzern beim Versuch, Inhalte zu schützen oder zu öffnen, eine Fehlermeldung angezeigt wird, fordern Sie sie auf, den [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) als Azure RMS-Benutzer auszuführen.
 
@@ -72,18 +71,16 @@ Die Rights Management (RMS)-Freigabeanwendung ist für Benutzer erforderlich, da
 
 Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
 
-Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)..
+Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
 
-Informationen zu mobilen Geräte finden Sie unter [FAQ for Microsoft Rights Management Sharing Application for Mobile Platforms](http://technet.microsoft.com/dn451248) (Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen)..
+Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
 
-> [!TIP]
-> Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users.
+> [!TIP] Ein allgemeines Beispielszenario mit Screenshots finden Sie in [Sicheres Freigeben von Anlagen für mobile Benutzer](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
 Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, wodurch das Schützen von Dateien erleichtert würde. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
 
-> [!TIP]
-> Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
+> [!TIP] Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der Anwendungsversion.
 
 #### So schützten Sie ein Dokument in Word 2013
 
@@ -91,8 +88,7 @@ Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung insta
 
 2.  Klicken Sie im Menü **Datei** auf **Info**, **Dokument schützen**, **Zugriff beschränken**, und wählen Sie dann eine Vorlage aus, um schnell die entsprechenden Nutzungsrechte anzuwenden, oder klicken Sie auf **Zugriff beschränken** , und wählen Sie die Nutzungsrechte selbst aus.
 
-    > [!NOTE]
-    > Wenn Sie zum ersten Mal Rights Management verwendet haben, stellen Sie eine Verbindung mit dem [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst her, und Sie werden zur Eingabe von Anmeldeinformationen aufgefordert, um den Office IRM-Client zu konfigurieren.
+    > [!NOTE] Wenn Sie zum ersten Mal Rights Management verwendet haben, stellen Sie eine Verbindung mit dem [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst her, und Sie werden zur Eingabe von Anmeldeinformationen aufgefordert, um den Office IRM-Client zu konfigurieren.
 
 3.  Speichern Sie das Dokument.
 
@@ -102,7 +98,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 1.  Erstellen Sie in Outlook eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**..
+2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -112,7 +108,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf  **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**..
+2.  Klicken Sie auf  **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -121,6 +117,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

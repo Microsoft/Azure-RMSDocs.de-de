@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -54,7 +54,7 @@ Sie können Ihre Azure RMS-Konfiguration und den Mandantenschlüssel anhand der 
 
 ### Schritt 1: Initiieren des Exports
 
--   Hierzu kontaktieren Sie den Microsoft-Kundendienst (CSS). Sie müssen nachweisen, dass Sie ein Administrator für Ihren Azure RMS-Mandanten sind.
+-   Wenden Sie sich hierfür an den Microsoft-Kundendienst (CSS), um eine **Azure Rights Management-Supportanfrage mit einer Anforderung eines Azure RMS-Schlüsselexports** zu öffnen. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Exportieren Ihres Mandatenschlüssels ist keine kostenfreie Supportleistung.
 
 ### Schritt 2: Warten auf Überprüfung
 
@@ -67,7 +67,7 @@ Sie können Ihre Azure RMS-Konfiguration und den Mandantenschlüssel anhand der 
     ```
     AadrmTpd.exe -createkey
     ```
-    Hierdurch wird ein RSA-Schlüsselpaar generiert, und die öffentliche und private Hälfte wird jeweils als Datei im aktuellen Ordner gespeichert. Beispiel: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** und **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**..
+    Hierdurch wird ein RSA-Schlüsselpaar generiert, und die öffentliche und private Hälfte wird jeweils als Datei im aktuellen Ordner gespeichert. Beispiel: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** und **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
     Antworten Sie auf die E-Mail des Kundendiensts, indem Sie die Datei mit dem Namen anfügen, der mit **PublicKey** beginnt. Der Kundendienst sendet Ihnen als Nächstes eine TPD-Datei als XML-Datei, die mit Ihrem RSA-Schlüssel verschlüsselt ist. Kopieren Sie diese Datei in den Ordner, in dem Sie das Tool „AadrmTpd“ ursprünglich ausgeführt haben, und führen Sie das Tool erneut aus, wobei Sie Ihre Datei, die mit **PrivateKey** beginnt, und die Datei vom Kundendienst verwenden. Beispiel:
 
@@ -86,7 +86,7 @@ Sie können Ihre Azure RMS-Konfiguration und den Mandantenschlüssel anhand der 
 
 -   Nachdem Sie Ihren Mandantenschlüssel erhalten haben, bewahren Sie ihn sicher auf, weil jede Person, die darauf zugreifen kann, alle Dokumente entschlüsseln kann, die mithilfe dieses Schlüssels geschützt werden.
 
-    Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin besteht, dass Sie Azure RMS nicht mehr verwenden möchten, sollten Sie als bewährte Methode Ihren RMS-Mandanten nun deaktivieren. Führen Sie diesen Vorgang unmittelbar nach dem Erhalt des Mandantenschlüssels aus, weil diese Vorsichtsmaßnahme die möglichen Konsequenzen minimiert, wenn auf Ihren Mandantenschlüssel durch eine Person zugegriffen wird, die nicht über diesen Schlüssel verfügen sollte. Eine Anleitung finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md)..
+    Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin besteht, dass Sie Azure RMS nicht mehr verwenden möchten, sollten Sie als bewährte Methode Ihren RMS-Mandanten nun deaktivieren. Führen Sie diesen Vorgang unmittelbar nach dem Erhalt des Mandantenschlüssels aus, weil diese Vorsichtsmaßnahme die möglichen Konsequenzen minimiert, wenn auf Ihren Mandantenschlüssel durch eine Person zugegriffen wird, die nicht über diesen Schlüssel verfügen sollte. Eine Anleitung finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
 
 ## Reaktion auf eine Sicherheitsverletzung
 Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der HSM-Technologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen gefunden werden.
@@ -104,6 +104,6 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

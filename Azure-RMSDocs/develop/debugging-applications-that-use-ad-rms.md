@@ -1,30 +1,20 @@
 ---
-# required metadata
+# erforderliche Metadaten
 
-title: Debuggen einer rechtlich geschützten Anwendung | Azure RMS
-description: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optional metadata
+title: Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung | Azure RMS-Beschreibung: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# optionale Metadaten
 
 #ROBOTS:
-audience: developer
+Zielgruppe: Entwickler
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
-# Debuggen einer rechtlich geschützten Anwendung
+
+# Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung
 
 Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 
@@ -33,6 +23,7 @@ Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das
 Im Rights Management Services SDK 2.1 sind die Anti-Debuggingüberprüfungen in der Entwicklerversion Ihrer Laufzeit deaktiviert.
 
 Sie können die Debugablaufverfolgung aktivieren, indem Sie den folgenden Registrierungsschlüssel verwenden. (Um die Debugablaufverfolgung zu deaktivieren, ändern Sie den Wert in 0.) Für das Debuggen in dieser Version müssen keine weiteren Anforderungen erfüllt werden.
+
 
 ```
 HKEY_LOCAL_MACHINE
@@ -72,15 +63,11 @@ Mit dem folgenden Befehl wird beispielsweise das MSIPC-Ereignisprotokoll aktivie
 
 ## Verwandte Themen
 
-* [Vorgehensweise](how-to-use-msipc.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

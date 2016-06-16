@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -70,9 +70,9 @@ Azure RMS verwendet immer ein Azure Active Directory-Konto und eine zugeordnete 
 Die Authentifizierungsmethode für diese Konten kann unterschiedlich sein, je nachdem, wie der Administrator in der anderen Organisation die Azure Active Directory-Konten konfiguriert hat. Beispielsweise können Kennwörter, die für diese Konten erstellt wurden, Multi-Factor Authentication (MFA, mehrstufige Authentifizierung), Verbund oder Kennwörter verwendet werden, die in Active Directory-Domänendienste erstellt und dann mit Azure Active Directory synchronisiert wurden.
 
 ## Kann ich Benutzer, die nicht zu meinem Unternehmen gehören, zu benutzerdefinierten Vorlagen hinzufügen?
-Ja.  Ein Erstellen von benutzerdefinierten Vorlagen, die Endbenutzer (und Administratoren) in Anwendungen auswählen können, ermöglicht es Benutzern, schnell und problemlos Informationsschutz anzuwenden, indem sie vordefinierte Richtlinien verwenden, die Sie definiert haben. Eine der Einstellungen in der Vorlage bestimmt, wer auf den Inhalt zugreifen kann, und Sie können Benutzer und Gruppen aus Ihrer Organisation sowie Benutzer angeben, die nicht zu Ihrer Organisation gehören.
+Ja. Ein Erstellen von benutzerdefinierten Vorlagen, die Endbenutzer (und Administratoren) in Anwendungen auswählen können, ermöglicht es Benutzern, schnell und problemlos Informationsschutz anzuwenden, indem sie vordefinierte Richtlinien verwenden, die Sie definiert haben. Eine der Einstellungen in der Vorlage bestimmt, wer auf den Inhalt zugreifen kann, und Sie können Benutzer und Gruppen aus Ihrer Organisation sowie Benutzer angeben, die nicht zu Ihrer Organisation gehören.
 
-Um Benutzer anzugeben, die nicht zu Ihrer Organisation gehören, verwenden Sie das [Windows PowerShell-Modul für Azure Rights Management](../deploy-use/install-powershell.md):
+Um Benutzer anzugeben, die nicht Ihrer Organisation angehören, fügen Sie diese als Kontakte einer Gruppe hinzu, die Sie beim Konfigurieren Ihrer Vorlagen im klassischen Azure-Portal auswählen. Sie können auch das [Windows PowerShell-Modul für Azure Rights Management](../deploy-use/install-powershell.md) verwenden:
 
 -   **Erstellen oder Aktualisieren der Vorlage mithilfe eines Rechtedefinitionsobjekts**.    Geben Sie die externen E-Mail-Adressen und ihre Rechte in einem Rechtedefinitionsobjekt an, das Sie dann zum Erstellen oder Aktualisieren einer Vorlage verwenden. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx)-Cmdlet (für eine neue Vorlage) oder mit dem [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx)-Cmdlet (zum Ändern einer vorhandenen Vorlage) für den „-RightsDefinition“-Parameter bereitstellen. Wenn Sie jedoch diese Benutzer zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
 
@@ -140,6 +140,11 @@ Das Verhindern von Bildschirmaufnahmen kann dabei helfen, versehentliche oder fa
 
 Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen und jegliche Software die Rights Management-APIs unterstützen würden, um Bildschirmaufnahmen zu blockieren, nicht allein Benutzer davon abhalten, Daten offenzulegen, für die dies nicht passieren sollte. Rights Management kann helfen, Ihre wichtigen Daten mithilfe von Autorisierungen und Nutzungsrichtlinien zu schützen, aber Sie sollten diese Lösung für die Rechteverwaltung im Unternehmen durch andere Kontrollmaßnahmen ergänzen. Arbeiten Sie z. B. mit physischen Sicherheitskontrollen, prüfen und überwachen Sie die Mitarbeiter, die zum Zugriff auf Unternehmens- oder Organisationsdaten autorisiert sind, und investieren Sie in Benutzerschulungen, damit die Benutzer verstehen, welche Daten nicht weitergegeben oder geteilt werden dürfen.
 
+## Welcher Unterschied besteht zwischen dem Schützen einer E-Mail mit der Option „Nicht weiterleiten“ und dem Schützen mit einer Vorlage, die die Berechtigung „Weiterleiten“ nicht gewährt?
+
+Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“, noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt [Option „Nicht weiterleiten“ für E-Mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) in [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
+
+
 ## Wo finde ich weitere Informationen zur Azure RMS – wie z. B. rechtliche Hinweise, Informationen zur Kompatibilität und SLAs?
 Azure RMS unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zur Azure RMS suchen, jedoch nicht zur Verwendung des Azure RMS-Diensts, sehen Sie sich folgende Ressourcen an:
 
@@ -191,6 +196,6 @@ Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO2-->
 
 

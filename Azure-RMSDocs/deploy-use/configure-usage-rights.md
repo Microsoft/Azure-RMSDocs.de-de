@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Ermöglicht es dem Benutzer, den Inhalt in der Anwendung zu ändern, neu anzuord
 
 **Richtliniencodierung**: DOCEDIT
 
-**Implementierung in benutzerdefinierten Office-Rechten**: als Teil der Optionen *Ändern* und *Vollzugriff*.**
+**Implementierung in benutzerdefinierten Office-Rechten**: als Teil der Optionen *Ändern* und *Vollzugriff*.
 
 **Name im klassischen Azure-Portal**: *Inhalt bearbeiten*
 
@@ -267,11 +267,32 @@ In den Standardvorlagen sind folgende Rechte enthalten:
 |&lt;*Name der Organisation*&gt; *– Nur vertrauliche Ansicht*|Anzeigen, Öffnen, Lesen|
 |&lt;*Name der Organisation*&gt; *– Vertraulich*|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
 
+## Option „Nicht weiterleiten“ für E-Mails
+
+Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Transportregeln) haben eine eigene Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
+
+Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im klassischen Azure-Portal angezeigt, wenn Sie Vorlagen für Azure RMS anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
+
+Wenn die Option **Nicht weiterleiten** auf eine E-Mail-Nachricht angewendet wird, kann diese von den Empfängern nicht weitergeleitet, gedruckt, vollständig oder teilweise kopiert werden, ihre Anhänge können nicht gespeichert werden, und sie kann nicht unter einem anderen Namen gespeichert werden. Im Outlook-Client ist beispielsweise die Schaltfläche „Weiterleiten“ nicht verfügbar, die Menüoptionen **Speichern unter**, **Anlage speichern** und **Drucken** sind nicht verfügbar, und Sie können keine Empfänger in den Feldern **An**, **Ccc** und **Bcc** hinzufügen oder ändern.
+
+Es besteht ein wichtiger Unterschied zwischen dem Anwenden der Option **Nicht weiterleiten** und dem Anwenden einer Vorlage, die die Berechtigung „Weiterleiten“ für eine E-Mail nicht gewährt: Bei der Option **Nicht weiterleiten** wird eine dynamische Liste autorisierter Benutzer verwendet, der die vom Benutzer ausgewählten Empfänger der ursprünglichen E-Mail zugrunde liegen; für die Berechtigungen in der Vorlage gilt hingegen eine statische Liste autorisierter Benutzer, die zuvor vom Administrator festgelegt wurden. Wie wirkt sich dieser Unterschied aus? Betrachten Sie das folgende Beispiel: 
+
+Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen per E-Mail zusenden, die jedoch nicht für andere Personen zugänglich sein sollen. Sollte er die E-Mail mit einer Vorlage schützen, die die Rechte (Anzeigen, Antworten und Speichern) auf die Marketingabteilung beschränkt?  Oder sollte er die Option **Nicht weiterleiten** auswählen? In beiden Fällen wären die Empfänger nicht in der Lage, die E-Mail weiterzuleiten. 
+
+- Wenn die Vorlage angewendet wird, können die Empfänger die Informationen an andere Personen in der Marketingabteilung weitergeben. Ein Empfänger könnte beispielsweise im Explorer die E-Mail per Drag & Drop in ein freigegebenes Verzeichnis oder an ein USB-Laufwerk verschieben. Nun können alle Mitarbeiter der Marketingabteilung (sowie der Besitzer der E-Mail) mit Zugriff auf diesen Speicherort die Informationen aus der E-Mail einsehen.
+ 
+- Wird hingegen die Option **Nicht weiterleiten** angewendet, können die Empfänger die Informationen nicht an andere Personen in der Marketingabteilung übermitteln, indem Sie sie an einen anderen Speicherort verschieben. In diesem Szenario können nur die ursprünglichen Empfänger (und der E-Mail-Besitzer) die Informationen in der E-Mail einsehen.
+
+> [!NOTE] Verwenden Sie **Nicht weiterleiten**, wenn es wichtig ist, dass nur die vom Absender ausgewählten Empfänger die Informationen in der E-Mail einsehen können. Verwenden Sie eine Vorlage für E-Mail-Nachrichten, um Berechtigungen auf eine zuvor vom Administrator angegebene Gruppe von Personen zu beschränken, und zwar unabhängig von den Empfängern, die der Absender ausgewählt hat.
+
+
+
+
 ## Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -23,14 +23,16 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+
 # Übersicht
 
 Microsoft Rights Management Services (RMS) ist eine Datenschutztechnologie, die zum Schutz digitaler Informationen vor nicht autorisierter Verwendung beiträgt. Über Ihre rechtlich geschützte Anwendung können Inhaltsbesitzer definieren, wer ihren Inhalt öffnen, ändern, drucken, weiterleiten oder andere Aktionen damit ausführen kann.
 
 ## Übersicht
 
-AD RMS umfasst sowohl [Server](ad-rms-server.md)- als auch [Client](ad-rms-client.md)komponenten. Die Serverkomponenten enthalten mehrere Webdienste, die auf einem Windows-Server, z. B. Windows Server 2008 R2, oder über die Cloud über die RMS-Webdienste in Azure ausgeführt werden können. Die Clientkomponente kann auf einem Client- oder Serverbetriebssystem ausgeführt werden und enthält Funktionen, mit denen eine Anwendung Inhalte verschlüsseln und entschlüsseln, Vorlagen und Sperrlisten abrufen, Lizenzen und Zertifikate von einem Server erwerben und andere mit der Rechteverwaltung verbundene Aufgaben ausführen können.
+AD RMS umfasst sowohl [Server](ad-rms-server.md)- als auch [Client](ad-rms-client.md)komponenten. Der Server, der unter Azure oder Windows Server ausgeführt wird, umfasst mehrere Webdienste.
+
+Die [Clientkomponente](ad-rms-client.md) kann auf einem Client- oder Serverbetriebssystem ausgeführt werden und enthält Funktionen, mit denen eine Anwendung Inhalte verschlüsseln und entschlüsseln, Vorlagen und Sperrlisten abrufen, Lizenzen und Zertifikate von einem Server erwerben und andere Rights Management-Aufgaben ausführen kann.
 
 Weitere Informationen finden Sie unter [Anwendungstypen](application-types.md).
 
@@ -44,24 +46,26 @@ Im Folgenden sind nur einige Szenarien aufgeführt, in denen mit Rights Manageme
 
 Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu AD RMS für IT-Spezialisten](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
 
-Informationen zu ersten Schritten finden Sie unter [Erste Schritte](getting-started-with-ad-rms-2-0.md).
+In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre Implementierung behandelt.
+
+## Inhalt dieses Abschnitts
+
+| Thema | Beschreibung |
+|-------|-------------|
+|[Client](ad-rms-client.md) |In diesem Thema werden der Zweck und die Funktion des Rights Management Service Client 2.1 beschrieben. |
+|[Server](ad-rms-server.md) | In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure und Windows Server beschrieben.|
+
 
 ## Verwandte Themen
 
-* [AD RMS-Konzepte](application-types.md)
-* [Unterschiede zwischen AD RMS und AD RMS 2.1](differences-between-ad-rms-and-ad-rms-2-0.md)
+* [RMS-Konzepte](application-types.md)
 * [Erste Schritte](getting-started-with-ad-rms-2-0.md)
 * [Dokumentation zu AD RMS für IT-Spezialisten](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx)
-* [Server](ad-rms-server.md)
-* [Client](ad-rms-client.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

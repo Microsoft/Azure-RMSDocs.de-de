@@ -23,16 +23,15 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
-# Aktivieren von E-Mail-Benachrichtigungen
+
+# Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen
 
 Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird.
 
 Um die E-Mail-Benachrichtigungen für eine bestimmte Lizenz einzurichten, verwenden Sie [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) zusammen mit dem Eigenschaftentypparameter *dwPropID* als [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) und die als [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list) formatierten Anwendungsdatenfelder.
 
-## C++
+    C++
 
-    ...
     int numDataPairs = 3;
 
     IPC_NAME_VALUE propertyValuePairs [numDataPairs];
@@ -46,7 +45,7 @@ Um die E-Mail-Benachrichtigungen für eine bestimmte Lizenz einzurichten, verwen
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-    ...    
+        
 
 Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenname-Wert-Paare, für die RMS-E-Mail-Benachrichtigungen.
 
@@ -71,6 +70,6 @@ Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenn
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

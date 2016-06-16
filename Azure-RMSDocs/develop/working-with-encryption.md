@@ -1,30 +1,19 @@
 ---
-# required metadata
+# erforderliche Metadaten
 
-title: Verwenden der Verschlüsselung | Azure RMS
-description: gibt Ihnen eine Orientierung über unsere Verschlüsselungspakete
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# optional metadata
+title: Exemplarische Vorgehensweise: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS-Beschreibung: Dieser Artikel vermittelt Ihnen eine Orientierung hinsichtlich unserer Verschlüsselungspakete. keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optionale Metadaten
 
 #ROBOTS:
-audience: developer
+Zielgruppe: Entwickler
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
-# Verwenden der Verschlüsselung
+
+# Exemplarische Vorgehensweise: Arbeiten mit Verschlüsselungseinstellungen
 
 Dieses Thema erläutert unsere Verschlüsselungspakete und zeigt einige Codeausschnitte für deren Verwendung.
 
@@ -58,54 +47,54 @@ Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin 
 
 Keine Änderung im Code erforderlich, *AES 256* CBC4K ist der Standard.
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
 
 ## Schützen von Dateien mit AES-128 CBC4K 
 
-    
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    C++
+
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
-    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K; 
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_CBC4K;
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
                            IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
+
 
 ## Schützen von Dateien mit AES-128 ECB (veraltete Algorithmen)
 
 Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralteten Algorithmen*.
 
+    C++
     
-    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID, 
-                                    0, 
-                                    NULL, 
+    hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
+                                    0,
+                                    NULL,
                                     &amp;pLicenseHandle);
-    
+
     DWORD dwEncryptionMode = IPC_ENCRYPTION_PACKAGE_AES128_ECB;
-    
-    hr = IpcSetLicenseProperty(pLicenseHandle, 
+
+    hr = IpcSetLicenseProperty(pLicenseHandle,
                            false,
-                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE, 
+                           IPC_LI_PREFERRED_ENCRYPTION_PACKAGE,
                            &amp;dwEncryptionMode);
-    
- 
 
  
 
+ 
 
 
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

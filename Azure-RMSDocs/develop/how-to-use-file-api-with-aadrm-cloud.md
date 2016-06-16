@@ -1,37 +1,25 @@
 ---
-# required metadata
+# erforderliche Metadaten
 
-title: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung | Azure RMS
-description: In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
-# optional metadata
+title: Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung | Azure RMS-Beschreibung: In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert.
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
+# optionale Metadaten
 
 #ROBOTS:
-audience: developer
+Zielgruppe: Entwickler
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
-# Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
+
+# Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
 
 In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert. Weitere Informationen finden Sie unter [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
 
 **Wichtig**  
-Eine bewährte Methode besteht darin, die Rights Management Services SDK 2.1-Anwendung zuerst mit der RMS-Präproduktionsumgebung auf einem RMS-Server zu testen. Soll Ihr Kunde dann die Möglichkeit erhalten, Ihre Anwendung mit dem Azure RMS-Dienst zu verwenden, testen Sie in dieser Umgebung.
-
-Um Ihre RMS SDK 2.1-Dienstanwendung mit Azure RMS verwenden zu können, müssen Sie einen Azure RMS-Mandanten anzufordern, wenn Sie noch keinen haben. Senden Sie eine E-Mail mit Ihrer Mandantenanforderung an <rmcstbeta@microsoft.com>.
+Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.1-Dienstanwendung mit Azure RMS zu verwenden. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](/rights-management/get-started/requirements-subscriptions.md).
 
 ## Voraussetzungen
 
@@ -43,18 +31,18 @@ Um Ihre RMS SDK 2.1-Dienstanwendung mit Azure RMS verwenden zu können, müss
 -   Rufen Sie [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) auf.
 -   Legen Sie [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) fest.
 
+        C++
+        int mode = IPC_API_MODE_SERVER;
+        IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-    int mode = IPC_API_MODE_SERVER; IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-
-**Hinweis**  Weitere Informationen finden Sie unter [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md).
+  **Hinweis**  Weitere Informationen finden Sie unter [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md).
 
      
-
 -   Mit den folgenden Schritten erstellen Sie eine Instanz einer [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)-Struktur. Das Mitglied **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) wird dabei mit Verbindungsinformationen aus dem Azure Rights Management-Dienst aufgefüllt.
 -   Verwenden Sie die beim Erstellen der Dienstidentität für den symmetrischen Schlüssel aufgezeichneten Informationen (siehe weiter oben aufgeführte Voraussetzungen), um die Parameter **wszServicePrincipal**, **wszBposTenantId** und **cbKey** festzulegen, wenn Sie eine Instanz einer der Struktur [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) erstellen.
 
-**Hinweis**  Aufgrund einer Bedingung unseres Ermittlungsdiensts sind Anmeldeinformationen für symmetrische Schlüssel von anderen Regionen nur zulässig, wenn Sie sich in Nordamerika befinden. Aus diesem Grund müssen Sie Ihre Mandanten-URLs direkt eingeben. Verwenden Sie hierfür den Parameter [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) von [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oder [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
+**Hinweis** Aufgrund einer Bedingung unseres Ermittlungsdiensts sind Anmeldeinformationen für symmetrische Schlüssel von anderen Regionen nur zulässig, wenn Sie sich in Nordamerika befinden. Aus diesem Grund müssen Sie Ihre Mandanten-URLs direkt eingeben. Verwenden Sie hierfür den Parameter [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) von [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oder [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
 ## Generieren Sie einen symmetrischen Schlüssel, und sammeln Sie die benötigten Informationen.
 
@@ -65,17 +53,14 @@ Um Ihre RMS SDK 2.1-Dienstanwendung mit Azure RMS verwenden zu können, müss
 
 **Hinweis**  Sie muss ein Mandantenadministrator sein, um die Powershell-Cmdlets verwenden zu können.
 
-
 -   Starten Sie PowerShell, und führen Sie die folgenden Befehle zum Generieren eines Schlüssels aus         `Import-Module MSOnline`
             `Connect-MsolService` (Geben Sie Ihre Administrator-Anmeldeinformationen ein.)         `New-MsolServicePrincipal` (Geben Sie einen Anzeigenamen ein.)
 -   Nachdem der symmetrische Schlüssel generiert wurde, werden Informationen zu dem Schlüssel sowie der Schlüssel an sich und **AppPrincipalId** ausgegeben.
 
 
-
     Der folgende symmetrische Schlüssel wurde erstellt, weil keiner angegeben wurde: ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
 
     DisplayName : RMSTestApp ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963} ObjectId : 0ee53770-ec86-409e-8939-6d8239880518 AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
-
 
 
 ### Anweisungen zum Ermitteln von **TenantBposId** und **Urls**
@@ -103,7 +88,7 @@ Weitere Informationen finden Sie unter [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/ri
 
 -   Erstellen Sie eine Instanz der [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)-Struktur, die Ihre [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key)-Instanz enthält.
 
-**Hinweis**  Die *ConectionInfo*-Mitglieder sind mit URLs aus dem vorherigen Aufruf von `Get-AadrmConfiguration` konfiguriert und mit diesen Feldnamen angegeben.
+**Hinweis** Die *connectionInfo*-Mitglieder sind mit URLs aus dem vorherigen Aufruf von `Get-AadrmConfiguration` konfiguriert und mit diesen Feldnamen angegeben.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -162,7 +147,6 @@ Sie haben jetzt die erforderlichen Schritte zum Aktivieren der Anwendung für di
 
 ## Verwandte Themen
 
-* [Entwicklerkonzepte](ad-rms-concepts-nav.md)
 * [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Erstellen einer Dienstidentität über ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
@@ -182,6 +166,6 @@ Sie haben jetzt die erforderlichen Schritte zum Aktivieren der Anwendung für di
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

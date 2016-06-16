@@ -23,32 +23,27 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
 
-# AD RMS-Server
-Dieses Thema beschreibt den Zweck und die Funktionen des RMS-Servers.
+# Server
 
-Die Serverkomponente von Rights Management Services (RMS) wird durch eine Reihe von Webdiensten implementiert, die in [Microsoft-Internetinformationsdienste](http://www.iis.net/overview) (IIS) ausgeführt werden. Sie können auch die cloudbasierte Implementierung über RMS in Azure verwenden. Weitere Informationen zur Verwendung von Azure Rights Management Services finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
+In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure und Windows Server beschrieben.
 
-Auf lokalen Servern ab Windows Server 2008 können Sie den RMS-Dienst installieren und konfigurieren, indem Sie ihn als Rolle hinzufügen. Um den Dienst unter früheren Betriebssystemen zu installieren, laden Sie ihn aus dem Microsoft Downloadcenter unter [Microsoft Windows Rights Management Services mit Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909) herunter.
+**Azure RMS**: Weitere Informationen zum Verwenden des Azure Rights Management Service finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-Von den vielen Webdiensten, die installiert werden, sind die folgenden für die Anwendungsentwicklung am wichtigsten.
+> [AZURE.IMPORTANT] Es empfiehlt sich, Ihre Anwendung über Azure RMS zu entwickeln und zu testen.
 
-**Verwaltung** – Hostet die Verwaltungswebsite, mit der Sie RMS verwalten können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt. Sie können mit der [Active Directory Rights Management Services-Skripterstellungs-API](https://msdn.microsoft.com/library/Bb968797) Verwaltungsskripts schreiben.
+**Windows Server**: Für RMS auf lokalen Servern können Sie den RMS-Dienst ab Windows Server 2008 installieren und konfigurieren, indem Sie ihn als Rolle hinzufügen. Um den Dienst unter früheren Betriebssystemen zu installieren, laden Sie ihn aus dem Microsoft Downloadcenter unter [Microsoft Windows Rights Management Services mit Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909) herunter.
 
-**Kontozertifizierung** – Erstellt Computerzertifikate, die Computer in der RMS-Zertifikathierarchie identifizieren, und Rechtekontozertifikate, über die Benutzer bestimmten Computern zugeordnet werden. Weitere Informationen finden Sie unter [Aktivieren eines Benutzers](https://msdn.microsoft.com/library/Cc530378).
+Von den vielen installierten Webdiensten sind die folgenden für die Anwendungsentwicklung mit RMS-Server unter Windows Server am wichtigsten.
 
-Dieser Dienst wird auf dem Stammzertifizierungsserver ausgeführt.
-
-**Lizenzierung** – Stellt eine Endbenutzerlizenz aus, die Endbenutzer in die Lage versetzt, geschützte Inhalte zu nutzen. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.
-
-**Veröffentlichen** – Erstellt eine [Erstellen einer Veröffentlichungslizenz](https://msdn.microsoft.com/library/Aa362355). Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.
-
-**Vorzertifizierung** – Ermöglicht es einem Server, ein Rechtekontozertifikat im Auftrag eines Benutzers anzufordern. Ein Rechtekontozertifikat verwendet das Computerzertifikat aus der RMS-Aktivierung, um Benutzerkonten an bestimmte Computer oder Gruppen von Computern zu binden, und es ermöglicht Endverbrauchern, geschützten Inhalte zu verwenden. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.
-
-**Dienstlocator** – Stellt die URL der Dienste zur Kontozertifizierung, Lizenzierung und Veröffentlichung von Diensten zur Verfügung, damit diese von RMS-Clients gefunden werden können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.
-
- 
+| Dienst | Beschreibung |
+|---------|-------------|
+| Verwaltung | Hostet die Verwaltungswebsite, mit der Sie RMS verwalten können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt. Sie können mit der Active Directory Rights Management Services-Skripterstellungs-API Verwaltungsskripts schreiben.|
+| Kontozertifizierung |Erstellt Computerzertifikate, die Computer in der RMS-Zertifikathierarchie identifizieren, und Rechtekontozertifikate, über die Benutzer bestimmten Computern zugeordnet werden. Weitere Informationen finden Sie unter „Aktivieren eines Computers“ und „Aktivieren eines Benutzers“.<p><p>Dieser Dienst wird auf dem Stammzertifizierungsserver ausgeführt. |
+|Lizenzierung | Stellt eine *Endbenutzerlizenz* aus. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
+|Veröffentlichung | Erstellt eine *Veröffentlichungslizenz*, die die Richtlinien definiert, die in einer Endbenutzerlizenz aufgelistet werden können. Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichungslizenz](https://msdn.microsoft.com/library/Aa362355).<p><p>Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
+|Vorzertifizierung | Ermöglicht es einem Server, ein *Rechtekontozertifikat* im Auftrag eines Benutzers anzufordern. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
+|Dienstlocator | Stellt die URL der Dienste zur Zertifizierung, Lizenzierung und Veröffentlichung von Konten für Active Directory bereit, damit diese von RMS-Clients gefunden werden können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 
 ## Verwandte Themen ##
 * [Übersicht](ad-rms-overview.md)
@@ -65,6 +60,6 @@ Dieser Dienst wird auf dem Stammzertifizierungsserver ausgeführt.
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

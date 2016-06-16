@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Dieser SDK-Inhalt ist nicht aktuell. Für kurze Zeit finden Sie die [aktuelle Version](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) der Dokumentation auf MSDN. **
+
 # Datei-API-Konfiguration
 
 
@@ -40,46 +40,45 @@ Weitere Informationen zu unterstützten Dateiformaten finden Sie unter **Datei-A
 
 Die folgenden Abschnitte beschreiben die Schlüssel und Schlüsselwerte, die die Verschlüsselung steuern.
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*Typ*: Key
+**Typ**: Schlüssel
 
-*Beschreibung*: Enthält die allgemeine Konfiguration für die Datei-API.
+**Beschreibung**: Enthält die allgemeine Konfiguration für die Datei-API.
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*Typ: Key
+**Typ**: Schlüssel
 
-*Beschreibung: Gibt Konfigurationsinformationen für eine bestimmte Dateierweiterung an, z. B. TXT, JPG usw.
+**Beschreibung**: Gibt Konfigurationsinformationen für eine bestimmte Dateierweiterung an, z.B. TXT, JPG usw.
 
 - Das Platzhalterzeichen „*“ ist zulässig. Eine Einstellung für eine bestimmte Erweiterung hat jedoch Vorrang vor der Platzhaltereinstellung. Das Platzhalterzeichen wirkt sich nicht auf Einstellungen für Microsoft Office-Dateien aus. Diese müssen explizit nach Dateityp deaktiviert werden.
 - Verwenden Sie „.“, um Dateien ohne Erweiterung anzugeben.
 - Geben Sie das „.“-Zeichen nicht beim Angeben des Schlüssels für eine bestimmte Dateierweiterung an. Verwenden Sie beispielsweise `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT`, um Einstellungen für TXT-Dateien anzugeben. (Verwenden Sie nicht `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Legen Sie den Wert *Encryption* im Schlüssel zum Angeben des Schutzverhaltens fest. Wenn der Wert *Encryption* nicht festgelegt ist, wird das Standardverhalten für den Dateityp verwendet.
+Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens fest. Wenn der Wert **Encryption** nicht festgelegt ist, wird das Standardverhalten für den Dateityp verwendet.
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*Typ: REG_SZ*
+**Typ**: REG_SZ
 
-*Beschreibung: Enthält einen von drei Werten:
+**Beschreibung**: Enthält einen von drei Werten:
 
-- *Off*: Verschlüsselung ist deaktiviert.
+- **Off**: Verschlüsselung ist deaktiviert.
 
-> [AZURE.NOTE] Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit Pfile- oder systemeigenen Schutz verschlüsselt ist, kann entschlüsselt werden, sofern der Benutzer über die Berechtigung EXTRACT verfügt.
+> [AZURE.NOTE] Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit PFile- oder systemeigenen Schutz verschlüsselt ist, kann entschlüsselt werden, sofern der Benutzer über die Berechtigung **EXTRACT** verfügt.
 
-- *Native*: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p**zzz** verschlüsselt, wobei **zzz** die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z. B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Unten finden Sie eine Liste der Dateierweiterungen, auf die der systemeigenene Schutz angewendet werden kann.
+- **Native**: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p*zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z. B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Unten finden Sie eine Liste der Dateierweiterungen, auf die der systemeigenene Schutz angewendet werden kann.
 
-- *Pfile*: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
+- **Pfile**: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
 
 
 > [AZURE.NOTE] Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption`-Wert z. B. auf „Pfile&quot; festgelegt wird, werden DOCX-Dateien weiterhin mit dem nativen Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung DOCX.
 
 Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten.
 
-## Standardverhalten für unterschiedliche Dateiformate**
+## Standardverhalten für unterschiedliche Dateiformate
 
 -   **Office-Dateien** – systemeigene Verschlüsselung wird aktiviert.
 -   **TXT-, XML-, JPEG-, PDF-, PNG-, TIFF-, BMP-, GIF-, GIFF-, JPE., JFIF-, JIF-Dateien** – systemeigene Verschlüsselung wird aktiviert (XXX wird zu PXXX).
@@ -106,7 +105,7 @@ Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hi
 
 **Alle anderen Dateiformate**
 
--   Protection type = Pfile: sample. *zzz* wird als „sample.*zzz*.pfile“ verschlüsselt und benannt, wobei „zzz“ die ursprüngliche Dateierweiterung ist.
+-   Protection type = Pfile: sample.*zzz* wird als „sample.*zzz*.pfile“ verschlüsselt und benannt, wobei *zzz* die ursprüngliche Dateierweiterung ist.
 -   Off: deaktiviert Verschlüsselung.
 
 ### Beispiele
@@ -158,9 +157,6 @@ HKEY_LOCAL_MACHINE
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

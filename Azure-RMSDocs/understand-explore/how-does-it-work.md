@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,7 +66,7 @@ So werden die kryptografischen Schlüssel gespeichert und geschützt:
 
 - Der Inhaltsschlüssel wird mit dem RSA-Schlüssel der Organisation (der „Azure RMS-Mandantenschlüssel“) als Teil der Richtlinie im Dokument geschützt, und die Richtlinie wird auch vom Autor des Dokuments signiert. Dieser Mandantenschlüssel gilt für alle Dokumente und E-Mails, die von Azure RMS für die Organisation geschützt werden, und dieser Schlüssel kann von einem Azure RMS-Administrator nur geändert werden, wenn die Organisation einen Mandantenschlüssel verwendet, der kundenverwaltet ist (bezeichnet als „Bring-Your-Own-Key“ oder BYOK). 
 
-    Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und zu BYOK finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md)..
+    Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und zu BYOK finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
 - Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit der DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
@@ -77,8 +77,7 @@ Sehen Sie sich zum besseren Verständnis der Funktionsweise von Azure RMS einen 
 
 Nach der Initialisierung der Benutzerumgebung kann der Benutzer Dokumente schützen oder geschützte Dokumente auf diesem Computer nutzen.
 
-> [!NOTE]
-> Wenn dieser Benutzer zu einem anderen Windows-Computer wechselt oder ein anderer Benutzer den gleichen Windows-Computer verwendet, wird der Initialisierungsvorgang wiederholt.
+> [!NOTE] Wenn dieser Benutzer zu einem anderen Windows-Computer wechselt oder ein anderer Benutzer den gleichen Windows-Computer verwendet, wird der Initialisierungsvorgang wiederholt.
 
 ### Initialisieren der Benutzerumgebung
 Bevor ein Benutzer Inhalte schützen oder geschützte Inhalte auf einem Windows-Computer nutzen kann, muss die Benutzerumgebung auf dem Gerät vorbereitet werden. Dies ist ein einmaliger Vorgang. Er geschieht automatisch ohne Benutzereingriff, wenn ein Benutzer versucht, Inhalte zu schützen oder geschützte Inhalte zu nutzen:
@@ -148,14 +147,13 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 
 Wenn Sie weitere Informationen zu Azure RMS benötigen, lesen Sie die weiteren Themen im Abschnitt **Verstehen und Kennenlernen**, z. B. [So unterstützen Anwendungen Azure Rights Management](applications-support.md), um zu erfahren, wie Ihre vorhandenen Anwendungen zur Bereitstellung einer Datenschutzlösung in Azure RMS integriert werden können. 
 
-Lesen Sie [Terminologie für Azure Rights Management](../get-started/terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie Azure RMS konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es gleich selbst ausprobieren möchten, verwenden Sie das [Schnellstart-Tutorial für Azure Rights Management](../get-started/quick-start-tutorial.md)..
+Lesen Sie [Terminologie für Azure Rights Management](../get-started/terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie Azure RMS konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es ohne weitere Vorbereitung gleich selbst ausprobieren möchten, verwenden Sie das [Schnellstart-Lernprogramm für Azure Rights Management](../get-started/quick-start-tutorial.md).
 
 Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS für Ihre Organisation zu beginnen, sollten Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) für die Bereitstellungsschritte und sowie für Links zu praktischen Anweisungen verwenden.
 
-> [!TIP]
-> Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Information and support for Azure Rights Management](../get-started/information-support.md) (Informationen und Support für Azure Rights Management)..
+> [!TIP] Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Informationen und Support für Azure Rights Management](../get-started/information-support.md).
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ ms.suite: ems
 
     -   Bestimmte Berechtigungen: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
 
-Darüber hinaus ermöglicht es die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) Benutzern, eine eigene Gruppe mit Berechtigungen zu definieren. Außerdem können Benutzer für den Outlook-Client sowie für Outlook Web Access die Option **Nicht weiterleiten** für E-Mails auswählen.
+Darüber hinaus ermöglicht es die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) Benutzern, eine eigene Gruppe mit Berechtigungen zu definieren. Außerdem können Benutzer für den Outlook-Client sowie für Outlook Web Access die Option [Nicht weiterleiten](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) auswählen.
 
 Für viele Organisationen sind die Standardvorlagen möglicherweise ausreichend. Wenn Sie aber eigene, benutzerdefinierte Vorlagen für Rechterichtlinien erstellen möchten, können Sie dies tun. Gründe zum Erstellen einer benutzerdefinierten Vorlage umfassen unter anderem die folgenden:
 
@@ -72,6 +72,6 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO1-->
 
 
