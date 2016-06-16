@@ -1669,8 +1669,8 @@
 * Archive Datetime: 2016-06-16 13:06:48
 * Handback File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/0424045dda448875d82fb82cf45690db4fbd7b15/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
 * Handback Datetime: 2016-06-16 16:03:17
-* Bilingual File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/637266450d7f7dac7fe1eb733d5e5f47cb14a24d/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
-* Bilingual Datetime: 2016-06-16 10:18:39
+* Bilingual File: [microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/0424045dda448875d82fb82cf45690db4fbd7b15/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/microsoft-information-protection-and-control-client-portal.716a21a0b760ecc96fbadc26dd1499abe0e5480c.de-de.xlf)
+* Bilingual Datetime: 2016-06-16 16:10:38
 * [Back to Top](#report-top)
 
 ##### <a name='e9a3f95c8ff289380dc62994e4f719bc174c490085'></a> Source: [Azure-RMSDocs\develop\overview.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/overview.md)
