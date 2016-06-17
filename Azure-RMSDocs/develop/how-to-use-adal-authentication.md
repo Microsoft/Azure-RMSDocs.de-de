@@ -43,13 +43,13 @@ Dieses Thema enthält zwei Ansätze zur Authentifizierung mit entsprechenden Cod
 
   Verwenden Sie diesen Ansatz, falls Sie möchten, dass der RMS-Client eine ADAL-Authentifizierungsaufforderung anzeigt, wenn eine Authentifizierung erforderlich ist. Weitere Informationen zum Konfigurieren Ihrer Anwendung finden Sie im Abschnitt „Interne Authentifizierung“.
 
-  >AZURE.NOTE Wenn die Anwendung derzeit das AD RMS SDK 2.1 mit dem Anmelde-Assistenten verwendet, empfiehlt es sich, die interne Authentifizierungsmethode als Migrationspfad für die Anwendung zu verwenden.
+  > [!Note] Es wird empfohlen, die interne Authentifizierungsmethode als Migrationspfad für Ihre Anwendung zu verwenden, wenn diese derzeit AD RMS SDK 2.1 mit dem Anmelde-Assistenten verwendet.
 
 - **Externe Authentifizierung** – von Ihrer Anwendung verwaltete OAuth-Authentifizierung.
 
   Verwenden Sie diesen Ansatz, wenn Sie möchten, dass Ihre Anwendung ihre eigene OAuth-Authentifizierung verwaltet. Bei diesem Ansatz führt der RMS-Client einen anwendungsdefinierten Rückruf aus, wenn eine Authentifizierung erforderlich ist. Ein ausführliches Beispiel finden Sie unter „Externe Authentifizierung“ am Ende dieses Themas.
 
-  >AZURE.NOTE Die externe Authentifizierung impliziert nicht die Fähigkeit, Benutzer zu ändern. Der RMS-Client verwendet immer den Standardbenutzer für einen bestimmten RMS-Mandanten.
+  > [!Note] Die externe Authentifizierung impliziert nicht die Fähigkeit, Benutzer zu ändern. Der RMS-Client verwendet immer den Standardbenutzer für einen bestimmten RMS-Mandanten.
 
 ## Interne Authentifizierung
 
