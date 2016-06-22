@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS | Azure RMS
+title: "Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS | Azure RMS"
 description: Beschreibt die Grundlagen der Benutzerauthentifizierung für Ihre RMS-fähige Anwendung.
 keywords:
 author: bruceperlerms

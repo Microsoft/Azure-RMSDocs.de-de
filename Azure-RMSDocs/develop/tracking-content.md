@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Azure RMS
+title: "Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Azure RMS"
 description: Grundlegende Leitfäden zum Implementieren der Dokumentnachverfolgung
 keywords:
 author: bruceperlerms
