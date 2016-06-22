@@ -1,12 +1,28 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-Titel: Azure RMS Schnellstart-Tutorial Schritt 5 | Azure RMS-Beschreibung: Der letzte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können.
-keywords: author: cabailey manager: mbaldwin ms.date: 05/09/2016 ms.topic: get-started-article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
+title: "Azure RMS Schnellstart-Tutorial Schritt 5 | AZURE RMS"
+description: "Der letzte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können."
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 05/09/2016
+ms.topic: get-started-article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
 
-# optionale Metadaten
+# optional metadata
 
-ROBOTS: audience: ms.devlang: ms.reviewer: esaggese ms.suite: ems ms.tgt_pltfrm: ms.technology: ms.custom:
+ROBOTS:
+audience:
+ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+ms.tgt_pltfrm:
+ms.technology:
+ms.custom:
 
 ---
 

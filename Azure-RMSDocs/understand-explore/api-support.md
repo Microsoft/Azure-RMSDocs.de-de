@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Sonstige Anwendungen, die die RMS-APIs unterstützen: Installation und Konfiguration | Azure RMS
+title: "Sonstige Anwendungen, die die RMS-APIs unterstützen: Installation und Konfiguration | Azure RMS"
 description:
 keywords:
 author: cabailey

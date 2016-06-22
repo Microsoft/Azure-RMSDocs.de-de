@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS-Anforderungen: Clientgerät | Azure RMS
+title: "Azure RMS-Anforderungen: Clientgerät | Azure RMS"
 description:
 keywords:
 author: cabailey

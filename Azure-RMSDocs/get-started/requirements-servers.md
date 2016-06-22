@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS-Anforderungen: Lokale Server, die Azure Rights Management unterstützen | Azure RMS
+title: "Azure RMS-Anforderungen: Lokale Server, die Azure Rights Management unterstützen | Azure RMS"
 description:
 keywords:
 author: cabailey

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Vorgehensweise: Verwenden integrierter Rechte | Azure RMS
+title: "Vorgehensweise: Verwenden integrierter Rechte | Azure RMS"
 description: Erläutert die integrierten Rechte, die das RMS SDK 4.2 bereitstellt, und die Nutzungseinschränkungen, die eine App im Rahmen dieser Einschränkungen erzwingen soll.
 keywords:
 author: bruceperlerms

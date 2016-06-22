@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS-Anforderungen: Azure AD-Verzeichnis | Azure RMS
+title: "Azure RMS-Anforderungen: Azure AD-Verzeichnis | Azure RMS"
 description:
 keywords:
 author: cabailey

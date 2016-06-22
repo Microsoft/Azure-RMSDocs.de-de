@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Azure RMS-Anforderungen: Anwendungen | Azure RMS
+title: "Azure RMS-Anforderungen: Anwendungen | Azure RMS"
 description:
 keywords:
 author: cabailey
