@@ -71,7 +71,8 @@ Sie können nun mit dem Schutz von Dateien beginnen, deren Inhalt Sie ausgewähl
 |Unterschied zwischen nativem und generischem Schutz|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
 
 
->[!div class="step-by-step"] [« Schritt 1](quick-start-tutorial.md)
+>[!div class="step-by-step"] 
+[« Schritt 1](quick-start-tutorial.md)
 [Schritt 3 »](tutorial-step3.md)
 
 <!--HONumber=May16_HO2-->
