@@ -1,12 +1,12 @@
 ---
 # required metadata
 
-title: "Azure RMS-Anforderungen: Cloudabonnements | Azure RMS"
+title: Azure RMS-Anforderungen: Cloudabonnements | Azure RMS
 description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2016
+ms.date: 06/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -49,6 +49,8 @@ Haben Sie weitere Fragen zur Lizenzierung von Azure RMS? Laden Sie die **häufig
 ## Office 365-Abonnement
 [Kostenlose 30-Tage-Testversion: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
+[Kostenlose 30-Tage-Testversion: Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+
 Dieses Abonnement ist auf Organisationen ausgelegt, die die Office-Onlinedienste und deren IRM-Feature (Information Rights Management), das Azure RMS verwendet, benutzen möchten. Aber nicht alle Office 365-Abonnements enthalten Azure RMS.
 
 Abonnement  |Beinhaltet IRM 
@@ -84,7 +86,7 @@ Wenn Ihr Testabonnement abläuft, verlieren Sie den Zugriff auf Inhalt, der im R
 Eine Ausnahme vom Zugriffsverlust bei Ablauf besteht, wenn Ihre Organisation Azure RMS mit dem "RMS for Individuals"-Abonnement verwendet hat, bevor Sie das Testabonnement erworben haben. Dann bleibt der Zugriff auf zuvor geschützte Inhalte bestehen, auch nach Ablauf des Testabonnements.
 
 ## Enterprise Mobility Suite-Abonnement
-[Kostenlose 30-Tage-Testversion](http://go.microsoft.com/fwlink/?LinkId=615385)
+[Kostenlose 30-Tage-Testversion](https://portal.office.com/Signup/Signup.aspx?OfferId=2E63A04D-BE0B-4A0F-A8CF-407C1C299221&dl=EMS)
 
 Dieses Abonnement ist auf Organisationen ausgelegt, die eine Kombination aus Azure Active Directory Premium, Windows Intune und Azure Rights Management verwenden möchten. Die Unterstützung für die Verwendung von Azure Rights Management mit Office ist mit dem Azure Rights Management-Premiumabonnement identisch. Weitere Informationen über das Enterprise Mobility Suite-Abonnement finden Sie unter der [Übersicht über Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
 
@@ -98,6 +100,6 @@ Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Man
 ## Nächste Schritte
 Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO2-->
 
 

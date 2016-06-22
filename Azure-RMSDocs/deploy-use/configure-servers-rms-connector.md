@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -30,7 +30,7 @@ ms.suite: ems
 *Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 
-Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Connectors](deploy-rms-connector.md).
+Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
 Stellen Sie zunächst sicher, dass Sie den RMS-Verbindungsdienst installiert und konfiguriert haben und dass Sie alle [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für die Server, die den Verbindungsdienst verwenden können, überprüft haben.
 
@@ -83,8 +83,7 @@ Nachteile:
 
 ---
 
-> [!IMPORTANT]
-> In beiden Fällen müssen Sie manuell alle vorausgesetzten Komponenten installieren und Exchange, SharePoint und die Dateiklassifizierungsinfrastruktur zur Verwendung von Rights Management konfigurieren.
+> [!IMPORTANT] In beiden Fällen müssen Sie manuell alle erforderlichen Komponenten installieren und Exchange, SharePoint und die Dateiklassifizierungsinfrastruktur zur Verwendung von Rights Management konfigurieren.
 
 Für die meisten Organisationen stellt die automatische Konfiguration unter Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst die bessere Möglichkeit dar, weil sie effizienter und zuverlässiger als eine manuelle Konfiguration ist.
 
@@ -92,7 +91,7 @@ Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, 
 
 ### Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst
 
-1.  Wenn Sie das Skript für das Serverkonfigurationstool für den Microsoft RMS-Connector (GenConnectorConfig.ps1) noch nicht heruntergeladen haben, tun Sie dies vom [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106) aus.
+1.  Wenn Sie das Skript für das Serverkonfigurationstool für den Microsoft RMS-Connector (GenConnectorConfig.ps1) noch nicht heruntergeladen haben, tun Sie dies im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Speichern Sie die Datei „GenConnectorConfig.ps1“ auf dem Computer, auf dem Sie das Tool ausführen möchten. Wenn Sie das Tool lokal ausführen, muss dies der Server sein, den Sie für die Kommunikation mit dem RMS-Verbindungsdienst konfigurieren möchten. Andernfalls können Sie sie auf einem beliebigen Computer speichern.
 
@@ -115,8 +114,7 @@ Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, 
 
 Zum Ausführen des Skripts müssen Sie die URL des RMS-Connectors für Ihre Organisation eingeben. Geben Sie das Protokollpräfix (HTTP:// oder HTTPS://) und den Namen des Connectors, den Sie in DNS definiert haben, als Lastenausgleichsadresse Ihres Connectors ein. Zum Beispiel: https://connector.contoso.com. Das Tool verwendet dann diese URL, um sich mit den Servern zu verbinden, auf denen der RMS-Verbindungsdienst ausgeführt wird, und um weitere Parameter abzurufen, die zum Erstellen der erforderlichen Konfigurationen verwendet werden.
 
-> [!IMPORTANT]
-> Wenn Sie dieses Tool ausführen, stellen Sie sicher, dass Sie den Namen des RMS-Verbindungsdiensts mit Lastenausgleich für Ihre Organisation angeben, und nicht den Namen eines einzelnen Servers, auf dem der RMS-Verbindungsdienst ausgeführt wird.
+> [!IMPORTANT] Wenn Sie dieses Tool ausführen, stellen Sie sicher, dass Sie den Namen des RMS-Connectors mit Lastenausgleich für Ihre Organisation angeben, und nicht den Namen eines einzelnen Servers, auf dem der RMS-Connector ausgeführt wird.
 
 In den folgenden Abschnitten finden Sie spezifische Informationen für jeden Diensttyp:
 
@@ -190,8 +188,7 @@ Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdi
 
 Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396) herunter.
 
-> [!WARNING]
-> Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher haben.
+> [!WARNING] Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher verwenden.
 >
 > Sie können die Clientversion überprüfen, indem Sie die Versionsnummer der Datei „MSIPC.dll“ prüfen, die sich in **\Programme\Active Directory Rights Management Services Client 2.1** befindet. Das Dialogfeld „Eigenschaften“ zeigt die Versionsnummer des MSIPC 2.1-Clients.
 
@@ -248,19 +245,13 @@ Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastrukt
 3.  Erstellen Sie Klassifizierungsregeln und Dateiverwaltungsaufgaben zum Schützen von Dokumenten mit RMS-Verschlüsselung, und geben Sie dann eine RMS-Vorlage an, um die RMS-Richtlinien automatisch anzuwenden. Weitere Informationen finden Sie unter [Ressourcen-Manager für Dateiserver (Übersicht)](http://technet.microsoft.com/library/hh831701.aspx) in der Windows Server-Dokumentationsbibliothek.
 
 ## Nächste Schritte
-Jetzt, wo der RMS-Verbindungsdienst installiert und konfiguriert ist und Ihre Server für dessen Verwendung konfiguriert sind, können IT-Administratoren und Benutzer E-Mail-Nachrichten und Dokumente mithilfe von Azure RMS schützen und verwenden. Um dies für Benutzer zu vereinfachen, können Sie die RMS-Freigabeanwendung bereitstellen, die ein Add-On für Office installiert und dem Datei-Explorer neue Kontextmenüoptionen hinzufügt. Weitere Informationen finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
+Nachdem der RMS-Connector installiert und konfiguriert ist und Ihre Server für dessen Verwendung konfiguriert sind, können IT-Administratoren und Benutzer E-Mail-Nachrichten und Dokumente mithilfe von Azure RMS schützen und verwenden. Um dies für Benutzer zu vereinfachen, können Sie die RMS-Freigabeanwendung bereitstellen, die ein Add-On für Office installiert und dem Datei-Explorer neue Kontextmenüoptionen hinzufügt. Weitere Informationen finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
-Zusätzlich können Sie ggf. noch Folgendes verwenden, um den RMS-Verbindungsdienst und die Nutzung von Azure RMS in Ihrer Organisation zu überwachen:
+Sie können die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten.
 
--   Die integrierten Leistungsindikatoren des **Microsoft Rights Management-Verbindungsdiensts**.
-
--   Das [RMS Analyzer-Tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437) unter Verwendung der RMS-Verbindungsdienstoption zum Überwachen der Integrität des Verbindungsdiensts und Bestimmen etwaiger Konfigurationsprobleme.
-
--   [Protokollieren und Analysieren der Nutzung von Azure Rights Management](log-analyze-usage.md)
-
-Sie können die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten. 
+Informationen zum Überwachen des RMS-Connectors finden Sie unter [Überwachen des Azure Rights Management-Connectors](monitor-rms-connector.md). 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

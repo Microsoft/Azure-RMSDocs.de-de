@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS
+title: "Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS"
 description: Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung.
 keywords:
 author: bruceperlerms

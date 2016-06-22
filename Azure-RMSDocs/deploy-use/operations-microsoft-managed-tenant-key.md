@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel | Azure RMS
+title: "Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel | Azure RMS"
 description:
 keywords:
 author: cabailey

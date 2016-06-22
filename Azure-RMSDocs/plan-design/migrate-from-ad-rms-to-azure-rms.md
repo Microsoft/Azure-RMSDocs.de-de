@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -35,7 +35,7 @@ Nicht sicher, ob diese Migration von AD RMS für Ihre Organisation geeignet ist?
 
 -   Eine Einführung in Azure RMS, die geschäftlichen Probleme, die damit gelöst werden können, die Benutzeroberfläche für Administratoren und Benutzer sowie die Funktionsweise werden unter [Was ist Azure Rights Management?](../understand-explore/what-is-azure-rms.md) vorgestellt.
 
--   Einen Vergleich von Azure RMS mit AD RMS finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)..
+-   Einen Vergleich von Azure RMS mit AD RMS finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
 ## Voraussetzungen für die Migration von AD RMS zu Azure RMS
 Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetzungen erfüllt sind und Sie alle etwaigen Einschränkungen kennen.
@@ -66,7 +66,7 @@ Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetz
 
 - **Alle Anforderungen zum Ausführen von Azure RMS, einschließlich eines Azure RMS-Mandanten (nicht aktiviert)**
 
-    Informationen finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md)..
+    Informationen finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
     Obwohl Sie einen Azure RMS-Mandanten benötigen, damit Sie von AD RMS aus migrieren können, empfehlen wir, dass die den Rights Management-Dienst nicht vor der Migration aktivieren. Sie führen diesen Schritt während der Migration aus, nachdem Sie die Schlüssel und Vorlagen aus AD RMS exportiert und in Azure RMS importiert haben. Wenn Azure RMS jedoch schon aktiviert wurde, können Sie immer noch von AD RMS migrieren.
 
@@ -77,7 +77,7 @@ Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetz
 
     - E-Mail-aktivierte Gruppen in Azure Active Directory
 
-    Informationen finden Sie unter [Vorbereiten für Azure Rights Management](prepare.md)..
+    Informationen finden Sie unter [Vorbereiten für Azure Rights Management](prepare.md).
 
 
 - **Wenn Sie die IRM-Funktionalität (Information Rights Management) von Exchange Server** (zum Beispiel Transportregeln und Outlook Web Access) oder SharePoint Server mit AD RMS verwendet haben:
@@ -101,7 +101,7 @@ Einschränkungen:
 
 -   Wenn Sie mit externen Partnern zusammenarbeiten (z. B. mithilfe von vertrauenswürdigen Benutzerdomänen oder Verbund), müssen diese ebenfalls auf Azure RMS migrieren, entweder zur gleichen Zeit wie Sie oder so bald wie möglich danach. Damit der Zugriff auf Inhalte, die Ihre Organisation zuvor mit AD RMS geschützt hat, weiterhin möglich ist, müssen Ihre Partner ähnliche Änderungen an der Clientkonfiguration wie Sie vornehmen (in diesem Dokument erläutert).
 
-    Aufgrund der möglichen Konfigurationsvarianten Ihrer Partner können in diesem Dokument keine genauen Anweisungen für diese Neukonfiguration gegeben werden. Wenn Sie Hilfe benötigen, wenden Sie sich an Microsoft Customer Support Services (CSS).
+    Aufgrund der möglichen Konfigurationsvarianten Ihrer Partner können in diesem Dokument keine genauen Anweisungen für diese Neukonfiguration gegeben werden. Wenden Sie sich an den [Microsoft Support](../get-started/information-support#support-options-and-community-resources), um Hilfe zu erhalten.
 
 ## Übersicht über die Schritte zum Migrieren von AD RMS zu Azure RMS
 
@@ -181,10 +181,10 @@ Die neun Migrationsschritte können in vier Phasen unterteilt werden, die zu unt
 
 
 ## Nächste Schritte
-Wechseln Sie zu dem Artikel [phase 1 - server-side configuration for AD RMS](migrate-from-ad-rms-phase1.md) (Migrationsphase 1: Serverseitige Konfiguration für AD RMS), um die Migration zu starten..
+Um die Migration zu starten, wechseln Sie zu [Phase 1: Serverseitige Konfiguration](migrate-from-ad-rms-phase1.md).
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

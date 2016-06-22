@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS
+title: "Gewusst wie: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS"
 description: Dieser Artikel bietet Orientierung für unsere Verschlüsselungspakete.
 keywords:
 author: bruceperlerms

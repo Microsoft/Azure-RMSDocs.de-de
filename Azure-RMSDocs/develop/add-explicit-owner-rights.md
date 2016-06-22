@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Hinzufügen expliziter Besitzerrechte | Azure RMS
+title: "Gewusst wie: Hinzufügen expliziter Besitzerrechte | Azure RMS"
 description: In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird.
 keywords:
 author: bruceperlerms

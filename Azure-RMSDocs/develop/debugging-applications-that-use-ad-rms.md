@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Debuggen einer rechtlich geschützten Anwendung | Azure RMS
+title: "Gewusst wie: Debuggen einer rechtlich geschützten Anwendung | Azure RMS"
 description: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 keywords:
 author: bruceperlerms

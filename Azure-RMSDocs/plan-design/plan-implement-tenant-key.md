@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Verwenden Sie die Informationen und Verfahren in diesem Abschnitt, wenn Sie sich
 
 
 > [!IMPORTANT]
-> Wenn Sie bereits mit der Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] begonnen haben (der Dienst ist aktiviert) und Benutzer haben, die Office 2010 ausführen, wenden Sie sich an den Microsoft-Kundendienst, bevor Sie diese Verfahren ausführen. Abhängig von Ihrem Szenario und den Voraussetzungen können Sie immer noch BYOK verwenden, allerdings mit einigen Einschränkungen bzw. zusätzlichen Schritten.
+> Wenn Sie bereits mit der Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] begonnen haben (der Dienst ist aktiviert) und Benutzer haben, die Office 2010 ausführen, [wenden Sie sich an den Microsoft Support](../get-started/information-support#to-contact-microsoft-support), bevor Sie diese Verfahren ausführen. Abhängig von Ihrem Szenario und den Voraussetzungen können Sie immer noch BYOK verwenden, allerdings mit einigen Einschränkungen bzw. zusätzlichen Schritten.
 > 
-> Wenden Sie sich auch an den Kundendienst, wenn Ihre Organisation bestimmte Richtlinien für die Behandlung von Schlüsseln vorsieht.
+> Wenden Sie sich auch an den [Microsoft Support](../get-started/information-support#to-contact-microsoft-support), wenn Ihre Organisation über bestimmte Richtlinien für den Umgang mit Schlüsseln verfügt.
 
 ### Voraussetzungen für BYOK
 In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring Your Own Key“ (BYOK).
@@ -114,7 +114,7 @@ Die Verfahren zum Generieren und Verwenden Ihres eigenen Mandantenschlüssels h�
     > [!NOTE]
     > Ihr Mandantenschlüssel kann nicht vertrauenswürdige Computer und Netzwerke sicher passieren, weil er verschlüsselt und mit Berechtigungen auf Zugriffssteuerungsebene gesichert ist, wodurch er nur in Ihren HSMs und in den HSMs für Azure RMS von Microsoft verwendet werden kann. Sie können die im Toolset bereitgestellten Skripts verwenden, um die Sicherheitsmaßnahmen zu überprüfen, und Sie können weitere Informationen von Thales zur Funktionsweise lesen: [Hardwareschlüsselverwaltung in der RMS-Cloud](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **Persönlich:** Dies erfordert, dass Sie sich an den Microsoft-Kundendienst wenden, um einen Termin für die Schlüsselübertragung für Azure RMS zu vereinbaren. Sie müssen zu einer Microsoft-Niederlassung in Redmond, Washington, USA, reisen, um Ihren Mandantenschlüssel in die Azure RMS Security World zu übertragen.
+-   **Persönlich:** Dies erfordert, dass Sie sich an den [Microsoft Support wenden](../get-started/information-support#to-contact-microsoft-support), um einen Termin für die Schlüsselübertragung für Azure RMS zu vereinbaren. Sie müssen zu einer Microsoft-Niederlassung in Redmond, Washington, USA, reisen, um Ihren Mandantenschlüssel in die Azure RMS Security World zu übertragen.
 
 Wählen Sie für Anweisungen zur Vorgehensweise, ob Sie den generierten Mandantenschlüssel über das Internet übertragen oder persönlich übergeben: 
 
@@ -148,6 +148,6 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

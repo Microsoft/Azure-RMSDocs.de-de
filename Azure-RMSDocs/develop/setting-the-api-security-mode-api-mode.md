@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Festlegen des API-Sicherheitsmodus | Azure RMS
+title: "Gewusst wie: Festlegen des API-Sicherheitsmodus | Azure RMS"
 description: Wählen Sie aus, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird.
 keywords:
 author: bruceperlerms

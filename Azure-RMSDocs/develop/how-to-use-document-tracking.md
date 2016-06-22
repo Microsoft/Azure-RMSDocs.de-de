@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gewusst wie: Verwenden der Dokumentenverfolgung | Azure RMS
+title: "Gewusst wie: Verwenden der Dokumentenverfolgung | Azure RMS"
 description: Die Funktion für die Dokumentenverfolgung erfordert einige grundlegende Kenntnisse bezüglich der Verwaltung der zugehörigen Metadaten und der Registrierung bei dem Dienst.
 keywords:
 author: bruceperlerms

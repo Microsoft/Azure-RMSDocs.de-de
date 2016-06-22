@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -33,10 +33,9 @@ Verwenden Sie diesen Anweisungsartikel und ein Skript, um den RMS-Client (Rights
 
 Mit diesen Lösungen können Sie automatisch alle Dateien in einem Ordner auf einem Dateiserver unter Windows Server oder automatisch Dateien schützen, die bestimmten Kriterien entsprechen. Das sind z. B. Dateien, die vertrauliche Informationen enthalten und entsprechend klassifiziert wurden. Diese Lösung verwendet Azure Rights Management (Azure RMS), um die Dateien zu schützen, daher müssen Sie diese Technologie in Ihrer Organisation bereitgestellt haben.
 
-> [!NOTE]
-> Obwohl Azure RMS einen [Verbindungsdienst](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur systemeigenen Schutz, z. B. Office-Dateien.
+> [!NOTE] Obwohl Azure RMS einen [Connector](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z. B. Office-Dateien.
 > 
-> Um alle Dateitypen mit der Dateiklassifizierungsinfrastruktur zu unterstützen, müssen Sie das Windows PowerShell- **RMS-Schutzmodul** verwenden, wie in diesem Artikel beschrieben wird. Die RMS-Schutz-Cmdlets, wie z. B. die RMS-Freigabeanwendung, unterstützen generischen Schutz und systemeigenen Schutz, was bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzebenen – nativ und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
+> Um alle Dateitypen mit der Dateiklassifizierungsinfrastruktur zu unterstützen, müssen Sie das Windows PowerShell- **RMS-Schutzmodul** verwenden, wie in diesem Artikel beschrieben wird. Die RMS-Schutz-Cmdlets, wie z. B. die RMS-Freigabeanwendung, unterstützen generischen Schutz und systemeigenen Schutz, was bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
 
 Die folgenden Anleitungen gelten für Windows Server 2012 R2 oder Windows Server 2012. Wenn Sie andere unterstützte Versionen von Windows ausführen, müssen Sie möglicherweise einige Schritte aufgrund der Unterschiede zwischen der Version Ihres Betriebssystems und der in diesem Artikel beschriebenen Version anpassen.
 
@@ -49,7 +48,7 @@ Voraussetzungen für diese Anweisungen:
 
     -   Sie haben einen lokalen Ordner identifiziert, der Dateien enthält, die mit Rights Management geschützt werden sollen. Beispielsweise „C:\FileShare“.
 
-    -   Sie haben das RMS-Schutztool einschließlich der Voraussetzungen für das Tool (z. B. den RMS-Client) und für Azure RMS (z. B. das Dienstprinzipalkonto) installiert. Weitere Informationen finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) (RMS-Schutz-Cmdlets)..
+    -   Sie haben das RMS-Schutztool einschließlich der Voraussetzungen für das Tool (z. B. den RMS-Client) und für Azure RMS (z. B. das Dienstprinzipalkonto) installiert. Weitere Informationen finden Sie im Thema zu [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
     -   Wenn Sie die Standardstufe des RMS-Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie auf der Seite [Datei-API-Konfiguration](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx) beschrieben wird.
 
@@ -129,7 +128,7 @@ Am Ende dieser Anweisungen sind alle Dateien im ausgewählten Ordner mit der ben
         Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
         ```
 
-3.  Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (sicherer), müssen Sie Windows PowerShell auf den Servern konfigurieren, auf denen es ausgeführt wird. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: **Set-ExecutionPolicy Unrestricted**. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts (weniger sicher).
+3.  Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (sicherer), müssen Sie Windows PowerShell auf den Servern konfigurieren, auf denen es ausgeführt wird. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: **Set-ExecutionPolicy RemoteSigned**. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Server gespeichert sind (weniger sicher).
 
     Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in der PowerShell-Dokumentationsbibliothek.
 
@@ -165,7 +164,7 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
 
-        -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispielsweise **C:\FileShare**.
+        -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
@@ -207,7 +206,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
-        -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispielsweise **C:\FileShare**.
+        -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
@@ -262,25 +261,24 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
 1.  Führen Sie die Klassifizierungsregel aus:
 
-    1.  Klicken Sie auf **Klassifizierungsregeln** &gt; **Klassifizierung mit allen Regeln jetzt ausführen**
+    1.  Klicken Sie auf **Klassifizierungsregeln** &gt; **Klassifizierung mit allen Regeln jetzt ausführen**.
 
-    2.  Klicken Sie auf **Warten, bis die Klassifizierung abgeschlossen ist**, und klicken Sie anschließend auf **OK**.
+    2.  Klicken Sie auf **Warten, bis die Klassifizierung abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
-2.  Warten Sie, bis das Dialogfeld **Klassifizierung wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Es sollte **1** für das Feld **Eigenschaften** und die Anzahl der Dateien im Ordner angezeigt werden. Überprüfen Sie mithilfe des Datei-Explorers die Eigenschaften der Dateien im ausgewählten Ordner. Auf der Registerkarte **Klassifizierung** sollte **RMS** als Eigenschaftenname und **Ja** für seinen **Wert**angezeigt werden.
+2.  Warten Sie, bis das Dialogfeld **Klassifizierung wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Es sollte **1** für das Feld **Eigenschaften** und die Anzahl der Dateien im Ordner angezeigt werden. Überprüfen Sie mithilfe des Datei-Explorers die Eigenschaften der Dateien im ausgewählten Ordner. Auf der Registerkarte **Klassifizierung** sollte **RMS** als Eigenschaftsname und **Ja** für den **Wert**angezeigt werden.
 
 3.  Führen Sie die Dateiverwaltungsaufgabe aus:
 
-    1.  Klicken Sie auf **Dateiverwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Dateiverwaltungsaufgabe jetzt ausführen**
+    1.  Klicken Sie auf **Dateiverwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Dateiverwaltungsaufgabe jetzt ausführen**.
 
-    2.  Klicken Sie auf **Warten, bis die Aufgabe abgeschlossen ist**, und klicken Sie anschließend auf **OK**.
+    2.  Klicken Sie auf **Warten, bis die Aufgabe abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
 4.  Warten Sie, bis das Dialogfeld **Dateiverwaltungsaufgabe wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Daraufhin sollte die Anzahl der Dateien im ausgewählten Ordner im Feld **Dateien** angezeigt werden. Vergewissern Sie sich, dass die Dateien im ausgewählten Ordner jetzt durch RMS geschützt sind. Wenn z. B. der ausgewählte Ordner „C:\FileShare“ ist, geben Sie Folgendes in einer Windows PowerShell-Sitzung ein und stellen sicher, dass keine Dateien den Status **Ungeschützt** haben:
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
     ```
-    > [!TIP]
-    > Einige Tipps zur Problembehandlung:
+    > [!TIP] Einige Tipps zur Problembehandlung:
     > 
     > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist dies darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen, und führen sie es aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich bei Azure RMS zu authentifizieren.
     > 
@@ -302,12 +300,12 @@ Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werde
 ## Ändern der Anweisungen zum selektiven Schutz von Dateien
 Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es sehr einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
 
-Verwenden Sie hierzu eine der integrierten Klassifizierungseigenschaften (z. B. **Daten mit persönlich identifizierbaren Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z.B. die **Inhaltsklassifizierung**und die Eigenschaft **Daten mit persönlich identifizierbaren Informationen** mit dem Wert **Hoch** auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z.B. die Zeichenfolge **Geburtsdatum**).").
+Verwenden Sie hierzu eine der integrierten Klassifizierungseigenschaften (z. B. **Daten mit persönlich identifizierbaren Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
 
-Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS**-Eigenschaft, **Gleich**, **Ja**), die Eigenschaft **Daten mit persönlich identifizierbaren Informationen** mit dem **Operator**-Wert **Gleich** und dem **Wert** **Hoch** aus..
+Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS** -Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem **Operator** -Wert **Gleich** und dem **Wert** **Hoch**aus.
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 
