@@ -1,14 +1,24 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-title: Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS-Beschreibung: Installieren und konfigurieren Sie einen RMS-Server für das Testen der rechtlich geschützten Anwendung.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# optionale Metadaten
+title: Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS
+description: Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
+# optional metadata
 
 #ROBOTS:
-Zielgruppe: Entwickler
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -55,7 +65,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
     Konfigurieren Sie zum Testen mit einem RMS-Server die serverseitige Ermittlung oder die clientseitige Ermittlung, damit der Rights Management Service Client 2.1 den RMS-Server erkennen und die Kommunikation mit ihm aufbauen kann.
 
-    >![NOTE] Beim Testen mit Azure RMS muss keine Ermittlung konfiguriert werden.
+    > [!Note] Beim Testen mit Azure RMS muss keine Ermittlung konfiguriert werden.
 
   - Bei der serverseitigen Ermittlung registriert der Administrator einen Dienstverbindungspunkt (SCP) für den RMS-Stammcluster bei Active Directory, und der Client fragt Active Directory ab, um den SCP zu ermitteln und eine Verbindung mit dem Server herzustellen.
   - Bei der clientseitigen Ermittlung konfigurieren Sie auf dem Computer, auf dem der RMS-Client 2.1 ausgeführt wird, RMS-Dienstermittlungseinstellungen in der Registrierung. Diese Einstellungen verweisen den RMS-Client 2.1 auf den zu verwendenden RMS-Server. Wenn sie vorhanden sind, wird keine serverseitige Ermittlung ausgeführt.

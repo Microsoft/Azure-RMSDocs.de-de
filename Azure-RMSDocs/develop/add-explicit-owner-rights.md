@@ -1,14 +1,24 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-title: Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte | Azure RMS-Beschreibung: In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
-# optionale Metadaten
+title: Gewusst wie: Hinzufügen expliziter Besitzerrechte | Azure RMS
+description: In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
+# optional metadata
 
 #ROBOTS:
-Zielgruppe: Entwickler
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

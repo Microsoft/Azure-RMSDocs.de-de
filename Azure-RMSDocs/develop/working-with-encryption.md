@@ -1,13 +1,24 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-title: Exemplarische Vorgehensweise: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS-Beschreibung: Dieser Artikel vermittelt Ihnen eine Orientierung hinsichtlich unserer Verschlüsselungspakete. keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# optionale Metadaten
+title: Gewusst wie: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS
+description: Dieser Artikel bietet Orientierung für unsere Verschlüsselungspakete.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optional metadata
 
 #ROBOTS:
-Zielgruppe: Entwickler
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

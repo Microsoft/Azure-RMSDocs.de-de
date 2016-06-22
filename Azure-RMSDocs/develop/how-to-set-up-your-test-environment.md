@@ -34,7 +34,7 @@ Dieses Thema enthält Anleitungen zum Einrichten von Anwendungstests.
 
 Sie können Tests entweder mit Azure RMS oder mit einem RMS-Server unter Windows Server ausführen. Wir empfehlen, dass Sie Tests zunächst unter Azure RMS und anschließend (sofern dies für Ihre Bereitstellung erforderlich ist) mit einem RMS-Server ausführen.
 
-1. Informationen zum Testen mit Azure RMS finden Sie unter [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication,md).
+1. Informationen zum Testen mit Azure RMS finden Sie unter [Gewusst wie: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md).
 2. Informationen zum Testen mit einem RMS-Server finden Sie unter [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md).
 3. Im Folgenden wird beschrieben, wie die Developer-Laufzeit installiert wird.
 

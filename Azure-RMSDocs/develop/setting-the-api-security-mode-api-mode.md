@@ -1,14 +1,24 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-title: Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus | Azure RMS-Beschreibung: Wählen Sie aus, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
-# optionale Metadaten
+title: Gewusst wie: Festlegen des API-Sicherheitsmodus | Azure RMS
+description: Wählen Sie aus, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
+# optional metadata
 
 #ROBOTS:
-Zielgruppe: Entwickler
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

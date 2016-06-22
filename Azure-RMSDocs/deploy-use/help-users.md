@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -75,7 +75,7 @@ Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im 
 
 Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
 
-> [!TIP] Ein allgemeines Beispielszenario mit Screenshots finden Sie in [Sicheres Freigeben von Anlagen für mobile Benutzer](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
+> [!TIP] Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Sicheres Freigeben von Anlagen für mobile Benutzer](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
 Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, wodurch das Schützen von Dateien erleichtert würde. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
@@ -108,7 +108,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf  **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 

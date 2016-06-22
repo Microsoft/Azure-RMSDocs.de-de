@@ -32,7 +32,7 @@ Dieses Thema bietet grundlegende Anleitungen hinsichtlich der wichtigsten Aspekt
 
 Die Anleitungen in diesem Thema basieren auf der Beispielanwendung IPCHelloWorld, anhand derer Sie sich mit den grundlegenden Konzepten und dem Code einer rechtlich geschützten Anwendung vertraut machen können. Sie können die komplette IPCHellowWorld-Beispielanwendung in der Datei [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) von Microsoft Connect herunterladen.
 
->AZURE.NOTE Das IPCHelloWorld-Projekt ist bereits für das Rights Management Services SDK 2.1 konfiguriert. Informationen zum Konfigurieren eines neuen Projekts, das RMS SDK 2.1 verwendet, finden Sie unter [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+> [!Note] Das IPCHelloWorld-Projekt ist bereits für das Rights Management Services SDK 2.1 konfiguriert. Informationen zum Konfigurieren eines neuen Projekts, das RMS SDK 2.1 verwendet, finden Sie unter [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
 ## Laden von „MSIPC.dll“
 

@@ -1,14 +1,24 @@
 ---
-# erforderliche Metadaten
+# required metadata
 
-title: Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung | Azure RMS-Beschreibung: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optionale Metadaten
+title: Gewusst wie: Debuggen einer rechtlich geschützten Anwendung | Azure RMS
+description: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# optional metadata
 
 #ROBOTS:
-Zielgruppe: Entwickler
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

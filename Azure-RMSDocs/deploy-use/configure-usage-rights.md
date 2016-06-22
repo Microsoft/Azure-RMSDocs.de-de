@@ -269,7 +269,7 @@ In den Standardvorlagen sind folgende Rechte enthalten:
 
 ## Option „Nicht weiterleiten“ für E-Mails
 
-Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Transportregeln) haben eine eigene Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
+Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Transportregeln) haben eine zusätzliche Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
 
 Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im klassischen Azure-Portal angezeigt, wenn Sie Vorlagen für Azure RMS anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
 
