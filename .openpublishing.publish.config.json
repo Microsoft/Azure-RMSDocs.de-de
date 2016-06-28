@@ -14,5 +14,5 @@
         }
     ],
     "notification_subscribers": [""],
-    "branches_to_filter": [ "live","master-oldev" ]
+    "branches_to_filter": [ "master-oldev" ]
 }
