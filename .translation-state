@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "3de05f5783e864e7700c154d6deb062f24322320",
-  "LastTranslatedCommit": "c2c6a9e6ae5d51fb889f30bfa07c64809a4ff307",
+  "LastTranslatedCommit": "0e78b7a14c536202b954b6cb02d0b1e49750dbe6",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -70187,7 +70187,7 @@
       "TargetFilePath": "Azure-RMSDocs\\get-started\\requirements-client-devices.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.de-de.xlf",
       "HandbackFileCommit": "9f10104eeb281641f21eb623259378041938f533",
-      "HandbackDateTime": "2016-07-02T05:37:00.9553575Z",
+      "HandbackDateTime": "2016-07-02T06:09:48.2261506Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.de-de.xlf failed.",
@@ -70197,7 +70197,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-06-22T12:11:47.4439079Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\archive\\requirements-client-devices.5c627bcec9b9abb2c589eb2e15b8e9c1036fb2f2.de-de.xlf",
       "ArchiveFileCommit": "ec3c34a32c589df608132c3e8a4ee1d820260be3",
@@ -74701,7 +74701,7 @@
       "TargetFilePath": "Azure-RMSDocs\\develop\\debugging-applications-that-use-ad-rms.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\debugging-applications-that-use-ad-rms.044fb4ce51f76ed363f57487a20b276d965edaa7.de-de.xlf",
       "HandbackFileCommit": "36e7b3a6e1cce8e9a535362bcbfca56a1371b070",
-      "HandbackDateTime": "2016-07-02T05:37:00.9553575Z",
+      "HandbackDateTime": "2016-07-02T06:09:48.2261506Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\debugging-applications-that-use-ad-rms.044fb4ce51f76ed363f57487a20b276d965edaa7.de-de.xlf failed.",
@@ -74711,7 +74711,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 2,
+      "HandbackFailureTimes": 3,
       "UpdatedDateTime": "2016-06-22T12:52:50.8046418Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\archive\\debugging-applications-that-use-ad-rms.044fb4ce51f76ed363f57487a20b276d965edaa7.de-de.xlf",
       "ArchiveFileCommit": "ec3c34a32c589df608132c3e8a4ee1d820260be3",
@@ -75129,7 +75129,7 @@
       "TargetFilePath": "Azure-RMSDocs\\develop\\working-with-encryption.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\working-with-encryption.19f5df37a590d0c88fe306cf324bf9883b1786f3.de-de.xlf",
       "HandbackFileCommit": "36e7b3a6e1cce8e9a535362bcbfca56a1371b070",
-      "HandbackDateTime": "2016-07-02T05:37:00.9553575Z",
+      "HandbackDateTime": "2016-07-02T06:09:48.2261506Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\working-with-encryption.19f5df37a590d0c88fe306cf324bf9883b1786f3.de-de.xlf failed.",
@@ -75139,7 +75139,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-06-22T12:52:50.8046418Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\archive\\working-with-encryption.19f5df37a590d0c88fe306cf324bf9883b1786f3.de-de.xlf",
       "ArchiveFileCommit": "ec3c34a32c589df608132c3e8a4ee1d820260be3",
@@ -75207,7 +75207,7 @@
       "TargetFilePath": "Azure-RMSDocs\\develop\\how-to-use-document-tracking.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf",
       "HandbackFileCommit": "36e7b3a6e1cce8e9a535362bcbfca56a1371b070",
-      "HandbackDateTime": "2016-07-02T05:37:00.9553575Z",
+      "HandbackDateTime": "2016-07-02T06:09:48.2261506Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf failed.",
@@ -75217,7 +75217,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 4,
+      "HandbackFailureTimes": 5,
       "UpdatedDateTime": "2016-06-22T12:52:50.8046418Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\archive\\how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf",
       "ArchiveFileCommit": "ec3c34a32c589df608132c3e8a4ee1d820260be3",
@@ -75425,7 +75425,7 @@
       "TargetFilePath": "Azure-RMSDocs\\develop\\tracking-content.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\tracking-content.96d55d65b4f5f5acd451c4e31ff2f07f2aa6fceb.de-de.xlf",
       "HandbackFileCommit": "93ceb63dfe2f161cefa8ac823309f53f7e155296",
-      "HandbackDateTime": "2016-07-02T05:37:00.9553575Z",
+      "HandbackDateTime": "2016-07-02T06:09:48.2261506Z",
       "HandbackException": {
         "internal_error_code": "handback_transform_failed",
         "internal_error_message": "Handback file: C:\\ol\\master\\EM.handback\\06462f\\ol-handback\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\tracking-content.96d55d65b4f5f5acd451c4e31ff2f07f2aa6fceb.de-de.xlf failed.",
@@ -75435,7 +75435,7 @@
         "stack_trace": "   at Microsoft.OpenLocalization.Transformer.TransformerClient.XliffToMarkdown(Stream xliffStream, Stream skeletonStream, Stream targetStream) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization.Transformer.Core\\TransformerClient.cs:line 119\r\n   at Microsoft.OpenLocalization.Helper.XliffTransformUtil.XliffToMarkdown(String skeletonFile, String xliffFile, String mdfile, Boolean useJavascriptTransformer) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Helper\\XliffTransformUtil.cs:line 92\r\n   at Microsoft.OpenLocalization.Localization.LocalizationCore.<>c__DisplayClass5_0.<GetHandbackFiles>b__0(String file) in C:\\Jenkins\\workspace\\OpenLocalization-Prod\\src\\OpenLocalization\\Localization\\HandbackCore.cs:line 406",
         "extended_information": null
       },
-      "HandbackFailureTimes": 2,
+      "HandbackFailureTimes": 3,
       "UpdatedDateTime": "2016-06-22T14:52:05.9776686Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.de-de\\master\\archive\\tracking-content.96d55d65b4f5f5acd451c4e31ff2f07f2aa6fceb.de-de.xlf",
       "ArchiveFileCommit": "ec3c34a32c589df608132c3e8a4ee1d820260be3",
