@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+
 
 ---
 
@@ -39,7 +33,8 @@ Die hier aufgeführten Szenarien sind ein Beispiel für die gängigsten Lösunge
 
 Vor der Einführung dieser Lösungen empfiehlt es sich, Endbenutzern eine umfangreiche Ankündigung zu senden, in der Sie sie bezüglich der bevorstehenden Änderungen zum Schutz von Unternehmensdaten informieren. Weisen Sie sie außerdem darauf hin, dass dadurch auch Änderungen ihrerseits erforderlich sein können. Eine Beispielkommunikation finden Sie nach der folgenden Tabelle.
 
-> [!NOTE]Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+> [!NOTE]
+> Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## Szenarien für die Azure RMS
 Damit Sie Azure RMS schneller bereitstellen können, um bestimmte Geschäftsprobleme zu lösen, wählen Sie die Szenarien, die Ihren Unternehmenszielen am nächsten kommen, und passen Sie diese gegebenenfalls an.
@@ -151,6 +146,7 @@ Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu s
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Registrierungseinstellungen für den RMS-Verbindungsdienst | Azure RMS
-description:
-keywords:
+title: "Registrierungseinstellungen für den RMS-Verbindungsdienst | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: ff90f009f9fda90171bbeeb2a7bb421376d4695c
+
 
 ---
 
@@ -37,7 +31,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *MicrosoftRMSURL* ist die URL des Microsoft RMS-Diensts Ihrer Organisation. So finden Sie diesen Wert
 
-    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, helfen Ihnen die Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md) weiter..
+    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, helfen Ihnen die Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md) weiter.
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
@@ -222,6 +216,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

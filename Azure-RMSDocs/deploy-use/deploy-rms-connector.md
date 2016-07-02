@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Bereitstellen des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: e31656e417a0861d33deb2436d2e4b596a7512a7
+ms.openlocfilehash: 6b9b3b039ba2de0de174a134768afd763d26b5dd
+
 
 ---
 
@@ -31,7 +25,8 @@ ms.suite: ems
 
 Hier erhalten Sie Informationen über den Azure Rights Management-Verbindungsdienst. Außerdem erfahren Sie, wie Sie mit dessen Hilfe für Informationsschutz mit vorhandenen lokalen Bereitstellungen sorgen können, die Microsoft Exchange Server, Microsoft SharePoint Server oder unter Windows Server ausgeführte Dateiserver verwenden, für die die Dateiklassifizierungsinfrastruktur-Funktion des Ressourcen-Managers für Dateiserver eingesetzt wird.
 
-> [!TIP] Ein allgemeines Beispielszenario mit Screenshots finden Sie im Abschnitt [Automatischer Schutz von Dateien auf Dateiservern, auf denen Windows Server und Dateiklassifizierungsinfrastruktur ausgeführt wird](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure) im Artikel [Azure RMS in Aktion](../understand-explore/what-admins-users-see.md).
+> [!TIP]
+> Ein allgemeines Beispielszenario mit Screenshots finden Sie im Abschnitt [Automatischer Schutz von Dateien auf Dateiservern, auf denen Windows Server und Dateiklassifizierungsinfrastruktur ausgeführt wird](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure) im Artikel [Azure RMS in Aktion](../understand-explore/what-admins-users-see.md).
 
 ## Übersicht über den Microsoft Rights Management-Verbindungsdienst
 Mit dem Microsoft Rights Management-Connector können Sie schnell vorhandene lokale Server für die Verwendung ihrer IRM-Funktionalität mit dem cloudbasierten Microsoft Rights Management Service (Azure RMS) aktivieren. Mit dieser Funktionalität können IT-Abteilungen und Benutzer Dokumente und Bilder, sowohl innerhalb als auch außerhalb der Organisation, ganz einfach schützen, ohne zusätzliche Infrastruktur installieren oder Vertrauensstellungen mit anderen Organisationen einrichten zu müssen. Sie können diesen Connector verwenden, selbst wenn einige der Benutzer Verbindungen mit Online-Diensten in einem Hybridszenario herstellen. Beispielsweise könnte es sein, dass für die Postfächer einiger Benutzer Exchange Online und für die Postfächer einiger anderer Benutzer Exchange Server verwendet wird. Nachdem Sie den RMS-Connector (RMS-Verbindungsdienst) installiert haben, können alle Benutzer E-Mails und Anlagen mithilfe von Azure RMS schützen und nutzen, und der Informationsschutz zwischen den beiden Bereitstellungskonfigurationen funktioniert nahtlos.
@@ -44,7 +39,8 @@ Wenn Sie Ihren eigenen Mandantenschlüssel für Azure RMS verwalten (das „Brin
 
 Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden, um Richtlinien zu klassifizieren und auf Office-Dokumente in einem Ordner anzuwenden. Wenn Sie alle Dateitypen mit Dateiklassifizierung schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
-> [!NOTE] Informationen zu den unterstützten Versionen dieser lokalen Server finden Sie unter [Lokale Server, die Azure RMS unterstützen](..\get-started\requirements-servers.md).
+> [!NOTE]
+> Informationen zu den unterstützten Versionen dieser lokalen Server finden Sie unter [Lokale Server, die Azure RMS unterstützen](..\get-started\requirements-servers.md).
 
 Die folgenden Informationen helfen Ihnen dabei, den RMS-Verbindungsdienst zu planen, zu installieren und zu konfigurieren. Sie müssen dann noch einige Konfigurationen nach der Installation vornehmen, damit Ihre Server den Verbindungsdienst verwenden können.
 
@@ -87,6 +83,7 @@ Stellen Sie vor der Installation des RMS-Verbindungsdiensts sicher, dass folgend
 
 Fahren Sie mit [Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts](install-configure-rms-connector.md) fort.
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
