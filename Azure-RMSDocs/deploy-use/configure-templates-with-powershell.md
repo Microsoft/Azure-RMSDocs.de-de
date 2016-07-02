@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: PowerShell-Referenz für benutzerdefinierte Vorlagen | Azure RMS
-description:
-keywords:
+title: "PowerShell-Referenz für benutzerdefinierte Vorlagen | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+
 
 ---
 
@@ -35,7 +29,8 @@ Alle Vorgänge, die Sie im klassischen Azure-Portal zum Erstellen und Verwalten 
 
 Sie können das Exportieren und Importieren auch zum Sichern und Wiederherstellen der benutzerdefinierten Vorlagen verwenden. Als bewährte Methode wird empfohlen, regelmäßig eine Sicherungskopie der benutzerdefinierten Vorlagen zu erstellen. So können Sie jederzeit leicht zur vorherigen Version zurückwechseln, falls Sie einmal eine unbeabsichtigte Änderung vornehmen sollten.
 
-> [!IMPORTANT] Sie benötigen mindestens Version 2.0.0.0 des [Windows PowerShell-Moduls für Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721), um Windows PowerShell zum Erstellen und Verwalten von Vorlagen für Azure RMS-Benutzerrechterichtlinien zu verwenden.
+> [!IMPORTANT]
+> Um Windows PowerShell zum Erstellen und Verwalten von Azure RMS-Rechterichtlinienvorlagen zu verwenden, benötigen Sie mindestens Version 2.0.0.0 des [Windows PowerShell-Moduls für Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
 > 
 > Wenn Sie dieses PowerShell-Modul bereits zuvor installiert hatten, führen Sie den folgenden Befehl in einem PowerShell-Fenster aus, um die Versionsnummer zu überprüfen: `(Get-Module aadrm -ListAvailable).Version`
 
@@ -64,6 +59,7 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 ## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

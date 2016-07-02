@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Dialogfeldoptionen der Rights Management-Freigabeanwendung | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+
 
 ---
 
@@ -61,7 +55,7 @@ Zusätzlich zu den Optionen, die Sie auswählen können, fragen Sie sich viellei
 
 -   Im Gegensatz dazu gilt bei Verwendung des **integrierten (nativen) Schutzes** von Rights Management der Schutz für Anwendungen, die dies unterstützen (z.B. Office-Dateien), auch für die Datei. Dies ist auch der Fall, wenn die Datei an jemand anderen gesendet oder an einem anderen Ort gespeichert wird. Und wenn Sie diese Dateien schützen, können Sie eingeschränkte Berechtigungen verwenden, z. B. schreibgeschützt oder die Berechtigung zum Bearbeiten, jedoch nicht zum Drucken oder Kopieren. Sie könnten beispielsweise **Anzeigender Benutzer – Nur Anzeigen**auswählen, sodass der Inhalt weder bearbeitet, noch gedruckt oder noch kopiert werden kann.
 
-Weitere technische Informationen finden Sie im Abschnitt [Schutzebenen – nativ und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md)..
+Weitere technische Informationen finden Sie im Abschnitt [Schutzstufe – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
 ## Erläuterung zur automatisch erstellten PPDF-Datei
 
@@ -84,6 +78,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

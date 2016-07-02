@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 1fc1835b60c4c75b81f106011849940ba2e77164
+ms.openlocfilehash: afb00e010df25dea5f3c3cad23824f773de59b18
+
 
 ---
 
@@ -33,7 +27,8 @@ Verwenden Sie diesen Anweisungsartikel und ein Skript, um den RMS-Client (Rights
 
 Mit diesen Lösungen können Sie automatisch alle Dateien in einem Ordner auf einem Dateiserver unter Windows Server oder automatisch Dateien schützen, die bestimmten Kriterien entsprechen. Das sind z. B. Dateien, die vertrauliche Informationen enthalten und entsprechend klassifiziert wurden. Diese Lösung verwendet Azure Rights Management (Azure RMS), um die Dateien zu schützen, daher müssen Sie diese Technologie in Ihrer Organisation bereitgestellt haben.
 
-> [!NOTE] Obwohl Azure RMS einen [Connector](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z. B. Office-Dateien.
+> [!NOTE]
+> Obwohl Azure RMS einen [Verbindungsdienst](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur systemeigenen Schutz, z. B. Office-Dateien.
 > 
 > Um alle Dateitypen mit der Dateiklassifizierungsinfrastruktur zu unterstützen, müssen Sie das Windows PowerShell- **RMS-Schutzmodul** verwenden, wie in diesem Artikel beschrieben wird. Die RMS-Schutz-Cmdlets, wie z. B. die RMS-Freigabeanwendung, unterstützen generischen Schutz und systemeigenen Schutz, was bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
 
@@ -278,7 +273,8 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
     ```
-    > [!TIP] Einige Tipps zur Problembehandlung:
+    > [!TIP]
+    > Einige Tipps zur Problembehandlung:
     > 
     > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist dies darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen, und führen sie es aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich bei Azure RMS zu authentifizieren.
     > 
@@ -306,6 +302,7 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

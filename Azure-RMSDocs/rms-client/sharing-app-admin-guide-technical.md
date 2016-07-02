@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Technische Übersicht für die Rights Management-Freigabeanwendung | Azure RMS
-description:
-keywords:
+title: "Technische Übersicht für die Rights Management-Freigabeanwendung | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+
 
 ---
 
@@ -66,7 +60,8 @@ Wenn die RMS-Freigabeanwendung darüber hinaus systemeigen eine Word-, Excel- od
 
 Für Dateien, die generisch geschützt sind, wird die ursprüngliche Namenserweiterung immer in PFILE geändert.
 
-> [!WARNING] Wenn Sie Firewalls, Webproxys oder Sicherheitssoftware haben, die Dateinamenerweiterungen überprüfen und entsprechende Maßnahmen ergreifen, müssen Sie diese möglicherweise dahingehend neu konfigurieren, sodass sie die neuen Dateinamenerweiterungen unterstützen.
+> [!WARNING]
+> Wenn Sie Firewalls, Webproxys oder Sicherheitssoftware haben, die Dateinamenerweiterungen überprüfen und entsprechende Maßnahmen ergreifen, müssen Sie diese möglicherweise zur Unterstützung der neuen Dateinamenerweiterungen neu konfigurieren.
 
 |Ursprüngliche Dateinamenerweiterung|RMS-geschützte Dateinamenerweiterung|
 |--------------------------------|-------------------------------------|
@@ -144,6 +139,7 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
