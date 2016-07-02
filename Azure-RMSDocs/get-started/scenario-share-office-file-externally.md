@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure RMS
-description:
-keywords:
+title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+
 
 ---
 
@@ -74,7 +68,8 @@ Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und f�
 
     -   Die Schritte beinhalten nicht das Festlegen eines Ablaufdatums. Falls die Informationen nach einem bestimmten Datum nicht mehr verwendet werden sollen, können Sie einen weiteren Schritt zum Festlegen eines geeigneten Ablaufzeitpunkts hinzufügen, z.B. 90 Tage nach dem Senden der E-Mail.
 
-    > [!NOTE]Weitere Informationen zu den einzelnen Optionen, die Benutzer auswählen können, finden Sie unter [Optionen des Dialogfelds für die Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574738.aspx).
+    > [!NOTE]
+    > Weitere Informationen zu den einzelnen Optionen, die Benutzer auswählen können, finden Sie unter [Optionen des Dialogfelds für die Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574738.aspx).
 
 4.  Nehmen Sie jegliche sonstigen Änderungen an den Anweisungen vor, und senden Sie sie an diese Benutzer.
 
@@ -159,6 +154,7 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -55,6 +55,6 @@ Obwohl hier nicht auf benutzerdefinierte Vorlagen eingegangen wird, müssen Sie 
 |Standardvorlagen und Erstellung neuer benutzerdefinierter Vorlagen   →|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

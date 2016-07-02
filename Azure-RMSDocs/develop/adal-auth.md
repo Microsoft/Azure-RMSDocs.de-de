@@ -1,27 +1,22 @@
 ---
-# required metadata
-
-title: Konfigurieren von Azure RMS für die ADAL-Authentifizierung | Azure RMS
-description: Erläutert die Schritte zum Konfigurieren der Azure ADAL-basierten Authentifizierung
+title: "Konfigurieren von Azure RMS für die ADAL-Authentifizierung | Azure RMS"
+description: "Erläutert die Schritte zum Konfigurieren der Azure ADAL-basierten Authentifizierung"
 keywords: authentication, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
-
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
+ms.openlocfilehash: 9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1
+
 
 ---
 
@@ -36,7 +31,8 @@ Folgendes wird benötigt:
 - Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/en-us/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie unter [Wie sich Benutzer für RMS for Individuals registrieren](../understand-explore/rms-for-individuals-user-sign-up.md).
 - Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](https://technet.microsoft.com/en-us/library/dn592127.aspx)-Konto ist ausreichend).
 
-> [!NOTE] Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Ihr IT-Administrator sollte das Abonnement zudem mit einem *Geschäfts-, Schul- oder Unikonto* und nicht mit einem *Microsoft-Konto* (z.B. Hotmail) erstellen.
+> [!NOTE] 
+> Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Ihr IT-Administrator sollte das Abonnement zudem mit einem *Geschäfts-, Schul- oder Unikonto* und nicht mit einem *Microsoft-Konto* (z.B. Hotmail) erstellen.
 
 Nach der Registrierung für Microsoft Azure:
 
@@ -81,11 +77,13 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Auswählen von KONFIGURIEREN](../media/ConfigYourApp.png)
 
->[!NOTE] Kopieren Sie die **CLIENT-ID** und den **UMLEITUNGS-URI**, und speichern Sie diese für die spätere Verwendung bei der Konfiguration des RMS-Clients.
+>[!NOTE] 
+> Kopieren Sie die **CLIENT-ID** und den **UMLEITUNGS-URI**, und speichern Sie diese für die spätere Verwendung bei der Konfiguration des RMS-Clients.
 
 - Navigieren Sie zum unteren Rand Ihrer Anwendungseinstellungen, und wählen Sie unter **Berechtigungen für andere Anwendungen** die Schaltfläche **Anwendung hinzufügen** aus.
 
->[!NOTE] Die für Windows Azure Active Directory angezeigten **delegierten Berechtigungen** sind standardmäßig korrekt – es darf nur eine Option ausgewählt sein, und dies ist **Ermöglichen der Anmeldung und Lesen des Benutzerprofils**.
+>[!NOTE] 
+> Die für Windows Azure Active Directory angezeigten **delegierten Berechtigungen** sind standardmäßig korrekt – es darf nur eine Option ausgewählt sein, und dies ist **Ermöglichen der Anmeldung und Lesen des Benutzerprofils**.
 
 ![Auswählen von „Anwendung hinzufügen“](../media/PermissionsToOtherBtn.png)
 
@@ -110,6 +108,7 @@ Nach der Registrierung für Microsoft Azure:
 ![Auswählen von SPEICHERN](../media/SaveApplication.png)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

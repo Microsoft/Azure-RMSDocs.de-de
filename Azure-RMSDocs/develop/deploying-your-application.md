@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Bereitstellen der Anwendung | Azure RMS
-description: Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für Ihre Rechte-fähige Anwendung
-keywords:
+description: "Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für Ihre Rechte-fähige Anwendung"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
+ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+
 
 ---
 
@@ -84,7 +80,8 @@ Der RMS Client 2.1 ist eine Software, die entwickelt wurde, damit auf Ihren Clie
 Der RMS Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der RMS Client 2.1 wird als optionaler Download bereitgestellt, der mit Bestätigung und Annahme des Lizenzvertrags mit der Software von Drittanbietern frei verteilt werden kann, um Clients Zugriff auf Inhalte zu ermöglichen, die durch Nutzung und Bereitstellung von RMS-Servern in Ihrer Umgebung geschützt wurden.
 
 
-> [!IMPORTANT] Die AD RMS-Client 2.1-Architektur ist speziell und muss der Architektur des Zielbetriebssystems entsprechen.
+> [!IMPORTANT]
+> Die AD RMS-Client 2.1-Architektur ist speziell und muss der Architektur des Zielbetriebssystems entsprechen.
 
 
 ## Installationsoptionen für den RMS Client 2.1
@@ -137,6 +134,7 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

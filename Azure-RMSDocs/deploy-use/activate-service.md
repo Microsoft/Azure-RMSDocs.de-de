@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Aktivieren von Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/16/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bf5e3561ef24d8f44e791ff7bdc8450a73f79705
+ms.openlocfilehash: d66e4e6bca253bc2bf9d12ba22ed0202cba2edaf
+
 
 ---
 
@@ -58,7 +52,8 @@ Alternativ können Sie zum Aktivieren von [!INCLUDE[aad_rightsmanagement_2](../i
 ## Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung
 Sollen nicht alle Benutzer sofort die Möglichkeit haben, Dateien mithilfe von Azure RMS zu schützen, können Sie mit dem Windows PowerShell-Befehl [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Benutzereinbindungsrichtlinien (Onboardingsteuerungsrichtlinien) konfigurieren. Sie können diesen Befehl ausführen, bevor oder nachdem Sie Azure RMS aktivieren.
 
-> [!IMPORTANT] Damit Sie diesen Befehl verwenden können, benötigen Sie mindestens Version **2.1.0.0** des [Azure RMS Windows PowerShell-Moduls](http://go.microsoft.com/fwlink/?LinkId=257721).
+> [!IMPORTANT]
+> Damit Sie diesen Befehl verwenden können, benötigen Sie mindestens Version **2.1.0.0** des [Azure RMS Windows PowerShell-Moduls](http://go.microsoft.com/fwlink/?LinkId=257721).
 >
 > Führen Sie den folgenden Befehl aus, um die Version zu überprüfen, die installiert ist: **(Get-Module aadrm –ListAvailable).Version**
 
@@ -86,6 +81,7 @@ Office-Dienste (z.B. Exchange Online und SharePoint Online) erfordern zusätzlic
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
