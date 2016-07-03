@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Registrieren für RMS for Individuals | Azure RMS
-description:
-keywords:
+title: "Registrieren für RMS for Individuals | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 19252180802c69d6e5d6bf22c71ff3bcba96fb36
+
 
 ---
 
@@ -35,22 +29,22 @@ Benutzer werden normalerweise zu dieser Anmeldeseite weitergeleitet, wenn sie ei
 
 ## So registrieren Sie sich für RMS für Einzelpersonen
 
-1.  Wechseln Sie auf einem Windows- oder Mac-Computer zur Seite [Microsoft Rights Management](https://portal.aadrm.com)..
+1.  Wechseln Sie auf einem Windows- oder Mac-Computer zur Seite [Microsoft Rights Management](https://portal.aadrm.com).
 
-2.  Geben Sie die E-Mail-Adresse ein, die Sie für Ihre Organisation verwenden, z.B. **janetm@contoso.com** oder **p.dover@fabrikam.com**..
+2.  Geben Sie die E-Mail-Adresse ein, die Sie für Ihre Organisation verwenden, z. B. **janetm@contoso.com** oder **p.dover@fabrikam.com**.
 
     > [!IMPORTANT]
     > Private E-Mail-Konten werden nicht unterstützt. Geben Sie also kein Microsoft-Konto (früher Microsoft Live ID-Konto) oder ein anderes privates Konto ein, das Sie zu Hause von Ihrem Internetanbieter verwenden.
 
-3.  Klicken Sie auf **Erste Schritte**..
+3.  Klicken Sie auf **Erste Schritte**.
 
     Microsoft prüft anhand Ihrer E-Mail-Adresse, ob Ihre Organisation bereits ein [kostenpflichtiges Abonnement hat, das Azure RMS umfasst](../get-started/requirements-subscriptions.md). Wenn dies der Fall ist, benötigen Sie RMS for Individuals nicht, und Sie werden sofort angemeldet, und die Self-Service-Registrierung für RMS for Individuals wird abgebrochen. Wird kein kostenpflichtiges Abonnement für Azure RMS gefunden, führen Sie den nächsten Schritt aus.
 
-4.  Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Sie stammt von Microsoft (DoNotReply@microsoft.com) und hat den Betreff **Microsoft RMS**..
+4.  Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Sie stammt von Microsoft (DoNotReply@microsoft.com) und hat den Betreff **Microsoft RMS**.
 
 5.  Wenn Sie die E-Mail empfangen, klicken Sie auf den Link in den Anweisungen, um den Registrierungsprozess abzuschließen.
 
-6.  Der Link leitet Sie zu einer neuen Seite **Microsoft Rights Management** , wo Sie Details zu Ihrem Konto angeben können. Geben Sie Ihren Vornamen, Ihren Nachnamen und ein Kennwort Ihrer Wahl ein, bestätigen Sie das Kennwort, wählen Sie Ihr Land (oder das nächstgelegene Land, wenn Ihr Land nicht aufgelistet ist) in der Dropdownliste aus, und klicken Sie auf **Erstellen**..
+6.  Der Link leitet Sie zu einer neuen Seite **Microsoft Rights Management** , wo Sie Details zu Ihrem Konto angeben können. Geben Sie Ihren Vornamen, Ihren Nachnamen und ein Kennwort Ihrer Wahl ein, bestätigen Sie das Kennwort, wählen Sie Ihr Land (oder das nächstgelegene Land, wenn Ihr Land nicht aufgelistet ist) in der Dropdownliste aus, und klicken Sie auf **Erstellen**.
 
 7.  Warten Sie auf eine weitere E-Mail von Microsoft, die jetzt bestätigt, dass Ihr Konto zur Verwendung bereit ist.
 
@@ -70,7 +64,7 @@ Dies geschieht im Hintergrund, wenn sich ein Benutzer für RMS für Einzelperson
 
     Wurde ein vorhandener Mandant gefunden, wird er überprüft, um zu festzustellen, ob er bereits ein Abonnement für Azure RMS hat. Wird kein Abonnement gefunden, kann das kostenlose RMS for Individuals-Abonnement hinzugefügt werden.
 
-2.  Der Organisation wird das RMS for Individuals-Abonnement gewährt. Nun kann dieser Benutzer von Azure authentifiziert werden und Azure Rights Management dazu verwenden, Dateien zu schützen sowie Dateien zu lesen, die von anderen geschützt wurden. Der Benutzer muss eine RMS-fähige Anwendung haben, beispielsweise die kostenlose [Rights Management-Freigabeanwendung](../rms-client/sharing-app-windows.md), um Dateien zu schützen und geschützte Dateien zu lesen..
+2.  Der Organisation wird das RMS for Individuals-Abonnement gewährt. Nun kann dieser Benutzer von Azure authentifiziert werden und Azure Rights Management dazu verwenden, Dateien zu schützen sowie Dateien zu lesen, die von anderen geschützt wurden. Um Dateien zu schützen und geschützte Dateien zu lesen, muss der Benutzer eine RMS-fähige Anwendung haben, beispielsweise die kostenlose [Rights Management-Freigabeanwendung](../rms-client/sharing-app-windows.md).
 
 3.  Wenn der zweite Benutzer aus derselben Organisation ein "RMS für Einzelpersonen"-Abonnement anfordert, wird dem zuvor erstellten Azure-Verzeichnis ein neues Benutzerkonto hinzugefügt, indem das „RMS für Einzelpersonen“-Abonnement der Organisation verwendet wird. Dieser zweite Benutzer kann alle Aktionen ausführen, die auch der erste Benutzer ausführen kann (Dateien schützen und geschützte Dateien lesen), aber zusätzlich können diese beiden Benutzer nun einfacher sicher zusammenarbeiten, weil sie schnell Standardvorlagen auf Dateien anwenden können, die den Zugriff auf Konten im Azure-Verzeichnis ihrer Organisation einschränken.
 
@@ -80,7 +74,7 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 
 -   **Verwalten der Konten und des Anmeldevorgangs**: IT-Administratoren können den Besitz der automatisch erstellten Verzeichnisse und Konten in Azure übernehmen. Sie können dann die Konten verwalten, indem sie Verzeichnisintegrationslösungen wie Kennwortsynchronisierung und einmaliges Anmelden implementieren. Oder sie können Benutzer daran hindern, Konten zu erstellen oder sich für RMS for Individuals zu registrieren.
 
-    Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS für Einzelpersonen erstellten Konten durch Administratoren](rms-for-individuals-take-control.md)..
+    Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren](rms-for-individuals-take-control.md).
 
 -   **Verwalten von Rights Management**: IT-Administratoren können das "RMS für Einzelpersonen"-Abonnement für die Organisation in ein kostenpflichtiges Abonnement umwandeln, das Azure Rights Management enthält. Wenn sie dies tun, bleiben das vorhandene Azure-Verzeichnis und die Konten erhalten, um einen nahtlosen Übergang von vorhandenen Benutzern, die bisher RMS für Einzelpersonen verwendet haben, zu gewährleisten. Alle Dateien, die zuvor geschützt waren, bleiben mit denselben Richtlinien geschützt, und die Personen, denen Berechtigungen für die Nutzung der Dateien gewährt wurden, können die Dateien weiterhin auf dieselbe Weise verwenden.
 
@@ -92,21 +86,22 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 
         -   [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md)
 
-    -   Führen Sie eine eDiscovery in den unternehmenseigenen Daten durch, damit Sie ggf. Dateien entschlüsseln können, die mithilfe von Rights Management geschützt wurden. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](../deploy-use/configure-super-users.md)..
+    -   Führen Sie eine eDiscovery in den unternehmenseigenen Daten durch, damit Sie ggf. Dateien entschlüsseln können, die mithilfe von Rights Management geschützt wurden. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](../deploy-use/configure-super-users.md).
 
-    -   Alle Aktivitäten für Rights Management protokollieren, wie sie in Ihrer Organisation verwendet werden. Dies ist sehr leistungsfähig, weil Sie nicht nur überwachen können, welche Dateien geschützt werden und wer erfolgreich auf diese geschützten Dateien zugreift, sondern auch potenziell verdächtiges Verhalten nicht autorisierter Personen identifizieren können, die versuchen, auf geschützte Dateien zuzugreifen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md)..
+    -   Alle Aktivitäten für Rights Management protokollieren, wie sie in Ihrer Organisation verwendet werden. Dies ist sehr leistungsfähig, weil Sie nicht nur überwachen können, welche Dateien geschützt werden und wer erfolgreich auf diese geschützten Dateien zugreift, sondern auch potenziell verdächtiges Verhalten nicht autorisierter Personen identifizieren können, die versuchen, auf geschützte Dateien zuzugreifen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
-    -   Geben Sie Benutzern die Möglichkeit, ihre geschützten Dokumente nachzuverfolgen und zu widerrufen, sofern diese Features von Ihrem [Azure RMS-Abonnement](https://technet.microsoft.com/dn858608)unterstützt werden. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dateien](../rms-client/sharing-app-track-revoke.md) im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)..
+    -   Geben Sie Benutzern die Möglichkeit, ihre geschützten Dokumente nachzuverfolgen und zu widerrufen, sofern diese Features von Ihrem [Azure RMS-Abonnement](https://technet.microsoft.com/dn858608)unterstützt werden. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dateien](../rms-client/sharing-app-track-revoke.md) im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
 
-    -   Eine BYOK-Lösung (Bring Your Own Key) implementieren, sodass Ihr Mandantenschlüssel für Azure Rights Management lokal und gemäß Ihren IT-Richtlinien generiert und sicher unter Verwendung eines HSM (Hardwaresicherheitsmodul) an Microsoft übertragen wird. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md)..
+    -   Eine BYOK-Lösung (Bring Your Own Key) implementieren, sodass Ihr Mandantenschlüssel für Azure Rights Management lokal und gemäß Ihren IT-Richtlinien generiert und sicher unter Verwendung eines HSM (Hardwaresicherheitsmodul) an Microsoft übertragen wird. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
 
 ## Nächste Schritte
-Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren](rms-for-individuals-take-control.md)..
+Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren](rms-for-individuals-take-control.md).
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
