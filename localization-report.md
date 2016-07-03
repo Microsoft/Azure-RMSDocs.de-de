@@ -1747,7 +1747,7 @@
 * Archive File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/ec3c34a32c589df608132c3e8a4ee1d820260be3/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf)
 * Archive Datetime: 2016-07-01 23:44:07
 * Handback File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/36e7b3a6e1cce8e9a535362bcbfca56a1371b070/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf)
-* Handback Datetime: 2016-07-03 06:31:48
+* Handback Datetime: 2016-07-03 07:18:06
 * Handback Error: [handback_transform_failed](#2be40c9caf33f391f8be9fe116d3473ce995613b89handback_transform_failed)
 * Bilingual File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/36e7b3a6e1cce8e9a535362bcbfca56a1371b070/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.de-de.xlf)
 * Bilingual Datetime: 2016-06-22 13:03:12
@@ -2029,7 +2029,7 @@
 * Archive File: [requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/ec3c34a32c589df608132c3e8a4ee1d820260be3/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf)
 * Archive Datetime: 2016-07-01 23:44:07
 * Handback File: [requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/9f10104eeb281641f21eb623259378041938f533/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf)
-* Handback Datetime: 2016-07-03 06:31:48
+* Handback Datetime: 2016-07-03 07:18:06
 * Handback Error: [handback_transform_failed](#75b2414cc360704deb6107d6c0038f5b0bf7fa70108handback_transform_failed)
 * Bilingual File: [requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/9f10104eeb281641f21eb623259378041938f533/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/requirements-azure-ad.f547a88ea6588c3498d1557227545b6d25a19bfe.de-de.xlf)
 * Bilingual Datetime: 2016-06-22 12:23:38
