@@ -2560,8 +2560,8 @@
 * Archive Datetime: 2016-07-01 23:44:07
 * Handback File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/25af4165bfb6e7dcbe8c7f6fed7db76d9dde7f4e/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf)
 * Handback Datetime: 2016-07-04 10:29:07
-* Bilingual File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/5671add8b1c4f105f85d045fbed6b7e8c18f7258/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf)
-* Bilingual Datetime: 2016-06-16 10:18:39
+* Bilingual File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/25af4165bfb6e7dcbe8c7f6fed7db76d9dde7f4e/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.de-de.xlf)
+* Bilingual Datetime: 2016-07-04 10:32:29
 * [Back to Top](#report-top)
 
 ##### <a name='2f7554efa3de9dd3a080888f6cbfee972a8bdfc0146'></a> Source: [Azure-RMSDocs\includes\rms-quickstart-step1-include.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/f3175f081efab6e21cd2f370c579c55fbc9e8096/Azure-RMSDocs/includes/rms-quickstart-step1-include.md)
