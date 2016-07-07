@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Generieren und Übertragen Ihres Mandantenschlüssels – persönlich | Azure RMS
-description:
-keywords:
+title: "Generieren und Übertragen Ihres Mandantenschlüssels – persönlich | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 1acc66e9a73b100268ed722391a0a87651c64abc
+
 
 ---
 
@@ -42,7 +36,7 @@ Um Ihren eigenen Mandantenschlüssel zu generieren, befolgen Sie diese 3 Schritt
 -   [Schritt 3: Erstellen Sie einen neuen Schlüssel](#step-3-create-a-new-key)
 
 ### Schritt 1: Bereiten Sie eine Arbeitsstation mit Thales HSM vor
-Installieren Sie die unterstützende nCipher-Software (Thales) auf einem Windows-Computer. Schließen Sie ein Thales HSM an diesen Computer an. Stellen Sie sicher, dass sich die Thales-Tools in Ihrem Pfad befinden. Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang der Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)..
+Installieren Sie die unterstützende nCipher-Software (Thales) auf einem Windows-Computer. Schließen Sie ein Thales HSM an diesen Computer an. Stellen Sie sicher, dass sich die Thales-Tools in Ihrem Pfad befinden. Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang des Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Schritt 2: Erstellen Sie eine Security World
 Starten Sie eine Eingabeaufforderung, und führen Sie das Thales-Programm „new-world“ aus.
@@ -156,6 +150,7 @@ Sie haben die erforderlichen Schritte der persönlichen Übertragung für „Bri
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

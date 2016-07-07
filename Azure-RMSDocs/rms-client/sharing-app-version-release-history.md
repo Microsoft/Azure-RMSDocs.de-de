@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure RMS
-description:
-keywords:
+title: "Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
+ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+
 
 ---
 
@@ -33,8 +26,21 @@ Das Rights Management-Team aktualisiert die Rights Management-Freigabeanwendung 
 
 Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
-> [!NOTE]
-> Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question)..
+> [!NOTE]Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Version 1.0.2191.0
+**Veröffentlicht**: 16.6.2016
+
+**Fixes**:
+
+- Die Website zur Dokumentnachverfolgung zeigt nun für jedes nachverfolgte Dokument die korrekte Anzahl von Ansichten an.
+
+- Die Vorlagen für alle Gebietsschemas werden jetzt als für Benutzer verfügbar angezeigt.
+
+- Wenn Sie „Geschütztes Freigeben“ für eine PowerPoint-Datei verwenden, werden Änderungen an der lokalen Version der Datei jetzt richtig gespeichert.
+
+- Geringe Anzahl kleinerer Fehler und Verbesserungen an Fehlermeldungen.
+
 
 ## Version 1.0.2004.0
 **Veröffentlicht**: 11.12.2015
@@ -62,7 +68,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   Unterstützung für mehrstufige Authentifizierung (MFA) für Azure RMS, wodurch auch die Abhängigkeit vom Microsoft Anmelde-Assistenten für Anwendungen, die eine moderne Authentifizierung verwenden, entfernt wird.
 
-    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md)..
+    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 ## Version 1.0.1784.0
 **Veröffentlicht**: 30.07.2015
@@ -84,7 +90,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 **Neue Features**:
 
--   Unterstützung für Dokumentnachverfolgung und -widerruf. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md)..
+-   Unterstützung für Dokumentnachverfolgung und -widerruf. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).
 
 -   Vorlagenunterstützung, wenn Sie **Geschützt freigeben**auswählen:
 
@@ -94,7 +100,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
     -   Es werden keine Optionen für **Nutzung auf allen Geräten zulassen** und **Nutzungsbeschränkungen erzwingen**mehr angezeigt. Stattdessen wird je nach Dateityp automatisch **Generischer Schutz** ausgewählt.
 
-    Weitere Informationen finden Sie unter [Dialogfeldoptionen für die Rights Management-Freigabeanwendung](sharing-app-dialog-box.md)..
+    Weitere Informationen finden Sie unter [Dialogfeldoptionen für die Rights Management-Freigabeanwendung](sharing-app-dialog-box.md).
 
 ## Version 1.0.1667.0
 **Veröffentlicht**: 19.01.2015
@@ -109,10 +115,11 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 **Neue Features**:
 
--   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md)..
+-   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO3-->
 
 

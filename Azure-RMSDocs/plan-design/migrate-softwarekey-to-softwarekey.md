@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS
-description:
-keywords:
+title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
+ms.openlocfilehash: a739da3fbebc8dfa4c6715fd64ccd72f87d2a686
+
 
 ---
 
@@ -33,7 +27,7 @@ ms.suite: ems
 
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 
 
-Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
+Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
 
 Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Azure RMS, um Ihren Azure RMS-Mandantenschlüssel zu erhalten, der von Microsoft verwaltet wird.
 
@@ -44,7 +38,7 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     > [!TIP]
     > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm -ListAvailable).Version`
 
-    Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md)..
+    Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
 
 2.  Starten Sie Windows PowerShell mit der Option **Als Administrator ausführen** , und stellen Sie mit dem Cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) eine Verbindung mit dem Azure RMS-Dienst her:
 
@@ -70,10 +64,11 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     Disconnect-AadrmService
     ```
 
-Sie können jetzt mit [Schritt 3: Aktivieren Sie Ihren RMS-Mandanten](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

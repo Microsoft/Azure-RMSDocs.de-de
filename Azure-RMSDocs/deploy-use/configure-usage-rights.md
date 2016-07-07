@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
+ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+
 
 ---
 
@@ -65,7 +58,7 @@ Ermöglicht es dem Benutzer, das Dokument am aktuellen Speicherort zu speichern.
 
 **Name in den AD RMS-Vorlagen**: *Speichern*
 
-**API-Konstante oder -Wert**: IPC_GENERIC_WRITEL"EDIT"
+**API-Konstante oder -Wert**: IPC_GENERIC_WRITE L"EDIT"
 
 In Office-Anwendungen ermöglicht dieses Recht es den Benutzern auch, das Dokument zu ändern.
 
@@ -83,7 +76,7 @@ Aktiviert die Option, dem Inhalt Anmerkungen oder Kommentare hinzufügen zu kön
 
 **Name in den AD RMS-Vorlagen**: Nicht implementiert.
 
-**API-Konstante oder -Wert**: IPC_GENERIC_COMMENTL"COMMENT
+**API-Konstante oder -Wert:** IPC_GENERIC_COMMENT L"COMMENT
 
 Dieses Recht ist im SDK verfügbar, ist als eine Ad-hoc-Richtlinie im RMS-Schutz-Modul (RMSProtection) für Windows PowerShell verfügbar und wurde in einigen Anwendungen von Softwarelieferanten implementiert. Es wird allerdings nicht häufig verwendet und wird derzeit nicht von Office-Anwendungen unterstützt.
 
@@ -101,7 +94,7 @@ Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (S
 
 **Name in den AD RMS-Vorlagen**: *Exportieren (Speichern unter)*
 
-**API-Konstante oder -Wert**: IPC_GENERIC_EXPORTL"EXPORT"
+**API-Konstante oder -Wert:** IPC_GENERIC_EXPORT L"EXPORT"
 
 Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen in Anwendungen auszuführen, beispielsweise *An OneNote senden*.
 
@@ -119,7 +112,7 @@ Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen
 
 **Name in den AD RMS-Vorlagen**: *Weiterleiten*
 
-**API-Konstante oder -Wert:** IPC_EMAIL_FORWARDL"FORWARD"
+**API-Konstante oder -Wert:** IPC_EMAIL_FORWARD L"FORWARD"
 
 Gestattet es dem Weiterleiter nicht, anderen Benutzern Berechtigungen als Teil des Weiterleitungsvorgangs zu gewähren.
 
@@ -137,7 +130,7 @@ Gewährt alle Berechtigungen für das Dokument, und alle verfügbaren Aktionen k
 
 **Name in den AD RMS-Vorlagen**: *Vollzugriff*
 
-**API-Konstante oder -Wert**: IPC_GENERIC_ALLL"OWNER"
+**API-Konstante oder -Wert**: IPC_GENERIC_ALL L"OWNER"
 
 Umfasst die Möglichkeit, den Schutz zu entfernen.
 
@@ -155,7 +148,7 @@ Aktiviert die Optionen zum Drucken des Inhalts.
 
 **Name in den AD RMS-Vorlagen**: *Drucken*
 
-**API-Konstante oder -Wert**: IPC_GENERIC_PRINTL"PRINT"
+**API-Konstante oder -Wert**: IPC_GENERIC_PRINT L"PRINT
 
 ---
 
@@ -187,7 +180,7 @@ Aktiviert die Option *Allen antworten* in einem E-Mail-Client, ermöglicht es de
 
 **Name in den AD RMS-Vorlagen**: *Allen antworten*
 
-**API-Konstante oder -Wert**: IPC_EMAIL_REPLYALLL"REPLYALL"
+**API-Konstante oder Wert:** IPC_EMAIL_REPLYALL L"REPLYALL"
 
 ---
 
@@ -203,7 +196,7 @@ Ermöglicht es dem Benutzer, das Dokument zu öffnen und den Inhalt zu sehen.
 
 **Name in den AD RMS-Vorlagen**: *Anzeigen*
 
-**API-Konstante oder -Wert**: IPC_GENERIC_READL"VIEW"
+**API-Konstante oder -Wert**: IPC_GENERIC_READ L"VIEW"
 
 ---
 
@@ -219,7 +212,7 @@ Aktiviert Optionen zum Kopieren von Daten (einschließlich Screenshots) aus dem 
 
 **Name in den AD RMS-Vorlagen:** *Extrahieren*
 
-**API-Konstante oder -Wert:** IPC_GENERIC_EXTRACTL"EXTRACT"
+**API-Konstante oder -Wert:** IPC_GENERIC_EXTRACT L"EXTRACT"
 
 In einigen Anwendungen ermöglicht es auch, dass das gesamte Dokument ungeschützt gespeichert werden kann.
 
@@ -293,6 +286,7 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

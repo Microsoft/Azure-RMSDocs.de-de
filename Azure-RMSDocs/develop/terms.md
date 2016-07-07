@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Begriffe | Azure RMS
-description: Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten.
-keywords:
+description: "Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
+
 
 ---
 
@@ -29,7 +24,7 @@ ms.suite: ems
 Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten.
 
 **Veralteter Algorithmus**  
-Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Cookbook-Verschlüsselungsmodus (ECB) verwiesen wird. In diesem SDK ermöglicht Ihnen diese Einstellung das Generieren von Lizenzen, die mit der vom [AD Rights Management Services SDK](https://msdn.microsoft.com/en-us/library/windows/desktop/cc530379.aspx) verwendeten MSDRM-Bibliothek kompatibel sind.
+Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Cookbook-Verschlüsselungsmodus (ECB) verwiesen wird. Die Einstellung ermöglicht es Ihnen in diesem SDK, Lizenzen zu generieren, die mit der vom [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) verwendeten MSDRM-Bibliothek kompatibel sind.
 
 Diese Einstellung kann dazu führen, dass Inhalt von Ihrer Anwendung mit einem Verfahren geschützt wird, das den Kundenstandards für den Inhaltsschutz nicht entspricht.
 
@@ -49,6 +44,7 @@ Das PFile-Format ist für den Anwendungsentwickler transparent, da es in den Ent
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Einrichten von Windows Phone | Azure RMS
-description: Windows Phone-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren.
-keywords:
+description: "Windows Phone-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 90552435666b8f25c893fcffe8c8cf3355a5942d
+ms.openlocfilehash: 136d6e9d0c45a9779f87e32eed8288fe8ee3a622
+
 
 ---
 
@@ -55,7 +51,7 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
 
 -   Öffnen Sie *Visual Studio*.
 -   Klicken Sie auf **Datei**. Klicken Sie im Menü **Datei** auf **Neu** und dann auf **Projekt**.
--   Wählen Sie im Dialogfeld **Neues Projekt** die Option **Visual C\#** und dann **Leere App (Windows Phone)** aus, und klicken Sie dann auf **OK**.
+-   Wählen Sie im Dialogfeld **Neues Projekt** die Option **Visual C\#** und anschließend **Leere App (Windows Phone)** aus, und klicken Sie anschließend auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/wpsetup-newproj.png)
 
@@ -96,6 +92,7 @@ Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

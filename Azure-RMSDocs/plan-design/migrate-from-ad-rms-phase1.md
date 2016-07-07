@@ -1,27 +1,20 @@
 ---
-# required metadata
-
-title: Migration von AD RMS zu Azure Rights Management – Phase 1 | Azure RMS
-description:
-keywords:
+title: "Migration von AD RMS zu Azure Rights Management – Phase 1 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: defe008a9b78026ccac584bb06762228456a2916
+
 
 ---
 
@@ -47,7 +40,8 @@ Dieser Schritt ist ein zweistufiger Vorgang:
 ### Exportieren der Konfigurationsdaten aus AD RMS
 Führen Sie das folgende Verfahren auf allen AD RMS-Clustern für alle vertrauenswürdigen Veröffentlichungsdomänen aus, die Inhalt für Ihre Organisation geschützt haben. Auf reinen Lizenzierungsclustern müssen Sie es nicht ausführen.
 
-> [!NOTE] Wenn Sie Windows Server 2003 Rights Management nutzen, befolgen Sie anstelle dieser Anweisungen das Verfahren [Export SLC, TUD, TPD and RMS private key](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) (Exportieren von SLC, TUD, TPD und dem privaten RMS-Schlüssel) im Artikel [Migrating from Windows RMS to AD RMS in a Different Infrastructure](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) (Migration von Windows RMS auf AD RMS in einer anderen Infrastruktur).
+> [!NOTE]
+> Wenn Sie Windows Server 2003 Rights Management nutzen, befolgen Sie anstelle dieser Anweisungen das Verfahren [Exportieren von SLC, TUD, TPD und privatem RMS-Schlüssel](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) im Artikel [Migration von Windows RMS auf AD RMS in einer anderen Infrastruktur](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx).
 
 #### So exportieren Sie die Konfigurationsdaten (Informationen zu vertrauenswürdigen Veröffentlichungsdomänen)
 
@@ -80,7 +74,8 @@ Die aktuelle AD RMS-Bereitstellung wird eine der folgenden Konfigurationen für 
 
 -   Kennwortschutz mithilfe eines externen Kryptografieanbieters.
 
-> [!NOTE] Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](http://technet.microsoft.com/library/jj651024.aspx).
+> [!NOTE]
+> Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](http://technet.microsoft.com/library/jj651024.aspx).
 
 Folgende zwei Optionen sind für die Azure RMS-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) verwaltet. Ein Szenario, in dem Sie Ihren eigenen Azure RMS-Mandantenschlüssel verwalten, wird auch als "Bring Your Own Key" (BYOK) bezeichnet und erfordert ein Hardwaresicherheitsmodul (HSM) von Thales. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md).
 
@@ -98,7 +93,8 @@ Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migra
 |Kennwortschutz mithilfe eines externen Kryptografieanbieters|Kundenverwaltet (BYOK)|Wenden Sie sich an den Lieferanten Ihres Kryptografieanbieters, um Anweisungen zur Übertragung Ihres Schlüssels in ein Thales nShield-Hardwaresicherheitsmodul (HSM) zu erhalten. Gehen Sie anschließend die Anweisungen für das Verfahren **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln** unterhalb dieser Tabelle durch.|
 Bevor Sie mit diesen Verfahren beginnen, stellen Sie sicher, dass Sie auf die XML-Dateien, die Sie zuvor beim Exportieren der vertrauenswürdigen Veröffentlichungsdomänen erstellt haben, zugreifen können. Diese können z. B. auf einem USB-Stick gespeichert sein, den Sie von Ihrem AD RMS-Server abziehen und an eine Arbeitsstation mit Internetverbindung anschließen.
 
-> [!NOTE] Verwenden Sie ungeachtet der Speichermethode bewährte Sicherheitsmethoden zum Schutz dieser Dateien, da diese Daten Ihren privaten Schlüssel enthalten.
+> [!NOTE]
+> Verwenden Sie ungeachtet der Speichermethode bewährte Sicherheitsmethoden zum Schutz dieser Dateien, da diese Daten Ihren privaten Schlüssel enthalten.
 
 
 Um Schritt 2 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad aus: 
@@ -120,27 +116,51 @@ Sämtliche Anweisungen zu diesem Schritt finden Sie im Artikel [Aktivieren von A
 
 Wenn Ihr Azure RMS-Mandant bereits aktiviert ist und Sie diese Computer identifizieren können, stellen Sie sicher, dass Sie das Skript "CleanUpRMS_RUN_Elevated.cmd" auf diesen Computern wie in Schritt 5 beschrieben ausführen. Durch das Ausführen dieses Skripts erzwingen sie, die Benutzerumgebung erneut zu initialisieren, damit sie den aktualisierten Mandantenschlüssel und die importierten Vorlagen herunterladen.
 
+Falls Sie außerdem benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese zunächst exportieren und wieder importieren. Diese Prozedur wird im nächsten Schritt behandelt. 
+
 ## Schritt 4: Konfigurieren importierter Vorlagen
 Da die importierten Vorlagen den Standardstatus **Archiviert**haben, müssen Sie diesen Status in **Veröffentlicht** ändern, wenn Benutzer in der Lage sein sollen, diese Vorlagen mit Azure RMS zu verwenden.
 
-Wenn für Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet wurde, wird diese Gruppe beim Importieren der Vorlagen in Azure RMS automatisch entfernt. In diesem Fall müssen Sie den importierten Vorlagen manuell die äquivalente Gruppe oder äquivalente Benutzer und dieselben Rechte hinzufügen. Die entsprechende Gruppe für Azure RMS heißt **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<Mandantenname>.onmicrosoft.com**. Diese Gruppe kann beispielsweise für Contoso wie folgt aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Vorlagen, die Sie aus AD RMS importieren, sind im Aussehen und Verhalten mit benutzerdefinierten Vorlagen identisch, die Sie im klassischen Azure-Portal erstellen können. Unter [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md) erfahren Sie, wie Sie importierte Vorlagen, die veröffentlicht werden sollen, so ändern können, dass die Vorlagen für Benutzer in Anwendungen sicht- und auswählbar sind.
 
-Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Verwalten von AD RMS mit Windows PowerShell](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Abgesehen von der Veröffentlichung der neu importierten Vorlagen müssen Sie vor der Fortsetzung der Migration möglicherweise noch zwei wichtige Änderungen an den Vorlagen vornehmen. Nehmen Sie keine weiteren Änderungen an den importierten Vorlagen vor, um eine konsistentere Benutzererfahrung während der Migration sicherzustellen. Veröffentlichen Sie ebenso wenig die beiden Standardvorlagen, die in Azure RMS enthalten sind, und erstellen Sie zu diesem Zeitpunkt keine neuen Vorlagen. Warten Sie stattdessen, bis der Migrationsvorgang abgeschlossen ist und die AD RMS-Server außer Betrieb gesetzt wurden.
+
+Die Änderungen an der Vorlage, die Sie für diesen Schritt möglicherweise vornehmen müssen:
+
+- Wenn Sie vor der Migration benutzerdefinierte Vorlagen in Azure RMS erstellt haben, müssen Sie diese manuell exportieren und erneut importieren.
+
+- Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, müssen Sie die entsprechende Gruppe und die Berechtigungen manuell hinzufügen.
+
+## Prozedur, falls Sie benutzerdefinierte Vorlagen vor der Migration erstellt haben
+
+Wenn Sie vor der Migration (entweder vor oder nach der Aktivierung von Azure RMS) benutzerdefinierte Vorlagen erstellt haben, sind diese nach der Migration nicht für Benutzer verfügbar, selbst wenn sie zuvor auf **Veröffentlicht** festgelegt wurden. Sie müssen folgende Schritte ausführen, um Benutzern die Vorlagen zur Verfügung zu stellen: 
+
+1. Ermitteln Sie, um welche Vorlagen es sich handelt, und notieren Sie sich die Vorlagen-ID durch Ausführen von [Get-AadrmTemplate](https://msdn.microsoft.com/library/dn727079.aspx). 
+
+2. Exportieren Sie die Vorlagen mithilfe des Azure RMS-PowerShell-Cmdlets [Export-AadrmTemplate](https://msdn.microsoft.com/library/dn727078.aspx).
+
+3. Importieren Sie die Vorlagen mithilfe des Azure RMS-PowerShell-Cmdlets [Import-AadrmTemplate](https://msdn.microsoft.com/library/dn727077.aspx).
+
+Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivieren, die Sie nach der Migration erstellen.
+
+
+## Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
+
+Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, wird diese Gruppe beim Importieren der Vorlagen in Azure RMS automatisch entfernt. In diesem Fall müssen Sie den importierten Vorlagen manuell die äquivalente Gruppe oder die äquivalente Benutzer und dieselben Rechte hinzufügen. Die entsprechende Gruppe für Azure RMS heißt **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<Mandantenname>.onmicrosoft.com**. Diese Gruppe kann beispielsweise für Contoso wie folgt aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+
+Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Verwalten von AD RMS mit Windows PowerShell](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
 Sie können die für Ihre Organisation automatisch erstellte Gruppe sehen, wenn Sie eine der Standardrichtlinienvorlagen für Rechte im klassischen Azure-Portal kopieren und dann auf der Seite **RECHTE** den **BENUTZERNAMEN** identifizieren. Allerdings können Sie diese Gruppe nicht über das klassische Azure-Portal einer Vorlage hinzufügen, die manuell erstellt oder importiert wurde, sondern müssen eine der folgenden Azure RMS PowerShell-Optionen verwenden:
 
--   Verwenden Sie das PowerShell-Cmdlet [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) zum Definieren der Gruppe "AllStaff" und der Rechte als ein Rechtedefinitionsobjekt. Wiederholen Sie diesen Befehl für alle anderen Gruppen oder Benutzer, denen in der ursprünglichen Vorlage zusätzlich zur Gruppe JEDER bereits Rechte gewährt wurden. Fügen Sie anschließend alle diese Rechtedefinitionsobjekte den Vorlagen mithilfe des Cmdlets [Set-AadrmTemplateProperty](https://msdn.microsoft.com/en-us/library/azure/dn727076.aspx) hinzu.
+-   Verwenden Sie das PowerShell-Cmdlet [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) zum Definieren der Gruppe "AllStaff" und der Rechte als ein Rechtedefinitionsobjekt. Wiederholen Sie diesen Befehl für alle anderen Gruppen oder Benutzer, denen in der ursprünglichen Vorlage zusätzlich zur Gruppe JEDER bereits Rechte gewährt wurden. Fügen Sie anschließend den Vorlagen alle diese Rechtedefinitionsobjekte mithilfe des Cmdlets [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) hinzu.
 
 -   Exportieren Sie die Vorlage mithilfe des Cmdlets [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) in eine XML-Datei, die Sie so bearbeiten können, dass die Gruppe "AllStaff" und die Rechte den vorhandenen Gruppen und Berechtigungen hinzugefügt werden. Importieren Sie anschließend diese Änderung über das Cmdlet [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) in Azure RMS zurück.
 
-> [!NOTE] Die äquivalente Gruppe „AllStaff“ ist nicht exakt mit der Gruppe ANYONE in AD RMS identisch: Die Gruppe „AllStaff“ enthält alle Benutzer aus Ihrem Azure-Mandanten, während die Gruppe ANYONE alle authentifizierten Benutzer enthält, die sich auch außerhalb Ihrer Organisation befinden können.
+> [!NOTE]
+> Die äquivalente Gruppe "AllStaff" ist nicht exakt mit der Gruppe JEDER in AD RMS identisch: Die Gruppe "AllStaff" enthält alle Benutzer aus Ihrem Azure-Mandanten, während die Gruppe JEDER alle authentifizierten Benutzer enthält, die sich auch außerhalb Ihrer Organisation befinden können.
 > 
 > Wegen dieses Unterschieds zwischen den beiden Gruppen müssen Sie möglicherweise zusätzlich zur Gruppe „AllStaff“ noch externe Benutzer hinzufügen. Externe E-Mail-Adressen für Gruppen werden derzeit nicht unterstützt.
 
-Vorlagen, die Sie aus AD RMS importieren, sind im Aussehen und Verhalten mit benutzerdefinierten Vorlagen identisch, die Sie im klassischen Azure-Portal erstellen können. Wenn Sie importierte Vorlagen ändern möchten, sodass sie veröffentlicht werden und Benutzer diese sehen und in Anwendungen auswählen können, oder wenn Sie andere Änderungen an den Vorlagen vornehmen möchten, informieren Sie sich unter [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md).
-
-> [!TIP]
-> Damit eine konsistente Umgebung für Benutzer während der Migration gewahrt bleibt, sollten Sie an den importierten Vorlagen außer diesen beiden Änderungen keine weiteren vornehmen. Veröffentlichen Sie auch nicht die beiden Standardvorlagen, die in Azure RMS enthalten sind, und erstellen Sie keine neuen Vorlagen zu diesem Zeitpunkt. Warten Sie stattdessen, bis der Migrationsvorgang abgeschlossen ist und die AD RMS-Server außer Betrieb gesetzt wurden.
 
 ### Windows PowerShell-Beispielskript zum Bestimmen von AD RMS-Vorlagen, die die Gruppe JEDER enthalten
 Dieser Abschnitt enthält das Beispielskript, mit dessen Hilfe Sie AD RMS-Vorlagen bestimmen können, in denen die Gruppe JEDER definiert ist, wie im vorherigen Abschnitt beschrieben.
@@ -185,6 +205,7 @@ Wechseln Sie zu [Phase 2: Clientseitige Konfiguration](migrate-from-ad-rms-phase
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

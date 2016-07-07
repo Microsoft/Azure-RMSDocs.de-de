@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
+ms.openlocfilehash: d48616cb638522e6cda61e7ae96db9480fc14099
+
 
 ---
 
@@ -35,7 +29,8 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
     Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt völlig neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [benutzerdefinierte Vorlagen](configure-custom-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
 
-    > [!TIP] Beispielvideos für Endbenutzer:
+    > [!TIP]
+    > Beispielvideos für Endbenutzer:
     >
     > -   [Azure RMS-Benutzererfahrung](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
@@ -75,12 +70,14 @@ Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im 
 
 Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
 
-> [!TIP] Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Sicheres Freigeben von Anlagen für mobile Benutzer](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
+> [!TIP]
+> Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
 Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, wodurch das Schützen von Dateien erleichtert würde. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
 
-> [!TIP] Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der Anwendungsversion.
+> [!TIP]
+> Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
 
 #### So schützten Sie ein Dokument in Word 2013
 
@@ -88,7 +85,8 @@ Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung insta
 
 2.  Klicken Sie im Menü **Datei** auf **Info**, **Dokument schützen**, **Zugriff beschränken**, und wählen Sie dann eine Vorlage aus, um schnell die entsprechenden Nutzungsrechte anzuwenden, oder klicken Sie auf **Zugriff beschränken** , und wählen Sie die Nutzungsrechte selbst aus.
 
-    > [!NOTE] Wenn Sie zum ersten Mal Rights Management verwendet haben, stellen Sie eine Verbindung mit dem [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst her, und Sie werden zur Eingabe von Anmeldeinformationen aufgefordert, um den Office IRM-Client zu konfigurieren.
+    > [!NOTE]
+    > Wenn Sie zum ersten Mal Rights Management verwendet haben, stellen Sie eine Verbindung mit dem [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst her, und Sie werden zur Eingabe von Anmeldeinformationen aufgefordert, um den Office IRM-Client zu konfigurieren.
 
 3.  Speichern Sie das Dokument.
 
@@ -117,6 +115,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Informationen zu und Unterstützung für Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Informationen zu und Unterstützung für Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/13/2016
+ms.date: 06/29/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 6052afabe4894f8129e9eebc93705b219e6ed875
+ms.openlocfilehash: a8f5852d965abe2f2654aa236bfd9ea49a62aa84
+
 
 ---
 
@@ -42,7 +36,8 @@ Verwenden Sie die folgenden Ressourcen, um weitere Informationen zu Microsoft [!
 ## Blog der Rights Management-Produktgruppe
 Die Rights Management-Produktgruppe nutzt nun den [Enterprise Mobility- und Sicherheitsblog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services), um Sie mit technischen Informationen und anderen Neuigkeiten zu [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] und verwandten Technologien zu versorgen. Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
-> [!TIP] Wenn Sie Anwendungen für Azure RMS oder AD RMS entwickeln, haben Sie möglicherweise auch Interesse an dem englischsprachigen Blog [Active Directory Rights Management Services (AD RMS) Developer's Corner](http://blogs.msdn.com/b/rms/) (Active Directory Rights Management Services (AD RMS)-Entwicklerecke).
+> [!TIP]
+> Wenn Sie Anwendungen für Azure RMS oder AD RMS entwickeln, haben Sie möglicherweise auch Interesse an dem englischsprachigen Blog [Active Directory Rights Management Services (AD RMS) Developer's Corner blog](https://blogs.msdn.microsoft.com/rms/) (Active Directory Rights Management Services-Entwicklerecke (AD RMS)).
 
 ## Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
@@ -59,7 +54,7 @@ Andere Kunden verwenden abhängig davon, wie sie Azure Rights Management erworbe
 
 - **Azure Rights Management mit Enterprise Mobility Suite**: Wenn Sie auch über Office 365 verfügen, können Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) verwenden.  Weitere Informationen finden Sie unter [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx) (Enterprise Mobility Suite: Häufig gestellte Fragen zum Support).
 
-- **Azure Rights Management Premium**: Erstellen Sie eine [Supportanfrage im Azure-Portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Um diese Option verwenden zu können, müssen Sie über ein Azure-Abonnement und einen Azure-Supportplan verfügen. Weitere Informationen finden Sie unter [Azure Support For Customers](https://azure.microsoft.com/support/plans/) (Azure-Support für Kunden). 
+- **Azure Rights Management Premium**: Erstellen Sie eine [Supportanfrage im Azure-Portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Um diese Option verwenden zu können, müssen Sie über ein Azure-Abonnement und einen Azure-Supportplan verfügen. Weitere Informationen finden Sie unter [Azure-Support für Kunden](https://azure.microsoft.com/support/plans/). 
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
 
@@ -71,7 +66,15 @@ Aneignen wichtiger Kenntnisse:
 
 Problembehandlung:
 
-- Laden Sie das [RMS Analyzer-Tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und führen Sie es aus. Weitere Informationen zu diesem Tool finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**. 
+- Wenn sie Fragen dazu haben, wie etwas funktioniert: Überprüfen Sie, ob Ihre Frage auf der Seite [Häufig gestellte Fragen](faqs.md) bereits beantwortet wurde.
+
+- Wenn Sie eine Frage zu einer Support-Anweisung für Azure RMS haben: Lesen Sie die Informationen zu den [Voraussetzungen](requirements-azure-rms.md), die regelmäßig aktualisiert werden.
+
+- Informationen dazu, wie Sie Ihre Endbenutzer, Ihren Helpdesk und Ihre Administratoren unterstützen, die Dienste und Anwendungen konfigurieren, die Azure RMS verwenden, finden Sie unter [Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management](../deploy-use/help-users.md).
+
+- Wenn Sie den RMS-Connector für Ihre lokalen Server entwickelt haben: Lesen Sie die Informationen zur [Überwachung](../deploy-use/monitor-rms-connector.md), die Einzelheiten zu Ereignisprotokolleinträgen, Leistungsindikatoren und der Protokollierung enthalten.
+
+- Für automatisierte Überprüfungen, die automatische Wiederherstellung und die Ablaufverfolgung: Laden Sie das [RMS Analyzer-Tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und führen Sie es aus. Weitere Informationen zu diesem Tool finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**. 
 
 ### Communityressourcen
 
@@ -83,6 +86,7 @@ Problembehandlung:
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

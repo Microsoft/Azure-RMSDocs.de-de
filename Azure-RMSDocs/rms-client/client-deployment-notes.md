@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Hinweise zur Bereitstellung des RMS-Clients | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2bd8aba91b9b65777c2319baea848e8313cbccda
+ms.openlocfilehash: ffddda9a144b23b64b54df4fe4d25ec62600599d
+
 
 ---
 
@@ -42,7 +36,8 @@ Der RMS-Client kann kostenlos zusammen mit anderen Anwendungen und IT-Lösungen 
 ## Installieren des RMS-Clients
 Der RMS-Client befindet sich in einer ausführbaren Installationsdatei mit dem Namen **setup_msipc_***<arch>***.exe**, wobei *<arch>* entweder **x86** (für 32-Bit-Clientcomputer) oder **x64** (für 64-Bit-Clientcomputer) ist. Das 64-Bit-Installationspaket (x64) installiert eine ausführbare 32-Bit-Laufzeit für Kompatibilität mit 32-Bit-Anwendungen, die unter einem 64-Bit-Betriebssystem ausgeführt werden, sowie eine ausführbare 64-Bit-Laufzeit zur Unterstützung systemeigener 64-Bit-Anwendungen. Das 32-Bit-Installationsprogramm (x86) kann nicht in einer 64-Bit-Windows-Installation ausgeführt werden.
 
-> [!NOTE] Für die Installation des RMS-Clients benötigen Sie erhöhte Berechtigungen, z.B. als Mitglied der Gruppe „Administratoren“ auf dem lokalen Computer.
+> [!NOTE]
+> Für die Installation des RMS-Clients benötigen Sie erhöhte Berechtigungen, z. B. als Mitglied der Gruppe "Administratoren" auf dem lokalen Computer.
 
 Sie können den RMS-Client mithilfe einer der folgenden Installationsmethoden installieren:
 
@@ -192,7 +187,8 @@ Als Alternative zur Verwendung eines Dienstverbindungspunkt oder für den Fall, 
 
 2.  Navigieren Sie im Registrierungseditor zu **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
-    > [!IMPORTANT] Wenn Sie eine 32-Bit-Anwendung auf einem 64-Bit-Computer ausführen, sieht der Pfad folgendermaßen aus: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > [!IMPORTANT]
+    > Wenn Sie eine 32-Bit-Anwendung auf einem 64-Bit-Computer ausführen, sieht der Pfad folgendermaßen aus: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3.  Klicken Sie zum Erstellen des Unterschlüssels "ServiceLocation" mit der rechten Maustaste auf **MSIPC**, zeigen Sie auf **Neu**, klicken Sie auf **Schlüssel**, und geben Sie dann **ServiceLocation** ein.
 
@@ -233,7 +229,8 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 
     **Wert:** https://fabrikam.com/_wmcs/licensing
 
-    > [!NOTE] Wenn für den alten Lizenzserver sowohl eine Intranet- als auch eine Extranet-URL festgelegt sind, muss für beide URLs eine neue Name-Wert-Zuordnung unter dem Schlüssel „LicensingRedirection“ festgelegt werden.
+    > [!NOTE]
+    > Wenn für den alten Lizenzserver sowohl eine Intranet- als auch eine Extranet-URL festgelegt sind, muss für beide URLs eine neue Name/Wert-Zuordnung unter dem Schlüssel "LicensingRedirection" festgelegt werden.
 
 5.  Wiederholen Sie den vorherigen Schritt für alle Server, die umgeleitet werden müssen.
 
@@ -241,6 +238,7 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
