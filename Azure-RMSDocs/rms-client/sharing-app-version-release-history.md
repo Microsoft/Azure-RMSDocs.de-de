@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
 ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
 
@@ -26,7 +27,8 @@ Das Rights Management-Team aktualisiert die Rights Management-Freigabeanwendung 
 
 Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
-> [!NOTE]Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!NOTE]
+> Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
 
 ## Version 1.0.2191.0
 **Veröffentlicht**: 16.6.2016
@@ -120,6 +122,6 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

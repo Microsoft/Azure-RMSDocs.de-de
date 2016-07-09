@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 50ebcd71336baeb68687e2d0c1ff1f0608925761
 ms.openlocfilehash: 72a75712da9efa201865440affa80461dcd7df53
 
@@ -43,7 +44,8 @@ Wenn Sie Azure RMS mit lokalen Servern verwenden möchten, werden folgende Produ
 
 Informationen zu den zusätzlichen Voraussetzungen für Azure RMS für dieses Szenario finden Sie unter [Lokale Server, die Azure RMS unterstützen](requirements-servers.md).
 
-> [!IMPORTANT] Das folgende Bereitstellungsszenario wird nicht unterstützt:
+> [!IMPORTANT]
+> Das folgende Bereitstellungsszenario wird nicht unterstützt:
 > 
 > -   Parallele Ausführung von AD RMS und Azure RMS in derselben Organisation (mit Ausnahme der Migration), wie unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md) beschrieben.
 > 
@@ -54,6 +56,6 @@ Informationen zu den zusätzlichen Voraussetzungen für Azure RMS für dieses Sz
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

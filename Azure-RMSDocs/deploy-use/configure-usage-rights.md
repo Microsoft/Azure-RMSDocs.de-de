@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
 ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
 
@@ -276,7 +277,8 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
  
 - Wird hingegen die Option **Nicht weiterleiten** angewendet, können die Empfänger die Informationen nicht an andere Personen in der Marketingabteilung übermitteln, indem Sie sie an einen anderen Speicherort verschieben. In diesem Szenario können nur die ursprünglichen Empfänger (und der E-Mail-Besitzer) die Informationen in der E-Mail einsehen.
 
-> [!NOTE] Verwenden Sie **Nicht weiterleiten**, wenn es wichtig ist, dass nur die vom Absender ausgewählten Empfänger die Informationen in der E-Mail einsehen können. Verwenden Sie eine Vorlage für E-Mail-Nachrichten, um Berechtigungen auf eine zuvor vom Administrator angegebene Gruppe von Personen zu beschränken, und zwar unabhängig von den Empfängern, die der Absender ausgewählt hat.
+> [!NOTE] 
+> Verwenden Sie **Nicht weiterleiten**, wenn es wichtig ist, dass nur die vom Absender ausgewählten Empfänger die Informationen in der E-Mail einsehen können. Verwenden Sie eine Vorlage für E-Mail-Nachrichten, um Berechtigungen auf eine zuvor vom Administrator angegebene Gruppe von Personen zu beschränken, und zwar unabhängig von den Empfängern, die der Absender ausgewählt hat.
 
 
 
@@ -287,6 +289,6 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 
 
-<!--HONumber=Jun16_HO3-->
+<!--HONumber=Jul16_HO2-->
 
 

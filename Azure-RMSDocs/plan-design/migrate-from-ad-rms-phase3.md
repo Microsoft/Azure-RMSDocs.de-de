@@ -12,6 +12,7 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
 ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
 
@@ -214,6 +215,6 @@ Nachdem Sie diese Verfahren ausgeführt haben, können Sie den Abschnitt **Näch
 Fahren Sie mit [Phase 4: Aufgaben nach der Migration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
-ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
+ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
 
 
 ---
 
-# Bereitstellen in der Präproduktion
+# Bereitstellen in der Produktion
 
 
 Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für die rechtlich geschützte Anwendung.
@@ -135,6 +135,6 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 
