@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 07/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb64a6b858cddea3d3f14c8956b34b786dccf5cb
-ms.openlocfilehash: 80e17903a6d2f3c6e8f15448a6a5499dfb9852d1
+ms.sourcegitcommit: 6eae63c629ae7cfe2175a655eb4901c1707c0f1d
+ms.openlocfilehash: 1ac96ddb1569483236c4dc61f7bc38c99d43ead2
 
 
 ---
@@ -33,20 +33,22 @@ Verwenden Sie diese Anleitung nur, wenn Sie die neue Vorschauversion von Office 
     > [!TIP]
     > Hilfe zum Admin Center finden Sie in [Informationen zum Office 365 Admin Center - Hilfe für Administratoren](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
 
-3. Im linken Bereich: **Einstellungen** > **Services & add-ins** (Dienste und Add-Ins).
+3. Navigieren Sie zur Seite der **Rechteverwaltung**, oder verwenden Sie die Suchfunktion.
 
-4. Klicken Sie auf **Microsoft Azure Rights Management**.
+    Es empfiehlt sich, zu navigieren, wenn Sie mit der Vorschauversion noch nicht vertraut sind und die Anzeige verwandter Konfigurationsoptionen hilfreich finden. Verwenden Sie die Suchfunktion, wenn Sie mit der Vorschauversion vertraut sind und direkt mit der Aktivierung von Azure Rights Management fortfahren möchten. In der Vorschauversion des Admin Center müssen Sie möglicherweise auch die Suchoption verwenden, wenn die Navigationsanweisungen nicht mit dem übereinstimmen, was angezeigt wird.
 
-    > [!NOTE]
-    >Je nach Anzeige müssen Sie ggf. einen Bildlauf durchführen, um diese Option anzuzeigen. Wenn sie jedoch nicht angezeigt wird, kann der Grund dafür sein, dass Ihr Serviceplan oder Ihre Produktversion [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] nicht beinhaltet.
-    >
-    >Verwenden Sie die Informationen unter [Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md), um die Azure Rights Management-Unterstützung zu bestätigen. Wenn Sie Hilfe zu diesem Problem benötigen, senden Sie eine E-Mail-Nachricht an das [Askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+    - Navigation: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Rights Management** > **Microsoft Azure Rights Management-Einstellungen verwalten**
 
-5. Klicken Sie auf der Seite **Microsoft Azure Rights Management** auf **Manage Microsoft Azure Rights Management settings** (Microsoft Azure Rights Management-Einstellungen verwalten).
+    - Durchsuchen: Geben Sie in das Suchfeld auf der **Startseite** die Zeichenfolge **Rights Management** ein, und klicken Sie dann in den Suchergebnissen auf **Microsoft Azure Rights Management-Einstellungen**.
 
-6. Klicken Sie auf der Seite **Rights Management** auf **Aktivieren**.
+        > [!NOTE]
+        >Wenn Sie zu dieser Option navigieren, müssen Sie je nach Anzeige ggf. scrollen, um diese Option anzuzeigen. Wenn sie jedoch auf der Seite nicht angezeigt und in den Suchergebnissen nicht zurückgegeben wird, kann der Grund dafür sein, dass Ihr Serviceplan oder Ihre Produktversion [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] nicht beinhaltet.
+        >
+        >Verwenden Sie die Informationen unter [Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md), um die Azure Rights Management-Unterstützung zu bestätigen. Wenn Sie Hilfe zu diesem Problem benötigen, senden Sie eine E-Mail-Nachricht an das [Askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
-7. Klicken Sie, wenn Sie gefragt werden **Möchten Sie die Rechteverwaltung aktivieren?**auf **Aktivieren**.
+4. Klicken Sie auf der Seite **Rights Management** auf **Aktivieren**.
+
+5. Klicken Sie, wenn Sie gefragt werden **Möchten Sie die Rechteverwaltung aktivieren?**auf **Aktivieren**.
 
 Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivieren angezeigt werden.
 
@@ -57,6 +59,6 @@ Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO1-->
 
 

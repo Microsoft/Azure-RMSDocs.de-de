@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 07/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 04fbac4389671ed32f64c0840d81723f8314869c
-ms.openlocfilehash: 4509126c61c4e37d9655d9bd080be3e097cd103f
+ms.sourcegitcommit: f8e23e8bcbfb25092cb31f7af76d17239f3063a7
+ms.openlocfilehash: 32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f
 
 
 ---
@@ -100,7 +100,7 @@ Warnung **2001**
 
 **Nichtautorisierter Zugriffsversuch auf den Microsoft RMS-Connector.**
 
-Dieses Ereignis wird protokolliert, wenn bei dem Versuch eines Kontos, eine Verbindung zu dem RMS-Connector aufzubauen, ein Fehler auftritt. Der häufigste Grund dafür ist das Fehlen des Kontos, das die Verbindung herstellt, in der Liste der autorisierten Konten, die der RMS-Connector von Azure RMS herunterlädt.  So z.B., wenn die aktuelle Liste ist noch nicht heruntergeladen wurde (das geschieht alle 15 Minuten) oder das Konto in der Liste fehlt. 
+Dieses Ereignis wird protokolliert, wenn bei dem Versuch eines Kontos, eine Verbindung zu dem RMS-Connector aufzubauen, ein Fehler auftritt. Der häufigste Grund dafür ist das Fehlen des Kontos, das die Verbindung herstellt, in der Liste der autorisierten Konten, die der RMS-Connector von Azure RMS herunterlädt. So z.B., wenn die aktuelle Liste ist noch nicht heruntergeladen wurde (das geschieht alle 15 Minuten) oder das Konto in der Liste fehlt. 
 
 Das Ereignis kann aber auch dadurch hervorgerufen werden, dass Sie den RMS-Connector auf dem gleichen Server installiert haben, der für die Verwendung des Connectors konfiguriert ist. So z.B., wenn Sie den RMS-Connector auf einem Server mit Exchange Server installieren und ein Exchange-Konto zur Verwendung des Connectors autorisieren. Diese Konfiguration wird nicht unterstützt, weil der RMS-Connector das Konto bei dem Versuch der Verbindungsherstellung nicht korrekt identifizieren kann.
 
@@ -140,6 +140,8 @@ Fehler **3000**
 
 Dieses Ereignis wird jedes Mal protokolliert, wenn im RMS-Connector ein unerwarteter Fehler auftritt. Die Details des Fehlers werden in der Ereignismeldung protokolliert.
 
+Eine mögliche Ursache kann durch den Text **Anforderung mit Leerantwort fehlgeschlagen** in der Ereignismeldung identifiziert werden. Wird dieser Text angezeigt, liegt dies möglicherweise daran, dass Sie ein Netzwerkgerät verwenden, das eine SSL-Überprüfung der Pakete zwischen den lokalen Servern und dem RMS-Connectorserver ausführt. Dies wird nicht unterstützt und führt zu einem Fehler bei der Kommunikation und dieser Meldung im Ereignisprotokoll.
+
 ----
 
 Fehler **3001**
@@ -147,6 +149,8 @@ Fehler **3001**
 **Beim Herunterladen von Autorisierungsinformationen ist eine Ausnahme aufgetreten.**
 
 Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste der für den RMS-Connector autorisierten Konten nicht herunterladen kann. Die Details des Fehlers werden in der Ereignismeldung protokolliert.
+
+
 
 ----
 
@@ -191,6 +195,6 @@ Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, k�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
