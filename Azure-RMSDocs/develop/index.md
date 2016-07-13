@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: RMS-Entwicklerhandbuch | Azure RMS
-description: Drei Generationen von Rights Management-SDK sind jetzt verfügbar.
-keywords:
+description: "Drei Generationen von Rights Management-SDK sind jetzt verfügbar."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 6f8a475907347e545eb3ea46fecc04013fa74c5e
+
 
 ---
 
@@ -49,12 +44,13 @@ Diese Sammlung von durch Microsoft bereitgestellten RMS-Codebeispielen und Entwi
 | [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) und höheren Versionen des 2.x-SDK|**IpcAzureApp** ist ein Beispiel für die Verwendung des RMS SDK in Azure-Anwendungen, um Daten im Azure Blob-Speicher zu schützen.|
 | [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) und höheren Versionen des 2.x-SDK|**RmsDocumentInspector** ist ein Tool, mit dem Sie Informationen zu einer beliebigen RMS-geschützten Datei erhalten können, wie z. B. Inhalts-ID oder Benutzerrechte.|
 | [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Windows Desktop|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) und höheren Versionen des 2.x-SDK|**RmsFileWatcher** ist ein Beispiel, das veranschaulicht, wie eine Windows-Anwendung erstellt wird, die Verzeichnisse im Dateisystem überwacht, und RMS-Schutzrichtlinien bei jeder Änderung anwendet, z. B. beim Hinzufügen oder Ändern einer Datei.|
-| [Szenarien für die Verwendung von iOS/OS X](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) |iOS/OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|Codebeispiele für **Objective C** stellen wichtige Entwicklungsszenarien dar, um Sie mit dem RMS SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.|
+| [Szenarien für die Verwendung von iOS/OS X](https://msdn.microsoft.com/library/dn758307(v=vs.85).aspx) |iOS/OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|Codebeispiele für **Objective C** stellen wichtige Entwicklungsszenarien dar, um Sie mit dem RMS SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.|
 | [UI-Bibliothek und Beispiel-App](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|**UI-Bibliothek und Beispiel-App für iOS** auf GitHub, damit Sie schnell einsteigen und unsere Standardoberfläche in Ihren Apps wiederverwenden können.|
 | [UI-Bibliothek und Beispiel-App](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|**UI-Bibliothek und Beispiel-App für Android** auf GitHub, damit Sie schnell einsteigen und unsere Standardoberfläche in Ihren Apps wiederverwenden können.|
 | [Szenarien für die Verwendung von Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|**Java-Codebeispiele** stellen wichtige Entwicklungsszenarien dar, um Sie mit dem RMS SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.|
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
