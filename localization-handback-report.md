@@ -19,7 +19,7 @@
 * Archive File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/ec3c34a32c589df608132c3e8a4ee1d820260be3/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf)
 * Archive Datetime: 2016-07-01 23:44:07
 * Handback File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/9f10104eeb281641f21eb623259378041938f533/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf)
-* Handback Datetime: 2016-07-15 15:33:11
+* Handback Datetime: 2016-07-15 15:47:08
 * Handback Error: [handback_transform_failed](#607de5e4699d654a4b7895bacde8f18a9707f8a111handback_transform_failed)
 * Bilingual File: [configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/9f10104eeb281641f21eb623259378041938f533/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.de-de.xlf)
 * Bilingual Datetime: 2016-06-22 12:23:38
@@ -34,7 +34,7 @@
 * Archive File: [how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/ec3c34a32c589df608132c3e8a4ee1d820260be3/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf)
 * Archive Datetime: 2016-07-01 23:44:07
 * Handback File: [how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/36e7b3a6e1cce8e9a535362bcbfca56a1371b070/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf)
-* Handback Datetime: 2016-07-15 15:33:11
+* Handback Datetime: 2016-07-15 15:47:08
 * Handback Error: [handback_transform_failed](#9872317c2d5f5f56f28ed2683d7ebc9743041a3772handback_transform_failed)
 * Bilingual File: [how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/36e7b3a6e1cce8e9a535362bcbfca56a1371b070/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/how-to-use-document-tracking.9b499b3eda30f41dbea9c7eb5f63a725fe4cbdcf.de-de.xlf)
 * Bilingual Datetime: 2016-06-22 13:03:12
