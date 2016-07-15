@@ -1,11 +1,28 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/74e200dcf65a7a1749f586421eb6ad30f3332d6b/Azure-RMSDocs/develop/api-reference-2-1.md) | InSyncHandedBackSuccess | [Details](#18f8958985043609a89171cd86771b922cf43daa47)
 
 ## Item Details
+##### <a name='18f8958985043609a89171cd86771b922cf43daa47'></a> Source: [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/74e200dcf65a7a1749f586421eb6ad30f3332d6b/Azure-RMSDocs/develop/api-reference-2-1.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\api-reference-2-1.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/a5da9f08d660d80c5b82e2d57b1489e6c14bdac3/Azure-RMSDocs/develop/api-reference-2-1.md)
+* Handoff File: [api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/fc15eac757365a1e16c4dec30dbca0ac5c12f0ac/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf)
+* Handoff Datetime: 2016-06-27 12:25:25
+* Handoff Reason: Include
+* Archive File: [api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/ec3c34a32c589df608132c3e8a4ee1d820260be3/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/archive/api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf)
+* Archive Datetime: 2016-07-01 23:44:07
+* Handback File: [api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/407a90621bcc780dd407414dbdbebc3d524783d4/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf)
+* Handback Datetime: 2016-07-15 10:39:31
+* Bilingual File: [api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/407a90621bcc780dd407414dbdbebc3d524783d4/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/api-reference-2-1.b098ba5a484c74e19759fdb28557981fa99c2b0a.de-de.xlf)
+* Bilingual Datetime: 2016-07-15 11:03:10
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
