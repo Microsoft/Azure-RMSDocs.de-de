@@ -56,6 +56,6 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

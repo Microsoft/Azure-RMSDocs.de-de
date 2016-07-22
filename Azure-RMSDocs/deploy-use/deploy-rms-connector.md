@@ -84,6 +84,6 @@ Stellen Sie vor der Installation des RMS-Verbindungsdiensts sicher, dass folgend
 Fahren Sie mit [Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts](install-configure-rms-connector.md) fort.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
