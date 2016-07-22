@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: "Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel | Azure RMS"
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: feb41356a2ef074679e60ce4bb7b1d6ee910371c
+
 
 ---
 
@@ -42,7 +36,7 @@ Die Neuvergabe Ihres Schlüssels wird auch als „Rollover“ bezeichnet. Führe
 
 -   Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels (die in Ihrem Besitz befindliche Kopie) kompromittiert wurde.
 
-Sie können Ihren Mandantenschlüssel neu vergeben, [indem Sie sich an den Microsoft Support wenden](../get-started/information-support#to-contact-microsoft-support), um einen **Azure Rights Management-Supportfall zum Anfordern zur Neuvergabe Ihres Azure RMS-Mandantenschlüssels zu erstellen**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an. Die Neuvergabe Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+Sie können Ihren Mandantenschlüssel wechseln, indem Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) wenden und eine **Azure Rights Management-Supportanfrage erstellen, um den Wechsel Ihres Azure RMS-Mandantenschlüssels anzufordern**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an. Die Neuvergabe Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
 Wenn Sie Ihren Mandantenschlüssel neu vergeben, wird neuer Inhalt unter Verwendung des neuen Mandantenschlüssels geschützt. Dies geschieht in einer gestaffelten Weise, sodass für einen gewissen Zeitraum neue Inhalte noch teilweise durch den alten Mandantenschlüssel geschützt sind. Zuvor geschützte Inhalte bleiben durch den alten Mandantenschlüssel geschützt. Um dieses Szenario zu unterstützen, behält Azure RMS Ihren alten Mandantenschlüssel bei, damit es Lizenzen für alte Inhalte erteilen kann.
 
@@ -54,7 +48,7 @@ Sie können Ihre Azure RMS-Konfiguration und den Mandantenschlüssel anhand der 
 
 ### Schritt 1: Initiieren des Exports
 
--   Wenden Sie sich hierfür [an den Microsoft-Support](../get-started/information-support#to-contact-microsoft-support), um eine **Azure Rights Management-Supportanfrage mit einer Anforderung eines Azure RMS-Schlüsselexports** zu öffnen. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Exportieren Ihres Mandatenschlüssels ist keine kostenfreie Supportleistung.
+-   Wenden Sie sich hierfür an den [Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support) und erstellen Sie eine **Azure Rights Management-Supportanfrage, um einen Azure RMS-Schlüsselexport** anzufordern. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Exportieren Ihres Mandatenschlüssels ist keine kostenfreie Supportleistung.
 
 ### Schritt 2: Warten auf Überprüfung
 
@@ -97,13 +91,14 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 
 |Beschreibung des Vorfalls|Wahrscheinliche Reaktion|
 |------------------------|-------------------|
-|Ihr Mandantenschlüssel wurde abgegriffen.|Vergeben Sie Ihren Mandantenschlüssel neu. Weitere Informationen finden Sie im Abschnitt [Neuvergabe (Rollover) Ihres Mandantenschlüssels](operations-tenant-key#re-key-your-tenant-key) in diesem Artikel.|
+|Ihr Mandantenschlüssel wurde abgegriffen.|Vergeben Sie Ihren Mandantenschlüssel neu. Weitere Informationen finden Sie im Abschnitt [Neuvergabe (Rollover) Ihres Mandantenschlüssels](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key) in diesem Artikel.|
 |Eine nicht autorisierte Person oder Schadsoftware hat Rechte zur Verwendung Ihres Mandantenschlüssels erlangt, aber nicht den Schlüssel selbst.|Die Neuvergabe (Rollover) Ihres Mandantenschlüssels schafft hierbei keine Abhilfe und erfordert eine Ursachenanalyse. Wenn ein Prozess- oder Softwarefehler dafür verantwortlich war, dass die nicht autorisierte Person Zugriff erlangt hat, muss dieser Zustand behoben werden.|
 |Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss den Azure RMS so aktualisieren, dass neue Algorithmen und längere Schlüssellängen unterstützt werden, die robust sind, und alle Kunden anweisen, ihre Mandantenschlüssel zu erneuern.|
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO3-->
 
 

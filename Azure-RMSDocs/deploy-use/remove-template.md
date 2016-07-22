@@ -42,6 +42,6 @@ Der Status ändert sich von **Veröffentlicht** zu **Archiviert**. Wenn Sie sich
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

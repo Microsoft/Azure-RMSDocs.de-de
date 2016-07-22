@@ -242,6 +242,6 @@ Nachdem Sie nun einige Beispiele für die Möglichkeiten von Azure RMS kennengel
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

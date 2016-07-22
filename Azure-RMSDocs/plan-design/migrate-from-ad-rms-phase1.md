@@ -207,6 +207,6 @@ Wechseln Sie zu [Phase 2: Clientseitige Konfiguration](migrate-from-ad-rms-phase
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

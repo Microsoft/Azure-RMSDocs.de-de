@@ -47,6 +47,6 @@ Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

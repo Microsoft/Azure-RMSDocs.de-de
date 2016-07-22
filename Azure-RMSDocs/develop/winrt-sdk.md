@@ -86,6 +86,6 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

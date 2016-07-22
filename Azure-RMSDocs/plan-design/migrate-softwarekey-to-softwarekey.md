@@ -69,6 +69,6 @@ Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
