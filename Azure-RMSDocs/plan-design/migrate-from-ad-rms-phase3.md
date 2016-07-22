@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Migration von AD RMS zu Azure Rights Management – Phase 3 | Azure RMS
-description:
-keywords:
+title: "Migration von AD RMS zu Azure Rights Management – Phase 3 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,17 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+
 
 ---
 
@@ -31,12 +24,12 @@ ms.suite: ems
 *Gilt für: Active Directory Rights Management Services, Azure Rights Management*
 
 
-Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md)..
+Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Schritt 6: Konfigurieren der IRM-Integration mit Exchange Online
 
-Wenn Sie Ihre TDP von AD RMS mit Exchange Online bereits importiert haben, müssen Sie diese TDP entfernen, um in Konflikt stehende Vorlagen und Richtlinien zu vermeiden, nachdem Sie zu Azure RMS migriert haben. Verwenden Sie hierzu das Cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/en-us/library/jj200720%28v=exchg.150%29.aspx) von Exchange Online.
+Wenn Sie Ihre TDP von AD RMS mit Exchange Online bereits importiert haben, müssen Sie diese TDP entfernen, um in Konflikt stehende Vorlagen und Richtlinien zu vermeiden, nachdem Sie zu Azure RMS migriert haben. Verwenden Sie hierzu das Exchange Online-Cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx).
 
 Bei Verwendung der Azure RMS-Mandantenschlüsseltopologie **von Microsoft verwaltet**:
 
@@ -52,7 +45,7 @@ Wenn Sie die Funktion zur Verwaltung von Informationsrechten (IRM) von Exchange 
 Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz von E-Mail-Nachrichten in Azure RMS importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle TPD-URLs an den RMS-Verbindungsdienst umzuleiten.
 
 > [!NOTE]
-> Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md)..
+> Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md).
 
 ### Deaktivieren von IRM auf Exchange Servern und Entfernen der AD RMS-Konfiguration
 
@@ -82,19 +75,19 @@ Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, indem Sie z.B. eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben..
+6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, z.B. indem Sie eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben.
 
 ### Deaktivieren von IRM auf SharePoint Servern und Entfernen der AD RMS-Konfiguration
 
 1.  Stellen Sie sicher, dass keine Dokumente aus RMS-geschützten Bibliotheken ausgecheckt sind. Wenn dies der Fall ist, kann am Ende dieses Verfahrens nicht mehr darauf zugegriffen werden.
 
-2.  Klicken Sie auf der Website der Microsoft SharePoint-Zentraladministration im Abschnitt **Schnellstart** auf **Sicherheit**..
+2.  Klicken Sie auf der Website der Microsoft SharePoint-Zentraladministration im Abschnitt **Schnellstart** auf **Sicherheit**.
 
-3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**..
+3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**.
 
-4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **IRM nicht auf diesem Server verwenden** aus, und klicken Sie anschließend auf **OK**..
+4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **Verwenden Sie IRM nicht auf diesem Server**, und klicken Sie dann auf **OK**.
 
-5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners \ProgramData\Microsoft\MSIPC\Server\*&lt;SID des Kontos, das SharePoint Server ausführt&gt;*.
+5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners „\ProgramData\Microsoft\MSIPC\Server\*&lt;SID des Kontos, das SharePoint Server ausführt&gt;*“.
 
 #### Installieren und Konfigurieren des RMS-Verbindungsdiensts
 
@@ -219,8 +212,9 @@ Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exch
 Nachdem Sie diese Verfahren ausgeführt haben, können Sie den Abschnitt **Nächste Schritte** im Artikel [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md) lesen.
 
 ## Nächste Schritte
-Wechseln Sie zu dem Artikel [phase 4 - post migration tasks](migrate-from-ad-rms-phase4.md) (Migrationsphase 4: Aufgaben nach der Migration), um die Migration fortzusetzen..
+Fahren Sie mit [Phase 4: Aufgaben nach der Migration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

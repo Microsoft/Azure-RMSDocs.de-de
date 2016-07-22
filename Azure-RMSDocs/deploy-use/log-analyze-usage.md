@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Protokollieren und Analysieren der Nutzung von Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
+ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+
 
 ---
 
@@ -47,7 +41,8 @@ Sie können dann mithilfe der Azure Rights Management-Protokolle die folgenden G
 
     Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie Azure Rights Management mit Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die mit Azure Rights Management geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie Azure Rights Management-Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe von Azure Rights Management schützen.
 
-> [!NOTE] Wenn Sie nur an der Protokollierung von administrativen Aufgaben für Azure Rights Management interessiert sind und nicht nachverfolgen möchten, wie die Benutzer Rights Management verwenden, können Sie das Cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) von Windows PowerShell für Azure Rights Management nutzen.
+> [!NOTE]
+> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für Azure Rights Management interessiert sind und nicht nachverfolgen möchten, wie die Benutzer Rights Management verwenden, können Sie das [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx)-Cmdlet von Windows PowerShell für Azure Rights Management nutzen.
 > 
 > Sie können auch das klassische Azure-Portal für allgemeine Verwendungsberichte verwenden. Hierzu gehören **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. Klicken Sie für den Zugriff auf diese Berichte im klassischen Azure-Portal auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.
 
@@ -56,7 +51,8 @@ In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollie
 ## Aktivieren der Verwendungsprotokollierung von Azure Rights Management
 Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure RMS-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
 
-> [!NOTE] Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
+> [!NOTE]
+> Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
 > 
 > Haben Sie Verwendungsprotokollierung für Azure RMS vor Februar 2016 verwendet, haben Sie ein Abonnement für Azure und ausreichend Speicherplatz auf Azure benötigt, was nun nicht mehr der Fall ist.
 
@@ -143,17 +139,17 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |--------------|-----------------|---------------|-----------------|
 |date|Datum|Das UTC-Datum, an dem die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.|2013-06-25|
 |time|Zeit|Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.|21:59:28|
-|row-id|Text|Eindeutige GUID für diesen Protokolldatensatz.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
+|row-id|Text|Eindeutige GUID für diesen Protokolldatensatz. Wenn ein Wert nicht vorhanden ist, verwenden Sie zum Identifizieren des Eintrags die Korrelations-ID.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Name|Der Name der angeforderten RMS-API.|AcquireLicense|
-|user-id|String|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Manche Anforderungstypen sind anonym, wobei der Wert dann "" ist.|'joe@contoso.com'|
-|result|String|„Success“, wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.|'Success'|
+|user-id|String|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.|'joe@contoso.com'|
+|result|Zeichenfolge|'Success', wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.|'Success'|
 |correlation-id|Text|Eine GUID, die das RMS-Clientprotokoll und das Serverprotokoll für eine bestimmte Anforderung gemeinsam haben.<br /><br />Dieser Wert kann bei der Behandlung von Clientproblemen hilfreich sein.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|Eine GUID in geschweiften Klammern, die den geschützten Inhalt identifiziert (z. B. ein Dokument).<br /><br />Dieses Feld hat nur dann einen Wert, wenn „request-type“ den Wert „AcquireLicense“ hat, und ist bei allen anderen Anforderungstypen leer.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Die E-Mail-Adresse des Besitzers des Dokuments.|alice@contoso.com|
 |issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com|
-|Template-id|String|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|Der Dateiname des geschützten Dokuments. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.|TopSecretDocument.docx|
-|Date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.|2015-10-15T21:37:00|
+|template-id|Zeichenfolge|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|Zeichenfolge|Der Dateiname des geschützten Dokuments. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.|TopSecretDocument.docx|
+|date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.|2015-10-15T21:37:00|
 |c-info|String|Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
 
@@ -166,7 +162,7 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
 
 -   Wenn Sie den RMS-Verbindungsdienst verwenden.
 
-    Anforderungen von diesem Connector werden mit dem Dienstprinzipalnamen protokolliert, der von RMS automatisch generiert wird, wenn Sie den RMS-Connector installieren.
+    Anforderungen von diesem Connector werden mit dem Dienstprinzipalnamen von **Aadrm_S-1-7-0** protokolliert, der automatisch generiert wird, wenn Sie den RMS-Connector installieren.
 
 #### Typische Anforderungstypen
 Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende Tabelle benennt und beschreibt einige der am häufigsten verwendeten Anforderungstypen.
@@ -181,7 +177,7 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |BECreateEndUserLicenseV1|Von einem Mobilgerät wird ein Aufruf ausgelöst, um eine Endbenutzerlizenz zu erstellen.|
 |BEGetAllTemplatesV1|Von einem Mobilgerät (Back-End) wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
 |Certify|Der Client zertifiziert den Inhalt für den Schutz.|
-|Decrypt|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln.|
+|KMSPDecrypt|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK).|
 |DeleteTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage nach Vorlagen-ID zu löschen.|
 |ExportTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage anhand einer Vorlagen-ID zu exportieren.|
 |FECreateEndUserLicenseV1|Ähnlich wie bei der „AcquireLicense“-Anforderung, aber von mobilen Geräten aus.|
@@ -199,7 +195,7 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |ServerCertify|Von einem RMS-fähigen Client (z. B. SharePoint) wird ein Aufruf zum Zertifizieren des Servers ausgelöst.|
 |SetUsageLogFeatureState|Ein Aufruf zum Aktivieren der Verwendungsprotokollierung wird ausgelöst.|
 |SetUsageLogStorageAccount|Ein Aufruf wird ausgelöst, um den Speicherort der Azure RMS-Protokolle anzugeben.|
-|SignDigest|Ein Aufruf wird ausgelöst, wenn ein Schlüssel für Signaturzwecke verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
+|KMSPSignDigest|Ein Aufruf wird ausgelöst, wenn ein vom Kunden verwalteter Schlüssel (BYOK) für Signaturzwecke verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
 |UpdateTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
 
 ## Windows PowerShell-Referenz
@@ -229,6 +225,7 @@ Weitere Informationen zum Verwenden von Windows PowerShell für Azure Rights Man
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Codebeispiele für iOS/OS X | Azure RMS
+title: "Codebeispiele für iOS/OS X | Azure RMS"
 description: In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vorgestellt.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
+ms.openlocfilehash: 66bb1b58cba19d0fe8bc2ec0d3720c0b040f8378
+
 
 ---
 
@@ -40,9 +36,9 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
 ###Szenario: Nutzen einer RMS-geschützten Datei
 
 
-- **Schritt 1**: Erstellen eines [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd)-Objekts
+- **Schritt 1**: Erstellen eines [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata)-Objekts
 
- **Beschreibung**: Instanziieren Sie ein [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotectedd)-Objekt mit dessen create-Methode. Diese Methode implementiert die Dienstauthentifizierung mit [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc), um durch die Übergabe einer Instanz von **MSAuthenticationCallback** als Parameter *authenticationCallback* an die MSIPC-API ein Token abzurufen. Den Aufruf von [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) sehen Sie im folgenden Beispielcodeabschnitt.
+ **Beschreibung**: Instanziieren Sie ein [**MSProtectedData**](/rights-management/sdk/4.2/api/iOS/msprotecteddata)-Objekt mit dessen create-Methode. Diese Methode implementiert die Dienstauthentifizierung mit [**MSAuthenticationCallback**](/rights-management/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc), um durch die Übergabe einer Instanz von **MSAuthenticationCallback** als Parameter *authenticationCallback* an die MSIPC-API ein Token abzurufen. Den Aufruf von [**protectedDataWithProtectedFile**](/rights-management/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc) sehen Sie im folgenden Beispielcodeabschnitt.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -288,6 +284,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([**MSTemplateDescript
 
  
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

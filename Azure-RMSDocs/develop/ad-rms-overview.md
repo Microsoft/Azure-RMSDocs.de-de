@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Übersicht | Azure RMS
-description: Microsoft Rights Management Services (RMS) ist eine Datenschutztechnologie, die zum Schutz digitaler Informationen vor nicht autorisierter Verwendung beiträgt.
-keywords:
+title: "Übersicht | Azure RMS"
+description: "Microsoft Rights Management Services (RMS) ist eine Datenschutztechnologie, die zum Schutz digitaler Informationen vor nicht autorisierter Verwendung beiträgt."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b97
+
 
 ---
 
@@ -44,7 +40,7 @@ Im Folgenden sind nur einige Szenarien aufgeführt, in denen mit Rights Manageme
 -   Der Besitzer einer Onlinedokumentbibliothek möchten die Rechte zum Anzeigen, Drucken oder Bearbeiten der Dokumente auf Grundlage der Identität des Benutzers aktivieren.
 -   Ein Unternehmen möchte vertrauliche Informationen zu Mitarbeitern auf einer internen Website veröffentlichen, auf der die Anzeige- und Bearbeitungsrechte auf bestimmte Benutzer beschränkt sind.
 
-Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu AD RMS für IT-Spezialisten](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
+Weitere Informationen zu AD RMS-Server, AD RMS-Client und deren Funktionalität finden Sie im TechNet in der [Dokumentation zu AD RMS für IT-Spezialisten](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre Implementierung behandelt.
 
@@ -66,6 +62,7 @@ In den übrigen Themen in diesem Abschnitt werden die RMS-Architektur und ihre I
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 

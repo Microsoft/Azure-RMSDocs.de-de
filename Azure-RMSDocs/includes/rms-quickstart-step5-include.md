@@ -40,6 +40,6 @@ Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS zu beginnen, sollten 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

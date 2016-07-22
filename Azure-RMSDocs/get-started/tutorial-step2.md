@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Azure RMS Quick Start-Lernprogramm – Schritt 2 | Azure RMS
-description: Dies ist der zweite Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können.
-keywords:
+title: "Azure RMS Quick Start-Lernprogramm – Schritt 2 | Azure RMS"
+description: "Dies ist der zweite Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: da706bcaf52d0519706898501c563a9a03231dd9
+
 
 ---
 
@@ -71,10 +65,11 @@ Sie können nun mit dem Schutz von Dateien beginnen, deren Inhalt Sie ausgewähl
 |Unterschied zwischen nativem und generischem Schutz|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
 
 
->[!div class="step-by-step"] 
+>[!div class="step-by-step"]
 [« Schritt 1](quick-start-tutorial.md)
 [Schritt 3 »](tutorial-step3.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

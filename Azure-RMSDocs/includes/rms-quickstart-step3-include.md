@@ -42,6 +42,6 @@ Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfän
 |Optionen im Dialogfeld **Geschützt freigeben** →|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

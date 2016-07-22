@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Herunterladen und Installieren der Rights Management-Freigabeanwendung | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+
 
 ---
 
@@ -37,7 +31,7 @@ Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu ins
 
 2.  Klicken Sie im Abschnitt **Computer** auf das Symbol für **RMS-App für Windows** , und speichern Sie die Datei **Setup.exe** , um die Microsoft Rights Management-Freigabeanwendung zu installieren.
 
-3.  Doppelklicken Sie auf die heruntergeladene Datei „Setup.exe“. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**..
+3.  Doppelklicken Sie auf die heruntergeladene Datei „Setup.exe“. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.
 
 4.  Klicken Sie auf der Seite **Microsoft RMS-Setup** auf **Weiter**, und warten Sie, bis die Installation abgeschlossen wurde.
 
@@ -75,6 +69,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

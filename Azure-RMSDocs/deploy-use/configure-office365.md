@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure RMS
-description:
-keywords:
+title: "Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 7a2436a6ebb17e4336f1321b8f3742e34ea59689
+
 
 ---
 
@@ -39,7 +33,7 @@ Um Exchange Online für die Unterstützung von Azure RMS zu konfigurieren, müss
 > [!NOTE]
 > Sie können Exchange Online derzeit nicht für die Unterstützung von Azure RMS konfigurieren, wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) für Azure RMS anstelle der Standardkonfiguration mit einem von Microsoft verwalteten Mandantenschlüssel verwenden. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md).
 >
-> Wenn Sie versuchen, Exchange Online zu konfigurieren, wenn Azure RMS BYOK verwendet, tritt beim Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) ein Fehler mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]** auf.
+> Wenn Sie versuchen, Exchange Online konfigurieren, wenn Azure RMS mit BYOK arbeitet, missling der Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
 
 Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müssen, um Exchange Online für die Verwendung von Azure RMS zu aktivieren:
 
@@ -120,7 +114,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Remove-PSSession $Session
     ```
 
-Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe von Azure RMS schützen. Wählen Sie in Outlook Web App im erweiterten Menü (**...**) **Berechtigungen festlegen** und anschließend **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
+Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe von Azure RMS schützen. Wählen Sie in Outlook Web App im erweiterten Menü ( **...** ) den Befehl**Berechtigungen festlegen**und dann **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
 
 > [!IMPORTANT]
 > Bei Erstellung neuer [benutzerdefinierter Vorlagen](configure-custom-templates.md) für Azure RMS oder Aktualisierung der Vorlagen müssen Sie jedes Mal den folgenden Exchange Online-PowerShell-Befehl ausführen (falls erforderlich, führen Sie die Schritte 2 und 3 zuerst aus), um diese Änderungen mit Exchange Online zu synchronisieren: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
@@ -165,13 +159,13 @@ Nachdem Sie den IRM-Dienst für SharePoint Online aktiviert haben, kann die OneD
 #### Konfiguration für Benutzer
 Geben Sie Benutzern diese Anleitungen, damit sie ihr OneDrive for Business konfigurieren und ihre Geschäftsdateien mit IRM schützen können.
 
-1.  Klicken Sie in OneDrive auf das Symbol **Einstellungen**, um das Menü „Einstellungen“ zu öffnen, und klicken Sie anschließend auf **Website-Inhalte**.
+1.  Klicken Sie in OneDrive auf das Symbol **Einstellungen** , um das Menü "Einstellungen" zu öffnen, und klicken Sie dann auf **Website-Inhalte**.
 
-2.  Zeigen Sie mit dem Mauszeiger auf die Kachel **Dokumente**, wählen Sie die Auslassungspunkte (**...**), und klicken Sie anschließend auf **EINSTELLUNGEN.**
+2.  Bewegen Sie den Mauszeiger über der Kachel **Dokumente** , wählen Sie die Auslassungspunkte (**...**), und klicken Sie dann auf **EINSTELLUNGEN**.
 
 3.  Klicken Sie auf der Seite **Einstellungen** im Bereich **Berechtigungen und Verwaltung** auf **Information Rights Management**.
 
-4.  Aktivieren Sie auf der Seite **Information Rights Management-Einstellungen** das Kontrollkästchen **Berechtigungen für diese Bibliothek beim Herunterladen einschränken**. Geben Sie den gewünschten Namen und eine Beschreibung für die Berechtigungen ein, und klicken Sie optional auf **OPTIONEN ANZEIGEN**, um optionale Konfigurationen zu konfigurieren. Klicken Sie anschließend auf **OK**..
+4.  Aktivieren Sie auf der Seite **Information Rights Management-Einstellungen** das Kontrollkästchen **Berechtigungen für diese Bibliothek beim Herunterladen einschränken** . Geben Sie den gewünschten Namen und eine Beschreibung für die Berechtigungen ein, und klicken Sie optional auf **OPTIONEN ANZEIGEN** , um optionale Konfigurationen zu konfigurieren. Klicken Sie dann auf **OK**.
 
     Weitere Informationen zu den Konfigurationsoptionen finden Sie in den Anweisungen in [Anwenden der Verwaltung von Informationsrechten (IRM) auf eine Liste oder Bibliothek](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) in der Office-Dokumentation.
 
@@ -584,7 +578,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 > [!TIP]
 > Sie können dieses Skript auch verwenden, um IRM für eine SharePoint Online-Bibliothek zu konfigurieren. Für diese Konfiguration möchte Sie vermutlich die zusätzliche Option **Benutzer dürfen keine Dokumente hochladen, die IRM nicht unterstützen** aktivieren, um sicherzustellen, dass die Bibliothek nur geschützte Dokumente enthält.    Fügen Sie hierzu dem Befehl "Set-IrmConfiguration" im Skript den `-IrmReject`-Parameter hinzu.
 >
-> Außerdem müssten Sie die `$webUrls`-Variable ändern (z.B. **https://contoso.sharepoint.com**) sowie die `$listTitle`-Variable (z.B. **$Reports**)).
+> Außerdem müssten Sie die `$webUrls`-Variable ändern (z. B. **https://contoso.sharepoint.com**) sowie die `$listTitle`-Variable (z. B. **$Reports**).
 
 Wenn Sie IRM für OneDrive for Business-Bibliotheken eines Benutzers deaktivieren müssen, finden Sie Informationen im Abschnitt [Skript zum Deaktivieren von IRM für OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 
@@ -1111,6 +1105,7 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

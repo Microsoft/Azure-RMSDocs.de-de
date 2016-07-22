@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Vorbereiten für Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Vorbereiten für Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 55f092ede1f003c700cb58359bab264772702c39
+
 
 ---
 
@@ -42,12 +36,13 @@ Vergewissern Sie sich aber vorher, dass folgende Punkte vorhanden sind:
     Wenn Sie über Exchange Online verfügen, können Sie im Exchange Admin Center E-Mail-fähige Gruppen erstellen und nutzen. Wenn Sie AD DS haben und die Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen erstellen und verwenden, die entweder Sicherheits- oder Verteilergruppen sind.
 
 ## Aktivieren von Rights Management
-Standardmäßig ist [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] deaktiviert, wenn Sie sich für Ihr [!INCLUDE[o365_2](../includes/o365_2_md.md)]- oder Azure AD-Konto registrieren. Um [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] für Ihre Organisation zu aktivieren, müssen Sie den Dienst aktivieren. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)..
+Standardmäßig ist [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] deaktiviert, wenn Sie sich für Ihr [!INCLUDE[o365_2](../includes/o365_2_md.md)]- oder Azure AD-Konto registrieren. Um [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] für Ihre Organisation zu aktivieren, müssen Sie den Dienst aktivieren. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

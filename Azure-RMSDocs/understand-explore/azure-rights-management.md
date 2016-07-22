@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Übersicht über Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Übersicht über Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/03/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: fdedb0f1064e98500d3b4edcee283c514851d446
+ms.openlocfilehash: a8c9a55977a285cd30872beeb160b07ce02edcce
+
 
 ---
 
@@ -35,16 +29,17 @@ Rights Management verwendet Verschlüsselungs-, Identitäts- und Autorisierungsr
 
 Beispielsweise können Sie eine Datei so konfigurieren, dass nur Personen in Ihrer Organisation darauf zugreifen können, oder kontrollieren, ob die Datei bearbeitet werden kann, oder die Datei auf schreibgeschützt einschränken oder das Drucken der Datei verhindern. Sie können E-Mails ganz ähnlich konfigurieren und noch zusätzlich verhindern, dass sie weitergeleitet werden, bzw. die Verwendung der Option „Allen antworten“ unterbinden. Diese Schutzaufgaben können mittels standardisierter Richtlinienvorlagen vereinfacht und optimiert werden.
 
-Kennen Sie Azure Rights Management unter einem anderen Namen? Weitere Informationen dazu finden Sie in [unserer Liste alternativer Benennungen für den Dienst](azure-rms-aka.md)..
+Kennen Sie Azure Rights Management unter einem anderen Namen? Weitere Informationen dazu finden Sie in [unserer Liste alternativer Benennungen für den Dienst](azure-rms-aka.md).
 
 # Nächste Schritte
 Weiterführende Informationen und einige Beispiele finden Sie unter [Was ist Azure Rights Management?](what-is-azure-rms.md).
 
-Wenn Sie bereit sind, Azure RMS für Ihre Organisation bereitzustellen, können Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden..
+Wenn Sie Azure RMS für Ihre Organisation bereitstellen möchten, können Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden.
 
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

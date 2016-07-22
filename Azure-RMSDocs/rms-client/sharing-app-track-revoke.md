@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 9d5c9558e809779940fac095a789730d5e5924e6
+
 
 ---
 
@@ -43,11 +37,11 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 -   Wenn Sie E-Mail-Benachrichtigungen konfigurieren möchten: Klicken Sie auf **Einstellungen** , und geben Sie an, wie und ob Sie bei einem Zugriff auf das Dokument per E-Mail benachrichtigt werden möchten.
 
--   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen..
+-   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
 
 ## Verwenden von Office für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
--   Bei den Office-Anwendungen wie Word, Excel und PowerPoint: Klicken Sie auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben**, und klicken Sie anschließend auf **Verwendung nachverfolgen**..
+-   Bei den Office-Anwendungen wie Word, Excel und PowerPoint: Klicken Sie auf der Registerkarte **Start** ihn der Gruppe **RMS** auf **Geschützt freigeben**, und klicken Sie dann auf **Verwendung nachverfolgen**.
 
     ![Verwendung nachverfolgen von Office-Anwendungen bei Verwendung der RMS-Freigabeanwendung ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
@@ -55,7 +49,7 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
     ![Auswählen von Verwendung nachverfolgen in Outlook bei der Verwendung der RMS-Freigabeanwendung ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
+Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
 ### Weitere Methoden zum Nachverfolgen von und zum Widerrufen des Zugriffs auf Dokumente
 Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mithilfe von Office-Anwendungen gibt es auch die folgenden Alternativen:
@@ -68,7 +62,7 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
 #### Verwenden eines Webbrowsers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
--   Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562)..
+-   Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562).
 
     Unterstützte Browser: Wir empfehlen Internet Explorer in der neuesten Version 10, Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
 
@@ -105,6 +99,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

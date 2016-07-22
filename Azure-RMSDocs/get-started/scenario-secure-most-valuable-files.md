@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Szenario – Schutz Ihrer wertvollsten Dateien | Azure RMS
-description:
-keywords:
+title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+
 
 ---
 
@@ -94,7 +88,8 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 Weitere Informationen zum direkten Schutz von Dateien finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP] Wenn die Anzahl der zu schützenden Dateien für den manuellen Prozess zu groß ist, können Sie die Dateien mit dem [RMS-Schutztool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) in einem Durchgang mit der Vorlage schützen.
+> [!TIP]
+> Wenn die Anzahl der zu schützenden Dateien für den manuellen Prozess zu groß ist, können Sie die Dateien mit dem [RMS-Schutztool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) in einem Durchgang mit der Vorlage schützen.
 
 ### So überwachen und sperren Sie die Dateien (falls erforderlich)
 
@@ -152,6 +147,7 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

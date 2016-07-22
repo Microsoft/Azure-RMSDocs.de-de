@@ -1,28 +1,26 @@
 ---
-# required metadata
-
-title: "Azure RMS Schnellstart-Tutorial Schritt 5 | AZURE RMS"
-description: "Der letzte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können."
-keywords:
+title: "Azure RMS Quick Start-Lernprogramm – Schritt 5 | Azure RMS"
+description: "Dies ist der letzte Schritt eines Tutorials, in dem Sie Microsoft Azure Rights Management in nur fünf Schritten und weniger als 15 Minuten für Ihr Unternehmen testen können."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+
 
 ---
 
@@ -83,7 +81,8 @@ Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS zu beginnen, sollten 
 
 Alternativ finden Sie eine Übersicht über bestimmte Szenarien und die dazugehörigen Konfigurationsschritte sowie die Endbenutzerdokumentation unter [Rapid Deployment Guide für Azure Rights Management](../get-started/rapid-deployment-guide.md) (Handbuch für die schnelle Bereitstellung von Azure Rights Management).
 
->[! Div-Klasse "step-by-step" =] [Einführung](quick-start-tutorial.md)
+>[!div class="step-by-step"]
+[Einleitung](quick-start-tutorial.md)
 [Schritt 1](tutorial-step1.md)
 [Schritt 2](tutorial-step2.md)
 [Schritt 3](tutorial-step3.md)
@@ -91,6 +90,7 @@ Alternativ finden Sie eine Übersicht über bestimmte Szenarien und die dazugeh�
 *Schritt 5*
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

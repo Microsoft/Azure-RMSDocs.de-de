@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden | Azure RMS
-description:
-keywords:
+title: "Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
+
 
 ---
 
@@ -36,10 +30,10 @@ Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installie
 >
 > Wenn Ihre Organisation weder Azure Rights Management (Azure RMS) noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von RMS geschützt wurden:
 >
-> -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen..
+> -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
 >
 >     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
-> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)..
+> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## So zeigen Sie eine geschützte Datei an
 Doppelklicken Sie im Datei-Explorer oder in der E-Mail-Nachricht, die die Anlage enthält, auf die geschützte Datei, und geben Sie Ihre Anmeldeinformationen ein, wenn Sie dazu aufgefordert werden.
@@ -59,7 +53,7 @@ Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie kö
 
     ![Das Dialogfeld für eine pfile-Datei, die bei Verwendung der RMS-Freigabeanwendung per E-Mail freigegeben wird](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Die Datei hat eine *.ppdf*-Dateinamenerweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*).)**
+- **Die Datei hat eine *.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
 
     Die Datei wurde systemeigen als schreibgeschützte Kopie geschützt.
 
@@ -89,9 +83,9 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
 
     Wurde eine Datei z. B. mit dem Dateinamen „dokument.vsdx.pfile“ geschützt, zeigen Sie die Datei an, und speichern Sie die Datei im Datei-Explorer als „dokument.vsdx“.
 
-    Die neue Datei ist nicht mehr geschützt. Wenn Sie sie schützen möchten, müssen Sie dies manuell tun. Eine Anleitung finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-in-place.md)..
+    Die neue Datei ist nicht mehr geschützt. Wenn Sie sie schützen möchten, müssen Sie dies manuell tun. Eine Anleitung finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-in-place.md).
 
-- **Die Datei hat eine *.ppdf*-Dateinamenerweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*).)**
+- **Die Datei hat eine *.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
 
     Sie können die Datei nur anzeigen, und wenn Sie sie umbenennen oder verschieben, bleibt die Datei weiterhin geschützt.
 
@@ -113,6 +107,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

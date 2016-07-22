@@ -1,26 +1,22 @@
 ---
-# required metadata
-
 title: Neuheiten und Versionshinweise | Azure RMS
-description: Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK.
-keywords:
+description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: eccc0ba9c13e0c35c8d0c8877ce92f9b99e83835
+
 
 ---
 
@@ -29,7 +25,8 @@ ms.suite: ems
 ## Neuheiten
 Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung. In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK beschrieben.
 
--   [Neu im Dezember 2015-Update](#new_for_our_december_2015_update)
+-   [Neu ab Juni 2016](#new_for_June_2016)
+-   [Dezember 2015-Update](#december_2015_update)
 -   [Juli 2015-Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt](#july_2015_update_-_adds_support_for_linux___c___development)
 -   [Mai 2015-Update – Steuerung der Protokollierung hinzugefügt](#may_2015_update_-_adds_logging_control)
 -   [Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february_2015_update_-_adds_windows_store_application_support)
@@ -38,7 +35,15 @@ Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und fle
 -   [Anmerkungen zu dieser Version](#release-notes)
 -   [Häufig gestellte Fragen](#frequently_asked_questions)
 
-### Neu im Dezember 2015-Update
+### Neu ab Juni 2016
+
+- **Unterstützung moderner Authentifizierung**: Diese ermöglicht in RMS-fähigen Apps die Anmeldung mithilfe der Active Directory-Authentifizierungsbibliothek (Active Directory Authentication Library; ADAL). Dadurch werden Anmeldefunktionen wie Multi-Factor Authentication (MFA), SAML-basierte Identitätsanbieter (Drittanbieter) mit RMS-Clientanwendungen und die smartcard- und zertifikatbasierte Authentifizierung aktiviert. Außerdem müssen RMS-fähige Apps nicht mehr das Standardauthentifizierungsprotokoll verwenden.
+- **Unterstützung von Dokumentkontrolle**: Entwickler können nun die Dokumentkontrolle aktivieren, wenn sie Dokumente in ihren Apps schützen 
+- Leistungsverbesserungen
+- Fehlerbehebungen
+
+
+### Dezember 2015-Update
 
 Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folgenden Ergänzungen vor:
 
@@ -124,7 +129,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   **AD RMS-Unterstützung**: IT-Administratoren können RMS-fähige Apps auf mobilen Geräten mit den neuen Erweiterungen für mobile Geräte des AD RMS-Servers verwenden.
 -   **Offlineverarbeitung**: Endbenutzer können auf RMS-geschützten Daten offline zugreifen.
--   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (ADAL)](https://MSDN.Microsoft.Com/en-us/library/jj573266.aspx)) verwenden.
+-   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (Azure AD Authentication Library; ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
 -   **Getrennte Benutzeroberfläche**: Entwickler können ihre Benutzeroberfläche zum Schutz und zur Nutzung von RMS-geschützten Dokumenten konfigurieren.
 -   **Überarbeitete API**: Entwickler können jetzt von einer einfachen und transparenten Verschlüsselungs- und Entschlüsselungs-API profitieren, die mit minimalem Aufwand ein konsistentes RMS-Verhalten bietet.
 
@@ -144,7 +149,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Bei Verwendung der Methode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung entweder ein **byte \[\]**-Array mit demselben Längenwert wie dem length-Parameter, oder verwenden Sie die Methode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
+    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein **byte \[\]**-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
 
 **iOS und OS X**
 
@@ -227,6 +232,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

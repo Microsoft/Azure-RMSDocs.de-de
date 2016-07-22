@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung | Azure RMS
-description:
-keywords:
+title: "Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 0ca9b8d9643f5489c100fa3aa614e89cd396df52
+
 
 ---
 
@@ -52,7 +46,7 @@ Bewährte Sicherheitsmethoden für die Administratorfunktion:
 
 -   Beschränken und überwachen Sie die Administratoren, die als globale Administratoren für Ihren Office 365- oder Azure RMS-Mandanten fungieren oder denen mithilfe des Cmdlets [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) die Rolle „GlobalAdministrator“ zugeordnet wurde. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (einschließlich der eigenen Person) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
 
--   Wenn Sie sehen möchten, welche Benutzer und Dienstkonten einzeln als Administratoren zugeordnet sind, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/dn629408.aspx). Wenn Sie feststellen möchten, ob eine Administratorgruppe konfiguriert ist, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/mt653942.aspx) und Ihre Standardtools für die Benutzerverwaltung, um zu überprüfen, welche Benutzer zu dieser Gruppe gehören. Wie alle administrativen Vorgänge werden auch das Aktivieren oder Deaktivieren der Administratorfunktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) überwacht werden. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
+-   Wenn Sie sehen möchten, welche Benutzer und Dienstkonten einzeln als Administratoren zugeordnet sind, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/dn629408.aspx). Wenn Sie feststellen möchten, ob eine Administratorgruppe konfiguriert ist, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/mt653942.aspx) und Ihre Standardtools für die Benutzerverwaltung, um zu überprüfen, welche Benutzer zu dieser Gruppe gehören. Wie alle administrativen Vorgänge werden auch das Aktivieren oder Deaktivieren der Administratorfunktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) überwacht werden. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
 
 -   Wenn Sie die Administratorfunktion für die alltäglichen Dienste nicht benötigen, sollten Sie diese Funktion nur im Bedarfsfall aktivieren und mit dem Cmdlet [Disable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629428.aspx) wieder deaktivieren.
 
@@ -69,7 +63,7 @@ Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet 
 ## Skriptoptionen für Administratoren
 Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Laden Sie hierfür das [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256)herunter. Verwenden Sie dann die Cmdlets [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) und [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) gemäß Ihren Anforderungen.
 
-Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) (RMS-Schutz-Cmdlets).
+Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
 > Das PowerShell-Modul für den RMS-Schutz im Lieferumfang des RMS Protection Tools unterscheidet sich vom [Windows PowerShell-Hauptmodul für Azure Rights Management](administer-powershell.md) und soll als Ergänzung dienen. Das Modul für den RMS-Schutz unterstützt sowohl Azure RMS als auch AD RMS.
@@ -77,6 +71,7 @@ Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Codebeispiele für Linux | Azure RMS
+title: "Codebeispiele für Linux | Azure RMS"
 description: In diesem Thema werden wichtige Szenarien Codeelemente der Linux-Version des RMS SDK vorgestellt.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 79e58b8092ea7cb057229d4c464d79f3694296e6
+ms.openlocfilehash: ace7103cfb44d84a7dd6bf64f57c2a47530117e0
+
 
 ---
 
@@ -205,13 +201,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     
     AddLog(&quot;Successfully converted to &quot;, fileOut.c_str());
     }
-   catch (const rmsauth::Exception&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.error().c_str());
-    outFile-&gt;close();
-    remove(fileOut.c_str());
-    }
-    catch (const rmscore::exceptions::RMSException&amp; e) {
-    AddLog(&quot;ERROR: &quot;, e.what());
+   catch (const rmsauth::Exception&amp; e) { AddLog(&quot;ERROR: &quot;, e.error().c_str()); outFile-&gt;close(); remove(fileOut.c_str()); } catch (const rmscore::exceptions::RMSException&amp; e) { AddLog(&quot;ERROR: &quot;, e.what());
     
     outFile-&gt;close();
     remove(fileOut.c_str());
@@ -221,7 +211,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     }
 
 
-**Schützt eine Datei mithilfe einer Richtlinie, die aus einer Vorlage erstellt wurde**
+**Schützt eine Datei mithilfe einer aus einer Vorlage erstellten Richtlinie**
 **Quelle**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Beschreibung**: Eine Liste mit dem Benutzer zugeordneten Vorlagen wird abgerufen. Mithilfe der ausgewählte Vorlage wird dann eine Richtlinie zum Schutz der Datei erstellt.
@@ -254,7 +244,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     }
     }
 
-**Schützt eine Datei auf Grundlage eine Richtlinie**
+**Schützt eine Datei auf Grundlage einer Richtlinie**
 **Quelle**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Beschreibung**: Hierbei wird ein geschützter Dateidatenstrom mithilfe der angegebenen Richtlinie erstellt und anschließend die Datei geschützt.
@@ -381,7 +371,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     }
 
 
-**Erstellt einer Schutzrichtlinie, um Benutzern ausgewählte Rechte zu erteilen**
+**Erstellt eine Schutzrichtlinie, um dem Benutzer ausgewählte Rechte zu erteilen**
 **Quelle**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Beschreibung**: Hierbei wird eine Richtlinienbeschreibung erstellt und mit den Informationen zu den jeweiligen Benutzerrechten gefüllt. Anschließend wird mit der Richtlinienbeschreibung eine Benutzerrichtlinie erstellt. Diese Richtlinie dient zum Schutz der ausgewählten Datei. Dabei wird *ConvertToPFileUsingPolicy* aufgerufen. (Eine Beschreibung hierzu finden Sie weiter oben in diesem Thema.)
@@ -511,7 +501,7 @@ Die *WorkerThread()*-Methode wird in den beiden vorherigen Szenarien **Erstellen
 ## Szenario: RMS-Authentifizierung
 
 Die folgenden Beispiele zeigen zwei verschiedene Authentifizierungsmethoden, bei denen das Azure-Authentifizierungstoken oAuth2 mit und ohne Benutzeroberfläche abgerufen wird.
-**Abrufen des oAuth2-Authentifizierungstokens mit Benutzeroberfläche**
+**Abrufen des OAuth2-Authentifizierungstokens mit Benutzeroberfläche**
 **Quelle**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
 **Schritt 1**: Erstellen eines gemeinsamen Punkts des **rmsauth::FileCache**-Objekts
@@ -522,8 +512,7 @@ Beschreibung: Sie können den Cachepfad festlegen oder die Standardeinstellung v
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**Schritt 2**: Erstellen eines **rmsauth::AuthenticationContext**-Objekts
-Beschreibung: Legen Sie den Azure-*Registrierungsstellen-URI* und das *FileCache*-Objekt fest.
+**Schritt 2**: Erstellen des Objekts **rmsauth::AuthenticationContext**. Beschreibung: Angeben des Azure-*Registrierungsstellen-URI* und des Objekts *FileCache*.
 
 **C++**:
 
@@ -533,8 +522,7 @@ Beschreibung: Legen Sie den Azure-*Registrierungsstellen-URI* und das *FileCache
                               FileCachePtr);
 
 
-**Schritt 3**: Aufrufen der **aquireToken**-Methode des **authContext**-Objekts und Festlegen der folgenden Parameter:
-Beschreibung:
+**Schritt 3**: Aufrufen der **aquireToken**-Methode des Objekts **authContext** und Festlegen der folgenden Parameter: Beschreibung:
 
 -   *Angeforderte Ressource*: die geschützte Ressource, auf die Sie zugreifen möchten
 -   *Eindeutige Client-ID*: normalerweise eine GUID
@@ -552,25 +540,22 @@ Beschreibung:
                 std::string(“john.smith@msopentechtest01.onmicrosoft.com”));
 
 
-**Schritt 4**: Abrufen des Zugriffstokens aus den Ergebnissen
-Beschreibung: Rufen Sie die **result-&gt; accessToken()**-Methode auf.
+**Schritt 4**: Abrufen des Zugriffstokens aus den Ergebnissen. Beschreibung: Aufrufen der **result-&gt; accessToken()**-Methode
 
 **Hinweis**  Die Authentifizierungsbibliotheksmethoden können **rmsauth::Exception** auslösen.
 
  
-**Abrufen des oAuth2-Authentifizierungstokens ohne Benutzeroberfläche**
+**Abrufen des OAuth2-Authentifizierungstokens ohne Benutzeroberfläche**
 **Quelle**: [rmsauth\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rmsauth_sample)
 
-**Schritt 1**: Erstellen eines gemeinsamen Punkts des **rmsauth::FileCache**-Objekts
-Beschreibung: Sie können den Cachepfad festlegen oder die Standardeinstellung verwenden.
+**Schritt 1**: Erstellen eines gemeinsamen Punkts des Objekts **rmsauth::FileCache**. Beschreibung: Sie können den Cachepfad festlegen oder die Standardeinstellung verwenden
 
 **C++**:
 
     auto FileCachePtr = std::make_shared&lt; rmsauth::FileCache&gt;();
 
 
-**Schritt 2**: Erstellen eines **UserCredential**-Objekts
-Beschreibung: Legen Sie den *Benutzernamen* und das *Kennwort* fest.
+**Schritt 2**: Erstellen des Objekts **UserCredential**. Beschreibung: Angeben des *Benutzernamens* und des *Kennworts*
 
 **C++**:
 
@@ -578,8 +563,7 @@ Beschreibung: Legen Sie den *Benutzernamen* und das *Kennwort* fest.
                                                  &quot;SomePass&quot;);
 
 
-**Schritt 3**: Erstellen eines **rmsauth::AuthenticationContext**-Objekts
-Beschreibung: Legen Sie den Azure-*Registrierungsstellen-URI* und das *FileCache*-Objekt fest.
+**Schritt 3**: Erstellen des Objekts **rmsauth::AuthenticationContext**. Beschreibung: Angeben des Azure-Registrierungsstellen-*URI* und des Objekts *FileCache*
 
 **C++**:
 
@@ -602,13 +586,13 @@ Beschreibung: Legen Sie den Azure-*Registrierungsstellen-URI* und das *FileCache
                 userCred);
 
 
-**Schritt 5**: Abrufen des Zugriffstokens aus den Ergebnissen
-Beschreibung: Rufen Sie die **result-&gt; accessToken()**-Methode auf.
+**Schritt 5**: Abrufen des Zugriffstokens aus den Ergebnissen. Beschreibung: Aufrufen der **result-&gt; accessToken()**-Methode
 
 **Hinweis**  Die Authentifizierungsbibliotheksmethoden können **rmsauth::Exception** auslösen.
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

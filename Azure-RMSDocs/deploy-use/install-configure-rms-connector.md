@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
+ms.openlocfilehash: 165292482349e4a233ab4030f49a297f57b041ac
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 
 *Gilt für: Azure Rights Management, Office 365*
 
-Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und Konfiguration der Azure Rights Management (RMS)-Verbindungsdiensts. Diese Verfahren beziehen sich auf die Schritte 1 bis 4 in [Deploying the Azure Rights Management connector](deploy-rms-connector.md) (Bereitstellen des Azure Rights Management-Connectors)..
+Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und Konfiguration der Azure Rights Management (RMS)-Verbindungsdiensts. Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
 Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für diese Bereitstellung.
 
@@ -41,7 +35,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
     > [!NOTE]
     > Sie installieren einen einzelnen RMS-Verbindungsdienst (bestehend aus mehreren Servern zwecks hoher Verfügbarkeit) pro Mandant (Office 365-Mandant oder Azure AD-Mandant). Im Gegensatz zu Active Directory RMS müssen Sie nicht in jeder Gesamtstruktur einen RMS-Verbindungsdienst installieren.
 
-2.  Laden Sie die Quelldateien für den RMS-Connector aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106) herunter..
+2.  Laden Sie die Quelldateien für den RMS-Connector aus dem [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106)herunter.
 
     Laden Sie zum Installieren des RMS-Verbindungsdiensts die Datei „RMSConnectorSetup.exe“ herunter.
 
@@ -53,9 +47,9 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
 3.  Führen Sie auf dem Computer, auf dem Sie den RMS-Verbindungsdienst installieren möchten, **RMSConnectorSetup.exe** mit Administratorrechten aus.
 
-4.  Wählen Sie auf der Startseite der Setupseite des Microsoft Rights Management-Connectors **Install Microsoft Rights Management connector on the computer** (Microsoft Rights Management-Connector auf dem Computer installieren), und klicken Sie anschließend auf **Weiter**..
+4.  Wählen Sie auf der Begrüßungsseite des Installations-Assistenten des Microsoft Rights Management-Verbindungsdiensts **Microsoft Rights Management-Verbindungsdienst auf dem Computer installieren**, und klicken Sie dann auf **Weiter**.
 
-5.  Lesen und akzeptieren Sie die Lizenzbedingungen des RMS-Connectors, und klicken Sie dann auf **Weiter**..
+5.  Lesen und akzeptieren Sie die Lizenzbedingungen des RMS-Verbindungsdiensts, und klicken Sie dann auf **Weiter**.
 
 Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Verbindungsdiensts ein.
 
@@ -68,16 +62,18 @@ Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#
 
 Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
--   **Office 365-Mandantenadministrator**: Ein Konto, das als globaler Administrator für Ihren Office 365-Mandanten fungiert.
+-   **Globaler Administrator für Ihren Mandanten**: ein Konto, das ein globaler Administrator für Ihren Office 365- oder Azure AD-Mandanten ist.
 
--   **Globaler Azure Rights Management-Administrator**: Ein Konto mit Administratorrechten für den Azure RMS-Mandanten.
+-   **Globaler Azure Rights Management-Administrator**: ein Konto in Azure Active Directory, dem die Azure RMS-Rolle „GlobalAdministrator“zugewiesen wurde.
 
--   **Microsoft RMS-Verbindungsdienstadministrator**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungsdiensts für Ihre Organisation gewährt wurden.
+-   **Azure Rights Management-Connectoradministrator**: ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Connectors für Ihre Organisation gewährt wurden.
 
     > [!NOTE]
-    > Wenn Sie das Microsoft RMS-Verbindungsdienst-Administratorkonto verwenden möchten, müssen Sie zuerst Folgendes ausführen, um die RMS-Verbindungsdienst-Administratorrolle zuzuweisen:
+    > Die Azure Rights Management-Rollen „GlobalAdministrator“ und „ConnectorAdministrator“ werden mithilfe des Azure RMS-Cmdlets [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx) Konten zugewiesen.
+    > 
+    > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
     >
-    > 1.  Laden Sie auf demselben Computer die Windows PowerShell für Rights Management herunter, und installieren Sie sie. Weitere Informationen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md)..
+    > 1.  Falls noch nicht geschehen, müssen Sie Windows PowerShell für Azure Rights Management herunterladen und installieren. Weitere Informationen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).
     >
     >     Starten Sie Windows PowerShell mit dem Befehl **Als Administrator ausführen**, und stellen Sie mithilfe des Befehls [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) eine Verbindung mit dem Azure RMS-Dienst her:
     >
@@ -97,9 +93,9 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Geben Sie beispielsweise Folgendes ein: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role " ConnectorAdministrator "**
+    >     Geben Sie beispielsweise Folgendes ein: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
-    >     Obwohl diese Befehle die "ConnectorAdministrator"-Rolle verwenden, können Sie hier die Rolle "GlobalAdministrator" ebenfalls verwenden.
+    >     Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
 Während der Installation des RMS-Connectors werden alle Softwarevoraussetzungen überprüft und installiert, Internetinformationsdienste (IIS) wird installiert, falls noch nicht vorhanden, und die Conector-Software wird installiert und konfiguriert. Darüber hinaus wird Azure RMS für die Konfiguration vorbereitet, indem Folgendes erstellt wird:
 
@@ -111,7 +107,7 @@ Führen Sie auf der letzten Seite des Assistenten Folgendes durch, und klicken S
 
 -   Wenn dies der erste Verbindungsdienst ist, den Sie installiert haben, aktivieren Sie dabei noch nicht **Verbindungsdienst-Administratorkonsole zum Autorisieren von Servern starten** . Diese Option wird aktiviert, nachdem Sie Ihren zweiten (oder letzten) RMS-Verbindungsdienst installiert haben. Führen Sie stattdessen den Assistenten erneut auf mindestens einem weiteren Computer aus. Sie müssen mindestens zwei Verbindungsdienste installieren.
 
--   Wenn Sie Ihren zweiten (oder letzten) Connector installiert haben, aktivieren Sie **Launch connector administrator console to authorize servers** (Verbindungsdienst-Administratorkonsole zum Autorisieren von Servern starten)..
+-   Wenn Sie Ihren zweiten (oder letzten) Verbindungsdienst installiert haben, aktivieren Sie **Verbindungsdienst-Administratorkonsole zum Autorisieren von Servern starten**.
 
 > [!TIP]
 > Zu diesem Zeitpunkt gibt es einen Überprüfungstest, den Sie ausführen können, um zu testen, ob die Webdienste für den RMS-Verbindungsdienst funktionieren:
@@ -131,7 +127,7 @@ Bedenken Sie Folgendes, wenn Sie diese Server autorisieren:
 
 -   Sie können mehrere Server als einzelnen Eintrag hinzufügen, indem Sie eine Active Directory-Sicherheits- oder -Verteilergruppe angeben oder ein Dienstkonto, das von mehr als einem Server verwendet wird. Wenn Sie diese Konfiguration verwenden, verwendet diese Gruppe von Servern gemeinsam dieselben RMS-Zertifikate, und alle werden als Besitzer von Inhalten angesehen, die einer von ihnen geschützt hat. Um den Verwaltungsaufwand zu minimieren, empfehlen wir, dass Sie diese Konfiguration einer Einzelgruppe statt einzelner Server verwenden, um die Exchange-Server Ihrer Organisation oder eine SharePoint-Serverfarm zu autorisieren.
 
-Klicken Sie auf der Seite **Server, von denen der Connector verwendet werden darf** auf **Hinzufügen**..
+Klicken Sie auf der Seite **Zur Verwendung des Verbindungsdiensts berechtigte Server** auf **Hinzufügen**.
 
 > [!NOTE]
 > Zum Autorisieren von Servern wird in Azure RMS und AD RMS die gleiche Konfiguration verwendet, bei der NTFS-Rechte manuell auf ServerCertification.asmx für die Dienst- oder Servercomputerkonten angewendet und den Exchange-Konten manuell Administratorrechte erteilt werden. Für den Verbindungsdienst müssen keine NTFS-Rechte auf ServerCertification.asmx angewendet werden.
@@ -161,7 +157,7 @@ Weitere Informationen zu den verschiedenen Serverrollen:
 
 -   Für Dateiserver, die die Dateiklassifizierungsinfrastruktur verwenden, werden die zugeordneten Dienste unter dem Konto „Lokales System“ ausgeführt, sodass Sie das Computerkonto für die Dateiserver (z. B. SERVERNAME$) oder eine Gruppe, die diese Computerkonten enthält, autorisieren müssen.
 
-Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie auf **Schließen**..
+Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie auf **Schließen**.
 
 Wenn nicht schon geschehen, müssen Sie jetzt den Lastenausgleich für die Server konfigurieren, auf denen der RMS-Verbindungsdienst installiert ist, und erwägen, ob HTTPS für die Verbindungen zwischen diesen Servern und den Servern, die Sie gerade autorisiert haben, verwendet werden soll.
 
@@ -173,7 +169,7 @@ Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namesp
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Verbindungsdiensts nicht mehr zu ändern, weil Sie sonst von diesen Servern alle IRM-Konfigurationen entfernen und diese dann neu konfigurieren müssen.
 
-Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konfigurieren Sie den Lastenausgleich für diese Adresse, die Datenverkehr an die Verbindungsdienstserver leitet. Sie können jedes IP-basierte Lastenausgleichsmodul verwenden, das das NLB-Feature (Network Load Balancing) von Windows Server enthält. Weitere Informationen finden Sie im [Network Load Balancing Deployment Guide](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx) (Bereitstellungshandbuch für den Netzwerklastenausgleich)..
+Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konfigurieren Sie den Lastenausgleich für diese Adresse, die Datenverkehr an die Verbindungsdienstserver leitet. Sie können jedes IP-basierte Lastenausgleichsmodul verwenden, das das NLB-Feature (Network Load Balancing) von Windows Server enthält. Weitere Informationen finden Sie im [Bereitstellungshandbuch für den Lastenausgleich](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Verwenden Sie folgende Einstellungen, um den NLB-Cluster zu konfigurieren:
 
@@ -238,12 +234,13 @@ Führen Sie zum Installieren des Administrationstool des RMS-Verbindungsdiensts 
 
 -   Für einen 64-Bit-Computer: RMSConnectorSetup.exe
 
-Wenn Sie diese Dateien noch nicht heruntergeladen haben, können Sie dies im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106)tun..
+Wenn Sie diese Dateien noch nicht heruntergeladen haben, können Sie dies im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106)tun.
 
 
 ## Nächste Schritte
-Nachdem Sie den RMS-Verbindungsdienst installiert und konfiguriert haben, können Sie die lokalen Server für dessen Verwendung konfigurieren. Gehen Sie zu [Configuring servers for the Azure Rights Management connector](configure-servers-rms-connector.md) (Konfigurieren von Servern für den Azure Rights Management-Connector)..
+Nachdem Sie den RMS-Verbindungsdienst installiert und konfiguriert haben, können Sie die lokalen Server für dessen Verwendung konfigurieren. Gehen Sie zu [Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst](configure-servers-rms-connector.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

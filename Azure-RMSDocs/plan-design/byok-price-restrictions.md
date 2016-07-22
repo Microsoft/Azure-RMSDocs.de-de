@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: BYOK – Preise und Einschränkungen | Azure RMS
-description:
-keywords:
+title: "BYOK – Preise und Einschränkungen | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 34d5ed8ca9f5b4556429a081718fc70a789590aa
+
 
 ---
 
@@ -34,7 +28,7 @@ Organisationen, die ein IT-verwaltetes Azure-Abonnement haben, können ohne zus�
 
 
 > [!NOTE]
-> Weitere Informationen zu RMS for Individuals finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)..
+> Weitere Informationen zu RMS for Individuals finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ![BYOK unterstützt Exchange Online nicht.](../media/RMS_BYOK_noExchange.png)
 
@@ -60,12 +54,13 @@ In einigen Fällen stellt die Azure RMS BYOK-Ausnahme in der Praxis kein Problem
 
 ## Nächste Schritte
 
-Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, gehen Sie zu [Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key)..
+Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, helfen Ihnen die Informationen unter [Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) weiter.
 
 Wenn Sie sich für die Standardkonfiguration entschieden haben, bei der Ihr Mandantenschlüssel von Microsoft verwaltet wird, helfen Ihnen die Informationen im Abschnitt [Nächste Schritte](plan-implement-tenant-key.md#next-steps) des Artikels „Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels“ weiter.
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

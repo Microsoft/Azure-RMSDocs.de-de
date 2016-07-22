@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung | Azure RMS
-description:
-keywords:
+title: "Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 7cf6ecb95374c080b9b2e94f948ec53ea5e6bb46
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 
 *Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
-Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte Datei ersetzt. Sie können die Datei dann dort belassen, wo sie ist, sie in einen anderen Ordner oder auf ein anderes Gerät kopieren oder den Ordner freigeben, in dem sie sich befindet. Die Datei bleibt in jedem Fall geschützt. Sie können die geschützte Datei auch an eine E-Mail anfügen, aber es empfiehlt sich, eine geschützte Datei direkt aus dem Datei-Explorer oder aus einer Office-Anwendung per E-Mail freizugeben. (Weitere Informationen finden Sie unter [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md)).).
+Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte Datei ersetzt. Sie können die Datei dann dort belassen, wo sie ist, sie in einen anderen Ordner oder auf ein anderes Gerät kopieren oder den Ordner freigeben, in dem sie sich befindet. Die Datei bleibt in jedem Fall geschützt. Sie können die geschützte Datei auch an eine E-Mail anfügen, aber es empfiehlt sich, eine geschützte Datei direkt aus dem Datei-Explorer oder aus einer Office-Anwendung per E-Mail freizugeben. (Weitere Informationen finden Sie unter [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).)
 
 > [!TIP]
-> Wenn beim Versuch, Dateien zu schützen, Fehler auftreten, sollten Sie [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) lesen..
+> Werden Fehler angezeigt, wenn Sie versuchen, Dateien zu schützen, sollten Sie [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971)lesen.
 
 ## So schützen Sie eine Datei auf einem Gerät (direkt schützen)
 
@@ -41,7 +35,7 @@ Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte
     ![Menüoption für direkt schützen](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
-    > Wenn die Option **Mit RMS schützen** nicht angezeigt wird, ist es wahrscheinlich, dass die RMS-Freigabeanwendung nicht auf Ihrem Computer installiert ist oder der Computer neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der RMS-Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
+    > Wenn die Option **Mit RMS schützen** nicht angezeigt wird, ist es wahrscheinlich, dass die RMS-Freigabeanwendung nicht auf Ihrem Computer installiert ist oder der Computer neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der RMS-Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
 2.  Führen Sie eines der folgenden Verfahren aus:
 
@@ -57,7 +51,7 @@ Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte
 
     ![Geschützte Datei mit Schlosssymbol für die RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_Pfile.png)
 
-Wenn Sie später den Schutz einer Datei aufheben müssen, gehen Sie entsprechend den Beschreibungen unter [Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-remove-protection.md) vor..
+Wenn Sie später den Schutz einer Datei aufheben müssen, gehen Sie entsprechend den Beschreibungen unter [Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-remove-protection.md) vor.
 
 ## Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
@@ -70,6 +64,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

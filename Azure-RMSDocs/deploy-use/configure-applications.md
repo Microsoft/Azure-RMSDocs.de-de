@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Konfigurieren von Anwendungen für Azure Rights Management | Azure RMS
-description:
-keywords:
+title: "Konfigurieren von Anwendungen für Azure Rights Management | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 8fe934c51e852791d19fbb336deaf9cd7be9817b
+
 
 ---
 
@@ -58,10 +52,10 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
     -   [Die RMS-Freigabeanwendung für mobile Plattformen: Installation und Verwaltung](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
-Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Connectors](deploy-rms-connector.md).
+Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
 > [!TIP]
-> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung von Azure RMS konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was Administratoren und Benutzer sehen](../understand-explore/what-admins-users-see.md).
+> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung von Azure RMS konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](../understand-explore/what-admins-users-see.md).
 
 
 Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die RMS-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des RMS SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des RMS SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
@@ -80,6 +74,7 @@ Nachdem Sie Ihre Anwendungen für die Unterstützung von Azure Rights Management
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

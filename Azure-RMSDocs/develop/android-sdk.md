@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Android-Setup | Azure RMS
-description: Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren.
-keywords:
+description: "Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+
 
 ---
 
@@ -50,7 +46,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Dieses SDK kann zur Anwendungsentwicklung für Android 4.0.3 (API-Ebene 15) und höher eingesetzt werden.
 
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
 
     Weitere Informationen finden Sie unter [ADAL für Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android).
 
@@ -87,7 +83,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
     ![Erstellen der Aktivität](../media/Android-setup-04.png)
 
--   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *Activity\_main* können Sie den Standardnamen *MainActivity* übernehmen.
+-   Klicken Sie auf **Next**, und geben Sie einen Namen für die Aktivität ein. Bei Verwendung des Layoutnamens *activity\_main* können Sie den Standardnamen *MainActivity* übernehmen.
 
     ![Angeben eines Namens für die Aktivität](../media/Android-setup-05a.jpg)
 
@@ -131,12 +127,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 -   Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
 
 
-    <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
+    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
 
 
 **Hinweis** Das SDK verwendet *android.support.v4*.
@@ -158,6 +149,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
  
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 

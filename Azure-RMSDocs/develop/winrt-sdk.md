@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Windows Store-Setup | Azure RMS
-description: Windows Store-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren.
-keywords:
+description: "Windows Store-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in ihrer Anwendung zu aktivieren."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 0b8e0fb6d872506ac3529bd137286f0e8fa562ee
+
 
 ---
 
@@ -41,7 +37,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
 
 -   [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)-Betriebssystem
--   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)
+-   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) oder höher oder Visual Studio Express 2012, das im Windows SDK für Windows 8.0/8.1 enthalten ist
 -   MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
 -   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/en-us/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
@@ -57,7 +53,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 -   Öffnen Sie Visual Studio.
 -   Klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.
--   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#**, und wählen Sie **Leere App (Windows)**. Klicken Sie anschließend auf **OK**.
+-   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#**, und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/winrtsetup-newproj.png)
 
@@ -89,6 +85,7 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 [Windows-API-Referenz](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jul16_HO2-->
 
 

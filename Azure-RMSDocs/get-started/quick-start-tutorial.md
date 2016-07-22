@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Schnellstart-Lernprogramm für Azure Rights Management | Azure RMS
-description: Ein Einführungslernprogramm, in dem beschrieben wird, wie Sie Microsoft Azure Rights Management in 5 Schritten und weniger als 15 Minuten für Ihre Organisation testen können.
-keywords:
+title: "Schnellstart-Lernprogramm für Azure Rights Management | Azure RMS"
+description: "Ein Einführungslernprogramm, in dem beschrieben wird, wie Sie Microsoft Azure Rights Management in 5 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
+
 
 ---
 
@@ -55,12 +49,14 @@ Voraussetzungen für dieses Tutorial:
 
 Los geht’s!
 
->[!div class="step-by-step"] [Schritt 1 »](tutorial-step1.md)
+>[!div class="step-by-step"]
+[Schritt 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

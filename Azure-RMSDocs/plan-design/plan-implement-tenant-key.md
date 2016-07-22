@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels | Azure RMS
-description:
-keywords:
+title: "Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
+ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+
 
 ---
 
@@ -81,9 +75,9 @@ Verwenden Sie die Informationen und Verfahren in diesem Abschnitt, wenn Sie sich
 
 
 > [!IMPORTANT]
-> Wenn Sie bereits mit der Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] begonnen haben (der Dienst ist aktiviert) und Benutzer haben, die Office 2010 ausführen, [wenden Sie sich an den Microsoft Support](../get-started/information-support#to-contact-microsoft-support), bevor Sie diese Verfahren ausführen. Abhängig von Ihrem Szenario und den Voraussetzungen können Sie immer noch BYOK verwenden, allerdings mit einigen Einschränkungen bzw. zusätzlichen Schritten.
+> Wenn Sie bereits begonnen haben, [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verwenden (der Dienst ist aktiviert), und Benutzer haben, die Office 2010 ausführen, [wenden Sie sich an den Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), bevor Sie diese Prozeduren ausführen. Abhängig von Ihrem Szenario und den Voraussetzungen können Sie immer noch BYOK verwenden, allerdings mit einigen Einschränkungen bzw. zusätzlichen Schritten.
 > 
-> Wenden Sie sich auch an den [Microsoft Support](../get-started/information-support#to-contact-microsoft-support), wenn Ihre Organisation über bestimmte Richtlinien für den Umgang mit Schlüsseln verfügt.
+> Wenden Sie sich auch an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), wenn Ihre Organisation über bestimmte Richtlinien für den Umgang mit Schlüsseln verfügt.
 
 ### Voraussetzungen für BYOK
 In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring Your Own Key“ (BYOK).
@@ -114,7 +108,7 @@ Die Verfahren zum Generieren und Verwenden Ihres eigenen Mandantenschlüssels h�
     > [!NOTE]
     > Ihr Mandantenschlüssel kann nicht vertrauenswürdige Computer und Netzwerke sicher passieren, weil er verschlüsselt und mit Berechtigungen auf Zugriffssteuerungsebene gesichert ist, wodurch er nur in Ihren HSMs und in den HSMs für Azure RMS von Microsoft verwendet werden kann. Sie können die im Toolset bereitgestellten Skripts verwenden, um die Sicherheitsmaßnahmen zu überprüfen, und Sie können weitere Informationen von Thales zur Funktionsweise lesen: [Hardwareschlüsselverwaltung in der RMS-Cloud](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **Persönlich:** Dies erfordert, dass Sie sich an den [Microsoft Support wenden](../get-started/information-support#to-contact-microsoft-support), um einen Termin für die Schlüsselübertragung für Azure RMS zu vereinbaren. Sie müssen zu einer Microsoft-Niederlassung in Redmond, Washington, USA, reisen, um Ihren Mandantenschlüssel in die Azure RMS Security World zu übertragen.
+-   **Persönlich:** Dies erfordert, dass Sie sich an den [Microsoft Support wenden](../get-started/information-support.md#to-contact-microsoft-support), um einen Termin für die Übergabe eines Azure RMS-Mandantenschlüssels zu vereinbaren. Sie müssen zu einer Microsoft-Niederlassung in Redmond, Washington, USA, reisen, um Ihren Mandantenschlüssel in die Azure RMS Security World zu übertragen.
 
 Wählen Sie für Anweisungen zur Vorgehensweise, ob Sie den generierten Mandantenschlüssel über das Internet übertragen oder persönlich übergeben: 
 
@@ -136,9 +130,9 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 2.  Erwägen Sie die Aktivierung der Nutzungsprotokollierung, durch die jede von RMS durchgeführte Transaktion protokolliert wird.
 
-    Wenn Sie sich zur Verwaltung des eigenen Mandantenschlüssels entschlossen haben, enthält die Protokollierung Informationen über die Nutzung Ihres Mandantenschlüssels. Im folgenden Beispiel sehen Sie eine in Excel angezeigte Protokolldatei, in der die Anforderungstypen **Decrypt** und **SignDigest** anzeigen, dass der Mandantenschlüssel verwendet wird.
+    Wenn Sie sich zur Verwaltung des eigenen Mandantenschlüssels entschlossen haben, enthält die Protokollierung Informationen über die Nutzung Ihres Mandantenschlüssels. Dies wird im folgenden Ausschnitt einer in Excel angezeigten Protokolldatei dargestellt, in der die Anforderungstypen **KMSPDecrypt** und **KMSPSignDigest** anzeigen, dass der Mandantenschlüssel verwendet wird.
 
-    ![Protokolldatei in Excel, in der der Mandantenschlüssel verwendet wird.](../media/RMS_Logging.gif)
+    ![Protokolldatei in Excel, in der der Mandantenschlüssel verwendet wird.](../media/RMS_Logging.png)
 
     Weitere Informationen zur Nutzungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -148,6 +142,7 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

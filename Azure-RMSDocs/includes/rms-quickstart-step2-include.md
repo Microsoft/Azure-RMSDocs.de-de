@@ -27,6 +27,6 @@ Sie können nun mit dem Schutz von Dateien beginnen, deren Inhalt Sie ausgewähl
 |Unterschied zwischen systemeigenem und generischem Schutz   →|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

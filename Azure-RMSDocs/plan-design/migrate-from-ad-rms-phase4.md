@@ -1,28 +1,21 @@
 ---
-# required metadata
-
-title: Migration von AD RMS zu Azure Rights Management – Phase 4 | Azure RMS
-description:
-keywords:
+title: "Migration von AD RMS zu Azure Rights Management – Phase 4 | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
+ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+
 
 ---
 
@@ -49,7 +42,7 @@ Wenn Sie RMS-Kryptografiemodus 2 ausgeführt haben, ist dieser Schritt nach der 
 
 Gehen Sie zum Ändern Ihres Azure RMS-Mandantenschlüssels wie folgt vor:
 
--   Wenn Ihr Azure RMS-Mandantenschlüssel von Microsoft verwaltet wird: [Wenden Sie sich an den Microsoft Support](../get-started/information-support#to-contact-microsoft-support), um einen **Azure Rights Management-Supportfall zum Anfordern der Änderung Ihres Azure RMS-Mandantenschlüssels zu erstellen**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Ändern Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+-   Wenn Ihr Azure RMS-Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) und erstellen Sie eine **Azure Rights Management-Supportanfrage, um den Wechsel Ihres Azure RMS-Mandantenschlüssels anzufordern**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Ändern Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
 -   Wenn Ihr Azure RMS-Mandantenschlüssel von Ihnen verwaltet wird (BYOK): Wiederholen Sie das BYOK-Verfahren zum Generieren eines neuen Schlüssels über das Internet oder persönlich.
 
@@ -61,6 +54,7 @@ Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet | Azure RMS
-description:
-keywords:
+title: "Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+
 
 ---
 
@@ -48,7 +42,7 @@ Laden Sie auf der Arbeitsstation mit Internetverbindung das Windows PowerShell-M
 > [!NOTE]
 > Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, führen Sie den folgenden Befehl aus, um zu überprüfen, ob Ihre Version mindestens 2.1.0.0 ist: `(Get-Module aadrm -ListAvailable).Version`
 
-Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md)..
+Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Schritt 2: Rufen Sie Ihre Azure Active Directory-Mandanten-ID ab
 Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen** , und führen Sie dann die folgenden Befehle aus:
@@ -85,15 +79,15 @@ Wechseln Sie zum Microsoft Download Center, und [laden Sie das BYOK-Toolset](htt
 |Asien|AzureRMS-BYOK-tools-AsiaPacific.zip|
 Das Toolset enthält Folgendes:
 
--   ein KEK-Paket (Key Exchange Key; Schlüsselaustauschschlüssel) mit einem Namen, der mit **BYOK-KEK-pkg-** beginnt.
+-   Ein KEK-Paket (Schlüsselaustauschschlüssel) mit einem Namen, der mit **BYOK-KEK-pkg-** beginnt.
 
--   ein Security World-Paket mit einem Namen, der mit **BYOK-SecurityWorld-pkg-** beginnt.
+-   Ein Security World-Paket mit einem Namen, der mit **BYOK-SecurityWorld-pkg-** beginnt.
 
--   ein Python-Skript namens **verifykeypackage.py**.
+-   Ein Python-Skript namens **verifykeypackage.py**.
 
 -   Eine ausführbare Befehlszeilendatei namens **KeyTransferRemote.exe**, eine Metadatendatei namens **KeyTransferRemote.exe.config** und die zugehörigen DLLs.
 
--   ein Visual C++ Redistributable Package namens **vcredist_x64.exe**.
+-   Ein Visual C++ Redistributable Package namens **vcredist_x64.exe**.
 
 Kopieren Sie das Paket auf ein USB-Laufwerk oder einen anderen mobilen Speicher.
 
@@ -112,7 +106,7 @@ Stellen Sie sicher, dass sich die Thales-Tools im Pfad **(%nfast_home%\bin** und
 ```
 set PATH=%PATH%;”%nfast_home%\bin”;”%nfast_home%\python\bin”
 ```
-Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang der Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud)..
+Weitere Informationen finden Sie im Benutzerhandbuch, das im Lieferumfang des Thales HSM enthalten ist, oder besuchen Sie die Thales-Website für Azure RMS unter [http://www.thales-esecurity.com/msrms/cloud](http://www.thales-esecurity.com/msrms/cloud).
 
 ### Schritt 2: Installieren Sie das BYOK-Toolset auf der nicht verbundenen Arbeitsstation
 Kopieren Sie das BYOK-Toolsetpaket von dem USB-Laufwerk oder dem anderen mobilen Speicher, und gehen Sie dann wie folgt vor:
@@ -188,7 +182,7 @@ Dieser Schritt ist optional, wird aber empfohlen, damit Sie Folgendes überprüf
 
 2.  Vergewissern Sie sich, dass Folgendes angezeigt wird, was eine erfolgreiche Überprüfung anzeigt: **Ergebnis:  ERFOLG (SUCCESS)**
 
-Dieses Skript überprüft die Kette der Signaturgeber bis hinauf zum Thales-Stammschlüssel. Der Hash dieses Stammschlüssels ist in das Skript eingebettet, und sein Wert sollte **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**sein. Sie können diesen Wert auch gesondert bestätigen, indem Sie die [Thales-Website](http://www.thalesesec.com/)besuchen..
+Dieses Skript überprüft die Kette der Signaturgeber bis hinauf zum Thales-Stammschlüssel. Der Hash dieses Stammschlüssels ist in das Skript eingebettet, und sein Wert sollte **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**sein. Sie können diesen Wert auch gesondert überprüfen, indem Sie die [Thales-Website](http://www.thalesesec.com/)besuchen.
 
 Sie sind jetzt bereit, um einen neuen Schlüssel zu erstellen, der dann Ihr RMS-Mandantenschlüssel ist.
 
@@ -269,11 +263,11 @@ Um die Berechtigungen für Ihren Mandantenschlüssel zu verringern, gehen Sie wi
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-Wenn Sie diesen Befehl ausführen, ersetzen Sie *contosokey* durch den Wert, den Sie in [Schritt 1: Erstellen Sie eine Security World](##step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
+Wenn Sie diesen Befehl ausführen, ersetzen Sie *contosokey* durch den Wert, den Sie in [Schritt 1: Erstellen Sie eine Security World](#step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
 
 Sie werden aufgefordert, Ihre Security World ACS-Karten einzustecken und, falls festgelegt, das Kennwort oder die PIN.
 
-Wenn der Befehl abgeschlossen wird, wird **Ergebnis: ERFOLG** angezeigt, und die Kopie Ihres Mandantenschlüssels mit verringerten Berechtigungen befindet sich in der Datei mit dem Namen „key_xferacId_*&lt;contosokey&gt;*“..
+Wenn der Befehl abgeschlossen wird, wird **Result: SUCCESS** angezeigt, und die Kopie Ihres Mandantenschlüssels mit verringerten Berechtigungen befindet sich in der Datei mit dem Namen „key_xferacId_*&lt;contosokey&gt;*“.
 
 ### Schritt 2: Untersuchen Sie die neue Kopie des Schlüssels
 Führen Sie optional die Thales-Hilfsprogramme aus, um die minimalen Berechtigungen des neuen Mandantenschlüssels sicherzustellen:
@@ -290,7 +284,7 @@ Führen Sie optional die Thales-Hilfsprogramme aus, um die minimalen Berechtigun
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-Wenn Sie diesen Befehl ausführen, ersetzen Sie *contosokey* durch den Wert, den Sie in [Schritt 1: Erstellen Sie eine Security World](##step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
+Wenn Sie diesen Befehl ausführen, ersetzen Sie *contosokey* durch den Wert, den Sie in [Schritt 1: Erstellen Sie eine Security World](#step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
 
 ### Schritt 3: Verschlüsseln Sie Ihren Schlüssel mithilfe des Schlüsselaustauschschlüssels von Microsoft
 Führen Sie in Abhängigkeit von Ihrer Region einen der folgenden Befehle aus:
@@ -315,7 +309,7 @@ Führen Sie in Abhängigkeit von Ihrer Region einen der folgenden Befehle aus:
 
 Wenn Sie diesen Befehl ausführen, verwenden Sie diese Anleitungen:
 
--   Ersetzen Sie *contosokey* durch den Bezeichner, den Sie in [Schritt 1: Erstellen Sie eine Security World](##step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
+-   Ersetzen Sie *contosokey* durch den Bezeichner, den Sie in [Schritt 1: Erstellen Sie eine Security World](#step-1-create-a-security-world) im Abschnitt *Generieren Ihres Mandantenschlüssels* angegeben haben.
 
 -   Ersetzen Sie *GUID* durch Ihre Azure Active Directory-Mandanten-ID, die Sie in [Schritt 2: Rufen Sie Ihre Azure Active Directory-Mandanten-ID ab](#step-2-get-your-azure-active-directory-tenant-id) im Abschnitt *Vorbereiten Ihrer Arbeitsstation mit Internetverbindung* abgerufen haben.
 
@@ -383,6 +377,7 @@ Sie haben jetzt alle Schritte abgeschlossen, die für „Bring Your Own Key“ �
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

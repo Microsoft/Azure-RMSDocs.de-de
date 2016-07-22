@@ -4,8 +4,8 @@ Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf
 
 Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. Die E-Mail wird den Empfängern mit dem folgenden vorangehenden Text angezeigt:
 
-**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms),
-      **um sie zu öffnen.**
+**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms)
+      **, um sie zu öffnen.**
 
 Sobald der Empfänger auf den Link klickt, wird er weitergeleitet und erhält Anweisungen zur Installation der RMS-Freigabe-App und ggf. zur Registrierung für ein kostenloses Konto. Das kostenlose Konto gewährt Zugriff auf ein RMS for Individuals-Abonnement, mit dem autorisierte Benutzer ein geschütztes Dokument immer lesen können, auch wenn ihre Organisation nicht über Azure RMS verfügt. Sie können die geschützte Anlage dann mithilfe der folgenden Anweisungen lesen.
 
@@ -33,6 +33,6 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

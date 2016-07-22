@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure RMS
-description:
-keywords:
+title: "Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: ea7f186e01606ca5e487bdfaab87d1eb0f2f41d3
+
 
 ---
 
@@ -37,7 +31,7 @@ Wenn Ihr Unternehmen Azure RMS verwendet, können Sie die Dateien nachverfolgen,
 
 -   Wählen Sie eine Option aus, um E-Mails zu erhalten, wenn jemand versucht, diese geschützten Anlagen zu öffnen. Jedes Mal, wenn auf die Datei zugegriffen wird, werden Sie benachrichtigt, wer wann versucht hat, die Datei zu öffnen, und ob der Vorgang erfolgreich war (sich der Benutzer erfolgreich authentifiziert hat).
 
--   Verwenden Sie die Website für die Dokumentationsbestandsverfolgung. Sie können die Freigabe der Datei auch Aufheben, indem Sie den Zugriff darauf auf der Website "Dokumentenbestandsverfolgung" zurückziehen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md)..
+-   Verwenden Sie die Website für die Dokumentationsbestandsverfolgung. Sie können die Freigabe der Datei auch Aufheben, indem Sie den Zugriff darauf auf der Website "Dokumentenbestandsverfolgung" zurückziehen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).
 
 ## Mit Outlook: So schützen Sie eine per E-Mail freigegebene Datei
 
@@ -45,9 +39,9 @@ Wenn Ihr Unternehmen Azure RMS verwendet, können Sie die Dateien nachverfolgen,
 
     ![Outlook-Add-In für die RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    Wenn diese Schaltfläche nicht angezeigt wird, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
+    Wenn diese Schaltfläche nicht angezeigt wird, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
-2.  Geben Sie die gewünschten Optionen im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie anschließend auf **Jetzt senden**..
+2.  Geben Sie die gewünschten Optionen im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie dann auf **Jetzt senden**.
 
 ### Andere Möglichkeiten zum Schützen einer per E-Mail freigegebenen Datei
 Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich stehen Ihnen folgende Möglichkeiten zur Verfügung:
@@ -68,9 +62,9 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
         ![Office-Symbolleisten-Add-In](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    Wenn diese Optionen zum Schutz nicht angezeigt werden, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md)..
+    Wenn diese Optionen zum Schutz nicht angezeigt werden, hat dies wahrscheinlich einen der folgenden Gründe: die RMS-Freigabeanwendung oder die neuste Version davon ist nicht auf Ihrem Computer installiert oder Ihr Computer muss neu gestartet werden, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
-2.  Geben Sie die gewünschten Optionen für diese Datei im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie anschließend auf **Senden**..
+2.  Geben Sie die gewünschten Optionen für diese Datei im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie dann auf **Senden**.
 
 3.  Möglicherweise sehen Sie kurzzeitig ein Dialogfeld, in dem der Dateischutz bestätigt wird, und dann sehen Sie eine automatisch erstellten E-Mail-Nachricht, die den Empfänger über den Schutz der Anlagen mit Microsoft RMS benachrichtigt und ihn dazu auffordert, sich anzumelden. Wenn der Benutzer auf dem Link zur Anmeldung klickt, werden ihm Anweisungen und Links angezeigt, die ihm beim Öffnen des geschützten Anhangs helfen.
 
@@ -98,6 +92,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

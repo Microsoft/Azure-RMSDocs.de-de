@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure RMS
-description:
-keywords:
+title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+
 
 ---
 
@@ -49,9 +43,10 @@ Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran 
 
 ## Nächste Schritte
 
-Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md)..
+Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md).
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
