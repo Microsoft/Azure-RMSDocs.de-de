@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Rights Management-Freigabeanwendung – Benutzerhandbuch | Azure RMS
-description:
-keywords:
+title: "Rights Management-Freigabeanwendung – Benutzerhandbuch | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
+ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
+
 
 ---
 
@@ -40,7 +34,7 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 |Ziel ...|Vorgehensweise|
 |----------------|------------------|
-|**… Ich möchte Finanzinformationen auf sichere Weise für Personen meines Vertrauens freigeben, die in einer anderen Organisation arbeiten**<br /><br />Sie arbeiten mit einem Partnerunternehmen zusammen und möchten eine Excel-Tabelle per E-Mail senden, die geplante Vertriebszahlen enthält. Sie möchten, dass die Empfänger die Zahlen anzeigen, jedoch nicht ändern können.|Klicken Sie auf die Schaltfläche **Geschütztes freigeben** im Excel-Menüband, geben Sie die E-Mail-Adressen der beiden Personen im Partnerunternehmen ein, mit denen Sie zusammenarbeiten, wählen Sie **Viewer – Nur anzeigen**aus, und klicken Sie auf **Senden**..<br /><br />Wenn die E-Mail im Partnerunternehmen ankommt, können nur die Empfänger der E-Mail die Tabelle anzeigen, können diese jedoch nicht speichern, bearbeiten, drucken oder weiterleiten.<br /><br />Schritt für Schritt: [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).|
+|**… Ich möchte Finanzinformationen auf sichere Weise für Personen meines Vertrauens freigeben, die in einer anderen Organisation arbeiten**<br /><br />Sie arbeiten mit einem Partnerunternehmen zusammen und möchten eine Excel-Tabelle per E-Mail senden, die geplante Vertriebszahlen enthält. Sie möchten, dass die Empfänger die Zahlen anzeigen, jedoch nicht ändern können.|Klicken Sie auf die Schaltfläche **Geschützt freigeben** im Excel-Menüband, geben Sie die E-Mail-Adressen der beiden Personen im Partnerunternehmen ein, mit denen Sie zusammenarbeiten, wählen Sie **Anzeigender Benutzer – Nur anzeigen**aus, und klicken Sie auf **Senden**.<br /><br />Wenn die E-Mail im Partnerunternehmen ankommt, können nur die Empfänger der E-Mail die Tabelle anzeigen, können diese jedoch nicht speichern, bearbeiten, drucken oder weiterleiten.<br /><br />Schritt für Schritt: [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).|
 |**… Ich möchte auf sichere Weise ein Dokument an eine Person senden, die ein iOS-Gerät verwendet**<br /><br />Sie können ein streng vertrauliches Word-Dokument an einen Kollegen senden, von dem Sie wissen, dass er regelmäßig seine E-Mails auf seinem iOS-Gerät abruft.|Verwenden Sie den Datei-Explorer, um mit der rechten Maustaste auf die Datei zu klicken und **Geschützt freigeben** auszuwählen und die Datei als Anlage an Ihre Kollegin zu senden.<br /><br />Die Empfängerin erhält die E-Mail auf ihrem iOS-Gerät. Da sie nicht über Office für iPad und iPhone verfügt, klickt sie in der E-Mail auf den Link mit den Informationen zum Herunterladen der Freigabeanwendung, installiert die Version für iOS-Geräte und zeigt anschließend das Dokument an¹.<br /><br />Schritt für Schritt: [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).|
 |**… Ich möchte überprüfen, wer wann meine geschützten Dokumente geöffnet hat und den Zugriff bei Bedarf widerrufen**<br /><br />Sie haben ein vertrauliches Entwurfsdokument auf sichere Weise für potenzielle Anbieter freigegeben und möchten nun wissen, wer wann und von wo auf das Dokument zugegriffen hat. Nachdem Sie dann einem der Anbieter den Zuschlag für das Projekt erteilt haben, möchten Sie den Zugriff auf das ursprüngliche Dokument widerrufen, sodass es von den Personen, für die Sie das Dokument freigegeben haben, nicht mehr gelesen werden kann.|Nachdem Sie ein Dokument per E-Mail freigegeben haben, wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562) , um zu sehen, wer wann auf das Dokument zugegriffen hat. Wenn Sie die Freigabe beenden möchten, wählen Sie die Option zum Widerrufen des Zugriffs aus.<br /><br />Schritt für Schritt: [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).|
 |**… Sie möchten ein Dokument lesen, das Sie als eine auf sichere Weise freigegebene E-Mail-Anlage erhalten haben, können es jedoch nicht lesen, da Ihr Unternehmen nicht mit Rights Management arbeitet.**<br /><br />Der Absender der E-Mail ist eine Person Ihres Vertrauens, da Sie schon früher geschäftliche Kontakte zu der Person gepflegt haben, und Sie nehmen an, dass die Person Ihnen Informationen zu einer neuen potenziellen Geschäftschance senden möchte.|Sie folgen den Anleitungen in der E-Mail und klicken auf den Link, um sich für Microsoft Rights Management anzumelden. Microsoft bestätigt, dass Ihre Organisation nicht über ein Abonnement verfügt, das Azure Rights Management umfasst, sendet Ihnen eine E-Mail, mit der Sie das kostenlose Anmeldeverfahren abschließen können, und Sie melden sich mit Ihrem neuen Konto an. Sie klicken auf den zweiten Link in der E-Mail, um die Rights Management-Freigabeanwendung zu installieren, und können anschließend die E-Mail-Anlage lesen und sich zu der neuen Geschäftschance informieren.<br /><br />Schritt für Schritt: [Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden](sharing-app-view-use-files.md).|
@@ -49,28 +43,31 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 ## Was möchten Sie tun?
 > [!NOTE]
-> Weitere technische Informationen, z.B. unterstützte Dateitypen und die Installation der Anwendung in einem Unternehmensnetzwerk, finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md)..
+> Weitere technische Informationen, z.B. zu [unterstützten Dateitypen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) und der [Installation der Anwendung in einem Unternehmensnetzwerk](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application), finden Sie im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
 
--   [Herunterladen und Installieren der Freigabeanwendung](install-sharing-app.md)
+- [Herunterladen und Installieren der Freigabeanwendung](install-sharing-app.md)
 
--   [Schützen einer Datei auf einem Gerät (direkt schützen)](sharing-app-protect-in-place.md)
+- [Schützen einer Datei auf einem Gerät (direkt schützen)](sharing-app-protect-in-place.md)
 
--   [Schützen einer Datei, die Sie per E-Mail freigeben](sharing-app-protect-by-email.md)
+- [Schützen einer Datei, die per E-Mail freigegebene ist](sharing-app-protect-by-email.md)
 
--   [Nachverfolgen und Widerrufen Ihrer Dokumente](sharing-app-track-revoke.md)
+- [Ändern von Berechtigungen für geschützte Dateien](sharing-app-reprotect-files.md)
 
--   [Anzeigen und Verwenden von Dateien, die geschützt wurden](sharing-app-view-use-files.md)
+- [Verfolgen und Widerrufen von Dokumenten](sharing-app-track-revoke.md)
 
--   [Entfernen des Schutzes von einer Datei](sharing-app-remove-protection.md)
+- [Anzeigen und Verwenden von Dateien, die geschützt wurden](sharing-app-view-use-files.md)
 
--   [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
+- [Entfernen des Schutzes von einer Datei](sharing-app-remove-protection.md)
 
--   [Festlegen von Einstellungen im Dialogfeld](sharing-app-dialog-box.md)
+- [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
+
+- [Festlegen von Einstellungen im Dialogfeld](sharing-app-dialog-box.md)
 
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO3-->
 
 

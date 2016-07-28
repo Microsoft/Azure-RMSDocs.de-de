@@ -1,7 +1,7 @@
 ---
 title: "Verwenden des Azure-Portals zur Konfiguration für die RMS-Authentifizierung | Azure RMS"
 description: "Skizziert den Prozess für die Authentifizierung mit ADAL"
-keywords: authentication, RMS, ADAL
+keywords: Authentifizierung, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -62,6 +62,6 @@ Nachfolgend ist ein Codeausschnitt aus dem größeren Codebeispiel für mobile C
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

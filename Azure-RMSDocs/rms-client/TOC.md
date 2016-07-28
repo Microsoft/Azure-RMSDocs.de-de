@@ -9,21 +9,23 @@
 #### [PowerShell-Skript](fci-script.md)
 ### [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md)
 #### [Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen](sharing-app-version-release-history.md)
-#### [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md)
-##### [Technische Übersicht](sharing-app-admin-guide-technical.md)
+#### [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md)
+##### [Technische Übersicht und Details zum Schutz](sharing-app-admin-guide-technical.md)
 #### [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 ##### [Herunterladen und Installieren](install-sharing-app.md)
 ##### [Schützen einer Datei auf einem Gerät](sharing-app-protect-in-place.md)
-##### [Schützen einer Datei, die Sie per E-Mail freigeben](sharing-app-protect-by-email.md)
-##### [Nachverfolgen und Widerrufen Ihrer Dokumente](sharing-app-track-revoke.md)
+##### [Schützen einer Datei, die per E-Mail freigegebene ist](sharing-app-protect-by-email.md)
+##### [Ändern von Berechtigungen für geschützte Dateien](sharing-app-reprotect-files.md)
+##### [Verfolgen und Widerrufen von Dokumenten](sharing-app-track-revoke.md)
 ##### [Anzeigen und Verwenden von geschützten Dateien](sharing-app-view-use-files.md)
 ##### [Entfernen von Schutz](sharing-app-remove-protection.md)
 ##### [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
 ##### [Dialogfeldoptionen](sharing-app-dialog-box.md)
 ### [Datenschutzerklärung für Microsoft Rights Management in für RMS aktivierten Anwendungen](privacy-statement-rms-enlightened-applications.md)
 # [Entwickeln und Anpassen von Apps](/rights-management/develop/developers-guide)
+# [Azure Information Protection (Preview)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -1,26 +1,22 @@
 ---
-# required metadata
-
 title: "Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS | Azure RMS"
-description: Beschreibt die Grundlagen der Benutzerauthentifizierung für Ihre RMS-fähige Anwendung.
-keywords:
+description: "Beschreibt die Grundlagen der Benutzerauthentifizierung für Ihre RMS-fähige Anwendung."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/15/2016
+ms.date: 07/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 04454886841fe7b3482d10e1e32422f28d1c434f
+ms.openlocfilehash: fbe12e339d3fb8fc62aabc34aaa9f5f043e95de9
+
 
 ---
 
@@ -33,6 +29,9 @@ Benutzerauthentifizierung ist ein grundlegender Schritt beim Aufbau der Kommunik
 
 ## Registrierung über das Azure-Portal
 Befolgen Sie zunächst die Anleitungen unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md), um die Registrierung Ihrer App über das Azure-Portal zu konfigurieren. Kopieren und speichern Sie die **Client-ID** und den **Umleitungs-URI** aus diesem Prozess zur späteren Verwendung.
+
+## Abschließen Ihres Rights Management-Lizenzvertrags (Rights Management License Agreement; RMLA)
+Bevor Sie Ihre Anwendung bereitstellen können, müssen Sie einen RMLA mit dem Microsoft Rights Management-Team abschließen. Ausführliche Informationen finden Sie im ersten Abschnitt des Themas [Bereitstellen in der Produktion – Anfordern eines Produktionslizenzvertrags](deploying-your-application.md).
 
 ## Implementieren der Benutzerauthentifizierung für Ihre App
 Jede RMS-API verfügt über einen Rückruf, der implementiert werden muss, um eine Authentifizierung des Benutzers zu ermöglichen. Das RMS SDK 4.2 verwendet Ihre Implementierung des Rückrufs, wenn Sie kein Zugriffstoken angeben, wenn das Zugriffstoken aktualisiert werden muss oder wenn das Zugriffstoken abgelaufen ist.
@@ -53,7 +52,8 @@ Jede der folgenden Ressourcen enthält Anleitungen zum Einrichten Ihrer Umgebung
 -   [Windows Azure Active Directory-Authentifizierungsbibliotheken (ADAL) für dotnet](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Beim Linux-SDK befindet sich die ADAL-Bibliothek im SDK-Quellcodepaket, das über [Github](https://github.com/AzureAD/rms-sdk-for-cpp) verfügbar ist.
 
->[!NOTE]  Es wird empfohlen, dass Sie selbst dann eine ADAL verwenden, wenn Sie andere Authentifizierungsbibliotheken verwenden könnten.
+>[!NOTE]  
+> Es wird empfohlen, dass Sie selbst dann eine ADAL verwenden, wenn Sie andere Authentifizierungsbibliotheken verwenden könnten.
 
 ### Authentifizierungsparameter
 
@@ -66,13 +66,15 @@ Die ADAL benötigt verschiedene Angaben, um Benutzer von Azure RMS (oder AD RMS)
 Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Portal ausgeführt wurde.
 - **Umleitungs-URI** – Stellt der Authentifizierungsbibliothek einen Ziel-URI für den Authentifizierungscode bereit. Für iOS und Android sind spezielle Formate erforderlich. Diese sind in den README-Dateien der entsprechenden GitHub-Repositorys der ADAL beschrieben. Dieser Wert stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Portal ausgeführt wurde.
 
->[!NOTE] Der **Bereich** wird aktuell nicht verwendet, kann aber verwendet werden und ist daher für die zukünftige Verwendung reserviert.
+>[!NOTE] 
+> Der **Bereich** wird aktuell nicht verwendet, kann aber verwendet werden und ist daher für die zukünftige Verwendung reserviert.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] Bei den Azure RMS- und Azure AD-Workflows tritt wahrscheinlich ein Fehler auf, und diese Workflows werden von Microsoft nicht unterstützt, wenn Ihre App diesen Richtlinien nicht entspricht. Darüber hinaus kann es einen Verstoß gegen die Rights Management License Agreement (RMLA) darstellen, wenn in einer Produktions-App eine ungültige Client-ID verwendet wird.
+>[!NOTE] 
+> Bei den Azure RMS- und Azure AD-Workflows tritt wahrscheinlich ein Fehler auf, und diese Workflows werden von Microsoft nicht unterstützt, wenn Ihre App diesen Richtlinien nicht entspricht. Darüber hinaus kann es einen Verstoß gegen die Rights Management License Agreement (RMLA) darstellen, wenn in einer Produktions-App eine ungültige Client-ID verwendet wird.
 
 ### Wie sollte die Implementieren eines Authentifizierungsrückrufs aussehen
 **Codebeispiele für die Authentifizierung** –Dieses SDK enthält Beispielcode, der die Verwendung von Authentifizierungsrückrufen veranschaulicht. Der Einfachheit halber werden diese Codebeispiele sowohl hier als auch in jedem der folgenden verknüpften Themen dargestellt.
@@ -271,6 +273,7 @@ Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Porta
  
 
 
-<!--HONumber=Jun16_HO3-->
+
+<!--HONumber=Jul16_HO3-->
 
 

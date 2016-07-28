@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/21/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
+ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
+ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: e67d0ab5537aa7444940a5e7ce3a653cc6e66993
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in der [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) vorhanden sind:
 
 Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt.  Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+
+Eine technische Übersicht über die Rights Management-Freigabeanwendung und Informationen zu nativem und generischem Schutz, den unterstützten Dateitypen, Dateierweiterungen und der Vorgehensweise zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md). 
 
 ## Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung
 Die Windows-Version des RMS-Freigabeanwendung unterstützt eine skriptbasierte Installation, sodass sie auch für Unternehmensbereitstellungen geeignet ist.
@@ -116,13 +118,13 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
         > [!NOTE]
         > Dieser Befehl fordert Sie möglicherweise zur Eingabe Ihrer Anmeldeinformationen für Azure auf. Wenn der Computer nicht zu einer Domäne angehört, werden Sie aufgefordert. Wenn der Computer einer Domäne angehört, kann das Tool möglicherweise zwischengespeicherte Anmeldeinformationen verwenden.
 
-2.  Führen Sie auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, den folgenden Befehl mit erhöhten Rechten aus:
+2.  Führen Sie auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, den folgenden Befehl einmal mit erhöhten Rechten aus:
 
     ```
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, müssen Benutzer den folgenden Befehl (ohne erhöhte Rechten) ausführen. Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen des Befehls auffordern (z. B. durch einen Link in einer E-Mail-Nachricht oder im Helpdesk-Portal), oder Sie können ihn dem Anmeldeskript hinzufügen:
+3.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, muss jeder Benutzer dieses Computers den folgenden Befehl (ohne erhöhte Rechten) ausführen. Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen des Befehls auffordern (z. B. durch einen Link in einer E-Mail-Nachricht oder im Helpdesk-Portal), oder Sie können ihn dem Anmeldeskript hinzufügen:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -367,6 +369,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 3281e45e-cf69-4dc5-946b-3029851d3152
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 1acc66e9a73b100268ed722391a0a87651c64abc
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 8e77298121a84f6feb16a992da81bd9c3bb7b20b
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1acc66e9a73b100268ed722391a0a87651c64abc
 *Gilt für: Azure Rights Management, Office 365*
 
 
-Verwenden Sie die folgenden Verfahren, wenn Sie sich für die [Verwaltung Ihres eigenen Mandantenschlüssels](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) entschieden haben und ihn nicht über das Internet, sondern persönlich übertragen möchten.
+Verwenden Sie die folgenden Vorgehensweisen, wenn Sie sich für die [Verwaltung Ihres eigenen Mandantenschlüssels](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) entschieden haben und ihn nicht über das Internet, sondern persönlich übertragen möchten.
 
 ## Generieren Ihres Mandantenschlüssels
 Um Ihren eigenen Mandantenschlüssel zu generieren, befolgen Sie diese 3 Schritte:
@@ -151,6 +151,6 @@ Sie haben die erforderlichen Schritte der persönlichen Übertragung für „Bri
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

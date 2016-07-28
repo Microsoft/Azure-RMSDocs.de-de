@@ -1,9 +1,9 @@
 ---
 asset_id: 78022852-1541-4194-bd6b-2f5fd5d94b77
 layout: HubPage
-title: Azure Rights Management-Dokumentation
+title: "Azure Rights Management-Dokumentation – RMS-Dokumentation | Microsoft Docs"
 description: "Technische Dokumentation für Azure Rights Management"
-keywords: rights management documentation, rms documentation, Azure RMS documentation
+keywords: Rights Management-Dokumentation, RMS-Dokumentation, Azure RMS-Dokumentation
 author: msmbaldwin
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -14,15 +14,15 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 translationtype: Human Translation
-ms.sourcegitcommit: 80de3ab273c090f466fc381390d84b8f7b90f6f4
-ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
+ms.sourcegitcommit: e5a1860afff2682cce093523b33c9e99b93d446d
+ms.openlocfilehash: 57b04bccfd2f650c24875d20baf89040c69ab0f6
 
 
 ---
-# Azure Rights Management-Dokumentation
+# Azure Rights Management-Dokumentation (RMS)
 <article id="main">
     <section id="hero-content">
-      <h1>Azure Rights Management-Dokumentation</h1>
+      <h1>Azure Rights Management-Dokumentation (RMS)</h1>
       <h2>Erfahren Sie, wie Sie Azure Rights Management (Azure RMS) bereitstellen und verwenden. Legen Sie sofort los, und wenden Sie den Informationsschutz von Rights Management auf E-Mails, Dokumente und andere sensible Daten an.</h2>
       <h3>Verwenden Sie Azure RMS zum ersten Mal? <a href="http://go.microsoft.com/fwlink/?LinkId=816857" target="_blank">Besuchen Sie unsere Produktseite. &rarr;</a></h3>
     </section>
@@ -36,11 +36,12 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
       <h2 class="section-heading"><span class="icon icon-warning"></span> Wichtige Inhalte</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NEU</b></mark> <a href="./information-protection/what-is-information-protection.md">Azure Information Protection (Preview)</a></li>
           <li><a href="./understand-explore/what-is-azure-rms.md">Was ist Azure Rights Management?</a></li>
           <li><a href="./get-started/quick-start-tutorial.md">Schnellstart-Tutorial für Azure Rights Management Services</a></li>
-          <li><a href="./get-started/rapid-deployment-guide.md">Handbuch für die schnelle Bereitstellung von Azure RMS</a></li>
         </ul>
         <ul class="column column-half">
+          <li><a href="./get-started/rapid-deployment-guide.md">Handbuch für die schnelle Bereitstellung von Azure RMS</a></li>
           <li><a href="./plan-design/deployment-roadmap.md">Roadmap für die Bereitstellung von Azure RMS</a></li>
           <li><a href="./develop/developers-guide.md">Integrieren von Anwendungen in Azure RMS</a></li>
         </ul>
@@ -214,6 +215,39 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
                 </li>
               </ul>
             </section>
+          <li class="journey-step">
+            <header class="journey-step-header row">
+              <a href="./information-protection/what-is-information-protection.md">
+                <div class="title column-third">
+                  <span class="step-number"> 6</span>
+                  <p>Azure Information Protection (Preview)</p>
+                </div>
+                <p class="description column-two-thirds">Klassifizieren, bezeichnen und schützen Sie Ihre Daten mit Azure Information Protection, das jetzt als Vorschau erhältlich ist.
+                </p>
+              </a>
+            </header>
+            <section class="journey-step-elements content">
+              <ul class="row">
+                <li class="column-third">
+                  <a href="./information-protection/what-is-information-protection.md">
+                    <h3>Was ist Azure Information Protection?</h3>
+                    <p>Erfahren Sie mehr über Azure Information Protection, das Azure Rights Management (RMS) sowie Klassifizierungs- und Bezeichnungstechnologien von Secure Islands zusammenbringt.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/infoprotect-quick-start-tutorial.md">
+                    <h3>Schnellstart-Tutorial für Azure Information Protection</h3>
+                    <p>Erste Schritte mit Azure Information Protection in nur vier Schritten.</p>
+                  </a>
+                </li>
+                <li class="column-third">
+                  <a href="./information-protection/faq.md">
+                    <h3>Häufig gestellte Fragen zu Azure Information Protection</h3>
+                    <p>Hier finden Sie Antworten auf häufig gestellte Fragen zu Azure Information Protection.</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
           </li>
         </ul>
       </section>
@@ -228,6 +262,6 @@ ms.openlocfilehash: 6ba6e7b208c0b53a5cc6f38811f6845234bf7983
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

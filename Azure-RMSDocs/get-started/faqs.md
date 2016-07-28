@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
-ms.openlocfilehash: a3ed9e8de496741fae8904481edb1177762a12c0
+ms.sourcegitcommit: e89c59716eef7fbdea415b41b1adfa54b0c16689
+ms.openlocfilehash: bd53b73452f444ac8529a8b8b613e76d8cc234a1
 
 
 ---
@@ -198,9 +198,14 @@ Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und ges
 
 -   Office 365-Bibliothek: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
+## Was gibt es Neues zur Klassifizierungs- und Bezeichnungsfunktion?
+
+Diese Funktion in Azure Information Protection ist nun als öffentliche Vorschau verfügbar. Informationen zum Testen dieser Funktion und eine Liste der verfügbaren Ressourcen finden Sie unter [What is Azure Information Protection preview?](../information-protection/what-is-information-protection.md) (Was ist Azure Information Protection (Preview)?)
+
+
 ## Ich habe gehört, dass bald ein neues Release für Azure RMS verfügbar sein wird. Wann wird es veröffentlicht?
 
-Die technische Dokumentation enthält keine Informationen zu bevorstehenden Releases. Lesen Sie für solche Informationen den [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Informationen in englischer Sprache zu Enterprise Mobility und Sicherheit) und die neuesten Updates von [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter. Wenn Sie an einem Office-Release interessiert sind, lesen Sie auch den [Office-Blog[(https://blogs.office.com/).
+Die technische Dokumentation enthält keine Informationen zu bevorstehenden Releases. Lesen Sie für solche Informationen den [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Informationen in englischer Sprache zu Enterprise Mobility und Sicherheit) und die neuesten Updates von [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter. Wenn Sie an einem Office-Release interessiert sind, lesen Sie auch den [Office Blog](https://blogs.office.com/).
 
 ## Wie gehe ich vor, wenn meine Frage hier nicht behandelt wird?
 Verwenden Sie die Links und Ressourcen, die unter [Informationen und Support für Azure Rights Management](information-support.md) aufgelistet sind.
@@ -219,6 +224,6 @@ Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

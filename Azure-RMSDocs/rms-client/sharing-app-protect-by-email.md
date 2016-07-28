@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: ea7f186e01606ca5e487bdfaab87d1eb0f2f41d3
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 13f44e93ee9c1c0583bd75121aec638fee09b748
 
 
 ---
@@ -72,7 +72,7 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
     ![E-Mail-Nachricht für Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Vielleicht stellen Sie sich folgende Frage: [Wie sieht die automatisch erstellte PPDF-Datei aus?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)
+    Möglicherweise wünschen Sie sich eine [Erläuterung zur automatisch erstellten PPDF-Datei](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created).
 
 4.  Optional: Sie können beliebige Änderungen an der E-Mail-Nachricht vornehmen. Sie können z. B. einen Betreff oder Nachrichtentext hinzufügen oder ändern.
 
@@ -86,13 +86,13 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

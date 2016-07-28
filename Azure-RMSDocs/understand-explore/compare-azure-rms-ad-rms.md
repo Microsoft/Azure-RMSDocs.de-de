@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 8635402989db0f83017151910013ca460011b392
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ce79ec40cbd8ca3796a17920d27dc3872cd40842
 
 
 ---
@@ -54,7 +54,7 @@ Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die 
 |Stellt zwei Standardvorlagen für Rechterichtlinien bereit, die den Zugriff auf die Inhalte auf Ihre eigene Organisation beschränken. Eine, die die schreibgeschützte Anzeige geschützter Inhalte bietet, und eine andere Vorlage, die Schreib- oder Änderungsberechtigungen für den geschützten Inhalt bereitstellt.<br /><br />Sie können auch eigene benutzerdefinierte Vorlagen erstellen, wozu Abteilungsvorlagen gehören, die nur für eine Teilmenge von Benutzern sichtbar sind. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|Es sind keine standardmäßigen Vorlagen für Benutzerrechterichtlinien verfügbar. Sie müssen diese erstellen und dann verteilen. Weitere Informationen finden Sie unter [Überlegungen zur AD RMS-Richtlinienvorlage](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|
 |Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird nicht unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2007.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird unterstützt|
 |Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte.<br /><br />Zusätzlich unterstützt die RMS-Freigabeanwendung Folgendes:<br /><br />– Freigeben für Personen in einer anderen Organisation<br /><br />– E-Mail-Benachrichtigung, die den Absender informiert, wenn jemand versucht, eine geschützte Anlage zu öffnen<br /><br />– Eine Website für die Dokumentnachverfolgung für Benutzer mit der Möglichkeit, ein Dokument zu widerrufen|Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte. Allerdings unterstützt Freigeben weder ein Freigeben für Benutzer in einer anderen Organisation, noch E-Mail-Benachrichtigungen oder die Dokumentnachverfolgung noch die Möglichkeit für Benutzer, Dokumente zu widerrufen.|
-|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Für andere Anwendungen sind die Informationen in der [Tabelle mit den Funktionen der Clientgeräte](../get-started/requirements-client-devices.md#client-device-capabilities) enthalten.|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Für andere Anwendungen sind die Informationen in der [Tabelle mit den Funktionen der Clientgeräte](../get-started/requirements-client-devices.md#client-device-capabilities) enthalten.|
+|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Informationen für andere Anwendungen finden Sie in der Tabelle unter [Azure RMS-Anforderungen: Anwendungen](../get-started/requirements-applications.md).|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Informationen für andere Anwendungen finden Sie in der Tabelle unter [Azure RMS-Anforderungen: Anwendungen](../get-started/requirements-applications.md).|
 |Die unterstützte Mindestversion des Windows-Clients ist Windows 7.|Die unterstützte Mindestversion des Windows-Clients ist Windows Vista Service Pack 2.|
 |Die Unterstützung mobiler Geräte umfasst Windows Phone, Android, iOS und Windows RT.<br /><br />E-Mail-Unterstützung durch Verwendung von Exchange ActiveSync IRM wird ebenfalls auf allen mobilen Geräteplattformen unterstützt, die dieses Protokoll unterstützen.|Die Unterstützung mobiler Geräte umfasst Windows Phone, Android, iOS und Windows RT und erfordert die [mobile Erweiterung für Active Directory-Rechteverwaltungsdienste](http://technet.microsoft.com/library/dn673574.aspx).<br /><br />E-Mail-Unterstützung durch Verwendung von Exchange ActiveSync IRM wird auf allen mobilen Geräteplattformen unterstützt, die dieses Protokoll unterstützen.|
 |Unterstützt Multi-Factor Authentication (MFA) für Computer und mobile Geräte.<br /><br />Weitere Informationen finden Sie unter [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms).|Unterstützt Smartcard-Authentifizierung, wenn IIS so konfiguriert ist, dass Zertifikate angefordert werden.|
@@ -76,6 +76,6 @@ Wenn Sie die Migration von AD RMS zu Azure RMS durchführen möchten, helfen Ihn
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

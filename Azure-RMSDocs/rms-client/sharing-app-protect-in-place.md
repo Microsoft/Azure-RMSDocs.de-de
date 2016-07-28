@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 7cf6ecb95374c080b9b2e94f948ec53ea5e6bb46
+ms.sourcegitcommit: 638c2f27c8d552653dcf3f41d8fad6d44cb08887
+ms.openlocfilehash: 5150351ec6772b95d77698dc39a1f69105c02d2c
 
 
 ---
@@ -51,6 +51,8 @@ Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte
 
     ![Geschützte Datei mit Schlosssymbol für die RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_Pfile.png)
 
+Wenn Sie Ihre Meinung hinsichtlich der Berechtigungen ändern oder die Berechtigungen später ändern müssen, schützen Sie die Datei einfach erneut.
+
 Wenn Sie später den Schutz einer Datei aufheben müssen, gehen Sie entsprechend den Beschreibungen unter [Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-remove-protection.md) vor.
 
 ## Beispiele und weitere Anweisungen
@@ -58,13 +60,13 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -32,6 +32,6 @@ Die Android-API verfügt über zwei Namespaces, die die Hauptfunktionen und -aus
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

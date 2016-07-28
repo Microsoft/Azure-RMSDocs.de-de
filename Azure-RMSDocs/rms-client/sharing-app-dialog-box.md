@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
 
 
 ---
@@ -32,14 +32,14 @@ Verwenden Sie diese Informationen als Hilfe bei der Angabe der Optionen in den D
 
 Zusätzlich zu den Optionen, die Sie auswählen können, fragen Sie sich vielleicht auch:
 
--   [Erläuterung zur automatisch erstellten PPDF-Datei](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [Erläuterung zur automatisch erstellten PPDF-Datei](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Option|Beschreibung|
 |----------|---------------|
 |**BENUTZER**|Wenn Sie noch keine E-Mail-Adresse aus Outlook angegeben haben, geben Sie die E-Mail-Adressen der Personen ein, die in der Lage sein sollen, die Datei zu öffnen.<br /><br />Beachten Sie, dass die RMS-Freigabe-App nicht alle E-Mail-Adressen unterstützt.<br /><br />Wenn in Ihrer Organisation die lokale Version von Rights Management (AD RMS) verwendet wird, sind die E-Mail-Adressen, die Sie angeben können, auf Personen innerhalb Ihrer Organisation beschränkt. Wenn dies zutrifft, und wenn Sie versuchen, externe E-Mail-Adressen anzugeben, wird eine Meldung angezeigt, die besagt, dass Ihre Unternehmenskonfiguration Freigeben von geschützten Inhalten nur innerhalb des Unternehmens zulässt. <br /><br /> Wenn in Ihrer Organisation Azure RMS verwendet wird, können die von Ihnen angegebenen E-Mail-Adressen zu Personen innerhalb Ihrer Organisation oder zu Personen in einer anderen Organisation gehören.<br /><br />Beispiele: **janetm@contoso.com; p.dover@fabrikam.com**<br /><br />Persönliche E-Mail-Adressen werden von der RMS-Freigabe-App derzeit nicht unterstützt.|
-|**Allgemeiner Schutz**|Wenn diese Option ausgewählt ist, bedeutet dies, dass die ausgewählte Datei nicht systemeigen geschützt werden kann. Weitere Informationen finden Sie unter [Wo liegt der Unterschied zwischen allgemeinem und integriertem (nativen) Schutz?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) auf dieser Seite.|
+|**Allgemeiner Schutz**|Wenn diese Option ausgewählt ist, bedeutet dies, dass die ausgewählte Datei nicht systemeigen geschützt werden kann. Weitere Informationen finden Sie unter [Wo liegt der Unterschied zwischen allgemeinem und integriertem (nativem) Schutz?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection) auf dieser Seite.|
 |**Anzeigender Benutzer – Nur anzeigen**<br /><br />**Prüfer – Anzeigen und Bearbeiten**<br /><br />**Mitautor – Anzeigen, Bearbeiten, Kopieren und Drucken**<br /><br />**Mitbesitzer – Alle Berechtigungen**<br /><br />Hinweis: Jede dieser Optionen hat vor ihrem Namen ein rundes Symbol, das einen Globus darstellt. Dieses Symbol wird verwendet, weil Sie üblicherweise eine dieser Optionen auswählen, wenn Sie eine Anlage an jemanden in einer anderen Organisation senden.|Wählen Sie eine dieser Optionen aus, wenn Sie die Rechte für das geschützte Dokument definieren möchten. Klicken Sie auf jede Option, um eine Beschreibung anzuzeigen.<br /><br />Wenn Sie eine dieser Optionen auswählen, haben nur die Personen, die Sie unter **BENUTZER** angeben, die Rechte, die Sie zum Öffnen und Verwenden des Dokuments angeben. Wenn diese Personen das Dokument beispielsweise an eine andere Person weiterleiten würden, könnte das Dokument nicht geöffnet werden.|
 |Richtlinienvorlagen, die von Ihrem Administrator konfiguriert werden.<br /><br />Wenn der Name Ihres Unternehmens beispielsweise Contoso, Ltd lautet: **Contoso, Ltd – Nur vertrauliche Ansicht**<br /><br />Hinweis: Jede dieser Optionen hat vor ihrem Namen ein quadratisches Symbol , das ein Bürogebäude darstellt. Dieses Symbol wird verwendet, weil Sie üblicherweise eine dieser Optionen auswählen, wenn Sie eine Anlage an jemanden in Ihrer Organisation senden.|Beim Freigeben eines Dokuments für Personen, die für Ihre Organisation arbeiten, sehen Sie die verfügbaren Richtlinienvorlagen, die von Ihrem Administrator konfiguriert wurden. Wählen Sie eine dieser Option aus, wenn das Dokument nicht außerhalb Ihrer Organisation freigegeben werden soll.<br /><br />Wenn Sie eine dieser Optionen auswählen, definiert der Administrator sowohl die Rechte für das Dokument als auch, wer es öffnen kann.|
 |**Diese Dokumente sollen ablaufen am**|Wählen Sie diese Option nur für zeitkritische Dateien aus, für die es den von Ihnen ausgewählten Benutzern nicht möglich sein soll, sie nach einem von Ihnen angegebenen Datum öffnen zu können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) an dem von Ihnen angegebenen Tag können andere Benutzer die Datei nicht öffnen.<br /><br />Diese Option ist nicht verfügbar, wenn Sie eine Richtlinienvorlage auswählen, die der Administrator konfiguriert.|
@@ -71,7 +71,7 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
@@ -79,6 +79,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
