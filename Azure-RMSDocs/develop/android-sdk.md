@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 4ff6328c0be4cd217390ee802e53e93c90f41c99
 
 
 ---
@@ -28,8 +28,8 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
--   [Konfigurieren der Entwicklungsumgebung](#configuring_your_development_environment_)
--   [Weitere Informationen](#see_also)
+-   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment_)
+-   [Weitere Informationen](#see-also)
 
 ## Voraussetzungen
 
@@ -150,6 +150,6 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 
