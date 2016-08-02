@@ -3,15 +3,15 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 2 | Azur
 description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/22/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 463c0bc1fa86f73e2623faf5a624afeabcadeedb
-ms.openlocfilehash: c6ecf22b72d862c605f8be2ab1f75fd2126f8575
+ms.sourcegitcommit: 3bf9fe837c7bb268361b8004352192f0540604b9
+ms.openlocfilehash: af2f5eadf3a4993c590f72a8f44e4fea03982505
 
 
 ---
@@ -44,7 +44,7 @@ Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie 
 
 2. Im Blatt **Label: Confidential** (Bezeichnung: Vertraulich) werden alle für diese Bezeichnungen verfügbaren Einstellungen angezeigt. Nehmen Sie die folgenden Änderungen vor:
 
-    a. Wenn Sie Azure Rights Management aktiviert haben, gehen Sie für **Select RMS template** (RMS-Vorlage auswählen) wie folgt vor: Klicken Sie auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Your Organization Name > Confidential** (Name Ihrer Organisation > Vertraulich) aus. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
+    a. Wenn Sie Azure Rights Management aktiviert haben, stellen Sie sicher, dass unter **Set RMS template for protecting documents and emails containing this label** (Festlegen der RMS-Vorlage für den Schutz von Dokumenten und E-Mails mit dieser Bezeichnung) **Azure RMS** ausgewählt ist. Klicken Sie anschließend auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Name Ihrer Organisation> – Confidential** (Vertraulich). Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
 
     Wenn Sie Azure Rights Management nicht aktiviert haben, können Sie diese Option nicht verwenden.
 
@@ -82,6 +82,6 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

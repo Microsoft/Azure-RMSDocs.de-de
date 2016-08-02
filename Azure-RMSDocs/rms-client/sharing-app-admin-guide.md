@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
-ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
+ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
+ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
 
 
 ---
@@ -124,7 +124,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, muss jeder Benutzer dieses Computers den folgenden Befehl (ohne erhöhte Rechten) ausführen. Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen des Befehls auffordern (z. B. durch einen Link in einer E-Mail-Nachricht oder im Helpdesk-Portal), oder Sie können ihn dem Anmeldeskript hinzufügen:
+3.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, muss jeder Benutzer dieses Computers den folgenden Befehl ausführen (erhöhte Rechte werden nicht benötigt). Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen des Befehls auffordern (z. B. durch einen Link in einer E-Mail-Nachricht oder im Helpdesk-Portal), oder Sie können ihn dem Anmeldeskript hinzufügen:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -369,6 +369,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

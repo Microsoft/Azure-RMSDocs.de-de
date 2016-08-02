@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cb1a4dfa4465e8f4798866c95d8965eec1b68f6b
-ms.openlocfilehash: 5dcb3fe88cced7945591a08c492b32bdc8895162
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: e00af9b9b0a5f2d917ac96812e980505d4cfd347
 
 
 ---
@@ -56,7 +56,7 @@ Der folgende Codeausschnitt listet die verfügbaren RMS-Vorlagen vom RMS-Standar
         goto exit;
       }
 
-Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [IPC_TIL](/rights-management/sdk/2.1/api/win/functions#msipc_ipctil)-Struktur, die durch die *pcTil*-Variable bezeichnet wird, und zeigt dann die Vorlagen an.
+Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til)-Struktur, die durch die *pcTil*-Variable bezeichnet wird, und zeigt anschließend die Vorlagen an.
 
       C++
       if (0 == pcTil->cTi) {
@@ -180,11 +180,11 @@ Bevor Sie fertig sind, müssen Sie auch alle reservierten Ressourcen freizugeben
 - [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
 - [IpcGetTemplateList](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 - [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-- [IPC_TIL](/rights-management/sdk/2.1/api/win/functions#msipc_ipctil)
+- [IPC_TIL](/rights-management/sdk/2.1/api/win/ipc_til#msipc_ipc_til)
 - [Webinar_Collateral.ZIP](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 
