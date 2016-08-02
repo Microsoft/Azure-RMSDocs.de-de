@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 61df64691ac3f4d7e871043767444ea64dfe1ef3
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 2892bc8242c3b6a90352829bf251b7044a919ed3
 
 
 ---
@@ -52,7 +52,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 
 ## Mai 2015-Update
 
--   **Dienst-Apps und cloudbasierter RMS** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) benötigt drei Angaben: symmetrischen Schlüssel **AppPrincipalId** und **TenantBposId**. Dieses Thema wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser abzurufenden Informationen zu bieten. Lesen Sie zu diesem Update die aktualisierte Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Dienst-Apps und cloudbasiertes RMS** – [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) benötigt drei Angaben: den symmetrischen Schlüssel, **AppPrincipalId** und **TenantBposId**. Dieses Thema wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser abzurufenden Informationen zu bieten. Lesen Sie zu diesem Update die aktualisierte Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## April 2015-Update
 
@@ -178,6 +178,6 @@ Wenn kein Name und keine Beschreibung abgerufen werden kann, wird ein Fehler zur
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO4-->
 
 
