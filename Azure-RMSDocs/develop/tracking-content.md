@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: "Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Azure RMS"
-description: Grundlegende Leitfäden zum Implementieren der Dokumentnachverfolgung
-keywords:
+title: 'Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Azure RMS'
+description: "Grundlegende Leitfäden zum Implementieren der Dokumentnachverfolgung"
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,24 +10,21 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+experimental: true
+experiment_id: priyamo-test-20160729
+translationtype: Human Translation
+ms.sourcegitcommit: 0d853f99c0a7855354492c508c5c382ceb489a18
+ms.openlocfilehash: fb51e2e1438716431a4d8a6e07878c69f428933f
+
 
 ---
-<<<<<<< HEAD
 
 # Nachverfolgung von Inhalten
-=======
->>>>>>> 81ec5ddf5acf3de78d77c01ed95631e44d37fe6e
 
-# Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung
+# Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
 
 Dieses Thema bietet grundlegende Anleitungen zum Implementieren der Dokumentnachverfolgung für Inhalte sowie Beispielcode für Metadatenaktualisierungen und zum Erstellen einer Schaltfläche **Verwendung nachverfolgen** für Ihre App.
 
@@ -170,6 +165,7 @@ Der Client muss lediglich einen Browser mit der entsprechenden URL öffnen. Im P
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO5-->
 
 
