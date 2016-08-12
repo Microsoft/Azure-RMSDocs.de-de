@@ -3,22 +3,24 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 1 | Azur
 description: "Schritt 1 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in vier Schritten und weniger als zehn Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/291/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 78f0f07271414fb646f996e7273343f2abf8852b
-ms.openlocfilehash: 633b24d0c23cbbee88a2647aaa9defe376ccb40e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 128952778ec317584e558e409961e2921c4ecd07
 
 
 ---
 
 # Schritt 1: Aktivieren des Rights Management-Diensts
  
-*Gilt für: Azure Information Protection (Preview)*
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
 
 > [!NOTE]
 >Wenn Sie Ihre Daten lediglich klassifizieren und nicht mit Azure Rights Management schützen möchten oder bereits Azure Rights Management für Ihren Mandanten aktiviert haben, können Sie direkt zum [nächsten Schritt](infoprotect-tutorial-step2.md) wechseln. 
@@ -84,6 +86,6 @@ Für eine Produktionsbereitstellung sollten Sie benutzerdefinierte Vorlagen konf
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

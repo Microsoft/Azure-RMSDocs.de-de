@@ -13,8 +13,18 @@
 ### [Schritt 3: installieren des Clients](infoprotect-tutorial-step3.md)
 ### [Schritt 4: Der Client in Aktion](infoprotect-tutorial-step4.md)
 ## [Häufig gestellte Fragen](faq.md)
+## [Konfigurieren der Richtlinie](configure-policy.md)
+### [Die Standardrichtlinie](configure-policy-default.md)
+### [Konfigurieren globaler Einstellungen](configure-policy-settings.md)
+### [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
+### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
+### [Ändern einer Bezeichnung](configure-policy-change-label.md)
+### [Anwenden des Schutzes](configure-policy-protection.md)
+### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
+### [Konfigurieren von Bedingungen](configure-policy-classification.md)
+## [Installieren des Clients](info-protect-client.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

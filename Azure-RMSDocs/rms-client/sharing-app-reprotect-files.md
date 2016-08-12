@@ -4,7 +4,7 @@ description: "Wenn eine Datei mit Rights Management geschützt wurde, können Si
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
-ms.openlocfilehash: 492f651f9234a8428a0f39da93b332a552894993
+ms.sourcegitcommit: ba029e48b540fda8474eba83322c531ff3daa7b3
+ms.openlocfilehash: a123338e34a8c4585a01782a473a400ecb58f166
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 492f651f9234a8428a0f39da93b332a552894993
 Wenn eine Datei mit Rights Management geschützt wurde, können Sie die Berechtigungen ändern, indem Sie die Datei erneut schützen. Dabei können Sie angeben, welche Benutzer Zugriff auf die Datei erhalten und über welche Berechtigungen sie verfügen sollen.
 
 > [!IMPORTANT]
-> Die Datei wird dabei nicht schrittweise geändert, sondern vollständig ersetzt. Sie schützen die Datei vollständig neu, und zwar mit dem vollständigen gewünschten Satz an Berechtigungen.
+> Dies ist keine schrittweise Änderung, sondern die Einstellungen werden vollständig überschrieben. Sie schützen die Datei vollständig neu, und zwar mit dem vollständigen gewünschten Satz an Berechtigungen.
 > 
 >  Wenn der Dateischutz z.B. ausschließlich zulässt, dass die Marketing-Abteilung die Datei öffnen kann, Sie die Datei aber auch für die Vertriebsabteilung freigeben wollen, müssen Sie die Datei erneut schützen, damit beide Abteilungen auf die Datei zugreifen können.
 >
@@ -96,6 +96,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

@@ -1,24 +1,26 @@
 ---
-title: Was ist Azure Information Protection?  | Azure Rights Management
+title: Was ist Azure Information Protection? | Azure Rights Management
 description: "Eine Übersicht über den Azure Information Protection-Dienst, der jetzt als Vorschau verfügbar ist"
 author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 0db303b01361b3220c2e9334f84594ac86c5b069
-ms.openlocfilehash: bfb56fd4994a358d366d94b40f6c5fc889330303
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: d3d63a778bff62649341227b65212722e285a6be
 
 
 ---
 
 # Was ist Azure Information Protection (Preview)?
 
-*Gilt für: Azure Information Protection (Preview)*
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
 
 Mit Azure Information Protection können Sie Ihre Dokumente und E-Mails klassifizieren, bezeichnen und schützen. Wenn Sie diese Daten klassifizieren, werden den Daten permanente Bezeichnungen hinzugefügt, sodass die Klassifizierung jederzeit identifizierbar ist – unabhängig davon, wo die Daten gespeichert sind oder für wen sie freigegeben wurden. Die permanenten Bezeichnungen beinhalten visuelle Markierungen wie Kopfzeilen, Fußzeilen oder Wasserzeichen. Für die meisten vertraulichen Daten können Sie die Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien von Azure Rights Management verwenden, um Datenverluste zu verhindern. 
 
@@ -42,6 +44,6 @@ Azure Information Protection ist problemlos in die vorhandenen Workflows von End
 Erste Schritte mit Azure Information Protection in vier einfachen Schritten, mit unserem [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

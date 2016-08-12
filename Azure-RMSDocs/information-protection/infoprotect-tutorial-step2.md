@@ -3,26 +3,28 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 2 | Azur
 description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf9fe837c7bb268361b8004352192f0540604b9
-ms.openlocfilehash: af2f5eadf3a4993c590f72a8f44e4fea03982505
+ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
+ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 
 ---
 
 # Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
-*Gilt für: Azure Information Protection (Preview)*
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
-1. Melden Sie sich mithilfe dieses Links im Azure-Portal an, um Azure Information Protection zu verwenden: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
  
 2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
 
@@ -44,20 +46,22 @@ Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie 
 
 2. Im Blatt **Label: Confidential** (Bezeichnung: Vertraulich) werden alle für diese Bezeichnungen verfügbaren Einstellungen angezeigt. Nehmen Sie die folgenden Änderungen vor:
 
-    a. Wenn Sie Azure Rights Management aktiviert haben, stellen Sie sicher, dass unter **Set RMS template for protecting documents and emails containing this label** (Festlegen der RMS-Vorlage für den Schutz von Dokumenten und E-Mails mit dieser Bezeichnung) **Azure RMS** ausgewählt ist. Klicken Sie anschließend auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Name Ihrer Organisation> – Confidential** (Vertraulich). Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
-
+    a. Wenn Sie Azure Rights Managment aktiviert haben: Wenn im Abschnitt **Set RMS template for protecting documents and emails containing this label** (RMS-Vorlage für den Schutz von Dokumenten und E-Mails mit dieser Bezeichnung festlegen) die Option **Select RMS template from** (RMS-Vorlage auswählen aus) angezeigt wird, übernehmen Sie die Standardeinstellung **Azure RMS**. Klicken Sie dann auf das Dropdownfeld für **Select RMS template** (RMS-Vorlage auswählen), und wählen Sie die Standardvorlage **\<your organization name> - Confidential** (<Name Ihrer Organisation> – „Vertraulich“) aus. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
+    
     Wenn Sie Azure Rights Management nicht aktiviert haben, können Sie diese Option nicht verwenden.
-
+    
     b. **Documents with this label have a watermark** (Dokumente mit dieser Bezeichnung haben ein Wasserzeichen): Klicken Sie auf **On**, und geben Sie im **Textfeld** den Namen Ihrer Organisation ein. In unserem Beispiel lautet er **VanArsdel, Ltd**. 
-
+    
     c. Klicken Sie auf **Add a new condition** (Eine neue Bedingung hinzufügen), und wählen Sie anschließend auf dem Blatt **Condition** (Bedingung) Folgendes aus:
-
+    
     - **Choose the type of condition** (Bedingungstyp auswählen): **Built-in** (Integriert)
-
+    
     - **Select built-in** (Integriert auswählen): **Credit Card Number** (Kreditkartennummer)
-
+    
     - **Minimum number of occurrences** (Mindestanzahl der Vorkommen): **1**
-
+    
+    - **Count occurrences with unique values only** (Nur Vorkommen mit eindeutigen Werten zählen): **On** (Ein)
+    
     - Klicken Sie auf **Save** (Speichern), um wieder auf das Blatt **Label: Confidential** zurückzukehren.
 
 3. Auf dem Blatt **Label: Confidential** erkennen Sie, dass **Credit Card Number** als **CONDITION NAME** (Name der Bedingung) angezeigt wird, mit **1** **OCCURRENCES** (Vorkommen).
@@ -76,12 +80,16 @@ Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal en
 
 Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, den Azure Information Protection-Client zu installieren.
 
+|Weitere Informationen zu...|Weitere Informationen|
+|--------------------------------|--------------------------|
+|Informationen zu den Konfigurationsoptionen für die Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Schritt 1](infoprotect-tutorial-step1.md)
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 

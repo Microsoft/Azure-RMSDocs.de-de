@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,15 +13,17 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e60cd910a8e995a2681d7eb87a13f815183d9124
-ms.openlocfilehash: 846578a84df383821a64d32ce6dd69290a5fdee9
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
 
 
 ---
 
 # Häufig gestellte Fragen zur Vorschau von Azure Information Protection
 
-*Gilt für: Azure Information Protection (Preview)*
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
 
 Haben Sie eine Frage zum Vorschaurelease von Azure Information Protection?  Vielleicht finden Sie hier eine Antwort darauf. 
 
@@ -61,12 +63,6 @@ Sie müssen über ein Azure-Abonnement verfügen, um die Azure Information Prote
 
 Alle Änderungen an den Abonnementanforderungen werden im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) angekündigt (Informationen in englischer Sprache zu Enterprise Mobility und Security).
 
-## Wenn es sich bei Azure Information Protection jetzt um eine öffentliche Vorschau handelt, warum kann ich es dann nicht im Azure-Portal finden?
-
-Derzeit müssen Sie diesen Link verwenden, um Azure Information Protection im Portal zu sehen: https://portal.azure.com/?Microsoft_Azure_InformationProtection=true
-
-Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie „Information Protection“ im Filterfeld ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus.
-
 ## Muss ich über globale Administratorrechte verfügen, um die Vorschau von Azure Information Protection ausprobieren zu können?
 
 Nur beim Vorschaurelease können alle Benutzer, die von Azure authentifiziert sind, die Azure Information Protection-Richtlinie Ihres Mandanten im Azure-Portal sehen und konfigurieren.
@@ -89,7 +85,7 @@ Dies ist jetzt dokumentiert und wird unter [Requirements for Azure Information P
 
 Jedes Mal, wenn ein Benutzer eine Office-Anwendung öffnet, überprüft der Azure Information Protection-Client, ob eine höhere Version der Azure Information Protection-Richtlinie verfügbar ist. Wenn eine höhere Version verfügbar ist, lädt der Client sie herunter, wobei er einen HTTPS-Link verwendet, um die Daten zu sichern. 
 
-Wenn die Anwendung bereits geladen ist, wenn eine Azure Information Protection-Richtlinie aktualisiert wird, müssen Sie die Anwendung schließen und erneut öffnen, um die aktuelle Version der Richtlinie zu erhalten.
+Wenn bei der Veröffentlichung einer neuen Azure Information Protection-Richtlinie mehrere Instanzen der Office-Anwendung geladen sind, müssen Sie alle Instanzen schließen, um die aktuelle Version der Richtlinie abzurufen. Beispiel: Sie haben zwei Word-Dokumente geöffnet, möchten die aktualisierte Azure Information Protection-Richtlinie jedoch nur in einem Dokument testen: Schließen Sie beide Word-Dokumente, und öffnen Sie das Dokument erneut, das mit der aktuellen Richtlinie verwendet werden soll.
 
 ## Wo können Dateien gespeichert werden, um Azure Information Protection zu verwenden? 
 
@@ -113,7 +109,7 @@ Im Azure-Portal können Sie vordefinierte Muster wie z.B. „Kreditkartennummern
 
 Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection). 
 
-Die Genauigkeit der Klassifizierung hängt davon ab, wie Sie die Klassifizierungsregel konfigurieren, die auf Bedingungen basiert. Derzeit unterstützen Bedingungen Textmuster und reguläre Ausdrücke. Eine Erläuterung der einzelnen Optionen, die in der Vorschau verfügbar sind, zusammen mit einigen vorgeschlagenen Beispielen, die Sie ausprobieren können, finden Sie im Yammer-Beitrag [Description of content matching for our pre-define Information types](https://www.yammer.com/askipteam/#/Threads/show?threadId=737163344) (Beschreibung des Inhaltsabgleichs für unsere vordefinierten Informationstypen). Die Erkennung wird ausgeführt, wenn das Dokument gespeichert wird oder eine E-Mail gesendet wird.
+Die Genauigkeit der Klassifizierung hängt davon ab, wie Sie die Klassifizierungsregel konfigurieren, die auf Bedingungen basiert. Derzeit unterstützen Bedingungen Textmuster und reguläre Ausdrücke. Eine Erläuterung der einzelnen Optionen, die während der Vorschauphase verfügbar sind, sowie eine Reihe von Beispielen, die Sie testen können, finden Sie unter [Konfigurieren von Bedingungen für die automatische und empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md). Die Erkennung wird ausgeführt, wenn das Dokument gespeichert wird oder eine E-Mail gesendet wird.
 
 Es wird empfohlen, dass Sie zunächst mit benutzerempfohlenen Aktionen beginnen, anstatt vollautomatische Aktionen anzuwenden, um eine bestmögliche Benutzererfahrung und die Geschäftskontinuität zu gewährleisten. Dadurch haben Ihre Benutzer die Möglichkeit, die Bezeichnungs- oder Schutzaktion zu akzeptieren oder diese Vorschläge außer Kraft zu setzen.   
 
@@ -121,7 +117,7 @@ Es wird empfohlen, dass Sie zunächst mit benutzerempfohlenen Aktionen beginnen,
 
 Ja. Verwenden Sie das Azure-Portal, um zu konfigurieren, ob die automatische Klassifizierung verwendet werden oder eine Empfehlung für Benutzer erfolgen soll, indem Sie die Option **Select how this label is applied: automatically or recommended to user** (Auswählen, wie diese Bezeichnung angewendet wird: automatisch oder für Benutzer empfohlen) auf **Recommended** (Empfohlen) festlegen.
 
-Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection).
+Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection).  
 
 ## Kann ich erzwingen, dass alle Dokumente klassifiziert werden?
 
@@ -140,7 +136,7 @@ Ja. Legen Sie im Azure-Portal die Option **Users must provide justification when
 
 Im Azure-Portal können Sie eine Azure Rights Management-Vorlage auswählen, um den Inhalt automatisch entsprechend der angegebenen Klassifizierungsstufe zu schützen.
 
-Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection).
+Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection). Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](configure-policy-protection.md).
 
 ## Kann eine Datei mit zwei verschiedenen Klassifizierungen klassifiziert werden?
 
@@ -188,6 +184,6 @@ Besuchen Sie anschließend unsere [Yammer-Seite](https://www.yammer.com/askiptea
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

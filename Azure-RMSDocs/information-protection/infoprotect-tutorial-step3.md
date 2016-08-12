@@ -3,22 +3,24 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 3 | Azur
 description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in nur 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7f85c673cd1e8055d6a27dcc49b5da18a7e12f98
-ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
 
 
 ---
 
 # Schritt 3: Installieren des Azure Information Protection-Clients 
 
-*Gilt für: Azure Information Protection (Preview)*
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
 
 In diesem Schritt installieren Sie den Azure Information Protection-Client, damit die Richtlinie, die Sie gerade konfiguriert haben, auf einen Windows-PC heruntergeladen wird und die Bezeichnungen in Office-Anwendungen angezeigt werden. 
 
@@ -41,11 +43,16 @@ In diesem Schritt installieren Sie den Azure Information Protection-Client, dami
 
 Sie sind bereit für den letzten Schritt, in dem Sie die Klassifizierung, die Bezeichnung und den Schutz in Aktion zu sehen.
 
+|Weitere Informationen zu...|Weitere Informationen|
+|--------------------------------|--------------------------|
+|Informationen zum Installieren des Clients|[Installieren des Azure Information Protection-Clients](info-protect-client.md)|
+
+
 >[!div class="step-by-step"]
 [&#171; Schritt 2](infoprotect-tutorial-step2.md)
 [Schritt 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

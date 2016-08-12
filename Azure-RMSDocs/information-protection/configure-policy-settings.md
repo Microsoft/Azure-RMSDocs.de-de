@@ -1,0 +1,73 @@
+---
+title: "Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection | Azure Rights Management"
+description: 
+author: cabailey
+manager: mbaldwin
+ms.date: 07/29/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
+translationtype: Human Translation
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
+
+
+---
+
+# Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection
+
+>*Gilt für: Azure Information Protection (Preview)*
+
+**[ Diese Informationen sind vorläufig und können geändert werden. ]**
+
+Die Azure Information Protection-Richtlinie enthält drei Einstellungen, die für alle Benutzer und alle Geräte gelten:
+
+![Globale Richtlinieneinstellungen für Azure Information Protection](../media/info-protect-policy-settings.png)
+
+
+So konfigurieren Sie diese Einstellungen:
+
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+ 
+2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+
+3. Konfigurieren Sie auf dem Blatt **Azure Information Protection** die folgenden globalen Einstellungen:
+
+    - **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen): Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden. 
+
+    Wenn beim Speichern eines Dokuments oder beim Senden einer E-Mail keine Bezeichnung zugewiesen wird, wird der Benutzer zur Auswahl einer Bezeichnung aufgefordert:
+
+    ![Azure Information Protection-Aufforderung, wenn die neue Klassifizierung eine niedrigere Vertraulichkeitsstufe aufweist](../media/info-protect-enforce-label.png)
+
+    - **Select the default label** (Standardbezeichnung auswählen): Wählen Sie bei Festlegung dieser Option die Bezeichnung aus, die Dokumenten und E-Mails zugewiesen werden sollen, die nicht über eine Bezeichnung verfügen. Bezeichnungen mit untergeordneten Bezeichnungen können nicht als Standardbezeichnungen festgelegt werden. 
+
+    - **Users must provide justification when lowering the sensitivity level** (Benutzer müssen bei der Herabsenkung der Vertraulichkeitsstufe eine Begründung angeben): Wenn Sie diese Option auf **On** (Ein) festlegen und ein Benutzer die Bezeichnung eines vorhandenen Dokuments oder einer vorhandenen E-Mail in eine Bezeichnung mit niedrigerer Vertraulichkeitsstufe ändert (z. B. von **Secret** [Geheim] in **Public** [Öffentlich]), muss der Benutzer eine Begründung für diese Änderung angeben. Der Benutzer kann z. B. angeben, dass das Dokument keine sensiblen Informationen mehr enthält. Die Aktion und die Begründung werden im lokalen Windows-Ereignisprotokoll des Benutzers protokolliert: **Anwendung** > **Microsoft Azure Information Protection**.  
+
+    ![Azure Information Protection-Aufforderung, wenn die neue Klassifizierung eine niedrigere Vertraulichkeitsstufe aufweist](../media/info-protect-lower-justification.png)
+
+    Diese Option gilt nicht für untergeordnete Bezeichnungen.
+
+4. Klicken Sie auf **Save** (Speichern), um Ihre Änderungen zu speichern.
+
+5. Klicken Sie auf **Publish** (Veröffentlichen), um Ihre Änderungen für Benutzer verfügbar zu machen.
+
+## Nächste Schritte
+
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).  
+
+
+
+
+
+
+
+
+
+
+
+
+<!--HONumber=Jul16_HO5-->
+
+
