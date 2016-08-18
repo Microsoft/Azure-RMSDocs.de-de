@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/10/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e9551db57cc1295f20368535267ca5a901ae9f2
-ms.openlocfilehash: a95b9679578f6786bd883884cd5c5f84cb6db739
+ms.sourcegitcommit: 75f868c4428e7b434e6a115a3e70508c3ff7f93d
+ms.openlocfilehash: 1a45457548d8cba6424e92bc18ef085d095742f3
 
 
 ---
@@ -32,10 +32,10 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE
 |Active Directory-Rechteverwaltungsdienste|Häufig als *AD RMS*abgekürzt.<br /><br />Eine Windows Server-Rolle, die Datenschutz mithilfe von Verschlüsselung und Richtlinien bereitstellt, die das Schützen von Dokumenten, Dateien und E-Mails unterstützen.|
 |AD RMS|Siehe *Active Directory Rights Management Services*.|
 |Azure Information Protection|Derzeit in der Vorschau – ein Dienst, der Klassifizierung, Bezeichnung und Schutz verwendet, um Sie beim Sichern von Dokumenten und E-Mails zu unterstützen. Azure Rights Management stellt Schutz mithilfe von Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien bereit.|
-|Azure Rights Management|Häufig als *Azure RMS*abgekürzt.<br /><br />Ein Azure-Dienst, der Datenschutz mithilfe von Verschlüsselung und Richtlinien bereitstellt, die das Schützen von Dokumenten, Dateien und E-Mails unterstützen.  Wird auch als *Azure Rights Management-Dienst*bezeichnet. Es gibt diese früheren Namen:<br /><br />*Windows Azure Active Directory Rights Management*: Wird häufig als Windows Azure AD Rights Management-Dienst abgekürzt.<br /><br />*RMS Online*: Der ursprünglich vorgeschlagene Name, der unter Umständen manchmal in Fehlermeldungen und Protokolldateieinträgen angezeigt wird.|
+|Azure Rights Management|Häufig als *Azure RMS*abgekürzt.<br /><br />Ein Azure-Dienst, der Datenschutz mithilfe von Verschlüsselung und Richtlinien bereitstellt, die das Schützen von Dokumenten, Dateien und E-Mails unterstützen.  Wird auch als *Azure Rights Management-Dienst*bezeichnet. Es gibt diese früheren Namen:<br /><br />- *Windows Azure Active Directory Rights Management*: Wird häufig als Windows Azure AD Rights Management-Dienst abgekürzt.<br /><br />- *RMS Online*: Der ursprünglich vorgeschlagene Name, der unter Umständen manchmal in Fehlermeldungen und Protokolldateieinträgen angezeigt wird.|
 |Azure RMS|Siehe *Azure Rights Management*.|
 |BYOK|Siehe *Bring Your Own Key*.|
-|Bring Your Own Key|Häufig als *BYOK*abgekürzt.<br /><br />Eine Konfigurationsoption, die von Organisationen gewählt wird, die einen eigenen Mandantenschlüssel für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] generieren und verwalten möchten.|
+|Bring Your Own Key|Häufig als *BYOK*abgekürzt.<br /><br />Eine Konfigurations- und Topologieoption, die von Organisationen gewählt wird, die einen eigenen Mandantenschlüssel für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] generieren und verwalten möchten.|
 |Inhaltsschlüssel|Ein eindeutiger Schlüssel, der von RMS-aktivierten Anwendungen für jedes Dokument oder jede E-Mail, das bzw. die mithilfe von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] geschützt wird, erstellt wird und hilft, die Gefahr der Aufdeckung von Informationen zu beschränken.|
 |Nutzen|Das Aufheben der Sperrung einer Datei, um sie zu lesen oder verwenden, wenn die Datei durch [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] geschützt ist.|
 |Deaktivieren|Deaktivieren des Rechteverwaltungsdiensts, sodass die Organisation [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] nicht mehr verwenden kann.|
@@ -44,6 +44,8 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE
 |Unternehmensrechteverwaltung|Ein branchenüblicher, allgemeiner Ausdruck, der häufig zur Beschreibung von Produkten und Lösungen verwendet wird, die Organisationen beim Schützen sensibler oder wertvoller Informationen durch Einsatz einer Kombination von Verschlüsselung und Richtlinienautorisierungstools unterstützen. Microsoft Rights Management ist ein Beispiel einer Unternehmens-RMS-Lösung (ERM, Enterprise Rights Management).|
 |ERM|Siehe *Unternehmensrechteverwaltung*.|
 |Allgemeiner Schutz|Eine Schutzstufe, bei der jeder Dateityp verschlüsselt wird und Unbefugte am Öffnen von Dateien gehindert werden. Nach dem Öffnen sind Dateien ungeschützt und können in Anwendungen verwendet werden, die [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] nicht systemeigen unterstützen.|
+|HYOK|Weitere Informationen finden Sie unter *Hold Your Own Key*.|
+|Hold Your Own Key|Häufig als *HYOK*abgekürzt.<br /><br />Eine Konfigurations- und Topologieoption für Organisationen, die ihre eigenen Schlüssel generieren und lokal speichern möchten, in der Regel aus behördlichen oder Kompatibilitätsgründen.|
 |Datenschutz|Manchmal als *IP*(Information Protection) abgekürzt.<br /><br />Ein branchenweiter allgemeiner Begriff, der sich auf den Schutz von Daten und Dateien vor nicht autorisiertem Zugriff bezieht, selbst nachdem die Daten und Dateien die Organisation durch E-Mails oder die Dokumentfreigabe verlassen haben. Microsoft Rights Management ist ein Beispiel einer Datenschutzlösung (DS).|
 |Information Rights Management|Häufig als *IRM*abgekürzt.<br /><br />Ein Ausdruck, der in Verbindung mit den Office Services, wie etwa Exchange Server, Word und SharePoint Online, verwendet wird, um die Fähigkeit zur Unterstützung von Rechteverwaltung zu beschreiben.|
 |IRM|Siehe *Information Rights Management*.|
@@ -72,6 +74,6 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 

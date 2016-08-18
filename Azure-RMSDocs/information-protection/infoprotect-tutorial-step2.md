@@ -3,15 +3,15 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 2 | Azur
 description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
-ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
+ms.sourcegitcommit: 09cb56aaa0d7d97073623c518aa331d591a376e3
+ms.openlocfilehash: 65d758635b77ee7d6c423a1400a7621e8e05b14d
 
 
 ---
@@ -24,13 +24,20 @@ ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an. Wenn Sie sowohl den Schutz als auch die Klassifizierung und Bezeichnung testen möchten, melden Sie sich als globaler Administrator an, damit Sie die Azure Rights Management-Vorlagen abrufen können.
  
-2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+2. Im Hubmenü: Klicken Sie auf **Neu**  >  **Sicherheit und Identität**  >  **Azure Information Protection (Vorschau)**  >  **Erstellen**.
 
-- Nun sehen Sie das Hauptblatt von **Azure Information Protection**, das die automatisch erstellte Standardrichtlinie von Information Protection anzeigt. Diese Standardrichtlinie enthält die folgenden Bezeichnungen für die Klassifizierung: **Personal** (Privat), **Public** (Öffentlich), **Internal** (Intern), **Confidential** (Vertraulich) und **Secret** (Geheim). Lesen Sie die QuickInfo zu jeder Bezeichnung, um die Verwendung jeder einzelnen kennenzulernen. Beachten Sie, dass **Secret** die zwei Unterbezeichnungen **All-Employees** (Alle Mitarbeiter) und **My-Group** (Meine Gruppe) besitzt. Dies ist ein Beispiel für Unterkategorien von Klassifizierungen.
+    Dadurch wird das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst nun im Hubmenü aus der Liste unter **Durchsuchen** auswählen. 
 
-- In ihren Standardeinstellungen verfügen die Bezeichnungen **Internal**, **Confidential** und **Secret** über optische Kennzeichnungen (z.B. Kopf- und Fußzeilen sowie Wasserzeichen), und für keine der Bezeichnungen ist ein Schutz festgelegt. Darüber hinaus werden die drei globalen Einstellungen nicht festgelegt, sodass nicht alle Dokumente und E-Mails Bezeichnungen aufweisen müssen. Es gibt keine Standardbezeichnung, und Benutzer müssen keine Begründung dafür geben, wenn sie die Vertraulichkeitsstufe herabsetzen.
+    > [!TIP] 
+    > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie den Schritt „Durchsuchen“ bei der nächsten Anmeldung überspringen können.
+
+3.  Lernen Sie nun das Hauptblatt von **Azure Information Protection** kennen, das die automatisch erstellte Standardrichtlinie von Information Protection anzeigt:
+    
+    - Bezeichnungen für die Klassifizierung: **Personal** (Privat), **Public** (Öffentlich), **Internal** (Intern), **Confidential** (Vertraulich) und **Secret** (Geheim). Lesen Sie die QuickInfo zu jeder Bezeichnung, um die Verwendung jeder einzelnen kennenzulernen. Beachten Sie, dass **Secret** die zwei Unterbezeichnungen **All-Employees** (Alle Mitarbeiter) und **My-Group** (Meine Gruppe) besitzt. Dies ist ein Beispiel für Unterkategorien von Klassifizierungen.
+
+    - In den Standardeinstellungen verfügen die Bezeichnungen **Internal**, **Confidential** und **Secret** über optische Kennzeichnungen (z.B. Kopf- und Fußzeilen sowie Wasserzeichen), und für keine der Bezeichnungen ist ein Schutz festgelegt. Darüber hinaus werden die drei globalen Einstellungen nicht festgelegt, sodass nicht alle Dokumente und E-Mails Bezeichnungen aufweisen müssen. Es gibt keine Standardbezeichnung, und Benutzer müssen keine Begründung dafür geben, wenn sie die Vertraulichkeitsstufe herabsetzen.
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy.png)
 
@@ -42,7 +49,7 @@ Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie 
 
 Ändern wir nun die Einstellungen einer der Bezeichnungen, und zwar **Confidential**:
 
-1. Klicken Sie auf den Eintrag der Bezeichnung **Confidential**.
+1. Klicken Sie auf die Bezeichnung **Confidential**.
 
 2. Im Blatt **Label: Confidential** (Bezeichnung: Vertraulich) werden alle für diese Bezeichnungen verfügbaren Einstellungen angezeigt. Nehmen Sie die folgenden Änderungen vor:
 
@@ -90,6 +97,6 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

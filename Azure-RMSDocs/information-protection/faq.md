@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
 
 
 ---
@@ -39,11 +39,11 @@ Probieren Sie unser Schnellstart-Tutorial aus, um zu sehen, wie dies innerhalb w
 
 Beachten Sie, dass Sie in der Vorschau den neuen **Premium P2-Serviceplan** ausprobieren können und dass einige erweiterte Funktionen, wie z.B. die automatische und empfohlene Bezeichnung, in Ihrem aktuellen Plan bei allgemeiner Verfügbarkeit möglicherweise nicht verfügbar sind. Informationen zu den verschiedenen Serviceplänen (Azure Information Protection Premium P1 und Azure Information Protection Premium P2) finden Sie im folgenden Blogbeitrag: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/) (Einführung in Enterprise Mobility und Security).
 
-Dieses Vorschaurelease unterliegt den folgenden Einschränkungen. Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wenn zusätzliche Features und Funktionen verfügbar sind:
+Dieses Vorschaurelease unterliegt den folgenden Einschränkungen. Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Features und Funktionen verfügbar sind:
 
 - Es gibt keine zentrale Protokollierung für die Klassifizierung und die Bezeichnung.
 
-- Bezeichnungsnamen und QuickInfos werden nur auf Englisch unterstützt.
+- Bezeichnungsnamen und QuickInfos werden nur in einer Sprache unterstützt.
 
 - Bedingungen für die automatische Klassifizierung müssen Ausdrücke oder Muster sein.
 
@@ -61,11 +61,11 @@ Sie können für das Vorschaurelease alle Abonnements verwenden, die Azure Right
 
 Sie müssen über ein Azure-Abonnement verfügen, um die Azure Information Protection-Richtlinien im Azure-Portal zu konfigurieren. Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden: Folgen Sie den Anweisungen auf der [Seite für die ersten Schritten mit Azure](https://account.windowsazure.com/organization).
 
-Alle Änderungen an den Abonnementanforderungen werden im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) angekündigt (Informationen in englischer Sprache zu Enterprise Mobility und Security).
+Alle Änderungen an den Abonnementanforderungen werden im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) angekündigt (Informationen in englischer Sprache zu Enterprise Mobility und Security).
 
 ## Muss ich über globale Administratorrechte verfügen, um die Vorschau von Azure Information Protection ausprobieren zu können?
 
-Nur beim Vorschaurelease können alle Benutzer, die von Azure authentifiziert sind, die Azure Information Protection-Richtlinie Ihres Mandanten im Azure-Portal sehen und konfigurieren.
+Nur beim Preview-Release können alle Benutzer, die von Azure authentifiziert sind, die Azure Information Protection-Richtlinie Ihres Mandanten für die Klassifizierung und Bezeichnung im Azure-Portal sehen und konfigurieren. Sie müssen als globaler Administrator für Azure Active Directory angemeldet sein, um eine Bezeichnung so konfigurieren zu können, dass sie eine Azure Rights Management-Vorlage anwendet.
 
 Wenn Sie die Option zum Installieren der Demorichtlinie bei der Installation des [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) auswählen, müssen Sie sich nicht einmal beim Portal anmelden, um die Vorschau auszuprobieren. Die Demorichtlinie installiert lokal die Standardrichtlinie für Azure Information Protection. Sie können daher versuchen, Dokumente und E-Mails zu bezeichnen. Sie werden jedoch nicht in der Lage sein, neue Bezeichnungen zu ändern oder hinzuzufügen, ohne sich beim Azure-Portal anzumelden. 
 
@@ -74,7 +74,7 @@ Wenn Sie die Dokumente und E-Mails schützen möchten, die Sie klassifizieren un
 
 ## Unterstützt Azure Information Protection lokale und hybride Szenarios?
 
-Azure Information Protection ist eine cloudbasierte Lösung. Wenn Sie Interesse an hybriden Szenarios haben, wenden Sie sich an das Information Protection-Team, indem Sie eine E-Mail an askipteam@microsoft.com senden.
+Azure Information Protection ist eine cloudbasierte Lösung. Wenn Sie Interesse an der Bereitstellung von Azure Information Protection für ein hybrides Szenario haben, wenden Sie sich an das Information Protection-Team, indem Sie eine E-Mail an askipteam@microsoft.com senden.
 
 ## Welche Clientplattformen und -anwendungen werden von Azure Information Protection unterstützt?
 
@@ -150,7 +150,11 @@ Da Azure Information Protection persistente Metadaten für die Klassifizierung v
 
 ## Wie funktionieren die Dokumentkontrolle und die Sperrungsarbeit für Azure Information Protection?
 
-Die Dokumentkontrolle für Dateien, die Sie mithilfe von Azure Information Protection klassifizieren und schützen, funktioniert genauso wie bei Azure Rights Management. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](../rms-client/sharing-app-track-revoke.md).
+Die Dokumentkontrolle für Dateien, die Sie mithilfe von Azure Information Protection klassifizieren und schützen, funktioniert genauso wie bei Azure Rights Management und der RMS-Freigabeanwendung. Sie können auf die Website für die Dokumentnachverfolgung auch mit dem Azure Information Protection-Client zugreifen (Version 1.0.233 oder höher): 
+
+- Klicken Sie in einer Office-Anwendung auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**  >  **Verwendung nachverfolgen**. 
+
+Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](../rms-client/sharing-app-track-revoke.md).
 
 ## Wie erzwingt Azure Information Protection die Richtlinien, die ich konfiguriere?
 
@@ -184,6 +188,6 @@ Besuchen Sie anschließend unsere [Yammer-Seite](https://www.yammer.com/askiptea
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

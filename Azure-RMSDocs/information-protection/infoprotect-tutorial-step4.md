@@ -3,15 +3,15 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 4 | Azur
 description: "Schritt 4 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: a36433167462275e91059f9eb3a2141ffa2797d5
 
 
 ---
@@ -28,7 +28,7 @@ Die Klassifizierung und der Schutz treten in Kraft, wenn Sie das Dokument speich
 
 ### So ändern wir unsere Standardbezeichnung manuell:
 
-- Klicken Sie auf der Leiste „Information Protection“ auf das Symbol „Edit label“ (Bezeichnung bearbeiten) neben **Internal** (Intern). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Wählen Sie **Personal** (Privat) aus. Sie werden dazu aufgefordert, zu begründen, warum Sie die Klassifizierungsstufe heruntersetzen. Wählen Sie **This file no longer requires that classification** (Diese Datei benötigt nicht länger diese Klassifizierung) und klicken Sie auf **Confirm** (Bestätigen).  
+- Wählen Sie auf der Leiste „Information Protection“ die Bezeichnung **Personal** aus. Daraufhin werden Sie aufgefordert, die Herabsenkung der Klassifizierungsstufe zu begründen. Wählen Sie **This file no longer requires that classification** (Diese Datei benötigt nicht länger diese Klassifizierung) und klicken Sie auf **Confirm** (Bestätigen).  
 
     Der Wert **Sensitivity** (Vertraulichkeit) wird zu **Personal** (Privat) geändert.
 
@@ -36,7 +36,7 @@ Die Klassifizierung und der Schutz treten in Kraft, wenn Sie das Dokument speich
 
 ### So entfernen Sie die Klassifizierung vollständig:
 
-- Klicken Sie auf der Leiste „Information Protection“ auf das Symbol „Edit label“ (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal anstatt auf eine der Bezeichnungen auf das Bezeichnungssymbol „Remove“ (Entfernen). Klicken Sie zum Bestätigen auf **OK**, und geben Sie für diesen Schritt eine Begründung ein.  
+- Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal anstatt auf eine der Bezeichnungen auf das Symbol **Remove label** (Bezeichnung entfernen). Klicken Sie zum Bestätigen auf **OK**, und geben Sie anschließend für diesen Schritt eine Begründung ein.  
 
     Der Wert **Sensitivity** wird mit **Not set** (Nicht festgelegt) angezeigt. Dies sehen Benutzer zunächst, wenn Sie keine Standardbezeichnung festlegen.
 
@@ -77,6 +77,6 @@ Wenn Sie Ihre eigenen Tests abgeschlossen haben, kann es für Sie möglicherweis
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

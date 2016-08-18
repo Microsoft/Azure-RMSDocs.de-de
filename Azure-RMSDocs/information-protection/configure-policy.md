@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: d4b0685176407fe3a0ff14408a1381e960033afe
+ms.sourcegitcommit: 781632c5a28377339431cd6537b1b9e11d0a3259
+ms.openlocfilehash: 0e31053a83c30d8552cfb78914d0d13baac25f42
 
 
 ---
@@ -31,7 +31,7 @@ So konfigurieren Sie die Azure Information Protection-Richtlinie während der Vo
 
 1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
 
-2. Klicken Sie im Hubmenü auf **Durchsuchen**, und geben Sie im Filterfeld **Information Protection** ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Durchsuchen**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
     Das Blatt **Azure Information Protection** wird geöffnet, auf dem Sie die Azure Information Protection-Richtlinie konfigurieren können. Diese Richtlinie umfasst folgende Elemente:
 
@@ -81,6 +81,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

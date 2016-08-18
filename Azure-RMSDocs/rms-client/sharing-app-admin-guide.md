@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
-ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
+ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
+ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 
 ---
@@ -351,6 +351,33 @@ Die folgenden URLs werden für die Dokumentenverfolgung verwendet und müssen zu
 
 -   https://&#42;.microsoftonline-p.com
 
+### Nachverfolgen und Sperren von Dokumenten für Benutzer
+
+Wenn sich Benutzer auf der Nachverfolgungswebsite anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe der RMS-Freigabeanwendung geteilt haben. Wenn Sie sich als Administrator bei Azure RMS anmelden (globaler Administrator), können Sie auf das Admin-Symbol in der oberen rechten Ecke der Seite klicken, mit dem Sie in den Administratormodus wechseln. So können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation freigegeben wurden.
+
+Aktionen, die Sie im Administratormodus durchführen, werden geprüft und in Verwendungsprotokolldateien protokolliert, und Sie müssen Ihre Einwilligung geben, um den Vorgang fortzusetzen. Weitere Informationen über diese Protokollierung finden Sie im nächsten Abschnitt.
+
+Wenn Sie sich im Administratormodus befinden, können Sie nach Benutzern oder Dokumenten suchen. Wenn Sie nach Benutzern suchen, werden Ihnen alle Dokumente angezeigt, die dem angegebenen Benutzer freigegeben wurden. Wenn Sie nach Dokumenten suchen, sehen alle Benutzer in Ihrer Organisation, die das Dokument freigegeben haben. Sie können die Suchergebnisse näher betrachten, um Dokumente zu überwachen, die Benutzer freigegeben haben, und diese Dokumente, falls erforderlich, wieder zu sperren. 
+
+Klicken Sie auf das **X** neben **Administratormodus beenden**, um den Administratormodus zu verlassen.
+
+Eine Anleitung zur Verwendung der Website zur Dokumentnachverfolgung finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md) im Benutzerhandbuch.
+
+
+
+### Verwendungsprotokollierung für die Website zur Dokumentnachverfolgung
+
+Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokolldateien infrage: **AdminAction** und **ActingAsUser**.
+
+**AdminAction** – Dieses Feld weist den Wert TRUE auf, wenn ein Administrator die Website zur Dokumentnachverfolgung im Administratormodus verwendet, z.B. um ein Dokument im Auftrag des Benutzers zu sperren oder um festzustellen, wann es freigegeben wurde. Wenn sich ein Benutzer auf der Website zur Dokumentnachverfolgung anmeldet, ist dieses Feld leer.
+
+**ActingAsUser** – Wenn das Feld „AdminAction“ TRUE aufweist, enthält dieses Feld den Benutzernamen, in dessen Auftrag der Administrator als der gesuchte Benutzer oder Besitzer des Dokuments handelt. Wenn sich ein Benutzer auf der Website zur Dokumentnachverfolgung anmeldet, ist dieses Feld leer. 
+
+Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur Dokumentnachverfolgung vonseiten der Benutzer und Administratoren. **RevokeAccess** ist beispielsweise der verwendete Anforderungstyp, wenn ein Benutzer oder Administrator im Auftrag eines Benutzers ein Dokument auf der Website zur Dokumentnachverfolgung gesperrt hat. Verwenden Sie diesen Anforderungstyp in Kombination mit dem AdminAction-Feld, um zu ermitteln, ob ein Benutzer sein eigenes Dokument gesperrt hat (AdminAction ist leer) oder ob der Administrator dies im Namen eines Benutzers getan hat (AdminAction ist TRUE).
+
+
+Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
+
 ## Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
 Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Domänen haben, möglicherweise aufgrund einer Fusion oder Übernahme, müssen Sie den folgenden Registrierungsschlüssel bearbeiten:
 
@@ -369,6 +396,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

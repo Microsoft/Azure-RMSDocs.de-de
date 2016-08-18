@@ -3,15 +3,15 @@ title: "Konfigurieren von Bedingungen für die automatische und die empfohlene K
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 80c201dcf316a5aa5e123645d47c6741f8b61f05
 
 
 ---
@@ -49,15 +49,15 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
 
 ## Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
-1. Stellen Sie sicher, dass Sie sich mithilfe dieses Links für Azure Information Protection beim Azure-Portal angemeldet haben: https://portal.azure.com/?microsoft_azure_informationprotection=true
- 
-2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+1. Falls Sie sich noch nicht im [Azure-Portal](https://portal.azure.com) angemeldet haben, tun Sie dies, und navigieren Sie zum Blatt **Azure Information Protection**. 
+    
+    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
 
-3. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten.
+2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten.
 
-4. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
+3. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
 
-5. Wählen Sie auf dem Blatt **Condition** (Bedingung) die Option **Built-in** (Integriert) aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Custom** (Benutzerdefiniert), um eine eigene Bedingung anzugeben. Klicken Sie anschließend auf **Save** (Speichern):
+4. Wählen Sie auf dem Blatt **Condition** (Bedingung) die Option **Built-in** (Integriert) aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Custom** (Benutzerdefiniert), um eine eigene Bedingung anzugeben. Klicken Sie anschließend auf **Save** (Speichern):
 
     - Für **Built-in** (Integriert): Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
@@ -67,13 +67,13 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
         
     **Beispiel für die Optionen zu Vorkommen**: Sie wählen die integrierte Option zum Ermitteln von US-Sozialversicherungsnummern und legen für die Mindestanzahl von Vorkommen den Wert 2 fest. Sie verfügen über ein Dokument, in dem dieselbe Sozialversicherungsnummer zweimal aufgeführt wird: Wenn Sie für **Count occurrences with unique values only** (Nur Vorkommen mit eindeutigen Werten zählen) die Einstellung **On** (Ein) wählen, wird die Bedingung nicht erfüllt. Wenn Sie für diese Option die Einstellung **Off** (Aus) festlegen, wird die Bedingung erfüllt.
 
-6. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) die folgenden Einstellungen, und klicken Sie dann auf **Save** (Speichern):
+5. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) die folgenden Einstellungen, und klicken Sie dann auf **Save** (Speichern):
 
     - Wählen Sie die automatische oder die empfohlene Klassifizierung: Wählen Sie für **Select how this label is applied: automatically or recommended to user** (Festlegen, wie diese Bezeichnung angewendet wird: automatisch oder empfohlen) die Einstellung **Automatic** (Automatisch) oder **Recommended** (Empfohlen).
 
     - Geben Sie den Text für die Benutzeraufforderung oder den Richtlinientipp an: Übernehmen Sie den Standardtext, oder geben Sie eine eigene Zeichenfolge ein.
 
-7. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
+6. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
 ## Informationen zu den integrierten Bedingungen
 
@@ -225,6 +225,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

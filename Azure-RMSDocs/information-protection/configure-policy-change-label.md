@@ -3,15 +3,15 @@ title: "Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Informati
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: d0d926bc7b06c1136ceb2964d1e62a350a73fc56
-ms.openlocfilehash: 39d83b42ace06e6e42ad50fee90b26a2f51a142e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 49f08d4180d74375a31136f7fc0c77437bcf84d5
 
 
 ---
@@ -29,17 +29,17 @@ Sie können z. B. folgende Merkmale einer Bezeichnung oder einer untergeordnete
 Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
 
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
- 
-2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+1. Falls Sie sich noch nicht im [Azure-Portal](https://portal.azure.com) angemeldet haben, tun Sie dies, und navigieren Sie zum Blatt **Azure Information Protection**. 
+    
+    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
 
-3. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie ändern möchten, und nehmen Sie auf dem Blatt **Label** (Bezeichnung) sowie gegebenenfalls auf weiteren Blättern die gewünschten Änderungen vor.
+2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie ändern möchten, und nehmen Sie auf dem Blatt **Label** (Bezeichnung) sowie gegebenenfalls auf weiteren Blättern die gewünschten Änderungen vor.
 
     Ausnahme: Wenn Sie die Position einer Bezeichnung ändern möchten, führen Sie diesen Schritt direkt auf dem Blatt **Azure Information Protection** aus: Klicken Sie entweder mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü für die Bezeichnung auf, und wählen Sie dann **Move up** (Nach oben) oder **Move down** (Nach unten).
 
-4. Wenn Sie Ihre Änderungen auf einem Blatt übernehmen möchten, klicken Sie auf dem jeweiligen Blatt auf **Save** (Speichern).
+3. Wenn Sie Ihre Änderungen auf einem Blatt übernehmen möchten, klicken Sie auf dem jeweiligen Blatt auf **Save** (Speichern).
 
-5. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
+4. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
 > [!TIP]
 >Informationen zum Wiederherstellen der Standardwerte einer Standardbezeichnung finden Sie unter [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md).
@@ -53,6 +53,6 @@ Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine B
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

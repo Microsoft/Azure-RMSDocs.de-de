@@ -3,15 +3,15 @@ title: "Konfigurieren der globalen Richtlinieneinstellungen für Azure Informati
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 3b22cf76f03a4d36281db7e705359402dcbbde0e
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 508161474bf6fd7406668de3976206947de254de
 
 
 ---
@@ -29,11 +29,11 @@ Die Azure Information Protection-Richtlinie enthält drei Einstellungen, die fü
 
 So konfigurieren Sie diese Einstellungen:
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
- 
-2. Klicken Sie anschließend im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+1. Falls Sie sich noch nicht im [Azure-Portal](https://portal.azure.com) angemeldet haben, tun Sie dies, und navigieren Sie zum Blatt **Azure Information Protection**. 
+    
+    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
 
-3. Konfigurieren Sie auf dem Blatt **Azure Information Protection** die folgenden globalen Einstellungen:
+2. Konfigurieren Sie auf dem Blatt **Azure Information Protection** die folgenden globalen Einstellungen:
 
     - **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen): Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden. 
 
@@ -49,9 +49,9 @@ So konfigurieren Sie diese Einstellungen:
 
     Diese Option gilt nicht für untergeordnete Bezeichnungen.
 
-4. Klicken Sie auf **Save** (Speichern), um Ihre Änderungen zu speichern.
+3. Klicken Sie auf **Save** (Speichern), um Ihre Änderungen zu speichern.
 
-5. Klicken Sie auf **Publish** (Veröffentlichen), um Ihre Änderungen für Benutzer verfügbar zu machen.
+4. Klicken Sie auf **Publish** (Veröffentlichen), um Ihre Änderungen für Benutzer verfügbar zu machen.
 
 ## Nächste Schritte
 
@@ -68,6 +68,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

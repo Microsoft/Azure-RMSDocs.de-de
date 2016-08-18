@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
-ms.openlocfilehash: 17a423b8a5a6ec0aeb1121b9ea290ae84d809d9c
+ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
+ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
 
 
 ---
@@ -28,211 +28,24 @@ Wenn Sie Schutz für Dateien oder E-Mails mithilfe von Azure Rights Management (
 Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwendete Anwendung zu konfigurieren und um zu verstehen, wie diese Rechte von den Anwendungen interpretiert werden.
 
 ## Nutzungsrechte und Beschreibungen
-In den folgenden Abschnitten werden die von Rights Management unterstützten Benutzerrechte aufgezählt und beschrieben und wird beschrieben, wie sie genutzt und interpretiert werden. Sie werden nach **Allgemeiner Name** aufgelistet, also in der Regel das, was Sie als das Nutzungsrecht sehen, das als die benutzerfreundlichere Version des Einzelwortwerts angezeigt oder referenziert wird, der im Code verwendet wird (der **Richtliniencodierung**-Wert). Die **API-Konstante oder der API-Wert** ist der SDK-Name für einen MSIPC API-Aufruf, der verwendet wird, wenn Sie eine RMS-fähige Anwendung schreiben, die auf ein Nutzungsrecht überprüft oder einer Richtlinie ein Nutzungsrecht hinzufügt.
+In der folgende Tabelle werden die von Rights Management unterstützten Benutzerrechte aufgezählt und beschrieben und wird beschrieben, wie sie genutzt und interpretiert werden. Sie werden nach **Allgemeiner Name** aufgelistet, also in der Regel das, was Sie als das Nutzungsrecht sehen, das als die benutzerfreundlichere Version des Einzelwortwerts angezeigt oder referenziert wird, der im Code verwendet wird (der **Richtliniencodierung**-Wert). Die **API-Konstante oder der API-Wert** ist der SDK-Name für einen MSIPC API-Aufruf, der verwendet wird, wenn Sie eine RMS-fähige Anwendung schreiben, die auf ein Nutzungsrecht überprüft oder einer Richtlinie ein Nutzungsrecht hinzufügt.
+
+
+|Right|Beschreibung|Implementierung|
+|-------------------------------|---------------------------|-----------------|
+|Allgemeiner Name: **Inhalt bearbeiten, Bearbeiten** <br /><br />Richtliniencodierung: **DOCEDIT**|Ermöglicht es dem Benutzer, den Inhalt in der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu filtern. Gewährt nicht das Recht, die bearbeitete Kopie speichern zu können.|Benutzerdefinierte Office-Rechte: als Teil der Optionen **Ändern** und **Vollzugriff** <br /><br />Name im klassischen Azure-Portal: **Inhalt bearbeiten**<br /><br />Name in den AD RMS-Vorlagen: **Bearbeiten** <br /><br />API-Konstante oder -Wert: nicht anwendbar|
+|Allgemeiner Name: **Speichern** <br /><br />Richtliniencodierung: **EDIT**|Ermöglicht es dem Benutzer, das Dokument am aktuellen Speicherort zu speichern.<br /><br />In Office-Anwendungen ermöglicht dieses Recht es den Benutzern auch, das Dokument zu ändern.|Benutzerdefinierte Office-Rechte: als Teil der Optionen **Ändern** und **Vollzugriff** <br /><br />Name im klassischen Azure-Portal: **Datei speichern**<br /><br />Name in den AD RMS-Vorlagen: **Speichern** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_WRITE L"EDIT"`|
+|Allgemeiner Name: **Kommentar** <br /><br />Richtliniencodierung: **COMMENT**|Aktiviert die Option, dem Inhalt Anmerkungen oder Kommentare hinzufügen zu können.<br /><br />Dieses Recht ist im SDK verfügbar, ist als eine Ad-hoc-Richtlinie im RMS-Schutz-Modul (RMSProtection) für Windows PowerShell verfügbar und wurde in einigen Anwendungen von Softwarelieferanten implementiert. Es wird allerdings nicht häufig verwendet und wird derzeit nicht von Office-Anwendungen unterstützt.|Benutzerdefinierte Office-Rechte: nicht implementiert <br /><br />Name im klassischen Azure-Portal: nicht implementiert<br /><br />Name in den AD RMS-Vorlagen: nicht implementiert <br /><br />API-Konstante oder -Wert `IPC_GENERIC_COMMENT L"COMMENT`|
+|Allgemeiner Name: **Speichern unter, Exportieren** <br /><br />Richtliniencodierung: **EXPORT**|Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). Office-Dokumente müssen nicht geschützt gespeichert werden.<br /><br />Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen in Anwendungen auszuführen, beispielsweise **An OneNote senden**.|Benutzerdefinierte Office-Rechte: als Teil der Optionen **Ändern** und **Vollzugriff** <br /><br />Name im klassischen Azure-Portal: **Inhalt exportieren (Speichern unter)**<br /><br />Name in den AD RMS-Vorlagen: **Exportieren (Speichern unter)** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Allgemeiner Name: **Weiterleiten** <br /><br />Richtliniencodierung: **FORWARD**|Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen von Empfängern in den Zeilen **An** und **Cc** . Dieses Recht wird nicht auf Dokumente sondern nur auf E-Mails angewendet.<br /><br />Gestattet es dem Weiterleiter nicht, anderen Benutzern Berechtigungen als Teil des Weiterleitungsvorgangs zu gewähren.|Benutzerdefinierte Office-Rechte: verweigert, wenn die Standardrichtlinie **Nicht weiterleiten** verwendet wird<br /><br />Name im klassischen Azure-Portal: **Weiterleiten**<br /><br />Name in den AD RMS-Vorlagen: **Weiterleiten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_FORWARD L"FORWARD"`|
+|Allgemeiner Name: **Vollzugriff** <br /><br />Richtliniencodierung: **OWNER**|Gewährt alle Berechtigungen für das Dokument, und alle verfügbaren Aktionen können ausgeführt werden.<br /><br />Umfasst die Möglichkeit, den Schutz zu entfernen, und das Dokument neu zu schützen.|Benutzerdefinierte Office-Rechte: als benutzerdefinierte Option **Vollzugriff**<br /><br />Name im klassischen Azure-Portal: **Vollzugriff**<br /><br />Name in den AD RMS-Vorlagen: **Vollzugriff** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_ALL L"OWNER"`|
+|Allgemeiner Name: **Drucken** <br /><br />Richtliniencodierung: **PRINT**|Aktiviert die Optionen zum Drucken des Inhalts.|Benutzerdefinierte Office-Rechte: als Option **Inhalt drucken** in benutzerdefinierten Berechtigungen Keine Pro-Empfänger-Einstellung.<br /><br />Name im klassischen Azure-Portal: **Drucken**<br /><br />Name in den AD RMS-Vorlagen: **Drucken** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_PRINT L"PRINT"`|
+|Allgemeiner Name: **Antwort** <br /><br />Richtliniencodierung: **PRINT**|Aktiviert die Option **Antwort** in einem E-Mail-Client, ohne Änderungen in der Zeile **An** oder **Cc** zuzulassen.|Benutzerdefinierte Office-Rechte: nicht anwendbar<br /><br />Name im klassischen Azure-Portal: **Antworten**<br /><br />Name in den AD RMS-Vorlagen: **Antworten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_REPLY`|
+|Allgemeiner Name: **Allen antworten** <br /><br />Richtliniencodierung: **REPLYALL**|Aktiviert die Option **Allen antworten** in einem E-Mail-Client, ermöglicht es dem Benutzer jedoch nicht, der Zeile **An** oder **Cc** Empfänger hinzuzufügen.|Benutzerdefinierte Office-Rechte: nicht anwendbar<br /><br />Name im klassischen Azure-Portal: **Allen antworten**<br /><br />Name in den AD RMS-Vorlagen: **Allen antworten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_REPLYALL L"REPLYALL"`|
+|Allgemeiner Name: **Anzeigen, Öffnen, Lesen** <br /><br />Richtliniencodierung: **VIEW**|Ermöglicht es dem Benutzer, das Dokument zu öffnen und den Inhalt zu sehen.|Benutzerdefinierte Office-Rechte: als benutzerdefinierte Option **Lesen**, Option **Anzeigen**<br /><br />Name im klassischen Azure-Portal: **Anzeigen**<br /><br />Name in den AD RMS-Vorlagen: **Allen antworten** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_READ L"VIEW"`|
+|Allgemeiner Name: **Kopieren** <br /><br />Richtliniencodierung: **EXTRACT**|Aktiviert Optionen zum Kopieren von Daten (einschließlich Screenshots) aus dem Dokument in dasselbe oder ein anderes Dokument.<br /><br />In einigen Anwendungen ermöglicht es auch, dass das gesamte Dokument ungeschützt gespeichert werden kann.|Benutzerdefinierte Office-Rechte: als die benutzerdefinierte Richtlinienoption **Benutzern mit Lesezugriff das Kopieren des Inhalts erlauben**<br /><br />Name im klassischen Azure-Portal: **Inhalt kopieren und extrahieren**<br /><br />Name in den AD RMS-Vorlagen: **Extrahieren** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_EXTRACT L"EXTRACT"`|
+|Allgemeiner Name: **Makros zulassen** <br /><br />Richtliniencodierung: **OBJMODEL**|Aktiviert die Option, Makros oder anderen programmgesteuerten oder remoten Zugriff auf den Inhalt eines Dokuments ausführen zu können.|Benutzerdefinierte Office-Rechte: als benutzerdefinierte Richtlinienoption **Programmgesteuerten Zugriff zulassen** Keine Pro-Empfänger-Einstellung.<br /><br />Name im klassischen Azure-Portal: **Makros zulassen**<br /><br />Name in den AD RMS-Vorlagen: **Makros zulassen** <br /><br />API-Konstante oder -Wert: nicht implementiert|
 
-
-### Inhalt bearbeiten, Bearbeiten
-
-Ermöglicht es dem Benutzer, den Inhalt in der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu filtern. Gewährt nicht das Recht, die bearbeitete Kopie speichern zu können.
-
-**Richtliniencodierung**: DOCEDIT
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als Teil der Optionen *Ändern* und *Vollzugriff*.
-
-**Name im klassischen Azure-Portal**: *Inhalt bearbeiten*
-
-**Name in den AD RMS-Vorlagen**: *Bearbeiten*
-
-**API-Konstante oder -Wert**: *Nicht zutreffend*
-
----
-
-### Speichern
-
-Ermöglicht es dem Benutzer, das Dokument am aktuellen Speicherort zu speichern.
-
-**Richtliniencodierung**: EDIT
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als Teil der Optionen *Ändern* und *Vollzugriff*.
-
-**Name im klassischen Azure-Portal**: *Datei speichern*
-
-**Name in den AD RMS-Vorlagen**: *Speichern*
-
-**API-Konstante oder -Wert**: IPC_GENERIC_WRITE L"EDIT"
-
-In Office-Anwendungen ermöglicht dieses Recht es den Benutzern auch, das Dokument zu ändern.
-
----
-
-### Kommentar
-
-Aktiviert die Option, dem Inhalt Anmerkungen oder Kommentare hinzufügen zu können.
-
-**Richtliniencodierung**: COMMENT
-
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht implementiert.
-
-**Name im klassischen Azure-Portal**: Nicht implementiert.
-
-**Name in den AD RMS-Vorlagen**: Nicht implementiert.
-
-**API-Konstante oder -Wert:** IPC_GENERIC_COMMENT L"COMMENT
-
-Dieses Recht ist im SDK verfügbar, ist als eine Ad-hoc-Richtlinie im RMS-Schutz-Modul (RMSProtection) für Windows PowerShell verfügbar und wurde in einigen Anwendungen von Softwarelieferanten implementiert. Es wird allerdings nicht häufig verwendet und wird derzeit nicht von Office-Anwendungen unterstützt.
-
----
-
-### Speichern unter, Exportieren
-
-Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). Office-Dokumente müssen nicht geschützt gespeichert werden.
-
-**Richtliniencodierung**: EXPORT
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als Teil der Optionen *Ändern* und *Vollzugriff*.
-
-**Name im klassischen Azure-Portal**: *Inhalt exportieren (Speichern unter)*
-
-**Name in den AD RMS-Vorlagen**: *Exportieren (Speichern unter)*
-
-**API-Konstante oder -Wert:** IPC_GENERIC_EXPORT L"EXPORT"
-
-Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen in Anwendungen auszuführen, beispielsweise *An OneNote senden*.
-
----
-
-### Weiterleiten
-
-Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen von Empfängern in den Zeilen *An* und *Cc* . Dieses Recht wird nicht auf Dokumente sondern nur auf E-Mails angewendet.
-
-**Richtliniencodierung**: FORWARD
-
-**Implementierung in benutzerdefinierten Office-Rechten**: verweigert, wenn die Standardrichtlinie *Nicht weiterleiten* verwendet wird.
-
-**Name im klassischen Azure-Portal**: *Weiterleiten*
-
-**Name in den AD RMS-Vorlagen**: *Weiterleiten*
-
-**API-Konstante oder -Wert:** IPC_EMAIL_FORWARD L"FORWARD"
-
-Gestattet es dem Weiterleiter nicht, anderen Benutzern Berechtigungen als Teil des Weiterleitungsvorgangs zu gewähren.
-
----
-
-### Vollzugriff
-
-Gewährt alle Berechtigungen für das Dokument, und alle verfügbaren Aktionen können ausgeführt werden.
-
-**Richtliniencodierung**: OWNER
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als benutzerdefinierte Option *Vollzugriff*.
-
-**Name im klassischen Azure-Portal**: *Vollzugriff*
-
-**Name in den AD RMS-Vorlagen**: *Vollzugriff*
-
-**API-Konstante oder -Wert**: IPC_GENERIC_ALL L"OWNER"
-
-Umfasst die Möglichkeit, den Schutz zu entfernen, und das Dokument neu zu schützen.
-
----
-
-### Drucken
-
-Aktiviert die Optionen zum Drucken des Inhalts.
-
-**Richtliniencodierung**: PRINT
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als Option *Inhalt drucken* in benutzerdefinierten Berechtigungen. Keine Pro-Empfänger-Einstellung.
-
-**Name im klassischen Azure-Portal**: *Drucken*
-
-**Name in den AD RMS-Vorlagen**: *Drucken*
-
-**API-Konstante oder -Wert**: IPC_GENERIC_PRINT L"PRINT
-
----
-
-### Antwort
-
-Aktiviert die Option „Antwort“ in einem E-Mail-Client, ohne Änderungen in der Zeile *An* oder *Cc* zuzulassen.
-
-**Richtliniencodierung**: REPLY
-
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht zutreffend
-
-**Name im klassischen Azure-Portal**: *Antworten*
-
-**Name in den AD RMS-Vorlagen**: *Antworten*
-
-**API-Konstante oder -Wert:** IPC_EMAIL_REPLY
-
----
-
-### Allen antworten
-
-Aktiviert die Option *Allen antworten* in einem E-Mail-Client, ermöglicht es dem Benutzer jedoch nicht, der Zeile *An* oder *Cc* Empfänger hinzuzufügen.
-
-**Richtliniencodierung**: REPLYALL
-
-**Implementierung in benutzerdefinierten Office-Rechten**: Nicht zutreffend
-
-**Name im klassischen Azure-Portal**: *Allen antworten*
-
-**Name in den AD RMS-Vorlagen**: *Allen antworten*
-
-**API-Konstante oder Wert:** IPC_EMAIL_REPLYALL L"REPLYALL"
-
----
-
-### Anzeigen, Öffnen, Lesen
-
-Ermöglicht es dem Benutzer, das Dokument zu öffnen und den Inhalt zu sehen.
-
-**Richtliniencodierung**: VIEW
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als benutzerdefinierte Option *Lesen*, Option *Anzeigen*.
-
-**Name im klassischen Azure-Portal**: *Inhalt anzeigen*
-
-**Name in den AD RMS-Vorlagen**: *Anzeigen*
-
-**API-Konstante oder -Wert**: IPC_GENERIC_READ L"VIEW"
-
----
-
-### Kopieren
-
-Aktiviert Optionen zum Kopieren von Daten (einschließlich Screenshots) aus dem Dokument in dasselbe oder ein anderes Dokument.
-
-**Richtliniencodierung**: EXTRACT
-
-**Implementierung in benutzerdefinierten Office-Rechten:** Als die benutzerdefinierte Richtlinienoption *Benutzern mit Lesezugriff das Kopieren des Inhalts erlauben*.
-
-**Name im klassischen Azure-Portal:** *Inhalt kopieren und extrahieren*
-
-**Name in den AD RMS-Vorlagen:** *Extrahieren*
-
-**API-Konstante oder -Wert:** IPC_GENERIC_EXTRACT L"EXTRACT"
-
-In einigen Anwendungen ermöglicht es auch, dass das gesamte Dokument ungeschützt gespeichert werden kann.
-
----
-
-
-### Makros zulassen
-
-Aktiviert die Option, Makros oder anderen programmgesteuerten oder remoten Zugriff auf den Inhalt eines Dokuments ausführen zu können.
-
-**Richtliniencodierung**: OBJMODEL
-
-**Implementierung in benutzerdefinierten Office-Rechten**: als benutzerdefinierte Richtlinienoption *Programmgesteuerten Zugriff zulassen*. Keine Pro-Empfänger-Einstellung.
-
-**Name im klassischen Azure-Portal**: *Makros zulassen*
-
-**Name in den AD RMS-Vorlagen**: *Makros zulassen*
-
-**API-Konstante oder -Wert**: Nicht zutreffend
 
 
 ## In Berechtigungsstufen enthaltene Rechte
@@ -289,6 +102,6 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

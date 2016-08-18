@@ -20,11 +20,12 @@
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
 ### [Anwenden des Schutzes](configure-policy-protection.md)
+#### [HYOK-Einschränkungen](configure-adrms-restrictions.md)
 ### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
 ### [Konfigurieren von Bedingungen](configure-policy-classification.md)
 ## [Installieren des Clients](info-protect-client.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

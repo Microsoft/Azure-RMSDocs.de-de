@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 9d5c9558e809779940fac095a789730d5e5924e6
+ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
+ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
 
 
 ---
@@ -33,9 +33,11 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 -   Wenn Sie die Freigabe eines Dokuments aufheben müssen: Klicken Sie auf **Zugriff widerrufen**, notieren Sie den Zeitraum, für den das Dokument weiterhin verfügbar sein wird, und entscheiden Sie, ob Sie den Personen mitteilen möchten, dass Sie den Zugriff auf das zuvor freigegebene Dokument widerrufen, und verfassen Sie bei Bedarf eine angepasste E-Mail-Nachricht. Wenn Sie ein Dokument widerrufen, wird das Dokument, das Sie freigegeben haben, nicht gelöscht, aber autorisierte Benutzer können es nicht mehr öffnen.
 
--   Wenn Sie das Dokument nach Excel exportieren möchten: Klicken Sie auf **In Excel öffnen**, um die Daten ändern und eigene Ansichten und Diagramm erstellen zu können.
+-   Wenn Sie das Dokument nach Excel exportieren möchten: Klicken Sie auf **In CSV-Datei exportieren**, um die Daten ändern und eigene Ansichten und Diagramme erstellen zu können.
 
 -   Wenn Sie E-Mail-Benachrichtigungen konfigurieren möchten: Klicken Sie auf **Einstellungen** , und geben Sie an, wie und ob Sie bei einem Zugriff auf das Dokument per E-Mail benachrichtigt werden möchten.
+
+- Wenn Sie freigegebene Dokumente nachverfolgen und für andere sperren möchten: Azure RMS-Administratoren können Dokumente nachverfolgen und für andere sperren, indem sie auf das Adminsymbol klicken. Dieses Symbol wird ausschließlich Administratoren angezeigt.
 
 -   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
 
@@ -50,6 +52,11 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
     ![Auswählen von Verwendung nachverfolgen in Outlook bei der Verwendung der RMS-Freigabeanwendung ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
 Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
+
+> [!NOTE] 
+> Wenn Sie die Preview des [Azure Information Protection-Clients](../information-protection/info-protect-client.md) installiert haben (Version 1.0.233 oder höher), können Sie auch über die Schaltfläche **Schützen** auf die Website zur Dokumentnachverfolgung zugreifen: 
+> 
+> - Klicken Sie in einer Office-Anwendung auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**  >  **Verwendung nachverfolgen**. 
 
 ### Weitere Methoden zum Nachverfolgen von und zum Widerrufen des Zugriffs auf Dokumente
 Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mithilfe von Office-Anwendungen gibt es auch die folgenden Alternativen:
@@ -93,13 +100,13 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 
