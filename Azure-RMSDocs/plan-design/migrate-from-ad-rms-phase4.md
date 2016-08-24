@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 21fac7d684f2d544ab97f5ca6eb7faaaca3e9d26
 
 
 ---
@@ -36,25 +36,24 @@ Optional: Entfernen Sie den Dienstverbindungspunkt (Service Connection Point, SC
 Nach der Außerbetriebsetzung Ihrer AD RMS-Server haben Sie die Gelegenheit, Ihre Vorlagen im klassischen Azure-Portal zu überprüfen und zu konsolidieren, sodass sich Benutzer unter weniger Vorlagen entscheiden müssen. Sie können die Vorlagen zu diesem Zeitpunkt auch neu konfigurieren oder sogar neue Vorlagen hinzufügen. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
 ## Schritt 9: Ändern des Azure RMS-Mandantenschlüssels
-Dieser Schritt ist nach abgeschlossener Migration erforderlich, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Bei einer Schlüsseländerung wird ein neuer Mandantenschlüssel erstellt, der RMS-Kryptografiemodus 2 verwendet. Die Verwendung von Azure RMS mit Kryptografiemodus 1 wird nur während der Migration unterstützt.
+Dieser Schritt ist nur anwendbar, wenn Ihre ausgewählte Mandantenschlüsseltopologie von Microsoft anstatt von Kunden (BYOK mit Azure Key Vault) verwaltet wird.
 
-Wenn Sie RMS-Kryptografiemodus 2 ausgeführt haben, ist dieser Schritt nach der Migration optional, seine Ausführung empfiehlt sich jedoch, da so Ihr Azure RMS-Mandantenschlüssel vor potenziellen Sicherheitsverletzungen, die auf Ihren AD RMS-Schlüssel abzielen, geschützt ist. Wenn Sie Ihren Azure RMS-Mandantenschlüssel ändern (oder "neu vergeben"), wird ein neuer Schlüssel erstellt und der ursprüngliche Schlüssel archiviert. Da der Wechsel von einem Schlüssel zu einem anderen jedoch nicht sofort erfolgt, sondern sich über einige Wochen zieht, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure RMS-Mandantenschlüssel ändern, sobald die Migration abgeschlossen ist.
+Dieser Schritt ist optional, wird jedoch empfohlen, wenn Ihr Azure RMS-Mandantenschlüssel von Microsoft verwaltet wird und von AD RMS migriert wurde. In diesem Szenario schützt das Erstellen neuer Schlüssel Ihren Azure RMS-Mandantenschlüssel vor potenziellen Sicherheitslücken des AD RMS-Schlüssels.
 
-Gehen Sie zum Ändern Ihres Azure RMS-Mandantenschlüssels wie folgt vor:
+Wenn Sie Ihren Azure RMS-Mandantenschlüssel ändern (oder "neu vergeben"), wird ein neuer Schlüssel erstellt und der ursprüngliche Schlüssel archiviert. Da der Wechsel von einem Schlüssel zu einem anderen jedoch nicht sofort erfolgt, sondern sich über einige Wochen zieht, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure RMS-Mandantenschlüssel ändern, sobald die Migration abgeschlossen ist.
 
--   Wenn Ihr Azure RMS-Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) und erstellen Sie eine **Azure Rights Management-Supportanfrage, um den Wechsel Ihres Azure RMS-Mandantenschlüssels anzufordern**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Ändern Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+Um Ihren von Microsoft verwalteten Azure RMS-Mandantenschlüssel neu zu erstellen: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) und erstellen Sie eine **Azure Rights Management-Supportanfrage, um die Neuerstellung Ihres Azure RMS-Schlüssels nach der Migration von AD RMS anzufordern**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure RMS-Mandanten sind; beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an; das Ändern Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
--   Wenn Ihr Azure RMS-Mandantenschlüssel von Ihnen verwaltet wird (BYOK): Wiederholen Sie das BYOK-Verfahren zum Generieren eines neuen Schlüssels über das Internet oder persönlich.
-
-Weitere Informationen zum Verwalten des Azure RMS-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
 
 ## Nächste Schritte
+
+Weitere Informationen zum Verwalten des RMS-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
 
 Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) ansehen, um die ggf. erforderlichen weiteren Bereitstellungsaufgaben zu ermitteln.
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

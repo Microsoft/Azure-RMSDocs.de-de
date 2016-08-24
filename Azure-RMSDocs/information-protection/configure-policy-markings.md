@@ -3,15 +3,15 @@ title: "Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
+ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
+ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
 
 
 ---
@@ -60,17 +60,19 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
 
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 
-- `${Item.Label}` für die ausgewählte Bezeichnung
+- `${Item.Label}` für die ausgewählte Bezeichnung. Beispiel: intern
 
-- `${Item.Name}` für den Dateinamen oder E-Mail-Betreff
+- `${Item.Name}` für den Dateinamen oder E-Mail-Betreff. Beispiel: JulySales.docx
 
-- `${Item.Location}` für den Dateipfad
+- `${Item.Location}` für den Pfad und den Dateinamen bei Dokumenten und für den Betreff bei E-Mails. Beispiel: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` für den Besitzer des Dokuments oder der E-Mail
+- `${User.Name}` für den Besitzer des Dokuments oder der E-Mail, gemäß dem Namen des angemeldeten Windows-Benutzers. Beispiel: rsimone
 
-- `${Event.DateTime}` für Datum und Uhrzeit, wann die ausgewählte Bezeichnung festgelegt wurde 
+- `${User.PrincipalName}` für den Besitzer des Dokuments oder der E-Mail, gemäß der E-Mail-Adresse des angemeldeten Azure Information Protection-Clients (UPN). Beispiel: rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
     
-Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name} Sensitivity: ${item.label}` für die Fußzeile der Bezeichnung „Geheim“ angeben, so lautet der Text in der Kopfzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Vertraulichkeit: Geheim**.
+Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung „Geheim“ angeben, so lautet der Text in der Kopfzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Geheim**.
 
 ## Nächste Schritte
 
@@ -80,6 +82,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

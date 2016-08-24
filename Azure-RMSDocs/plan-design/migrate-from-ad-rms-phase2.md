@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/23/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a9dc45fb5146b0a4d2f013bff9d090723ce95ee5
-ms.openlocfilehash: 1016ecdd77e818840f2a2cfab8212e908291bb89
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: ca2dae71dceae4c59d12243c386eaded8ebb11f9
 
 
 ---
@@ -28,7 +28,7 @@ Verwenden Sie die folgenden Informationen für Phase 2 der Migration von AD RMS 
 ## Schritt 5: Neukonfigurieren von Clients zur Verwendung von Azure RMS
 Für Windows-Clients:
 
-1.  [Herunterladen der Migrationsskripts](http://go.microsoft.com/fwlink/?LinkId=524619):
+1.  [Herunterladen der Migrationsskripts](https://go.microsoft.com/fwlink/?LinkId=524619):
 
     -   CleanUpRMS_RUN_Elevated.cmd
 
@@ -132,6 +132,6 @@ Redirect_OnPrem.cmd:
 Fahren Sie mit [Phase 3: Unterstützung der Dienstekonfiguration](migrate-from-ad-rms-phase3.md) fort, um die Migration fortzusetzen.
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
