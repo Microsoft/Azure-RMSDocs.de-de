@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 65371b9a3b210743fc160dbad38333ccb12671e6
 
 
 ---
@@ -35,30 +35,31 @@ Nicht sicher, ob diese Migration von AD RMS für Ihre Organisation geeignet ist?
 Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetzungen erfüllt sind und Sie alle etwaigen Einschränkungen kennen.
 
 
-- **Unterstützte RMS-Bereitstellung**
+- **Unterstützte RMS-Bereitstellung:**
+    
+    - Die folgenden AD RMS-Versionen unterstützen die Migration zu Azure RMS:
+    
+        - Windows Server 2008 R2 (x64)
+        
+        - Windows Server 2012 (x64)
+        
+        - Windows Server 2012 R2 (x64)
+        
+    - Kryptografiemodus 2:
+    
+        - Die AD RMS-Server und Clients müssen vor Beginn der Migration zu Azure RMS im Kryptografiemodus 2 ausgeführt werden. Weitere Informationen finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        
+    - Alle gültigen AD RMS-Topologien werden unterstützt:
+    
+        - Einzelne Gesamtstruktur, einzelner RMS-Cluster
+        
+        - Einzelne Gesamtstruktur, mehrere reine RMS-Lizenzierungscluster
+        
+        - Mehrere Gesamtstrukturen, mehrere RMS-Cluster
+        
+    Hinweis: Mehrere RMS-Cluster werden standardmäßig zu einem einzelnen Azure RMS-Mandanten migriert. Wenn Sie getrennte Azure RMS-Mandanten wünschen, müssen Sie sie als weitere Migrationen behandeln. Ein Schlüssel von einem RMS-Cluster kann nur in einen einzigen Azure RMS-Mandanten importiert werden.
 
-    Alle AD RMS-Versionen von Windows Server 2008 bis Windows Server 2012 R2 unterstützen die Migration zu Azure RMS:
-
-    - Windows Server 2008 (x86 oder x64)
-
-    - Windows Server 2008 R2 (x64)
-
-    - Windows Server 2012 (x64)
-
-    - Windows Server 2012 R2 (x64)
-
-    Alle gültigen AD RMS-Topologien werden unterstützt:
-
-    - Einzelne Gesamtstruktur, einzelner RMS-Cluster
-
-    - Einzelne Gesamtstruktur, mehrere reine RMS-Lizenzierungscluster
-
-    - Mehrere Gesamtstrukturen, mehrere RMS-Cluster
-
-    **Hinweis**: Mehrere RMS-Cluster werden standardmäßig zu einem einzelnen Azure RMS-Mandanten migriert. Wenn Sie weitere RMS-Mandanten wünschen, müssen Sie sie als weitere Migrationen behandeln. Ein Schlüssel von einem RMS-Cluster kann nur in einen einzigen Azure RMS-Mandanten importiert werden.
-
-
-- **Alle Anforderungen zum Ausführen von Azure RMS, einschließlich eines Azure RMS-Mandanten (nicht aktiviert)**
+- **Alle Anforderungen zum Ausführen von Azure RMS, einschließlich eines Azure RMS-Mandanten (nicht aktiviert):**
 
     Informationen finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -82,6 +83,10 @@ Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetz
 
     Dies ist die einzige Dienstunterbrechung während der Migration.
 
+- **Wenn Sie Ihren eigenen Azure RMS-Mandantenschlüssel mithilfe eines HSM-geschützten Schlüssels verwalten möchten**:
+
+    - Für diese optionale Konfiguration sind Azure Key Vault und ein Azure-Abonnement erforderlich, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+
 
 Einschränkungen:
 
@@ -100,7 +105,7 @@ Einschränkungen:
 ## Übersicht über die Schritte zum Migrieren von AD RMS zu Azure RMS
 
 
-Die neun Migrationsschritte können in vier Phasen unterteilt werden, die zu unterschiedlichen Zeiten und von verschiedenen Administratoren ausgeführt werden können.
+Die Migrationsschritte können in vier Phasen unterteilt werden, die zu unterschiedlichen Zeiten und von verschiedenen Administratoren ausgeführt werden können.
 
 [**PHASE 1: SERVERSEITIGE KONFIGURATION FÜR AD RMS**](migrate-from-ad-rms-phase1.md)
 
@@ -118,11 +123,11 @@ Die neun Migrationsschritte können in vier Phasen unterteilt werden, die zu unt
 
     - **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln**:
 
-        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure RMS-Mandantenschlüssel gespeichert werden (das "Bring Your Own Key"- oder BYOK-Szenario). Hier sind zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM an das Azure RMS-HSM erforderlich. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden vom BYOK-Toolset nicht unterstützt.
+        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure RMS-Mandantenschlüssel gespeichert werden (das "Bring Your Own Key"- oder BYOK-Szenario). Hier sind zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM an Azure Key Vault und zur Autorisierung von Azure RMS für die Verwendung dieses Schlüssels erforderlich. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden von den Rights Management-Services nicht unterstützt.
 
     - **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln**:
 
-        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure RMS-Mandantenschlüssel (das "Bring Your Own Key"- oder BYOK-Szenario). Dieses Szenario erfordert die meisten Konfigurationsschritte, da Sie zunächst den Softwareschlüssel extrahieren und in ein lokales HSM importieren und dann zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM in das Azure RMS-HSM ausführen müssen.
+        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure RMS-Mandantenschlüssel (das "Bring Your Own Key"- oder BYOK-Szenario). Dieses Szenario erfordert die meisten Konfigurationsschritte, da Sie zunächst den Softwareschlüssel extrahieren und in ein lokales HSM importieren und dann zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM in das Azure Key Vault-HSM und zur Autorisierung von Azure RMS für die Verwendung des Schlüsseltresors, der den Schlüssel speichert, ausführen müssen.
 
 - **Schritt 3: Aktivieren Ihres Azure RMS-Mandanten**
 
@@ -171,7 +176,7 @@ Die neun Migrationsschritte können in vier Phasen unterteilt werden, die zu unt
 
 - **Schritt 9: Ändern des Azure RMS-Mandantenschlüssels**
 
-    Dieser Schritt ist erforderlich, wenn Sie den Kryptografiemodus 2 vor der Migration nicht ausgeführt haben, und wird für alle anderen Migrationen als optionaler Schritt empfohlen, um die Sicherheit Ihres Azure RMS-Mandantenschlüssels zu gewährleisten.
+    Dieser Schritt ist optional, wird jedoch empfohlen, wenn Ihre in Schritt 2 gewählte Azure RMS-Mandantenschlüsseltopologie von Microsoft verwaltet wird. Dieser Schritt ist nicht anwendbar, wenn die gewählte Azure RMS-Mandantenschlüsseltopologie kundenverwaltet (BYOK) ist.
 
 
 ## Nächste Schritte
@@ -180,6 +185,6 @@ Um die Migration zu starten, wechseln Sie zu [Phase 1: Serverseitige Konfigurati
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

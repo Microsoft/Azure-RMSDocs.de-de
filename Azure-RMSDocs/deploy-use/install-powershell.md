@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 590148218fdd10e88ba764b2dc523a2213e2c8bb
+ms.sourcegitcommit: 5f8672b1f4d8e1b5ed707e89e88c9ba50d24f486
+ms.openlocfilehash: 4120aeeae7c2c48168e4f01de6558da5034bf019
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 590148218fdd10e88ba764b2dc523a2213e2c8bb
 
 Verwenden Sie die folgenden Informationen als Hilfestellung bei der Installation von Windows PowerShell für Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS).
 
-Sie können mithilfe dieses Windows PowerShell-Moduls [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] über die Befehlszeile verwalten, indem Sie einen Computer verwenden, der eine Internetverbindung besitzt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md).
+Mithilfe dieses PowerShell-Moduls können Sie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] über die Befehlszeile verwalten, indem Sie einen Computer verwenden, der eine Internetverbindung besitzt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md).
 
 ## Voraussetzungen
 In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung von Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] aufgeführt.
@@ -33,9 +33,14 @@ In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung 
 |Anforderung|Weitere Informationen|
 |---------------|--------------------|
 |Eine Version von Windows, die das [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul unterstützt|Überprüfen Sie die Liste der unterstützten Betriebssysteme im Bereich **Systemanforderungen** der [Downloadseite für das Azure Rights Management-Verwaltungstool](http://go.microsoft.com/fwlink/?LinkId=257721).|
-|Mindestversion von Windows PowerShell: 2.0|Die Unterstützung für das [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul wurde in Windows PowerShell 2.0 eingeführt.<br /><br />Standardmäßig werden die meisten Windows-Betriebssysteme mindestens mit Version 2.0 der Windows PowerShell installiert. Wenn Sie Windows PowerShell 2.0 installieren müssen, finden Sie Informationen dazu unter [Installieren von Windows PowerShell 2.0](http://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tipp: Sie können die von Ihnen ausgeführte Version der Windows PowerShell überprüfen, indem Sie in einer Windows PowerShell-Sitzung **$PSVersionTable** eingeben.|
+|Mindestversion von Windows PowerShell: 2.0|Die Unterstützung für das [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul wurde in Windows PowerShell 2.0 eingeführt.<br /><br />Standardmäßig werden die meisten Windows-Betriebssysteme mindestens mit Version 2.0 der Windows PowerShell installiert. Wenn Sie Windows PowerShell 2.0 installieren müssen, finden Sie Informationen dazu unter [Installieren von Windows PowerShell 2.0](http://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tipp: Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben.|
 |Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist im Lieferumfang neuerer Betriebssysteme enthalten. Deshalb sollten Sie eine manuelle Installation nur dann durchführen müssen, wenn Sie ein Clientbetriebssystem vor Windows 8.0 oder ein Serverbetriebssystem vor Windows Server 2012 verwenden.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist für einige Klassen erforderlich, die vom [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul verwendet werden.|
-|Microsoft Online Services-Anmeldeassistent 7.0|Der Microsoft Online Services-Anmeldeassistent ist für die [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Authentifizierung erforderlich.<br /><br />Weitere Informationen finden Sie unter [Download Center: Microsoft Online Services-Assistent für IT-Experten RTW](http://www.microsoft.com/en-us/download/details.aspx?id=41950).|
+
+> [!NOTE]
+> Ab Version 2.5.0.0 des Rights Management-Verwaltungsmoduls ist der Microsoft Online Services-Anmeldeassistent nicht mehr erforderlich.
+> 
+> Wenn Sie eine frühere Version des Rights Management-Verwaltungsmoduls installiert haben, deinstallieren Sie **Windows Azure AD Rights Management-Verwaltung** über **Programme und Funktionen**, bevor Sie die neueste Version installieren.
+
 
 ## Installieren des Rights Management-Administrationsmoduls
 
@@ -66,11 +71,11 @@ Vor dem Ausführen von Befehlen, die den [!INCLUDE[aad_rightsmanagement_1](../in
 > [!NOTE]
 > Wenn Sie [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] noch nicht aktiviert haben, können Sie dies nach der Dienstverbindung mithilfe des [Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx)-Cmdlets nachholen.
 
-## Weitere Informationen
+## Siehe auch
 [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO3-->
 
 
