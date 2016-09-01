@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
 
 
 ---
@@ -42,7 +42,7 @@ Bei Verwendung der Azure RMS-Mandantenschlüsseltopologie **Vom Kunden verwaltet
 ## Schritt 7: Bereitstellen des RMS-Connectors
 Wenn Sie die Funktion zur Verwaltung von Informationsrechten (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie zuerst IRM auf diesen Servern deaktivieren und die AD RMS-Konfiguration entfernen. Anschließend stellen Sie den Rights Management-Verbindungsdienst (RMS-Verbindungsdienst) bereit, der als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und Azure RMS fungiert.
 
-Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz von E-Mail-Nachrichten in Azure RMS importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle TPD-URLs an den RMS-Verbindungsdienst umzuleiten.
+Wenn Sie mehrere AD RMS-Datenkonfigurationsdateien (XML) zum Schutz von E-Mail-Nachrichten in Azure RMS importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten.
 
 > [!NOTE]
 > Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md).
@@ -95,7 +95,7 @@ Wenn Sie mehrere vertrauenswürdige Veröffentlichungsdomänen (TPDs) zum Schutz
 
 #### Nur für Exchange und mehrere TPDs: Bearbeiten der Registrierung
 
--   Fügen Sie auf jedem Exchange Server die folgenden Registrierungsschlüssel manuell für jede zusätzlich importierte TPD hinzu, um die TPD-URLs an den RMS-Verbindungsdienst umzuleiten. Diese Registrierungseinträge sind migrationsspezifisch und werden nicht vom Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst hinzugefügt.
+-   Fügen Sie auf jedem Exchange Server die folgenden Registrierungsschlüssel manuell für jede zusätzlich importierte Datei mit Konfigurationsdaten (XML) hinzu, um die URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten. Diese Registrierungseinträge sind migrationsspezifisch und werden nicht vom Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst hinzugefügt.
 
     Gehen Sie beim Vornehmen dieser Änderungen an der Registrierung wie folgt vor:
 
@@ -215,6 +215,6 @@ Nachdem Sie diese Verfahren ausgeführt haben, können Sie den Abschnitt **Näch
 Fahren Sie mit [Phase 4: Aufgaben nach der Migration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 

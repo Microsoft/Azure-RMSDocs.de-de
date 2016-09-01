@@ -3,15 +3,15 @@ title: "HYOK-Einschränkungen | Azure Rights Management"
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2016
+ms.date: 08/18/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: cfab76a97034b58eec8dfdbdc82cc1037a647d11
-ms.openlocfilehash: 95f64c00c28fb52a0bd7d78a997705f7ed515557
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: 1cbf6bd6c209a8aafd1db61422ce03b628aaec07
 
 
 ---
@@ -51,9 +51,13 @@ Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS
 
 - AD RMS-Konfiguration:
     
+    - Mindestversion von Windows Server 2012 R2: erforderlich für Produktionsumgebungen. Für Tests oder zu Evaluierungszwecken können Sie jedoch eine Mindestversion von Windows Server 2008 R2 mit Service Pack 1 verwenden.
+    
     - Einzelner AD RMS-Stammcluster.
     
-    - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx).
+    - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können die Version des Kryptografiemodus des AD RMS-Clusters und dessen Gesamtzustand mithilfe des [RMS Analyzer-Tools](https://www.microsoft.com/en-us/download/details.aspx?id=46437) überprüfen.   
+    
+    - Die AD RMS-Server sind so konfiguriert, dass sie SSL/TLS mit einem gültigen x.509-Zertifikat verwenden, welches von den Clients, die eine Verbindung herstellen, als vertrauenswürdig eingestuft wird: Dies ist erforderlich für Produktionsumgebungen, aber nicht für Tests oder zu Evaluierungszwecken.
     
     - Konfigurierte Rechtevorlagen.
 
@@ -66,7 +70,9 @@ Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS
 - Der [Azure Information Protection-Client](info-protect-client.md) weist die Version **1.0.233.0** oder höher auf.
 
 > [!IMPORTANT]
-> Wir empfehlen, dass sich Ihre AD RMS-Server nicht in Ihrer DMZ befinden und dass sie nur von ordnungsgemäß verwalteten Computern verwendet werden (z.B. keine mobilen Geräte oder Arbeitsgruppencomputer),um die hohe Sicherheit zu erfüllen, die dieses Szenario bietet.
+> Wir empfehlen, dass sich Ihre AD RMS-Server nicht in Ihrer DMZ befinden und dass sie nur von ordnungsgemäß verwalteten Computern verwendet werden (z.B. keine mobilen Geräte oder Arbeitsgruppencomputer),um die hohe Sicherheit zu erfüllen, die dieses Szenario bietet. 
+> 
+> Außerdem wird empfohlen, dass das AD RMS-Cluster ein Hardwaresicherheitsmodul (HSM) verwendet, sodass der private Schlüssel für Ihr lizenzgebendes Serverzertifikat (SLC) nicht offengelegt oder gestohlen wird, wenn die AD RMS-Bereitstellung jemals verletzt oder gefährdet werden sollte. 
 
 Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Sie unter [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in der Windows Server-Bibliothek. 
 
@@ -89,6 +95,6 @@ Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

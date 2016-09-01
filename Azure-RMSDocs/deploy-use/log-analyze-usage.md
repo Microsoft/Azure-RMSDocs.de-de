@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
-ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
 
 
 ---
@@ -179,13 +179,13 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |BECreateEndUserLicenseV1|Von einem Mobilgerät wird ein Aufruf ausgelöst, um eine Endbenutzerlizenz zu erstellen.|
 |BEGetAllTemplatesV1|Von einem Mobilgerät (Back-End) wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
 |Certify|Der Client zertifiziert den Inhalt für den Schutz.|
-|KMSPDecrypt|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK).|
 |DeleteTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage nach Vorlagen-ID zu löschen.|
 |DocumentEventsCsv|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Herunterladen der CSV-Datei für ein einziges Dokument.|
 |ExportTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage anhand einer Vorlagen-ID zu exportieren.|
 |FECreateEndUserLicenseV1|Ähnlich wie bei der „AcquireLicense“-Anforderung, aber von mobilen Geräten aus.|
 |FECreatePublishingLicenseV1|Identisch mit „Certify“ und „GetClientLicensorCert“ in Kombination, von mobilen Clients aus.|
 |FEGetAllTemplates|Von einem Mobilgerät (Front-End) wird ein Aufruf ausgelöst, um die Vorlagen abzurufen.|
+|FindServiceLocationsForUser|Ein Aufruf zum Abfragen von URLs wird ausgelöst, die zum Aufrufen von „Certify“ oder von „AcquireLicense“ verwendet werden.|
 |GetAllDocs|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Laden der Seite **Alle Dokumente** für einen Benutzer oder zum Durchsuchen aller Dokumente des Mandanten. Verwenden Sie diesen Wert in den Feldern „admin-action“ (Adminaktion) und „acting-as-user“ (Fungiert als Benutzer):<br /><br />- „admin-action“ ist leer: Einem Benutzer wird die Seite **Alle Dokumente** für seine eigenen Dokumente angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist leer: Einem Administrator werden alle Dokumente für seinen Mandanten angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist nicht leer: Einem Administrator wird die Seite **Alle Dokumente** für einen Benutzer angezeigt.|
 |GetAllTemplates|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
 |GetClientLicensorCert|Der Client fordert von einem Windows-basierten Computer aus ein Veröffentlichungszertifikat an (das später zum Schützen von Inhalt verwendet wird).|
@@ -195,8 +195,11 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |GetSingle|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, zur Seite **Einzelnes Dokument** zu navigieren.|
 |GetTenantFunctionalState|Das klassische Azure-Portal überprüft, ob Azure RMS aktiviert ist.|
 |GetTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID abzurufen.|
-|ExportTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID zu exportieren.|
-|FindServiceLocationsForUser|Ein Aufruf zum Abfragen von URLs wird ausgelöst, die zum Aufrufen von „Certify“ oder von „AcquireLicense“ verwendet werden.|
+|KeyVaultDecryptRequest|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK) in Azure Key Vault.|
+|KeyVaultGetKeyInfoRequest|Ein Aufruf erfolgt, um zu überprüfen, ob der angegebene Schlüssel, der in Azure Key Vault als Azure RMS-Mandantenschlüssel verwendet werden soll, verfügbar ist und nicht bereits verwendet wird.|
+|KeyVaultSignDigest|Ein Aufruf erfolgt, wenn ein vom Kunden verwalteter Schlüssel (BYOK) in Azure Key Vault zu Signaturzwecken verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
+|KMSPDecrypt|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Legacymandantenschlüssel (BYOK).|
+|KMSPSignDigest|Ein Aufruf erfolgt, wenn ein vom Kunden verwalteter Legacyschlüssel (BYOK) zu Signaturzwecken verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
 |LoadEventsForMap|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Kartenansicht zu navigieren.|
 |LoadEventsForSummary|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Zeitachsenansicht zu navigieren.|
 |LoadEventsForTimeline|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Kartenansicht zu navigieren.|
@@ -206,10 +209,8 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |ServerCertify|Von einem RMS-fähigen Client (z. B. SharePoint) wird ein Aufruf zum Zertifizieren des Servers ausgelöst.|
 |SetUsageLogFeatureState|Ein Aufruf zum Aktivieren der Verwendungsprotokollierung wird ausgelöst.|
 |SetUsageLogStorageAccount|Ein Aufruf wird ausgelöst, um den Speicherort der Azure RMS-Protokolle anzugeben.|
-|SignDigest|Ein Aufruf wird ausgelöst, wenn ein Schlüssel für Signaturzwecke verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
 |UpdateNotificationSettings|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, die Benachrichtigungseinstellungen für ein einzelnes Dokument zu ändern.|
 |UpdateTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
-
 
 
 ## Windows PowerShell-Referenz
@@ -240,6 +241,6 @@ Weitere Informationen zum Verwenden von Windows PowerShell für Azure Rights Man
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 
