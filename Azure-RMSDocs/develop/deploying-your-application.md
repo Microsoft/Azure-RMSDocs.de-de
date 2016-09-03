@@ -4,9 +4,9 @@ description: "Dieses Thema beschreibt und führt Sie durch die Bereitstellungsop
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 982021a2e972023b04e6483348a7c27aa029e198
-ms.openlocfilehash: 8308e2db84e13c6b8c85a1a3ae6c01fc0aabee75
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3b6ff46581921f69c47cad3d6d879c53320b9126
 
 
 ---
@@ -28,10 +28,6 @@ Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für di
 ## Anfordern eines Produktionslizenzvertrags
 
  Bevor Sie eine mithilfe des Rights Management Services SDK 2.1 entwickelte Anwendung freigeben können, müssen Sie einen Produktionslizenzvertrag beantragen, um ein Produktionszertifikat zu erhalten.
-
-> [!IMPORTANT]
-> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).
-> Weitere Informationen zur Ausführung mit Azure RMS finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 Sie können das Zertifikat beziehen, indem Sie einen Produktionslizenzvertrag beantragen.
 
@@ -116,7 +112,8 @@ Damit Endbenutzer Azure Rights Management Services nutzen können, müssen Sie d
 
 
 > [!IMPORTANT]
-> Zum Ausführen der RMS SDK 2.1-Clientanwendung mit Azure RMS müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).
+> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).
+> Weitere Informationen zur Ausführung mit Azure RMS finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](http://www.microsoft.com/en-us/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
 -   Stellen Sie sicher, dass die Bereitstellung einer rechtefähigen Anwendung eine Überprüfung der Voraussetzungen für diese Dienstauswahl enthält.
@@ -135,6 +132,6 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

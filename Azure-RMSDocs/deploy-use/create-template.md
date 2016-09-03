@@ -1,20 +1,19 @@
 ---
 title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure RMS"
-description: 
-keywords: 
+description: "Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die erweiterten Funktionen für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
-ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 # Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die **erweiterten Funktionen** für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden.
@@ -163,10 +162,10 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 > [!WARNING]
 > Wenn Sie Änderungen an einer zuvor gespeicherten Vorlage vornehmen, werden diese Vorlagenänderungen bei Clients erst sichtbar, nachdem die Vorlagen auf deren Computern aktualisiert wurden. Weitere Informationen finden Sie unter [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md).
 
-## Siehe auch
+## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

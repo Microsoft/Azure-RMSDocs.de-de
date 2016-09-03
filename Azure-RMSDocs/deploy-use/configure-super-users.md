@@ -1,27 +1,26 @@
 ---
 title: "Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung | Azure RMS"
-description: 
-keywords: 
+description: "Mit der Administratorfunktion von Microsoft Azure RMS wird sichergestellt, dass nur entsprechend berechtigte Personen und Dienste immer auf die Daten zugreifen und diese überprüfen können, die mit Azure RMS für Ihre Organisation geschützt werden. Falls notwendig, können diese Personen/Dienste auch den zuvor angewendeten Schutz aufheben oder ändern. Ein Administrator verfügt immer über die vollständigen Besitzerrechte für alle Nutzungslizenzen, die vom RMS-Mandanten der Organisation gewährt wurden. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 0ca9b8d9643f5489c100fa3aa614e89cd396df52
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
 
 
 ---
 
 # Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Mit der Administratorfunktion von Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) wird sichergestellt, dass nur entsprechend berechtigte Personen und Dienste immer auf die Daten zugreifen und diese überprüfen können, die mit Azure RMS für Ihre Organisation geschützt werden. Falls notwendig, können diese Personen/Dienste auch den zuvor angewendeten Schutz aufheben oder ändern. Ein Administrator verfügt immer über die vollständigen Besitzerrechte für alle Nutzungslizenzen, die vom RMS-Mandanten der Organisation gewährt wurden. Diese Fähigkeit wird gelegentlich als "Schlussfolgern über Daten" (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten. So verwenden Sie diese Funktion beispielsweise für alle der folgenden Szenarien:
 
@@ -72,6 +71,6 @@ Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

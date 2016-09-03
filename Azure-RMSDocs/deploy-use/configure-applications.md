@@ -1,27 +1,26 @@
 ---
 title: "Konfigurieren von Anwendungen für Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen und Dienste für die Unterstützung von Azure RMS zu konfigurieren. Hierzu gehören unter anderem Office-Anwendungen wie Word 2013 und Word 2010 sowie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken)."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8fe934c51e852791d19fbb336deaf9cd7be9817b
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 7e592d99bcd2a143d63b35aa4afb92b1e45cb74a
 
 
 ---
 
 # Konfigurieren von Anwendungen für Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 > [!NOTE]
 > Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Rights Management bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung von Rights Management für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
@@ -75,6 +74,6 @@ Nachdem Sie Ihre Anwendungen für die Unterstützung von Azure Rights Management
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

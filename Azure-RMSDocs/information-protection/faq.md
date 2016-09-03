@@ -1,20 +1,19 @@
 ---
 title: "Häufig gestellte Fragen zur Vorschau von Azure Information Protection | Azure Information Protection"
-description: 
-keywords: 
+description: Haben Sie eine Frage zum Vorschaurelease von Azure Information Protection? Vielleicht finden Sie hier eine Antwort darauf.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
-ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
 
 
 ---
@@ -57,7 +56,7 @@ Dieses Vorschaurelease unterliegt den folgenden Einschränkungen. Achten Sie auf
 
 ## Welches Abonnement brauche ich, um Azure Information Protection auszuprobieren?
 
-Sie können für das Vorschaurelease alle Abonnements verwenden, die Azure Rights Management einschließen. Azure Information Protection ist in allen Regionen verfügbar. Weitere Informationen zu den verfügbaren Abonnements und Links zu kostenlosen Testversionen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).
+Für die Vorschauversion können Sie ein beliebiges Office 365-Abonnement verwenden, das den Schutz von Office-Dokumenten und E-Mails mithilfe von Azure Rights Management umfasst. Azure Information Protection ist in allen Regionen verfügbar. Weitere Informationen zu den verfügbaren Abonnements und Links zu kostenlosen Testversionen finden Sie im Abschnitt [Office 365-Abonnement](../get-started/requirements-subscriptions.md#office-365-subscription) in der Dokumentation zu den Azure RMS-Anforderungen.
 
 Sie müssen über ein Azure-Abonnement verfügen, um die Azure Information Protection-Richtlinien im Azure-Portal zu konfigurieren. Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden: Folgen Sie den Anweisungen auf der [Seite für die ersten Schritten mit Azure](https://account.windowsazure.com/organization).
 
@@ -188,6 +187,6 @@ Besuchen Sie anschließend unsere [Yammer-Seite](https://www.yammer.com/askiptea
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: Vergleich zwischen Azure Rights Management und AD RMS | Azure RMS
-description: 
-keywords: 
+description: Wenn Sie Active Directory Rights Management Services (AD RMS) bereits kennen oder bereitgestellt haben, fragen Sie sich vielleicht, wie sich Azure RMS in Bezug auf die Funktionen und Anforderungen unterscheidet.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: ce79ec40cbd8ca3796a17920d27dc3872cd40842
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 7dd888f28e5f4d307a1f96203516d3b058541ba5
 
 
 ---
 
 # Vergleich zwischen Azure Rights Management und AD RMS
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Office 365*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Office 365*
 
 Wenn Sie Active Directory Rights Management Services (AD RMS) bereits kennen oder bereitgestellt haben, fragen Sie sich vielleicht, wie sich [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) in Bezug auf die Funktionen und Anforderungen unterscheidet. 
 
@@ -50,7 +49,7 @@ Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die 
 |Azure RMS|AD RMS|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Unterstützt IRM-Funktionen (Verwaltung von Informationsrechten) in Microsoft Online Services wie Exchange Online und SharePoint Online sowie in Office 365.<br /><br />Unterstützt ebenfalls lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|Unterstützt lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|
-|Ermöglicht implizite Vertrauensstellungen zwischen Organisationen und Benutzern in jeder Organisation. Dies bedeutet, dass geschützter Inhalt zwischen Benutzern innerhalb derselben Organisation oder zwischen Organisationen freigegeben werden kann, wenn die Benutzer [!INCLUDE[o365_1](../includes/o365_1_md.md)], or [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] haben oder sich für RMS für Einzelpersonen registrieren.|Vertrauensstellungen müssen ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung zwischen Organisationen definiert werden, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (Active Directory Federation Services, AD FS) erstellen.|
+|Ermöglicht implizite Vertrauensstellungen zwischen Organisationen und Benutzern in jeder Organisation. Dies bedeutet, dass geschützter Inhalt zwischen Benutzern innerhalb derselben Organisation oder zwischen Organisationen freigegeben werden kann, wenn die Benutzer über [!INCLUDE[o365_1](../includes/o365_1_md.md)] oder [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] verfügen oder sich für RMS for Individuals registrieren.|Vertrauensstellungen müssen ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung zwischen Organisationen definiert werden, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (Active Directory Federation Services, AD FS) erstellen.|
 |Stellt zwei Standardvorlagen für Rechterichtlinien bereit, die den Zugriff auf die Inhalte auf Ihre eigene Organisation beschränken. Eine, die die schreibgeschützte Anzeige geschützter Inhalte bietet, und eine andere Vorlage, die Schreib- oder Änderungsberechtigungen für den geschützten Inhalt bereitstellt.<br /><br />Sie können auch eigene benutzerdefinierte Vorlagen erstellen, wozu Abteilungsvorlagen gehören, die nur für eine Teilmenge von Benutzern sichtbar sind. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|Es sind keine standardmäßigen Vorlagen für Benutzerrechterichtlinien verfügbar. Sie müssen diese erstellen und dann verteilen. Weitere Informationen finden Sie unter [Überlegungen zur AD RMS-Richtlinienvorlage](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|
 |Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird nicht unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2007.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird unterstützt|
 |Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte.<br /><br />Zusätzlich unterstützt die RMS-Freigabeanwendung Folgendes:<br /><br />– Freigeben für Personen in einer anderen Organisation<br /><br />– E-Mail-Benachrichtigung, die den Absender informiert, wenn jemand versucht, eine geschützte Anlage zu öffnen<br /><br />– Eine Website für die Dokumentnachverfolgung für Benutzer mit der Möglichkeit, ein Dokument zu widerrufen|Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte. Allerdings unterstützt Freigeben weder ein Freigeben für Benutzer in einer anderen Organisation, noch E-Mail-Benachrichtigungen oder die Dokumentnachverfolgung noch die Möglichkeit für Benutzer, Dokumente zu widerrufen.|
@@ -76,6 +75,6 @@ Wenn Sie die Migration von AD RMS zu Azure RMS durchführen möchten, helfen Ihn
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

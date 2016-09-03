@@ -1,20 +1,19 @@
 ---
 title: "Welche Probleme werden von Azure RMS gelöst? | Azure RMS"
-description: 
-keywords: 
+description: "Anhand der folgenden Tabelle können Sie Geschäftsanforderungen oder -probleme bestimmen, die Ihre Organisation möglicherweise hat, und können ermitteln, wie sich diese Probleme mit Azure RMS lösen lassen."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
-ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
 
 # Welche Probleme werden von Azure RMS gelöst?
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Anhand der folgenden Tabelle können Sie Geschäftsanforderungen oder -probleme bestimmen, die Ihre Organisation möglicherweise hat, und können ermitteln, wie sich diese Probleme mit Azure RMS lösen lassen.
 
@@ -73,6 +72,6 @@ Informationen dazu, wie Azure RMS für Administratoren und Benutzern aussieht, f
 Wenn Sie eher an technischen Informationen zur Funktionsweise von Azure RMS interessiert sind, finden Sie diese unter [Funktionsweise von Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

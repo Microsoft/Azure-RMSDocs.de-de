@@ -4,9 +4,9 @@ description: "Dies ist der letzte Schritt eines Tutorials, in dem Sie Microsoft 
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5884914e2ff69c4db40d4e874541f42b9a0e7df5
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 
 # Azure RMS Quick Start – Schritt 5: Verfolgen des geschützten Dokuments
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Wechseln zu: 
@@ -56,7 +56,7 @@ Dieser Schritt ist optional. Die meisten Absender möchten jedoch gerne wissen, 
 
 1.  Klicken Sie in Outlook auf der Registerkarte **Start** in der Gruppe **RMS** auf **Nutzung nachverfolgen**.
 
-2.  Wenn die Seite mit Schutz- und Freigabeoptionen ** ** angezeigt wird, klicken Sie auf **Anmelden** und geben Benutzernamen und Kennwort erneut ein.
+2.  Wenn die Seite **Schutz und Freigabe nach Ihren Vorgaben** angezeigt wird, klicken Sie auf **Anmelden** und geben Benutzernamen und Kennwort erneut ein.
 
 3.  Auf der Seite **Freigegebene Dokumente** sehen Sie das an die E-Mail angehängte Dokument **Confidential.docx**. Zu diesem Zeitpunkt wird nur diese Datei angezeigt. Sobald Sie jedoch zusätzliche geschützte Dokumente freigeben, wird die Liste erweitert.
 
@@ -91,6 +91,6 @@ Alternativ finden Sie eine Übersicht über bestimmte Szenarien und die dazugeh�
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

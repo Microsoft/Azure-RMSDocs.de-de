@@ -3,15 +3,15 @@ title: "Schnellstart-Tutorial für Azure Information Protection | Azure Rights M
 description: "Ein Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in nur vier Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
-ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 6fbe4bd32f1aef57b3bf42aeedea46f618fb5540
 
 
 ---
@@ -31,7 +31,7 @@ Falls Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden dieses
 ## Voraussetzungen 
 Voraussetzungen für dieses Tutorial:
 
-- Alle Abonnements, die Azure Rights Management umfasst, die Ihnen Zugriff auf das Vorschaurelease von Azure Information Protection gewähren. Azure Information Protection ist in allen Regionen verfügbar, die Azure Rights Management unterstützen. Weitere Informationen zu den verfügbaren Abonnements und Links zu kostenlosen Testversionen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).
+- Ein Office 365-Abonnement, dass den Schutz von Office-Dokumenten und E-Mails unter Verwendung von Azure RMS beinhaltet. Weitere Informationen zu den verfügbaren Abonnements und Links zu kostenlosen Testversionen finden Sie im Abschnitt [Office 365-Abonnement](../get-started/requirements-subscriptions.md#office-365-subscription) in der Dokumentation zu den Azure RMS-Anforderungen.
 
 - Sie müssen über ein Azure-Abonnement verfügen, um die Azure Information Protection-Richtlinien im Azure-Portal zu konfigurieren. Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden: Folgen Sie den Anweisungen auf der [Seite für die ersten Schritten mit Azure](https://account.windowsazure.com/organization).
 
@@ -51,6 +51,6 @@ Los geht’s!
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

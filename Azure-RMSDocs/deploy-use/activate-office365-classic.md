@@ -1,27 +1,26 @@
 ---
 title: "Aktivieren von Azure Rights Management über das klassische Office 365 Admin Center | Azure RMS"
-description: 
-keywords: 
+description: Verwenden Sie diese Anleitung, wenn Sie die klassische Version (Originalversion) von Office 365 Admin Center verwenden.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
-ms.openlocfilehash: 657fb47485ce0e86fab800f8ab981e6dfbd9ee11
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 27667ed6c205cfa93b2d985722637255ddbd6072
 
 
 ---
 
 # Aktivieren von Azure Rights Management über das klassische Office 365 Admin Center
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Verwenden Sie diese Anleitung, wenn Sie die klassische Version (Originalversion) von Office 365 Admin Center verwenden.
@@ -54,6 +53,6 @@ Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivi
 Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

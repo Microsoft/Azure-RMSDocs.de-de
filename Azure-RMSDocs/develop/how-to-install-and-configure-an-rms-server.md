@@ -1,26 +1,22 @@
 ---
-# required metadata
-
-title: "Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS"
-description: Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung.
-keywords:
+title: 'Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS'
+description: "Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
+ms.openlocfilehash: d046e7f6bbe867b6bc867483441bb0cc5c20df82
+
 
 ---
 
@@ -65,12 +61,13 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
     Konfigurieren Sie zum Testen mit einem RMS-Server die serverseitige Ermittlung oder die clientseitige Ermittlung, damit der Rights Management Service Client 2.1 den RMS-Server erkennen und die Kommunikation mit ihm aufbauen kann.
 
-    > [!Note] Beim Testen mit Azure RMS muss keine Ermittlung konfiguriert werden.
+    > [!Note]
+    > Beim Testen mit Azure RMS muss keine Ermittlung konfiguriert werden.
 
   - Bei der serverseitigen Ermittlung registriert der Administrator einen Dienstverbindungspunkt (SCP) für den RMS-Stammcluster bei Active Directory, und der Client fragt Active Directory ab, um den SCP zu ermitteln und eine Verbindung mit dem Server herzustellen.
   - Bei der clientseitigen Ermittlung konfigurieren Sie auf dem Computer, auf dem der RMS-Client 2.1 ausgeführt wird, RMS-Dienstermittlungseinstellungen in der Registrierung. Diese Einstellungen verweisen den RMS-Client 2.1 auf den zu verwendenden RMS-Server. Wenn sie vorhanden sind, wird keine serverseitige Ermittlung ausgeführt.
 
-  Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der Ermittlung aufseiten des Dienstes finden Sie unter [Hinweise zur Bereitstellung des RMS-Clients 2.0](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
+  Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der dienstseitigen Ermittlung finden Sie in den [Anmerkungen zur Bereitstellung des RMS-Clients 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
@@ -80,9 +77,11 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 2. **EnterprisePublishing**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
->[!NOTE] Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.
+>[!NOTE] 
+> Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.
 
->[!IMPORTANT] Wenn Sie eine 32-Bit-Anwendung unter einer 64-Bit-Version von Windows ausführen, müssen Sie diese Schlüssel im folgenden Schlüsselpfad festlegen:<p>
+>[!IMPORTANT] 
+> Wenn Sie eine 32-Bit-Anwendung unter einer 64-Bit-Version von Windows ausführen, müssen Sie diese Schlüssel im folgenden Schlüsselpfad festlegen:<p>
   ```    
   HKEY_LOCAL_MACHINE
     SOFTWARE
@@ -96,6 +95,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

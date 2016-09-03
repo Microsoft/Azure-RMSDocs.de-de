@@ -6,14 +6,14 @@ author: Cabailey
 manager: mbaldwin
 ms.date: 06/29/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fab51fefed8d3a347a52ab7c118bb40b3cc23b37
-ms.openlocfilehash: 80f2742bbaab9d3252cec6f6c709012ca81218d5
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: c00264e6c8b99d95e8eedf9b91781484611880c3
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 80f2742bbaab9d3252cec6f6c709012ca81218d5
 
 # Azure RMS Quick Start – Schritt 1: Aktivieren des Rights Management-Diensts
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Wechseln zu: 
@@ -100,6 +100,6 @@ Obwohl hier nicht auf benutzerdefinierte Vorlagen eingegangen wird, müssen Sie 
 [Schritt 2 »](tutorial-step2.md)
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

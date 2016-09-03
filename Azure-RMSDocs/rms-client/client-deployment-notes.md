@@ -1,27 +1,26 @@
 ---
 title: Hinweise zur Bereitstellung des RMS-Clients | Azure RMS
-description: 
-keywords: 
+description: "Der RMS-Client, Version 2 (Rights Management Services) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. Zusätzlich zur Auslieferung mit der Microsoft Rights Management-Freigabeanwendung steht der RMS-Client als optionaler Download zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2bd8aba91b9b65777c2319baea848e8313cbccda
-ms.openlocfilehash: ffddda9a144b23b64b54df4fe4d25ec62600599d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 6d80958fe4d56458b7dee48e7475a37de8a102bd
 
 
 ---
 
 # Anmerkungen zur Bereitstellung des RMS-Clients
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 7 mit SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 7 mit SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
 
 Der RMS-Client, Version 2 (Rights Management Service, Rechteverwaltungsdienst) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. Zusätzlich zur Auslieferung mit der [Microsoft Rights Management-Freigabeanwendung](sharing-app-windows.md) steht der RMS-Client [als optionaler Download](http://www.microsoft.com/download/details.aspx?id=38396) zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind.
 
@@ -57,7 +56,7 @@ Der RMS-Client wird von den folgenden Betriebssystemen unterstützt:
 
 |Windows Server-Betriebssystem|Windows-Clientbetriebssystem|
 |-----------------------------------|-----------------------------------|
-|Windows Server 2012 R2|Windows 8,1|
+|Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 mit mindestens SP1|
 |Windows Server 2008 (nur AD RMS)|Windows Vista mit mindestens SP2 (nur AD RMS)|
@@ -107,7 +106,7 @@ Der RMS-Client speichert Lizenzen auf dem lokalen Datenträger. Außerdem weden 
 ### Windows-Registrierungseinstellungen für den RMS-Client
 Sie können Windows-Registrierungsschlüssel zum Festlegen oder Ändern einiger RMS-Clientkonfigurationen verwenden. Als Administrator von RMS-fähigen Anwendungen, die mit AD RMS-Servern kommunizieren, können Sie beispielsweise den Dienstspeicherort im Unternehmen je nach aktuellem Speicherort des Clientcomputers in Ihrer Active Directory-Topologie aktualisieren (d. h. den AD RMS-Server außer Kraft seten, der aktuell für die Veröffentlichung ausgewählt ist). Oder Sie können AD RMS-Ablaufverfolgung auf dem Clientcomputer aktivieren, um das Beheben eines Problems mit einer RMS-fähigen Anwendung zu unterstützen. In der folgenden Tabelle finden Sie die Registrierungseinstellungen, die Sie für den RMS-Client ändern können.
 
-|Aufgabe|Einstellung|
+|Aufgabe|Einstellungen|
 |--------|------------|
 |Nur AD RMS: Aktualisieren des Speicherorts im Unternehmens für einen Clientcomputer|Aktualisieren Sie die folgenden Registrierungsschlüssel:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Wert:**<http or https>:// *RMS-Clustername*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Wert:** <http or https>:// *RMS-Clustername*/_wmcs/Licensing|
 |Aktivieren und Deaktivieren der Ablaufverfolgung|Aktualisieren Sie den folgenden Registrierungsschlüssel:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Wert:** 1 zum Aktivieren der Ablaufverfolgung, 0 zum Deaktivieren der Ablaufverfolgung (Standardwert)|
@@ -239,6 +238,6 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 
