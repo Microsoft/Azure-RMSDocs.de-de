@@ -1,27 +1,26 @@
 ---
 title: "Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden | Azure RMS"
-description: 
-keywords: 
+description: "Wenn die Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert ist, können Sie eine geschützte Datei anzeigen, indem Sie einfach auf sie doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
-ms.openlocfilehash: cd19be1c0319a3d2a4609030c0114b07b461c1d8
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 78810a639c2360707b628423bb68b2f05e8c5b56
 
 
 ---
 
 # Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
 Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert](install-sharing-app.md) ist, können Sie eine geschützte Datei anzeigen, indem Sie einfach darauf doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden.
 
@@ -108,6 +107,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

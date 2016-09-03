@@ -1,20 +1,19 @@
 ---
 title: "Registrierungseinstellungen für den RMS-Verbindungsdienst | Azure RMS"
-description: 
-keywords: 
+description: "Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Exchange-, SharePoint- oder Windows Server-Servern, mit denen die Server für die Verwendung des RMS-Verbindungsdiensts konfiguriert werden, manuell hinzufügen oder überprüfen möchten. Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 935c354f9bcd3be23a953cdeb08c7860257637d6
-ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
 
 
 ---
@@ -22,10 +21,10 @@ ms.openlocfilehash: 5099a10a183f1c78595794511654226265e740c8
 
 # Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
-Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Servern mit Exchange, SharePoint oder Windows Server, mit denen die Server für die Verwendung des [RMS-Verbindungsdiensts](deploy-rms-connector.md) konfiguriert werden, manuell hinzufügen oder überprüfen möchten. Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst.
+Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Exchange-, SharePoint- oder Windows Server-Servern, mit denen die Server für die Verwendung des [RMS-Verbindungsdiensts](deploy-rms-connector.md) konfiguriert werden, manuell hinzufügen oder überprüfen möchten. Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst.
 
 Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
@@ -217,6 +216,6 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

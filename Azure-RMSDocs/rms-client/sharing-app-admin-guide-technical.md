@@ -1,20 +1,19 @@
 ---
 title: "Technische Übersicht für die Rights Management-Freigabeanwendung | Azure RMS"
-description: 
-keywords: 
+description: "Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladbare Anwendung für Microsoft Windows und andere Plattformen, die Folgendes bereitstellt."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 09effc3dfb238370563981defdcf3c3b4cffcaae
-ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d5e1c7969d2125c4f66d6dcea3bde0c81a7de1f3
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 2f249996b9b912f744754357423a0c4f134ec094
 
 # Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
 
 Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladbare Anwendung für Microsoft Windows und andere Plattformen, die Folgendes bereitstellt:
@@ -39,7 +38,7 @@ Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladb
 
 Die Microsoft Rights Management-Freigabeanwendung verwendet die neue [AD RMS-Client 2.1-Runtime](http://www.microsoft.com/download/details.aspx?id=38396). Mithilfe der Funktionalität von AD RMS 2.1 stellt die Microsoft Rights Management-Freigabeanwendung Endbenutzern einen einfachen Schutz und eine einfache Nutzung bereit.
 
-Ab der RMS-Version aus dem Oktober 2013 können Sie Dokumente systemeigen mithilfe von Office 2010 schützen und an andere Personen in einem anderen Unternehmen senden, die diese dann mithilfe von Azure RMS nutzen können. Darüber hinaus können Sie mit dieser Version bei Verwendung von AD RMS im Kryptografiemodus 2 RMS für Einzelpersonen verwenden und Inhalte von Personen in einem anderen Unternehmen, das Azure RMS verwendet, nutzen. Weitere Informationen zum Kryptografiemodus 2 finden Sie unter [AD RMS-Kryptografiemodi](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+Ab der RMS-Version aus dem Oktober 2013 können Sie Dokumente systemeigen mithilfe von Office 2010 schützen und an andere Personen in einem anderen Unternehmen senden, die diese dann mithilfe von Azure RMS nutzen können. Darüber hinaus können Sie mit dieser Version bei Verwendung von AD RMS im Kryptografiemodus 2 RMS for Individuals verwenden und Inhalte von Personen in einem anderen Unternehmen, das Azure RMS verwendet, nutzen. Weitere Informationen zum Kryptografiemodus 2 finden Sie unter [AD RMS-Kryptografiemodi](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 Informationen zur Bereitstellung finden Sie unter [Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
@@ -134,12 +133,12 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 -   **Off**: Schutz blockieren
 
-## Weitere Informationen
+## Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

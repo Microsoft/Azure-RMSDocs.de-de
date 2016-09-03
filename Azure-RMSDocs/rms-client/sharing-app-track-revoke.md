@@ -1,27 +1,26 @@
 ---
 title: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung | Azure RMS
-description: 
-keywords: 
+description: "Wenn Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben und Ihre Organisation nicht Active Directory Rights Management Services, sondern Azure Rights Management verwendet, können Sie verfolgen, wie die Benutzer die geschützten Dokumente verwenden. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden. Verwenden Sie hierfür die Website zum Nachverfolgen von Dokumenten, auf die Sie von Windows-Computern, Mac-Computern und sogar mit Tablets und Smartphones zugreifen können."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
-ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
 
 
 ---
 
 # Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
 
-*Gilt für: Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben und Ihre Organisation nicht Active Directory Rights Management Services, sondern Azure Rights Management verwendet, können Sie verfolgen, wie die Benutzer die geschützten Dokumente verwenden. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden. Verwenden Sie hierfür die **Website zum Nachverfolgen von Dokumenten**, auf die Sie von Windows-Computern, Mac-Computern und sogar mit Tablets und Smartphones zugreifen können.
 
@@ -107,6 +106,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: Aktualisieren von Vorlagen | Azure RMS
-description: 
-keywords: 
+description: "Wenn Sie Azure RMS verwenden, werden Vorlagen automatisch auf Clientcomputer heruntergeladen, sodass Benutzer sie aus Ihren Anwendungen heraus auswählen können. Allerdings müssen Sie möglicherweise zusätzliche Schritte ausführen, wenn Sie Änderungen an der Vorlage vornehmen."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 771f4139b09cccc05f2d1ee52c76b99467c70446
-ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 2339643120b9e9ee24d046bf5620f68fee88b7c9
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
 
 # Aktualisieren von Vorlagen für Benutzer
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Wenn Sie Azure RMS verwenden, werden Vorlagen automatisch auf Clientcomputer heruntergeladen, sodass Benutzer sie aus Ihren Anwendungen heraus auswählen können. Allerdings müssen Sie möglicherweise zusätzliche Schritte ausführen, wenn Sie Änderungen an der Vorlage vornehmen:
 
@@ -183,10 +182,10 @@ Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie ein
 
 3.  Starten Sie Ihre Office-Anwendungen neu.
 
-## Siehe auch
+## Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

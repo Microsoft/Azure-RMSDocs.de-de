@@ -1,20 +1,19 @@
 ---
 title: 'Azure RMS-Anforderungen: Cloudabonnements | Azure RMS'
-description: 
-keywords: 
+description: "Um Azure Rights Management (RMS) zu verwenden, muss die Organisation mindestens eines der folgenden Abonnements mit einer ausreichenden Anzahl von Lizenzen für Benutzer und Dienste besitzen, die E-Mail-Nachrichten und Dateien schützen. Wenn Sie einen Dienst verwenden, der Schutz auf Benutzer anwendet (Besitzer der Dateien oder E-Mail-Nachrichten), benötigt jeder dieser Benutzer eine dieser Lizenzen. Benutzer, die diese geschützten Daten lediglich nutzen (z. B. lesen und bearbeiten), benötigen keine Lizenz."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 08/22/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
-ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
 
 
 ---
@@ -22,11 +21,11 @@ ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
 
 # Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Um Azure Rights Management (RMS) zu verwenden, muss die Organisation mindestens eines der folgenden Abonnements mit einer ausreichenden Anzahl von Lizenzen für Benutzer und Dienste besitzen, die E-Mail-Nachrichten und Dateien schützen. Wenn Sie einen Dienst verwenden, der Schutz auf Benutzer anwendet (Besitzer der Dateien oder E-Mail-Nachrichten), benötigt jeder dieser Benutzer eine dieser Lizenzen. Benutzer, die diese geschützten Daten lediglich nutzen (z. B. lesen und bearbeiten), benötigen keine Lizenz.
 
--   Office 365
+-   Office 365 (bestimmte Abonnements)
 
 -   Azure Rights Management Premium (früher Azure RMS Standalone)
 
@@ -95,6 +94,6 @@ Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Man
 Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

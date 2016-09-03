@@ -1,27 +1,26 @@
 ---
 title: "Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung | Azure RMS"
-description: 
-keywords: 
+description: "Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte Datei ersetzt. Sie können die Datei dann dort belassen, wo sie ist, sie in einen anderen Ordner oder auf ein anderes Gerät kopieren oder den Ordner freigeben, in dem sie sich befindet. Die Datei bleibt in jedem Fall geschützt. Sie könnten die geschützte Datei auch an eine E-Mail-Nachricht anfügen, es empfiehlt sich aber, eine geschützte Datei direkt aus dem Datei-Explorer oder aus einer Office-Anwendung per E-Mail freizugeben."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/15/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 638c2f27c8d552653dcf3f41d8fad6d44cb08887
-ms.openlocfilehash: 5150351ec6772b95d77698dc39a1f69105c02d2c
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 55f5f9dd0dd90bfa98798b4fc0b4cb4bd3c90076
 
 
 ---
 
 # Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
 Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte Datei ersetzt. Sie können die Datei dann dort belassen, wo sie ist, sie in einen anderen Ordner oder auf ein anderes Gerät kopieren oder den Ordner freigeben, in dem sie sich befindet. Die Datei bleibt in jedem Fall geschützt. Sie können die geschützte Datei auch an eine E-Mail anfügen, aber es empfiehlt sich, eine geschützte Datei direkt aus dem Datei-Explorer oder aus einer Office-Anwendung per E-Mail freizugeben. (Weitere Informationen finden Sie unter [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).)
 
@@ -67,6 +66,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

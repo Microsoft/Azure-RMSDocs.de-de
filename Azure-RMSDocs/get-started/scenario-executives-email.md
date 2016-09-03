@@ -1,27 +1,26 @@
 ---
 title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus | Azure RMS"
-description: 
-keywords: 
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen. Die E-Mail-Nachrichten und Anlagen werden automatisch von Azure Rights Management geschützt."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3c15175f26c5e3bc0ff824c284beedc639cf9309
 
 
 ---
 
 # Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen. Die E-Mail-Nachrichten und Anlagen werden automatisch von Azure Rights Management geschützt.
 
@@ -133,6 +132,6 @@ Wenn Sie vertrauliche Unternehmensinformationen an eine andere VanArsdel-Führun
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: Anforderungen an Azure Information Protection | Azure RMS
-description: 
-keywords: 
+description: "Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen, um das Vorschaurelease von Azure Information Protection auswerten zu können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aa4353e5-c5b0-47f6-a6f9-87d13e8f075f
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c0652e05576ab28d7b77380ab1b8aa0ca2d3e479
-ms.openlocfilehash: e3eb845af4e2cfec43c63c9625163f62c83cf954
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: cc1ec2b2544ac368821155b7e0c3c0e179982d1d
 
 
 ---
@@ -29,7 +28,7 @@ Stellen Sie sicher, dass Sie die folgenden Anforderungen erfüllen, um das Vorsc
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Ein Cloud-Abonnement, das Azure RMS enthält|Ihre Organisation muss ein Cloud-Abonnement besitzen, das Rights Management unterstützt.<br /><br />Weitere Informationen und Links zu kostenlosen Testversionen finden Sie unter [Cloud-Abonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md).|
+|Ein Office 365-Abonnement einschließlich Azure Rights Management|Beispielsweise ein Office 365 E3, E4- oder E5-Abonnement<br /><br />Weitere Informationen zu den verfügbaren Abonnements und Links zu kostenlosen Testversionen finden Sie im Abschnitt [Office 365-Abonnement](../get-started/requirements-subscriptions.md#office-365-subscription) in der Dokumentation zu den Azure RMS-Anforderungen.|
 |Azure AD-Verzeichnis|Ihre Organisation muss über ein Azure AD-Verzeichnis verfügen, um die Benutzerauthentifizierung für Azure RMS und Azure Information Protection zu unterstützen. Zusätzlich müssen Sie, wenn Sie Ihre Benutzerkonten aus Ihrem lokalen Verzeichnis (AD DS) verwenden möchten, auch die Verzeichnisintegration konfigurieren.<br /><br />Multi-Factor Authentication (MFA) wird mit Azure RMS unterstützt, wenn Sie die erforderliche Clientsoftware haben und die für MFA erforderliche unterstützende Infrastruktur richtig konfiguriert haben.<br /><br />Weitere Informationen finden Sie im Artikel [Azure AD-Verzeichnis](../get-started/requirements-azure-ad.md), in dem die Informationen für Azure RMS auch für Azure Information Protection gelten.|
 |Clientgeräte|Diese Vorschau unterstützt die folgenden Clientgeräte:<br /><br />- Windows 10 (x86, x64)<br /><br />- Windows 8.1 (x86, x64)<br /><br />- Windows 8 (x86, x64)<br /><br />- Windows 7 Service Pack 1 (x86, x64)<br /><br />Wenn Sie Daten schützen, können sie von den gleichen Geräten genutzt werden (Windows, Mac, iOS, Android), die Azure Rights Management unterstützen. Weitere Informationen zu diesen Geräten und den unterstützten Versionen finden Sie unter [Azure RMS-Anforderungen: Clientgeräte, die Azure RMS unterstützen](../get-started/requirements-client-devices.md).|
 |Anwendungen|Azure Information Protection unterstützt im Vorschau- und im GA-Release die Bezeichnung und den Schutz von Dateien und E-Mails, die mithilfe der folgenden Office-Programme erstellt wurden: **Word**, **Excel**, **PowerPoint** und **Outlook** aus folgenden Office-Suiten:<br /><br />Office Professional Plus 2016<br /><br />Office Professional Plus 2013 mit Service Pack 1<br /><br />Office Professional Plus 2010<br /><br />Eine Ankündigung, wann Azure Information Protection zusätzliche Dateitypen wie PDF, Audio-, Video- und Bilddateien unterstützen wird, können Sie nach der Veröffentlichung des allgemein verfügbaren Release auf dem [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) finden (Blog mit Informationen in englischer Sprache zu Enterprise Mobility und Sicherheit).|
@@ -42,6 +41,6 @@ Wenn Sie diese Anforderungen erfüllt haben, probieren Sie unser Tutorial aus, u
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

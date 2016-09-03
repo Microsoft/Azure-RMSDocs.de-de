@@ -1,33 +1,32 @@
 ---
 title: "Registrieren für RMS for Individuals | Azure RMS"
-description: 
-keywords: 
+description: "Um sich für dieses kostenlose Konto zu registrieren, fordern Benutzer eine Registrierung auf der Microsoft Rights Management-Seite an und geben die E-Mail-Adresse ihrer Arbeit oder Schule an."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 19252180802c69d6e5d6bf22c71ff3bcba96fb36
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a31005f3dce927db917cb0f2851916b8946da4ee
 
 
 ---
 
-# Registrieren für RMS für Einzelpersonen
+# Registrieren für RMS for Individuals
 
-*Gilt für: Azure Rights Management*
+>*Gilt für: Azure Rights Management*
 
 Um sich für dieses kostenlose Konto zu registrieren, fordern Benutzer dies auf der [Microsoft Rights Management-Seite](https://portal.aadrm.com/) an und geben die E-Mail-Adresse ihrer Arbeit oder Schule an. 
 
 Benutzer werden normalerweise zu dieser Anmeldeseite weitergeleitet, wenn sie eine E-Mail mit einer geschützten Anlage empfangen haben, die Anweisungen zur Registrierung enthält. Sie erhalten eine E-Mail als Antwort von Microsoft und können den Registrierungsprozess dann abschließen, indem sie Details eingeben, um ihr Konto zu erstellen. Wenn Benutzer eine E-Mail-Bestätigung von Microsoft erhalten, leitet diese letzte E-Mail sie zu einer Seite weiter, von der sie die Freigabeanwendung für verschiedene Geräte herunterladen können. Außerdem enthält diese E-Mail einen Link zum Benutzerhandbuch.
 
-## So registrieren Sie sich für RMS für Einzelpersonen
+## So registrieren Sie sich für RMS for Individuals
 
 1.  Wechseln Sie auf einem Windows- oder Mac-Computer zur Seite [Microsoft Rights Management](https://portal.aadrm.com).
 
@@ -50,23 +49,23 @@ Benutzer werden normalerweise zu dieser Anmeldeseite weitergeleitet, wenn sie ei
 
 8.  Wenn Sie die E-Mail erhalten, klicken Sie auf den Link, um sich anzumelden, und lesen Sie die Anweisungen, um die Freigabeanwendung herunterzuladen und zu installieren, oder klicken Sie auf den Hilfelink, um das Benutzerhandbuch zur Freigabeanwendung zu lesen.
 
-Nun ist Ihr Konto erstellt, und Sie sind bereit, um Dateien zu schützen und von anderen geschützte Dateien zu lesen. Wenn Sie aufgefordert werden, sich anzumelden, um Dateien zu schützen oder geschützte Dateien zu lesen, geben Sie Ihre E-Mail-Adresse und Ihr Kennwort ein, mit denen Sie das Konto für RMS für Einzelpersonen erstellt haben.
+Nun ist Ihr Konto erstellt, und Sie sind bereit, um Dateien zu schützen und von anderen geschützte Dateien zu lesen. Wenn Sie aufgefordert werden, sich anzumelden, um Dateien zu schützen oder geschützte Dateien zu lesen, geben Sie Ihre E-Mail-Adresse und Ihr Kennwort ein, mit denen Sie das Konto für RMS for Individuals erstellt haben.
 
 ## Technische Übersicht über den Anmeldevorgang
-RMS for Individuals (RMS für Einzelpersonen) verwendet einen Self-Service-Registrierungsprozess, der auch von anderen Diensten verwendet wird, die Cloudtechnologie von Microsoft zur Authentifizierung von Benutzern verwenden.
+RMS for Individuals verwendet einen Self-Service-Registrierungsprozess, der auch von anderen Diensten verwendet wird, die Cloudtechnologie von Microsoft zur Authentifizierung von Benutzern verwenden.
 
-Dies geschieht im Hintergrund, wenn sich ein Benutzer für RMS für Einzelpersonen registriert und seine Organisation kein Office 365-Abonnement oder Azure-Abonnement besitzt und daher auch kein Verzeichnis in Azure, um Benutzer zu authentifizieren:
+Dies geschieht im Hintergrund, wenn sich ein Benutzer für RMS for Individuals registriert und seine Organisation kein Office 365-Abonnement oder Azure-Abonnement besitzt und daher auch kein Verzeichnis in Azure, um Benutzer zu authentifizieren:
 
 1.  Wenn der erste Benutzer einer Organisation ein Abonnement für RMS for Individuals anfordert, wird der in der E-Mail-Adresse angegebene Domänenname überprüft, um festzustellen, ob er bereits einem Azure-Mandanten zugeordnet ist. Ist kein Mandant vorhanden, wird automatisch ein neuer Mandant und ein neues Azure-Verzeichnis für die Organisation erstellt, die ein Konto für diesen ersten Benutzer enthält. Im Gegensatz zu einem kostenpflichtigen Abonnement für Azure ist dieses erste Konto kein globaler Administrator, sondern ein Standardbenutzer. Das neue Konto verwendet die E-Mail-Adresse und das Kennwort, das der Benutzer angegeben hat.
 
     > [!NOTE]
-    > Manche Domänennamen können nicht zum Erstellen des Verzeichnisses verwendet werden, weshalb sie auch nicht für RMS für Einzelpersonen verwendet werden können. Die Liste der blockierten Domänennamen kann mithilfe der folgenden JSON-Datei (JavaScript Object Notation) angezeigt werden: [http://portal.aadrm.com/content/blocked_domains.json](http://portal.aadrm.com/content/blocked_domains.json)
+    > Manche Domänennamen können nicht zum Erstellen des Verzeichnisses verwendet werden, weshalb sie auch nicht für RMS for Individuals verwendet werden können. Die Liste der blockierten Domänennamen kann mithilfe der folgenden JSON-Datei (JavaScript Object Notation) angezeigt werden: [http://portal.aadrm.com/content/blocked_domains.json](http://portal.aadrm.com/content/blocked_domains.json)
 
     Wurde ein vorhandener Mandant gefunden, wird er überprüft, um zu festzustellen, ob er bereits ein Abonnement für Azure RMS hat. Wird kein Abonnement gefunden, kann das kostenlose RMS for Individuals-Abonnement hinzugefügt werden.
 
 2.  Der Organisation wird das RMS for Individuals-Abonnement gewährt. Nun kann dieser Benutzer von Azure authentifiziert werden und Azure Rights Management dazu verwenden, Dateien zu schützen sowie Dateien zu lesen, die von anderen geschützt wurden. Um Dateien zu schützen und geschützte Dateien zu lesen, muss der Benutzer eine RMS-fähige Anwendung haben, beispielsweise die kostenlose [Rights Management-Freigabeanwendung](../rms-client/sharing-app-windows.md).
 
-3.  Wenn der zweite Benutzer aus derselben Organisation ein "RMS für Einzelpersonen"-Abonnement anfordert, wird dem zuvor erstellten Azure-Verzeichnis ein neues Benutzerkonto hinzugefügt, indem das „RMS für Einzelpersonen“-Abonnement der Organisation verwendet wird. Dieser zweite Benutzer kann alle Aktionen ausführen, die auch der erste Benutzer ausführen kann (Dateien schützen und geschützte Dateien lesen), aber zusätzlich können diese beiden Benutzer nun einfacher sicher zusammenarbeiten, weil sie schnell Standardvorlagen auf Dateien anwenden können, die den Zugriff auf Konten im Azure-Verzeichnis ihrer Organisation einschränken.
+3.  Wenn der zweite Benutzer aus derselben Organisation ein RMS for Individuals-Abonnement anfordert, wird dem zuvor erstellten Azure-Verzeichnis ein neues Benutzerkonto hinzugefügt, indem das RMS for Individuals-Abonnement der Organisation verwendet wird. Dieser zweite Benutzer kann alle Aktionen ausführen, die auch der erste Benutzer ausführen kann (Dateien schützen und geschützte Dateien lesen), aber zusätzlich können diese beiden Benutzer nun einfacher sicher zusammenarbeiten, weil sie schnell Standardvorlagen auf Dateien anwenden können, die den Zugriff auf Konten im Azure-Verzeichnis ihrer Organisation einschränken.
 
 4.  Nachfolgende Benutzer aus derselben Organisation folgen demselben Muster, und dem Azure-Verzeichnis der Organisation werden (wenn sich neue Benutzer registrieren) Benutzerkonten hinzugefügt. Je mehr Konten dem Verzeichnis hinzugefügt werden, desto mehr Benutzer können sicher mit Kollegen und Partnern zusammenarbeiten und einfacher verhindern, dass nicht autorisierte Personen ihre Dateien lesen, die keinen Zugriff darauf haben sollten.
 
@@ -76,7 +75,7 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 
     Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren](rms-for-individuals-take-control.md).
 
--   **Verwalten von Rights Management**: IT-Administratoren können das "RMS für Einzelpersonen"-Abonnement für die Organisation in ein kostenpflichtiges Abonnement umwandeln, das Azure Rights Management enthält. Wenn sie dies tun, bleiben das vorhandene Azure-Verzeichnis und die Konten erhalten, um einen nahtlosen Übergang von vorhandenen Benutzern, die bisher RMS für Einzelpersonen verwendet haben, zu gewährleisten. Alle Dateien, die zuvor geschützt waren, bleiben mit denselben Richtlinien geschützt, und die Personen, denen Berechtigungen für die Nutzung der Dateien gewährt wurden, können die Dateien weiterhin auf dieselbe Weise verwenden.
+-   **Verwalten von Rights Management**: IT-Administratoren können das RMS for Individuals-Abonnement für die Organisation in ein kostenpflichtiges Abonnement umwandeln, das Azure Rights Management enthält. Wenn sie dies tun, bleiben das vorhandene Azure-Verzeichnis und die Konten erhalten, um einen nahtlosen Übergang von vorhandenen Benutzern, die bisher RMS for Individuals verwendet haben, zu gewährleisten. Alle Dateien, die zuvor geschützt waren, bleiben mit denselben Richtlinien geschützt, und die Personen, denen Berechtigungen für die Nutzung der Dateien gewährt wurden, können die Dateien weiterhin auf dieselbe Weise verwenden.
 
     Wenn Sie so vorgehen, profitiert Ihre Organisation davon, dass sie in der Lage ist, Rights Management in die eigenen Workflows, Dienste und Datenspeicher zu integrieren. Zusätzlich können Sie dann Rights Management verwalten, weil Sie die Kontrolle über den Mandantenschlüssel Ihrer Organisation für Azure Rights Management haben. Sie können jetzt Folgendes machen:
 
@@ -102,6 +101,6 @@ Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die f
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

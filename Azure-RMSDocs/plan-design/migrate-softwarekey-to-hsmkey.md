@@ -1,27 +1,26 @@
 ---
 title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS"
-description: 
-keywords: 
+description: "Diese Anweisungen sind Teil des Migrationspfads von AD RMS zu Azure Rights Management und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: bd93e781da7dc34c18e236a90a03dbc8fb012a1c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: e470b5b5542536e812749f77353aaf34922d4985
 
 
 ---
 
 # Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
 
 
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten. 
@@ -164,6 +163,6 @@ Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
