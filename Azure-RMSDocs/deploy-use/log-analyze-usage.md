@@ -1,27 +1,26 @@
 ---
 title: Protokollieren und Analysieren der Nutzung von Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "In diesem Thema wird erläutert, wie Sie die Verwendungsprotokollierung bei Azure Rights Management (Azure RMS) verwenden können. Der Azure Rights Management-Dienst kann jede Anforderung protokollieren, die für Ihre Organisation durchgeführt wird. Hierzu gehören die Anforderungen von Benutzern, die von Rights Management-Administratoren in Ihrer Organisation ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Rights Management-Bereitstellung unterstützt wird."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 868656f84f39db20f0aee8d148b00af15849fda5
 
 
 ---
 
 # Protokollieren und Analysieren der Nutzung von Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 In diesem Thema wird erläutert, wie Sie die Verwendungsprotokollierung bei Azure Rights Management (Azure RMS) verwenden können. Der Azure Rights Management-Dienst kann jede Anforderung protokollieren, die für Ihre Organisation durchgeführt wird. Hierzu gehören die Anforderungen von Benutzern, die von Rights Management-Administratoren in Ihrer Organisation ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Rights Management-Bereitstellung unterstützt wird.
 
@@ -241,6 +240,6 @@ Weitere Informationen zum Verwenden von Windows PowerShell für Azure Rights Man
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

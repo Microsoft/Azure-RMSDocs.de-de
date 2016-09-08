@@ -1,20 +1,19 @@
 ---
 title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure RMS"
-description: 
-keywords: 
+description: "Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind, oder wenn Sie mehr technische Informationen benötigen, als im „Rights Management-Freigabeanwendung – Benutzerhandbuch“ oder in „FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows“ zur Verfügung gestellt werden."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/05/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
-ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
 
 
 ---
@@ -22,10 +21,10 @@ ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 # Administratorhandbuch der Rights Management-Freigabeanwendung
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
 
-Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in der [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) vorhanden sind:
+Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
 Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt.  Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
@@ -396,6 +395,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

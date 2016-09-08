@@ -4,9 +4,9 @@ description: Anweisungen zum Einrichten der Anwendung zum Testen.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b01f009ec3dffbb3fe671da8a19929e53c67fb79
-ms.openlocfilehash: cf86b07ba057d8999a156ae397ff7200b12a3f5e
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9cc96c7f4d75969ec75b1372a4a49499709b0d32
 
 
 ---
@@ -48,7 +48,7 @@ Die Anleitung in diesem Thema ist nicht vollständig. Detaillierte Informationen
 
 * [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md)
 * [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md)
-* [Installieren des SDKs](install-the-rms-sdk.md)
+* [Installieren des SDK](install-the-rms-sdk.md)
 * [Hinweise zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx)
  
 
@@ -56,6 +56,6 @@ Die Anleitung in diesem Thema ist nicht vollständig. Detaillierte Informationen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,29 +1,28 @@
 ---
 title: "Rights Management-Freigabeanwendung – Benutzerhandbuch | Azure RMS"
-description: 
-keywords: 
+description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern. Sie können mit dieser Anwendung auch Dateien öffnen und verwenden, die von anderen Personen mit derselben Rights Management-Technologie geschützt wurden."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
-ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 0e9ec1074f5305c12f436336520d7a6703ed0cfa
 
 
 ---
 
 # Rights Management-Freigabeanwendung – Benutzerhandbuch
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
-Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen, sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern. Sie können mit dieser Anwendung auch Dateien öffnen und verwenden, die von anderen Personen mit derselben Rights Management-Technologie geschützt wurden.
+Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern. Sie können mit dieser Anwendung auch Dateien öffnen und verwenden, die von anderen Personen mit derselben Rights Management-Technologie geschützt wurden.
 
 Sie benötigen dafür lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 ausgeführt wird. Anschließend können diese kostenlose Anwendung von Microsoft [herunterladen und installieren](http://go.microsoft.com/fwlink/?LinkId=303970) .
 
@@ -49,7 +48,7 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 - [Schützen einer Datei auf einem Gerät (direkt schützen)](sharing-app-protect-in-place.md)
 
-- [Schützen einer Datei, die per E-Mail freigegebene ist](sharing-app-protect-by-email.md)
+- [Schützen einer Datei, die per E-Mail freigegeben ist](sharing-app-protect-by-email.md)
 
 - [Ändern von Berechtigungen für geschützte Dateien](sharing-app-reprotect-files.md)
 
@@ -68,6 +67,6 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

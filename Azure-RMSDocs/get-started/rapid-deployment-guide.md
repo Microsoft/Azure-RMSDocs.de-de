@@ -1,27 +1,26 @@
 ---
 title: "Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt „Bereitstellen und Verwenden“, damit Sie Azure Rights Management (Azure RMS) schneller bereitstellen und nutzen können. Wählen Sie aus einer Liste mit spezifischen Implementierungsszenarien."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 93ef6397be2cd4799bd72975de72028ee6a898ed
 
 
 ---
 
 # Handbuch für die Schnellbereitstellung von Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt **Bereitstellen und Verwenden**, damit Sie Azure Rights Management (Azure RMS) schneller bereitstellen und nutzen können. Wählen Sie aus einer Liste mit spezifischen Implementierungsszenarien.
 
@@ -147,6 +146,6 @@ Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu s
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

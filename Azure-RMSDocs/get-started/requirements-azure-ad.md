@@ -1,27 +1,26 @@
 ---
 title: 'Azure RMS-Anforderungen: Azure AD-Verzeichnis | Azure RMS'
-description: 
-keywords: 
+description: "Sie benötigen ein Azure AD-Verzeichnis, um Azure Rights Management (Azure RMS) verwenden zu können. Für die Anmeldung am klassischen Azure-Portal, in dem Sie z. B. Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie Ihr Organisationskonto für dieses Verzeichnis."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 75b2414cc360704deb6107d6c0038f5b0bf7fa70
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 8083c2f7e4cfdbf65748007ae21a48a49a56599f
 
 
 ---
 
 # Azure RMS-Anforderungen: Azure AD-Verzeichnis
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Sie benötigen ein Azure AD-Verzeichnis, um Azure Rights Management (Azure RMS) verwenden zu können. Für die Anmeldung am klassischen Azure-Portal, in dem Sie z. B. Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie Ihr Organisationskonto für dieses Verzeichnis.
@@ -76,6 +75,6 @@ Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Manage
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

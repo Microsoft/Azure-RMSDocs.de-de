@@ -1,27 +1,26 @@
 ---
 title: "Terminologie für Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure RMS unklar? Hier finden Sie die Definitionen für Begriffe und Abkürzungen, die entweder für Azure RMS spezifisch sind oder im Kontext von Rights Management eine spezielle Bedeutung haben."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 75f868c4428e7b434e6a115a3e70508c3ff7f93d
-ms.openlocfilehash: 1a45457548d8cba6424e92bc18ef085d095742f3
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: cb30347efd062b0f1c74a029efc747d277c817f3
 
 
 ---
 
 # Terminologie für Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) unklar? Hier finden Sie die Definitionen für Begriffe und Abkürzungen, die entweder für Azure RMS spezifisch sind oder im Kontext von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] eine spezielle Bedeutung haben.
 
@@ -62,7 +61,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE
 |Rights Management-Freigabeanwendung|Eine optional herunterladbare Anwendung für Windows und besonders verbreitete mobile Geräte, die das sichere Freigeben von Dateien per Einbindung und per E-Mail unterstützt.|
 |RMS|Siehe *Rights Management Services*.|
 |RMS-Connector|Siehe *Rights Management-Connector*.|
-|RMS für Einzelpersonen|Ein kostenloses Abonnement, mit dessen Hilfe ein Benutzer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] verwenden kann, wenn seine Organisation nicht über ein Abonnement für Office 365 oder Azure Active Directory verfügt.|
+|RMS for Individuals|Ein kostenloses Abonnement, mit dessen Hilfe ein Benutzer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] verwenden kann, wenn seine Organisation nicht über ein Abonnement für Office 365 oder Azure Active Directory verfügt.|
 |RMS-Freigabeanwendung|Siehe *Rights Management-Freigabeanwendung*.|
 |Administrator|Eine Gruppe besonders vertrauenswürdiger Administratoren, die Dateien, die von der Organisation mithilfe von Rights Management geschützt wurden, entschlüsseln und anschließend öffnen kann. Normalerweise ist diese Zugangsstufe für rechtliche eDiscovery und Überwachungsteams erforderlich.|
 |Mandantenschlüssel|Auch als Schlüssel des lizenzgebenden Serverzertifikats bezeichnet (SLC, Server Licensor Certificate).<br /><br />Der eindeutige Schlüssel eines Unternehmens, der den Ursprung des Schutzes für alle Kryptografiefunktionen von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], die mit diesem Mandantenschlüssel verkettet sind, darstellt.|
@@ -74,6 +73,6 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft [!INCLUDE
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

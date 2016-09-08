@@ -1,27 +1,26 @@
 ---
 title: Verwenden von Tastenkombinationen in der Rights Management-Freigabeanwendung | Azure RMS
-description: 
-keywords: 
+description: "Wenn Sie die RMS-Freigabeanwendung verwenden, drücken Sie die ALT-TASTE, um die verfügbaren Tastenkombinationen anzuzeigen, und drücken Sie dann ALT+Zugriffstaste, um eine Option auszuwählen."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 1ff6f1c788d95efa534e22935f2f13ac0cc598d7
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 640e318c2c12bc1e2044163b2d9201c912345806
 
 
 ---
 
 # Verwenden von Tastenkombinationen in der Rights Management-Freigabeanwendung
 
-*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
 
 Wenn Sie die RMS-Freigabeanwendung verwenden, drücken Sie die **ALT**-TASTE, um die verfügbaren Tastenkombinationen anzuzeigen, und drücken Sie dann **ALT**+Zugriffstaste, um eine Option auszuwählen.
 
@@ -34,13 +33,13 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

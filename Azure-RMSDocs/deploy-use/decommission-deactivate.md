@@ -1,29 +1,28 @@
 ---
 title: "Außerbetriebsetzen und Deaktivieren von Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Sie können jederzeit steuern, ob Ihre Organisation Inhalte mithilfe von Azure RMS schützt. Wenn Sie entscheiden, dass diese Lösung zum Schutz von Daten nicht mehr verwendet werden soll, können Sie sich sicher sein, dass Ihnen die zuvor geschützten Inhalte weiterhin uneingeschränkt zur Verfügung stehen. Wenn Sie keinen weiteren Zugriff auf zuvor geschützte Inhalte mehr benötigen, deaktivieren Sie einfach den Dienst, und lassen Sie Ihr Abonnement für Azure Rights Management ablaufen. Dies ist zum Beispiel angebracht, nachdem Sie Tests abgeschlossen haben, und bevor Sie eine Bereitstellung in der Produktionsumgebung durchführen."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c114336551417fdbf1503ffc8350e3fc28e9c95
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
 
 
 ---
 
 # Außerbetriebsetzen und Deaktivieren von Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
-Sie können jederzeit steuern, ob Ihre Organisation Inhalte mithilfe von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) schützt, und wenn Sie entscheiden, dass diese Lösung zum Schützen von Daten nicht mehr verwendet werden soll, können Sie sich sicher sein, dass Ihnen die Inhalte, die zuvor geschützt waren, weiterhin uneingeschränkt zur Verfügung stehen. Wenn Sie keinen weiteren Zugriff auf zuvor geschützte Inhalte mehr benötigen, deaktivieren Sie einfach den Dienst, und lassen Sie Ihr Abonnement für Azure Rights Management ablaufen. Dies ist zum Beispiel angebracht, nachdem Sie das Testen von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] abgeschlossen haben, und bevor Sie es in der Produktionsumgebung bereitstellen.
+Sie können jederzeit steuern, ob Ihre Organisation Inhalte mithilfe von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) schützt. Wenn Sie entscheiden, dass diese Lösung zum Schutz von Daten nicht mehr verwendet werden soll, können Sie sich sicher sein, dass Ihnen die zuvor geschützten Inhalte weiterhin uneingeschränkt zur Verfügung stehen. Wenn Sie keinen weiteren Zugriff auf zuvor geschützte Inhalte mehr benötigen, deaktivieren Sie einfach den Dienst, und lassen Sie Ihr Abonnement für Azure Rights Management ablaufen. Dies ist zum Beispiel angebracht, nachdem Sie das Testen von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] abgeschlossen haben, und bevor Sie es in der Produktionsumgebung bereitstellen.
 
 Wenn Sie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] jedoch in der Produktionsumgebung bereitgestellt haben, müssen Sie sicherstellen, dass Sie über eine Kopie Ihres Azure Rights Management-Mandantenschlüssels verfügen, bevor Sie den Dienst deaktivieren. Tun Sie dies vor Ablauf des Abonnements, weil dadurch sichergestellt ist, dass Sie nach dem Deaktivieren des Diensts weiterhin Zugriff auf Inhalte haben, die von Azure Rights Management geschützt wurden. Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihren eigenen Schlüssel in einem HSM erzeugen und verwalten, verfügen Sie bereits über Ihren Azure Rights Management-Mandantenschlüssel. Wenn der Schlüssel jedoch von Microsoft verwaltet wurde (Standardlösung), lesen Sie die Anweisungen zum Exportieren Ihres Mandantenschlüssels im Artikel [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](operations-tenant-key.md).
 
@@ -92,6 +91,6 @@ Als **RIGHTS MANAGEMENT-STATUS** sollte jetzt **Inaktiv** angezeigt werden, und 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

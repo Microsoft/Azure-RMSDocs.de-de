@@ -1,27 +1,26 @@
 ---
 title: Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description: 
-keywords: 
+description: "Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und Konfiguration der Azure Rights Management (RMS)-Verbindungsdiensts. Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter „Bereitstellen des Azure Rights Management-Connectors“."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
-ms.openlocfilehash: 165292482349e4a233ab4030f49a297f57b041ac
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9160188f6e905db7ef95365a0cc5cfbcb7522101
 
 
 ---
 
 # Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und Konfiguration der Azure Rights Management (RMS)-Verbindungsdiensts. Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
@@ -241,6 +240,6 @@ Wenn Sie diese Dateien noch nicht heruntergeladen haben, können Sie dies im [Mi
 Nachdem Sie den RMS-Verbindungsdienst installiert und konfiguriert haben, können Sie die lokalen Server für dessen Verwendung konfigurieren. Gehen Sie zu [Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst](configure-servers-rms-connector.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

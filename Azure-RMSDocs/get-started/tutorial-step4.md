@@ -4,9 +4,9 @@ description: "Dies ist der vierte Schritt eines Tutorials, in dem Sie Microsoft 
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 0287f1408c7cd22d0254d135aaa267ec77246e45
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
 
 # Azure RMS Quick Start – Schritt 4: Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 Wechseln zu: 
@@ -71,7 +71,7 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 |--------------------------------|--------------------------|
 |Umfassende Erläuterung dazu, wie die durch Azure Rights Management geschützten Dateien angezeigt werden|[Anzeigen und Verwenden der durch Rights Management geschützten Dateien](../rms-client/sharing-app-view-use-files.md)|
 |Kostenloses RMS for Individuals-Abonnement|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Informationen zu den beiden Versionen der an die E-Mail angehängten Datei|[Erläuterung zur automatisch erstellten PPDF-Datei](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|Informationen zu den beiden Versionen der an die E-Mail angehängten Datei|[Erläuterung zur automatisch erstellten PPDF-Datei](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)|
 
 
 >[!div class="step-by-step"]
@@ -79,6 +79,6 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 [Schritt 5 »](tutorial-step5.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

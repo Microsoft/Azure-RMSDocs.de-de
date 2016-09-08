@@ -1,27 +1,26 @@
 ---
 title: "Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels | Azure RMS"
-description: 
-keywords: 
+description: "Verwenden Sie die Informationen in diesem Artikel, um Ihren Rights Management (RMS)-Mandantenschlüssel für Azure RMS zu planen und zu verwalten. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als &quot;Bring Your Own Key&quot; (kurz BYOK) bezeichnet."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
-ms.openlocfilehash: ee7b9b5f251856f102651f1e8f379f7bbacea77e
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
 
 
 ---
 
 # Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Verwenden Sie die Informationen in diesem Artikel, um Ihren Rights Management (RMS)-Mandantenschlüssel für Azure RMS zu planen und zu verwalten. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten.  Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
 
@@ -137,6 +136,6 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

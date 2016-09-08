@@ -1,27 +1,26 @@
 ---
 title: "Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Wenn Sie Schutz für Dateien oder E-Mails mithilfe von Azure Rights Management (Azure RMS) festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie benutzerdefinierte Vorlagen für Azure RMS konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
-ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
+ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
+ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
 
 
 ---
 
 # Konfigurieren von Nutzungsrechten für Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Wenn Sie Schutz für Dateien oder E-Mails mithilfe von Azure Rights Management (Azure RMS) festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie benutzerdefinierte Vorlagen für Azure RMS konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Im klassischen Azure-Portal können Sie beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren:
 
@@ -40,7 +39,7 @@ In der folgende Tabelle werden die von Rights Management unterstützten Benutzer
 |Allgemeiner Name: **Weiterleiten** <br /><br />Richtliniencodierung: **FORWARD**|Aktiviert die Option zum Weiterleiten einer E-Mail-Nachricht und zum Hinzufügen von Empfängern in den Zeilen **An** und **Cc** . Dieses Recht wird nicht auf Dokumente sondern nur auf E-Mails angewendet.<br /><br />Gestattet es dem Weiterleiter nicht, anderen Benutzern Berechtigungen als Teil des Weiterleitungsvorgangs zu gewähren.|Benutzerdefinierte Office-Rechte: verweigert, wenn die Standardrichtlinie **Nicht weiterleiten** verwendet wird<br /><br />Name im klassischen Azure-Portal: **Weiterleiten**<br /><br />Name in den AD RMS-Vorlagen: **Weiterleiten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Allgemeiner Name: **Vollzugriff** <br /><br />Richtliniencodierung: **OWNER**|Gewährt alle Berechtigungen für das Dokument, und alle verfügbaren Aktionen können ausgeführt werden.<br /><br />Umfasst die Möglichkeit, den Schutz zu entfernen, und das Dokument neu zu schützen.|Benutzerdefinierte Office-Rechte: als benutzerdefinierte Option **Vollzugriff**<br /><br />Name im klassischen Azure-Portal: **Vollzugriff**<br /><br />Name in den AD RMS-Vorlagen: **Vollzugriff** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_ALL L"OWNER"`|
 |Allgemeiner Name: **Drucken** <br /><br />Richtliniencodierung: **PRINT**|Aktiviert die Optionen zum Drucken des Inhalts.|Benutzerdefinierte Office-Rechte: als Option **Inhalt drucken** in benutzerdefinierten Berechtigungen Keine Pro-Empfänger-Einstellung.<br /><br />Name im klassischen Azure-Portal: **Drucken**<br /><br />Name in den AD RMS-Vorlagen: **Drucken** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_PRINT L"PRINT"`|
-|Allgemeiner Name: **Antwort** <br /><br />Richtliniencodierung: **PRINT**|Aktiviert die Option **Antwort** in einem E-Mail-Client, ohne Änderungen in der Zeile **An** oder **Cc** zuzulassen.|Benutzerdefinierte Office-Rechte: nicht anwendbar<br /><br />Name im klassischen Azure-Portal: **Antworten**<br /><br />Name in den AD RMS-Vorlagen: **Antworten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_REPLY`|
+|Allgemeiner Name: **Antwort** <br /><br />Richtliniencodierung: **REPLY**|Aktiviert die Option **Antwort** in einem E-Mail-Client, ohne Änderungen in der Zeile **An** oder **Cc** zuzulassen.|Benutzerdefinierte Office-Rechte: nicht anwendbar<br /><br />Name im klassischen Azure-Portal: **Antworten**<br /><br />Name in den AD RMS-Vorlagen: **Antworten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_REPLY`|
 |Allgemeiner Name: **Allen antworten** <br /><br />Richtliniencodierung: **REPLYALL**|Aktiviert die Option **Allen antworten** in einem E-Mail-Client, ermöglicht es dem Benutzer jedoch nicht, der Zeile **An** oder **Cc** Empfänger hinzuzufügen.|Benutzerdefinierte Office-Rechte: nicht anwendbar<br /><br />Name im klassischen Azure-Portal: **Allen antworten**<br /><br />Name in den AD RMS-Vorlagen: **Allen antworten** <br /><br />API-Konstante oder -Wert `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |Allgemeiner Name: **Anzeigen, Öffnen, Lesen** <br /><br />Richtliniencodierung: **VIEW**|Ermöglicht es dem Benutzer, das Dokument zu öffnen und den Inhalt zu sehen.|Benutzerdefinierte Office-Rechte: als benutzerdefinierte Option **Lesen**, Option **Anzeigen**<br /><br />Name im klassischen Azure-Portal: **Anzeigen**<br /><br />Name in den AD RMS-Vorlagen: **Allen antworten** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_READ L"VIEW"`|
 |Allgemeiner Name: **Kopieren** <br /><br />Richtliniencodierung: **EXTRACT**|Aktiviert Optionen zum Kopieren von Daten (einschließlich Screenshots) aus dem Dokument in dasselbe oder ein anderes Dokument.<br /><br />In einigen Anwendungen ermöglicht es auch, dass das gesamte Dokument ungeschützt gespeichert werden kann.|Benutzerdefinierte Office-Rechte: als die benutzerdefinierte Richtlinienoption **Benutzern mit Lesezugriff das Kopieren des Inhalts erlauben**<br /><br />Name im klassischen Azure-Portal: **Inhalt kopieren und extrahieren**<br /><br />Name in den AD RMS-Vorlagen: **Extrahieren** <br /><br />API-Konstante oder -Wert `IPC_GENERIC_EXTRACT L"EXTRACT"`|
@@ -102,6 +101,6 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

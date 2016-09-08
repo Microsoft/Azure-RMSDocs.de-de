@@ -1,27 +1,26 @@
 ---
 title: "Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI | Azure RMS"
-description: 
-keywords: 
+description: "Auf dieser Seite finden Sie das Beispielskript zum Kopieren und Bearbeiten, wie unter „RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)“ beschrieben."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: a1771c37bffa2af60773a5befdd35c14f684c942
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 567280a3992d8964d4112e597ebda8cf65f5ec9a
 
 
 ---
 
 # Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
-*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure)](configure-fci.md) beschrieben.
 
@@ -175,6 +174,6 @@ Zurück zu [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (Fi
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

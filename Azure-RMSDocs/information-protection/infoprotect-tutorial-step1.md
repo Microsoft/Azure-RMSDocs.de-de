@@ -5,13 +5,13 @@ author: cabailey
 manager: mbaldwin
 ms.date: 07/291/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 128952778ec317584e558e409961e2921c4ecd07
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: b608ee307bf7388ab7c7ed70cc1286db5df176c8
 
 
 ---
@@ -75,7 +75,7 @@ Dies ist bereits alles im ersten Schritt. Der Azure Rights Management-Dienst ist
 
 Für eine Produktionsbereitstellung sollten Sie benutzerdefinierte Vorlagen konfigurieren, zusätzlich zu den oder anstelle der beiden Standardvorlagen von Azure Rights Management. Da in diesem Tutorial aber keine benutzerdefinierten Vorlagen erforderlich sind, können Sie direkt zum zweiten Schritt übergehen.
 
-|Weitere Informationen zu...|Weitere Informationen|
+|Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Informationen zum Aktivieren von Rights Management|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
 |Standardvorlagen und Erstellung neuer benutzerdefinierter Vorlagen|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md)|
@@ -86,6 +86,6 @@ Für eine Produktionsbereitstellung sollten Sie benutzerdefinierte Vorlagen konf
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 
