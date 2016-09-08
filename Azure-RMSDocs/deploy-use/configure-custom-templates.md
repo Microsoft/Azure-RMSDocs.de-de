@@ -1,27 +1,26 @@
 ---
 title: "Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Nachdem Sie Azure Rights Management (Azure RMS) aktiviert haben, sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Richtlinien auf vertrauliche Dateien erleichtern, die den Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränken. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/03/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8e72b68c03ee7da58adaff96f3f4611a227214b0
-ms.openlocfilehash: 26afa04c5041d0b8c952d3d6b3da5a2215acda87
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 83db5e11a4603523d7c4a86921fbdafb5f6fbfb5
 
 
 ---
 
 # Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 [Nachdem Sie Azure Rights Management (Azure RMS) aktiviert haben](activate-service.md), sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Richtlinien auf vertrauliche Dateien erleichtern, mit denen der Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränkt wird. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
 
@@ -67,6 +66,6 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

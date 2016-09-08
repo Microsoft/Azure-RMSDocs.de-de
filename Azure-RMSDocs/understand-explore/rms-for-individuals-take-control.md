@@ -1,32 +1,31 @@
 ---
 title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure RMS"
-description: 
-keywords: 
+description: "Wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten, können Sie die Benutzerkonten in dem für Ihre Organisation erstellten Azure-Verzeichnis weiterhin auf die folgenden Arten kontrollieren."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: a900622fcce4a0a1431f47647709584e404a7f8c
 
 
 ---
 
 
 
-# Möglichkeiten der Kontrolle über die für RMS für Einzelpersonen erstellten Konten durch Administratoren
+# Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren
 
-*Gilt für: Azure Rights Management*
+>*Gilt für: Azure Rights Management*
 
 
-Wenn Sie das „RMS für Einzelpersonen“-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten, können Sie immer noch die Benutzerkonten im Azure-Verzeichnis, das für Ihre Organisation erstellt wurde, auf die folgenden Arten kontrollieren:
+Wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten, können Sie die Benutzerkonten in dem für Ihre Organisation erstellten Azure-Verzeichnis weiterhin auf die folgenden Arten kontrollieren:
 
 -   Implementieren Sie Verzeichnisintegrationslösungen für Azure Active Directory und Ihre Active Directory-Domänendienste-Infrastruktur. Sie können Konten und Kennwörter synchronisieren, sodass Benutzer keine neuen Konten für die Verwendung von Rights Management erstellen müssen, und Ihre lokalen Kennwortrichtlinien gelten weiterhin auch für die neuen Azure-Benutzerkonten. Sie können auch Kennwörter synchronisieren, sodass Benutzer sich kein anderes Kennwort für die Verwendung von Rights Management merken müssen.
 
@@ -38,7 +37,7 @@ Wenn Sie das „RMS für Einzelpersonen“-Abonnement Ihrer Organisation nicht i
 
     -   Synchronisieren Sie Ihre Active Directory-Domänendienste-Infrastruktur mit Azure Active Directory. Diese Aktion verhindert, dass neue Konten erstellt werden, wenn sich Benutzer für Self-Service-Abonnements wie RMS for Individuals registrieren, und Sie können Konten löschen oder deaktivieren, die zuvor im Azure-Verzeichnis erstellt wurden.
 
-Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran zu hindern, sich für RMS für Einzelpersonen zu registrieren, müssen Sie ein Azure-Abonnement besitzen und Besitzer des Verzeichnisses sein. Wenn Sie noch kein Azure-Abonnement haben, können Sie sich eines beschaffen, für das keine Kosten anfallen. Wenn während des Self-Service-Prozesses automatisch ein Verzeichnis für Sie erstellt wurde, übernehmen Sie den Besitz der Domäne, die zu dessen Erstellung verwendet wurde. Wenn Sie bereits ein Verzeichnis in Azure besitzen, Benutzer aber eine neue Domäne angegeben haben, die Sie in Ihrer Organisation verwenden, führen Sie diese Domäne mit Ihrem vorhandenen Verzeichnis zusammen. Weitere Informationen finden Sie in den Anweisungen in [Was ist die Self-Service-Registrierung für Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
+Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran zu hindern, sich für RMS for Individuals zu registrieren, müssen Sie ein Azure-Abonnement besitzen und Besitzer des Verzeichnisses sein. Wenn Sie noch kein Azure-Abonnement haben, können Sie sich eines beschaffen, für das keine Kosten anfallen. Wenn während des Self-Service-Prozesses automatisch ein Verzeichnis für Sie erstellt wurde, übernehmen Sie den Besitz der Domäne, die zu dessen Erstellung verwendet wurde. Wenn Sie bereits ein Verzeichnis in Azure besitzen, Benutzer aber eine neue Domäne angegeben haben, die Sie in Ihrer Organisation verwenden, führen Sie diese Domäne mit Ihrem vorhandenen Verzeichnis zusammen. Weitere Informationen finden Sie in den Anweisungen in [Was ist die Self-Service-Registrierung für Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
 
 ## Nächste Schritte
@@ -47,6 +46,6 @@ Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: "Szenario - Dateien auf einer Dateiserverfreigabe schützen | Azure RMS"
-description: 
-keywords: 
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management zum Schutz aller von Ihnen gewünschten Dateien auf einem Dateiserver verwendet. Dies stellt sicher, dass nur Mitarbeiter Ihrer Organisation darauf zugreifen können, selbst wenn die Dateien kopiert und an einem Ort gespeichert werden, der nicht unter der Kontrolle Ihrer IT-Abteilung liegt, oder wenn sie per E-Mail an andere Benutzer gesendet werden."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: c16098a2d0fe41748280704716a2eeef8921a6fa
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
 
 
 ---
 
 # Szenario - Dateien auf einer Dateiserverfreigabe schützen
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management zum Schutz aller von Ihnen gewünschten Dateien auf einem Dateiserver verwendet. Dies stellt sicher, dass nur Mitarbeiter Ihrer Organisation darauf zugreifen können, selbst wenn die Dateien kopiert und an einem Ort gespeichert werden, der nicht unter der Kontrolle Ihrer IT-Abteilung liegt, oder wenn sie per E-Mail an andere Benutzer gesendet werden.
 
@@ -48,7 +47,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und Azure Rights Management geschützt wurden.|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Eine der folgenden Komponenten:<br /><br />– Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage &lt;Organisationsname&gt; – Vertraulich nicht archiviert<br /><br />– Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |Sie haben das RMS-Schutztool heruntergeladen und die erforderlichen Komponenten für Azure RMS konfiguriert.|Anweisungen zum Herunterladen des Tools und zum Erfüllen der Voraussetzungen: [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Informationen zum Konfigurieren zusätzlich erforderlicher Komponenten für Azure RMS wie dem Dienstprinzipalkonto: [About_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 ### Konfigurieren eines Dateiservers zum Schutz aller Dateien mithilfe von Azure RMS und dem Ressourcen-Manager für Dateiserver mit Dateiklassifizierungsinfrastruktur
@@ -156,6 +155,6 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

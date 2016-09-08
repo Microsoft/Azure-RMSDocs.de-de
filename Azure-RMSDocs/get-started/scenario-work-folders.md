@@ -1,29 +1,28 @@
 ---
 title: "Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren | Azure RMS"
-description: 
-keywords: 
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Office-Dokumente in Arbeitsordnern dauerhaft zu schützen. Arbeitsordner verwenden einen Rollendienst für Dateiserver, die unter Windows Server ausgeführt werden. Sie bieten Benutzern eine konsistente Möglichkeit, um auf ihren PCs und Geräten auf ihre Arbeitsdateien zuzugreifen. Arbeitsordner bieten eine eigene Verschlüsselung zum Schutz der Dateien. Dieser Schutz geht jedoch verloren, wenn die Dateien aus den Arbeitsordnern verschoben werden."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 35ad445e229eac3feeca5522a41b9e3b25fd1180
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: ce61f22be934ec9817a22737417514468b5c6528
 
 
 ---
 
 # Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
-In diesem Szenario und der unterstützende Benutzerdokumentation wird Azure Rights Management verwendet, um Office-Dokumente in [Arbeitsordnern](https://technet.microsoft.com/library/dn265974.aspx) dauerhaft zu schützen. Arbeitsordner verwenden einen Rollendienst für Dateiserver, die unter Windows Server ausgeführt werden. Sie bieten Benutzern eine konsistente Möglichkeit, um auf ihren PCs und Geräten auf ihre Arbeitsdateien zuzugreifen. Arbeitsordner bieten eine eigene Verschlüsselung zum Schutz der Dateien. Dieser Schutz geht jedoch verloren, wenn die Dateien aus den Arbeitsordnern verschoben werden. Dies ist beispielsweise der Fall, wenn Benutzer die synchronisierten Dateien kopieren und in einem Speicher ablegen, der nicht der Kontrolle der IT-Abteilung unterliegt, oder wenn sie die Dateien anderen Personen per E-Mail senden.
+In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Office-Dokumente in [Arbeitsordnern](https://technet.microsoft.com/library/dn265974.aspx) dauerhaft zu schützen. Arbeitsordner verwenden einen Rollendienst für Dateiserver, die unter Windows Server ausgeführt werden. Sie bieten Benutzern eine konsistente Möglichkeit, um auf ihren PCs und Geräten auf ihre Arbeitsdateien zuzugreifen. Arbeitsordner bieten eine eigene Verschlüsselung zum Schutz der Dateien. Dieser Schutz geht jedoch verloren, wenn die Dateien aus den Arbeitsordnern verschoben werden. Dies ist beispielsweise der Fall, wenn Benutzer die synchronisierten Dateien kopieren und in einem Speicher ablegen, der nicht der Kontrolle der IT-Abteilung unterliegt, oder wenn sie die Dateien anderen Personen per E-Mail senden.
 
 Der zusätzliche Schutz durch Azure Rights Management trägt dazu bei, versehentliche Datenverluste zu verhindern. Damit wird unterbunden, dass Dateien von Personen außerhalb Ihrer Organisation angezeigt werden. Zu diesem Zweck können Sie eine der integrierten Standardvorlagen für Benutzerrechterichtlinien verwenden. Bevor Sie dieses Szenario jedoch bereitstellen, sollten Sie erwägen, ob Benutzer diese Dateien möglicherweise legitim an Personen außerhalb der Organisation weiterleiten müssen. Dies ist beispielsweise der Fall, wenn ein Benutzer nach der Arbeit an einer Preisliste die endgültige Version per E-Mail an einen Kunden in einer anderen Organisation sendet. Wenn Sie die Rights Management-Standardvorlage für Arbeitsordner verwenden, kann der Kunden in der anderen Organisation das per E-Mail gesendete Dokument nicht lesen. Um dies zu ermöglichen, können Sie eine benutzerdefinierte Vorlage erstellen, mit der Benutzer eine neue Benutzerrechterichtlinie auf die Datei anwenden können. Diese ersetzt die ursprüngliche Beschränkung für alle Mitarbeiter durch die Beschränkung für den in der E-Mail angegebenen Empfänger.
 
@@ -123,6 +122,6 @@ Wenn Sie die benutzerdefinierte Vorlage wie für dieses Szenario beschrieben kon
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

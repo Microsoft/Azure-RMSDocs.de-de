@@ -1,27 +1,26 @@
 ---
 title: "Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure RMS"
-description: 
-keywords: 
+description: "Da Office 365 systemeigene Unterstützung für Azure RMS bietet, ist keine Clientcomputerkonfiguration erforderlich, um die Features für die Verwaltung von Informationsrechten (IRM) für Anwendungen wie Word, Excel, PowerPoint, Outlook und die Outlook Web App zu unterstützen. Die Benutzer müssen sich lediglich bei ihren Office-Anwendungen mit ihren Microsoft Office 365-Anmeldeinformationen anmelden, und sie können Dateien und E-Mails schützen sowie von anderen geschützte Dateien und E-Mails verwenden."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 3592fb7c386eaeddc839c11a494f94d9b7564472
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 09f152ef910cf9c08c9a693f79c40f491263c5d3
 
 
 ---
 
 # Office 365: Konfigurationen für Clients und Onlinedienste
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Da Office 365 systemeigene Unterstützung für Azure RMS bietet, ist keine Clientcomputerkonfiguration erforderlich, um die Features für die Verwaltung von Informationsrechten (IRM) für Anwendungen wie Word, Excel, PowerPoint, Outlook und die Outlook Web App zu unterstützen. Die Benutzer müssen sich lediglich bei ihren Office-Anwendungen mit ihren [!INCLUDE[o365_1](../includes/o365_1_md.md)]-Anmeldeinformationen anmelden, und sie können Dateien und E-Mails schützen sowie von anderen geschützte Dateien und E-Mails verwenden.
 
@@ -1106,6 +1105,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

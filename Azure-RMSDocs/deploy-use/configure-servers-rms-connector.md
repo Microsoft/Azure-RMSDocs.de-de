@@ -1,27 +1,26 @@
 ---
 title: "Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst | Azure RMS"
-description: 
-keywords: 
+description: "Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus „Bereitstellen des Azure Rights Management-Verbindungsdiensts“."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/08/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0b07ecc88b1d2d344f0984d4a805cc033996cc4d
-ms.openlocfilehash: 79171b5931b69ca18d2a2cbe321d5d5887903da2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d2b15dac1f2b2163ff72d80c97ca0d5da44fd13c
 
 
 ---
 
 # Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
-*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 
 Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
@@ -250,6 +249,6 @@ Informationen zum Überwachen des RMS-Connectors finden Sie unter [Überwachen d
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

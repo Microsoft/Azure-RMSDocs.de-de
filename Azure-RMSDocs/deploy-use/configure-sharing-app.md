@@ -1,27 +1,26 @@
 ---
 title: "Rights Management-Freigabeanwendung&colon; Installation und Konfiguration für Clients | Azure RMS"
-description: 
-keywords: 
+description: "Die Rights Management (RMS)-Freigabeanwendung ist für Clientcomputer erforderlich, damit diese Azure RMS mit Office 2010 verwenden können, und wird für alle Computer und mobilen Geräte empfohlen, die Azure RMS unterstützen. Die RMS-Freigabeanwendung integriert sich in Office-Anwendungen, indem ein Office-Add-In- installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht systemeigen von Azure Rights Management unterstützt werden, und eine Website zur Dokumentverfolgung, auf der Benutzer geschützte Dateien verfolgen und sperren können, die sie geschützt haben."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: d3f923cf6f140c2caa75b7b0c8ac90a42be962a7
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: bf7cd8007b5423efaa13849101af5c4688cf0975
 
 
 ---
 
 # Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Die Rights Management (RMS)-Freigabeanwendung ist für Clientcomputer erforderlich, damit diese Azure RMS mit Office 2010 verwenden können, und wird für alle Computer und mobilen Geräte empfohlen, die Azure RMS unterstützen. Die RMS-Freigabeanwendung integriert sich in Office-Anwendungen, indem ein Office-Add-In- installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht systemeigen von Azure Rights Management unterstützt werden, und eine Website zur Dokumentverfolgung, auf der Benutzer geschützte Dateien verfolgen und sperren können, die sie geschützt haben.
 
@@ -43,6 +42,6 @@ Um die RMS-Freigabeanwendung für mobile Plattformen zu installieren, laden Sie 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

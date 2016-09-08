@@ -1,27 +1,26 @@
 ---
 title: "Übersicht über Azure Rights Management | Azure RMS"
-description: 
-keywords: 
+description: "Microsoft Azure Rights Management (Azure RMS) hilft Ihnen, die sensiblen Informationen Ihrer Organisation vor nicht autorisiertem Zugriff zu schützen und zu steuern, wie diese Informationen verwendet werden. Azure Rights Management ist ein Clouddienst, der auch in andere Microsoft-Clouddienste und -Anwendungen integriert ist, z.B. Office 365 und Azure Active Directory. Er kann auch mit Ihren eigenen Branchenanwendungen und Informationsschutzlösungen von Softwareherstellern verwendet werden. Dabei kann es sich sowohl um lokale als auch um Cloudanwendungen und -lösungen handeln."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fdedb0f1064e98500d3b4edcee283c514851d446
-ms.openlocfilehash: a8c9a55977a285cd30872beeb160b07ce02edcce
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9d6c68c01cbd410def904f7cf256ffe9a5a5417b
 
 
 ---
 
 # Übersicht über Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 Microsoft Azure Rights Management (Azure RMS) hilft Ihnen, die sensiblen Informationen Ihrer Organisation vor nicht autorisiertem Zugriff zu schützen und zu steuern, wie diese Informationen verwendet werden. Azure Rights Management ist ein Clouddienst, der auch in andere Microsoft-Clouddienste und -Anwendungen integriert ist, z.B. Office 365 und Azure Active Directory. Er kann auch mit Ihren eigenen Branchenanwendungen und Informationsschutzlösungen von Softwareherstellern verwendet werden. Dabei kann es sich sowohl um lokale als auch um Cloudanwendungen und -lösungen handeln. 
 
@@ -40,6 +39,6 @@ Wenn Sie Azure RMS für Ihre Organisation bereitstellen möchten, können Sie di
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

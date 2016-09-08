@@ -1,27 +1,26 @@
 ---
 title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure RMS"
-description: 
-keywords: 
+description: "In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
 
 
 ---
 
 # Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt.
 
@@ -105,7 +104,7 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 -   Zusätzliche Informationen:
 
-    -   [Schützen einer Datei, die per E-Mail freigegebene ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Schützen einer Datei, die per E-Mail freigegeben ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
 
     -   [Verfolgen und Widerrufen von Dokumenten](https://technet.microsoft.com/library/dn986611.aspx)
 
@@ -144,7 +143,7 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 -   Zusätzliche Informationen:
 
-    -   [Schützen einer Datei, die per E-Mail freigegebene ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Schützen einer Datei, die per E-Mail freigegeben ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
 
     -   [Verfolgen und Widerrufen von Dokumenten](https://technet.microsoft.com/library/dn986611.aspx)
 
@@ -155,6 +154,6 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

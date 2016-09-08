@@ -1,27 +1,26 @@
 ---
 title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure RMS"
-description: 
-keywords: 
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff. Dies sind in der Regel Dateien, auf die nur wenige Personen Zugriff haben sollten. Hierzu zählen beispielsweise die Rezepte der bekanntesten Lebensmittelprodukte Ihres Unternehmens oder Übernahmepläne, die nicht vor einem bestimmten Datum veröffentlicht werden dürfen."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5db916bc9eef927dc7d6a628808e9af79363e480
 
 
 ---
 
 # Szenario – Schutz Ihrer wertvollsten Dateien
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff. Dies sind in der Regel Dateien, auf die nur wenige Personen Zugriff haben sollten. Hierzu zählen beispielsweise die Rezepte der bekanntesten Lebensmittelprodukte Ihres Unternehmens oder Übernahmepläne, die nicht vor einem bestimmten Datum veröffentlicht werden dürfen.
 
@@ -148,6 +147,6 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

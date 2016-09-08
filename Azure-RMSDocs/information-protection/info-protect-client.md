@@ -1,17 +1,16 @@
 ---
 title: Installieren des Azure Information Protection-Clients | Azure Rights Management
-description: 
-author: cabailey
+description: "Um Dokumente und E-Mail-Nachrichten mithilfe von Azure Information Protection zu klassifizieren, müssen Sie zunächst den Azure Information Protection-Client installieren. Durch diese Installation wird eine Information Protection-Leiste zu Ihren Office-Anwendungen (Word, Excel, PowerPoint, Outlook) hinzugefügt, auf der die Klassifizierungsbezeichnungen für Ihre Organisation angezeigt werden. Außerdem wird auf der Registerkarte „Start“ (Word, Excel, PowerPoint) eine neue Gruppe „Schutz“ mit einer Schaltfläche „Schützen“ angezeigt."
 manager: mbaldwin
 ms.date: 07/29/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: c8a7c7d7182df7b525b3425ab378126feb389d9f
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: ab8388e03803d32a6891785f905a1ddef796bc25
 
 
 ---
@@ -89,6 +88,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

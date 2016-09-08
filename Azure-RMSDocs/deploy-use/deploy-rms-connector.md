@@ -1,27 +1,26 @@
 ---
 title: Bereitstellen des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description: 
-keywords: 
+description: "Hier erhalten Sie Informationen über den Azure Rights Management-Verbindungsdienst. Außerdem erfahren Sie, wie Sie mit dessen Hilfe für Informationsschutz mit vorhandenen lokalen Bereitstellungen sorgen können, die Microsoft Exchange Server, Microsoft SharePoint Server oder unter Windows Server ausgeführte Dateiserver verwenden, für die die Dateiklassifizierungsinfrastruktur-Funktion des Ressourcen-Managers für Dateiserver eingesetzt wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e31656e417a0861d33deb2436d2e4b596a7512a7
-ms.openlocfilehash: 6b9b3b039ba2de0de174a134768afd763d26b5dd
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 003dcc6a000d303fc42204d61145cf067dc16d32
 
 
 ---
 
 # Bereitstellen des Azure Rights Management-Verbindungsdiensts
 
-*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Hier erhalten Sie Informationen über den Azure Rights Management-Verbindungsdienst. Außerdem erfahren Sie, wie Sie mit dessen Hilfe für Informationsschutz mit vorhandenen lokalen Bereitstellungen sorgen können, die Microsoft Exchange Server, Microsoft SharePoint Server oder unter Windows Server ausgeführte Dateiserver verwenden, für die die Dateiklassifizierungsinfrastruktur-Funktion des Ressourcen-Managers für Dateiserver eingesetzt wird.
 
@@ -84,6 +83,6 @@ Stellen Sie vor der Installation des RMS-Verbindungsdiensts sicher, dass folgend
 Fahren Sie mit [Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts](install-configure-rms-connector.md) fort.
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

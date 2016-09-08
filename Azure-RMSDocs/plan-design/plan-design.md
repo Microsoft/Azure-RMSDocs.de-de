@@ -1,36 +1,30 @@
 ---
-# required metadata
-
 title: Planen und Entwerfen von Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: msmbaldwin
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod:
-ms.service:
-ms.technology:
+ms.prod: 
+ms.service: 
+ms.technology: 
 ms.assetid: 47928314-6509-4850-a3ab-5081044b33db
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: mbaldwin
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 2fdb237f35614329e7c6b0fa96f396522b786c52
+
 
 ---
 
 # Planen und Entwerfen von Azure Rights Management
 
-*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Rights Management, Office 365*
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Aug16_HO4-->
 
 
