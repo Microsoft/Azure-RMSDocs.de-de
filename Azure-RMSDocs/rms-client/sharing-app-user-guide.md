@@ -1,9 +1,9 @@
 ---
 title: "Rights Management-Freigabeanwendung – Benutzerhandbuch | Azure RMS"
-description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern. Sie können mit dieser Anwendung auch Dateien öffnen und verwenden, die von anderen Personen mit derselben Rights Management-Technologie geschützt wurden."
+description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 0e9ec1074f5305c12f436336520d7a6703ed0cfa
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: c39e311e8247938cf44068106a9771d2ad7a56e0
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure RMS"
-description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff. Dies sind in der Regel Dateien, auf die nur wenige Personen Zugriff haben sollten. Hierzu zählen beispielsweise die Rezepte der bekanntesten Lebensmittelprodukte Ihres Unternehmens oder Übernahmepläne, die nicht vor einem bestimmten Datum veröffentlicht werden dürfen."
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 5db916bc9eef927dc7d6a628808e9af79363e480
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
 
 
 ---
