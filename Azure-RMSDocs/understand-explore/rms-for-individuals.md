@@ -1,6 +1,6 @@
 ---
 title: RMS for Individuals und Azure Rights Management | Azure RMS
-description: "RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die durch Microsoft Azure Rights Management (Azure RMS) geschützt sind. RMS for Individuals kann eingesetzt werden, wenn diese Dateien nicht authentifiziert werden können, weil die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet. Dies ist z. B. der Fall, wenn die IT-Abteilung Office 365 nicht abonniert hat oder keine Azure-Dienste verwendet."
+description: "Informationen zu RMS for Individuals, ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die durch Microsoft Azure Rights Management (Azure RMS) geschützt sind. RMS for Individuals kann eingesetzt werden, wenn diese Benutzer nicht authentifiziert werden können, weil die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
 
 >*Gilt für: Azure Rights Management*
 
-RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die durch Microsoft Azure Rights Management (Azure RMS) geschützt sind. RMS for Individuals kann eingesetzt werden, wenn diese Dateien nicht authentifiziert werden können, weil die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet. Dies ist z. B. der Fall, wenn die IT-Abteilung Office 365 nicht abonniert hat oder keine Azure-Dienste verwendet.
+RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die durch Microsoft Azure Rights Management (Azure RMS) geschützt sind. RMS for Individuals kann eingesetzt werden, wenn diese Benutzer nicht authentifiziert werden können, weil die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet. Dies ist z. B. der Fall, wenn die IT-Abteilung Office 365 nicht abonniert hat oder keine Azure-Dienste verwendet.
 
 Diese Benutzer können sich für ein kostenloses Geschäfts- oder -Schulkonto registrieren, das mit Azure RMS verwendet wird, und können die Rights Management-Freigabeanwendung herunterladen und installieren. Danach können sich diese Benutzer authentifizieren, um nachzuweisen, dass sie die jeweilige Person sind, an die die geschützten Dateien gesendet wurden, und können dann die geschützten Dateien auf Computern oder mobilen Geräten lesen.
 

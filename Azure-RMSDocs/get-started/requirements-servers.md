@@ -1,9 +1,9 @@
 ---
 title: "Azure RMS-Anforderungen: Lokale Server, die Azure Rights Management unterstützen | Azure RMS"
-description: "Die folgenden lokalen Serverprodukte werden mit Azure RMS unterstützt, wenn Sie den Azure RMS-Verbindungsdienst verwenden, der als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und Azure RMS fungiert. Zusätzlich erfordert diese Konfiguration, dass Sie die Verzeichnissynchronisierung zwischen Ihren Active Directory-Gesamtstrukturen und Azure Active Directory konfigurieren."
+description: "Identifizieren Sie die lokalen Serverprodukte, die mit Azure RMS unterstützt werden, wenn Sie den Azure RMS-Connector verwenden."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: cd8b8d18e146fcc0864565a603b47b2b074af2b2
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 0f9f1dc09d1b0d831b1c96d25b7bb763086aa9c9
 
 
 ---

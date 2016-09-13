@@ -1,9 +1,9 @@
 ---
 title: RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) | Azure RMS
-description: "Verwenden Sie diesen Anweisungsartikel und ein Skript, um den RMS-Client (Rights Management) mit dem RMS-Schutztool zum Konfigurieren des Ressourcen-Managers für Dateiserver und der Dateiklassifizierungsinfrastruktur (FCI) zu verwenden."
+description: "Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit dem RMS-Schutztool, um den Ressourcen-Manager für Dateiserver und die Dateiklassifizierungsinfrastruktur zu konfigurieren."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 431eb994070391a78b0b8e34b1afb668f0981f0f
+ms.sourcegitcommit: b8a7a433652e76ff1069f0f0a7465483b13c065c
+ms.openlocfilehash: b350a35d44e743de94446409b1bba4256ca38728
 
 
 ---
@@ -126,7 +126,7 @@ Am Ende dieser Anweisungen sind alle Dateien im ausgewählten Ordner mit der ben
 
     Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) in der PowerShell-Dokumentationsbibliothek.
 
-4.  Speichern Sie die Datei lokal auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen: Speichern Sie die Datei beispielsweise unter **C:\RMS-Protection**. Sichern Sie diese Datei mithilfe von NTFS-Berechtigungen, damit sie nur von autorisierten Benutzern geändert werden kann.
+4.  Speichern Sie die Datei lokal auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen: Speichern Sie die Datei beispielsweise unter **C:\RMS-Protection**. Wenn Sie einen anderen Pfad oder Ordnernamen verwenden, wählen Sie einen Pfad und einen Ordner, der keine Leerzeichen enthält. Sichern Sie diese Datei mithilfe von NTFS-Berechtigungen, damit sie nur von autorisierten Benutzern geändert werden kann.
 
 Sie können jetzt mit der Konfiguration des Ressourcen-Managers für Dateiserver beginnen.
 
@@ -302,6 +302,6 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

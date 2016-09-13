@@ -1,9 +1,9 @@
 ---
 title: Was ist Azure Rights Management? | Azure RMS
-description: "Azure Rights Management (Azure RMS) ist eine Lösung zum Schutz von Informationen für Organisationen, die ihre Daten in den immer komplexer werdenden Arbeitsumgebungen von heute schützen möchten."
+description: "Azure Rights Management (Azure RMS) ist eine Lösung zum Schutz von Informationen für Organisationen, die ihre Daten unabhängig von deren Speicherort schützen möchten. Diese Lösung unterstützt gängige moderne Endbenutzergeräte, auf denen Windows, Mac OS, iOS, Android oder Windows Phone ausgeführt wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: f6f2b382766ea91ed463c18655efb07d206213af
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: c206da4a12cb7eb7bdd0386f47953284c96a33f3
 
 
 ---

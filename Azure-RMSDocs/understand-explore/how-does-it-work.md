@@ -1,9 +1,9 @@
 ---
 title: Funktionsweise von Azure RMS | Azure RMS
-description: "Es ist wichtig, hinsichtlich der Funktionsweise von Azure RMS zu verstehen, dass der Rechteverwaltungsdienst (und Microsoft) Ihre Daten als Teil des Informationsschutzvorgangs weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. Durch Azure RMS werden die Daten in einem Dokument nicht lesbar für Personen, die keine autorisierten Benutzer und Dienste sind."
+description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, die verwendeten kryptografischen Steuerelemente sowie Schritt-für-Schritt-Diagramme zur Funktionsweise dieses Prozesses."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 527af70532f390330fdb65bc27b04bb366289748
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
 
 
 ---

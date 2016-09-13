@@ -1,9 +1,9 @@
 ---
 title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS"
-description: "Diese Anweisungen sind Teil des Migrationspfads von AD RMS zu Azure Rights Management und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
+description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Rights Management sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 6597bf4ea54f640c30e98b30363323d874e32c43
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: 5ec3d2b275521807c6fd8f9ccfe1136db97d5d79
 
 
 ---

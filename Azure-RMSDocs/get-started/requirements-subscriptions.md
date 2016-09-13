@@ -1,9 +1,9 @@
 ---
 title: 'Azure RMS-Anforderungen: Cloudabonnements | Azure RMS'
-description: "Um Azure Rights Management (RMS) zu verwenden, muss die Organisation mindestens eines der folgenden Abonnements mit einer ausreichenden Anzahl von Lizenzen für Benutzer und Dienste besitzen, die E-Mail-Nachrichten und Dateien schützen. Wenn Sie einen Dienst verwenden, der Schutz auf Benutzer anwendet (Besitzer der Dateien oder E-Mail-Nachrichten), benötigt jeder dieser Benutzer eine dieser Lizenzen. Benutzer, die diese geschützten Daten lediglich nutzen (z. B. lesen und bearbeiten), benötigen keine Lizenz."
+description: "Identifizieren Sie die Abonnements, die Sie zum Bereitstellen von Azure Rights Management (Azure RMS) in Ihrer Organisation verwenden können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 5c0597ee3882c25fd5c04fbd89990806754bda1a
 
 
 ---

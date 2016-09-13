@@ -3,7 +3,7 @@ title: "Häufig gestellte Fragen zu Azure Rights Management | Azure RMS"
 description: "Einige häufig gestellte Fragen zu Microsoft Rights Management, das auch als Azure RMS bezeichnet wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 09/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 906e544cc3c9be6ba475502e3cdb93f2e047da7f
+ms.sourcegitcommit: 47328bc0c3cc66e99a98b7c8abc553f25d956404
+ms.openlocfilehash: e485286a0bd42bbcfb46a8aabe4d2ee66d65b4a1
 
 
 ---
@@ -121,7 +121,7 @@ Zunächst hat Azure RMS Migration von einer lokalen Bereitstellung von Rights Ma
 Weitere Informationen finden Sie unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 ## Wir möchten BYOK mit Azure RMS verwenden, haben jedoch erfahren, dass diese Kombination nicht mit Exchange Online kompatibel ist. Wie lautet Ihre Empfehlung?
-Lassen Sie sich durch diese aktuelle Einschränkung nicht von der Azure RMS-Bereitstellung abbringen. Wenn Sie Exchange Online verwenden und BYOK (Bring Your Own Key) nutzen möchten, empfehlen wir, dass Sie Azure RMS im Standard-Schlüsselverwaltungsmodus bereitstellen, in dem Microsoft Ihren Schlüssel generiert und verwaltet. Auf diese Weise erhalten Sie jetzt alle Vorteile bezüglich des Schutzes wichtiger Dateien und E-Mails mit der Option, zu einem späteren Zeitpunkt zu BYOK zu wechseln (z. B. wenn Exchange Online BYOK unterstützt).
+Lassen Sie sich durch diese aktuelle Einschränkung nicht von der Azure RMS-Bereitstellung abbringen. Wenn Sie Exchange Online verwenden und BYOK (Bring Your Own Key) nutzen möchten, empfehlen wir, dass Sie Azure RMS im Standard-Schlüsselverwaltungsmodus bereitstellen, in dem Microsoft Ihren Schlüssel generiert und verwaltet. Auf diese Weise erhalten Sie jetzt alle Vorteile bezüglich des Schutzes wichtiger Dateien und E-Mails mit der Option, zu einem späteren Zeitpunkt zu BYOK zu wechseln (z. B. wenn Exchange Online BYOK unterstützt). Wenn Sie zu BYOK wechseln, bleiben Ihre zuvor geschützten Dokumente und E-Mails über einen archivierten Schlüssel zugänglich.
 
 Wenn Ihre Unternehmensrichtlinien jedoch erfordern, dass Sie ein Hardwaresicherheitsmodul (HSM) verwenden, und dies würde Ihre Azure RMS-Bereitstellung blockieren, können Sie alternativ jetzt Azure RMS mit BYOK bereitstellen, mit verminderter RMS-Funktionalität für Exchange. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md) in [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
@@ -223,6 +223,6 @@ Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

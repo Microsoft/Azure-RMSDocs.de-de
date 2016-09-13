@@ -1,9 +1,9 @@
 ---
 title: 'Azure RMS-Anforderungen: Anwendungen | Azure RMS'
-description: "Ermitteln Sie in der folgenden Tabelle die Anwendungen, die systemeigene Unterstützung für Azure RMS bieten, was bedeutet, dass RMS in diese Anwendungen eng integriert ist. Dabei kommen RMS-APIs zur Unterstützung von Nutzungseinschränkungen zum Einsatz. Diese Anwendungen werden auch als &quot;RMS-aktiviert&quot; bezeichnet:"
+description: "Identifizieren Sie die Anwendungen, die native Unterstützung für Azure RMS bieten. Dies bedeutet, dass RMS anhand von RMS-APIs zur Unterstützung von Nutzungseinschränkungen eng in diese Anwendungen integriert ist."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/19/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d3408f954381978287852dd74a38c5903f583dda
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 14eec6f0ad9c1b9abaeff1c70cfbcb66011397a0
 
 
 ---

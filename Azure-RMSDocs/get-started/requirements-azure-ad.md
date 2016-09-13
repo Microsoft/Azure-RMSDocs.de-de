@@ -1,9 +1,9 @@
 ---
 title: 'Azure RMS-Anforderungen: Azure AD-Verzeichnis | Azure RMS'
-description: "Sie benötigen ein Azure AD-Verzeichnis, um Azure Rights Management (Azure RMS) verwenden zu können. Für die Anmeldung am klassischen Azure-Portal, in dem Sie z. B. Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie Ihr Organisationskonto für dieses Verzeichnis."
+description: "Identifizieren Sie die Azure AD-Anforderungen für die Verwendung von Azure Rights Management (Azure RMS), damit Benutzer erfolgreich authentifiziert werden können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 8083c2f7e4cfdbf65748007ae21a48a49a56599f
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: b4ac71492ba9ad883d481149a248b919973d7386
 
 
 ---

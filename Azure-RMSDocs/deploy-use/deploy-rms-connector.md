@@ -1,9 +1,9 @@
 ---
 title: Bereitstellen des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description: "Hier erhalten Sie Informationen über den Azure Rights Management-Verbindungsdienst. Außerdem erfahren Sie, wie Sie mit dessen Hilfe für Informationsschutz mit vorhandenen lokalen Bereitstellungen sorgen können, die Microsoft Exchange Server, Microsoft SharePoint Server oder unter Windows Server ausgeführte Dateiserver verwenden, für die die Dateiklassifizierungsinfrastruktur-Funktion des Ressourcen-Managers für Dateiserver eingesetzt wird."
+description: "Anweisungen zur Bereitstellung des RMS-Connectors (Azure Rights Management), der Informationsschutz für vorhandene lokale Bereitstellungen bietet, die Microsoft Exchange Server, Microsoft SharePoint Server oder Dateiserver verwenden, welche Windows Server und die Dateiklassifizierungsinfrastruktur ausführen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 003dcc6a000d303fc42204d61145cf067dc16d32
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 7569a53f035e3333ee7ee00cb83b83b3126a6eb1
 
 
 ---
@@ -22,21 +22,23 @@ ms.openlocfilehash: 003dcc6a000d303fc42204d61145cf067dc16d32
 
 >*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
-Hier erhalten Sie Informationen über den Azure Rights Management-Verbindungsdienst. Außerdem erfahren Sie, wie Sie mit dessen Hilfe für Informationsschutz mit vorhandenen lokalen Bereitstellungen sorgen können, die Microsoft Exchange Server, Microsoft SharePoint Server oder unter Windows Server ausgeführte Dateiserver verwenden, für die die Dateiklassifizierungsinfrastruktur-Funktion des Ressourcen-Managers für Dateiserver eingesetzt wird.
+Verwenden Sie diese Informationen und Anweisungen, um den RMS-Connector (Azure Rights Management) bereitzustellen. Dieser Connector bietet Datenschutz für vorhandene lokale Bereitstellungen, die Microsoft Exchange Server, Microsoft SharePoint Server oder Dateiserver verwenden, die Windows Server und die Dateiklassifizierungsinfrastruktur ausführen.
 
 > [!TIP]
 > Ein allgemeines Beispielszenario mit Screenshots finden Sie im Abschnitt [Automatischer Schutz von Dateien auf Dateiservern, auf denen Windows Server und Dateiklassifizierungsinfrastruktur ausgeführt wird](../understand-explore/what-admins-users-see.md#automatically-protecting-files-on-file-servers-running-windows-server-and-file-classification-infrastructure) im Artikel [Azure RMS in Aktion](../understand-explore/what-admins-users-see.md).
 
 ## Übersicht über den Microsoft Rights Management-Verbindungsdienst
-Mit dem Microsoft Rights Management-Connector können Sie schnell vorhandene lokale Server für die Verwendung ihrer IRM-Funktionalität mit dem cloudbasierten Microsoft Rights Management Service (Azure RMS) aktivieren. Mit dieser Funktionalität können IT-Abteilungen und Benutzer Dokumente und Bilder, sowohl innerhalb als auch außerhalb der Organisation, ganz einfach schützen, ohne zusätzliche Infrastruktur installieren oder Vertrauensstellungen mit anderen Organisationen einrichten zu müssen. Sie können diesen Connector verwenden, selbst wenn einige der Benutzer Verbindungen mit Online-Diensten in einem Hybridszenario herstellen. Beispielsweise könnte es sein, dass für die Postfächer einiger Benutzer Exchange Online und für die Postfächer einiger anderer Benutzer Exchange Server verwendet wird. Nachdem Sie den RMS-Connector (RMS-Verbindungsdienst) installiert haben, können alle Benutzer E-Mails und Anlagen mithilfe von Azure RMS schützen und nutzen, und der Informationsschutz zwischen den beiden Bereitstellungskonfigurationen funktioniert nahtlos.
+Mit dem Microsoft Rights Management-Connector können Sie schnell vorhandene lokale Server für die Verwendung ihrer IRM-Funktionalität mit dem cloudbasierten Microsoft Rights Management Service (Azure RMS) aktivieren. Mit dieser Funktionalität können IT-Abteilungen und Benutzer Dokumente und Bilder, sowohl innerhalb als auch außerhalb der Organisation, ganz einfach schützen, ohne zusätzliche Infrastruktur installieren oder Vertrauensstellungen mit anderen Organisationen einrichten zu müssen. 
+
+Sie können diesen Connector verwenden, selbst wenn einige der Benutzer Verbindungen mit Online-Diensten in einem Hybridszenario herstellen. Beispielsweise könnte es sein, dass für die Postfächer einiger Benutzer Exchange Online und für die Postfächer einiger anderer Benutzer Exchange Server verwendet wird. Nachdem Sie den RMS-Connector (RMS-Verbindungsdienst) installiert haben, können alle Benutzer E-Mails und Anlagen mithilfe von Azure RMS schützen und nutzen, und der Informationsschutz zwischen den beiden Bereitstellungskonfigurationen funktioniert nahtlos.
 
 Der RMS-Verbindungsdienst ist ein kleiner Dienst, der lokal auf Servern installiert wird, die unter Windows Server 2012 R2, Windows Server 2012 oder Windows Server 2008 R2 ausgeführt werden. Zusätzlich zum Ausführen des Connectors auf physischen Computern können Sie ihn auch auf virtuellen Computern ausführen, einschließlich virtuellen Azure IaaS-Computern. Nachdem Sie den Verbindungsdienst installiert und konfiguriert haben, fungiert er als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und dem Cloud-Dienst.
 
-Wenn Sie Ihren eigenen Mandantenschlüssel für Azure RMS verwalten (das „Bring Your Own Key“- oder BYOK-Szenario), greifen der RMS-Verbindungsdienst und die lokalen Server, die ihn verwenden, nicht auf das Hardwaresicherheitsmodul (HSM) zu, das Ihren Mandantenschlüssel enthält. Dies liegt daran, dass alle kryptografischen Vorgänge, bei denen der Mandantenschlüssel zum Einsatz kommt, in Azure RMS und nicht lokal ausgeführt werden.
+Wenn Sie Ihren eigenen Mandantenschlüssel für Azure RMS verwalten (das „Bring Your Own Key“- oder BYOK-Szenario), greifen der RMS-Connector und die lokalen Server, die ihn verwenden, nicht auf das Hardwaresicherheitsmodul (HSM) zu, das Ihren Mandantenschlüssel enthält. Dies liegt daran, dass alle kryptografischen Vorgänge, bei denen der Mandantenschlüssel zum Einsatz kommt, in Azure RMS und nicht lokal ausgeführt werden.
 
 ![RMS-Connectorarchitektur (Übersicht)](../media/RMS_connector.png)
 
-Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden, um Richtlinien zu klassifizieren und auf Office-Dokumente in einem Ordner anzuwenden. Wenn Sie alle Dateitypen mit Dateiklassifizierung schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden, um Richtlinien zu klassifizieren und auf Office-Dokumente in einem Ordner anzuwenden. Wenn Sie alle Dateitypen mit der Dateiklassifizierungsinfrastruktur schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
 > Informationen zu den unterstützten Versionen dieser lokalen Server finden Sie unter [Lokale Server, die Azure RMS unterstützen](..\get-started\requirements-servers.md).
