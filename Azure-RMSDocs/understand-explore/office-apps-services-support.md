@@ -3,7 +3,7 @@ title: Office-Anwendungen und -Dienste | Azure RMS
 description: Verwendung von Microsoft Azure Rights Management zum Schutz der Daten Ihrer Organisation durch Endbenutzer-Office-Anwendungen (z.B. Word, Excel, PowerPoint und Outlook) und Office-Dienste (z.B. Exchange und SharePoint).
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 76200a27b31bc9a7afaea4ab6b2083beb3c85256
+ms.sourcegitcommit: f0871436caef79187349d700d190564b08cc9e46
+ms.openlocfilehash: 1e1a52e637671d857fac22c51a635e726fa99b01
 
 
 ---
@@ -61,7 +61,6 @@ Wenn Sie SharePoint Server verwenden, können Sie die Informationsschutzfeatures
 > 
 > -   Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im klassischen Azure-Portal verwalten.
 > -   Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateinamenerweiterung PDF, die systemintern von RMS geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine systemeigene Unterstützung von RMS bietet.
-> -   Da Office auf mobilen Geräten RMS noch nicht unterstützt, muss auf diesen Geräten ein Browser zum Anzeigen von mit RMS geschützten Dateien verwendet werden, und die Dateien sind schreibgeschützt.
 
 Azure RMS wendet Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 
@@ -72,6 +71,6 @@ Weitere Informationen zu Azure RMS in Verbindung mit SharePoint finden Sie im fo
 Informationen dazu, wie andere Anwendungen und Dienste Rights Management unterstützen, finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](applications-support.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

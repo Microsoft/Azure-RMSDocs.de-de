@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 15be32e029637321bf8e4f7c1a53f918efda7f23
 
 
 ---
@@ -29,7 +29,7 @@ Diese Benutzer können sich für ein kostenloses Geschäfts- oder -Schulkonto re
 Mithilfe der Rights Management-Freigabeanwendung auf Windows-Computern können diese Benutzer außerdem Dateien lokal schützen oder geschützte Dateien per E-Mail an Personen innerhalb oder außerhalb ihrer Organisation senden. Wenn die Empfänger einer solchen E-Mail zu einer Organisation gehören, die ebenfalls keine Benutzerkonten in Azure verwaltet, können sich auch die Empfänger für ein RMS for Individuals-Konto anmelden, damit sie die geschützte E-Mail-Anlage lesen können.
 
 > [!IMPORTANT]
-> Dieses kostenlose Abonnement stellt sicher, dass autorisierte Personen Dateien immer lesen können, die geschützt wurden. Zurzeit können Sie dieses kostenlose Abonnement auch zum Schützen von Dokumenten und Erstellen neuer geschützter E-Mail-Nachrichten verwenden. Doch die Fähigkeit zum Erstellen neuer geschützter Inhalte dient nur zu Testzwecken und wird ggf. künftig entfernt. Weitere Informationen und Änderungen zur Verwendung von RMS for Individuals zum Schützen von Inhalten finden Sie in den [Microsoft Rights Management-Nutzungsbedingungen](https://portal.aadrm.com/Legal/Service).
+> Dieses kostenlose Abonnement stellt sicher, dass autorisierte Personen Dateien immer lesen können, die geschützt wurden. Zurzeit können Sie dieses kostenlose Abonnement auch zum Schützen von Dokumenten und Erstellen neuer geschützter E-Mail-Nachrichten verwenden. Doch die Fähigkeit zum Erstellen neuer geschützter Inhalte dient nur zu Testzwecken und wird ggf. künftig entfernt. 
 
 Weitere Informationen dazu, wie Sie Dateien mithilfe der kostenlosen Rights Management-Freigabeanwendung schützen können, finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
 
@@ -41,6 +41,6 @@ Eine Schritt-für-Schritt-Anleitung und eine technische Übersicht über die Vor
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
