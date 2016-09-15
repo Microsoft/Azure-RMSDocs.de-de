@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden | Azure Rights Management
+title: Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden | Azure Information Protection
 description: "Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe der Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien des Rights Management-Diensts, mit dem sich Datenverlust verhindern lässt. Dieser Schutz wird angewendet, wenn Sie eine Bezeichnung für die Verwendung einer Rights Management-Vorlage konfigurieren."
 manager: mbaldwin
 ms.date: 08/15/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
 
 
 ---
@@ -57,7 +57,7 @@ Weitere Informationen zu Azure Rights Management sowie zur Funktionsweise dieser
     
     In den meisten Fällen wählen Sie **Azure RMS**. Wählen Sie nicht AD RMS aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser Konfiguration einhergehen, die auch manchmal als „*Hold-your-own-key*“ (HYOK) bezeichnet wird. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz).
     
-4. Falls Sie Azure RMS ausgewählt haben: Wählen Sie für **Select RMS template** (RMS-Vorlage auswählen) die Vorlage der Dropdownliste aus, die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen.
+4. Falls Sie Azure RMS ausgewählt haben: Wählen Sie für **RMS-Vorlage auswählen** die Vorlage oder Rights Management-Option aus dem Dropdownfeld aus, die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen.
 
     > [!NOTE] 
     > Wenn Sie nach dem Öffnen des Blatts **Label** (Bezeichnung) eine neue Vorlage erstellen, schließen Sie dieses Blatt, und kehren Sie zu Schritt 2 zurück, damit Azure Ihre neu erstellte Vorlage abrufen und zur Auswahl anzeigen kann.
@@ -78,6 +78,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

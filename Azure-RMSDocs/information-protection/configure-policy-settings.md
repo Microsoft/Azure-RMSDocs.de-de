@@ -1,5 +1,5 @@
 ---
-title: "Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection | Azure Rights Management"
+title: "Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection | Azure Information Protection"
 description: "Die Azure Information Protection-Richtlinie enthält drei Einstellungen, die für alle Benutzer und alle Geräte gelten."
 manager: mbaldwin
 ms.date: 08/08/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: c48f5488e49a54b970f76012e0f2f17fe4158691
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 872ea7da6f3b72a355a73c8b0589beda86ded20d
 
 
 ---
@@ -42,7 +42,7 @@ So konfigurieren Sie diese Einstellungen:
 
     - **Select the default label** (Standardbezeichnung auswählen): Wählen Sie bei Festlegung dieser Option die Bezeichnung aus, die Dokumenten und E-Mails zugewiesen werden sollen, die nicht über eine Bezeichnung verfügen. Bezeichnungen mit untergeordneten Bezeichnungen können nicht als Standardbezeichnungen festgelegt werden. 
 
-    - **Users must provide justification when lowering the sensitivity level** (Benutzer müssen bei der Herabsenkung der Vertraulichkeitsstufe eine Begründung angeben): Wenn Sie diese Option auf **On** (Ein) festlegen und ein Benutzer die Bezeichnung eines vorhandenen Dokuments oder einer vorhandenen E-Mail in eine Bezeichnung mit niedrigerer Vertraulichkeitsstufe ändert (z. B. von **Secret** [Geheim] in **Public** [Öffentlich]), muss der Benutzer eine Begründung für diese Änderung angeben. Der Benutzer kann z. B. angeben, dass das Dokument keine sensiblen Informationen mehr enthält. Die Aktion und die Begründung werden im lokalen Windows-Ereignisprotokoll des Benutzers protokolliert: **Anwendung** > **Microsoft Azure Information Protection**.  
+    - **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten**: Ist diese Option auf **Ein** festgelegt und der Benutzer führt eine dieser Aktionen aus (z.B. Ändern der Bezeichnung von **Secret** auf **Personal**), so wird er aufgefordert, eine Begründung für diese Aktion anzugeben. Der Benutzer kann z. B. angeben, dass das Dokument keine sensiblen Informationen mehr enthält. Die Aktion und die Begründung werden im lokalen Windows-Ereignisprotokoll des Benutzers protokolliert: **Anwendung** > **Microsoft Azure Information Protection**.  
 
     ![Azure Information Protection-Aufforderung, wenn die neue Klassifizierung eine niedrigere Vertraulichkeitsstufe aufweist](../media/info-protect-lower-justification.png)
 
@@ -67,6 +67,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

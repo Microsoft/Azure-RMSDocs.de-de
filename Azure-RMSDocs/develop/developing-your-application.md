@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 0dcaf13afb1802c2301c9516b2602aa2f6b7ce7e
+ms.sourcegitcommit: 4141cadf67dc479116c802f9340ba222140194a3
+ms.openlocfilehash: 2d965086fa44d98e8236a6bbd2515fb3afac3f05
 
 
 ---
@@ -26,10 +26,12 @@ Dieses Thema bietet grundlegende Anleitungen hinsichtlich der wichtigsten Aspekt
 
 ## Einführung
 
-Die Anleitungen in diesem Thema basieren auf der Beispielanwendung IPCHelloWorld, anhand derer Sie sich mit den grundlegenden Konzepten und dem Code einer rechtlich geschützten Anwendung vertraut machen können. Sie können die komplette IPCHellowWorld-Beispielanwendung in der Datei [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) von Microsoft Connect herunterladen.
+Die Anleitungen in diesem Thema basieren auf der Beispielanwendung *IPCHelloWorld*, anhand derer Sie sich mit den grundlegenden Konzepten und dem Code einer rechtlich geschützten Anwendung vertraut machen können. Das *IPCHelloWorld*-Projekt ist bereits für das Rights Management Services SDK 2.1 konfiguriert. Informationen zum Konfigurieren eines neuen Projekts, das RMS SDK 2.1 verwendet, finden Sie unter [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
-> [!Note] 
-> Das IPCHelloWorld-Projekt ist bereits für das Rights Management Services SDK 2.1 konfiguriert. Informationen zum Konfigurieren eines neuen Projekts, das RMS SDK 2.1 verwendet, finden Sie unter [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+Sie können die komplette *IPCHellowWorld*-Beispielanwendung in der Datei [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) von Microsoft Connect herunterladen.
+> [!Note]
+> Wenn beim Zugriff auf Microsoft Connect eine Fehlermeldung ausgegeben wird, sind Sie möglicherweise nicht registriert. Registrieren: Wechseln Sie zu [Verbinden](http://connect.microsoft.com), melden Sie sich mit Ihrem Microsoft-Account an und klicken Sie anschließend auf „Verzeichnis“ > „Search for Rights Management“ Services (Suche nach Rights Management Services) > „Beitreten“.
+
 
 ## Laden von „MSIPC.dll“
 
@@ -185,6 +187,6 @@ Bevor Sie fertig sind, müssen Sie auch alle reservierten Ressourcen freizugeben
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

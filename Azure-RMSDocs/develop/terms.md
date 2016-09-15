@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
+ms.sourcegitcommit: 99390fb78a9da3bef8a67c8595770a84fb9bb89a
+ms.openlocfilehash: a32bfc59dd72efbcb239845ddabfa9bd3a969127
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
 Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten.
 
 **Veralteter Algorithmus**  
-Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Cookbook-Verschlüsselungsmodus (ECB) verwiesen wird. Die Einstellung ermöglicht es Ihnen in diesem SDK, Lizenzen zu generieren, die mit der vom [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) verwendeten MSDRM-Bibliothek kompatibel sind.
+Eine modale Einstellung, mit der ein älteres Inhaltsschutzschema implementiert wird, bei dem speziell auf den Electronic Codebook-Verschlüsselungsmodus (Electronic Codebook cipher mode; ECB) verwiesen wird. Die Einstellung ermöglicht es Ihnen in diesem SDK, Lizenzen zu generieren, die mit der vom [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx) verwendeten MSDRM-Bibliothek kompatibel sind.
 
 Diese Einstellung kann dazu führen, dass Inhalt von Ihrer Anwendung mit einem Verfahren geschützt wird, das den Kundenstandards für den Inhaltsschutz nicht entspricht.
 
@@ -46,6 +46,6 @@ Das PFile-Format ist für den Anwendungsentwickler transparent, da es in den Ent
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure RMS"
-description: "In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt."
+description: "In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 9615e41666a08a1d66f4e0dbdedb06f02a8efd3e
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
 
 
 ---

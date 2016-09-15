@@ -1,9 +1,9 @@
 ---
 title: "Aktivieren von Azure Rights Management über das klassische Azure-Portal | Azure RMS"
-description: "Verwenden Sie diese Anleitung, wenn Sie Zugriff auf das Azure-Portal haben. Sie verfügen z.B. über ein Abonnement für Enterprise Mobility Suite oder Azure Rights Management Premium."
+description: "Aktivierungsanweisungen für Azure RMS, wenn Sie auf das Azure-Portal zugreifen können. Sie verfügen z.B. über ein Abonnement für Enterprise Mobility Suite oder Azure Rights Management Premium."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 573aa437d8449212bd2f22b532342e4c7e3a1be6
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: ab3b5d71e8cee2ece7fad4c9c3017de7d6eca979
 
 
 ---

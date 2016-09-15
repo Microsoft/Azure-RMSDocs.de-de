@@ -1,9 +1,9 @@
 ---
 title: "Unterstützung von Azure Rights Management durch Anwendungen | Azure RMS"
-description: "Die folgenden Informationen sollen Ihnen dabei helfen zu verstehen, wie die am häufigsten verwendeten Anwendungen Ihrer Endbenutzer (z.B. Office-Anwendungen, Word, Excel, PowerPoint und Outlook) und Dienste (z.B. Exchange und SharePoint) Microsoft Azure Rights Management verwenden können, um die Daten Ihrer Organisation besser zu schützen."
+description: "Erfahren Sie, wie die am häufigsten verwendeten Anwendungen Ihrer Endbenutzer (z.B. Office-Anwendungen, Word, Excel, PowerPoint und Outlook) und Dienste (z.B. Exchange und SharePoint) die Daten Ihrer Organisation mithilfe von Microsoft Azure Rights Management besser schützen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: df66b53238acecd4173b7d1bc57a611c403ec256
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 00f64e1d22f9e3aba302dcef43d2041a4e4c9fab
 
 
 ---

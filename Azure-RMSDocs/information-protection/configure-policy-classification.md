@@ -2,15 +2,15 @@
 title: "Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection | Azure Rights Management"
 description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
+ms.sourcegitcommit: 87069b73e5f8959955b9967070bd3bcb5e7dc196
+ms.openlocfilehash: 357b012bd8679d7e24bfe3ae40c3160e4b69c01f
 
 
 ---
@@ -27,7 +27,7 @@ Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch
  
 - Die empfohlene Klassifizierung gilt beim Speichern von Dateien in Word, Excel und PowerPoint.
 
-Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z. B. für Kreditkartennummern oder US-Sozialversicherungsnummern. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
+Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z. B. für Kreditkartennummern oder US-Sozialversicherungsnummern. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
 
 So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten:
 
@@ -224,6 +224,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

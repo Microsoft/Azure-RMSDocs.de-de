@@ -1,9 +1,9 @@
 ---
 title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure RMS"
-description: "Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind, oder wenn Sie mehr technische Informationen benötigen, als im „Rights Management-Freigabeanwendung – Benutzerhandbuch“ oder in „FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows“ zur Verfügung gestellt werden."
+description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
+ms.sourcegitcommit: 575d52efb788956b0a711e908a730b677e1f7f9c
+ms.openlocfilehash: 113a49586b4582ec984678df6730c6b554ff6a75
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
-Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt.  Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
 Eine technische Übersicht über die Rights Management-Freigabeanwendung und Informationen zu nativem und generischem Schutz, den unterstützten Dateitypen, Dateierweiterungen und der Vorgehensweise zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md). 
 
@@ -139,7 +139,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
     setup.exe /s /configureO2010Admin
     ```
 
-2.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, müssen Benutzer den folgenden Befehl (ohne erhöhte Rechten) ausführen. Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen des Befehls auffordern (z. B. durch einen Link in einer E-Mail-Nachricht oder im Helpdesk-Portal), oder Sie können ihn dem Anmeldeskript hinzufügen:
+2.  Auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren möchten, müssen Benutzer die folgenden Befehle ausführen. (Erhöhte Rechte sind nicht erforderlich.) Es gibt dazu verschiedene Möglichkeiten. Sie können Benutzer zum Ausführen der Befehle auffordern (z.B. durch einen Link in einer E-Mail oder im Helpdeskportal), oder Sie können sie dem Anmeldeskript hinzufügen:
 
     -   Für Windows 10, Windows 8.1 und Windows 8, 64-Bit:
 
@@ -155,9 +155,16 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
     -   Für Windows 7, 64 Bit:
 
-        ```
-        x64\win7\aadrmpep.exe /configureO2010
-        ```
+            pushd x64\win7
+            aadrmpep.exe /configureO2010
+            popd
+
+    -   Für Windows 7, 32 Bit:
+
+            pushd x86\win7
+            aadrmpep.exe /configureO2010
+            popd
+
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
@@ -395,6 +402,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 
