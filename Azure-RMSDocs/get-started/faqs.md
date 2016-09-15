@@ -3,7 +3,7 @@ title: "Häufig gestellte Fragen zu Azure Rights Management | Azure RMS"
 description: "Einige häufig gestellte Fragen zu Microsoft Rights Management, das auch als Azure RMS bezeichnet wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47328bc0c3cc66e99a98b7c8abc553f25d956404
-ms.openlocfilehash: e485286a0bd42bbcfb46a8aabe4d2ee66d65b4a1
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
 
 
 ---
@@ -145,7 +145,7 @@ Bei kostenpflichtigen Abonnements, die Azure RMS unterstützen (Office 365, Az
 
 Das kostenlose Abonnement, das Azure RMS unterstützt (RMS for Individuals), unterstützt das Nutzen von Inhalten, die durch die Azure RMS geschützt sind. Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Wo kann ich technische Informationen über das kostenlose Azure RMS-Abonnement (RMS for Individuals) erhalten – um beispielsweise Informationen über die tatsächliche Funktionsweise, die Steuerung der Konten und Domänen zu erhalten, die nicht verwendet werden können?
+## Wo kann ich technische Informationen über das kostenlose Azure RMS-Abonnement (RMS for Individuals) erhalten? Beispielsweise Informationen darüber, wie dieser Prozess funktioniert und wie ein Administrator Kontrolle über die Konten übernehmen kann, die erstellt werden.
 Antworten auf diese Fragen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md) und in verwandten Artikeln.
 
 ## Wie erhalten wir erneut Zugriff auf Dateien, die von einem Mitarbeiter geschützt wurden, der die Organisation verlassen hat?
@@ -223,6 +223,6 @@ Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

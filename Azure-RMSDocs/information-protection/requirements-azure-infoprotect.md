@@ -1,5 +1,5 @@
 ---
-title: Anforderungen an Azure Information Protection | Azure RMS
+title: Anforderungen an Azure Information Protection | Azure Information Protection
 description: Identifizieren Sie die Voraussetzungen, die zum Bewerten der Vorschauversion von Azure Information Protection erforderlich sind.
 author: cabailey
 manager: mbaldwin
@@ -12,8 +12,8 @@ ms.assetid: aa4353e5-c5b0-47f6-a6f9-87d13e8f075f
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba6887a5c9bab18867d07cfc98e8416bf102c211
-ms.openlocfilehash: 85bed6554140525fabc1ab863e3196ac5a37366b
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: b9bb97e075e569e54e535c921c5d1db77200b20c
 
 
 ---
@@ -41,6 +41,6 @@ Wenn Sie diese Anforderungen erfüllt haben, probieren Sie unser Tutorial aus, u
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

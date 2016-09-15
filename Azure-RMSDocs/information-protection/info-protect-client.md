@@ -1,5 +1,5 @@
 ---
-title: Installieren des Azure Information Protection-Clients | Azure Rights Management
+title: Installieren des Azure Information Protection-Clients | Azure Information Protection
 description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-Anwendungen eine Information Protection-Leiste hinzugefügt wird, damit Sie Klassifizierungsbezeichnungen für Ihre Dokumente und E-Mails auswählen können."
 manager: mbaldwin
 ms.date: 08/29/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 15ca59f34847d20413fbfa7973567cf5ca66db96
-ms.openlocfilehash: c245d542d237216c84941f8718cb9a0cafb44a70
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: f8d4b7f154ab8b47cded0dd2f315dba33664c7ff
 
 
 ---
@@ -34,7 +34,7 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 ## Manuelle Installation des Azure Information Protection-Clients
 
-1. Nachdem Sie [den Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie **AzInfoProtection_v233.exe** aus, und befolgen Sie die Aufforderungen zum Installieren des Clients. Für diese Installation sind lokale Administratorrechte erforderlich.
+1. Nachdem Sie [den Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie **AzInfoProtection.exe** aus, und befolgen Sie die Aufforderungen, um den Client zu installieren. Für diese Installation sind lokale Administratorrechte erforderlich.
 
     Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt. 
 
@@ -42,14 +42,21 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 ## Installieren des Azure Information Protection-Clients für Benutzer
 
-- Sie können die Installation des Azure Information Protection-Clients mithilfe von Befehlszeilenoptionen in Skripts automatisieren. Führen Sie `AzInfoProtection_v233.exe /help` aus, um die Installationsoptionen anzuzeigen.
+- Sie können die Installation des Azure Information Protection-Clients mithilfe von Befehlszeilenoptionen in Skripts automatisieren. Führen Sie `AzInfoProtection.exe /help` aus, um die Installationsoptionen anzuzeigen.
 
-    Geben Sie beispielsweise Folgendes ein, um den Client automatisch zu installieren: `AzInfoProtection_v233.exe /passive | quiet`
+    Geben Sie beispielsweise Folgendes ein, um den Client automatisch zu installieren: `AzInfoProtection.exe /passive | quiet`
 
 
 ## Deinstallieren des Azure Information Protection-Clients
 
+Sie können jede beliebige Option verwenden:
+
 - Deinstallieren Sie ein Programm über die Systemsteuerung: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**
+
+- Führen Sie **AzInfoProtection.exe** erneut aus, und klicken Sie auf der Seite **Setup ändern** auf **Deinstallieren**. 
+
+- Ausführen `AzInfoProtection.exe /uninstall`
+
 
 ## Überprüfen der Installation und des Verbindungsstatus oder Melden von Problemen
 
@@ -88,6 +95,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 
