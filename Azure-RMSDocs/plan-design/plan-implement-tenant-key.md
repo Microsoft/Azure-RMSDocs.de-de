@@ -1,9 +1,9 @@
 ---
 title: "Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels | Azure RMS"
-description: "Verwenden Sie die Informationen in diesem Artikel, um Ihren Rights Management (RMS)-Mandantenschlüssel für Azure RMS zu planen und zu verwalten. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als &quot;Bring Your Own Key&quot; (kurz BYOK) bezeichnet."
+description: "Informationen zum Planen und Verwalten Ihres RMS-Mandantenschlüssels (Rights Management) für Azure RMS. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als &quot;Bring Your Own Key&quot; (kurz BYOK) bezeichnet."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
+ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
+ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
 
 
 ---
@@ -64,7 +64,7 @@ Das zweite Diagramm zeigt die zusätzlichen Schritte, die erforderlich sind, wen
 
 ![Lebenszyklus des Azure RMS-Mandantenschlüssels – verwaltet von Ihnen, BYOK](../media/RMS_BYOK_onprem4.png)
 
-Wenn Sie sich entschließen, Ihren Mandantenschlüssel von Microsoft verwalten zu lassen, müssen Sie nichts weiter unternehmen, damit der Schlüssel generiert wird. Sie können direkt unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) fortfahren.
+Wenn Sie sich entschließen, Ihren Mandantenschlüssel von Microsoft verwalten zu lassen, müssen Sie nichts weiter unternehmen, damit der Schlüssel generiert wird. Sie können direkt unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) fortfahren.  
 
 Wenn Sie sich entschließen, Ihren Mandantenschlüssel selbst zu verwalten, finden Sie in den folgenden Abschnitten weitere Informationen hierzu, die Sie lesen sollten.
 
@@ -74,7 +74,7 @@ Verwenden Sie die Informationen und Verfahren in diesem Abschnitt, wenn Sie sich
 
 
 > [!IMPORTANT]
-> Wenn Sie bereits begonnen haben, [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verwenden (der Dienst ist aktiviert), und Benutzer haben, die Office 2010 ausführen, [wenden Sie sich an den Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), bevor Sie diese Prozeduren ausführen. Abhängig von Ihrem Szenario und den Voraussetzungen können Sie immer noch BYOK verwenden, allerdings mit einigen Einschränkungen bzw. zusätzlichen Schritten.
+> Wenn Sie Azure RMS zunächst mit einem Mandantenschlüssel verwendet haben, der von Microsoft verwaltet wird, und jetzt Ihren Mandantenschlüssel selbst verwalten möchten (BYOK), bleiben die zuvor geschützten Dokumente und E-Mails über einen archivierten Schlüssel zugänglich. Wenn einige Ihrer Benutzer jedoch Office 2010 ausführen, [wenden Sie sich vor dem Durchführen dieser Verfahren an den Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support). Für diese Computer sind einige zusätzliche Konfigurationsschritte erforderlich.
 > 
 > Wenden Sie sich auch an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), wenn Ihre Organisation über bestimmte Richtlinien für den Umgang mit Schlüsseln verfügt.
 
@@ -136,6 +136,6 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

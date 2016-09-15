@@ -1,5 +1,5 @@
 ---
-title: "Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection | Azure Rights Management"
+title: "Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection | Azure Information Protection"
 description: "Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen."
 manager: mbaldwin
 ms.date: 08/17/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: c73b6e3fe114625c16a7c2e799162902ba26e4cf
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: d70bfbe658b1c7d9a5a91c925a554974423699a7
 
 
 ---
@@ -81,6 +81,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

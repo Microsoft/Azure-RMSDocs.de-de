@@ -1,9 +1,9 @@
 ---
 title: "Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure RMS"
-description: "Wenn Sie eine Datei schützen, die Sie per E-Mail freigeben, wird eine neue Version der ursprünglichen Datei erstellt. Die ursprüngliche Datei bleibt ungeschützt und die neue Version ist geschützt und wird automatisch an die E-Mail-Nachricht angefügt, die Sie senden."
+description: Anweisungen zur sicheren Freigabe eines Dokuments per E-Mail.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9becbab6612e49e285774e2e8742d6448b11a041
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: ff5dd6afaa454c20f35c237e94947dcec9e737f6
 
 
 ---

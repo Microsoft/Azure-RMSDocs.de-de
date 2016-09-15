@@ -1,6 +1,6 @@
 ---
 title: "RMS-Freigabeanwendung für Windows und mobile Plattformen | Azure RMS"
-description: "Die RMS-Freigabeanwendung ist eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für Rights Management bieten. Dies bedeutet, dass alle Dateien geschützt werden können."
+description: "Unterstützung von Azure RMS durch die RMS-Freigabeanwendung als eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 6304c5c29e2dab176fb9d5a617e1467af00ab504
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 21bdcae9432e2edbecaa6eafb35ccefbd3ca372c
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure RMS"
-description: "Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die erweiterten Funktionen für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden."
+description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlagen im klassischen Azure-Portal. Mit Vorlagen können Endbenutzer und andere Administratoren ganz einfach geeignete Richtlinien anwenden, um Dokumente und E-Mails zu schützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 64beb891fda54da3718a322f6628a2987ff35111
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
 
 
 ---

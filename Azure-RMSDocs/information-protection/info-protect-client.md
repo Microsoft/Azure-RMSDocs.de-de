@@ -1,16 +1,16 @@
 ---
 title: Installieren des Azure Information Protection-Clients | Azure Rights Management
-description: "Um Dokumente und E-Mail-Nachrichten mithilfe von Azure Information Protection zu klassifizieren, müssen Sie zunächst den Azure Information Protection-Client installieren. Durch diese Installation wird eine Information Protection-Leiste zu Ihren Office-Anwendungen (Word, Excel, PowerPoint, Outlook) hinzugefügt, auf der die Klassifizierungsbezeichnungen für Ihre Organisation angezeigt werden. Außerdem wird auf der Registerkarte „Start“ (Word, Excel, PowerPoint) eine neue Gruppe „Schutz“ mit einer Schaltfläche „Schützen“ angezeigt."
+description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-Anwendungen eine Information Protection-Leiste hinzugefügt wird, damit Sie Klassifizierungsbezeichnungen für Ihre Dokumente und E-Mails auswählen können."
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: ab8388e03803d32a6891785f905a1ddef796bc25
+ms.sourcegitcommit: 15ca59f34847d20413fbfa7973567cf5ca66db96
+ms.openlocfilehash: c245d542d237216c84941f8718cb9a0cafb44a70
 
 
 ---
@@ -34,7 +34,7 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 ## Manuelle Installation des Azure Information Protection-Clients
 
-1. Nachdem Sie [den Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie **AZInfoProtection.exe** aus, und befolgen Sie die Aufforderungen zum Installieren des Clients. Für diese Installation sind lokale Administratorrechte erforderlich.
+1. Nachdem Sie [den Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie **AzInfoProtection_v233.exe** aus, und befolgen Sie die Aufforderungen zum Installieren des Clients. Für diese Installation sind lokale Administratorrechte erforderlich.
 
     Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt. 
 
@@ -42,9 +42,9 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 ## Installieren des Azure Information Protection-Clients für Benutzer
 
-- Sie können ein Skript für die Installation des Azure Information Protection-Clients erstellen und die Installation automatisieren, indem Sie „AZInfoProtection.exe“ verpacken und die standardmäßigen [Windows Installer-Befehlszeilenoptionen (msiexec)](https://technet.microsoft.com/library/cc759262(v=ws.10).aspx) verwenden.
+- Sie können die Installation des Azure Information Protection-Clients mithilfe von Befehlszeilenoptionen in Skripts automatisieren. Führen Sie `AzInfoProtection_v233.exe /help` aus, um die Installationsoptionen anzuzeigen.
 
-    Beispiel, wenn der Name der verpackten Version „InfoProtect.msi“ lautet und Sie den Client unbeaufsichtigt installieren möchten: `msiexec /qn InfoProtection.msi`
+    Geben Sie beispielsweise Folgendes ein, um den Client automatisch zu installieren: `AzInfoProtection_v233.exe /passive | quiet`
 
 
 ## Deinstallieren des Azure Information Protection-Clients
@@ -88,6 +88,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

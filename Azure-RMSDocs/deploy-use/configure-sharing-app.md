@@ -1,9 +1,9 @@
 ---
 title: "Rights Management-Freigabeanwendung&colon; Installation und Konfiguration für Clients | Azure RMS"
-description: "Die Rights Management (RMS)-Freigabeanwendung ist für Clientcomputer erforderlich, damit diese Azure RMS mit Office 2010 verwenden können, und wird für alle Computer und mobilen Geräte empfohlen, die Azure RMS unterstützen. Die RMS-Freigabeanwendung integriert sich in Office-Anwendungen, indem ein Office-Add-In- installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht systemeigen von Azure Rights Management unterstützt werden, und eine Website zur Dokumentverfolgung, auf der Benutzer geschützte Dateien verfolgen und sperren können, die sie geschützt haben."
+description: "Informationen für Administratoren zum Bereitstellen der RMS-Freigabeanwendung (Rights Management) auf Windows-Computern und mobilen Geräten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: bf7cd8007b5423efaa13849101af5c4688cf0975
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: c73529b39f31fc6d819a3123bbdc2416f2d996f4
 
 
 ---
