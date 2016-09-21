@@ -1,26 +1,22 @@
 ---
-# required metadata
-
 title: "Gewusst wie: Arbeiten mit Verschlüsselungseinstellungen | Azure RMS"
-description: Dieser Artikel bietet Orientierung für unsere Verschlüsselungspakete.
-keywords:
+description: "Orientierung für die Azure RMS-Verschlüsselungspakete und Codeausschnitte für deren Nutzung."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 83c4eb741c484018a2837840465aca3276c785c1
+ms.openlocfilehash: b128a9adf75ae8558a33181f63881e2243e840bb
+
 
 ---
 
@@ -106,6 +102,7 @@ Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralte
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Sep16_HO2-->
 
 

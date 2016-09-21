@@ -2,15 +2,15 @@
 title: Installieren des Azure Information Protection-Clients | Azure Information Protection
 description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-Anwendungen eine Information Protection-Leiste hinzugefügt wird, damit Sie Klassifizierungsbezeichnungen für Ihre Dokumente und E-Mails auswählen können."
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: f8d4b7f154ab8b47cded0dd2f315dba33664c7ff
+ms.sourcegitcommit: 2ecdfe905694b3d14727abdb5e6176d24f675d2e
+ms.openlocfilehash: cd6684dd25a721272c073fcc972724a6b81c0c72
 
 
 ---
@@ -74,6 +74,15 @@ Sie können jede beliebige Option verwenden:
 
     - Der Link **Run diagnostics** (Diagnose ausführen): Diese Funktionalität ist aktuell nicht implementiert.
 
+## Tastenkombinationen für die Azure Information Protection-Leiste
+
+Für den Zugriff auf die Azure Information Protection-Leiste über Tastenkürzel können Sie die folgenden Tastenkombinationen nutzen:
+
+- Drücken Sie **STRG** + **UMSCHALT** + **~** 
+
+Verwenden Sie dann die TAB-TASTE, um die Bezeichnungen und andere Steuerelemente auf der Leiste auszuwählen (die Symbole**Bezeichnungen ausblenden** und **Bezeichnung entfernen**), und drücken Sie die EINGABETASTE, um sie auszuwählen.
+
+
 ## Dateispeicherorte
 
 Clientdateien:   
@@ -95,6 +104,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

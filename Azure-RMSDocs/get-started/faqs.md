@@ -3,7 +3,7 @@ title: "Häufig gestellte Fragen zu Azure Rights Management | Azure RMS"
 description: "Einige häufig gestellte Fragen zu Microsoft Rights Management, das auch als Azure RMS bezeichnet wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
+ms.sourcegitcommit: 62b72d2debef3421fea4f0e70beed67e5364d7d3
+ms.openlocfilehash: 99b5e4ea74cd6f76a2409d89c3db5d8672b63055
 
 
 ---
@@ -165,37 +165,8 @@ Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen 
 Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“, noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt [Option „Nicht weiterleiten“ für E-Mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) in [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 ## Wo finde ich weitere Informationen zur Azure RMS – wie z. B. rechtliche Hinweise, Informationen zur Kompatibilität und SLAs?
-Azure RMS unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zur Azure RMS suchen, jedoch nicht zur Verwendung des Azure RMS-Diensts, sehen Sie sich folgende Ressourcen an:
 
-**Rechtliche Hinweise und Datenschutz:**
-
--   Informationen zur Microsoft Azure-Vereinbarung: [Microsoft Azure-Vereinbarung](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   Informationen zum Microsoft Azure-Datenschutz: [Datenschutzerklärung zu Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Sicherheit, Compliance und Überwachung:**
-
-Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md). Zusätzlich:
-
--   Informationen zu externen Zertifizierungen für Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
-
--   FIPS 140-Informationen: [FIPS 140-Überprüfung](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Vereinbarungen zum Servicelevel:**
-
--   Vereinbarungen zum Servicelevel für Azure RMS nach ausgewählter Region: [Herunterladen von der Produktlizenzierungs-Suchseite](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-    - Klicken Sie beispielsweise auf **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)**, um die Vereinbarung zum Servicelevel für Nordamerika vom März 2016 herunterzuladen.
-
--   Vereinbarung zum Servicelevel für Azure Active Directory: [Vereinbarungen zum Servicelevel](http://azure.microsoft.com/support/legal/sla/)
-
-**Dokumentation:**
-
--   Azure Active Directory-Dokumentationswebsite: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Azure Active Directory-Bibliothek: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Office 365-Bibliothek: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+Siehe hierzu [Kompatibilitätsinformationen und ergänzende Informationen zu Azure Rights Management](../understand-explore/compliance.md).
 
 ## Was gibt es Neues zur Klassifizierungs- und Bezeichnungsfunktion?
 
@@ -223,6 +194,6 @@ Diese FAQ-Seite wird regelmäßig aktualisiert. Dabei werden die neuen Beiträge
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

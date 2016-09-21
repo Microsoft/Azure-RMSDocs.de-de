@@ -12,8 +12,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 1dd3c09f5bf6a38eb3d82bfa3f7a756f5237eab6
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: ba7acf835439d059874e0512997b2b591193f0c3
 
 
 ---
@@ -28,9 +28,9 @@ Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen 
 
 So konfigurieren Sie die Azure Information Protection-Richtlinie während der Vorschauphase von Azure Information Protection:
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an.
+1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com) an.
 
-2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Durchsuchen**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. Navigieren Sie zum Blatt **Azure Information Protection**:Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information Protection** ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
     Das Blatt **Azure Information Protection** wird geöffnet, auf dem Sie die Azure Information Protection-Richtlinie konfigurieren können. Diese Richtlinie umfasst folgende Elemente:
 
@@ -80,6 +80,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
