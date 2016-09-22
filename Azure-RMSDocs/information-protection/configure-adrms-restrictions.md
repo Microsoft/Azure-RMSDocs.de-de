@@ -1,6 +1,6 @@
 ---
-title: "HYOK-Einschränkungen | Azure Rights Management"
-description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie AD RMS-Schutz mit Azure Information Protection auswählen. Diese Lösung wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet."
+title: "HYOK-Einschränkungen | Azure Information Protection"
+description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
 manager: mbaldwin
 ms.date: 08/25/2016
 ms.topic: article
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
-ms.openlocfilehash: 0d6a5013f953931a6bffa28e1c3c1f282a2c668b
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: fe0f492b94cbcc437c722daae9c3c56820593566
 
 
 ---
@@ -69,7 +69,7 @@ Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS
 - Der [Azure Information Protection-Client](info-protect-client.md) weist die Version **1.0.233.0** oder höher auf.
 
 > [!IMPORTANT]
-> Wir empfehlen, dass sich Ihre AD RMS-Server nicht in Ihrer DMZ befinden und dass sie nur von ordnungsgemäß verwalteten Computern verwendet werden (z.B. keine mobilen Geräte oder Arbeitsgruppencomputer),um die hohe Sicherheit zu erfüllen, die dieses Szenario bietet. 
+> Wir empfehlen, dass sich Ihre AD RMS-Server nicht in Ihrem DMZ befinden und dass sie nur von ordnungsgemäß verwalteten Computern verwendet werden (z.B. keine mobilen Geräte oder Arbeitsgruppencomputer),um die hohe Sicherheit zu erfüllen, die dieses Szenario bietet. 
 > 
 > Außerdem wird empfohlen, dass das AD RMS-Cluster ein Hardwaresicherheitsmodul (HSM) verwendet, sodass der private Schlüssel für Ihr lizenzgebendes Serverzertifikat (SLC) nicht offengelegt oder gestohlen wird, wenn die AD RMS-Bereitstellung jemals verletzt oder gefährdet werden sollte. 
 
@@ -94,6 +94,6 @@ Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

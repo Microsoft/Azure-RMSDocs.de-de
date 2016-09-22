@@ -3,7 +3,7 @@ title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwarege
 description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Rights Management sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 5ec3d2b275521807c6fd8f9ccfe1136db97d5d79
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 2bd9abcac99a06a29e5dacdd014e660358840adc
 
 
 ---
@@ -49,13 +49,13 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
 3.  Laden Sie mit dem [Import-AadrmTdp](http://msdn.microsoft.com/library/azure/dn857523.aspx)-Cmdlet die erste exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Wenn Sie mehr als eine XML-Datei haben, weil Sie mehrere vertrauenswürdige Veröffentlichungsdomänen hatten, wählen Sie die Datei aus, die die exportierte vertrauenswürdige Veröffentlichungsdomäne enthält, die Sie in Azure RMS verwenden möchten, um Inhalte nach der Migration zu schützen. Verwenden Sie den folgenden Befehl:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword -Active $True -Verbose
+    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
     ```
-    Beispiel: **Import-AadrmTpd -TpdFile E:\contosokey1.xml –ProtectionPassword –Active $true -Verbose**
-
-    Geben Sie bei entsprechender Aufforderung das Kennwort ein, das Sie zuvor angegeben haben, und bestätigen Sie, dass Sie diese Aktion ausführen möchten.
-
-4.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 3 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen. Beispiel: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword -Active $false -Verbose**
+    Sie können entweder[ConvertTo-SecureString -AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) oder [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) verwenden, um das Kennwort als sichere Zeichenfolge festzulegen. Wenn Sie „ConvertTo-SecureString“ verwenden und das Kennwort Sonderzeichen enthält, geben Sie das Kennwort in einfachen Anführungszeichen ein, oder fügen Sie Escapezeichen für die Sonderzeichen ein.
+    
+    Beispiel: Führen Sie zunächst **$TPD_Password = Read-Host -AsSecureString** aus, und geben Sie dann das zuvor festgelegte Kennwort ein. Führen Sie anschließend **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose** aus. Bestätigen Sie bei Aufforderung, dass Sie die Aktion ausführen möchten.
+    
+4.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 3 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen. Beispiel: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
 5.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) , um die Verbindung mit dem Azure RMS-Dienst zu trennen:
 
@@ -70,6 +70,6 @@ Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 
