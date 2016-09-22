@@ -2,15 +2,15 @@
 title: "Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection | Azure Information Protection"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen ändern, indem Sie diese in der Azure Information Protection-Richtlinie konfigurieren."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 61ceff2fb2a964495d16bb5e801a5ee7bfa60832
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 2ee4f945307744678df8b842aab2be219f8ef582
 
 
 ---
@@ -28,9 +28,9 @@ Sie können z. B. folgende Merkmale einer Bezeichnung oder einer untergeordnete
 Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
 
 
-1. Falls Sie sich noch nicht im [Azure-Portal](https://portal.azure.com) angemeldet haben, tun Sie dies, und navigieren Sie zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+    Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie ändern möchten, und nehmen Sie auf dem Blatt **Label** (Bezeichnung) sowie gegebenenfalls auf weiteren Blättern die gewünschten Änderungen vor.
 
@@ -52,6 +52,6 @@ Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine B
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -3,7 +3,7 @@ title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellt
 description: "Möglichkeiten zur Steuerung der Benutzerkonten in Azure Active Directory, wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: eb86c9e4f83fcf42599145b10ad8f021e40c208f
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 
 ---
@@ -31,9 +31,9 @@ Wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kost
 
 -   Sie könnten Benutzer daran hindern, sich anzumelden, um Azure Rights Management mit dem RMS for Individuals-Abonnement zu verwenden. In den meisten Fällen bringt dies kaum Vorteile, weil Benutzer dann Dateien ohne Schutz freigeben (was ein Risiko für Ihr Unternehmen bedeuten kann) oder einen anderen Dateischutzmechanismus verwenden werden, der der IT-Abteilung nicht die Möglichkeit für den Zugriff auf die Daten bietet. Wenn Sie jedoch Benutzer an der Registrierung für die Verwendung von RMS for Individuals hindern möchten, führen Sie eine der folgenden Aktionen aus, nachdem Sie in Azure den Besitz des Verzeichnisses Ihrer Organisation übernommen haben:
 
-    -   Hindern Sie alle Benutzer daran, sich für Self-Service-Abonnements zu registrieren, die RMS for Individuals umfassen.  Derzeit kann dies nicht nach Dienst festgelegt werden, sondern die Einstellung wird auf alle Azure-Abonnements angewendet, die den Self-Service-Prozess nutzen. Legen Sie hierzu den Parameter **AllowAdHocSubscriptions** mit dem Cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) aus dem Windows PowerShell-Modul für Azure Active Directory auf „false“ fest. Beispiel: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
+    -   Hindern Sie alle Benutzer daran, sich für Self-Service-Abonnements zu registrieren, die RMS for Individuals umfassen.  Derzeit kann dies nicht nach Dienst festgelegt werden, sondern die Einstellung wird auf alle Azure-Abonnements angewendet, die den Self-Service-Prozess nutzen. Legen Sie hierzu den Parameter **AllowAdHocSubscriptions** mit dem Cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) aus dem PowerShell-Modul für Azure Active Directory auf „FALSE“ fest. Beispiel: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
 
-    -   Hindern Sie Benutzer an der Erstellung eines neuen Kontos in Azure, was bedeutet, dass nur Benutzer, die bereits ein Konto in Azure haben, sich für Self-Service-Abonnements registrieren können, wozu auch RMS for Individuals gehört.  Legen Sie hierzu den Parameter **AllowEmailVerifiedUsers** mit dem Cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) aus dem Windows PowerShell-Modul für Azure Active Directory auf „false“ fest. Beispiel: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
+    -   Hindern Sie Benutzer an der Erstellung eines neuen Kontos in Azure, was bedeutet, dass nur Benutzer, die bereits ein Konto in Azure haben, sich für Self-Service-Abonnements registrieren können, wozu auch RMS for Individuals gehört.  Legen Sie hierzu den Parameter **AllowEmailVerifiedUsers** mit dem Cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) aus dem PowerShell-Modul für Azure Active Directory auf „FALSE“ fest. Beispiel: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
 
     -   Synchronisieren Sie Ihre Active Directory-Domänendienste-Infrastruktur mit Azure Active Directory. Diese Aktion verhindert, dass neue Konten erstellt werden, wenn sich Benutzer für Self-Service-Abonnements wie RMS for Individuals registrieren, und Sie können Konten löschen oder deaktivieren, die zuvor im Azure-Verzeichnis erstellt wurden.
 
@@ -46,6 +46,6 @@ Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

@@ -2,15 +2,15 @@
 title: "Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection | Azure Rights Management"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen löschen oder deren Position ändern, indem Sie diese Einstellungen in der Azure Information Protection-Richtlinie konfigurieren."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 14863f7fcd4df2e8baaddc7837649fa3efe59019
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 0283706733a61e2ccf88552b23ec67a7f755b8da
 
 
 ---
@@ -35,9 +35,9 @@ Ordnen Sie die Bezeichnungen so an, dass Sie auf der Information Protection-Leis
 
 Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
 
-1. Falls Sie sich noch nicht im [Azure-Portal](https://portal.azure.com) angemeldet haben, tun Sie dies, und navigieren Sie zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+    Klicken Sie z.B. im Hubmenü auf Weitere Dienste, und geben Sie im Filterfeld den Begriff Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Führen Sie auf dem Blatt **Azure Information Protection** eine der folgenden Aktionen aus (abhängig davon, ob Sie eine Bezeichnung löschen, deaktivieren oder neu anordnen möchten):
 
@@ -57,6 +57,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
