@@ -2,15 +2,15 @@
 title: Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden | Azure Information Protection
 description: "Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe der Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien des Rights Management-Diensts, mit dem sich Datenverlust verhindern lässt. Dieser Schutz wird angewendet, wenn Sie eine Bezeichnung für die Verwendung einer Rights Management-Vorlage konfigurieren."
 manager: mbaldwin
-ms.date: 08/15/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
+ms.sourcegitcommit: fc390680918a08405e914a858c64bb723efa5580
+ms.openlocfilehash: ca1534801facc6273d481cc99f23ec8acd5341d1
 
 
 ---
@@ -47,9 +47,9 @@ Weitere Informationen zu Azure Rights Management sowie zur Funktionsweise dieser
 
 ## Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden
 
-1. Wenn Sie dies noch nicht getan haben, melden Sie sich beim [Azure-Portal](https://portal.azure.com) als ein globaler Administrator an, damit Sie die Azure Rights Management-Vorlagen abrufen können. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich beim [Azure-Portal](https://portal.azure.com) als globaler Administrator an, damit Sie die Azure Rights Management-Vorlagen abrufen können. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
 
-    Klicken Sie z.B. im Hubmenü auf **Durchsuchen**, und geben Sie **Information** im Filterfeld ein. Wählen Sie **Azure Information Protection** aus.
+    Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie zur Anwendung des Rights Management-Schutzes konfigurieren möchten.
 
@@ -57,15 +57,22 @@ Weitere Informationen zu Azure Rights Management sowie zur Funktionsweise dieser
     
     In den meisten Fällen wählen Sie **Azure RMS**. Wählen Sie nicht AD RMS aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser Konfiguration einhergehen, die auch manchmal als „*Hold-your-own-key*“ (HYOK) bezeichnet wird. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz).
     
-4. Falls Sie Azure RMS ausgewählt haben: Wählen Sie für **RMS-Vorlage auswählen** die Vorlage oder Rights Management-Option aus dem Dropdownfeld aus, die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen.
+4. Bei Auswahl von Azure RMS: Klicken Sie auf das Dropdownfeld für **RMS-Vorlage auswählen**, und wählen Sie die [Vorlage](../deploy-use/configure-custom-templates.md) oder Rechteverwaltungsoptionen, die Sie zum Schützen von Dokumenten und E-Mails mit dieser Bezeichnung verwenden möchten.
+    
+    Weitere Informationen zu den Optionen:
+    
+    - Haben Sie eine neue Vorlage erstellt, nachdem Sie das Blatt **Bezeichnung** geöffnet haben? Schließen Sie dieses Blatt, und gehen Sie zurück zu Schritt 2, damit Ihre neu erstellte Vorlage aus Azure abgerufen wird und zur Auswahl zur Verfügung steht.
+    
+    - Bei Auswahl einer **Abteilungsvorlage** oder wenn Sie [Onboardingsteuerelemente](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
+    
+        - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
+        
+    - Bei Auswahl der Option **Schutz entfernen**:
+        
+        - Benutzer benötigen Berechtigungen zum Entfernen des Rights Management-Schutzes, um eine Bezeichnung mit dieser Option anzuwenden. Diese Option erfordert, dass die Benutzer über das Nutzungsrecht Exportieren (für Office-Dokumente) oder Vollzugriff verfügen. Alternativ muss der Besitzer der Rights Management-Besitzer sein (dieser erhält automatisch Vollzugriff) oder als [Administrator für Azure Rights Management](../deploy-use/configure-super-users.md) fungieren. Die Rights Management-Standardvorlagen umfassen nicht die Nutzungsrechte, die Benutzer zum Aufheben des Schutzes benötigen. 
 
-    > [!NOTE] 
-    > Wenn Sie nach dem Öffnen des Blatts **Label** (Bezeichnung) eine neue Vorlage erstellen, schließen Sie dieses Blatt, und kehren Sie zu Schritt 2 zurück, damit Azure Ihre neu erstellte Vorlage abrufen und zur Auswahl anzeigen kann.
-    
-    Beachten Sie Folgendes, wenn Sie eine Abteilungsvorlage auswählen oder [Onboardingsteuerelemente](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
-    
-    - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
-    
+            Wenn Benutzer keine Berechtigungen zum Entfernen des Rights Management-Schutzes haben und diese Bezeichnung mit der Option **Schutz entfernen** auswählen, wird folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
+
 5. Falls Sie AD RMS ausgewählt haben: Stellen Sie die Vorlagen-GUID und die Lizenzierungs-URL Ihres AD RMS-Clusters bereit. [Weitere Informationen](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label)
 
 6. Klicken Sie auf **Speichern**.
@@ -78,6 +85,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
