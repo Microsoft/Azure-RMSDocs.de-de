@@ -3,15 +3,15 @@ title: "Schnellstart-Tutorial für Azure Information Protection Schritt 2 | Azur
 description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in 4 Schritten und weniger als 15 Minuten für Ihre Organisation testen können."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
+ms.sourcegitcommit: ba0f05619e1d13e16b8d4f6d86231b89e9326726
+ms.openlocfilehash: 9dfbeb4c887c619d07b11be0da304ac4f4e7d4a9
 
 
 ---
@@ -24,14 +24,14 @@ ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
-1. Melden Sie sich beim [Azure-Portal](https://portal.azure.com) an. Wenn Sie sowohl den Schutz als auch die Klassifizierung und Bezeichnung testen möchten, melden Sie sich als globaler Administrator an, damit Sie die Azure Rights Management-Vorlagen abrufen können.
+1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com) an. Wenn Sie sowohl den Schutz als auch die Klassifizierung und Bezeichnung testen möchten, melden Sie sich als globaler Administrator an, damit Sie die Azure Rights Management-Vorlagen abrufen können.
  
 2. Im Hubmenü: Klicken Sie auf **Neu**  >  **Sicherheit und Identität**  >  **Azure Information Protection (Vorschau)**  >  **Erstellen**.
 
-    Dadurch wird das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst nun im Hubmenü aus der Liste unter **Durchsuchen** auswählen. 
+    Dadurch wird das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter Weitere Dienste auswählen. 
 
     > [!TIP] 
-    > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie den Schritt „Durchsuchen“ bei der nächsten Anmeldung überspringen können.
+    > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
 
 3.  Lernen Sie nun das Hauptblatt von **Azure Information Protection** kennen, das die automatisch erstellte Standardrichtlinie von Information Protection anzeigt:
     
@@ -53,7 +53,7 @@ Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie 
 
 2. Im Blatt **Label: Confidential** (Bezeichnung: Vertraulich) werden alle für diese Bezeichnungen verfügbaren Einstellungen angezeigt. Nehmen Sie die folgenden Änderungen vor:
 
-    a. Wenn Sie Azure Rights Managment aktiviert haben: Wenn im Abschnitt **Set RMS template for protecting documents and emails containing this label** (RMS-Vorlage für den Schutz von Dokumenten und E-Mails mit dieser Bezeichnung festlegen) die Option **Select RMS template from** (RMS-Vorlage auswählen aus) angezeigt wird, übernehmen Sie die Standardeinstellung **Azure RMS**. Klicken Sie dann auf das Dropdownfeld für **Select RMS template** (RMS-Vorlage auswählen), und wählen Sie die Standardvorlage **\<your organization name> - Confidential** (<Name Ihrer Organisation> – „Vertraulich“) aus. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
+    a. Wenn Sie Azure Rights Managment aktiviert haben: Wenn im Abschnitt **RMS-Vorlage zum Schützen von Dokumenten und E-Mails mit dieser Bezeichnung festlegen** die Option **RMS-Vorlage auswählen von** angezeigt wird, übernehmen Sie die Standardeinstellung **Azure RMS**. Klicken Sie dann auf das Dropdownfeld für **Select RMS template** (RMS-Vorlage auswählen), und wählen Sie die Standardvorlage **\<your organization name> - Confidential** (<Name Ihrer Organisation> – „Vertraulich“) aus. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** aus. Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
     
     Wenn Sie Azure Rights Management nicht aktiviert haben, können Sie diese Option nicht verwenden.
     
@@ -97,6 +97,6 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
