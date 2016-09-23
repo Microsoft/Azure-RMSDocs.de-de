@@ -3,7 +3,7 @@ title: "Schritt 2&colon; Migration HSM-geschützter Schlüssel zu HSM-geschützt
 description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Rights Management sind und nur gelten, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 32cedc573aa6d14c4897642789c8e58b788279f2
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 539ad9db29f7795d3f56655a64f49532ef6ff6e8
 
 
 ---
@@ -55,7 +55,7 @@ Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
     
     Wenn beispielsweise der Schlüsseltresor, den Sie für Azure RMS erstellt haben, „contoso-byok-ky“ heißt und die Ressourcengruppe „contoso-byok-rg“, führen Sie den folgenden Befehl aus:
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign
+        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
 Jetzt haben Sie Ihren HSM-Schlüssel in Azure Key Vault für Azure RMS vorbereitet und können die AD RMS-Konfigurationsdaten importieren.
@@ -94,6 +94,6 @@ Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
