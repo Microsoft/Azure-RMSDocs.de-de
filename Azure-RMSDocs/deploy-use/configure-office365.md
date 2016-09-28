@@ -3,7 +3,7 @@ title: "Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure R
 description: "Informationen und Anweisungen für Administratoren zum Konfigurieren von Office 365 für den Einsatz mit Azure Rights Management (Azure RMS)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 5e9ecbdef4adb4995199b059903902df078471e5
+ms.sourcegitcommit: 18498a6d1edac11b20842b0cca0c4559909d681e
+ms.openlocfilehash: e8e2abe6006f40f5c2e34ef0d4ac3f1ccaf66516
 
 
 ---
@@ -63,7 +63,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
 
 4.  Geben Sie den Speicherort des Azure RMS-Mandantenschlüssels entsprechend dem Standort an, an dem der Mandant Ihrer Organisation erstellt wurde:
 
-    Für Nordamerika (und Abonnements von Behörden):
+    Für Nordamerika:
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.na.aadrm.com/TenantManagement/ServicePartner.svc"
@@ -82,6 +82,11 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
 
     ```
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.sa.aadrm.com/TenantManagement/ServicePartner.svc"
+    ```
+    Für Office 365 Government (Government Community Cloud):
+
+    ```
+    Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.govus.aadrm.com/TenantManagement/ServicePartner.svc"
     ```
 
 5.  Importieren Sie Konfigurationsdaten aus Azure RMS in Exchange Online in Form der vertrauenswürdigen Veröffentlichungsdomäne (Trusted Publishing Domain, TPD). Dies umfasst den Azure RMS-Mandantenschlüssel und Azure RMS-Vorlagen:
@@ -1105,6 +1110,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

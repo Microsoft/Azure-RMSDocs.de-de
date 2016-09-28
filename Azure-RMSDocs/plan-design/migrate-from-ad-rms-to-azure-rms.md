@@ -3,7 +3,7 @@ title: Migration von AD RMS zu Azure Rights Management | Azure RMS
 description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Directory Rights Management Services) zu Azure Rights Management (Azure RMS). Nach der Migration haben Benutzer weiter Zugriff auf Dokumente und E-Mail-Nachrichten, die Ihre Organisation mithilfe von AD RMS geschützt hat. Für neue zu schützende Inhalte wird Azure RMS verwendet."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 6aa75f5e6b326068951b3d4d65f337c15a475029
+ms.sourcegitcommit: 5c20772240961bdd3052e55a19eaca21ef7da003
+ms.openlocfilehash: 01c107979265abf0d34060eccf09ca32c0086ab8
 
 
 ---
@@ -46,7 +46,7 @@ Stellen Sie vor der Migration zu Azure RMS sicher, dass die folgenden Voraussetz
         
     - Kryptografiemodus 2:
     
-        - Die AD RMS-Server und Clients müssen vor Beginn der Migration zu Azure RMS im Kryptografiemodus 2 ausgeführt werden. Weitere Informationen finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+        - Die AD RMS-Server und Clients müssen vor Beginn der Migration zu Azure RMS im Kryptografiemodus 2 ausgeführt werden. Obwohl das aktuelle lizenzgebende Serverzertifikat (Server Licensor Certificate, SLC) den Kryptografiemodus 2 verwenden muss, werden vorherige Schlüssel, die für den Kryptografiemodus 1 konfiguriert wurden, in Azure RMS als archivierte Schlüssel unterstützt. Weitere Informationen zu den Kryptografiemodi sowie zum Wechsel zu Kryptografiemodus 2, finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - Alle gültigen AD RMS-Topologien werden unterstützt:
     
@@ -184,6 +184,6 @@ Um die Migration zu starten, wechseln Sie zu [Phase 1: Serverseitige Konfigurati
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

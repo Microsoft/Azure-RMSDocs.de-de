@@ -3,7 +3,7 @@ title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 1ec54b54197471f8cccaf6ae83ae8e592da30cae
+ms.sourcegitcommit: 3b0b165f594da47c090f7822afed2a80541b71e8
+ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
 
 
 ---
@@ -49,7 +49,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Einer der folgenden Konfigurationen:<br /><br />– Exchange Online ist für Azure Rights Management aktiviert<br /><br />– Der RMS-Connector ist für die lokale Exchange-Anwendung installiert und konfiguriert|Für Exchange Online: Weitere Informationen finden Sie im Abschnitt **Exchange Online: IRM-Konfiguration** unter [Konfigurieren von Anwendungen für Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Für lokales Exchange: [Bereitstellen des Azure Rights Management-Verbindungsdiensts](https://technet.microsoft.com/library/dn375964.aspx)|
 |Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|Sie haben wie später in diesem Artikel beschrieben eine Transportschutzregel für IRM konfiguriert .|Für Exchange Online: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Für Exchange 2013: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)<br /><br />Für Exchange 2010: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
+|Sie haben wie später in diesem Artikel beschrieben eine Transportschutzregel für IRM konfiguriert .|Für Exchange Online: [E-Mail-Fluss oder Transportregeln](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Für Exchange 2013: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Für Exchange 2010: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### So konfigurieren Sie die benutzerdefinierte Vorlage für Führungskräfte
 
@@ -132,6 +132,6 @@ Wenn Sie vertrauliche Unternehmensinformationen an eine andere VanArsdel-Führun
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
