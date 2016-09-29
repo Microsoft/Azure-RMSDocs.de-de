@@ -3,7 +3,7 @@ title: "Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüs
 description: "Informationen zum Planen und Verwalten Ihres RMS-Mandantenschlüssels (Rights Management) für Azure RMS. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als &quot;Bring Your Own Key&quot; (kurz BYOK) bezeichnet."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
-ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 0e3e77073898e2ae9f84f555183fb6fcbc7d2d8a
 
 
 ---
@@ -96,7 +96,7 @@ Wenn der Schlüssel an Key Vault übertragen wird, wird ihm in Key Vault eine Sc
 
 Bevor Azure RMS den Schlüssel jedoch verwenden kann, muss Azure RMS dazu autorisiert werden, den Schlüssel im Schlüsseltresor Ihrer Organisation verwenden zu dürfen. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) und erteilt dem Azure RMS-Dienstprinzipal, **Microsoft.Azure.RMS**, die Berechtigung. Beispiel:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Sie können Azure RMS jetzt so konfigurieren, dass dieser Schlüssel als Azure RMS-Mandantenschlüssel Ihrer Organisation verwendet wird. Verbinden Sie sich zunächst unter Verwendung der Azure RMS-Cmdlets mit Azure RMS, und melden Sie sich an:
 
@@ -136,6 +136,6 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
