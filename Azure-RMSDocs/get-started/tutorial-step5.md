@@ -68,7 +68,7 @@ Dieser Schritt ist optional. Die meisten Absender möchten jedoch gerne wissen, 
 
 Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem mobilen Gerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562)auswählen.
 
-|Weitere Informationen zu...|Weitere Informationen|
+|Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Umfassende Anleitung zur Dokumentenverfolgung|[Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](../rms-client/sharing-app-track-revoke.md)|
 |Zweiminütiges Video zur Erläuterung der Dokumentenverfolgung|[Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|

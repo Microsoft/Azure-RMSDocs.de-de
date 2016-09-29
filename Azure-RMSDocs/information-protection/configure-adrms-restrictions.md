@@ -2,15 +2,15 @@
 title: "HYOK-Einschränkungen | Azure Information Protection"
 description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: fe0f492b94cbcc437c722daae9c3c56820593566
+ms.sourcegitcommit: 593ec90a781a41e3b93a4c31d22a3ca547b49bc7
+ms.openlocfilehash: faf3180ca290f1668233663099b924ff199524d9
 
 
 ---
@@ -43,6 +43,16 @@ In diesem HYOK-Szenario werden die Richtlinien und der private Schlüssel der Or
 > Verwenden Sie diese Konfiguration nur, wenn Sie es müssen, und auch nur für die Dokumente und E-Mails, die dies erfordern. AD RMS-Schutz bietet nicht die aufgeführten Vorteile, die Sie erhalten, wenn Sie Azure RMS-Schutz verwenden, und der Zweck davon ist „Uneinsehbarkeit um jeden Preis“.
 
 Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS-Schutz verwendet. Stellen Sie aufgrund der Einschränkungen, die mit AD RMS-Schutz einhergehen sicher, dass Sie klare Anweisungen für den Fall bieten, wenn Benutzer Bezeichnungen auswählen, die für den AD RMS-Schutz gelten.
+
+## Einschränkungen
+
+Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection werden die aufgeführten Vorteile des Azure RMS-Schutzes nicht unterstützt. Zudem sind damit folgende Einschränkungen verbunden:
+
+- Office 2010 und Office 2007 werden nicht unterstützt.
+
+- Wenn Sie außerdem Azure RMS-Schutz verwenden: Verwenden Sie nicht die Option **Nicht weiterleiten**, wenn Sie für Azure RMS-Schutz eine Bezeichnung konfigurieren. Darüber hinaus müssen Sie Benutzer anweisen, diese Option in Outlook nicht manuell auszuwählen. 
+
+    Wird die Option „Nicht weiterleiten“ durch eine Bezeichnung oder manuell durch Benutzer angewendet, wird die Option unter Umständen von Ihrer AD RMS-Bereitstellung angewendet und nicht wie beabsichtigt vom Azure Rights Management-Dienst. Bei diesem Szenario können Personen, denen Sie extern Inhalte zur Verfügung stellen, E-Mail-Nachrichten nicht öffnen, für die diese Option „Nicht weiterleiten“ aktiviert wurde.
 
 ## Anforderungen an HYOK
 
@@ -94,6 +104,6 @@ Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 
