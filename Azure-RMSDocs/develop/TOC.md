@@ -1,4 +1,4 @@
-# [Kennenlernen](/rights-management/understand-explore/azure-rights-management)
+# [Kennenlernen](/rights-management/understand-explore/what-is-information-protection)
 # [Erste Schritte](/rights-management/get-started/requirements-azure-rms)
 # [Planen und Entwerfen](/rights-management/plan-design/deployment-roadmap)
 # [Bereitstellen und Verwenden des Diensts](/rights-management/deploy-use/activate-service)
@@ -12,7 +12,7 @@
 #### [Einrichten der Entwicklerumgebung](setup-Developer-environment.md)
 #### [Android-Setup](android-sdk.md)
 #### [Linux-Setup](linux-setup.md)
-#### [iOS- und OS X-Setup](ios-sdk.md)
+#### [Einrichten von iOS und OS X](ios-sdk.md)
 #### [Windows Phone-Setup](windows-phone-apps.md)
 #### [Windows Store-Setup](winrt-sdk.md)
 #### [Codebeispiele](code-examples.md)
@@ -37,7 +37,7 @@
 #### [Server](ad-rms-server.md)
 ### [Erste Schritte](getting-started-with-ad-rms-2-0.md)
 #### [Anmerkungen zu dieser Version](release-notes-rtm.md)
-#### [Installieren des SDKs](install-the-rms-sdk.md)
+#### [Installieren des SDK](install-the-rms-sdk.md)
 #### [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
 #### [Entwickeln Ihrer Anwendung](developing-your-application.md)
 #### [Testen der Anwendung](how-to-set-up-your-test-environment.md)
@@ -65,9 +65,8 @@
 #### [Funktionen](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
 #### [Strukturen](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
 #### [Fehlercodes](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
-# [Azure Information Protection (Preview)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 
