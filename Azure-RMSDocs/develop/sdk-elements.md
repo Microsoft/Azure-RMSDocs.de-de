@@ -4,18 +4,18 @@ description: Dieses Thema zeigt die Dateien der Entwicklungsumgebung und ihren r
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: a3f1e913c92dbee3b889a3d3c0bd6c97317112c9
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
 
 
 ---
@@ -43,9 +43,9 @@ Das Rights Management Services SDK 2.1 umfasst die folgenden Dateien, die auf Ih
 |Ipcerror.h|\inc|Enthält die vom RMS SDK 2.1 exportierten öffentlichen Fehlercodes.|
 |Ipcfile.h|\inc|Enthält die vom RMS SDK 2.1 exportierten Datei-API-Schnittstellen.|
 |Msipc.lib|\lib|Zu verknüpfende Bibliothek, wenn mithilfe des RMS SDK 2.1 x86-Anwendungen erstellt werden sollen.|
-|Msipc_s.lib|\lib|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x86-Anwendungen.|
+|Msipc_s.lib|\lib|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x86-Anwendungen.|
 |Msipc.lib|\lib\x64|Zu verknüpfende Bibliothek, wenn mithilfe des RMS SDK 2.1 x64-Anwendungen erstellt werden sollen.|
-|Msipc_s.lib|\lib\x64|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x64-Anwendungen.|
+|Msipc_s.lib|\lib\x64|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x64-Anwendungen.|
 |Genmanifest.exe|\tools|Generiert ein Manifest für die Verwendung während der Entwicklung einer RMS-fähigen Anwendung.|
  
 
@@ -55,6 +55,6 @@ Das Rights Management Services SDK 2.1 umfasst die folgenden Dateien, die auf Ih
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
