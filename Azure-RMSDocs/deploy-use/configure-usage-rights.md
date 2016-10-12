@@ -1,28 +1,28 @@
 ---
-title: "Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure RMS"
-description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet werden, wenn Sie Dateien oder E-Mails mithilfe von Azure Rights Management (Azure RMS) schützen."
+title: "Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure Information Protection"
+description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet werden, wenn Sie Dateien oder E-Mails mithilfe des Azure Rights Management-Diensts von Azure Information Protection schützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: ab1b2f652d34183e1d95fd0a387abb10c3aff9b1
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
 
 
 ---
 
 # Konfigurieren von Nutzungsrechten für Azure Rights Management
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Wenn Sie Schutz für Dateien oder E-Mails mithilfe von Azure Rights Management (Azure RMS) festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie benutzerdefinierte Vorlagen für Azure RMS konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Im klassischen Azure-Portal können Sie beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren:
+Wenn Sie Schutz für Dateien oder E-Mails mithilfe des Azure Rights Management-Diensts von Azure Information Protection festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie benutzerdefinierte Vorlagen für Azure Rights Management konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Im klassischen Azure-Portal können Sie beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechten konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren:
 
 Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwendete Anwendung zu konfigurieren und um zu verstehen, wie diese Rechte von den Anwendungen interpretiert werden.
 
@@ -77,7 +77,7 @@ In den Standardvorlagen sind folgende Rechte enthalten:
 
 Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Transportregeln) haben eine zusätzliche Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
 
-Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im klassischen Azure-Portal angezeigt, wenn Sie Vorlagen für Azure RMS anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
+Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im klassischen Azure-Portal angezeigt, wenn Sie Vorlagen für Azure Rights Management anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
 
 Wenn die Option **Nicht weiterleiten** auf eine E-Mail-Nachricht angewendet wird, kann diese von den Empfängern nicht weitergeleitet, gedruckt, vollständig oder teilweise kopiert werden, ihre Anhänge können nicht gespeichert werden, und sie kann nicht unter einem anderen Namen gespeichert werden. Im Outlook-Client ist beispielsweise die Schaltfläche „Weiterleiten“ nicht verfügbar, die Menüoptionen **Speichern unter**, **Anlage speichern** und **Drucken** sind nicht verfügbar, und Sie können keine Empfänger in den Feldern **An**, **Ccc** und **Bcc** hinzufügen oder ändern.
 
@@ -95,12 +95,12 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 
 
-## Siehe auch
-[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
+## Weitere Informationen
+[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

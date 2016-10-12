@@ -1,26 +1,26 @@
 ---
-title: "Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst | Azure RMS"
+title: "Konfigurieren von Servern für den Azure Rights Management-Connector | Azure Information Protection"
 description: "Informationen, die Sie beim Konfigurieren Ihrer lokalen Server unterstützen, die den RMS-Connector (Azure Rights Management) verwenden sollen. Diese Verfahren beziehen sich auf Schritt 5 aus „Bereitstellen des Azure Rights Management-Verbindungsdiensts“."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 67bf5f7b5a550e723ac16707c341f6b3af054b9a
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
 
 
 ---
 
 # Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
->*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 
 Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
@@ -29,7 +29,7 @@ Stellen Sie zunächst sicher, dass Sie den RMS-Verbindungsdienst installiert und
 
 
 ## Konfigurieren von Servern für die Verwendung des RMS-Verbindungsdiensts
-Nachdem Sie den RMS-Verbindungsdienst installiert und konfiguriert haben, können Sie Ihre lokalen Server konfigurieren, die Rights Management verwenden und mithilfe des Verbindungsdiensts eine Verbindung mit Azure RMS herstellen werden. Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
+Nachdem Sie den RMS-Connector installiert und konfiguriert haben, können Sie Ihre lokalen Server konfigurieren, die den Azure Rights Management-Dienst verwenden und mithilfe des Connectors diese Schutztechnologie verwenden werden. Dies bedeutet, dass die folgenden Server zu konfigurieren sind:
 
 -   **Für Exchange 2016 und Exchange 2013**: Clientzugriffsserver und Postfachserver
 
@@ -243,12 +243,12 @@ Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastrukt
 ## Nächste Schritte
 Nachdem der RMS-Connector installiert und konfiguriert ist und Ihre Server für dessen Verwendung konfiguriert sind, können IT-Administratoren und Benutzer E-Mail-Nachrichten und Dokumente mithilfe von Azure RMS schützen und verwenden. Um dies für Benutzer zu vereinfachen, können Sie die RMS-Freigabeanwendung bereitstellen, die ein Add-On für Office installiert und dem Datei-Explorer neue Kontextmenüoptionen hinzufügt. Weitere Informationen finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
-Sie können die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten.
+Sie können die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen sollten.
 
 Informationen zum Überwachen des RMS-Connectors finden Sie unter [Überwachen des Azure Rights Management-Connectors](monitor-rms-connector.md). 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
