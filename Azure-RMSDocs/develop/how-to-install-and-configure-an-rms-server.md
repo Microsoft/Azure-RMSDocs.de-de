@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: ea8ef9108afc01b5046d523cfc8394d81689638b
+ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
+ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 ---
@@ -70,12 +70,26 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
   Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der dienstseitigen Ermittlung finden Sie in den [Anmerkungen zur Bereitstellung des RMS-Clients 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
 
-  **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
+
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.
@@ -96,6 +110,6 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO2-->
 
 
