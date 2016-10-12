@@ -3,7 +3,7 @@ title: "Szenario – Schützen von Dateien auf einer Dateiserverfreigabe | Azure
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation werden mit dem Azure Rights Management-Schutz alle gewünschten Dateien auf einem Dateiserver geschützt. Dies stellt sicher, dass nur Mitarbeiter Ihrer Organisation darauf zugreifen können, selbst wenn die Dateien kopiert und in einem Speicher abgelegt werden, der nicht der Kontrolle Ihrer IT-Abteilung unterliegt, oder wenn sie per E-Mail an andere Benutzer gesendet werden."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
 
 
 ---
@@ -46,7 +46,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |---------------|--------------------------------|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und Azure Rights Management geschützt wurden.|[Vorbereiten für Azure Information Protection](../plan-design/prepare.md)|
-|Eine der folgenden Komponenten:<br /><br />– Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage &lt;Organisationsname&gt; – Vertraulich nicht archiviert<br /><br />– Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Eine der folgenden Komponenten:<br /><br />– Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage &lt;Organisationsname&gt; – Vertraulich nicht archiviert<br /><br />– Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
 |Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Sie haben das RMS-Schutztool heruntergeladen und die erforderlichen Komponenten für Azure RMS konfiguriert.|Anweisungen zum Herunterladen des Tools und zum Erfüllen der Voraussetzungen: [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Informationen zum Konfigurieren zusätzlich erforderlicher Komponenten für Azure RMS wie dem Dienstprinzipalkonto: [About_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -155,6 +155,6 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

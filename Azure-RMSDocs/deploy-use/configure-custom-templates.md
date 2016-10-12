@@ -1,28 +1,28 @@
 ---
-title: "Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management | Azure RMS"
+title: "Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst | Azure Information Protection"
 description: "Informationen und Anweisungen für Administratoren zum Konfigurieren und Verwalten von Vorlagen für Nutzungsrechte. Mit Vorlagen können Benutzer und andere Administratoren ganz einfach Richtlinien auf sensible Dateien anwenden, die den Zugriff auf autorisierte Benutzer beschränken."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
 
 
 ---
 
-# Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management
+# Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-[Nachdem Sie Azure Rights Management (Azure RMS) aktiviert haben](activate-service.md), sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Richtlinien auf vertrauliche Dateien erleichtern, mit denen der Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränkt wird. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
+Nachdem Sie den Azure Rights Management-Dienst [aktiviert](activate-service.md) haben, sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Rechteverwaltungsrichtlinien auf vertrauliche Dateien erleichtern, mit denen der Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränkt wird. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
 
 -   Schreibgeschützte Anzeige geschützter Inhalte
 
@@ -66,6 +66,6 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

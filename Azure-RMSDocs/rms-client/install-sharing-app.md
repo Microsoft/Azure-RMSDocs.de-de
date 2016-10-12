@@ -1,26 +1,26 @@
 ---
-title: Herunterladen und Installieren der Rights Management-Freigabeanwendung | Azure RMS
+title: Herunterladen und Installieren der Rights Management-Freigabeanwendung | Azure Information Protection
 description: "Anweisungen zur interaktiven Installation der RMS-Freigabeanwendung für Windows, damit Sie problemlos Dokumente für andere Benutzer freigeben können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
-ms.openlocfilehash: b01896dc49a6c581427393f9e3fc21dbbd235238
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
 
 
 ---
 
 # Herunterladen und Installieren der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu installieren. Wenn Sie es jedoch nicht sind und Office 2010 verwenden, bestehen einige Einschränkungen. Weitere Informationen finden Sie im Abschnitt [Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden](#if-you-are-not-a-local-administrator-and-use-office-2010) auf dieser Seite.
 
@@ -44,13 +44,13 @@ Damit sind Sie bereit, Ihre Dateien zu schützen und von anderen geschützte Dat
 ## Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden
 Wenn Sie sich ohne lokale Administratorrechte bei Ihrem Computer anmelden und Setup erkennt, dass Office 2010 installiert ist, werden Sie in einer Warnmeldung darauf hingewiesen, dass einige Szenarien in dieser Konfiguration nicht funktionieren. Dies sind folgende Szenarien:
 
--   Wenn Ihre Organisation keine lokale Version von RMS, sondern Azure RMS verwendet:
+-   Wenn Ihre Organisation den Azure Rights Management-Dienst von Azure Information Protection anstelle einer lokalen Version von Rights Management verwendet:
 
     -   Das Microsoft Office-Feature „Information Rights Management“ (IRM) ist nicht verfügbar. Das betrifft z.B. die Option **Nicht weiterleiten** für E-Mails und die Berechtigungen unter **Zugriff einschränken**, die Sie in Word und Excel im Menü **Datei** festlegen können. Sie können die Option „Geschützt freigeben“ im Menüband verwenden, und Sie können im Datei-Explorer die Kontextmenüoptionen verwenden.
 
--   Wenn Ihre Organisation nicht Azure RMS, sondern eine lokale Version von RMS verwendet:
+-   Wenn Ihre Organisation eine lokale Version von Rights Management anstelle des Azure Rights Management-Diensts von Azure Information Protection verwendet:
 
-    -   Sie können keine geschützten Dokumente lesen, die Sie aus einer anderen Organisation erhalten, in der Azure RMS verwendet wird.
+    -   Sie können keine geschützten Dokumente lesen, die Sie aus einer anderen Organisation erhalten, die den Azure Rights Management-Dienst verwendet.
 
 Wenn Sie kein lokaler Administrator sind und Office 365 oder Office 2013 verwenden, wird Ihnen diese Meldung nicht angezeigt, und diese Szenarien werden unterstützt.
 
@@ -69,6 +69,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

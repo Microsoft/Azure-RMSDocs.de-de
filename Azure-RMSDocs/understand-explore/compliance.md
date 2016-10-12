@@ -1,28 +1,28 @@
 ---
-title: "Kompatibilitätsinformationen und ergänzende Informationen zu Azure Rights Management | Azure RMS"
-description: "Ergänzende Informationen zu Azure RMS, darunter rechtliche Hinweise, Informationen zur Kompatibilität und SLAs."
+title: "Kompatibilitätsinformationen und ergänzende Informationen | Azure Information Protection"
+description: "Ergänzende Informationen zu Azure Information Protection, darunter rechtliche Hinweise, Informationen zur Kompatibilität und SLAs."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 83b9aa53f0a53e8ab26543e5e4b6540061cc13bf
-ms.openlocfilehash: 2cfbae5139a82369df863feccc88f6425509ea98
+ms.sourcegitcommit: 784e8a1f53df10ee66595b1268a4d9a1f0cdc9b0
+ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
 
 
 ---
 
 
 
-# Kompatibilitätsinformationen und unterstützende Informationen zu Azure Rights Management
+# Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
-Azure Rights Management (Azure RMS) unterstützt weitere Dienste und nutzt andere Dienste. Wenn Sie Informationen zur Azure RMS suchen, jedoch nicht zur Verwendung des Azure RMS-Diensts, sehen Sie sich folgende Ressourcen an:
+Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
 
 ## Rechtliche Hinweise und Datenschutz
 
@@ -34,13 +34,13 @@ Azure Rights Management (Azure RMS) unterstützt weitere Dienste und nutzt ander
 
 Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md). Zusätzlich:
 
-- Informationen zu externen Zertifizierungen für Azure RMS: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
+- Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
 - FIPS 140-Informationen: [FIPS 140-Überprüfung](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 ## Vereinbarungen zum Service Level
 
-- Vereinbarungen zum Servicelevel für Azure RMS nach ausgewählter Region: [Herunterladen von der Produktlizenzierungs-Suchseite](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- Vereinbarung zum Servicelevel für Azure Information Protection nach ausgewählter Region: [Download auf der Produktlizenzierungs-Suchseite](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
 
     - Klicken Sie beispielsweise auf **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)**, um die Vereinbarung zum Servicelevel für Nordamerika vom März 2016 herunterzuladen.
 
@@ -55,6 +55,6 @@ Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und ges
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: "Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management | Azure RMS"
-description: "Informationen, die Sie beim Bereitstellen von Hilfe für Benutzer, Administratoren und Ihren Helpdesk unterstützen, nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitgestellt haben."
+title: "Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst | Azure Information Protection"
+description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 0ff8282d01957af1a0dd59673ae2e94a6d879f39
+ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
+ms.openlocfilehash: 56bb2e90f9d1ecb7c925ab22cf1dba16246876f7
 
 
 ---
 
-# Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management
+# Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitgestellt haben, bieten Sie Ihren Benutzern, Administratoren und Ihrem Helpdesk Hilfe und Anleitung:
+Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt und konfiguriert haben, können Sie Ihren Benutzern und Administratoren sowie Ihrem Helpdesk Hilfe und Anleitung bieten:
 
 -   **Endbenutzerinformationen:**
 
@@ -36,23 +36,23 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 
 -   **Administratorinformationen:**
 
-    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
+    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für den Azure Rights Management-Dienst](configure-applications.md).
 
 -   **Helpdesk-Informationen:**
 
     Eines der nützlichsten Helpdesktools ist der [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Helpdesk-Operatoren können das Tool mit der Azure RMS-Administratoroption ausführen und Benutzer dazu auffordern, es mit der Azure RMS-Benutzeroption auszuführen. Dieses Tool unterstützt Sie nicht nur bei der Fehlersuche, sondern behebt gefundene Probleme und zeichnet, sofern der Fehler nicht behoben werden konnte, Ablaufverfolgungsprotokolle auf.
 
-    Stellen Sie bei legitimen Anfragen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung der Azure RMS-[Administratorfunktion](configure-super-users.md) angefordert werden kann.
+    Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung des Azure Rights Management-[Administratorfeatures](configure-super-users.md) angefordert werden kann.
 
     Darüber hinaus finden Sie im Folgenden einige der möglicherweise auftretenden Probleme:
 
     -   **Hilfe bei der Anmeldung:**
 
-        Benutzer werden möglicherweise zur Eingaben von Anmeldeinformationen aufgefordert, wenn Azure RMS einen Benutzer authentifizieren muss und dazu keine zwischengespeicherten Anmeldeinformationen verwenden kann. Dies ist dann das Geschäfts- oder Schulkonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Es ist kein Microsoft-Konto (früher Microsoft Live ID) oder ein persönliches E-Mail-Konto des Benutzers, weil diese zurzeit von Azure RMS nicht unterstützt werden. Stellen Sie Benutzern und Ihrem Helpdesk Anleitungen bereit, welches Konto zu verwenden ist, wenn bei Verwendung dieser Anwendungen mit Azure RMS Anmeldeinformationen abgefragt werden.
+        Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Dies ist dann das Geschäfts- oder Schulkonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Es handelt sich nicht um ein Microsoft-Konto (früher Microsoft Live ID) oder ein privates E-Mail-Konto des Benutzers, weil diese zurzeit vom Azure Rights Management-Dienst nicht unterstützt werden. Stellen Sie Benutzern und Ihrem Helpdesk Anweisungen bereit, welches Konto zu verwenden ist, wenn bei Verwendung dieser Anwendungen mit dem Azure Rights Management-Dienst Anmeldeinformationen abgefragt werden.
 
     -   **Probleme beim Schützen oder Nutzen von Inhalten:**
 
-        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die von ihnen verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die von Azure RMS unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
         Wenn Benutzern beim Versuch, Inhalte zu schützen oder zu öffnen, eine Fehlermeldung angezeigt wird, fordern Sie sie auf, den [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) als Azure RMS-Benutzer auszuführen.
 
@@ -61,7 +61,7 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen sensibler Dokumente und E-Mails zu helfen.
 
 ## Verwenden von Informationsschutz mit der Rights Management-Freigabeanwendung
-Die Rights Management (RMS)-Freigabeanwendung ist für Benutzer erforderlich, damit diese Inhalte schützen und geschützte Inhalte benutzen können, wenn sie Office 2010 verwenden, wird aber auch für alle Computer und mobilen Geräte empfohlen, die Azure RMS unterstützen.
+Die RMS-Freigabeanwendung (Rights Management) ist möglicherweise für Benutzer erforderlich, damit diese Inhalte schützen und geschützte Inhalte nutzen können, wenn sie Office 2010 verwenden, wird aber auch für alle Computer und mobilen Geräte empfohlen, die den Azure Rights Management-Dienst unterstützen.
 
 Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
 
@@ -73,7 +73,7 @@ Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FA
 > Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
-Wenn Sie Azure RMS verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, wodurch das Schützen von Dateien erleichtert würde. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
+Wenn Sie den Azure Rights Management-Dienst verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, die das Schützen von Dateien erleichtern würden. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
@@ -115,6 +115,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
