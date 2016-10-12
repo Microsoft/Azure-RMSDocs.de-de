@@ -1,28 +1,28 @@
 ---
-title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus | Azure RMS"
-description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen."
+title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus | Azure Information Protection"
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b0b165f594da47c090f7822afed2a80541b71e8
-ms.openlocfilehash: 511eb0b95039bb7ee1c4a4f06778a18c1cf6c542
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
 
 
 ---
 
 # Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen. Die E-Mail-Nachrichten und Anlagen werden automatisch von Azure Rights Management geschützt.
+In diesem Szenario und der unterstützenden Benutzerdokumentation wird die Azure Rights Management-Technologie von Azure Information Protection verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen. Die E-Mail-Nachrichten und Anlagen werden automatisch von Azure Rights Management geschützt.
 
 Bei Bedarf können Sie der Regel eine Ausnahme hinzufügen, indem Sie beispielsweise im Betreff der E-Mail-Nachricht die Abkürzung "DNP" (Do Not Protect = Nicht schützen) hinzufügen. Führungskräfte können dies etwa angeben, wenn sie eine ungeschützte E-Mail zur Überprüfung an bestimmte Führungskräfte senden möchten, bevor Sie sie an andere Kollegen weiterleiten.
 
@@ -44,11 +44,11 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
 |---------------|--------------------------------|
-|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet:<br /><br />– Eine E-Mail-aktivierte Gruppe namens **Führungskräfte**, der alle Führungskräfte angehören<br /><br />– Eine E-Mail-aktivierte Gruppe namens **RMS-Administratoren**, der alle Administratoren angehören, die Azure RMS konfigurieren|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Ihr Azure Rights Management-Mandantenschlüssel wird von Microsoft verwaltet. Sie verwenden nicht BYOK (Bring your own key, Eigenen Schlüssel verwenden)|[Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](https://technet.microsoft.com/library/dn440580.aspx)|
-|Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Einer der folgenden Konfigurationen:<br /><br />– Exchange Online ist für Azure Rights Management aktiviert<br /><br />– Der RMS-Connector ist für die lokale Exchange-Anwendung installiert und konfiguriert|Für Exchange Online: Weitere Informationen finden Sie im Abschnitt **Exchange Online: IRM-Konfiguration** unter [Konfigurieren von Anwendungen für Azure Rights Management](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Für lokales Exchange: [Bereitstellen des Azure Rights Management-Verbindungsdiensts](https://technet.microsoft.com/library/dn375964.aspx)|
-|Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet:<br /><br />– Eine E-Mail-aktivierte Gruppe namens **Führungskräfte**, der alle Führungskräfte angehören<br /><br />– Eine E-Mail-aktivierte Gruppe namens **RMS-Administratoren**, der alle Administratoren angehören, die Azure RMS konfigurieren|[Vorbereiten für Azure Information Protection](../plan-design/prepare.md)|
+|Ihr Azure Information Protection-Mandantenschlüssel wird von Microsoft verwaltet. Sie verwenden nicht BYOK (Bring Your Own Key, eigenen Schlüssel verwenden).|[Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md)|
+|Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
+|Einer der folgenden Konfigurationen:<br /><br />– Exchange Online ist für Azure Rights Management aktiviert<br /><br />– Der RMS-Connector ist für die lokale Exchange-Anwendung installiert und konfiguriert|Für Exchange Online: Informationen finden Sie unter [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).<br /><br />Für lokales Exchange: [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md)|
+|Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Sie haben wie später in diesem Artikel beschrieben eine Transportschutzregel für IRM konfiguriert .|Für Exchange Online: [E-Mail-Fluss oder Transportregeln](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Für Exchange 2013: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Für Exchange 2010: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
 ### So konfigurieren Sie die benutzerdefinierte Vorlage für Führungskräfte
@@ -132,6 +132,6 @@ Wenn Sie vertrauliche Unternehmensinformationen an eine andere VanArsdel-Führun
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

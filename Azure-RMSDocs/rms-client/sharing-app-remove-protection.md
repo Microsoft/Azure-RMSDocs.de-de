@@ -1,26 +1,26 @@
 ---
-title: Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung | Azure RMS
+title: Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung | Azure Information Protection
 description: "Anweisungen zum Aufheben des Schutzes für eine Datei, die zuvor mit der RMS-Freigabeanwendung geschützt wurde."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 4400b09108851ad5776596b699db2fcb01bb0b70
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: ceb726e47c4eb9413b7d7eb5b1469e2a99992dda
 
 
 ---
 
 # Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Um den Schutz von einer zu entfernen (d.h. den Dateischutz aufzuheben), die zuvor von der RMS-Freigabeanwendung geschützt wurde, verwenden Sie die Option **Schutz entfernen** im Datei-Explorer.
 
@@ -51,6 +51,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

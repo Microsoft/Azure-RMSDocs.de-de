@@ -1,28 +1,28 @@
 ---
-title: "Rights Management-Freigabeanwendung für Windows | Azure RMS"
-description: "Informationsressourcen für die Rights Management-Freigabeanwendung für Windows. Dies ist eine kostenlose, herunterladbare Anwendung für Organisationen, die Active Directory Rights Management Services (AD RMS) oder Azure Rights Management (Azure RMS) verwenden, sowie für Organisationen, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure RMS geschützt sind."
+title: "Rights Management-Freigabeanwendung für Windows | Azure Information Protection"
+description: "Informationsressourcen für die Rights Management-Freigabeanwendung für Windows. Dies ist eine kostenlose, herunterladbare Anwendung für Organisationen, die Active Directory Rights Management Services (AD RMS) oder Azure Information Protection verwenden, sowie für Organisationen, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure Information Protection geschützt sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 50d1613242033ca176466b405832975d6f76aa13
+ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
+ms.openlocfilehash: 4151d5d27f4297d3b9e02d45d0168c1933f3abc9
 
 
 ---
 
 # Rights Management-Freigabeanwendung für Windows
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection*
 
-Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freigabe-App“ bezeichnet) ist eine kostenlose, herunterladbare Anwendung für Unternehmen, die [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) oder [Azure Rights Management](../understand-explore/azure-rights-management.md) (Azure RMS) verwenden. Sie ist für Unternehmen konzipiert, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure RMS geschützt sind.
+Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freigabe-App“ bezeichnet) ist eine kostenlose, herunterladbare Anwendung für Unternehmen, die [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) oder [Azure Information Protection](../understand-explore/what-is-information-protection.md) verwenden. Sie ist für Unternehmen konzipiert, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit dem Azure Rights Management-Dienst von Azure Information Protection geschützt sind.
 
 -   [Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen](sharing-app-version-release-history.md)
 
@@ -31,7 +31,9 @@ Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freiga
 -   [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 > [!TIP]
-> Es gibt auch eine Rights Management-Freigabe-App für Mac-Computer und mobile Geräte. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für mobile und Mac-Plattformen](http://technet.microsoft.com/dn451248).
+> Es gibt auch eine Azure Information Protection-App für iOS und Android. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](mobile-app-faq.md ).
+> 
+> Weitere Informationen zu Mac-Computern und Windows Phones finden Sie unter [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für mobile und Mac-Plattformen](http://technet.microsoft.com/dn451248).
 
 ## Weitere Informationen
 [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für Windows](http://technet.microsoft.com/dn467883)
@@ -39,6 +41,6 @@ Die Rights Management-Freigabeanwendung für Windows (auch nur als „RMS-Freiga
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
