@@ -1,40 +1,40 @@
 ---
-title: "Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure RMS"
-description: "Informationen und Anweisungen für Administratoren zum Konfigurieren von Office 365 für den Einsatz mit Azure Rights Management (Azure RMS)."
+title: "Office 365&colon; Konfiguration für Clients und Onlinedienste | Azure Information Protection"
+description: "Informationen und Anweisungen für Administratoren zum Konfigurieren von Office 365 für den Einsatz mit dem Azure Rights Management-Dienst von Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 18498a6d1edac11b20842b0cca0c4559909d681e
-ms.openlocfilehash: e8e2abe6006f40f5c2e34ef0d4ac3f1ccaf66516
+ms.sourcegitcommit: d07f981456f5f642642f4bcc748ad56b630daf93
+ms.openlocfilehash: b2baad6a8ed383903883f33eedc56a8cebe019d3
 
 
 ---
 
 # Office 365: Konfigurationen für Clients und Onlinedienste
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Da Office 365 systemeigene Unterstützung für Azure RMS bietet, ist keine Clientcomputerkonfiguration erforderlich, um die Features für die Verwaltung von Informationsrechten (IRM) für Anwendungen wie Word, Excel, PowerPoint, Outlook und die Outlook Web App zu unterstützen. Die Benutzer müssen sich lediglich bei ihren Office-Anwendungen mit ihren [!INCLUDE[o365_1](../includes/o365_1_md.md)]-Anmeldeinformationen anmelden, und sie können Dateien und E-Mails schützen sowie von anderen geschützte Dateien und E-Mails verwenden.
+Da Office 365 native Unterstützung für den Azure Rights Management-Dienst von Azure Information Protection bietet, ist keine Clientcomputerkonfiguration erforderlich, um die Features für die Verwaltung von Informationsrechten (IRM) für Anwendungen wie Word, Excel, PowerPoint, Outlook und die Outlook-Web-App zu unterstützen. Die Benutzer müssen sich lediglich bei ihren Office-Anwendungen mit ihren [!INCLUDE[o365_1](../includes/o365_1_md.md)]-Anmeldeinformationen anmelden, und sie können Dateien und E-Mails schützen sowie von anderen geschützte Dateien und E-Mails verwenden.
 
 Wir empfehlen jedoch, dass Sie diese Anwendungen durch die Rights Management-Freigabeanwendung ergänzen, damit Ihre Benutzer von dem Office-Add-In profitieren können. Weitere Informationen finden Sie unter [Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients](configure-sharing-app.md).
 
 ## Exchange Online: IRM-Konfiguration
-Um Exchange Online für die Unterstützung von Azure RMS zu konfigurieren, müssen Sie den IRM-Dienst für Exchange Online konfigurieren. Zu diesem Zweck verwenden Sie Windows PowerShell (es muss kein separates Modul installiert werden) und führen [PowerShell-Befehle für Exchange Online](https://technet.microsoft.com/library/jj200677.aspx) aus.
+Um Exchange Online für die Unterstützung des Azure Rights Management-Diensts zu konfigurieren, müssen Sie den IRM-Dienst für Exchange Online konfigurieren. Zu diesem Zweck verwenden Sie Windows PowerShell (es muss kein separates Modul installiert werden) und führen [PowerShell-Befehle für Exchange Online](https://technet.microsoft.com/library/jj200677.aspx) aus.
 
 > [!NOTE]
-> Sie können Exchange Online derzeit nicht für die Unterstützung von Azure RMS konfigurieren, wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) für Azure RMS anstelle der Standardkonfiguration mit einem von Microsoft verwalteten Mandantenschlüssel verwenden. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md).
+> Sie können Exchange Online derzeit nicht für die Unterstützung des Azure Rights Management-Diensts konfigurieren, wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) für Azure Information Protection anstelle der Standardkonfiguration mit einem von Microsoft verwalteten Mandantenschlüssel verwenden. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](../plan-design/byok-price-restrictions.md).
 >
-> Wenn Sie versuchen, Exchange Online konfigurieren, wenn Azure RMS mit BYOK arbeitet, missling der Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]**.
+> Wenn Sie versuchen, Exchange Online zu konfigurieren, wenn der Azure Rights Management-Dienst mit BYOK arbeitet, tritt beim Befehl zum Importieren des Schlüssels (Schritt 5 im folgenden Verfahren) mit der Fehlermeldung **[FailureCategory=Cmdlet-FailedToGetTrustedPublishingDomainFromRmsOnlineException]** auf.
 
-Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müssen, um Exchange Online für die Verwendung von Azure RMS zu aktivieren:
+Die folgenden Schritte enthalten eine Reihe von Befehlen, die Sie ausführen müssen, um Exchange Online für die Verwendung des Azure Rights Management-Diensts zu aktivieren:
 
 1.  Wenn dies das erste Mal ist, dass Sie Windows PowerShell für Exchange Online auf Ihrem Computer verwendet haben, müssen Sie Windows PowerShell für das Ausführen signierter Skripts konfigurieren. Starten Sie Ihre Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** , und geben Sie dann Folgendes ein:
 
@@ -42,7 +42,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Set-ExecutionPolicy RemoteSigned
     ```
 
-2.  Melden Sie in Ihrer Windows PowerShell-Sitzung bei Exchange Online mit einem Konto an, das für den Remoteshellzugriff aktiviert ist. Standardmäßig sind alle Konten, die in Exchange Online erstellt werden, für den Remoteshellzugriff aktiviert. Diese Einstellung kann über den Befehl [Set-User &lt;UserIdentity&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) deaktiviert (und wieder aktiviert) werden.
+2.  Melden Sie in Ihrer Windows PowerShell-Sitzung bei Exchange Online mit einem Konto an, das für den Remoteshellzugriff aktiviert ist. Standardmäßig sind alle Konten, die in Exchange Online erstellt werden, für den Remoteshellzugriff aktiviert. Diese Einstellung kann über den Befehl [Set-User &lt;Benutzer-ID&gt; -RemotePowerShellEnabled](https://technet.microsoft.com/library/jj984292%28v=exchg.160%29.aspx) deaktiviert (und wieder aktiviert) werden.
 
     Um sich anzumelden, geben Sie Folgendes ein:
 
@@ -61,7 +61,7 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Import-PSSession $Session
     ```
 
-4.  Geben Sie den Speicherort des Azure RMS-Mandantenschlüssels entsprechend dem Standort an, an dem der Mandant Ihrer Organisation erstellt wurde:
+4.  Geben Sie den Speicherort des Azure Information Protection-Mandantenschlüssels entsprechend dem Standort an, an dem der Mandant Ihrer Organisation erstellt wurde:
 
     Für Nordamerika:
 
@@ -89,14 +89,14 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Set-IRMConfiguration -RMSOnlineKeySharingLocation "https://sp-rms.govus.aadrm.com/TenantManagement/ServicePartner.svc"
     ```
 
-5.  Importieren Sie Konfigurationsdaten aus Azure RMS in Exchange Online in Form der vertrauenswürdigen Veröffentlichungsdomäne (Trusted Publishing Domain, TPD). Dies umfasst den Azure RMS-Mandantenschlüssel und Azure RMS-Vorlagen:
+5.  Importieren Sie Konfigurationsdaten aus dem Azure Rights Management-Dienst in Exchange Online in Form der vertrauenswürdigen Veröffentlichungsdomäne (Trusted Publishing Domain, TPD). Dies umfasst den Azure Information Protection-Mandantenschlüssel und Azure Rights Management-Vorlagen:
 
     ```
     Import-RMSTrustedPublishingDomain -RMSOnline -name "RMS Online"
     ```
-    In diesem Befehl wird der Name **RMS Online** als Basisnamen für die vertrauenswürdige Veröffentlichungsdomäne für Azure RMS in Exchange Online verwendet. Nach dem Importieren der vertrauenswürdigen Veröffentlichungsdomäne lautet der Name in Exchange Online **RMS Online - 1**.
+    In diesem Befehl wird der Name **RMS Online** als Basisname für die vertrauenswürdige Veröffentlichungsdomäne (TPD) für Azure Rights Management in Exchange Online verwendet. Nach dem Importieren der vertrauenswürdigen Veröffentlichungsdomäne lautet der Name in Exchange Online **RMS Online - 1**.
 
-6.  Aktivieren Sie Azure RMS-Funktionalität, damit IRM-Features für Exchange Online zur Verfügung stehen:
+6.  Aktivieren Sie die Azure Rights Management-Funktionalität, damit IRM-Features für Exchange Online zur Verfügung stehen:
 
     ```
     Set-IRMConfiguration -InternalLicensingEnabled $true
@@ -118,10 +118,10 @@ Die folgenden Schritte bieten eine Reihe von Befehlen, die Sie ausführen müsse
     Remove-PSSession $Session
     ```
 
-Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe von Azure RMS schützen. Wählen Sie in Outlook Web App im erweiterten Menü ( **...** ) den Befehl**Berechtigungen festlegen**und dann **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
+Benutzer können ihre E-Mail-Nachrichten jetzt mithilfe des Azure Rights Management-Diensts schützen. Wählen Sie in Outlook Web App im erweiterten Menü ( **...** ) den Befehl**Berechtigungen festlegen**und dann **Nicht weiterleiten** oder eine der verfügbaren Vorlagen aus, um den Informationsschutz auf die E-Mail-Nachricht und sämtliche Anlagen anzuwenden. Da die Outlook Web App jedoch die Benutzeroberfläche für einen Tag zwischenspeichert, warten Sie diesen Zeitraum ab, bevor Sie versuchen, den Informationsschutz auf E-Mail-Nachrichten anzuwenden, nachdem Sie diese Konfigurationsbefehle ausgeführt haben. Ehe Benutzeroberfläche entsprechend der neuen Konfiguration aktualisiert wird, sehen Sie keine Optionen im Menü **Berechtigungen festlegen** .
 
 > [!IMPORTANT]
-> Bei Erstellung neuer [benutzerdefinierter Vorlagen](configure-custom-templates.md) für Azure RMS oder Aktualisierung der Vorlagen müssen Sie jedes Mal den folgenden Exchange Online-PowerShell-Befehl ausführen (falls erforderlich, führen Sie die Schritte 2 und 3 zuerst aus), um diese Änderungen mit Exchange Online zu synchronisieren: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
+> Wenn Sie neue [benutzerdefinierte Vorlagen](configure-custom-templates.md) für Azure Rights Management erstellen oder die Vorlagen aktualisieren, müssen Sie jedes Mal den folgenden Exchange Online-PowerShell-Befehl ausführen (führen Sie ggf. zunächst die Schritte 2 und 3 aus), um diese Änderungen mit Exchange Online zu synchronisieren: `Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates –RMSOnline`
 
 Als Exchange-Administrator können Sie jetzt Features konfigurieren, die den Informationsschutz automatisch anwenden, wie z. B. [Transportregeln](https://technet.microsoft.com/library/dd302432.aspx), [DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx)und [geschützte Voicemail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
@@ -139,7 +139,7 @@ Wenn Sie anschließend bereit sind, [Transportregeln](https://technet.microsoft.
 Weitere Informationen zur Verschlüsselung von Nachrichten finden Sie unter [Verschlüsselung in Office 365](https://technet.microsoft.com/library/dn569286.aspx) in der Exchange-Bibliothek.
 
 ## SharePoint Online und OneDrive for Business: IRM-Konfiguration
-Um SharePoint Online und OneDrive für die Unterstützung von Azure RMS zu konfigurieren, müssen Sie zunächst den IRM-Dienst für SharePoint Online über das SharePoint Admin Center aktivieren. Anschließend können Websitebesitzer ihre SharePoint-Listen und Dokumentbibliotheken und Benutzer ihre OneDrive for Business-Bibliothek mit IRM schützen, sodass Dokumente, die dort gespeichert und mit anderen Benutzern geteilt werden, automatisch von Azure RMS geschützt sind.
+Um SharePoint Online und OneDrive für die Unterstützung des Azure Rights Management-Diensts zu konfigurieren, müssen Sie zunächst den IRM-Dienst für SharePoint Online über das SharePoint Admin Center aktivieren. Anschließend können Websitebesitzer ihre SharePoint-Listen und -Dokumentbibliotheken und Benutzer ihre OneDrive for Business-Bibliothek mit IRM schützen, sodass Dokumente, die dort gespeichert und mit anderen Benutzern geteilt werden, automatisch vom Azure Rights Management-Dienst geschützt sind.
 
 Um den IRM-Dienst für SharePoint Online zu aktivieren, lesen Sie die folgenden Anweisungen auf der Office-Website:
 
@@ -1110,6 +1110,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: "Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure RMS"
+title: "Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure Information Protection"
 description: "Hier finden Sie Informationen zu Neuheiten oder Änderungen an einer Version der Rights Management-Freigabeanwendung für Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 361fde97756c24fa46df6eda16d7506b4b8aaa3a
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
 
 
 ---
 
 # Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
-Das Rights Management-Team aktualisiert die Rights Management-Freigabeanwendung regelmäßig, um Fixes und neue Funktionen zu implementieren. Verwenden Sie die folgenden Informationen, um zu sehen, welche Neuerungen oder Änderungen eine Version bietet. Die neueste Version ist zuerst aufgeführt.
+Das Azure Information Protection-Team aktualisiert die Rights Management-Freigabeanwendung regelmäßig, um Fixes und neue Funktionen zu implementieren. Verwenden Sie die folgenden Informationen, um zu sehen, welche Neuerungen oder Änderungen eine Version bietet. Die neueste Version ist zuerst aufgeführt.
 
 Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
@@ -131,6 +131,6 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

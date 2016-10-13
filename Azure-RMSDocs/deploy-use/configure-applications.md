@@ -1,33 +1,33 @@
 ---
-title: "Konfigurieren von Anwendungen für Azure Rights Management | Azure RMS"
-description: "Anweisungen für Administratoren zum Konfigurieren von Anwendungen und Diensten für die Unterstützung von Azure RMS. Beispielsweise Office-Anwendungen wie Word 2013 und Word 2010 sowie Dienste wie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken)."
+title: "Konfigurieren von Anwendungen für den Azure Rights Management-Dienst | Azure Information Protection"
+description: "Hier finden Sie Anleitung für Administratoren zum Konfigurieren von Anwendungen und Diensten für die Unterstützung des Azure Rights Management-Schutzdiensts für Azure Information Protection. Beispielsweise Office-Anwendungen wie Word 2013 und Word 2010 sowie Dienste wie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: e2958a2b76880025ad46421163a15d2bad5ec81c
+ms.sourcegitcommit: 9dee9e7c925258ffd3cd9e783582733e9518d3fa
+ms.openlocfilehash: d141bf56515853f7b6fddda1ddf150b8d3730b78
 
 
 ---
 
 # Konfigurieren von Anwendungen für Azure Rights Management
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
 > [!NOTE]
-> Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Rights Management bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung von Rights Management für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
+> Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Information Protection bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung der Rights Management-Funktionen für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
 >
 > Klicken Sie bei Office-Anwendungen z. B. auf das Hilfesymbol, und geben Sie Suchbegriffe wie **Rights Management** oder **IRM**ein. Informationen zur RMS-Freigabeanwendung für Windows finden Sie unter [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
 
-Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen und Dienste für die Unterstützung von Azure RMS zu konfigurieren. Hierzu gehören unter anderem Office-Anwendungen wie Word 2013 und Word 2010 sowie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken). Informationen dazu, wie diese Anwendungen und Dienste Rights Management unterstützen, finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](../understand-explore/applications-support.md).
+Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt haben, verwenden Sie die folgenden Informationen, um Anwendungen und Dienste für die Unterstützung des Azure Rights Management-Diensts von Azure Information Protection zu konfigurieren. Hierzu gehören unter anderem Office-Anwendungen wie Word 2013 und Word 2010 sowie Exchange Online (Transportregeln, Verhinderung von Datenverlust, Unterbinden der Weiterleitung und Nachrichtenverschlüsselung) und SharePoint Online (geschützte Bibliotheken). Informationen dazu, wie diese Anwendungen und Dienste Rights Management unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md).
 
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
@@ -54,26 +54,26 @@ Nachdem Sie Azure Rights Management (Azure RMS) für Ihre Organisation bereitges
 Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
 > [!TIP]
-> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung von Azure RMS konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](../understand-explore/what-admins-users-see.md).
+> Allgemeine Beispiele und Screenshots von Anwendungen, die für die Verwendung des Azure Rights Management-Diensts konfiguriert sind, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](../understand-explore/what-admins-users-see.md).
 
 
-Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die RMS-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des RMS SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des RMS SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
+Zusätzlich zu diesen Anwendungen und Diensten gibt es noch andere Anwendungen, die die Rights Management-APIs unterstützen. Diese Kategorie umfasst Branchenanwendungen, die intern mithilfe des Rights Management-SDK geschrieben wurden, sowie Anwendungen von Softwareherstellern, die mithilfe des Rights Management-SDK geschrieben wurden. Befolgen Sie für diese Anwendungen die Anweisungen, die zusammen mit der jeweiligen Anwendung bereitgestellt werden.
 
 ## Nächste Schritte
-Nachdem Sie Ihre Anwendungen für die Unterstützung von Azure Rights Management konfiguriert haben, können Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] für Benutzer und Administratoren weitere Konfigurationsschritte ausführen möchten. Wenn dies nicht der Fall ist, helfen Ihnen unter Umständen die folgenden Informationen weiter:
+Nachdem Sie Ihre Anwendungen für die Unterstützung des Azure Rights Management-Diensts konfiguriert haben, können Sie die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) verwenden, um herauszufinden, ob Sie vor dem Rollout von Azure Information Protection für Benutzer und Administratoren weitere Konfigurationsschritte ausführen möchten. Wenn dies nicht der Fall ist, helfen Ihnen unter Umständen die folgenden Informationen weiter:
 
-- [Überprüfen von Azure Rights Management](verify.md)
+- [Überprüfen des Azure Rights Management-Diensts](verify.md)
 
-- [Unterstützung von Benutzern beim Schützen von Dateien unter Verwendung von Azure Rights Management](help-users.md)
+- [Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](help-users.md)
 
-- [Protokollieren und Analysieren von Azure Rights Management](log-analyze-usage.md)
+- [Protokollieren und Analysieren des Azure Rights Management-Diensts](log-analyze-usage.md)
 
-- [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](operations-tenant-key.md)
-
-
+- [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](operations-tenant-key.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Sep16_HO5-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: "Überwachen des Azure Rights Management-Connectors | Azure RMS"
-description: "Informationen, die Sie beim Überwachen des Connectors und der Azure RMS-Nutzung in Ihrer Organisation unterstützen."
+title: "Überwachen des Azure Rights Management-Connectors | Azure Information Protection"
+description: "Hier finden Sie Informationen, die Sie beim Überwachen des Connectors und Verwendung des Azure Rights Management-Diensts von Azure Information Protection in Ihre Organisation unterstützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 97b8107e1529271376c21837b3ac357dba9235d2
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
 
 
 ---
 
 # Überwachen des Azure Rights Management-Connectors
 
->*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
-Nach der Installation und Konfiguration des RMS-Connectors können Sie die folgenden Methoden und Informationen verwenden, um den Connector und die Nutzung von Azure RMS in Ihrer Organisation zu überwachen.
+Nach der Installation und Konfiguration des RMS-Connectors können Sie die folgenden Methoden und Informationen verwenden, um den Connector und die Nutzung des Azure Rights Management-Diensts von Azure Information Protection in Ihrer Organisation zu überwachen.
 
 ## Anwendungsereignis-Protokolleinträge
 
@@ -32,10 +32,10 @@ Beispiele für diese Einträge sind die folgenden Informationsereignisse: Mit ID
 
 Wenn der Connector nicht für die Verwendung von HTTPS konfiguriert wurde, wird mit der Warnungs-ID 2002 angezeigt, dass ein Client eine nicht sichere Verbindung (HTTP) verwendet.
 
-Wenn der Connector keine Verbindung mit Azure RMS herstellen kann, wird wahrscheinlich der Fehler 3001 angezeigt. Dieser Fehler kann beispielsweise aufgrund eines DNS-Problems oder bei einer Unterbrechung des Internetzugriffs auf mindestens einem Server auftreten, auf dem der RMS-Connector ausgeführt wird. 
+Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen kann, wird wahrscheinlich der Fehler 3001 angezeigt. Dieser Fehler kann beispielsweise aufgrund eines DNS-Problems oder bei einer Unterbrechung des Internetzugriffs auf mindestens einem Server auftreten, auf dem der RMS-Connector ausgeführt wird. 
 
 > [!TIP]
-> Wenn Server mit dem RMS-Connector keine Verbindung mit Azure RMS herstellen können, sind häufig Webproxykonfigurationen die Ursache.
+> Wenn Server mit dem RMS-Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen können, sind häufig Webproxykonfigurationen die Ursache.
 
 Lesen Sie wie bei allen Ereignisprotokolleinträgen die Meldung, um weitere Einzelheiten zu erfahren.
 
@@ -83,7 +83,7 @@ Information **1004**
 
 **Die Liste der autorisierten Konten wurde aktualisiert.**
 
-Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste der zur Verwendung des RMS-Connectors autorisierten Konten heruntergeladen hat (vorhandene Konten und jegliche Änderungen). Wenn der RMS-Connector mit Azure RMS kommunizieren kann, wird diese Liste alle 15 Minuten heruntergeladen.
+Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste der zur Verwendung des RMS-Connectors autorisierten Konten heruntergeladen hat (vorhandene Konten und jegliche Änderungen). Wenn der RMS-Connector mit dem Azure Rights Management-Dienst kommunizieren kann, wird diese Liste alle 15 Minuten heruntergeladen.
 
 ----
 
@@ -99,9 +99,9 @@ Warnung **2001**
 
 **Nichtautorisierter Zugriffsversuch auf den Microsoft RMS-Connector.**
 
-Dieses Ereignis wird protokolliert, wenn bei dem Versuch eines Kontos, eine Verbindung zu dem RMS-Connector aufzubauen, ein Fehler auftritt. Der häufigste Grund dafür ist das Fehlen des Kontos, das die Verbindung herstellt, in der Liste der autorisierten Konten, die der RMS-Connector von Azure RMS herunterlädt. So z.B., wenn die aktuelle Liste ist noch nicht heruntergeladen wurde (das geschieht alle 15 Minuten) oder das Konto in der Liste fehlt. 
+Dieses Ereignis wird protokolliert, wenn bei dem Versuch eines Kontos, eine Verbindung zu dem RMS-Connector aufzubauen, ein Fehler auftritt. Der häufigste Grund dafür ist das Fehlen des Kontos, das die Verbindung herstellt, in der Liste der autorisierten Konten, die der RMS-Connector des Azure Rights Management-Diensts herunterlädt. So z.B., wenn die aktuelle Liste ist noch nicht heruntergeladen wurde (das geschieht alle 15 Minuten) oder das Konto in der Liste fehlt. 
 
-Das Ereignis kann aber auch dadurch hervorgerufen werden, dass Sie den RMS-Connector auf dem gleichen Server installiert haben, der für die Verwendung des Connectors konfiguriert ist. So z.B., wenn Sie den RMS-Connector auf einem Server mit Exchange Server installieren und ein Exchange-Konto zur Verwendung des Connectors autorisieren. Diese Konfiguration wird nicht unterstützt, weil der RMS-Connector das Konto bei dem Versuch der Verbindungsherstellung nicht korrekt identifizieren kann.
+Das Ereignis kann aber auch dadurch hervorgerufen werden, dass Sie den RMS-Connector auf dem gleichen Server installiert haben, der für die Verwendung des Connectors konfiguriert ist. So z.B., wenn Sie den RMS-Connector auf einem Server mit Exchange Server installieren und ein Exchange-Konto zur Verwendung des Connectors autorisieren. Diese Konfiguration wird nicht unterstützt, da der RMS-Connector das Konto bei dem Versuch der Verbindungsherstellung nicht korrekt identifizieren kann.
 
 Die Ereignismeldung enthält Informationen über das Konto und den Computer, die versuchen, eine Verbindung zum RMS-Connector herzustellen:
 
@@ -155,9 +155,7 @@ Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste de
 
 ## Leistungsindikatoren
 
-Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren für den **Microsoft Rights Management-Connector** erstellt. Diese Leistungsindikatoren sind nützlich, um die Leistung bei Verwendung von Azure RMS über den Connector zu überwachen. 
-
-Beispiel: Wenn beim Schützen von Dokumenten oder E-Mails oder beim Öffnen geschützter Dokumente oder E-Mails regelmäßig Verzögerungen auftreten, können Sie anhand der Leistungsindikatoren ermitteln, ob diese Verzögerungen aufgrund der Verarbeitungszeit des Connectors, aufgrund der Verarbeitungszeit von Azure RMS oder aufgrund von Netzwerkverzögerungen auftreten. Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
+Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren für den **Microsoft Rights Management-Connector** erstellt. Diese Leistungsindikatoren sind nützlich, um die Leistung bei Verwendung des Azure Rights Management-Diensts über den Connector zu überwachen. Beispiel: Wenn beim Schützen von Dokumenten oder E-Mails oder beim Öffnen geschützter Dokumente oder E-Mails regelmäßig Verzögerungen auftreten, können Sie anhand der Leistungsindikatoren ermitteln, ob diese Verzögerungen aufgrund der Verarbeitungszeit des Connectors, aufgrund der Verarbeitungszeit des Azure Rights Management-Diensts oder aufgrund von Netzwerkverzögerungen auftreten. Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
 
 Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
@@ -173,7 +171,7 @@ Weitere Informationen und Anleitungen finden Sie auf der Downloadseite unter **D
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn diese Protokollierung mithilfe des RMS-Connectors erfolgt, enthält das Feld mit der Benutzer-ID in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**, der automatisch für den RMS-Connector erstellt wird.
 
-Weitere Informationen zur Nutzungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](log-analyze-usage.md).
+Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).
 
 Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, können Sie [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) von Windows Sysinternals verwenden und die Nachverfolgung für den RMS-Connector aktivieren, indem Sie die Datei „web.config“ für die Standardwebsite in IIS ändern. Dazu gehen Sie folgendermaßen vor:
 
@@ -194,6 +192,6 @@ Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, k�
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

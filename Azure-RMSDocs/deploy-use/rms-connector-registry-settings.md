@@ -1,19 +1,19 @@
 ---
-title: "Registrierungseinstellungen für den RMS-Verbindungsdienst | Azure RMS"
+title: "Registrierungseinstellungen für den RMS-Connector | Azure Information Protection"
 description: "Informationen zu den Registrierungseinträgen auf Servern, die den RMS-Connector verwenden. Die empfohlene Methode zum Konfigurieren dieser Einstellungen ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Connector."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
 
 # Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
 
 Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Exchange-, SharePoint- oder Windows Server-Servern, mit denen die Server für die Verwendung des [RMS-Verbindungsdiensts](deploy-rms-connector.md) konfiguriert werden, manuell hinzufügen oder überprüfen möchten. Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst.
@@ -216,6 +216,6 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

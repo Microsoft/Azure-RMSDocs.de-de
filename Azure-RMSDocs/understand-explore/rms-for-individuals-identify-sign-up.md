@@ -1,19 +1,19 @@
 ---
-title: "So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben | Azure RMS"
-description: "Als Administrator können Sie jede der in diesem Artikel beschriebenen Methoden (oder auch eine Kombination mehrerer Methoden) verwenden, um festzustellen, ob Ihre Benutzer sich für RMS for Individuals registriert haben."
+title: "Gewusst wie: Ermitteln, ob Benutzer sich für RMS for Individuals registriert haben | Azure Information Protection"
+description: "Wie erfahren Sie als Administrator, ob Ihre Benutzer sich für RMS for Individuals registriert haben? Sie können beliebige Methoden oder eine Kombination aus den Methoden in diesem Artikel verwenden."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: 6a8a6ac7aae7c8e370af47e1d39a9f69acc1e12c
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 9233952b6a707359c8f97516b57542e5d3d1744c
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 6a8a6ac7aae7c8e370af47e1d39a9f69acc1e12c
 
 # So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben
 
->*Gilt für: Azure Rights Management*
+>*Gilt für: Azure Information Protection*
 
 Wie erfahren Sie als Administrator, ob Ihre Benutzer sich für RMS for Individuals registriert haben? Sie können eine dieser Methoden bzw. eine beliebige Kombination der folgenden Methoden verwenden:
 
@@ -36,6 +36,6 @@ Wie erfahren Sie als Administrator, ob Ihre Benutzer sich für RMS for Individua
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

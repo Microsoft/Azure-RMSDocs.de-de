@@ -1,28 +1,28 @@
 ---
-title: "Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung | Azure RMS"
-description: "Lernen Sie die Administratorfunktion von Microsoft Azure RMS kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure RMS für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
+title: "Konfigurieren von Administratoren für die Dienste Azure Rights Management und Discovery oder die Datenwiederherstellung | Azure Information Protection"
+description: "Lernen Sie die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: ac0d2c991bdd13c31c46a9579ac1a6d2150557b6
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d2ae8df5895b1cf1985420be25abac36fe2689b7
 
 
 ---
 
 # Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Mit der Administratorfunktion von Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) wird sichergestellt, dass nur entsprechend berechtigte Personen und Dienste immer auf die Daten zugreifen und diese überprüfen können, die mit Azure RMS für Ihre Organisation geschützt werden. Falls notwendig, können diese Personen/Dienste auch den zuvor angewendeten Schutz aufheben oder ändern. Ein Administrator verfügt immer über die vollständigen Besitzerrechte für alle Nutzungslizenzen, die vom RMS-Mandanten der Organisation gewährt wurden. Diese Fähigkeit wird gelegentlich als "Schlussfolgern über Daten" (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten. So verwenden Sie diese Funktion beispielsweise für alle der folgenden Szenarien:
+Die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection stellt sicher, dass autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen können. Falls notwendig, können diese Personen/Dienste auch den zuvor angewendeten Schutz aufheben oder ändern. Ein Administrator verfügt immer über die vollständigen Besitzerrechte für alle Nutzungslizenzen, die vom Azure Information Protection-Mandanten der Organisation gewährt wurden. Diese Fähigkeit wird gelegentlich als "Schlussfolgern über Daten" (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten. So verwenden Sie diese Funktion beispielsweise für alle der folgenden Szenarien:
 
 -   Ein Mitarbeiter verlässt die Organisation, und Sie müssen alle Dateien lesen können, die von dieser Person geschützt wurden.
 
@@ -43,13 +43,13 @@ Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das
 
 Bewährte Sicherheitsmethoden für die Administratorfunktion:
 
--   Beschränken und überwachen Sie die Administratoren, die als globale Administratoren für Ihren Office 365- oder Azure RMS-Mandanten fungieren oder denen mithilfe des Cmdlets [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) die Rolle „GlobalAdministrator“ zugeordnet wurde. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (einschließlich der eigenen Person) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
+-   Beschränken und überwachen Sie die Administratoren, die als globale Administratoren für Ihren Office 365- oder Azure Information Protection-Mandanten fungieren oder denen mithilfe des Cmdlets [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) die Rolle „GlobalAdministrator“ zugewiesen wurde. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (einschließlich der eigenen Person) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
 
 -   Wenn Sie sehen möchten, welche Benutzer und Dienstkonten einzeln als Administratoren zugeordnet sind, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/dn629408.aspx). Wenn Sie feststellen möchten, ob eine Administratorgruppe konfiguriert ist, verwenden Sie das [Get-AadrmSuperUser-Cmdlet](https://msdn.microsoft.com/library/azure/mt653942.aspx) und Ihre Standardtools für die Benutzerverwaltung, um zu überprüfen, welche Benutzer zu dieser Gruppe gehören. Wie alle administrativen Vorgänge werden auch das Aktivieren oder Deaktivieren der Administratorfunktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) überwacht werden. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
 
 -   Wenn Sie die Administratorfunktion für die alltäglichen Dienste nicht benötigen, sollten Sie diese Funktion nur im Bedarfsfall aktivieren und mit dem Cmdlet [Disable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629428.aspx) wieder deaktivieren.
 
-Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet „Get-AadrmAdminLog“ erstellt wurden. In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für Azure RMS konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
+Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet „Get-AadrmAdminLog“ erstellt wurden. In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für den Azure Rights Management-Dienst konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
 
 `2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
@@ -65,12 +65,12 @@ Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../inc
 Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
-> Das PowerShell-Modul für den RMS-Schutz im Lieferumfang des RMS Protection Tools unterscheidet sich vom [Windows PowerShell-Hauptmodul für Azure Rights Management](administer-powershell.md) und soll als Ergänzung dienen. Das Modul für den RMS-Schutz unterstützt sowohl Azure RMS als auch AD RMS.
+> Das PowerShell-Modul für den RMS-Schutz im Lieferumfang des RMS Protection Tools unterscheidet sich vom [Windows PowerShell-Hauptmodul für Azure Rights Management](administer-powershell.md) und soll als Ergänzung dienen. Das RMS Protection-Modul unterstützt sowohl den Azure Rights Management-Dienst (Azure RMS) für den Azure Information Protection als auch Active Directory Rights Management Services (AD RMS).
 
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

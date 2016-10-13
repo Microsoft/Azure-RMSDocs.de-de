@@ -1,19 +1,19 @@
 ---
-title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure RMS"
+title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure Information Protection"
 description: "Möglichkeiten zur Steuerung der Benutzerkonten in Azure Active Directory, wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
-ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
+ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
+ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 # Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren
 
->*Gilt für: Azure Rights Management*
+>*Gilt für: Azure Information Protection*
 
 
 Wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten, können Sie die Benutzerkonten in dem für Ihre Organisation erstellten Azure-Verzeichnis weiterhin auf die folgenden Arten kontrollieren:
@@ -46,6 +46,6 @@ Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 

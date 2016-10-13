@@ -1,42 +1,42 @@
 ---
-title: "Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure RMS"
-description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung von Azure Rights Management (Azure RMS) zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
+title: "Handbuch für die schnelle Bereitstellung von Azure Information Protection | Azure Information Protection"
+description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung von Azure Information Protection zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 715290d2417df3b386d8e5b8a784e964355d4e15
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
 
 
 ---
 
 # Handbuch für die Schnellbereitstellung von Azure Rights Management
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt **Bereitstellen und Verwenden**, damit Sie Azure Rights Management (Azure RMS) schneller bereitstellen und nutzen können. Wählen Sie aus einer Liste mit spezifischen Implementierungsszenarien.
+Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt **Bereitstellen und Verwenden**, damit Sie Azure Information Protection schneller bereitstellen und nutzen können. Wählen Sie aus einer Liste mit spezifischen Implementierungsszenarios.
 
 Diese Szenarien enthalten sowohl Anweisungen für Administratoren als auch eine entsprechende Dokumentation für die Endbenutzer. Bevor Sie die Dokumentation (Anweisungen oder Ankündigungen) an die Endbenutzer weitergeben, müssen Sie sie an Ihre geschäftlichen Anforderungen und Arbeitsabläufe anpassen. Ein Beispielsatz mit Anweisungen oder eine Ankündigung zeigt, wie die endgültigen Endbenutzerdokumentation aussehen könnte.
 
 Jedes Szenario umfasst eine Liste der Anforderungen mit Links zu weiteren Informationen (bei Bedarf), damit Sie diese Lösungen unabhängig voneinander und in beliebiger Reihenfolge bereitstellen können.
 
-Die hier aufgeführten Szenarien sind ein Beispiel für die gängigsten Lösungen. Da Azure RMS zum Schutz von Informationen in einer Vielzahl von Szenarien sowohl innerhalb einer Organisation als auch organisationsübergreifend verwendet werden kann, können Sie Ihre eigenen Szenarien definieren und für Ihre Umgebung und Ihre Benutzer mithilfe des gleichen Modells bereitstellen. Durch die Fokussierung auf bestimmte Szenarien wird Ihre Azure RMS-Bereitstellung genauer auf Ihre geschäftlichen Ziele ausgerichtet. Darüber hinaus neigen Benutzer unserer Erfahrung nach dazu, szenariospezifische Anweisungen erheblich strikter und systematischer zu befolgen als allgemeinen Leitfaden, wie "Schützen Sie vertrauliche Dokumente".
+Die hier aufgeführten Szenarien sind ein Beispiel für die gängigsten Lösungen. Da Azure Information Protection zum Schutz von Informationen in einer Vielzahl von Szenarios sowohl innerhalb einer Organisation als auch organisationsübergreifend verwendet werden kann, können Sie Ihre eigenen Szenarios definieren und für Ihre Umgebung und Ihre Benutzer mithilfe des gleichen Modells bereitstellen. Durch die Fokussierung auf bestimmte Szenarios wird Ihre Azure Information Protection-Bereitstellung genauer auf Ihre geschäftlichen Ziele ausgerichtet. Darüber hinaus neigen Benutzer unserer Erfahrung nach dazu, szenariospezifische Anweisungen erheblich strikter und systematischer zu befolgen als allgemeinen Leitfaden, wie "Schützen Sie vertrauliche Dokumente".
 
 Vor der Einführung dieser Lösungen empfiehlt es sich, Endbenutzern eine umfangreiche Ankündigung zu senden, in der Sie sie bezüglich der bevorstehenden Änderungen zum Schutz von Unternehmensdaten informieren. Weisen Sie sie außerdem darauf hin, dass dadurch auch Änderungen ihrerseits erforderlich sein können. Eine Beispielkommunikation finden Sie nach der folgenden Tabelle.
 
 > [!NOTE]
 > Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Szenarien für die Azure RMS
-Damit Sie Azure RMS schneller bereitstellen können, um bestimmte Geschäftsprobleme zu lösen, wählen Sie die Szenarien, die Ihren Unternehmenszielen am nächsten kommen, und passen Sie diese gegebenenfalls an.
+## Szenarios für Azure Information Protection
+Damit Sie Azure Information Protection schneller bereitstellen können, um bestimmte Geschäftsprobleme zu lösen, wählen Sie die Szenarios aus, die Ihren Unternehmenszielen am nächsten kommen, und passen Sie sie gegebenenfalls an.
 
 
 
@@ -124,14 +124,14 @@ Siehe: [Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren](scenar
 
 
 ## Ankündigung für Benutzer vor der Einführung
-Sie können als Beispiel die folgende Mitteilung verwenden, um Benutzer zu informieren, dass mit der Bereitstellung von Azure RMS verschiedene Änderungen auf sie zukommen. Kopieren Sie den folgenden Text, und fügen Sie ihn in eine E-Mail ein. Lassen Sie diese von einer Ihrer Führungskräfte, vorzugsweise Ihrem Geschäftsführer, an alle Mitarbeiter senden. Ändern Sie den Text gegebenenfalls, um die Nachricht auf die Mitarbeiter Ihrer Organisation abzustimmen.
+Sie können als Beispiel die folgende Mitteilung verwenden, um Benutzer zu informieren, dass mit der Bereitstellung von Azure Information Protection verschiedene Änderungen auf sie zukommen. Kopieren Sie den folgenden Text, und fügen Sie ihn in eine E-Mail ein. Lassen Sie diese von einer Ihrer Führungskräfte, vorzugsweise Ihrem Geschäftsführer, an alle Mitarbeiter senden. Ändern Sie den Text gegebenenfalls, um die Nachricht auf die Mitarbeiter Ihrer Organisation abzustimmen.
 
 ![Beispiel-Benutzerdokumentationsbanner für die schnelle Bereitstellung von Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 ### Bevorstehende Änderungen zum Schutz unserer Daten
 Haben Sie sich schon einmal gewünscht, Sie könnten den Zugriff auf ein Dokument, das Sie versehentlich Ihren Partnern geschickt haben, sperren? Haben Sie sich gefragt, ob es eine Möglichkeit gibt, zu erfahren, welche Ihrer Kunden die neuesten von Ihnen gesendeten Produktinformationen gelesen haben? Müssen Sie vertrauliche Produktinformationen übermitteln, die nicht an andere Personen weitergeleitet werden dürfen?
 
-All dies ist demnächst möglich, da die IT-Abteilung dabei ist, diverse Änderungen einzuführen und dabei Microsoft Azure Rights Management (Azure RMS) als Lösung zum Schutz von Unternehmensdaten zu implementieren. Viele dieser Lösungen sorgen automatisch für den erforderlichen Schutz, ohne dass sich irgendetwas an Ihrer Vorgehensweise ändern. Andere Änderungen hingegen erfordern eine etwas andere Verfahrensweise. In diesen Fällen erhalten Sie von der IT-Abteilung Informationen und Anweisungen. Bei Fragen oder Problemen können Sie sich jederzeit an das Helpdesk wenden.
+All dies ist demnächst möglich, da die IT-Abteilung dabei ist, diverse Änderungen einzuführen und dabei Microsoft Azure Information Protection als Lösung zum Schutz von Unternehmensdaten zu implementieren. Viele dieser Lösungen sorgen automatisch für den erforderlichen Schutz, ohne dass sich irgendetwas an Ihrer Vorgehensweise ändern. Andere Änderungen hingegen erfordern eine etwas andere Verfahrensweise. In diesen Fällen erhalten Sie von der IT-Abteilung Informationen und Anweisungen. Bei Fragen oder Problemen können Sie sich jederzeit an das Helpdesk wenden.
 
 Beispiel: Zum Verfolgen (und gegebenenfalls Widerrufen) der von Ihnen übermittelten Dokumente verwenden Sie die Website für die Dokumentenverfolgung:
 
@@ -146,6 +146,6 @@ Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu s
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

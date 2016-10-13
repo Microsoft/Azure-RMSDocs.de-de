@@ -1,32 +1,32 @@
 ---
-title: "Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel | Azure RMS"
-description: "Identifizieren Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen, die Sie für Ihren Azure RMS-Mandantenschlüssel (Azure Rights Management) vorgesehen haben."
+title: "Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel | Azure Information Protection"
+description: "Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen kennen, die für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung stehen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: d496a99c4b05e0cf0ba5929f44cdbd1906d31341
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 780c4db3e791dd427828550e428ec4ea18d55fd5
 
 
 ---
 
-# Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel
+# Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Abhängig von der Mandantenschlüsseltopologie (von Microsoft oder vom Kunden verwaltet), besitzen Sie verschiedene Stufen der Kontrolle und Verantwortlichkeit für Ihren Microsoft Azure Rights Management-Mandantenschlüssel (Azure RMS), nachdem er implementiert wurde.
+Abhängig von der Mandantenschlüsseltopologie (von Microsoft oder vom Kunden verwaltet) verfügen Sie über verschiedene Ebenen der Steuerung und Zuständigkeit für Ihren Azure Information Protection-Mandantenschlüssel, nachdem dieser implementiert wurde.
 
 Wenn Sie Ihren eigenen Mandantenschlüssel in Azure Key Vault verwalten, wird dies häufig als „Bring Your Own Key“ (BYOK) bezeichnet. Weitere Informationen zu diesem Szenario und zur Wahl zwischen den beiden Mandantenschlüssel-Topologien finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
-In der folgenden Tabelle werden die Vorgänge identifiziert, die Sie in der jeweiligen Topologie, die Sie für Ihren Azure RMS-Mandantenschlüssel ausgewählt haben, ausführen können.
+In der folgenden Tabelle sind die Vorgänge aufgeführt, die Sie in der jeweiligen Topologie, die Sie für Ihren Azure Information Protection-Mandantenschlüssel ausgewählt haben, ausführen können.
 
 |Lebenszyklusvorgang|Von Microsoft verwaltet (Standard)|Kundenverwaltet (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
@@ -36,7 +36,7 @@ In der folgenden Tabelle werden die Vorgänge identifiziert, die Sie in der jewe
 |Exportieren Ihres Mandantenschlüssels|Ja|Nein|
 |Reaktion auf eine Sicherheitsverletzung|Ja|Ja|
 
-Nachdem Sie identifiziert haben, welche Topologie Sie implementiert haben, können Sie einen der folgenden Punkte auswählen, um weitere Informationen zu diesen Vorgängen für Ihren Azure RMS-Mandantenschlüssel zu erhalten:
+Nachdem Sie die implementierte Topologie ermittelt haben, können Sie auf einen der folgenden Links klicken, um weitere Informationen zu diesen Vorgängen für Ihren Azure Information Protection-Mandantenschlüssel zu erhalten:
 
 
 - [Von Microsoft verwalteter Mandantenschlüssel](operations-microsoft-managed-tenant-key.md)
@@ -48,6 +48,6 @@ Nachdem Sie identifiziert haben, welche Topologie Sie implementiert haben, könn
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

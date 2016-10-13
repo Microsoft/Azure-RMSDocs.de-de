@@ -4,18 +4,18 @@ description: "Installieren und konfigurieren Sie den RMS-Server zum Testen der r
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: d046e7f6bbe867b6bc867483441bb0cc5c20df82
+ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
+ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
 
 
 ---
@@ -70,12 +70,26 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
   Zum Konfigurieren der clientseitigen Ermittlung können Sie die folgenden Registrierungsschlüssel festlegen, dass sie auf den RMS-Server verweisen. Informationen zum Konfigurieren der dienstseitigen Ermittlung finden Sie in den [Anmerkungen zur Bereitstellung des RMS-Clients 2.0](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
 
-  **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterpriseCertification
+
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
-        HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+
+        HKEY_LOCAL_MACHINE
+          SOFTWARE
+            Microsoft
+              MSIPC
+                ServiceLocation
+                  EnterprisePublishing
+                  
+   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.
@@ -96,6 +110,6 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

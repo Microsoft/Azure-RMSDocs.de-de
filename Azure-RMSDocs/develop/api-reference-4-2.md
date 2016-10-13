@@ -4,18 +4,18 @@ description: "Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betri
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a8df1d8-1279-4189-b17d-f128b7ca5643
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 03e3ee68487a21c5dec68bd30f5f656512287b3c
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: cab47811d6b7b2b11f5bdcb58c4d72837a209131
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 03e3ee68487a21c5dec68bd30f5f656512287b3c
 Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. Weitere Einzelheiten finden Sie unter [What‘s new](release-notes.md) (Neuheiten).
 
 ### Apple
-- [iOS/OS X-API-Referenz](/rights-management/sdk/4.2/api/iOS/iOS): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
+- [iOS/OS X-API-Referenz](/information-protection/sdk/4.2/api/iOS/iOS): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
 
 ### Google
 - [Android-Namespaces](android-namespaces.md)
@@ -34,7 +34,7 @@ Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. We
 - [Linux-API-Referenz](linux-c-api-reference.md): Die API-Referenz für unsere Unterstützung von Betriebssystemen mit Linux-Bezug wird auf GitHub gehostet: [RMS SDK für C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
 ### Microsoft
-- [Windows-API-Referenz](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
+- [Windows-API-Referenz](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
 
 ## Verwandte Themen
 
@@ -45,6 +45,6 @@ Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. We
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

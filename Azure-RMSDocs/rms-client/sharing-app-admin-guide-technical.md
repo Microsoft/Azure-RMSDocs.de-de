@@ -1,19 +1,19 @@
 ---
-title: "Technische Übersicht für die Rights Management-Freigabeanwendung | Azure RMS"
+title: "Technische Übersicht für die Rights Management-Freigabeanwendung | Azure Information Protection"
 description: "Technische Details für Administratoren in Unternehmensnetzwerken, die für die Bereitstellung der RMS-Freigabeanwendung für Windows verantwortlich sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 2a3640590ca2729da71e847c03823719e92bcb0f
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3b4cd04732e38da31bf31d899993c912694e3ee8
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 2a3640590ca2729da71e847c03823719e92bcb0f
 
 # Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 
 Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladbare Anwendung für Microsoft Windows und andere Plattformen, die Folgendes bereitstellt:
@@ -36,9 +36,9 @@ Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladb
 
 -   Vollständige Interoperabilität mit PDF-Dateien, die mit der Dateiklassifizierungsinfrastruktur (FCI) geschützt sind, sowie unterstützte PDF-Erstellungstools.
 
-Die Microsoft Rights Management-Freigabeanwendung verwendet die neue [AD RMS-Client 2.1-Runtime](http://www.microsoft.com/download/details.aspx?id=38396). Mithilfe der Funktionalität von AD RMS 2.1 stellt die Microsoft Rights Management-Freigabeanwendung Endbenutzern einen einfachen Schutz und eine einfache Nutzung bereit.
+Die Microsoft Rights Management-Freigabeanwendung verwendet die [AD RMS-Client 2.1-Runtime](http://www.microsoft.com/download/details.aspx?id=38396). Mithilfe der Funktionalität von AD RMS 2.1 stellt die Microsoft Rights Management-Freigabeanwendung Endbenutzern einen einfachen Schutz und eine einfache Nutzung bereit.
 
-Ab der RMS-Version aus dem Oktober 2013 können Sie Dokumente systemeigen mithilfe von Office 2010 schützen und an andere Personen in einem anderen Unternehmen senden, die diese dann mithilfe von Azure RMS nutzen können. Darüber hinaus können Sie mit dieser Version bei Verwendung von AD RMS im Kryptografiemodus 2 RMS for Individuals verwenden und Inhalte von Personen in einem anderen Unternehmen, das Azure RMS verwendet, nutzen. Weitere Informationen zum Kryptografiemodus 2 finden Sie unter [AD RMS-Kryptografiemodi](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+Ab der RMS-Version von Oktober 2013 können Sie Dokumente nativ mithilfe von Office 2010 schützen und an andere Personen in einem anderen Unternehmen senden, die diese dann mithilfe des Azure Rights Management-Diensts von Azure Information Protection nutzen können. Darüber hinaus können Sie mit dieser Version bei Verwendung von AD RMS im Kryptografiemodus 2 RMS for Individuals verwenden und Inhalte von Personen in einem anderen Unternehmen, das den Azure Rights Management-Dienst verwendet, nutzen. Weitere Informationen zum Kryptografiemodus 2 finden Sie unter [AD RMS-Kryptografiemodi](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 Informationen zur Bereitstellung finden Sie unter [Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
@@ -47,7 +47,7 @@ Die Microsoft Rights Management-Freigabeanwendung unterstützt den Schutz auf zw
 
 |Typ des Schutzes|Systemeigenes Format|Generisch|
 |----------------------|----------|-----------|
-|Beschreibung|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die AD RMS unterstützen, stellt der systemeigene Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Schutzebene, die Dateiverkapselung mit dem PFILE-Dateityp und Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
+|Beschreibung|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Schutzebene, die Dateiverkapselung mit dem PFILE-Dateityp und Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
 |Schutz|Dateien werden vollständig verschlüsselt, und der Schutz folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, wenn Dateien geschützt werden, vollständig erzwungen, wenn der Inhalt im IP-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Eine Überwachungsprotokollierung der autorisierten Benutzer, die auf Dateien zugreifen und diese öffnen, findet statt, es werden aber keine Nutzungsrechte durch nicht unterstützende Anwendungen erzwungen|
 |Standard für Dateitypen|Dies ist die Standardschutzebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt: [Unterstützte Dateitypen und Dateinamenerweiterungen](#supported-file-types-and-file-name-extensions).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den vollständigen Schutz unterstützt werden.|
 Sie können die Standardschutzebene ändern, die die RMS-Freigabeanwendung anwendet. Sie können die Standardebene von systemeigen zu generisch oder von generisch zu systemeigen ändern und sogar verhindern, dass die RMS-Freigabeanwendung Schutz anwendet. Weitere Informationen finden Sie im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files) dieses Artikels.
@@ -80,7 +80,7 @@ Für Dateien, die generisch geschützt sind, wird die ursprüngliche Namenserwei
 |JT|PJT|
 ¹ PDF-Rendering unterstützt von Foxit. Copyright © 2003–2014, Foxit Corporation.
 
-In der folgende Tabelle werden die Dateitypen aufgeführt, die von der Microsoft Rights Management-Freigabeanwendung in Microsoft Office 2016, Office 2013 und Office 2010 systemeigen unterstützt werden. Für diese Dateitypen bleiben die Dateinamenerweiterungen nach dem Schutz der Dateien durch RMS unverändert.
+In der folgende Tabelle werden die Dateitypen aufgeführt, die von der Microsoft Rights Management-Freigabeanwendung in Microsoft Office 2016, Office 2013 und Office 2010 nativ unterstützt werden. Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 
 |Von Office unterstützte Dateitypen|Von Office unterstützte Dateitypen|
 |----------------------------------|----------------------------------|
@@ -139,6 +139,6 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

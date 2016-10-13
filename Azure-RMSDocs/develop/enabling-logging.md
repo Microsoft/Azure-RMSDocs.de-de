@@ -4,18 +4,18 @@ description: "Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 1bd4b0c2605a24cd683473b35bfaf8dd0745365a
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 118aa3e25c6be9d0bf43141585d79030fc79224a
 
 
 ---
@@ -79,7 +79,7 @@ Automatische Protokollierung aktivieren
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Weitere Informationen zu optionalen Einstellungen finden Sie unter [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+Weitere Informationen zu optionalen Einstellungen finden Sie unter [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
 
 Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 
@@ -96,6 +96,6 @@ Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

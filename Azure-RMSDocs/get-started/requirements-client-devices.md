@@ -1,32 +1,32 @@
 ---
-title: "Azure RMS-Anforderungen: Clientgerät | Azure RMS"
-description: "Stellen Sie fest, welche Geräte Azure Rights Management (Azure RMS) unterstützen."
+title: "Unterstützung von Clientgeräten für den Schutz von Daten | Azure Information Protection"
+description: "Stellen Sie fest, welche Geräte den Azure Rights Management-Dienst von Azure Information Protection unterstützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: e52720c09e3541a16c2e234bbd336cc7916ccfe1
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 3b9c126211389dfe14bb5f1cc4ec8be1213df49d
 
 
 ---
 
 
-# Azure RMS-Anforderungen: Clientgeräte, die Azure RMS unterstützen
+# Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Verwenden Sie die folgenden Abschnitte, um zu identifizieren, welche Geräte Azure Rights Management (Azure RMS) unterstützen.
+In den folgenden Abschnitten sind die Geräte aufgeführt, die den Azure Rights Management-Dienst zum Schutz von Daten für Azure Information Protection unterstützen.
 
 ## Computer
-Folgende Computerbetriebssysteme unterstützen Azure Rights Management:
+Folgende Computerbetriebssysteme unterstützen den Azure Rights Management-Dienst:
 
 -   **Windows 7** (x86, x64)
 
@@ -39,7 +39,7 @@ Folgende Computerbetriebssysteme unterstützen Azure Rights Management:
 -   **Mac OS X**: Mindestversion Mac OS X 10.8 (Mountain Lion)
 
 ## Mobile Geräte
-Folgende Betriebssysteme für mobile Geräte unterstützen Azure Rights Management:
+Folgende Mobilbetriebssysteme unterstützen den Azure Rights Management-Dienst:
 
 -   **Windows Phone**: Windows Phone 8.1
 
@@ -51,11 +51,11 @@ Folgende Betriebssysteme für mobile Geräte unterstützen Azure Rights Manageme
 
 
 ## Nächste Schritte
-Weitere Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](requirements-azure-rms.md).
+Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

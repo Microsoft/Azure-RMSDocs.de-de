@@ -1,40 +1,40 @@
 ---
-title: "Schritt 2&colon; Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure RMS"
-description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Rights Management sind und nur gelten, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten."
+title: "Schritt 2&colon; Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure Information Protection"
+description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Information Protection mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
-ms.openlocfilehash: 539ad9db29f7795d3f56655a64f49532ef6ff6e8
+ms.sourcegitcommit: a61075eb555f6cec1572851bdde6fae85e6310ed
+ms.openlocfilehash: 7db4da1a48bb24ce7680c84fe586a3f96e61c0b7
 
 
 ---
 
 # Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection*
 
 
-Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Rights Management mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten. 
+Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Information Protection mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten. 
 
 Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
 
 > [!NOTE]
 > Für diese Anweisungen wird angenommen, dass Ihr AD RMS-Schlüssel modulgeschützt ist. Dies ist der am häufigsten vorkommende Fall. 
 
-Das Verfahren zum Importieren des HSM-Schlüssels und der AD RMS-Konfiguration in Azure RMS, um den von Ihnen verwalteten Azure RMS-Mandantenschlüssel (BYOK) zu erhalten, gliedert sich in zwei Phasen.
+Das Verfahren zum Importieren des HSM-Schlüssels und der AD RMS-Konfiguration in Azure Information Protection, um den von Ihnen verwalteten Azure Information Protection-Mandantenschlüssel (BYOK) zu erhalten, gliedert sich in zwei Phasen.
 
-Da Ihr Azure RMS-Mandantenschlüssel von Azure Key Vault gespeichert und verwaltet wird, muss dieser Teil der Migration nicht nur in Azure Key RMS, sondern auch in Azure Key Vault verwaltet werden. Wenn Azure Key Vault für Ihre Organisation nicht von Ihnen, sondern von einem anderen Administrator verwaltet wird, müssen Sie sich mit diesem Administrator abstimmen und mit ihm zusammenarbeiten, um diese Prozeduren abzuschließen.
+Da Ihr Azure Information Protection-Mandantenschlüssel von Azure Key Vault gespeichert und verwaltet wird, muss dieser Teil der Migration nicht nur in Azure Key Vault, sondern auch in Azure Information Protection verwaltet werden. Wenn Azure Key Vault für Ihre Organisation nicht von Ihnen, sondern von einem anderen Administrator verwaltet wird, müssen Sie sich mit diesem Administrator abstimmen und mit ihm zusammenarbeiten, um diese Prozeduren abzuschließen.
 
-Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltresor verfügt, der in Azure Key Vault erstellt wurde, und dass er HSM-geschützte Schlüssel unterstützt. Auch wenn dies nicht erforderlich ist, empfehlen wir, einen dedizierten Schlüsseltresor für Azure RMS zu verwenden. Dieser Schlüsseltresor wird so konfiguriert, dass Azure RMS darauf zugreifen kann, sodass dieser Schlüsseltresor nur Azure RMS-Schlüssel enthält.
+Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltresor verfügt, der in Azure Key Vault erstellt wurde, und dass er HSM-geschützte Schlüssel unterstützt. Auch wenn dies nicht erforderlich ist, empfehlen wir, einen dedizierten Schlüsseltresor für Azure Information Protection zu verwenden. Dieser Schlüsseltresor wird so konfiguriert, dass der Azure Rights Management-Dienst darauf zugreifen kann, sodass dieser Schlüsseltresor nur Azure Information Protection-Schlüssel enthält.
 
 
 > [!TIP]
@@ -49,22 +49,22 @@ Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
 
     - Führen Sie nicht die Schritte zum **Generieren Ihres Mandantenschlüssels** aus, da Sie bereits über das Äquivalent aus Ihrer AD RMS-Bereitstellung verfügen. Stattdessen müssen Sie den vom AD RMS-Server verwendeten Schlüssel aus der Thales-Installation identifizieren und diesen Schlüssel während der Migration verwenden. Verschlüsselte Thales-Schlüsseldateien weisen meist einen Namen nach dem Muster **key<*Schlüsselanwendungsname*><*Schlüsselbezeichner*>** auf dem lokalen Server auf.
 
-    Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Dies sieht etwa so aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Sie sollten sich diese URL notieren, da der Azure RMS-Administrator ihn benötigt, um Azure RMS mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
+    Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Dies sieht etwa so aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Sie sollten sich diese URL notieren, da der Azure Information Protection-Administrator ihn benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 
-2. Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Set AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx ) zum Autorisieren des Azure RMS-Dienstprinzipals (Microsoft.Azure.RMS), damit dieser auf den Schlüsseltresor zugreifen kann, in dem der Azure RMS-Mandantenschlüssel gespeichert werden soll. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
+2. Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) zum Autorisieren des Dienstprinzipals „Microsoft.Azure.RMS“, damit dieser auf den Schlüsseltresor zugreifen kann, in dem der Azure Information Protection-Mandantenschlüssel gespeichert werden soll. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
     
-    Wenn beispielsweise der Schlüsseltresor, den Sie für Azure RMS erstellt haben, „contoso-byok-ky“ heißt und die Ressourcengruppe „contoso-byok-rg“, führen Sie den folgenden Befehl aus:
+    Wenn beispielsweise der Schlüsseltresor, den Sie für Azure Information Protection erstellt haben, „contoso-byok-ky“ heißt und die Ressourcengruppe „contoso-byok-rg“, führen Sie den folgenden Befehl aus:
     
         Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 
-Jetzt haben Sie Ihren HSM-Schlüssel in Azure Key Vault für Azure RMS vorbereitet und können die AD RMS-Konfigurationsdaten importieren.
+Jetzt haben Sie Ihren HSM-Schlüssel in Azure Key Vault für den Azure Rights Management-Dienst von Azure Information Protection vorbereitet und können die AD RMS-Konfigurationsdaten importieren.
 
-## Teil 2: Importieren der Konfigurationsdaten in Azure RMS
+## Teil 2: Importieren der Konfigurationsdaten in Azure Information Protection
 
-Diese Verfahren werden vom Administrator für Azure RMS durchgeführt.
+Diese Verfahren werden vom Administrator für Azure Information Protection durchgeführt.
 
-1.  Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ), um eine Verbindung mit Azure RMS herzustellen.
+1.  Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ), um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
     
     Laden Sie dann mit dem Cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx) die erste exportierte XML-Datei für eine vertrauenswürdige Veröffentlichungsdomäne hoch. Wenn Sie mehr als eine XML-Datei haben, weil Sie mehrere vertrauenswürdige Veröffentlichungsdomänen hatten, wählen Sie die Datei aus, die die exportierte vertrauenswürdige Veröffentlichungsdomäne enthält, die dem HSM-Schlüssel entspricht, den Sie in Azure RMS verwenden möchten, um Inhalte nach der Migration zu schützen. 
     
@@ -80,20 +80,20 @@ Diese Verfahren werden vom Administrator für Azure RMS durchgeführt.
 
 2.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 1 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen.  
 
-3.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) , um die Verbindung mit dem Azure RMS-Dienst zu trennen:
+3.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > Verwenden Sie das Azure RMS-Cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx), wenn Sie später bestätigen müssen, welchen Schlüssel Ihr Azure RMS-Mandantenschlüssel in Azure Key Vault verwendet.
+    > Verwenden Sie das Azure RMS-Cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx), wenn Sie später bestätigen müssen, welchen Schlüssel Ihr Azure Information Protection-Mandantenschlüssel in Azure Key Vault verwendet.
 
-Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
-
-
+Sie können jetzt mit [Schritt 3: Aktivieren Ihres Azure Information Protection-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
-<!--HONumber=Sep16_HO3-->
+
+
+<!--HONumber=Sep16_HO4-->
 
 

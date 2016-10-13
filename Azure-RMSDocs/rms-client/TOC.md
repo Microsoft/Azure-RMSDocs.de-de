@@ -1,9 +1,10 @@
-# [Kennenlernen](/rights-management/understand-explore/azure-rights-management)
-# [Erste Schritte](/rights-management/get-started/requirements-azure-rms)
-# [Planen und Entwerfen](/rights-management/plan-design/deployment-roadmap)
-# [Bereitstellen und Verwenden des Diensts](/rights-management/deploy-use/activate-service)
+# [Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
+# [Erste Schritte](/information-protection/get-started/requirements-azure-rms)
+# [Planen und Entwerfen](/information-protection/plan-design/deployment-roadmap)
+# [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
 # [Bereitstellen und Verwenden des Clients](use-client.md)
 ## [Rights Management-Client](use-client.md)
+### [Installieren des Azure Information Protection-Clients](info-protect-client.md)
 ### [Anmerkungen zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
 ### [RMS-Schutz mit Windows Server FCI](configure-fci.md)
 #### [PowerShell-Skript](fci-script.md)
@@ -14,17 +15,16 @@
 #### [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 ##### [Herunterladen und Installieren](install-sharing-app.md)
 ##### [Schützen einer Datei auf einem Gerät](sharing-app-protect-in-place.md)
-##### [Schützen einer Datei, die per E-Mail freigegebene ist](sharing-app-protect-by-email.md)
+##### [Schützen einer Datei, die per E-Mail freigegeben ist](sharing-app-protect-by-email.md)
 ##### [Ändern von Berechtigungen für geschützte Dateien](sharing-app-reprotect-files.md)
 ##### [Verfolgen und Widerrufen von Dokumenten](sharing-app-track-revoke.md)
 ##### [Anzeigen und Verwenden von geschützten Dateien](sharing-app-view-use-files.md)
 ##### [Entfernen von Schutz](sharing-app-remove-protection.md)
 ##### [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
 ##### [Dialogfeldoptionen](sharing-app-dialog-box.md)
-# [Entwickeln und Anpassen von Apps](/rights-management/develop/developers-guide)
-# [Azure Information Protection (Preview)](/rights-management/information-protection/what-is-information-protection)
+# [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

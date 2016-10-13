@@ -4,18 +4,18 @@ description: "Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkunge
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: df210bd7aff33fda41a278e6aed1108574fe68eb
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: df210bd7aff33fda41a278e6aed1108574fe68eb
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
 
-Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)-Funktion abgefragt werden.
+Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)-Funktion abgefragt werden.
 
 ## Grundlegendes zu Nutzungseinschränkungen
 
@@ -48,7 +48,7 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 ## Verwandte Themen
 
-* [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
 * [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

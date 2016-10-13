@@ -4,18 +4,18 @@ description: "Dieses Thema enthält eine Anleitung zum Erstellen einer rechtlich
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 581451A2-9558-4D0D-9D01-BEAB282C5A83
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: d5f84815a143dd28574c8742da1642cba7c96a62
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 601bd3f8bd0f076e55e6bd7379179d8247063d34
 
 
 ---
@@ -35,7 +35,7 @@ In den folgenden Abschnitten werden die grundlegende Schritte und erforderlichen
 
 ## Laden von „MSIPC.dll“
 
-Bevor Sie eine RMS SDK 2.1-Funktion aufrufen können, müssen Sie zunächst die [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Funktion zum Laden der Datei „msipc.dll“ aufrufen.
+Bevor Sie eine RMS SDK 2.1-Funktion aufrufen können, müssen Sie zunächst die [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Funktion zum Laden der Datei „msipc.dll“ aufrufen.
 
 
 
@@ -67,7 +67,7 @@ Der folgende Codeausschnitt listet die verfügbaren RMS-Vorlagen vom RMS-Standar
 
 
 
-Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Struktur, die durch die *pcTil*-Variable bezeichnet wird, und zeigt dann die Vorlagen an.
+Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert sind, lädt die Ergebnisse in die [**IPC\_TIL**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)-Struktur, die durch die *pcTil*-Variable bezeichnet wird, und zeigt dann die Vorlagen an.
 
 
 
@@ -91,9 +91,9 @@ Dieser Aufruf ruft die RMS-Vorlagen ab, die auf dem Standardserver installiert s
 
 ## Serialisieren einer Lizenz
 
-Bevor Sie Daten schützen können, müssen Sie eine Lizenz serialisieren und einen Inhaltsschlüssel erhalten. Der Inhaltsschlüssel wird zum Verschlüsseln vertraulicher Daten verwendet. Die serialisierte Lizenz wird in der Regel den verschlüsselten Daten angefügt und wird vom Consumer der geschützten Daten verwendet. Der Consumer muss die [**IpcGetKey**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)-Funktion mit der serialisierten Lizenz aufrufen, um den Inhaltsschlüssel zum Entschlüsseln des Inhalts und zum Abrufen der mit dem Inhalt verknüpften Richtlinie zu erhalten.
+Bevor Sie Daten schützen können, müssen Sie eine Lizenz serialisieren und einen Inhaltsschlüssel erhalten. Der Inhaltsschlüssel wird zum Verschlüsseln vertraulicher Daten verwendet. Die serialisierte Lizenz wird in der Regel den verschlüsselten Daten angefügt und wird vom Consumer der geschützten Daten verwendet. Der Consumer muss die [**IpcGetKey**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)-Funktion mit der serialisierten Lizenz aufrufen, um den Inhaltsschlüssel zum Entschlüsseln des Inhalts und zum Abrufen der mit dem Inhalt verknüpften Richtlinie zu erhalten.
 
-Verwenden Sie der Einfachheit halber die RMS-Vorlage, die von [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) zuerst zurückgegeben wird, um eine Lizenz zu serialisieren.
+Verwenden Sie der Einfachheit halber die RMS-Vorlage, die von [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) zuerst zurückgegeben wird, um eine Lizenz zu serialisieren.
 
 In der Regel verwenden Sie ein Dialogfeld, um den Benutzer die gewünschte Vorlage auswählen zu lassen.
 
@@ -114,7 +114,7 @@ Nach diesem Schritt verfügen Sie über den Inhaltsschlüssel *hContentKey* und 
 
 ## Schützen von Daten
 
-Nun können Sie die sensiblen Daten mit der [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt)-Funktion verschlüsseln. Zunächst müssen Sie die **IpcEncrypt**-Funktion fragen, wie groß die verschlüsselten Daten sein werden.
+Nun können Sie die sensiblen Daten mit der [**IpcEncrypt**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt)-Funktion verschlüsseln. Zunächst müssen Sie die **IpcEncrypt**-Funktion fragen, wie groß die verschlüsselten Daten sein werden.
 
 
 
@@ -129,7 +129,7 @@ Nun können Sie die sensiblen Daten mit der [**IpcEncrypt**](/rights-management/
 
 
 
-Hier enthält *wszText* den Nur-Text, den Sie schützen möchten. Die [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt)-Funktion gibt die Größe der verschlüsselten Daten im *cbEncrypted*-Parameter zurück.
+Hier enthält *wszText* den Nur-Text, den Sie schützen möchten. Die [**IpcEncrypt**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt)-Funktion gibt die Größe der verschlüsselten Daten im *cbEncrypted*-Parameter zurück.
 
 Nun reservieren Sie Arbeitsspeicher für die verschlüsselten Daten.
 
@@ -177,7 +177,7 @@ In dieser Beispielanwendung wird die **DisplayError**-Funktion zur Fehlerbehandl
     }   
 
 
-Die **DisplayError**-Funktion verwendet die [**IpcGetErrorMessageText**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)-Funktion, um die Fehlermeldung aus dem entsprechenden Fehlercode abzurufen, und gibt sie an die Standardausgabe aus.
+Die **DisplayError**-Funktion verwendet die [**IpcGetErrorMessageText**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)-Funktion, um die Fehlermeldung aus dem entsprechenden Fehlercode abzurufen, und gibt sie an die Standardausgabe aus.
 
 ## Bereinigen
 
@@ -206,12 +206,12 @@ Bevor Sie fertig sind, müssen Sie auch alle reservierten Ressourcen freizugeben
 
 * [Hinweise für Entwickler](developer-notes.md)
 * [Konfigurieren von Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
-* [**IpcEncrypt**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcencrypt)
-* [**IpcGetErrorMessageText**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
-* [**IpcGetKey**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-* [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [**IPC\_TIL**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [**IpcEncrypt**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcencrypt)
+* [**IpcGetErrorMessageText**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgeterrormessagetext)
+* [**IpcGetKey**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+* [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
+* [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [**IPC\_TIL**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [Webinar\_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
  
 
@@ -219,6 +219,6 @@ Bevor Sie fertig sind, müssen Sie auch alle reservierten Ressourcen freizugeben
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

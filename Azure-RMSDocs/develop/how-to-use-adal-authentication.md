@@ -4,18 +4,18 @@ description: "Skizziert den Prozess für die Authentifizierung mit ADAL"
 keywords: Authentifizierung, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: a2da0e0aedde09cbd834f731d1ddc25f9062336e
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 3ed49cf7dddb72783ecd3bf1e89454d805552743
 
 
 ---
@@ -53,7 +53,7 @@ Dieses Thema enthält zwei Ansätze zur Authentifizierung mit entsprechenden Cod
 1. Führen Sie die Azure-Konfigurationsschritte in [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md) aus, und wechseln Sie anschließend zurück zum folgenden App-Initialisierungsschritt.
 2. Sie können Ihre Anwendung nun konfigurieren, damit sie die vom RMS SDK 2.1 bereitgestellte interne ADAL-Authentifizierung verwendet.
 
-Fügen Sie einen Aufruf von [IpcSetGlobalProperty](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) direkt nach dem Aufrufen von [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) hinzu, um den RMS-Client zu konfigurieren. Verwenden Sie den folgenden Codeausschnitt als Beispiel.
+Fügen Sie einen Aufruf von [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) direkt nach dem Aufrufen von [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) hinzu, um den RMS-Client zu konfigurieren. Verwenden Sie den folgenden Codeausschnitt als Beispiel.
 
       C++
       IpcInitialize();
@@ -111,19 +111,19 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 
 ## Verwandte Themen
 
-* [Datentypen](/rights-management/sdk/2.1/api/win/data%20types)
-* [Umgebungseigenschaften](/rights-management/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
-* [IpcCreateOAuth2Token](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
-* [IpcGetKey](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [IpcInitialize](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [IPC_CREDENTIAL](/rights-management/sdk/2.1/api/win/IPC_CREDENTIAL)
-* [IPC_NAME_VALUE_LIST](/rights-management/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/rights-management/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
-* [IPC_PROMPT_CTX](/rights-management/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/rights-management/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
+* [Datentypen](/information-protection/sdk/2.1/api/win/data%20types)
+* [Umgebungseigenschaften](/information-protection/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
+* [IpcCreateOAuth2Token](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
+* [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
+* [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
+* [IPC_CREDENTIAL](/information-protection/sdk/2.1/api/win/IPC_CREDENTIAL)
+* [IPC_NAME_VALUE_LIST](/information-protection/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
+* [IPC_OAUTH2_CALLBACK_INFO](/information-protection/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
+* [IPC_PROMPT_CTX](/information-protection/sdk/2.1/api/win/IPC_PROMPT_CTX)
+* [IPC_AAD_APPLICATION_ID](/information-protection/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
