@@ -1,31 +1,56 @@
 ---
-title: "BYOK – Preise und Einschränkungen | Azure RMS"
-description: "Lernen Sie die Einschränkungen bei Verwendung kundenverwalteter Schlüssel (bekannt als „Bring Your Own Key“, BYOK) mit Azure RMS kennen."
+title: "BYOK – Preise und Einschränkungen | Azure Information Protection"
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: d704f3d9357993bdb01a38cda6f434ab1583b627
+ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
+ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
 
 
 ---
 
 # BYOK – Preise und Einschränkungen
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
 
-Organisationen mit einem Abonnement, das Azure Rights Management umfasst, können kundenverwaltete Schlüssel (BYOK) in Azure Key Vault verwenden und die Nutzung ohne Aufpreis protokollieren. Um Azure Key Vault verwenden zu können, müssen Sie jedoch über ein Azure-Abonnement verfügen, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Für die Verwendung eines Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+Organisationen mit einem Abonnement, das Azure Information Protection umfasst, können kundenverwaltete Schlüssel (BYOK) in Azure Key Vault verwenden und [die Nutzung ohne Aufpreis protokollieren](../deploy-use/log-analyze-usage.md). 
 
-Wenn Benutzer sich über RMS for Individuals für ein kostenloses Konto registriert haben, können Sie BYOK und die Verwendungsprotokollierung nicht nutzen, da in dieser Konfiguration kein Mandantenadministrator zum Konfigurieren dieser Features vorhanden ist.
+Um Azure Key Vault verwenden zu können, müssen Sie jedoch über ein Azure-Abonnement verfügen, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Für die Verwendung eines Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+Wenn Sie Azure Key Vault für Ihren Azure Information Protection-Mandantenschlüssel einsetzen, empfiehlt es sich, einen dedizierten Schlüsseltresor für diesen Schlüssel mit einem dedizierten Abonnement zu verwenden, um sicherzustellen, dass er nur vom Azure Rights Management-Dienst verwendet wird. 
+
+## Vorteile der Verwendung von Azure Key Vault
+
+Zusätzlich zur Verwendung der Azure Information Protection-Verwendungsprotokollierung können Sie für zusätzliche Sicherheit Querverweise zur [Azure Key Vault-Protokollierung](https://azure.microsoft.com/documentation/articles/key-vault-logging/) einrichten, um unabhängig zu überwachen, dass dieser Schlüssel nur vom Azure Rights Management-Dienst verwendet wird. Bei Bedarf können Sie den Zugriff auf den Schlüssel sofort widerrufen, indem Sie die Berechtigungen für den Schlüsseltresor entfernen.
+
+Weitere Vorteile der Verwendung von Azure Key Vault für den Azure Information Protection-Mandantenschlüssel:
+
+- Azure Key Vault ist eine zentralisierte Schlüsselverwaltungslösung, die eine konsistente Verwaltungslösung für viele cloudbasierte und sogar lokale Dienste bietet, die Verschlüsselung verwenden.
+
+- Azure Key Vault unterstützt eine Reihe von integrierten Schnittstellen für die Schlüsselverwaltung, einschließlich PowerShell, CLI, REST-APIs und das Azure-Portal. Andere Dienste und Tools wurden in den Schlüsseltresor integriert, um Funktionen bereitzustellen, die für bestimmte Aufgaben, z. B. Überwachung, optimiert wurden. So können Sie beispielsweise die Schlüsselverwendungsprotokolle über Log Analytics aus der Operations Management Suite analysieren, festlegen, dass bei Erfüllung bestimmter Kriterien Benachrichtigungen gesendet werden, und so weiter.
+
+- Azure Key Vault bietet Rollentrennung als anerkannte und bewährte Sicherheitsmethode. Azure Information Protection-Administratoren können sich auf die Verwaltung von Datenklassifizierung und -Datenschutz konzentrieren, und Azure Key Vault-Administratoren können sich auf die Verwaltung von Verschlüsselungsschlüsseln und speziellen Richtlinien konzentrieren, die möglicherweise aus Sicherheits- oder Compliancegründen erforderlich sind.
+
+- In einigen Organisationen gibt es Einschränkungen für die Verwahrung ihres Hauptschlüssels. Azure Key Vault bietet ein hohes Maß an Kontrolle über den Speicherort des Hauptschlüssels, da der Dienst in viele Azure-Regionen verfügbar ist. Derzeit können Sie unter 28 Azure-Regionen wählen, und Sie dürfen davon ausgehen, dass diese Anzahl noch steigen wird. Weitere Informationen finden Sie auf der Seite „Produkte nach Region“ (https://azure.microsoft.com/regions/services/) auf der Azure-Website.
+
+Zusätzlich zum Verwalten von Schlüsseln bietet Azure Key Vault Ihren Sicherheitsadministratoren die gleiche Verwaltungsumgebung zum Speichern von, Zugreifen auf und Verwalten von Zertifikaten und geheimen Schlüsseln (z. B. Kennwörtern) für andere Dienste und Anwendungen, die Verschlüsselung verwenden. 
+
+Weitere Informationen zu Azure Key Vault finden Sie unter [Was ist Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/). Im [Azure Key Vault-Teamblog](https://blogs.technet.microsoft.com/kv/) finden Sie aktuelle Informationen und erfahren, wie andere Dienste diese Technologie verwenden.
+
+
+## Einschränkungen bei Verwendung von BYOK
+
+Wenn Benutzer sich über RMS for Individuals für ein kostenloses Konto registriert haben, können Sie BYOK oder die Verwendungsprotokollierung nicht nutzen, da in dieser Konfiguration kein Mandantenadministrator zum Konfigurieren dieser Features vorhanden ist.
 
 
 > [!NOTE]
@@ -33,7 +58,7 @@ Wenn Benutzer sich über RMS for Individuals für ein kostenloses Konto registri
 
 ![BYOK unterstützt Exchange Online nicht.](../media/RMS_BYOK_noExchange.png)
 
-BYOK und die Verwendungsprotokollierung arbeiten nahtlos mit jeder Anwendung zusammen, die in Azure RMS integriert wird. Dazu gehören Clouddienste wie SharePoint Online, lokale Server mit Exchange und SharePoint, für die Azure RMS unter Verwendung des RMS-Connectors eingesetzt wird, sowie Clientanwendungen wie Office 2016 und Office 2013. Sie erhalten Protokolle der Schlüsselnutzung unabhängig davon, welche Anwendung Anforderungen an Azure RMS stellt.
+BYOK und die Nutzungsprotokollierung arbeiten nahtlos mit jeder Anwendung zusammen, die den Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection integriert. Dazu gehören Clouddienste wie SharePoint Online, lokale Server mit Exchange und SharePoint, für die Azure RMS unter Verwendung des RMS-Connectors eingesetzt wird, sowie Clientanwendungen wie Office 2016 und Office 2013. Sie erhalten Protokolle der Schlüsselnutzung unabhängig davon, welche Anwendung Anforderungen an Azure RMS stellt.
 
 Es gibt eine Ausnahme: Derzeit ist **Azure RMS BYOK nicht mit Exchange Online kompatibel**. Wenn Sie Exchange Online verwenden möchten, empfehlen wir, dass Sie Azure RMS jetzt im Standard-Schlüsselverwaltungsmodus bereitstellen, in dem Microsoft Ihren Schlüssel generiert und verwaltet. Sie können später zu BYOK wechseln, beispielsweise wenn Exchange Online Azure RMS BYOK unterstützt. Wenn Sie jedoch nicht warten können, haben Sie jetzt die Möglichkeit, Azure RMS mit BYOK mit eingeschränkter RMS-Funktionalität für Exchange Online bereitzustellen (ungeschützte E-Mails und Anlagen bleiben dabei voll funktionsfähig):
 
@@ -62,6 +87,6 @@ Wenn Sie sich für die Standardkonfiguration entschieden haben, bei der Ihr Mand
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -1,26 +1,26 @@
 ---
-title: Bereitstellen des Azure Rights Management-Verbindungsdiensts | Azure RMS
-description: "Anweisungen zur Bereitstellung des RMS-Connectors (Azure Rights Management), der Informationsschutz für vorhandene lokale Bereitstellungen bietet, die Microsoft Exchange Server, Microsoft SharePoint Server oder Dateiserver verwenden, welche Windows Server und die Dateiklassifizierungsinfrastruktur ausführen."
+title: Bereitstellen des Azure Rights Management-Connectors | Azure Information Protection
+description: "Hier finden Sie Anweisungen zur Bereitstellung des RMS-Connectors, der den Dienst zum Schutz von Daten für bestehende lokale Bereitstellungen, die Exchange Server, SharePoint Server oder Windows Server und die Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) ausführen, bereitstellt."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/09/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a96018818f81787720021b661db10e818f388772
-ms.openlocfilehash: 2d962f168dafb1b8c207fa6b5d353a6a3ea4d1b2
+ms.sourcegitcommit: 54901b9091a87349bc9d182bf3e2924f4046b30e
+ms.openlocfilehash: 63d900232613c264e8d8481fb43bc585e7cd6886
 
 
 ---
 
 # Bereitstellen des Azure Rights Management-Verbindungsdiensts
 
->*Gilt für: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Hier erhalten Sie Informationen zum Azure Rights Management-Connector und dazu, wie Sie ihn erfolgreich für Ihre Organisation bereitstellen. Der Connector bietet Datenschutz für bestehende lokale Bereitstellungen, die **Microsoft Exchange Server**, **SharePoint Server** oder Dateiserver nutzen, die Windows Server und die **Dateiklassifizierungsinfrastruktur** (File Classification Infrastructure, FCI) ausführen.
 
@@ -30,7 +30,7 @@ Hier erhalten Sie Informationen zum Azure Rights Management-Connector und dazu, 
 ## Übersicht über den Microsoft Rights Management-Verbindungsdienst
 Mit dem Microsoft Rights Management-Connector können Sie schnell vorhandene lokale Server für die Verwendung ihrer IRM-Funktionalität mit dem cloudbasierten Microsoft Rights Management Service (Azure RMS) aktivieren. Mit dieser Funktionalität können IT-Abteilungen und Benutzer Dokumente und Bilder, sowohl innerhalb als auch außerhalb der Organisation, ganz einfach schützen, ohne zusätzliche Infrastruktur installieren oder Vertrauensstellungen mit anderen Organisationen einrichten zu müssen. 
 
-Der RMS-Verbindungsdienst ist ein kleiner Dienst, der lokal auf Servern installiert wird, die unter Windows Server 2012 R2, Windows Server 2012 oder Windows Server 2008 R2 ausgeführt werden. Zusätzlich zum Ausführen des Connectors auf physischen Computern können Sie ihn auch auf virtuellen Computern ausführen, einschließlich virtuellen Azure IaaS-Computern. Nachdem Sie den Connector bereitgestellt haben, fungiert er wie in der folgenden Abbildung dargestellt als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und dem Clouddienst.
+Der RMS-Verbindungsdienst ist ein kleiner Dienst, der lokal auf Servern installiert wird, die unter Windows Server 2012 R2, Windows Server 2012 oder Windows Server 2008 R2 ausgeführt werden. Zusätzlich zum Ausführen des Connectors auf physischen Computern können Sie ihn auch auf virtuellen Computern ausführen, einschließlich virtuellen Azure IaaS-Computern. Nachdem Sie den Connector bereitgestellt haben, fungiert er wie in der folgenden Abbildung dargestellt als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und dem Clouddienst. Die Pfeile zeigen die Richtung an, in der Netzwerkverbindungen initiiert werden.
 
 ![RMS-Connectorarchitektur (Übersicht)](../media/RMS_connector.png)
 
@@ -97,6 +97,6 @@ Der Connector führt keine automatische Prüfung aller [Voraussetzungen](deploy-
 Weiter zu Schritt 1: [Installieren und Konfigurieren des Azure Rights Management-Connectors](install-configure-rms-connector.md).
 
 
-<!--HONumber=Sep16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

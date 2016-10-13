@@ -1,19 +1,19 @@
 ---
-title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure RMS"
+title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure Information Protection"
 description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 575d52efb788956b0a711e908a730b677e1f7f9c
-ms.openlocfilehash: 113a49586b4582ec984678df6730c6b554ff6a75
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
 
 
 ---
@@ -21,12 +21,12 @@ ms.openlocfilehash: 113a49586b4582ec984678df6730c6b554ff6a75
 
 # Administratorhandbuch der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
-Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure RMS geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z. B. E-Mail-Benachrichtigungen und Dokumentenverfolgung mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure RMS und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Rights Management und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie AD RMS haben und zu Azure RMS migrieren möchten, finden Sie entsprechende Informationen unter [Migration von AD RMS zu Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure Information Protection geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z.B. E-Mail-Benachrichtigungen und Dokumentkontrolle mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure Information Protection und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Information Protection und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md). Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md) nach.
 
 Eine technische Übersicht über die Rights Management-Freigabeanwendung und Informationen zu nativem und generischem Schutz, den unterstützten Dateitypen, Dateierweiterungen und der Vorgehensweise zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md). 
 
@@ -47,36 +47,36 @@ Die Setuppakete für die RMS-Freigabeanwendung unterstützen verschiedene Bereit
 
 |Beschreibung|Bereitstellungsszenario|
 |---------------|-----------------------|
-|Microsoft Online-Anmelde-Assistent|Office 2010 und Azure RMS<br /><br />Office 2013 und Azure RMS, wenn Sie das [Update für Office 2013 vom 9. Juni 2015](https://support.microsoft.com/kb/3054853) (KB3054853) nicht installiert haben|
-|Hotfix für Office (KB 2596501)|Office 2010 und Azure RMS<br /><br />Office 2010 und Active Directory RMS|
-|Hotfix, damit der AD RMS-Client 1.0 zusammen mit Azure RMS funktioniert (KB 2843630)|Office 2010 und Azure RMS<br /><br />Office 2010 und Active Directory RMS|
-|AD RMS-Client und die RMS-Freigabeanwendung|Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS<br /><br />Office 2010 und Azure RMS<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
-|Office-Add-in für Menüband|Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS<br /><br />Office 2010 und Azure RMS<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
-|Vorbereitungstool für Azure Active Directory Rights Management|Office 2010 und Azure RMS|
+|Microsoft Online-Anmelde-Assistent|Office 2010 und Azure Information Protection<br /><br />Office 2013 und Azure Information Protection, wenn Sie das [Update für Office 2013 vom 9. Juni 2015](https://support.microsoft.com/kb/3054853) (KB3054853) nicht installiert haben|
+|Hotfix für Office (KB 2596501)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS|
+|Hotfix, damit der AD RMS-Client 1.0 zusammen mit Azure Information Protection funktioniert (KB 2843630)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS|
+|AD RMS-Client und die RMS-Freigabeanwendung|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
+|Office-Add-in für Menüband|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
+|Vorbereitungstool für Azure Active Directory Rights Management|Office 2010 und Azure Information Protection|
 Verwenden Sie die folgenden Verfahren, um die Befehle, die zum Bereitstellen der RMS-Freigabeanwendung für diese Bereitstellungsszenarien erforderlich sind, zu identifizieren:
 
--   **Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS**
+-   **Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS**
 
-    Ihre Benutzer führen Office 2016 oder Office 2013 aus, Ihre Organisation verwendet Azure RMS oder Active Directory RMS, Benutzer arbeiten mit anderen Organisationen zusammen, die Azure RMS oder Active Directory RMS verwenden.
+    Ihre Benutzer führen Office 2016 oder Office 2013 aus, Ihre Organisation verwendet Azure Information Protection oder Active Directory RMS, und die Benutzer arbeiten mit anderen Organisationen zusammen, die Azure Information Protection oder Active Directory RMS verwenden.
 
--   **Office 2010 und Azure RMS**
+-   **Office 2010 und Azure Information Protection**
 
-    Ihre Benutzer führen Office 2010 aus, Ihre Organisation verwendet Azure RMS, Benutzer arbeiten mit anderen Organisationen zusammen, die Azure RMS oder Active Directory RMS verwenden.
+    Ihre Benutzer führen Office 2010 aus, Ihre Organisation verwendet Azure Information Protection, und die Benutzer arbeiten mit anderen Organisationen zusammen, die Azure Information Protection oder Active Directory RMS verwenden.
 
 -   **Office 2010 und Active Directory RMS**
 
-    Ihre Benutzer führen Office 2010 aus, Ihre Organisation verwendet AD RMS, Benutzer arbeiten mit anderen Organisationen zusammen, die Azure RMS verwenden.
+    Ihre Benutzer führen Office 2010 aus, Ihre Organisation verwendet AD RMS, und die Benutzer arbeiten mit anderen Organisationen zusammen, die Azure Information Protection verwenden.
 
 -   **Nur RMS-Freigabeanwendung und Office-Add-In**
 
-    Ihre Benutzer führen Office 2016, Office 2013 oder Office 2010 aus, Ihre Organisation verwendet AD RMS, Benutzer müssen nicht mit anderen Organisationen zusammenarbeiten, die Azure RMS verwenden. Mit dieser Installation können Sie nur die Freigabeanwendung und das Office-Add-In installieren.
+    Ihre Benutzer führen Office 2016, Office 2013 oder Office 2010 aus, Ihre Organisation verwendet AD RMS, und die Benutzer müssen nicht mit anderen Organisationen zusammenarbeiten, die Azure Information Protection verwenden. Mit dieser Installation können Sie nur die Freigabeanwendung und das Office-Add-In installieren.
 
 > [!NOTE]
-> Wenn Ihre Organisation in diesen Szenarien AD RMS verwendet, können die Benutzer geschützte Inhalte von anderen Organisationen, die Azure RMS verwenden, erhalten, aber die Benutzer können keine geschützten Inhalte an Benutzer in einer Organisation senden, die Azure RMS verwendet. Wenn Ihre Organisation aber Azure RMS ausführt, können die Benutzer geschützte Inhalte an andere bzw. von anderen Organisationen senden und empfangen.
+> Wenn Ihre Organisation in diesen Szenarios AD RMS verwendet, können die Benutzer geschützte Inhalte von anderen Organisationen, die Azure Information Protection verwenden, empfangen, aber sie können keine geschützten Inhalte an Benutzer in einer Organisation senden, die Azure Information Protection verwendet. Wenn Ihre Organisation aber Azure Information Protection ausführt, können die Benutzer geschützte Inhalte an andere Organisationen senden bzw. von diesen empfangen.
 
 Um die Installation für jedes Verfahren abzuschließen, muss der Computer neu gestartet werden. Sie können einen automatischen Neustart initiieren, indem Sie einen Befehl wie **shutdown /i** verwenden.
 
-### So stellen Sie die RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS bereit
+### So stellen Sie die RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS bereit
 
 -   Führen Sie auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung und zugehörige Komponenten installieren möchten, den folgenden Befehl mit erhöhten Rechten aus:
 
@@ -86,7 +86,7 @@ Um die Installation für jedes Verfahren abzuschließen, muss der Computer neu g
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
-### So stellen Sie die RMS-Freigabeanwendung für Office 2010 und Azure RMS bereit
+### So stellen Sie die RMS-Freigabeanwendung für Office 2010 und Azure Information Protection bereit
 
 1.  Sie müssen der globale Administrator für Ihren Office 365- oder Azure Active Directory-Mandanten sein, damit Sie durch Ausführen des Vorbereitungstools für Azure Active Directory Rights Management die Zertifizierungsdienst-URL Ihrer Organisation abrufen können. Sie müssen dieses Tool nur ein Mal auf einem einzigen Computer ausführen. Sie verwenden die Zertifizierungsdienst-URL bei der Installation der RMS-Freigabeanwendung auf allen Computern:
 
@@ -207,7 +207,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 ## Überprüfen der erfolgreichen Installation
 Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen Installation verwenden.
 
-### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure RMS oder Active Directory RMS
+### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS
 
 -   Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
@@ -215,7 +215,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
     Beispiel eines Protokolldateinamens: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
-### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Azure RMS
+### So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Azure Information Protection
 
 1.  Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
@@ -309,13 +309,13 @@ Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich si
 
 -   Verwenden Sie die folgenden Befehle:
 
-    -   Für 64-Bit-Version von Office:
+    -   Für 64-Bit-Windows:
 
         ```
         msiexec /x \x64\Setup[64].msi /quiet
         ```
 
-    -   Für die 32-Bit-Version von Office:
+    -   Für 32-Bit-Windows:
 
         ```
         msiexec /x \x86\Setup.msi /quiet
@@ -336,10 +336,10 @@ Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das f
 
 3.  Wenn die Tests abgeschlossen sind und alle Probleme gelöst wurden, können Sie die neueste Version allen Benutzern mithilfe der Anweisungen zur automatischen Bereitstellung in diesem Handbuch bereitstellen.
 
-## Nur Azure RMS: Konfigurieren der Dokumentenverfolgung
-Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://technet.microsoft.com/dn858608), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert.  Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
+## Nur Azure Information Protection: Konfigurieren der Dokumentkontrolle
+Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://technet.microsoft.com/dn858608), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
 
-Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure RMS-Moduls für Windows PowerShell.  Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
@@ -359,7 +359,7 @@ Die folgenden URLs werden für die Dokumentenverfolgung verwendet und müssen zu
 
 ### Nachverfolgen und Sperren von Dokumenten für Benutzer
 
-Wenn sich Benutzer auf der Nachverfolgungswebsite anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe der RMS-Freigabeanwendung geteilt haben. Wenn Sie sich als Administrator bei Azure RMS anmelden (globaler Administrator), können Sie auf das Admin-Symbol in der oberen rechten Ecke der Seite klicken, mit dem Sie in den Administratormodus wechseln. So können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation freigegeben wurden.
+Wenn sich Benutzer auf der Nachverfolgungswebsite anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe der RMS-Freigabeanwendung geteilt haben. Wenn Sie sich als Administrator für Azure Information Protection anmelden (globaler Administrator), können Sie auf das Adminsymbol in der rechten oberen Ecke der Seite klicken, um in den Administratormodus zu wechseln. So können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation freigegeben wurden.
 
 Aktionen, die Sie im Administratormodus durchführen, werden geprüft und in Verwendungsprotokolldateien protokolliert, und Sie müssen Ihre Einwilligung geben, um den Vorgang fortzusetzen. Weitere Informationen über diese Protokollierung finden Sie im nächsten Abschnitt.
 
@@ -382,7 +382,7 @@ Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokollda
 Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur Dokumentnachverfolgung vonseiten der Benutzer und Administratoren. **RevokeAccess** ist beispielsweise der verwendete Anforderungstyp, wenn ein Benutzer oder Administrator im Auftrag eines Benutzers ein Dokument auf der Website zur Dokumentnachverfolgung gesperrt hat. Verwenden Sie diesen Anforderungstyp in Kombination mit dem AdminAction-Feld, um zu ermitteln, ob ein Benutzer sein eigenes Dokument gesperrt hat (AdminAction ist leer) oder ob der Administrator dies im Namen eines Benutzers getan hat (AdminAction ist TRUE).
 
 
-Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
+Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
 ## Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
 Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Domänen haben, möglicherweise aufgrund einer Fusion oder Übernahme, müssen Sie den folgenden Registrierungsschlüssel bearbeiten:
@@ -393,7 +393,7 @@ Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Dom�
 
     Beispiel: Das Unternehmen Coho Vineyard &amp; Winery verfügt über die Standard-E-Mail-Domäne **cohovineyardandwinery.com**, aber durch Fusionen verwendet es auch die E-Mail-Domänen **cohowinery.com**, **eastcoast.cohowinery.com** und **cohovineyard**. Für den **FederatedDomains**-Wert gibt der Administrator **cohowinery.com; eastcoast.cohowinery.com; cohovineyard** ein.
 
-Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglicherweise keine Inhalte nutzen, die von anderen Benutzern in ihrer Organisation geschützt wurden. Diese Bearbeitung der Registrierung ist nicht erforderlich, wenn Sie Azure RMS verwenden.
+Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglicherweise keine Inhalte nutzen, die von anderen Benutzern in ihrer Organisation geschützt wurden. Diese Bearbeitung der Registrierung ist nicht erforderlich, wenn Sie Azure Information Protection verwenden.
 
 
 ## Nächste Schritte
@@ -402,6 +402,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 

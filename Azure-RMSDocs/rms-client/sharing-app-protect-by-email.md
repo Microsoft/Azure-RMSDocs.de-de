@@ -1,32 +1,32 @@
 ---
-title: "Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure RMS"
+title: "Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure Information Protection"
 description: Anweisungen zur sicheren Freigabe eines Dokuments per E-Mail.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: ff5dd6afaa454c20f35c237e94947dcec9e737f6
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
 
 
 ---
 
 # Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn Sie eine Datei schützen, die Sie per E-Mail freigeben, wird eine neue Version der ursprünglichen Datei erstellt. Die ursprüngliche Datei bleibt ungeschützt und die neue Version ist geschützt und wird automatisch an die E-Mail-Nachricht angefügt, die Sie senden.
 
-In einigen Fällen (für Dateien, die mit Microsoft Word, Excel und PowerPoint erstellt wurden) erstellt die RMS-Freigabeanwendung zwei Versionen der Datei, die an die E-Mail-Nachricht angefügt wird. Die zweite Version der Datei hat die Dateierweiterung **.ppdf** und ist eine PDF-Schattenkopie der Datei. Diese Version der Datei sorgt dafür, dass Empfänger die Datei immer lesen können, selbst wenn sie nicht die gleiche Anwendung installiert haben, mit der Sie die Datei erstellt haben. Dies ist häufig der Fall, wenn Mitarbeiter ihre E-Mails auf mobilen Geräten lesen und ihre E-Mail-Anlagen angezeigt werden sollen. Zum Öffnen wird lediglich die RMS-Freigabeanwendung benötigt. Dann können sie die angefügte Datei lesen, aber nicht bearbeiten, solange sie nicht die andere Version der Datei mit einer Anwendung öffnen, die RMS unterstützt.
+In einigen Fällen (für Dateien, die mit Microsoft Word, Excel und PowerPoint erstellt wurden) erstellt die RMS-Freigabeanwendung zwei Versionen der Datei, die an die E-Mail-Nachricht angefügt wird. Die zweite Version der Datei hat die Dateierweiterung **.ppdf** und ist eine PDF-Schattenkopie der Datei. Diese Version der Datei sorgt dafür, dass Empfänger die Datei immer lesen können, selbst wenn sie nicht die gleiche Anwendung installiert haben, mit der Sie die Datei erstellt haben. Dies ist häufig der Fall, wenn Mitarbeiter ihre E-Mails auf mobilen Geräten lesen und ihre E-Mail-Anlagen angezeigt werden sollen. Zum Öffnen wird lediglich die RMS-Freigabeanwendung benötigt. Dann können sie die angefügte Datei lesen, aber nicht bearbeiten, solange sie nicht die andere Version der Datei mit einer Anwendung öffnen, die einen Rights Management-Dienst unterstützt.
 
-Wenn Ihr Unternehmen Azure RMS verwendet, können Sie die Dateien nachverfolgen, die Sie durch die Freigabe schützen:
+Wenn Ihr Unternehmen Azure Information Protection verwendet, können Sie die Dateien nachverfolgen, die Sie durch die Freigabe schützen:
 
 -   Wählen Sie eine Option aus, um E-Mails zu erhalten, wenn jemand versucht, diese geschützten Anlagen zu öffnen. Jedes Mal, wenn auf die Datei zugegriffen wird, werden Sie benachrichtigt, wer wann versucht hat, die Datei zu öffnen, und ob der Vorgang erfolgreich war (sich der Benutzer erfolgreich authentifiziert hat).
 
@@ -69,7 +69,7 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
     Beispiel:
 
-    ![E-Mail-Nachricht für Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![E-Mail-Nachricht für Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Möglicherweise wünschen Sie sich eine [Erläuterung zur automatisch erstellten PPDF-Datei](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created).
 
@@ -92,6 +92,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

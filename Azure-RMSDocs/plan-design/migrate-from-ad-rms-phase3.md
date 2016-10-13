@@ -1,50 +1,48 @@
 ---
-title: "Migration von AD RMS zu Azure Rights Management – Phase 3 | Azure RMS"
-description: Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Deckt die Schritte 6 und 7 der Migration von AD RMS zu Azure Rights Management ab.
-author: cabailey
-manager: mbaldwin
-ms.date: 08/17/2016
+title: "Migrieren von AD RMS zu Azure Information Protection – Phase 3 | Azure Information Protection"
+description: Phase 3 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 6 bis 7 der Migration von AD RMS zu Azure Information Protection ab.
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 5d707e1fac410e5ff959071507044420dbd8cde7
+ms.sourcegitcommit: d7e21c2bb07e82bc243e5ab01c0a21aa0fe274d1
+ms.openlocfilehash: 8f7f27f3b9def4b38f5de45b9d9686208a4f5283
 
 
 ---
 
 # Migrationsphase 3: Unterstützung der Dienstekonfiguration
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Rights Management (Azure RMS). Diese Verfahren beziehen sich auf die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 6 bis 7 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
 
 ## Schritt 6: Konfigurieren der IRM-Integration mit Exchange Online
 
-Wenn Sie Ihre TDP von AD RMS mit Exchange Online bereits importiert haben, müssen Sie diese TDP entfernen, um in Konflikt stehende Vorlagen und Richtlinien zu vermeiden, nachdem Sie zu Azure RMS migriert haben. Verwenden Sie hierzu das Exchange Online-Cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx).
+Wenn Sie Ihre TDP von AD RMS mit Exchange Online bereits importiert haben, müssen Sie diese TDP entfernen, um Konflikte verursachende Vorlagen und Richtlinien nach der Migration zu Azure Information Protection zu vermeiden. Verwenden Sie hierzu das Exchange Online-Cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx).
 
-Bei Verwendung der Azure RMS-Mandantenschlüsseltopologie **von Microsoft verwaltet**:
+Bei Verwendung der Azure Information Protection-Mandantenschlüsseltopologie **von Microsoft verwaltet**:
 
--   Informationen finden Sie im Abschnitt [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md). Dieser Abschnitt enthält typische auszuführende Befehle, die eine Verbindung mit dem Exchange Online-Dienst herstellen, den Mandantenschlüssel aus Azure RMS importieren und IRM-Funktionen für Exchange Online ermöglichen. Nachdem Sie diese Schritte abgeschlossen haben, verfügen Sie über die volle RMS-Funktionalität mit Exchange Online.
+-   Informationen finden Sie im Abschnitt [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md). Dieser Abschnitt enthält typische auszuführende Befehle, die eine Verbindung mit dem Exchange Online-Dienst herstellen, den Mandantenschlüssel aus Azure Information Protection importieren und IRM-Funktionen für Exchange Online aktivieren. Nachdem Sie diese Schritte abgeschlossen haben, verfügen Sie über die volle Schutzfunktionalität von Azure Rights Management mit Exchange Online.
 
-Bei Verwendung der Azure RMS-Mandantenschlüsseltopologie **Vom Kunden verwaltet (BYOK)**:
+Bei Verwendung der Azure Information Protection-Mandantenschlüsseltopologie **vom Kunden verwaltet (BYOK)**:
 
--   Sie verfügen hierbei über eine reduzierte RMS-Funktionalität für Exchange Online. Dies ist im Artikel [BYOK – Preise und Einschränkungen](byok-price-restrictions.md) beschrieben.
+-   Sie verfügen hierbei über eine reduzierte Rights Management-Schutzfunktionalität für Exchange Online. Dies ist im Artikel [BYOK – Preise und Einschränkungen](byok-price-restrictions.md) beschrieben.
 
 ## Schritt 7: Bereitstellen des RMS-Connectors
-Wenn Sie die Funktion zur Verwaltung von Informationsrechten (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie zuerst IRM auf diesen Servern deaktivieren und die AD RMS-Konfiguration entfernen. Anschließend stellen Sie den Rights Management-Verbindungsdienst (RMS-Verbindungsdienst) bereit, der als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und Azure RMS fungiert.
+Wenn Sie die Funktion zur Verwaltung von Informationsrechten (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie zuerst IRM auf diesen Servern deaktivieren und die AD RMS-Konfiguration entfernen. Anschließend stellen Sie den Rights Management-Connector (RMS-Connector) bereit, der als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und dem Schutzdienst von Azure Information Protection fungiert.
 
-Wenn Sie mehrere AD RMS-Datenkonfigurationsdateien (XML) zum Schutz von E-Mail-Nachrichten in Azure RMS importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten.
+Wenn Sie mehrere AD RMS-Datenkonfigurationsdateien (XML) zum Schutz von E-Mail-Nachrichten in Azure Information Protection importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten.
 
 > [!NOTE]
-> Überprüfen Sie vor Beginn die Versionen der lokalen Server, die Azure RMS unterstützt, unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md).
+> Überprüfen Sie vor Beginn unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md) die Versionen der lokalen Server, die der Azure Rights Management-Dienst unterstützt.
 
 ### Deaktivieren von IRM auf Exchange Servern und Entfernen der AD RMS-Konfiguration
 
@@ -214,6 +212,6 @@ Nachdem Sie diese Verfahren ausgeführt haben, können Sie den Abschnitt **Näch
 Fahren Sie mit [Phase 4: Aufgaben nach der Migration](migrate-from-ad-rms-phase4.md) fort, um die Migration fortzusetzen.
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

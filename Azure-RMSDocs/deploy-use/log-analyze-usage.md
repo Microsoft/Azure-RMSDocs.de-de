@@ -1,68 +1,68 @@
 ---
-title: Protokollieren und Analysieren der Nutzung von Azure Rights Management | Azure RMS
+title: Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts | Azure Information Protection
 description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokollierung mit Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: c1727f1a5d6747977da7113b6dc0ac37ebefe386
+ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
+ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
 
 
 ---
 
-# Protokollieren und Analysieren der Nutzung von Azure Rights Management
+# Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-In diesem Thema wird erläutert, wie Sie die Verwendungsprotokollierung bei Azure Rights Management (Azure RMS) verwenden können. Der Azure Rights Management-Dienst kann jede Anforderung protokollieren, die für Ihre Organisation durchgeführt wird. Hierzu gehören die Anforderungen von Benutzern, die von Rights Management-Administratoren in Ihrer Organisation ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Rights Management-Bereitstellung unterstützt wird.
+Anhand der folgenden Informationen erhalten Sie eine Übersicht darüber, wie Sie die Verwendungsprotokollierung für den Azure Rights Management-Dienst von Azure Information Protection verwenden können. Dieser Dienst stellt den Schutz von Daten für Dokumente und E-Mails Ihrer Organisation bereit und kann jede für ihn durchgeführte Anforderung protokollieren. Hierzu gehören die Anforderungen von Benutzern, die von Administratoren für diesen Dienst ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Information Protection-Bereitstellung unterstützt wird.
 
-Sie können dann mithilfe der Azure Rights Management-Protokolle die folgenden Geschäftsszenarios unterstützen:
+Sie können dann mithilfe dieser Protokolle des Azure Rights Management-Diensts die folgenden Geschäftsszenarios unterstützen:
 
 -   **Analyse hinsichtlich geschäftlicher Erkenntnisse**
 
-    Die von Azure Rights Management generierten Protokolle können in ein Repository Ihrer Wahl importiert werden (z. B. eine Datenbank, ein OLAP-System (Online Analytical Processing) oder ein Zuordnen/Reduzieren-System), um die Informationen zu analysieren und Berichte zu erstellen. Beispielsweise könnten Sie identifizieren, wer auf Ihre RMS-geschützten Daten zugreift. Sie können bestimmen, auf welche RMS-geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt ist.
+    Die vom Azure Rights Management-Dienst generierten Protokolle können in ein Repository Ihrer Wahl importiert werden (z.B. eine Datenbank, ein OLAP-System (Online Analytical Processing) oder ein Zuordnen/Reduzieren-System), um die Informationen zu analysieren und Berichte zu erstellen. Beispielsweise können Sie feststellen, wer auf Ihre geschützten Daten zugreift. Sie können ermitteln, auf welche geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt ist.
 
 -   **Überwachung auf Missbrauch**
 
-    Azure Rights Management-Protokollierungsinformationen stehen Ihnen praktisch in Echtzeit zur Verfügung, sodass Sie die Verwendung von Rights Management in Ihrem Unternehmen kontinuierlich überwachen können. 99,9 % der Protokolle sind innerhalb von 15 Minuten nach einer RMS-ausgelösten Aktion verfügbar.
+    Azure Rights Management-Protokollierungsinformationen stehen Ihnen praktisch in Echtzeit zur Verfügung, sodass Sie die Verwendung des Rights Management-Diensts in Ihrem Unternehmen kontinuierlich überwachen können. 99,9 % der Protokolle sind innerhalb von 15 Minuten nach einer für den Dienst ausgelösten Aktion verfügbar.
 
-    Beispielsweise können Sie sich benachrichtigen lassen, wenn ein plötzlicher Anstieg der Personen zu verzeichnen ist, die RMS-geschützte Daten außerhalb der Standardarbeitszeiten lesen, was darauf hindeuten kann, dass ein bösartiger Benutzer Informationen sammelt, um sie an die Konkurrenz zu verkaufen. Oder wenn derselbe Benutzer innerhalb eines kurzen Zeitraums offensichtlich von zwei verschiedenen IP-Adressen aus auf Daten zugreift, was darauf hindeuten kann, dass ein Benutzerkonto kompromittiert wurde.
+    Beispielsweise können Sie sich benachrichtigen lassen, wenn ein plötzlicher Anstieg der Personen zu verzeichnen ist, die geschützte Daten außerhalb der Standardarbeitszeiten lesen, was darauf hindeuten kann, dass ein böswilliger Benutzer Informationen sammelt, um sie an die Konkurrenz zu verkaufen. Oder wenn derselbe Benutzer innerhalb eines kurzen Zeitraums offensichtlich von zwei verschiedenen IP-Adressen aus auf Daten zugreift, was darauf hindeuten kann, dass ein Benutzerkonto kompromittiert wurde.
 
 -   **Durchführen forensischer Analysen**
 
-    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie Azure Rights Management mit Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die mit Azure Rights Management geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie Azure Rights Management-Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe von Azure Rights Management schützen.
+    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Art Fragen beantworten, wenn Sie diese Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die durch den Azure Rights Management-Dienst geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie diese Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe des Azure Rights Management-Diensts schützen.
 
 > [!NOTE]
-> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für Azure Rights Management interessiert sind und nicht nachverfolgen möchten, wie die Benutzer Rights Management verwenden, können Sie das [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx)-Cmdlet von Windows PowerShell für Azure Rights Management nutzen.
+> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für den Azure Rights Management-Dienst interessiert sind und nicht nachverfolgen möchten, wie Benutzer den Rights Management-Dienst verwenden, können Sie das Windows PowerShell-Cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) für Azure Rights Management nutzen.
 > 
 > Sie können auch das klassische Azure-Portal für allgemeine Verwendungsberichte verwenden. Hierzu gehören **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. Klicken Sie für den Zugriff auf diese Berichte im klassischen Azure-Portal auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.
 
 In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollierung von Azure Rights Management.
 
 ## Aktivieren der Verwendungsprotokollierung von Azure Rights Management
-Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure RMS-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
+Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure Rights Management-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
 
 > [!NOTE]
 > Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
 > 
-> Haben Sie Verwendungsprotokollierung für Azure RMS vor Februar 2016 verwendet, haben Sie ein Abonnement für Azure und ausreichend Speicherplatz auf Azure benötigt, was nun nicht mehr der Fall ist.
+> Wenn Sie die Verwendungsprotokollierung für Azure Rights Management vor Februar 2016 verwendet haben, benötigten Sie ein Abonnement für Azure und ausreichend Speicherplatz auf Azure, was nun nicht mehr der Fall ist.
 
 
 
 ## Zugreifen auf und Verwenden von Azure Rights Management-Verwendungsprotokollen
-Azure Rights Management schreibt Protokolle als eine Serie von BLOBs in Ihr Azure-Speicherkonto. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-azure-rights-management-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.
+Der Azure Rights Management-Dienst schreibt Protokolle als eine Serie von Blobs in Ihr Azure-Speicherkonto. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-azure-rights-management-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.
 
 Es kann einen Moment dauern, bis nach einer Azure Rights Management-Aktion Protokolle in Ihrem Speicherkonto angezeigt werden. Die meisten Protokolle werden innerhalb von 15 Minuten angezeigt. Es empfiehlt sich, dass Sie die Protokolle in den lokalen Speicher herunterladen, z. B. einen lokalen Ordner, eine Datenbank oder ein Zuordnen/Reduzieren-Repository.
 
-Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure RMS-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, führen Sie den folgenden Befehl aus, um zu überprüfen, ob Ihre Version mindestens **2.4.0.0** ist: `(Get-Module aadrm -ListAvailable).Version` 
+Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Management-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, führen Sie den folgenden Befehl aus, um zu überprüfen, ob Ihre Version mindestens **2.4.0.0** ist: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### So laden Sie Ihre Verwendungsprotokolle mit PowerShell herunter
 
@@ -96,10 +96,10 @@ Standardmäßig werden für dieses Cmdlet drei Threads verwendet, um die Protoko
 >
 > Beispielsweise können Sie folgenden Befehl ausführen, um alle Informationen in eine Datei im LOG-Format zu importieren: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Wenn Sie Azure RMS-Verwendungsprotokollierung vor der Protokollierungsänderung (22. Februar 2016) manuell aktiviert haben
+#### Wenn Sie die Azure Rights Management-Verwendungsprotokollierung vor der Protokollierungsänderung (22. Februar 2016) manuell aktiviert haben
 
 
-Wenn Sie Verwendungsprotokollierung vor der Protokollierungsänderung verwendet haben, haben Sie Verwendungsprotokolle in Ihrem konfigurierten Azure-Speicherkonto. Microsoft kopiert diese Protokolle nicht als Teil dieser Protokollierungsänderung aus Ihrem Speicherkonto in das neue verwaltete Azure RMS-Speicherkonto. Sie sind dafür zuständig, den Lebenszyklus der zuvor generierten Protokolle zu verwalten, und Sie können das [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx)-Cmdlet verwenden, um Ihre alten Protokolle herunterzuladen. Beispiel:
+Wenn Sie Verwendungsprotokollierung vor der Protokollierungsänderung verwendet haben, haben Sie Verwendungsprotokolle in Ihrem konfigurierten Azure-Speicherkonto. Microsoft kopiert diese Protokolle nicht als Teil dieser Protokollierungsänderung aus Ihrem Speicherkonto in das neue verwaltete Azure Rights Management-Speicherkonto. Sie sind dafür zuständig, den Lebenszyklus der zuvor generierten Protokolle zu verwalten, und Sie können das [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx)-Cmdlet verwenden, um Ihre alten Protokolle herunterzuladen. Beispiel:
 
 - So laden Sie alle verfügbaren Protokolle in Ihren Ordner „E:\logs“ herunter `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -107,17 +107,17 @@ Wenn Sie Verwendungsprotokollierung vor der Protokollierungsänderung verwendet 
 
 Sie müssen keine Protokolle mit dem Get-AadrmUsageLog-Cmdlet herunterladen, wenn einer der folgenden Punkte zutrifft:
 
--  Sie haben Azure Rights Management vor dem 22. Februar 2016 aktiviert, haben die Verwendungsprotokollierung aber nicht aktiviert.
+-  Sie haben den Azure Rights Management-Dienst am oder vor dem 22. Februar 2016 aktiviert, haben die Verwendungsprotokollierung aber nicht aktiviert.
 
-- Sie haben Azure Rights Management nach dem 22. Februar 2016 aktiviert.
+- Sie haben den Azure Rights Management-Dienst nach dem 22. Februar 2016 aktiviert.
 
 ## Interpretieren von Azure Rights Management-Verwendungsprotokollen
 Verwenden Sie folgende Informationen als Hilfestellung bei der Interpretation der Azure Rights Management-Verwendungsprotokolle.
 
 ### Die Abfolge von Protokollen
-Azure Rights Management schreibt die Protokolle als eine Serie von BLOBs. 
+Der Azure Rights Management-Dienst schreibt die Protokolle als eine Serie von Blobs. 
 
-Jeder Eintrag im Protokoll hat einen UTC-Zeitstempel. Da Azure Rights Management auf mehreren Servern in mehreren Datencentern ausgeführt wird, scheinen die Protokolle manchmal nicht in der richtigen Reihenfolge zu sein, auch wenn sie nach Zeitstempel sortiert sind. Die Abweichung ist jedoch in der Regel gering und liegt im Bereich von einer Minute. In den meisten Fällen ist dies kein Problem, das sich nachteilig bei der Protokollanalyse manifestieren würde.
+Jeder Eintrag im Protokoll hat einen UTC-Zeitstempel. Da der Azure Rights Management-Dienst auf mehreren Servern in mehreren Rechenzentren ausgeführt wird, scheinen die Protokolle manchmal nicht in der richtigen Reihenfolge zu sein, auch wenn sie nach Zeitstempel sortiert sind. Die Abweichung ist jedoch in der Regel gering und liegt im Bereich von einer Minute. In den meisten Fällen ist dies kein Problem, das sich nachteilig bei der Protokollanalyse manifestieren würde.
 
 ### Das BLOB-Format
 Jedes BLOB ist im erweiterten W3C-Protokollformat. Es beginnt mit den folgenden zwei Zeilen:
@@ -165,7 +165,7 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
     Anforderungen von diesem Connector werden mit dem Dienstprinzipalnamen von **Aadrm_S-1-7-0** protokolliert, der automatisch generiert wird, wenn Sie den RMS-Connector installieren.
 
 #### Typische Anforderungstypen
-Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende Tabelle benennt und beschreibt einige der am häufigsten verwendeten Anforderungstypen.
+Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In der folgenden Tabelle sind einige der am häufigsten verwendeten Anforderungstypen benannt und beschrieben.
 
 |Anforderungstyp|Beschreibung|
 |----------------|---------------|
@@ -192,10 +192,10 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |GetConnectorAuthorizations|Von den RMS-Connectors wird ein Aufruf ausgelöst, um deren Konfiguration aus der Cloud abzurufen.|
 |GetRecipients|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Listenansicht zu navigieren.|
 |GetSingle|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, zur Seite **Einzelnes Dokument** zu navigieren.|
-|GetTenantFunctionalState|Das klassische Azure-Portal überprüft, ob Azure RMS aktiviert ist.|
+|GetTenantFunctionalState|Das klassische Azure-Portal überprüft, ob der Azure Rights Management-Dienst aktiviert ist.|
 |GetTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID abzurufen.|
 |KeyVaultDecryptRequest|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK) in Azure Key Vault.|
-|KeyVaultGetKeyInfoRequest|Ein Aufruf erfolgt, um zu überprüfen, ob der angegebene Schlüssel, der in Azure Key Vault als Azure RMS-Mandantenschlüssel verwendet werden soll, verfügbar ist und nicht bereits verwendet wird.|
+|KeyVaultGetKeyInfoRequest|Ein Aufruf erfolgt, um zu überprüfen, ob der angegebene Schlüssel, der in Azure Key Vault als Azure Information Protection-Mandantenschlüssel verwendet werden soll, verfügbar ist und nicht bereits verwendet wird.|
 |KeyVaultSignDigest|Ein Aufruf erfolgt, wenn ein vom Kunden verwalteter Schlüssel (BYOK) in Azure Key Vault zu Signaturzwecken verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
 |KMSPDecrypt|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Legacymandantenschlüssel (BYOK).|
 |KMSPSignDigest|Ein Aufruf erfolgt, wenn ein vom Kunden verwalteter Legacyschlüssel (BYOK) zu Signaturzwecken verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
@@ -207,15 +207,15 @@ Es gibt zahlreiche Anforderungstypen in Azure Rights Management. Die folgende T
 |SearchUsers |Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, alle Benutzer in einem Mandanten zu suchen.|
 |ServerCertify|Von einem RMS-fähigen Client (z. B. SharePoint) wird ein Aufruf zum Zertifizieren des Servers ausgelöst.|
 |SetUsageLogFeatureState|Ein Aufruf zum Aktivieren der Verwendungsprotokollierung wird ausgelöst.|
-|SetUsageLogStorageAccount|Ein Aufruf wird ausgelöst, um den Speicherort der Azure RMS-Protokolle anzugeben.|
+|SetUsageLogStorageAccount|Ein Aufruf wird ausgelöst, um den Speicherort der Protokolle des Azure Rights Management-Diensts anzugeben.|
 |UpdateNotificationSettings|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, die Benachrichtigungseinstellungen für ein einzelnes Dokument zu ändern.|
 |UpdateTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
 
 
 ## Windows PowerShell-Referenz
-Seit Februar 2016 ist [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) das einzige Windows PowerShell-Cmdlet, das Sie für die Azure RMS-Verwendungsprotokollierung benötigen. 
+Seit Februar 2016 ist [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) das einzige Windows PowerShell-Cmdlet, das Sie für die Azure Rights Management-Verwendungsprotokollierung benötigen. 
 
-Vor dieser Änderung wurden die folgenden Cmdlets, die nun veraltet sind, für die Azure RMS-Verwendungsprotokolle benötigt:  
+Vor dieser Änderung wurden die folgenden Cmdlets, die nun veraltet sind, für die Azure Rights Management-Verwendungsprotokolle benötigt:  
 
 -   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
 
@@ -231,15 +231,15 @@ Vor dieser Änderung wurden die folgenden Cmdlets, die nun veraltet sind, für d
 
 -   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
 
-Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher haben, die vor der Azure RMS-Protokollierungsänderung erstellt wurden, können Sie diese Protokolle wie bisher mit den alten Cmdlets „Get-AadrmUsageLog“ und „Get-AadrmUsageLogLastCounterValue“ herunterladen. Alle neuen Verwendungsprotokolle werden dagegen in den neuen Azure RMS-Speicher geschrieben und müssen mit „Get-AadrmUserLog“ heruntergeladen werden.
+Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher gespeichert haben, die vor der Azure Rights Management-Protokollierungsänderung erstellt wurden, können Sie diese Protokolle wie bisher mit den alten Cmdlets Get-AadrmUsageLog und Get-AadrmUsageLogLastCounterValue herunterladen. Alle neuen Verwendungsprotokolle werden dagegen in den neuen Azure RMS-Speicher geschrieben und müssen mit „Get-AadrmUserLog“ heruntergeladen werden.
 
-Weitere Informationen zum Verwenden von Windows PowerShell für Azure Rights Management finden Sie unter [Verwaltung von Azure Rights Management mithilfe von Windows PowerShell](administer-powershell.md).
-
-
+Weitere Informationen zum Verwenden von Windows PowerShell für den Azure Rights Management-Dienst finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](administer-powershell.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+
+
+<!--HONumber=Sep16_HO4-->
 
 

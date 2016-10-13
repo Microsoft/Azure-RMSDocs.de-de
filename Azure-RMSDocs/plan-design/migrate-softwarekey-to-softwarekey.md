@@ -1,19 +1,19 @@
 ---
-title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure RMS"
-description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Rights Management sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
+title: "Schritt 2&colon; Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln | Azure Information Protection"
+description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/14/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
-ms.openlocfilehash: 2bd9abcac99a06a29e5dacdd014e660358840adc
+ms.sourcegitcommit: 931642ea9070a7581b428bcd04756048673fe3c0
+ms.openlocfilehash: e6bffd31e7f198a767531fb343b8146246078004
 
 
 ---
@@ -21,18 +21,18 @@ ms.openlocfilehash: 2bd9abcac99a06a29e5dacdd014e660358840adc
 
 # Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
 
-Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Rights Management mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 
+Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 
 
 Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms) zurückkehren und eine andere Konfiguration auswählen.
 
-Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Azure RMS, um Ihren Azure RMS-Mandantenschlüssel zu erhalten, der von Microsoft verwaltet wird.
+Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Azure Information Protection an, um den von Microsoft verwalteten Azure Information Protection-Mandantenschlüssel zu erhalten.
 
-## So importieren Sie die Konfigurationsdaten in Azure RMS
+## So importieren Sie die Konfigurationsdaten in Azure Information Protection
 
-1.  Laden Sie auf einer Arbeitsstation mit Internetverbindung das Windows PowerShell-Modul für Azure RMS (Mindestversion 2.5.0.0) herunter, in dem das Cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) enthalten ist, und installieren Sie es.
+1.  Laden Sie auf einer Arbeitsstation mit Internetverbindung das Windows PowerShell-Modul für Azure Rights Management (Mindestversion 2.5.0.0) herunter, in dem das Cmdlet [Import-AadrmTpd](http://msdn.microsoft.com/library/azure/dn857523.aspx) enthalten ist, und installieren Sie es. Der Azure Rights Management-Dienst (Azure RMS) stellt den Schutz von Daten für Azure Information Protection bereit.
 
     > [!TIP]
     > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm -ListAvailable).Version`
@@ -46,7 +46,7 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     ```
     Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
 
-3.  Laden Sie mit dem [Import-AadrmTdp](http://msdn.microsoft.com/library/azure/dn857523.aspx)-Cmdlet die erste exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Wenn Sie mehr als eine XML-Datei haben, weil Sie mehrere vertrauenswürdige Veröffentlichungsdomänen hatten, wählen Sie die Datei aus, die die exportierte vertrauenswürdige Veröffentlichungsdomäne enthält, die Sie in Azure RMS verwenden möchten, um Inhalte nach der Migration zu schützen. Verwenden Sie den folgenden Befehl:
+3.  Laden Sie mit dem [Import-AadrmTdp](http://msdn.microsoft.com/library/azure/dn857523.aspx)-Cmdlet die erste exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Wenn mehrere dieser XML-Dateien vorliegen, weil Sie mehrere vertrauenswürdige Veröffentlichungsdomänen verwendet haben, wählen Sie die Datei mit der exportierten vertrauenswürdigen Domäne aus, die Sie nach der Migration in Azure Information Protection zum Schutz von Inhalten verwenden möchten. Verwenden Sie den folgenden Befehl:
 
     ```
     Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
@@ -57,19 +57,19 @@ Verwenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in
     
 4.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 3 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen. Beispiel: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
 
-5.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx) , um die Verbindung mit dem Azure RMS-Dienst zu trennen:
+5.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/azure/dn629416.aspx), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
     ```
     Disconnect-AadrmService
     ```
 
 
-Sie können jetzt mit [Schritt 3: Aktivieren des RMS-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
+Sie können jetzt mit [Schritt 3: Aktivieren Ihres Azure Information Protection-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Sep16_HO4-->
 
 

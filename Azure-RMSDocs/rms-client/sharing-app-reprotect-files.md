@@ -1,27 +1,27 @@
 ---
-title: "Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden | Azure RMS"
+title: "Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden | Azure Information Protection"
 description: "Wenn eine Datei mit Rights Management geschützt wurde, können Sie die Berechtigungen ändern, indem Sie die Datei erneut schützen. Dabei können Sie angeben, welche Benutzer Zugriff auf die Datei erhalten und über welche Berechtigungen sie verfügen sollen."
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 
 ---
 
 # Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn eine Datei mit Rights Management geschützt wurde, können Sie die Berechtigungen ändern, indem Sie die Datei erneut schützen. Dabei können Sie angeben, welche Benutzer Zugriff auf die Datei erhalten und über welche Berechtigungen sie verfügen sollen.
 
@@ -62,9 +62,9 @@ Weitere Informationen zum vollständigen Entfernen aller Berechtigungen, sodass 
     Sollten Sie über die Berechtigung zum erneuten Schützen der Datei verfügen, wird sehr schnell ein Dialogfeld mit der Meldung angezeigt, dass die Datei geschützt wird, und der Fokus wird anschließend an den Datei-Explorer zurückgegeben. Die ausgewählte(n) Datei(en) ist bzw. sind nun mit Ihren Änderungen geschützt. 
 
 > [!NOTE]
-> Bevor Sie die Datei erneut schützen können, muss RMS erst bestätigen, dass Sie dazu berechtigt sind. Dazu überprüft RMS Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
+> Bevor Sie die Datei erneut schützen können, muss der Rights Management-Dienst erst bestätigen, dass Sie dazu berechtigt sind. Dazu überprüft er Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
 >
-> Wenn Ihre Organisation weder Azure Rights Management (Azure RMS) noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie von RMS geschützte Dateien verwenden können:
+> Wenn Ihre Organisation weder Azure Information Protection noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie von RMS geschützte Dateien verwenden können:
 >
 > -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
 >
@@ -96,6 +96,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

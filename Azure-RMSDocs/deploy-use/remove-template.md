@@ -1,19 +1,19 @@
 ---
-title: Entfernen von Vorlagen | Azure RMS
+title: Entfernen von Vorlagen | Azure Information Protection
 description: "Die Standardvorlagen können nicht gelöscht werden. Sie können jedoch archiviert werden, damit sie Benutzern nicht angezeigt werden."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 22db39697dbd35b1a295f214f11e72c47fe6ca1b
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 22db39697dbd35b1a295f214f11e72c47fe6ca1b
 
 # Entfernen (Archivieren) von Vorlagen
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
 Die Standardvorlagen können nicht gelöscht werden. Sie können jedoch archiviert werden, damit sie Benutzern nicht angezeigt werden.
 
@@ -41,6 +41,6 @@ Der Status ändert sich von **Veröffentlicht** zu **Archiviert**. Wenn Sie sich
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,26 +1,26 @@
 ---
-title: "Registrieren für RMS for Individuals | Azure RMS"
+title: "Registrieren von Benutzern für RMS for Individuals | Azure Information Protection"
 description: "Anweisungen zur Registrierung für dieses kostenlose Konto und technische Informationen zur Funktionsweise dieses Verfahrens."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0bd53bde0bfa9b44203b9d2f0f429265a013476c
-ms.openlocfilehash: 25c2ddac40c9eff78101cfaf42d4398be4e8a5cc
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
 
 
 ---
 
 # Registrieren für RMS for Individuals
 
->*Gilt für: Azure Rights Management*
+>*Gilt für: Azure Information Protection*
 
 Um sich für dieses kostenlose Konto zu registrieren, müssen Sie die Seite [Microsoft Azure Rights Management-Seite](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) aufrufen Ihre geschäftliche E-Mail-Adresse angeben. Der häufigste Auslöser dafür, dass Sie zu dieser Anmeldeseite weitergeleitet werden, ist, dass Sie eine E-Mail-Nachricht mit einem geschützten Anhang empfangen haben, die Anweisungen enthält, wie Sie sich registrieren können. Sie erhalten eine E-Mail als Antwort von Microsoft und können den Registrierungsprozess dann abschließen, indem Sie Details eingeben, um Ihr Konto zu erstellen. Wenn dies abgeschlossen ist, wird eine Seite angezeigt, auf der Sie die Freigabeanwendung für verschiedene Geräte herunterladen können sowie ein Link zum Benutzerhandbuch und ein Link für eine aktuelle Liste der Anwendungen, die den Rights Management-Schutz nativ unterstützen. 
 
@@ -83,7 +83,7 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 
     -   Führen Sie eine eDiscovery in den unternehmenseigenen Daten durch, damit Sie ggf. Dateien entschlüsseln können, die mithilfe von Rights Management geschützt wurden. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](../deploy-use/configure-super-users.md).
 
-    -   Alle Aktivitäten für Rights Management protokollieren, wie sie in Ihrer Organisation verwendet werden. Dies ist sehr leistungsfähig, weil Sie nicht nur überwachen können, welche Dateien geschützt werden und wer erfolgreich auf diese geschützten Dateien zugreift, sondern auch potenziell verdächtiges Verhalten nicht autorisierter Personen identifizieren können, die versuchen, auf geschützte Dateien zuzugreifen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Nutzung von Azure Rights Management](../deploy-use/log-analyze-usage.md).
+    -   Alle Aktivitäten für Rights Management protokollieren, wie sie in Ihrer Organisation verwendet werden. Dies ist sehr leistungsfähig, weil Sie nicht nur überwachen können, welche Dateien geschützt werden und wer erfolgreich auf diese geschützten Dateien zugreift, sondern auch potenziell verdächtiges Verhalten nicht autorisierter Personen identifizieren können, die versuchen, auf geschützte Dateien zuzugreifen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
     -   Geben Sie Benutzern die Möglichkeit, ihre geschützten Dokumente nachzuverfolgen und zu widerrufen, sofern diese Features von Ihrem [Azure RMS-Abonnement](https://technet.microsoft.com/dn858608)unterstützt werden. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dateien](../rms-client/sharing-app-track-revoke.md) im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
 
@@ -97,6 +97,6 @@ Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die f
 
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

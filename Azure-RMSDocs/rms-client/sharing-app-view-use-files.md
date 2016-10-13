@@ -1,33 +1,33 @@
 ---
-title: "Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden | Azure RMS"
+title: "Anzeigen und Verwenden von Dateien, die mit Rights Management geschützt wurden | Azure Information Protection"
 description: "Informationen zum Anzeigen und Verwenden einer geschützten Datei, für die eine Installation der RMS-Freigabeanwendung (Rights Management) erforderlich ist."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 8d93968c51ad1037e5424df4ee9b724e0c1f89a2
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
 
 
 ---
 
 # Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert](install-sharing-app.md) ist, können Sie eine geschützte Datei anzeigen, indem Sie einfach darauf doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden.
 
 > [!NOTE]
-> Bevor Sie die geschützte Datei anzeigen können, muss RMS bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft RMS Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
+> Bevor Sie die geschützte Datei anzeigen können, muss der Rights Management-Dienst bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft er Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
 >
-> Wenn Ihre Organisation weder Azure Rights Management (Azure RMS) noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von RMS geschützt wurden:
+> Wenn Ihre Organisation weder Azure Information Protection noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von RMS geschützt wurden:
 >
 > -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
 >
@@ -68,7 +68,7 @@ Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie kö
 
 
 
-Eine vollständige Liste der Dateinamenerweiterungen, die von Rights Management unterstützt werden, finden Sie in den Abschnitten [Unterstützte Dateitypen und Dateinamenerweiterungen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md). Wenn Ihre Dateierweiterung dort nicht aufgeführt wird, finden Sie im Internet heraus, ob dieses Dateierweiterung von einer anderen Anwendung unterstützt wird.
+Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diensten unterstützt werden, finden Sie in den Abschnitten [Unterstützte Dateitypen und Dateierweiterungen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md). Wenn Ihre Dateierweiterung dort nicht aufgeführt wird, finden Sie im Internet heraus, ob dieses Dateierweiterung von einer anderen Anwendung unterstützt wird.
 
 > [!NOTE]
 > Wenn die Datei erwiesenermaßen durch Rights Management geschützt ist und sie sich dennoch nicht öffnen lässt, laden Sie das [RMS Analyzer-Tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und setzen Sie es ein. Befolgen Sie die Anweisungen in dem Tool und suchen Sie nach Problemen auf Ihrem Computer, die das Öffnen des geschützten Dokuments verhindern können.
@@ -90,7 +90,7 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
 
 - **Andere Dateinamenerweiterungen**
 
-    Damit diese Dateien verwendet werden können, muss Ihr Gerät eine Anwendung haben, die Rights Management versteht. Diese Anwendungen werden als RMS-fähige Anwendungen bezeichnet. Anwendungen aus Office 2016, Office 2013 und Office 2010 (z. B. Word, Excel, PowerPoint und Outlook) sind Beispiele für Anwendungen, die für Rights Management geeignet sind. Aber auch Anwendungen, die nicht von Microsoft stammen, z. B. Branchenanwendungen anderer Softwarehersteller oder Ihre eigenen Branchenanwendungen, sind möglicherweise für Rights Management geeignet.
+    Damit diese Dateien verwendet werden können, muss Ihr Gerät eine Anwendung haben, die den Rights Management-Schutz versteht. Diese Anwendungen werden als RMS-fähige Anwendungen bezeichnet. Anwendungen aus Office 2016, Office 2013 und Office 2010 (z.B. Word, Excel, PowerPoint und Outlook) sind Beispiele für Anwendungen, die für Rights Management geeignet sind. Aber auch Anwendungen, die nicht von Microsoft stammen, z. B. Branchenanwendungen anderer Softwarehersteller oder Ihre eigenen Branchenanwendungen, sind möglicherweise für Rights Management geeignet.
 
     Anwendungen, die für Rights Management geeignet sind, wissen, wie Dateien zu öffnen sind, die durch andere Rights Management-fähige Anwendungen geschützt wurden. Sie behalten außerdem den auf sie angewendeten Schutz, selbst wenn Sie die Datei bearbeiten oder unter einem anderen Dateinamen oder an einem anderen Speicherort speichern. Diese Anwendungen ermöglichen es Ihnen, die Datei entsprechend den Berechtigungen zu verwenden, die derzeit auf sie angewendet sind. Wenn Sie also die Berechtigungen haben, die Datei zu verwenden, können Sie dies tun. Beispielsweise könnte es sein, dass Sie die Datei bearbeiten, aber nicht drucken können.
 
@@ -107,6 +107,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

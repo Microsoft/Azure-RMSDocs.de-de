@@ -1,28 +1,28 @@
 ---
-title: Hinweise zur Bereitstellung des RMS-Clients | Azure RMS
+title: Anmerkungen zur Bereitstellung des RMS-Clients | Azure Information Protection
 description: "Der RMS-Client, Version 2 (Rights Management Services) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. Zusätzlich zur Auslieferung mit der Microsoft Rights Management-Freigabeanwendung steht der RMS-Client als optionaler Download zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 6d80958fe4d56458b7dee48e7475a37de8a102bd
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7dc20d52b501b9a6cbf659c3e00d6059352d6631
 
 
 ---
 
 # Anmerkungen zur Bereitstellung des RMS-Clients
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 7 mit SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 7 mit SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
 
-Der RMS-Client, Version 2 (Rights Management Service, Rechteverwaltungsdienst) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. Zusätzlich zur Auslieferung mit der [Microsoft Rights Management-Freigabeanwendung](sharing-app-windows.md) steht der RMS-Client [als optionaler Download](http://www.microsoft.com/download/details.aspx?id=38396) zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind.
+Der RMS-Client, Version 2 (Rights Management Service, Rechteverwaltungsdienst) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. Zusätzlich zur Auslieferung mit der [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md) steht der RMS-Client [als optionaler Download](http://www.microsoft.com/download/details.aspx?id=38396) zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch Rights Management-Dienste geschützt sind.
 
 
 ## Weiterverbreiten des RMS-Clients
@@ -238,6 +238,6 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

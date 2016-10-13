@@ -1,19 +1,19 @@
 ---
-title: "RMS-Freigabeanwendung für Windows und mobile Plattformen | Azure RMS"
+title: "RMS-Freigabeanwendung für Windows und mobile Plattformen | Azure Information Protection"
 description: "Unterstützung von Azure RMS durch die RMS-Freigabeanwendung als eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 21bdcae9432e2edbecaa6eafb35ccefbd3ca372c
+ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
+ms.openlocfilehash: e4b9a13ba29820cd7a19e0b8509966f5d8195353
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 21bdcae9432e2edbecaa6eafb35ccefbd3ca372c
 
 # RMS-Freigabeanwendung für Windows und mobile Plattformen
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-Die RMS-Freigabeanwendung ist eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
+Die RMS-Freigabeanwendung ist eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für den Azure Rights Management-Dienst bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
 Wenn Benutzer ihre Dateien mit der RMS-Freigabeanwendung schützen, können sie auch von ihnen geschützte Dokumente nachverfolgen und bei Bedarf den Zugriff hierauf widerrufen. Hierfür wird die [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562)verwendet.
 
@@ -33,9 +33,9 @@ Bei Windows-Computern integriert sich die RMS-Freigabeanwendung unauffällig in 
 
 -   Eine neue Kontextmenüoption für Datei-Explorer. Benutzer erhalten die Option **Direkt schützen** zum Aufrufen eines benutzerfreundlichen Dialogfelds mit den Einstellungen, die am häufigsten zum Schützen von auf einem Datenträger gespeicherten Dateien verwendet werden.
 
--   Eine Anzeige zum Öffnen von Dateien, die durch [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] geschützt sind. Diese Anzeige wird automatisch aufgerufen, wenn keine andere Anwendung installiert ist, mit der die geschützte Datei geöffnet werden kann.
+-   Ein Viewer zum Öffnen von Dateien, die mit dem Azure Rights Management-Dienst geschützt wurden. Diese Anzeige wird automatisch aufgerufen, wenn keine andere Anwendung installiert ist, mit der die geschützte Datei geöffnet werden kann.
 
--   Back-End-Konfiguration für Office 2010, die Word, Excel, PowerPoint und Outlook aus dieser Suite die nahtlose Zusammenarbeit mit [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] ermöglicht.
+-   Back-End-Konfiguration für Office 2010, die Word, Excel, PowerPoint und Outlook aus dieser Suite die nahtlose Zusammenarbeit mit dem Azure Rights Management-Dienst ermöglicht.
 
 Obwohl die RMS-Freigabeanwendung für Windows über die [Microsoft Rights Management-Seite](http://go.microsoft.com/fwlink/?LinkId=303970)auf einzelnen Computer heruntergeladen und installiert werden kann, wird auch eine Unternehmensbereitstellung mit automatischer Installation und benutzerdefinierter Konfiguration unterstützt. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
@@ -53,11 +53,11 @@ Die RMS-Freigabeanwendung für mobile Geräte unterstützt die gängigsten verwe
 
 
 ## Nächste Schritte
-Informationen dazu, wie andere Anwendungen und Dienste Rights Management unterstützen, finden Sie unter [Unterstützung von Azure Rights Management durch Anwendungen](applications-support.md).
+Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

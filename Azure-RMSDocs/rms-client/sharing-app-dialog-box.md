@@ -1,26 +1,26 @@
 ---
-title: Dialogfeldoptionen der Rights Management-Freigabeanwendung | Azure RMS
+title: "Dialogfeldoptionen für die Rights Management-Freigabeanwendung | Azure Information Protection"
 description: "Informationen, die Sie bei der Festlegung der Optionen in den Dialogfeldern „Schutz hinzufügen“ oder „Geschützt freigeben“ der RMS-Freigabeanwendung unterstützen. Dieses Dialogfeld wird angezeigt, wenn Sie eine freizugebende Datei schützen oder eine Datei auf einem Gerät (direkt) schützen und benutzerdefinierte Berechtigungen auswählen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 5f652b0e75350656f446c05d2464319ba46e06ad
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: a3a5fc8adf725d9cca0218e788988f718bd07bab
 
 
 ---
 
 # Dialogfeldoptionen der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1.*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Verwenden Sie diese Informationen als Hilfe bei der Angabe der Optionen in den Dialogfeldern **Schutz hinzufügen** oder **Geschützt freigeben** der RMS-Freigabeanwendung. Dieses Dialogfeld wird angezeigt, wenn Sie [eine freizugebende Datei schützen](sharing-app-protect-by-email.md) oder [eine Datei auf einem Gerät (direkt) schützen](sharing-app-protect-in-place.md) und benutzerdefinierte Berechtigungen auswählen.
 
@@ -42,8 +42,8 @@ Zusätzlich zu den Optionen, die Sie auswählen können, fragen Sie sich viellei
 |**Anzeigender Benutzer – Nur anzeigen**<br /><br />**Prüfer – Anzeigen und Bearbeiten**<br /><br />**Mitautor – Anzeigen, Bearbeiten, Kopieren und Drucken**<br /><br />**Mitbesitzer – Alle Berechtigungen**<br /><br />Hinweis: Jede dieser Optionen hat vor ihrem Namen ein rundes Symbol, das einen Globus darstellt. Dieses Symbol wird verwendet, weil Sie üblicherweise eine dieser Optionen auswählen, wenn Sie eine Anlage an jemanden in einer anderen Organisation senden.|Wählen Sie eine dieser Optionen aus, wenn Sie die Rechte für das geschützte Dokument definieren möchten. Klicken Sie auf jede Option, um eine Beschreibung anzuzeigen.<br /><br />Wenn Sie eine dieser Optionen auswählen, haben nur die Personen, die Sie unter **BENUTZER** angeben, die Rechte, die Sie zum Öffnen und Verwenden des Dokuments angeben. Wenn diese Personen das Dokument beispielsweise an eine andere Person weiterleiten würden, könnte das Dokument nicht geöffnet werden.|
 |Richtlinienvorlagen, die von Ihrem Administrator konfiguriert werden.<br /><br />Wenn der Name Ihres Unternehmens beispielsweise Contoso, Ltd lautet: **Contoso, Ltd – Nur vertrauliche Ansicht**<br /><br />Hinweis: Jede dieser Optionen hat vor ihrem Namen ein quadratisches Symbol , das ein Bürogebäude darstellt. Dieses Symbol wird verwendet, weil Sie üblicherweise eine dieser Optionen auswählen, wenn Sie eine Anlage an jemanden in Ihrer Organisation senden.|Beim Freigeben eines Dokuments für Personen, die für Ihre Organisation arbeiten, sehen Sie die verfügbaren Richtlinienvorlagen, die von Ihrem Administrator konfiguriert wurden. Wählen Sie eine dieser Option aus, wenn das Dokument nicht außerhalb Ihrer Organisation freigegeben werden soll.<br /><br />Wenn Sie eine dieser Optionen auswählen, definiert der Administrator sowohl die Rechte für das Dokument als auch, wer es öffnen kann.|
 |**Diese Dokumente sollen ablaufen am**|Wählen Sie diese Option nur für zeitkritische Dateien aus, für die es den von Ihnen ausgewählten Benutzern nicht möglich sein soll, sie nach einem von Ihnen angegebenen Datum öffnen zu können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) an dem von Ihnen angegebenen Tag können andere Benutzer die Datei nicht öffnen.<br /><br />Diese Option ist nicht verfügbar, wenn Sie eine Richtlinienvorlage auswählen, die der Administrator konfiguriert.|
-|**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Hinweis: Diese Option ist derzeit als Vorschau verfügbar.<br /><br />Wählen Sie diese Option aus, wenn Sie E-Mail-Benachrichtigungen erhalten möchten, sobald jemand versucht, das Dokument zu öffnen, das Sie schützen. In der E-Mail-Nachricht wird mitgeteilt, wer versucht hat, die Datei zu öffnen, wann dies war ob es erfolgreich war.<br /><br />Diese Option ist nur verfügbar, wenn in Ihrer Organisation Azure RMS verwendet wird. Wenn in Ihrer Organisation die lokale Version von Rights Management (AD RMS) verwendet wird, wird diese Option nicht angezeigt.|
-|**Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**|Wählen Sie diese Option aus, wenn Sie den Zugriff auf die Dokumente später möglicherweise über die Website für die Dokumentnachverfolgung widerrufen müssen und der Widerruf sofort in Kraft treten muss. Ein Auswählen dieser Option bedeutet jedoch, dass Benutzer, solange das Dokument nicht widerrufen ist, bei jedem Zugriff auf das Dokument eine Internetverbindung benötigen, um das Dokument zu lesen. Es gibt möglicherweise einige Szenarios, in denen Benutzer für ihre Geräte keine Verbindung mit dem Internet herstellen können, sodass die Benutzer Ihr Dokument nicht wie von Ihnen beabsichtigt lesen können.<br /><br />Wenn Sie diese Option nicht auswählen, können Sie die Dokumente immer noch später über Website für die Dokumentnachverfolgung widerrufen. Da Benutzer jedoch nicht immer eine Internetverbindung zum Lesen des Dokuments benötigen, erfahren sie nicht sofort, dass das Dokument widerrufen wurde, und können es weiter lesen, bis sie sich das nächste Mal bei Azure RMS authentifizieren. Standardmäßig beträgt die maximale Anzahl von Tagen, an denen jemand ein geschütztes Dokument, das Sie widerrufen haben, weiter lesen kann, 30 Tage, aber ein Administrator kann diesen Wert auf weniger oder mehr als 30 Tage ändern.<br /><br />Diese Option ist nur verfügbar, wenn in Ihrer Organisation Azure RMS verwendet wird. Wenn in Ihrer Organisation die lokale Version von Rights Management (AD RMS) verwendet wird, wird diese Option nicht angezeigt.|
+|**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Hinweis: Diese Option ist derzeit als Vorschau verfügbar.<br /><br />Wählen Sie diese Option aus, wenn Sie E-Mail-Benachrichtigungen erhalten möchten, sobald jemand versucht, das Dokument zu öffnen, das Sie schützen. In der E-Mail-Nachricht wird mitgeteilt, wer versucht hat, die Datei zu öffnen, wann dies war ob es erfolgreich war.<br /><br />Diese Option ist nur verfügbar, wenn in Ihrer Organisation Azure Information Protection verwendet wird. Wenn in Ihrer Organisation die lokale Version von Rights Management (AD RMS) verwendet wird, wird diese Option nicht angezeigt.|
+|**Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**|Wählen Sie diese Option aus, wenn Sie den Zugriff auf die Dokumente später möglicherweise über die Website für die Dokumentnachverfolgung widerrufen müssen und der Widerruf sofort in Kraft treten muss. Ein Auswählen dieser Option bedeutet jedoch, dass Benutzer, solange das Dokument nicht widerrufen ist, bei jedem Zugriff auf das Dokument eine Internetverbindung benötigen, um das Dokument zu lesen. Es gibt möglicherweise einige Szenarios, in denen Benutzer für ihre Geräte keine Verbindung mit dem Internet herstellen können, sodass die Benutzer Ihr Dokument nicht wie von Ihnen beabsichtigt lesen können.<br /><br />Wenn Sie diese Option nicht auswählen, können Sie die Dokumente immer noch später über Website für die Dokumentnachverfolgung widerrufen. Da Benutzer jedoch nicht immer eine Internetverbindung zum Lesen des Dokuments benötigen, erfahren sie nicht sofort, dass das Dokument widerrufen wurde, und können es weiter lesen, bis sie sich das nächste Mal bei Azure RMS authentifizieren. Standardmäßig beträgt die maximale Anzahl von Tagen, an denen jemand ein geschütztes Dokument, das Sie widerrufen haben, weiter lesen kann, 30 Tage, aber ein Administrator kann diesen Wert auf weniger oder mehr als 30 Tage ändern.<br /><br />Diese Option ist nur verfügbar, wenn in Ihrer Organisation Azure Information Protection verwendet wird. Wenn in Ihrer Organisation die lokale Version von Rights Management (AD RMS) verwendet wird, wird diese Option nicht angezeigt.|
 
 ## Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?
 
@@ -78,6 +78,6 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

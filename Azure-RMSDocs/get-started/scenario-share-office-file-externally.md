@@ -1,28 +1,28 @@
 ---
-title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure RMS"
-description: "In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können."
+title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure Information Protection"
+description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
 
 
 ---
 
 # Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
-In diesem Szenario und der begleitenden Benutzerdokumentation wird Azure Rights Management verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt.
+In diesem Szenario und der unterstützenden Benutzerdokumentation wird die Azure Rights Management-Technologie von Azure Information Protection verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können. Eine Office-Datei kann z.B. ein Word-Dokument, eine Excel-Tabelle oder eine PowerPoint-Präsentation sein, die Preislisteninformationen für einen Partner, eine Liste mit Produkten für einen Händler oder eine Liste mit Bereitstellungsfristen für potenzielle Kunden enthält. Wenn der Benutzer die Anweisungen befolgt, wird die in der E-Mail-Nachricht angefügte Datei durch Azure Rights Management geschützt.
 
 Dieses Szenario eignet sich für folgende Fälle:
 
@@ -44,11 +44,11 @@ Damit die Benutzeranweisungen in diesem Szenarion funktionieren, muss Folgendes 
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
 |---------------|--------------------------------|
-|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet.|[Vorbereiten für Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet.|[Vorbereiten für Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|Benutzer verwenden Outlook aus Office 2013.|Wenn Benutzer Office 2010 haben, ersetzen Sie den Screenshot mit einer entsprechenden Version, damit die Ansicht das zeigt, was Benutzer sehen.|
-|Ihr Azure RMS-Abonnement umfasst die Dokumentnachverfolgung.|Wenn Sie Ihr Abonnement für Azure RMS keine Nachverfolgung und keinen Widerruf von Dokumenten umfasst, können Benutzer nicht alle Schritte in den Benutzeranweisungen ausführen. Erwerben Sie in diesem Fall entweder ein Abonnement, das diese Funktionen unterstützt, oder ändern die Benutzeranweisungen som dass die Schritte entfernt werden, die diese Funktionen verwenden.<br /><br />So überprüfen Sie Ihren Abonnementsupport: [Vergleich der Rights Management Services(RMS)-Angebote](https://technet.microsoft.com/dn858608)|
+|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|Benutzer verwenden Outlook aus Office 2013.|Wenn Benutzer Office 2016 oder Office 2010 verwenden, ersetzen Sie den Screenshot durch eine entsprechende Version, sodass die Abbildung mit der Version der Benutzer übereinstimmt.|
+|Ihr Abonnement für Azure Information Protection umfasst die Dokumentkontrolle.|Wenn Ihr Abonnement keine Dokumentkontrolle und keinen Widerruf von Dokumenten umfasst, können Benutzer nicht alle Schritte in den Benutzeranweisungen ausführen. Erwerben Sie in diesem Fall entweder ein Abonnement, das diese Funktionen unterstützt, oder ändern die Benutzeranweisungen som dass die Schritte entfernt werden, die diese Funktionen verwenden.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 ## Anweisungen für Benutzerdokumentation
 Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie als Anpassung an Ihre Umgebung die folgenden Änderungen vor:
@@ -104,9 +104,9 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 -   Zusätzliche Informationen:
 
-    -   [Schützen einer Datei, die per E-Mail freigegeben ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Schützen einer Datei, die per E-Mail freigegeben ist](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Verfolgen und Widerrufen von Dokumenten](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Verfolgen und Widerrufen von Dokumenten](../rms-client/sharing-app-track-revoke.md)
 
 -   Wenden Sie sich an den Helpdesk:
 
@@ -143,9 +143,9 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 -   Zusätzliche Informationen:
 
-    -   [Schützen einer Datei, die per E-Mail freigegeben ist](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Schützen einer Datei, die per E-Mail freigegeben ist](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Verfolgen und Widerrufen von Dokumenten](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Verfolgen und Widerrufen von Dokumenten](../rms-client/sharing-app-track-revoke.md)
 
 -   Wenden Sie sich an den Helpdesk:
 
@@ -154,6 +154,6 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

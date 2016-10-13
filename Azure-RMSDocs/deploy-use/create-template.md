@@ -1,19 +1,19 @@
 ---
-title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure RMS"
+title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure Information Protection"
 description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlagen im klassischen Azure-Portal. Mit Vorlagen können Endbenutzer und andere Administratoren ganz einfach geeignete Richtlinien anwenden, um Dokumente und E-Mails zu schützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
+ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
+ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
 
 
 ---
@@ -21,12 +21,12 @@ ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
 
 # Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
->*Gilt für: Azure Rights Management, Office 365*
+>*Gilt für: Azure Information Protection, Office 365*
 
 
 Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die **erweiterten Funktionen** für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden.
 
-Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für Azure RMS anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für den Azure Rights Management-Dienst anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Rights Management zu erstellen, zu konfigurieren und zu veröffentlichen.
 
@@ -45,7 +45,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
         4.  Klicken Sie im Abschnitt **Rechteverwaltung** auf **Erweiterte Features**.
 
             > [!NOTE]
-            > Wenn Sie Rights Management nicht aktiviert haben, klicken Sie zuerst auf **Aktivieren**, und bestätigen Sie Ihre Aktion. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
+            > Wenn Sie den Rights Management-Dienst nicht aktiviert haben, klicken Sie zuerst auf **Aktivieren**, und bestätigen Sie dann Ihre Aktion. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
             > 
             > Wenn Sie zuvor noch nicht auf **Erweiterte Funktionen** geklickt haben, befolgen Sie nach der Aktivierung von Rights Management die Anweisungen auf dem Bildschirm, um ein kostenloses Azure-Abonnement zu erhalten, das für den Zugriff auf das klassische Azure-Portal erforderlich ist.
 
@@ -70,9 +70,11 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
         Wenn Sie diese Seite nicht sofort nach dem Ausführen der Anweisungen für Office 365 sehen, befolgen Sie die oben aufgeführten Navigationsanweisungen für das klassische Azure-Portal.
 
-3.  Wählen Sie auf der Seite **Neue Richtlinienvorlage für Rechte hinzufügen** eine Sprache aus, in der Sie den Namen und die Beschreibung der Vorlage eingeben möchten, die Benutzern angezeigt werden (Sie können später weitere Sprachen hinzufügen). Geben Sie dann einen eindeutigen Namen und eine Beschreibung ein, und klicken Sie auf die Schaltfläche "Fertig stellen".
+3. Wählen Sie auf der Seite **Neue Richtlinienvorlage für Rechte hinzufügen** eine Sprache aus, in der Sie den Namen und die Beschreibung der Vorlage eingeben möchten, die Benutzern angezeigt werden (Sie können später weitere Sprachen hinzufügen). Geben Sie dann einen eindeutigen Namen und eine Beschreibung ein, und klicken Sie auf die Schaltfläche "Fertig stellen".
 
-Klicken Sie auf der Schnellstartseite **Erste Schritte mit der Rechteverwaltung** auf **Vorlagen für Benutzerrechterichtlinien verwalten**. Ihre neu erstellte Vorlage wird mit dem Status **Archiviert**in der Liste der Vorlagen angezeigt. Zu diesem Zeitpunkt ist die Vorlage zwar erstellt, aber noch nicht konfiguriert und für die Benutzer noch nicht sichtbar.
+    Verwenden Sie keinen Doppelpunkt und kein Semikolon im Namen oder in der Beschreibung. Doppelpunkte und Semikolons werden für diese Vorlagen nicht von allen Diensten und Anwendungen, die Rights Management-Vorlagen verwenden, unterstützt. In einem solchen Fall können die Azure Rights Management-Vorlagen möglicherweise von diesen Diensten und Anwendungen nicht abgerufen oder verwendet werden.
+
+4. Klicken Sie auf der Schnellstartseite **Erste Schritte mit der Rechteverwaltung** auf **Vorlagen für Benutzerrechterichtlinien verwalten**. Ihre neu erstellte Vorlage wird mit dem Status **Archiviert**in der Liste der Vorlagen angezeigt. Zu diesem Zeitpunkt ist die Vorlage zwar erstellt, aber noch nicht konfiguriert und für die Benutzer noch nicht sichtbar.
 
 ## So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
 
@@ -166,6 +168,6 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
