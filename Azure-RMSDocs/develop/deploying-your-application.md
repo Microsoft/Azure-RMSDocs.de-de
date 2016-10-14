@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: e47c5331f49c62a00617f40b1af7ffdc4a89dcfd
+ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
+ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
 
 
 ---
@@ -61,8 +61,6 @@ Gehen Sie zum Beantragen eines Vertrags wie Folgt vor:
 Das Active Directory Rights Management Licensing Agreement (ADRMLA)-Team antwortet binnen drei Werktagen auf Ihren per E-Mail gesendeten Antrag. Die Beantwortung von per Post gesendeten Anträgen dauert länger. Die Antwort enthält das Formular für den Lizenzvertrag und weitere Anweisungen. Lesen Sie den vollständigen Vertrag, unterzeichnen Sie ihn, und senden Sie alle Seiten an das ADRMLA-Team zurück. Bitte ändern Sie weder die Schriftarten noch die Formatierung der Absätze des Lizenzvertrags.
 
 Beachten Sie unbedingt die vom ADRMLA-Team erhaltenen Anweisungen. In den Anweisungen sind die digitalen Informationen aufgeführt, die Sie in Ihrem Zertifikatsantrag angeben müssen. Indem Sie die schrittweisen Anweisungen befolgen, vermeiden Sie Verzögerungen.
-
-Das ADRMLA-Team leitet das daraufhin erstellte Produktionszertifikat an Sie weiter. Beachten Sie, dass die Zusendung Ihres Zertifikats durch das ADRMLA-Team bis zu 15 Werktage dauern kann. Die Zusendung per Post kann länger dauern.
 
 
 ## Installationsoptionen und Voraussetzungen für Rights Management Service Client 2.1
@@ -132,6 +130,6 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
