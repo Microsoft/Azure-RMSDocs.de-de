@@ -108,14 +108,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-* [iOS/OS X-API-Referenz](/information-protection/sdk/4.2/api/ios/ios)
+* [iOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
 
 
 
