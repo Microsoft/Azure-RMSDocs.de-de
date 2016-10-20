@@ -3,7 +3,7 @@ title: "Weitere Anwendungen, die die Rights Management-APIs unterstützen – In
 description: "Erfahren Sie, wie der Azure Rights Management-Dienst von Azure Information Protection andere Anwendungen dabei unterstützen kann, die Daten Ihrer Organisation zu schützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: 1b2a6f24824ca4efbed11403a8a863992c93ed38
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 0ee1e316310df889f87b1bc7932d8970abae140f
 
 
 ---
@@ -26,13 +26,13 @@ Erfahren Sie anhand der folgenden Informationen, wie der Azure Rights Management
 
 Durch die Verwendung des Rights Management-SDK können interne Entwickler Branchenanwendungen schreiben, die den Azure Rights Management-Dienst nativ unterstützen. Wie Informationsschutz in diese Anwendungen integriert wird, hängt davon ab, wie sie geschrieben sind. Beispielsweise kann die Integration automatisch, mit nur einem Minimum an erforderlicher Benutzerinteraktion angewendet werden, oder Benutzer können zur Erzeugung einer stärker angepassten Erfahrung aufgefordert werden, Einstellungen für die Anwendung von Informationsschutz auf Dateien zu konfigurieren. Weitere Informationen zum SDK finden Sie im [Entwicklerhandbuch](../develop/developers-guide.md).
 
-Ebenso bieten zahlreiche Softwarehersteller Anwendungen für die Bereitstellung von Informationsschutzlösungen an, die auch als ERM-Produkte (Enterprise Rights Management) bezeichnet werden. Ein beliebtes Beispiel ist ein PDF-Reader, der den Azure Rights Management-Dienst für bestimmte Plattformen unterstützt. Mithilfe der Tabelle unter [Azure RMS-Anforderungen: Anwendungen](../get-started/requirements-applications.md) können Sie die Anwendungen ermitteln, die Rights Management unterstützen (RMS-fähige Anwendungen). Führen Sie dann eine Websuche durch, um die Anwendung zu kaufen oder herunterzuladen.
+Ebenso bieten zahlreiche Softwarehersteller Anwendungen für die Bereitstellung von Informationsschutzlösungen an, die auch als ERM-Produkte (Enterprise Rights Management) bezeichnet werden. Ein beliebtes Beispiel ist ein PDF-Reader, der den Azure Rights Management-Dienst für bestimmte Plattformen unterstützt. Mithilfe der Tabelle unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md) können Sie die Anwendungen ermitteln, die das Rights Management unterstützen (RMS-fähige Anwendungen). Führen Sie anschließend eine Websuche durch, um die gewünschte Anwendung zu kaufen oder herunterzuladen.
 
 ## Nächste Schritte
 
 Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 
