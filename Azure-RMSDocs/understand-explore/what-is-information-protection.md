@@ -3,15 +3,15 @@ title: Was ist Azure Information Protection? | Azure Information Protection
 description: "Eine Übersicht über den Azure Information Protection-Dienst."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: 590f12e0c6c6122a6bc0a559940870c18f0e2d39
-ms.openlocfilehash: 350a3cb877674208b4c560bb841135904aee1136
+ms.sourcegitcommit: 0098fa28313561e99f39e2539e20c8a6bc0207f7
+ms.openlocfilehash: eaaa08a99b3c065422dd8b0bc01d89ead15e9d49
 
 
 ---
@@ -84,9 +84,21 @@ Wenn Benutzer ihre geschützten Dokumente per E-Mail freigeben, können sie eine
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Videopräsentation:
+- Video-Überblick
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+
+    Darüber hinaus bietet Microsoft Ignite 2016 viele auf Abruf verfügbare Sitzungen für Azure Information Protection:
+
+    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely (BRK2127: Einführen einer umfassenden identitätsgesteuerten Lösung für den Schutz und die sichere Freigabe von Dateien)](https://myignite.microsoft.com/videos?q=BRK2127)
+    
+    - [THR2107: Collaborate securely using Azure Information Protection (THR2107: Sichere Zusammenarbeit mithilfe von Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2107)
+    
+    - [THR2108: Ensure comprehensive protection of your data with Azure Information Protection (THR2108: Sicherstellen des umfassenden Schutzes Ihrer Daten mit Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2108)
+    
+    - [BRK3095: Learn how classification, labeling, and protection delivers persistent data protection (BRK3095: Erlernen, wie Klassifizierung, Bezeichnung und Schutz persistenten Datenschutz bieten)](https://myignite.microsoft.com/videos?q=BRK3095)
+    
+    - [BRK2128: Send secure email to anyone with the power of Microsoft Office 365 and Azure Information Protection (BRK2128: Senden von sicheren E-Mails mithilfe von Microsoft Office 365 und Azure Information Protection)](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
 ## Nächste Schritte
@@ -96,6 +108,6 @@ Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnel
 Kennen Sie Azure Information Protection oder Azure Rights Management unter einem anderen Namen? Weitere Informationen dazu finden Sie in [unserer Liste alternativer Benennungen für den Dienst](azure-rms-aka.md).
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

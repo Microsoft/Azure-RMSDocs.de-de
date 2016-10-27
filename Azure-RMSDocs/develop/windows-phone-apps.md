@@ -78,7 +78,7 @@ Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
 [Windows Phone-Entwicklung](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Windows-API-Referenz](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 

@@ -142,7 +142,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-[Android-API-Referenz](android-namespaces.md)
+[Android-API-Referenz](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 
