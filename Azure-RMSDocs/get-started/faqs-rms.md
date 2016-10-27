@@ -3,7 +3,7 @@ title: "Häufig gestellte Fragen zum Azure Rights Management-Dienst von Azure In
 description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/10/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
 
 
 ---
@@ -94,7 +94,7 @@ Wie der Optionsname deutlich zeigt, befindet sich dieser neue Gruppentyp noch in
 
 
 ## Welche Geräte und welche Dateitypen werden von Azure RMS unterstützt?
-Eine Liste der vom Azure Rights Management-Dienst unterstützten Geräte finden Sie unter [Azure RMS-Anforderungen: Clientgeräte, die Azure RMS unterstützen](../get-started/requirements-client-devices.md). Da derzeit nicht alle unterstützten Geräte alle Rights Management-Funktionen unterstützen, sehen Sie sich auch die Tabelle unter [Azure RMS-Anforderungen: Anwendungen](../get-started/requirements-applications.md) an.
+Eine Liste mit Geräten, die den Azure Rights Management-Dienst unterstützen, finden Sie unter [Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-client-devices.md). Da derzeit nicht alle unterstützten Geräte alle Rights Management-Funktionen unterstützen, sollten Sie sich auch die Tabelle unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md) ansehen.
 
 Der Azure Rights Management-Diensts kann sämtliche Dateitypen unterstützen. Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen stellt Azure Rights Management nativen Schutz bereit, der Verschlüsselung und die Durchsetzung von Rechten (Berechtigungen) umfasst. Für alle anderen Anwendungen und Dateitypen bietet generischer Schutz Dateiverkapselung und Authentifizierung, damit überprüft wird, ob ein Benutzer zum Öffnen der Datei autorisiert ist.
 
@@ -145,6 +145,6 @@ Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleit
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO2-->
 
 

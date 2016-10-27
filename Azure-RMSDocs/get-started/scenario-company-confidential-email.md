@@ -3,7 +3,7 @@ title: "Szenario – Senden einer vertraulichen geschäftlichen E-Mail | Azure I
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, sodass alle Benutzer innerhalb der Organisation E-Mail-Nachrichten sicher senden können, die außerhalb der Organisation nicht lesbar sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
+ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
+ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
 
 
 ---
@@ -54,7 +54,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
 |Eine der folgenden Komponenten:<br /><br />– Exchange Online ist für Azure Rights Management aktiviert<br /><br />– Der RMS-Connector ist für die lokale Exchange-Anwendung installiert und konfiguriert|Für Exchange Online: Informationen finden Sie im Abschnitt **Exchange Online: IRM-Konfiguration** unter [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md).<br /><br />Für lokales Exchange: [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md)|
 |Sie haben die Azure Rights Management-Standardvorlage **&lt;Organisation&gt; – Vertraulich** nicht archiviert. Oder Sie haben eine benutzerdefinierte Vorlage für diesen Zweck konfiguriert, da Sie eine restriktivere Einstellung benötigen oder nur eine Teilmenge der Benutzer in der Organisation die geschützten E-Mails lesen können soll.|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)<br /><br />Tipp: Wenn Sie restriktivere Nutzungsrichtlinieneinstellungen für alle Benutzer in Ihrer Organisation benötigen, kopieren Sie eine der Standardvorlagen, und bearbeiten Sie diese, anstatt eine von Grund auf neue Vorlage zu erstellen.<br /><br />Aktualisierte Vorlagen werden für die E-Mail-Clients in diesem Szenario nicht sofort aktualisiert. Weitere Informationen finden Sie im Artikel [Aktualisieren von Vorlagen für Benutzer](../deploy-use/refresh-templates.md).|
-|Benutzer, die die geschützte E-Mail senden, verwenden Outlook 2013 oder 2016 oder Outlook Web Access.<br /><br />Benutzer, die die E-Mail empfangen, verwenden einen E-Mail-Client, der Azure Rights Management unterstützt.|Sie können Outlook 2010 verwenden, müssen aber die [Rights Management-Freigabeanwendung für Windows installieren](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) und die Benutzeranweisungen entsprechend anpassen.<br /><br />Eine Liste der E-Mail-Clients, die Azure Rights Management unterstützen, finden Sie in der Spalte **E-Mail** in der Tabelle unter [Azure RMS-Anforderungen: Anwendungen](../get-started/requirements-applications.md).|
+|Benutzer, die die geschützte E-Mail senden, verwenden Outlook 2013 oder 2016 oder Outlook Web Access.<br /><br />Benutzer, die die E-Mail empfangen, verwenden einen E-Mail-Client, der Azure Rights Management unterstützt.|Sie können Outlook 2010 verwenden, müssen aber die [Rights Management-Freigabeanwendung für Windows installieren](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) und die Benutzeranweisungen entsprechend anpassen.<br /><br />Eine Liste der E-Mail-Clients, die Azure Rights Management unterstützen, finden Sie in der **E-Mail**-Spalte der Tabelle unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).|
 
 ## Anweisungen für Benutzerdokumentation
 Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie als Anpassung an Ihre Umgebung die folgenden Änderungen vor:
@@ -157,6 +157,6 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

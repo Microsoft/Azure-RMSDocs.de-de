@@ -1,79 +1,10 @@
 ---
-title: Vergleich von Azure Information Protection und AD RMS | Azure Information Protection
-description: Wenn Sie Active Directory Rights Management Services (AD RMS) bereits kennen oder bereitgestellt haben, fragen Sie sich vielleicht, wie sich Azure Information Protection in Bezug auf die Funktionen und Anforderungen unterscheidet.
-author: cabailey
-manager: mbaldwin
-ms.date: 10/05/2016
-ms.topic: article
-ms.prod: 
-ms.service: information-protection
-ms.technology: techgroup-identity
-ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
-ms.reviewer: esaggese
-ms.suite: ems
+redirect_url: compare-on-premise
 translationtype: Human Translation
-ms.sourcegitcommit: 4591d5c45104108ccf151bb1d7a9382652e585a6
-ms.openlocfilehash: 36adf768bdb5a0937af3563665bbe139c86ff250
-
+ms.sourcegitcommit: 52b603971c1cfab0822857d192c1330f33dd1770
+ms.openlocfilehash: d703253695d7b3d61a82ca96453c23519b232590
 
 ---
-
-# Vergleich von Azure Information Protection und AD RMS
-
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
-
-Wenn Sie Active Directory Rights Management Services (AD RMS) bereits kennen oder bereitgestellt haben, fragen Sie sich vielleicht, wie sich Azure Information Protection in Bezug auf die Funktionen und Anforderungen als Lösung für den Schutz von Daten unterscheidet.
-
-Einige der Hauptunterschiede von Azure Information Protection:
-
-- **Keine Serverinfrastruktur erforderlich:** Azure Information Protection benötigt nicht die zusätzlichen Server und PKI-Zertifikate, die AD RMS erfordert, da sich Microsoft Azure für Sie darum kümmert. Dadurch kann diese Cloudlösung schneller bereitgestellt werden und ist leichter zu verwalten.
-
-- **Cloudbasierte Authentifizierung:** Azure Information Protection verwendet Azure AD für die Authentifizierung – sowohl für interne als auch für Benutzer anderer Organisationen. Das bedeutet, dass Ihre mobilen Benutzer authentifiziert werden können, selbst wenn sie nicht mit Ihrem internen Netzwerk verbunden sind. Außerdem ist es einfacher, geschützte Inhalte für Benutzer aus anderen Organisationen freizugeben. Viele Organisationen verfügen bereits über Benutzerkonten in Azure AD, da sie Azure-Dienste ausführen oder Office 365 haben. Falls dies nicht der Fall ist, lässt RMS for Individuals Benutzer ein kostenloses Konto erstellen. Sie müssen explizite Vertrauensstellungen mit jeder Organisation konfigurieren, um von AD RMS geschützten Inhalt für andere Organisationen freizugeben.
-
-- **Integrierter Support für mobile Geräte**: Es sind keine Bereitstellungsänderungen erforderlich, damit Azure RMS mobile Geräte und Macintosh-Computer unterstützt. Sie müssen die Mobilgeräteerweiterung installieren, AD FS für den Verbund konfigurieren und zusätzliche Datensätze für Ihren öffentlichen DNS-Dienst erstellen, damit diese Geräte von AD RMS unterstützt werden.
-
-- **Standardvorlagen:** Azure Information Protection erstellt zwei Standardvorlagen, sobald der Schutzdienst aktiviert ist. Dadurch ist es sehr einfach, sofort mit dem Schützen wichtiger Daten zu beginnen. Es gibt keine Standardvorlagen für AD RMS.
-
-- **Abteilungsvorlagen:** Azure Information Protection unterstützt Abteilungsvorlagen als eine Konfigurationseinstellung für die zusätzlichen Vorlagen, die Sie erstellen. Durch diese Einstellung können Sie angeben, welchen Benutzern die Vorlage in ihren Clientanwendungen (wie z.B. Office-Apps) angezeigt wird. Dadurch wird ihnen das Auswählen der richtigen Richtlinie erleichtert, die Sie für verschiedene Benutzergruppen definieren. AD RMS unterstützt keine Abteilungsvorlagen.
-
-- **Dokumentkontrolle, Sperrung und E-Mail-Benachrichtigung:** Azure Information Protection unterstützt diese Features mit der RMS-Freigabe-App, während dies bei AD RMS nicht der Fall ist.
-
-- **Klassifizierungen und Bezeichnungen:** Azure Information Protection unterstützt diese Features über die Azure Information Protection-Leiste, die in Office-Anwendung integriert ist, während dies bei AD RMS nicht der Fall ist.
-
-
-Zudem kann Azure Information Protection neue Features und Fixes schneller bereitstellen als eine lokale, serverbasierte Lösung, da es sich dabei um einen Clouddienst handelt. Es sind keine neuen Features für AD RMS unter Windows Server 2016 geplant.
-
-Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die eine vergleichende Gegenüberstellung der Features und Vorteile von Azure Information Protection und AD RMS zeigt. Antworten auf sicherheitsbezogene Fragen, die den Vergleich betreffen, finden Sie im Abschnitt [Kryptografiesteuerelemente zum Signieren und Verschlüsseln](compare-azure-rms-ad-rms.md#cryptographic-controls-for-signing-and-encryption) in diesem Artikel.
-
-> [!NOTE]
-> Um diesen Vergleich zu erleichtern, werden hier einige Informationen aus [Voraussetzungen für Azure Information Protection](../get-started/requirements-azure-rms.md) wiederholt. In dieser Quelle finden Sie spezifischere Support- und Versionsinformationen zu [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
-
-|Azure Information Protection|AD RMS|
-|-----------------------------------------------------------------------------------------|--------------------------------------------------------|
-|Unterstützt IRM-Funktionen (Verwaltung von Informationsrechten) in Microsoft Online Services wie Exchange Online und SharePoint Online sowie in Office 365.<br /><br />Unterstützt ebenfalls lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|Unterstützt lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|
-|Ermöglicht implizite Vertrauensstellungen zwischen Organisationen und Benutzern in jeder Organisation. Dies bedeutet, dass geschützter Inhalt zwischen Benutzern innerhalb derselben Organisation oder zwischen Organisationen freigegeben werden kann, wenn die Benutzer über [!INCLUDE[o365_1](../includes/o365_1_md.md)] oder [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] verfügen oder sich für RMS for Individuals registrieren.|Vertrauensstellungen müssen ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung zwischen Organisationen definiert werden, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (Active Directory Federation Services, AD FS) erstellen.|
-|Stellt zwei Standardvorlagen für Rechterichtlinien bereit, die den Zugriff auf die Inhalte auf Ihre eigene Organisation beschränken. Eine, die die schreibgeschützte Anzeige geschützter Inhalte bietet, und eine andere Vorlage, die Schreib- oder Änderungsberechtigungen für den geschützten Inhalt bereitstellt.<br /><br />Sie können auch eigene benutzerdefinierte Vorlagen erstellen, wozu Abteilungsvorlagen gehören, die nur für eine Teilmenge von Benutzern sichtbar sind. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|Es sind keine standardmäßigen Vorlagen für Benutzerrechterichtlinien verfügbar. Sie müssen diese erstellen und dann verteilen. Weitere Informationen finden Sie unter [Überlegungen zur AD RMS-Richtlinienvorlage](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|
-|Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird nicht unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2007.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird unterstützt|
-|Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte.<br /><br />Zusätzlich unterstützt die RMS-Freigabeanwendung Folgendes:<br /><br />– Freigeben für Personen in einer anderen Organisation<br /><br />– E-Mail-Benachrichtigung, die den Absender informiert, wenn jemand versucht, eine geschützte Anlage zu öffnen<br /><br />– Eine Website für die Dokumentnachverfolgung für Benutzer mit der Möglichkeit, ein Dokument zu widerrufen|Unterstützt die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) für Windows, für Mac-Computer und für mobile Geräte. Allerdings unterstützt Freigeben weder ein Freigeben für Benutzer in einer anderen Organisation, noch E-Mail-Benachrichtigungen oder die Dokumentnachverfolgung noch die Möglichkeit für Benutzer, Dokumente zu widerrufen.|
-|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Weitere Informationen zu anderen Anwendungen finden Sie in der Tabelle im [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).|Alle Dateitypen können bei Verwendung der RMS-Freigabeanwendung mit [nativem oder allgemeinem Schutz](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) geschützt werden.<br /><br />Weitere Informationen zu anderen Anwendungen finden Sie in der Tabelle im [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).|
-|Die unterstützte Mindestversion des Windows-Clients ist Windows 7.|Die unterstützte Mindestversion des Windows-Clients ist Windows Vista Service Pack 2.|
-|Die Unterstützung mobiler Geräte umfasst Windows Phone, Android, iOS und Windows RT.<br /><br />E-Mail-Unterstützung durch Verwendung von Exchange ActiveSync IRM wird ebenfalls auf allen mobilen Geräteplattformen unterstützt, die dieses Protokoll unterstützen.|Die Unterstützung mobiler Geräte umfasst Windows Phone, Android, iOS und Windows RT und erfordert die [mobile Erweiterung für Active Directory-Rechteverwaltungsdienste](http://technet.microsoft.com/library/dn673574.aspx).<br /><br />E-Mail-Unterstützung durch Verwendung von Exchange ActiveSync IRM wird auf allen mobilen Geräteplattformen unterstützt, die dieses Protokoll unterstützen.|
-|Unterstützt Multi-Factor Authentication (MFA) für Computer und mobile Geräte.<br /><br />Weitere Informationen finden Sie unter [Multi-Factor Authentication (MFA) und Azure Information Protection](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms).|Unterstützt Smartcard-Authentifizierung, wenn IIS so konfiguriert ist, dass Zertifikate angefordert werden.|
-|Unterstützt den Kryptografiemodus 2 ohne zusätzliche Konfiguration, der höhere Sicherheit für Schlüssellängen und Verschlüsselungsalgorithmus bietet.<br /><br />Weitere Informationen finden Sie im Artikel [Kryptografiesteuerelemente zum Signieren und Verschlüsseln](#cryptographic-controls-for-signing-and-encryption) in diesem Thema und in [AD RMS-Kryptografiemodi](http://go.microsoft.com/fwlink/?LinkId=266659).|Unterstützt standardmäßig den Kryptografiemodus 1 und erfordert eine zusätzliche Konfiguration zur Unterstützung des Kryptografiemodus 2 für höhere Sicherheit.<br /><br />Weitere Informationen finden Sie im Artikel [Kryptografiesteuerelemente zum Signieren und Verschlüsseln](#cryptographic-controls-for-signing-and-encryption) in diesem Thema und in [AD RMS-Kryptografiemodi](http://go.microsoft.com/fwlink/?LinkId=266659).|
-|Unterstützt die Migration von AD RMS und, falls erforderlich, zu AD RMS:<br /><br />- [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)<br /><br />- [Außerbetriebsetzen und Deaktivieren von Azure Information Protection](../deploy-use/decommission-deactivate.md)|Unterstützt das Migrieren zu und von Azure Information Protection:<br /><br />- [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](../deploy-use/decommission-deactivate.md)<br /><br />- [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md)|
-|Erfordert eine Azure Information Protection-Lizenz für den Schutz von Inhalten. Es ist keine Azure Information Protection-Lizenz erforderlich, um Inhalte zu verwenden, die mit Azure Information Protection geschützt wurden (einschließlich Benutzern aus einer anderen Organisation).<br /><br />Weitere Informationen finden Sie in der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|Erfordert eine RMS-Lizenz, um Inhalte zu schützen, sowie zum Verwenden von Inhalten, die mit AD RMS geschützt wurden.<br /><br />Weitere, allgemeine Informationen zur Lizenzierung für AD RMS finden Sie unter [Clientzugriffslizenzen und Management-Lizenzen](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) . Wenn Sie spezifische Informationen benötigen, wenden Sie sich bitte an Ihren Microsoft-Partner oder den für Sie zuständigen Mitarbeiter von Microsoft.|
-
-## Kryptografiesteuerelemente zum Signieren und Verschlüsseln
-Azure Information Protection verwendet immer RSA 2048 für Kryptografieaufgaben mit öffentlichem Schlüssel und SHA 256 für Signaturvorgänge. Im Vergleich unterstützt AD RMS RSA 1024 und RSA 2048 sowie SHA 1 und SHA 256 für Signaturvorgänge.
-
-Sowohl Azure Information Protection als auch AD RMS verwenden AES 128 für die symmetrische Verschlüsselung.
-
-Azure Information Protection ist mit FIPS 140-2 kompatibel, wenn Ihr Mandantenschlüssel von Microsoft erstellt und verwaltet wird (Standard) oder wenn Sie Ihren eigenen Mandantenschlüssel verwalten (bekannt als BYOK). Weitere Informationen zum Verwalten Ihres Mandantenschlüssels finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
-
-## Nächste Schritte
-Wenn Sie eine Migration von AD RMS zu Azure Information Protection durchführen möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md) nach.
-
-
 
 
 
