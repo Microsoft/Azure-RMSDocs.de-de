@@ -3,7 +3,7 @@ title: Neuheiten und Versionshinweise | Azure RMS
 description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: da4dce1c44cd79e90e7d232f74f194b734dea0f6
+ms.sourcegitcommit: 81cbe287b67e2a1598efdd2a816913f147c7ff7b
+ms.openlocfilehash: f3d4b1ba0da3530121aa81056238533f0dcbed2f
 
 
 ---
 
-# Neuheiten und Versionshinweise
+# Neuheiten und Anmerkungen zu dieser Version
 
 ## Neuheiten
 Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung. In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK beschrieben.
@@ -37,7 +37,7 @@ Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und fle
 ### Neu ab Juni 2016
 
 - **Unterstützung moderner Authentifizierung**: Diese ermöglicht in RMS-fähigen Apps die Anmeldung mithilfe der Active Directory-Authentifizierungsbibliothek (Active Directory Authentication Library; ADAL). Dadurch werden Anmeldefunktionen wie Multi-Factor Authentication (MFA), SAML-basierte Identitätsanbieter (Drittanbieter) mit RMS-Clientanwendungen und die smartcard- und zertifikatbasierte Authentifizierung aktiviert. Außerdem müssen RMS-fähige Apps nicht mehr das Standardauthentifizierungsprotokoll verwenden.
-- **Unterstützung von Dokumentkontrolle**: Entwickler können nun die Dokumentkontrolle aktivieren, wenn sie Dokumente in ihren Apps schützen 
+- **Unterstützung von Dokumentkontrolle**: Entwickler können nun die Dokumentkontrolle aktivieren, wenn sie Dokumente in ihren Apps schützen
 - Leistungsverbesserungen
 - Fehlerbehebungen
 
@@ -48,29 +48,29 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 
 -   Dokumentenverfolgung, nur RMS Online für iOS/OS X- und Android-Betriebssysteme.
 
-    Details und Anleitungen für iOS/OS X erhalten Sie in der [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc)-Klasse. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentenverfolgung mit [**MSUserPolicy**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msuserpolicy_interface_objc). Ähnliche Ergänzungen sind für Android für [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) und [**UserPolicy**](/information-protection/sdk/4.2/api/android/userpolicy) vorhanden.
+    Details und Anleitungen für iOS/OS X erhalten Sie in der [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)-Klasse. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentnachverfolgung mit [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ähnliche Ergänzungen sind für Android für [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) und [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) vorhanden.
 
-    Eine ausführliche Beschreibung der Dokumentenverfolgungsfunktion finden Sie unter [**Vorgehensweise: Verwenden von Dokumentenverfolgung**](how-to-use-document-tracking.md).
+    Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden von Dokumentenverfolgung](how-to-use-document-tracking.md).
 
 -   Eine Reihe synchroner Methoden, die parallel zu den asynchronen Versionen für die Android-API verwendet werden:
 
-    [**Synchrone CustomProtectedInputStream.create-Methode**](/information-protection/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_create_synchronous_method_java)
+    [Synchrone CustomProtectedInputStream.create-Methode](https://msdn.microsoft.com/library/mt631362.aspx)
 
-    [**Synchrone CustomProtectedOutputStream.create-Methode**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [Synchrone CustomProtectedOutputStream.create-Methode](https://msdn.microsoft.com/library/mt631363.aspx)
 
-    [**Synchrone ProtectedFileInputStream.create-Methode**](/information-protection/sdk/4.2/api/android/protectedfileinputstream#msipcthin2_protectedfileinputstream_create_synchronous_method)
+    [Synchrone ProtectedFileInputStream.create-Methode](https://msdn.microsoft.com/library/mt631375.aspx)
 
-    [**Synchrone ProtectedFileOutputStream.create-Methode**](/information-protection/sdk/4.2/api/android/customprotectedoutputstream#msipcthin2_customprotectedoutputstream_create_synchronous_method)
+    [Synchrone ProtectedFileOutputStream.create-Methode](https://msdn.microsoft.com/library/mt631376.aspx)
 
-    [**Synchrone TemplateDescriptor.getTemplates-Methode**](/information-protection/sdk/4.2/api/android/templatedescriptor#msipcthin2_templatedescriptor_gettemplates_synchronous_method_java)
+    [Synchrone TemplateDescriptor.getTemplates-Methode](https://msdn.microsoft.com/library/mt631380.aspx)
 
-    [**Synchrone UserPolicy.acquire-Methode**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_acquire_synchronous_method_java)
+    [Synchrone UserPolicy.acquire-Methode](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [**Synchrone UserPolicy.create-Methode (PolicyDescriptor…)**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_policydescriptor_______synchronous_method_java)
+    [Synchrone Methode** UserPolicy.create (PolicyDescriptor…)](https://msdn.microsoft.com/library/mt631385.aspx)
 
-    [**Synchrone UserPolicy.create-Methode (TempalteDescriptor…)**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_create_templatedescriptor_______synchronous_method_java)
+    [Synchrone UserPolicy.create-Methode (TempalteDescriptor…)](https://msdn.microsoft.com/library/mt631386.aspx)
 
--   Der Android-API-Klasse wurde eine neue [**ProtectedBuffer**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_protectedbuffer_class)-Klasse hinzugefügt.
+-   Der Android-API wurde eine neue [ProtectedBuffer](https://msdn.microsoft.com/library/mt631369.aspx)-Klasse hinzugefügt.
 -   Updates zur Verbesserung der Fehlermeldungen und der Problembehandlung.
 -   Beträchtliche Leistungssteigerungen für kryptografische Operationen.
 
@@ -90,7 +90,7 @@ Diese Version unterstützt Folgendes:
 
     App-Verschlüsselung und -Entschlüsselung können unabhängig und parallel ausgeführt werden.
 
-    Weitere Informationen finden Sie unter [**MSProtector**](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msprotector_class_objc).
+    Weitere Informationen finden Sie unter [MSProtector](https://msdn.microsoft.com/library/mt210993.aspx).
 
     Aktivierte Steuerungseinstellungen auf Protokollebene.
 
@@ -98,7 +98,7 @@ Diese Version unterstützt Folgendes:
 
     Unterstützung zum Löschen des Caches hinzugefügt.
 
-    Weitere Informationen finden Sie unter [**MSProtection:resetStateWithCompletionBlock**](/information-protection/sdk/4.2/api/iOS/msprotection#msipcthin2_msprotection_resetstatewithcompletionblock_method_objc).
+    Weitere Informationen finden Sie unter [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
 ### Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt
 
@@ -114,11 +114,11 @@ Die Version 4.1 des RMS SDK fügt die folgenden neuen Features für Google Andro
 
 -   Android und iOS/OS X-SDK-API-Erweiterungen zur Verarbeitung der *Benutzerzustimmung*, sodass SDK-Verhalten vom Benutzer bestätigt werden können. Aktuell werden als Zustimmungstypen die Dokumentenverfolgung und der Zugriff auf unbekannte AD RMS-Dienst-URLs unterstützt.
 
-    Weitere Informationen finden Sie im Beispiel der Android-API-Version der [**ConsentCallback-Schnittstelle**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_consentcallback_interface_java).
+    Weitere Informationen finden Sie im Beispiel der Android-API-Version der [ConsentCallback-Schnittstelle](https://msdn.microsoft.com/library/dn833503.aspx).
 
 -   iOS 8 und OS X 10.10 (Yosemite) werden jetzt unterstützt. Auch gab es aufgrund von Xcode 6 Änderungen bei den Eigenschaftsnamen.
 
-    Beispiel: MSUserPolicy.name wurde geändert in [**MSUserPolicy.policyName**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_name_property_objc).
+    Beispiel: MSUserPolicy.name wurde in [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx) geändert.
 
 ## Anmerkungen zu dieser Version
 
@@ -146,9 +146,9 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
     **Lösung**: Stellen Sie sicher, dass die Anwendung nicht mehrere Instanzaufrufe auf der Android-API zulässt.
 
--   Bei Verwendung der Methode [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array, int offset, int length)** mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
+-   Bei Verwendung der Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein **byte \[\]**-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [**ProtectedFileOutputStream**](/information-protection/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java)**.write(byte\[\] array)**.
+    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]*-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
 **iOS und OS X**
 
@@ -174,8 +174,8 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
     Die folgenden Methoden dürfen nicht gleichzeitig ausgeführt werden. Verwenden Sie zum Überwachen des Ausführungsabschlusses den erwähnten Blockansatz.
 
-    - [**protectedDataWithProtectedFile**](/information-protection/sdk/4.2/api/iOS/msprotecteddata#msipcthin2_msprotecteddata_protecteddatawithprotectedfile_completionblock_method_objc)
-    - [**customProtectedDataWithPolicy**](/information-protection/sdk/4.2/api/iOS/mscustomprotecteddata#msipcthin2_mscustomprotecteddata_customprotecteddatawithpolicy_protecteddata_contentstartposition_contentsize_completionblock_method_objc)
+    - [MSProtectedData.protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx)
+    - [MSCustomProtectedData.customProtectedDataWithPolicy](https://msdn.microsoft.com/library/dn758315.aspx)
 
 
 
@@ -232,6 +232,6 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
+ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
+ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 
 ---
@@ -63,7 +63,7 @@ Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens
 
 - **Off**: Verschlüsselung ist deaktiviert.
 
-> [!Note] 
+> [!Note]
 > Diese Einstellung hat keinen Einfluss auf die Entschlüsselung. Jede verschlüsselte Datei, die mit PFile- oder systemeigenen Schutz verschlüsselt ist, kann entschlüsselt werden, sofern der Benutzer über die Berechtigung **EXTRACT** verfügt.
 
 - **Native**: Systemeigene Verschlüsselung wird verwendet. Für Office-Dateien hat die verschlüsselte Datei die gleiche Erweiterung wie die ursprüngliche Datei. Beispielsweise wird eine Datei mit der Dateierweiterung DOCX-Datei in eine Datei mit der Erweiterung DOCX verschlüsselt. Für andere Dateien, auf die der systemeigene Schutz angewendet werden kann, wird die Datei in eine Datei mit der Erweiterung im Format p*zzz* verschlüsselt, wobei *zzz* die ursprüngliche Dateierweiterung ist. Eine TXT-Datei wird z. B. in eine Datei mit der Erweiterung PTXT verschlüsselt. Unten finden Sie eine Liste der Dateierweiterungen, auf die der systemeigenene Schutz angewendet werden kann.
@@ -71,7 +71,7 @@ Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens
 - **Pfile**: PFile-Verschlüsselung wird verwendet. Der verschlüsselten Datei wird „.pfile“ an die ursprüngliche Erweiterung angefügt. Zum Beispiel hat eine TXT-Datei nach der Verschlüsselung die Erweiterung „.txt.pfile“.
 
 
-> [!Note] 
+> [!Note]
 > Diese Einstellung hat keinen Einfluss auf Office-Dateiformate. Wenn der `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption`-Wert z. B. auf „Pfile&quot; festgelegt wird, werden DOCX-Dateien weiterhin mit dem nativen Schutz verschlüsselt, und die verschlüsselte Datei hat weiterhin die Dateierweiterung DOCX.
 
 Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten.
@@ -82,7 +82,7 @@ Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten
 -   **TXT-, XML-, JPEG-, PDF-, PNG-, TIFF-, BMP-, GIF-, GIFF-, JPE., JFIF-, JIF-Dateien** – systemeigene Verschlüsselung wird aktiviert (XXX wird zu PXXX).
 -   **Alle anderen Dateien** – Verschlüsselung ist pfile-fähig (XXX wird zu XXX.PFILE)
 
-Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)-Fehler auf.
+Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)-Fehler auf.
 
 ### Datei-API – Dateiunterstützungsdetails
 
@@ -148,14 +148,14 @@ HKEY_LOCAL_MACHINE
 
 ## Verwandte Themen
 
-* [Hinweise für Entwickler](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
+- [Hinweise für Entwickler](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

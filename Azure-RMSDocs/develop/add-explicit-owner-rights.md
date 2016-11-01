@@ -14,22 +14,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 22016f824263916f5f265d818c51975d42c35799
+ms.sourcegitcommit: 8be965d76578c28457eee207b56e5da83f7eb468
+ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
 
 
 ---
 
 # Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte
 
-In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird ([**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+In Ihrer Anwendung sollten explizit Berechtigungen vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) neu erstellt wird.
 
 ## Voraussetzungen
 
-Wenn Ihre Anwendung ein Lizenzhandle mit [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch) erstellt, muss sie dem Besitzer auch explizit Vollzugriff (Berechtigungen) gewähren.
+Wenn Ihre Anwendung ein Lizenzhandle mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt, muss sie dem Besitzer auch explizit einen Vollzugriff (Berechtigungen) gewähren.
 
 >[!NOTE] 
-> Wenn ein Benutzer über [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden dem Besitzer damit alle Berechtigungen gewährt.
+> Wenn ein Benutzer über [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden dem Besitzer damit alle Berechtigungen gewährt.
 
 In diesem Codebeispiel werden nur die Schritte gezeigt, die zum Erstellen und Hinzufügen bestimmter Rechte zu einer Lizenz erforderlich sind.
 
@@ -37,7 +37,7 @@ In diesem Codebeispiel werden nur die Schritte gezeigt, die zum Erstellen und Hi
  
 ## Schritt 1: Beispielszenario
 
-In diesem Beispiel werden einer Lizenz, die mit [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch) erstellt wurde, die benötigten Rechte hinzugefügt. Im Beispiel wird die Erstellung und Zuweisung der Rechte zur Lizenz über eine Liste mit Rechten veranschaulicht.
+In diesem Beispiel werden einer Lizenz, die mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wurde, die benötigten Rechte hinzugefügt. Im Beispiel wird die Erstellung und Zuweisung der Rechte zur Lizenz über eine Liste mit Rechten veranschaulicht.
 
 Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
@@ -107,15 +107,15 @@ Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
 ## Verwandte Themen
 
-* [Hinweise für Entwickler](developer-notes.md)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
+- [Hinweise für Entwickler](developer-notes.md)
+- [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
+- [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

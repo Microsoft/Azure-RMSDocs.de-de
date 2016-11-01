@@ -4,7 +4,7 @@ description: "Orientierung für die Azure RMS-Verschlüsselungspakete und Codeau
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
+ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
+ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
 
 
 ---
@@ -40,13 +40,13 @@ Seit dem [Update vom März 2015](release-notes-rtm.md) haben wir die drei folgen
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (auch als veraltete Algorithmen bezeichnet)
 
-Die Verschlüsselungpaketflags (siehe [**Bevorzugte Verschlüsselung**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption)) können in Verbindung mit unserem neuen Lizenzeigenschaftsflag **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE** verwendet werden.
+Die Verschlüsselungpaketflags (siehe [Bevorzugte Verschlüsselung](https://msdn.microsoft.com/library/dn974065.aspx)) können in Verbindung mit dem Lizenzeigenschaftsflag *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE* verwendet werden.
 
 Es folgend einige einfache Codeausschnitte, die die Verwendung der neuen Lizenzeigenschaft veranschaulichen.
 
 ## Veraltete Algorithmen
 
-Das Flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** wird in unserer API nicht länger zur Verfügung gestellt. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen, aber bereits entwickelte Anwendungen, die es verwenden, sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen.
+Das Flag *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS* wird in unserer API nicht länger zur Verfügung gestellt. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen, aber bereits entwickelte Anwendungen, die es verwenden, sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen.
 
 Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Beispiele finden Sie in den folgenden Codeausschnitten.
 
@@ -84,7 +84,7 @@ Keine Änderung im Code erforderlich, *AES 256* CBC4K ist der Standard.
 Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralteten Algorithmen*.
 
     C++
-    
+
     hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
                                     0,
                                     NULL,
@@ -103,6 +103,6 @@ Dieses Beispiel zeigt außerdem die neue Methode zur Unterstützung von *veralte
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

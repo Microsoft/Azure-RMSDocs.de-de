@@ -4,7 +4,7 @@ description: "Dieses Thema behandelt die Typen von Anwendungen, die Sie als rech
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dac322fedd1ac23660abb3b79261e8339ffd81ca
+ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
+ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
 
 
 ---
@@ -29,7 +29,7 @@ Die folgenden Anwendungstypen werden derzeit von Rights Management Services SDK 
 
 ## Einfache Anwendungen
 
-Bei einer einfachen Anwendung kann es sich um ein Befehlszeilenprogramm handeln, das zum Verschlüsseln einer gegebenen Datei erstellt wird. Ein Beispiel für eine einfache rechtlich geschützte Anwendung finden Sie unter [IPCHelloWorld – Beispielanwendung](how-to-build-your-first-application.md).
+Bei einer einfachen Anwendung kann es sich um ein Befehlszeilenprogramm handeln, das zum Verschlüsseln einer gegebenen Datei erstellt wird. Ein Beispiel für eine einfache, rechtlich geschützte Anwendung finden Sie in unserer Implementierung von *IPCHelloWorld* unter [Entwickeln Ihrer Anwendung](developing-your-application.md).
 
 ### Servermodusanwendungen
 
@@ -55,13 +55,13 @@ Weitere Informationen zum Schutz Ihrer Anwendung finden Sie unter [Grundlegendes
 
 ## Verwandte Themen
 
-* [IpcDlp-Beispiel](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld – Beispielanwendung](how-to-build-your-first-application.md)
-* [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md)
-* [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md)
+- [IpcDlp-Beispiel](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Entwickeln Ihrer Anwendung](developing-your-application.md)
+- [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md)
+- [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 
