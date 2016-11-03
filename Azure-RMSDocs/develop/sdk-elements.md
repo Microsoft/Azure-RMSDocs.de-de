@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
+ms.sourcegitcommit: 4e96ba043584c5d8c140d6804c72cf63362f58c5
+ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
 
 
 ---
@@ -43,9 +43,9 @@ Das Rights Management Services SDK 2.1 umfasst die folgenden Dateien, die auf Ih
 |Ipcerror.h|\inc|Enthält die vom RMS SDK 2.1 exportierten öffentlichen Fehlercodes.|
 |Ipcfile.h|\inc|Enthält die vom RMS SDK 2.1 exportierten Datei-API-Schnittstellen.|
 |Msipc.lib|\lib|Zu verknüpfende Bibliothek, wenn mithilfe des RMS SDK 2.1 x86-Anwendungen erstellt werden sollen.|
-|Msipc_s.lib|\lib|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x86-Anwendungen.|
+|Msipc_s.lib|\lib|Bietet einen Einstiegspunkt für [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) für x86-Anwendungen.|
 |Msipc.lib|\lib\x64|Zu verknüpfende Bibliothek, wenn mithilfe des RMS SDK 2.1 x64-Anwendungen erstellt werden sollen.|
-|Msipc_s.lib|\lib\x64|Bietet einen Einstiegspunkt für [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) für x64-Anwendungen.|
+|Msipc_s.lib|\lib\x64|Bietet einen Einstiegspunkt für [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) für x64-Anwendungen.|
 |Genmanifest.exe|\tools|Generiert ein Manifest für die Verwendung während der Entwicklung einer RMS-fähigen Anwendung.|
  
 
@@ -55,6 +55,6 @@ Das Rights Management Services SDK 2.1 umfasst die folgenden Dateien, die auf Ih
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 
