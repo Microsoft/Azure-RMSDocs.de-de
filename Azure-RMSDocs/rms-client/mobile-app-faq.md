@@ -4,7 +4,7 @@ description:
 keywords: "Einige häufig gestellte Fragen, die Ihnen beim Verwenden der Azure Information Protection-App für iOS und Android helfen sollen"
 author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7ca40550f16dff0cc4979eb029d9eb7dd68414f
-ms.openlocfilehash: da77d799128e110679c972629fa9f816487ccb4f
+ms.sourcegitcommit: c03bcfc5590035ab0d51cb3b4f2b7196db458ea3
+ms.openlocfilehash: 1829557b41d2c49ac661cbde96f69dda2ccc5b19
 
 
 ---
@@ -27,7 +27,7 @@ Auf dieser Seite finden Sie Antworten auf einige häufig gestellte Fragen zur Az
 
 ## Was kann ich mit der Azure Information Protection-App machen?
 
-Mit dieser App können Sie durch Rechte geschützte E-Mail-Nachrichten anzeigen (RPMSG-Dateien), wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. Zusätzlich können Sie sich durch Rechte geschützte PDF-Dateien, Bilder und Textdateien sowie generisch geschützte Dateien (Dateinamenerweiterung „.pfile“) anzeigen lassen. Derzeit können Sie mit dieser App keine neuen geschützten E-Mail-Nachrichten erstellen oder beantworten und keine geschützten Dateien erstellen oder bearbeiten.
+Mit dieser App können Sie durch Rechte geschützte E-Mail-Nachrichten anzeigen (RPMSG-Dateien), wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. Mit dieser App können Sie außerdem durch Rechte geschützte PDF-Dateien, Bilder und Textdateien anzeigen. Derzeit können Sie mit dieser App keine neuen geschützten E-Mail-Nachrichten erstellen oder beantworten und keine geschützten Dateien erstellen oder bearbeiten.
 
 ## Kann ich PDF-Dateien aus geschützten SharePoint-Bibliotheken und OneDrive for Business öffnen?
 
@@ -43,7 +43,7 @@ Sie müssen auf Ihrem mobilen Gerät eine Datei eines Formats öffnen, das die A
 
 - **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie die Rights Management-Freigabeanwendung auf einem Windows-Computer oder eine PDF-Anwendung, die Rights Management von sich aus unterstützt, um sich selbst eine durch Rechte geschützte PDF-Datei als Anhang in einer E-Mail zu senden. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
 
-- **Eine PTXT-, PJPG- oder PFILE-Datei**: Verwenden Sie die Rights Management-Freigabeanwendung auf einem Windows-Computer sowie die Option [Geschützt freigeben](sharing-app-protect-by-email.md), um sich selbst eine geschützte Datei als Anhang in einer E-Mail zu senden. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle des Abschnitts [Unterstützte Dateitypen und Dateinamenerweiterungen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) im Administratorhandbuch zur Rights Management-Freigabeanwendung. 
+- **Eine PTXT-, PJPG- oder PPNG-Datei**: Verwenden Sie die Rights Management-Freigabeanwendung auf einem Windows-Computer sowie die Option [Geschützt freigeben](sharing-app-protect-by-email.md), um sich selbst eine geschützte Datei als Anhang in einer E-Mail zu senden. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle des Abschnitts [Unterstützte Dateitypen und Dateinamenerweiterungen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) im Administratorhandbuch zur Rights Management-Freigabeanwendung. 
 
 Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie aufgefordert, sich an Ihrem Arbeits- oder Schulkonto anzumelden. Nachdem Sie sich erfolgreich authentifiziert haben, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
 
@@ -58,14 +58,6 @@ Bisher nicht. Derzeit können Sie sich nur mit Ihrer geschäftlichen E-Mail-Adre
 ## Welche Dateierweiterungen kann ich mit dieser App öffnen?
 
 Sie können Dateien mit den Erweiterungen „.rpmsg“, „.pdf“, „.ppdf“, „.pjpg“, „.ptxt“ sowie viele weitere Text- und Bilddateiformate öffnen.
-
-## Warum muss ich zustimmen, bevor eine geschützte PFILE-Datei angezeigt wird?
-
-Die Zustimmung ist erforderlich, um sicherzustellen, dass Sie über Folgendes informiert sind:
-
-- Der Besitzer des Dokuments verlangt von Ihnen, dass Sie seine Rechte beachten.
-
-- Das Öffnen dieser Inhalte in einer Anwendung eines Drittanbieters wird überwacht.
 
 ##  Wie gebe ich Feedback zu dieser App?
 

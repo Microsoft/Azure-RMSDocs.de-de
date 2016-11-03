@@ -3,7 +3,7 @@ title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure In
 description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
+ms.sourcegitcommit: e5decd2df9135317f2e0da4951a177211342d7ac
+ms.openlocfilehash: e66f0ac6e596840ad940c51db41dbc6f91139e51
 
 
 ---
@@ -170,7 +170,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
 ### So installieren Sie nur die RMS-Freigabeanwendung und das Office-Add-In
 
-1.  Installieren Sie den AD RMS-Client und die RMS-Freigabeanwendung mithilfe des folgenden Befehls:
+1.  Installieren Sie den AD RMS-Client sowie die RMS-Freigabeanwendung, indem Sie den folgenden Befehl verwenden und einen vorhandenen Ordner angeben, um die Protokolldatei zu erstellen:
 
     -   Für 64-Bit-Windows:
 
@@ -185,8 +185,10 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
         ```
 
     Beispiel: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    
+    Wenn diese Befehle nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
 
-2.  Installieren Sie das Office-Add-in mit den folgenden Befehlen:
+2.  Installieren Sie das Office-Add-In mithilfe der folgenden Befehle, und geben Sie einen vorhandenen Ordner zum Erstellen der Protokolldatei an:
 
     -   Für 64-Bit-Version von Office:
 
@@ -201,6 +203,8 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
         ```
 
     Beispiel: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    
+    Wenn diese Befehle nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
@@ -402,6 +406,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO3-->
 
 

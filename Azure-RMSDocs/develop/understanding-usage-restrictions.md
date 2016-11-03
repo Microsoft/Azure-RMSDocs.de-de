@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
+ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
+ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
 
-Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)-Funktion abgefragt werden.
+Die Berechtigungen eines Benutzers für ein Dokument können mit der [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)-Funktion abgefragt werden.
 
 ## Grundlegendes zu Nutzungseinschränkungen
 
@@ -48,7 +48,7 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 ## Verwandte Themen
 
-* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [**IpcAcces
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO3-->
 
 

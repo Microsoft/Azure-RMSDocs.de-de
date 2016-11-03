@@ -3,7 +3,7 @@ title: "Häufig gestellte Fragen zum Azure Rights Management-Dienst von Azure In
 description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 874836e1a0abc9bbb3f5d881980ba0d5dfe30869
+ms.sourcegitcommit: ec8609217db42a2cf0b3f89367cf4dee6ccb77de
+ms.openlocfilehash: ae25f5af9784b0de92626dbfe65d4358359b4bd9
 
 
 ---
@@ -129,6 +129,18 @@ Verwenden Sie die Administratorfunktion von Azure RMS, über die autorisierte Be
 
 Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](../deploy-use/configure-super-users.md).
 
+## Wenn ich die Sperrung in der Website zur Dokumentnachverfolgung teste, erhalte ich eine Meldung, die angibt, dass Personen für bis zu 30 Tage auf das Dokument zugreifen können. Kann ich diesen Zeitraum konfigurieren?
+
+Ja. Diese Meldung gibt die Nutzungslizenz für diese bestimmte Datei wieder. Eine Nutzungslizenz ist ein pro-Dokument-Zertifikat, das einem Benutzer gewährt wird, der eine geschützte Datei- oder E-Mail-Nachricht öffnet. Dieses Zertifikat enthält Benutzerrechte für die Datei oder E-Mail-Nachricht und den Verschlüsselungsschlüssel, der zum Verschlüsseln des Inhalts verwendet wurde, und zusätzliche Zugriffseinschränkungen, die in der Richtlinie für das Dokument definiert wurden. Wenn die Gültigkeitsdauer der Nutzungslizenz abgelaufen ist, und der Benutzer versucht, die Datei oder die E-Mail zu öffnen, müssen deren Benutzeranmeldeinformationen neu an den Azure Rights Management-Dienst übermittelt werden. 
+
+Wenn Sie eine Datei widerrufen, kann diese Aktion nur erzwungen werden, wenn der Benutzer sich beim Azure Rights Management-Dienst authentifiziert. Wenn eine Datei über eine gültige Nutzungslizenz von 30 Tagen verfügt, und der Benutzer das Dokument bereits geöffnet hat, erhält dieser Benutzer weiterhin Zugriff auf das Dokument, solange die Nutzungslizenz gültig ist. Wenn die Nutzungslizenz ausläuft, muss sich der Benutzer erneut authentifizieren. Zu diesem Zeitpunkt wird der Zugriff für den Benutzer verweigert, da das Dokument nun gesperrt ist.
+
+Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für einen Mandanten 30 Tage, und Sie können diesen Wert mithilfe des PowerShell-Cmdlets [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx) konfigurieren. Diese Einstellung kann durch eine restriktivere Einstellung in einer benutzerdefinierten Vorlage überschrieben werden. 
+
+Die Mandanteneinstellung und die Vorlageneinstellung können von Benutzern überschrieben werden, wenn sie die RMS-Freigabeanwendung verwenden und die Option **Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe** auswählen. Diese Einstellung legt effektiv die Gültigkeitsdauer der Nutzungslizenz auf 0 fest. 
+
+Weitere Informationen und Beispiele für die Funktionsweise der Nutzungslizenz finden Sie in der ausführlichen Beschreibung für [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
+
 ## Kann Rights Management Bildschirmaufnahmen verhindern?
 Rights Management kann dadurch, dass es das **Nutzungsrecht** [Kopieren](../deploy-use/configure-usage-rights.md) nicht gewährt, für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows Phone) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen (Screenshots) verhindern. Auf iOS- und Mac-Geräten ist es aber für keine App zulässig, Bildschirmaufnahmen zu verhindern, und Browser (z. B. bei Verwendung mit Outlook Web App und Office Online) können ebenfalls keine Bildschirmaufnahmen verhindern.
 
@@ -145,6 +157,6 @@ Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleit
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Oct16_HO3-->
 
 

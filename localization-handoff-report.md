@@ -6,24 +6,24 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e5a1860afff2682cce093523b33c9e99b93d446d/Azure-RMSDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#57b04bccfd2f650c24875d20baf89040c69ab0f6153)
+ [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9c125950af03b0b2e50bf8890da5d78bc762e29d/Azure-RMSDocs/rms-client/client-deployment-notes.md) | HandedOffSuccess | [Details](#673c699422489b313dd03d70dbebe80dc295307a423)
 
 ## Item Details
-##### <a name='57b04bccfd2f650c24875d20baf89040c69ab0f6153'></a> Source: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/e5a1860afff2682cce093523b33c9e99b93d446d/Azure-RMSDocs/index.md)
-* Status: OutofSyncHandedBackSuccess
+##### <a name='673c699422489b313dd03d70dbebe80dc295307a423'></a> Source: [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9c125950af03b0b2e50bf8890da5d78bc762e29d/Azure-RMSDocs/rms-client/client-deployment-notes.md)
+* Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf](https://github.com/Microsoft/EM.handoff/blob/3e32f8c3c46d7ed8304418d708cc4528f6c3e760/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf)
-* Handoff Datetime: 2016-07-16 01:44:52
+* Handoff File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handoff/blob/1a5b699d1141214f57722cac6696bb894bf9d404/ol-handoff/Microsoft/Azure-RMSDocs-pr.de-de/live/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf)
+* Handoff Datetime: 2016-10-28 19:04:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/97f9eff897e450ef2a57adfcbb1de892d2bafc62/Azure-RMSDocs/index.md)
-* Current Handback File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/1c0e8c27cee8d7dd3eac9b30b9370a134b743f2e/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf)
-* Current Handback Datetime: 2016-07-14 16:47:24
-* Bilingual File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf](https://github.com/Microsoft/EM.handback/blob/1c0e8c27cee8d7dd3eac9b30b9370a134b743f2e/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.de-de.xlf)
-* Bilingual Datetime: 2016-07-14 17:18:10
+* Current Target File: [Azure-RMSDocs\rms-client\client-deployment-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr.de-de/blob/8eed1b7f1a88ff3d1de3ac0b9d3e6e61e920e7c9/Azure-RMSDocs/rms-client/client-deployment-notes.md)
+* Current Handback File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handback/blob/cc35ca65d5a461795f446c75a5f275aef02541a9/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf)
+* Current Handback Datetime: 2016-07-13 18:10:36
+* Bilingual File: [client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf](https://github.com/Microsoft/Azure-RMSDocs-pr.handback/blob/cc35ca65d5a461795f446c75a5f275aef02541a9/ol-handback/Microsoft/Azure-RMSDocs-pr.de-de/master/client-deployment-notes.2c00eef84cbb27e32ece796eecdb703ce7d8f4c7.de-de.xlf)
+* Bilingual Datetime: 2016-07-13 18:21:31
 * [Back to Top](#report-top)
 
 
