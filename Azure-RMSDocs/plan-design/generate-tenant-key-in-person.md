@@ -18,13 +18,13 @@ ms.openlocfilehash: 4f8b32fa7961b3d59911cc279ac30a7c497deb5f
 
 ---
 
-# Generieren und Übertragen Ihres Mandantenschlüssels – persönlich: INHALT VERALTET
+# <a name="generate-and-transfer-your-tenant-key-in-person-retired-content"></a>Generieren und Übertragen Ihres Mandantenschlüssels – persönlich: INHALT VERALTET
 
 >*Gilt für: Azure Rights Management, Office 365*
 
 Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant sind, seitdem Azure Rights Management den Azure Key Vault-Dienst für von Kunden verwaltete Mandantenschlüssel (auch bekannt als „Bring Your Own Key“, kurz BYOK) verwendet. 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

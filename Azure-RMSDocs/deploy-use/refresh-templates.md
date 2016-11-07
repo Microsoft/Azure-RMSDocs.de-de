@@ -19,7 +19,7 @@ ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
 ---
 
 
-# Aktualisieren von Vorlagen für Benutzer
+# <a name="refreshing-templates-for-users"></a>Aktualisieren von Vorlagen für Benutzer
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -33,7 +33,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Office 2010|Aktualisierung bei der Benutzeranmeldung.<br /><br />Um eine Aktualisierung zu erzwingen, bitten oder zwingen Sie Benutzer, sich abzumelden und erneut anzumelden. Oder lesen Sie den folgenden Abschnitt: [Nur Office 2010: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Bei mobilen Geräten, die die RMS-Freigabeanwendung verwenden, werden Vorlagen ohne zusätzliche Konfiguration automatisch heruntergeladen (und erforderlichenfalls aktualisiert).
 
-## Nur Exchange Online: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Nur Exchange Online: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen
 Wenn Sie die Verwaltung von Informationsrechten (IRM) für Exchange Online bereits konfiguriert haben, werden benutzerdefinierte Vorlagen für Benutzer erst heruntergeladen, nachdem Sie die folgenden Änderungen mithilfe der Windows PowerShell in Exchange Online vorgenommen haben.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Wenn Sie die Verwaltung von Informationsrechten (IRM) für Exchange Online berei
 
 Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern.
 
-### So aktualisieren Sie Vorlagen für Exchange Online
+### <a name="to-update-templates-for-exchange-online"></a>So aktualisieren Sie Vorlagen für Exchange Online
 
 1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
 
@@ -94,13 +94,13 @@ Damit Benutzer diese Vorlagen nicht mehr sehen, stellen Sie unter Verwendung von
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
+## <a name="office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
 Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 2013 oder die RMS-Freigabeanwendung (Rights Management) für Windows ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als gemäß dem Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
 > Die unsachgemäße Verwendung des Registrierungs-Editors kann zu schwerwiegenden Problemen führen, die eine Neuinstallation des Betriebssystems erforderlich machen können. Microsoft kann nicht garantieren, dass Sie Probleme, die durch die fehlerhafte Verwendung des Registrierungs-Editors entstehen, beheben können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
 
-### So ändern Sie den automatischen Zeitplan
+### <a name="to-change-the-automatic-schedule"></a>So ändern Sie den automatischen Zeitplan
 
 1.  Verwenden Sie einen Registrierungs-Editor, um einen der folgenden Registrierungswerte zu erstellen und festzulegen:
 
@@ -124,7 +124,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 
 2.  Wenn Sie eine sofortige Aktualisierung der Vorlagen erzwingen möchten, führen Sie die nächste Schrittfolge aus. Starten Sie andernfalls jetzt Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
-### So erzwingen Sie eine sofortige Aktualisierung
+### <a name="to-force-an-immediate-refresh"></a>So erzwingen Sie eine sofortige Aktualisierung
 
 1.  Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
@@ -149,13 +149,13 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 
 3.  Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
-## Nur Office 2010: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
+## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Nur Office 2010: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
 Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie einen Wert festlegen, sodass geänderte Vorlagen auf Computern aktualisiert werden, ohne dass darauf gewartet wird, dass sich Benutzer ab- und wieder anmelden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
 > Die unsachgemäße Verwendung des Registrierungs-Editors kann zu schwerwiegenden Problemen führen, die eine Neuinstallation des Betriebssystems erforderlich machen können. Microsoft kann nicht garantieren, dass Sie Probleme, die durch die fehlerhafte Verwendung des Registrierungs-Editors entstehen, beheben können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
 
-### So ändern Sie die Aktualisierungshäufigkeit
+### <a name="to-change-the-update-frequency"></a>So ändern Sie die Aktualisierungshäufigkeit
 
 1.  Erstellen Sie mit einem Registrierungs-Editor einen neuen Registrierungswert namens **UpdateFrequency** , und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgende Tabelle, um den Registrierungspfad zu finden, in dem dieser neue Registrierungswert erstellt werden soll.
 
@@ -167,7 +167,7 @@ Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie ein
 
 2.  Wenn Sie eine sofortige Aktualisierung der Vorlagen erzwingen möchten, führen Sie die nächste Schrittfolge aus. Starten Sie andernfalls jetzt Ihre Office-Anwendungen neu.
 
-### So erzwingen Sie eine sofortige Aktualisierung
+### <a name="to-force-an-immediate-refresh"></a>So erzwingen Sie eine sofortige Aktualisierung
 
 1.  Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Tabelle, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
@@ -182,10 +182,10 @@ Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie ein
 
 3.  Starten Sie Ihre Office-Anwendungen neu.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

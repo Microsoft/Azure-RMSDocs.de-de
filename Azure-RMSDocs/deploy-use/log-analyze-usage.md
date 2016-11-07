@@ -12,13 +12,13 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
-ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
 
 ---
 
-# Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
+# <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -47,7 +47,7 @@ Sie können dann mithilfe dieser Protokolle des Azure Rights Management-Diensts 
 
 In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollierung von Azure Rights Management.
 
-## Aktivieren der Verwendungsprotokollierung von Azure Rights Management
+## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Aktivieren der Verwendungsprotokollierung von Azure Rights Management
 Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure Rights Management-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
 
 > [!NOTE]
@@ -57,14 +57,14 @@ Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung sta
 
 
 
-## Zugreifen auf und Verwenden von Azure Rights Management-Verwendungsprotokollen
+## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Zugreifen auf und Verwenden von Azure Rights Management-Verwendungsprotokollen
 Der Azure Rights Management-Dienst schreibt Protokolle als eine Serie von Blobs in Ihr Azure-Speicherkonto. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-azure-rights-management-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.
 
 Es kann einen Moment dauern, bis nach einer Azure Rights Management-Aktion Protokolle in Ihrem Speicherkonto angezeigt werden. Die meisten Protokolle werden innerhalb von 15 Minuten angezeigt. Es empfiehlt sich, dass Sie die Protokolle in den lokalen Speicher herunterladen, z. B. einen lokalen Ordner, eine Datenbank oder ein Zuordnen/Reduzieren-Repository.
 
-Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Management-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, führen Sie den folgenden Befehl aus, um zu überprüfen, ob Ihre Version mindestens **2.4.0.0** ist: `(Get-Module aadrm -ListAvailable).Version` 
+Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Management-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, überprüfen Sie anhand des folgenden Befehls, ob Sie Version **2.4.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version` 
 
-### So laden Sie Ihre Verwendungsprotokolle mit PowerShell herunter
+### <a name="to-download-your-usage-logs-by-using-powershell"></a>So laden Sie Ihre Verwendungsprotokolle mit PowerShell herunter
 
 1.  Starten Sie Windows PowerShell mit der Option **Als Administrator ausführen**, und stellen Sie mit dem Cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) eine Verbindung mit dem Azure Rights Management-Dienst her:
 
@@ -80,9 +80,9 @@ Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Man
 
     Angenommen, Sie haben einen Ordner namens „Protokolle“ auf Laufwerk E: erstellt:
     
-    * Um Protokolle für ein bestimmtes Datum (z. B. 01.02.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
+    * Um Protokolle für ein bestimmtes Datum (z.B. 1.2.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AadrmUserLog -Path E:\Logs -fordate 2/1/2016`
     
-    * Um Protokolle für einen Datumsbereich (z. B. 01.02.2016 bis 14.02.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
+    * Um Protokolle für einen Datumsbereich (z.B. 1.2.2016 bis 14.2.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
 Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-AadrmUserLog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
 
@@ -96,14 +96,14 @@ Standardmäßig werden für dieses Cmdlet drei Threads verwendet, um die Protoko
 >
 > Beispielsweise können Sie folgenden Befehl ausführen, um alle Informationen in eine Datei im LOG-Format zu importieren: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Wenn Sie die Azure Rights Management-Verwendungsprotokollierung vor der Protokollierungsänderung (22. Februar 2016) manuell aktiviert haben
+#### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Wenn Sie die Azure Rights Management-Verwendungsprotokollierung vor der Protokollierungsänderung (22. Februar 2016) manuell aktiviert haben
 
 
 Wenn Sie Verwendungsprotokollierung vor der Protokollierungsänderung verwendet haben, haben Sie Verwendungsprotokolle in Ihrem konfigurierten Azure-Speicherkonto. Microsoft kopiert diese Protokolle nicht als Teil dieser Protokollierungsänderung aus Ihrem Speicherkonto in das neue verwaltete Azure Rights Management-Speicherkonto. Sie sind dafür zuständig, den Lebenszyklus der zuvor generierten Protokolle zu verwalten, und Sie können das [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx)-Cmdlet verwenden, um Ihre alten Protokolle herunterzuladen. Beispiel:
 
-- So laden Sie alle verfügbaren Protokolle in Ihren Ordner „E:\logs“ herunter `Get-AadrmUsageLog -Path "E:\Logs"`
+- So laden Sie alle verfügbaren Protokolle in Ihren Ordner „E:\logs“ herunter: `Get-AadrmUsageLog -Path "E:\Logs"`
     
-- So laden Sie einen bestimmten Bereich von BLOBs herunter `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
+- So laden Sie einen bestimmten Bereich von Blobs herunter: `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
 
 Sie müssen keine Protokolle mit dem Get-AadrmUsageLog-Cmdlet herunterladen, wenn einer der folgenden Punkte zutrifft:
 
@@ -111,15 +111,15 @@ Sie müssen keine Protokolle mit dem Get-AadrmUsageLog-Cmdlet herunterladen, wen
 
 - Sie haben den Azure Rights Management-Dienst nach dem 22. Februar 2016 aktiviert.
 
-## Interpretieren von Azure Rights Management-Verwendungsprotokollen
+## <a name="how-to-interpret-your-azure-rights-management-usage-logs"></a>Interpretieren von Azure Rights Management-Verwendungsprotokollen
 Verwenden Sie folgende Informationen als Hilfestellung bei der Interpretation der Azure Rights Management-Verwendungsprotokolle.
 
-### Die Abfolge von Protokollen
+### <a name="the-log-sequence"></a>Die Abfolge von Protokollen
 Der Azure Rights Management-Dienst schreibt die Protokolle als eine Serie von Blobs. 
 
 Jeder Eintrag im Protokoll hat einen UTC-Zeitstempel. Da der Azure Rights Management-Dienst auf mehreren Servern in mehreren Rechenzentren ausgeführt wird, scheinen die Protokolle manchmal nicht in der richtigen Reihenfolge zu sein, auch wenn sie nach Zeitstempel sortiert sind. Die Abweichung ist jedoch in der Regel gering und liegt im Bereich von einer Minute. In den meisten Fällen ist dies kein Problem, das sich nachteilig bei der Protokollanalyse manifestieren würde.
 
-### Das BLOB-Format
+### <a name="the-blob-format"></a>Das BLOB-Format
 Jedes BLOB ist im erweiterten W3C-Protokollformat. Es beginnt mit den folgenden zwei Zeilen:
 
 **#Software: RMS**
@@ -140,12 +140,12 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |time|Zeit|Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.|21:59:28|
 |row-id|Text|Eindeutige GUID für diesen Protokolldatensatz. Wenn ein Wert nicht vorhanden ist, verwenden Sie zum Identifizieren des Eintrags die Korrelations-ID.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Name|Der Name der angeforderten RMS-API.|AcquireLicense|
-|user-id|String|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.|'joe@contoso.com'|
+|user-id|String|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.|‘joe@contoso.com’|
 |result|Zeichenfolge|'Success', wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.|'Success'|
 |correlation-id|Text|Eine GUID, die das RMS-Clientprotokoll und das Serverprotokoll für eine bestimmte Anforderung gemeinsam haben.<br /><br />Dieser Wert kann bei der Behandlung von Clientproblemen hilfreich sein.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|Eine GUID in geschweiften Klammern, die den geschützten Inhalt identifiziert (z. B. ein Dokument).<br /><br />Dieses Feld hat nur dann einen Wert, wenn „request-type“ den Wert „AcquireLicense“ hat, und ist bei allen anderen Anforderungstypen leer.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Die E-Mail-Adresse des Besitzers des Dokuments.|alice@contoso.com|
-|issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com|
+|issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Zeichenfolge|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|Zeichenfolge|Der Dateiname des geschützten Dokuments. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.|TopSecretDocument.docx|
 |date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.|2015-10-15T21:37:00|
@@ -153,10 +153,10 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
 
 
-#### Ausnahmen für das Feld „user-id“
+#### <a name="exceptions-for-the-userid-field"></a>Ausnahmen für das Feld „user-id“
 Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die Anforderung stammt, gibt es zwei Ausnahmen, bei denen der Wert keinem echten Benutzer entspricht:
 
--   Der Wert **'microsoftrmsonline@&lt;IhreMandantenID&gt;.rms.&lt;Region&gt;.aadrm.com'**.
+-   Der Wert **'microsoftrmsonline@&lt;Ihre-Mandanten-ID&gt;.rms.&lt;Region&gt;.aadrm.com'**
 
     Dies zeigt an, dass die Anforderung von einem Office 365-Dienst wie Exchange Online oder SharePoint Online stammt. In der Zeichenfolge steht *&lt;IhreMandantenID&gt;* für die GUID Ihres Mandanten und *&lt;Region&gt;* für die Region, in der Ihr Mandant registriert ist. Beispielsweise steht **Na** für Nordamerika, **Eu** für Europa und **ap** für Asien.
 
@@ -164,7 +164,7 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
 
     Anforderungen von diesem Connector werden mit dem Dienstprinzipalnamen von **Aadrm_S-1-7-0** protokolliert, der automatisch generiert wird, wenn Sie den RMS-Connector installieren.
 
-#### Typische Anforderungstypen
+#### <a name="typical-request-types"></a>Typische Anforderungstypen
 Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In der folgenden Tabelle sind einige der am häufigsten verwendeten Anforderungstypen benannt und beschrieben.
 
 |Anforderungstyp|Beschreibung|
@@ -212,14 +212,14 @@ Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In
 |UpdateTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
 
 
-## Windows PowerShell-Referenz
+## <a name="windows-powershell-reference"></a>Windows PowerShell-Referenz
 Seit Februar 2016 ist [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) das einzige Windows PowerShell-Cmdlet, das Sie für die Azure Rights Management-Verwendungsprotokollierung benötigen. 
 
 Vor dieser Änderung wurden die folgenden Cmdlets, die nun veraltet sind, für die Azure Rights Management-Verwendungsprotokolle benötigt:  
 
 -   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
 
--   [ENable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
 
 -   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
 
@@ -240,6 +240,6 @@ Weitere Informationen zum Verwenden von Windows PowerShell für den Azure Rights
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

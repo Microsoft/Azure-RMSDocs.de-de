@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 763e99e40bbe329305e97757e87d10b048cc62e9
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: c3dfa23a4bb03aec3ad9eae835382040a5347006
 
 
 ---
 
-# Windows Store-Setup
+# <a name="windows-store-setup"></a>Windows Store-Setup
 
 Windows Store-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Informationsschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
 
@@ -29,9 +29,9 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
--   [Weitere Informationen](#see-also)
+-   [Siehe auch](#see-also)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
@@ -44,11 +44,11 @@ Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
 
 Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
-## Optional
+## <a name="optional"></a>Optional
 
 Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Benutzeroberfläche erstellen möchten, eine wiederverwendbare Benutzeroberfläche für Nutzungs- und Schutzverfahren. Nutzen Sie die [UI-Bibliothek für Windows Store-Apps](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). Außerdem stellen wir eine Beispielanwendung für eine Windows Store-App bereit: [RMS-Beispielanwendung für Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-## Konfigurieren der Entwicklungsumgebung
+## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 
 -   Öffnen Sie Visual Studio.
@@ -70,11 +70,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
-### Weitere Informationen
+### <a name="see-also"></a>Weitere Informationen
 
 [Erste Schritte](get-started.md)
 
-[Neuheiten](release-notes.md)
+[Neuerungen](release-notes.md)
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
@@ -86,6 +86,6 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

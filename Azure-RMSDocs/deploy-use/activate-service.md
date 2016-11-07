@@ -18,7 +18,7 @@ ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
 
 ---
 
-# Aktivieren von Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Aktivieren von Azure Rights Management
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -48,7 +48,7 @@ Alternativ können Sie zum Aktivieren von [!INCLUDE[aad_rightsmanagement_2](../i
 
 3. Führen Sie [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx) aus, um den Azure Rights Management-Dienst zu aktivieren.
 
-## Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung
 Sollen nicht alle Benutzer sofort die Möglichkeit haben, Dateien mithilfe von Azure Rights Management zu schützen, können Sie mit dem Windows PowerShell-Befehl [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) Benutzereinbindungsrichtlinien (Onboardingsteuerungsrichtlinien) konfigurieren. Sie können diesen Befehl ausführen, bevor oder nachdem Sie den Azure Rights Management-Dienst aktivieren.
 
 > [!IMPORTANT]
@@ -71,7 +71,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der Organisation immer geschützte Inhalte nutzen, die durch Ihre Teilmenge von Benutzern geschützt wurde, können aber Informationsschutz aus Clientanwendungen nicht selbst anwenden. Beispielsweise sehen sie nicht die Standardvorlagen in ihren Office-Clients, die automatisch veröffentlicht werden, wenn der Azure Rights Management-Dienst aktiviert ist, oder benutzerdefinierte Vorlagen, die Sie ggf. konfiguriert haben.  Serverseitige Anwendung wie z.B. Exchange können eigene Steuerelemente pro Benutzer für die Rights Management-Integration implementieren, um das gleiche Ergebnis zu erzielen.
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] jetzt für Ihre Organisation aktiviert haben, verwenden Sie die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md), um herauszufinden, ob Sie vor dem Rollout von Azure Information Protection für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen müssen. 
 
 Angenommen, Sie möchten [benutzerdefinierte Vorlagen](configure-custom-templates.md) verwenden, um es den Benutzern zu erleichtern, Informationsschutz auf Dateien anzuwenden, Ihre lokalen Server durch Installation des [Rights Management-Connectors](deploy-rms-connector.md) für die Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verbinden und die [Rights Management-Freigabeanwendung](../rms-client/sharing-app-windows.md) bereitzustellen, die den Schutz aller Dateitypen auf allen Geräten unterstützt. 
@@ -81,6 +81,6 @@ Office-Dienste (z.B. Exchange Online und SharePoint Online) erfordern zusätzlic
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 
