@@ -3,7 +3,7 @@ title: "Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel | A
 description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK-Szenario, „Bring Your Own Key“)."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: c879d4de6b8b99c401b36e03dd3b16dc8b722344
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 
 
 ---
@@ -45,7 +45,7 @@ Um Ihren Mandantenschlüssel zu erneuern, müssen Sie zunächst Ihren Azure Info
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Sie sind für das Sichern Ihres Mandantenschlüssels verantwortlich. Wenn Sie Ihren Mandantenschlüssel in einem Thales HSM generiert haben, sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern.
 
-Da Sie den Schlüssel gemäß den Verfahren im Artikel [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md) im Abschnitt [Implementieren von „Bring Your Own Key“ (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) übertragen haben, speichert Key Vault die Tokenschlüsseldatei dauerhaft, um Schutz vor Ausfällen jeglicher Dienstknoten zu bieten. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten dies aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise jemals eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht abrufen, weil die Lösung lediglich über eine nicht wiederherstellbare Kopie verfügt.
+Da Sie den Schlüssel gemäß den Verfahren im Artikel [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md) im Abschnitt [Implementieren von „Bring Your Own Key“ (BYOK)](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) übertragen haben, speichert Key Vault die Tokenschlüsseldatei dauerhaft, um Schutz vor Ausfällen jeglicher Dienstknoten zu bieten. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten dies aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise jemals eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht abrufen, weil die Lösung lediglich über eine nicht wiederherstellbare Kopie verfügt.
 
 ## <a name="export-your-tenant-key"></a>Exportieren Ihres Mandantenschlüssels
 Wenn Sie BYOK verwenden, können Sie Ihren Mandantenschlüssel nicht aus Azure Key Vault oder Azure Information Protection exportieren. Die Kopie in Azure Key Vault ist nicht wiederherstellbar. 

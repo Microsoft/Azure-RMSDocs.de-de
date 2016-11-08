@@ -3,7 +3,7 @@ title: "Dialogfeldoptionen für die Rights Management-Freigabeanwendung | Azure 
 description: "Informationen, die Sie bei der Festlegung der Optionen in den Dialogfeldern „Schutz hinzufügen“ oder „Geschützt freigeben“ der RMS-Freigabeanwendung unterstützen. Dieses Dialogfeld wird angezeigt, wenn Sie eine freizugebende Datei schützen oder eine Datei auf einem Gerät (direkt) schützen und benutzerdefinierte Berechtigungen auswählen."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 25e93f993ef76d0bce61f925c58cc667ccacf7b8
-ms.openlocfilehash: c28651342c3048b783880f8ea3b12acd56d973a2
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 97766046526db5148f03873343a2fb3840392c6a
 
 
 ---
@@ -54,7 +54,7 @@ Zusätzlich zu den Optionen, die Sie auswählen können, fragen Sie sich viellei
 
 -   Im Gegensatz dazu gilt bei Verwendung des **integrierten (nativen) Schutzes** von Rights Management der Schutz für Anwendungen, die dies unterstützen (z.B. Office-Dateien), auch für die Datei. Dies ist auch der Fall, wenn die Datei an jemand anderen gesendet oder an einem anderen Ort gespeichert wird. Und wenn Sie diese Dateien schützen, können Sie eingeschränkte Berechtigungen verwenden, z. B. schreibgeschützt oder die Berechtigung zum Bearbeiten, jedoch nicht zum Drucken oder Kopieren. Sie könnten beispielsweise **Anzeigender Benutzer – Nur Anzeigen**auswählen, sodass der Inhalt weder bearbeitet, noch gedruckt oder noch kopiert werden kann.
 
-Weitere technische Informationen finden Sie im Abschnitt [Schutzstufe – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
+Weitere technische Informationen finden Sie im Abschnitt [Schutzstufe – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
 ## <a name="whats-the-ppdf-file-thats-automatically-created"></a>Erläuterung zur automatisch erstellten PPDF-Datei
 
