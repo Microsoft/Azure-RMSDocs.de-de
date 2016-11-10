@@ -3,7 +3,7 @@ title: "Unterstützung von Anwendungen für den Schutz von Daten | Azure Informa
 description: "Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Rights Management-Dienst von Azure Information Protection nativ unterstützen."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2016
+ms.date: 10/31/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6dbbfacd072d5badd69cc6ea452a86baa99cc46
-ms.openlocfilehash: 0649b4300c1bd10ddcfc0c1432144f5eaa0b7797
+ms.sourcegitcommit: a036da617d88a65903cfea9df30d5f851bda6e36
+ms.openlocfilehash: 80874b7e15fef7f4e7685774b31410149301c124
 
 
 ---
 
 
-# Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
+# <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -45,36 +45,36 @@ Informationen über die Tabellenspalten:
 |**iOS**|Office für iPad und iPhone[[5]](#footnote-5)<br /><br />Office Online[[2]](#footnote-2)<br /><br />TITUS-Dokumentation|Azure Information Protection-App [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS-Dokumentation|Azure Information Protection-App [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für iPad und iPhone[[4]](#footnote-4)<br /><br />OWA für iOS[[3]](#footnote-3)<br /><br />TITUS Mail|Azure Information Protection-App [[1]](#footnote-1): Text, Bilder<br /><br />TITUS-Dokumentation: PFILE|
 |**Android**|GigaTrust App für Android<br /><br />Office Online[[2]](#footnote-2)<br /><br />Office Mobile (nur Azure RMS) [[1]](#footnote-1)|Azure Information Protection-App [[1]](#footnote-1)<br /><br />GigaTrust App für Android<br /><br />Foxit Reader<br /><br />RMS-Freigabeanwendung[[1]](#footnote-1)|9Folders[[4]](#footnote-4)<br /><br />Azure Information Protection-App [[1]](#footnote-1)<br /><br />GigaTrust App für Android[[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für Android [[4]](#footnote-4)<br /><br />OWA für Android [[3]](#footnote-3) und [[7]](#footnote-7)<br /><br />Samsung E-Mail (S3 und neuer)[7](#footnote-7)<br /><br />TITUS-Klassifizierung für mobile Geräte|Azure Information Protection-App [[1]](#footnote-1): Text, Bilder|
 |**OS X**|Office 2011 (nur AD RMS)<br /><br />Office 2016 für Mac<br /><br />Office Online[[2]](#footnote-2)|Foxit Reader<br /><br />RMS-Freigabeanwendung[[1]](#footnote-1)|Outlook 2011 (nur AD RMS)<br /><br />Outlook 2016 für Mac<br /><br />Outlook für Mac|RMS-Freigabeanwendung[[1]](#footnote-1): Text, Bilder, PFILE|
-|**Windows 10 Mobile**|Office Mobile-Apps (nur Azure RMS)[[1]](#footnote-1)|Nicht unterstützt|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook Mail|Nicht unterstützt|
+|**Windows 10 Mobile**|Office Mobile-Apps (nur Azure RMS)[[1]](#footnote-1)|Nicht unterstützt|Citrix WorxMail [[6]](#footnote-6)<br /><br />Outlook Mail|Nicht unterstützt|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online[[2]](#footnote-2)|Nicht unterstützt|Outlook 2013 RT<br /><br />E-Mail-App für Windows<br /><br />Windows Mail[[4]](#footnote-4)|Siemens JT2Go: JT-Dateien|
 |**Windows Phone 8.1**|Office Mobile (nur AD RMS)|RMS-Freigabeanwendung[[1]](#footnote-1)|Outlook Mobile[[4]](#footnote-4)|RMS-Freigabeanwendung[[1]](#footnote-1): Text, Bilder, PFILE|
-|**Blackberry 10**|Nicht unterstützt|Nicht unterstützt|Blackberry-E-Mail[[4]](#footnote-4)|Nicht unterstützt|
+|**Blackberry 10**|Nicht unterstützt|Nicht unterstützt|Blackberry-E-Mail[[4]](#footnote-4)|Nicht unterstützt|
 
 
-##### Fußnote 1
+##### <a name="footnote-1"></a>Fußnote 1
 Unterstützt die Anzeige geschützter Inhalte.
 
-##### Fußnote 2 
-Unterstützt die Anzeige von geschützten Inhalten in SharePoint Online, OneDrive for Business und Outlook Web Access.
+##### <a name="footnote-2"></a>Fußnote 2 
+Unterstützt die Anzeige von geschützten Dokumenten, wenn ein ungeschütztes Dokument in eine geschützte Bibliothek in SharePoint Online und OneDrive for Business hochgeladen wird 
 
-##### Fußnote 3
+##### <a name="footnote-3"></a>Fußnote 3
 Wenn ein Empfänger eine geschützte E-Mail erhält und als Mailserver nicht Exchange verwendet, oder wenn der Absender zu einer anderen Organisation gehört, kann der Inhalt nur in einem funktionsreichen E-Mail-Client wie Outlook geöffnet werden. Dieser Inhalt kann nicht in Outlook Web Access geöffnet werden.
 
-##### Fußnote 4
+##### <a name="footnote-4"></a>Fußnote 4
 Verwendet Exchange ActiveSync IRM, das vom Exchange-Administrator aktiviert werden muss. Benutzer können „Anzeigen“, „Antworten“ und „Allen antworten“ für geschützte E-Mail-Nachrichten ausführen, können selbst aber keine neuen E-Mail-Nachrichten schützen.
 
 Wenn ein Empfänger eine geschützte E-Mail erhält und als Mailserver nicht Exchange verwendet, oder wenn der Absender zu einer anderen Organisation gehört, kann der Inhalt nur in einem funktionsreichen E-Mail-Client wie Outlook geöffnet werden. Dieser Inhalt kann nicht über Outlook Web Access oder mobile E-Mail-Clients, die Exchange Active Sync-IRM verwenden, geöffnet werden.
 
-##### Fußnote 5
+##### <a name="footnote-5"></a>Fußnote 5
 Unterstützt das Anzeigen und Bearbeiten von geschützten Dokumenten. Weitere Informationen finden Sie im Office-Blog im Beitrag zu [Azure Rights Management support comes to Office for iPad and iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/) (Azure Rights Management-Unterstützung jetzt auch für Office für iPad und iPhone).
 
-##### Fußnote 6
+##### <a name="footnote-6"></a>Fußnote 6
 Weitere Informationen finden Sie unter der Citrix [Produktdokumentation für WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html).
 
-##### Fußnote 7
+##### <a name="footnote-7"></a>Fußnote 7
 Weitere Informationen finden Sie im Office-Blog im Beitrag zu: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/) (OWA für Android ist nun für ausgewählte Geräte verfügbar).
 
-## Weitere Informationen zur Azure RMS-Unterstützung für Office
+## <a name="more-information-about-azure-rms-support-for-office"></a>Weitere Informationen zur Azure RMS-Unterstützung für Office
 
 Azure RMS ist eng in die Word-, Excel-, PowerPoint- und Outlook-Apps integriert. Dort wird diese Funktionalität oft als Information Rights Management (IRM) bezeichnet. Die folgenden Editionen von Office-Clients unterstützen den Schutz von Dateien und E-Mails mithilfe von Azure RMS:
 
@@ -92,7 +92,7 @@ Azure RMS mit Office Professional Plus 2010 oder Office Professional 2010:
 
 - Unter Windows 10 nicht unterstützt
 
-## Weitere Informationen zur Azure Information Protection-App für iOS und Android
+## <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Weitere Informationen zur Azure Information Protection-App für iOS und Android
 
 Die Azure Information Protection-App für iOS und Android ersetzt die RMS-Freigabeanwendung für diese Geräte. Sie bietet dieselbe Funktionalität und unterstützt darüber hinaus durch Rights Management geschützte E-Mails und durch Rights Management geschützte PDF-Dateien in SharePoint Online.
 
@@ -101,7 +101,7 @@ Wenn Ihre iOS- und Android-Geräte bei Microsoft Intune registriert sind, könne
 Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android](../rms-client/mobile-app-faq.md).
 
 
-## Weitere Informationen zur Rights Management-Freigabeanwendung
+## <a name="more-information-about-the-rights-management-sharing-application"></a>Weitere Informationen zur Rights Management-Freigabeanwendung
 
 Weitere Informationen zur Rights Management-Freigabeanwendung für Windows finden Sie in den folgenden Ressourcen:
 
@@ -118,7 +118,7 @@ Weitere Informationen zur Rights Management-Freigabeanwendung für mobile Plattf
 > [!NOTE]
 > Die RMS-Freigabeanwendung für iOS und Android wird ab sofort von der Azure Information Protection-App ersetzt.
 
-## Weitere Informationen zu anderen Anwendungen, die Azure RMS unterstützen
+## <a name="more-information-about-other-applications-that-support-azure-rms"></a>Weitere Informationen zu anderen Anwendungen, die Azure RMS unterstützen
 
 Zusätzlich zu den Anwendungen in der Tabelle kann jede Anwendung, die diese RMS-APIs unterstützt, in Azure RMS integriert werden. Hierzu zählen:
 
@@ -128,7 +128,7 @@ Zusätzlich zu den Anwendungen in der Tabelle kann jede Anwendung, die diese RMS
 
 Weitere Informationen zum SDK finden Sie unter [Microsoft Rights Management SDK](../develop/developers-guide.md).
 
-## Nicht von Azure RMS unterstützte Anwendungen
+## <a name="applications-that-are-not-supported-by-azure-rms"></a>Nicht von Azure RMS unterstützte Anwendungen
 
 Folgende Anwendungen werden zurzeit nicht von Azure RMS unterstützt:
 
@@ -144,7 +144,7 @@ Zusätzlich liegen bei der RMS-Freigabeanwendung folgende Einschränkungen vor:
 
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements-azure-rms.md).
 
 Weitere Informationen dazu, wie die gängigsten Anwendungen Azure RMS unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md).
@@ -152,6 +152,6 @@ Weitere Informationen dazu, wie die gängigsten Anwendungen Azure RMS unterstüt
 Informationen dazu, wie die gängigsten Anwendungen für Azure RMS konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
