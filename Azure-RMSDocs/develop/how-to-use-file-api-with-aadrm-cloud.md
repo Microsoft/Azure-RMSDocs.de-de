@@ -20,19 +20,19 @@ ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
 
 ---
 
-# Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
+# <a name="howto-enable-your-service-application-to-work-with-cloud-based-rms"></a>Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
 
 In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert. Weitere Informationen finden Sie unter [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Wichtig**  
 Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.1-Dienstanwendung mit Azure RMS zu verwenden. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../get-started/requirements-subscriptions.md)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   RMS SDK 2.1 muss installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   [Erstellen Sie eine Dienstidentität über ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) mithilfe der symmetrischen Schlüsseloption oder auf andere Weise, und zeichnen Sie die Schlüsselinformation dieses Prozesses auf.
 
-## Verbinden mit dem Azure-Rechteverwaltungsdienst
+## <a name="connecting-to-the-azure-rights-management-service"></a>Verbinden mit dem Azure-Rechteverwaltungsdienst
 
 -   Rufen Sie [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) auf.
 -   Legen Sie [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) fest.
@@ -50,9 +50,9 @@ Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.
 
 **Hinweis** – Aufgrund einer Bedingung unseres Ermittlungsdiensts sind Anmeldeinformationen für symmetrische Schlüssel von anderen Regionen nur zulässig, wenn Sie sich in Nordamerika befinden. Aus diesem Grund müssen Sie Ihre Mandanten-URLs direkt eingeben. Verwenden Sie hierfür den Parameter *pConnectionInfo* mit dem Typ [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) in den Funktionen [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) oder [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
-## Generieren Sie einen symmetrischen Schlüssel, und sammeln Sie die benötigten Informationen.
+## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>Generieren Sie einen symmetrischen Schlüssel, und sammeln Sie die benötigten Informationen.
 
-### Anweisungen zum Generieren eines symmetrischen Schlüssels
+### <a name="instructions-to-generate-a-symmetric-key"></a>Anweisungen zum Generieren eines symmetrischen Schlüssels
 
 -   Installieren Sie den [Microsoft Online-Anmeldeassistenten](http://go.microsoft.com/fwlink/p/?LinkID=286152).
 -   Installieren Sie das [Azure AD Powershell-Modul](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
@@ -78,7 +78,7 @@ Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.
       AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
-### Anweisungen zum Ermitteln von **TenantBposId** und **Urls**
+### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Anweisungen zum Ermitteln von **TenantBposId** und **Urls**
 
 -   Installieren Sie das [Azure RMS Powershell-Modul](https://technet.microsoft.com/en-us/library/jj585012.aspx).
 -   Starten Sie Powershell, und führen Sie die folgenden Befehle aus, um die RMS-Konfiguration des Mandanten abzurufen.
@@ -128,7 +128,7 @@ Weitere Informationen finden Sie unter [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https:/
     promptCtx.hCancelEvent = NULL;
     promptCtx.pcCredential = &cred;
 
-### Identifizieren einer Vorlage und Verschlüsselung
+### <a name="identify-a-template-and-then-encrypt"></a>Identifizieren einer Vorlage und Verschlüsselung
 
 -   Wählen Sie eine Vorlage für die Verschlüsselung aus.
     Rufen Sie [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) auf, und übergeben Sie dieselbe Instanz von [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
@@ -162,7 +162,7 @@ Beispiel für die Verwendung von [IpcfDecryptFile](https://msdn.microsoft.com/li
 
 Sie haben jetzt die erforderlichen Schritte zum Aktivieren der Anwendung für die Verwendung von Azure Rights Management abgeschlossen.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
@@ -184,6 +184,6 @@ Sie haben jetzt die erforderlichen Schritte zum Aktivieren der Anwendung für di
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 

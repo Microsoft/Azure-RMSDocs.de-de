@@ -20,13 +20,13 @@ ms.openlocfilehash: 719077671664dda3102949609874c569a691bbb8
 
 ---
 
-# Testen der Anwendung
+# <a name="testing-your-application"></a>Testen der Anwendung
 
 Dieses Thema enthält Anleitungen zum Einrichten der Anwendung zum Testen.
 
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
 
-### Schritt 1: Einrichten für Tests
+### <a name="step-1-setup-for-testing"></a>Schritt 1: Einrichten für Tests
 
 Sie können Tests entweder mit Azure RMS oder mit einem RMS-Server unter Windows Server ausführen. Wir empfehlen, dass Sie Tests zunächst unter Azure RMS und anschließend (sofern dies für Ihre Bereitstellung erforderlich ist) mit einem RMS-Server ausführen.
 
@@ -40,11 +40,11 @@ Sie können Tests entweder mit Azure RMS oder mit einem RMS-Server unter Windows
 
     Informationen zum Installieren des RMS SDK 2.1 finden Sie unter [Installieren des SDK](install-the-rms-sdk.md).
 
-## Hinweise
+## <a name="remarks"></a>Hinweise
 
 Die Anleitung in diesem Thema ist nicht vollständig. Detaillierte Informationen zum Konfigurieren des RMS-Clients 2.1 finden Sie unter [Hinweise zur Bereitstellung des RMS-Clients 2.1](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx).
 
-### Verwandte Themen
+### <a name="related-topics"></a>Verwandte Themen
 
 * [Exemplarische Vorgehensweise: Installieren und Konfigurieren eines RMS-Servers](how-to-install-and-configure-an-rms-server.md)
 * [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md)
@@ -56,6 +56,6 @@ Die Anleitung in diesem Thema ist nicht vollständig. Detaillierte Informationen
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

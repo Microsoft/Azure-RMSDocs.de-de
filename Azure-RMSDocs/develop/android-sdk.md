@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 90c8c97c720c624ba8f1ca7703b6c79a66f77d08
+ms.sourcegitcommit: ff3b1ce2ec5984c1e79bc9d10c5fc913b4fd3291
+ms.openlocfilehash: 1925eb3a630f61e995886989ad351a8263c9779f
 
 
 ---
 
-# Android-Setup
+# <a name="android-setup"></a>Android-Setup
 
 Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.
 
@@ -29,9 +29,9 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
--   [Weitere Informationen](#see-also)
+-   [Siehe auch](#see-also)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -56,11 +56,11 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
 Unter [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Versionshinweise und häufig gestellte Fragen (FAQ).
 
-## Optional
+## <a name="optional"></a>Optional
 
 Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI erstellen möchten, eine wiederverwendbare UI zur Nutzung und zum Schutz. Nutzen Sie die [UI-Bibliothek und Beispiel-App für Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-## Konfigurieren der Entwicklungsumgebung
+## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 **Hinweis** MS RMS SDK 4.2 Preview-Version: In dieser Vorabversion wurden die Screenshots nicht aktualisiert, um die Änderung des Pfads von com/microsoft/protection in com/microsoft/rightsmanagment widerzuspiegeln. Der Text wurde allerdings aktualisiert.
 
@@ -134,11 +134,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 -   Sie können jetzt Ihre eigenen neuen Android-Apps erstellen.
 
-### Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 [Erste Schritte](get-started.md)
 
-[Neuheiten](release-notes.md)
+[Neuerungen](release-notes.md)
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
@@ -150,6 +150,6 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

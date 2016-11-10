@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: 790f0d847c57b9e13d9074298b3e89584dc24760
 
 
 ---
 
-# Windows Phone-Setup
+# <a name="windows-phone-setup"></a>Windows Phone-Setup
 
 
 Windows Phone-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Informationsschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.
@@ -29,9 +29,9 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 
 -   [Voraussetzungen](#prerequisites)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
--   [Weitere Informationen](#see-also)
+-   [Siehe auch](#see-also)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
 Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
@@ -46,7 +46,7 @@ Im Thema zu den [Neuigkeiten](release-notes.md) finden Sie Informationen zu API-
 
 Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklung](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) an
 
-## Konfigurieren der Entwicklungsumgebung
+## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 
 -   Öffnen Sie *Visual Studio*.
@@ -60,7 +60,7 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
     ![Hinzufügen eines Verweises](../media/wpsetup-addref.png)
 
 -   Klicken Sie auf **Durchsuchen** unten links im Dialogfeld **Verweis hinzufügen**, und wählen Sie die *Microsoft.RightsManagment.dll*-Datei aus, die sich in dem Ordner befindet, in dem Sie das Paket extrahiert haben.
--   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für **das Windows Visual C++-Laufzeitpaket für Windows**.
 
     ![Hinzufügen von Erweiterungen](../media/wpsetup-refmngr.png)
 
@@ -68,11 +68,11 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
 
 Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
-### Weitere Informationen
+### <a name="see-also"></a>Weitere Informationen
 
 [Erste Schritte](get-started.md)
 
-[Neuheiten](release-notes.md)
+[Neuerungen](release-notes.md)
 
 [Kernkonzepte](core-concepts.md)
 
@@ -93,6 +93,6 @@ Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

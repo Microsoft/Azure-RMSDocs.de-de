@@ -20,7 +20,7 @@ ms.openlocfilehash: 561ed44582fe2c73cf40ac082bf67e91d37fb351
 
 ---
 
-# Linux-Setup
+# <a name="linux-setup"></a>Linux-Setup
 
 
 Verschiedene Arten von Linux-Betriebssystemen können jetzt das Microsoft Rights Management SDK 4.2 nutzen, um den integrierten Schutz von Daten in der Anwendung zu aktivieren, indem Azure Active Directory Rights Management (AAD RM) verwendet wird.
@@ -29,25 +29,25 @@ Verschiedene Arten von Linux-Betriebssystemen können jetzt das Microsoft Rights
 -   [Erstellen und Verwenden](#how-to-build-and-use)
 -   [Siehe auch](#see-also)
 
-## Unterstützte Betriebssysteme
+## <a name="supported-operating-systems"></a>Unterstützte Betriebssysteme
 
 
 Ubuntu 14.04 OpenSUSE 13.2 CentOS 7 **Hinweis**  Bibliotheken und Beispiele wurden unter Windows und auch unter OSX erfolgreich kompiliert, aber diese werden derzeit nicht vollständig unterstützt.
 
  
 
-## Erstellen und Verwenden
+## <a name="how-to-build-and-use"></a>Erstellen und Verwenden
 
 Auf GitHub werden zwei Anleitungsthemen zu diesem SDK als grundlegende Hilfe für die Erstellung und Verwendung des SDK gehostet.
 
--   [Gewusst wie: Erstellen von Bibliotheken und Beispiel-Apps](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
--   [Gewusst wie: Installieren und Verwenden von Apps auf Benutzersystemen](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
+-   [Vorgehensweise: Erstellen von Bibliotheken und Beispiel-Apps (in englischer Sprache)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_build_it.md)
+-   [Vorgehensweise: Installieren und Verwenden von Apps auf Benutzersystemen (in englischer Sprache)](https://github.com/AzureAD/rms-sdk-for-cpp/blob/master/docs/how_to_use_it.md)
 
-## Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 * [Erste Schritte](get-started.md)
 
-* [Neuheiten](release-notes.md)
+* [Neuerungen](release-notes.md)
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
@@ -60,6 +60,6 @@ Auf GitHub werden zwei Anleitungsthemen zu diesem SDK als grundlegende Hilfe fü
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

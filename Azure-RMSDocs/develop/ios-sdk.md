@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
+ms.sourcegitcommit: 7c0b885c35dcac0237788a69486d8f736c97c0c4
+ms.openlocfilehash: 96b71d26461559aa8e53960e7e8f3f748b7ebb1d
 
 
 ---
 
-# Einrichten von iOS und OS X
+# <a name="ios-and-os-x-setup"></a>Einrichten von iOS und OS X
 
 iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Rights Management (Azure RMS) zu ermöglichen.
 
@@ -32,9 +32,9 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
--   [Weitere Informationen](#see-also)
+-   [Siehe auch](#see-also)
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -53,11 +53,11 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
 Unter [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Versionshinweise und häufig gestellte Fragen (FAQ).
 
-## Optional
+## <a name="optional"></a>Optional
 
 Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Benutzeroberfläche erstellen möchten, eine wiederverwendbare Benutzeroberfläche für Nutzungs- und Schutzverfahren. Nutzen Sie die [UI-Bibliothek und Beispiel-App für iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
-## Konfigurieren der Entwicklungsumgebung
+## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
 -   Um ein neues Projekt zu erstellen, klicken Sie im Menü **Datei** auf **Neu** und dann auf **Projekt**.
 -   Wählen Sie **Single View Application**.
@@ -100,11 +100,11 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 -   Sie können jetzt Ihre eigenen neuen iOS/OS X-Apps erstellen.
 
-### Siehe auch
+### <a name="see-also"></a>Siehe auch
 
 * [Erste Schritte](get-started.md)
 
-* [Neuheiten](release-notes.md)
+* [Neuerungen](release-notes.md)
 
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
@@ -116,6 +116,6 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

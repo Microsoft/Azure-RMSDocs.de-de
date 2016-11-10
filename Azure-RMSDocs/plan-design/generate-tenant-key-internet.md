@@ -19,7 +19,7 @@ ms.openlocfilehash: c2a272cc27a45f7fda8279394fcb681b70dea81b
 ---
 
 
-# Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet: INHALT VERALTET
+# <a name="generate-and-transfer-your-tenant-key-over-the-internet-retired-content"></a>Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet: INHALT VERALTET
 
 >*Gilt für: Azure Rights Management, Office 365*
 
@@ -27,6 +27,6 @@ Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

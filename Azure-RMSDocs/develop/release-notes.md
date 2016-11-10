@@ -3,7 +3,7 @@ title: Neuheiten und Versionshinweise | Azure RMS
 description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 10/31/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,28 +13,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81cbe287b67e2a1598efdd2a816913f147c7ff7b
-ms.openlocfilehash: f3d4b1ba0da3530121aa81056238533f0dcbed2f
+ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
+ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
 
 
 ---
 
-# Neuheiten und Anmerkungen zu dieser Version
+# <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
-## Neuheiten
-Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung. In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK beschrieben.
+## <a name="whats-new"></a>Neuheiten
+Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung. In diesem Thema werden wichtige Änderungen und Funktionen in der Version des RMS SDK beschrieben.
 
--   [Neu ab Juni 2016](#new-for-June-2016)
--   [Dezember 2015-Update](#december-2015-update)
--   [Juli 2015-Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt](#july-2015-update-adds-support-for-linux-c-developm)
--   [Mai 2015-Update – Steuerung der Protokollierung hinzugefügt](#may-2015-update-adds-logging-control)
--   [Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february-2015-update-adds-windows-store-application-support)
--   [Januar 2015-Update – Unterstützung für WinPhone-Plattform hinzugefügt](#january-2015-update-adds-winphone-platform-support)
--   [Oktober 2014-Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
--   [Anmerkungen zu dieser Version](#release-notes)
--   [Häufig gestellte Fragen](#frequently-asked-questions)
-
-### Neu ab Juni 2016
+### <a name="new-for-june-2016"></a>Neu ab Juni 2016
 
 - **Unterstützung moderner Authentifizierung**: Diese ermöglicht in RMS-fähigen Apps die Anmeldung mithilfe der Active Directory-Authentifizierungsbibliothek (Active Directory Authentication Library; ADAL). Dadurch werden Anmeldefunktionen wie Multi-Factor Authentication (MFA), SAML-basierte Identitätsanbieter (Drittanbieter) mit RMS-Clientanwendungen und die smartcard- und zertifikatbasierte Authentifizierung aktiviert. Außerdem müssen RMS-fähige Apps nicht mehr das Standardauthentifizierungsprotokoll verwenden.
 - **Unterstützung von Dokumentkontrolle**: Entwickler können nun die Dokumentkontrolle aktivieren, wenn sie Dokumente in ihren Apps schützen
@@ -42,7 +32,7 @@ Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und fle
 - Fehlerbehebungen
 
 
-### Dezember 2015-Update
+### <a name="december-2015-update"></a>Dezember 2015-Update
 
 Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folgenden Ergänzungen vor:
 
@@ -74,7 +64,7 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 -   Updates zur Verbesserung der Fehlermeldungen und der Problembehandlung.
 -   Beträchtliche Leistungssteigerungen für kryptografische Operationen.
 
-### Juli 2015-Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt
+### <a name="july-2015-update-adds-support-for-linux-c-development"></a>Juli 2015-Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt
 
 Diese Version bietet folgende Zusätze:
 
@@ -82,7 +72,7 @@ Diese Version bietet folgende Zusätze:
 
     Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
 
-### Mai 2015-Update – Steuerung der Protokollierung hinzugefügt
+### <a name="may-2015-update-adds-logging-control"></a>Mai 2015-Update – Steuerung der Protokollierung hinzugefügt
 
 Diese Version unterstützt Folgendes:
 
@@ -100,15 +90,15 @@ Diese Version unterstützt Folgendes:
 
     Weitere Informationen finden Sie unter [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
-### Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt
+### <a name="february-2015-update-adds-windows-store-application-support"></a>Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt
 
 Diese Version bietet Unterstützung für Windows Store-Anwendungen sowie funktionale Parität mit der Windows Phone-, Android- und iOS/OS X-Version des RMS SDK 4.1.
 
-### Januar 2015-Update – Unterstützung für WinPhone-Plattform hinzugefügt
+### <a name="january-2015-update-adds-winphone-platform-support"></a>Januar 2015-Update – Unterstützung für WinPhone-Plattform hinzugefügt
 
 Diese Version bietet Unterstützung für das Windows Phone-Betriebssystem sowie funktionale Parität mit der Android- und iOS/OS X-Version des RMS SDK 4.1.
 
-### Oktober 2014-Update – Upgrade auf Microsoft RMS SDK 4.1
+### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>Oktober 2014-Update – Upgrade auf Microsoft RMS SDK 4.1
 
 Die Version 4.1 des RMS SDK fügt die folgenden neuen Features für Google Android und Apple iOS/OS X hinzu.
 
@@ -120,7 +110,7 @@ Die Version 4.1 des RMS SDK fügt die folgenden neuen Features für Google Andro
 
     Beispiel: MSUserPolicy.name wurde in [MSUserPolicy.policyName](https://msdn.microsoft.com/library/dn790799.aspx) geändert.
 
-## Anmerkungen zu dieser Version
+## <a name="release-notes"></a>Anmerkungen zu dieser Version
 
 Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Versionen der Microsoft Rights Management SDK 4.x-APIs, die Sie als Entwickler berücksichtigen sollten.
 
@@ -181,7 +171,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **Hinweis**  MDI-Anwendungen werden von unserer iOS-API nicht unterstützt.
 
-## Häufig gestellte Fragen
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
 **Alle Plattformen**
 
@@ -232,6 +222,6 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO1-->
 
 
