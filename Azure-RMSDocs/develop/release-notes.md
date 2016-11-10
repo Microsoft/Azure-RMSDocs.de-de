@@ -2,6 +2,7 @@
 title: Neuheiten und Versionshinweise | Azure RMS
 description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article

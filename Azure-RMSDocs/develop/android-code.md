@@ -3,6 +3,7 @@ title: "Codebeispiele für Android | Azure RMS"
 description: In diesem Thema werden wichtige Codeelemente der Android-Version des RMS SDK vorgestellt.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,14 +21,14 @@ ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
 
 ---
 
-# Codebeispiele für Android
+# <a name="android-code-examples"></a>Codebeispiele für Android
 
 In diesem Thema werden wichtige Codeelemente der Android-Version des RMS SDK vorgestellt.
 
 **Hinweis**: Im Beispielcode und in den nachfolgenden Beschreibungen verwenden wir den Begriff MSIPC (Microsoft Information Protection und Steuerelement) zur Bezeichnung des Clientprozesses.
 
 
-## Verwenden von Microsoft Rights Management SDK 4.2 – Schlüsselszenarien
+## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Verwenden von Microsoft Rights Management SDK 4.2 – Schlüsselszenarien
 
 Es folgen Codebeispiele aus einer größeren Beispielanwendung, die für die Einführung in dieses SDK wichtig sind. Diese veranschaulichen die Verwendung des Microsoft Protected File-Dateiformats, das auch als geschützte Datei bezeichnet wird, die Verwendung benutzerdefinierter geschützter Dateiformate und die Verwendung benutzerdefinierter Benutzeroberflächen-Steuerelemente.
 
@@ -35,7 +36,7 @@ Es folgen Codebeispiele aus einer größeren Beispielanwendung, die für die Ein
 
 Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für Android-Betriebssysteme verfügbar. Unter [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) auf GitHub können Sie auf diese Anwendung zugreifen.
 
-### Szenario: Nutzen einer RMS-geschützten Datei
+### <a name="scenario-consume-an-rms-protected-file"></a>Szenario: Nutzen einer RMS-geschützten Datei
 
 -   **Schritt 1**: Erstellen eines [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)-Objekts
 
@@ -197,7 +198,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
                 }
 
 
-### Szenario: Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Szenario: Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
 
 In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erste Vorlage zum Erstellen einer Richtlinie ausgewählt, und dann wird die neue geschützte Datei erstellt und in sie geschrieben.
 
@@ -321,7 +322,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
 
 
 
-### Szenario: Öffnen einer benutzerdefinierten geschützten Datei
+### <a name="scenario-open-a-custom-protected-file"></a>Szenario: Öffnen einer benutzerdefinierten geschützten Datei
 
 -   **Schritt 1**: Erstellen eines [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx)-Objekts aus einem *serializedContentPolicy*-Objekt.
 
@@ -436,7 +437,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
 
 -   **Schritt 1**: Erstellen einer Richtlinienbeschreibung mit einer vom Benutzer angegebenen E-Mail-Adresse.
 

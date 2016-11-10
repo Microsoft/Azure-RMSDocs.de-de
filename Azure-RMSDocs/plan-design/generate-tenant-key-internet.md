@@ -2,6 +2,7 @@
 title: "Generieren und Übertragen Ihres Mandantenschlüssels – über das Internet&#58; INHALT VERALTET | Azure RMS"
 description: "Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant sind, seitdem Azure Rights Management den Azure Key Vault-Dienst für von Kunden verwaltete Mandantenschlüssel (auch bekannt als „Bring Your Own Key“, kurz BYOK) verwendet."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

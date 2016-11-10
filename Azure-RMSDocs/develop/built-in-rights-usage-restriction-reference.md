@@ -3,6 +3,7 @@ title: 'Vorgehensweise: Verwenden integrierter Rechte | Azure RMS'
 description: "Erläutert die integrierten Rechte, die das RMS SDK 4.2 bereitstellt, und die Nutzungseinschränkungen, die eine App im Rahmen dieser Einschränkungen erzwingen soll."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -22,13 +23,13 @@ ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
 
 ---
 
-# Vorgehensweise: Verwenden integrierter Rechte
+# <a name="how-to-use-builtin-rights"></a>Vorgehensweise: Verwenden integrierter Rechte
 
 Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Management SDK 4.2 bereitstellt, und die Nutzungseinschränkungen, die eine App im Rahmen dieser Einschränkungen erzwingen soll. Im Folgenden werden die integrierten Rechte, allgemeinen Rechte, editierbaren Dokumentrechte und E-Mail-Rechte gefolgt von einer Beschreibung und den Werten je nach Betriebssystem erläutert.
 
 **Hinweis**: Weitere Informationen zum Linux-SDK finden Sie in der Quelldatei *rights.h*.
 
-## Allgemeine Rechte
+## <a name="common-rights"></a>Allgemeine Rechte
 
 **All** – Eine Auflistung aller allgemeinen Rechte.
 - Android: [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
@@ -51,7 +52,7 @@ Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Manage
 
  
 
-## Editierbare Dokumentrechte
+## <a name="editable-document-rights"></a>Editierbare Dokumentrechte
 **All** – Eine Auflistung, die alle editierbaren Dokumentrechte enthält.
 - Android: [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS und OS X: [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
@@ -93,7 +94,7 @@ Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Manage
 
  
 
-## E-Mail-Rechte
+## <a name="email-rights"></a>E-Mail-Rechte
 
 **All** – Eine Auflistung, die alle E-Mail-Rechte enthält.
 - Android: [EmailRights.All](https://msdn.microsoft.com/library/dn758285.aspx)

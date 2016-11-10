@@ -2,6 +2,7 @@
 title: "Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel | Azure Information Protection"
 description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK-Szenario, „Bring Your Own Key“)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

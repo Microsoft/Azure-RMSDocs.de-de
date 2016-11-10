@@ -3,6 +3,7 @@ title: Dateien der Entwicklungsumgebung | Azure RMS
 description: Dieses Thema zeigt die Dateien der Entwicklungsumgebung und ihren relativen Installationsort auf Ihrem Computer.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
 
 ---
 
-# Dateien der Entwicklungsumgebung
+# <a name="development-environment-files"></a>Dateien der Entwicklungsumgebung
 
 Dieses Thema zeigt die Dateien der Entwicklungsumgebung und ihren relativen Installationsort auf Ihrem Computer.
 

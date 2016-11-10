@@ -2,6 +2,7 @@
 title: "Technische Übersicht für die Rights Management-Freigabeanwendung | Azure Information Protection"
 description: "Technische Details für Administratoren in Unternehmensnetzwerken, die für die Bereitstellung der RMS-Freigabeanwendung für Windows verantwortlich sind."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
