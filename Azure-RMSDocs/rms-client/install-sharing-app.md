@@ -2,6 +2,7 @@
 title: Herunterladen und Installieren der Rights Management-Freigabeanwendung | Azure Information Protection
 description: "Anweisungen zur interaktiven Installation der RMS-Freigabeanwendung für Windows, damit Sie problemlos Dokumente für andere Benutzer freigeben können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f1553ebd64f174128e41f55b66582e8791ce9133
 
 
 ---
 
-# Herunterladen und Installieren der Rights Management-Freigabeanwendung
+# <a name="download-and-install-the-rights-management-sharing-application"></a>Herunterladen und Installieren der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu installieren. Wenn Sie es jedoch nicht sind und Office 2010 verwenden, bestehen einige Einschränkungen. Weitere Informationen finden Sie im Abschnitt [Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden](#if-you-are-not-a-local-administrator-and-use-office-2010) auf dieser Seite.
 
-## So laden Sie die Rights Management-Freigabeanwendung herunter und installieren sie
+## <a name="to-download-and-install-the-rights-management-sharing-application"></a>So laden Sie die Rights Management-Freigabeanwendung herunter und installieren sie
 
 1.  Navigieren Sie auf der Microsoft-Website zur Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
 
@@ -41,7 +42,7 @@ Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu ins
 
 Damit sind Sie bereit, Ihre Dateien zu schützen und von anderen geschützte Dateien zu lesen.
 
-## Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden
+## <a name="if-you-are-not-a-local-administrator-and-use-office-2010"></a>Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden
 Wenn Sie sich ohne lokale Administratorrechte bei Ihrem Computer anmelden und Setup erkennt, dass Office 2010 installiert ist, werden Sie in einer Warnmeldung darauf hingewiesen, dass einige Szenarien in dieser Konfiguration nicht funktionieren. Dies sind folgende Szenarien:
 
 -   Wenn Ihre Organisation den Azure Rights Management-Dienst von Azure Information Protection anstelle einer lokalen Version von Rights Management verwendet:
@@ -56,19 +57,19 @@ Wenn Sie kein lokaler Administrator sind und Office 365 oder Office 2013 verwe
 
 Sie können die Installation mit diesen bekannten Einschränkungen fortsetzen. Alternativ beenden Sie die Installation und führen sie erneut aus, wählen aber in Schritt 3 beim Ausführen von „Setup.exe“ die Option **Als Administrator ausführen**. Sie können auch einen Administrator bitten, die Installation für Sie durchzuführen. Administratoren können diese [Installation per Skript](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) ausführen, sodass sie ohne Ihr Zutun automatisch erfolgt.
 
-## Beispiele und weitere Anweisungen
+## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

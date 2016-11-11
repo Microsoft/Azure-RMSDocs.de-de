@@ -2,6 +2,7 @@
 title: "Vorbereiten für Azure Rights Management-Schutz | Azure Information Protection"
 description: "Überprüfen Sie, ob alles für die Verwendung des Azure Rights Management-Diensts bereit ist, sodass Ihre Organisation Dokumente und E-Mails schützen kann."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 46db6ef6f65a06c42909252cf99884cc5eaaefe4
-ms.openlocfilehash: 5a3df821c70b8cd308f8fb8cc94ee0cff069a3d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
 
 
 ---
 
-# Vorbereiten für Azure Information Protection
+# <a name="preparing-for-azure-information-protection"></a>Vorbereiten für Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -32,7 +33,7 @@ Damit Sie Azure Information Protection für Ihre Organisation bereitstellen kön
 
     Wenn Sie über Exchange Online verfügen, können Sie im Exchange Admin Center E-Mail-fähige Gruppen erstellen und nutzen. Wenn Sie AD DS haben und die Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen erstellen und verwenden, die entweder Sicherheits- oder Verteilergruppen sind.
 
-## Aktivieren des Rights Management-Diensts für den Schutz von Daten
+## <a name="activate-the-rights-management-service-for-data-protection"></a>Aktivieren des Rights Management-Diensts für den Schutz von Daten
 Wenn alles für den Schutz von Dokumenten und E-Mails bereit ist, aktivieren Sie den Rights Management-Dienst, um diese Technologie anzuwenden. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
 
@@ -40,6 +41,6 @@ Wenn alles für den Schutz von Dokumenten und E-Mails bereit ist, aktivieren Sie
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

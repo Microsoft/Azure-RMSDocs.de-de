@@ -2,6 +2,7 @@
 title: Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung | Azure Information Protection
 description: "Anweisungen zum Aufheben des Schutzes für eine Datei, die zuvor mit der RMS-Freigabeanwendung geschützt wurde."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: ceb726e47c4eb9413b7d7eb5b1469e2a99992dda
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3ef47e5dea1c6b56127e231ba6dba774c31cca90
 
 
 ---
 
-# Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung
+# <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -27,7 +28,7 @@ Um den Schutz von einer zu entfernen (d.h. den Dateischutz aufzuheben), die zuvo
 > [!IMPORTANT]
 > Sie müssen einen Besitzer der Datei sein, um den Schutz zu entfernen.
 
-## Vorgehensweise beim Entfernen des Schutzes von einer Datei
+## <a name="to-remove-protection-from-a-file"></a>Vorgehensweise beim Entfernen des Schutzes von einer Datei
 
 1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf die Datei (z.B. Beispiel.ptxt), wählen Sie **Mit RMS schützen** aus, klicken Sie auf **Direkt schützen**, und klicken Sie dann auf **Schutz entfernen**:
 
@@ -39,18 +40,18 @@ Hinweis: Wenn diese Optionen nicht angezeigt werden, ist die RMS-Freigabeanwendu
 
 Die ursprüngliche geschützte Datei (z. B. Sample.ptxt) ist gelöscht und wurde von einer Datei mit dem gleichen Namen, jedoch mit der ungeschützten Dateinamenerweiterung (z. B. "Sample.txt") ersetzt.
 
-## Beispiele und weitere Anweisungen
+## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

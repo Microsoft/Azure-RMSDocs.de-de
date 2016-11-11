@@ -3,6 +3,7 @@ title: "Ändern von Berechtigungen für Dateien, die mit Rights Management gesch
 description: "Wenn eine Datei mit Rights Management geschützt wurde, können Sie die Berechtigungen ändern, indem Sie die Datei erneut schützen. Dabei können Sie angeben, welche Benutzer Zugriff auf die Datei erhalten und über welche Berechtigungen sie verfügen sollen."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -13,13 +14,13 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
 
 
 ---
 
-# Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden
+# <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -38,7 +39,7 @@ Angenommen, eine andere Person hat die Datei mithilfe der Rights Management-Frei
 
 Weitere Informationen zum vollständigen Entfernen aller Berechtigungen, sodass die Datei nicht länger geschützt wird, finden Sie unter [Entfernen des Schutzes von einer Datei](sharing-app-remove-protection.md).
 
-## So schützen Sie eine Datei direkt erneut
+## <a name="to-reprotect-a-file-inplace"></a>So schützen Sie eine Datei direkt erneut
 
 1.  Wählen Sie im Datei-Explorer eine Datei aus, die Sie schützen möchten. Klicken Sie mit der rechten Maustaste, und wählen Sie **Mit RMS schützen** und anschließend **Direkt schützen** aus. Beispiel:
 
@@ -71,7 +72,7 @@ Weitere Informationen zum vollständigen Entfernen aller Berechtigungen, sodass 
 >     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
 > -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## So schützen Sie eine Datei erneut, die Sie per E-Mail versendet haben
+## <a name="to-reprotect-a-file-that-you-have-emailed"></a>So schützen Sie eine Datei erneut, die Sie per E-Mail versendet haben
 
 Wenn Sie Berechtigungen für eine Datei ändern möchten, die Sie per E-Mail versendet haben, gehen Sie wie folgt vor:
 
@@ -84,18 +85,18 @@ Wenn Sie Berechtigungen für eine Datei ändern möchten, die Sie per E-Mail ver
     Weitere Informationen zur Widerrufung einer per E-Mail versendeten Datei finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente](sharing-app-track-revoke.md).
 
 
-## Beispiele und weitere Anweisungen
+## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
