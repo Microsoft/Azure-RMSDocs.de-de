@@ -2,6 +2,7 @@
 title: "Dialogfeldoptionen für die Rights Management-Freigabeanwendung | Azure Information Protection"
 description: "Informationen, die Sie bei der Festlegung der Optionen in den Dialogfeldern „Schutz hinzufügen“ oder „Geschützt freigeben“ der RMS-Freigabeanwendung unterstützen. Dieses Dialogfeld wird angezeigt, wenn Sie eine freizugebende Datei schützen oder eine Datei auf einem Gerät (direkt) schützen und benutzerdefinierte Berechtigungen auswählen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article

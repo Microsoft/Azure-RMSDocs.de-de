@@ -3,6 +3,7 @@ title: Testen der Anwendung | Azure RMS
 description: Anweisungen zum Einrichten der Anwendung zum Testen.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
