@@ -2,6 +2,7 @@
 title: Entfernen von Vorlagen | Azure Information Protection
 description: "Die Standardvorlagen können nicht gelöscht werden. Sie können jedoch archiviert werden, damit sie Benutzern nicht angezeigt werden."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: 42935ce2-879c-4168-aef9-9a88f72b15b2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 2597df5b95bc1aaff345804e476f48d6436d9a32
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: e9af6dcf237ec0136101835ceff56e79e01f3b3c
 
 
 ---
 
 
-# Entfernen (Archivieren) von Vorlagen
+# <a name="remove-archive-templates"></a>Entfernen (Archivieren) von Vorlagen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -29,7 +30,7 @@ Wenn Sie eine benutzerdefinierte Vorlage veröffentlicht haben, diese aber für 
 
 Da Sie die Standardvorlagen nicht bearbeiten können, müssen Sie zum Archivieren dieser Vorlagen die Option **ARCHIVIEREN** auf der Seite **VORLAGEN** verwenden. Sie können nicht die Outlook-Option **Nicht weiterleiten** archivieren.
 
-## So entfernen Sie eine Standardvorlage
+## <a name="to-remove-a-default-template"></a>So entfernen Sie eine Standardvorlage
 
 -   Wählen Sie auf der Seite **VORLAGEN** die Standardvorlage aus, und klicken Sie auf **ARCHIVIEREN**.
 
@@ -37,10 +38,10 @@ Der Status ändert sich von **Veröffentlicht** zu **Archiviert**. Wenn Sie sich
 
 
 
-## Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

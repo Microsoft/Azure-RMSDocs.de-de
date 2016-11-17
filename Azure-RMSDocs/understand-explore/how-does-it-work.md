@@ -2,6 +2,7 @@
 title: Funktionsweise von Azure RMS | Azure Information Protection
 description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, die verwendeten kryptografischen Steuerelemente sowie Schritt-für-Schritt-Diagramme zur Funktionsweise dieses Prozesses."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: "Unterstützte Plattformen | Azure RMS"
 description: "In diesem Thema werden die vom Rights Management Services SDK 2.1 unterstützten Client- und Serverplattformen identifiziert."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,11 +21,11 @@ ms.openlocfilehash: eb20483bd3a2be60e1b9fcee173ebeabcb5b6d93
 
 ---
 
-# Unterstützte Plattformen
+# <a name="supported-platforms"></a>Unterstützte Plattformen
 
 In diesem Thema werden die vom Rights Management Services SDK 2.1 unterstützten Client- und Serverplattformen identifiziert.
 
-## Unterstützte Plattformen
+## <a name="supported-platforms"></a>Unterstützte Plattformen
 
 -   Windows 10
 -   Windows Server 2012 R2

@@ -3,6 +3,7 @@ title: "Gewusst wie: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihr
 description: "In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

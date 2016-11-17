@@ -3,6 +3,7 @@ title: Linux-Setup | Azure RMS
 description: "Verschiedene Arten von Linux-Betriebssystemen können jetzt das Microsoft Rights Management SDK 4.2 nutzen."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

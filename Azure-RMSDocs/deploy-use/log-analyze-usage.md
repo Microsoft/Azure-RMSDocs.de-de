@@ -2,6 +2,7 @@
 title: Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts | Azure Information Protection
 description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokollierung mit Azure Rights Management (Azure RMS).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

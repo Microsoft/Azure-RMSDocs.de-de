@@ -3,6 +3,7 @@ title: "Anleitung für Entwickler und Begriffe | Azure RMS"
 description: "Das RMS SDK 4.2 dient hauptsächlich als Unterstützung beim Erstellen von AD RMS-fähigen Anwendungen, bei denen der AD RMS-Datenschutz genutzt wird. Der Prozess soll für Sie so einfach wie möglich gestaltet werden."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 2ac4ca3e505d78758a01516f66f1e5f4ff4b17b6
 
 ---
 
-# Anleitung für Entwickler und Begriffe
+# <a name="developer-guidance-and-terms"></a>Anleitung für Entwickler und Begriffe
 Ziel des Microsoft Rights Management SDK 4.2 ist es, die Erstellung von AD RMS-fähigen Anwendungen, für die Active Directory Rights Management Services (AD RMS) genutzt wird, so weit wie möglich zu vereinfachen.
 
 Die folgenden Themen sollen Ihnen als Unterstützung für den Entwurfsprozess zur Entwicklung von RMS-fähigen Anwendungen dienen.
