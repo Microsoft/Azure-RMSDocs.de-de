@@ -2,6 +2,7 @@
 title: Schnellstarttutorial Schritt 4 | Azure Rights Management
 description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: ce1d0a700e0b69d71f5cb2e93f406124bc0ca581
-ms.openlocfilehash: c9ed50317e18e86438b4393ce629d23d433c99fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: dc4cf3426bca306b66e2b23c3dd63373f62c9b7c
 
 
 ---
 
-# Schritt 4: Klassifizierung, Bezeichnung und Schutz in Aktion 
+# <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Schritt 4: Klassifizierung, Bezeichnung und Schutz in Aktion 
 
 >*Gilt für: Azure Information Protection*
 
@@ -24,7 +25,7 @@ Nun, da Sie ein Word-Dokument mit dem installierten Azure Information Protection
 
 Die Klassifizierung und der Schutz treten in Kraft, wenn Sie das Dokument speichern. Bevor wir dies jedoch tun, verwenden wir unser nicht gespeichertes Dokument und können testen, wie einfach es ist, Bezeichnungen anzuwenden und zu ändern.
 
-## So ändern Sie die Standardbezeichnung manuell
+## <a name="to-manually-change-our-default-label"></a>So ändern Sie die Standardbezeichnung manuell
 
 Wählen Sie auf der Information Protection-Leiste die Bezeichnung **Persönlich** aus. Daraufhin werden Sie aufgefordert, die Herabsenkung der Klassifizierungsstufe zu begründen:
 
@@ -32,7 +33,7 @@ Wählen Sie auf der Information Protection-Leiste die Bezeichnung **Persönlich*
 
 Wählen Sie **The previous label no longer applies** (Vorherige Bezeichnung gilt nicht mehr) aus, und klicken Sie auf **Bestätigen**. Der Wert **Sensitivity** (Vertraulichkeit) wird zu **Personal** (Privat) geändert.
 
-## So entfernen Sie die Klassifizierung vollständig
+## <a name="to-remove-the-classification-completely"></a>So entfernen Sie die Klassifizierung vollständig
 
 Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal anstatt auf eine der Bezeichnungen auf das Symbol **Remove label** (Bezeichnung entfernen). Klicken Sie zum Bestätigen auf **OK**, und geben Sie anschließend für diesen Schritt eine Begründung ein.  
 
@@ -41,7 +42,7 @@ Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen
 ![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Entfernen der Klassifizierung](../media/sensitivity-not-set.png)
 
 
-## So wird eine Empfehlungsaufforderung für die Bezeichnung und den automatischen Schutz angezeigt
+## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>So wird eine Empfehlungsaufforderung für die Bezeichnung und den automatischen Schutz angezeigt
 
 1. Geben Sie im Word-Dokument eine gültige Kreditkartennummer ein, zum Beispiel: **4242-4242-4242-4242**. 
 
@@ -63,6 +64,6 @@ Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokum
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

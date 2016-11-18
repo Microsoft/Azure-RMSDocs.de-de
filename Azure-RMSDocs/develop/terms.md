@@ -3,6 +3,7 @@ title: Begriffe | Azure RMS
 description: "Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cf12a824d3d56ca2df234ba0732d0c4eaae6358e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8d6a7553123d36f5a08665949e6417d83bd3912e
 
 
 ---
 
-# Nutzungsbedingungen
+# <a name="terms"></a>Nutzungsbedingungen
 
 Sammlung mit Terminologiedefinitionen, die speziell für Rights Management Services gelten.
 
@@ -31,7 +32,7 @@ Diese Einstellung kann dazu führen, dass Inhalt von Ihrer Anwendung mit einem V
 
 Mit der Einstellung wird verhindert, dass Ihre Anwendung von den kryptografischen Erweiterungen profitiert, die dem Microsoft Rights Management SDK 3.0 oder höher hinzugefügt werden.
 
-**Microsoft Protected File Format**
+**Microsoft Protected File-Format**
 
 Wird auch als PFile-Format bezeichnet. Es ist das Standardformat für AD RMS und fungiert als Standard für alle RMS-fähigen Anwendungen.
 
@@ -46,6 +47,6 @@ Das PFile-Format ist für den Anwendungsentwickler transparent, da es in den Ent
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

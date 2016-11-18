@@ -3,6 +3,7 @@ title: Rights Management Services SDK 2.1 | Azure RMS
 description: "Die RMS SDK 2.1-Plattform ermöglicht Entwicklern das Erstellen von Anwendungen, die für den Datenschutz RMS oder Azure RMS nutzen."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 5972599c568091d39e8a6974648022c4835af1bb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20699fe6a0f5d1e989ee767a5710a3272718f064
 
 
 ---
 
-# Rights Management Services SDK 2.1
+# <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
 
-## Zweck
+## <a name="purpose"></a>Zweck
 
 Die Rights Management Services SDK 2.1-Plattform ermöglicht es Entwicklern, Anwendungen zu erstellen, die für den Datenschutz Rights Management Services (RMS) oder Azure Rights Management nutzen. Das RMS SDK 2.1 handhabt komplexe Sicherheitsmethoden wie die Schlüsselverwaltung, Verschlüsselung und Entschlüsselung. Zudem bietet sie eine vereinfachte API, um die Anwendungsentwicklung zu erleichtern.
 
-### Entwicklerzielgruppe
+### <a name="developer-audience"></a>Entwicklerzielgruppe
 
 Das RMS SDK 2.1 ist im Microsoft Download Center auf der [Downloadseite für RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) verfügbar. Entwickler können damit benutzerdefinierte Anwendungen zur Rechteverwaltung auf digitale Ressourcen erstellen und Nutzungsbedingungen für diese Ressourcen erzwingen. Kenntnisse der Programmiersprache C++ sind erforderlich.
 
@@ -34,7 +35,7 @@ Weitere Informationen zu dieser Technologie finden Sie in unserem [RMS Developer
 
 Antworten auf häufig gestellte Fragen finden Sie im Entwicklerabschnitt der [häufig gestellten Fragen zu RMS](http://aka.ms/adrmsfaq ).
 
-### Laufzeitanforderungen
+### <a name="runtime-requirements"></a>Laufzeitanforderungen
 
 Informationen zu den Laufzeitanforderungen für ein bestimmtes Programmierelement finden Sie im Referenzthema zu diesem Element im Abschnitt mit den Anforderungen.
 
@@ -48,17 +49,17 @@ Informationen zu den Laufzeitanforderungen für ein bestimmtes Programmierelemen
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Downloadseite für RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
 * [RMS Developer's Corner](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
-* [Häufig gestellte Fragen zu RMS](http://aka.ms/adrmsfaq )
+* [HÄUFIG GESTELLTE FRAGEN ZU RMS](http://aka.ms/adrmsfaq )
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: Schnellstarttutorial Schritt 3 | Azure Information Protection
 description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: b5c87669c965d1e67b47dcfbd8ba97f1da41d104
-ms.openlocfilehash: 042e168452d2b5cbc1eeec4fc06a3b0f137a5caf
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 496f086d4db43a69ef0acca579b290286a5b9e5b
 
 
 ---
 
-# Schritt 3: Installieren von Client und Anwendung 
+# <a name="step-3-install-the-client-and-application"></a>Schritt 3: Installieren von Client und Anwendung 
 
 >*Gilt für: Azure Information Protection*
 
@@ -27,7 +28,7 @@ Anschließend installieren Sie die Rights Management-Freigabeanwendung, damit Si
 Diese beiden Installationen können in Office-Anwendungen integriert werden. Zum gegenwärtigen Zeitpunkt müssen sie separat installiert werden.
 
 
-## Installieren des Azure Information Protection-Clients
+## <a name="install-the-azure-information-protection-client"></a>Installieren des Azure Information Protection-Clients
 
 1. [Laden Sie den Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) aus dem Microsoft Download Center auf einen PC herunter, auf dem Office installiert aber Word gerade nicht geöffnet ist. 
 
@@ -35,7 +36,7 @@ Diese beiden Installationen können in Office-Anwendungen integriert werden. Zum
 
     Für dieses Tutorial ist es unerheblich, ob Sie die Option zum Installieren einer Demorichtlinie auswählen, da die Richtlinie, die Sie gerade konfiguriert haben, aus Azure heruntergeladen wird und die Demorichtlinie ersetzt, falls diese installiert ist. Sie könnten die Option für die Demorichtlinie jedoch verwenden, wenn Sie nur die Standardbezeichnungen testen möchten, ohne eine Verbindung mit Azure Information Protection herzustellen. 
 
-## Installieren der Rights Management-Freigabeanwendung 
+## <a name="install-the-rights-management-sharing-application"></a>Installieren der Rights Management-Freigabeanwendung 
 
 1. Navigieren Sie auf der Microsoft-Website zur Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
 
@@ -44,7 +45,7 @@ Diese beiden Installationen können in Office-Anwendungen integriert werden. Zum
 3. Klicken Sie auf der Seite **Microsoft RMS-Setup** auf **Weiter**, und warten Sie das Ende der Installation ab. Klicken Sie dann auf **Neu starten**, wenn Sie zum Neustart des Computers aufgefordert werden, oder auf **Schließen**, um die Installation abzuschließen.
 
 
-## Überprüfen der Installationen
+## <a name="verify-the-installations"></a>Überprüfen der Installationen
 
 Stellen Sie sicher, dass diese Installationen erfolgreich durchgeführt wurden, indem Sie Word und ein neues leeres Dokument öffnen (speichern Sie es noch nicht). Wenn Sie aufgefordert werden, Ihren Benutzernamen und Ihr Kennwort einzugeben, geben Sie die Anmeldeinformationen Ihres globalen Administratorkontos ein. 
 
@@ -74,6 +75,6 @@ Sie können nun Azure Information Protection in Aktion sehen.
 [Schritt 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

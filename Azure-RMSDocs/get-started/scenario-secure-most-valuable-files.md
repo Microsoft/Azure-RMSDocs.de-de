@@ -2,6 +2,7 @@
 title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
 
 
 ---
 
-# Szenario – Schutz Ihrer wertvollsten Dateien
+# <a name="scenario-secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -38,12 +39,12 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 
 -   Der Administrator muss in der Lage sein, nachzuverfolgen, wer wann auf die Dateien zugreift, und den Zugriff bei Bedarf zu widerrufen.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Für dieses Szenario muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
@@ -55,7 +56,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 |Autorisierte Benutzer verfügen als Mindestversion über Office 2013.|Benutzer mit Office 2010 müssen zusätzlich die Rights Management-Freigabeanwendung installieren.|
 |Ihr Azure Information Protection-Abonnement umfasst die Dokumentenverfolgung.|Wenn Ihr Abonnement keine Dokumentenverfolgung und -sperrung beinhaltet, können Sie die Website für die Dokumentenverfolgung nicht verwenden, um festzustellen, wer auf die Dokumente zugreift, und den Zugriff bei Bedarf zu widerrufen. Erwerben Sie in diesem Fall entweder ein Abonnement, das die Dokumentenverfolgung unterstützt, oder akzeptieren Sie diese Einschränkung. Sie sollten auch die Funktionen zur [Nutzungsprotokollierung](../deploy-use/log-analyze-usage.md) des Azure Rights Management-Diensts in Erwägung ziehen. Diese können Auskunft darüber geben, wer wann auf jede Datei zugegriffen hat, um potenziell verdächtige Verhaltensweisen zu erkennen.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
-### So konfigurieren Sie benutzerdefinierte Vorlagen
+### <a name="to-configure-the-custom-template"></a>So konfigurieren Sie benutzerdefinierte Vorlagen
 
 1.  Im klassischen Azure-Portal: Erstellen Sie eine neue benutzerdefinierte Vorlage für Azure Rights Management, die die folgenden Werte und Einstellungen enthält:
 
@@ -69,7 +70,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 2.  Veröffentlichen Sie die neue Vorlage.
 
-### So schützen Sie die Dateien lokal
+### <a name="to-protect-the-files-inplace"></a>So schützen Sie die Dateien lokal
 
 1.  Navigieren Sie im Datei-Explorer zum ersten Ordner mit zu schützenden Dateien:
 
@@ -90,7 +91,7 @@ Weitere Informationen zum direkten Schutz von Dateien finden Sie unter [Schütze
 > [!TIP]
 > Wenn die Anzahl der zu schützenden Dateien für den manuellen Prozess zu groß ist, können Sie die Dateien mit dem [RMS-Schutztool](https://www.microsoft.com/en-us/download/details.aspx?id=47256) in einem Durchgang mit der Vorlage schützen.
 
-### So überwachen und sperren Sie die Dateien (falls erforderlich)
+### <a name="to-monitor-and-if-necessary-revoke-access-to-the-files"></a>So überwachen und sperren Sie die Dateien (falls erforderlich)
 
 1.  Klicken Sie im Datei-Explorer mit der rechten Maustaste auf die geschützte Datei, und wählen Sie **Mit RMS schützen** und dann **Verwendung nachverfolgen** aus.
 
@@ -98,7 +99,7 @@ Weitere Informationen zum direkten Schutz von Dateien finden Sie unter [Schütze
 
 3.  Überprüfen Sie, wer auf die von Ihnen geschützten Dateien zugegriffen hat. Achten Sie insbesondere auf fehlgeschlagene Versuche. Diese können auf ein verdächtiges Verhalten hinweisen. Bei Bedarf können Sie den Zugriff auf jede Datei widerrufen.
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Es gibt keine spezifischen Benutzeranweisungen für dieses Szenario, da diese Dateien keine besondere Aktionen von Benutzern verlangen. Die Dateien wurde von Ihnen geschützt und werden durch Sie überwacht. Allerdings müssen Sie gegebenenfalls die Benutzer und Ihre Supportkanäle informieren, welche Dateien geschützt sind und wie dies die Nutzung der Dokumente einschränken kann. Beispiel: Wenn autorisierte Benutzer keinen Internetzugang haben, können sie die Datei nicht öffnen.
 
 Verwenden Sie die folgende Vorlage, kopieren Sie die Ankündigung, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie die folgenden Änderungen vor:
@@ -113,7 +114,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Ankündigung für Benutzer 
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### IT-Ankündigung: Schutz der geheimsten Dokumente von &lt;Organisationsname&gt;
+### <a name="it-announcement-protecting-ltorganization-namegts-top-secret-documents"></a>IT-Ankündigung: Schutz der geheimsten Dokumente von &lt;Organisationsname&gt;
 Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, sodass nur &lt;Benutzer mit eingeschränktem Zugriff&gt; auf diese Dateien zugreifen und sie ändern können. Zum Schutz vor nicht autorisiertem Zugriff fordert die Anwendung bei jedem Aufruf der Dateien automatisch eine Autorisierung an. Sie benötigen daher zum Öffnen eine Internetverbindung und müssen möglicherweise Ihre Anmeldeinformationen eingeben:
 
 -   &lt;Streng geheimes Dokument, Typ oder Speicherort 1&gt;
@@ -126,10 +127,10 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 -   Wenn Sie keinen Zugriff auf diese Dateien haben oder verdächtige Änderungen in den Dateien feststellen, nutzen Sie die angegebenen &lt;Maßnahmen und Kontaktdetails&gt;.
 
-#### Beispiel für eine angepasste Benutzerdokumentation
+#### <a name="example-customized-user-documentation"></a>Beispiel für eine angepasste Benutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-##### IT-Ankündigung: Schutz der geheimsten Dokumente von VanArsdel
+##### <a name="it-announcement-protecting-vanarsdels-top-secret-documents"></a>IT-Ankündigung: Schutz der geheimsten Dokumente von VanArsdel
 Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, sodass nur die in der Empfängerzeile angegebenen Personen Zugriff auf diese Dateien haben und sie ändern können. Zum Schutz vor nicht autorisiertem Zugriff fordert die Anwendung bei jedem Aufruf der Dateien automatisch eine Autorisierung an. Sie benötigen daher zum Öffnen eine Internetverbindung und müssen möglicherweise Ihre Anmeldeinformationen eingeben:
 
 -   Designspezifikationen für Codename "Mercury"
@@ -147,6 +148,6 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

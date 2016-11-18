@@ -3,6 +3,7 @@ title: AD RMS-Server | Azure RMS
 description: "Die Serverkomponente von Rights Management Services (RMS) wird durch eine Reihe von Webdiensten implementiert, die in Microsoft-Internetinformationsdienste (IIS) ausgeführt werden."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 498a06a65d61417600cd5501a0d04935cb733c37
 
 
 ---
 
-# Server
+# <a name="server"></a>Server
 
 In diesem Thema werden der Zweck und die Funktionen des RMS-Servers für Azure und Windows Server beschrieben.
 
@@ -42,12 +43,12 @@ Von den vielen installierten Webdiensten sind die folgenden für die Anwendungse
 |Vorzertifizierung | Ermöglicht es einem Server, ein *Rechtekontozertifikat* im Auftrag eines Benutzers anzufordern. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 |Dienstlocator | Stellt die URL der Dienste zur Zertifizierung, Lizenzierung und Veröffentlichung von Konten für Active Directory bereit, damit diese von RMS-Clients gefunden werden können. Der Dienst wird auf Stammzertifizierungsservern und Lizenzierungsservern ausgeführt.|
 
-## Verwandte Themen ##
+## <a name="related-topics"></a>Verwandte Themen ##
 * [Übersicht](ad-rms-overview.md)
 * [Microsoft Internetinformationsdienste](http://www.iis.net/overview)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services mit Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909)
-* [Active Directory Rights Management Services (AD RMS)-Skripterstellungs-API](https://msdn.microsoft.com/library/Bb968797)
+* [Active Directory Rights Management Services Scripting API (Active Directory Rights Management Services-Skripterstellungs-API)](https://msdn.microsoft.com/library/Bb968797)
 * [Aktivieren eines Computers](https://msdn.microsoft.com/library/Cc530377)
 * [Aktivieren eines Benutzers](https://msdn.microsoft.com/library/Cc530378)
 * [Erstellen einer Veröffentlichungslizenz](https://msdn.microsoft.com/library/Aa362355)
@@ -58,6 +59,6 @@ Von den vielen installierten Webdiensten sind die folgenden für die Anwendungse
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

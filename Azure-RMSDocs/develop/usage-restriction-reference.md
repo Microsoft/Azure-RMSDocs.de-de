@@ -3,6 +3,7 @@ title: "Referenz für die Nutzungseinschränkung | Azure RMS"
 description: "Nutzungseinschränkungen werden durch die in diesem Thema aufgeführten Konstanten definiert."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
-ms.openlocfilehash: e9cc23d220408faf0e010debb1b6cab0c9dc58ba
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f4767c81c246ec6ba53992b9b8e3375e8e02723d
 
 
 ---
 
-# Referenz für die Nutzungseinschränkung
+# <a name="usage-restriction-reference"></a>Referenz für die Nutzungseinschränkung
 
 Nutzungseinschränkungen werden durch die in diesem Thema aufgeführten Konstanten definiert.
 
@@ -49,6 +50,6 @@ Jedes Benutzerrecht, das in der AD RMS-Rechtespalte aufgeführt wird, hat eine B
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

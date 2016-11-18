@@ -3,6 +3,7 @@ title: 'Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server
 description: "Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
-ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 47f9cf725b864ee22afc7605702992b08cb686dc
 
 
 ---
 
-# Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
+# <a name="howto-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
 In diesem Thema werden die Schritte zum Herstellen einer Verbindung mit einem RMS-Server oder Azure RMS zum Testen der rechtlich geschützten Anwendung behandelt.
  
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
 
-### Schritt 1: Einrichten des RMS-Servers
+### <a name="step-1-setup-your-rms-server"></a>Schritt 1: Einrichten des RMS-Servers
 
 Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und umfassen Folgendes:
 
@@ -110,6 +111,6 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

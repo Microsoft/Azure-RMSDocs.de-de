@@ -2,6 +2,7 @@
 title: "Gewusst wie: Aktivieren von Azure Rights Management über das klassische Azure-Portal | Azure Information Protection"
 description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, wenn Sie auf das Azure-Portal zugreifen können. Sie verfügen z.B. über ein Abonnement für Enterprise Mobility Suite oder Azure Information Protection Premium."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
-ms.openlocfilehash: 74aac58a7b523f98ef627831830577d4fde7d5af
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
 
 
 ---
 
-# Aktivieren von Azure Rights Management über das klassische Azure-Portal
+# <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Aktivieren von Azure Rights Management über das klassische Azure-Portal
 
 >*Gilt für: Azure Information Protection*
 
@@ -44,7 +45,7 @@ Verwenden Sie diese Anleitung, wenn Sie Zugriff auf das Azure-Portal haben. Sie 
 
 Der **RECHTEVERWALTUNGSSTATUS** sollte nun **Aktiv** anzeigen, und die Option **AKTIVIEREN** wird durch **DEAKTIVIEREN**ersetzt.
 
-## Rights Management-Statuswerte und -Beschreibungen im klassischen Azure-Portal
+## <a name="rights-management-status-values-and-descriptions-in-the-azure-classic-portal"></a>Rights Management-Statuswerte und -Beschreibungen im klassischen Azure-Portal
 Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst aktiviert und einsatzbereit ist, wird darüber hinaus möglicherweise **Inaktiv**, **Nicht verfügbar**oder **Nicht autorisiert**angezeigt.
 
 |Statuswert|Beschreibung|
@@ -54,10 +55,10 @@ Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst
 |**Nicht verfügbar**|Der [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] Service ist nicht verfügbar. Versuchen Sie es später erneut.|
 |**Nicht autorisiert**|Sie sind nicht berechtigt, den Status des [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] Services anzuzeigen. Ihr Konto ist z. B. gesperrt, oder Sie sind nicht der globale Administrator für den ausgewählten Mandanten.|
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

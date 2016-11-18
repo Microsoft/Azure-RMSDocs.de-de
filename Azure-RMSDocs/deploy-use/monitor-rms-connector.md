@@ -2,6 +2,7 @@
 title: "Überwachen des Azure Rights Management-Connectors | Azure Information Protection"
 description: "Hier finden Sie Informationen, die Sie beim Überwachen des Connectors und Verwendung des Azure Rights Management-Diensts von Azure Information Protection in Ihre Organisation unterstützen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
 
 
 ---
 
-# Überwachen des Azure Rights Management-Connectors
+# <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
 >*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Nach der Installation und Konfiguration des RMS-Connectors können Sie die folgenden Methoden und Informationen verwenden, um den Connector und die Nutzung des Azure Rights Management-Diensts von Azure Information Protection in Ihrer Organisation zu überwachen.
 
-## Anwendungsereignis-Protokolleinträge
+## <a name="application-event-log-entries"></a>Anwendungsereignis-Protokolleinträge
 
 Der RMS-Connector zeichnet Einträge für den **Microsoft RMS-Connector** im Anwendungsereignisprotokoll auf. 
 
@@ -41,7 +42,7 @@ Lesen Sie wie bei allen Ereignisprotokolleinträgen die Meldung, um weitere Einz
 
 Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Beispiel: Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Ein anderer Administrator kann beispielsweise die Konfiguration des Webproxyservers so ändern, dass Server mit dem RMS-Connector nicht mehr auf das Internet zugreifen können (Fehler 3001). Oder ein Administrator entfernt ein Computerkonto aus einer Gruppe, die Sie für die Verwendung des Connectors berechtigt haben (Warnung 2001).
 
-### Ereignisprotokoll-IDs und Beschreibungen
+### <a name="event-log-ids-and-descriptions"></a>Ereignisprotokoll-IDs und Beschreibungen
 
 Mithilfe der folgenden Abschnitte können Sie mögliche Ereignis-IDs, Beschreibungen und zusätzliche Informationen ermitteln.
 
@@ -153,13 +154,13 @@ Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste de
 
 ----
 
-## Leistungsindikatoren
+## <a name="performance-counters"></a>Leistungsindikatoren
 
 Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren für den **Microsoft Rights Management-Connector** erstellt. Diese Leistungsindikatoren sind nützlich, um die Leistung bei Verwendung des Azure Rights Management-Diensts über den Connector zu überwachen. Beispiel: Wenn beim Schützen von Dokumenten oder E-Mails oder beim Öffnen geschützter Dokumente oder E-Mails regelmäßig Verzögerungen auftreten, können Sie anhand der Leistungsindikatoren ermitteln, ob diese Verzögerungen aufgrund der Verarbeitungszeit des Connectors, aufgrund der Verarbeitungszeit des Azure Rights Management-Diensts oder aufgrund von Netzwerkverzögerungen auftreten. Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
 
 Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
-## RMS Analyzer
+## <a name="rms-analyzer"></a>RMS Analyzer
 
 Sie können das Analyzer-Tool von Rights Management Services zum Überwachen der Integrität des Connectors und Bestimmen etwaiger Konfigurationsprobleme verwenden.
 
@@ -167,7 +168,7 @@ Wenn Sie dieses Tool noch nicht heruntergeladen haben, können Sie dies im [Down
 
 Weitere Informationen und Anleitungen finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**.
 
-## Logging
+## <a name="logging"></a>Logging
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn diese Protokollierung mithilfe des RMS-Connectors erfolgt, enthält das Feld mit der Benutzer-ID in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**, der automatisch für den RMS-Connector erstellt wird.
 
@@ -192,6 +193,6 @@ Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, k�
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

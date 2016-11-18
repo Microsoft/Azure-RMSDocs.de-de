@@ -3,6 +3,7 @@ title: Schnellstarttutorial Schritt 5 | Azure Information Protection
 description: "Schritt 5 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 keywords: 
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -13,14 +14,14 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1af9f3b3451bf8ceafbaf3cddd2b26c37fe9d597
-ms.openlocfilehash: d607c19d37da6b6fb23513067e9e30f33f0260de
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5844ddd3f675cdc5a88de3abc3170d7e8a89aee9
 
 
 ---
 
 
-# Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
 >*Gilt für: Azure Information Protection*
 
@@ -28,7 +29,7 @@ Verwenden Sie für diesen letzten Schritt des Tutorials ein Word-Dokument, das S
 
 Anschließend können Sie das Dokument sicher per E-Mail freigeben. 
 
-## So geben Sie Ihr Dokument sicher per E-Mail frei
+## <a name="to-safely-share-your-document-by-email"></a>So geben Sie Ihr Dokument sicher per E-Mail frei
 
 1.  Öffnen Sie das Dokument in Word. Sie können sehen, dass die Standardbezeichnung **Internal** (Intern) wieder automatisch angewendet wurde. 
 
@@ -68,13 +69,13 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
 Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfänger, das Dokument anzunehmen und zu öffnen. Word sollte zu diesem Zeitpunkt nicht geschlossen werden, da die Anwendung beim letzten Vorgang zum Nachverfolgen des freigegebenen Dokuments noch benötigt wird.
 
-## Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen.
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen.
 
 Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf verschiedenen Geräten lesen. Die Geräte umfassen iPads, iPhones, Android-Tablets und -Smartphones sowie Macintosh- und Windows-Computer.
 
 Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. In der Annahme, dass diese zum ersten Mal Anlagen erhalten haben, die durch Rights Management geschützt sind, bitten Sie sie, auf den Link für die Anweisungen zu klicken. Dadurch gelangen die Empfänger zur Seite [Willkommen bei Microsoft RMS!](https://portal.azurerms.com/#/rmshelp), die Anweisungen zur Installation der RMS-Freigabeanwendung und gegebenenfalls zur Registrierung für ein kostenloses Konto enthält. Die Empfänger können dann die geschützte Anlage lesen.
 
-### Anweisungen für Empfänger: So zeigen Sie die Anlage mit dem geschützten Dokument an
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Anweisungen für Empfänger: So zeigen Sie die Anlage mit dem geschützten Dokument an
 
 1. Öffnen Sie eine der Anlagen, um das Dokument zu lesen:
     
@@ -94,7 +95,7 @@ Als optionalen Schritt kann der Empfänger die E-Mail an andere Personen weiterl
 
 Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Empfänger weitergeleitet hat, erhalten Sie eine E-Mail-Benachrichtigung über die jeweiligen Aktivitäten. Da E-Mails jedoch leicht in Vergessenheit geraten, lassen sich Dokumentzugriffe einfacher über die Website zur Dokumentenverfolgung überwachen. Dies wird im letzten Vorgang veranschaulicht.
 
-## So verfolgen Sie das geschützte Dokument
+## <a name="to-track-your-protected-document"></a>So verfolgen Sie das geschützte Dokument
 
 1.  Klicken Sie in Word auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben** und dann im Menü auf **Verwendung nachverfolgen**:
 
@@ -121,10 +122,10 @@ Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das ge
 |Umfassende Anweisungen und alternative Methoden zum Schutz der per E-Mail freigegebenen Dateien|[Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](../rms-client/sharing-app-protect-by-email.md)|
 |Optionen im Dialogfeld **Geschützt freigeben**|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
 |Informationen zum kostenlosen Konto, für das sich andere Benutzer registrieren können|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Verwenden der Website zur Dokumentennachverfolgung|[Verfolgen und Widerrufen von Dokumenten](../rms-client/sharing-app-track-revoke.md)
+|Verwenden der Website zur Dokumentennachverfolgung|[Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/sharing-app-track-revoke.md)
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Nun, da Sie die standardmäßige Azure Information Protection-Richtlinie gesehen haben, und jetzt wissen, wie Sie sie anpassen können und wie das Bezeichnen in einem Word-Dokument funktioniert, testen Sie doch einige der anderen Einstellungen und lernen Sie die Funktionsweise der Office-Apps kennen, die Azure Information Protection verwenden: Excel, PowerPoint, Outlook. Falls diese Anwendungen geöffnet waren, als Sie den Azure Information Protection-Client installiert haben, schließen Sie sie, und öffnen Sie sie erneut, bevor Sie sie mit Azure Information Protection verwenden.
 
@@ -133,6 +134,6 @@ Geben Sie weitere Dokumente frei, und verfolgen Sie deren Verwendung. Testen Sie
 Es empfiehlt sich zudem, einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) sein. 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

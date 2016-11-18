@@ -2,6 +2,7 @@
 title: Schnellstarttutorial Schritt 1 | Azure Information Protection
 description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: c8cad9c4b6efe2630843bcb1618ecd535670e0fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
 
 
 ---
 
-# Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
@@ -39,7 +40,7 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy.png)
 
-## Ändern der globalen Einstellungen für eine Standardvorlage und Aufforderung zur Eingabe einer Begründung
+## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>Ändern der globalen Einstellungen für eine Standardvorlage und Aufforderung zur Eingabe einer Begründung
 
 Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie sehen können, wie diese funktionieren:
 
@@ -47,7 +48,7 @@ Für unser Tutorial ändern wir einige dieser globalen Einstellungen, damit Sie 
 
 2. Legen Sie **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten) auf **Ein** fest.
 
-## Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
 
 Ändern wir nun die Einstellungen einer der Bezeichnungen, und zwar **Confidential**:
 
@@ -121,6 +122,6 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

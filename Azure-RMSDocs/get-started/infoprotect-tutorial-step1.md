@@ -2,6 +2,7 @@
 title: Schnellstarttutorial Schritt 1 | Azure Information Protection
 description: "Schritt 1 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: b23022c5fbec3d4f6f19ab5017ecf9badf01a9e7
-ms.openlocfilehash: 247ab8dd5a47f9370f03fbd5badd7c78784d20b5
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: edb98a61d247b51319a1eb172f9978e3d64d0e1b
 
 
 ---
 
-# Schritt 1: Aktivieren des Rights Management-Diensts
+# <a name="step-1-activate-the-rights-management-service"></a>Schritt 1: Aktivieren des Rights Management-Diensts
  
 >*Gilt für: Azure Information Protection*
 
@@ -29,7 +30,7 @@ In diesem Tutorial wechseln wir direkt zur Aktivierungsseite für Office 365-Adm
 
 Wenn Sie nicht direkt, sondern über Ihr Office 365-Verwaltungsportal zu dieser Seite navigieren möchten, finden Sie die entsprechenden vollständigen Anweisungen unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md). Diese vollständigen Anweisungen können Sie auch befolgen, wenn Sie Zugriff auf das Azure-Portal, jedoch nicht auf das Office 365-Verwaltungsportal haben.
 
-## So aktivieren Sie den Rights Management-Dienst
+## <a name="to-activate-the-rights-management-service"></a>So aktivieren Sie den Rights Management-Dienst
 
 1. Öffnen Sie ein neues Browserfenster, und navigieren Sie direkt zur [Rights Management-Aktivierungsseite](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Office 365-Administratoren.
     
@@ -56,6 +57,6 @@ Dies ist bereits alles im ersten Schritt dieses Tutorials. Für eine Produktions
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

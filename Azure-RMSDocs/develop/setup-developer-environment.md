@@ -3,6 +3,7 @@ title: Einrichten der Entwicklerumgebung | Azure RMS
 description: "Es wird veranschaulicht, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 185b67b50b7ded0ff28998f5a59be6b216abd0f9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b369c480cc9841a7c8d92f95af3319e0e49f43d0
 
 
 ---
 
-# Einrichten der Entwicklerumgebung
+# <a name="setup-developer-environment"></a>Einrichten der Entwicklerumgebung
 
 In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.
 
 |Plattform | Beschreibung|
 |------|------------|
-|[Android](android-sdk.md)| Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.|
+|[Android](android-sdk.md)| Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.|
 |[Linux](linux-setup.md)|Verschiedene Arten von Linux-Betriebssystemen können jetzt das MS RMS SDK 4.2 nutzen, um den integrierten Schutz von Daten in der Anwendung zu aktivieren, indem Azure Active Directory Rights Management (AAD RM) verwendet wird.|
 |[iOS und OS X](ios-sdk.md)|iOS- und OS X-Anwendungen können das MS RMS SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.|
 |[Windows Phone](windows-phone-apps.md)|Windows Phone-Anwendungen können das MS RMS SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu ermöglichen.|
@@ -40,6 +41,6 @@ In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

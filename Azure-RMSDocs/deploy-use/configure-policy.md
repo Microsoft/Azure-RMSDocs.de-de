@@ -2,6 +2,7 @@
 title: Konfigurieren der Richtlinie | Azure Information Protection
 description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 472541f32c429eea34ea0afb76905bee8abf9747
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
 
 
 ---
 
-# Konfigurieren der Azure Information Protection-Richtlinie
+# <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
@@ -51,33 +52,33 @@ Klicken Sie auf **Publish** (Veröffentlichen), wenn Sie alle gewünschten Ände
 
 Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt er diese Änderungen dann als Azure Information Protection-Richtlinie herunter.
 
-## Konfigurieren der Richtlinie Ihrer Organisation
+## <a name="configuring-your-organizations-policy"></a>Konfigurieren der Richtlinie Ihrer Organisation
 
 Über die folgenden Links können Sie auf Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zugreifen:
 
-- [Die Information Protection-Standardrichtlinie](configure-policy-default.md)
+- [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md)
 
-- [Konfigurieren der globalen Richtlinieneinstellungen](configure-policy-settings.md)
+- [Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection](configure-policy-settings.md)
 
-- [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
+- [Erstellen einer neuen Bezeichnung für Azure Information Protection](configure-policy-new-label.md)
 
-- [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
+- [Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection](configure-policy-delete-reorder.md)
 
-- [Ändern oder Anpassen einer vorhandenen Bezeichnung](configure-policy-change-label.md)
+- [Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection](configure-policy-change-label.md)
 
-- [Konfigurieren einer Bezeichnung, um den Schutz anzuwenden](configure-policy-protection.md)
+- [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](configure-policy-protection.md)
 
-- [Konfigurieren einer Bezeichnung, um visuelle Kennzeichnungen anzuwenden](configure-policy-markings.md)
+- [Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection](configure-policy-markings.md)
 
-- [Konfigurieren von Bedingungen für die automatische und empfohlene Klassifizierung](configure-policy-classification.md)
+- [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

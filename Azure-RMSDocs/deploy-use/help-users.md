@@ -2,6 +2,7 @@
 title: "Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst | Azure Information Protection"
 description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: 56bb2e90f9d1ecb7c925ab22cf1dba16246876f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
 
 
 ---
 
-# Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
+# <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -60,7 +61,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
 
 Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen sensibler Dokumente und E-Mails zu helfen.
 
-## Verwenden von Informationsschutz mit der Rights Management-Freigabeanwendung
+## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Verwenden von Informationsschutz mit der Rights Management-Freigabeanwendung
 Die RMS-Freigabeanwendung (Rights Management) ist möglicherweise für Benutzer erforderlich, damit diese Inhalte schützen und geschützte Inhalte nutzen können, wenn sie Office 2010 verwenden, wird aber auch für alle Computer und mobilen Geräte empfohlen, die den Azure Rights Management-Dienst unterstützen.
 
 Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
@@ -72,13 +73,13 @@ Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FA
 > [!TIP]
 > Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
-## Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
+## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
 Wenn Sie den Azure Rights Management-Dienst verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, die das Schützen von Dateien erleichtern würden. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
 
-#### So schützten Sie ein Dokument in Word 2013
+#### <a name="to-protect-a-document-in-word-2013"></a>So schützten Sie ein Dokument in Word 2013
 
 1.  Erstellen Sie in Microsoft Word ein neues Dokument.
 
@@ -91,7 +92,7 @@ Wenn Sie den Azure Rights Management-Dienst verwenden, ohne die Rights Managemen
 
 Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert. Wenn Sie nicht autorisiert sind, um das Dokument zu öffnen, wird es nicht geöffnet. Wenn sie zum Öffnen des Dokuments autorisiert sind, wird es mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Beispielsweise gestattet ein Nutzungsrecht „Nur anzeigen“ dem Benutzer nicht das Bearbeiten oder Speichern des Dokuments, auch nicht, wenn es vorher an einen anderen Speicherort kopiert wird. Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsbanner angezeigt. In dem Banner können die Berechtigungen angezeigt werden, die auf das Dokument angewendet werden, oder es kann ein Link zu deren Anzeige vorhanden sein.
 
-#### So schützten Sie eine E-Mail mithilfe von Outlook 2013 und Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>So schützten Sie eine E-Mail mithilfe von Outlook 2013 und Exchange Online
 
 1.  Erstellen Sie in Outlook eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
@@ -101,7 +102,7 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 Ähnlich wie beim Anzeigen eines geschützten Dokuments, werden die Empfänger der E-Mail bei deren Empfang zuerst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Wenn Sie beispielsweise **Nicht weiterleiten**ausgewählt haben, ist die Schaltfläche „Weiterleiten“ im Menüband nicht verfügbar.
 
-#### So schützten Sie eine E-Mail mithilfe von Outlook Web App
+#### <a name="to-protect-an-email-message-using-the-outlook-web-app"></a>So schützten Sie eine E-Mail mithilfe von Outlook Web App
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
@@ -115,6 +116,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

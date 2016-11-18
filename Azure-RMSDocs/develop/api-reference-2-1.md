@@ -3,6 +3,7 @@ title: API-Referenz | Azure RMS
 description: "Das Microsoft Rights Management SDK 2.1 unterstützt die RMS-Aktivierung von Windows-Clients."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bb20d796e5a852aa9da224cbf218b9a166a9dbd8
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f430c1ea265e560786bf06d4aeb0792ab610746c
 
 
 ---
 
-# API-Referenz
+# <a name="api-reference"></a>API-Referenz
 
 Das Microsoft Rights Management SDK 2.1 unterstützt die RMS-Aktivierung von Windows-Clients. Weitere Informationen finden Sie in den [Anmerkungen zu dieser Version](release-notes-rtm.md).
-- [Konstanten](https://msdn.microsoft.com/library/hh535291.aspx)
-- [Datentypen](https://msdn.microsoft.com/library/hh535288.aspx)
-- [Funktionen](https://msdn.microsoft.com/library/hh535289.aspx)
-- [Strukturen](https://msdn.microsoft.com/library/hh535294.aspx)
-- [Fehlercodes](https://msdn.microsoft.com/library/hh535248.aspx)
+- [Constants (Konstanten)](https://msdn.microsoft.com/library/hh535291.aspx)
+- [Data Types (Datentypen)](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Functions (Funktionen)](https://msdn.microsoft.com/library/hh535289.aspx)
+- [Structures (Strukturen)](https://msdn.microsoft.com/library/hh535294.aspx)
+- [Error Codes (Fehlercodes)](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Anmerkungen zu dieser Version](release-notes-rtm.md)
  
@@ -40,6 +41,6 @@ Das Microsoft Rights Management SDK 2.1 unterstützt die RMS-Aktivierung von Win
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

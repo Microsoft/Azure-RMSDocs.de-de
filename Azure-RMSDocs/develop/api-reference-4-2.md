@@ -3,8 +3,9 @@ title: API-Referenz | Azure RMS
 description: "Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme: Android, iOS, OS X, Linux, Windows Phone und Windows Store."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,29 +15,29 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab47811d6b7b2b11f5bdcb58c4d72837a209131
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 4f54eb662200bd07a368287cb9e182223132118f
 
 
 ---
 
-# API-Referenz
+# <a name="api-reference"></a>API-Referenz
 
 Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. Weitere Einzelheiten finden Sie unter [What‘s new](release-notes.md) (Neuheiten).
 
-### Apple
-- [iOS/OS X-API-Referenz](/information-protection/sdk/4.2/api/iOS/iOS): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
+### <a name="apple"></a>Apple
+- [iOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx): API-Referenz für die Apple-Betriebssysteme iOS und OS X.
 
-### Google
-- [Android-Namespaces](android-namespaces.md)
+### <a name="google"></a>Google
+- [Android-Namespaces](https://msdn.microsoft.com/library/dn758245.aspx)
 
-### Linux
+### <a name="linux"></a>Linux
 - [Linux-API-Referenz](linux-c-api-reference.md): Die API-Referenz für unsere Unterstützung von Betriebssystemen mit Linux-Bezug wird auf GitHub gehostet: [RMS SDK für C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
-### Microsoft
-- [Windows-API-Referenz](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
+### <a name="microsoft"></a>Microsoft
+- [Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Erste Schritte](get-started.md)
  
@@ -45,6 +46,6 @@ Das Microsoft Rights Management SDK 4.2 unterstützt mehrere Betriebssysteme. We
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

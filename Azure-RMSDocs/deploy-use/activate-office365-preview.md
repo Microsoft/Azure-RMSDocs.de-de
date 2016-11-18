@@ -2,8 +2,9 @@
 title: "Gewusst wie: Aktivieren von Azure Rights Management über das Office 365 Admin Center (Vorschau) | Azure Information Protection"
 description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, wenn Sie auf die neue (Vorschau-)Version von Office 365 Admin Center zugreifen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +13,20 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
-ms.openlocfilehash: ca1547a6ff00b7100cd52c34938bf6e088085f8a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 986cb20b1cf4ecebb08e5f651bbc3af9e28d884b
 
 
 ---
 
-# Aktivieren von Azure Rights Management über das Office 365 Admin Center (Vorschau)
+# <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center-preview"></a>Aktivieren von Azure Rights Management über das Office 365 Admin Center (Vorschau)
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 
 Verwenden Sie diese Anleitung nur, wenn Sie die neue Vorschauversion von Office 365 Admin Center (**Office 365 Admin Center – Vorschau**) verwenden.
+
+Beachten Sie, dass die Anweisungen für diese Version des Admin Center weniger zuverlässig sind als die Anweisungen für die klassische Version des Admin Center, da sich diese Version in der Vorschauphase befindet und gegenwärtig der Wechsel des Markennamens von Azure Rights Management zu Azure Information Protection erfolgt. Unterschiedlichen Kunden werden möglicherweise verschiedene Optionen angezeigt, wenn sie diese Version des Admin Center verwenden.
 
 1. Nachdem Sie sich für einen Office 365-Plan angemeldet haben, der Rights Management umfasst, [melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an](https://portal.office.com/), das als globaler Administrator für Ihre Office 365-Bereitstellung fungiert.
 
@@ -36,9 +39,9 @@ Verwenden Sie diese Anleitung nur, wenn Sie die neue Vorschauversion von Office 
 
     Es empfiehlt sich, zu navigieren, wenn Sie mit der Vorschauversion noch nicht vertraut sind und die Anzeige verwandter Konfigurationsoptionen hilfreich finden. Verwenden Sie die Suchfunktion, wenn Sie mit der Vorschauversion vertraut sind und direkt mit der Aktivierung von Azure Rights Management fortfahren möchten. In der Vorschauversion des Admin Center müssen Sie möglicherweise auch die Suchoption verwenden, wenn die Navigationsanweisungen nicht mit dem übereinstimmen, was angezeigt wird.
 
-    - Navigation: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Rights Management** > **Microsoft Azure Rights Management-Einstellungen verwalten**
+    - Navigieren: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Information Protection** > **Verwalten von Microsoft Azure Information Protection-Einstellungen**
 
-    - Durchsuchen: Geben Sie in das Suchfeld auf der **Startseite** die Zeichenfolge **Rights Management** ein, und klicken Sie dann in den Suchergebnissen auf **Microsoft Azure Rights Management-Einstellungen**.
+    - Suchen: Geben Sie im Suchfeld auf der **Startseite** **Information Protection** ein, und klicken Sie in den Suchergebnissen auf **Microsoft Azure Information Protection** und anschließend auf **Manage Microsoft Azure Information Protection settings** (Verwalten von Microsoft Azure Information Protection-Einstellungen). Wenn keine Suchergebnisse zurückgegeben werden, geben Sie **Rights Management** ein, und klicken Sie dann in den Suchergebnissen auf **Microsoft Azure Rights Management-Einstellungen**.
 
         > [!NOTE]
         >Wenn Sie zu dieser Option navigieren, müssen Sie je nach Anzeige ggf. scrollen, um diese Option anzuzeigen. Wenn sie jedoch auf der Seite nicht angezeigt und in den Suchergebnissen nicht zurückgegeben wird, kann der Grund dafür sein, dass Ihr Diensttarif den Azure Rights Management-Dienst für Azure Information Protection nicht beinhaltet.
@@ -52,12 +55,12 @@ Verwenden Sie diese Anleitung nur, wenn Sie die neue Vorschauversion von Office 
 Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivieren angezeigt werden.
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

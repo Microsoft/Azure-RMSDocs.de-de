@@ -2,6 +2,7 @@
 title: "Szenario – Schützen von Dateien auf einer Dateiserverfreigabe | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation werden mit dem Azure Rights Management-Schutz alle gewünschten Dateien auf einem Dateiserver geschützt. Dies stellt sicher, dass nur Mitarbeiter Ihrer Organisation darauf zugreifen können, selbst wenn die Dateien kopiert und in einem Speicher abgelegt werden, der nicht der Kontrolle Ihrer IT-Abteilung unterliegt, oder wenn sie per E-Mail an andere Benutzer gesendet werden."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 136cabfad5914fadf183e308c51b77e20f98ca4f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 31957f12d363746a7a48580e043b477ab09cb823
 
 
 ---
 
-# Szenario - Dateien auf einer Dateiserverfreigabe schützen
+# <a name="scenario-protect-files-on-a-file-server-share"></a>Szenario - Dateien auf einer Dateiserverfreigabe schützen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 
 -   Der Schutz wird regelmäßig erneut auf alle Dateien angewendet, um sicherzustellen, dass alle Änderungen an den Vorlagen für Benutzerrechterichtlinien auf die geschützten Dateien angewendet werden.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
@@ -47,10 +48,10 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und Azure Rights Management geschützt wurden.|[Vorbereiten für Azure Information Protection](../plan-design/prepare.md)|
 |Eine der folgenden Komponenten:<br /><br />– Zum Verwenden einer Standardvorlage für alle Benutzer: Sie haben die Standardvorlage &lt;Organisationsname&gt; – Vertraulich nicht archiviert<br /><br />– Zum Verwenden einer benutzerdefinierten Vorlage für bestimmte Benutzer: Sie haben diese benutzerdefinierte Vorlage erstellt und veröffentlicht|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
-|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Sie haben das RMS-Schutztool heruntergeladen und die erforderlichen Komponenten für Azure RMS konfiguriert.|Anweisungen zum Herunterladen des Tools und zum Erfüllen der Voraussetzungen: [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Informationen zum Konfigurieren zusätzlich erforderlicher Komponenten für Azure RMS wie dem Dienstprinzipalkonto: [About_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
-### Konfigurieren eines Dateiservers zum Schutz aller Dateien mithilfe von Azure RMS und dem Ressourcen-Manager für Dateiserver mit Dateiklassifizierungsinfrastruktur
+### <a name="configuring-a-file-server-to-protect-all-files-by-using-azure-rms-and-file-server-resource-manager-with-file-classification-infrastructure"></a>Konfigurieren eines Dateiservers zum Schutz aller Dateien mithilfe von Azure RMS und dem Ressourcen-Manager für Dateiserver mit Dateiklassifizierungsinfrastruktur
 
 1.  Starten Sie eine Windows PowerShell-Sitzung. Sie müssen diese Sitzung nicht als Administrator ausführen.
 
@@ -72,7 +73,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
     Dabei wird ein Windows PowerShell-Skript einbezogen, das Sie angeben, um im Ressourcen-Manager für Dateiserver eine benutzerdefinierte ausführbare Datei auszuführen. Die Anweisungen beinhalten außerdem, wie zu prüfen ist, dass die Dateien durch Azure Rights Management geschützt sind.
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Wenn es sich bei den zu schützenden Dateien nur um Office-Dateien handelt, müssen Sie Benutzern möglicherweise keine Anweisungen zu den geschützten Dateien bereitstellen. Wenn autorisierte Benutzer die Dokumente öffnen, werden diese wie gewohnt in Office angezeigt. Einziger Unterschied ist, dass Benutzer gegebenenfalls zur Authentifizierung aufgefordert werden. In diesem Fall wird am oberen Rand des Dokuments in einer Informationsleiste angezeigt, dass das Dokument geschützt ist.
 
 Wenn die geschützten Dateien eine **.ppdf**-Erweiterung haben oder es sich um geschützte Text- oder Bilddateien handelt (beispielsweise mit der Dateinamenerweiterung **.ptxt** oder **.pjpg**), sind diese Dateien schreibgeschützt und können nicht bearbeitet werden. Benutzer können sie mit dem Viewer für RMS-Freigabeanwendungen anzeigen, der automatisch für diese Dateitypen geladen wird. Diese Dateien werden direkt von Azure RMS geschützt. Dabei werden alle Richtlinieneinstellungen aus der gewählten Vorlage angewendet, mit Ausnahme der Nutzungsrechte, da die Datei an sich schreibgeschützt ist. Sofern Sie diese Dateitypen nicht schützen möchten, benötigen Sie in der Regel keine Anweisungen für dieses Szenario. Sie sollten jedoch das Helpdesk informieren, da dieses Benutzern gegebenenfalls erklären muss, warum diese Dateien nicht bearbeitbar sind.
@@ -97,7 +98,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### So bearbeiten Sie einen &lt;Dateityp&gt; aus der &lt;Dateiserverfreigabe&gt;
+### <a name="how-to-edit-lttype-of-filegt-from-the-ltfile-server-sharegt"></a>So bearbeiten Sie eine &lt;Dateityp&gt;Datei aus der &lt;Dateiserverfreigabe&gt;
 
 1.  Doppelklicken Sie auf die Datei, um sie zu öffnen. Sie werden möglicherweise zur Eingabe Ihrer Anmeldeinformationen aufgefordert.
 
@@ -123,10 +124,10 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
     -   *&lt;Kontaktinformationen&gt;*
 
-### Beispiel für eine angepasste Benutzerdokumentation
+### <a name="example-customized-user-documentation"></a>Beispiel für eine angepasste Benutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-#### Bearbeiten von CAD-Zeichnungen aus der ProjectNextGen-Freigabe
+#### <a name="how-to-edit-cad-drawings-from-the-projectnextgen-share"></a>Bearbeiten von CAD-Zeichnungen aus der ProjectNextGen-Freigabe
 
 1.  Doppelklicken Sie auf die Datei, um sie zu öffnen. Sie werden möglicherweise zur Eingabe Ihrer Anmeldeinformationen aufgefordert.
 
@@ -150,11 +151,11 @@ Die Datei wird in regelmäßigen Abständen erneut geschützt, wobei sie wieder 
 
     -   [Anzeigen und Verwenden von Dateien, die geschützt wurden](../rms-client/sharing-app-view-use-files.md)
 
--   Wenden Sie sich an das Helpdesk: helpdesk@vanarsdelltd.com
+-   Wenden Sie sich an den Helpdesk: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

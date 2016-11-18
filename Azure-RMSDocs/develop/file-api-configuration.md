@@ -3,6 +3,7 @@ title: Datei-API-Konfiguration | Azure RMS
 description: Das Datei-API-Verhalten kann durch Einstellungen in der Registrierung konfiguriert werden.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
-ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
+ms.sourcegitcommit: 329dce4c8bb5a6de3ecb7bbd7e734b4acbf339c9
+ms.openlocfilehash: 913373504e34321556a1cdd34ea2744d8477f562
 
 
 ---
 
-# Datei-API-Konfiguration
+# <a name="file-api-configuration"></a>Datei-API-Konfiguration
 
 
 Das Datei-API-Verhalten kann durch Einstellungen in der Registrierung konfiguriert werden.
@@ -32,17 +33,17 @@ Die Datei-API bietet zwei Arten von Schutz – systemeigenen Schutz und PFile-Sc
 
 Weitere Informationen zu unterstützten Dateiformaten finden Sie unter **Datei-API-Unterstützungsdetails** in diesem Thema.
 
-## Schlüssel/Schlüsselwerttypen und -beschreibungen
+## <a name="keykey-value-types-and-descriptions"></a>Schlüssel/Schlüsselwerttypen und -beschreibungen
 
 Die folgenden Abschnitte beschreiben die Schlüssel und Schlüsselwerte, die die Verschlüsselung steuern.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
 **Typ**: Schlüssel
 
 **Beschreibung**: Enthält die allgemeine Konfiguration für die Datei-API.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
 **Typ**: Schlüssel
 
@@ -55,7 +56,7 @@ Die folgenden Abschnitte beschreiben die Schlüssel und Schlüsselwerte, die die
 Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens fest. Wenn der Wert **Encryption** nicht festgelegt ist, wird das Standardverhalten für den Dateityp verwendet.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
 
 **Typ**: REG_SZ
 
@@ -76,7 +77,7 @@ Legen Sie den Wert **Encryption** im Schlüssel zum Angeben des Schutzverhaltens
 
 Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten.
 
-## Standardverhalten für unterschiedliche Dateiformate
+## <a name="default-behavior-for-different-file-formats"></a>Standardverhalten für unterschiedliche Dateiformate
 
 -   **Office-Dateien** – systemeigene Verschlüsselung wird aktiviert.
 -   **TXT-, XML-, JPEG-, PDF-, PNG-, TIFF-, BMP-, GIF-, GIFF-, JPE., JFIF-, JIF-Dateien** – systemeigene Verschlüsselung wird aktiviert (XXX wird zu PXXX).
@@ -84,7 +85,7 @@ Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten
 
 Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)-Fehler auf.
 
-### Datei-API – Dateiunterstützungsdetails
+### <a name="file-api-file-support-details"></a>Datei-API – Dateiunterstützungsdetails
 
 Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hinzugefügt werden. Beispielsweise wird für eine beliebige Erweiterung &lt;ext&gt; (nicht Office) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung „NATIVE“ lautet.
 
@@ -106,7 +107,7 @@ Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hi
 -   Protection type = Pfile: sample.*zzz* wird als „sample.*zzz*.pfile“ verschlüsselt und benannt, wobei *zzz* die ursprüngliche Dateierweiterung ist.
 -   Off: deaktiviert Verschlüsselung.
 
-### Beispiele
+### <a name="examples"></a>Beispiele
 
 Die folgenden Einstellungen aktivieren PFile-Verschlüsselung für TXT-Dateien. Für Office-Dateien wird systemeigener Schutz aktiviert (standardmäßig), für TXT-Dateien wird PFile-Schutz aktiviert, und für alle anderen Dateien wird der Schutz blockiert (standardmäßig).
 
@@ -146,7 +147,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 - [Hinweise für Entwickler](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -156,6 +157,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO3-->
 
 

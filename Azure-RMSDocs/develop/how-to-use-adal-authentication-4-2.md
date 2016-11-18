@@ -3,6 +3,7 @@ title: "Verwenden des Azure-Portals zur Konfiguration für die RMS-Authentifizie
 description: "Skizziert den Prozess für die Authentifizierung mit ADAL"
 keywords: Authentifizierung, RMS, ADAL
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,22 +15,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: eb9cea79d9e5a7902839d34d9b4f13bdefe5a5d3
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0bea42f0de08dc521828ccfe3cbff85e32c74aca
 
 
 ---
 
-# Vorgehensweise: Verwenden des Azure-Portals zur Konfiguration für die RMS-Authentifizierung
+# <a name="how-to-use-azure-portal-to-configure-for-rms-authentication"></a>Vorgehensweise: Verwenden des Azure-Portals zur Konfiguration für die RMS-Authentifizierung
 
 Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory Authentication Library (ADAL).
 
 Für diesen Ansatz muss Ihre Anwendung ihre eigene OAuth-Authentifizierung verwalten. Bei diesem Ansatz führt der RMS-Client einen anwendungsdefinierten Rückruf aus, wenn eine Authentifizierung erforderlich ist.
 
-## Konfiguration über das Azure-Portal
+## <a name="configure-via-azure-portal"></a>Konfiguration über das Azure-Portal
 Befolgen Sie zunächst die Anleitungen zur Konfiguration über das Azure-Portal, die unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md) beschrieben sind. Kopieren und speichern Sie die *Client-ID* und den *Umleitungs-URI* aus diesem Prozess zur späteren Verwendung.
 
-## Codebeispiel
+## <a name="code-sample"></a>Codebeispiel
 Nachfolgend ist ein Codeausschnitt aus dem größeren Codebeispiel für mobile Clients zur Aktivierung der Azure ADAL gezeigt. Weitere Informationen finden Sie im vollständigen Beispiel unter [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 
        /**
@@ -55,13 +56,13 @@ Nachfolgend ist ein Codeausschnitt aus dem größeren Codebeispiel für mobile C
        }
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 - [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 - [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 
