@@ -4,7 +4,7 @@ description: "Informationen zum Planen und Verwalten Ihres Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
-ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
+ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
+ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
 
 
 ---
@@ -97,9 +97,9 @@ Gehen Sie wie im Abschnitt [Gewusst wie: Generieren und Übertragen von HSM-gesc
 
 Wenn der Schlüssel an Key Vault übertragen wird, wird ihm in Key Vault eine Schlüssel-ID zugewiesen, bei der es sich um eine URL handelt, die den Namen des Schlüsseltresors, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Zum Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen den Azure Rights Management-Dienst von Azure Information Protection anweisen, diesen Schlüssel zu verwenden, indem Sie diese URL angeben.
 
-Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihrer Organisation autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) und erteilt dem Azure Rights Management-Dienstprinzipal, **Microsoft.Azure.RMS**, die Berechtigungen. Beispiel:
+Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihrer Organisation autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) und erteilt dem Azure Rights Management-Dienstprinzipal die Berechtigungen unter Verwendung der GUID 00000012-0000-0000-c000-000000000000. Beispiel:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Sie können Azure Information Protection jetzt so konfigurieren, dass dieser Schlüssel als Azure Information Protection-Mandantenschlüssel Ihrer Organisation verwendet wird. Stellen Sie unter Verwendung des Azure RMS-Cmdlets zunächst eine Verbindung mit dem Azure Rights Management-Dienst her, und melden Sie sich an:
 

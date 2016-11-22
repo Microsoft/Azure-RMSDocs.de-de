@@ -4,7 +4,7 @@ description: "Informationen, die Sie beim Konfigurieren Ihrer lokalen Server unt
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/11/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: fc30e58bb6702576988db0dcb4fd38a73d5591b1
+ms.sourcegitcommit: afbaf9bfc2b898d8dece415a26045ec52f7deaac
+ms.openlocfilehash: 15d017cda5e390a6fd2b639ef451a15422981ae4
 
 
 ---
@@ -142,10 +142,16 @@ Damit diese Server, auf denen Exchange ausgeführt wird, den RMS-Verbindungsdien
 
 -   Exchange Server 2010 mit Exchange 2010 Service Pack 3 Updaterollup 6
 
-Sie müssen auf diesen Servern außerdem eine Version des RMS-Clients installieren, die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Die Mindestversion, die in Windows Server 2008 unterstützt wird, ist in dem Hotfix enthalten, das Sie herunterladen können aus [RSA-Schlüssellänge wurde für AD RMS in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627272). Die Mindestversion für Windows Server 2008 R2 kann heruntergeladen werden von [RSA-Schlüssellänge für AD RMS in Windows 7 oder Windows Server 2008 R2 wurde auf 2048 Bits erhöht](http://support.microsoft.com/kb/2627273). Windows Server 2012 und Windows Server 2012 R2 verfügen über systemeigene Unterstützung für Kryptografiemodus 2.
+Auf diesen Servern muss außerdem eine Version 1 des RMS-Clients (auch als MSDRM bezeichnet) installiert sein, die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Alle Windows-Betriebssysteme enthalten den MSRDM-Client, in frühen Versionen des Clients wurde jedoch der Kryptografiemodus 2 nicht unterstützt. Wenn auf Ihren Exchange-Servern mindestens Windows Server 2012 ausgeführt wird, ist keine weitere Aktion erforderlich, weil der mit diesen Betriebssystemen installierte RMS-Client systemeigene Unterstützung für den Kryptografiemodus 2 bietet. 
+
+Wenn auf Ihren Exchange-Servern eine frühere Version des Betriebssystems ausgeführt wird, vergewissern Sie sich, dass die installierte Version des RMS-Clients den Kryptografiemodus 2 unterstützt. Vergleichen Sie hierzu die installierte Version der Datei „Windows\System32\Msdrm.dll“ mit den in den folgenden Knowledge Base-Artikeln aufgeführten Versionsnummern. Ist die Versionsnummer der installierten Datei gleich oder höher als die aufgeführten Versionsnummern, ist keine weitere Aktion erforderlich. Ist die Versionsnummer der installierten Datei niedriger, laden Sie den Hotfix aus dem Artikel herunter, und installieren Sie ihn.
+
+- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
+
+- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
-> Wenn diese Versionen oder höhere Versionen von Exchange und der RMS-Client nicht installiert sind, können Sie Exchange nicht für die Verwendung des Verbindungsdiensts konfigurieren. Bevor Sie die nächsten Schritte ausführen, vergewissern Sie sich, dass diese Versionen installiert sind.
+> Wenn diese Versionen oder höhere Versionen von Exchange und der MSDRM-Client nicht installiert sind, können Sie Exchange nicht für die Verwendung des Connectors konfigurieren. Bevor Sie die nächsten Schritte ausführen, vergewissern Sie sich, dass diese Versionen installiert sind.
 
 ### <a name="to-configure-exchange-servers-to-use-the-connector"></a>So konfigurieren Sie Exchange-Server für die Verwendung des Verbindungsdiensts
 
@@ -182,7 +188,7 @@ Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdi
 
 -   SharePoint Server 2010
 
-Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=38396) herunter.
+Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396) herunter.
 
 > [!WARNING]
 > Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher haben.
@@ -250,6 +256,6 @@ Informationen zum Überwachen des RMS-Connectors finden Sie unter [Überwachen d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

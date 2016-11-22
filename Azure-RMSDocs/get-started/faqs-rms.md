@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: e24c2fdb5c99fa1799abc936c0734098b31c93d9
+ms.sourcegitcommit: eb9b9c1308abe6b1b5803cba7ba254d54cbac812
+ms.openlocfilehash: d3d11dba936ca8901b701008e55df8d73be8bded
 
 
 ---
@@ -29,6 +29,12 @@ Haben Sie eine Frage zum Azure Rights Management-Dienst von Azure Information Pr
 Nein, das ist ein weit verbreitetes Missverständnis. Für den Prozess zum Schutz von Daten des Azure Rights Management-Diensts (und von Microsoft) gilt, dass er Ihre Daten weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. 
 
 Weitere Informationen finden Sie unter [Funktionsweise von Azure RMS. Details](../understand-explore/how-does-it-work.md). Dort ist beschrieben, wie eine geheime Cola-Formel, die lokal erstellt und gespeichert wurde, von Azure Rights Management geschützt wird, aber lokal bleibt.
+
+## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Was ist der Unterschied zwischen Azure Rights Management-Verschlüsselung und Verschlüsselung in andere Microsoft-Clouddiensten?
+
+Microsoft stellt mehrere Verschlüsselungstechnologien zum Schutz Ihrer Daten in verschiedenen und häufig sich ergänzenden Szenarien zur Verfügung. Während Office 365 z. B. Verschlüsselung von in Office 365 gespeicherten ruhenden Daten bietet, verschlüsselt und schützt der Azure Rights Management-Dienst von Azure Information Protection Ihre Daten unabhängig von Speicherort oder Übertragungsmethode.
+
+Diese Verschlüsselungstechnologien ergänzen sich, und zur Verwendung müssen Sie sie unabhängig voneinander aktivieren und konfigurieren. Dabei besteht möglicherweise die Option, einen eigenen Schlüssel für die Verschlüsselung bereitzustellen, ein Szenario, das auch als BYOK (Bring-Your-Own-Key) bezeichnet wird. Das Aktivieren von BYOK für eine dieser Technologien hat keinen Einfluss auf andere. Sie können BYOK z. B. für Azure Information Protection verwenden und für andere Verschlüsselungstechniken nicht verwenden (und umgekehrt). Die von den unterschiedlichen Technologien verwendeten Schlüssel können gleich oder verschieden sein, je nachdem, wie Sie die Verschlüsselungsoptionen für die einzelnen Dienste konfigurieren.
 
 ## <a name="can-i-integrate-the-azure-rights-management-service-with-my-onpremises-servers"></a>Kann ich den Azure Rights Management-Dienst auf lokalen Servern integrieren?
 Ja. Azure Rights Management kann in lokale Server, etwa Exchange Server, SharePoint und Windows-Dateiserver, integriert werden. Dazu verwenden Sie den [Rights Management-Connector](../deploy-use/deploy-rms-connector.md). Wenn Sie nur an der Nutzung der Dateiklassifizierungsinfrastruktur (FCI, File Classification Infrastructure) mit Windows Server interessiert sind, können Sie auch die [RMS Protection-Cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx) verwenden. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
@@ -158,6 +164,6 @@ Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleit
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

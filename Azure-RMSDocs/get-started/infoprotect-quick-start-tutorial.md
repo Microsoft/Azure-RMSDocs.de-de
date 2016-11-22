@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
+ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
+ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 
 ---
@@ -41,7 +41,7 @@ Voraussetzungen für dieses Tutorial:
 
 - Ein globales Administratorkonto zur Anmeldung beim Azure-Portal, um die Azure Information Protection-Richtlinie zu konfigurieren. Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst (z. B. Exchange Online oder Exchange Server) verfügen.
 
-- Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Office Professional Plus 2016, Office Professional Plus 2013 mit Service Pack 1 oder Office Professional Plus 2010 installiert ist. 
+- Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Office 365 ProPlus mit 2016-Apps oder 2013-Apps, Office Professional Plus 2016, Office Professional Plus 2013 mit Service Pack 1 oder Office Professional Plus 2010 installiert ist. 
 
 Los geht’s!
 
