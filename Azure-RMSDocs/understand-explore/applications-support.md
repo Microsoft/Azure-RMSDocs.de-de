@@ -2,6 +2,7 @@
 title: "Unterstützung des Azure Rights Management-Diensts durch Anwendungen | Azure Information Protection"
 description: "Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B. Office-Anwendungen, Word, Excel, PowerPoint und Outlook) und Dienste (z.B. Exchange und SharePoint) für Endbenutzer den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und E-Mails Ihrer Organisation zu schützen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9dee9e7c925258ffd3cd9e783582733e9518d3fa
-ms.openlocfilehash: 3d2f95f2a20782897be293162d901ae0ffac421a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
 
 
 ---
 
-# Unterstützung des Azure Rights Management-Diensts durch Anwendungen
+# <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -47,7 +48,7 @@ Suchdienste können auf unterschiedliche Weise in Rights Management integriert w
 
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Komponenten unterstützt wird:
 
@@ -55,13 +56,13 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Komponent
 
 -   [Office-Anwendungen und -Dienste](office-apps-services-support.md)
 
--   [Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden](file-server-support.md)
+-   [Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) verwenden](file-server-support.md)
 
 -   [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

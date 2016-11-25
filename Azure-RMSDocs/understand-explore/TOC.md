@@ -1,11 +1,11 @@
-# [Kennenlernen](what-is-information-protection.md)
+# [Verstehen und Kennenlernen](what-is-information-protection.md)
 ## [Was ist Azure Information Protection?](what-is-information-protection.md)
 ### [Auch bezeichnet als...](aka.md)
 ### [Was ist Azure Rights Management?](what-is-azure-rms.md)
 #### [Welche Probleme werden damit gelöst?](azure-rms-problems-it-solves.md)
 #### [Was wird Administratoren und Benutzern angezeigt?](what-admins-users-see.md)
 #### [Wie funktioniert es?](how-does-it-work.md)
-## [RMS for Individuals und Azure RMS](rms-for-individuals.md)
+## [RMS for Individuals und Azure Information Protection](rms-for-individuals.md)
 ### [Registrieren für RMS for Individuals](rms-for-individuals-user-sign-up.md)
 ### [Steuern der für RMS for Individuals erstellten Konten](rms-for-individuals-take-control.md)
 ### [Ermitteln, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md)
@@ -23,6 +23,6 @@
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO3-->
 
 

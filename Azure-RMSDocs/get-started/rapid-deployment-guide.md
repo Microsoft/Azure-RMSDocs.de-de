@@ -2,6 +2,7 @@
 title: "Handbuch für die schnelle Bereitstellung von Azure Information Protection | Azure Information Protection"
 description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung von Azure Information Protection zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 
 ---
 
-# Handbuch für die Schnellbereitstellung von Azure Rights Management
+# <a name="rapid-deployment-guide-for-azure-rights-management"></a>Handbuch für die Schnellbereitstellung von Azure Rights Management
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -35,12 +36,12 @@ Vor der Einführung dieser Lösungen empfiehlt es sich, Endbenutzern eine umfang
 > [!NOTE]
 > Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Szenarios für Azure Information Protection
+## <a name="scenarios-for-azure-information-protection"></a>Szenarios für Azure Information Protection
 Damit Sie Azure Information Protection schneller bereitstellen können, um bestimmte Geschäftsprobleme zu lösen, wählen Sie die Szenarios aus, die Ihren Unternehmenszielen am nächsten kommen, und passen Sie sie gegebenenfalls an.
 
 
 
-**Sie senden eine Office-Datei sicher an Benutzer in einer anderen Organisation, wobei Sie die daraus resultierenden Adressen verfolgen können (B2B-Zusammenarbeit).**
+**Sie senden eine Office-Datei sicher an Benutzer in einer anderen Organisation, wobei Sie die daraus resultierenden Zugriffe verfolgen können (B2B-Zusammenarbeit)**
 
 Beispiele:
 
@@ -52,7 +53,7 @@ Beispiele:
 
 Siehe: [Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation](scenario-share-office-file-externally.md)
 
-**Sie möchten sicherstellen, dass in einer SharePoint-Bibliothek gespeicherte Dokumente unter Ihrer Kontrolle bleiben.**
+**Sie möchten sicherstellen, dass in einer SharePoint-Bibliothek gespeicherte Dokumente unter Ihrer Kontrolle bleiben**
 
 Beispiele:
 
@@ -62,7 +63,7 @@ Beispiele:
 
 Siehe: [Szenario – Beibehalten der Kontrolle über in SharePoint gespeicherte Dokumente](scenario-sharepoint.md)
 
-**Führungskräfte sollen vertrauliche Informationen sicher per E-Mail austauschen können.**
+**Führungskräfte sollen vertrauliche Informationen sicher per E-Mail austauschen können**
 
 Beispiele:
 
@@ -74,7 +75,7 @@ Beispiele:
 
 Siehe: [Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus](scenario-executives-email.md)
 
-**Sie möchten automatisch alle Dateien auf einem Dateiserver schützen.**
+**Sie möchten automatisch alle Dateien auf einem Dateiserver schützen**
 
 Beispiele:
 
@@ -84,7 +85,7 @@ Beispiele:
 
 Siehe: [Szenario - Dateien auf einer Dateiserverfreigabe schützen](scenario-fci.md)
 
-**Sie möchten Ihre hochvertraulichen, geschäftskritischen Dokumente besonders schützen.**
+**Sie möchten Ihre hochvertraulichen, geschäftskritischen Dokumente besonders schützen**
 
 Beispiele:
 
@@ -96,7 +97,7 @@ Beispiele:
 
 Siehe: [Szenario – Schutz Ihrer wertvollsten Dateien](scenario-secure-most-valuable-files.md)
 
-**Sie möchten vertrauliche geschäftliche E-Mails und Anlagen senden.**
+**Sie möchten vertrauliche geschäftliche E-Mails und Anlagen senden**
 
 Beispiele:
 
@@ -108,7 +109,7 @@ Beispiele:
 
 Siehe: [Szenario – Vertrauliche geschäftliche E-Mail senden](scenario-company-confidential-email.md)
 
-**Sie möchten Office-Dateien in Arbeitsordnern dauerhaft schützen.**
+**Sie möchten Office-Dateien in Arbeitsordnern dauerhaft schützen**
 
 Beispiele:
 
@@ -123,12 +124,12 @@ Siehe: [Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren](scenar
 
 
 
-## Ankündigung für Benutzer vor der Einführung
+## <a name="announcement-for-users-before-rollout"></a>Ankündigung für Benutzer vor der Einführung
 Sie können als Beispiel die folgende Mitteilung verwenden, um Benutzer zu informieren, dass mit der Bereitstellung von Azure Information Protection verschiedene Änderungen auf sie zukommen. Kopieren Sie den folgenden Text, und fügen Sie ihn in eine E-Mail ein. Lassen Sie diese von einer Ihrer Führungskräfte, vorzugsweise Ihrem Geschäftsführer, an alle Mitarbeiter senden. Ändern Sie den Text gegebenenfalls, um die Nachricht auf die Mitarbeiter Ihrer Organisation abzustimmen.
 
 ![Beispiel-Benutzerdokumentationsbanner für die schnelle Bereitstellung von Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-### Bevorstehende Änderungen zum Schutz unserer Daten
+### <a name="changes-were-making-to-safeguard-our-data"></a>Bevorstehende Änderungen zum Schutz unserer Daten
 Haben Sie sich schon einmal gewünscht, Sie könnten den Zugriff auf ein Dokument, das Sie versehentlich Ihren Partnern geschickt haben, sperren? Haben Sie sich gefragt, ob es eine Möglichkeit gibt, zu erfahren, welche Ihrer Kunden die neuesten von Ihnen gesendeten Produktinformationen gelesen haben? Müssen Sie vertrauliche Produktinformationen übermitteln, die nicht an andere Personen weitergeleitet werden dürfen?
 
 All dies ist demnächst möglich, da die IT-Abteilung dabei ist, diverse Änderungen einzuführen und dabei Microsoft Azure Information Protection als Lösung zum Schutz von Unternehmensdaten zu implementieren. Viele dieser Lösungen sorgen automatisch für den erforderlichen Schutz, ohne dass sich irgendetwas an Ihrer Vorgehensweise ändern. Andere Änderungen hingegen erfordern eine etwas andere Verfahrensweise. In diesen Fällen erhalten Sie von der IT-Abteilung Informationen und Anweisungen. Bei Fragen oder Problemen können Sie sich jederzeit an das Helpdesk wenden.
@@ -146,6 +147,6 @@ Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu s
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

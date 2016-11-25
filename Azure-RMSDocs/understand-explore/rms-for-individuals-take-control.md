@@ -2,6 +2,7 @@
 title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure Information Protection"
 description: "Möglichkeiten zur Steuerung der Benutzerkonten in Azure Active Directory, wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
 
 
 ---
 
 
 
-# Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren
+# <a name="how-administrators-can-control-the-accounts-created-for-rms-for-individuals"></a>Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren
 
 >*Gilt für: Azure Information Protection*
 
@@ -40,12 +41,12 @@ Wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kost
 Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran zu hindern, sich für RMS for Individuals zu registrieren, müssen Sie ein Azure-Abonnement besitzen und Besitzer des Verzeichnisses sein. Wenn Sie noch kein Azure-Abonnement haben, können Sie sich eines beschaffen, für das keine Kosten anfallen. Wenn während des Self-Service-Prozesses automatisch ein Verzeichnis für Sie erstellt wurde, übernehmen Sie den Besitz der Domäne, die zu dessen Erstellung verwendet wurde. Wenn Sie bereits ein Verzeichnis in Azure besitzen, Benutzer aber eine neue Domäne angegeben haben, die Sie in Ihrer Organisation verwenden, führen Sie diese Domäne mit Ihrem vorhandenen Verzeichnis zusammen. Weitere Informationen finden Sie in den Anweisungen in [Was ist die Self-Service-Registrierung für Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

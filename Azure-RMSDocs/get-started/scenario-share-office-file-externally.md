@@ -2,6 +2,7 @@
 title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
 
 
 ---
 
-# Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
+# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -34,23 +35,23 @@ Dieses Szenario eignet sich für folgende Fälle:
 
 -   Der Mitarbeiter möchte unter Umständen wissen, wann dieses Dokument von einem externen Benutzer geöffnet wird.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Damit die Benutzeranweisungen in diesem Szenarion funktionieren, muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
 |---------------|--------------------------------|
 |Sie haben Konten und Gruppen für Office 365 oder Azure Active Directory vorbereitet.|[Vorbereiten für Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Benutzer verwenden Outlook aus Office 2013.|Wenn Benutzer Office 2016 oder Office 2010 verwenden, ersetzen Sie den Screenshot durch eine entsprechende Version, sodass die Abbildung mit der Version der Benutzer übereinstimmt.|
 |Ihr Abonnement für Azure Information Protection umfasst die Dokumentkontrolle.|Wenn Ihr Abonnement keine Dokumentkontrolle und keinen Widerruf von Dokumenten umfasst, können Benutzer nicht alle Schritte in den Benutzeranweisungen ausführen. Erwerben Sie in diesem Fall entweder ein Abonnement, das diese Funktionen unterstützt, oder ändern die Benutzeranweisungen som dass die Schritte entfernt werden, die diese Funktionen verwenden.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie als Anpassung an Ihre Umgebung die folgenden Änderungen vor:
 
 1.  Ersetzen Sie *&lt;Name des Office-Dokumenttyps&gt;* durch den Dokumenttyp, der von Ihren Benutzern gesendet wird. Verwenden Sie anstelle von "Word-Dokument" oder "Excel-Tabelle" Formulierungen, die konkret sind und sich auf die Workflows beziehen, wie z. B. "Preisliste", "Lieferzeiten" und "Angebot erstellen". Mit dieser präziseren Wortwahl wird die Wahrscheinlichkeit erhöht, dass beim Verwenden der Dokumente die Anweisungen befolgt werden.
@@ -76,7 +77,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### So geben Sie den &lt;Namen des Office-Dokumenttyps frei&gt;
+### <a name="how-to-share-a-ltname-of-office-document-typegt"></a>So geben Sie den &lt;Namen des Office-Dokumenttyps&gt;frei
 
 1.  Erstellen Sie Ihre E-Mail-Nachricht durch Angabe der E-Mail-Adresse oder -Adressen, geben Sie Ihre Nachricht ein, und fügen Sie den *&lt;Namen des Office-Dokumenttyps&gt;* an. Klicken Sie dann auf der Registerkarte **NACHRICHT** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
 
@@ -106,16 +107,16 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
     -   [Schützen einer Datei, die per E-Mail freigegeben ist](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Verfolgen und Widerrufen von Dokumenten](../rms-client/sharing-app-track-revoke.md)
+    -   [Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/sharing-app-track-revoke.md)
 
 -   Wenden Sie sich an den Helpdesk:
 
     -   *&lt;Kontaktinformationen&gt;*
 
-### Beispiel für eine angepasste Benutzerdokumentation
+### <a name="example-customized-user-documentation"></a>Beispiel für eine angepasste Benutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-#### Vorgehensweise bei der Freigabe einer Preisliste für den Kunden
+#### <a name="how-to-share-a-price-list-with-your-customer"></a>Vorgehensweise bei der Freigabe einer Preisliste für den Kunden
 
 1.  Erstellen Sie Ihre E-Mail-Nachricht durch Angabe der E-Mail-Adresse oder -Adressen des Kunden, geben Sie Ihre Nachricht ein, und fügen Sie die aktuelle Preisliste an. Klicken Sie dann auf der Registerkarte **NACHRICHT** in der Gruppe **RMS** auf **Geschützt freigeben** , und klicken Sie dann erneut auf **Geschützt freigeben** :
 
@@ -145,7 +146,7 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
     -   [Schützen einer Datei, die per E-Mail freigegeben ist](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Verfolgen und Widerrufen von Dokumenten](../rms-client/sharing-app-track-revoke.md)
+    -   [Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/sharing-app-track-revoke.md)
 
 -   Wenden Sie sich an den Helpdesk:
 
@@ -154,6 +155,6 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

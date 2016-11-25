@@ -2,6 +2,7 @@
 title: "Szenario – Senden einer vertraulichen geschäftlichen E-Mail | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, sodass alle Benutzer innerhalb der Organisation E-Mail-Nachrichten sicher senden können, die außerhalb der Organisation nicht lesbar sind."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/10/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3b5f82e495291bd48d488f44bc72c1d478a879e0
-ms.openlocfilehash: 6ad18ba1035438af88f814689884f9873d75eea0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 
 ---
 
-# Szenario – Vertrauliche geschäftliche E-Mail senden
+# <a name="scenario-send-a-companyconfidential-email"></a>Szenario – Vertrauliche geschäftliche E-Mail senden
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -39,12 +40,12 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 
 -   Benutzer müssen die Vorlage manuell in ihren E-Mail-Client auswählen.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
@@ -56,7 +57,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Sie haben die Azure Rights Management-Standardvorlage **&lt;Organisation&gt; – Vertraulich** nicht archiviert. Oder Sie haben eine benutzerdefinierte Vorlage für diesen Zweck konfiguriert, da Sie eine restriktivere Einstellung benötigen oder nur eine Teilmenge der Benutzer in der Organisation die geschützten E-Mails lesen können soll.|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)<br /><br />Tipp: Wenn Sie restriktivere Nutzungsrichtlinieneinstellungen für alle Benutzer in Ihrer Organisation benötigen, kopieren Sie eine der Standardvorlagen, und bearbeiten Sie diese, anstatt eine von Grund auf neue Vorlage zu erstellen.<br /><br />Aktualisierte Vorlagen werden für die E-Mail-Clients in diesem Szenario nicht sofort aktualisiert. Weitere Informationen finden Sie im Artikel [Aktualisieren von Vorlagen für Benutzer](../deploy-use/refresh-templates.md).|
 |Benutzer, die die geschützte E-Mail senden, verwenden Outlook 2013 oder 2016 oder Outlook Web Access.<br /><br />Benutzer, die die E-Mail empfangen, verwenden einen E-Mail-Client, der Azure Rights Management unterstützt.|Sie können Outlook 2010 verwenden, müssen aber die [Rights Management-Freigabeanwendung für Windows installieren](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) und die Benutzeranweisungen entsprechend anpassen.<br /><br />Eine Liste der E-Mail-Clients, die Azure Rights Management unterstützen, finden Sie in der **E-Mail**-Spalte der Tabelle unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).|
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie als Anpassung an Ihre Umgebung die folgenden Änderungen vor:
 
 1.  Ersetzen Sie alle Instanzen von *&lt;Organisationsname&gt;* durch den Namen Ihrer Organisation.
@@ -91,7 +92,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
 
 1.  Erstellen Sie in Outlook eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie unter *&lt;Organisationsname&gt;* Benutzer oder Gruppen aus.
 
@@ -101,7 +102,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 3.  Senden Sie die Nachricht.
 
-### Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie unter *&lt;Organisationsname&gt;* Benutzer oder Gruppen aus dem Adressbuch aus.
 
@@ -121,10 +122,10 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
     -   *&lt;Kontaktinformationen&gt;*
 
-### Beispiel für eine angepasste Benutzerdokumentation
+### <a name="example-customized-user-documentation"></a>Beispiel für eine angepasste Benutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-#### Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
 
 1.  Erstellen Sie in Outlook eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie im Adressbuch VanArsdel-Benutzer oder -Gruppen aus.
 
@@ -134,7 +135,7 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
 3.  Senden Sie die Nachricht.
 
-#### Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie im Adressbuch VanArsdel-Benutzer oder -Gruppen aus.
 
@@ -157,6 +158,6 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: "Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel | Azure Information Protection"
 description: "Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen kennen, die für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung stehen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 780c4db3e791dd427828550e428ec4ea18d55fd5
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2a46c750034267bc2e69c35f5ac9c134aed0461b
 
 
 ---
 
-# Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
+# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -48,6 +49,6 @@ Nachdem Sie die implementierte Topologie ermittelt haben, können Sie auf einen 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

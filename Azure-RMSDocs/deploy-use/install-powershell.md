@@ -2,6 +2,7 @@
 title: "Installieren der Windows PowerShell für Azure Rights Management | Azure Information Protection"
 description: "Hier finden Sie Anweisungen zum Installieren der Windows PowerShell für den Azure Rights Management-Dienst von Azure Information Protection. Der Name dieses Moduls lautet AADRM."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c114059e99f3caed4fa5e2c48fe0428cb5847f68
 
 
 ---
 
-# Installieren der Windows PowerShell für Azure Rights Management
+# <a name="installing-windows-powershell-for-azure-rights-management"></a>Installieren der Windows PowerShell für Azure Rights Management
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -26,7 +27,7 @@ Die folgenden Informationen helfen Ihnen beim Installieren des Windows PowerShel
 
 Mithilfe dieses PowerShell-Moduls können Sie den Azure Rights Management-Dienst über die Befehlszeile verwalten, indem Sie einen Computer verwenden, der über eine Internetverbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md).
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung von Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] aufgeführt.
 
 |Anforderung|Weitere Informationen|
@@ -41,7 +42,7 @@ In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung 
 > Wenn Sie eine frühere Version des Rights Management-Verwaltungsmoduls installiert haben, deinstallieren Sie **Windows Azure AD Rights Management-Verwaltung** über **Programme und Funktionen**, bevor Sie die neueste Version installieren.
 
 
-## Installieren des Rights Management-Administrationsmoduls
+## <a name="how-to-install-the-rights-management-administration-module"></a>Installieren des Rights Management-Administrationsmoduls
 
 1.  Wechseln Sie zum Microsoft Download Center, und [laden Sie das Azure Rights Management-Verwaltungstool herunter](https://go.microsoft.com/fwlink/?LinkId=257721), in dem das [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Verwaltungsmodul für Windows PowerShell enthalten ist.
 
@@ -51,7 +52,7 @@ In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung 
 
 Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] ist jetzt installiert.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Um anzuzeigen, welche Cmdlets verfügbar sind, starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen** , und geben Sie Folgendes ein:
 
 ```
@@ -70,11 +71,11 @@ Vor dem Ausführen von Befehlen, die den [!INCLUDE[aad_rightsmanagement_1](../in
 > [!NOTE]
 > Azure Rights Management-Dienst noch nicht aktiviert wurde, können Sie dies nach dem Herstellen der Verbindung mit dem Dienst mithilfe des Cmdlets [Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) nachholen.
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

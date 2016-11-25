@@ -3,6 +3,7 @@ title: Aktivieren von E-Mail-Benachrichtigungen | Azure RMS
 description: "Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 411c549cc865914c6e35ececad99da0a0d46c5d4
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5da480834485d58028b366c8fbb9a53412cd7c6a
 
 
 ---
 
-# Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen
+# <a name="howto-enable-email-notification"></a>Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen
 
 Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird.
 
@@ -56,7 +57,7 @@ Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenn
 |MS.Notify.TZSN|string|"Pacific Standard Time"|**Quelle:** TimeZoneInfo.Local.StandardName – Standardzeitzonenname.<br><br>Dies sollte der lokalisierte Name des Standardzeitzonennamens der Zeitzone sein.|
 |MS.Notify.TZDN|string|"Pazifische Sommerzeit"|**Quelle:** TimeZoneInfo.Local.DaylightName – Name der Sommerzeitzeitzone.<br><br>Dies sollte der lokalisierte Name der Sommerzeitzeitzone sein. Er kann mit dem Standardnamen identisch sein, wenn in der Zeitzone keine Sommerzeit unterstützt wird.|
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
@@ -67,6 +68,6 @@ Die folgende Tabelle enthält die Anwendungsdatenfelder, also die Eigenschaftenn
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -2,6 +2,7 @@
 title: Azure Active Directory-Anforderungen | Azure Information Protection
 description: "Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azure Information Protection kennen, damit Benutzer erfolgreich authentifiziert werden können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/29/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
-ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 667e1e533df6d26c9aae0aba1f889b0e6470b059
 
 
 ---
 
-# Azure Active Directory-Anforderungen für Azure Information Protection
+# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -39,7 +40,7 @@ Wenn Sie das Azure AD-Verzeichnis in Ihre lokalen AD-Gesamtstrukturen integriere
 > 
 > -   Sie müssen AD FS mit einer Mindestserverversion von **Windows Server 2012 R2** oder einem alternativen Authentifizierungsanbieter verwenden, der das OAuth 2.0-Protokoll verwendet.
 
-## Multi-Factor Authentication (MFA) und Azure Information Protection
+## <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) und Azure Information Protection
 Damit Sie Multi-Factor Authentication (MFA) mit Azure Information Protection verwenden können, ist mindestens eine der folgenden Komponenten erforderlich:
 
 -   Office 2013 (Mindestversion):
@@ -68,12 +69,12 @@ Konfigurieren Sie dann Ihre MFA-Lösung:
 
         Weitere Informationen zu diesem Szenario finden Sie unter [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) (Programm „Works with Office 365 – Identity“ wurde jetzt optimiert) im Office-Blog.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

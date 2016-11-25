@@ -3,6 +3,7 @@ title: "Gewusst wie: Debuggen einer rechtlich geschützten Anwendung | Azure RMS
 description: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
 
 
 ---
 
-# Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung
+# <a name="howto-debug-a-rightsenabled-application"></a>Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung
 
 Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 
-## Debuggen der Anwendung
+## <a name="debugging-your-application"></a>Debuggen der Anwendung
 
 Im Rights Management Services SDK 2.1 sind die Anti-Debuggingüberprüfungen in der Entwicklerversion Ihrer Laufzeit deaktiviert.
 
@@ -41,7 +42,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Anwendungsprotokollierung per Windows-Ereignisprotokoll
+### <a name="application-logging-by-using-the-windows-event-log"></a>Anwendungsprotokollierung per Windows-Ereignisprotokoll
 
 Der Name des Ereignisprotokolls lautet „Microsoft-RMS-MSIPC/Debug“. Dies bedeutet, dass das Protokoll in der Windows-Ereignisanzeige als „Application and Services Logs\\Microsoft\\RMS\\MSIPC\\Debug“ angezeigt wird.
 
@@ -67,7 +68,7 @@ Mit dem folgenden Befehl wird beispielsweise das MSIPC-Ereignisprotokoll aktivie
 
  
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
  
 
@@ -75,6 +76,6 @@ Mit dem folgenden Befehl wird beispielsweise das MSIPC-Ereignisprotokoll aktivie
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

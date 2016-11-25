@@ -2,6 +2,7 @@
 title: "Registrierungseinstellungen für den RMS-Connector | Azure Information Protection"
 description: "Informationen zu den Registrierungseinträgen auf Servern, die den RMS-Connector verwenden. Die empfohlene Methode zum Konfigurieren dieser Einstellungen ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Connector."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 
 ---
 
 
-# Registrierungseinstellung für den Rights Management-Verbindungsdienst
+# <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -45,7 +46,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 -   Verwenden Sie das HTTPS-Präfix für die Connector-URL, wenn Sie den Connector für die Verwendung von HTTPS zur Kommunikation mit Ihren lokalen Servern konfiguriert haben. Weitere Informationen finden Sie im Abschnitt [Konfigurieren des RMS-Connector für die Verwendung von HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) in der Hauptanleitung. Die Microsoft RMS-URLs verwenden immer HTTPS.
 
 
-## Exchange 2016- oder Exchange 2013-Registrierungseinstellungen
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Exchange 2016- oder Exchange 2013-Registrierungseinstellungen
 
 **Registrierungspfad:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +97,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 - https://*ConnectorFQDN*
 
 
-## Exchange 2010-Registrierungseinstellungen
+## <a name="exchange-2010-registry-settings"></a>Exchange 2010-Registrierungseinstellungen
 
 **Registrierungspfad:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +146,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 - https://*ConnectorFQDN*
 
 
-## Registrierungseinstellungen für SharePoint 2016 oder SharePoint 2013
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Registrierungseinstellungen für SharePoint 2016 oder SharePoint 2013
 
 **Registrierungspfad:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +193,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 
 
-## Registrierungseinstellungen für Dateiserver, die die Dateiklassifizierungsinfrastruktur verwenden
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Registrierungseinstellungen für Dateiserver, die die Dateiklassifizierungsinfrastruktur verwenden
 
 **Registrierungspfad:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -216,6 +217,6 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

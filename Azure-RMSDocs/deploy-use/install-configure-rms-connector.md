@@ -2,6 +2,7 @@
 title: Installieren und Konfigurieren des Azure Rights Management-Connectors | Azure Information Protection
 description: "Informationen zur Unterstützung bei der Installation und Konfiguration des RMS-Connectors (Azure Rights Management). Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter „Bereitstellen des Azure Rights Management-Connectors“."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 4af8d8b5f95edc7bd95fda93b26da98ee00b5075
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: babd3b14cba61aa49cb448c1d132b279dc9ad5da
 
 
 ---
 
-# Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
+# <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -27,7 +28,7 @@ Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und 
 Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-connector.md#prerequisites-for-the-rms-connector) für diese Bereitstellung.
 
 
-## Installieren des RMS-Verbindungsdiensts
+## <a name="installing-the-rms-connector"></a>Installieren des RMS-Verbindungsdiensts
 
 1.  Identifizieren Sie die Computer (mindestens zwei), auf denen der RMS-Verbindungsdienst ausgeführt werden soll. Sie müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
 
@@ -52,7 +53,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
 Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Verbindungsdiensts ein.
 
-## Eingeben von Anmeldeinformationen
+## <a name="entering-credentials"></a>Eingeben von Anmeldeinformationen
 Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie **admin@contoso.com** eingeben und dann das Kennwort für dieses Konto angeben.
 
 Es gibt einige Zeicheneinschränkungen für dieses Kennwort. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Verbindungsdienst fehl, und es wird die Fehlermeldung "Die Kombination aus Benutzername und Kennwort ist nicht korrekt" angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dies auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
@@ -115,7 +116,7 @@ Führen Sie auf der letzten Seite des Assistenten Folgendes durch, und klicken S
 
 Wenn Sie den RMS-Verbindungsdienst deinstallieren müssen, führen Sie den Assistenten erneut aus, und wählen Sie die Option „Deinstallieren“ aus.
 
-## Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts
+## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts
 Wenn Sie den RMS-Verbindungsdienst auf mindestens zwei Computern installiert haben, können Sie die Server und Dienste autorisieren, die den RMS-Verbindungsdienst verwenden sollen. Beispielsweise Server, die Exchange Server 2013 oder SharePoint Server 2013 ausführen.
 
 Um diese Server zu definieren, führen Sie das Administrationstool des RMS-Verbindungsdiensts aus, und fügen Sie der Liste zugelassener Server Einträge hinzu. Sie können dieses Tool ausführen, wenn Sie am Ende des Installations-Assistenten des Microsoft Rights Management-Verbindungsdiensts **Verbindungsdienst-Administratorkonsole zum Autorisieren von Servern starten** auswählen, oder Sie führen ihn gesondert aus dem Assistenten heraus aus.
@@ -132,7 +133,7 @@ Klicken Sie auf der Seite **Zur Verwendung des Verbindungsdiensts berechtigte Se
 > Zum Autorisieren von Servern wird in Azure RMS und AD RMS die gleiche Konfiguration verwendet, bei der NTFS-Rechte manuell auf ServerCertification.asmx für die Dienst- oder Servercomputerkonten angewendet und den Exchange-Konten manuell Administratorrechte erteilt werden. Für den Verbindungsdienst müssen keine NTFS-Rechte auf ServerCertification.asmx angewendet werden.
 
 
-### Hinzufügen eines Servers zur Liste der zugelassenen Server
+### <a name="add-a-server-to-the-list-of-allowed-servers"></a>Hinzufügen eines Servers zur Liste der zugelassenen Server
 Geben Sie auf der Seite **Einem Server die Nutzung des Verbindungsdiensts gestatten** den Namen des Objekts ein, oder durchsuchen Sie, um das zu autorisierende Objekt zu identifizieren.
 
 Es ist wichtig, dass Sie das richtige Objekt autorisieren. Für einen Server muss, damit er den Verbindungsdienst verwenden kann, das Konto zur Autorisierung ausgewählt werden, von dem der lokale Dienst (z. B. Exchange oder SharePoint) ausgeführt wird. Wenn der Dienst beispielsweise als konfiguriertes Dienstkonto ausgeführt wird, fügen Sie der Liste den Namen dieses Dienstkontos hinzu. Wenn der Dienst als „Lokales System“ ausgeführt wird, fügen Sie den Namen des Computerobjekts (z. B. SERVERNAME$) hinzu. Asl bewährte Methode erstellen Sie eine Gruppe, die diese Konten enthält, und geben Sie anstelle einzelner Servernamen die Gruppe an.
@@ -160,7 +161,7 @@ Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie a
 
 Wenn nicht schon geschehen, müssen Sie jetzt den Lastenausgleich für die Server konfigurieren, auf denen der RMS-Verbindungsdienst installiert ist, und erwägen, ob HTTPS für die Verbindungen zwischen diesen Servern und den Servern, die Sie gerade autorisiert haben, verwendet werden soll.
 
-## Konfigurieren von Lastenausgleich und Hochverfügbarkeit
+## <a name="configuring-load-balancing-and-high-availability"></a>Konfigurieren von Lastenausgleich und Hochverfügbarkeit
 Nachdem Sie die zweite oder letzte Instanz des RMS-Verbindungsdiensts installiert haben, definieren Sie einen Verbindungsdienst-URL-Servernamen, und konfigurieren Sie ein Lastenausgleichssystem.
 
 Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Beispielsweise können Sie in Ihrem DNS-System einen Eintrag für **rmsconnector.contoso.com** erstellen und diesen Eintrag für die Verwendung einer IP-Adresse in Ihrem Lastenausgleichssystem konfigurieren. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
@@ -182,7 +183,7 @@ Verwenden Sie folgende Einstellungen, um den NLB-Cluster zu konfigurieren:
 
 Dieser Name, den Sie für das System mit Lastenausgleich (für die Server mit dem RMS-Verbindungsdienst) definieren, ist der RMS-Verbindungsdienstname Ihrer Organisation, den Sie später beim Konfigurieren der lokalen Server zur Verwendung von Azure RMS verwenden.
 
-## Konfigurieren des RMS-Verbindungsdiensts für die Verwendung von HTTPS
+## <a name="configuring-the-rms-connector-to-use-https"></a>Konfigurieren des RMS-Verbindungsdiensts für die Verwendung von HTTPS
 > [!NOTE]
 > Dieser Konfigurationsschritt ist optional, wird aber für zusätzliche Sicherheit empfohlen.
 
@@ -199,10 +200,10 @@ Wenn Sie die HTTPS-Option verwenden, stellen Sie sicher, dass alle Server, auf d
 > -   Wenn Sie eine eigenständige Zertifizierungsstelle verwenden oder dieses Zertifikat von einer anderen Firma kaufen, finden Sie hierzu Informationen unter [Konfigurieren von Internetserverzertifikaten (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) in der [Webserver (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx)-Dokumentationsbibliothek in TechNet.
 > -   Informationen zum Konfigurieren von IIS für die Verwendung des Zertifikats finden Sie unter [Eine Bindung zu einer Website (IIS 7) hinzufügen](http://technet.microsoft.com/library/cc731692.aspx) in der [Webserver (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) -Dokumentationsbibliothek in TechNet.
 
-## Konfigurieren des RMS-Verbindungsdiensts für einen Webproxyserver
+## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Konfigurieren des RMS-Verbindungsdiensts für einen Webproxyserver
 Wenn Ihre Verbindungsdienstserver in einem Netzwerk installiert sind, das keine direkte Internetverbindung besitzt und eine manuelle Konfiguration eines Webproxyservers für ausgehenden Internetzugriff erfordert, müssen Sie die Registrierung auf diesen Servern für den RMS-Verbindungsdienst konfigurieren.
 
-#### So konfigurieren Sie den RMS-Verbindungsdienst für die Verwendung eines Webproxyservers
+#### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>So konfigurieren Sie den RMS-Verbindungsdienst für die Verwendung eines Webproxyservers
 
 1.  Öffnen Sie auf jedem Server, auf dem der RMS-Verbindungsdienst ausgeführt wird, einen Registrierungs-Editor, z. B. Regedit.
 
@@ -214,7 +215,7 @@ Wenn Ihre Verbindungsdienstserver in einem Netzwerk installiert sind, das keine 
 
 4.  Schließen Sie den Registrierungs-Editor, und starten Sie den Server neu, oder führen Sie einen IISReset-Befehl aus, um IIS neu zu starten.
 
-## Installieren des Administrationstool des RMS-Verbindungsdiensts auf administrativen Computern
+## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Installieren des Administrationstool des RMS-Verbindungsdiensts auf administrativen Computern
 Sie können das Verwaltungstool des RMS-Verbindungsdiensts auf einem Computer ausführen, auf dem der RMS-Verbindungsdienst nicht installiert ist, wenn dieser Computer folgende Anforderungen erfüllt:
 
 -   Ein physischer oder virtueller Computer, auf dem Windows Server 2012 oder Windows Server 2012 R2 (alle Editionen), Windows Server 2008 R2 oder Windows Server 2008 R2 Service Pack 1 (alle Editionen), Windows 8.1, Windows 8 oder Windows 7 ausgeführt wird.
@@ -236,10 +237,10 @@ Führen Sie zum Installieren des Administrationstool des RMS-Verbindungsdiensts 
 Wenn Sie diese Dateien noch nicht heruntergeladen haben, können Sie dies im [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=314106)tun.
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie den RMS-Verbindungsdienst installiert und konfiguriert haben, können Sie die lokalen Server für dessen Verwendung konfigurieren. Gehen Sie zu [Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst](configure-servers-rms-connector.md).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
