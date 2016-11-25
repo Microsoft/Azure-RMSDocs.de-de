@@ -3,6 +3,7 @@ title: Codebeispiele | Azure RMS
 description: "Das RMS SDK 4.2 enthält Beispielcode und funktionierende Projekte für einige unterstützte Betriebssysteme."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,28 +15,28 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: a8f5230b80d2472c1680499704f17879cd66de02
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d39bd0523e27a8b5e2c93c6729719203b4488d7e
 
 
 ---
 
-# Codebeispiele
+# <a name="code-examples"></a>Codebeispiele
 
 Microsoft Rights Management SDK 4.2 enthält Beispielcode und funktionierende Projekte für einige unterstützte Betriebssysteme.
 
-## Verfügbarkeit über GitHub ##
+## <a name="available-via-github"></a>Verfügbarkeit über GitHub ##
 Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Benutzeroberfläche erstellen möchten, eine wiederverwendbare Benutzeroberfläche für Nutzungs- und Schutzverfahren.
 
 - Android: [UI-Bibliothek und Beispiel-App](https://github.com/AzureAD/rms-sdk-ui-for-android)
 - iOS: [UI-Bibliothek und Beispiel-App für iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios)
 - Windows Store-Apps: [UI-Bibliothek für Windows Store-Apps](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore) und [Beispiel-App für Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
-## Beispiele ##
+## <a name="examples"></a>Beispiele ##
 In diesen Themen werden wichtige Codeelemente der zugeordneten Version des RMS SDK vorgestellt.
-- [Android-Codebeispiele](android-code.md)
-- [Linux-Codebeispiele](linux-c-code-examples.md)
-- [iOS/OS X-Codebeispiele](ios-os-x-code-examples.md)
+- [Codebeispiele für Android](android-code.md)
+- [Codebeispiele für Linux](linux-c-code-examples.md)
+- [Codebeispiele für iOS/OS X](ios-os-x-code-examples.md)
 
 
  
@@ -46,6 +47,6 @@ In diesen Themen werden wichtige Codeelemente der zugeordneten Version des RMS S
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

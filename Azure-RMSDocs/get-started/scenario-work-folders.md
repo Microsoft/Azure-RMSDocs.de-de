@@ -2,6 +2,7 @@
 title: "Szenario – Konfigurieren von Arbeitsordnern für dauerhaften Schutz | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, um Office-Dokumente in Arbeitsordnern dauerhaft zu schützen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
 
 
 ---
 
-# Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
+# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -41,12 +42,12 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 
 -   Für Dateien, die für Personen freigegeben werden müssen, die nicht in der Vorlage für Benutzerrechterichtlinien angegeben sind (z. B. Benutzer in einer anderen Organisation), müssen Benutzer eine neue Benutzerrechterichtlinie anwenden, um den Schutz durch die ursprüngliche Benutzerrechterichtlinie zu ersetzen.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
@@ -54,10 +55,10 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
 |Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die Arbeitsordner verwenden.|[Vorbereiten für Azure Information Protection](../plan-design/prepare.md)|
 |Eine der folgenden Komponenten:<br /><br />– Um eine Standardvorlage für alle Benutzer zu verwenden, mit der Benutzer keine neue Benutzerrechterichtlinien anwenden dürfen: Sie haben die Standardvorlage **&lt;Organisationsname&gt; – Vertraulich** nicht archiviert<br /><br />– Um eine benutzerdefinierte Vorlage zu verwenden, mit der Benutzer eine neue Benutzerrechterichtlinie anwenden können: Sie verwenden die folgenden Anweisungen, um eine benutzerdefinierte Vorlage zu erstellen|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
-|Der Rights Management-Verbindungsdienst ist installiert, für den Windows Server-Computer autorisiert und für die **FCI Server**-Rolle konfiguriert.|[Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md)|
+|Der Rights Management-Verbindungsdienst ist installiert, für den Windows Server-Computer autorisiert und für die **FCI Server**-Rolle konfiguriert.|[Bereitstellen des Azure Rights Management-Connectors](../deploy-use/deploy-rms-connector.md)|
 |Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
-### Konfigurieren der benutzerdefinierten Vorlage für Benutzerrechterichtlinien, sodass Benutzer Dateien aus Arbeitsordnern außerhalb der Organisation freigeben können
+### <a name="configuring-the-custom-rights-policy-template-so-that-users-can-share-work-folders-files-outside-the-organization"></a>Konfigurieren der benutzerdefinierten Vorlage für Benutzerrechterichtlinien, sodass Benutzer Dateien aus Arbeitsordnern außerhalb der Organisation freigeben können
 
 1.  Melden Sie sich bei dem klassischen Azure-Portal an, und navigieren Sie zu den Azure Rights Management-Vorlagen.
 
@@ -79,7 +80,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
 5.  Speichern Sie die Vorlage.
 
-### Konfigurieren von Arbeitsordnern für dauerhaften Schutz von Office-Dateien
+### <a name="configuring-work-folders-to-apply-persistent-protection-to-office-file"></a>Konfigurieren von Arbeitsordnern für dauerhaften Schutz von Office-Dateien
 
 1.  Legen Sie Arbeitsordner für Benutzer an, sodass lokal gespeicherte Dateien in einem Dateiserverordner synchronisiert werden. Dies wird als *Synchronisierungsfreigabe* bezeichnet. Die Synchronisierungsfreigabe auf dem Dateiserver darf nicht auf demselben Server erfolgen, auf dem der Rights Management-Verbindungsdienst ausgeführt wird.
 
@@ -109,7 +110,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
 4.  Wenn Sie Dateien mithilfe der Dateiklassifizierungsinfrastruktur selektiv schützen möchten, konfigurieren Sie die Klassifizierungsregel und den Zeitplan. Beziehen Sie dann diese Klassifizierungseigenschaft als Bedingung in die Dateiverwaltungsaufgabe ein.
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Wenn die Dateien, die Sie mit Azure Rights Management schützen, nicht für Personen außerhalb Ihrer Organisation freigegeben werden müssen, müssen Sie Benutzern möglicherweise neben den Anweisungen zur Verwendung von Arbeitsordnern keine zusätzlichen Anweisungen bereitstellen. Wenn Benutzer die mit Azure Rights Management und der Standardvorlage geschützten Dateien öffnen, werden die Dateien wie gewohnt in Office angezeigt. Einziger Unterschied ist, dass Benutzer gegebenenfalls zur Authentifizierung aufgefordert werden. In diesem Fall wird am oberen Rand des Dokuments in einer Informationsleiste angezeigt, dass der Inhalt vertrauliche Informationen enthält, die nur zur internen Verwendung vorgesehen sind.
 
 Wenn Sie die benutzerdefinierte Vorlage wie für dieses Szenario beschrieben konfiguriert haben, sehen Benutzer in der Informationsleiste die Vorlagenbeschreibung: **Dieser Inhalt wird durch Arbeitsordnern geschützt und ist Mitarbeitern des Unternehmens vorbehalten. Um diesen Inhalt für Personen außerhalb der Organisation freizugeben, fügen Sie das Dokument an eine E-Mail-Nachricht an, und verwenden Sie die Funktion "Geschützt freigeben".** Diese Beschreibung bietet zwar eine Übersicht, wie die Datei außerhalb der Organisation freigegeben werden kann, aber die Benutzer benötigen vermutlich detaillierte Anweisungen, insbesondere bei der ersten Freigabe. Verwenden Sie für dieses Folgeszenario die Administrator- und Endbenutzeranweisungen unter [Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation](scenario-share-office-file-externally.md).
@@ -122,6 +123,6 @@ Wenn Sie die benutzerdefinierte Vorlage wie für dieses Szenario beschrieben kon
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

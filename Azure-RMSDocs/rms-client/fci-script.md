@@ -2,8 +2,9 @@
 title: "Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI | Azure Information Protection"
 description: Beispielskript zum Kopieren und Bearbeiten, wie in den Anweisungen zum RMS-Schutz mit der Windows Server-Dateiklassifizierungsinfrastruktur beschrieben.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +13,19 @@ ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: a857fd1b4f6779f6647ab122366122dbfbda7c33
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3ec4b05af68380994f636d0a415691f6465f65b0
 
 
 ---
 
-# Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
+# <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
 >*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure)](configure-fci.md) beschrieben.
+
+Dieses Skript verwendet die Mindestversion **2.2.0.0** für das RMS Protection-Modul. Führen Sie zum Überprüfen der Version den folgenden Befehl aus: `(Get-Module RMSProtection -ListAvailable).Version` 
 
 *&#42;&#42;Haftungsausschluss&#42;&#42;: Dieses Beispielskript wird unter keinem Microsoft-Standardsupportprogramm oder -dienst unterstützt. Dieses Beispiel*
 *skript wird WIE ES IST und ohne jede Gewährleistung bereitgestellt.*
@@ -32,7 +35,7 @@ Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [
 .SYNOPSIS 
      Helper script to protect all file types using the Azure Rights Management service and FCI.
 .DESCRIPTION
-     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID.   
+     Protect files with the Azure Rights Management service and Windows Server FCI, using an RMS template ID and RMS Protection module minimum version 2.2.0.0.   
 #>
 param(
             [Parameter(Mandatory = $false)]
@@ -56,7 +59,7 @@ param(
 ) 
 
 # script information
-[String] $Script:Version = 'version 1.0' 
+[String] $Script:Version = 'version 2.0' 
 [String] $Script:Name = "RMS-Protect-FCI.ps1"
 
 #global working variables
@@ -98,11 +101,11 @@ function Protect-File ($ffile, $ftemplateId, $fownermail) {
     [bool] $returnValue = $false
     try {
         If ($OwnerMail -eq $null -or $OwnerMail -eq "") {
-            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId")
         } else {
-            $protectReturn = Protect-RMSFile -File $ffile -TemplateID $ftemplateId -OwnerEmail $fownermail
+            $protectReturn = Protect-RMSFile -File $ffile -InPlace -TemplateID $ftemplateId -OwnerEmail $fownermail
             $returnValue = $true
             Write-Host ( "Information: " + "Protected File: $ffile with Template: $ftemplateId, set Owner: $fownermail")
         }
@@ -174,6 +177,6 @@ Zurück zu [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (Fi
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

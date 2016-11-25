@@ -3,6 +3,7 @@ title: "Anleitung für Entwickler und Informationen | Azure RMS"
 description: "Dieses Thema enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarien."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
-ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 ---
 
-# Anleitung für Entwickler und Informationen
+# <a name="developer-guidance-and-information"></a>Anleitung für Entwickler und Informationen
 
 Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarien sowie allgemeine Informationen zur Entwicklung mit diesem SDK. Die Szenarien in diesem Abschnitt gelten speziell für diese Version des Rights Management Services SDK 2.1 und können sich in nachfolgenden Versionen ändern.
 - [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md): Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL).
@@ -40,7 +41,7 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 - [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md): Nutzungseinschränkungen werden durch die in diesem Thema aufgeführten Konstanten definiert.
 
  
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht](ad-rms-overview.md)
  
 
@@ -48,6 +49,6 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

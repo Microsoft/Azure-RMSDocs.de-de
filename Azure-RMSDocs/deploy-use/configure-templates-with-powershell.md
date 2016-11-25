@@ -2,6 +2,7 @@
 title: "PowerShell-Referenz für benutzerdefinierte Vorlagen | Azure Information Protection"
 description: "Alle Vorgänge, die Sie im klassischen Azure-Portal zum Erstellen und Verwalten von Rechteverwaltungsvorlagen ausführen können, können Sie auch mithilfe von PowerShell über die Befehlszeile durchführen. Darüber hinaus können Sie Vorlagen exportieren und importieren, sodass Sie Vorlagen zwischen Mandanten kopieren oder Massenbearbeitungen komplexer Eigenschaften in Vorlagen, z. B. von mehrsprachigen Namen und Beschreibungen, ausführen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 3a213388584424871304778f3df36f7d49b370bd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: aad5bc49b15b32c74352d5c9d6d48cd4f1f3cf9c
 
 
 ---
 
 
 
-# PowerShell-Referenz für benutzerdefinierte Vorlagen
+# <a name="powershell-reference-for-custom-templates"></a>PowerShell-Referenz für benutzerdefinierte Vorlagen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -39,13 +40,13 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
 -   [Add-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727075.aspx)
 
--   [Expodert-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
+-   [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)
 
 -   [Get-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727079.aspx)
 
 -   [Get-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727081.aspx)
 
--   [Impodert-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
+-   [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)
 
 -   [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)
 
@@ -55,10 +56,10 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
 
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -3,6 +3,7 @@ title: Bereitstellen der Anwendung | Azure RMS
 description: "Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für Ihre Rechte-fähige Anwendung"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,18 +15,18 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
-ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
 
 
 ---
 
-# Bereitstellen in der Produktion
+# <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
 
 Dieses Thema beschreibt und führt Sie durch die Bereitstellungsoptionen für die rechtlich geschützte Anwendung.
 
-## Anfordern eines Produktionslizenzvertrags
+## <a name="request-a-production-license-agreement"></a>Anfordern eines Produktionslizenzvertrags
 
  Bevor Sie eine mithilfe des Rights Management Services SDK 2.1 entwickelte Anwendung freigeben können, müssen Sie einen Produktionslizenzvertrag beantragen, um ein Produktionszertifikat zu erhalten.
 
@@ -63,11 +64,11 @@ Das Active Directory Rights Management Licensing Agreement (ADRMLA)-Team antwort
 Beachten Sie unbedingt die vom ADRMLA-Team erhaltenen Anweisungen. In den Anweisungen sind die digitalen Informationen aufgeführt, die Sie in Ihrem Zertifikatsantrag angeben müssen. Indem Sie die schrittweisen Anweisungen befolgen, vermeiden Sie Verzögerungen.
 
 
-## Installationsoptionen und Voraussetzungen für Rights Management Service Client 2.1
+## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Installationsoptionen und Voraussetzungen für Rights Management Service Client 2.1
 
 Sofern Sie RMS SDK 2.1 genutzt haben, muss Active Directory Rights Management Services Client 2.1 auf dem Endbenutzercomputer bereitgestellt werden.
 
-### RMS Client 2.1
+### <a name="rms-client-21"></a>RMS Client 2.1
 
 Der RMS Client 2.1 ist eine Software, die entwickelt wurde, damit auf Ihren Clientcomputern der Zugriff auf und die Verwendung von Informationen möglich ist, die durch Anwendungen fließen, die AD RMS verwenden und lokal oder in einem Microsoft-Rechenzentrum installiert sind.
 
@@ -78,9 +79,9 @@ Der RMS Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der RMS Cli
 > Die AD RMS-Client 2.1-Architektur ist speziell und muss der Architektur des Zielbetriebssystems entsprechen.
 
 
-## Installationsoptionen für den RMS Client 2.1
+## <a name="rms-client-21-installation-choices"></a>Installationsoptionen für den RMS Client 2.1
 
--   **Weiterverbreiten des RMS Client 2.1**
+-   **Weiterverbreiten von RMS-Client 2.1**
 
     Es wird empfohlen, das RMS-Client-Installationspaket mit Ihrer Anwendung oder Lösung mithilfe des bevorzugten Installationsverfahrens zu packen. Der RMS-Client kann kostenlos zusammen mit anderen Anwendungen und IT-Lösungen weiterverbreitet und gebündelt werden.
 
@@ -99,7 +100,7 @@ Der RMS Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der RMS Cli
 
     Wenn der Client vorhanden ist wird die Anwendungsinstallation fortgesetzt.
 
-## Aktivieren von Azure Rights Management Services mit Ihrer Anwendung
+## <a name="enabling-azure-rights-management-services-with-your-application"></a>Aktivieren von Azure Rights Management Services mit Ihrer Anwendung
 
 > [!NOTE]
 > Wenn Sie in das neue ADAL-Modell für die Authentifizierung migriert haben, müssen Sie SIA nicht installieren. Weitere Informationen finden Sie unter [ADAL-Authentifizierung für Ihre RMS-fähige Anwendung](adal-auth.md).
@@ -119,9 +120,9 @@ Damit Endbenutzer Azure Rights Management Services nutzen können, müssen Sie d
 
 Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights Management Services durch Ihre Anwendung finden Sie im Thema zum [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Anwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Microsoft-Onlinedienst-Anmeldungs-Assistent](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
+* [Microsoft Online Services-Anmeldeassistent](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Konfigurieren von Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Anwendung](how-to-use-file-api-with-aadrm-cloud.md)
  
@@ -130,6 +131,6 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

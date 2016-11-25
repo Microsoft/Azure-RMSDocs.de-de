@@ -3,6 +3,7 @@ title: Erste Schritte | Azure RMS
 description: "Die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen ermöglichen einen schnellen Einstieg in die Erstellung einer ersten Anwendung."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 6e05b2c7444b5440d80bf5c4764b5ada554bbdc7
 
 
 ---
 
-# Erste Schritte
+# <a name="get-started"></a>Erste Schritte
 
 Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leitfäden zum Einrichten der Entwicklungsumgebung für die einzelnen Betriebssysteme/Plattformen einen schnellen Einstieg in die Erstellung einer ersten Anwendung. Beginnen Sie wie folgt mit dem Erstellen der rechtlich geschützten Anwendung:
 
@@ -39,7 +40,7 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 
   In den Installationshandbüchern werden Sie durch die Konfiguration Ihrer Entwicklungsumgebung für die Erstellung Ihrer eigenen Apps geführt.
   - [Android-Setup](android-sdk.md)
-  - [iOS- und OS X-Setup](ios-sdk.md)          
+  - [Einrichten von iOS und OS X](ios-sdk.md)          
   - [Linux-Setup](linux-setup.md)              
   - [Windows Phone](windows-phone-apps.md)     
   - [Windows Store-Anwendungen](winrt-sdk.md)
@@ -49,13 +50,13 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 
   |Thema|Beschreibung|
   |-----|-----------|
-  |[Neuheiten](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
+  |[Neuerungen](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
   |[Einrichten der Entwicklerumgebung](setup-developer-environment.md)|In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.|
   |[Codebeispiele](code-examples.md)|Das MS RMS SDK 4.2 enthält Beispielcode und funktionierende Projekte für einige unterstützte Betriebssysteme.|
   |[Communityressourcen](community-resources.md)|Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.|
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

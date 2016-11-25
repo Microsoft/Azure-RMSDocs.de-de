@@ -3,6 +3,7 @@ title: 'Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Az
 description: "Dieser Artikel bietet grundlegende Anleitungen zum Implementieren der Dokumentnachverfolgung für Inhalte sowie Beispielcode für Metadatenaktualisierungen und zum Erstellen einer Schaltfläche „Verwendung nachverfolgen“ für Ihre App."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -16,19 +17,17 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
 
 
 ---
 
-# Nachverfolgung von Inhalten
-
-# Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
+# <a name="howto-enable-document-tracking-and-revocation"></a>Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
 
 Dieses Thema bietet grundlegende Anleitungen zum Implementieren der Dokumentnachverfolgung für Inhalte sowie Beispielcode für Metadatenaktualisierungen und zum Erstellen einer Schaltfläche **Verwendung nachverfolgen** für Ihre App.
 
-## Schritte zum Implementieren der Dokumentnachverfolgung
+## <a name="steps-to-implement-document-tracking"></a>Schritte zum Implementieren der Dokumentnachverfolgung
 
 In den Schritten 1 und 2 wird die Nachverfolgung des Dokuments aktiviert. In Schritt 3 wird der Zugriff der App-Benutzer auf die Website für die Dokumentnachverfolgung eingerichtet, sodass Ihre geschützten Dokumente nachverfolgt und gesperrt werden können.
 
@@ -38,7 +37,7 @@ In den Schritten 1 und 2 wird die Nachverfolgung des Dokuments aktiviert. In Sch
 
 Die Implementierungsdetails für diese Schritte folgen.
 
-## 1. Hinzufügen von Metadaten für die Dokumentnachverfolgung
+## <a name="1-add-document-tracking-metadata"></a>1. Hinzufügen von Metadaten für die Dokumentnachverfolgung
 
 Dokumentnachverfolgung ist ein Feature des Rights Management-Systems. Durch das Hinzufügen bestimmter Metadaten während des Dokumentschutzprozesses kann ein Dokument beim Nachverfolgungsdienstportal registriert werden, das dann mehrere Optionen für die Nachverfolgung bereitstellt.
 
@@ -48,12 +47,12 @@ Verwenden Sie diese APIs zum Hinzufügen/Aktualisieren einer Inhaltslizenz mit M
 Im Prinzip sind nur für die Dokumentenverfolgung nur das **contentName**- und das **notificationType**-Objekt erforderlich.
 
 
-- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 
   Wir erwarten, dass Sie alle Metadateneigenschaften festlegen. Diese werden im Folgenden nach Typ aufgelistet.
 
-  Weitere Informationen finden Sie unter [Lizenzmetadaten-Eigenschaftstypen](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types).
+  Weitere Informationen finden Sie unter [Lizenzmetadaten-Eigenschaftstypen](https://msdn.microsoft.com/library/dn974062.aspx).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -79,19 +78,19 @@ Im Prinzip sind nur für die Dokumentenverfolgung nur das **contentName**- und d
 
     Legen Sie hier das Ursprungsdatum der Datei fest.
 
-- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
 
 Verwenden Sie die richtige dieser APIs, um die Metadaten Ihrer Datei oder Ihrem Stream hinzuzufügen.
 
-- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 
 Verwenden Sie schließlich diese API, um das nachverfolgte Dokument beim Nachverfolgungssystem zu registrieren.
 
-- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## 2. Registrieren des Dokuments beim RMS-Dienst
+## <a name="2-register-the-document-with-the-rms-service"></a>2. Registrieren des Dokuments beim RMS-Dienst
 
 Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten für die Dokumentnachverfolgung und das Aufrufen für die Registrierung beim Nachverfolgungssystem zeigt.
 
@@ -134,15 +133,15 @@ Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten f
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
 
-## Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App
+## <a name="add-a-track-usage-button-to-your-app"></a>Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App
 
 Das Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App ist genauso einfach wie die Verwendung eines der folgenden URL-Formate:
 
 - Verwenden der Inhalts-ID
-  - Rufen Sie die Inhalts-ID mit [IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) oder der [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) ab, wenn die Lizenz serialisiert ist, und verwenden Sie die Lizenzeigenschaft **IPC_LI_CONTENT_ID**. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types).
+  - Rufen Sie die Inhalts-ID mit [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) oder der [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) ab, wenn die Lizenz serialisiert ist, und verwenden Sie die Lizenzeigenschaft **IPC_LI_CONTENT_ID**. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
   - Verwenden Sie bei den Metadaten **ContentId** und **Issuer** das folgende Format: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
-    Beispiel: `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
+    Beispiel – `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
 
 - Wenn Sie nicht auf die Metadaten zugreifen können (d.h., Sie untersuchen die ungeschützte Version des Dokuments), können Sie **Content_Name** im folgenden Format verwenden: `https://track.azurerms.com/#/?q={ContentName}`
 
@@ -150,22 +149,22 @@ Das Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App ist gen
 
 Der Client muss lediglich einen Browser mit der entsprechenden URL öffnen. Im Portal für die RMS-Dokumentnachverfolgung werden die Authentifizierung und alle erforderlichen Umleitungen verarbeitet.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
-* [Lizenzmetadaten-Eigenschaftstypen](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [Benachrichtigungseinstellungen](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [Benachrichtigungtyp](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [License metadata property types (Lizenzmetadaten-Eigenschaftstypen)](https://msdn.microsoft.com/library/dn974062.aspx)
+* [Notification preference (Benachrichtigungseinstellung)](https://msdn.microsoft.com/library/dn974063.aspx)
+* [Notification type (Benachrichtigungtyp)](https://msdn.microsoft.com/library/dn974064.aspx)
+* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

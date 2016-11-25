@@ -3,6 +3,7 @@ title: Versionshinweise | Azure RMS
 description: 
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1f65f42b54fbca1a0436a0f1f6cc9be60a5e3c68
-ms.openlocfilehash: 31670bda73bdf0ddcb0167c40cdf32b11fd7af3c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 
 ---
 
-# Anmerkungen zu dieser Version
+# <a name="release-notes"></a>Anmerkungen zu dieser Version
 
 Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.
 
-## Neu für Februar 2016 – SDK-Dokumentationsupdate
+## <a name="new-for-the-february-2016-sdk-documentation-update"></a>Neu für Februar 2016 – SDK-Dokumentationsupdate
 
 >[!Note]
 > Die Funktionsdokumentationsupdates in diesem Abschnitt gelten für den SDK-Download vom 12.11.2015.
@@ -40,7 +41,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 - **Die Unterstützung für den Microsoft Online Services-Anmeldeassistenten (SIA) mit dem RMS SDK wird entfernt.** Wir werden die Verwendung von SIA noch für sechs Monate unterstützen und danach endet die Zeitunterstützung.
 
 
-## Dezember 2015-Update
+## <a name="december-2015-update"></a>Dezember 2015-Update
 
 - Leistungssteigerungen wurden unter anderem in folgenden Bereichen implementiert:
     - Veröffentlichen von primären Lizenzserver bei Verwendung von reinen Lizenz-Servern.
@@ -50,11 +51,11 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 - Beachten Sie auch, dass die Liste der [unterstützten Plattformen](supported-platforms.md) ebenfalls aktualisiert wurde.
 - Die Notwendigkeit für die Präproduktionsumgebung und die Verwendung eines Anwendungsmanifests wurden im RMS SDK 2.1 entfernt. Die betreffenden Abschnitte dieser Entwicklerdokumentation wurden entfernt, und die Gesamtdokumentation wurde vereinfacht und umstrukturiert.
 
-## Mai 2015-Update
+## <a name="may-2015-update"></a>Mai 2015-Update
 
 -   **Dienst-Apps und cloudbasiertes RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) benötigt drei Angaben: den symmetrischen Schlüssel, **AppPrincipalId** und **TenantBposId**. Dieses Thema wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-## April 2015-Update
+## <a name="april-2015-update"></a>April 2015-Update
 
 -   Die **Dokumentenverfolgung** ist jetzt über eine Reihe neuer APIs möglich. Weitere Informationen hierzu finden Sie unter [Nachverfolgung von Inhalten](tracking-content.md).
 -   **Verschlüsselungstyp**: Zur Auswahl des Verschlüsselungspakets wird jetzt die Steuerung auf API-Ebene unterstützt. Weitere Informationen finden Sie unter [Verwenden der Verschlüsselung](working-with-encryption.md).
@@ -65,7 +66,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 -   **Protokollierung** wurde jetzt über die Datei- und Ereignisablaufverfolgung für Windows-Methoden implementiert.
 -   Bei Ausführung auf einem **Windows 7 SP1- oder Windows Server 2008 R2-Computer** lesen Sie den Hinweis unter "Wichtige Hinweise für Entwickler".
 
-## Januar 2015-Update
+## <a name="january-2015-update"></a>Januar 2015-Update
 
 -   **Vergrößerung der unterstützten geschützten Datei (PFILE)**: Jetzt werden PFILE-Dateien über 1 GB unterstützt. Weitere Informationen zu PFILE-Dateien finden Sie unter [Unterstützte Dateiformate](supported-file-formats.md).
 -   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **INFO** protokolliert.
@@ -75,12 +76,12 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 -   **Abrufen von Unternehmensvorlagen**: Es wurden wesentliche Korrekturen am Code zum Abrufen von Vorlagen basierend auf Kundenberichten und Feedback vorgenommen.
 -   Verbesserte Lokalisierungskonsistenz
 
-## Oktober 2014-Update
+## <a name="october-2014-update"></a>Oktober 2014-Update
 
 -   Das Standardverhalten für die Datei-API-Komponente des SDK wurden aktualisiert. Weitere Informationen finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 -   Die neue Funktion der E-Mail-Benachrichtigung wird in den Hinweisen für Entwickler im Abschnitt über das [Aktivieren von E-Mail-Benachrichtigungen](how-to-enable-email-notification.md) erläutert.
 
-## Juli 2014-Update
+## <a name="july-2014-update"></a>Juli 2014-Update
 
 Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen:
 
@@ -99,7 +100,7 @@ Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen
     -   [IpcfSetEndOfFile](https://msdn.microsoft.com/library/dn771754.aspx)
     -   [IpcfWriteFile](https://msdn.microsoft.com/library/dn771756.aspx)
 
-## April 2014-Update
+## <a name="april-2014-update"></a>April 2014-Update
 
 -   Die **Datei-API-Speicherverwendung**, insbesondere für große PFILE-Dateien, wurde erheblich verbessert.
 -   Die **Inhalts-ID** kann jetzt über die Eigenschaft **IPC\_LI\_CONTENT\_ID** geschrieben werden. Weitere Informationen finden Sie unter den Angaben zu [Lizenzeigenschaftstypen](https://msdn.microsoft.com/library/hh535287.aspx).
@@ -108,9 +109,9 @@ Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen
 
     **Bewährte Testmethoden**: Anleitung zur Verwendung des lokalen Servers vor dem Testen mit Azure RMS hinzugefügt. Weitere Informationen finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Wichtige Hinweise für Entwickler
+## <a name="important-developer-notes"></a>Wichtige Hinweise für Entwickler
 
--   **Systemeigene Unterstützung für alle Dateitypen**
+-   **Native Unterstützung für alle Dateitypen**
 
     Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) mit dieser Version des Rights Management Services SDK 2.1 hinzugefügt werden. Beispielsweise wird für jede &lt;ext&gt;-Erweiterung (nicht Office und PDF) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung NATIVE lautet.
 
@@ -148,7 +149,7 @@ Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen
 
     **Lösung**: Wenn Sie „Ipcsecproc\*isv.dll“ für eine andere Architektur verwenden möchten (Sie haben beispielsweise das 64-Bit-SDK auf einem 64-Bit-Computer installiert, möchten die Bereitstellung aber jetzt auf einem 32-Bit-Computer durchführen, auf dem „Ipcsecproc\*isv.dll“ erforderlich ist), müssen Sie das 32-Bit-SDK auf einem anderen Computer installieren und die Dateien „Ipcsecproc\*isv.dll“ vom Ordner „%PROGRAMFILES%\\Microsoft Information Protection And Control“ (dem Standardordner bzw. von dem Speicherort, den Sie für die Installation des SDK angegeben haben) dorthin kopieren.
 
-## Häufig gestellte Fragen
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
 **F**: Welches Standardverhalten gilt für die Sprache bei Funktionen, die einen LCID-Parameter akzeptieren?
 
@@ -167,6 +168,6 @@ Wenn kein Name und keine Beschreibung abgerufen werden kann, wird ein Fehler zur
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

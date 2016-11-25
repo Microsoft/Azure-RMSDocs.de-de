@@ -2,6 +2,7 @@
 title: "Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst | Azure Information Protection"
 description: "Informationen und Anweisungen für Administratoren zum Konfigurieren und Verwalten von Vorlagen für Nutzungsrechte. Mit Vorlagen können Benutzer und andere Administratoren ganz einfach Richtlinien auf sensible Dateien anwenden, die den Zugriff auf autorisierte Benutzer beschränken."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
 
 
 ---
 
-# Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
+# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -58,14 +59,14 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 -   [Entfernen (Archivieren) von Vorlagen](remove-template.md)
 
--   [Gewusst wie: Aktualisieren von Vorlagen für Benutzer](refresh-templates.md)
+-   [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md)
 
--   [Verwenden von PowerShell zum Verwalten von Vorlagen](configure-templates-with-powershell.md)
-
-
+-   [PowerShell-Referenz für benutzerdefinierte Vorlagen](configure-templates-with-powershell.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO2-->
 
 

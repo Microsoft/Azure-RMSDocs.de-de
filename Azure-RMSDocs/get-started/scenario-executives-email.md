@@ -2,6 +2,7 @@
 title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus | Azure Information Protection"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 8481c275609e74ff5e09a0397e0e3a0346aa4430
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 
 
 ---
 
-# Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus
+# <a name="scenario-executives-securely-exchange-privileged-information"></a>Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ Die Anweisungen sind unter den folgenden Umständen geeignet:
 
 -   Führungskräfte haben eine Möglichkeit, die Regel selbst zu überschreiben, wenn sie eine ungeschützte E-Mail-Nachricht an andere Führungskräfte senden möchten.
 
-## Anweisungen zur Bereitstellung
+## <a name="deployment-instructions"></a>Anweisungen zur Bereitstellung
 ![Administrator-Anweisungen für die Schnellbereitstellung von Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind, und führen Sie dann die Anweisungen für die unterstützenden Verfahren durch, bevor Sie mit der Benutzerdokumentation fortfahren.
 
-## Anforderungen bei diesem Szenario
+## <a name="requirements-for-this-scenario"></a>Anforderungen bei diesem Szenario
 Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden sein:
 
 |Anforderungen|Wenn Sie weitere Informationen benötigen|
@@ -51,7 +52,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 |Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
 |Sie haben wie später in diesem Artikel beschrieben eine Transportschutzregel für IRM konfiguriert .|Für Exchange Online: [E-Mail-Fluss oder Transportregeln](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx)<br /><br />Für Exchange 2013: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Für Exchange 2010: [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
-### So konfigurieren Sie die benutzerdefinierte Vorlage für Führungskräfte
+### <a name="to-configure-the-custom-template-for-executives"></a>So konfigurieren Sie die benutzerdefinierte Vorlage für Führungskräfte
 
 1.  Im klassischen Azure-Portal: Erstellen Sie eine neue benutzerdefinierte Vorlage für Azure Rights Management, die die folgenden Werte und Einstellungen enthält:
 
@@ -69,7 +70,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
     Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
-### So konfigurieren Sie die Transportregel für IRM
+### <a name="to-configure-the-transport-rule-for-irm"></a>So konfigurieren Sie die Transportregel für IRM
 
 -   Entnehmen Sie der in der Tabelle angegebenen Exchange-Dokumentation die Verfahrensinformationen, um die Transportregel mit den folgenden Einstellungen zu erstellen:
 
@@ -83,7 +84,7 @@ Damit die Anweisungen in diesem Szenario funktionieren, muss Folgendes vorhanden
 
     -   Stellen Sie sicher, dass für die Regel **Erzwingen** festgelegt ist.
 
-## Anweisungen für Benutzerdokumentation
+## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Sofern Sie keine Anweisungen zur Angabe von **DNP** oder Ihrer eigenen Worte oder Ausdrücke im E-Mail-Betreff bereitstellen, erhalten die Benutzer keine Verfahrensanweisungen zu diesem Szenario, da der Schutz der von und zu Führungskräften gesendeten E-Mails keine spezielle Aktion seitens der Führungskräfte erfordert. E-Mail-Nachrichten und -Anlagen werden automatisch so geschützt, dass nur die Mitglieder der Gruppe "Führungskräfte" darauf zugreifen können.
 
 Allerdings müssen Sie die Führungskräfte und das Helpdesk gegebenenfalls informieren, dass diese E-Mails automatisch geschützt werden und dies ihre Nutzung einschränken kann. Die E-Mails können beispielsweise nicht von unberechtigten Benutzern gelesen werden, wenn sie später an diese weitergeleitet werden. Wenn Sie die DNP-Ausnahme (oder ein Äquivalent) konfiguriert haben, stellen Sie sicher, dass diese Konfiguration dem Helpdesk bekannt ist, sodass Führungskräfte die Regel selbst überschreiben können, ohne einen Exchange-Administrator kontaktieren zu müssen.
@@ -104,21 +105,21 @@ Die Beispieldokumentation veranschaulicht, wie diese Ankündigung für Benutzer 
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### IT-Ankündigung: E-Mails von Führungskräften der Gruppe &lt;Organisationsname&gt; sind jetzt automatisch geschützt.
+### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>IT-Ankündigung: E-Mails von Führungskräften der Gruppe &lt;Organisationsname&gt; sind jetzt automatisch geschützt.
 Von nun an werden Inhalte und Anlagen von E-Mail-Nachrichten, die an andere &lt;Organisationsname&gt;-Führungskräfte im Unternehmen gesendet werden, automatisch so geschützt, dass nur andere Führungskräfte im Unternehmen darauf Zugriff haben, um die Informationen zu lesen, zu drucken, zu kopieren usw. Diese Einschränkung gilt auch, wenn Sie die E-Mail-Nachricht an andere weiterleiten oder die Anlagen speichern. Dieser Schutz hilft, Datenverluste bei vertraulichen oder sensiblen Informationen zu vermeiden.
 
 Wenn Sie möchten, dass Dritte, die keine &lt;Organisationsname&gt;-Führungskräfte sind, die Informationen in diesen E-Mails lesen und bearbeiten können, müssen Sie diesen die Informationen in einer separaten E-Mail senden. Um den automatischen Schutz zu überschreiben, geben Sie die Buchstaben **DNP** (als Abkürzung für "Do Not Protect" = Nicht schützen) an einer beliebigen Stelle in den Betreff der E-Mail-Nachricht ein.
 
-Wenn Sie vertrauliche geschäftliche Informationen an eine andere &lt;Organisationsname&gt;-Führungskraft senden möchten, wählen Sie deren geschäftliche E-Mail-Adresse (*Name*@@&lt;E-Mail-Domäne&gt;) und keine private E-Mail-Adresse.
+Wenn Sie vertrauliche geschäftliche Informationen an eine andere &lt;Organisationsname&gt;-Führungskraft senden möchten, wählen Sie deren geschäftliche E-Mail-Adresse (*Name*@&lt;E-Mail-Domäne&gt;) und keine private E-Mail-Adresse.
 
 **Benötigen Sie Unterstützung?**
 
--   Wenden Sie sich an das Helpdesk: &lt;Kontaktdetails&gt;
+-   Wenden Sie sich an den Helpdesk: &lt;Kontaktdetails&gt;
 
-### Beispielbenutzerdokumentation
+### <a name="example-user-documentation"></a>Beispielbenutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-#### IT-Ankündigung: E-Mails von VanArsdel-Führungskräften sind jetzt automatisch geschützt.
+#### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>IT-Ankündigung: E-Mails von VanArsdel-Führungskräften sind jetzt automatisch geschützt.
 Von nun an werden Inhalte und Anlagen von E-Mail-Nachrichten, die an andere VanArsdel-Führungskräfte im Unternehmen gesendet werden, automatisch so geschützt, dass nur diese Führungskräfte im Unternehmen darauf Zugriff haben, um die Informationen zu lesen, zu drucken, zu kopieren usw. Diese Einschränkung gilt auch, wenn Sie die E-Mail-Nachricht an andere weiterleiten oder die Anlagen speichern. Dieser Schutz hilft, Datenverluste bei vertraulichen oder sensiblen Informationen zu vermeiden.
 
 Wenn Sie möchten, dass Dritte, die keine VanArsdel-Führungskräfte sind, die Informationen in diesen E-Mails lesen und bearbeiten können, müssen Sie die Informationen in einer separaten E-Mail an sie senden. Um den automatischen Schutz zu überschreiben, geben Sie die Buchstaben **DNP** (als Abkürzung für "Do Not Protect" = Nicht schützen) an einer beliebigen Stelle in den Betreff der E-Mail-Nachricht ein.
@@ -127,11 +128,11 @@ Wenn Sie vertrauliche Unternehmensinformationen an eine andere VanArsdel-Führun
 
 **Benötigen Sie Unterstützung?**
 
--   Wenden Sie sich an das Helpdesk: helpdesk@vanarsdelltd.com
+-   Wenden Sie sich an den Helpdesk: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

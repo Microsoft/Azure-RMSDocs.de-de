@@ -3,6 +3,7 @@ title: Communityressourcen | Azure RMS
 description: "AD RMS wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dab2d84371cd2c45af617898f1694f99128551d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cd203a651362564e2f2275051f61f86b3bee6703
 
 
 ---
 
-# Communityressourcen
+# <a name="community-resources"></a>Communityressourcen
 
 Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.
 
-## AD RMS-Communityressourcen
+## <a name="ad-rms-community-resources"></a>AD RMS-Communityressourcen
 
 Die [RMS Developer's Corner (Blog)](http://blogs.msdn.com/b/rms/) ist der aktive Treffpunkt für Entwickler, die sich mit dem Schützen von Daten befassen.
 
@@ -50,6 +51,6 @@ Gehen Sie wie folgt vor, falls Sie sich noch nicht unter Microsoft Connect regis
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

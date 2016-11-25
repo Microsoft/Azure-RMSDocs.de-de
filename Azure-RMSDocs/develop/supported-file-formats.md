@@ -3,6 +3,7 @@ title: "Unterstützte Dateiformate | Azure RMS"
 description: "Die aktuelle Version der Datei-API unterstützt den nativen Schutz für MS Office-Dateien und PDFs und den PFile-Schutz für alle anderen Dateiformate."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 0baa6a5ceeba8ae2e276ffe09edb54060671d8be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f5fa3082e407e207f33f041d22661888a13566b2
 
 
 ---
 
-# Unterstützte Dateiformate
+# <a name="supported-file-formats"></a>Unterstützte Dateiformate
 
 Die Datei-API unterstützt native Formate und das PFile-Format.
 
-## Unterstützte Dateiformate
+## <a name="supported-file-formats"></a>Unterstützte Dateiformate
 
 Die aktuelle Version der Datei-API unterstützt den nativen Schutz für MS Office-Dateien und PDF-Dateien und den PFile-Schutz für alle anderen Dateiformate. Auf PDF-Dateien kann optional der PFile-Schutz angewendet werden.
 
@@ -33,7 +34,7 @@ Die aktuelle Version der Datei-API unterstützt den nativen Schutz für MS Offic
 
 Administratoren können Registrierungsschlüssel festlegen, um zu konfigurieren, ob und wie Dateien basierend auf ihrer Dateinamenerweiterung geschützt werden sollten. Weitere Informationen zur Konfiguration des Dateischutzes beim Verwenden der Datei-API finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Hinweise für Entwickler](developer-notes.md)
 * [Datei-API-Konfiguration](file-api-configuration.md)
@@ -43,6 +44,6 @@ Administratoren können Registrierungsschlüssel festlegen, um zu konfigurieren,
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

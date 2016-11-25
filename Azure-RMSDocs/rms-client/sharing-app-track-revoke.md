@@ -2,6 +2,7 @@
 title: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung | Azure Information Protection
 description: "Nachdem Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
-ms.openlocfilehash: 1cd55e9c6200876a4d9921e3b60eb8fb58845d0c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
 
 
 ---
 
-# Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
+# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
 
 >*Gilt für: Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -40,7 +41,7 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 -   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
 
-## Verwenden von Office für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
+## <a name="using-office-to-access-the-document-tracking-site"></a>Verwenden von Office für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
 -   Bei den Office-Anwendungen wie Word, Excel und PowerPoint: Klicken Sie auf der Registerkarte **Start** ihn der Gruppe **RMS** auf **Geschützt freigeben**, und klicken Sie dann auf **Verwendung nachverfolgen**.
 
@@ -57,7 +58,7 @@ Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendu
 > 
 > - Klicken Sie in einer Office-Anwendung auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**  >  **Verwendung nachverfolgen**. 
 
-### Weitere Methoden zum Nachverfolgen von und zum Widerrufen des Zugriffs auf Dokumente
+### <a name="other-ways-to-track-and-revoke-your-documents"></a>Weitere Methoden zum Nachverfolgen von und zum Widerrufen des Zugriffs auf Dokumente
 Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mithilfe von Office-Anwendungen gibt es auch die folgenden Alternativen:
 
 -   **Verwenden eines Webbrowsers**: Diese Methode kann auf allen unterstützten Geräten angewendet werden.
@@ -66,7 +67,7 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
 -   **Verwenden einer Outlook-E-Mail-Nachricht**: Diese Methode funktioniert auf Windows-Computern.
 
-#### Verwenden eines Webbrowsers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
+#### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Verwenden eines Webbrowsers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
 -   Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -82,30 +83,30 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
     -   Google Chrome: Mindestens Version 18
 
-#### Verwenden des Datei-Explorers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
+#### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Verwenden des Datei-Explorers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
 -   Klicken Sie mit der rechten Maustaste auf die Datei, und wählen Sie **Mit RMS schützen** und dann **Verwendung nachverfolgen** aus:
 
     ![Auswählen von Verwendung nachverfolgen im Explorer bei der Verwendung der RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
-#### Verwenden einer Outlook-E-Mail-Nachricht für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
+#### <a name="using-an-outlook-email-message-to-access-the-doc-tracking-site"></a>Verwenden einer Outlook-E-Mail-Nachricht für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
 -   Klicken Sie in einer E-Mail-Nachricht auf der Registerkarte **Nachricht** in der Gruppe  **RMS** auf **Geschützt freigeben**und dann auf **Verwendung nachverfolgen**:
 
     ![Auswählen von Verwendungsnachverfolgung in Outlook bei der Verwendung der RMS-Freigabeanwendung](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
-## Beispiele und weitere Anweisungen
+## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

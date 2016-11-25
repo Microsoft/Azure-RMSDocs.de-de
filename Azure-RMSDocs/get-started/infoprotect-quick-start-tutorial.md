@@ -2,6 +2,7 @@
 title: Schnellstart-Tutorial | Azure Information Protection
 description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 4f5f7670ce1897a6436e511057fc714c839a8f00
-ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
+ms.sourcegitcommit: d300f3c130476974e39689edf9e1f0eabbc35da1
+ms.openlocfilehash: de3435767d161567003369fc55dd476283b64f41
 
 
 ---
 
-# Schnellstart-Tutorial für Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
 
 >*Gilt für: Azure Information Protection*
 
@@ -26,7 +27,7 @@ Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Info
 
 Wenn Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden von Azure Information Protection haben oder wissen möchten, was andere darüber sagen, besuchen Sie die [Yammer-Website von Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-## Voraussetzungen 
+## <a name="prerequisites"></a>Voraussetzungen 
 Voraussetzungen für dieses Tutorial:
 
 - Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Vergewissern Sie sich, dass diese Features in Ihrem Abonnement unterstützt werden. Weitere Informationen finden Sie in den [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
@@ -40,7 +41,7 @@ Voraussetzungen für dieses Tutorial:
 
 - Ein globales Administratorkonto zur Anmeldung beim Azure-Portal, um die Azure Information Protection-Richtlinie zu konfigurieren. Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst (z. B. Exchange Online oder Exchange Server) verfügen.
 
-- Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Office Professional Plus 2016, Office Professional Plus 2013 mit Service Pack 1 oder Office Professional Plus 2010 installiert ist. 
+- Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Office 365 ProPlus mit 2016-Apps oder 2013-Apps, Office Professional Plus 2016, Office Professional Plus 2013 mit Service Pack 1 oder Office Professional Plus 2010 installiert ist. 
 
 Los geht’s!
 
@@ -51,6 +52,6 @@ Los geht’s!
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

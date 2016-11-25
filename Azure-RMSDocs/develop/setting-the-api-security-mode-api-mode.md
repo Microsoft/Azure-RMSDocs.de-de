@@ -3,6 +3,7 @@ title: 'Gewusst wie: Festlegen des API-Sicherheitsmodus | Azure RMS'
 description: "Wählen Sie aus, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 9235fa1c194162689b854493ea31e76c08c40ce7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f7acef7fa69c836c5d57d8c1705007f919a9dbf2
 
 
 ---
 
-# Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus
+# <a name="howto-set-the-api-security-mode"></a>Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus
 
 Sie können wählen, in welchem Sicherheitsmodus Ihre Datei-API-Anwendung ausgeführt wird, indem Sie die [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)-Funktion verwenden.
 
@@ -30,10 +31,10 @@ Weitere Informationen zum *Servermodus* finden Sie unter [Anwendungstypen](appli
 
 **Wichtig**: Der Sicherheitsmodus sollte festgelegt werden, bevor andere Funktionen des Rights Management Services SDK 2.1 aufgerufen werden. Nachdem der Sicherheitsmodus festgelegt wurde, kann er für den aktuellen Prozess nicht mehr geändert werden.
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Anwendungstypen](application-types.md)
-* [API-Moduswerte](https://msdn.microsoft.com/library/hh535236.aspx)
+* [API mode values (API-Moduswerte)](https://msdn.microsoft.com/library/hh535236.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
  
 
@@ -41,6 +42,6 @@ Weitere Informationen zum *Servermodus* finden Sie unter [Anwendungstypen](appli
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

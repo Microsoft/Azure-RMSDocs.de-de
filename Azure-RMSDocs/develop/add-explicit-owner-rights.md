@@ -3,6 +3,7 @@ title: "Gewusst wie: Hinzufügen expliziter Besitzerrechte | Azure RMS"
 description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 8be965d76578c28457eee207b56e5da83f7eb468
-ms.openlocfilehash: 36c0bece4fb99e4d92fcda0c57da1b3cee11e37a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2fa260480eaa26a529a058b597657216572b4cb8
 
 
 ---
 
-# Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte
+# <a name="howto-add-explicit-owner-rights"></a>Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte
 
 In Ihrer Anwendung sollten explizit Berechtigungen vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) neu erstellt wird.
 
-## Voraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Wenn Ihre Anwendung ein Lizenzhandle mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt, muss sie dem Besitzer auch explizit einen Vollzugriff (Berechtigungen) gewähren.
 
@@ -33,16 +34,16 @@ Wenn Ihre Anwendung ein Lizenzhandle mit [IpcCreateLicenseFromScratch](https://m
 
 In diesem Codebeispiel werden nur die Schritte gezeigt, die zum Erstellen und Hinzufügen bestimmter Rechte zu einer Lizenz erforderlich sind.
 
-## Anweisungen
+## <a name="instructions"></a>Anweisungen
  
-## Schritt 1: Beispielszenario
+## <a name="step-1-example-scenario"></a>Schritt 1: Beispielszenario
 
 In diesem Beispiel werden einer Lizenz, die mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wurde, die benötigten Rechte hinzugefügt. Im Beispiel wird die Erstellung und Zuweisung der Rechte zur Lizenz über eine Liste mit Rechten veranschaulicht.
 
 Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
--   „joe@contoso.com“ zugewiesene Berechtigung *Lesen*
--   „mary\_kay@contoso.com“ zugewiesene Berechtigung *Vollzugriff*
+-   joe@contoso.com zugewiesene *Lese*berechtigungen
+-   *Alle* Berechtigungen, die mary\_kay@contoso.com zugewiesen sind
 
         // Create User Rights structure
         IPC_USER_RIGHTS ownerRightForOwner = {0};
@@ -105,7 +106,7 @@ Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
 
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 - [Hinweise für Entwickler](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
@@ -116,6 +117,6 @@ Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

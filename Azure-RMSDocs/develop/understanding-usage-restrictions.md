@@ -3,6 +3,7 @@ title: "Grundlegendes zu Nutzungseinschränkungen | Azure RMS"
 description: "Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
-ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cc383728d487cac45e59ef34ca43ba47c4db237b
 
 
 ---
 
-# Grundlegendes zu Nutzungseinschränkungen
+# <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
 
 Die Berechtigungen eines Benutzers für ein Dokument können mit der [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)-Funktion abgefragt werden.
 
-## Grundlegendes zu Nutzungseinschränkungen
+## <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 
 -   Kennenlernen der standardmäßigen RMS-Rechte
 
@@ -46,7 +47,7 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [IpcAccessC
 
     Eine Anleitung, wie Sie bestimmte Rechte durchsetzen, finden Sie unter [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md).
 
-## Verwandte Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md)
@@ -56,6 +57,6 @@ Die Berechtigungen eines Benutzers für ein Dokument können mit der [IpcAccessC
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 
