@@ -44,7 +44,7 @@ Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern
 
 ### <a name="to-update-templates-for-exchange-online"></a>So aktualisieren Sie Vorlagen für Exchange Online
 
-1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
+1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
 
     1.  Geben Sie Ihren Office 365-Benutzernamen und das Kennwort an:
 
@@ -62,7 +62,7 @@ Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern
         Import-PSSession $Session
         ```
 
-2.  Verwenden Sie das [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx)-Cmdlet, um Ihre vertrauenswürdige Veröffentlichungsdomäne (TPD, Trusted Publishing Domain) aus Azure RMS erneut zu importieren:
+2.  Verwenden Sie das [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx)-Cmdlet, um Ihre vertrauenswürdige Veröffentlichungsdomäne (TPD, Trusted Publishing Domain) aus Azure RMS erneut zu importieren:
 
     ```
     Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
