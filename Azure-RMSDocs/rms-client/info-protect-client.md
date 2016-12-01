@@ -4,15 +4,15 @@ description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
-ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
+ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
+ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
 
 
 ---
@@ -36,9 +36,9 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 1. Nachdem Sie [den Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie **AzInfoProtection.exe** aus, und befolgen Sie die Aufforderungen, um den Client zu installieren. Für diese Installation sind lokale Administratorrechte erforderlich.
 
-    Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt. 
+    Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt. 
 
-2. So beginnen Sie mit der Verwendung des Azure Information Protection-Clients: Wenn auf Ihrem Computer Office 2010 ausgeführt wird, starten Sie Ihren Computer neu. Bei anderen Office-Versionen starten Sie eine beliebige Office-Anwendung neu.
+2. So beginnen Sie mit der Verwendung des Azure Information Protection-Clients: Wenn auf Ihrem Computer Office 2010 ausgeführt wird, starten Sie Ihren Computer neu. Bei anderen Office-Versionen starten Sie eine beliebige Office-Anwendung neu.
 
 ## <a name="to-install-the-azure-information-protection-client-for-users"></a>Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -67,7 +67,7 @@ Sie können jede beliebige Option verwenden:
 
     - Im Abschnitt **Clientstatus**: Überprüfen Sie anhand des Werts von**Version**, ob die Installation erfolgreich war. Außerdem erkennen Sie, wann sich der Client zuletzt mit dem Azure Information Protection-Dienst Ihrer Organisation verbunden hat und wann die Azure Information Protection-Richtlinie zuletzt installiert oder aktualisiert wurde. Wenn der Client eine Verbindung mit dem Dienst herstellt, lädt er automatisch die letzte Richtlinie herunter (sofern diese von der aktuellen Richtlinie abweicht). Wenn Sie nach dem angezeigten Zeitpunkt Änderungen vorgenommen haben, schließen Sie die Office-Anwendung, und öffnen Sie sie erneut.
     
-        Ihr ebenfalls angezeigter Benutzername gibt das Konto an, mit dem Sie bei Azure Information Protection authentifiziert werden. Dieser Benutzername muss mit einem Konto übereinstimmen, das für Office 365 oder Azure Active Directory verwendet wird.
+        Ihr ebenfalls angezeigter Benutzername gibt das Konto an, mit dem Sie bei Azure Information Protection authentifiziert werden. Der Benutzername muss zu einem für Office 365 oder Azure Active Directory verwendeten Konto passen, und es muss zu einem Mandanten gehören, der für Azure Information Protection konfiguriert ist.
 
     - Im Abschnitt**Hilfe und Feedback**: Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)-Website. Sie können aber auch eine benutzerdefinierte URL als eine der [globalen Einstellungen](../deploy-use/configure-policy-settings.md) in der Azure Information Protection-Richtlinie festlegen.
         
@@ -117,6 +117,6 @@ Im [Verlauf der Versionsveröffentlichung](client-version-release-history.md) fi
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

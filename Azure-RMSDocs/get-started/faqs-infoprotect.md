@@ -4,7 +4,7 @@ description: Haben Sie eine Frage zum Vorschaurelease von Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a05b33f5085bf31d4ef1e6a606322fda8b0febe7
+ms.sourcegitcommit: 9d4338a1c89f2a94c744b8f5cc99bce1e54e7dec
+ms.openlocfilehash: 028468e7f4bbcff53187a947038926fbf9af1498
 
 
 ---
@@ -152,6 +152,26 @@ Sie können einschränken, welche Benutzer Daten klassifizieren und schützen, i
 
 Dateien und E-Mails, die von Azure Information Protection klassifiziert werden, können von jedem Benutzer genutzt oder bearbeitet werden, unabhängig davon, ob der Azure Information Protection-Client installiert ist oder nicht. 
 
+## <a name="how-do-i-sign-in-as-a-different-user"></a>Wie kann ich mich als anderer Benutzer anmelden?
+
+Bei Verwendung des Azure Information Protection-Clients müssen Sie sich in einer Produktionsumgebung in der Regel nicht als anderer Benutzer anmelden. Dies kann jedoch der Fall sein, wenn Sie über mehrere Mandanten verfügen. Dies gilt z.B., wenn Ihre Organisation zusätzlich zu einem Office 365- oder einem Azure-Mandanten auch einen Testmandanten verwendet.
+
+Sie können mithilfe des Dialogfelds **Microsoft Azure Information Protection** überprüfen, mit welchem Konto Sie gerade angemeldet sind: Öffnen Sie dazu eine Office-Anwendung, und klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**, und klicken Sie dann auf **Hilfe und Feedback**. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
+
+Überprüfen Sie – insbesondere bei Nutzung eines Administratorkontos – den angezeigten Domänennamen des angemeldeten Kontos. Beispiel: Wenn Sie ein Administratorkonto für zwei verschiedene Mandanten haben, kann leicht übersehen werden, dass Sie zwar mit dem richtigen Kontonamen, aber mit der falschen Domäne angemeldet sind. Ein Hinweis darauf können Fehler beim Herunterladen der Azure Information Protection-Richtlinie, die fehlende Anzeige erwarteter Bezeichnungen oder unerwartete Verhaltensweisen sein.
+
+Um sich als anderer Benutzer anzumelden, müssen Sie derzeit die Registrierung bearbeiten:
+
+1. Navigieren Sie in einem Registrierungs-Editor zu **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**, und löschen Sie den **TokenCache**-Schlüssel.
+
+2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
+
+Darüber hinaus gilt:
+
+- Um die Umgebung für den Azure Rights Management-Dienst (auch bekannt als Bootstrapping) erneut zu initialisieren, verwenden Sie die Option **Zurücksetzen** im [RMS Analyzer Tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+
+- Um die gerade heruntergeladene Azure Information Protection-Richtlinie wieder zu entfernen, löschen Sie die Datei **Policy.msip** aus dem Ordner „%localappdata%\Microsoft\MSIP“.
+
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Wie kann ich ein Problem melden oder Feedback zu Azure Information Protection übermitteln?
 
 Wenn Sie ein Problem mit Azure Information Protection haben und die aktuelle Version des Clients verwenden: Klicken Sie in der Office-Anwendung auf der Registerkarte **Start** im Bereich **Schutz** auf **Schützen** und dann auf **Hilfe und Feedback**. Klicken Sie im Dialogfeld **Microsoft Azure Information Protection** auf **Send feedback** (Feedback senden). Dadurch senden Sie eine E-Mail an das Information Protection-Team, wobei automatisch Protokolldateien von Ihrem PC angehängt werden, die dabei helfen sollen, das Problem zu diagnostizieren. 
@@ -159,6 +179,6 @@ Wenn Sie ein Problem mit Azure Information Protection haben und die aktuelle Ver
 Wenn Sie Fragen oder Feedback haben, verwenden Sie die Yammer-Seite [Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

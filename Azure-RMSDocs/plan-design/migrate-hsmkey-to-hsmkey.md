@@ -4,7 +4,7 @@ description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Info
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
-ms.openlocfilehash: 9db60e1e841cd1f821501d402986dbd05a577f6f
+ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
+ms.openlocfilehash: 5def3aa722afd29b99ef18c100d71a447c22554f
 
 
 ---
 
-# <a name="step-2-hsmprotected-key-to-hsmprotected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
+# <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection*
 
@@ -79,7 +79,7 @@ Diese Verfahren werden vom Administrator für Azure Information Protection durch
     
     Geben Sie bei entsprechender Aufforderung das Kennwort ein, das Sie zuvor angegeben haben, und bestätigen Sie, dass Sie diese Aktion ausführen möchten.
 
-2.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 1 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen.  
+2.  Wenn der Befehl abgeschlossen ist, wiederholen Sie Schritt 1 für jede verbleibende XML-Datei, die Sie durch den Export Ihrer vertrauenswürdigen Veröffentlichungsdomänen erstellt haben. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. Legen Sie für diese Dateien aber **-Active** auf **false** fest, wenn Sie den Importbefehl ausführen.  
 
 3.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
@@ -95,6 +95,6 @@ Sie können jetzt mit [Schritt 3: Aktivieren Ihres Azure Information Protection-
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

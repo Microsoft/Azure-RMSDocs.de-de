@@ -1,21 +1,23 @@
 ---
 title: Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden | Azure Information Protection
 description: "Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe der Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien des Rights Management-Diensts, mit dem sich Datenverlust verhindern lässt. Dieser Schutz wird angewendet, wenn Sie eine Bezeichnung für die Verwendung einer Rights Management-Vorlage konfigurieren."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 830e982fc1f0443545942c1deb1a2fc93431be17
+ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
+ms.openlocfilehash: 18e7dfdc91051836093ad5b36fc9a8705d99dcc0
 
 
 ---
 
-# Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden
+# <a name="how-to-configure-a-label-to-apply-rights-management-protection"></a>Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden
 
 >*Gilt für: Azure Information Protection*
 
@@ -23,7 +25,7 @@ Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe der Verschlüsse
 
 Bei dieser Vorlage kann es sich um eine der Standardvorlagen handeln, die beim Aktivieren von Azure Rights Management automatisch erstellt werden, oder um eine benutzerdefinierte Vorlage. Azure Rights Management-Abteilungsvorlagen werden unterstützt, wenden den Schutz jedoch nur an, wenn der Verfasser des Dokuments oder der E-Mail zum konfigurierten Bereich der Vorlage gehört. Wenn der Benutzer nicht zu diesem Bereich gehört, wird in einer Meldung angezeigt, dass Azure Information Protection die Bezeichnung nicht anwenden kann.
 
-## Funktionsweise des Schutzes
+## <a name="how-the-protection-works"></a>Funktionsweise des Schutzes
 
 Wenn ein Dokument oder eine E-Mail mit Rights Management geschützt wird, werden die Inhalte in ruhendem Zustand und während der Übertragung verschlüsselt. Eine Entschlüsselung ist nur durch autorisierte Benutzer möglich. Diese Verschlüsselung wird auch dann beibehalten, wenn das Dokument oder die E-Mail umbenannt wird. Darüber hinaus können Sie Nutzungsrechte und Einschränkungen konfigurieren. Nachfolgend sind einige Beispiele aufgeführt:
 
@@ -42,8 +44,14 @@ Weitere Informationen zu Azure Rights Management sowie zur Funktionsweise dieser
 > [!IMPORTANT]
 > Um eine Bezeichnung zur Anwendung des Azure Rights Management-Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Wenn Sie den Dienst noch nicht aktiviert haben, finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md) weitere Informationen.
 
+Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM konfiguriert ist. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook Web Access anzeigen, diese Mails können nicht für die Suche indiziert werden, und Sie können Exchange Online DLP nicht für den Rights Management-Schutz konfigurieren. Weitere Informationen zum Konfigurieren von Exchange, um diese zusätzlichen Szenarien zu unterstützen, finden Sie in den folgenden Ressourcen:
 
-## Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden
+- Anweisungen für Exchange Online finden Sie unter [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+- Für lokales Exchange müssen Sie den [RMS-Connector bereitstellen und Ihre Exchange-Server konfigurieren](../deploy-use/deploy-rms-connector.md). 
+
+
+## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden
 
 1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
 
@@ -77,12 +85,12 @@ Weitere Informationen zu Azure Rights Management sowie zur Funktionsweise dieser
 
 7. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).  
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
