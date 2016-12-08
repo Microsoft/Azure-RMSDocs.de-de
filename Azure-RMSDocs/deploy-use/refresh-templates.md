@@ -13,8 +13,8 @@ ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67c2f47e1cc8e02c2bb4430421952a146e583e87
-ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 2cfe5fd787811cae71bb08c458bd6767e4bc35e4
 
 
 ---
@@ -44,7 +44,7 @@ Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern
 
 ### <a name="to-update-templates-for-exchange-online"></a>So aktualisieren Sie Vorlagen für Exchange Online
 
-1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
+1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
 
     1.  Geben Sie Ihren Office 365-Benutzernamen und das Kennwort an:
 
@@ -62,7 +62,7 @@ Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern
         Import-PSSession $Session
         ```
 
-2.  Verwenden Sie das [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx)-Cmdlet, um Ihre vertrauenswürdige Veröffentlichungsdomäne (TPD, Trusted Publishing Domain) aus Azure RMS erneut zu importieren:
+2.  Verwenden Sie das [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx)-Cmdlet, um Ihre vertrauenswürdige Veröffentlichungsdomäne (TPD, Trusted Publishing Domain) aus Azure RMS erneut zu importieren:
 
     ```
     Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
@@ -187,6 +187,6 @@ Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie ein
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
