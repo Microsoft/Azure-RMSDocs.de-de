@@ -14,8 +14,8 @@ ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 70f10569884811b0b8dfab9b138399720ff48267
+ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
+ms.openlocfilehash: 767d19132decd308f028ddca1c3c6136eb862426
 
 
 ---
@@ -48,8 +48,11 @@ Die folgende Dokumentation enthält weitere Informationen zum Bereitstellen und 
 ## <a name="see-also"></a>Weitere Informationen:
 [Vergleich von Azure Information Protection und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
 
+## <a name="comments"></a>Kommentare
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 
