@@ -2,8 +2,9 @@
 title: Welche Probleme werden von Azure RMS behoben? | Azure Information Protection
 description: "Identifizieren Sie Anforderungen an den Schutz von Informationen oder Probleme, die möglicherweise in Ihrer Organisation vorliegen, und erfahren Sie, wie sich diese mit der Azure RMS-Technologie beheben lassen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +13,14 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 03ada045291115a6cc47353fed36ed9db7a23668
+ms.sourcegitcommit: 0a8332cf2402139046ba4f1ca13c4b2bb9a333a1
+ms.openlocfilehash: 6f29595f87b3cb7aa57d7037bad96ddca5fc7ea0
 
 
 ---
 
 
-# Welche Probleme werden von Azure RMS gelöst?
+# <a name="what-problems-does-azure-rms-solve"></a>Welche Probleme werden von Azure RMS gelöst?
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -29,7 +30,7 @@ Azure RMS ist die Schutztechnologie von [Azure Information Protection](what-is-i
 
 |Anforderung oder Problem|Gelöst durch Azure RMS|
 |--------------------------|-----------------------|
-|Schützen von Dateien beliebigen Typs|√ In frühen Implementierungen von Rights Management konnten nur Office-Dateien geschützt werden, wozu ein nativer Schutz verwendet wird. Nun bedeutet [generischer Schutz](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection), dass alle Dateitypen unterstützt werden.|
+|Schützen von Dateien beliebigen Typs|√ In frühen Implementierungen von Rights Management konnten nur Office-Dateien geschützt werden, wozu ein nativer Schutz verwendet wird. Nun bedeutet [generischer Schutz](../rms-client/sharing-app-dialog-box.md#whats-the-difference-between-generic-protection-and-built-in-native-protection), dass alle Dateitypen unterstützt werden.|
 |Schützen von Dateien überall|√ Wenn eine Datei an einem Speicherort gespeichert wird ([direkter Schutz](../rms-client/sharing-app-protect-in-place.md)), bleibt die Datei geschützt, auch wenn sie in einen Speicher kopiert wird, der nicht unter der Kontrolle der IT ist, z. B. in einen Cloud-Speicherdienst.|
 |Sicheres Freigeben von Dateien per E-Mail|√ Wenn eine Datei per E-Mail geteilt wird ([Geschützt freigeben](../rms-client/sharing-app-protect-by-email.md)), wird die Datei als Anlage einer E-Mail-Nachricht geschützt, mit einer Anleitung ,wie sie geöffnet wird. Der Text der E-Mail ist nicht verschlüsselt, sodass der Empfänger diese Anweisungen immer lesen kann. Da das als Anlage angehängte Dokument aber geschützt ist, kann es nur von autorisierten Benutzern geöffnet werden, auch wenn die E-Mail oder das Dokument an andere Personen weitergeleitet wird.|
 |Überprüfung und Überwachung|√ Sie können die [Nutzung Ihrer geschützten Dateien selbst dann noch überprüfen und überwachen](../deploy-use/log-analyze-usage.md), wenn diese Dateien die Grenzen Ihrer Organisation verlassen haben.<br /><br />Sie arbeiten z. B. für Contoso, Ltd. Sie arbeiten mit drei Mitarbeitern von Fabrikam, Inc. an einem gemeinsamen Projekt. Sie senden diesen 3 Personen ein Dokument per E-Mail, das Sie schützen und mit einem Schreibschutz versehen. Azure RMS-Überprüfung kann die folgenden Informationen bereitstellen:<br /><br />- Ob und wann die von Ihnen angegebenen Fabrikam-Personen das Dokument geöffnet haben.<br /><br />- Ob andere Personen, die Sie nicht angegeben haben, versucht haben, das Dokument zu öffnen (und dabei gescheitert sind): Das Dokument wurde möglicherweise weitergeleitet oder in einem freigegebenen Speicherort gespeichert, auf den andere Personen Zugriff haben.<br /><br />- Ob eine der angegebenen Personen versucht hat (und gescheitert ist), das Dokument zu drucken oder zu ändern.|
@@ -39,12 +40,12 @@ Azure RMS ist die Schutztechnologie von [Azure Information Protection](what-is-i
 |Einfache Aktivierung|√ Zum [Aktivieren des Rechteverwaltungsdiensts](../deploy-use/activate-service.md) für Benutzer sind nur einige Mausklicks im klassischen Azure-Portal erforderlich.|
 |Fähigkeit, nach Bedarf über die gesamte Organisation zu skalieren|√ Weil Azure RMS als Cloud-Dienst mit der Azure-Flexibilität für zentrales und horizontales Hochskalieren ausgeführt wird, müssen Sie keine zusätzlichen lokalen Server bereitstellen.|
 |Fähigkeit, einfache und flexible Richtlinien zu erstellen|√ [Angepasste Vorlagen für Benutzerrechterichtlinien](../deploy-use/configure-custom-templates.md) bieten schnelle und einfache Lösungen, mit denen Administratoren Richtlinien anwenden und Benutzer das richtige Maß an Schutz für jedes Dokument anwenden sowie den Zugriff auf Personen in der eigenen Organisation beschränken können.<br /><br />Soll beispielsweise ein unternehmensweites Strategiepapier für alle Mitarbeiter freigegeben werden, könnten Sie eine Schreibschutzrichtlinie für alle internen Mitarbeiter anwenden. Für ein Dokument mit sensibleren Daten, etwa einen Finanzbericht, könnten Sie den Zugriff auf Führungskräfte beschränken.|
-|Breite Anwendungsunterstützung|√ Azure RMS ist eng auf Microsoft Office-Anwendungen und -Dienste abgestimmt und ermöglicht durch Verwenden der RMS-Freigabe-Anwendung erweiterte Unterstützung für andere Anwendungen.<br /><br />√ Mit dem [Microsoft Rights Management SDK](../develop/developers-guide.md#software-development-kits) erhalten Ihre internen Entwickler sowie Softwarehersteller APIs, mit denen sie angepasste Anwendungen schreiben können, die Azure RMS unterstützen.<br /><br />Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md).|
+|Breite Anwendungsunterstützung|√ Azure RMS ist eng auf Microsoft Office-Anwendungen und -Dienste abgestimmt und ermöglicht durch Verwenden der RMS-Freigabe-Anwendung erweiterte Unterstützung für andere Anwendungen.<br /><br />√ Mit den [Azure Information Protection SDKs](../develop/developers-guide.md) erhalten Ihre internen Entwickler sowie Softwarehersteller APIs, mit denen sie angepasste Anwendungen schreiben können, die Azure Information Protection unterstützen.<br /><br />Weitere Informationen finden Sie unter [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md).|
 |IT-Abteilung muss Kontrolle über die Daten behalten|√ Organisationen können ihren eigenen Mandantenschlüssel verwalten, die „[Bring Your Own Key](../plan-design/plan-implement-tenant-key.md)“ (BYOK)-Lösung nutzen und ihren Mandantenschlüssel in Hardwaresicherheitsmodulen (HSMs) speichern.<br /><br />√ Unterstützung der Überwachung und [Verwendungsprotokollierung](../deploy-use/log-analyze-usage.md), sodass Sie Geschäftsabläufe analysieren, Missbrauch erkennen und (falls ein Informationsleck vorliegt) forensische Analysen durchführen können.<br /><br />√ Delegierter Zugriff mithilfe der [Administratorfunktion](../deploy-use/configure-super-users.md) stellt sicher, dass die IT-Abteilung stets auf geschützte Inhalte zugreifen kann, selbst wenn ein Dokument von einem Mitarbeiter geschützt wurde, der die Organisation bereits verlassen hat. Bei Peer-zu-Peer-Verschlüsselungslösungen besteht dagegen das Risiko, dass Zugriff auf Unternehmensdaten verloren geht.<br /><br />√ Synchronisieren [nur der Verzeichnisattribute, die Azure RMS benötigt](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms), um eine allgemeine Identität für Ihre lokalen Active Directory-Konten zu unterstützen, indem ein [Verzeichnissynchronisierungstool](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison) wie Azure AD Connect verwendet wird.<br /><br />√ Aktivieren des einmaligen Anmelden, ohne Kennwörter in die Cloud zu replizieren, mithilfe von AD FS.<br /><br />√ Organisationen haben immer die Möglichkeit, Azure RMS nicht mehr zu verwenden, ohne den Zugriff auf Inhalte zu verlieren, die zuvor von Azure RMS geschützt wurden. Weitere Informationen zur Außerbetriebsetzung finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](../deploy-use/decommission-deactivate.md). Organisationen, die Active Directory Rights Management Services (AD RMS) bereitgestellt haben, können darüber hinaus [zu Azure RMS migrieren](../plan-design/migrate-from-ad-rms-to-azure-rms.md) , ohne den Zugriff auf Daten zu verlieren, die zuvor durch AD RMS geschützt waren.|
 > [!TIP]
 > Wenn Sie mit der lokalen Version von Rights Management, Active Directory Rights Management Services (AD RMS), vertraut sind, ist die Vergleichstabelle in [Vergleich zwischen Azure Rights Management und AD RMS](compare-azure-rms-ad-rms.md) möglicherweise für Sie interessant.
 
-## Sicherheits-, Compliance- und gesetzliche Anforderungen
+## <a name="security-compliance-and-regulatory-requirements"></a>Sicherheits-, Compliance- und gesetzliche Anforderungen
 Azure RMS unterstützt die folgenden Sicherheits-, Compliance- und gesetzlichen Anforderungen:
 
 √ Verwendung von Kryptografie gemäß Industriestandard und Unterstützung von FIPS 140-2. Weitere Informationen finden Sie unter [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
@@ -67,13 +68,13 @@ Azure RMS unterstützt die folgenden Sicherheits-, Compliance- und gesetzlichen 
 
 Weitere Informationen zu diesen externen Zertifizierungen finden Sie im [Azure Trust Center](http://azure.microsoft.com/support/trust-center/compliance/).
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Informationen dazu, wie Azure RMS für Administratoren und Benutzern aussieht, finden Sie unter [Azure RMS in Aktion](what-admins-users-see.md).
 
 Wenn Sie eher an technischen Informationen zur Funktionsweise von Azure RMS interessiert sind, finden Sie diese unter [Funktionsweise von Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

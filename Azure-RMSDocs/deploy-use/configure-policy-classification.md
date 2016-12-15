@@ -1,21 +1,23 @@
 ---
 title: "Gewusst wie: Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung | Azure Information Protection"
 description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 
 ---
 
-# Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
+# <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -44,13 +46,15 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er die Leiste schließt.
 
-## Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
+## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
 1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten.
+2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus und nehmen dann Ihre Änderungen bei Bedarf am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. 
+
+     Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.  
 
 3. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
 
@@ -72,22 +76,22 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
 
 6. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## Informationen zu den integrierten Bedingungen
+## <a name="information-about-the-built-in-conditions"></a>Informationen zu den integrierten Bedingungen
 
 Während des Vorschauzeitraums können Sie die folgenden Bedingungen wählen (beachten Sie, dass diese Beispiele auf US-amerikanischen Standards basieren):
 
-- [SWIFT Code (SWIFT-Code)](#swift-code )
+- [SWIFT Code](#swift-code ) (SWIFT-Code)
 
-- [Credit Card Number (Kreditkartennummer)](#credit-card-number )
+- [Credit Card Number](#credit-card-number ) (Kreditkartennummer)
 
-- [ABA Routing Number (BLZ)](#aba-routing-number )
+- [ABA Routing Number](#aba-routing-number ) (BLZ)
 
-- [USA Social Security Number (US-Sozialversicherungsnummer)](#usa-social-security-number-ssn)
+- [USA Social Security Number](#usa-social-security-number-ssn) (US-Sozialversicherungsnummer)
 
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
 
-### SWIFT Code (SWIFT-Code)
+### <a name="swift-code"></a>SWIFT Code (SWIFT-Code)
 
 Übereinstimmung für diesen Informationstyp anzeigen, wenn die Inhalte Folgendes enthalten:  
 
@@ -113,7 +117,7 @@ Beispiele zum Durchführen von Tests:
 ----
 
 
-### Credit Card Number (Kreditkartennummer)
+### <a name="credit-card-number"></a>Credit Card Number (Kreditkartennummer)
 
 Übereinstimmung für diesen Informationstyp anzeigen, wenn die Inhalte Folgendes enthalten:  
 
@@ -136,7 +140,7 @@ Beispiele zum Durchführen von Tests:
 
 ----
 
-### ABA Routing Number (BLZ)
+### <a name="aba-routing-number"></a>ABA Routing Number (BLZ)
 
 Übereinstimmung für diesen Informationstyp anzeigen, wenn die Inhalte Folgendes enthalten:  
 
@@ -173,7 +177,7 @@ Beispiele zum Durchführen von Tests:
 
 ----
 
-### USA Social Security Number (US-Sozialversicherungsnummer)
+### <a name="usa-social-security-number-ssn"></a>USA Social Security Number (US-Sozialversicherungsnummer)
 
 Übereinstimmung für diesen Informationstyp anzeigen, wenn die Inhalte Folgendes enthalten:  
 
@@ -199,7 +203,7 @@ Beispiele zum Durchführen von Tests:
 
 ----
 
-### International Banking Account Number (IBAN)
+### <a name="international-banking-account-number-iban"></a>International Banking Account Number (IBAN)
 
 Übereinstimmung für diesen Informationstyp anzeigen, wenn die Inhalte Folgendes enthalten:  
 
@@ -213,15 +217,15 @@ Beispiele zum Durchführen von Tests:
 - **GB29 NWBK 6016 1331 9268 19 IBAN**
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,21 +1,23 @@
 ---
 title: "Gewusst wie: Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen | Azure Information Protection"
 description: "Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
+ms.sourcegitcommit: 81c0f97d1684091753b68e93e8b9c06f0d713264
+ms.openlocfilehash: 70d9feb8e45c1a6a266529997434dcc1e9f7899d
 
 
 ---
 
-# Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
+# <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -41,7 +43,9 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung, die Sie für visuelle Kennzeichnungen konfigurieren möchten.
+2. Wenn die für visuelle Markierungen zu konfigurierende Bezeichnung für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus. 
+
+     Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.
 
 3. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Set visual marking (such as header or footer)** (Visuelle Kennzeichnung [z. B. Kopf- oder Fußzeile] festlegen) die Einstellungen für die gewünschten visuellen Kennzeichnungen, und klicken Sie dann auf **Save** (Speichern):
 
@@ -53,7 +57,7 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
 
 4. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## Verwenden von Variablen in der Textzeichenfolge
+## <a name="using-variables-in-the-text-string"></a>Verwenden von Variablen in der Textzeichenfolge
 
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 
@@ -71,14 +75,14 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
     
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung „Geheim“ angeben, so lautet der Text in der Kopfzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Geheim**.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

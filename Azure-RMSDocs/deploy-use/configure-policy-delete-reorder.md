@@ -1,21 +1,23 @@
 ---
 title: "Gewusst wie: Löschen oder Ändern der Position einer Bezeichnung | Azure Information Protection"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen löschen oder deren Position ändern, indem Sie diese Einstellungen in der Azure Information Protection-Richtlinie konfigurieren."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3e73e928c8a0189c275e02c189db5c872993d9dd
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 743741fc63adfd959074986aab5c697d817f69c7
 
 
 ---
 
-# Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
+# <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -37,7 +39,7 @@ Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Führen Sie auf dem Blatt **Azure Information Protection** eine der folgenden Aktionen aus (abhängig davon, ob Sie eine Bezeichnung löschen, deaktivieren oder neu anordnen möchten):
+2. Wenn die Bezeichnung, die Sie löschen, deaktivieren oder umstrukturieren möchten, für alle Benutzer gilt, führen Sie einen der folgenden Schritte auf dem Blatt **Policy:Global** (Richtlinie: Global) aus. 
 
     - So löschen Sie eine Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü (**...**) für die Bezeichnung auf, die gelöscht werden soll, klicken Sie auf **Delete this label** (Diese Bezeichnung löschen), und klicken Sie auf **Yes** (Ja), um den Vorgang zu bestätigen. Klicken Sie dann auf **Save** (Speichern). 
 
@@ -45,16 +47,18 @@ Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
 
     - So ändern Sie die Position einer Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü (**...**) für die Bezeichnung auf, deren Position Sie ändern möchten, und klicken Sie auf **Move up** (Nach oben) oder **Move down** (Nach unten), bis sich die Bezeichnung an der gewünschten Position befindet. Klicken Sie dann auf **Save** (Speichern). 
 
+     Wenn sich die Bezeichnung, die Sie löschen, deaktivieren oder umstrukturieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.
+
 3. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

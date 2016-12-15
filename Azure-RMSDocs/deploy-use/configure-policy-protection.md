@@ -4,15 +4,15 @@ description: "Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
-ms.openlocfilehash: 18e7dfdc91051836093ad5b36fc9a8705d99dcc0
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 31ef3e41e84515c02ebe97f01025331578273c71
 
 
 ---
@@ -57,9 +57,11 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie zur Anwendung des Rights Management-Schutzes konfigurieren möchten.
+2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus. 
 
-3. Wählen Sie im Abschnitt **RMS-Vorlage zum Schützen von Dokumenten und E-Mails mit dieser Bezeichnung festlegen** des **Blatts** der Bezeichnung unter **RMS-Vorlage auswählen von:** entweder **Azure RMS** oder **AD RMS (Vorschau)** aus.
+     Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.
+
+3. Wählen Sie im Abschnitt **RMS-Vorlage zum Schützen von Dokumenten und E-Mails mit dieser Bezeichnung festlegen** des **Blatts** der Bezeichnung unter **RMS-Vorlage auswählen von:** entweder **Azure RMS** oder **AD RMS** aus.
     
     In den meisten Fällen wählen Sie **Azure RMS**. Wählen Sie nicht AD RMS aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser Konfiguration einhergehen, die auch manchmal als „*Hold-your-own-key*“ (HYOK) bezeichnet wird. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz).
     
@@ -73,6 +75,8 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
         - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
         
+            Beachten Sie, dass immer alle Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Azure RMS-Vorlagen, die Sie auswählen können, werden nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
+            
     - Bei Auswahl der Option **Schutz entfernen**:
         
         - Benutzer benötigen Berechtigungen zum Entfernen des Rights Management-Schutzes, um eine Bezeichnung mit dieser Option anzuwenden. Diese Option erfordert, dass die Benutzer über das [Nutzungsrecht](../deploy-use/configure-usage-rights.md) **Exportieren** (für Office-Dokumente) oder **Vollzugriff** verfügen. Alternativ muss der Besitzer der Rights Management-Besitzer sein (dieser erhält automatisch Vollzugriff) oder als [Administrator für Azure Rights Management](../deploy-use/configure-super-users.md) fungieren. Die Rights Management-Standardvorlagen umfassen nicht die Nutzungsrechte, die Benutzer zum Aufheben des Schutzes benötigen. 
@@ -91,6 +95,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,11 +1,12 @@
-# [Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
+# [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
 # [Erste Schritte](/information-protection/get-started/requirements-azure-rms)
 # [Planen und Entwerfen](/information-protection/plan-design/deployment-roadmap)
 # [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
 # [Bereitstellen und Verwenden des Clients](use-client.md)
 ## [Rights Management-Client](use-client.md)
 ### [Installieren des Azure Information Protection-Clients](info-protect-client.md)
-### [Anmerkungen zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
+#### [Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen](client-version-release-history.md)
+### [Hinweise zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
 ### [RMS-Schutz mit Windows Server FCI](configure-fci.md)
 #### [PowerShell-Skript](fci-script.md)
 ### [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md)
@@ -17,14 +18,19 @@
 ##### [Schützen einer Datei auf einem Gerät](sharing-app-protect-in-place.md)
 ##### [Schützen einer Datei, die per E-Mail freigegeben ist](sharing-app-protect-by-email.md)
 ##### [Ändern von Berechtigungen für geschützte Dateien](sharing-app-reprotect-files.md)
-##### [Verfolgen und Widerrufen von Dokumenten](sharing-app-track-revoke.md)
+##### [Nachverfolgen und Widerrufen Ihrer Dokumente](sharing-app-track-revoke.md)
 ##### [Anzeigen und Verwenden von geschützten Dateien](sharing-app-view-use-files.md)
 ##### [Entfernen von Schutz](sharing-app-remove-protection.md)
 ##### [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
 ##### [Dialogfeldoptionen](sharing-app-dialog-box.md)
+### [Azure Information Protection-Benutzerhandbuch – Vorschau](client-user-guide.md)
+#### [Herunterladen und Installieren des Azure Information Protection-Clients](install-client-app.md)
+#### [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md)
+#### [Nachverfolgen und Widerrufen Ihrer Dokumente](client-track-revoke.md)
+#### [Öffnen von Dateien, die geschützt wurden](client-view-use-files.md)
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
