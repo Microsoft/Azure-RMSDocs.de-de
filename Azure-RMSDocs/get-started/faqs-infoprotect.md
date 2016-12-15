@@ -4,7 +4,7 @@ description: Haben Sie eine Frage zum Vorschaurelease von Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d4338a1c89f2a94c744b8f5cc99bce1e54e7dec
-ms.openlocfilehash: 028468e7f4bbcff53187a947038926fbf9af1498
+ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
+ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
 
 
 ---
@@ -35,13 +35,7 @@ Probieren Sie unser Schnellstart-Tutorial aus, um zu sehen, wie dies innerhalb w
 
 Die aktuelle Version unterliegt den folgenden Einschränkungen. Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Features und Funktionen verfügbar sind:
 
-- Sie können Bezeichnungen nur Office-Dateitypen und Outlook-E-Mail-Nachrichten zuweisen.
-
-- Bezeichnungen im Office-Add-In sind für alle Benutzer sichtbar, die den Azure Information Protection-Client installiert haben.
-
 - Bezeichnungsnamen und QuickInfos werden nur in einer Sprache unterstützt.
-
-- Dateien können nicht vom Windows-Datei-Explorer aus klassifiziert werden.
 
 - Es gibt keine zentrale Protokollierung für die Klassifizierung und die Bezeichnung.
 
@@ -53,6 +47,9 @@ Die aktuelle Version unterliegt den folgenden Einschränkungen. Achten Sie auf A
 
 - Das SDK für Partner und Entwickler ist nicht verfügbar.
 
+Einige der oben aufgeführten Einschränkungen sind jetzt in der Vorschau verfügbar. Weitere Informationen finden Sie in der Blogbeitragsankündigung: [Azure Information Protection – Dezember-Vorschau jetzt verfügbar](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/).
+
+
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>Muss ich über globale Administratorrechte verfügen, um Azure Information Protection testen zu können?
 
 Damit Sie die Azure Information Protection-Richtlinie konfigurieren können, müssen Sie sich im Azure-Portal als ein globaler Administrator für Azure Active Directory anmelden.
@@ -61,7 +58,7 @@ Wenn Sie jedoch die Option zum Installieren der Demorichtlinie bei der Installat
 
 ## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Welche Optionen im Azure-Portal sind P1 oder P2?
 
-Informationen dazu, welche Features im Abonnement **Azure Information Protection Premium 1** (P1) im Vergleich mit dem Abonnement **Azure Information Protection Premium 2** (P2) enthalten sind, finden Sie in der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
+Informationen dazu, welche Features im Abonnement **Azure Information Protection Premium 1** (P1) im Vergleich mit dem Abonnement **Azure Information Protection Premium 2** (P2) enthalten sind, finden Sie in der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website. Als allgemeine Richtlinie sind die erweiterten Features wie automatische Klassifizierung und Hold Your Own Key (HYOK) jedoch für das Abonnement von Azure Informationen Protection Premium 2 spezifisch.
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Unterstützt Azure Information Protection lokale und hybride Szenarios?
 
@@ -80,10 +77,6 @@ Da Azure Information Protection persistente Bezeichnungen und persistenten Schut
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>Kann ich nur neue Daten klassifizieren, oder kann ich auch vorhandene Daten klassifizieren?
 
 Aktionen der Azure Information Protection-Richtlinie werden wirksam, wenn Dokumente gespeichert und E-Mails versendet werden. Dies gilt für neuen Inhalt und für Änderungen an bestehendem Inhalt. 
-
-Wenn Sie die Dateien, die Sie klassifizieren möchten, gespeichert haben, öffnen Sie diese einfach in der Office-Anwendung, und speichern Sie sie. 
-
-Aktuell können Sie die Klassifizierung nicht für mehrere Dokumente auf einmal überprüfen und anwenden. Sie müssen jedes Dokument einzeln in der Office-Anwendung öffnen und speichern. 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Kann ich Azure Information Protection nur für die Klassifizierung verwenden, ohne die Verschlüsselung und die Einschränkung von Nutzungsrechten zu erzwingen?
 
@@ -116,7 +109,7 @@ Ja. Um die Klassifizierung einer Datei zu entfernen, öffnen Sie die Datei in de
 
 ## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>Kann ich Benutzer dazu auffordern, zu begründen, warum sie die Klassifizierungsstufe ändern?
 
-Ja. Legen Sie im Azure-Portal die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten** auf **Ein** fest, um sicherzustellen, dass Benutzer Änderungen an Klassifikationen begründen. Wenn sie dies tun, wird ihre Aktion und Begründung in ihrem lokalen Windows-Ereignisprotokoll protokolliert: **Anwendung** > **Microsoft Azure Information Protection**.
+Ja. Legen Sie im Azure-Portal die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten** auf **Ein** fest, um sicherzustellen, dass Benutzer Änderungen an Klassifikationen begründen. Wenn sie dies tun, wird ihre Aktion und Begründung in ihrem lokalen Windows-Ereignisprotokoll protokolliert: **Anwendungs- und Dienstprotokolle** > **Microsoft Azure Information Protection**.
 
 ## <a name="how-can-i-automatically-protect-the-content-after-its-been-classified"></a>Wie kann ich den Inhalt automatisch schützen, nachdem er klassifiziert wurde?
 
@@ -134,6 +127,32 @@ Obwohl Sie aktuell optische Kennzeichnungen, den Schutz und die Bedingungen auf 
 
 Nein. Wenn Sie einer E-Mail-Nachricht mit Anlagen eine Bezeichnung zuweisen, erben die Anlagen nicht dieselbe Bezeichnung. Die Anlagen erhalten entweder keine Bezeichnung, oder es wird eine separate Bezeichnung angewendet. Wenn aber mit der Bezeichnung für die E-Mail ein Schutz konfiguriert wird, wird dieser Schutz auch auf die Anlagen angewendet.
 
+## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Azure Information Protection-Klassifizierung für E-Mails von der Exchange-Nachrichtenklassifizierung?
+
+Die Exchange-Nachrichtenklassifizierung ist ein älteres Feature, das unabhängig von einer Azure Information Protection-Klassifizierung implementiert wird, und mit dem E-Mails klassifiziert werden können. Sie können jedoch beide Lösungen integrieren, damit die Azure Information Protection-Klassifizierung und entsprechende Bezeichnungsmarkierungen automatisch hinzugefügt werden, wenn Benutzer eine E-Mail mithilfe der Outlook Web-App und einiger mobiler E-Mail-Anwendungen klassifizieren. Exchange fügt die Klassifizierung hinzu und die Vorschauversion des Azure Information Protection-Clients wendet die entsprechenden Bezeichnungseinstellungen für diese Klassifizierung an.
+
+Obwohl die Outlook Web-App die Azure Information Protection-Klassifizierung und den Schutz noch nicht systemintern unterstützt, können Sie diese Technik dazu verwenden, um Ihre Bezeichnungen zusätzlich zum Outlook-Desktopclient mit diesem E-Mail-Client zu nutzen.
+
+So erreichen Sie diese Lösung 
+
+1. Verwenden Sie das Exchange PowerShell-Cmdlet [New-MessageClassification](https://technet.microsoft.com/library/bb124400), um Nachrichtenklassifizierungen mit der Name-Eigenschaft zu erstellen, die Ihren Bezeichnungsnamen in der Azure Information Protection-Richtlinie zugeordnet wird. 
+
+2. Erstellen Sie eine Exchange-Transportregel für jede Bezeichnung. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
+
+    Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Eigenschaften einer von Ihnen mit der Azure Information Protection-Bezeichnung klassifizierten Office-Datei untersuchen. Identifizieren Sie die Dateieigenschaft mit dem Format **MSIP_Label_<GUID>_Enabled**, und geben Sie diese Zeichenfolge für den Nachrichtenheader und dann **True** für den Headerwert an. Ihr Nachrichtenheader kann z. B. wie die folgende Zeichenfolge aussehen: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**.
+
+
+Jetzt geschieht Folgendes, wenn Benutzer die Outlook Web Access-App oder einen Client auf einem mobilen Gerät verwenden, das den Rechteverwaltungsschutz unterstützt: 
+
+- Benutzer wählen die Exchange-Nachrichtenklassifizierung aus, und senden die E-Mail.
+
+- Die Exchange-Regel erkennt die Exchange-Klassifizierung und ändert entsprechend den Nachrichtenheader, um die Azure Information Protection-Klassifizierung hinzuzufügen.
+
+- Wenn Empfänger, die die Vorschauversion des Azure Information Protection-Clients ausführen, die E-Mail in Outlook anzeigen, sehen sie, dass die Azure Information Protection-Bezeichnung sowie alle entsprechenden Kopfzeilen, Fußzeilen oder Wasserzeichen der E-Mail zugewiesen sind. 
+
+Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Rechteverwaltungsschutz anwenden, fügen Sie diesen zur Regelkonfiguration hinzu, indem Sie die Option zum Ändern der Nachrichtensicherheit ändern, den Rechteschutz anwenden und dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ auswählen.
+
+
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Wie können DLP-Lösungen und andere Anwendungen in Azure Information Protection integriert werden?
 
 Da Azure Information Protection persistente Metadaten für die Klassifizierung verwendet, die eine Klartextbezeichnung enthalten, können diese Informationen von DLP-Lösungen und anderen Anwendungen gelesen werden. In Dateien werden diese Metadaten in benutzerdefinierten Eigenschaften gespeichert. In E-Mails befinden sich diese Informationen in den E-Mail-Kopfzeilen.
@@ -148,7 +167,7 @@ Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokum
 
 ## <a name="can-i-control-which-users-can-use-azure-information-protection-to-classify-and-protect-content"></a>Kann ich steuern, welche Benutzer Azure Information Protection zum Klassifizieren und Schützen von Inhalten verwenden können?
 
-Sie können einschränken, welche Benutzer Daten klassifizieren und schützen, indem Sie die Verteilung des Azure Information Protection-Client steuern. 
+Sie können einschränken, welche Benutzer Daten klassifizieren und schützen, indem Sie die Verteilung des Azure Information Protection-Client steuern. Sie fügen beim Konfigurieren einer [bereichsbezogenen Richtlinie](../deploy-use\configure-policy-scope.md) lediglich für die angegebenen Benutzer neue Bezeichnungen hinzu. 
 
 Dateien und E-Mails, die von Azure Information Protection klassifiziert werden, können von jedem Benutzer genutzt oder bearbeitet werden, unabhängig davon, ob der Azure Information Protection-Client installiert ist oder nicht. 
 
@@ -179,6 +198,6 @@ Wenn Sie ein Problem mit Azure Information Protection haben und die aktuelle Ver
 Wenn Sie Fragen oder Feedback haben, verwenden Sie die Yammer-Seite [Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
