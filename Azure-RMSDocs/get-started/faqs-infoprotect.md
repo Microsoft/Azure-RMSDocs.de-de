@@ -4,7 +4,7 @@ description: Haben Sie eine Frage zum Vorschaurelease von Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
+ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
+ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
 
 
 ---
@@ -76,11 +76,13 @@ Da Azure Information Protection persistente Bezeichnungen und persistenten Schut
 
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>Kann ich nur neue Daten klassifizieren, oder kann ich auch vorhandene Daten klassifizieren?
 
-Aktionen der Azure Information Protection-Richtlinie werden wirksam, wenn Dokumente gespeichert und E-Mails versendet werden. Dies gilt für neuen Inhalt und für Änderungen an bestehendem Inhalt. 
+Aktionen der Azure Information Protection-Richtlinie werden wirksam, wenn Dokumente gespeichert und E-Mails versendet werden. Dies gilt für neuen Inhalt und für Änderungen an bestehendem Inhalt.
+
+Wenn Sie über den Preview-Client verfügen, können Sie auch schnell vorhandene Dateien aus dem Datei-Explorer klassifizieren (und optional schützen). 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>Kann ich Azure Information Protection nur für die Klassifizierung verwenden, ohne die Verschlüsselung und die Einschränkung von Nutzungsrechten zu erzwingen?
 
-Ja. Sie können eine Azure Information Protection-Richtlinie konfigurieren, die nur eine Bezeichnung anwendet. Wir erwarten sogar, dass dies bei Bereitstellungsnetzwerken, in denen nur ein Teil der Dokumente oder E-Mails geschützt werden müssen, die eine besondere Datenverwaltung erfordern, mehrheitlich der Fall sein wird.
+Ja. Sie können eine Azure Information Protection-Richtlinie konfigurieren, die nur die Klassifizierung ohne Schutz anwendet, wenn der Dateityp diese Aktion unterstützt. Wir erwarten sogar, dass dies bei Bereitstellungsnetzwerken, in denen nur ein Teil der Dokumente oder E-Mails geschützt werden müssen, die eine besondere Datenverwaltung erfordern, mehrheitlich der Fall sein wird.
 
 ## <a name="how-does-automatic-classification-work"></a>Wie funktioniert die automatische Klassifizierung?
 
@@ -100,7 +102,7 @@ Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information
 
 ## <a name="can-i-force-all-documents-to-be-classified"></a>Kann ich erzwingen, dass alle Dokumente klassifiziert werden?
 
-Ja. Wenn Sie möchten, dass die Benutzer alle Dateien, die sie speichern, klassifizieren, legen Sie im Azure-Portal die Einstellung **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) auf **On** (Aktiviert) fest. 
+Ja. Wenn Sie möchten, dass die Benutzer alle Dateien, die sie speichern, klassifizieren, legen Sie im Azure-Portal die Richtlinieneinstellung **Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen** auf **On** (Aktiviert) fest. 
 
 ## <a name="can-i-remove-classification-from-a-file"></a>Kann ich die Klassifizierung einer Datei entfernen?
 
@@ -117,11 +119,13 @@ Im Azure-Portal können Sie eine Rights Management-Vorlage auswählen, um den In
 
 Ein Beispiel hierzu finden Sie unter [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection). Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md).
 
-## <a name="can-a-file-be-classified-with-two-different-classifications"></a>Kann eine Datei mit zwei verschiedenen Klassifizierungen klassifiziert werden?
+## <a name="can-a-file-have-more-than-one-classification"></a>Kann eine Datei über mehr als eine Klassifizierung verfügen?
 
-Falls erforderlich, können Sie Unterbezeichnungen erstellen, um die Unterkategorien für eine bestimmte Vertraulichkeitsbezeichnung besser zu beschreiben. Beispielsweise könnte die Hauptbezeichnung **Geheim** Unterbezeichnungen wie z.B. **Geheim\Recht** und **Geheim\Finanzen** enthalten. Sie können dann unterschiedliche optische Klassifizierungskennzeichnungen und unterschiedliche Rights Management-Vorlagen auf verschiedene Unterbezeichnungen anwenden.
+Benutzer können für jedes Dokument und jede E-Mail immer nur eine Bezeichnung gleichzeitig auswählen, was oft zu nur einer Klassifizierung führt. Wenn Benutzer jedoch eine untergeordnete Bezeichnung auswählen, werden zwei Bezeichnungen zur gleichen Zeit angewendet – eine primäre Bezeichnung und eine sekundäre Bezeichnung. Durch die Verwendung von untergeordneten Bezeichnungen kann eine Datei über zwei Klassifizierungen verfügen, die eine Über-/Untergeordnet-Beziehung für eine zusätzliche Kontrollebene markieren.
 
-Obwohl Sie aktuell optische Kennzeichnungen, den Schutz und die Bedingungen auf beiden Ebenen festlegen können, konfigurieren Sie diese Einstellungen, wenn Sie Unterebenen verwenden, nur auf der Unterebene. Wenn Sie die gleichen Einstellungen auf einer übergeordneten und ihrer untergeordneten Ebene konfigurieren, haben die Einstellungen der untergeordneten Ebene Vorrang.
+Beispielsweise könnte die Bezeichnung **Geheim** Unterbezeichnungen wie z.B. **Recht** und **Finanzen** enthalten. Sie können unterschiedliche optische Klassifizierungskennzeichnungen und unterschiedliche Rights Management-Vorlagen auf diese Unterbezeichnungen anwenden. Ein Benutzer kann die Bezeichnung **Geheim** nicht selbst auswählen; nur eine der untergeordneten Bezeichnungen wie z.B. **Recht**. Daher wird als festgelegte Bezeichnung **Geheim\Recht** angezeigt. Die Metadaten für diese Datei enthalten eine benutzerdefinierte Texteigenschaft für **Geheim**, eine benutzerdefinierte Texteigenschaft für **Recht** und eine weitere mit beiden Werten (**Geheim Recht**). 
+
+Bei der Verwendung von untergeordneten Bezeichnungen konfigurieren Sie optische Kennzeichnungen, Schutz und Bedingungen für die primäre Bezeichnung. Bei der Verwendung von Unterebenen konfigurieren Sie diese Einstellungen nur für die untergeordnete Bezeichnung. Wenn Sie diese Einstellungen auf der übergeordneten und ihrer untergeordneten Bezeichnung konfigurieren, haben die Einstellungen der untergeordneten Bezeichnung Vorrang.
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Wenn eine E-Mail eine Bezeichnung umfasst, erhalten Anlagen dann automatisch dieselbe Bezeichnung?
 
@@ -152,6 +156,9 @@ Jetzt geschieht Folgendes, wenn Benutzer die Outlook Web Access-App oder einen C
 
 Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Rechteverwaltungsschutz anwenden, fügen Sie diesen zur Regelkonfiguration hinzu, indem Sie die Option zum Ändern der Nachrichtensicherheit ändern, den Rechteschutz anwenden und dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ auswählen.
 
+Sie können Transportregeln auch so konfigurieren, dass sie die umgekehrte Zuordnung vornehmen: Wenn eine Azure Information Protection-Bezeichnung erkannt wird, legen Sie eine entsprechende Exchange-Nachrichtenklassifizierung fest. Dazu gehen Sie folgendermaßen vor:
+
+- Erstellen Sie für jede Azure Information Protection-Bezeichnung eine Transportregel, die angewendet wird, wenn der Header **msip_labels** den Namen Ihrer Bezeichnung enthält (z.B. **Vertraulich**), und wenden Sie eine Nachrichtenklassifizierung an, die dieser Bezeichnung zugeordnet wird.
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Wie können DLP-Lösungen und andere Anwendungen in Azure Information Protection integriert werden?
 
@@ -198,6 +205,6 @@ Wenn Sie ein Problem mit Azure Information Protection haben und die aktuelle Ver
 Wenn Sie Fragen oder Feedback haben, verwenden Sie die Yammer-Seite [Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

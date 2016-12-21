@@ -4,15 +4,15 @@ description: "Sie können die auf der Information Protection-Leiste angezeigten 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 743741fc63adfd959074986aab5c697d817f69c7
+ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
+ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
 
 
 ---
@@ -25,7 +25,9 @@ Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen 
 
 ![Löschen oder Ändern der Position von Bezeichnungen in der Azure Information Protection-Richtlinie](../media/info-protect-contextmenu.png)
 
-Anstatt eine Bezeichnung zu löschen, können Sie sie auch deaktivieren. Dadurch wird die Konfiguration der Bezeichnung beibehalten, die Bezeichnung wird jedoch nicht in der Information Protection-Leiste angezeigt.
+Wenn Sie eine Bezeichnung löschen, die auf Dokumente und E-Mails angewendet wurde, und anschließend die Azure Information Protection-Richtlinie veröffentlichen, wird diese Bezeichnung automatisch von diesen Dokumenten oder E-Mails entfernt, wenn diese das nächste Mal vom Azure Information Protection-Client geöffnet werden.
+
+Anstatt eine Bezeichnung zu löschen, möchten Sie sie möglicherweise einfach deaktivieren. Dadurch wird die Bezeichnung beibehalten, jedoch nicht in der Information Protection-Leiste angezeigt.
 
 Ordnen Sie die Bezeichnungen so an, dass Sie auf der Information Protection-Leiste in einer logischen Reihenfolge für die Benutzer angezeigt werden. Ordnen Sie die Bezeichnungen z. B. nach steigender Vertraulichkeitsstufe an, sodass den Benutzern zuerst die niedrigste Vertraulichkeitsstufe und zuletzt die höchste Vertraulichkeitsstufe angezeigt wird. Diese Konfiguration wird in der [Standardrichtlinie](configure-policy-default.md) verwendet.
 
@@ -59,6 +61,6 @@ Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Ri
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 99d7a2a9580466492edc313329cada315a9966d6
+ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
+ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
 
 
 ---
@@ -33,7 +33,7 @@ Bereichsbezogene Richtlinien sind wie Bezeichnungen im Azure-Portal angeordnet. 
 
 Da eine bereichsbezogene Richtlinie immer die Bezeichnungen und Einstellungen der globalen Richtlinie erbt, werden die Bezeichnungen der globalen Richtlinie angezeigt, wenn Sie eine bereichsbezogene Richtlinie erstellen oder bearbeiten. Sie können jedoch nicht die Bezeichnungen der globalen Richtlinie bearbeiten, wenn Sie eine bereichsbezogene Richtlinie bearbeiten. Sie können diesen geerbten Bezeichnungen jedoch untergeordnete Bezeichnungen hinzufügen.
 
-Wenn Sie z. B. in der globalen Richtlinie über eine Bezeichnung namens „Vertraulich“ verfügen, wird diese Bezeichnung allen Benutzern angezeigt. Sie können sie nicht mit einer bereichsbezogenen Richtlinie entfernen oder neu anordnen. Aber möglicherweise möchten Sie eine bereichsbezogene Richtlinie für die Marketing-Abteilung erstellen, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern „Vertraulich\Aktionen“ angezeigt wird. Dann erstellen Sie eine weitere bereichsbezogene Richtlinie für die Marketing-Abteilung, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern „Vertraulich\Partner“ angezeigt wird. Jede untergeordnete Bezeichnung kann dann für unterschiedliche Einstellungen konfiguriert werden, und die untergeordnete Bezeichnung wird nur den entsprechenden Benutzern in der Abteilung angezeigt.
+Wenn Sie z.B. in der globalen Richtlinie über eine Bezeichnung namens **Vertraulich** verfügen, wird diese Bezeichnung allen Benutzern angezeigt. Sie können sie nicht mit einer bereichsbezogenen Richtlinie entfernen oder neu anordnen. Aber möglicherweise möchten Sie eine bereichsbezogene Richtlinie für die Marketing-Abteilung erstellen, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern **Vertraulich\Aktionen** angezeigt wird. Sie erstellen zudem eine weitere bereichsbezogene Richtlinie für die Vertriebsabteilung, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern **Vertraulich\Partner** angezeigt wird. Jede untergeordnete Bezeichnung kann dann für unterschiedliche Einstellungen konfiguriert werden, und die untergeordnete Bezeichnung wird nur den entsprechenden Benutzern in der Abteilung angezeigt.
 
 
 So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Protection
@@ -63,6 +63,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
