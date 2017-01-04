@@ -4,7 +4,7 @@ description: "Ergänzende Informationen zu Azure Information Protection, darunte
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 784e8a1f53df10ee66595b1268a4d9a1f0cdc9b0
-ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
+ms.sourcegitcommit: 291198ed501854de1aa7ddbfc80cd7a7f1b4849c
+ms.openlocfilehash: a853aaa993bbb5e15e6c4b80d4c6f0581b6e9090
 
 
 ---
@@ -33,11 +33,13 @@ Azure Information Protection unterstützt weitere Dienste und verwendet zusätzl
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Kompatibilität und Überwachung
 
-Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md). Zusätzlich:
+Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements). Zusätzlich:
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 
 - FIPS 140-Informationen: [FIPS 140-Überprüfung](https://technet.microsoft.com/library/security/cc750357.aspx)
+
+Weitere ausführliche technische Informationen über die Funktionsweise der Schutztechnologie finden Sie unter [Funktionsweise von Azure RMS](../understand-explore/how-does-it-work.md). 
 
 ## <a name="service-level-agreements"></a>Vereinbarungen zum Service Level
 
@@ -56,6 +58,6 @@ Weitere Informationen finden Sie im Abschnitt [Sicherheits-, Compliance- und ges
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO5-->
 
 

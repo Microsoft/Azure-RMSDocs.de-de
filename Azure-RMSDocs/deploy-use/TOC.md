@@ -1,4 +1,4 @@
-# [Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
+# [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
 # [Erste Schritte](/information-protection/get-started/requirements-azure-rms)
 # [Planen und Entwerfen](/information-protection/plan-design/deployment-roadmap)
 # [Bereitstellen und Verwenden des Diensts](activate-service.md)
@@ -20,7 +20,7 @@
 ## [Konfigurieren von Administratoren für Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)
 ## [Konfigurieren der Information Protection-Richtlinie](configure-policy.md)
 ### [Die Standardrichtlinie](configure-policy-default.md)
-### [Konfigurieren globaler Einstellungen](configure-policy-settings.md)
+### [Konfigurieren der Richtlinieneinstellungen](configure-policy-settings.md)
 ### [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
@@ -28,8 +28,9 @@
 #### [HYOK-Einschränkungen](configure-adrms-restrictions.md)
 ### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
 ### [Konfigurieren von Bedingungen](configure-policy-classification.md)
-## [Bereitstellen des RMS-Verbindungsdiensts](deploy-rms-connector.md)
-### [Installieren und Konfigurieren des Verbindungsdiensts](install-configure-rms-connector.md)
+### [Konfigurieren von bereichsbezogenen Richtlinien](configure-policy-scope.md)
+## [Bereitstellen des RMS-Connectors](deploy-rms-connector.md)
+### [Installieren und Konfigurieren des Connectors](install-configure-rms-connector.md)
 ### [Konfigurieren von Servern](configure-servers-rms-connector.md)
 #### [Registrierungseinstellungen](rms-connector-registry-settings.md)
 ### [Überwachen des Connectors](monitor-rms-connector.md)
@@ -47,6 +48,6 @@
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

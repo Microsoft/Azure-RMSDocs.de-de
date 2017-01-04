@@ -4,7 +4,7 @@ description: "Hier finden Sie Informationen, die Sie beim Überwachen des Connec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
+ms.sourcegitcommit: e5939bb469af198a74d81724c5417eb63db7732b
+ms.openlocfilehash: bf73a79218fa8dba2b90115d0c1573a29f791023
 
 
 ---
@@ -29,9 +29,9 @@ Nach der Installation und Konfiguration des RMS-Connectors können Sie die folge
 
 Der RMS-Connector zeichnet Einträge für den **Microsoft RMS-Connector** im Anwendungsereignisprotokoll auf. 
 
-Beispiele für diese Einträge sind die folgenden Informationsereignisse: Mit ID 1000 wird bestätigt, dass der Connectordienst gestartet wurde, ID 1002 zeigt an, dass sich ein Server erfolgreich mit dem RMS-Connector verbunden hat, und ID 1004 gibt an, wann die Liste der autorisierten Konten (alle Konten werden aufgeführt) auf den Connector heruntergeladen wurde. 
+Beispiele für diese Einträge sind die folgenden Informationsereignisse: Mit ID 1000 wird bestätigt, dass der Connectordienst gestartet wurde, ID 1002 zeigt an, dass sich ein Server erfolgreich mit dem RMS-Connector verbunden hat, und ID 1004 gibt an, wann die Liste der autorisierten Konten (alle Konten werden aufgeführt) auf den Connector heruntergeladen wurde. 
 
-Wenn der Connector nicht für die Verwendung von HTTPS konfiguriert wurde, wird mit der Warnungs-ID 2002 angezeigt, dass ein Client eine nicht sichere Verbindung (HTTP) verwendet.
+Wenn der Connector nicht für die Verwendung von HTTPS konfiguriert wurde, wird mit der Warnungs-ID 2002 angezeigt, dass ein Client eine nicht sichere Verbindung (HTTP) verwendet.
 
 Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen kann, wird wahrscheinlich der Fehler 3001 angezeigt. Dieser Fehler kann beispielsweise aufgrund eines DNS-Problems oder bei einer Unterbrechung des Internetzugriffs auf mindestens einem Server auftreten, auf dem der RMS-Connector ausgeführt wird. 
 
@@ -40,7 +40,7 @@ Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herst
 
 Lesen Sie wie bei allen Ereignisprotokolleinträgen die Meldung, um weitere Einzelheiten zu erfahren.
 
-Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Beispiel: Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Ein anderer Administrator kann beispielsweise die Konfiguration des Webproxyservers so ändern, dass Server mit dem RMS-Connector nicht mehr auf das Internet zugreifen können (Fehler 3001). Oder ein Administrator entfernt ein Computerkonto aus einer Gruppe, die Sie für die Verwendung des Connectors berechtigt haben (Warnung 2001).
+Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Beispiel: Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Ein anderer Administrator kann beispielsweise die Konfiguration des Webproxyservers so ändern, dass Server mit dem RMS-Connector nicht mehr auf das Internet zugreifen können (Fehler 3001). Oder ein Administrator entfernt ein Computerkonto aus einer Gruppe, die Sie für die Verwendung des Connectors berechtigt haben (Warnung 2001).
 
 ### <a name="event-log-ids-and-descriptions"></a>Ereignisprotokoll-IDs und Beschreibungen
 
@@ -158,13 +158,15 @@ Dieses Ereignis wird protokolliert, wenn der RMS-Connector die aktuelle Liste de
 
 Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren für den **Microsoft Rights Management-Connector** erstellt. Diese Leistungsindikatoren sind nützlich, um die Leistung bei Verwendung des Azure Rights Management-Diensts über den Connector zu überwachen. Beispiel: Wenn beim Schützen von Dokumenten oder E-Mails oder beim Öffnen geschützter Dokumente oder E-Mails regelmäßig Verzögerungen auftreten, können Sie anhand der Leistungsindikatoren ermitteln, ob diese Verzögerungen aufgrund der Verarbeitungszeit des Connectors, aufgrund der Verarbeitungszeit des Azure Rights Management-Diensts oder aufgrund von Netzwerkverzögerungen auftreten. Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
 
-Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
+Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
 ## <a name="rms-analyzer"></a>RMS Analyzer
 
-Sie können das Analyzer-Tool von Rights Management Services zum Überwachen der Integrität des Connectors und Bestimmen etwaiger Konfigurationsprobleme verwenden.
+Auch wenn für dieses Tool die derzeit vorhandenen Supportoptionen verfügbar sind, können Sie das Analyzer-Tool von Rights Management Services zum Überwachen der Integrität des Connectors und zum Identifizieren etwaiger Konfigurationsprobleme verwenden. Wenn Sie dieses Tool noch nicht heruntergeladen haben, können Sie dies im [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437) tun. 
 
-Wenn Sie dieses Tool noch nicht heruntergeladen haben, können Sie dies im [Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=46437) tun. Installieren Sie das Tool auf allen Computern, die über Internetzugriff verfügen und eine Verbindung mit dem RMS-Connector herstellen können. Führen Sie das Tool aus, und wählen Sie auf der Seite **Willkommen** die Option **Azure RMS-Connector**.
+Melden Sie sich mithilfe eines Kontos, das Sie für die Nutzung des Connectors für diese Arbeitsauslastung autorisiert haben, an einem der für den RMS-Connector konfigurierten Server an. Wenn Sie den RMS-Connector zum Beispiel für Exchange konfiguriert haben, melden Sie sich an diesem Server mithilfe eines der Konten an, die Sie im Konfigurationstool für den RMS-Connector für Exchange autorisiert haben. Führen Sie dann das RMS Analyzer-Tool mit der Option **Als Administrator ausführen** aus.
+
+Wählen Sie beim Laden des Tools auf der Seite **Willkommen** die Option **Azure RMS-Connector** aus. Geben Sie die URL Ihres RMS-Connectors als aktive Adresse ein, und klicken Sie auf den grünen Pfeil. Dann sollten die Details Ihres Mandanten angezeigt werden, wodurch bestätigt wird, dass der Connector erfolgreich eine Verbindung mit dem Azure Rights Management-Dienst herstellen kann. Wenn dieser erste Test fehlerhaft ist, überprüfen Sie die Konfiguration des Proxyservers und die Firewalls, die den Serverdatenverkehr möglicherweise blockieren. Nachdem die Details zu Ihrem Mandanten erfolgreich angezeigt werden, können Sie das Ausführen von Diagnosetests für diese Serverarbeitsauslastung fortsetzen. Dabei werden unterstützte Versionsnummern, Voraussetzungen, Registrierungseinstellungen etc. geprüft.
 
 Weitere Informationen und Anleitungen finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**.
 
@@ -193,6 +195,6 @@ Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, k�
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

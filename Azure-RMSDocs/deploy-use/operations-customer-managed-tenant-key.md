@@ -20,7 +20,7 @@ ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 ---
 
 
-# <a name="customermanaged-tenant-key-lifecycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
+# <a name="customer-managed-tenant-key-lifecycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -32,7 +32,7 @@ In Azure Key Vault können Sie die Berechtigungen für den Schlüsseltresor mit 
 Wenn Sie Ihr Abonnement für Azure Information Protection kündigen, wird Ihr Mandantenschlüssel in Azure Information Protection nicht mehr verwendet. Es ist keine weitere Aktion erforderlich.
 
 
-## <a name="rekey-your-tenant-key"></a>Neuvergabe (Rollover) Ihres Mandantenschlüssels
+## <a name="re-key-your-tenant-key"></a>Neuvergabe (Rollover) Ihres Mandantenschlüssels
 Die Neuvergabe Ihres Schlüssels wird auch als „Rollover“ bezeichnet. Führen Sie eine Neuvergabe Ihres Mandantenschlüssels nur durch, wenn es wirklich notwendig ist. Ältere Clients wie Office 2010 wurden nicht darauf ausgelegt, problemlos mit Schlüsseländerungen umzugehen. In diesem Szenario müssen Sie den Rights Management-Status auf Computern löschen, indem Sie eine Gruppenrichtlinie oder einen entsprechenden Mechanismus verwenden. Es gibt jedoch einige berechtigte Ereignisse, die Sie zwingen können, Ihren Mandantenschlüssel neu zu vergeben. Beispiel:
 
 -   Ihr Unternehmen wurde in zwei oder mehr Unternehmen aufgeteilt. Wenn Sie Ihren Mandantenschlüssel neu vergeben, hat das neue Unternehmen keinen Zugriff auf neue Inhalte, die von Ihren Mitarbeitern veröffentlicht werden. Sie können auf den alten Inhalt zugreifen, wenn sie eine Kopie des alten Mandantenschlüssels besitzen.

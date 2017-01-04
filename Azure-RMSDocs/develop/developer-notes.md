@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
+ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
+ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
 
 
 ---
@@ -35,20 +35,18 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 - [Exemplarische Vorgehensweise: Verwenden der Verschlüsselung](working-with-encryption.md): Dieses Thema erläutert unsere Verschlüsselungspakete und zeigt einige Codeausschnitte für deren Verwendung.
 - [Anwendungstypen](application-types.md): Dieses Thema behandelt die Typen von Anwendungen, die Sie als rechtlich geschützte Anwendung erstellen können.
 - [Datei-API-Konfiguration](file-api-configuration.md): Das Datei-API-Verhalten kann durch Einstellungen in der Registrierung konfiguriert werden.
+- [Sicherheitsrichtlinien](security-guidelines.md): Bieten Anwendungsentwicklern Anleitungen und Informationen für ein effizientes Arbeiten mit dem AIP-Ökosystem.
 - [Unterstützte Dateiformate](supported-file-formats.md): Die Datei-API unterstützt native Formate und PFile-Formate.
 - [Unterstützte Plattformen](supported-platforms.md): In diesem Thema werden die vom RMS SDK 2.1 unterstützten Client- und Serverplattformen identifiziert.
-- [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md): Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden.
-- [Referenz für die Nutzungseinschränkung](usage-restriction-reference.md): Nutzungseinschränkungen werden durch die in diesem Thema aufgeführten Konstanten definiert.
+- [Grundlegendes zu Nutzungsbeschränkungen](understanding-usage-restrictions.md): Sämtliche RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwingen, die durch die in diesem Thema aufgeführten Konstanten definiert sind.
 
  
 ## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht](ad-rms-overview.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
