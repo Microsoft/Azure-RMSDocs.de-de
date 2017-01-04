@@ -43,10 +43,8 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
  
 ## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht](ad-rms-overview.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO4-->

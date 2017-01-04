@@ -73,10 +73,7 @@ Jedes Benutzerrecht, das in der AD RMS-Rechtespalte aufgeführt wird, hat eine B
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
- 
-
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO4-->
