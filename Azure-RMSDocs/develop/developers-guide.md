@@ -1,103 +1,135 @@
 ---
-title: Entwicklerhandbuch | Azure RMS
-description: "Überblick über die verwendeten Entwicklertools, SDKs, zusätzliche Bibliotheken und Codebeispiele."
-keywords: 
-author: bruceperlerms
+title: Azure Information Protection-Entwicklerhandbuch | Azure Information Protection
+description: "Entwickler können mithilfe von RMS Dateien eines beliebigen Typs schützen und verwalten."
+author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 11/15/2016
+ms.date: 12/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: a22e6bd0-8ce8-45b4-9a32-273126ab831e
-audience: developer
-ms.reviewer: kartikk
+ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
+ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: 329dce4c8bb5a6de3ecb7bbd7e734b4acbf339c9
-ms.openlocfilehash: bbf266512a80ece05253cbfab7b9ab40505f3f67
-
-
----
-
-# <a name="developers-guide"></a>Entwicklerhandbuch
-
-## <a name="overview"></a>Übersicht ##
-Dieses Handbuch bietet einen Überblick über unsere wachsende Zahl von Tools und Codebeispielen, die alle unterstützten Plattformen, eine Suite von Rights Management-SDKs und PowerShell-Verwaltungstools abdecken.
-
-[**Codebeispiele und Tools**](#code-samples-and-tools), die alle unterstützten Betriebssysteme abdecken: Android, iOS/OS X, Windows-Client und Windows Phone.
-
-[**PowerShell-Leitfaden**](#powershell-guidance) für Rights Management-Verwaltung und Massenschutzvorgänge.
-
-[**Software Development Kits**](#software-development-kits), die Unterstützung für verschiedene Betriebssysteme für mobile Geräte bieten, einschließlich Android und iOS sowie eine umfangreiche Unterstützung für Windows-Client.
-
+ms.sourcegitcommit: d9385bd8c22d220e8ccdf7e9b5e81049c7368744
+ms.openlocfilehash: f3603b258e79bca1709e1750b8fc63e44eb4da94
 
 ---
 
-## <a name="code-samples-and-tools"></a>Codebeispiele und Tools
+# <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 
-Diese Sammlung von durch Microsoft bereitgestellten RMS-Codebeispielen und Entwicklersupporttools umfasst alle unterstützten Betriebssysteme – Android, iOS/OS X, Windows Phone und Windows-Desktop – und wird in regelmäßigen Abständen aktualisiert, um die Kompatibilität mit dem unterstützten SDK beizubehalten.
+Dieses Handbuch ist auf Tools zum Erweitern und Integrieren des Rechteverwaltungsdiensts von Azure Information Protection ausgerichtet. Mithilfe dieses Handbuchs soll es Entwicklern, die das Rechteverwaltungssystem nutzen möchten, ermöglicht werden, verschiedene Arten von Anwendungen für eine Reihe unterstützter Plattformen zu erstellen.
 
-### <a name="android"></a>Android
+>Das aktuelle Azure Information Protection-SDK verfügt über die Komponente zur Rechteverwaltung und die Klassifizierung und Bezeichnung befinden sich in der Entwicklung.
 
-Folgendes kann auf Android unterstützt durch [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höhere Versionen des 4.x-SDKs ausgeführt werden.
+## <a name="service-applications"></a>Dienstanwendungen
+Dienstanwendungen bieten Funktionen zum Schutz von Informationen beim Exportieren aus einem Enterprise Content Management-System, aus einer Geschäftsanwendung oder einer cloudbasierten Geschäftslösung. DLP- (Data Leakage Protection) und CAS-Anwendungen (Cloud Application Security) sind Beispiele für Dienstanwendungen. Unser SDK zum Entwickeln von Dienstanwendungen steht über zwei Programmiermodelle zur Verfügung.
 
-- [UI-Bibliothek und Beispiel-App](https://github.com/AzureAD/rms-sdk-ui-for-android) auf GitHub, damit Sie schnell einsteigen und unsere Standardoberfläche in Ihren Apps wiederverwenden können.
-- [Android-Verwendungsszenarios](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) in Java stellen wichtige Entwicklungsszenarios dar, um Sie mit dem RMS-SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.
-
-### <a name="ios-os-x"></a>iOS/OS X
-
-Folgendes kann auf iOS/OS X unterstützt durch [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höhere Versionen des 4.x-SDKs ausgeführt werden.
-
-- [iOS/OS X-Verwendungsszenarios](https://msdn.microsoft.com/en-us/library/dn758307(v=vs.85).aspx) in Objective C stellen wichtige Entwicklungsszenarios dar, um Sie mit dem RMS-SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.
-- [UI-Bibliothek und Beispiel-App](https://github.com/AzureAD/rms-sdk-ui-for-ios) auf GitHub, damit Sie schnell einsteigen und unsere Standardoberfläche in Ihren Apps wiederverwenden können. **Nur unter iOS** unterstützt.
-
-### <a name="windows-desktop"></a>Windows Desktop
-
-Folgendes kann auf Windows-Desktop unterstützt durch [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) und höhere Versionen des 2.x-SDKs ausgeführt werden.
-
-- [Durch PFILE geschützte PDF-Datei lesen](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) ist ein einfaches Codebeispiel in unserem RMS Developer's Corner-Blog, das die MSIPC-Datei-API zum Entschlüsseln und Öffnen eines durch PFILE geschützten PDF-Dokuments verwendet.
-- [IpcManagedAPI](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI) ist eine .NET (C#)-Darstellung des RMS SDK 2.1, die auf einfache Weise die RMS-Aktivierung Ihre verwaltete Anwendung ermöglicht.
-- [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcNotepad) ist eine RMS-fähige Beispielanwendung, die Sie durch die grundlegenden Schritte führt, die jede RMS-fähige Anwendung zum Schutz und zur Nutzung eingeschränkter Inhalte ausführen sollten.
-- [IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) ist eine RMS-fähige DLP-Anwendung (Data Leak Protection), die Sie durch die grundlegenden Schritte führt, die jede RMS-fähige DLP-Anwendung mithilfe der Datei-API zum Schutz und zur Nutzung eingeschränkter Inhalte ausführen sollte.
-- [IpcAzureApp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcAzureApp) ist ein Beispiel für die Verwendung des RMS SDK in Azure-Anwendungen, um Daten im Azure Blob-Speicher zu schützen.
-- [RmsDocumentInspector](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/RmsDocumentInspector) ist ein Tool, mit dem Sie Informationen zu einer beliebigen RMS-geschützten Datei erhalten können, wie z. B. Inhalts-ID oder Benutzerrechte.
-- [RmsFileWatcher](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/RmsFileWatcher) ist ein Beispiel, das veranschaulicht, wie eine Windows-Anwendung erstellt wird, die Verzeichnisse im Dateisystem überwacht, und RMS-Schutzrichtlinien bei jeder Änderung anwendet, z. B. beim Hinzufügen oder Ändern einer Datei.
-
-### <a name="windows-store-and-phone"></a>Windows Store und Windows Phone
-
-- [UI-Bibliothek für Windows Store](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore) – eine UI-Bibliothek für Microsoft RMS SDK v4.1 für Windows Store-Anwendungen. Diese Bibliothek ist optional, und Entwickler können eine eigene Benutzeroberfläche erstellen, wenn Sie Microsoft RMS SDK v4.1 verwenden.
-
-- [UI-Bibliothek für Windows Phone](https://github.com/AzureAD/rms-sdk-ui-for-winphone) – eine UI-Bibliothek für Microsoft RMS SDK v4.1 für Windows Phone-Anwendungen. Diese Bibliothek ist optional, und Entwickler können eine eigene Benutzeroberfläche erstellen, wenn Sie Microsoft RMS SDK v4.1 verwenden.
-
-- [Beispielanwendung](https://github.com/Azure-Samples/active-directory-dotnet-rms-windowsstore) – Das Beispiel für Microsoft RMS SDK v4.1 für Windows Store-Anwendungen stellt ein grundlegendes Verbrauchsbeispiel für die Plattform bereit.
-
----
-
-## <a name="powershell-guidance"></a>PowerShell-Anleitung
-Es stehen PowerShell-Cmdlets für Rights Management-Verwaltung Massenschutzvorgänge zur Verfügung.
-
-Mit [Azure Rights Management-Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) können Sie Azure RMS über die Befehlszeile verwalten. Auf diese Weise wird einerseits Automatisierung ermöglicht, andererseits werden aber auch zuverlässige und wiederholte Prozesse unterstützt, um den Verwaltungsaufwand zu verringern. Außerdem erfordern einige erweiterte Azure RMS-Konfigurationen und -Vorgänge Azure PowerShell.
-
-[RMS Protection-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) können mit dem Azure Rights Management-Datenschutz (Azure RMS) in Azure Information Protection oder mit Active Directory Rights Management Services (AD RMS) verwendet werden und andere PowerShell-Module für diese Rights Management-Bereitstellungen ergänzen. Mit diesen RMS Protection-Cmdlets können Sie Dateien beliebiger Typen in einem Massenvorgang schützen bzw. deren Schutz aufheben.
-
----
-
-## <a name="software-development-kits"></a>Software Development Kits
+- [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
+- [C#-verwaltete API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 
-Aktuell sind drei Generationen von RMS SDKs erhältlich, die in der nachstehenden Tabelle dargestellt werden.
+### <a name="examples-of-service-applications"></a>Beispiele für Dienstanwendungen
+- [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist eine RMS-fähige DLP-Anwendung (Data Leak Protection), die Sie durch die grundlegenden Schritte führt, die jede RMS-fähige DLP-Anwendung mithilfe der RMS-Datei-API zum Schutz und zur Nutzung eingeschränkter Inhalte ausführen sollte.
+- [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist ein Beispiel für die Verwendung des RMS SDK in Azure-Anwendungen, um Daten im Azure Blob-Speicher zu schützen.
+- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist ein Beispiel, das veranschaulicht, wie eine Windows-Anwendung erstellt wird, die Verzeichnisse im Dateisystem überwacht, und RMS-Schutzrichtlinien bei jeder Änderung anwendet, z. B. beim Hinzufügen oder Ändern einer Datei.
 
-| SDK | Beschreibung |
-|------|---------|
-| [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Ein vereinfachtes Toolset der nächsten Generation, das eine einfache Entwicklung ermöglicht, um Ihren Android-, iOS-, Mac OS X-, Windows Phone/RT- und Linux/C++-Geräte-Apps den Schutz von Informationen über Microsoft Rights Management-Dienste zu ermöglichen |
-| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | Ein leistungsstarkes SDK-Angebot für Entwickler von Windows-Desktopanwendungen und serverbasierte Lösungsanbieter, um Rights Management für die Produkte zu ermöglichen|
-|[AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx)|** Hinweis ** – Das AD RMS SDK, das vom Client in „Msdrm.dll“ bereitgestellte Funktionen nutzt, steht für die Verwendung in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 7, Windows Server 2008 und Windows Vista zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen Microsoft Rights Management Services SDK 2.1, das vom Client in "Msipc.dll" bereitgestellte Funktionen nutzt.|
-|[AD RMS-Skripterstellungs-API](https://msdn.microsoft.com/en-us/library/bb968797.aspx)| Wird zum Erstellen von Skripts zum Verwalten einer AD RMS-Installation verwendet|
+## <a name="powershell-guides"></a>PowerShell-Anleitungen
+Diese Skripts, die im Allgemeinen von Administratoren für Azure Rights Management verwendet werden, sind beim Entwickeln und Testen Ihrer Dienstanwendungen hilfreich.
+- Mit [Azure Rights Management-Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) können Sie Azure RMS über die Befehlszeile verwalten. Auf diese Weise wird einerseits Automatisierung ermöglicht, andererseits werden aber auch zuverlässige und wiederholte Prozesse unterstützt, um den Verwaltungsaufwand zu verringern. Außerdem erfordern einige erweiterte Azure RMS-Konfigurationen und -Vorgänge Azure PowerShell.+
+- [RMS Protection-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) können mit dem Azure Rights Management-Datenschutz (Azure RMS) in Azure Information Protection oder mit Active Directory Rights Management Services (AD RMS) verwendet werden und andere PowerShell-Module für diese Rights Management-Bereitstellungen ergänzen. Mit diesen RMS Protection-Cmdlets können Sie Dateien beliebiger Typen in einem Massenvorgang schützen bzw. deren Schutz aufheben.
 
 
+## <a name="user-applications"></a>Benutzeranwendungen
+Benutzeranwendungen können mit dem RMS SDK 2.1 oder dem RMS SDK 4.2 erstellt werden.
+Die Version 4.2 basiert auf dem REST-Client mit betriebssystemspezifischen APIs für eine Reihe beliebter Betriebssysteme wie iOS/OSX, Android, Linux und Windows. Version 2.1 dient zum Erstellen systemeigener Windows-basierter Anwendungen.
 
-<!--HONumber=Nov16_HO3-->
+### <a name="user-application-development-guides"></a>Anleitungen zur Entwicklung von Benutzeranwendungen
+- [Entwickeln Ihrer Anwendung](developing-your-application.md)
+- [Testen der Anwendung](how-to-set-up-your-test-environment.md)
+- [Bereitstellen der Anwendung](deploying-your-application.md)
+
+
+### <a name="user-application-samples"></a>Benutzeranwendungsbeispiele
+- [AzureIP Test](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) ist ein Beispiel einer Konsolenanwendung, mit der Sie Dokumente mit einer Azure-Vorlage oder einer Ad-hoc-Richtlinie verschlüsseln können.
+- [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) ist eine RMS-fähige Beispielanwendung, die Sie durch die grundlegenden Schritte führt, die jede RMS-fähige Anwendung zum Schutz und zur Nutzung eingeschränkter Inhalte ausführen sollten.
+- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist ein Tool, mit dem Sie Informationen zu einer beliebigen RMS-geschützten Datei erhalten können, wie z. B. Inhalts-ID oder Benutzerrechte.
+
+## <a name="development-environment-setup"></a>Einrichtung der Entwicklungsumgebung
+Die folgenden Anleitungen führen Sie durch betriebssystemspezifische Einrichtungsschritte für eine Anwendungsentwicklungsumgebung mithilfe häufig verwendeter Tools.
+
+|[![iOS/OSX-Setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android-Setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone-Setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service-Setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux-Setup](../media/develop/linux-icon.png)](linux-setup.md) |
+
+## <a name="how-tos"></a>Vorgehensweisen
+Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt der Implementierung Ihrer Anwendung. Dienstanwendungen werden mit dem RMS SDK 2.x erstellt. Benutzeranwendungen werden mit dem RMS SDK 4.x erstellt. Der Artikellink umfasst als Attribut den Anwendungstyp, d. h. Dienst oder Benutzer.
+
+### <a name="general"></a>Allgemein
+- [Aktivieren von Dokumentenverfolgung und -widerruf (Dienst)](tracking-content.md)
+- [Installieren und Konfigurieren eines RMS-Servers (Dienst)](how-to-install-and-configure-an-rms-server.md)
+- [Verwenden der Dokumentenverfolgung (Benutzer)](how-to-use-document-tracking.md)
+
+
+### <a name="security-and-authentication"></a>Sicherheit und Authentifizierung
+- [Konfigurieren Ihrer App-Dienstanwendung für die Azure Active Directory-Anmeldung](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Verwenden der Azure Active Directory-Authentifizierung (ADAL)](how-to-use-adal-authentication.md)
+- [Konfigurieren von Azure RMS für die Authentifizierung (Dienst)](adal-auth.md)
+- [Festlegen des API-Sicherheitsmodus (Dienst)](setting-the-api-security-mode-api-mode.md)
+- [Aktivieren von Anwendungen für Azure RMS (Dienst)](how-to-use-file-api-with-aadrm-cloud.md)
+- [Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS (Benutzer)](authentication-integration.md)
+
+### <a name="configuration-and-performance-management"></a>Konfiguration und Leistungsverwaltung
+- [Hinzufügen expliziter Besitzerrechte (Dienst)](add-explicit-owner-rights.md)
+- [Datei-API-Konfiguration (Dienst)](file-api-configuration.md)
+- [Verwenden integrierter Rechte (Benutzer)](built-in-rights-usage-restriction-reference.md)
+- [Aktivieren der Fehler- und Leistungsprotokollierung (Benutzer)](enabling-logging.md)
+
+
+## <a name="videos"></a>Videos
+Dan Plastina von Microsoft bietet diese [Einführung in Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection).
+
+Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
+
+- [E-Mail-Sicherheit im Unternehmen](https://myignite.microsoft.com/videos/2787)
+- [Einführen einer umfassenden identitätsgesteuerten Lösung für den Schutz und die sichere Freigabe von Dateien](https://myignite.microsoft.com/videos/2784)
+- [Informationen zum persistenten Datenschutz durch Klassifizierung, Bezeichnung und Schutz](https://myignite.microsoft.com/videos/2786)
+
+
+## <a name="other-resources"></a>Weitere Ressourcen
+- [Anleitung zur bewährten Sicherheitsmethode](security-guidelines.md)
+- [RMS Developer's Corner (Blog)](https://blogs.msdn.microsoft.com/rms/)
+- [Häufig gestellte Fragen zu Azure Information Protection](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
+
+
+### <a name="support-articles"></a>Supportartikel
+- [Unterstützte Dateiformate](supported-file-formats.md)
+- [Unterstützte Plattformen](supported-platforms.md)
+- [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md)
+
+
+### <a name="api-reference"></a>API-Referenz
+- [Windows-API-Referenz](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
+  - [Windows SDK-Fehlercodes](https://msdn.microsoft.com/library/hh535248.aspx)
+- [API-Referenz für Windows Phone und Windows Store](https://msdn.microsoft.com/library/dn891914.aspx)
+- [iOS/OSX-API-Referenz](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
+- [Android-API-Referenz](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
+- [Linux-API-Referenz](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
+
+
+### <a name="previous-versions"></a>Frühere Versionen
+- Das [AD RMS-SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) ist die erste Version des RMS-SDKs.
+- Das [AD RMS-Skripttool](https://msdn.microsoft.com/en-us/library/bb968797.aspx) ist ein Verwaltungstool für eine AD RMS-Installation.
+
+### <a name="see-also"></a>Weitere Informationen:
+- [Entwicklerterminlogie](terms.md)
+- [Terminologie zu Azure Information Protection – ITPro](../get-started/terminology.md)
+
+## <a name="comments"></a>Kommentare
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+
+
+<!--HONumber=Dec16_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Führen Sie diese Schritte aus, um Azure Information Protection f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1551b5dc3c5c9740721e3de01d086185966b6016
-ms.openlocfilehash: ce1ed30122b3bff5b045dfbec65c257d348f0122
+ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
+ms.openlocfilehash: b4b701d6a88bea91e2adbe7e002f01929d388e91
 
 
 ---
@@ -98,6 +98,8 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 1. Aktualisieren Ihrer Azure Information Protection-Richtlinie für den Schutz von Daten
     
     Ändern Sie Ihre Azure Information Protection-Richtlinie so, dass eine oder mehrere Bezeichnungen den Rights Management-Schutz anwenden. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md).
+    
+    Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM konfiguriert ist. Diese zusätzliche Konfiguration ist in Schritt 3 für Exchange Online und in Schritt 6 für lokales Exchange enthalten. 
 
 2. Bereitstellen der Rights Management-Freigabeanwendung
     
@@ -186,10 +188,12 @@ Wenn Sie sich für den automatischen Schutz von Dateien mithilfe der Dateiklassi
 ### <a name="step-5-administer-the-rights-management-service-for-your-tenant-account-as-needed"></a>Schritt 5: bedarfsgesteuertes Verwalten des Rights Management-Diensts für Ihr Mandantenkonto
 Wenn Sie mit der Verwendung des Azure Rights Management-Diensts beginnen, kann Windows PowerShell nützlich sein, um administrative Änderungen skriptgesteuert oder automatisiert durchzuführen. Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](../deploy-use/administer-powershell.md).
 
+## <a name="comments"></a>Kommentare
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO2-->
 
 

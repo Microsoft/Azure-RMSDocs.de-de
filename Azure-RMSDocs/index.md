@@ -13,17 +13,17 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.assetid: 78022852-1541-4194-bd6b-2f5fd5d94b77
 translationtype: Human Translation
-ms.sourcegitcommit: cd24268839fac6c42a3214e5e1bb012f61b5ffff
-ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
+ms.sourcegitcommit: a7de2b462362b1fe595856c71694eab149ec09b6
+ms.openlocfilehash: 035327cdfc771bae7ff36dca1a7a888223222252
 
 
 ---
-# Azure Information Protection-Dokumentation
+# <a name="azure-information-protection-documentation"></a>Azure Information Protection-Dokumentation
 <article id="main">
     <section id="hero-content">
       <h1>Azure Information Protection-Dokumentation</h1>
       <h2>Erfahren Sie, wie Sie Azure Information Protection (früher Azure Rights Management oder RMS) bereitstellen und verwalten. Legen Sie sofort los, und wenden Sie mithilfe des Diensts die Klassifizierung, die Bezeichnung und den Schutz für die E-Mails und Dokumente Ihrer Organisation an.</h2>
-      <h3>Verwenden Sie Azure Information Protection zum ersten Mal? <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">Besuchen Sie unsere Produktseite. &rarr;</a></h3>
+      <h3>Verwenden Sie Azure Information Protection zum ersten Mal? <a href="https://www.microsoft.com/en-us/cloud-platform/azure-information-protection" target="_blank">Besuchen Sie unsere Produktwebsite &rarr;</a></h3>
     </section>
     <aside class="alert section-border">
         <p>Bereit, loszulegen?</p>
@@ -35,12 +35,15 @@ ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
       <h2 class="section-heading"><span class="icon icon-warning"></span> Wichtige Inhalte</h2>
       <div class="features row">
         <ul class="column column-half">
+          <li><mark><b>NEU</b></mark> <a href="./deploy-use/configure-policy-scope.md">Konfigurieren von bereichsbezogenen Richtlinien (Vorschau)</a></li>
+          <li><mark><b>NEU</b></mark> <a href="./rms-client/client-user-guide.md">Benutzerhandbuch (Vorschau)</a></li>
+          <li><a href="./understand-explore/what-is-information-protection.md#resources-for-azure-information-protection">Azure Information Protection-Sessions von der Microsoft Ignite 2016</a></li>
           <li><a href="./understand-explore/what-is-information-protection.md">Was ist Azure Information Protection?</a></li>
-          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Schnellstart-Tutorial für Azure Information Protection</a></li>
-          <li><a href="./get-started/faqs.md">Häufig gestellte Fragen zu Azure Information Protection</a></li>
         </ul>
         <ul class="column column-half">
-          <li><a href="./plan-design/deployment-roadmap.md">Roadmap für die Bereitstellung von Azure Information Protection</a></li>
+          <li><a href="./get-started/infoprotect-quick-start-tutorial.md">Schnellstart-Tutorial für Azure Information Protection</a></li>
+          <li><a href="./get-started/faqs.md">Häufig gestellte Fragen zu Azure Information Protection</a></li>
+      <li><a href="./plan-design/deployment-roadmap.md">Roadmap für die Bereitstellung von Azure Information Protection</a></li>
           <li><a href="./develop/developers-guide.md">Azure Information Protection-Entwicklerhandbuch</a></li>
           <li><a href="./rms-client/info-protect-client.md">Installieren des Azure Information Protection-Clients</a></li>
         </ul>
@@ -226,6 +229,6 @@ ms.openlocfilehash: eab242611a9b5557e8c1056b1c093a4070f6f202
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

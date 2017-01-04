@@ -1,21 +1,23 @@
 ---
 title: "Gewusst wie: Ändern oder Anpassen einer vorhandenen Bezeichnung | Azure Information Protection"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen ändern, indem Sie diese in der Azure Information Protection-Richtlinie konfigurieren."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 0ca82bdbb4db382c868ae38f7595a7eee585c479
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
 
 
 ---
 
-# Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -30,9 +32,9 @@ Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wählen Sie auf dem Blatt **Azure Information Protection** die Bezeichnung aus, die Sie ändern möchten, und nehmen Sie auf dem Blatt **Label** (Bezeichnung) sowie gegebenenfalls auf weiteren Blättern die gewünschten Änderungen vor.
+2. Um eine Bezeichnung der globalen Richtlinie zu ändern, damit sie für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus und nehmen dann Ihre Änderungen bei Bedarf am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. Um eine Bezeichnung von einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) zu ändern, damit sie für ausgewählte Benutzer gilt, wählen Sie zunächst diese Richtlinie auf dem Blatt **Azure Information Protection** aus.
 
-    Ausnahme: Wenn Sie die Position einer Bezeichnung ändern möchten, führen Sie diesen Schritt direkt auf dem Blatt **Azure Information Protection** aus: Klicken Sie entweder mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü für die Bezeichnung auf, und wählen Sie dann **Move up** (Nach oben) oder **Move down** (Nach unten).
+    Ausnahme: Wenn Sie die Position einer Bezeichnung ändern möchten, was Sie auf dem Richtlinienblatt der globalen Richtlinie oder der bereichsbezogenen Richtlinie ausführen: Klicken Sie entweder mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü für die Bezeichnung auf, und wählen Sie dann **Move up** (Nach oben) oder **Move down** (Nach unten).
 
 3. Wenn Sie Ihre Änderungen auf einem Blatt übernehmen möchten, klicken Sie auf dem jeweiligen Blatt auf **Save** (Speichern).
 
@@ -41,15 +43,15 @@ Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
 > [!TIP]
 >Informationen zum Wiederherstellen der Standardwerte einer Standardbezeichnung finden Sie unter [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md).
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organization-s-policy).
-
-
+Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Dec16_HO1-->
 
 

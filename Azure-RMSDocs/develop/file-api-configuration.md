@@ -85,7 +85,7 @@ Das Festlegen eines anderen Werts oder keines Werts führt zum Standardverhalten
 
 Wenn die Verschlüsselung für einen Dateityp ausgeführt wird, der blockiert ist, tritt ein [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)-Fehler auf.
 
-### <a name="file-api-file-support-details"></a>Datei-API – Dateiunterstützungsdetails
+### <a name="file-api---file-support-details"></a>Datei-API – Dateiunterstützungsdetails
 
 Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) hinzugefügt werden. Beispielsweise wird für eine beliebige Erweiterung &lt;ext&gt; (nicht Office) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung „NATIVE“ lautet.
 
@@ -151,10 +151,8 @@ HKEY_LOCAL_MACHINE
 
 - [Hinweise für Entwickler](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO3-->

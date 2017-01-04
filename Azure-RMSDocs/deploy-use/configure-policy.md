@@ -4,7 +4,7 @@ description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfiguri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
 
 
 ---
@@ -31,11 +31,11 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Das Blatt **Azure Information Protection** wird geöffnet, auf dem Sie die Azure Information Protection-Richtlinie konfigurieren können. Diese Richtlinie umfasst folgende Elemente:
-
-    - Einen Titel und eine QuickInfo für die Information Protection-Leiste, die in den Office-Anwendungen von Benutzern angezeigt wird.
+    Dann wird das Blatt **Azure Information Protection** angezeigt, das automatisch das Blatt für die globale Information Protection-Richtlinie öffnet, die alle Benutzer erhalten. Sie enthält die folgenden Elemente, die Sie konfigurieren können:
 
     - Bezeichnungen, mit denen Sie und Ihre Benutzer Dokumente und E-Mails klassifizieren können.
+
+    - Einen Titel und eine QuickInfo für die Information Protection-Leiste, die in den Office-Anwendungen von Benutzern angezeigt wird.
 
     - Die Option zum Erzwingen einer Klassifizierung, wenn Benutzer Dokumente speichern und E-Mails senden.
 
@@ -43,6 +43,7 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
     - Die Option, um Benutzer zur Angabe einer Begründung aufzufordern, wenn sie eine Bezeichnung mit einer niedrigeren Vertraulichkeitsstufe wählen.
 
+    - Die Möglichkeit zum Bereitstellen eines benutzerdefinierten Hilfelinks für Benutzer.
 
 Azure Information Protection umfasst eine [Standardrichtlinie](configure-policy-default.md), die die Bezeichnungen **Personal** (Persönlich), **Public** (Öffentlich), **Internal** (Intern), **Confidential** (Vertraulich) und **Secret** (Geheim) beinhaltet. Sie können die Standardbezeichnungen unverändert verwenden, diese Bezeichnungen anpassen oder löschen und neue Bezeichnungen erstellen.
 
@@ -58,7 +59,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md)
 
-- [Konfigurieren der globalen Richtlinieneinstellungen für Azure Information Protection](configure-policy-settings.md)
+- [Konfigurieren der Richtlinieneinstellungen](configure-policy-settings.md)
 
 - [Erstellen einer neuen Bezeichnung für Azure Information Protection](configure-policy-new-label.md)
 
@@ -72,6 +73,8 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
 
+- [Konfigurieren der Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
@@ -79,6 +82,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
