@@ -1,5 +1,5 @@
-<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows® 7</Token>
+<Token xmlns:xlink="http://www.w3.org/1999/xlink">Windows® 7</Token>
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

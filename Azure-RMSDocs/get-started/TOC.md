@@ -1,6 +1,6 @@
-# [Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
+# [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
 # [Erste Schritte](requirements-azure-rms.md)
-## [Anforderungen](requirements.md)
+## [Requirements](requirements.md)
 ### [Azure Active Directory-Anforderungen](requirements-azure-ad.md)
 ### [Unterstützung von Clientgeräten für den Schutz von Daten](requirements-client-devices.md)
 ### [Unterstützung von Anwendungen für den Schutz von Daten](requirements-applications.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
