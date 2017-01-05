@@ -6,7 +6,7 @@ Die Anwendung steht kostenlos zum Download bereit und unterstützt die skriptges
 
 ![RMS-Installation – Screenshots](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### So laden Sie die Rights Management-Freigabeanwendung herunter und installieren sie
+#### <a name="to-download-and-install-the-rights-management-sharing-application"></a>So laden Sie die Rights Management-Freigabeanwendung herunter und installieren sie
 
 1.  Navigieren Sie auf der Microsoft-Website zur Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
 
@@ -20,13 +20,13 @@ Die Anwendung steht kostenlos zum Download bereit und unterstützt die skriptges
 
 Sie können nun mit dem Schutz von Dateien beginnen, deren Inhalt Sie ausgewählten Personen zugänglich machen möchten.
 
-|Weitere Informationen zu...|Zusätzliche Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Lokale Installation der Rights Management-Freigabeanwendung für Windows und Anweisungen für Benutzer   →|[Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)|
-|Skriptgesteuerte Installation der Rights Management-Freigabeanwendung für Windows und weiterführende technische Informationen   →|[Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md)|
-|Unterschied zwischen systemeigenem und generischem Schutz   →|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (systemeigenem) Schutz?](../rms-client/sharing-app-dialog-box.md)|
+|Skriptgesteuerte Installation der Rights Management-Freigabeanwendung für Windows und weiterführende technische Informationen   →|[Administratorhandbuch der Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md)|
+|Unterschied zwischen systemeigenem und generischem Schutz   →|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (nativem) Schutz?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
