@@ -13,8 +13,8 @@ ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fff3b94014728ffbd222bc698dfdf4f6020b5c05
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 382b599e7001e993fa614c95b70e747d500aedda
 
 
 ---
@@ -25,9 +25,10 @@ ms.openlocfilehash: fff3b94014728ffbd222bc698dfdf4f6020b5c05
 
 Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant sind, seitdem Azure Rights Management den Azure Key Vault-Dienst für von Kunden verwaltete Mandantenschlüssel (auch bekannt als „Bring Your Own Key“, kurz BYOK) verwendet. 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

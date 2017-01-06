@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: cb0ce6cc8f4740ffc04b36b02392bed2c5f5490c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca3ec0fdde3b8aa2eeebf056c5e155daf79573b0
 
 
 ---
@@ -404,7 +404,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     
 
-## <a name="workerthread-a-supporting-method"></a>WorkerThread – eine unterstützende Methode
+## <a name="workerthread---a-supporting-method"></a>WorkerThread – eine unterstützende Methode
 
 
 Die *WorkerThread()*-Methode wird in den beiden vorherigen Szenarien **Erstellen eines geschützten Dateidatenstroms** und **Schützt eine Datei auf Grundlage eine Richtlinie** auf folgende Weise aufgerufen:
@@ -591,9 +591,9 @@ Beschreibung: Sie können den Cachepfad festlegen oder die Standardeinstellung v
 
 **Hinweis**  Die Authentifizierungsbibliotheksmethoden können **rmsauth::Exception** auslösen.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
