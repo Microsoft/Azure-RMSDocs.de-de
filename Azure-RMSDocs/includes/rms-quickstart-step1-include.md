@@ -8,9 +8,9 @@ Auch wenn Sie über ein Abonnement mit Unterstützung von Azure Rights Managemen
 
 ![Klassisches Azure-Portal](../media/AzRMS_Tutorial_1_Screenshots.png)
 
-#### So aktivieren Sie Rights Management über das Office 365 Admin Center
+#### <a name="to-activate-rights-management-from-the-office-365-admin-center"></a>So aktivieren Sie Rights Management über das Office 365 Admin Center
 
-1.  Wechseln Sie zum [Office 365-Portal](https://portal.office.com/) , und melden Sie sich mit Ihrem Arbeits- oder Schulkonto an.
+1.  Wechseln Sie zum [Office 365-Portal](https://portal.office.com/), und melden Sie sich mit Ihrem Arbeits- oder Schulkonto an.
 
 2.  Wenn das Office 365 Admin Center nicht automatisch angezeigt wird, wählen Sie in der linken oberen Ecke das Symbol für das App-Startprogramm und dann **Administrator** aus. Die Kachel **Administrator** wird nur für Office 365-Administratoren angezeigt.
 
@@ -31,7 +31,7 @@ Auch wenn Sie über ein Abonnement mit Unterstützung von Azure Rights Managemen
 
 Klicken Sie zu diesem Zeitpunkt nicht auf **Erweiterte Funktionen**. Dadurch gelangen Sie zum klassischen Azure-Portal, wo Sie Vorlagen konfigurieren können, die für dieses Tutorial jedoch nicht benötigt werden. Stattdessen können Sie das Office 365 Admin Center schließen.
 
-#### So aktivieren Sie Rights Management über das Azure-Portal
+#### <a name="to-activate-rights-management-from-the-azure-portal"></a>So aktivieren Sie Rights Management über das Azure-Portal
 
 1.  Wechseln Sie zum [klassischen Azure-Portal](http://go.microsoft.com/fwlink/p/?LinkID=275081), und melden Sie sich an.
 
@@ -55,6 +55,6 @@ Obwohl hier nicht auf benutzerdefinierte Vorlagen eingegangen wird, müssen Sie 
 |Standardvorlagen und Erstellung neuer benutzerdefinierter Vorlagen   →|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

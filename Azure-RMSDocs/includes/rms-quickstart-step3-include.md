@@ -6,15 +6,15 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
 ![Azure RMS-Freigabe per E-Mail – Screenshots](../media/AzRMS_Tutorial_3_Screenshots.png)
 
-#### So geben Sie Ihr Dokument sicher per E-Mail frei
+#### <a name="to-safely-share-your-document-by-email"></a>So geben Sie Ihr Dokument sicher per E-Mail frei
 
 1.  Erstellen Sie in Outlook eine neue Nachricht, und fügen Sie die gerade erstellte Datei an.
 
-2.  Geben Sie in das Feld **An** eine oder mehrere geschäftliche E-Mail-Adressen ein. Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Rights Management momentan keine personenbezogenen E-Mail-Adressen von Internetanbietern unterstützt. Es spielt keine Rolle, ob der Empfänger über Azure Rights Management verfügt oder nicht.
+2.  Geben Sie im Feld **An** eine oder mehrere geschäftliche E-Mail-Adressen ein. Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Rights Management momentan keine personenbezogenen E-Mail-Adressen von Internetanbietern unterstützt. Es spielt keine Rolle, ob der Empfänger über Azure Rights Management verfügt oder nicht.
 
 3.  Geben Sie einen Betreff wie  **Vertrauliches Dokument** und dann eine kurze E-Mail-Nachricht wie **Vertrauliches Dokument lesen und nicht weiterleiten**ein.
 
-4.  Klicken Sie dann auf der Registerkarte **Nachricht** in der Gruppe **RMS** auf **Geschützt freigeben** und dann erneut auf **Geschützt freigeben** :
+4.  Klicken Sie dann auf der Registerkarte **Nachricht** in der Gruppe **RMS** auf **Geschützt freigeben** und dann erneut auf **Geschützt freigeben**:
 
 5.  Im Dialogfeld **Geschützt freigeben** :
 
@@ -36,12 +36,12 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
 Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfänger, das Dokument anzunehmen und zu öffnen. Outlook sollte zu diesem Zeitpunkt nicht geschlossen werden, da wir es im letzten Schritt zum Verfolgen der Anlage benötigen.
 
-|Weitere Informationen zu...|Zusätzliche Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Umfassende Anweisungen und alternative Methoden zum Schutz der per E-Mail freigegebenen Dateien   →|[Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](../rms-client/sharing-app-protect-by-email.md)|
 |Optionen im Dialogfeld **Geschützt freigeben** →|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

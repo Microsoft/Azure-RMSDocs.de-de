@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: faa1f33d1151a2d4700cc64556510994c708a414
-ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
 
 
 ---
@@ -29,7 +29,7 @@ In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vo
 
 
 
-## <a name="using-the-microsoft-rights-management-sdk-42-key-scenarios"></a>Verwenden von Microsoft Rights Management SDK 4.2 – Schlüsselszenarien
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Verwenden von Microsoft Rights Management SDK 4.2 – Schlüsselszenarien
 
 
 Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwendung, die für die Einführung in dieses SDK wichtig sind. Diese veranschaulichen die Verwendung des Microsoft Protected File-Dateiformats (geschützte Datei), benutzerdefinierter geschützter Dateiformate und benutzerdefinierter Benutzeroberflächen-Steuerelemente.
@@ -213,7 +213,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-adhoc-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
 
 
 -   **Schritt 1**: Erstellen einer Richtlinienbeschreibung mit einer vom Benutzer angegebenen E-Mail-Adresse.
@@ -280,8 +280,9 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
           }
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
