@@ -4,15 +4,15 @@ description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: 71972b0a057b1958dfa5e5b4af41b65d5080a086
+ms.sourcegitcommit: bd3cbea29183c39abaa66aa5dcec8a14ad0b0757
+ms.openlocfilehash: bccddf228b33bcd8d36ef6af55dea9015cad34d0
 
 
 ---
@@ -31,21 +31,77 @@ Laden Sie den Azure Information Protection-Client aus dem [Microsoft Download Ce
 
 Überprüfen Sie vor der Installation des Clients, ob Sie über die erforderlichen Betriebssystemversionen und Anwendungen für den Azure Information Protection-Client verfügen: [Anforderungen für Azure Information Protection](../get-started/requirements-azure-rms.md). Für die Vorschauversion des Clients benötigen Computer mit Windows 7 SP1 zudem [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), die nach der Installation des Clients installiert werden kann. Wenn dieses Update erforderlich, aber noch nicht installiert ist, werden Sie zur Installation aufgefordert.
 
+
 ## <a name="to-install-the-azure-information-protection-client-manually"></a>Manuelle Installation des Azure Information Protection-Clients
 
-1. Nachdem Sie den [Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie die ausführbare Datei wie **AzInfoProtection.exe** aus, und befolgen Sie die Aufforderungen, um den Client zu installieren. Für diese Installation sind lokale Administratorrechte erforderlich.
+> [!NOTE]
+> Für diese Installation sind lokale Administratorrechte erforderlich.
 
-    Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt. 
+    
+1. Nachdem Sie den [Client heruntergeladen haben](https://www.microsoft.com/en-us/download/details.aspx?id=53018), führen Sie die ausführbare Datei wie **AzInfoProtection.exe** aus, und befolgen Sie die Aufforderungen, um den Client zu installieren.
+    
+    Wenn Sie sich nicht mit Office 365 oder Azure Active Directory verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer **Demorichtlinie**, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.
+    
+    Weitere Informationen darüber, was installiert wird:
 
-2. So beginnen Sie mit der Verwendung des Azure Information Protection-Clients: Wenn auf Ihrem Computer Office 2010 ausgeführt wird, starten Sie Ihren Computer neu. Bei anderen Office-Versionen starten Sie eine beliebige Office-Anwendung neu.
+    - Die Version zur allgemeinen Verfügbarkeit installiert die Azure Information Protection-Leiste für die Office-Anwendungen. 
+    
+    - Die aktuelle Vorschauversion des Clients installiert die Azure Information Protection-Leiste für die Office-Anwendungen. Klicken Sie mit der rechten Maustaste auf „Optionen“ für den Datei-Explorer, einen Viewer für geschützte Dateien und Windows PowerShell-Cmdlets zur gleichzeitigen Klassifizierung und zum Schutz von Dateien. 
+        
+        Beachten Sie, dass Sie nur das PowerShell-Modul (RMSProtection) durch Angeben des Parameters **PowerShellOnly = True** installieren können. Beispiel: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true`
+
+2. So schließen Sie die Installation ab: 
+
+    - Starten Sie den Computer neu, wenn darauf Office 2010 ausgeführt wird. 
+        
+        **Wenn Sie die Vorschauversion des Clients installiert haben**: Öffnen Sie zusätzlich zum Neustart Ihres Computers eine der Office-Anwendungen, die die Azure Information Protection-Leiste verwenden (z.B. Word), und bestätigen Sie alle Aufforderungen, die Registrierung für diese erste Verwendung zu aktualisieren. [Dienstermittlung](../rms-client/client-deployment-notes.md#rms-service-discovery) wird verwendet, um die Registrierungsschlüssel aufzufüllen. 
+    
+    - Bei anderen Office-Versionen starten Sie eine beliebige Office-Anwendung neu. 
+        
+        **Wenn Sie die Vorschauversion des Clients installiert haben**: Schließen Sie zusätzlich zum Neustart von Office-Anwendungen den Datei-Explorer, und starten Sie ihn erneut.
 
 ## <a name="to-install-the-azure-information-protection-client-for-users"></a>Installieren des Azure Information Protection-Clients für Benutzer
 
-Sie können die Installation des Azure Information Protection-Clients mithilfe von Befehlszeilenoptionen in Skripts automatisieren. Führen Sie die ausführbare Datei mit **/help** aus, um die Installationsoptionen anzuzeigen. Beispiel: `AzInfoProtection.exe /help`.
+Sie können die Installation des Azure Information Protection-Clients mithilfe von Befehlszeilenoptionen in Skripts automatisieren. Führen Sie die ausführbare Datei mit **/help** aus, um die Installationsoptionen anzuzeigen. Beispiel: `AzInfoProtection.exe /help`
 
-Beispiel zum automatischen Installieren des Clients: `AzInfoProtection.exe /passive | quiet`
+Beispiel für die unbeaufsichtigte Installation der Version zur allgemeinen Verfügbarkeit des Clients: `AzInfoProtection.exe /quiet`
+
+Beispiel für die unbeaufsichtigte Installation mit dem Preview-Client von einzig und allein dem PowerShell-Modul: `AzInfoProtection_PREVIEW_1.3.98.0.exe  PowerShellOnly=true /quiet`
+
+Wenn Sie die Vorschauversion des Clients auf Computern installieren, die Office 2010 ausführen, geben Sie den Parameter **ServiceLocation** an, wenn Benutzer keine lokalen Administratoren auf ihren Computern sind. Weitere Informationen finden Sie im nächsten Abschnitt.
 
 Die Version zur allgemeinen Verfügbarkeit des Azure Information Protection-Clients ist auch im Microsoft Update-Katalog enthalten. Sie können deshalb den Client mit einem beliebigem Softwareupdatedienst installieren und aktualisieren, der den Katalog nutzt. Die Vorschauversionen des Clients sind nicht im Microsoft Update-Katalog enthalten.
+
+### <a name="preview-version-and-office-2010-only"></a>Nur Vorschauversion und Office 2010
+
+Geben Sie bei der Installation des Clients für Benutzer den ServiceLocation-Parameter und die URL für Ihren Azure Rights Management-Dient für die Vorschauversion des Clients und Office 2010 an. Dieser Parameter und Wert erstellt die folgenden Registrierungsschlüssel und legt sie fest:
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\Activation
+
+Verwenden Sie das folgende Verfahren, um den Wert zu identifizieren, den Sie für den ServiceLocation-Parameter angeben. 
+
+#### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>So identifizieren Sie die Wert, der für den ServiceLocation-Parameter angegeben wird
+
+1. Führen Sie aus einer PowerShell-Sitzung zuerst [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) aus, und geben Sie Ihre Administratoranmeldeinformationen an, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen. Führen Sie dann [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration) aus. 
+ 
+    Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, lesen Sie [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+
+2. Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
+
+    Beispiel: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+
+3. Entfernen Sie im Wert den Text **/_wmcs/licensing** aus der Zeichenfolge. Zum Beispiel: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+
+    Die verbleibende Zeichenfolge ist der Wert, der für Ihren ServiceLocation-Parameter angegeben wird.
+
+Beispiel zum automatischen Installieren des Clients für Office 2010 und Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
+
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 
@@ -164,8 +220,9 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 Im [Verlauf der Versionsveröffentlichung](client-version-release-history.md) finden Sie die Informationen zu veröffentlichten Versionen.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 

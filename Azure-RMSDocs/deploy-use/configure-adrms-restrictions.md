@@ -4,15 +4,15 @@ description: Identify the limitations, prerequisites, and recommendations if you
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
+ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
+ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
 
 
 ---
@@ -66,6 +66,8 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
     
     - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können die Version des Kryptografiemodus des AD RMS-Clusters und dessen Gesamtzustand mithilfe des [RMS Analyzer-Tools](https://www.microsoft.com/en-us/download/details.aspx?id=46437) überprüfen.   
     
+    - Ein Dienstverbindungspunkt ist nicht in Active Directory registriert: Ein Dienstverbindungspunkt wird nicht verwendet, wenn Sie den AD RMS-Schutz mit Azure Information Protection verwenden. Wenn Sie über einen registrierten Dienstverbindungspunkt für Ihre AD RMS-Bereitstellung verfügen, müssen Sie diesen entfernen, sodass die [Dienstermittlung](../rms-client/client-deployment-notes.md#rms-service-discovery) für den Azure Rights Management-Schutz erfolgreich ist.
+    
     - Die AD RMS-Server sind so konfiguriert, dass sie SSL/TLS mit einem gültigen x.509-Zertifikat verwenden, welches von den Clients, die eine Verbindung herstellen, als vertrauenswürdig eingestuft wird: Dies ist erforderlich für Produktionsumgebungen, aber nicht für Tests oder zu Evaluierungszwecken.
     
     - Konfigurierte Rechtevorlagen.
@@ -100,8 +102,9 @@ Weitere Informationen zu dieser Previewfunktion finden Sie in der Blogbeitragsan
 
 Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
