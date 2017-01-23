@@ -1,4 +1,4 @@
-# [Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
+# [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
 # [Erste Schritte](/information-protection/get-started/requirements-azure-rms)
 # [Planen und Entwerfen](deployment-roadmap.md)
 ## [Roadmap für die Bereitstellung](deployment-roadmap.md)
@@ -18,6 +18,6 @@
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

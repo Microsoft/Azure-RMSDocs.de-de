@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d6a7553123d36f5a08665949e6417d83bd3912e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 38ed5a7128813f52cb62b906b0a5cef4e6d990be
 
 
 ---
@@ -38,15 +38,10 @@ Wird auch als PFile-Format bezeichnet. Es ist das Standardformat für AD RMS und
 
 Das PFile-Format ist für den Anwendungsentwickler transparent, da es in den Entwurf des Microsoft Rights Management SDK 4.2 eingebettet ist.
 
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

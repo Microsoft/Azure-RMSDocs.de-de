@@ -1,4 +1,4 @@
-# [Kennenlernen](/information-protection/understand-explore/what-is-azure-information-protection)
+# [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-azure-information-protection)
 # [Erste Schritte](/information-protection/get-started/requirements-azure-rms)
 # [Planen und Entwerfen](/information-protection/plan-design/deployment-roadmap)
 # [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
@@ -7,6 +7,6 @@
 # [Azure Information Protection (Preview)](/information-protection/understand-explore/what-is-azure-information-protection)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

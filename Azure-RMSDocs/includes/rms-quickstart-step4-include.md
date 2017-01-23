@@ -11,7 +11,7 @@ Sobald der Empfänger auf den Link klickt, wird er weitergeleitet und erhält An
 
 ![RM-Lernprogramm – Screenshots](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### So zeigen Sie die Anlage des geschützten Dokuments an
+#### <a name="to-view-the-protected-document-attachment"></a>So zeigen Sie die Anlage des geschützten Dokuments an
 
 1.  Da die mit Azure Rights Management geschützte Datei ein Word-Dokument ist, verfügt die E-Mail über zwei Anlagen. Es handelt sich tatsächlich um zwei Versionen derselben Datei, aber mit unterschiedlichen Dateierweiterungen. Öffnen Sie die Version, die über die Dateinamenerweiterung **.ppdf** verfügt (**Confidential.ppdf**).
 
@@ -25,7 +25,7 @@ Als optionalen Schritt könnten Sie den Empfänger bitten, die E-Mail an andere 
 
 Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Empfänger weitergeleitet hat, erhalten Sie eine E-Mail-Benachrichtigung über die jeweiligen Aktivitäten. Da E-Mails jedoch leicht in Vergessenheit geraten, lassen sich Dokumentzugriffe einfacher mithilfe der Dokumentenverfolgungs-Website überwachen. Dies wird im letzten Schritt veranschaulicht.
 
-|Weitere Informationen zu...|Zusätzliche Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Umfassende Erläuterung dazu, wie die durch Azure Rights Management geschützten Dateien angezeigt werden   →|[Anzeigen und Verwenden der durch Rights Management geschützten Dateien](../rms-client/sharing-app-view-use-files.md)|
 |Kostenloses RMS for Individuals-Abonnement   →|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|
@@ -33,6 +33,6 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

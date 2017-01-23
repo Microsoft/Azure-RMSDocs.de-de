@@ -4,7 +4,7 @@ description: "Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Righ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 12/16/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ffe5949c080073f8acaadd7780b2c68b4b155f8
-ms.openlocfilehash: 1381a93b3a4f262c1747fa136467132137421ecb
+ms.sourcegitcommit: 115708d10b3504e77a5e469b4df93262c067ae0c
+ms.openlocfilehash: 9947c6e8b8fe78f262dbfa129f8490489d119dd2
 
 
 ---
@@ -76,7 +76,7 @@ Weitere Informationen finden Sie unter der Citrix [Produktdokumentation für Wor
 Weitere Informationen finden Sie im Office-Blog im Beitrag zu: [OWA for Android now available on select devices](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/) (OWA für Android ist nun für ausgewählte Geräte verfügbar).
 
 ###### <a name="footnote-8"></a>Fußnote 8
-Weitere Informationen finden Sie im folgenden Beitrag zum „Enterprise und Mobility“-Blog: [SealPath brings RMS protection to AutoCAD:(https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
+Weitere Informationen finden Sie im folgenden Beitrag auf dem „Enterprise und Mobility“-Blog [SealPath brings RMS protection to AutoCAD (SealPath setzt den RMS-Schutz auf AutoCAD)](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/).
 
 
 ## <a name="more-information-about-azure-rms-support-for-office"></a>Weitere Informationen zur Azure RMS-Unterstützung für Office
@@ -166,7 +166,9 @@ Weitere Informationen dazu, wie die gängigsten Anwendungen Azure RMS unterstüt
 
 Informationen dazu, wie die gängigsten Anwendungen für Azure RMS konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO3-->
 
 

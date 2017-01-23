@@ -11,11 +11,11 @@ Dieser Schritt ist optional. Die meisten Absender möchten jedoch gerne wissen, 
 
 ![Azure RMS-Lernprogramm – Screenshots](../media/AzRMS_Tutorial_5_Screenshots.png)
 
-#### So verfolgen Sie das geschützte Dokument
+#### <a name="to-track-your-protected-document"></a>So verfolgen Sie das geschützte Dokument
 
 1.  Klicken Sie in Outlook auf der Registerkarte **Start** in der Gruppe **RMS** auf **Nutzung nachverfolgen**.
 
-2.  Wenn die Seite mit Schutz- und Freigabeoptionen ** ** angezeigt wird, klicken Sie auf **Anmelden** und geben Benutzernamen und Kennwort erneut ein.
+2.  Wenn die Seite **Schutz und Freigabe nach Ihren Vorgaben** angezeigt wird, klicken Sie auf **Anmelden** und geben Benutzernamen und Kennwort erneut ein.
 
 3.  Auf der Seite **Freigegebene Dokumente** sehen Sie das an die E-Mail angehängte Dokument **Confidential.docx**. Zu diesem Zeitpunkt wird nur diese Datei angezeigt. Sobald Sie jedoch zusätzliche geschützte Dokumente freigeben, wird die Liste erweitert.
 
@@ -27,19 +27,19 @@ Dieser Schritt ist optional. Die meisten Absender möchten jedoch gerne wissen, 
 
 Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem mobilen Gerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562)auswählen.
 
-|Weitere Informationen zu...|Zusätzliche Informationen|
+|Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
-|Umfassende Anleitung zur Dokumentenverfolgung   →|[Verfolgen und Widerrufen von Dokumenten bei Verwendung der RMS-Freigabeanwendung](../rms-client/sharing-app-track-revoke.md)|
-|2-minütiges Video zur Erläuterung der Dokumentenverfolgung   →|[Azure RMS-Dokumentenverfolgung und Widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
+|Umfassende Anleitung zur Dokumentenverfolgung   →|[Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](../rms-client/sharing-app-track-revoke.md)|
+|2-minütiges Video zur Erläuterung der Dokumentenverfolgung   →|[Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
 |Problembehandlung und Kundenfragen   →|[Häufig gestellte Fragen zur Dokumentenverfolgung](https://technet.microsoft.com/dn947488)|
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 In diesem Tutorial haben Sie nur ein Datenschutzszenario für Azure RMS kennengelernt. Weitere häufige Verwendungsmöglichkeiten finden Sie unter [Azure RMS in Aktion](../understand-explore/what-admins-users-see.md). Dieser Artikel enthält weitere Abschnitte, die Sie interessieren könnten, z. B. über die Funktionsweise von Azure RMS und die Lösung geschäftlicher Probleme.
 
 Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS zu beginnen, sollten Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) für die Bereitstellungsschritte und die darin enthaltenen Links zu praktischen Anweisungen verwenden.
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

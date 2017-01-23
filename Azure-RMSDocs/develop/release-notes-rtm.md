@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.
 
-## <a name="new-for-the-february-2016-sdk-documentation-update"></a>Neu für Februar 2016 – SDK-Dokumentationsupdate
+## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Neu für Februar 2016 – SDK-Dokumentationsupdate
 
 >[!Note]
 > Die Funktionsdokumentationsupdates in diesem Abschnitt gelten für den SDK-Download vom 12.11.2015.
@@ -161,13 +161,9 @@ Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen
 
 Wenn kein Name und keine Beschreibung abgerufen werden kann, wird ein Fehler zurückgegeben. Es kann nur ein Name und eine Beschreibung für eine bestimmte LCID vorhanden sein.
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 
