@@ -1,6 +1,6 @@
 ---
 title: "HYOK-Einschränkungen | Azure Information Protection"
-description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie AD RMS-Schutz mit Azure Information Protection auswählen. Diese Lösung wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -105,6 +105,6 @@ Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ed59b022078f73d61afcff3eff10aa338176e568
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 61fa812d43ea65cd77bca2edd9b71eacf90f8acb
 
 
 ---
@@ -39,8 +39,9 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 ## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 386453578a5ea8eeb874d7f27badb8f041dda659
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: eaa1d7a0a74fa68f9bf1d15f348dbb45d14cee9a
 
 
 ---
@@ -36,7 +36,7 @@ Der RMS-Verbindungsdienst ist ein kleiner Dienst, der lokal auf Servern installi
 ![RMS-Connectorarchitektur (Übersicht)](../media/RMS_connector.png)
 
 
-### <a name="onpremises-servers-supported"></a>Unterstützung lokaler Server
+### <a name="on-premises-servers-supported"></a>Unterstützung lokaler Server
 
 Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden, um Richtlinien zu klassifizieren und auf Office-Dokumente in einem Ordner anzuwenden. 
 
@@ -50,7 +50,7 @@ Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unte
 
 Sie können den RMS-Connector auch dann verwenden, wenn einige Benutzer Verbindungen mit Onlinediensten in einem Hybridszenario herstellen. Beispielsweise könnte es sein, dass für die Postfächer einiger Benutzer Exchange Online und für die Postfächer einiger anderer Benutzer Exchange Server verwendet wird. Nachdem Sie den RMS-Connector (RMS-Verbindungsdienst) installiert haben, können alle Benutzer E-Mails und Anlagen mithilfe von Azure RMS schützen und nutzen, und der Informationsschutz zwischen den beiden Bereitstellungskonfigurationen funktioniert nahtlos.
 
-### <a name="support-for-customermanaged-keys-byok"></a>Unterstützung für von Kunden verwaltete Schlüssel (BYOK)
+### <a name="support-for-customer-managed-keys-byok"></a>Unterstützung für von Kunden verwaltete Schlüssel (BYOK)
 
 Wenn Sie Ihren eigenen Mandantenschlüssel für Azure RMS verwalten (das „Bring Your Own Key“- oder BYOK-Szenario), greifen der RMS-Connector und die lokalen Server, die ihn verwenden, nicht auf das Hardwaresicherheitsmodul (HSM) zu, das Ihren Mandantenschlüssel enthält. Dies liegt daran, dass alle kryptografischen Vorgänge, bei denen der Mandantenschlüssel zum Einsatz kommt, in Azure RMS und nicht lokal ausgeführt werden.
 
@@ -97,7 +97,9 @@ Der Connector führt keine automatische Prüfung aller [Voraussetzungen](deploy-
 
 Weiter zu Schritt 1: [Installieren und Konfigurieren des Azure Rights Management-Connectors](install-configure-rms-connector.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

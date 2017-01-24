@@ -80,6 +80,6 @@ Anweisungen zur Vorgehensweise finden Sie in den folgenden Abschnitten des Azure
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

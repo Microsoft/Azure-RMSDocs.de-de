@@ -2,8 +2,9 @@
 title: "RMS-Freigabeanwendung für Windows und mobile Plattformen | Azure Information Protection"
 description: "Unterstützung von Azure RMS durch die RMS-Freigabeanwendung als eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +13,18 @@ ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
-ms.openlocfilehash: e4b9a13ba29820cd7a19e0b8509966f5d8195353
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 5b438ed97df754b88b0d654439153dea03c8250c
 
 
 ---
 
 
-# RMS-Freigabeanwendung für Windows und mobile Plattformen
+# <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>RMS-Freigabeanwendung für Windows und mobile Plattformen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Die RMS-Freigabeanwendung ist eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für den Azure Rights Management-Dienst bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
+Die RMS-Freigabeanwendung ist eine kostenlose, herunterladbare Anwendung, die für die Unterstützung von Office 2010 erforderlich ist, aber auch für Windows-Computer, Mac-Computer und mobile Geräte empfohlen wird. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für den Azure Rights Management-Dienst bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
 Wenn Benutzer ihre Dateien mit der RMS-Freigabeanwendung schützen, können sie auch von ihnen geschützte Dokumente nachverfolgen und bei Bedarf den Zugriff hierauf widerrufen. Hierfür wird die [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562)verwendet.
 
@@ -52,12 +53,13 @@ Die RMS-Freigabeanwendung für mobile Geräte unterstützt die gängigsten verwe
 -   Verwalten der App für Android-Geräte, die nicht per Intune registriert sind
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,13 +13,13 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9ae44cf7beba0f4af3078eedeac352e9792d497c
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -28,7 +28,7 @@ Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte
 > [!TIP]
 > Werden Fehler angezeigt, wenn Sie versuchen, Dateien zu schützen, sollten Sie [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971)lesen.
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>So schützen Sie eine Datei auf einem Gerät (direkt schützen)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>So schützen Sie eine Datei auf einem Gerät (direkt schützen)
 
 1.  Wählen Sie im Datei-Explorer eine Datei aus, die Sie schützen möchten. Klicken Sie mit der rechten Maustaste, und wählen Sie **Mit RMS schützen** und anschließend **Direkt schützen** aus. Beispiel:
 
@@ -65,8 +65,9 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 ## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

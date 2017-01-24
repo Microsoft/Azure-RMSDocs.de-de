@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 
 ---
@@ -169,7 +169,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>So installieren Sie nur die RMS-Freigabeanwendung und das Office-Add-In
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>So installieren Sie nur die RMS-Freigabeanwendung und das Office-Add-In
 
 1.  Installieren Sie den AD RMS-Client sowie die RMS-Freigabeanwendung, indem Sie den folgenden Befehl verwenden und einen vorhandenen Ordner angeben, um die Protokolldatei zu erstellen:
 
@@ -273,7 +273,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
 
 1.  Um den Erfolg des Befehls "Setup_ipviewer.exe" zu überprüfen, suchen Sie den folgenden Text in der Installationsprotokolldatei: **Installation success or error status: 0**
 
@@ -310,7 +310,7 @@ Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich si
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>So deinstallieren Sie das Office-Add-in
+### <a name="to-uninstall-the-office-add-in"></a>So deinstallieren Sie das Office-Add-in
 
 -   Verwenden Sie die folgenden Befehle:
 
@@ -404,9 +404,10 @@ Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglic
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere technische Informationen einschließlich einer Erläuterung des Unterschieds zwischen den Schutzebenen (systemeigene und generische), der unterstützten Dateitypen und Dateinameerweiterungen und einer Anleitung zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

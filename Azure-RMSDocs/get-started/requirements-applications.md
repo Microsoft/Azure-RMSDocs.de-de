@@ -169,6 +169,6 @@ Informationen dazu, wie die gängigsten Anwendungen für Azure RMS konfiguriert 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: 97766046526db5148f03873343a2fb3840392c6a
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: d70dbd0f9fc4119a506551e7e058b29cc21562bd
 
 
 ---
@@ -53,7 +53,7 @@ Zusätzlich zu den Optionen, die Sie auswählen können, fragen Sie sich viellei
     > [!NOTE]
     > Eine allgemein geschützte Datei hat immer die Dateinamenerweiterung **.pfile**.
 
--   Im Gegensatz dazu gilt bei Verwendung des **integrierten (nativen) Schutzes** von Rights Management der Schutz für Anwendungen, die dies unterstützen (z.B. Office-Dateien), auch für die Datei. Dies ist auch der Fall, wenn die Datei an jemand anderen gesendet oder an einem anderen Ort gespeichert wird. Und wenn Sie diese Dateien schützen, können Sie eingeschränkte Berechtigungen verwenden, z. B. schreibgeschützt oder die Berechtigung zum Bearbeiten, jedoch nicht zum Drucken oder Kopieren. Sie könnten beispielsweise **Anzeigender Benutzer – Nur Anzeigen**auswählen, sodass der Inhalt weder bearbeitet, noch gedruckt oder noch kopiert werden kann.
+-   Im Gegensatz dazu gilt bei Verwendung des **integrierten (nativen) Schutzes** von Rights Management der Schutz für Anwendungen, die dies unterstützen (z.B. Office-Dateien), auch für die Datei. Dies ist auch der Fall, wenn die Datei an jemand anderen gesendet oder an einem anderen Ort gespeichert wird. Und wenn Sie diese Dateien schützen, können Sie eingeschränkte Berechtigungen verwenden, z. B. schreibgeschützt oder die Berechtigung zum Bearbeiten, jedoch nicht zum Drucken oder Kopieren. Sie könnten beispielsweise **Anzeigender Benutzer – Nur Anzeigen**auswählen, sodass der Inhalt weder bearbeitet, noch gedruckt oder noch kopiert werden kann.
 
 Weitere technische Informationen finden Sie im Abschnitt [Schutzstufe – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
@@ -76,9 +76,10 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 ## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

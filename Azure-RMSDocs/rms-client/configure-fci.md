@@ -2,8 +2,9 @@
 title: RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) | Azure Information Protection
 description: "Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit dem RMS-Schutztool, um den Ressourcen-Manager für Dateiserver und die Dateiklassifizierungsinfrastruktur zu konfigurieren."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9185b1e28638c8885f4130dfe969c3bdf39d07f5
 
 
 ---
 
-# RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
+# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
 >*Gilt für: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
@@ -29,11 +30,11 @@ Mit diesen Lösungen können Sie automatisch alle Dateien in einem Ordner auf ei
 > [!NOTE]
 > Obwohl Azure Information Protection einen [Connector](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z.B. Office-Dateien.
 > 
-> Um alle Dateitypen mit der Dateiklassifizierungsinfrastruktur zu unterstützen, müssen Sie das Windows PowerShell- **RMS-Schutzmodul** verwenden, wie in diesem Artikel beschrieben wird. Die RMS-Schutz-Cmdlets, wie z. B. die RMS-Freigabeanwendung, unterstützen generischen Schutz und systemeigenen Schutz, was bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
+> Um alle Dateitypen mit der Dateiklassifizierungsinfrastruktur zu unterstützen, müssen Sie das Windows PowerShell- **RMS-Schutzmodul** verwenden, wie in diesem Artikel beschrieben wird. Die RMS-Schutz-Cmdlets, wie z. B. die RMS-Freigabeanwendung, unterstützen generischen Schutz und systemeigenen Schutz, was bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md).
 
 Die folgenden Anleitungen gelten für Windows Server 2012 R2 oder Windows Server 2012. Wenn Sie andere unterstützte Versionen von Windows ausführen, müssen Sie möglicherweise einige Schritte aufgrund der Unterschiede zwischen der Version Ihres Betriebssystems und der in diesem Artikel beschriebenen Version anpassen.
 
-## Voraussetzungen für Azure Rights Management-Schutz mit Windows Server FCI
+## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Voraussetzungen für Azure Rights Management-Schutz mit Windows Server FCI
 Voraussetzungen für diese Anweisungen:
 
 -   Auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen:
@@ -44,7 +45,7 @@ Voraussetzungen für diese Anweisungen:
 
     -   Sie haben das RMS-Schutztool einschließlich der Voraussetzungen für das Tool (z. B. den RMS-Client) und für Azure RMS (z. B. das Dienstprinzipalkonto) installiert. Weitere Informationen finden Sie im Thema zu [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
-    -   Wenn Sie die Standardstufe des RMS-Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie auf der Seite [Datei-API-Konfiguration](https://msdn.microsoft.com/library/dn197834%28v=vs.85%29.aspx) beschrieben wird.
+    -   Wenn Sie die Standardstufe des RMS-Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie auf der Seite [Datei-API-Konfiguration](../develop/file-api-configuration.md) beschrieben wird.
 
     -   Sie haben eine Internetverbindung mit konfigurierten Computereinstellungen, falls für einen Proxyserver erforderlich. Beispiel: `netsh winhttp import proxy source=ie`
 
@@ -60,7 +61,7 @@ Voraussetzungen für diese Anweisungen:
 
 -   Sie haben die zu verwendende Rights Management-Vorlage identifiziert, die die Dateien schützen wird. Stellen Sie mithilfe des [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) -Cmdlets sicher, dass Sie die ID für diese Vorlage kennen.
 
-## Anweisungen zum Konfigurieren der Ressourcen-Manager für Dateiserver-FCI für den Azure RMS-Schutz
+## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rms-protection"></a>Anweisungen zum Konfigurieren der Ressourcen-Manager für Dateiserver-FCI für den Azure RMS-Schutz
 Folgen Sie diesen Anweisungen, um mithilfe eines Windows PowerShell-Skripts als benutzerdefinierte Aufgabe alle Dateien in einem Ordner zu schützen. Führen Sie diese Verfahren in folgender Reihenfolge aus:
 
 1.  Speichern des Windows PowerShell-Skripts
@@ -77,13 +78,13 @@ Folgen Sie diesen Anweisungen, um mithilfe eines Windows PowerShell-Skripts als 
 
 Am Ende dieser Anweisungen sind alle Dateien im ausgewählten Ordner mit der benutzerdefinierten Eigenschaft von RMS klassifiziert, und diese Dateien werden dann durch Rights Management geschützt. Dann können Sie für eine komplexere Konfiguration, die nur bestimmte Dateien selektiv schützt, eine andere Klassifizierungseigenschaft und -regel mit einer Dateiverwaltungsaufgabe, die nur diese Dateien schützt, erstellen oder verwenden.
 
-### Speichern des Windows PowerShell-Skripts
+### <a name="save-the-windows-powershell-script"></a>Speichern des Windows PowerShell-Skripts
 
 1.  Kopieren Sie die Inhalte des [Windows PowerShell-Skripts](fci-script.md) für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver. Fügen Sie die Inhalts des Skripts ein, und benennen Sie die Datei auf Ihrem Computer **RMS-Protect-FCI.ps1**.
 
 2.  Überprüfen Sie das Skript, und nehmen Sie folgende Änderungen vor:
 
-    -   Suchen Sie nach der folgenden Zeichenfolge, und ersetzen Sie sie durch Ihre eigene AppPrincipalId, die Sie mit dem [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) -Cmdlet für die Verbindung zu Azure RMS verwenden:
+    -   Suchen Sie nach der folgenden Zeichenfolge, und ersetzen Sie sie durch Ihre eigene „AppPrincipalId“, die Sie mit dem Cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) für die Verbindung mit dem Azure Rights Management-Dienst verwenden:
 
         ```
         <enter your AppPrincipalId here>
@@ -130,7 +131,7 @@ Am Ende dieser Anweisungen sind alle Dateien im ausgewählten Ordner mit der ben
 
 Sie können jetzt mit der Konfiguration des Ressourcen-Managers für Dateiserver beginnen.
 
-### Erstellen einer Klassifizierungseigenschaft für Rights Management (RMS)
+### <a name="create-a-classification-property-for-rights-management-rms"></a>Erstellen einer Klassifizierungseigenschaft für Rights Management (RMS)
 
 -   Erstellen Sie im Ressourcen-Manager für Dateiserver in der Klassifizierungsverwaltung eine neue lokale Eigenschaft:
 
@@ -144,7 +145,7 @@ Sie können jetzt mit der Konfiguration des Ressourcen-Managers für Dateiserver
 
 Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verwendet.
 
-### Erstellen einer Klassifizierungsregel (Klassifizierung für RMS)
+### <a name="create-a-classification-rule-classify-for-rms"></a>Erstellen einer Klassifizierungsregel (Klassifizierung für RMS)
 
 -   Erstellen Sie eine neue Klassifizierungsregel:
 
@@ -168,11 +169,11 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
     -   Name der**Eigenschaft** : Wählen Sie **RMS**aus.
 
-    -    **Wert**der Eigenschaft: Wählen Sie **Ja**aus.
+    -   **Wert**der Eigenschaft: Wählen Sie **Ja**aus.
 
 Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausführen können, sollten Sie diese Regel nach einem Zeitplan ausführen, damit neue Dateien mit der RMS-Eigenschaft klassifiziert werden.
 
-### Konfigurieren des Klassifizierungszeitplans
+### <a name="configure-the-classification-schedule"></a>Konfigurieren des Klassifizierungszeitplans
 
 -   Auf der Registerkarte **Automatische Klassifizierung** :
 
@@ -186,7 +187,7 @@ Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausfüh
 
 Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie eine Verwaltungsaufgabe zum Anwenden des RMS-Schutzes auf die Dateien konfigurieren.
 
-### Erstellen einer benutzerdefinierten Dateiverwaltungsaufgabe (Schützen von Dateien mit RMS)
+### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>Erstellen einer benutzerdefinierten Dateiverwaltungsaufgabe (Schützen von Dateien mit RMS)
 
 -   Erstellen Sie unter **Dateiverwaltungsaufgaben**eine neue Dateiverwaltungsaufgabe:
 
@@ -251,7 +252,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
         -   **Für neue Dateien fortlaufend ausführen**: Aktivieren Sie dieses Kontrollkästchen.
 
-### Testen der Konfiguration durch manuelles Ausführen der Regel und der Aufgabe
+### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>Testen der Konfiguration durch manuelles Ausführen der Regel und der Aufgabe
 
 1.  Führen Sie die Klassifizierungsregel aus:
 
@@ -292,16 +293,17 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werden, können Sie den Dateiressourcen-Manager schließen. Neue Dateien werden automatisch geschützt, und alle Dateien werden erneut geschützt, wenn die Zeitpläne ausgeführt werden. Das erneute Schützen der Dateien stellt sicher, dass alle Änderungen an der Vorlage auf die Dateien angewendet werden.
 
 
-## Ändern der Anweisungen zum selektiven Schutz von Dateien
+## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Ändern der Anweisungen zum selektiven Schutz von Dateien
 Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es sehr einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
 
 Verwenden Sie hierzu eine der integrierten Klassifizierungseigenschaften (z. B. **Daten mit persönlich identifizierbaren Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
 
 Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS** -Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem **Operator** -Wert **Gleich** und dem **Wert** **Hoch**aus.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 
