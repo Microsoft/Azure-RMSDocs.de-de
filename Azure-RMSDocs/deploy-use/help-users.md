@@ -13,8 +13,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b4ba043aa351b4b6b118a83bd5fe54898ea17492
 
 
 ---
@@ -112,10 +112,11 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 Ähnlich wie beim Anzeigen eines geschützten Dokuments, werden die Empfänger der E-Mail bei deren Empfang zuerst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Wenn Sie beispielsweise **Nicht allen antworten**ausgewählt haben, ist die Option **ALLEN ANTWORTEN** im Nachrichtenfenster nicht verfügbar.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

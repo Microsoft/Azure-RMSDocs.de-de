@@ -65,6 +65,6 @@ Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokum
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

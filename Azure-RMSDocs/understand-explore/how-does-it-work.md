@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e66bfa436bf811b34cf3cfe1b2d68a6a4e137c2
-ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 91a5485b2860edf6f2095027e1c0d69ec96141d7
 
 
 ---
@@ -149,8 +149,9 @@ Wenn Sie soweit sind, mit der Bereitstellung von Datenschutz für Ihre Organisat
 > [!TIP]
 > Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Informationen und Support für Azure Information Protection](../get-started/information-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
 
 
 ---
@@ -154,7 +154,7 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>Ausnahmen für das Feld „user-id“
+#### <a name="exceptions-for-the-user-id-field"></a>Ausnahmen für das Feld „user-id“
 Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die Anforderung stammt, gibt es zwei Ausnahmen, bei denen der Wert keinem echten Benutzer entspricht:
 
 -   Der Wert **'microsoftrmsonline@&lt;Ihre-Mandanten-ID&gt;.rms.&lt;Region&gt;.aadrm.com'**
@@ -236,11 +236,12 @@ Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher gespeichert haben, die vor d
 
 Weitere Informationen zum Verwenden von Windows PowerShell für den Azure Rights Management-Dienst finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Anweisungen zur Registrierung für dieses kostenlose Konto und tec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 1de26925961ad560cb9aa86ebc16f7354c7cff1f
 
 
 ---
@@ -48,7 +48,7 @@ Um sich für dieses kostenlose Konto zu registrieren, müssen Sie die Seite [Mic
 
 Nun ist Ihr Konto erstellt, und Sie sind bereit, um Dateien zu schützen und von anderen geschützte Dateien zu lesen. Falls Sie aufgefordert werden, sich anzumelden, um Dateien zu schützen oder geschützte Dateien zu lesen, geben Sie dieselbe E-Mail-Adresse und dasselbe Kennwort ein, mit denen Sie das Konto für RMS for Individuals erstellt haben.
 
-## <a name="technical-overview-of-the-signup-process"></a>Technische Übersicht über den Anmeldevorgang
+## <a name="technical-overview-of-the-sign-up-process"></a>Technische Übersicht über den Anmeldevorgang
 RMS for Individuals verwendet einen Self-Service-Registrierungsprozess, der auch von anderen Diensten verwendet wird, die Cloudtechnologie von Microsoft zur Authentifizierung von Benutzern verwenden.
 
 Dies geschieht im Hintergrund, wenn sich ein Benutzer für RMS for Individuals registriert und seine Organisation kein Office 365-Abonnement oder Azure-Abonnement besitzt und daher auch kein Verzeichnis in Azure, um Benutzer zu authentifizieren:
@@ -94,10 +94,9 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Informationen finden Sie unter [Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren](rms-for-individuals-take-control.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

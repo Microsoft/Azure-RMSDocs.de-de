@@ -13,8 +13,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: bb74ea0e88430cfb784b3f88bd3e6fd75373b9a2
+ms.sourcegitcommit: ed836a1f64ccb3f7e176ad19d27af1021c423cd9
+ms.openlocfilehash: 7727e512b83d09adaf79d4f5d586c16fbd049170
 
 
 ---
@@ -50,14 +50,12 @@ Informationen zu den zusätzlichen Anforderungen für dieses Szenario finden Sie
 > 
 > Es gibt einen unterstützten Migrationspfad [von AD RMS zu Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) und [von Azure Information Protection zu AD RMS](http://msdn.microsoft.com/library/azure/dn629429.aspx). Wenn Sie Azure Information Protection bereitstellen und dann beschließen, diesen Clouddienst nicht mehr zu verwenden, finden Sie weitere Informationen unter [Außerbetriebsetzen und Deaktivieren von Azure Information Protection](../deploy-use/decommission-deactivate.md).
 
-## <a name="comments"></a>Kommentare
-
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

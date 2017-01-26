@@ -4,7 +4,7 @@ description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d6c88b1b9bc53dddea000ecff65abb73d06eb7ee
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8acc80758eb27cfbe537b705342220418c22fa96
 
 
 ---
@@ -63,11 +63,12 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 - [Festlegen von Einstellungen im Dialogfeld](sharing-app-dialog-box.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

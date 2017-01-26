@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/01/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 1f7647fd41ba71b4cda4c942d86b6dbfe9c870f8
 
 
 ---
@@ -29,7 +29,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |----------------|---------------|
 |Zeigen Sie die empfohlene Dokumentation für den Dienst an →|Verwenden Sie die Startseite der [Azure Information Protection-Dokumentation](https://docs.microsoft.com/information-protection/).|
 |Geben Sie Feedback zur Dokumentation, oder stellen Sie eine Frage zur Dokumentation →|E-Mail an [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Erhalten Sie Tweets zu Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe →|Folgen Sie Dan Plastina, der bei der Leitung des Microsoft Information Protection-Teams hilft. Siehe [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy)|
+|Erhalten Sie Tweets zu Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe →|Folgen Sie Dan Plastina, der bei der Leitung des Microsoft Information Protection-Teams hilft. Siehe [Dan Plastina@DanPlastina](https://twitter.com/DanPlastina)|
 |Überprüfen Sie Abonnementinformationen und die unterstützten Features →|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 
@@ -90,9 +90,10 @@ Problembehandlung:
 
 -   [Forum: RMS für Benutzer (Anwendungen)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

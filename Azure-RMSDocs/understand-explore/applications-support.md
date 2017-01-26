@@ -4,7 +4,7 @@ description: "Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
 
 
 ---
@@ -60,9 +60,10 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Komponent
 
 -   [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

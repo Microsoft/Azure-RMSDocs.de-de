@@ -2,8 +2,9 @@
 title: "Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung | Azure Information Protection"
 description: Anweisungen zur sicheren Freigabe eines Dokuments per E-Mail.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 7b8fe306b82e0eb964106b3ab3b890d1a115037d
 
 
 ---
 
-# Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung
+# <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -32,7 +33,7 @@ Wenn Ihr Unternehmen Azure Information Protection verwendet, können Sie die Dat
 
 -   Verwenden Sie die Website für die Dokumentationsbestandsverfolgung. Sie können die Freigabe der Datei auch Aufheben, indem Sie den Zugriff darauf auf der Website "Dokumentenbestandsverfolgung" zurückziehen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](sharing-app-track-revoke.md).
 
-## Mit Outlook: So schützen Sie eine per E-Mail freigegebene Datei
+## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Mit Outlook: So schützen Sie eine per E-Mail freigegebene Datei
 
 1.  Erstellen Sie Ihre E-Mail-Nachricht, und fügen Sie die Datei an. Klicken Sie dann auf der Registerkarte **Nachricht** in der Gruppe **RMS** auf **Geschützt freigeben** und dann erneut auf **Geschützt freigeben** :
 
@@ -42,14 +43,14 @@ Wenn Ihr Unternehmen Azure Information Protection verwendet, können Sie die Dat
 
 2.  Geben Sie die gewünschten Optionen im [Dialogfeld „Geschützt freigeben“](sharing-app-dialog-box.md) an, und klicken Sie dann auf **Jetzt senden**.
 
-### Andere Möglichkeiten zum Schützen einer per E-Mail freigegebenen Datei
+### <a name="other-ways-to-protect-a-file-that-you-share-by-email"></a>Andere Möglichkeiten zum Schützen einer per E-Mail freigegebenen Datei
 Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich stehen Ihnen folgende Möglichkeiten zur Verfügung:
 
 -   Datei-Explorer: Diese Methode funktioniert für alle Dateien.
 
 -   In einer Office-Anwendung: Diese Methode funktioniert in Anwendungen, die von der RMS-Freigabeanwendung unterstützt werden. Sie müssen hierfür das Office-Add-In verwenden, das Sie im Menüband in der Gruppe **RMS** enthalten ist.
 
-#### Mit Datei-Explorer oder einer Office-Anwendung: So schützen Sie eine per E-Mail freigegebene Datei
+#### <a name="using-file-explorer-or-an-office-application-to-protect-a-file-that-you-share-by-email"></a>Mit Datei-Explorer oder einer Office-Anwendung: So schützen Sie eine per E-Mail freigegebene Datei
 
 1.  Verwenden Sie eine der folgenden Optionen:
 
@@ -71,7 +72,7 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
     ![E-Mail-Nachricht für Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Möglicherweise wünschen Sie sich eine [Erläuterung zur automatisch erstellten PPDF-Datei](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created).
+    Möglicherweise wünschen Sie sich eine [Erläuterung zur automatisch erstellten PPDF-Datei](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created).
 
 4.  Optional: Sie können beliebige Änderungen an der E-Mail-Nachricht vornehmen. Sie können z. B. einen Betreff oder Nachrichtentext hinzufügen oder ändern.
 
@@ -80,18 +81,19 @@ Sie können eine geschützte Datei nicht nur mit Outlook freigeben. Zusätzlich 
 
 5.  Senden Sie die E-Mail-Nachricht.
 
-## Beispiele und weitere Anweisungen
+## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

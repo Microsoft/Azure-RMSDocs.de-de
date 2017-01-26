@@ -4,7 +4,7 @@ description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verw
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 
 ---
@@ -144,9 +144,10 @@ Zu den wichtigsten Vermögenswerten des Unternehmens zählen die Daten, die wir 
 
 Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu schützen. Mit den bereitgestellten Tools behalten Sie die Kontrolle über die Daten. Vielen Dank für Ihre Unterstützung bei der Einführung dieser Änderungen.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
