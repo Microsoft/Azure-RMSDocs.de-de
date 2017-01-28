@@ -20,7 +20,7 @@ ms.openlocfilehash: 1b5268a13538df1537dbf3ea6f66eeda2b5e2292
 ---
 
 
-# <a name="azure-information-protection-also-known-as-"></a>Azure Information Protection – auch bezeichnet als ...
+# <a name="azure-information-protection---also-known-as-"></a>Azure Information Protection – auch bezeichnet als ...
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -47,6 +47,6 @@ Weitere Informationen zum Erwerb oder zum Testen von Azure Information Protectio
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
