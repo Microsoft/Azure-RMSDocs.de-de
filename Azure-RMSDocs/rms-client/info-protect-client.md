@@ -4,15 +4,15 @@ description: "Anweisungen zum Installieren des Clients, durch den Ihren Office-A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: bd3cbea29183c39abaa66aa5dcec8a14ad0b0757
-ms.openlocfilehash: bccddf228b33bcd8d36ef6af55dea9015cad34d0
+ms.sourcegitcommit: 6012049162d0ac9ee53476640ab3a4bcac18287f
+ms.openlocfilehash: 92d6b6f13d124c8c7ab7735fa170890263c9011b
 
 
 ---
@@ -70,7 +70,7 @@ Beispiel für die unbeaufsichtigte Installation mit dem Preview-Client von einzi
 
 Wenn Sie die Vorschauversion des Clients auf Computern installieren, die Office 2010 ausführen, geben Sie den Parameter **ServiceLocation** an, wenn Benutzer keine lokalen Administratoren auf ihren Computern sind. Weitere Informationen finden Sie im nächsten Abschnitt.
 
-Die Version zur allgemeinen Verfügbarkeit des Azure Information Protection-Clients ist auch im Microsoft Update-Katalog enthalten. Sie können deshalb den Client mit einem beliebigem Softwareupdatedienst installieren und aktualisieren, der den Katalog nutzt. Die Vorschauversionen des Clients sind nicht im Microsoft Update-Katalog enthalten.
+Der Azure Information Protection-Client ist auch im Microsoft Update-Katalog enthalten. Sie können deshalb den Client mit einem beliebigem Softwareupdatedienst installieren und aktualisieren, der den Katalog nutzt. 
 
 ### <a name="preview-version-and-office-2010-only"></a>Nur Vorschauversion und Office 2010
 
@@ -223,6 +223,6 @@ Im [Verlauf der Versionsveröffentlichung](client-version-release-history.md) fi
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 
