@@ -4,9 +4,22 @@
 # [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
 # [Bereitstellen und Verwenden des Clients](use-client.md)
 ## [Rights Management-Client](use-client.md)
-### [Installieren des Azure Information Protection-Clients](info-protect-client.md)
-#### [Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen](client-version-release-history.md)
 ### [Hinweise zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
+### [Azure Information Protection-Client](aip-client.md)
+#### [Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen](client-version-release-history.md)
+#### [Azure Information Protection-Client – Administratorhandbuch](client-admin-guide.md)
+##### [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
+##### [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
+##### [Unterstützte Dateitypen](client-admin-guide-file-types.md)
+##### [PowerShell-Befehle](client-admin-guide-powershell.md)
+#### [Azure Information Protection-Benutzerhandbuch](client-user-guide.md)
+##### [Herunterladen und Installieren des Clients](install-client-app.md)
+##### [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md)
+##### [Nachverfolgen und Widerrufen Ihrer Dokumente](client-track-revoke.md)
+##### [Öffnen von Dateien, die geschützt wurden](client-view-use-files.md)
+##### [Entfernen von Bezeichnungen und Schutz](client-remove-label-protection.md)
+##### [Reiner Schutzmodus](client-protection-only-mode.md)
+##### [Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben](upgrade-client-app.md)
 ### [RMS-Schutz mit Windows Server FCI](configure-fci.md)
 #### [PowerShell-Skript](fci-script.md)
 ### [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md)
@@ -23,14 +36,9 @@
 ##### [Entfernen von Schutz](sharing-app-remove-protection.md)
 ##### [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
 ##### [Dialogfeldoptionen](sharing-app-dialog-box.md)
-### [Azure Information Protection-Benutzerhandbuch – Vorschau](client-user-guide.md)
-#### [Herunterladen und Installieren des Azure Information Protection-Clients](install-client-app.md)
-#### [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md)
-#### [Nachverfolgen und Widerrufen Ihrer Dokumente](client-track-revoke.md)
-#### [Öffnen von Dateien, die geschützt wurden](client-view-use-files.md)
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

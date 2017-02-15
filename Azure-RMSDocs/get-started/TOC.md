@@ -13,7 +13,7 @@
 ## [Quick Start-Lernprogramm](infoprotect-quick-start-tutorial.md)
 ### [Schritt 1: Aktivieren des Servers](infoprotect-tutorial-step1.md)
 ### [Schritt 2: Konfigurieren und Veröffentlichen der Richtlinie](infoprotect-tutorial-step2.md)
-### [Schritt 3: Installieren von Client und Anwendung](infoprotect-tutorial-step3.md)
+### [Schritt 3: installieren des Clients](infoprotect-tutorial-step3.md)
 ### [Schritt 4: Bezeichnung, Klassifizierung und Schutz in Aktion](infoprotect-tutorial-step4.md)
 ### [Schritt 5: geschützte Freigabe und Nachverfolgung in Aktion](infoprotect-tutorial-step5.md)
 ## [Handbuch für die schnelle Bereitstellung](rapid-deployment-guide.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

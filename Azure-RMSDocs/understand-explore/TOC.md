@@ -10,9 +10,9 @@
 ### [Steuern der für RMS for Individuals erstellten Konten](rms-for-individuals-take-control.md)
 ### [Ermitteln, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md)
 ## [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md)
-### [RMS-Freigabeanwendung für Windows und mobile Plattformen](sharing-app-support.md)
 ### [Office-Anwendungen und -Dienste](office-apps-services-support.md)
 ### [Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden](file-server-support.md)
+### [RMS-Freigabeanwendung für Windows und mobile Plattformen](sharing-app-support.md)
 ### [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 ## [Vergleich von Azure Information Protection und AD RMS](compare-on-premise.md)
 ## [Kompatibilitätsinformationen und ergänzende Informationen](compliance.md)
@@ -23,6 +23,6 @@
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

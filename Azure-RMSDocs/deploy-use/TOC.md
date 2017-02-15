@@ -15,6 +15,7 @@
 ## [Konfigurieren von Anwendungen](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Office-Apps](configure-office-apps.md)
+### [Azure Information Protection-Client](configure-client.md)
 ### [RMS-Freigabeanwendung](configure-sharing-app.md)
 ## [Konfigurieren der Nutzungsrechte](configure-usage-rights.md)
 ## [Konfigurieren von Administratoren für Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)
@@ -48,6 +49,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
