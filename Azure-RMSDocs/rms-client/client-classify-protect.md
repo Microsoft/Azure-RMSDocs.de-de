@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6d4cc50259b9d9bb73a75c648f9e6915562accf
-ms.openlocfilehash: e1d61fbe1d74a4a57d9a1fdf518aeb0242d0f7ad
+ms.sourcegitcommit: 171a47f9c22dec24f72f8f21392d6577efd807a5
+ms.openlocfilehash: d050629999c3a886eb8d422f4f38c22d586e0824
 
 
 ---
@@ -53,11 +53,11 @@ Eine Liste der vom Datei-Explorer unterstützten Dateitypen finden Sie im Abschn
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung und der Schutz gemäß der Definition Ihres Administrators festgelegt werden. Wenn eine Bezeichnung nicht ausgewählt werden kann (sie ist nicht verfügbar), unterstützt die ausgewählte Datei die Klassifizierung nicht, aber Sie können sie schützen.
 
-3. Um die Datei zu schützen, wählen Sie entweder die von Ihrem Administrator definierten Schutzeinstellungen für die markierte Bezeichnung (**Automatisch, auf Basis der ausgewählten Klassifizierungsbezeichnung**), oder geben Sie Ihre eigenen Einstellungen (**Mit benutzerdefinierten Berechtigungen außer Kraft setzen**) an.
+3. Wenn Sie lieber eigene Schutzeinstellungen angeben möchten, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat, wählen Sie **Mit benutzerdefinierten Berechtigungen schützen** aus.
     
-    Die Option zum außer Kraft setzen verwendet keine der Schutzeinstellungen, die möglicherweise von Ihrem Administrator für die markierte Bezeichnung definiert wurden. Stattdessen geben Sie Ihre eigenen Schutzeinstellungen an. 
+    Die von Ihnen angegebenen benutzerdefinierten Berechtigungen sind keine Ergänzung der vom Administrator für Ihre ausgewählte Bezeichnung definierten Schutzeinstellungen, sondern ersetzen diese.  
 
-4. Wenn Sie die Option zum außer Kraft setzen gewählt haben, geben Sie jetzt Folgendes an:
+4. Wenn Sie die Option der benutzerdefinierten Berechtigungen ausgewählt haben, geben Sie jetzt Folgendes an:
 
     - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
     
@@ -108,9 +108,10 @@ Anweisungen zur Vorgehensweise finden Sie in den folgenden Abschnitten des Azure
 
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

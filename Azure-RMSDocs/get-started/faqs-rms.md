@@ -13,8 +13,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eb9b9c1308abe6b1b5803cba7ba254d54cbac812
-ms.openlocfilehash: d3d11dba936ca8901b701008e55df8d73be8bded
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 181357691df02c8532a6f28eef689dcacdfd937f
 
 
 ---
@@ -36,14 +36,14 @@ Microsoft stellt mehrere Verschlüsselungstechnologien zum Schutz Ihrer Daten in
 
 Diese Verschlüsselungstechnologien ergänzen sich, und zur Verwendung müssen Sie sie unabhängig voneinander aktivieren und konfigurieren. Dabei besteht möglicherweise die Option, einen eigenen Schlüssel für die Verschlüsselung bereitzustellen, ein Szenario, das auch als BYOK (Bring-Your-Own-Key) bezeichnet wird. Das Aktivieren von BYOK für eine dieser Technologien hat keinen Einfluss auf andere. Sie können BYOK z. B. für Azure Information Protection verwenden und für andere Verschlüsselungstechniken nicht verwenden (und umgekehrt). Die von den unterschiedlichen Technologien verwendeten Schlüssel können gleich oder verschieden sein, je nachdem, wie Sie die Verschlüsselungsoptionen für die einzelnen Dienste konfigurieren.
 
-## <a name="can-i-integrate-the-azure-rights-management-service-with-my-onpremises-servers"></a>Kann ich den Azure Rights Management-Dienst auf lokalen Servern integrieren?
+## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Kann ich den Azure Rights Management-Dienst auf lokalen Servern integrieren?
 Ja. Azure Rights Management kann in lokale Server, etwa Exchange Server, SharePoint und Windows-Dateiserver, integriert werden. Dazu verwenden Sie den [Rights Management-Connector](../deploy-use/deploy-rms-connector.md). Wenn Sie nur an der Nutzung der Dateiklassifizierungsinfrastruktur (FCI, File Classification Infrastructure) mit Windows Server interessiert sind, können Sie auch die [RMS Protection-Cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx) verwenden. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
 
 Azure Rights Management generiert und verwaltet XrML-Zertifikate automatisch nach Bedarf und verwendet daher keine lokale PKI. Weitere Informationen zur Verwendung von Zertifikaten in Azure Rights Management finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsnutzung](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) des Artikels [Funktionsweise von Azure RMS](../understand-explore/how-does-it-work.md).
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Wo finde ich Informationen zu Drittanbieterlösungen, die in Azure RMS integrierbar sind?
 
-Viele Softwarehersteller verfügen bereits über Lösungen oder sind dabei, Lösungen zu implementieren, die in Azure Rights Management integrierbar sind – und die Liste erweitert sich sehr schnell. Es könnte hilfreich sein, den [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) und die neuesten Updates von [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter zu lesen. Wenn Sie jedoch eine spezifische Frage haben, schicken Sie eine E-Mail an das Information Protection-Team: askipteam@microsoft.com.
+Viele Softwarehersteller verfügen bereits über Lösungen oder sind dabei, Lösungen zu implementieren, die in Azure Rights Management integrierbar sind – und die Liste erweitert sich sehr schnell. Es könnte hilfreich sein, den [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) und die neuesten Updates von [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter zu lesen. Wenn Sie jedoch eine spezifische Frage haben, senden Sie eine E-Mail an das Information Protection-Team: askipteam@microsoft.com.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Gibt es ein Management Pack oder einen ähnlichen Überwachungsmechanismus für den RMS-Connector?
 
@@ -107,7 +107,7 @@ Der Azure Rights Management-Diensts kann sämtliche Dateitypen unterstützen. F�
 
 Eine Liste der Dateierweiterungen, für die Azure Rights Management native Unterstützung bietet, finden Sie im Abschnitt [Unterstützte Dateitypen und Dateierweiterungen](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) des [Administratorhandbuchs der Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md). Nicht aufgeführte Dateinamenerweiterungen werden mithilfe der RMS-Freigabeanwendung unterstützt, die automatisch generischen Schutz auf diese Dateien anwendet.
 
-## <a name="when-i-open-an-rmsprotected-office-document-does-the-associated-temporary-file-become-rmsprotected-as-well"></a>Wenn ich ein RMS-geschütztes Office-Dokument öffne, wird die dazugehörige temporäre Datei ebenfalls von RMS geschützt?
+## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Wenn ich ein RMS-geschütztes Office-Dokument öffne, wird die dazugehörige temporäre Datei ebenfalls von RMS geschützt?
 
 Nein. Die dazugehörige temporäre Datei enthält in diesem Szenario keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei soll die temporäre Datei offensichtlich nicht freigegeben werden und verbleibt auf dem Gerät, geschützt durch lokale Sicherheitskontrollen wie BitLocker und EFS.
 
@@ -159,11 +159,12 @@ Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen 
 
 Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“, noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt [Option „Nicht weiterleiten“ für E-Mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) in [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

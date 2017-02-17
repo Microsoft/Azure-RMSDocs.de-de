@@ -4,7 +4,7 @@ description: "Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 
 ---
@@ -54,15 +54,19 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
 6. Wenn Sie die Änderungen für diese bereichsbezogene Richtlinie abgeschlossen haben, stellen Sie auf dem ersten Blatt **Azure Informationsschutz** sicher, dass diese bereichsbezogene Richtlinie gemäß Ihren Vorstellungen angeordnet ist. Dies ist wichtig, wenn Sie denselben Benutzer für mehrere bereichsbezogene Richtlinien ausgewählt haben. Klicken Sie dann auf **Publish** (Veröffentlichen). 
 
-Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Er lädt dann alle Änderungen an der globalen Richtlinie oder bereichsbezogenen Richtlinie, die für diesen Benutzer gelten.
+Beim Start einer unterstützten Office-Anwendung oder Öffnen des Datei-Explorers prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Der Client lädt dann alle Änderungen an der globalen Richtlinie oder bereichsbezogenen Richtlinie herunter, die für diesen Benutzer gelten.
+
+> [!TIP]
+> Nachdem Sie Ihre bereichsbezogene Richtlinie gespeichert haben, können Sie den **richtlinienübergreifenden Editor** auf dem anfänglichen Blatt **Azure Information Protection** verwenden, um alle Bezeichnungen Ihrer Azure Information Protection-Richtlinie anzuzeigen und neu zu konfigurieren. Diese Methode bietet eine einfache Möglichkeit, Bezeichnungen aus mehreren Richtlinien (Ihrer globalen Richtlinie und allen bereichsbezogenen Richtlinien) zu vergleichen. In diesem Editor können Sie jedoch keine Bezeichnungen hinzufügen oder neu anordnen oder die Richtlinieneinstellungen anzeigen oder konfigurieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

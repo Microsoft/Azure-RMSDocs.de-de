@@ -2,8 +2,9 @@
 title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure Information Protection"
 description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlagen im klassischen Azure-Portal. Mit Vorlagen können Endbenutzer und andere Administratoren ganz einfach geeignete Richtlinien anwenden, um Dokumente und E-Mails zu schützen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,37 +13,31 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
-ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
+ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
+ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
 
 
 ---
 
 
-# Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
+# <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 
 Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die **erweiterten Funktionen** für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden.
 
-Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für den Azure Rights Management-Dienst anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für den Azure Rights Management-Dienst anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Rights Management zu erstellen, zu konfigurieren und zu veröffentlichen.
 
-## So erstellen Sie eine benutzerdefinierte Vorlage
+## <a name="to-create-a-custom-template"></a>So erstellen Sie eine benutzerdefinierte Vorlage
 
 1.  Je nachdem, ob Sie sich beim Office 365 Admin Center oder beim klassischen Azure-Portal angemeldet haben, führen Sie eine der folgenden Aktionen aus:
 
-    -   Vom [Office 365 Admin Center](https://portal.office.com/):
+    -   Im **Office 365 Admin Center** richtet sich die Navigation danach, ob Sie Office 365 Admin Center in der Vorschau (und in welcher Version) verwenden oder ob Sie das klassische Office 365 Admin Center verwenden. In allen Versionen können Sie direkt zur Seite für die [Rechteverwaltung](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) wechseln: 
 
-        1.  Klicken Sie im linken Bereich auf **Diensteinstellungen**.
-
-        2.  Klicken Sie auf der Seite **Diensteinstellungen** auf **Rechteverwaltung**.
-
-        3.  Klicken Sie im Abschnitt **Schützen Sie Ihre Informationen** auf **Verwalten**.
-
-        4.  Klicken Sie im Abschnitt **Rechteverwaltung** auf **Erweiterte Features**.
+        1.  Klicken Sie im Abschnitt **Zusätzliche Konfiguration** auf **Erweiterte Features**.
 
             > [!NOTE]
             > Wenn Sie den Rights Management-Dienst nicht aktiviert haben, klicken Sie zuerst auf **Aktivieren**, und bestätigen Sie dann Ihre Aktion. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
@@ -76,7 +71,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
 4. Klicken Sie auf der Schnellstartseite **Erste Schritte mit der Rechteverwaltung** auf **Vorlagen für Benutzerrechterichtlinien verwalten**. Ihre neu erstellte Vorlage wird mit dem Status **Archiviert**in der Liste der Vorlagen angezeigt. Zu diesem Zeitpunkt ist die Vorlage zwar erstellt, aber noch nicht konfiguriert und für die Benutzer noch nicht sichtbar.
 
-## So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
+## <a name="to-configure-and-publish-a-custom-template"></a>So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
 
 1.  Wählen Sie auf der Seite **VORLAGEN** im klassischen Azure-Portal Ihre neu erstellte Vorlage aus.
 
@@ -97,7 +92,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
 3.  Klicken Sie auf die Schaltfläche "Weiter", und weisen Sie dann Ihren ausgewählten Benutzern und Gruppen eins der aufgeführten Rechte zu.
 
-    In der angezeigten Beschreibung finden Sie weitere Informationen zu jedem der Rechte (sowie zu benutzerdefinierten Rechten). Ausführlichere Informationen finden Sie auch unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md). Anwendungen, die RMS unterstützen, unterscheiden sich möglicherweise darin, wie sie diese Rechte implementieren Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen. Um diese Vorlage für diese Tests nur für Administratoren sichtbar zu machen, legen Sie diese Vorlage als Abteilungsvorlage fest (Schritt 6).
+    In der angezeigten Beschreibung finden Sie weitere Informationen zu jedem der Rechte (sowie zu benutzerdefinierten Rechten). Ausführlichere Informationen finden Sie auch unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md). Anwendungen, die Rights Management unterstützen, unterscheiden sich jedoch möglicherweise darin, wie sie diese Rechte implementieren. Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen. Um diese Vorlage für diese Tests nur für Administratoren sichtbar zu machen, legen Sie diese Vorlage als Abteilungsvorlage fest (Schritt 6).
 
 4.  Wenn Sie **Benutzerdefiniert**ausgewählt haben, klicken Sie auf die Schaltfläche „Weiter“, und wählen Sie dann diese benutzerdefinierten Rechte aus.
 
@@ -140,10 +135,10 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Überprüfen Sie dann, ob Sie Änderungen an den folgenden Einstellungen vornehmen möchten:
 
-    |Einstellung|Weitere Informationen|
-    |-----------|--------------------|
-    |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen für diese Vorlage, nach deren Ablauf Dateien, die durch diese Vorlage geschützt sind, nicht mehr geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen angeben, beginnend ab dem Zeitpunkt, zu dem der Schutz auf die Datei angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|
-    |**Offlinezugriff**|Verwenden Sie diese Einstellung, um Sicherheitsanforderungen zu erfüllen, wenn Benutzer in der Lage sein müssen, geschützte Dateien ohne Internetverbindung zu öffnen.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und Zugriffe werden protokolliert. Sollte dies eintreten, werden Benutzer, wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, aufgefordert, sich anzumelden, bevor sie die Datei öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dieselbe Datei zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf die Datei Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben.|
+    |Einstellung|Weitere Informationen| Empfohlene Einstellung
+    |-----------|--------------------|--------------------|
+    |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen für diese Vorlage, nach deren Ablauf Dateien, die durch diese Vorlage geschützt sind, nicht mehr geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen angeben, beginnend ab dem Zeitpunkt, zu dem der Schutz auf die Datei angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
+    |**Offlinezugriff**|Verwenden Sie diese Einstellung, um Sicherheitsanforderungen zu erfüllen, wenn Benutzer in der Lage sein müssen, geschützte Dateien ohne Internetverbindung zu öffnen.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und Zugriffe werden protokolliert. Sollte dies eintreten, werden Benutzer, wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, aufgefordert, sich anzumelden, bevor sie die Datei öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dieselbe Datei zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf die Datei Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Inhalt ist nur mit Internetverbindung verfügbar** für sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Bei dieser Empfehlung erhält die Sicherheit Priorität vor der Flexibilität. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
 
 10. Wenn Sie sicher sind, dass die Vorlage für Ihre Benutzer ordnungsgemäß konfiguriert wurde, klicken Sie auf **VERÖFFENTLICHEN** , um die Vorlage für Benutzer sichtbar zu machen, und klicken Sie auf **Speichern**.
 
@@ -164,10 +159,12 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 > [!WARNING]
 > Wenn Sie Änderungen an einer zuvor gespeicherten Vorlage vornehmen, werden diese Vorlagenänderungen bei Clients erst sichtbar, nachdem die Vorlagen auf deren Computern aktualisiert wurden. Weitere Informationen finden Sie unter [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md).
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Oct16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 
