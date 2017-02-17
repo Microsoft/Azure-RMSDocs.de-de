@@ -4,7 +4,7 @@ description: "Technische Details für Administratoren in Unternehmensnetzwerken,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 88b03e5e844e78db5dc8ac5f116d19899c5f354f
+ms.sourcegitcommit: 770be3f7423f8d47439096393bba7464629646c5
+ms.openlocfilehash: b90a0e1ab363c1d7f87d0b1a18503da641bf7cfb
 
 
 ---
@@ -43,7 +43,7 @@ Ab der RMS-Version von Oktober 2013 können Sie Dokumente nativ mithilfe von Off
 
 Informationen zur Bereitstellung finden Sie unter [Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
-## <a name="levels-of-protection-native-and-generic"></a>Schutzebenen – systemeigen und generisch
+## <a name="levels-of-protection--native-and-generic"></a>Schutzebenen – systemeigen und generisch
 Die Microsoft Rights Management-Freigabeanwendung unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
 |Typ des Schutzes|Systemeigenes Format|Generisch|
@@ -102,25 +102,25 @@ Auf ähnliche Weise können Sie erzwingen, dass die RMS-Freigabeanwendung system
 
 Sie können auch erzwingen, dass die RMS-Freigabeanwendung den Schutz von Dateien blockiert (der systemeigene oder generische Schutz wird nicht angewendet). Dies kann z. B. erforderlich sein, wenn Sie eine automatische Anwendung oder einen automatischen Dienst haben, die bzw. der eine bestimmte Datei öffnen muss, um ihren Inhalt zu verarbeiten. Wenn Sie den Schutz für einen Dateityp blockieren, können Benutzer die RMS-Freigabeanwendung nicht verwenden, um eine Datei mit diesem Dateityp zu schützen. Wenn sie es versuchen, wird eine Meldung angezeigt, dass der Administrator den Schutz verhindert hat, und sie müssen ihre Aktion zum Schutz der Datei abbrechen.
 
-Nehmen Sie die folgenden Registrierungseinträge vor, um die RMS-Freigabeanwendung so zu konfigurieren, dass sie generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch systemeigenen Schutz geschützt würden.
+Bearbeiten Sie die folgenden Registrierungseinträge, um die RMS-Freigabeanwendung so zu konfigurieren, dass sie generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch native Schutzfunktionen geschützt würden. Beachten Sie, dass Sie die Schlüssel „RmsSharingApp“ oder „FileProtection“ manuell erstellen müssen, falls diese nicht vorhanden sind.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
 
     Diese Einstellung gibt Dateien mit beliebiger Erweiterung an.
 
-2.  Erstellen Sie im neu hinzugefügten Schlüssel zu HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\* einen neuen Zeichenfolgenwert (REG_SZ) namens **Encryption** mit dem Datenwert **Pfile**.
+2.  Erstellen Sie im neu hinzugefügten Schlüssel für HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\* einen neuen Zeichenfolgenwert (REG_SZ) namens **Encryption** mit dem Datenwert **Pfile**.
 
     Diese Einstellung führt dazu, dass die RMS-Freigabeanwendung generischen Schutz anwendet.
 
 Diese beiden Einstellungen führen dazu, dass die RMS-Freigabeanwendung generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn dies Ihr Ziel ist, ist keine weitere Konfiguration erforderlich. Sie können aber auch Ausnahmen für bestimmte Dateitypen definieren, damit diese weiterhin systemeigen geschützt werden. Zu diesem Zweck müssen Sie drei zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangestellten Punkt) hinzu.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangestellten Punkt) hinzu.
 
     Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
-2.  Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z.B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**) einen neuen DWORD-Wert namens **AllowPFILEEncryption** mit dem Wert **0**.
+2.  Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z.B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**) einen neuen DWORD-Wert namens **AllowPFILEEncryption** mit dem Wert **0**.
 
-3.  Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z.B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**) einen neuen Zeichenfolgenwert namens **Encryption** mit dem Wert **Native**.
+3.  Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z.B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**) einen neuen Zeichenfolgenwert namens **Encryption** mit dem Wert **Native**.
 
 Durch diese Einstellungen sind alle Dateien generisch geschützt, mit Ausnahme der Dateien mit der Erweiterung DOCX, die systemeigen durch die RMS-Freigabeanwendung geschützt werden.
 
@@ -137,9 +137,10 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 ## <a name="see-also"></a>Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

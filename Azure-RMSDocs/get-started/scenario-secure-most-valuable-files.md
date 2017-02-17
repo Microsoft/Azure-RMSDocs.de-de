@@ -13,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -70,7 +70,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 2.  Veröffentlichen Sie die neue Vorlage.
 
-### <a name="to-protect-the-files-inplace"></a>So schützen Sie die Dateien lokal
+### <a name="to-protect-the-files-in-place"></a>So schützen Sie die Dateien lokal
 
 1.  Navigieren Sie im Datei-Explorer zum ersten Ordner mit zu schützenden Dateien:
 
@@ -145,9 +145,9 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 -   Wenn Sie keinen Zugriff auf diese Dateien haben oder verdächtige Änderungen in den Dateien feststellen, rufen Sie den rund um die Uhr verfügbaren Supporteskalationskanal an, der Ihnen von der IT-Abteilung in einer geschützten E-Mail-Nachricht zugesendet wurde.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
