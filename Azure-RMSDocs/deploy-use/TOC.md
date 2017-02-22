@@ -25,7 +25,7 @@
 ### [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
-### [Anwenden des Schutzes](configure-policy-protection.md)
+### [Konfigurieren des Schutzes](configure-policy-protection.md)
 #### [HYOK-Einschränkungen](configure-adrms-restrictions.md)
 ### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
 ### [Konfigurieren von Bedingungen](configure-policy-classification.md)
@@ -49,6 +49,6 @@
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
