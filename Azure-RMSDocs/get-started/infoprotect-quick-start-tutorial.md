@@ -1,18 +1,18 @@
 ---
 title: Schnellstart-Tutorial | Azure Information Protection
-description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
+description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 >*Gilt für: Azure Information Protection*
 
-Mit diesem Tutorial können Sie Azure Information Protection ohne großen Zeitaufwand testen – in nur fünf Schritten, die ungefähr 30 Minuten in Anspruch nehmen. In diesem leicht verständlichen Tutorial sollen einige der Features und Funktionen von Azure Information Protection präsentiert und demonstriert werden. Das Tutorial umfasst nicht alle verfügbaren Features und soll nicht als Bereitstellungshandbuch für Ihre Organisation dienen. Wenn Sie Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md). 
+Mit diesem Tutorial können Sie Azure Information Protection ohne großen Zeitaufwand testen – in nur fünf Schritten, die ungefähr 20 Minuten in Anspruch nehmen. In diesem leicht verständlichen Tutorial sollen einige der Features und Funktionen von Azure Information Protection präsentiert und demonstriert werden. Das Tutorial umfasst nicht alle verfügbaren Features und soll nicht als Bereitstellungshandbuch für Ihre Organisation dienen. Wenn Sie Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
-Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Information Protection als Lösung zum Schutz von Unternehmensinformationen für eine Organisation evaluieren. In einer Produktionsumgebung werden die Schritte zur Konfiguration der Information Protection-Richtlinie und zur Installation des Clients und der Anwendung für Benutzer von einem Administrator ausgeführt. Die Schritte zur Bezeichnung der Dokumente, zur sicheren Freigabe von Dokumenten per E-Mail und zur Nachverfolgung der Dokumente erfolgen durch die Endbenutzer. Das Tutorial beinhaltet all diese Schritte und veranschaulicht typische End-to-End-Szenarios für die Klassifizierung, die Bezeichnung und den Schutz der Daten Ihrer Organisation. 
+Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Information Protection als Lösung zum Schutz von Unternehmensinformationen für eine Organisation evaluieren. In einer Produktionsumgebung werden die Schritte zur Konfiguration der Information Protection-Richtlinie und zur Installation des Clients für Benutzer von einem Administrator ausgeführt. Die Schritte zur Bezeichnung der Dokumente, zur sicheren Freigabe von Dokumenten per E-Mail und zur Nachverfolgung der Dokumente erfolgen durch die Endbenutzer. Das Tutorial beinhaltet all diese Schritte und veranschaulicht typische End-to-End-Szenarios für die Klassifizierung, die Bezeichnung und den Schutz der Daten Ihrer Organisation. 
 
 Wenn Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden von Azure Information Protection haben oder wissen möchten, was andere darüber sagen, besuchen Sie die [Yammer-Website von Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
@@ -53,6 +53,6 @@ Los geht’s!
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,18 +1,18 @@
 ---
 title: Schnellstarttutorial Schritt 4 | Azure Rights Management
-description: "Schritt 4 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
+description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: a8bfb3be9b19718cc8a94755e19b8d2521dde323
-ms.openlocfilehash: 59639e9c90c5a55d8eda44bbcc2f9efbc5b9ffb5
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: bf438f4f7617b4cc05df7f4a7067c5ac57fd1d06
 
 
 ---
@@ -35,7 +35,7 @@ Wählen Sie **The previous label no longer applies** (Vorherige Bezeichnung gilt
 
 ## <a name="to-remove-the-classification-completely"></a>So entfernen Sie die Klassifizierung vollständig
 
-Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal anstatt auf eine der Bezeichnungen auf das Symbol **Remove label** (Bezeichnung entfernen). Klicken Sie zum Bestätigen auf **OK**, und geben Sie anschließend für diesen Schritt eine Begründung ein.  
+Klicken Sie auf der Information Protection-Leiste auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal auf das Symbol **Delete label** (Bezeichnung löschen), anstatt eine der Bezeichnungen auszuwählen. Geben Sie dieses Mal „Dieses Dokument erfordert keine Klassifizierung“ ein, und klicken Sie dann auf **Confirm** (Bestätigen).  
 
 Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen Benutzer zunächst, wenn Sie keine Standardbezeichnung festlegen:
 
@@ -56,7 +56,17 @@ Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen
 
     Das Dokument ist auch mit der angegebenen Azure Rights Management-Vorlage geschützt. Klicken Sie zum Bestätigen auf die Registerkarte **Datei**, und zeigen Sie die Informationen für **Dokument schützen** an. Wenn Sie die Standardvorlage „Confidential“ verwendet haben, erhalten Sie die Information, dass das Dokument auf interne Benutzer beschränkt ist (Benutzer außerhalb Ihrer Organisation können das Dokument nicht öffnen) und dessen Inhalte nicht kopiert oder gedruckt werden können. Als Besitzer des Dokuments können Sie daraus kopieren und es drucken, aber wenn Sie es an einen anderen Benutzer in Ihrer Organisation per E-Mail senden, kann dieser Benutzer diese Vorgänge nicht durchführen.
 
+4. Sie können das Dokument jetzt schließen.
+
 Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokumenten nun an, wie Sie Ihre Dokumente schützen können, wenn diese für andere Benutzer in einer anderen Organisation freigegeben werden. Sie können sogar nachverfolgen, wie sie verwendet werden und den Zugriff auf diese Dokumente widerrufen.
+
+|Weitere Informationen zu|Weitere Informationen|
+|--------------------------------|--------------------------|
+|Vollständige Anweisungen zum Bezeichnen und Schützen von Dateien |[Klassifizieren und Schützen einer Datei oder E-Mail](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Schritt 3](infoprotect-tutorial-step3.md)
@@ -65,6 +75,6 @@ Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokum
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

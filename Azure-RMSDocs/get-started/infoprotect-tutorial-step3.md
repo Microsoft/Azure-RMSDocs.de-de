@@ -1,31 +1,27 @@
 ---
 title: Schnellstarttutorial Schritt 3 | Azure Information Protection
-description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
+description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ee60db5b9ede65042e9121567cce48e204f25d27
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 559136e48a709b91c544352c38a5bbb40d66261f
 
 
 ---
 
-# <a name="step-3-install-the-client-and-application"></a>Schritt 3: Installieren von Client und Anwendung 
+# <a name="step-3-install-the-client"></a>Schritt 3: installieren des Clients
 
 >*Gilt für: Azure Information Protection*
 
-In diesem Schritt installieren Sie zunächst den Azure Information Protection-Client, damit die Richtlinie, die Sie gerade konfiguriert haben, auf einen Windows-PC heruntergeladen wird und die Bezeichnungen in Office-Anwendungen angezeigt werden.
-
-Anschließend installieren Sie die Rights Management-Freigabeanwendung, damit Sie die Möglichkeit haben, ein Dokument per E-Mail sicher freizugeben und anschließend nachzuverfolgen, wie es verwendet wird. 
-
-Diese beiden Installationen können in Office-Anwendungen integriert werden. Zum gegenwärtigen Zeitpunkt müssen sie separat installiert werden.
+In diesem Schritt installieren Sie den Azure Information Protection-Client, damit die Richtlinie, die Sie gerade konfiguriert haben, auf einen Windows-PC heruntergeladen wird und die Bezeichnungen in Office-Anwendungen angezeigt werden.
 
 
 ## <a name="install-the-azure-information-protection-client"></a>Installieren des Azure Information Protection-Clients
@@ -36,26 +32,17 @@ Diese beiden Installationen können in Office-Anwendungen integriert werden. Zum
 
     Für dieses Tutorial ist es unerheblich, ob Sie die Option zum Installieren einer Demorichtlinie auswählen, da die Richtlinie, die Sie gerade konfiguriert haben, aus Azure heruntergeladen wird und die Demorichtlinie ersetzt, falls diese installiert ist. Sie könnten die Option für die Demorichtlinie jedoch verwenden, wenn Sie nur die Standardbezeichnungen testen möchten, ohne eine Verbindung mit Azure Information Protection herzustellen. 
 
-## <a name="install-the-rights-management-sharing-application"></a>Installieren der Rights Management-Freigabeanwendung 
-
-1. Navigieren Sie auf der Microsoft-Website zur Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
-
-2. Klicken Sie im Abschnitt **Computer** auf das Symbol für **RMS-App für Windows** , und speichern Sie die Datei **Setup.exe** , um die Microsoft Rights Management-Freigabeanwendung zu installieren.
-
-3. Klicken Sie auf der Seite **Microsoft RMS-Setup** auf **Weiter**, und warten Sie das Ende der Installation ab. Klicken Sie dann auf **Neu starten**, wenn Sie zum Neustart des Computers aufgefordert werden, oder auf **Schließen**, um die Installation abzuschließen.
-
-
 ## <a name="verify-the-installations"></a>Überprüfen der Installationen
 
-Stellen Sie sicher, dass diese Installationen erfolgreich durchgeführt wurden, indem Sie Word und ein neues leeres Dokument öffnen (speichern Sie es noch nicht). Wenn Sie aufgefordert werden, Ihren Benutzernamen und Ihr Kennwort einzugeben, geben Sie die Anmeldeinformationen Ihres globalen Administratorkontos ein. 
+Stellen Sie sicher, dass die Installation erfolgreich durchgeführt wurde, indem Sie Word und ein neues leeres Dokument öffnen (speichern Sie es noch nicht). Wenn Sie aufgefordert werden, Ihren Benutzernamen und Ihr Kennwort einzugeben, geben Sie die Anmeldeinformationen Ihres globalen Administratorkontos ein. 
 
-Wenn das Dokument geladen wird, sollten drei neue Elemente angezeigt werden:
+Wenn Sie den Client zum ersten Mal installiert haben, wird eine Seite mit **Glückwunsch** und grundlegenden Anweisungen angezeigt. Nachdem Sie sie gelesen haben, klicken Sie auf **schließen**.
+
+Wenn das Dokument geladen wird, sehen Sie zwei neue Dinge:
 
 - Auf der Registerkarte **Start** wird die neue Gruppe **Protection** (Schutz) mit einer Schaltfläche namens **Protect** (Schützen) angezeigt.
 
-    Klicken Sie auf **Protect** > **Help and feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Information Protection policy is installed** (Die Information Protection-Richtlinie wurde installiert) und die letzte Verbindungszeit angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
-
-- Zudem wird auf der Registerkarte **Start** die neue Gruppe **RMS** mit einer Schaltfläche namens **Geschützt freigeben** angezeigt.
+    Klicken Sie auf **Protect** > **Help and feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten eine aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Installation der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
 
 - Unter dem Menüband wird eine neue Navigationsleiste angezeigt – die Information Protection-Navigationsleiste. Sie zeigt den **Sensitivity**-Titel (Vertraulichkeit) und die von Ihnen konfigurierte Standardbezeichnung **Internal** (Intern) an. 
     
@@ -65,9 +52,8 @@ Sie können nun Azure Information Protection in Aktion sehen.
 
 |Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
-|Informationen zur Installation des Azure Information Protection-Clients|[Installieren des Azure Information Protection-Clients](../rms-client/info-protect-client.md)|
-|Informationen zur Installation der Rights Management-Freigabeanwendung und Anweisungen für Benutzer|[Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)|
-|Skriptgesteuerte Installation der Rights Management-Freigabeanwendung für Windows und weiterführende technische Informationen|[Administratorhandbuch der Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md)|
+|Informationen zur Installation des Azure Information Protection-Clients|[Herunterladen und Installieren des Azure Information Protection-Clients](../rms-client/install-client-app.md)|
+|Administratoranweisungen für den Azure Information Protection-Client|[Azure Information Protection-Client – Administratorhandbuch](../rms-client/client-admin-guide.md)|
 
 
 >[!div class="step-by-step"]
@@ -77,6 +63,6 @@ Sie können nun Azure Information Protection in Aktion sehen.
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

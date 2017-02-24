@@ -4,7 +4,7 @@ description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Admi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: b4ba043aa351b4b6b118a83bd5fe54898ea17492
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
 
 
 ---
@@ -61,20 +61,16 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
 
 Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen sensibler Dokumente und E-Mails zu helfen.
 
-## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Verwenden von Informationsschutz mit der Rights Management-Freigabeanwendung
-Die RMS-Freigabeanwendung (Rights Management) ist möglicherweise für Benutzer erforderlich, damit diese Inhalte schützen und geschützte Inhalte nutzen können, wenn sie Office 2010 verwenden, wird aber auch für alle Computer und mobilen Geräte empfohlen, die den Azure Rights Management-Dienst unterstützen.
+## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Verwenden des Informationsschutzes mit dem Azure Information Protection-Client
+Der Azure Information Protection-Client ist möglicherweise erforderlich, damit Benutzer geschützte Dokumente und E-Mails schützen und nutzen können, wenn sie Office 2010 verwenden. Er wird aber auch für Computer und mobile Geräte empfohlen.
 
-Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
+Der Azure Information Protection-Client erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
 
-Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](../rms-client/client-user-guide.md).
 
-Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
-Wenn Sie den Azure Rights Management-Dienst verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, die das Schützen von Dateien erleichtern würden. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
+Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Auch die Schaltfläche **Schützen** wird nicht im Menüband oder die Option **Klassifizieren und schützen** für den Datei-Explorer angezeigt. Mithilfe dieser Optionen können die Dateien einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
@@ -117,6 +113,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

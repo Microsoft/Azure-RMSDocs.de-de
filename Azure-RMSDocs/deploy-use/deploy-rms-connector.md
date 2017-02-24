@@ -4,7 +4,7 @@ description: "Hier finden Sie Anweisungen zur Bereitstellung des RMS-Connectors,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a8bfb3be9b19718cc8a94755e19b8d2521dde323
-ms.openlocfilehash: 874882b46bea052a1052b6f8e0e09f74b92753b8
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
 
 
 ---
@@ -41,7 +41,7 @@ Der RMS-Verbindungsdienst ist ein kleiner Dienst, der lokal auf Servern installi
 Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden, um Richtlinien zu klassifizieren und auf Office-Dokumente in einem Ordner anzuwenden. 
 
 > [!NOTE]
-> Wenn Sie alle Dateitypen (nicht nur Office-Dokumente) mit der Dateiklassifizierungsinfrastruktur schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [RMS-Schutz-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+> Wenn Sie mehrere Dateitypen (nicht nur Office-Dokumente) mit der Dateiklassifizierungsinfrastruktur schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [AzureInformationProtection-Cmdlets](/powershell/azureinformationprotection/vlatest/aip).
 
 Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unterstützt werden, finden Sie unter [Lokale Server, die Azure RMS unterstützen](..\get-started\requirements-servers.md).
 
@@ -100,6 +100,6 @@ Weiter zu Schritt 1: [Installieren und Konfigurieren des Azure Rights Management
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

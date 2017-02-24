@@ -5,7 +5,7 @@ keywords: "So zeigen Sie E-Mails oder Dateien mit der Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: b2fb20fb4613c688a8ab956fbe91d62041801959
+ms.sourcegitcommit: 47de236f07996eed3f1ceb51309c6315d4625128
+ms.openlocfilehash: 32e0315a8a4e6515b0b89b85afefa1bb17591e0b
 
 
 ---
@@ -32,9 +32,9 @@ Sie müssen auf Ihrem mobilen Gerät eine Datei eines Formats öffnen, das die A
     
     Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der E-Mail-Clients, die von sich aus Rights Management unterstützen, finden Sie in der Spalte E-MAIL der Seite [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).
 
-- **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie die Rights Management-Freigabeanwendung auf einem Windows-Computer oder eine PDF-Anwendung, die Rights Management von sich aus unterstützt, um sich selbst eine durch Rechte geschützte PDF-Datei als Anhang in einer E-Mail zu senden. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
+- **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine [PDF-Datei zu schützen](client-classify-protect.md). Senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage einer E-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
 
-- **Eine PTXT-, PJPG- oder PPNG-Datei**: Verwenden Sie die Rights Management-Freigabeanwendung auf einem Windows-Computer sowie die Option [Geschützt freigeben](sharing-app-protect-by-email.md), um sich selbst eine geschützte Datei als Anhang in einer E-Mail zu senden. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle des Abschnitts [Unterstützte Dateitypen und Dateinamenerweiterungen](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) im Administratorhandbuch zur Rights Management-Freigabeanwendung. 
+- **Eine PTXT- oder PJPG- oder PPNG-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine Text- oder Bilddatei zu schützen. Senden Sie diese geschützte Datei dann als Anlage einer E-Mail an sich selbst. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie im Abschnitt [Unterstützte Dateitypen und Dateierweiterungen für den Schutz](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) im Administratorhandbuch zum Azure Information Protection-Client. 
 
 Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie aufgefordert, sich an Ihrem Arbeits- oder Schulkonto anzumelden. Nachdem Sie sich erfolgreich authentifiziert haben, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
 
@@ -47,6 +47,6 @@ Besuchen Sie für andere Fragen unsere [Yammer-Website](https://www.yammer.com/A
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Handbuch für die schnelle Bereitstellung von Azure Information Protection | Azure Information Protection"
-description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung von Azure Information Protection zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
+title: "Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure Information Protection"
+description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung des Azure Rights Management-Diensts zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
 
 
 ---
@@ -23,7 +23,10 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt **Bereitstellen und Verwenden**, damit Sie Azure Information Protection schneller bereitstellen und nutzen können. Wählen Sie aus einer Liste mit spezifischen Implementierungsszenarios.
+Verwenden Sie dieses Handbuch ergänzend zu den Konfigurationsinformationen im Abschnitt **Bereitstellen und Verwenden**, damit Sie eine Lösung für den ausschließlichen Schutz schneller bereitstellen können, die den Azure Rights Management-Dienst von Azure Information Protection verwendet. Treffen Sie eine Auswahl aus einer Liste mit spezifischen Szenarien für die Implementierung.
+
+> [!NOTE]
+> Zu diesem Zeitpunkt enthält das Handbuch Szenarien für den ausschließlichen Schutz und keine Szenarien für die Klassifizierung und den Schutz oder den Azure Information Protection-Client. 
 
 Diese Szenarien enthalten sowohl Anweisungen für Administratoren als auch eine entsprechende Dokumentation für die Endbenutzer. Bevor Sie die Dokumentation (Anweisungen oder Ankündigungen) an die Endbenutzer weitergeben, müssen Sie sie an Ihre geschäftlichen Anforderungen und Arbeitsabläufe anpassen. Ein Beispielsatz mit Anweisungen oder eine Ankündigung zeigt, wie die endgültigen Endbenutzerdokumentation aussehen könnte.
 
@@ -33,8 +36,7 @@ Die hier aufgeführten Szenarien sind ein Beispiel für die gängigsten Lösunge
 
 Vor der Einführung dieser Lösungen empfiehlt es sich, Endbenutzern eine umfangreiche Ankündigung zu senden, in der Sie sie bezüglich der bevorstehenden Änderungen zum Schutz von Unternehmensdaten informieren. Weisen Sie sie außerdem darauf hin, dass dadurch auch Änderungen ihrerseits erforderlich sein können. Eine Beispielkommunikation finden Sie nach der folgenden Tabelle.
 
-> [!NOTE]
-> Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+Wenn Sie Fragen und Kommentare zu diesem Handbuch haben, nutzen Sie die Feedback-Mechanismen auf dieser Seite, oder senden Sie eine E-Mail an [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## <a name="scenarios-for-azure-information-protection"></a>Szenarios für Azure Information Protection
 Damit Sie Azure Information Protection schneller bereitstellen können, um bestimmte Geschäftsprobleme zu lösen, wählen Sie die Szenarios aus, die Ihren Unternehmenszielen am nächsten kommen, und passen Sie sie gegebenenfalls an.
@@ -148,6 +150,6 @@ Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu s
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

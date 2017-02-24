@@ -4,7 +4,7 @@ description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/11/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
-ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
+ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
+ms.openlocfilehash: 66158f74951e7226482e58cf94e4249486b4dc7b
 
 
 ---
@@ -85,10 +85,10 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
     > [!TIP]
     > Sie können Ihrer Vorlage Benutzer von außerhalb Ihrer Organisation („externe Benutzer“) hinzufügen, indem Sie eine E-Mail-aktivierte Gruppe auswählen, die Kontakte aus Office 365 oder Exchange Online enthält. Dadurch können Sie diesen Benutzern genau wie Benutzern in Ihrer Organisation Rechte zuweisen. Beispielsweise können Sie verhindern, dass Kunden eine von Ihnen gesendete Preisliste bearbeiten. Verwenden Sie diese Vorlagenkonfiguration nicht zum Schutz von E-Mails, wenn Benutzer von außerhalb Ihrer Organisation die geschützten E-Mails mit Outlook Web App lesen.
     > 
-    > Außerdem können Sie der Vorlage später Benutzer von außerhalb Ihrer Organisation hinzufügen, indem Sie das [Windows PowerShell-Modul für Azure Rights Management](install-powershell.md) und eine der folgenden Methoden verwenden:
+    > Darüber hinaus können Sie später Benutzer, die von außerhalb Ihrer Organisation stammen, nach **bestimmten Benutzern** oder **Gruppen** zur Vorlage hinzufügen. Sie können auch **alle Benutzer der Organisation** zur Vorlage hinzufügen. Verwenden Sie hierzu das [Windows PowerShell-Modul für Rights Management](install-powershell.md) und eine der folgenden Methoden:
     > 
-    > -  **Verwenden eines Rechtedefinitionsobjekts zum Aktualisieren einer Vorlage**: Geben Sie die externen E-Mail-Adressen und die dazugehörigen Rechte in einem Rechtedefinitionsobjekt an, das Sie dann zum Aktualisieren der Vorlage verwenden. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx)-Cmdlet für den -RightsDefinition-Parameter bereitstellen, um eine vorhandene Vorlage zu ändern. Wenn Sie jedoch diese Benutzer zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die neuen externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
-    > -  **Exportieren, Bearbeiten und Importieren der aktualisierten Vorlage**: Exportieren Sie die Vorlage mithilfe des [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)-Cmdlets in eine Datei, und bearbeiten Sie diese, indem Sie die externen Adressen dieser Benutzer und ihre Rechte den vorhandenen Gruppen und Rechten hinzufügen. Importieren Sie diese Änderung anschließend mit dem [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)-Cmdlet wieder in Azure RMS.
+    > -  **Verwenden Sie zum Aktualisieren einer Vorlage ein Rechtedefinitionsobjekt**: Geben Sie die externen Benutzer (nach E-Mail-Adresse des Benutzers, nach E-Mail-Adresse der Gruppe oder für alle Benutzer in dieser Organisation nach einer Domäne) und ihre Rechte in einem Rechtedefinitionsobjekt an. Anschließend verwenden Sie dieses Rechtedefinitionsobjekt zum Aktualisieren Ihrer Vorlage. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty)-Cmdlet für den -RightsDefinition-Parameter bereitstellen, um eine vorhandene Vorlage zu ändern. Wenn Sie jedoch diese Benutzer zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die neuen externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
+    > -  **Exportieren, Bearbeiten und Importieren der aktualisierten Vorlage**: Exportieren Sie die Vorlage mithilfe des [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate)-Cmdlets in eine Datei, und bearbeiten Sie diese, indem Sie die externen Benutzer (nach E-Mail-Adresse des Benutzers, nach E-Mail-Adresse der Gruppe oder für alle Benutzer in dieser Organisation nach einer Domäne) und ihre Rechte den vorhandenen Gruppen und Rechten hinzufügen. Importieren Sie diese Änderung anschließend mit dem [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate)-Cmdlet wieder in Azure RMS.
 
 3.  Klicken Sie auf die Schaltfläche "Weiter", und weisen Sie dann Ihren ausgewählten Benutzern und Gruppen eins der aufgeführten Rechte zu.
 
@@ -107,7 +107,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Weitere Informationen zu Abteilungsvorlagen: Standardmäßig sehen alle Benutzer in Ihrem Azure-Verzeichnis alle veröffentlichten Vorlagen, und die Benutzer können dann die Vorlagen aus Anwendungen auswählen, wenn Inhalt geschützt werden soll. Wenn Sie möchten, dass nur bestimmte Benutzer einige der veröffentlichten Vorlagen sehen können, müssen Sie den Bereich der Vorlagen auf diese Benutzer beschränken. Dann können diese Vorlagen nur von diesen Benutzern ausgewählt werden. Andere Benutzer, die Sie nicht angegeben haben, sehen die Vorlagen nicht und können diese daher nicht auswählen. Diese Vorgehensweise kann das Auswählen der richtigen Vorlage für Benutzer vereinfachen, insbesondere wenn Sie Vorlagen erstellen, die für eine Verwendung durch bestimmte Gruppen oder Abteilungen vorgesehen sind. Benutzer sehen dann nur die Vorlagen, die für sie entwickelt wurden.
 
-    Angenommen, Sie haben eine Vorlage für die Personalabteilung erstellt, mit der die Leseberechtigung für Mitarbeiter der Finanzabteilung erteilt wird. Damit nur Mitarbeiter der Personalabteilung diese Vorlage anwenden können, wenn sie die Rights Management-Freigabeanwendung verwenden, legen Sie den Bereich der Vorlage auf die E-Mail-aktivierte Gruppe "Personalabteilung" fest. Dann können nur Mitglieder dieser Gruppe diese Vorlage sehen und anwenden.
+    Angenommen, Sie haben eine Vorlage für die Personalabteilung erstellt, mit der die Leseberechtigung für Mitarbeiter der Finanzabteilung erteilt wird. Damit nur Mitarbeiter der Personalabteilung diese Vorlage anwenden können, wenn sie den Azure Information Protection-Client verwenden, legen Sie den Bereich der Vorlage auf die E-Mail-aktivierte Gruppe „Personalabteilung“ fest. Dann können nur Mitglieder dieser Gruppe diese Vorlage anwenden. Wenn Benutzer darüber hinaus den Azure Information Protection-Client im [reinen Schutzmodus](../rms-client/client-protection-only-mode.md) ausführen, wird diese Vorlage nicht angezeigt.
 
 7.  Wählen Sie auf der Seite **VORLAGENSICHTBARKEIT** die Benutzer und Gruppen aus, für die es möglich sein soll, die Vorlage in den RMS-fähigen Anwendungen auszuwählen. Wie bereits zuvor sollten Sie Gruppen statt Benutzer verwenden, und die Gruppen oder Benutzer, die Sie auswählen, müssen E-Mail-Adressen haben.
 
@@ -115,7 +115,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Warum müssen Sie möglicherweise Anwendungskompatibilität konfigurieren? Nicht alle Anwendungen können Abteilungsvorlagen unterstützen. Dazu muss sich die Anwendung zunächst beim RMS-Dienst authentifizieren, bevor die Vorlagen heruntergeladen werden. Wird der Authentifizierungsprozess nicht ausgeführt, wird standardmäßig keine der Abteilungsvorlagen heruntergeladen. Sie können dieses Verhalten außer Kraft setzen, indem Sie angeben, dass alle Abteilungsvorlagen heruntergeladen werden sollen. Dazu konfigurieren Sie die Anwendungskompatibilität und aktivieren das Kontrollkästchen **Zeigen Sie diese Vorlage allen Benutzern, wenn die Anwendungen die Benutzeridentität nicht unterstützen** .
 
-    Wenn Sie beispielsweise keine Anwendungskompatibilität für die Abteilungsvorlage im Personalabteilungsbeispiel konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie die RMS-Freigabeanwendung verwenden. Benutzer, die Outlook Web Access (OWA) aus Exchange Server 2013 verwenden, können die Abteilungsvorlage dagegen nicht sehen, weil Exchange OWA und Exchange ActiveSync zurzeit keine Abteilungsvorlagen unterstützen. Wenn Sie dieses Standardverhalten außer Kraft setzen, indem Sie die Anwendungskompatibilität konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie die RMS-Freigabeanwendung verwenden, aber alle Benutzer können die Abteilungsvorlage sehen, wenn sie Outlook Web Access (OWA) verwenden. Wenn Benutzer OWA oder Exchange ActiveSync aus Exchange Online verwenden, können entweder alle Benutzer die Abteilungsvorlagen sehen oder kein Benutzer, je nach dem Status der Vorlage ("Archivierung" oder "Veröffentlicht") in Exchange Online.
+    Wenn Sie beispielsweise keine Anwendungskompatibilität für die Abteilungsvorlage im Personalabteilungsbeispiel konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie den Azure Information Protection-Client im [reinen Schutzmodus](../rms-client/client-protection-only-mode.md) verwenden. Benutzer, die Outlook Web Access (OWA) aus Exchange Server 2013 verwenden, können die Abteilungsvorlage dagegen nicht sehen, weil Exchange OWA und Exchange ActiveSync zurzeit keine Abteilungsvorlagen unterstützen. Wenn Sie dieses Standardverhalten außer Kraft setzen, indem Sie die Anwendungskompatibilität konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie den Azure Information Protection-Client im reinen Schutzmodus verwenden, aber alle Benutzer können die Abteilungsvorlage sehen, wenn sie Outlook Web Access (OWA) verwenden. Wenn Benutzer OWA oder Exchange ActiveSync aus Exchange Online verwenden, können entweder alle Benutzer die Abteilungsvorlagen sehen oder kein Benutzer, je nach dem Status der Vorlage ("Archivierung" oder "Veröffentlicht") in Exchange Online.
 
     Office 2016 unterstützt Abteilungsvorlagen nativ, und Gleiches gilt für Office 2013 ab Version 15.0.4727.1000, die im Juni 2015 als Bestandteil von [KB 3054853](https://support.microsoft.com/kb/3054853) veröffentlicht wurde.
 
@@ -165,6 +165,6 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

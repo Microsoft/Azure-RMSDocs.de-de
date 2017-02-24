@@ -4,7 +4,7 @@ description: "Informationen zu Verteilung, Installation, unterstützten Betriebs
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/28/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
 
 Der RMS-Client, Version 2 (Rights Management Services) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. 
 
-Zusätzlich zur Auslieferung mit der [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md) steht der RMS-Client als [optionaler Download](http://www.microsoft.com/download/details.aspx?id=38396) zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind.
+Zusätzlich zur Auslieferung mit dem [Azure Information Protection-Client für Windows](aip-client.md) steht der RMS-Client als [optionaler Download](http://www.microsoft.com/download/details.aspx?id=38396) zur Verfügung, der nach Bestätigen und Akzeptieren der Lizenzbedingungen kostenlos mit Drittanbietersoftware verteilt werden kann. Dadurch können Clients Inhalte schützen und nutzen, die durch RMS geschützt sind.
 
 
 ## <a name="redistributing-the-rms-client"></a>Weiterverbreiten des RMS-Clients
@@ -94,7 +94,7 @@ Wenn Sie diesen RMS-Client mit der Option für die unbeaufsichtigte Installation
 Der folgende Abschnitt enthält Einstellungsinformationen zum RMS-Client. Diese Informationen sind möglicherweise hilfreich, wenn Probleme mit Anwendungen oder Diensten haben, die den RMS-Client verwenden.
 
 > [!NOTE]
-> Einige Einstellungen hängen davon ab, ob die RMS-fähige Anwendung als Clientmodusanwendung (z. B. Microsoft Word und Outlook oder die RMS-Freigabeanwendung) oder Servermodusanwendung (z. B. SharePoint und Exchange) ausgeführt wird. In den folgenden Tabellen werden diese Einstellungen als **Clientmodus** bzw. **Servermodus**bezeichnet.
+> Einige Einstellungen hängen davon ab, ob die RMS-fähige Anwendung als Clientmodusanwendung (z. B. Microsoft Word und Outlook oder der Azure Information Protection-Client mit Windows-Datei-Explorer) oder Servermodusanwendung (z. B. SharePoint und Exchange) ausgeführt wird. In den folgenden Tabellen werden diese Einstellungen als **Clientmodus** bzw. **Servermodus**bezeichnet.
 
 ### <a name="where-the-rms-client-stores-licenses-on-client-computers"></a>Speicherorte, an denen der RMS-Client Lizenzen auf Clientcomputern speichert
 Der RMS-Client speichert Lizenzen auf dem lokalen Datenträger. Außerdem weden einige Informationen in der Windows-Registrierung zwischengespeichert.
@@ -261,6 +261,6 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

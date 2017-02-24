@@ -4,7 +4,7 @@ description: "Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 53a77c0e312f44fe2210ed19ead6dedeb36a5a78
 
 
 ---
@@ -27,7 +27,7 @@ Erfahren Sie anhand der folgenden Informationen, wie die am häufigsten verwende
 > [!NOTE]
 > Die Anwendungen und Versionen, die der Azure Rights Management-Dienst unterstützt, finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).
 
-In einigen Fällen wendet der Azure Rights Management-Dienst den Schutz automatisch gemäß den Richtlinien an, die von Administratoren konfiguriert wurden. Dies ist beispielsweise bei SharePoint-Bibliotheken, klassifizierten Dateien und Exchange-Transportregeln der Fall. In anderen Fällen müssen Endbenutzer den Informationsschutz selbst aus ihren Anwendungen heraus anwenden – durch Auswählen von Vorlagen oder Optionen. Dies ist beispielsweise der Fall, wenn Benutzer eine Datei per E-Mail teilen oder eine Datei direkt schützen, indem sie den Zugriff oder die Verwendung auf ausgewählte Benutzer bzw. auf Benutzer außerhalb der Organisation einschränken.
+In einigen Fällen wendet der Azure Rights Management-Dienst den Schutz automatisch gemäß den Richtlinien an, die von Administratoren konfiguriert wurden. Dies ist beispielsweise bei SharePoint-Bibliotheken und Exchange-Transportregeln der Fall. In anderen Fällen müssen Endbenutzer den Informationsschutz selbst über ihre Anwendungen anwenden, indem sie z. B. eine konfigurierte Klassifizierungsbezeichnung auswählen, um eine Vorlage anzuwenden, eine Vorlage direkt auszuwählen oder bestimmte Optionen auszuwählen. Von Benutzern angewendeter Schutz ist typisch, wenn Benutzer eine freizugebende Datei schützen und sie den Zugriff oder die Verwendung auf ausgewählte Benutzer oder auf Benutzer außerhalb der Organisation einschränken.
 
 Vorlagen erleichtern den Benutzern (und den Administratoren, die Richtlinien konfigurieren) das Anwenden der richtigen Schutzstufe und das Einschränken des Zugriffs auf Personen innerhalb Ihrer Organisation. Zwar verfügt der Azure Rights Management-Dienst über zwei Standardvorlagen, doch Sie können benutzerdefinierte Vorlagen erstellen, damit die Benutzer nicht so häufig einzelne Optionen angeben müssen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).
 
@@ -64,6 +64,6 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Komponent
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
