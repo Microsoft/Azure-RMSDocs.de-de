@@ -4,7 +4,7 @@ description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfiguri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 10c7d307cceb1ca5f1b9bf857fdbe9aea0dc321d
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
 
 
 ---
@@ -31,7 +31,7 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Dann wird das Blatt **Azure Information Protection** angezeigt, das automatisch das Blatt für die globale Information Protection-Richtlinie öffnet, die alle Benutzer erhalten. Sie enthält die folgenden Elemente, die Sie konfigurieren können:
+    Dann wird das Blatt **Azure Information Protection** angezeigt, auf dem Sie die Richtlinie **Global** öffnen können, die alle Benutzer erhalten. Sie können optional auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinie **Global** enthält die folgenden Elemente, die Sie konfigurieren können:
 
     - Bezeichnungen, mit denen Sie und Ihre Benutzer Dokumente und E-Mails klassifizieren können.
 
@@ -83,6 +83,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
 
 
 ---
@@ -23,9 +23,7 @@ ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 >*Gilt für: Azure Information Protection*
 
-**[Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.]**
-
-Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** (derzeit in der Vorschauversion) erstellen, die für diese Benutzer konfiguriert ist.
+Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** erstellen, die für diese Benutzer konfiguriert ist.
 
 Alle Benutzer erhalten die globale Richtlinie, die Titel und QuickInfo sowie globale Einstellungen und globale Bezeichnungen der Information Protection-Leiste enthält. Wenn Sie bereichsbezogene Richtlinien für bestimmte Benutzer konfiguriert haben, erhalten diese Benutzer diese zusätzlichen Einstellungen und Bezeichnungen. 
 
@@ -42,7 +40,7 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Add a new policy (PREVIEW)** (Neue Richtlinie hinzufügen (VORSCHAU)) aus. Dann wird das zweite Blatt angezeigt, das normalerweise die Aktualisierung der globalen Richtlinie anzeigt, sodass Sie jetzt Ihre neue bereichsbezogene Richtlinie konfigurieren können.
+    Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Add a new policy** (Neue Richtlinie hinzufügen) aus. Dann wird das zweite Blatt angezeigt, das normalerweise die Aktualisierung der globalen Richtlinie anzeigt, sodass Sie jetzt Ihre neue bereichsbezogene Richtlinie konfigurieren können.
 
 3. Geben Sie einen Richtliniennamen und eine Beschreibung an, die nur für Administratoren im Azure-Portal angezeigt wird. Der Name muss für Ihren Mandanten eindeutig sein. Klicken Sie dann auf **Specify which users/groups get this policy** (Benutzer/Gruppen angeben, die diese Richtlinie erhalten). Auf den nachfolgenden Blättern können Sie dann die Benutzer und Gruppen für diese Richtlinie suchen und auswählen. Die Bezeichnungen und Einstellungen, die Sie in dieser bereichsbezogenen Richtlinie konfigurieren, werden nur auf diese Benutzer angewendet. 
 
@@ -67,6 +65,6 @@ Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende V
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

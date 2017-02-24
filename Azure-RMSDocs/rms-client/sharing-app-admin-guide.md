@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 156474cce6bb9026d56d65eff5acc5ce4ae7edf6
 
 
 ---
@@ -24,6 +24,8 @@ ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
+> [!IMPORTANT]
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
@@ -408,6 +410,6 @@ Weitere technische Informationen einschließlich einer Erläuterung des Untersch
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

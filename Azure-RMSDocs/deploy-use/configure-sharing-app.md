@@ -4,7 +4,7 @@ description: "Informationen für Administratoren zum Bereitstellen der RMS-Freig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: cffebd2ac11f78b20b125bfd7eabca83a6ba0363
 
 
 ---
@@ -23,21 +23,22 @@ ms.openlocfilehash: 0d15a232bc1f0b1bce94e48c7e9c6f6b9419b5dd
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Die Rights Management-Freigabeanwendung (RMS) ist für Clientcomputer erforderlich, damit diese den Azure Rights Management-Dienst mit Office 2010 verwenden können. Sie wird darüber hinaus für alle Computer und mobilen Geräte empfohlen, die den Azure Rights Management-Dienst über Azure Information Protection unterstützen. Die RMS-Freigabeanwendung integriert sich in Office-Anwendungen, indem ein Office-Add-In- installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht nativ vom Azure Rights Management-Dienst unterstützt werden, sowie eine Website zur Dokumentkontrolle, auf der Benutzer geschützte Dateien verfolgen und sperren können.
+> [!IMPORTANT]
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](../rms-client/aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
+ 
+Die RMS-Freigabeanwendung bietet die Unterstützung der Authentifizierung für Office 2010 und integriert sich in Office-Anwendungen, indem ein Office-Add-In installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht nativ vom Azure Rights Management-Dienst unterstützt werden, sowie eine Website für die Dokumentenverfolgung, auf der Benutzer geschützte Dateien verfolgen und sperren können.
 
 ## <a name="the-rms-sharing-application-for-windows-installation-and-configuration"></a>Die RMS-Freigabeanwendung für Windows: Installation und Konfiguration
-Informationen zum Installieren und Konfigurieren der RMS-Freigabeanwendung für Windows für eine Unternehmensbereitstellung finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
+Informationen zum Installieren und Konfigurieren der RMS-Freigabeanwendung für Windows in einem Unternehmen finden Sie im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
-> [!TIP]
-> Wenn Sie die RMS-Freigabeanwendung für einen einzelnen Computer schnell installieren und testen möchten, finden Sie Informationen dazu unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](../rms-client/install-sharing-app.md) im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+Sie können diese Anwendung nicht mehr über die Microsoft Azure Information Protection-Seite herunterladen. Über den Link für Windows-Computer wird jetzt der Azure Information Protection-Client heruntergeladen. 
+
 
 ## <a name="the-rms-sharing-application-for-mobile-platforms-installation-and-management"></a>Die RMS-Freigabeanwendung für mobile Plattformen: Installation und Verwaltung
-Um die RMS-Freigabeanwendung für mobile Plattformen zu installieren, laden Sie die entsprechende App herunter, indem Sie die Links auf der Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)verwenden. Für die Verwendung des Azure Rights Management-Diensts mit dieser App ist keine Konfiguration erforderlich.
+Sie können die RMS-Freigabeanwendung für Macintosh-Computer und Windows Phone-Geräte von der [Microsoft Azure Information Protection-Seite](https://go.microsoft.com/fwlink/?LinkId=303970) herunterladen und installieren. 
 
-> [!NOTE]
-> Die RMS-Freigabeanwendung für iOS und Android wird ab sofort von der Azure Information Protection-App ersetzt.
+Sie können die RMS-Freigabeanwendung für iOS und Android nicht mehr über diese Seite herunterladen. Über die Links für diese mobilen Geräte wird jetzt der Azure Information Protection-Client heruntergeladen. 
 
-**Wenn Sie Microsoft Intune besitzen:** Da die Azure Information Protection-App das Microsoft Intune App Software Development Kit umfasst, können Sie, wenn iOS- und Android-Geräte von Intune angemeldet werden, die Azure Information Protection-App für diese Geräte bereitstellen und verwalten. Weitere Informationen finden Sie in der Intune-Dokumentation unter [Konfigurieren und Bereitstellen von Verwaltungsrichtlinien für mobile Anwendungen in der Microsoft Intune-Konsole](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console). Verwenden Sie für Schritt 2 die Anleitung zum Veröffentlichen einer richtlinienverwalteten App.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
@@ -45,6 +46,6 @@ Um die RMS-Freigabeanwendung für mobile Plattformen zu installieren, laden Sie 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

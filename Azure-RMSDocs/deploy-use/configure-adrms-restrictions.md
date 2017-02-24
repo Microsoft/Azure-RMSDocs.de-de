@@ -4,15 +4,15 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
-ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
 
 
 ---
@@ -35,7 +35,7 @@ Azure RMS schützt die Dokumente und E-Mails Ihrer Organisation durch die Verwen
 
 Allerdings müssen einige Kunden möglicherweise ausgewählte Dokumente und E-Mails mit einem Schlüssel schützen, der lokal gehostet wird. Dies kann aus gesetzlichen Gründen oder Kompatibilitätsgründen möglicherweise nicht erforderlich sein. 
 
-Diese Konfiguration wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet und wird durch Azure Information Protection unterstützt, wenn Sie über eine funktionierende Active Directory Rights Management Services-Bereitstellung (AD RMS) mit den Anforderungen verfügen, die im nächsten Abschnitt beschrieben werden. Dieses Feature ist noch in der Vorschau.
+Diese Konfiguration wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet und wird durch Azure Information Protection unterstützt, wenn Sie über eine funktionierende Active Directory Rights Management Services-Bereitstellung (AD RMS) mit den Anforderungen verfügen, die im nächsten Abschnitt beschrieben werden.
 
 In diesem HYOK-Szenario werden die Richtlinien und der private Schlüssel der Organisation, die diese Richtlinien schützt, lokal verwaltet und gehalten, während die Azure Information Protection-Richtlinie für die Bezeichnung und Klassifizierung in Azure verwaltet und gespeichert wird. So wie bei Azure RMS-Schutz werden Informationen, die Sie mit AD RMS schützen, nie an die Cloud gesendet.
 
@@ -98,13 +98,13 @@ Wenn Sie eine Bezeichnung für den AD RMS-Schutz konfigurieren, müssen Sie die 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu dieser Previewfunktion finden Sie in der Blogbeitragsankündigung [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (in englischer Sprache).
+Weitere Informationen zu diesem Feature finden Sie in der Blogbeitragsankündigung [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (in englischer Sprache).
 
 Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -4,7 +4,7 @@ description: "Lernen Sie die Administratorfunktion des Azure Rights Management-D
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d2c7c5307ad1ea8866b40e9daa29634496f9323c
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
 
 
 ---
@@ -52,27 +52,29 @@ Bewährte Sicherheitsmethoden für die Administratorfunktion:
 
 Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet „Get-AadrmAdminLog“ erstellt wurden. In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für den Azure Rights Management-Dienst konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
 
-`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
+`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
+`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
 
-`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
+`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
 
 ## <a name="scripting-options-for-super-users"></a>Skriptoptionen für Administratoren
-Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Laden Sie hierfür das [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256)herunter. Verwenden Sie dann die Cmdlets [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) und [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) gemäß Ihren Anforderungen.
+Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Verwenden Sie dazu die Cmdlets [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) und [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) gemäß Ihren Anforderungen. 
 
-Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Wenn Sie die Klassifizierung und den Schutz verwenden, können Sie auch das Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) verwenden, um eine neue Bezeichnung ohne Schutz anzuwenden, oder die Bezeichnung entfernen, die einen entsprechenden Schutz angewendet hat. 
+
+Weitere Informationen zu diesen Cmdlets finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](../rms-client/client-admin-guide-powershell.md) im Administratorhandbuch für den Azure Information Protection-Client.
 
 > [!NOTE]
-> Das PowerShell-Modul für den RMS-Schutz im Lieferumfang des RMS Protection Tools unterscheidet sich vom [Windows PowerShell-Hauptmodul für Azure Rights Management](administer-powershell.md) und soll als Ergänzung dienen. Das RMS Protection-Modul unterstützt sowohl den Azure Rights Management-Dienst (Azure RMS) für den Azure Information Protection als auch Active Directory Rights Management Services (AD RMS).
+> Das AIP-Modul ersetzt das PowerShell-Modul „RMS Protection“, das mit dem RMS Protection Tool installiert wurde. Beide Module unterscheiden sich vom [Windows PowerShell-Modul für Azure Rights Management](administer-powershell.md) und ergänzen es. Das AIP-Modul unterstützt Azure Information Protection, den Azure Rights Management-Dienst (Azure RMS) für Azure Information Protection und auch Active Directory Rights Management Services (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

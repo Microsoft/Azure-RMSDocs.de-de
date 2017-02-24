@@ -4,7 +4,7 @@ description: "Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 95d50707c362244972f286943abf9a07e3cedf38
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: ecb85e8fd2f09579536782f00a1babddb9466c54
 
 
 ---
@@ -52,9 +52,13 @@ Damit Sie Multi-Factor Authentication (MFA) mit Azure Information Protection ver
 
     -   Wenn Sie Office 2013 haben, müssen Sie auch das [Update vom 9. Juni 2015 für Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853) installieren. Weitere Informationen zu diesem Update sowie dazu, wie die moderne Authentifizierung ADAL-basierte Anmeldungen (Active Directory Authentication Library) in Office 2013 integriert, finden Sie im Office-Blog unter [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) (Ankündigung der öffentlichen Vorschau für moderne Authentifizierung in Office 2013).
 
+- Azure Information Protection-Client:
+
+    - Der [Azure Information Protection-Client](../rms-client/aip-client.md) für Windows, iOS und Android hat immer MFA unterstützt. Es ist keine Mindestversion erforderlich. 
+
 -   Rights Management-Freigabeanwendung für Windows:
 
-    -   Sie müssen mindestens die Version 1.0.1908.0 installiert haben. Sie können dies in der Systemsteuerung in „Programme und Features“ prüfen. Weitere Informationen zur Freigabeanwendung finden Sie unter [Rights Management-Freigabeanwendung für Windows](../rms-client/sharing-app-windows.md).
+    -   Sie müssen mindestens die Version 1.0.1908.0 installiert haben. Sie können dies in der Systemsteuerung in „Programme und Features“ prüfen. Beachten Sie, dass die Rights Management-Freigabeanwendung jetzt durch den Azure Information Protection-Client ersetzt wurde. Weitere Informationen zur Freigabeanwendung finden Sie unter [Rights Management-Freigabeanwendung für Windows](../rms-client/sharing-app-windows.md).
 
 -   Rights Management-Freigabe-App für mobile Geräte und Mac-Computer:
 
@@ -81,6 +85,6 @@ Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Pro
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

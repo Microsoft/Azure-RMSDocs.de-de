@@ -4,82 +4,74 @@ description: "Anweisungen für Benutzer zum Installieren des Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
-ms.reviewer: esaggese
+ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
-ms.openlocfilehash: 72266181c5334ed7e03b2022df61c4065f1c3ac7
+ms.sourcegitcommit: 633f3dfe12828a21943bb5faf6ad9f69b98fc70b
+ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
 
 
 ---
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Herunterladen und Installieren des Azure Information Protection-Clients
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
-
-**[Diese Version des Clients ist eine Vorschau und unterliegt Änderungen.]**
-
 Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren. 
 
-### <a name="office-2010-only"></a>Nur Office 2010
+Zusätzlich:
 
-Wenn Sie diese Version von Office verwenden, muss der Azure Information Protection-Client Registrierungsschlüssel festlegen, die Administratorberechtigungen erfordern: 
+- Der Azure Information Protection-Client erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 
-Verwenden Sie die Anleitungen zum Herunterladen und Installieren des Clients, und verwenden Sie dann die Anleitungen in den folgenden Abschnitten für Office 2010.
+- Wenn Sie Windows 7 SP1 verwenden, erfordert der Azure Information Protection-Client ein bestimmtes Update, [KB 2533623](https://support.microsoft.com/kb/2533623). Wenn Ihr PC dieses Update benötigt, es aber nicht installiert ist, wird die Installation abgeschlossen, aber eine Meldung angezeigt, dass dieses Update installiert werden muss, bevor Sie alle Features des Azure Information Protection-Clients verwenden können. 
 
-## <a name="to-download-and-install-the-azure-information-protection-client"></a>So laden Sie den Azure Information Protection-Client herunter und installieren ihn
+## <a name="to-download-and-install-the-azure-information-protection-client"></a>So laden Sie den Azure Information Protection-Client herunter und installieren ihn    
 
-1.  Wechseln Sie zur [Microsoft-Downloadwebsite](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie die **Vorschauversion** des Azure Information Protection-Clients herunter.
+1.  Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).    
+2. Klicken Sie auf das Windows-Symbol für den **Azure Information Protection-Client**, und speichern Sie die Datei **AzInfoProtection.exe**, um den Azure Information Protection-Client zu installieren.     
 
-2. Doppelklicken Sie auf die ausführbare Datei, die heruntergeladen wurde. 
+2. Doppelklicken Sie auf die ausführbare Datei, die heruntergeladen wurde. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
 
-3. Auf der Seite **Installieren des Azure Information Protection-Clients**: 
-    
-    - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.
-    
-    - Klicken Sie auf **Ich stimme zu**, wenn Sie die Lizenzbedingungen gelesen haben.
+3. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
+    - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.    
 
-4. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.
+    - Klicken Sie auf **Ich stimme zu**, wenn Sie die Lizenzbedingungen gelesen haben.    
 
-3. Klicken Sie auf **Schließen**. Bevor Sie den Azure Information Protection-Client verwenden:
+4. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.    
 
-    - Wenn Ihr Computer mit Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie mit dem letzten Schritt im nächsten Abschnitt fort.
-    
-    - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
+3. Klicken Sie auf **Schließen**. Bevor Sie den Azure Information Protection-Client verwenden:    
 
-> [!NOTE]
-> Wenn Sie Windows 7 SP1 verwenden, erfordert der Azure Information Protection-Client ein bestimmtes Update, [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). Wenn Ihr PC dieses Update benötigt, es aber nicht installiert ist, wird eine Meldung angezeigt, wenn Sie versuchen, den Client zu verwenden, dass dieses Update installiert werden muss, bevor Sie alle Features des Azure Information Protection-Clients verwenden können.
+    - Wenn Ihr Computer mit Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie mit dem letzten Schritt im nächsten Abschnitt fort.    
+        
+    - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.    
 
-### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients mit Office 2010
-
-Nachdem Sie den Azure Information Protection-Client mithilfe der vorherigen Anweisungen installiert haben:
+### <a name="installing-the-azure-information-protection-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients mit Office 2010    
+Nachdem Sie den Azure Information Protection-Client mithilfe der vorherigen Anweisungen installiert haben:    
 
 1. Öffnen Sie Microsoft Word. Wenn Sie zum ersten Mal eine Office 2010-Anwendung ausführen, nachdem Sie den Azure Information Protection-Client installiert haben, sehen Sie das Dialogfeld **Microsoft Azure Information Protection**. Dieses Dialogfeld zeigt Ihnen, dass Administratoranmeldeinformationen erforderlich sind, um den Anmeldeprozess abzuschließen.
 
 2. Klicken Sie im Dialogfeld **Microsoft Azure Information Protection** auf **OK**.
 
-2. Wenn das Dialogfeld **Benutzerzugriffssteuerung** angezeigt wird, klicken Sie auf **Ja**, damit der Azure Information Protection-Client die Registrierung aktualisieren kann.
-
+3. Wenn das Dialogfeld **Benutzerzugriffssteuerung** angezeigt wird, klicken Sie auf **Ja**, damit der Azure Information Protection-Client die Registrierung aktualisieren kann.   
 Die Installation ist nun abgeschlossen, und Sie können Azure Information Protection zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
 
-## <a name="other-instructions"></a>Sonstige Anweisungen
-Anweisungen zur Vorgehensweise finden Sie in den folgenden Abschnitten des Azure Information Protection-Benutzerhandbuchs:
+## <a name="other-instructions"></a>Sonstige Anweisungen    
+Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
--   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
+- [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
-## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren
-[Installieren des Azure Information Protection-Clients](info-protect-client.md)
+## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
+Weitere Informationen finden Sie im Administratorhandbuch unter [Installieren des Azure Information Protection-Clients für Benutzer](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users).
+ 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]  
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

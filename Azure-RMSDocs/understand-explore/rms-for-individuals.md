@@ -4,7 +4,7 @@ description: "Informationen zu RMS for Individuals, ein kostenloses Self-Service
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 6bf3aa5e12da7faa8c1b7c0461e652693111c59a
+ms.sourcegitcommit: 9453354687b4b469989f0fe33d4abce0bde21570
+ms.openlocfilehash: 327e68131c8d432887a682c83a6e30f6c83c1a8e
 
 
 ---
@@ -25,14 +25,14 @@ ms.openlocfilehash: 6bf3aa5e12da7faa8c1b7c0461e652693111c59a
 
 RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die vom Azure Rights Management-Dienst von Azure Information Protection geschützt wurden. Dieser kostenlose Anmeldedienst kann eingesetzt werden, wenn diese Benutzer nicht authentifiziert werden können, da die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet. Dies ist z. B. der Fall, wenn die IT-Abteilung Office 365 nicht abonniert hat oder keine Azure-Dienste verwendet.
 
-Diese Benutzer können sich für ein kostenloses Geschäfts-, Schul- oder Unikonto registrieren, das mit Azure Information Protection verwendet wird, und die Rights Management-Freigabeanwendung herunterladen und installieren. Danach können sich diese Benutzer authentifizieren, um nachzuweisen, dass sie die jeweilige Person sind, an die die geschützten Dateien gesendet wurden, und dann die geschützten Dateien auf Computern oder mobilen Geräten lesen.
+Diese Benutzer können sich für ein kostenloses Geschäfts-, Schul- oder Unikonto registrieren, das mit Azure Information Protection verwendet wird, und den Azure Information Protection-Client herunterladen und installieren. Danach können sich diese Benutzer authentifizieren, um nachzuweisen, dass sie die jeweilige Person sind, an die die geschützten Dateien gesendet wurden, und dann die geschützten Dateien auf Computern oder mobilen Geräten lesen.
 
-Mithilfe der Rights Management-Freigabeanwendung auf Windows-Computern können diese Benutzer außerdem Dateien lokal schützen oder geschützte Dateien per E-Mail an Personen innerhalb oder außerhalb ihrer Organisation senden. Wenn die Empfänger einer solchen E-Mail zu einer Organisation gehören, die ebenfalls keine Benutzerkonten in Azure verwaltet, können sich auch die Empfänger für ein RMS for Individuals-Konto anmelden, damit sie die geschützte E-Mail-Anlage lesen können.
+Mithilfe des Azure Information Protection-Clients auf Windows-Computern können diese Benutzer auch Dateien schützen, damit sie problemlos mit anderen Benutzern gemeinsam genutzt werden können. Wenn sie Dateien mit Personen außerhalb ihrer Organisation gemeinsam nutzen, können sie sich ebenfalls für ein RMS-Konto für Einzelpersonen registrieren, um die geschützte Datei zu lesen.
 
 > [!IMPORTANT]
-> Dieses kostenlose Abonnement stellt sicher, dass autorisierte Personen Dateien immer lesen können, die geschützt wurden. Zurzeit können Sie dieses kostenlose Abonnement auch zum Schützen von Dokumenten und Erstellen neuer geschützter E-Mail-Nachrichten verwenden. Doch die Fähigkeit zum Erstellen neuer geschützter Inhalte dient nur zu Testzwecken und wird ggf. künftig entfernt. 
+> Dieses kostenlose Abonnement stellt sicher, dass autorisierte Personen Dateien immer lesen können, die geschützt wurden. Zurzeit können Sie dieses kostenlose Abonnement auch zum Schützen von Dokumenten verwenden. Doch die Fähigkeit zum Schützen von Inhalten dient nur zu Testzwecken und wird ggf. künftig entfernt. 
 
-Weitere Informationen dazu, wie Sie Dateien mithilfe der kostenlosen Rights Management-Freigabeanwendung schützen können, finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+Weitere Informationen zum Schützen von Dateien mithilfe des Azure Information Protection-Clients finden Sie im [Azure Information Protection – Benutzerhandbuch](../rms-client/client-user-guide.md).
 
 RMS for Individuals ist ein Beispiel für eine Self-Service-Anmeldung, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise finden Sie unter [Was ist die Self-Service-Registrierung für Azure?](/active-directory/active-directory-self-service-signup) in der Dokumentation zu Azure Active Directory. 
 
@@ -43,6 +43,6 @@ Eine Schritt-für-Schritt-Anleitung und eine technische Übersicht über die Vor
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
