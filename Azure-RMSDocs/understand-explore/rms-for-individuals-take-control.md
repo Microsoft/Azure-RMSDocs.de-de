@@ -1,10 +1,10 @@
 ---
-title: "Möglichkeiten der Kontrolle über die für RMS for Individuals erstellten Konten durch Administratoren | Azure Information Protection"
+title: "Steuern der für RMS for Individuals erstellten Konten – AIP"
 description: "Möglichkeiten zur Steuerung der Benutzerkonten in Azure Active Directory, wenn Sie das RMS for Individuals-Abonnement Ihrer Organisation nicht in ein kostenpflichtiges Abonnement umwandeln möchten."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 19b71ee6016971e1d989db8961b8b77a50fd0124
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ff8cd150ce438a7b9ad5203dfb6d9d01c1a0d85a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -46,8 +47,3 @@ Um die Benutzerkonten im Azure-Verzeichnis zu kontrollieren oder Benutzer daran 
 Wenn Benutzer anstelle von Administratoren ihre Konten in Azure Active Directory für RMS for Individuals erstellen können, wie kann dann ermittelt werden, ob sie diesen Schritt auch ausgeführt haben?  Weitere Informationen finden Sie unter [So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben](rms-for-individuals-identify-sign-up.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

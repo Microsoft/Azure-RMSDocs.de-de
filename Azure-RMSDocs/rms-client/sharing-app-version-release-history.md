@@ -1,10 +1,10 @@
 ---
-title: "Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure Information Protection"
+title: "RMS-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen – AIP"
 description: "Hier finden Sie Informationen zu Neuheiten oder Änderungen an einer Version der Rights Management-Freigabeanwendung für Windows."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: aded487e9d7f7bc8341c7f6e1d6ac4e673b55c56
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -130,9 +131,4 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 -   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

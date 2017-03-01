@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Führungskräfte tauschen vertrauliche Informationen sicher aus | Azure Information Protection"
+title: "AIP-Szenario – Führungskräfte tauschen vertrauliche Informationen aus"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Führungskräfte E-Mail-Nachrichten und Anlagen sicher austauschen können. Richtlinien beschränken automatisch den Zugriff auf die Führungskräfte, ohne dass diese eine bestimmte Aktion ausführen müssen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: cb7cbe24589030e5fd1b2b2f9589f47e3f0b780e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -131,9 +132,4 @@ Wenn Sie vertrauliche Unternehmensinformationen an eine andere VanArsdel-Führun
 -   Wenden Sie sich an den Helpdesk: helpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

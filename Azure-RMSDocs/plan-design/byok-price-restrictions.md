@@ -1,10 +1,10 @@
 ---
-title: "BYOK – Preise und Einschränkungen | Azure Information Protection"
+title: "BYOK – Preise und Einschränkungen – Azure Information Protection"
 description: "Lernen Sie die Einschränkungen bei Verwendung kundenverwalteter Schlüssel (bekannt als „Bring Your Own Key“, BYOK) mit Azure RMS kennen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2e8a00d4c8d38387645d015d3f69a4d568fc9683
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: c05521faed2cd8a7f9d32d81cd6899161e858153
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -86,9 +87,4 @@ Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, h
 Wenn Sie sich für die Standardkonfiguration entschieden haben, bei der Ihr Mandantenschlüssel von Microsoft verwaltet wird, helfen Ihnen die Informationen im Abschnitt [Nächste Schritte](plan-implement-tenant-key.md#next-steps) des Artikels „Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels“ weiter.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
