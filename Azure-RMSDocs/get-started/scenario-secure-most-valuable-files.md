@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure Information Protection"
+title: "AIP-Szenario – Schutz Ihrer wertvollsten Dateien"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -146,8 +147,3 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 -   Wenn Sie keinen Zugriff auf diese Dateien haben oder verdächtige Änderungen in den Dateien feststellen, rufen Sie den rund um die Uhr verfügbaren Supporteskalationskanal an, der Ihnen von der IT-Abteilung in einer geschützten E-Mail-Nachricht zugesendet wurde.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

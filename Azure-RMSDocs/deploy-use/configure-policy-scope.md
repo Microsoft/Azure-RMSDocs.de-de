@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren bereichsbezogener Richtlinien | Azure Information Protection
+title: "Konfigurieren bereichsbezogener Richtlinien für Azure Information Protection"
 description: "Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer zu konfigurieren, müssen Sie eine bereichsbezogene Richtlinie für Azure Information Protection konfigurieren."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e2112ca081ed0520330355734bb0913e4a612c66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -62,9 +63,4 @@ Beim Start einer unterstützten Office-Anwendung oder Öffnen des Datei-Explorer
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

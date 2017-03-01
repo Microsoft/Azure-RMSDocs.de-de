@@ -1,10 +1,10 @@
 ---
-title: "Migrieren von AD RMS zu Azure Information Protection – Phase 2 | Azure Information Protection"
+title: "Migrieren von AD RMS-Azure Information Protection – Phase 2"
 description: Phase 2 der Migration von AD RMS zu Azure Information Protection deckt den Schritt 5 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 197ff53d64889487c457f574a235c76821fcf61a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: aa1569749abbdd335c8fdff56441441d5c49b21d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -134,8 +135,3 @@ Redirect_OnPrem.cmd:
 Fahren Sie mit [Phase 3: Unterstützung der Dienstekonfiguration](migrate-from-ad-rms-phase3.md) fort, um die Migration fortzusetzen.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

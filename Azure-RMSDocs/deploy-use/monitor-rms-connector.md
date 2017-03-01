@@ -1,10 +1,10 @@
 ---
-title: "Überwachen des Azure Rights Management-Connectors | Azure Information Protection"
+title: "Überwachen des Rights Management-Connectors – AIP"
 description: "Hier finden Sie Informationen, die Sie beim Überwachen des Connectors und Verwendung des Azure Rights Management-Diensts von Azure Information Protection in Ihre Organisation unterstützen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0af2ad5107cfa958e3309352304f6bdbee4f7316
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d9f2e20abe0a4abce3220d53d6373d9c2baf8ee
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -193,9 +194,4 @@ Wenn eine detailliertere Protokollierung zu Diagnosezwecken erforderlich ist, k�
 5.  Nachdem Sie die benötigten Ablaufverfolgungen erfasst haben, stellen Sie die Zeile in Schritt 3 wieder her. Anschließend halten Sie IIS erneut an und starten die Dienste neu.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
