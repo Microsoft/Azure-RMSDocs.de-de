@@ -1,10 +1,10 @@
 ---
-title: "Häufig gestellte Fragen zum Azure Rights Management-Dienst von Azure Information Protection für den Schutz von Daten | Azure Information Protection"
+title: "Häufig gestellte Fragen zu Azure RMS – AIP"
 description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
-ms.openlocfilehash: f0fb23195983771fb7e19a626adc78ca28faa1a7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f2413580bf76f0b9b6fa52d8be381c44f9c985fe
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,6 +36,19 @@ Weitere Informationen finden Sie unter [Funktionsweise von Azure RMS. Details](.
 Microsoft stellt mehrere Verschlüsselungstechnologien zum Schutz Ihrer Daten in verschiedenen und häufig sich ergänzenden Szenarien zur Verfügung. Während Office 365 z. B. Verschlüsselung von in Office 365 gespeicherten ruhenden Daten bietet, verschlüsselt und schützt der Azure Rights Management-Dienst von Azure Information Protection Ihre Daten unabhängig von Speicherort oder Übertragungsmethode.
 
 Diese Verschlüsselungstechnologien ergänzen sich, und zur Verwendung müssen Sie sie unabhängig voneinander aktivieren und konfigurieren. Dabei besteht möglicherweise die Option, einen eigenen Schlüssel für die Verschlüsselung bereitzustellen, ein Szenario, das auch als BYOK (Bring-Your-Own-Key) bezeichnet wird. Das Aktivieren von BYOK für eine dieser Technologien hat keinen Einfluss auf andere. Sie können BYOK z. B. für Azure Information Protection verwenden und für andere Verschlüsselungstechniken nicht verwenden (und umgekehrt). Die von den unterschiedlichen Technologien verwendeten Schlüssel können gleich oder verschieden sein, je nachdem, wie Sie die Verschlüsselungsoptionen für die einzelnen Dienste konfigurieren.
+
+## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Was ist der Unterschied zwischen BYOK und HYOK, und wann sollte ich welche Option verwenden?
+
+**Bring Your Own Key ** (BYOK) bedeutet im Kontext von Azure Information Protection, dass Sie Ihren eigenen Schlüssel für Azure Rights Management-Schutz lokal erzeugen. Sie übertragen diesen Schlüssel anschließend auf ein Hardwaresicherheitsmodul (HSM) in Azure Key Vault, bleiben nach wie vor Besitzer des Schlüssels und verwalten ihn weiterhin. Wenn Sie diesen Schritt nicht durchführen, würde Azure Rights Management Protection einen Schlüssel verwenden, der automatisch erstellt und für Sie in Azure verwaltet wird. Diese Standardkonfiguration wird als „von Microsoft-verwaltet“ bezeichnet, im Gegensatz zu „Kundenverwaltet“ (BYOK-Option).
+
+Weitere Informationen zu BYOK und dazu, ob Sie diese Schlüsseltopologie für Ihre Organisation auswählen sollten, finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md). 
+
+**Hold Your Own Key** (HYOK) ist im Kontext von Azure Information Protection für eine kleine Anzahl von Organisationen bestimmt, die über eine Teilmenge von Dokumenten oder E-Mails verfügen, die nicht durch einen in der Cloud gespeicherten Schlüssel geschützt werden können. Für diese Unternehmen gilt diese Einschränkung auch dann, wenn sie den Schlüssel mit BYOK erstellt haben und verwalten. Die Einschränkung gilt häufig aufgrund von gesetzlichen oder Compliancegründen. Die HYOK-Konfiguration sollte nur auf „streng geheime“ Informationen angewendet werden, die niemals außerhalb der Organisation freigegeben und nur im internen Netzwerk verwendet werden und auf die nicht über mobile Geräte zugegriffen werden muss. 
+
+Für diese Ausnahmen (in der Regel weniger als 10 % des gesamten Inhalts, der geschützt werden muss), können Organisationen den Schlüssel mit einer lokalen Lösung (Active Directory Rights Management Services) erstellen und lokal speichern. Mit dieser Lösung erhalten Computer die Azure Information Protection-Richtlinie aus der Cloud, aber dieser spezielle Inhalt kann mit dem lokalen Schlüssel geschützt werden.
+
+Weitere Informationen zu HYOK und zum Verständnis der dafür geltenden Einschränkungen sowie Hinweise dazu, wann Sie HYOK verwenden sollten, finden Sie unter [Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz](../deploy-use/configure-adrms-restrictions.md).
+
 
 ## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Kann ich den Azure Rights Management-Dienst auf lokalen Servern integrieren?
 Ja. Azure Rights Management kann in lokale Server, etwa Exchange Server, SharePoint und Windows-Dateiserver, integriert werden. Dazu verwenden Sie den [Rights Management-Connector](../deploy-use/deploy-rms-connector.md). Wenn Sie nur an der Nutzung der Dateiklassifizierungsinfrastruktur (FCI, File Classification Infrastructure) mit Windows Server interessiert sind, können Sie auch die [RMS Protection-Cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx) verwenden. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
@@ -156,10 +170,5 @@ Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleit
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

@@ -1,18 +1,19 @@
 ---
-title: "HYOK-Einschränkungen | Azure Information Protection"
-description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie AD RMS-Schutz mit Azure Information Protection auswählen. Diese Lösung wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet."
+title: "HYOK-Einschränkungen für Azure Information Protection"
+description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie HYOK (AD RMS)-Schutz mit Azure Information Protection auswählen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e918f3fa7c001c4265ffaf72ebe8baa02dc8e407
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -21,7 +22,7 @@ ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
 
 >*Gilt für: Azure Information Protection*
 
-Wenn Sie Ihre vertraulichsten Dokumente und E-Mails schützen, tun Sie dies für gewöhnlich durch Anwenden des Azure Rights Management-Schutzes, um von folgenden Punkten zu profitieren:
+Wenn Sie Ihre vertraulichsten Dokumente und E-Mails schützen, tun Sie dies für gewöhnlich durch Anwenden des Azure Rights Management-Schutzes (Azure RMS), um von folgenden Punkten zu profitieren:
 
 - Es ist keine Serverinfrastruktur erforderlich, wodurch die Lösung schneller und kostengünstiger bereitzustellen und zu verwalten ist als eine lokale Lösung.
 
@@ -33,7 +34,7 @@ Wenn Sie Ihre vertraulichsten Dokumente und E-Mails schützen, tun Sie dies für
 
 Azure RMS schützt die Dokumente und E-Mails Ihrer Organisation durch die Verwendung eines privaten Schlüssels für die Organisation, die von Microsoft (standardmäßig) oder von Ihnen (das „Bring-your-own-key“- oder BYOK-Szenario) verwaltet wird. Die Informationen, die Sie mit Azure RMS schützen, werden nie an die Cloud gesendet. Die geschützte Dokumente und E-Mails werden nicht in Azure gespeichert, es sei denn, Sie speichern sie explizit dort oder verwenden einen anderen Clouddienst, der sie in Azure speichert. Weitere Informationen zu Mandantenschlüsseloptionen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md). 
 
-Allerdings müssen einige Kunden möglicherweise ausgewählte Dokumente und E-Mails mit einem Schlüssel schützen, der lokal gehostet wird. Dies kann aus gesetzlichen Gründen oder Kompatibilitätsgründen möglicherweise nicht erforderlich sein. 
+Allerdings müssen einige Organisationen möglicherweise eine kleine Teilmenge von Dokumenten und E-Mails mit einem Schlüssel schützen, der lokal gehostet wird. Dies kann aus gesetzlichen Gründen oder Kompatibilitätsgründen möglicherweise nicht erforderlich sein.  
 
 Diese Konfiguration wird manchmal als „Hold Your Own Key“ (HYOK) bezeichnet und wird durch Azure Information Protection unterstützt, wenn Sie über eine funktionierende Active Directory Rights Management Services-Bereitstellung (AD RMS) mit den Anforderungen verfügen, die im nächsten Abschnitt beschrieben werden.
 
@@ -41,18 +42,34 @@ In diesem HYOK-Szenario werden die Richtlinien und der private Schlüssel der Or
 
 > [!NOTE]
 > Verwenden Sie diese Konfiguration nur, wenn Sie es müssen, und auch nur für die Dokumente und E-Mails, die dies erfordern. AD RMS-Schutz bietet nicht die aufgeführten Vorteile, die Sie erhalten, wenn Sie Azure RMS-Schutz verwenden, und der Zweck davon ist „Uneinsehbarkeit um jeden Preis“.
+>
+> Sogar für Organisationen, die diese Konfiguration verwenden, eignet sie sich in der Regel nur für weniger als 10 % des gesamten Inhalts, der geschützte werden muss. Als Leitfaden gilt: Verwenden Sie es nur für Dokumente oder E-Mails, die alle folgenden Kriterien erfüllen:
+> 
+> - Der Inhalt weist die höchste Klassifizierung in Ihrer Organisation auf („Streng geheim“), und der Zugriff ist auf einige wenige Personen beschränkt.
+> 
+> - Der Inhalt wird niemals außerhalb der Organisation freigegeben.
+> 
+> - Der Inhalt wird nur im internen Netzwerk genutzt.
+> 
+> - Auf den Inhalt muss nicht von Macintosh-Computern oder mobilen Geräten zugegriffen werden.
 
-Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS-Schutz verwendet. Stellen Sie aufgrund der Einschränkungen, die mit AD RMS-Schutz einhergehen sicher, dass Sie klare Anweisungen für den Fall bieten, wenn Benutzer Bezeichnungen auswählen, die für den AD RMS-Schutz gelten.
+Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS-Schutz verwendet. Stellen Sie aufgrund der Einschränkungen, die mit AD RMS-Schutz einhergehen sicher, dass Sie klare Anweisungen über die Ausnahmen für den Fall bieten, wenn Benutzer Bezeichnungen auswählen, die für den AD RMS-Schutz gelten. 
 
-## <a name="limitations-when-using-hyok"></a>Einschränkungen bei der Verwendung von HYOK
+[Bereichsbezogene Richtlinien](configure-policy-scope.md) sind eine gute Möglichkeit, um sicherzustellen, dass Bezeichnungen, die für den AD RMS-Schutz konfiguriert sind, nur von Benutzern angezeigt werden können, die AD RMS-Schutz anwenden müssen. 
+
+## <a name="additional-limitations-when-using-hyok"></a>Weitere Einschränkungen bei der Verwendung von HYOK
 
 Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection werden die aufgeführten Vorteile des Azure RMS-Schutzes nicht unterstützt. Zudem sind damit folgende Einschränkungen verbunden:
 
 - Office 2010 und Office 2007 werden nicht unterstützt.
 
-- Wenn Sie außerdem Azure RMS-Schutz verwenden: Verwenden Sie nicht die Option **Nicht weiterleiten**, wenn Sie für Azure RMS-Schutz eine Bezeichnung konfigurieren. Darüber hinaus müssen Sie Benutzer anweisen, diese Option in Outlook nicht manuell auszuwählen. 
+- Verwenden Sie nicht die Option **Nicht weiterleiten**, wenn Sie für Azure RMS-Schutz eine Bezeichnung konfigurieren. Darüber hinaus müssen Sie Benutzer anweisen, diese Option in Outlook nicht manuell auszuwählen. 
 
     Wird die Option „Nicht weiterleiten“ durch eine Bezeichnung oder manuell durch Benutzer angewendet, wird die Option unter Umständen von Ihrer AD RMS-Bereitstellung angewendet und nicht wie beabsichtigt vom Azure Rights Management-Dienst. Bei diesem Szenario können Personen, denen Sie extern Inhalte zur Verfügung stellen, E-Mail-Nachrichten nicht öffnen, für die diese Option „Nicht weiterleiten“ aktiviert wurde.
+
+- Wenn Benutzer in Outlook eine Bezeichnung auswählen, die AD RMS-Schutz anwendet, und dann vor dem Senden der E-Mail-Adresse ihre Meinung ändern und eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, kann die neu ausgewählte Bezeichnung nicht angewendet werden. Es wird die folgende Fehlermeldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Sie sind nicht berechtigt, diese Aktion auszuführen.**
+    
+    Die einzige Problemumgehung besteht darin, die E-Mail-Nachricht zu schließen und von vorne zu beginnen. Die gleiche Einschränkung gilt, wenn Benutzer zunächst eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, und die Bezeichnung dann in eine Bezeichnung ändern, die AD RMS-Schutz anwendet.
 
 ## <a name="requirements-for-hyok"></a>Anforderungen an HYOK
 
@@ -88,7 +105,7 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 
-Wenn Sie eine Bezeichnung für den AD RMS-Schutz konfigurieren, müssen Sie die Vorlagen-GUID und Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Sie können beide Werte in der Konsole von Active Directory Rights Management Services finden:
+Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Vorlagen-GUID und Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Sie können beide Werte in der Konsole von Active Directory Rights Management Services finden:
 
 - Suchen der Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
@@ -98,13 +115,8 @@ Wenn Sie eine Bezeichnung für den AD RMS-Schutz konfigurieren, müssen Sie die 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu diesem Feature finden Sie in der Blogbeitragsankündigung [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (in englischer Sprache).
+Weitere Informationen zu diesem Feature sowie Hinweise dazu, wann Sie es verwenden sollten, finden Sie in der Blogbeitragsankündigung [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (in englischer Sprache).
 
-Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md). 
+Weitere Informationen zum Konfigurieren einer Bezeichnung für den AD RMS-Schutz finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](../deploy-use/configure-policy-protection.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-
