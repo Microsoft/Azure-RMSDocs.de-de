@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen des Azure Rights Management-Connectors | Azure Information Protection
+title: "Bereitstellen des Rights Management-Connectors – AIP"
 description: "Hier finden Sie Anweisungen zur Bereitstellung des RMS-Connectors, der den Dienst zum Schutz von Daten für bestehende lokale Bereitstellungen, die Exchange Server, SharePoint Server oder Windows Server und die Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI) ausführen, bereitstellt."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 93246a239476331f8fc117560c8ce45420eea674
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -98,8 +99,3 @@ Der Connector führt keine automatische Prüfung aller [Voraussetzungen](deploy-
 Weiter zu Schritt 1: [Installieren und Konfigurieren des Azure Rights Management-Connectors](install-configure-rms-connector.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

@@ -1,5 +1,5 @@
 ---
-title: "Nachverfolgen und Widerrufen Ihrer geschützten Dokumente bei Verwendung von Azure Information Protection | Azure Information Protection"
+title: "Nachverfolgen und Widerrufen von Dokumenten – Azure Information Protection"
 description: "Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen, wie sie von Benutzern verwendet werden. Bei Bedarf können Sie auch den Zugriff auf diese Dokumente widerrufen, wenn Benutzer nicht mehr in der Lage sein sollen, sie zu lesen."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 569c60d502ddcf3169ec0955a76312a50451ec72
-ms.openlocfilehash: ee2160c6c81c5de5bd1e9a9afaea959229e125e3
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 37ab2f78f1ba2f3803ad1aafd011e530ef204acb
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -91,8 +92,3 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 - [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

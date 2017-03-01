@@ -1,5 +1,5 @@
 ---
-title: "Migrieren von AD RMS zu Azure Information Protection – Phase 4 | Azure Information Protection"
+title: "Migrieren von AD RMS-Azure Information Protection – Phase 4"
 description: Phase 4 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 8 bis 9 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e45bbfe0fc2b064d987016cac8af8c4f57d465c9
-ms.openlocfilehash: e10b271872935b7903a3e1bcfe2e8287e693c613
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fc45ae10101460ea46bf2aa599b213a772eb5626
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -62,9 +63,4 @@ Weitere Informationen zum Verwalten des Azure Information Protection-Mandantensc
 Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) ansehen, um die ggf. erforderlichen weiteren Bereitstellungsaufgaben zu ermitteln.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

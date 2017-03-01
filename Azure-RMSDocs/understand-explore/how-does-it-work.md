@@ -1,5 +1,5 @@
 ---
-title: Funktionsweise von Azure RMS | Azure Information Protection
+title: "Funktionsweise von Azure RMS – Azure Information Protection"
 description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, die verwendeten kryptografischen Steuerelemente sowie Schritt-für-Schritt-Diagramme zur Funktionsweise dieses Prozesses."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
-ms.openlocfilehash: 0ff5deaaea73b7354d2b251c3ce9c768debd2269
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -154,8 +155,3 @@ Wenn Sie soweit sind, mit der Bereitstellung von Datenschutz für Ihre Organisat
 > Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Informationen und Support für Azure Information Protection](../get-started/information-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

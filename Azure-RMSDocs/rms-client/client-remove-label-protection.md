@@ -1,5 +1,5 @@
 ---
-title: Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien und E-Mails | Azure Information Protection
+title: Entfernen von Azure Information Protection-Bezeichnungen
 description: "Anweisungen zum Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a720ab08596964ed04fdc800ce55f3932a7cc0f
-ms.openlocfilehash: fc401131a11426a17be4417d049199fb1c1a8f68
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: af6f57c265509f383dfe1354e5d1256665fc155b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -74,8 +75,3 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

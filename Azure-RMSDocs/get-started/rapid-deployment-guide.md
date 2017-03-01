@@ -1,5 +1,5 @@
 ---
-title: "Handbuch für die Schnellbereitstellung von Azure Rights Management | Azure Information Protection"
+title: "Handbuch für die schnelle Bereitstellung von Azure RMS – AIP"
 description: "Ein Leitfaden, der Sie bei der schnelleren Bereitstellung und Verwendung des Azure Rights Management-Diensts zum Schutz der Daten Ihrer Organisation unterstützt. Treffen Sie zuerst eine Auswahl aus einer Liste mit spezifischen Szenarios für die Implementierung."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2e50dc9d53550f35f5c589cdb1b384e0abf585e0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -147,9 +148,4 @@ Zu den wichtigsten Vermögenswerten des Unternehmens zählen die Daten, die wir 
 Die neu implementierten Lösungen helfen uns dabei, unsere wertvollen Daten zu schützen. Mit den bereitgestellten Tools behalten Sie die Kontrolle über die Daten. Vielen Dank für Ihre Unterstützung bei der Einführung dieser Änderungen.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

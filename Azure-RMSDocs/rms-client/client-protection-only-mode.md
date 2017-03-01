@@ -1,5 +1,5 @@
 ---
-title: "Reiner Schutzmodus für den Azure Information Protection-Client"
+title: "Reiner Schutzmodus für Azure Information Protection"
 description: "Informationen für Benutzer, die den Azure Information Protection-Client im reinen Schutzmodus ausführen."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bc81b8587e999e6cbb036942e1c5d37e1e2b319b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -50,9 +51,4 @@ Wenn Sie den Azure Information Protection-Client ohne Azure Information Protecti
 - Greifen Sie über Ihre Office-Apps auf die Website zum Nachverfolgen von Dokumenten zu. Sie müssen jedoch über ein gültiges Abonnement zum Nachverfolgen und Widerrufen von Dokumenten für diese Website verfügen.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

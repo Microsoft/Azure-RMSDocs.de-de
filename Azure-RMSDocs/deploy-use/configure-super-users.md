@@ -1,5 +1,5 @@
 ---
-title: "Konfigurieren von Administratoren für die Dienste Azure Rights Management und Discovery oder die Datenwiederherstellung | Azure Information Protection"
+title: "Konfigurieren von Administratoren für Azure Rights Management – AIP"
 description: "Lernen Sie die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,10 +72,5 @@ Weitere Informationen zu diesen Cmdlets finden Sie unter [Verwenden von PowerShe
 > Das AIP-Modul ersetzt das PowerShell-Modul „RMS Protection“, das mit dem RMS Protection Tool installiert wurde. Beide Module unterscheiden sich vom [Windows PowerShell-Modul für Azure Rights Management](administer-powershell.md) und ergänzen es. Das AIP-Modul unterstützt Azure Information Protection, den Azure Rights Management-Dienst (Azure RMS) für Azure Information Protection und auch Active Directory Rights Management Services (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Azure Information Protection-Client &colon; Installation und Konfiguration für Clients | Azure Information Protection"
+title: Azure Information Protection-Client &colon; Installieren und Konfigurieren
 description: "Informationen für Administratoren zum Bereitstellen des Azure Information Protection-Clients auf Windows-Computern und mobilen Geräten."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 25a018cb8a94179b5eb5748efabe18a8c26c7554
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 39d2fb244be91d7fc655efbdda24e4e268ac1329
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -43,10 +44,5 @@ Wenn Sie den Azure Information Protection-Client für diese gängigen mobilen Pl
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection | Azure Information Protection"
+title: "Dokumentenverfolgung für Azure Information Protection"
 description: "Anweisungen und Informationen für Administratoren zum Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 569c60d502ddcf3169ec0955a76312a50451ec72
-ms.openlocfilehash: a50a358f6552eb4ddd4cde982f2aa01504c1d555
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: aa3b80b7369348f87adc440d6f7a91977aa0fc7c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -85,9 +86,4 @@ Nachdem Sie die Website für die Dokumentenverfolgung für den Azure Information
 - [PowerShell-Befehle](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

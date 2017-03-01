@@ -1,10 +1,10 @@
 ---
-title: Herunterladen und Installieren des Azure Information Protection-Clients | Azure Information Protection
+title: Herunterladen und Installieren des Azure Information Protection-Clients
 description: "Anweisungen für Benutzer zum Installieren des Azure Information Protection-Clients für Windows, damit Sie Ihre Dokumente und E-Mails klassifizieren und schützen können."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 633f3dfe12828a21943bb5faf6ad9f69b98fc70b
-ms.openlocfilehash: 303ca72fa8753e417b4a06b4cad475559295eb2a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,19 +32,22 @@ Zusätzlich:
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>So laden Sie den Azure Information Protection-Client herunter und installieren ihn    
 
-1.  Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).    
-2. Klicken Sie auf das Windows-Symbol für den **Azure Information Protection-Client**, und speichern Sie die Datei **AzInfoProtection.exe**, um den Azure Information Protection-Client zu installieren.     
+1.  Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
 
-2. Doppelklicken Sie auf die ausführbare Datei, die heruntergeladen wurde. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
+    Diese Seite enthält Links für alle gängigen möglicherweise verwendeten Geräte, sodass Sie bei Bedarf problemlos eine Viewer-Anwendung herunterladen können, um geschützte Dateien zu öffnen. Wir werden allerdings den vollständigen Client installieren, mit dem Sie Dateien mit Bezeichnungen versehen und schützen können. 
 
-3. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
+2. Suchen Sie den Abschnitt **Azure Information Protection-Client**, und klicken Sie auf das Windows-Symbol. Klicken Sie auf **Herunterladen**, und speichern Sie die Datei **AzInfoProtection.exe**.     
+
+3. Führen Sie die EXE-Datei aus, die heruntergeladen wurde. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
+
+4. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
     - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.    
 
     - Klicken Sie auf **Ich stimme zu**, wenn Sie die Lizenzbedingungen gelesen haben.    
 
-4. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.    
+5. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.    
 
-3. Klicken Sie auf **Schließen**. Bevor Sie den Azure Information Protection-Client verwenden:    
+6. Klicken Sie auf **Schließen**. Bevor Sie den Azure Information Protection-Client verwenden:    
 
     - Wenn Ihr Computer mit Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie mit dem letzten Schritt im nächsten Abschnitt fort.    
         
@@ -69,9 +73,4 @@ Weitere Informationen finden Sie im Administratorhandbuch unter [Installieren de
  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

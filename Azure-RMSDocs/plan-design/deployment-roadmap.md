@@ -1,5 +1,5 @@
 ---
-title: "Roadmap für die Bereitstellung von Azure Information Protection | Azure Information Protection"
+title: "Roadmap für die Bereitstellung von Azure Information Protection"
 description: "Führen Sie diese Schritte aus, um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 617ce3204296a4f9a7affc2750684871d60be65e
-ms.openlocfilehash: d2888a1612e1c3521773deae7b49049c702137b4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4128188d0fba56a5b61fe16a6f0128ec2dc24c4a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -97,7 +98,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 1. Aktualisieren Ihrer Azure Information Protection-Richtlinie für den Schutz von Daten
     
-    Ändern Sie Ihre Azure Information Protection-Richtlinie so, dass eine oder mehrere Bezeichnungen den Rights Management-Schutz anwenden. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](../deploy-use/configure-policy-protection.md).
+    Ändern Sie Ihre Azure Information Protection-Richtlinie so, dass eine oder mehrere Bezeichnungen den Rights Management-Schutz anwenden. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](../deploy-use/configure-policy-protection.md).
     
     Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM konfiguriert ist. Diese zusätzliche Konfiguration ist in Schritt 3 für Exchange Online und in Schritt 6 für lokales Exchange enthalten. 
 
@@ -191,9 +192,4 @@ Wenn Sie sich für den automatischen Schutz von Dateien mithilfe der Dateiklassi
 Wenn Sie mit der Verwendung des Azure Rights Management-Diensts beginnen, kann Windows PowerShell nützlich sein, um administrative Änderungen skriptgesteuert oder automatisiert durchzuführen. Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](../deploy-use/administer-powershell.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

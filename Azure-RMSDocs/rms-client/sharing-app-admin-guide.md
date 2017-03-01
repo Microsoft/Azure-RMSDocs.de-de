@@ -1,5 +1,5 @@
 ---
-title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure Information Protection"
+title: "Administratorhandbuch der RMS-Freigabeanwendung – AIP"
 description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 156474cce6bb9026d56d65eff5acc5ce4ae7edf6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -269,7 +270,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
-        @="&lt;Zertifizierungs-URL&gt;
+        @="&lt;certification url&gt;"
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
@@ -407,9 +408,4 @@ Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglic
 Weitere technische Informationen einschließlich einer Erläuterung des Unterschieds zwischen den Schutzebenen (systemeigene und generische), der unterstützten Dateitypen und Dateinameerweiterungen und einer Anleitung zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

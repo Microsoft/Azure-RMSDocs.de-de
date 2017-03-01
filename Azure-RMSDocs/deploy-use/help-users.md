@@ -1,5 +1,5 @@
 ---
-title: "Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst | Azure Information Protection"
+title: "Unterstützen von Benutzern beim Schützen von Dateien mithilfe von Azure RMS – AIP"
 description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -109,10 +110,5 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 Ähnlich wie beim Anzeigen eines geschützten Dokuments, werden die Empfänger der E-Mail bei deren Empfang zuerst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Wenn Sie beispielsweise **Nicht allen antworten**ausgewählt haben, ist die Option **ALLEN ANTWORTEN** im Nachrichtenfenster nicht verfügbar.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Rights Management-Freigabeanwendung – Benutzerhandbuch | Azure Information Protection"
+title: "Benutzerhandbuch der RMS-Freigabeanwendung – AIP"
 description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 1acc6563f8b5da498cb58db46a93160a1fa94022
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -68,10 +69,5 @@ Hier einige Beispiele für die mögliche Nutzung der RMS-Freigabeanwendung zum S
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

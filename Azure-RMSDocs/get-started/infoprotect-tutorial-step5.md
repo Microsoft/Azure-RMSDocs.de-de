@@ -1,5 +1,5 @@
 ---
-title: Schnellstarttutorial Schritt 5 | Azure Information Protection
+title: "Schnellstart-Tutorial Schritt 5 – AIP"
 description: "Schritt 5 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
 keywords: 
 author: cabailey
@@ -14,8 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 7d8efb8d590e75979c98f14951f2cda389e58c4c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 351ba4f71ac36194494ed315466522120a61692c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -129,8 +130,3 @@ Geben Sie weitere Dokumente frei, und verfolgen Sie deren Verwendung. Testen Sie
 Es empfiehlt sich zudem, einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) sein. 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-
