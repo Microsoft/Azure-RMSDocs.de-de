@@ -46,6 +46,7 @@
 ##### [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md)
 #### [Vorgehensweise: Hinzufügen expliziter Besitzerrechte](add-explicit-owner-rights.md)
 #### [Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung](debugging-applications-that-use-ad-rms.md)
+#### [Vorgehensweise: Bereitstellen einer App](how-to-deploy-app.md)
 #### [Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf](tracking-content.md)
 #### [Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen](how-to-enable-email-notification.md)
 #### [Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
@@ -65,8 +66,3 @@
 #### [Structures (Strukturen)](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [Error Codes (Fehlercodes)](https://msdn.microsoft.com/library/hh535248.aspx)
 ## [Geschäftsbedingungen](terms.md) 
-
-
-<!--HONumber=Jan17_HO4-->
-
-
