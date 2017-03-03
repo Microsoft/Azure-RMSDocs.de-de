@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einer Version des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fec4ca2541b28fd9d91286fceaee0466fc445364
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
+ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -77,7 +77,7 @@ Diese Clientversion ist die [allgemein verfügbare Version](https://blogs.techne
 
 - Diagnosetests und eine Option zum Zurücksetzen, die ein Benutzer in einer Office-Anwendung ausführen kann, wenn der Azure Information Protection-Client installiert ist: Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**, dann auf **Hilfe und Feedback** und schließlich auf **Diagnose ausführen**. 
 
-    Weitere Informationen zu dieser Option finden Sie im Abschnitt [Überprüfen der Installation, des Verbindungsstatus oder Senden von Feedback](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) der Dokumentation zur Clientinstallation.
+    Weitere Informationen zu dieser Option finden Sie im Abschnitt [Überprüfen der Installation, des Verbindungsstatus oder Senden von Feedback](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) der Dokumentation zur Clientinstallation.
 
 ## <a name="version-11230"></a>Version 1.1.23.0
 
