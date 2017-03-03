@@ -16,6 +16,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
 ms.openlocfilehash: 85cd61e564b066458618c02b4ac20cddf6b7e183
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -51,8 +52,3 @@ Diese Sammlung von durch Microsoft bereitgestellten RMS-Codebeispielen und Entwi
 | [Szenarien für die Verwendung von Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) und höheren Versionen des 4.x-SDK|**Java-Codebeispiele** stellen wichtige Entwicklungsszenarien dar, um Sie mit dem RMS SDK vertraut zu machen. Beispiele umfassen die Verwendung des MPF-Formats (Microsoft Protected File), benutzerdefinierte Dateiformate sowie benutzerdefinierte Steuerelemente der Benutzeroberfläche.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

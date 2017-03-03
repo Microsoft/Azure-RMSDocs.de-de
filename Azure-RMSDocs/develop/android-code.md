@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
 ms.openlocfilehash: 847d19feaea442da66296565f0ffb5b0663ad170
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -525,8 +526,3 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
         }
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
