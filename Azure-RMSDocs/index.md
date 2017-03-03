@@ -3,6 +3,7 @@ layout: LandingPage
 translationtype: Human Translation
 ms.sourcegitcommit: 04f88ca8040efb6f189691ffc5b45c024693aa55
 ms.openlocfilehash: 713d2484288d1297fd72f976e0dbf000eba7f018
+ms.lasthandoff: 02/10/2017
 
 ---
 # <a name="azure-information-protection-documentation"></a>Azure Information Protection-Dokumentation
@@ -152,8 +153,3 @@ Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steu
         </div>
     </li>  
 </ul>
-
-
-<!--HONumber=Feb17_HO2-->
-
-
