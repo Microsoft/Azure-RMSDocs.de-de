@@ -37,8 +37,3 @@
 ##### [Verwenden von Tastenkombinationen](sharing-app-keyboard-shortcuts.md)
 ##### [Dialogfeldoptionen](sharing-app-dialog-box.md)
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-
