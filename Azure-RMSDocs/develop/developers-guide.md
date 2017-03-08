@@ -4,7 +4,7 @@ description: "Entwickler können mithilfe von Azure Information Protection Datei
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb4f9bf0c38e25045fcd1a01deaa993bc862c8
-ms.openlocfilehash: 7f3c9f95ea86655d04e385eee7fd9c8cc0096ce9
+ms.sourcegitcommit: 9a8b37f8e4e6d3a22c5ae4b43ffb82bfd0482037
+ms.openlocfilehash: ee257e733177077caaf3cf3b579a1b3718479121
+ms.lasthandoff: 02/10/2017
 
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
@@ -35,7 +36,7 @@ Dienstanwendungen bieten Funktionen zum Schutz von Informationen beim Exportiere
 - [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist eine RMS-fähige DLP-Anwendung (Data Leak Protection), die Sie durch die grundlegenden Schritte führt, die jede RMS-fähige DLP-Anwendung mithilfe der RMS-Datei-API zum Schutz und zur Nutzung eingeschränkter Inhalte ausführen sollte.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist ein Beispiel für die Verwendung des RMS SDK in Azure-Anwendungen, um Daten im Azure Blob-Speicher zu schützen.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) ist ein Beispiel, das veranschaulicht, wie eine Windows-Anwendung erstellt wird, die Verzeichnisse im Dateisystem überwacht, und RMS-Schutzrichtlinien bei jeder Änderung anwendet, z. B. beim Hinzufügen oder Ändern einer Datei.
-- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) ist ein Beispiel für eine einfache Konsolenanwendung, die ein Verzeichnis als Eingabe verwendet und ohne Rekursion ausschließlich alle Dateien in diesem Verzeichnis schützt.
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) ist ein Beispiel für eine einfache Konsolenanwendung, die ein Verzeichnis als Eingabe verwendet und ohne Rekursion ausschließlich alle Dateien in diesem Verzeichnis schützt.
 
 ## <a name="powershell-guides"></a>PowerShell-Anleitungen
 
@@ -65,7 +66,12 @@ Die Version 4.2 basiert auf dem REST-Client mit betriebssystemspezifischen APIs 
 
 Die folgenden Anleitungen führen Sie durch betriebssystemspezifische Einrichtungsschritte für eine Anwendungsentwicklungsumgebung mithilfe häufig verwendeter Tools.
 
-|[![iOS/OSX-Setup](../media/develop/ios-icon.png)](ios-sdk.md) | [![Android-Setup](../media/develop/android-icon.png)](android-sdk.md) | [![Windows Phone-Setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![Windows Service-Setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![Linux-Setup](../media/develop/linux-icon.png)](linux-setup.md) |
+[![iOS/OSX-Setup](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Android-Setup](../media/develop/android-icon.png)](android-sdk.md)
+[![Windows Phone-Setup](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Windows Service-Setup](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Linux-Setup](../media/develop/linux-icon.png)](linux-setup.md)
+
 
 ## <a name="how-tos"></a>Vorgehensweisen
 
@@ -74,8 +80,10 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 ### <a name="general"></a>Allgemein
 
 - [Aktivieren von Dokumentenverfolgung und -widerruf (Dienst)](tracking-content.md)
+- [So stellen Sie Ihren Client bereit](../rms-client/client-deployment-notes.md)
 - [Installieren und Konfigurieren eines RMS-Servers (Dienst)](how-to-install-and-configure-an-rms-server.md)
 - [Verwenden der Dokumentenverfolgung (Benutzer)](how-to-use-document-tracking.md)
+
 
 ### <a name="security-and-authentication"></a>Sicherheit und Authentifizierung
 
@@ -135,8 +143,3 @@ Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
 - [Terminologie zu Azure Information Protection – ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
