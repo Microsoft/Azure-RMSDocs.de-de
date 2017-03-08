@@ -1,19 +1,19 @@
 ---
 title: "Schnellstart-Tutorial Schritt 2 – AIP"
-description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
+description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Konfigurieren der Richtlinie"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -63,13 +63,13 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
 
 2. Suchen Sie auf dem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) den Abschnitt **Set permissions for documents and emails containing this label** (Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen).
 
-    Wählen Sie die Option **Schutz** aus:
+    Wählen Sie **Schützen** und dann die Option **Schutz** aus:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar.png) 
     
-    Daraufhin öffnet sich das Blatt **Berechtigungen**.
+    Daraufhin öffnet sich das Blatt **Schutz**.
     
-3. Vergewissern Sie sich, dass im Blatt **Berechtigungen** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage ** \<Name Ihrer Organisation> – Vertraulich** aus.     
+3. Vergewissern Sie sich, dass im Blatt **Schutz** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage ** \<Name Ihrer Organisation> – Vertraulich** aus.     
     
     Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
     
@@ -77,7 +77,7 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
     
     Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
     
-4. Klicken Sie auf **Fertig**, um Ihre Änderungen zu speichern, und schließen Sie das Blatt **Berechtigungen**.
+4. Klicken Sie auf **OK**, um die Änderungen zu speichern und das Blatt **Schutz** zu schließen.
 
 5. Sie kehren zum Blatt **Bezeichnung: Vertraulich** zurück. Suchen Sie dort den Abschnitt **Optische Kennzeichnung festlegen **:
     

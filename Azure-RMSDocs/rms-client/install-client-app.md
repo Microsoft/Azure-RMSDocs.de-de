@@ -4,7 +4,7 @@ description: "Anweisungen für Benutzer zum Installieren des Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/17/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
+ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
 ms.lasthandoff: 02/24/2017
 
 
@@ -22,9 +22,9 @@ ms.lasthandoff: 02/24/2017
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Herunterladen und Installieren des Azure Information Protection-Clients
 
-Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren. 
+Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Zusätzlich:
+Beachten Sie auch Folgendes:
 
 - Der Azure Information Protection-Client erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 
@@ -34,7 +34,7 @@ Zusätzlich:
 
 1.  Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
 
-    Diese Seite enthält Links für alle gängigen möglicherweise verwendeten Geräte, sodass Sie bei Bedarf problemlos eine Viewer-Anwendung herunterladen können, um geschützte Dateien zu öffnen. Wir werden allerdings den vollständigen Client installieren, mit dem Sie Dateien mit Bezeichnungen versehen und schützen können. 
+    Diese Seite enthält Links für alle gängigen möglicherweise verwendeten Geräte, sodass Sie bei Bedarf problemlos eine Viewer-Anwendung herunterladen können, um geschützte Dateien zu öffnen. Wenn Sie kein lokaler Administrator für Ihren PC sind, können Sie immer noch die Viewer-App für Windows installieren. Diese Anweisungen installieren allerdings den vollständigen Client, mit dem Sie Dateien mit Bezeichnungen versehen und schützen können. 
 
 2. Suchen Sie den Abschnitt **Azure Information Protection-Client**, und klicken Sie auf das Windows-Symbol. Klicken Sie auf **Herunterladen**, und speichern Sie die Datei **AzInfoProtection.exe**.     
 

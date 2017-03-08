@@ -4,7 +4,7 @@ description: "Lernen Sie die Administratorfunktion des Azure Rights Management-D
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 07236a2820e4d8d4d594eda755cb025d21b96d12
+ms.openlocfilehash: 591ca9ba080da9565e0143d887e3db179b810862
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -38,7 +38,9 @@ Die Administratorfunktion des Azure Rights Management-Diensts aus Azure Informat
 
 Standardmäßig ist die Administratorfunktion nicht aktiviert, und dieser Rolle sind keine Benutzer zugeordnet. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
 
-Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das Windows PowerShell-Cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), und ordnen Sie dann mithilfe des Cmdlets [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) nach Bedarf Benutzer (oder Dienstkonten) zu, oder verwenden Sie das Cmdlet [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx), und fügen Sie dieser Gruppe die entsprechenden Benutzer (oder anderen Gruppen) hinzu. 
+Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature), und ordnen Sie dann mithilfe des Cmdlets [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) nach Bedarf Benutzer (oder Dienstkonten) zu, oder verwenden Sie das Cmdlet [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup), und fügen Sie dieser Gruppe die entsprechenden Benutzer (oder andere Gruppen) hinzu. 
+
+Obwohl das Verwenden einer Gruppe für Ihren Administrator einfacher zu verwalten ist, seien Sie sich bewusst, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). Wenn Sie also einen neuen Benutzer als Administrator bestimmen müssen, um Inhalt sofort zu entschlüsseln, fügen Sie diesen Benutzer hinzu, indem Sie Add-AadrmSuperUser benutzen, statt diesen Benutzer einer vorhandenen Gruppe zuzuordnen, die Sie mithilfe von Set-AadrmSuperUserGroup konfiguriert haben.
 
 > [!NOTE]
 > Wenn Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] noch nicht installiert haben, lesen Sie [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).

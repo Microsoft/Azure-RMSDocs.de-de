@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b6a8477078a333aa23ccfe5904af3582216a1e96
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: b0ddf66acf0db37d0396647a5518ccf48195019c
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -79,7 +79,7 @@ Zusätzlich:
 
 - Wenn der Azure Information Protection-Viewer separat installiert wird, ist Microsoft .NET Framework 4.5.2 oder höher erforderlich. Wenn diese Version fehlt, wird sie vom Installationsprogramm nicht heruntergeladen oder installiert.
 
-- Das PowerShell-Modul erfordert Windows PowerShell, Version 4.0. Dieses muss auf älteren Betriebssystemen ggf. installiert werden. Weitere Informationen finden Sie unter [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Installieren von Windows PowerShell 4.0). Zum Überprüfen, welche Version von Windows PowerShell auf dem Computer ausgeführt wird, geben Sie **$PSVersionTable** in einer PowerShell-Sitzung ein.
+- Das PowerShell-Modul erfordert Windows PowerShell, Version 4.0. Dieses muss auf älteren Betriebssystemen ggf. installiert werden. Weitere Informationen finden Sie unter [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Installieren von Windows PowerShell 4.0). Das Installationsprogramm überprüft oder installiert diese erforderlichen Komponenten nicht für Sie. Zum Überprüfen, welche Version von Windows PowerShell auf dem Computer ausgeführt wird, geben Sie **$PSVersionTable** in einer PowerShell-Sitzung ein.
 
 - Computer unter Windows 7 Service Pack 1 benötigen [KB 2533623](https://support.microsoft.com/en-us/kb/2533623). Diese Option kann nach der Installation des Clients installiert werden. Wenn dieses Update erforderlich, aber noch nicht installiert ist, werden Sie zur Installation aufgefordert.
 
@@ -108,9 +108,11 @@ Zusätzlich zur Verwendung der folgenden Anweisungen ist der Azure Information P
     
     - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. 
         
-5. Sie können anhand der Installationsprotokolldatei im Ordner „%temp%“ überprüfen, ob die Installation erfolgreich war. Der Name der Datei weist das folgende Format auf: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. Beispiel: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+5. Sie können anhand der Installationsprotokolldatei im Ordner „%temp%“ überprüfen, ob die Installation erfolgreich war. Der Name der Datei weist das folgende Format auf: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`.
     
-    Suchen Sie in dieser Protokolldatei nach der folgenden Zeichenfolge: **Product: Microsoft Azure Information Protection -- Installation completed successfully** (Produkt: Microsoft Azure Information Protection – Installation erfolgreich abgeschlossen).
+    Beispiel: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    Suchen Sie in dieser Protokolldatei nach der folgenden Zeichenfolge: **Product: Microsoft Azure Information Protection -- Installation completed successfully** (Produkt: Microsoft Azure Information Protection – Installation erfolgreich abgeschlossen). Wenn Fehler bei der Installation auftreten, enthält diese Protokolldatei Informationen, anhand derer Sie Probleme erkennen und diese beheben können.
 
 ### <a name="additional-instructions-for-office-2010-only"></a>Zusätzliche Anweisungen für Office 2010
 
@@ -154,7 +156,7 @@ Sie können jede beliebige Option verwenden:
 - Führen Sie die ausführbare Datei mit **/uninstall** aus. Beispiel: `AzInfoProtection.exe /uninstall`
 
 
-## <a name="to-verify-installation-connection-status-or-send-feedback"></a>So überprüfen Sie die Installation und den Verbindungsstatus oder senden Feedback
+## <a name="additional-checks-to-verify-installation-connection-status-or-send-feedback"></a>Zusätzliche Überprüfungen zum Prüfen der Installation und des Verbindungsstatus oder zum Senden von Feedback
 
 1. Öffnen Sie eine Office-Anwendung, und klicken Sie auf der Registerkarte **Start** in der Gruppe **Protection** (Schutz) auf **Protect** (Schützen) und anschließend auf **Help and feedback** (Hilfe und Feedback).
 

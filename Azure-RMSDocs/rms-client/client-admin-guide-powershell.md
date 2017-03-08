@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 865a30bb85c1e9e2f8331ae3a85960e005de5b07
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -36,6 +36,7 @@ Das Modul „AzureInformationProtection“ umfasst alle Rights Management-Cmdlet
 |[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|Für einen freigegebenen Ordner werden alle Dateien mit einer bestimmten Bezeichnung ermittelt.|
 |[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|Für einen freigegebenen Ordner wird eine bestimmte Bezeichnung auf alle Dateien ohne Bezeichnung angewendet.|
 
+Eine Übersicht über alle Cmdlets und die entsprechende Hilfe finden Sie unter [AzureInformationProtection-Modul](/powershell/azureinformationprotection/vlatest/aip).
 
 Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Protection** und fügt diesen Ordner der Systemvariablen **PSModulePath** hinzu. Die DLL-Datei für dieses Modul lautet **AIP.dll**.
 

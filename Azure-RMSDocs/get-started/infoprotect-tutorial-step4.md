@@ -1,19 +1,19 @@
 ---
 title: "Schnellstart-Tutorial Schritt 4 – AIP"
-description: "Schritt 3 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
+description: "Schritt 4 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Bezeichnung und Schutz in Aktion."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 57a46c7afe34717dd4335b0f9a19bd539821fc72
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -28,15 +28,33 @@ Die Klassifizierung und der Schutz treten in Kraft, wenn Sie das Dokument speich
 
 ## <a name="to-manually-change-our-default-label"></a>So ändern Sie die Standardbezeichnung manuell
 
-Wählen Sie auf der Information Protection-Leiste die Bezeichnung **Persönlich** aus. Daraufhin werden Sie aufgefordert, die Herabsenkung der Klassifizierungsstufe zu begründen:
+Wählen Sie auf der Leiste „Information Protection“ die Bezeichnung **Geheim** aus, und Sie sehen, wie untergeordnete Bezeichnungen dargestellt werden:
+
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Auswählen einer untergeordneten Bezeichnung](../media/info-protect-sub-labels.png)
+
+Wählen Sie **All Company** (Gesamtes Unternehmen) aus, und Sie sehen, wie die anderen Bezeichnungen nicht länger auf der Leiste angezeigt werden, sobald Sie eine Bezeichnung für diese Dokument ausgewählt haben. Der Wert **Sensitivity** (Vertraulichkeit) ändert sich in **Secret \ All Company** (Geheim \ Gesamtes Unternehmen) mit einer entsprechenden Änderung der Farbe der Bezeichnung:
+
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – ausgewählte untergeordnete Bezeichnung](../media/info-protect-sub-label-selected.png)
+
+Klicken Sie auf der Information Protection-Leiste auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Secret \ All Company** (Geheim \ Gesamtes Unternehmen):
+
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Symbol „Bezeichnung bearbeiten“](../media/info-protect-edit-label-selected.png)
+
+Dadurch werden die verfügbaren Bezeichnungen erneut angezeigt.
+
+Wählen Sie jetzt die Bezeichnung **Persönlich** aus. Da Sie eine Bezeichnung ausgewählt haben, die eine niedrigere Klassifizierung als die ausgewählte Bezeichnung für dieses Dokument darstellt, werden Sie aufgefordert, zu begründen, warum Sie die Klassifizierungsebene senken:
 
 ![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Bestätigungsaufforderung bei Reduzierung](../media/info-protect-lower-justification.png)
 
-Wählen Sie **The previous label no longer applies** (Vorherige Bezeichnung gilt nicht mehr) aus, und klicken Sie auf **Bestätigen**. Der Wert **Sensitivity** (Vertraulichkeit) wird zu **Personal** (Privat) geändert.
+Wählen Sie **The previous label no longer applies** (Vorherige Bezeichnung gilt nicht mehr) aus, und klicken Sie auf **Bestätigen**. Der Wert **Sensitivity** (Vertraulichkeit) ändert sich in **Persönlich**, und die anderen Bezeichnungen werden wieder ausgeblendet.
 
 ## <a name="to-remove-the-classification-completely"></a>So entfernen Sie die Klassifizierung vollständig
 
-Klicken Sie auf der Information Protection-Leiste auf das Symbol **Edit label** (Bezeichnung bearbeiten) neben **Personal** (Privat). Dadurch werden die verfügbaren Bezeichnungen angezeigt. Klicken Sie dieses mal auf das Symbol **Delete label** (Bezeichnung löschen), anstatt eine der Bezeichnungen auszuwählen. Geben Sie dieses Mal „Dieses Dokument erfordert keine Klassifizierung“ ein, und klicken Sie dann auf **Confirm** (Bestätigen).  
+Klicken Sie auf der Information Protection-Leiste erneut auf das Symbol **Edit label** (Bezeichnung bearbeiten). Klicken Sie auf das Symbol **Delete label** (Bezeichnung löschen), anstatt eine der Bezeichnungen auszuwählen:
+
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Symbol „Löschen“](../media/delete-icon-from-personal.png)
+
+Geben Sie dieses Mal „Dieses Dokument erfordert keine Klassifizierung“ ein, wenn Sie dazu aufgefordert werden, und klicken Sie dann auf **Confirm** (Bestätigen).  
 
 Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen Benutzer zunächst, wenn Sie keine Standardbezeichnung festlegen:
 

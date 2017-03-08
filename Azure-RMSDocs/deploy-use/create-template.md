@@ -4,7 +4,7 @@ description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
 ms.lasthandoff: 02/24/2017
 
 
@@ -81,7 +81,9 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
     > [!NOTE]
     > Die von Ihnen ausgewählten Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung ist dies praktisch immer der Fall, aber in einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder Gruppen E-Mail-Adressen hinzufügen.
 
-    Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie Active Directory lokal haben und Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen verwenden, die entweder Sicherheits- oder Verteilergruppen sind. Wenn Sie jedoch allen Benutzern in der Organisation Rechte erteilen möchten, ist es effizienter, eine der Standardvorlagen zu kopieren, anstatt mehrere Gruppen anzugeben. Weitere Informationen finden Sie unter [Kopieren einer Vorlage](copy-template.md).
+    Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie jedoch Änderungen an der Gruppe durchführen, denken Sie daran, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). 
+    
+    Wenn Sie Active Directory lokal haben und Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen verwenden, die entweder Sicherheits- oder Verteilergruppen sind. Um allen Benutzern in der Organisation Rechte zu erteilen, ist es effizienter, eine der Standardvorlagen zu kopieren, anstatt mehrere Gruppen anzugeben. Weitere Informationen finden Sie unter [Kopieren einer Vorlage](copy-template.md).
 
     > [!TIP]
     > Sie können Ihrer Vorlage Benutzer von außerhalb Ihrer Organisation („externe Benutzer“) hinzufügen, indem Sie eine E-Mail-aktivierte Gruppe auswählen, die Kontakte aus Office 365 oder Exchange Online enthält. Dadurch können Sie diesen Benutzern genau wie Benutzern in Ihrer Organisation Rechte zuweisen. Beispielsweise können Sie verhindern, dass Kunden eine von Ihnen gesendete Preisliste bearbeiten. Verwenden Sie diese Vorlagenkonfiguration nicht zum Schutz von E-Mails, wenn Benutzer von außerhalb Ihrer Organisation die geschützten E-Mails mit Outlook Web App lesen.

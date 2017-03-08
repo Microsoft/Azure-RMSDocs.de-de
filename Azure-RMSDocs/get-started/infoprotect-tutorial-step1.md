@@ -1,19 +1,19 @@
 ---
 title: "Schnellstart-Tutorial Schritt 1 – AIP"
-description: "Schritt 1 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können."
+description: "Schritt 1 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Aktivieren des Rights Management-Diensts."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 7046a82d83c7bf3197dc2e7cea51f4af0be03a56
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: aa1808503e92d0afeb7c0f3f7f9da446d2f13b51
+ms.lasthandoff: 03/01/2017
 
 
 ---

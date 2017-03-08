@@ -4,7 +4,7 @@ description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Admi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -43,6 +43,8 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
 -   **Helpdesk-Informationen:**
 
     Eines der nützlichsten Helpdesktools ist der [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Helpdesk-Operatoren können das Tool mit der Azure RMS-Administratoroption ausführen und Benutzer dazu auffordern, es mit der Azure RMS-Benutzeroption auszuführen. Dieses Tool unterstützt Sie nicht nur bei der Fehlersuche, sondern behebt gefundene Probleme und zeichnet, sofern der Fehler nicht behoben werden konnte, Ablaufverfolgungsprotokolle auf.
+    
+    Wenn Benutzer den Azure Information Protection-Client ausführen, können Helpdesk-Operatoren sie auffordern, die Option **Hilfe und Feedback**, **Ausführen von Diagnosen** zu verwenden und danach den Client zurückzusetzen. Im Gegensatz zu RMS Analyzer loggt die Zurücksetzung jedoch den Benutzer nicht aus und führt auch keinen erneuten Bootstrap auf dem Client aus. Zusätzlich wird keine automatische Wartung durchgeführt.
 
     Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung des Azure Rights Management-[Administratorfeatures](configure-super-users.md) angefordert werden kann.
 

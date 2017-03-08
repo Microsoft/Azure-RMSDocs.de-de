@@ -13,9 +13,9 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f2413580bf76f0b9b6fa52d8be381c44f9c985fe
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dccc643ae49521262d5327b4d3d98801f88b3894
+ms.openlocfilehash: ed200df12b3d0665920091c7772ed88a79143e70
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -48,12 +48,6 @@ Weitere Informationen zu BYOK und dazu, ob Sie diese Schlüsseltopologie für Ih
 Für diese Ausnahmen (in der Regel weniger als 10 % des gesamten Inhalts, der geschützt werden muss), können Organisationen den Schlüssel mit einer lokalen Lösung (Active Directory Rights Management Services) erstellen und lokal speichern. Mit dieser Lösung erhalten Computer die Azure Information Protection-Richtlinie aus der Cloud, aber dieser spezielle Inhalt kann mit dem lokalen Schlüssel geschützt werden.
 
 Weitere Informationen zu HYOK und zum Verständnis der dafür geltenden Einschränkungen sowie Hinweise dazu, wann Sie HYOK verwenden sollten, finden Sie unter [Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz](../deploy-use/configure-adrms-restrictions.md).
-
-
-## <a name="can-i-integrate-the-azure-rights-management-service-with-my-on-premises-servers"></a>Kann ich den Azure Rights Management-Dienst auf lokalen Servern integrieren?
-Ja. Azure Rights Management kann in lokale Server, etwa Exchange Server, SharePoint und Windows-Dateiserver, integriert werden. Dazu verwenden Sie den [Rights Management-Connector](../deploy-use/deploy-rms-connector.md). Wenn Sie nur an der Nutzung der Dateiklassifizierungsinfrastruktur (FCI, File Classification Infrastructure) mit Windows Server interessiert sind, können Sie auch die [RMS Protection-Cmdlets](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx) verwenden. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
-
-Azure Rights Management generiert und verwaltet XrML-Zertifikate automatisch nach Bedarf und verwendet daher keine lokale PKI. Weitere Informationen zur Verwendung von Zertifikaten in Azure Rights Management finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsnutzung](../understand-explore/how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) des Artikels [Funktionsweise von Azure RMS](../understand-explore/how-does-it-work.md).
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Wo finde ich Informationen zu Drittanbieterlösungen, die in Azure RMS integrierbar sind?
 
@@ -135,7 +129,7 @@ Wenn Sie an einer bestimmten Funktion interessiert sind, die noch nicht unterst�
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Wie konfiguriere ich OneDrive for Business in SharePoint Online, sodass Benutzer ihre Dateien sicher für Personen innerhalb und außerhalb des Unternehmens freigeben können?
 Als Office 365-Administrator konfigurieren Sie dies normalerweise nicht. Eine solche Konfiguration erfolgt durch Benutzer.
 
-Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für eine SharePoint-Bibliothek, deren Besitzer Sie sind. OneDrive for Business ist so konzipiert, dass die Benutzer IRM für ihre eigene OneDrive for Business-Bibliothek aktivieren und konfigurieren.  Mithilfe von PowerShell können Sie das jedoch für sie übernehmen. Anweisungen finden Sie im Abschnitt [SharePoint Online und OneDrive for Business: IRM-Konfiguration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md).
+Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für eine SharePoint-Bibliothek, deren Besitzer Sie sind. OneDrive for Business ist so konzipiert, dass die Benutzer IRM für ihre eigene OneDrive for Business-Bibliothek aktivieren und konfigurieren. Mithilfe von PowerShell können Sie das jedoch für sie übernehmen. Anweisungen finden Sie im Abschnitt [SharePoint Online und OneDrive for Business: IRM-Konfiguration](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Gibt es besondere Tipps und Tricks für eine erfolgreiche Bereitstellung?
 Nachdem wir viele Bereitstellungen begleitet und uns mit Kunden, Partnern, Beratern und Supportmitarbeitern unterhalten haben – ist das einer der größten Tipps, die wir aus unserer Erfahrung weitergeben können: **Entwerfen Sie einfache Rechterichtlinien, und stellen Sie sie entsprechend bereit**.
@@ -143,9 +137,7 @@ Nachdem wir viele Bereitstellungen begleitet und uns mit Kunden, Partnern, Berat
 Da Azure Information Protection sichere Freigaben mit praktisch jeder Person unterstützt, können Sie bei der Reichweite des Schutzes Ihrer Daten Ehrgeiz entwickeln. Seien Sie aber konservativ bei Ihren Rechterichtlinien. Für die meisten Organisationen hat die Vermeidung von Datenlecks durch Anwenden der standardmäßigen Rechterichtlinienvorlage, die den Zugriff auf Personen in der eigenen Organisation einschränkt, die größte geschäftliche Bedeutung. Natürlich können Sie Rechte, wenn nötig, viel kleinteiliger festlegen – etwa indem Sie Personen am Drucken, Bearbeiten usw. hindern. Behandeln Sie die kleinteiligeren Einschränkungen jedoch als Ausnahme für Dokumente, die wirklich hohe Sicherheitsstufen benötigen, und implementieren Sie diese restriktiveren Richtlinien nicht am ersten Tag, sondern gehen Sie eher stufenweise vor.
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Wie erhalten wir erneut Zugriff auf Dateien, die von einem Mitarbeiter geschützt wurden, der die Organisation verlassen hat?
-Verwenden Sie die Administratorfunktion von Azure RMS, über die autorisierte Benutzer volle Besitzerrechte für alle Nutzungslizenzen erhalten, die vom RMS-Mandanten Ihrer Organisation gewährt wurden. Dieselbe Funktion ermöglicht darüber hinaus autorisierten Diensten ggf. die Indizierung und Inspektion von Dateien.
-
-Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](../deploy-use/configure-super-users.md).
+Verwenden Sie die [Administratorfunktion](../deploy-use/configure-super-users.md), über die autorisierte Benutzer volle Benutzerrechte für alle Nutzungslizenzen erhalten, die vom Mandanten Ihrer Organisation gewährt wurden. Dieselbe Funktion ermöglicht darüber hinaus autorisierten Diensten ggf. die Indizierung und Inspektion von Dateien.
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Wenn ich die Sperrung in der Website zur Dokumentnachverfolgung teste, erhalte ich eine Meldung, die angibt, dass Personen für bis zu 30 Tage auf das Dokument zugreifen können. Kann ich diesen Zeitraum konfigurieren?
 

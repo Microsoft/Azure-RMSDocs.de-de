@@ -15,8 +15,9 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
-ms.openlocfilehash: 1c10eb8f7a68138761931d1c8a1715a03b7ff0a9
+ms.sourcegitcommit: 3b56c14d4ec1faf940e8b7d350d2680625cac795
+ms.openlocfilehash: 268d474e11f70961263b1cbbcc5eca926e880416
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -27,6 +28,7 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 - [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md): Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL).
 - [Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte](add-explicit-owner-rights.md): In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung](debugging-applications-that-use-ad-rms.md): In diesem Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
+- [Exemplarische Vorgehensweise: Bereitstellen einer App in einen Mandanten eines Kunden](how-to-deploy-app.md): Zeigt die Schritte zum Bereitstellen einer App aus dessen Entwicklungs-Azure AD-Mandanten zu einem Produktions-Azure AD-Mandanten.
 - [Exemplarische Vorgehensweise: Aktivieren von Dokumentennachverfolgung und -widerruf](tracking-content.md): Dieses Thema bietet grundlegende Anleitungen zum Implementieren der Dokumentennachverfolgung für Inhalte sowie Beispielcode für Metadaten-Aktualisierungen und zum Erstellen einer Schaltfläche **Verwendung nachverfolgen** für Ihre App.
 - [Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen](how-to-enable-email-notification.md): Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird.
 - [Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md): In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert.
@@ -45,8 +47,3 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 * [Übersicht](ad-rms-overview.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
