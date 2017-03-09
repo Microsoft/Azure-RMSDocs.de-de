@@ -1,10 +1,10 @@
 ---
-title: "Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst | Azure Information Protection"
+title: "Konfigurieren benutzerdefinierter Vorlagen für Azure RMS – AIP"
 description: "Informationen und Anweisungen für Administratoren zum Konfigurieren und Verwalten von Vorlagen für Nutzungsrechte. Mit Vorlagen können Benutzer und andere Administratoren ganz einfach Richtlinien auf sensible Dateien anwenden, die den Zugriff auf autorisierte Benutzer beschränken."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -37,7 +38,7 @@ Nachdem Sie den Azure Rights Management-Dienst [aktiviert](activate-service.md) 
 
     -   Bestimmte Berechtigungen: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
 
-Darüber hinaus ermöglicht es die [RMS-Freigabeanwendung](../rms-client/sharing-app-windows.md) Benutzern, eine eigene Gruppe mit Berechtigungen zu definieren. Außerdem können Benutzer für den Outlook-Client sowie für Outlook Web Access die Option [Nicht weiterleiten](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) auswählen.
+Darüber hinaus ermöglicht es der [Azure Information Protection-Client](../rms-client/aip-client.md) den Benutzern, eine eigene Gruppe mit Berechtigungen zu definieren. Außerdem können Benutzer für den Outlook-Client sowie für Outlook Web Access die Option [Nicht weiterleiten](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) auswählen.
 
 Für viele Organisationen sind die Standardvorlagen möglicherweise ausreichend. Wenn Sie aber eigene, benutzerdefinierte Vorlagen für Rechterichtlinien erstellen möchten, können Sie dies tun. Gründe zum Erstellen einer benutzerdefinierten Vorlage umfassen unter anderem die folgenden:
 
@@ -63,10 +64,6 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 
 -   [PowerShell-Referenz für benutzerdefinierte Vorlagen](configure-templates-with-powershell.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

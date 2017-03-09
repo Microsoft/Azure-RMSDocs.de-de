@@ -1,9 +1,10 @@
 ---
-title: "Rights Management-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen | Azure Information Protection"
+title: "RMS-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen – AIP"
 description: "Hier finden Sie Informationen zu Neuheiten oder Änderungen an einer Version der Rights Management-Freigabeanwendung für Windows."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,14 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 811c89ef6922f6939e7a7d13ed707c6ebe6aafd6
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
+# <a name="rights-management-sharing-application-version-release-history"></a>Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -29,7 +31,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 > [!NOTE]
 > Wenn Sie Feedback oder Fragen zur RMS-Freigabeanwendung haben, senden Sie eine E-Mail an [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
 
-## Version 1.0.2217.0
+## <a name="version-1022170"></a>Version 1.0.2217.0
 
 **Veröffentlicht**: 13.7.2016
 
@@ -39,7 +41,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 
 
-## Version 1.0.2191.0
+## <a name="version-1021910"></a>Version 1.0.2191.0
 **Veröffentlicht**: 16.6.2016
 
 **Fixes**:
@@ -53,7 +55,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 - Geringe Anzahl kleinerer Fehler und Verbesserungen an Fehlermeldungen.
 
 
-## Version 1.0.2004.0
+## <a name="version-1020040"></a>Version 1.0.2004.0
 **Veröffentlicht**: 11.12.2015
 
 **Fixes**:
@@ -72,16 +74,16 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
     Für Standardbenutzer, die Office 2010 verwenden, bestehen einige Einschränkungen. Weitere Informationen finden Sie im Abschnitt [Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden](install-sharing-app.md#if-you-are-not-a-local-administrator-and-use-office-2010) der Benutzeranleitung unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
-## Version 1.0.1908.0
+## <a name="version-1019080"></a>Version 1.0.1908.0
 **Veröffentlicht**: 16.09.2015
 
 **Fixes**:
 
 -   Unterstützung für mehrstufige Authentifizierung (MFA) für Azure RMS, wodurch auch die Abhängigkeit vom Microsoft Anmelde-Assistenten für Anwendungen, die eine moderne Authentifizierung verwenden, entfernt wird.
 
-    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) unter [Azure Active Directory-Anforderungen für Azure Information Protection](../get-started/requirements-azure-ad.md).
 
-## Version 1.0.1784.0
+## <a name="version-1017840"></a>Version 1.0.1784.0
 **Veröffentlicht**: 30.07.2015
 
 **Fixes**:
@@ -90,7 +92,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   Kleine Anzahl von Regressionen und kleinere Fehler.
 
-## Version 1.0.1770.0
+## <a name="version-1017700"></a>Version 1.0.1770.0
 **Veröffentlicht**: 25.04.2015
 
 **Fixes**:
@@ -113,7 +115,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
     Weitere Informationen finden Sie unter [Dialogfeldoptionen für die Rights Management-Freigabeanwendung](sharing-app-dialog-box.md).
 
-## Version 1.0.1667.0
+## <a name="version-1016670"></a>Version 1.0.1667.0
 **Veröffentlicht**: 19.01.2015
 
 **Fixes**:
@@ -128,9 +130,5 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

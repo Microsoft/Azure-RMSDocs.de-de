@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Beibehalten der Kontrolle über in SharePoint gespeicherte Dokumente | Azure Information Protection"
+title: "AIP-Szenario – Kontrolle über in SharePoint gespeicherte Dokumente"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, um sicherzustellen, dass in SharePoint gespeicherte Office-Dokumente mithilfe geschützter Bibliotheken unter Ihrer Kontrolle bleiben."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 371e566a166dad74b55266db23e034f926942a26
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d5d1c818323a3723f6837ebe8fedd4995efb467
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-retain-control-of-documents-stored-in-sharepoint"></a>Szenario – Beibehalten der Kontrolle über in SharePoint gespeicherte Dokumente
+# <a name="scenario---retain-control-of-documents-stored-in-sharepoint"></a>Szenario – Beibehalten der Kontrolle über in SharePoint gespeicherte Dokumente
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -103,9 +104,4 @@ Sie können nur Dokumente auf die Website „Vertriebsprognosen und Berichte“ 
 
 -   Wenden Sie sich an den Helpdesk: helpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

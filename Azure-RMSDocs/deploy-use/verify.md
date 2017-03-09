@@ -1,10 +1,10 @@
 ---
-title: "Überprüfen von Azure Rights Management | Azure Information Protection"
+title: "Überprüfen von Azure Rights Management – AIP"
 description: "Anweisungen zum Überprüfen, ob der Dienst wie erwartet funktioniert. Hierbei wird eine Datei oder E-Mail unter Verwendung eines Benutzerkontos geschützt und anschließend versucht, diesen geschützten Inhalt von einem anderen Benutzerkonto aus zu öffnen und zu verwenden."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d10bc4aeeed6f5b3d150f6e765c6457f5741409
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 50da38ee5e852d72458845a97ebe005f4949d265
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,11 +37,7 @@ Wenn Ihre Tests nicht erfolgreich sind, überprüfen Sie die Konfigurationsschri
 
 Sie können überwachen, wie Ihre Organisation den Azure Rights Management-Dienst verwendet, indem Sie die Nutzung protokollieren. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

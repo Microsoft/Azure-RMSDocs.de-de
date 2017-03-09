@@ -1,10 +1,10 @@
 ---
-title: Konfigurieren bereichsbezogener Richtlinien | Azure Information Protection
+title: "Konfigurieren bereichsbezogener Richtlinien für Azure Information Protection"
 description: "Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer zu konfigurieren, müssen Sie eine bereichsbezogene Richtlinie für Azure Information Protection konfigurieren."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e2112ca081ed0520330355734bb0913e4a612c66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,9 +24,7 @@ ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
 
 >*Gilt für: Azure Information Protection*
 
-**[Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.]**
-
-Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** (derzeit in der Vorschauversion) erstellen, die für diese Benutzer konfiguriert ist.
+Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** erstellen, die für diese Benutzer konfiguriert ist.
 
 Alle Benutzer erhalten die globale Richtlinie, die Titel und QuickInfo sowie globale Einstellungen und globale Bezeichnungen der Information Protection-Leiste enthält. Wenn Sie bereichsbezogene Richtlinien für bestimmte Benutzer konfiguriert haben, erhalten diese Benutzer diese zusätzlichen Einstellungen und Bezeichnungen. 
 
@@ -42,7 +41,7 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Add a new policy (PREVIEW)** (Neue Richtlinie hinzufügen (VORSCHAU)) aus. Dann wird das zweite Blatt angezeigt, das normalerweise die Aktualisierung der globalen Richtlinie anzeigt, sodass Sie jetzt Ihre neue bereichsbezogene Richtlinie konfigurieren können.
+    Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Add a new policy** (Neue Richtlinie hinzufügen) aus. Dann wird das zweite Blatt angezeigt, das normalerweise die Aktualisierung der globalen Richtlinie anzeigt, sodass Sie jetzt Ihre neue bereichsbezogene Richtlinie konfigurieren können.
 
 3. Geben Sie einen Richtliniennamen und eine Beschreibung an, die nur für Administratoren im Azure-Portal angezeigt wird. Der Name muss für Ihren Mandanten eindeutig sein. Klicken Sie dann auf **Specify which users/groups get this policy** (Benutzer/Gruppen angeben, die diese Richtlinie erhalten). Auf den nachfolgenden Blättern können Sie dann die Benutzer und Gruppen für diese Richtlinie suchen und auswählen. Die Bezeichnungen und Einstellungen, die Sie in dieser bereichsbezogenen Richtlinie konfigurieren, werden nur auf diese Benutzer angewendet. 
 
@@ -54,15 +53,14 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
 6. Wenn Sie die Änderungen für diese bereichsbezogene Richtlinie abgeschlossen haben, stellen Sie auf dem ersten Blatt **Azure Informationsschutz** sicher, dass diese bereichsbezogene Richtlinie gemäß Ihren Vorstellungen angeordnet ist. Dies ist wichtig, wenn Sie denselben Benutzer für mehrere bereichsbezogene Richtlinien ausgewählt haben. Klicken Sie dann auf **Publish** (Veröffentlichen). 
 
-Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Er lädt dann alle Änderungen an der globalen Richtlinie oder bereichsbezogenen Richtlinie, die für diesen Benutzer gelten.
+Beim Start einer unterstützten Office-Anwendung oder Öffnen des Datei-Explorers prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Der Client lädt dann alle Änderungen an der globalen Richtlinie oder bereichsbezogenen Richtlinie herunter, die für diesen Benutzer gelten.
+
+> [!TIP]
+> Nachdem Sie Ihre bereichsbezogene Richtlinie gespeichert haben, können Sie den **richtlinienübergreifenden Editor** auf dem anfänglichen Blatt **Azure Information Protection** verwenden, um alle Bezeichnungen Ihrer Azure Information Protection-Richtlinie anzuzeigen und neu zu konfigurieren. Diese Methode bietet eine einfache Möglichkeit, Bezeichnungen aus mehreren Richtlinien (Ihrer globalen Richtlinie und allen bereichsbezogenen Richtlinien) zu vergleichen. In diesem Editor können Sie jedoch keine Bezeichnungen hinzufügen oder neu anordnen oder die Richtlinieneinstellungen anzeigen oder konfigurieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

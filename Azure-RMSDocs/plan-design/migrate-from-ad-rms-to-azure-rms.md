@@ -1,9 +1,10 @@
 ---
-title: Migrieren von AD RMS zu Azure Information Protection | Azure Information Protection
+title: Migrieren von AD RMS-Azure Information Protection
 description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Directory Rights Management Services) zu Azure Information Protection. Nach der Migration haben Benutzer weiter Zugriff auf Dokumente und E-Mail-Nachrichten, die Ihre Organisation mithilfe von AD RMS geschützt hat. Für neue zu schützende Inhalte wird Azure Information Protection verwendet."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,14 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb240b92a86bfc37685556ba2ce71b9eea56ae88
-ms.openlocfilehash: c3e926b48dfc66da71e4e3f16f9359b3cb8322c6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# Migrieren von AD RMS zu Azure Information Protection
+# <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
@@ -30,7 +32,19 @@ Nicht sicher, ob diese Migration von AD RMS für Ihre Organisation geeignet ist?
 
 -   Einen Vergleich von Azure Information Protection mit AD RMS finden Sie unter [Vergleich von Azure Information Protection und AD RMS](../understand-explore/compare-azure-rms-ad-rms.md).
 
-## Voraussetzungen für die Migration von AD RMS zu Azure Information Protection
+## <a name="recommended-reading-before-you-migrate-to-azure-information-protection"></a>Empfohlene Lektüre vor der Migration zu Azure Information Protection
+
+Wenngleich nicht erforderlich, kann es hilfreich sein, die folgenden Dokumente zu lesen, ehe Sie mit der Migration beginnen, damit Sie besser verstehen, wie die Technologie funktioniert, sobald dies in Ihrem Migrationsschritt relevant ist:
+
+- [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md): Machen Sie sich mit den Schlüsselverwaltungsoptionen für Ihren Azure Information Protection-Mandanten vertraut. Die Entsprechung Ihres SLC-Schlüssels (Server Licensor Certificate, lizenzgebendes Serverzertifikat) wird entweder von Microsoft (Standard) oder Ihnen („Bring Your Own Key“- oder BYOK-Konfiguration) verwaltet. 
+
+- [RMS-Dienstermittlung](../rms-client/client-deployment-notes.md#rms-service-discovery): In diesem Abschnitt des RMS-Client-Bereitstellungshinweises wird erklärt, dass die Reihenfolge für die Dienstermittlung **Registrierung** > **Dienstverbindungspunkt** > **Cloud** ist. Wenn der Dienstverbindungspunkt während des Migrationsvorgangs noch installiert ist, konfigurieren Sie Clients mit Registrierungseinstellungen für Ihren Azure Information Protection-Mandanten so, dass sie nicht den vom Dienstverbindungspunkt zurückgegebenen AD RMS-Cluster verwenden.
+
+- [Übersicht über den Microsoft Rights Management-Connector](../deploy-use/deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): In diesem Abschnitt der Dokumentation zum RMS-Connector wird erläutert, wie Ihre lokalen Server sich mit dem Azure Rights Management-Dienst verbinden können, um Dokumente und E-Mails zu schützen.
+
+Wenn Sie mit der Funktionsweise von AD RMS vertraut sind, kann es hilfreich sein, [Funktionsweise von Azure RMS: Hinter den Kulissen](../understand-explore/how-does-it-work.md) zu lesen, um zu bestimmen, welche Technologieprozesse für die Cloudversion gleich oder unterschiedlich sind.
+
+## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>Voraussetzungen für die Migration von AD RMS zu Azure Information Protection
 Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die folgenden Voraussetzungen erfüllt sind und Sie alle etwaigen Einschränkungen kennen.
 
 - **Unterstützte RMS-Bereitstellung:**
@@ -42,6 +56,8 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
         - Windows Server 2012 (x64)
         
         - Windows Server 2012 R2 (x64)
+        
+        - Windows Server 2016 (x64)
         
     - Kryptografiemodus 2:
 
@@ -102,7 +118,7 @@ Einschränkungen:
 
     Aufgrund der möglichen Konfigurationsvarianten Ihrer Partner können in diesem Dokument keine genauen Anweisungen für diese Neukonfiguration gegeben werden. Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#support-options-and-community-resources), um Hilfe zu erhalten.
 
-## Übersicht über die Schritte zur Migration von AD RMS zu Azure Information Protection
+## <a name="overview-of-the-steps-for-migrating-ad-rms-to-azure-information-protection"></a>Übersicht über die Schritte zur Migration von AD RMS zu Azure Information Protection
 
 
 Die Migrationsschritte können in vier Phasen unterteilt werden, die zu unterschiedlichen Zeiten und von verschiedenen Administratoren ausgeführt werden können.
@@ -113,7 +129,7 @@ Die Migrationsschritte können in vier Phasen unterteilt werden, die zu untersch
 
     Während der Migration müssen Sie eine oder mehrere der Windows PowerShell-Cmdlets aus dem Azure RMS-Modul ausgeführt, das mit dem Azure RMS-Verwaltungstool installiert wurde.
 
-- **Schritt 2. Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection**
+- **Schritt 2: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection**
 
     Sie exportieren die Konfigurationsdaten (Schlüssel, Vorlagen, URLs) aus AD RMS in eine XML-Datei und laden dann diese Datei mithilfe des Windows PowerShell-Cmdlets Import-AadrmTpd in den Azure Rights Management-Dienst von Azure Information Protection hoch. Je nach AD RMS-Schlüsselkonfiguration sind möglicherweise weitere Schritte erforderlich:
 
@@ -179,12 +195,8 @@ Die Migrationsschritte können in vier Phasen unterteilt werden, die zu untersch
     Dieser Schritt ist optional, wird jedoch empfohlen, wenn Ihre in Schritt 2 ausgewählte Azure Information Protection-Mandantenschlüsseltopologie „von Microsoft verwaltet“ ist. Dieser Schritt ist nicht anwendbar, wenn die ausgewählte Azure Information Protection-Mandantenschlüsseltopologie „vom Kunden verwaltet“ (BYOK) ist.
 
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Um die Migration zu starten, wechseln Sie zu [Phase 1: Serverseitige Konfiguration](migrate-from-ad-rms-phase1.md).
 
-
-
-
-<!--HONumber=Sep16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

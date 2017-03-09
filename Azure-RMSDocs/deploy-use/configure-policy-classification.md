@@ -1,18 +1,19 @@
 ---
-title: "Gewusst wie: Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung | Azure Information Protection"
+title: "Konfigurieren von Bedingungen für eine Azure Information Protection-Bezeichnung"
 description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,7 +79,7 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
 
 ## <a name="information-about-the-built-in-conditions"></a>Informationen zu den integrierten Bedingungen
 
-Während des Vorschauzeitraums können Sie die folgenden Bedingungen wählen (beachten Sie, dass diese Beispiele auf US-amerikanischen Standards basieren):
+Es stehen folgende Bedingungen zur Auswahl:
 
 - [SWIFT Code](#swift-code ) (SWIFT-Code)
 
@@ -221,11 +222,7 @@ Beispiele zum Durchführen von Tests:
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

@@ -1,10 +1,11 @@
 ---
-title: "Konfigurieren von Azure RMS für die ADAL-Authentifizierung | Azure RMS"
-description: "Erläutert die Schritte für die Konfiguration von Azure RMS zur Nutzung der ADAL-basierten Authentifizierung."
-keywords: Authentifizierung, RMS, ADAL
+title: "Konfigurieren Ihrer App für die ADAL-Authentifizierung | Microsoft-Dokumentation"
+description: "Schritte zur Konfiguration der Azure Information Protection-App für die Nutzung der ADAL-basierten Authentifizierung"
+keywords: authentication, RMS, ADAL, Information Protection,
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2588d10805ddfdc1c09db3008a424767fb528986
+ms.sourcegitcommit: b7415265d0e27896df2bdf6a62e7c875ba681345
+ms.openlocfilehash: d51730af8a1f410ad890087200f64864eceb2268
 
 
 ---
 
-# Konfigurieren von Azure RMS für die ADAL-Authentifizierung
+# <a name="configure-your-app-for-adal-authentication"></a>Konfigurieren Ihrer App für die ADAL-Authentifizierung
 
-In diesem Thema werden die Schritte zum Konfigurieren der Azure ADAL-basierten Authentifizierung beschrieben.
+Dieses Thema beschreibt die Schritte zum Konfigurieren Ihrer App für die ADAL-basierte (Azure Active Directory Authentication Library) Authentifizierung.
 
-## Einrichten der Azure-Authentifizierung
+## <a name="azure-authentication-setup"></a>Einrichten der Azure-Authentifizierung
 
 Folgendes wird benötigt:
 
 - Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/en-us/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie unter [Wie sich Benutzer für RMS for Individuals registrieren](../understand-explore/rms-for-individuals-user-sign-up.md).
 - Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](https://technet.microsoft.com/en-us/library/dn592127.aspx)-Konto ist ausreichend).
 
-> [!NOTE] 
+> [!NOTE]
 > Fragen Sie Ihren IT-Administrator, ob Sie über ein Abonnement für Microsoft Azure Rights Management verfügen oder nicht, und lassen Sie Ihren IT-Administrator die nachstehenden Schritte ausführen. Wenn Ihre Organisation nicht über ein Abonnement verfügt, sollte Ihr IT-Administrator eines erstellen. Ihr IT-Administrator sollte das Abonnement zudem mit einem *Geschäfts-, Schul- oder Unikonto* und nicht mit einem *Microsoft-Konto* (z.B. Hotmail) erstellen.
 
 Nach der Registrierung für Microsoft Azure:
@@ -77,19 +78,15 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Auswählen von KONFIGURIEREN](../media/ConfigYourApp.png)
 
->[!NOTE] 
+>[!NOTE]
 > Kopieren Sie die **CLIENT-ID** und den **UMLEITUNGS-URI**, und speichern Sie diese für die spätere Verwendung bei der Konfiguration des RMS-Clients.
 
 - Navigieren Sie zum unteren Rand Ihrer Anwendungseinstellungen, und wählen Sie unter **Berechtigungen für andere Anwendungen** die Schaltfläche **Anwendung hinzufügen** aus.
 
->[!NOTE] 
+>[!NOTE]
 > Die für Windows Azure Active Directory angezeigten **delegierten Berechtigungen** sind standardmäßig korrekt – es darf nur eine Option ausgewählt sein, und dies ist **Ermöglichen der Anmeldung und Lesen des Benutzerprofils**.
 
 ![Auswählen von „Anwendung hinzufügen“](../media/PermissionsToOtherBtn.png)
-
-- Geben Sie nun die GUID `00000012-0000-0000-c000-000000000000` in das Eingabefeld **Beginnend mit** ein, und klicken Sie auf das Häkchen.
-
-![Hinzufügen der GUID](../media/AddGUID.png)
 
 - Wählen Sie das Pluszeichen neben **Microsoft Rights Management** aus.
 
@@ -97,7 +94,7 @@ Nach der Registrierung für Microsoft Azure:
 
 - Klicken Sie nun auf das Häkchen in der unteren linken Ecke des Dialogfelds.
 
-![Klicken des Häkchens](../media/ChooseCheck.png)
+![Klicken des Häkchens](../media/choosecheck01.png)
 
 - Nun können Sie Ihrer Anwendung für Azure RMS eine Abhängigkeit hinzufügen. Wählen Sie zum Hinzufügen der Abhängigkeit den neuen Eintrag **Microsoft Rights Management Services** unter **Berechtigungen für andere Anwendungen** aus, und aktivieren Sie das Kontrollkästchen **Create and access protected content for users** (Geschützten Inhalt für Benutzer erstellen und darauf zugreifen) in der Dropdownliste bei **Delegierte Berechtigungen:**.
 
@@ -107,8 +104,9 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Auswählen von SPEICHERN](../media/SaveApplication.png)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

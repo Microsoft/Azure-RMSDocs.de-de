@@ -1,9 +1,10 @@
 ---
-title: "BYOK – Preise und Einschränkungen | Azure Information Protection"
-description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
+title: "BYOK – Preise und Einschränkungen – Azure Information Protection"
+description: "Lernen Sie die Einschränkungen bei Verwendung kundenverwalteter Schlüssel (bekannt als „Bring Your Own Key“, BYOK) mit Azure RMS kennen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +13,25 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
-ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: c05521faed2cd8a7f9d32d81cd6899161e858153
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# BYOK – Preise und Einschränkungen
+# <a name="byok-pricing-and-restrictions"></a>BYOK – Preise und Einschränkungen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 
-Organisationen mit einem Abonnement, das Azure Information Protection umfasst, können kundenverwaltete Schlüssel (BYOK) in Azure Key Vault verwenden und [die Nutzung ohne Aufpreis protokollieren](../deploy-use/log-analyze-usage.md). 
+Organisationen mit einem Abonnement, das Azure Information Protection umfasst, können ihren Azure Information Protection-Mandanten so konfigurieren, dass ein vom Kunden verwalteter Schlüssel (Bring Your Own Key, BYOK) verwendet wird, dessen [Nutzung ohne Aufpreis protokolliert](../deploy-use/log-analyze-usage.md) werden kann. 
 
-Um Azure Key Vault verwenden zu können, müssen Sie jedoch über ein Azure-Abonnement verfügen, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Für die Verwendung eines Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+Der Schlüssel muss in Azure Key Vault gespeichert werden. Dies erfordert ein kostenpflichtiges bzw. Testabonnement von Azure. Außerdem müssen Sie zur Unterstützung von durch HSM geschützte Schlüssel den Diensttarif „Azure Key Vault Premium“ wählen. Bei Nutzung eines durch HSM geschützten Schlüssels in Azure Key Vault fällt eine monatliche Gebühr an. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
 Wenn Sie Azure Key Vault für Ihren Azure Information Protection-Mandantenschlüssel einsetzen, empfiehlt es sich, einen dedizierten Schlüsseltresor für diesen Schlüssel mit einem dedizierten Abonnement zu verwenden, um sicherzustellen, dass er nur vom Azure Rights Management-Dienst verwendet wird. 
 
-## Vorteile der Verwendung von Azure Key Vault
+## <a name="benefits-of-using-azure-key-vault"></a>Vorteile der Verwendung von Azure Key Vault
 
 Zusätzlich zur Verwendung der Azure Information Protection-Verwendungsprotokollierung können Sie für zusätzliche Sicherheit Querverweise zur [Azure Key Vault-Protokollierung](https://azure.microsoft.com/documentation/articles/key-vault-logging/) einrichten, um unabhängig zu überwachen, dass dieser Schlüssel nur vom Azure Rights Management-Dienst verwendet wird. Bei Bedarf können Sie den Zugriff auf den Schlüssel sofort widerrufen, indem Sie die Berechtigungen für den Schlüsseltresor entfernen.
 
@@ -48,7 +50,7 @@ Zusätzlich zum Verwalten von Schlüsseln bietet Azure Key Vault Ihren Sicherhei
 Weitere Informationen zu Azure Key Vault finden Sie unter [Was ist Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/). Im [Azure Key Vault-Teamblog](https://blogs.technet.microsoft.com/kv/) finden Sie aktuelle Informationen und erfahren, wie andere Dienste diese Technologie verwenden.
 
 
-## Einschränkungen bei Verwendung von BYOK
+## <a name="restrictions-when-using-byok"></a>Einschränkungen bei Verwendung von BYOK
 
 Wenn Benutzer sich über RMS for Individuals für ein kostenloses Konto registriert haben, können Sie BYOK oder die Verwendungsprotokollierung nicht nutzen, da in dieser Konfiguration kein Mandantenadministrator zum Konfigurieren dieser Features vorhanden ist.
 
@@ -78,15 +80,11 @@ Wenn Sie von AD RMS zu Azure RMS migrieren, haben Sie möglicherweise Ihren Schl
 
 In einigen Fällen stellt die Azure RMS BYOK-Ausnahme in der Praxis kein Problem für Exchange Online dar. Beispielsweise führen Organisationen, die BYOK und Protokollierung benötigen, ihre Datenanwendungen (Exchange, SharePoint, Office) lokal aus und verwenden Azure RMS für Funktionen, die bei lokalem AD RMS nicht einfach verfügbar sind (z. B. Zusammenarbeit mit anderen Unternehmen und Zugriff von mobilen Clients aus). Sowohl BYOK als auch die Protokollierung funktionieren gut in diesem Szenario und gestatten der Organisation die Übernahme der vollständigen Kontrolle über ihr Azure RMS-Abonnement.
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, helfen Ihnen die Informationen unter [Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) weiter.
+Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, helfen Ihnen die Informationen unter [Implementieren Ihres Azure Rights Management-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) weiter.
 
 Wenn Sie sich für die Standardkonfiguration entschieden haben, bei der Ihr Mandantenschlüssel von Microsoft verwaltet wird, helfen Ihnen die Informationen im Abschnitt [Nächste Schritte](plan-implement-tenant-key.md#next-steps) des Artikels „Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels“ weiter.
 
-
-
-
-<!--HONumber=Oct16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

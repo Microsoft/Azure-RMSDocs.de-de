@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Schutz Ihrer wertvollsten Dateien | Azure Information Protection"
+title: "AIP-Szenario – Schutz Ihrer wertvollsten Dateien"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird Azure Rights Management verwendet, um Ihre wertvollsten Dateien manuell und benutzerdefiniert zu schützen. Dies gewährleistet das höchste Maß an Schutz vor nicht autorisiertem Zugriff."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -70,7 +71,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 
 2.  Veröffentlichen Sie die neue Vorlage.
 
-### <a name="to-protect-the-files-inplace"></a>So schützen Sie die Dateien lokal
+### <a name="to-protect-the-files-in-place"></a>So schützen Sie die Dateien lokal
 
 1.  Navigieren Sie im Datei-Explorer zum ersten Ordner mit zu schützenden Dateien:
 
@@ -145,9 +146,4 @@ Auf die folgenden Dateien wurde jetzt ein sehr hoher Schutzgrad angewendet, soda
 
 -   Wenn Sie keinen Zugriff auf diese Dateien haben oder verdächtige Änderungen in den Dateien feststellen, rufen Sie den rund um die Uhr verfügbaren Supporteskalationskanal an, der Ihnen von der IT-Abteilung in einer geschützten E-Mail-Nachricht zugesendet wurde.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

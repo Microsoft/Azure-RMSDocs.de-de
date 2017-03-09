@@ -1,11 +1,11 @@
 ---
-title: Entwickeln Ihrer Anwendung | Azure Information Protection
+title: Entwickeln Ihrer Anwendung
 description: Anleitung mithilfe einer einfachen Konsolen-App zum Implementieren des Dokumentschutz mit AIP
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/05/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7e2f4cfead53bd34673c1ebb85b9d966b8f6f848
-ms.openlocfilehash: 90b6ecd2860214c9b1f26ab9aad421390de8d6ff
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
 
 
 ---
@@ -231,8 +231,9 @@ Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung w
 
 6. Abschließend geben Sie einige Richtlinienmetadaten ein: Richtlinienname, Beschreibung und Anzeigename des Ausstellers (Azure AD-Mandant) ![App-Ausgabe – Schritt 6](../media/develop/app-output-6.png)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO4-->
 
 
