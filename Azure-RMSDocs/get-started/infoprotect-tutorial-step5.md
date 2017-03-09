@@ -1,11 +1,11 @@
 ---
-title: Schnellstarttutorial Schritt 5 | Azure Information Protection
-description: "Schritt 5 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
+title: "Schnellstart-Tutorial Schritt 5 – AIP"
+description: "Schritt 5 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Freigeben und Nachverfolgen von geschützten Dokumenten."
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2016
+ms.date: 02/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
-ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: ea34b900855d43cb1458438b1d15a16fd7cf01bf
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -25,67 +26,59 @@ ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
 
 >*Gilt für: Azure Information Protection*
 
-Verwenden Sie für diesen letzten Schritt des Tutorials ein Word-Dokument, das Sie bereits erstellt haben und an einen Partner oder Kollegen senden möchten. In diesem Tutorial spielt der enthaltene Text keine Rolle. Etwas Text ist jedoch sinnvoll, damit Sie einfacher überprüfen können, ob der Inhalt vom autorisierten Empfänger gelesen werden kann.
+Verwenden Sie für diesen letzten Schritt des Tutorials ein Word-Dokument oder ein Excel-Arbeitsblatt, das Sie bereits erstellt haben und an einen Partner oder Kollegen senden möchten. In diesem Tutorial spielt der enthaltene Text keine Rolle. Etwas Text ist jedoch sinnvoll, damit Sie einfacher überprüfen können, ob der Inhalt vom autorisierten Empfänger gelesen werden kann.
 
 Anschließend können Sie das Dokument sicher per E-Mail freigeben. 
 
 ## <a name="to-safely-share-your-document-by-email"></a>So geben Sie Ihr Dokument sicher per E-Mail frei
 
-1.  Öffnen Sie das Dokument in Word. Sie können sehen, dass die Standardbezeichnung **Internal** (Intern) wieder automatisch angewendet wurde. 
+1. Klicken Sie im Datei-Explorer mit der rechten Maustaste auf das Dokument, und wählen Sie **Klassifizieren und schützen** aus. Das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** wird geöffnet:
 
-2.  Klicken Sie auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben** und dann im Menü auf **Geschützt freigeben**:
+    ![Schnellstart-Tutorial für Azure Information Protection Schritt 5 – „Klassifizieren und schützen“ über das Kontextmenü](../media/classify-protect-dialog.png)
 
-    ![Schnellstarttutorial für Azure Information Protection Schritt 5 – Geschützt freigeben](../media/share-protected-callout.png)
+2. Wählen Sie **Protect with custom permissions** (Mit benutzerdefinierten Berechtigungen schützen) aus, wodurch zusätzliche Optionen angezeigt werden.
 
-    Das Dialogfeld **Geschützt freigeben** wird angezeigt (ähnelt der folgenden Abbildung):
+3. Verwenden Sie für **Select permissions** (Berechtigungen auswählen) die Standardeinstellung **Viewer – View only** (Viewer – Nur anzeigen).
 
-    ![Schnellstarttutorial für Azure Information Protection Schritt 5 – Dialogfeld „Geschützt freigeben“](../media/example-share-protected-dialog.png)
+    Mit dieser Einstellung können die Empfänger das Dokument anzeigen, jedoch nicht bearbeiten oder ausdrucken.
 
-3. Geben Sie im Feld **BENUTZER** eine oder mehrere geschäftliche E-Mail-Adressen ein, wie um ein Dokument an einen Geschäftspartner Ihrer Organisation zu senden. Sie können auch die E-Mail-Adresse eines Kollegen angeben. Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Information Protection momentan keine privaten E-Mail-Adressen unterstützt. 
+4. Geben Sie für **Select users** (Benutzer auswählen) eine oder mehrere geschäftliche E-Mail-Adressen ein, wie beim Senden eines Dokuments an einen Geschäftspartner Ihrer Organisation. Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Information Protection momentan keine privaten E-Mail-Adressen unterstützt. 
 
-    Es spielt keine Rolle, ob der Empfänger über Azure Information Protection verfügt oder nicht.
+    Klicken Sie alternativ auf das Adressbuch, um die E-Mail-Adresse eines Kollegen auszuwählen:
 
-4. Wählen Sie **Anzeigender Benutzer - Nur anzeigen**.
-
-    Dies bedeutet, dass die Empfänger das Dokument anzeigen, jedoch nicht bearbeiten oder ausdrucken können.
-
-5. Wählen Sie **E-Mail an mich bei Öffnungsversuchen dieser Dokumente durch andere Benutzer**.
-
-    Sie erhalten jedes Mal eine E-Mail-Benachrichtigung, wenn der Empfänger oder eine andere Person (falls der Empfänger die E-Mail an einen Kollegen weiterleitet) versucht, das Dokument zu öffnen. Wenn das Dokument weitergeleitet wird, können Sie sehen, dass der Zugriff verweigert wurde. Sie können dann anhand der Benutzerdetails entscheiden, ob Sie dieser Person eine Kopie des Dokuments zum Öffnen senden möchten.
-
-6. Wählen Sie **Sofortigen Widerruf des Zugriffs auf diese Dokumente zulassen**.
-
-    Bei dieser Option muss der Empfänger bei jedem Öffnen der Anlage mit dem Internet verbunden sein. Das hat für den Absender den Vorteil, dass ein nachträglich widerrufenes Dokument beim nächsten Mal nicht mehr geöffnet werden kann. 
-
-4.  Wenn Sie auf **Senden** klicken, wird eine E-Mail-Nachricht angezeigt, die an die angegebenen Empfänger gesendet werden kann und den Standardtext der Anweisungen enthält. Beispiel:
-
-    ![Beispiel für E-Mail-Nachricht bei geschützter Freigabe](../media/example-email-share-protected.png)
+    ![Schnellstart-Tutorial für Azure Information Protection Schritt 5 – Mit benutzerdefinierten Berechtigungen schützen](../media/protect-custom-permissions.png)  
     
-    **HINWEIS:** Wenn Outlook bei der Installation des Azure Information Protection-Clients geöffnet war, wird die Information Protection-Leiste nicht angezeigt, die in der vorherigen Abbildung zu sehen ist. In diesem Schritt zur Veranschaulichung der Freigabe geschützter Dateien wird diese Leiste nicht speziell verwendet. Daher müssen Sie Outlook für dieses Tutorial nicht schließen und wieder öffnen. Wenn Sie Outlook nach der Installation des Azure Information Protection-Clients geöffnet haben, können Sie sehen, dass diese E-Mail-Nachricht, wie das Word-Dokument beim ersten Öffnen, standardmäßig mit der Bezeichnung **Internal** (Intern) angezeigt wird, da diese globale Einstellung in der Azure Information Protection-Richtlinie konfiguriert wurde.
-    
-    Sie werden feststellen, dass die E-Mail zwei Anlagen umfasst: das Word-Originaldokument und eine Datei mit demselben Namen, jedoch mit der Dateierweiterung **.ppdf**. Die PPDF-Version ist eine geschützte PDF-Datei, die in der Rights Management-Freigabeanwendung automatisch erstellt wird, für den Fall, dass der Empfänger nicht über eine Version von Office verfügt, in der geschützte Dokumente unterstützt werden. Durch diese zusätzliche Datei kann der Empfänger das geschützte Dokument mit dem Viewer lesen, der mit der Rights Management-Freigabeanwendung installiert wird.
+    Nach der Angabe der Adressen kopieren Sie sie in die Zwischenablage, da sie in einem späteren Schritt verwendet werden.
 
-    Klicken Sie in der E-Mail-Nachricht auf **Senden**.
+5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 
-Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfänger, das Dokument anzunehmen und zu öffnen. Word sollte zu diesem Zeitpunkt nicht geschlossen werden, da die Anwendung beim letzten Vorgang zum Nachverfolgen des freigegebenen Dokuments noch benötigt wird.
+4. Zurück im Datei-Explorer klicken Sie mit der rechten Maustaste erneut auf die Datei und wählen dieses Mal **Senden an** > **E-Mail-Empfänger** aus. Durch diesen Vorgang wird Ihr Dokument an eine E-Mail mit Standardtext angehängt, der geändert wird.
+
+5. Bevor der Standardtext geändert wird, fügen Sie die E-Mail-Adressen ein, die Sie zuvor im Feld **An** angegeben haben. 
+
+6. Geben Sie optional Ihren Betreff in das Feld **Betreff** ein. Beispiel: **Ich gebe ein geschütztes Dokument frei**. 
+
+7. Ändern Sie die Standardbeschreibung der Nachricht, damit sie für Ihre Empfänger geeignet ist. Fügen Sie jedoch den folgenden Text hinzu:
+
+    **Ich habe diese Datei mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in den folgenden Anweisungen: https://aka.ms/rms-signup**. 
+
+    ![Schnellstarttutorial für Azure Information Protection Schritt 5 – Geschütztes Dokument per E-Mail freigeben](../media/share-protected-email.png)
+
+    Klicken Sie auf **Senden**.
+
+Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfänger, das Dokument anzunehmen und zu öffnen. 
 
 ## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen.
 
 Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf verschiedenen Geräten lesen. Die Geräte umfassen iPads, iPhones, Android-Tablets und -Smartphones sowie Macintosh- und Windows-Computer.
 
-Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. In der Annahme, dass diese zum ersten Mal Anlagen erhalten haben, die durch Rights Management geschützt sind, bitten Sie sie, auf den Link für die Anweisungen zu klicken. Dadurch gelangen die Empfänger zur Seite [Willkommen bei Microsoft RMS!](https://portal.azurerms.com/#/rmshelp), die Anweisungen zur Installation der RMS-Freigabeanwendung und gegebenenfalls zur Registrierung für ein kostenloses Konto enthält. Die Empfänger können dann die geschützte Anlage lesen.
+Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. In der Annahme, dass diese zum ersten Mal Anlagen erhalten haben, die durch Rights Management geschützt sind, bitten Sie sie, auf den Link für die Anweisungen zu klicken. Es wird dann die **Willkommensseite** für Microsoft Azure Information Protection angezeigt, die zur Eingabe der geschäftlichen E-Mail-Adresse auffordert.
+
+Wenn sie auf **Registrieren** klicken, prüft Azure Information Protection, ob ihre Organisation über ein Abonnement verfügt, das den Azure Rights Management-Datenschutzdienst umfasst. Wenn dies nicht der Fall ist, können sie ein kostenloses Konto beantragen.
 
 ### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Anweisungen für Empfänger: So zeigen Sie die Anlage mit dem geschützten Dokument an
 
-1. Öffnen Sie eine der Anlagen, um das Dokument zu lesen:
-    
-    - Wenn Sie eine Version von Office auf Ihrem Gerät installiert haben, die Rights Management unterstützt:
-    
-        -  Öffnen Sie das Dokument mit der Dateierweiterung **.docx**.
-        
-    - Wenn Sie keine Version von Office installiert haben, die Rights Management unterstützt, wenn Sie sich nicht sicher sind, oder wenn Sie einfach nur den Viewer der Rights Management-Freigabeanwendung testen möchten: 
-    
-        - Öffnen Sie das Dokument mit der Dateierweiterung **.ppdf**.
+1. Öffnen Sie die Anlage auf einem PC oder mobilen Gerät mit installiertem Office, um das Dokument zu lesen.  
 
 2.  Wenn Sie zur Eingabe von Benutzernamen und Kennwort aufgefordert werden, geben Sie Ihren Benutzernamen im gleichen Format wie die E-Mail-Adresse ein, die Sie zum Senden der E-Mail und der Anlage verwendet haben. Beispiel: **janetm@contoso.com** oder **p.dover@fabrikam.com**. Geben Sie das Kennwort ein, das Sie beim Registrieren von RMS for Individuals erhalten haben. Wenn Ihre Organisation über einen Clouddienst wie Office 365 verfügt oder Azure verwendet, geben Sie Ihr übliches Arbeitskennwort ein.
 
@@ -93,11 +86,15 @@ Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. In der Annahme, dass d
 
 Als optionalen Schritt kann der Empfänger die E-Mail an andere Personen weiterleiten, die Sie in der ursprünglichen E-Mail nicht angegeben haben. Diese Personen können die Anlage nicht öffnen. Bei der Aufforderung zur Eingabe des Benutzernamens wird den Empfängern der Zugriff verweigert.
 
-Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Empfänger weitergeleitet hat, erhalten Sie eine E-Mail-Benachrichtigung über die jeweiligen Aktivitäten. Da E-Mails jedoch leicht in Vergessenheit geraten, lassen sich Dokumentzugriffe einfacher über die Website zur Dokumentenverfolgung überwachen. Dies wird im letzten Vorgang veranschaulicht.
+Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfänger weitergeleitet hat, sind Sie bereit, Ihr Dokument nachzuverfolgen.
 
 ## <a name="to-track-your-protected-document"></a>So verfolgen Sie das geschützte Dokument
 
-1.  Klicken Sie in Word auf der Registerkarte **Start** in der Gruppe **RMS** auf **Geschützt freigeben** und dann im Menü auf **Verwendung nachverfolgen**:
+1.  Öffnen Sie das Dokument, das Sie geschützt und freigegeben haben. Das Informationsbanner bestätigt die benutzerdefinierten Schutzeinstellungen, die Sie angegeben haben:
+
+    ![Informationsbanner für den benutzerdefinierten Schutz](../media/information-banner-custom-protection.png)
+
+2.  Klicken Sie auf der Registerkarte **Start** auf **Protect (Schützen)** > **Track and revoke (Nachverfolgen und widerrufen)**:
 
     ![Option „Verwendung nachverfolgen“](../media/track-usage-callout.png)
 
@@ -119,10 +116,9 @@ Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das ge
 
 |Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
-|Umfassende Anweisungen und alternative Methoden zum Schutz der per E-Mail freigegebenen Dateien|[Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](../rms-client/sharing-app-protect-by-email.md)|
-|Optionen im Dialogfeld **Geschützt freigeben**|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
+|Vollständige Anweisungen zum Schützen von Dateien, die dann sicher freigegeben werden können|[Klassifizieren und Schützen einer Datei oder E-Mail](../rms-client/client-classify-protect.md)|
 |Informationen zum kostenlosen Konto, für das sich andere Benutzer registrieren können|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Verwenden der Website zur Dokumentennachverfolgung|[Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/sharing-app-track-revoke.md)
+|Verwenden der Website zur Dokumentennachverfolgung|[Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/client-track-revoke.md)
 
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -133,7 +129,4 @@ Geben Sie weitere Dokumente frei, und verfolgen Sie deren Verwendung. Testen Sie
 
 Es empfiehlt sich zudem, einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) sein. 
 
-
-<!--HONumber=Nov16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

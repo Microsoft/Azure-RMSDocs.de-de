@@ -1,18 +1,19 @@
 ---
-title: "Gewusst wie: Ändern oder Anpassen einer vorhandenen Bezeichnung | Azure Information Protection"
+title: "Ändern einer Azure Information Protection-Bezeichnung"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen ändern, indem Sie diese in der Azure Information Protection-Richtlinie konfigurieren."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -47,11 +48,7 @@ Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
 
 Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

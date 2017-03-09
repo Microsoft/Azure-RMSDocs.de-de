@@ -1,10 +1,10 @@
 ---
-title: "Konfigurieren von Nutzungsrechten für Azure Rights Management | Azure Information Protection"
+title: "Konfigurieren von Nutzungsrechten für Azure Rights Management – AIP"
 description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet werden, wenn Sie Dateien oder E-Mails mithilfe des Azure Rights Management-Diensts von Azure Information Protection schützen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
-ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 34f77a0ff33a9a960e12bc53d62b38f4e6553c80
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -56,18 +57,18 @@ In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und al
 
 |Berechtigungsstufe|Anwendungen|Enthaltene Rechte (allgemeiner Name)|
 |---------------------|----------------|---------------------------------|
-|Anzeigender Benutzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows (Vorschau)|Anzeigen, Öffnen, Lesen; Antworten; Allen Antworten|
-|Prüfer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows (Vorschau)|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
-|Mitautor|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows (Vorschau)|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[2]](#footnote-2); Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
-|Mitbesitzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows (Vorschau)|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1); Vollzugriff|
+|Anzeigender Benutzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Antworten; Allen Antworten|
+|Prüfer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
+|Mitautor|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[2]](#footnote-2); Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
+|Mitbesitzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1); Vollzugriff|
 
 ----
 
 ###### <a name="footnote-1"></a>Fußnote 1
-Gilt nicht für die Rights Management-Freigabeanwendung für Windows oder den Azure Information Protection-Client für Windows (Vorschau).
+Gilt nicht für den Azure Information Protection-Client für Windows oder die Rights Management-Freigabeanwendung für Windows.
 
 ###### <a name="footnote-2"></a>Fußnote 2
-Nicht im Azure Information Protection-Client für Windows (Vorschau) enthalten. In diesem Client umfasst das Nutzungsrecht zum Exportieren die Möglichkeit zum Aufheben des Schutzes.
+Nicht im Azure Information Protection-Client für Windows enthalten. In diesem Client umfasst das Nutzungsrecht zum Exportieren die Möglichkeit zum Aufheben des Schutzes.
 
 
 ## <a name="rights-included-in-the-default-templates"></a>In den Standardvorlagen enthaltene Rechte
@@ -103,9 +104,6 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 ## <a name="see-also"></a>Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](configure-custom-templates.md)
 
-
-
-
-<!--HONumber=Dec16_HO1-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

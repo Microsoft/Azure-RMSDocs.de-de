@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Konfigurieren von Arbeitsordnern für dauerhaften Schutz | Azure Information Protection"
+title: "AIP-Szenario – Arbeitsordner für RMS-Schutz konfigurieren"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, um Office-Dokumente in Arbeitsordnern dauerhaft zu schützen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Szenario – Arbeitsordner für dauerhaften Schutz konfigurieren
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -120,9 +121,4 @@ Wenn Sie die benutzerdefinierte Vorlage wie für dieses Szenario beschrieben kon
 > 
 > Wenn Sie nach gewisser Zeit feststellen, dass viele dieser Anforderungen eingehen, können Sie eine eigene benutzerdefinierte Vorlage für dieses Szenario definieren, die nur bestimmten Benutzern (z. B. Manager oder dem Helpdesk) die Mitbesitzeroption gewährt, während Standardbenutzer Rechte als Mitautor oder sonstige gewünschte [Rechte](../deploy-use/configure-usage-rights.md) erhalten.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

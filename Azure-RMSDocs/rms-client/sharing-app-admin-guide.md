@@ -1,10 +1,10 @@
 ---
-title: "Rights Management-Freigabeanwendung – Administratorhandbuch | Azure Information Protection"
+title: "Administratorhandbuch der RMS-Freigabeanwendung – AIP"
 description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -24,6 +25,8 @@ ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
+> [!IMPORTANT]
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
@@ -169,7 +172,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>So installieren Sie nur die RMS-Freigabeanwendung und das Office-Add-In
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>So installieren Sie nur die RMS-Freigabeanwendung und das Office-Add-In
 
 1.  Installieren Sie den AD RMS-Client sowie die RMS-Freigabeanwendung, indem Sie den folgenden Befehl verwenden und einen vorhandenen Ordner angeben, um die Protokolldatei zu erstellen:
 
@@ -267,13 +270,13 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
-        @="&lt;Zertifizierungs-URL&gt;
+        @="&lt;certification url&gt;"
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
 
 1.  Um den Erfolg des Befehls "Setup_ipviewer.exe" zu überprüfen, suchen Sie den folgenden Text in der Installationsprotokolldatei: **Installation success or error status: 0**
 
@@ -310,7 +313,7 @@ Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich si
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>So deinstallieren Sie das Office-Add-in
+### <a name="to-uninstall-the-office-add-in"></a>So deinstallieren Sie das Office-Add-in
 
 -   Verwenden Sie die folgenden Befehle:
 
@@ -404,9 +407,5 @@ Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglic
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere technische Informationen einschließlich einer Erläuterung des Unterschieds zwischen den Schutzebenen (systemeigene und generische), der unterstützten Dateitypen und Dateinameerweiterungen und einer Anleitung zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md).
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

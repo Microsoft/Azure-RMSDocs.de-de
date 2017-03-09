@@ -1,10 +1,10 @@
 ---
-title: Aktivieren von Azure Rights Management | Azure Information Protection
+title: "Aktivieren von Azure Rights Management – AIP"
 description: "Sie müssen den Azure Rights Management-Dienst aktivieren, damit Ihre Organisation damit beginnen kann, Dokumente und E-Mails mithilfe von Anwendungen und Diensten zu schützen, die diese Lösung für den Informationsschutz unterstützen."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ced42d0856b992d3539575d64f5a49706f1768b3
-ms.openlocfilehash: 80fd7a7ce1ac6b7a8b2867729dd3e09e9b106d9b
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dcccc07758cef4428d5ee0430f67047d645f2104
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,15 +79,9 @@ Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] jetzt für Ihre Organisation aktiviert haben, verwenden Sie die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md), um herauszufinden, ob Sie vor dem Rollout von Azure Information Protection für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen müssen. 
 
-Angenommen, Sie möchten [benutzerdefinierte Vorlagen](configure-custom-templates.md) verwenden, um es den Benutzern zu erleichtern, Informationsschutz auf Dateien anzuwenden, Ihre lokalen Server durch Installation des [Rights Management-Connectors](deploy-rms-connector.md) für die Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verbinden und die [Rights Management-Freigabeanwendung](../rms-client/sharing-app-windows.md) bereitzustellen, die den Schutz aller Dateitypen auf allen Geräten unterstützt. 
+Angenommen, Sie möchten [benutzerdefinierte Vorlagen](configure-custom-templates.md) verwenden, um es den Benutzern zu erleichtern, Informationsschutz auf Dateien anzuwenden, Ihre lokalen Server durch Installation des [Rights Management-Connectors](deploy-rms-connector.md) für die Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verbinden und den [Azure Information Protection-Client](../rms-client/aip-client.md) bereitzustellen, der den Schutz aller Dateitypen auf allen Geräten unterstützt. 
 
 Office-Dienste (z.B. Exchange Online und SharePoint Online) erfordern zusätzliche Konfigurationsschritte, bevor Sie deren IRM-Features (Information Rights Management) verwenden können. Informationen dazu, wie Ihre Anwendungen mit dem Rights Management-Dienst funktionieren, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md).
 
-## <a name="comments"></a>Kommentare
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Dec16_HO2-->
-
-

@@ -1,6 +1,6 @@
 # [Verstehen und Kennenlernen](/information-protection/understand-explore/what-is-information-protection)
 # [Erste Schritte](requirements-azure-rms.md)
-## [Requirements](requirements.md)
+## [Anforderungen](requirements.md)
 ### [Azure Active Directory-Anforderungen](requirements-azure-ad.md)
 ### [Unterstützung von Clientgeräten für den Schutz von Daten](requirements-client-devices.md)
 ### [Unterstützung von Anwendungen für den Schutz von Daten](requirements-applications.md)
@@ -13,7 +13,7 @@
 ## [Quick Start-Lernprogramm](infoprotect-quick-start-tutorial.md)
 ### [Schritt 1: Aktivieren des Servers](infoprotect-tutorial-step1.md)
 ### [Schritt 2: Konfigurieren und Veröffentlichen der Richtlinie](infoprotect-tutorial-step2.md)
-### [Schritt 3: Installieren von Client und Anwendung](infoprotect-tutorial-step3.md)
+### [Schritt 3: installieren des Clients](infoprotect-tutorial-step3.md)
 ### [Schritt 4: Bezeichnung, Klassifizierung und Schutz in Aktion](infoprotect-tutorial-step4.md)
 ### [Schritt 5: geschützte Freigabe und Nachverfolgung in Aktion](infoprotect-tutorial-step5.md)
 ## [Handbuch für die schnelle Bereitstellung](rapid-deployment-guide.md)
@@ -28,9 +28,4 @@
 # [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
 # [Bereitstellen und Verwenden des Clients](/information-protection/rms-client/use-client)
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

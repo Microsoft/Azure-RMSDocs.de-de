@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation | Azure Information Protection"
+title: "AIP-Szenario – Office-Dateien für externe Benutzer freigeben"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, damit Benutzer eine Office-Datei auf sichere Weise an Personen in einer anderen Organisation senden können."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ff848fcd67c1d740e042d5bf0391c2a1cf5845e7
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
+# <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -152,9 +153,5 @@ Nutzen Sie das [Portal für die Dokumentennachverfolgung](https://track.azurerms
 
     -   E-Mail: helpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

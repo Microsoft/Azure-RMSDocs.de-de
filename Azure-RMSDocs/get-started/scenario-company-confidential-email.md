@@ -1,10 +1,10 @@
 ---
-title: "Szenario – Senden einer vertraulichen geschäftlichen E-Mail | Azure Information Protection"
+title: "AIP-Szenario – Vertrauliche geschäftliche E-Mail senden"
 description: "In diesem Szenario und der unterstützenden Benutzerdokumentation wird der Azure Rights Management-Schutz verwendet, sodass alle Benutzer innerhalb der Organisation E-Mail-Nachrichten sicher senden können, die außerhalb der Organisation nicht lesbar sind."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 04d8e694aa33bcc00deca602737e0ab11eafb53d
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-send-a-companyconfidential-email"></a>Szenario – Vertrauliche geschäftliche E-Mail senden
+# <a name="scenario---send-a-company-confidential-email"></a>Szenario – Vertrauliche geschäftliche E-Mail senden
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -92,7 +93,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 ![Benutzerdokumentationsvorlage für die Azure RMS-Schnellbereitstellung](../media/AzRMS_UsersBanner.png)
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
 
 1.  Erstellen Sie in Outlook eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie unter *&lt;Organisationsname&gt;* Benutzer oder Gruppen aus.
 
@@ -102,7 +103,7 @@ Die Beispieldokumentation veranschaulicht, wie diese Anweisungen für Benutzer n
 
 3.  Senden Sie die Nachricht.
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie unter *&lt;Organisationsname&gt;* Benutzer oder Gruppen aus dem Adressbuch aus.
 
@@ -125,7 +126,7 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 ### <a name="example-customized-user-documentation"></a>Beispiel für eine angepasste Benutzerdokumentation
 ![Beispielbenutzerdokumentation für die Azure RMS-Schnellbereitstellung](../media/AzRMS_ExampleBanner.png)
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook
 
 1.  Erstellen Sie in Outlook eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie im Adressbuch VanArsdel-Benutzer oder -Gruppen aus.
 
@@ -135,7 +136,7 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
 3.  Senden Sie die Nachricht.
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Senden von E-Mails mit vertrauliche Unternehmensinformationen mit Outlook Web App
 
 1.  Erstellen Sie in Outlook Web App eine neue E-Mail-Nachricht, fügen Sie gegebenenfalls Anlagen hinzu, und wählen Sie im Adressbuch VanArsdel-Benutzer oder -Gruppen aus.
 
@@ -155,9 +156,5 @@ Benutzer, an die Sie die E-Mail senden, können diese zwar an andere Personen we
 
     -   E-Mail: helpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

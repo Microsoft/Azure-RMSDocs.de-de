@@ -1,9 +1,10 @@
 ---
-title: Office-Anwendungen und -Dienste | Azure Information Protection
+title: Office-Apps und -Dienste mit Azure Information Protection
 description: Verwendung des Azure Rights Management-Diensts zum Schutz der Daten Ihrer Organisation durch Endbenutzer-Office-Anwendungen (z.B. Word, Excel, PowerPoint und Outlook) und Office-Dienste (z.B. Exchange und SharePoint).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,25 +13,28 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: ddf5e5d6064263489d44b4b1f3de394c471c90bb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3e77cebd642b2b9e983f5cbc81e43e1cc437dc5d
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# Office-Anwendungen und -Dienste
+# <a name="office-applications-and-services"></a>Office-Anwendungen und -Dienste
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 Endbenutzer-Office-Anwendungen (z.B. Word, Excel, PowerPoint und Outlook) und Office-Dienste (z.B. Exchange und SharePoint) können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden.
 
-## Office-Anwendungen: Word, Excel, PowerPoint, Outlook
+## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office-Anwendungen: Word, Excel, PowerPoint, Outlook
 Diese Anwendungen bieten systemeigene Unterstützung für Rights Management durch Verwendung von IRM (Information Rights Management, Verwaltung von Informationsrechten) und ermöglichen Benutzern das Schützen eines gespeicherten Dokuments oder einer zu sendenden E-Mail. Benutzer können Vorlagen verwenden oder für Word, Excel und PowerPoint sehr individuell anpassbare benutzerdefinierte Einstellungen für den Zugriff, die Rechte und die Nutzungseinschränkungen festlegen. 
 
 So können Benutzer ein Word-Dokument beispielsweise so konfigurieren, dass nur Personen in Ihrer Organisation darauf zugreifen können. Sie können ebenso kontrollieren, ob eine Excel-Tabelle bearbeitet werden kann, ihren Modus auf schreibgeschützt ändern oder das Drucken der Tabelle verhindern. Für Dateien mit zeitlicher Relevanz kann eine Ablaufzeit konfiguriert werden (direkt von Benutzern oder durch Anwenden einer Vorlage), nach deren Erreichen kein Zugriff auf die Datei mehr möglich ist. In Outlook können Benutzer zusätzlich zu einer Vorlage die Option **Nicht weiterleiten** auswählen, um zur Vermeidung von Datenlecks beizutragen.
 
-## Exchange Online und Exchange Server
+Zusätzlich zur systemeigenen Unterstützung von IRM unterstützen diese Anwendungen die Azure Information Protection-Leiste, die mit dem [Azure Information Protection-Client](../rms-client/aip-client.md ) installiert wird. Auf dieser Leiste werden Bezeichnungen angezeigt, die Benutzern das automatische Anwenden von Rights Management-Schutz auf Dokumente und E-Mails erleichtert, die vertrauliche Daten enthalten.
+
+## <a name="exchange-online-and-exchange-server"></a>Exchange Online und Exchange Server
 Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie IRM-Integration (Verwaltung von Informationsrechten) verwenden, die zusätzliche Informationsschutzlösungen bereitstellt:
 
 -   **Exchange ActiveSync IRM** , sodass mobile Geräte E-Mails schützen und geschützte E-Mails nutzen können.
@@ -47,7 +51,7 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie IRM-Integra
 
 Wenn Sie Exchange Server verwenden, können Sie die Informationsschutzfeatures mit dem Azure Rights Management-Dienst verwenden, indem Sie den RMS-Connector bereitstellen, der als Relay zwischen lokalen Servern und dem Azure Rights Management-Dienst fungiert. Weitere Informationen finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md).
 
-## SharePoint Online und SharePoint Server
+## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online und SharePoint Server
 Wenn Sie SharePoint Online oder SharePoint Server verwenden, können Sie IRM-Integration verwenden, wodurch Administratoren Listen und Bibliotheken schützen können, damit eine Datei, die von einem Benutzer ausgecheckt wird, geschützt ist, sodass nur autorisierte Personen sie entsprechend der von Ihnen angegebenen Informationsschutzregeln anzeigen und verwenden können. So kann die Datei beispielsweise schreibgeschützt sein, das Kopieren von Text deaktivieren, das Speichern einer lokalen Kopie oder das Drucken der Datei verhindern.
 
 Bei Listen und Bibliotheken wird der Informationsschutz immer von einem Administrator und nie von einem Endbenutzer angewendet. Außerdem wird er auf Listen- oder Bibliotheksebene für alle Dokumente in dem betreffenden Container angewendet statt auf einzelne Dateien.  Wenn Sie SharePoint Online verwenden, können die Benutzer IRM auch auf ihre OneDrive for Business-Bibliothek anwenden.
@@ -59,19 +63,16 @@ Wenn Sie SharePoint Server verwenden, können Sie die Informationsschutzfeatures
 > [!NOTE]
 > Gegenwärtig gibt es einige Beschränkungen bei der Verwendung von IRM mit SharePoint:
 > 
-> -   Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im klassischen Azure-Portal verwalten.
-> -   Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateierweiterung PDF, die nativ von Rights Management geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine native Unterstützung von Rights Management bietet.
-> -   Da Office auf mobilen Geräten Rights Management noch nicht unterstützt, muss auf diesen Geräten ein Browser zum Anzeigen von mit Rights Management geschützten Dateien verwendet werden, und die Dateien sind schreibgeschützt.
+> - Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im klassischen Azure-Portal verwalten.
+> - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateierweiterung PDF, die nativ von Rights Management geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine native Unterstützung von Rights Management bietet.
 
-Azure RMS wendet Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
+
+Azure Rights Management wendet Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 
 Weitere Informationen zum Azure Rights Management-Dienst in Verbindung mit SharePoint finden Sie im folgenden Beitrag im Office-Blog: [What’s New with Information Rights Management in SharePoint and SharePoint Online?](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/) (Neuerungen bei Information Rights Management in SharePoint und SharePoint Online).
 
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
-
-<!--HONumber=Sep16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Konfigurieren von Administratoren für die Dienste Azure Rights Management und Discovery oder die Datenwiederherstellung | Azure Information Protection"
+title: "Konfigurieren von Administratoren für Azure Rights Management – AIP"
 description: "Lernen Sie die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 70c74678ec0ef0b583b2784177520d0ea8a5b7e8
+ms.sourcegitcommit: 07236a2820e4d8d4d594eda755cb025d21b96d12
+ms.openlocfilehash: 591ca9ba080da9565e0143d887e3db179b810862
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -37,7 +38,9 @@ Die Administratorfunktion des Azure Rights Management-Diensts aus Azure Informat
 
 Standardmäßig ist die Administratorfunktion nicht aktiviert, und dieser Rolle sind keine Benutzer zugeordnet. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
 
-Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das Windows PowerShell-Cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx), und ordnen Sie dann mithilfe des Cmdlets [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) nach Bedarf Benutzer (oder Dienstkonten) zu, oder verwenden Sie das Cmdlet [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx), und fügen Sie dieser Gruppe die entsprechenden Benutzer (oder anderen Gruppen) hinzu. 
+Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature), und ordnen Sie dann mithilfe des Cmdlets [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) nach Bedarf Benutzer (oder Dienstkonten) zu, oder verwenden Sie das Cmdlet [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup), und fügen Sie dieser Gruppe die entsprechenden Benutzer (oder andere Gruppen) hinzu. 
+
+Obwohl das Verwenden einer Gruppe für Ihren Administrator einfacher zu verwalten ist, seien Sie sich bewusst, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). Wenn Sie also einen neuen Benutzer als Administrator bestimmen müssen, um Inhalt sofort zu entschlüsseln, fügen Sie diesen Benutzer hinzu, indem Sie Add-AadrmSuperUser benutzen, statt diesen Benutzer einer vorhandenen Gruppe zuzuordnen, die Sie mithilfe von Set-AadrmSuperUserGroup konfiguriert haben.
 
 > [!NOTE]
 > Wenn Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] noch nicht installiert haben, lesen Sie [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).
@@ -52,26 +55,24 @@ Bewährte Sicherheitsmethoden für die Administratorfunktion:
 
 Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet „Get-AadrmAdminLog“ erstellt wurden. In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für den Azure Rights Management-Dienst konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
 
-`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
+`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
+`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
 
-`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
+`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
 
 ## <a name="scripting-options-for-super-users"></a>Skriptoptionen für Administratoren
-Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Laden Sie hierfür das [RMS Protection Tool](http://www.microsoft.com/en-us/download/details.aspx?id=47256)herunter. Verwenden Sie dann die Cmdlets [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) und [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) gemäß Ihren Anforderungen.
+Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Verwenden Sie dazu die Cmdlets [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) und [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) gemäß Ihren Anforderungen. 
 
-Weitere Informationen zu diesen Cmdlets finden Sie unter [RMS Protection Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Wenn Sie die Klassifizierung und den Schutz verwenden, können Sie auch das Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) verwenden, um eine neue Bezeichnung ohne Schutz anzuwenden, oder die Bezeichnung entfernen, die einen entsprechenden Schutz angewendet hat. 
+
+Weitere Informationen zu diesen Cmdlets finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](../rms-client/client-admin-guide-powershell.md) im Administratorhandbuch für den Azure Information Protection-Client.
 
 > [!NOTE]
-> Das PowerShell-Modul für den RMS-Schutz im Lieferumfang des RMS Protection Tools unterscheidet sich vom [Windows PowerShell-Hauptmodul für Azure Rights Management](administer-powershell.md) und soll als Ergänzung dienen. Das RMS Protection-Modul unterstützt sowohl den Azure Rights Management-Dienst (Azure RMS) für den Azure Information Protection als auch Active Directory Rights Management Services (AD RMS).
+> Das AIP-Modul ersetzt das PowerShell-Modul „RMS Protection“, das mit dem RMS Protection Tool installiert wurde. Beide Module unterscheiden sich vom [Windows PowerShell-Modul für Azure Rights Management](administer-powershell.md) und ergänzen es. Das AIP-Modul unterstützt Azure Information Protection, den Azure Rights Management-Dienst (Azure RMS) für Azure Information Protection und auch Active Directory Rights Management Services (AD RMS).
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

@@ -1,10 +1,10 @@
 ---
-title: "Schritt 2&colon; Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln | Azure Information Protection"
+title: "Migrieren HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln – AIP"
 description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel HSM-geschützt ist und Sie die Migration zu Azure Information Protection mit einem HSM-geschützten Mandantenschlüssel in Azure Key Vault durchführen möchten."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
-ms.openlocfilehash: 5def3aa722afd29b99ef18c100d71a447c22554f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d0bb1cad20acdc16ee47c4a970a0cc095d07dc75
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -92,9 +93,5 @@ Diese Verfahren werden vom Administrator für Azure Information Protection durch
 
 Sie können jetzt mit [Schritt 3: Aktivieren Ihres Azure Information Protection-Mandanten](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
-
-
-
-<!--HONumber=Nov16_HO4-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -15,6 +15,7 @@
 ## [Konfigurieren von Anwendungen](configure-applications.md)
 ### [Office 365](configure-office365.md)
 ### [Office-Apps](configure-office-apps.md)
+### [Azure Information Protection-Client](configure-client.md)
 ### [RMS-Freigabeanwendung](configure-sharing-app.md)
 ## [Konfigurieren der Nutzungsrechte](configure-usage-rights.md)
 ## [Konfigurieren von Administratoren für Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)
@@ -24,7 +25,7 @@
 ### [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
-### [Anwenden des Schutzes](configure-policy-protection.md)
+### [Konfigurieren des Schutzes](configure-policy-protection.md)
 #### [HYOK-Einschränkungen](configure-adrms-restrictions.md)
 ### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
 ### [Konfigurieren von Bedingungen](configure-policy-classification.md)
@@ -48,6 +49,6 @@
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 

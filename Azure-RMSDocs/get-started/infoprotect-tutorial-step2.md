@@ -1,18 +1,19 @@
 ---
-title: Schnellstarttutorial Schritt 1 | Azure Information Protection
-description: "Schritt 2 eines Einführungstutorials, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 30 Minuten für Ihre Organisation testen können."
+title: "Schnellstart-Tutorial Schritt 2 – AIP"
+description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Konfigurieren der Richtlinie"
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -32,7 +33,7 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
     > [!TIP] 
     > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
 
-3.  Lernen Sie nun das automatisch angezeigte Blatt **Policy: Global** (Richtlinie: Global) kennen, das die automatisch erstellte Standardrichtlinie von Information Protection anzeigt:
+3.  Klicken Sie auf dem Azure Information Protection-Blatt auf **Global**, und untersuchen Sie das Blatt **Richtlinie: Global**, das die automatisch erstellte Standardrichtlinie von Information Protection anzeigt:
     
     - Bezeichnungen für die Klassifizierung: **Personal** (Privat), **Public** (Öffentlich), **Internal** (Intern), **Confidential** (Vertraulich) und **Secret** (Geheim). Lesen Sie die QuickInfo zu jeder Bezeichnung, um die Verwendung jeder einzelnen kennenzulernen. Beachten Sie, dass **Secret** die zwei Unterbezeichnungen **All-Employees** (Alle Mitarbeiter) und **My-Group** (Meine Gruppe) besitzt. Dies ist ein Beispiel für Unterkategorien von Klassifizierungen.
 
@@ -60,9 +61,15 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
     
     Auf dem neuen Blatt **Label: Confidential** (Bezeichnung: Vertraulich) werden alle für diese Bezeichnungen verfügbaren Einstellungen angezeigt. 
 
-2. Suchen Sie auf dem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) den Abschnitt **Set RMS template for protecting documents and emails containing this label** (RMS-Vorlage für den Schutz von Dokumenten und E-Mails mit dieser Bezeichnung festlegen):
+2. Suchen Sie auf dem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) den Abschnitt **Set permissions for documents and emails containing this label** (Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen).
+
+    Wählen Sie **Schützen** und dann die Option **Schutz** aus:
     
-    Behalten Sie für die Option **Select RMS template from** (RMS-Vorlage auswählen aus) den Standardwert **Azure RMS** bei. Klicken Sie dann auf das Dropdownfeld für **Select RMS template** (RMS-Vorlage auswählen), und wählen Sie die Standardvorlage **\<your organization name> - Confidential** (<Name Ihrer Organisation> – „Vertraulich“) aus. 
+    ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar.png) 
+    
+    Daraufhin öffnet sich das Blatt **Schutz**.
+    
+3. Vergewissern Sie sich, dass im Blatt **Schutz** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage ** \<Name Ihrer Organisation> – Vertraulich** aus.     
     
     Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
     
@@ -70,7 +77,9 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
     
     Wenn Sie diese Standardvorlage von Azure Rights Management deaktiviert haben, wählen Sie eine alternative Vorlage aus. Wenn Sie jedoch eine Abteilungsvorlage auswählen, sollten Sie sicherstellen, dass Ihr Konto im Bereich enthalten ist.
     
-3. Suchen Sie den Abschnitt **Set visual marking** (Visuelle Kennzeichnung festlegen):
+4. Klicken Sie auf **OK**, um die Änderungen zu speichern und das Blatt **Schutz** zu schließen.
+
+5. Sie kehren zum Blatt **Bezeichnung: Vertraulich** zurück. Suchen Sie dort den Abschnitt **Optische Kennzeichnung festlegen **:
     
     Klicken Sie für die Einstellung **Documents with this label have a watermark** (Dokumente mit dieser Bezeichnung haben ein Wasserzeichen) auf **Ein**, und geben Sie dann im **Textfeld** den Namen Ihrer Organisation ein. In diesem Beispiel lautet er **VanArsdel, Ltd**: 
     
@@ -78,7 +87,7 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
     
     Die Größe, die Farbe und das Layout für Wasserzeichen können zwar jeweils geändert werden, wir behalten jedoch hier die Standardwerte bei.
     
-4. Suchen Sie den Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden):
+6. Suchen Sie den Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden):
     
     Klicken Sie auf **Add a new condition** (Eine neue Bedingung hinzufügen), und wählen Sie anschließend auf dem Blatt **Condition** (Bedingung) Folgendes aus:
     
@@ -94,29 +103,29 @@ Für unser Tutorial ändern wir einige dieser globalen Richtlinieneinstellungen,
     
     Klicken Sie auf **Save** (Speichern), um wieder auf das Blatt **Label: Confidential** zurückzukehren.
 
-5. Auf dem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** angezeigt wird, mit **1** **VORKOMMEN**:
+7. Auf dem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** angezeigt wird, mit **1** **VORKOMMEN**:
     
     ![Schnellstarttutorial für Azure Information Protection Schritt 3 – Konfigurieren der Bedingung für Kreditkarten](../media/step2-see-condition.png)
 
-6. Behalten Sie für **Select how this label is applied** (Anwendungsweise dieser Bezeichnung auswählen) den Standardwert **Empfohlen** bei, und ändern Sie den Tipp für die Standardrichtlinie nicht:
+8. Behalten Sie für **Select how this label is applied** (Anwendungsweise dieser Bezeichnung auswählen) den Standardwert **Empfohlen** bei, und ändern Sie den Tipp für die Standardrichtlinie nicht:
     
     ![Schnellstarttutorial für Azure Information Protection Schritt 3 – Empfohlene Klassifizierung](../media/step2-keep-recommended.png)
 
-7. Geben Sie im Textfeld **Enter notes for internal housekeeping** (Notizen für interne Haushaltsführung eingeben) den Wert **For testing purposes only** (Ausschließlich für Testzwecke) ein:
+9. Geben Sie im Textfeld **Enter notes for internal housekeeping** (Notizen für interne Haushaltsführung eingeben) den Wert **For testing purposes only** (Ausschließlich für Testzwecke) ein:
     
     ![Schnellstarttutorial für Azure Information Protection Schritt 3 – Eingeben von Notizen](../media/step2-type-notes.png)
 
-8. Klicken Sie auf diesem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) auf **Speichern**. Klicken Sie dann auf dem Blatt **Policy: Global** (Richtlinie: Global) erneut auf **Speichern**.
+10. Klicken Sie auf diesem Blatt **Label: Confidential** (Bezeichnung: Vertraulich) auf **Speichern**. Klicken Sie dann auf dem Blatt **Policy: Global** (Richtlinie: Global) erneut auf **Speichern**.
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie konfiguriert](../media/info-protect-policy-configured.png)
 
-9. Da wir nun unsere Änderungen vorgenommen und gespeichert haben, möchten wir sie unseren Benutzern zur Verfügung stellen. Klicken Sie dazu auf dem ersten **Azure Information Protection**-Blatt auf **Publish** (Veröffentlichen) und anschließend auf **Yes** (Ja), um zu bestätigen.
+11. Da wir nun unsere Änderungen vorgenommen und gespeichert haben, möchten wir sie unseren Benutzern zur Verfügung stellen. Klicken Sie dazu auf dem ersten **Azure Information Protection**-Blatt auf **Publish** (Veröffentlichen) und anschließend auf **Yes** (Ja), um zu bestätigen.
 
 Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal entweder schließen oder es offen lassen, um zusätzliche Konfigurationsoptionen auszuprobieren.
 
-Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, wie der Azure Information Protection-Client und die Rights Management-Freigabeanwendung installiert werden.
+Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, den Azure Information Protection-Client zu installieren.
 
-|Weitere Informationen zu|Weitere Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Informationen zu den Konfigurationsoptionen für die Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md)|
 
@@ -125,7 +134,4 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 [&#171; Schritt 1](infoprotect-tutorial-step1.md)
 [Schritt 3 &#187;](infoprotect-tutorial-step3.md)
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Anforderungen an Azure Information Protection: Vollständiger Artikel | Azure Information Protection"
+title: "Anforderungen an Azure Information Protection – vollständiger Artikel"
 description: "Voraussetzungen für die Bereitstellung von Azure Information Protection für Ihre Organisation."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 10cf9371-a61b-495f-9d42-898448806994
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 68b3d74d32b98f44cfdf9cf78b7a9151f16124ce
-ms.openlocfilehash: b4afd639439f0549ce38de1e63a1798d30680066
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 94259046ed2eb78bce9d7ce49a4dc3b9c99d55c3
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,7 +72,7 @@ Wenn Sie das Azure AD-Verzeichnis in Ihre lokalen AD-Gesamtstrukturen integriere
 > 
 > -   Sie müssen AD FS mit einer Mindestserverversion von **Windows Server 2012 R2** oder einem alternativen Authentifizierungsanbieter verwenden, der das OAuth 2.0-Protokoll verwendet.
 
-### <a name="multifactor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) und Azure Information Protection
+### <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) und Azure Information Protection
 Damit Sie Multi-Factor Authentication (MFA) mit Azure Information Protection verwenden können, ist mindestens eine der folgenden Komponenten erforderlich:
 
 -   Office 2013 (Mindestversion):
@@ -161,7 +162,7 @@ Informationen über die Tabellenspalten:
 Unterstützt die Anzeige geschützter Inhalte.
 
 ##### <a name="footnote-2"></a>Fußnote 2 
-Unterstützt die Anzeige von geschützten Dokumenten, wenn ein ungeschütztes Dokument in eine geschützte Bibliothek in SharePoint Online und OneDrive for Business hochgeladen wird. 
+Unterstützt die Anzeige von geschützten Dokumenten, wenn ein ungeschütztes Dokument in eine geschützte Bibliothek in SharePoint Online und OneDrive for Business hochgeladen wird 
 
 ##### <a name="footnote-3"></a>Fußnote 3
 Wenn ein Empfänger eine geschützte E-Mail erhält und als Mailserver nicht Exchange verwendet, oder wenn der Absender zu einer anderen Organisation gehört, kann der Inhalt nur in einem funktionsreichen E-Mail-Client wie Outlook geöffnet werden. Dieser Inhalt kann nicht in Outlook Web Access geöffnet werden.
@@ -248,7 +249,7 @@ Zusätzlich liegen bei der RMS-Freigabeanwendung folgende Einschränkungen vor:
 
 -   Für Windows-Computer: Erfordert eine Mindestversion von Windows 7 Service Pack 1.
 
-## <a name="onpremises-servers-that-support-azure-rights-management-data-protection"></a>Lokale Server mit Unterstützung für den Azure Rights Management-Schutz von Daten
+## <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Lokale Server mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
 Bei Verwendung des Azure Rights Management-Connectors werden die folgenden lokalen Serverprodukte mit Azure Information Protection unterstützt. Dieser Connector dient als Kommunikationsschnittstelle (Relay) zwischen den lokalen Servern und dem Azure Rights Management-Dienst, über den durch Azure Information Protection Office-Dokumente und E-Mails geschützt werden. 
 
@@ -285,9 +286,5 @@ Der Rights Management-Connector wird unter Windows Server 2012 R2, Windows Serve
 
 Weitere Informationen zum Konfigurieren des Rights Management-Connectors für diese lokalen Server finden Sie unter [Bereitstellen des Azure Rights Management-Connectors](../deploy-use/deploy-rms-connector.md).
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

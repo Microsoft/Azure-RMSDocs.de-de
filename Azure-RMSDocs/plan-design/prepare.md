@@ -1,10 +1,10 @@
 ---
-title: "Vorbereiten für Azure Rights Management-Schutz | Azure Information Protection"
+title: "Vorbereiten für den Schutz durch Azure Rights Management – AIP"
 description: "Überprüfen Sie, ob alles für die Verwendung des Azure Rights Management-Diensts bereit ist, sodass Ihre Organisation Dokumente und E-Mails schützen kann."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
+ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
+ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -33,14 +34,14 @@ Damit Sie Azure Information Protection für Ihre Organisation bereitstellen kön
 
     Wenn Sie über Exchange Online verfügen, können Sie im Exchange Admin Center E-Mail-fähige Gruppen erstellen und nutzen. Wenn Sie AD DS haben und die Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen erstellen und verwenden, die entweder Sicherheits- oder Verteilergruppen sind.
 
+### <a name="group-membership-caching"></a>Zwischenspeichern der Gruppenmitgliedschaft
+
+Aus Leistungsgründen wird die Gruppenmitgliedschaft vom Azure Rights Management-Dienst zwischengespeichert. Dies bedeutet, dass die Änderungen an der Gruppenmitgliedschaft bis zu drei Stunden benötigen, bis sie wirksam sind. Änderungen dieses Zeitraums sind vorbehalten. Denken Sie daran, diese Verzögerung in alle Änderungen oder Tests mit einzubeziehen, die Sie während der Verwendung von Gruppen in Ihrer Konfiguration des Azure Rights Management-Diensts vornehmen, z.B. das Konfigurieren von [benutzerdefinierten Vorlagen](../deploy-use/configure-custom-templates.md), oder wenn Sie eine Gruppe für die [Administratorfunktion](../deploy-use/configure-super-users.md) verwenden. 
+
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Aktivieren des Rights Management-Diensts für den Schutz von Daten
 Wenn alles für den Schutz von Dokumenten und E-Mails bereit ist, aktivieren Sie den Rights Management-Dienst, um diese Technologie anzuwenden. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

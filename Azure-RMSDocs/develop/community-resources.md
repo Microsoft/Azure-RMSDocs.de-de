@@ -1,11 +1,11 @@
 ---
-title: Communityressourcen | Azure RMS
-description: "AD RMS wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt."
+title: Ressourcen der Entwicklercommunity | Microsoft-Dokumentation
+description: "Azure Information Protection wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 91d2dc461ecdb2f15b7bfc93b38a4937c4322f3a
+ms.sourcegitcommit: 91a91b55c0dad4cf83d76d18b75e6b0d91c67190
+ms.openlocfilehash: d9ec87cea94248fb0bb34856d0ff7bd343da26f0
 
 
 ---
@@ -25,24 +25,25 @@ ms.openlocfilehash: 91d2dc461ecdb2f15b7bfc93b38a4937c4322f3a
 
 Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.
 
-## <a name="ad-rms-community-resources"></a>AD RMS-Communityressourcen
-
+## <a name="developers-blog"></a>Entwicklerblog
 Die [RMS Developer's Corner (Blog)](http://blogs.msdn.com/b/rms/) ist der aktive Treffpunkt für Entwickler, die sich mit dem Schützen von Daten befassen.
 
+## <a name="microsoft-connect"></a>Microsoft Connect
 Im Abschnitt zu Rights Management Services auf der Connect-Website finden Sie aktuelle „Deliverables“ und können Feedback geben.
 
-**Hinweis**  
-Gehen Sie wie folgt vor, falls Sie sich noch nicht unter Microsoft Connect registriert haben:
-
--   Navigieren Sie zu [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com).
--   Melden Sie sich mit Ihrem Microsoft-Konto an.
--   Klicken Sie in der Befehlsleiste auf **Verzeichnis**.
--   Suchen Sie nach **Rights Management Services**.
--   Klicken Sie auf **Beitreten**, um sich zu registrieren.
+> [!NOTE]
+>
+>Gehen Sie wie folgt vor, falls Sie sich noch nicht unter Microsoft Connect registriert haben:
+>
+>-   Navigieren Sie zu [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com).
+>-   Melden Sie sich mit Ihrem Microsoft-Konto an.
+>-   Klicken Sie in der Befehlsleiste auf **Verzeichnis**.
+>-   Suchen Sie nach „Rights Management Services“.
+>-   Klicken Sie auf **Beitreten**, um sich zu registrieren.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

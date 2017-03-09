@@ -5,18 +5,19 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
+ms.sourcegitcommit: 8af3161946b2dfc6ea58d0565491d8e59736d565
+ms.openlocfilehash: 2f4c11f7661a814849ccea41c60edfc2ad2287e8
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -25,7 +26,13 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.
 
-## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Neu für Februar 2016 – SDK-Dokumentationsupdate
+## <a name="new-for-the-february-2017---sdk-documentation-update"></a>Neues im SDK-Dokumentationsupdate von Februar 2017
+>[!Note]  
+> Die Dokumentationsupdates in diesem Abschnitt gelten für die SDK-Downloadversion 1.03102.0221.
+ 
+- **Datensammlung**: Die Anwendungsfehler-Leistungsinformationssammlung ist nun verfügbar. Diese Funktion wird über eine neue Eigenschaft gesteuert, nämlich *IPC_EI_DATA_COLLECTION_ENABLED*, was eine der [Umgebungseigenschaften](https://msdn.microsoft.com/en-us/library/hh535247.aspx) ist; sie kann vom Administrator überschrieben werden. 
+
+## <a name="february-2016---sdk-documentation-update"></a>Februar 2016 – SDK-Dokumentationsupdate
 
 >[!Note]
 > Die Funktionsdokumentationsupdates in diesem Abschnitt gelten für den SDK-Download vom 12.11.2015.
@@ -68,7 +75,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 
 ## <a name="january-2015-update"></a>Januar 2015-Update
 
--   **Vergrößerung der unterstützten geschützten Datei (PFILE)**: Jetzt werden PFILE-Dateien über 1 GB unterstützt. Weitere Informationen zu PFILE-Dateien finden Sie unter [Unterstützte Dateiformate](supported-file-formats.md).
+-   **Vergrößerung der unterstützten geschützten Datei (PFILE)**: Jetzt werden PFILE-Dateien über&1; GB unterstützt. Weitere Informationen zu PFILE-Dateien finden Sie unter [Unterstützte Dateiformate](supported-file-formats.md).
 -   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **INFO** protokolliert.
 
     Auf diese Weise bleiben Ihre Details erhalten. Jetzt werden nur die wichtigsten Nachrichten als WARNUNG angezeigt.
@@ -162,8 +169,3 @@ Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen
 Wenn kein Name und keine Beschreibung abgerufen werden kann, wird ein Fehler zurückgegeben. Es kann nur ein Name und eine Beschreibung für eine bestimmte LCID vorhanden sein.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -1,10 +1,10 @@
 ---
-title: Konfigurieren der Richtlinie | Azure Information Protection
+title: Konfigurieren der Azure Information Protection-Richtlinie
 description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,7 +32,7 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Dann wird das Blatt **Azure Information Protection** angezeigt, das automatisch das Blatt für die globale Information Protection-Richtlinie öffnet, die alle Benutzer erhalten. Sie enthält die folgenden Elemente, die Sie konfigurieren können:
+    Dann wird das Blatt **Azure Information Protection** angezeigt, auf dem Sie die Richtlinie **Global** öffnen können, die alle Benutzer erhalten. Sie können optional auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinie **Global** enthält die folgenden Elemente, die Sie konfigurieren können:
 
     - Bezeichnungen, mit denen Sie und Ihre Benutzer Dokumente und E-Mails klassifizieren können.
 
@@ -67,7 +68,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection](configure-policy-change-label.md)
 
-- [Konfigurieren einer Bezeichnung, um den Rights Management-Schutz anzuwenden](configure-policy-protection.md)
+- [Konfigurieren einer Bezeichnung zum Schutz](configure-policy-protection.md)
 
 - [Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection](configure-policy-markings.md)
 
@@ -79,9 +80,5 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

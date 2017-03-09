@@ -1,10 +1,10 @@
 ---
-title: "Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst | Azure Information Protection"
+title: "Unterstützen von Benutzern beim Schützen von Dateien mithilfe von Azure RMS – AIP"
 description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: df9da739717465a905c9e6da281df652de63f8bd
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -42,6 +43,8 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
 -   **Helpdesk-Informationen:**
 
     Eines der nützlichsten Helpdesktools ist der [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Helpdesk-Operatoren können das Tool mit der Azure RMS-Administratoroption ausführen und Benutzer dazu auffordern, es mit der Azure RMS-Benutzeroption auszuführen. Dieses Tool unterstützt Sie nicht nur bei der Fehlersuche, sondern behebt gefundene Probleme und zeichnet, sofern der Fehler nicht behoben werden konnte, Ablaufverfolgungsprotokolle auf.
+    
+    Wenn Benutzer den Azure Information Protection-Client ausführen, können Helpdesk-Operatoren sie auffordern, die Option **Hilfe und Feedback**, **Ausführen von Diagnosen** zu verwenden und danach den Client zurückzusetzen. Im Gegensatz zu RMS Analyzer loggt die Zurücksetzung jedoch den Benutzer nicht aus und führt auch keinen erneuten Bootstrap auf dem Client aus. Zusätzlich wird keine automatische Wartung durchgeführt.
 
     Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente – z.B. eine Anfrage von der Rechtsabteilung oder einem Vorgesetzten, nachdem ein Mitarbeiter die Organisation verlassen hat – sicher, dass der Helpdesk über Prozesse verfügt, mit denen dies unter Verwendung des Azure Rights Management-[Administratorfeatures](configure-super-users.md) angefordert werden kann.
 
@@ -61,20 +64,16 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
 
 Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen sensibler Dokumente und E-Mails zu helfen.
 
-## <a name="using-information-protection-with-the-rights-management-sharing-application"></a>Verwenden von Informationsschutz mit der Rights Management-Freigabeanwendung
-Die RMS-Freigabeanwendung (Rights Management) ist möglicherweise für Benutzer erforderlich, damit diese Inhalte schützen und geschützte Inhalte nutzen können, wenn sie Office 2010 verwenden, wird aber auch für alle Computer und mobilen Geräte empfohlen, die den Azure Rights Management-Dienst unterstützen.
+## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Verwenden des Informationsschutzes mit dem Azure Information Protection-Client
+Der Azure Information Protection-Client ist möglicherweise erforderlich, damit Benutzer geschützte Dokumente und E-Mails schützen und nutzen können, wenn sie Office 2010 verwenden. Er wird aber auch für Computer und mobile Geräte empfohlen.
 
-Die RMS-Freigabeanwendung erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
+Der Azure Information Protection-Client erleichtert es Benutzern, wichtige Dokumente zu schützen, die von ihnen geschützten Dokumente nachzuverfolgen und, falls nötig, den Zugriff darauf zu widerrufen.
 
-Anweisungen zur Verwendung dieser Anwendung für Windows-Computer finden Sie im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](../rms-client/client-user-guide.md).
 
-Informationen für mobile Geräte finden Sie unter [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile Plattformen](http://technet.microsoft.com/dn451248).
-
-> [!TIP]
-> Ein allgemeines Beispielszenario mit Screenshots finden Sie unter [Benutzer geben auf sichere Weise Anlagen für mobile Benutzer frei](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
-Wenn Sie den Azure Rights Management-Dienst verwenden, ohne die Rights Management-Freigabeanwendung installiert zu haben, wird Benutzern weder im Menüband die Schaltfläche **Geschützt freigeben** noch im Datei-Explorer die Option **Direkt schützen** angezeigt, die das Schützen von Dateien erleichtern würden. Diese Benutzer müssen ähnliche Anleitungen wie diese befolgen.
+Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Auch die Schaltfläche **Schützen** wird nicht im Menüband oder die Option **Klassifizieren und schützen** für den Datei-Explorer angezeigt. Mithilfe dieser Optionen können die Dateien einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
@@ -112,10 +111,6 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 
 Ähnlich wie beim Anzeigen eines geschützten Dokuments, werden die Empfänger der E-Mail bei deren Empfang zuerst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Wenn Sie beispielsweise **Nicht allen antworten**ausgewählt haben, ist die Option **ALLEN ANTWORTEN** im Nachrichtenfenster nicht verfügbar.
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

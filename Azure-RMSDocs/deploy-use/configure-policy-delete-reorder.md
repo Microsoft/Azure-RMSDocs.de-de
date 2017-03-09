@@ -1,18 +1,19 @@
 ---
-title: "Gewusst wie: Löschen oder Ändern der Position einer Bezeichnung | Azure Information Protection"
+title: "Löschen oder Ändern der Position einer Azure Information Protection-Bezeichnung"
 description: "Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen löschen oder deren Position ändern, indem Sie diese Einstellungen in der Azure Information Protection-Richtlinie konfigurieren."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: df667a8580af71d808752d569a6148852faec82c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen 
 
 Wenn Sie eine Bezeichnung löschen, die auf Dokumente und E-Mails angewendet wurde, und anschließend die Azure Information Protection-Richtlinie veröffentlichen, wird diese Bezeichnung automatisch von diesen Dokumenten oder E-Mails entfernt, wenn diese das nächste Mal vom Azure Information Protection-Client geöffnet werden.
 
-Anstatt eine Bezeichnung zu löschen, möchten Sie sie möglicherweise einfach deaktivieren. Dadurch wird die Bezeichnung beibehalten, jedoch nicht in der Information Protection-Leiste angezeigt.
+Bevor Sie eine Bezeichnung löschen, erwägen Sie, diese stattdessen zu deaktivieren. Wenn Sie eine Bezeichnung deaktivieren, die auf Dokumente und E-Mails angewendet wurde, wird die angewendete Bezeichnung nicht von diesen Dokumenten und E-Mails entfernt. Sie wird aber in der Information Protection-Leiste nicht mehr als Bezeichnung angezeigt, die von Benutzern ausgewählt werden kann. Durch Deaktivieren einer Bezeichnung können Sie zudem die ursprüngliche Konfiguration beibehalten, damit Benutzer die Bezeichnung zu einem späteren Zeitpunkt wieder auswählen können, wenn Sie diese wieder aktivieren.
 
 Ordnen Sie die Bezeichnungen so an, dass Sie auf der Information Protection-Leiste in einer logischen Reihenfolge für die Benutzer angezeigt werden. Ordnen Sie die Bezeichnungen z. B. nach steigender Vertraulichkeitsstufe an, sodass den Benutzern zuerst die niedrigste Vertraulichkeitsstufe und zuletzt die höchste Vertraulichkeitsstufe angezeigt wird. Diese Konfiguration wird in der [Standardrichtlinie](configure-policy-default.md) verwendet.
 
@@ -57,10 +58,6 @@ Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

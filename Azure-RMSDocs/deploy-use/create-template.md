@@ -1,9 +1,10 @@
 ---
-title: "Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage | Azure Information Protection"
+title: "Konfigurieren und Veröffentlichen einer benutzerdefinierten Azure RMS-Vorlage"
 description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlagen im klassischen Azure-Portal. Mit Vorlagen können Endbenutzer und andere Administratoren ganz einfach geeignete Richtlinien anwenden, um Dokumente und E-Mails zu schützen."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,37 +13,32 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
-ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
+# <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 
 Benutzerdefinierte Vorlagen erstellen und verwalten Sie im klassischen Azure-Portal. Sie können dies direkt im klassischen Azure-Portal durchführen, oder Sie können sich beim Office 365 Admin Center anmelden und die **erweiterten Funktionen** für Rights Management auswählen, über die Sie zum klassischen Azure-Portal weitergeleitet werden.
 
-Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für den Azure Rights Management-Dienst anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassischen Azure-Portal zu erstellen und zu verwalten. Wenn Sie die globale Administratorrolle für den Azure Rights Management-Dienst anderen Benutzern zugewiesen haben, können diese ebenfalls Vorlagen erstellen und verwalten, müssen jedoch [PowerShell](configure-templates-with-powershell.md) verwenden. Weitere Informationen finden Sie unter [Werden zum Konfigurieren von Azure RMS globale Administratorrechte benötigt, oder kann ich diese Aufgabe an andere Administratoren delegieren?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Rights Management zu erstellen, zu konfigurieren und zu veröffentlichen.
 
-## So erstellen Sie eine benutzerdefinierte Vorlage
+## <a name="to-create-a-custom-template"></a>So erstellen Sie eine benutzerdefinierte Vorlage
 
 1.  Je nachdem, ob Sie sich beim Office 365 Admin Center oder beim klassischen Azure-Portal angemeldet haben, führen Sie eine der folgenden Aktionen aus:
 
-    -   Vom [Office 365 Admin Center](https://portal.office.com/):
+    -   Im **Office 365 Admin Center** richtet sich die Navigation danach, ob Sie Office 365 Admin Center in der Vorschau (und in welcher Version) verwenden oder ob Sie das klassische Office 365 Admin Center verwenden. In allen Versionen können Sie direkt zur Seite für die [Rechteverwaltung](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) wechseln: 
 
-        1.  Klicken Sie im linken Bereich auf **Diensteinstellungen**.
-
-        2.  Klicken Sie auf der Seite **Diensteinstellungen** auf **Rechteverwaltung**.
-
-        3.  Klicken Sie im Abschnitt **Schützen Sie Ihre Informationen** auf **Verwalten**.
-
-        4.  Klicken Sie im Abschnitt **Rechteverwaltung** auf **Erweiterte Features**.
+        1.  Klicken Sie im Abschnitt **Zusätzliche Konfiguration** auf **Erweiterte Features**.
 
             > [!NOTE]
             > Wenn Sie den Rights Management-Dienst nicht aktiviert haben, klicken Sie zuerst auf **Aktivieren**, und bestätigen Sie dann Ihre Aktion. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
@@ -76,7 +72,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
 4. Klicken Sie auf der Schnellstartseite **Erste Schritte mit der Rechteverwaltung** auf **Vorlagen für Benutzerrechterichtlinien verwalten**. Ihre neu erstellte Vorlage wird mit dem Status **Archiviert**in der Liste der Vorlagen angezeigt. Zu diesem Zeitpunkt ist die Vorlage zwar erstellt, aber noch nicht konfiguriert und für die Benutzer noch nicht sichtbar.
 
-## So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
+## <a name="to-configure-and-publish-a-custom-template"></a>So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
 
 1.  Wählen Sie auf der Seite **VORLAGEN** im klassischen Azure-Portal Ihre neu erstellte Vorlage aus.
 
@@ -85,19 +81,21 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
     > [!NOTE]
     > Die von Ihnen ausgewählten Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung ist dies praktisch immer der Fall, aber in einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder Gruppen E-Mail-Adressen hinzufügen.
 
-    Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie Active Directory lokal haben und Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen verwenden, die entweder Sicherheits- oder Verteilergruppen sind. Wenn Sie jedoch allen Benutzern in der Organisation Rechte erteilen möchten, ist es effizienter, eine der Standardvorlagen zu kopieren, anstatt mehrere Gruppen anzugeben. Weitere Informationen finden Sie unter [Kopieren einer Vorlage](copy-template.md).
+    Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie jedoch Änderungen an der Gruppe durchführen, denken Sie daran, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). 
+    
+    Wenn Sie Active Directory lokal haben und Synchronisierung mit Azure AD vornehmen, können Sie E-Mail-fähige Gruppen verwenden, die entweder Sicherheits- oder Verteilergruppen sind. Um allen Benutzern in der Organisation Rechte zu erteilen, ist es effizienter, eine der Standardvorlagen zu kopieren, anstatt mehrere Gruppen anzugeben. Weitere Informationen finden Sie unter [Kopieren einer Vorlage](copy-template.md).
 
     > [!TIP]
     > Sie können Ihrer Vorlage Benutzer von außerhalb Ihrer Organisation („externe Benutzer“) hinzufügen, indem Sie eine E-Mail-aktivierte Gruppe auswählen, die Kontakte aus Office 365 oder Exchange Online enthält. Dadurch können Sie diesen Benutzern genau wie Benutzern in Ihrer Organisation Rechte zuweisen. Beispielsweise können Sie verhindern, dass Kunden eine von Ihnen gesendete Preisliste bearbeiten. Verwenden Sie diese Vorlagenkonfiguration nicht zum Schutz von E-Mails, wenn Benutzer von außerhalb Ihrer Organisation die geschützten E-Mails mit Outlook Web App lesen.
     > 
-    > Außerdem können Sie der Vorlage später Benutzer von außerhalb Ihrer Organisation hinzufügen, indem Sie das [Windows PowerShell-Modul für Azure Rights Management](install-powershell.md) und eine der folgenden Methoden verwenden:
+    > Darüber hinaus können Sie später Benutzer, die von außerhalb Ihrer Organisation stammen, nach **bestimmten Benutzern** oder **Gruppen** zur Vorlage hinzufügen. Sie können auch **alle Benutzer der Organisation** zur Vorlage hinzufügen. Verwenden Sie hierzu das [Windows PowerShell-Modul für Rights Management](install-powershell.md) und eine der folgenden Methoden:
     > 
-    > -  **Verwenden eines Rechtedefinitionsobjekts zum Aktualisieren einer Vorlage**: Geben Sie die externen E-Mail-Adressen und die dazugehörigen Rechte in einem Rechtedefinitionsobjekt an, das Sie dann zum Aktualisieren der Vorlage verwenden. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx)-Cmdlet für den -RightsDefinition-Parameter bereitstellen, um eine vorhandene Vorlage zu ändern. Wenn Sie jedoch diese Benutzer zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die neuen externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
-    > -  **Exportieren, Bearbeiten und Importieren der aktualisierten Vorlage**: Exportieren Sie die Vorlage mithilfe des [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx)-Cmdlets in eine Datei, und bearbeiten Sie diese, indem Sie die externen Adressen dieser Benutzer und ihre Rechte den vorhandenen Gruppen und Rechten hinzufügen. Importieren Sie diese Änderung anschließend mit dem [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx)-Cmdlet wieder in Azure RMS.
+    > -  **Verwenden Sie zum Aktualisieren einer Vorlage ein Rechtedefinitionsobjekt**: Geben Sie die externen Benutzer (nach E-Mail-Adresse des Benutzers, nach E-Mail-Adresse der Gruppe oder für alle Benutzer in dieser Organisation nach einer Domäne) und ihre Rechte in einem Rechtedefinitionsobjekt an. Anschließend verwenden Sie dieses Rechtedefinitionsobjekt zum Aktualisieren Ihrer Vorlage. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty)-Cmdlet für den -RightsDefinition-Parameter bereitstellen, um eine vorhandene Vorlage zu ändern. Wenn Sie jedoch diese Benutzer zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die neuen externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
+    > -  **Exportieren, Bearbeiten und Importieren der aktualisierten Vorlage**: Exportieren Sie die Vorlage mithilfe des [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate)-Cmdlets in eine Datei, und bearbeiten Sie diese, indem Sie die externen Benutzer (nach E-Mail-Adresse des Benutzers, nach E-Mail-Adresse der Gruppe oder für alle Benutzer in dieser Organisation nach einer Domäne) und ihre Rechte den vorhandenen Gruppen und Rechten hinzufügen. Importieren Sie diese Änderung anschließend mit dem [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate)-Cmdlet wieder in Azure RMS.
 
 3.  Klicken Sie auf die Schaltfläche "Weiter", und weisen Sie dann Ihren ausgewählten Benutzern und Gruppen eins der aufgeführten Rechte zu.
 
-    In der angezeigten Beschreibung finden Sie weitere Informationen zu jedem der Rechte (sowie zu benutzerdefinierten Rechten). Ausführlichere Informationen finden Sie auch unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md). Anwendungen, die RMS unterstützen, unterscheiden sich möglicherweise darin, wie sie diese Rechte implementieren Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen. Um diese Vorlage für diese Tests nur für Administratoren sichtbar zu machen, legen Sie diese Vorlage als Abteilungsvorlage fest (Schritt 6).
+    In der angezeigten Beschreibung finden Sie weitere Informationen zu jedem der Rechte (sowie zu benutzerdefinierten Rechten). Ausführlichere Informationen finden Sie auch unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md). Anwendungen, die Rights Management unterstützen, unterscheiden sich jedoch möglicherweise darin, wie sie diese Rechte implementieren. Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen. Um diese Vorlage für diese Tests nur für Administratoren sichtbar zu machen, legen Sie diese Vorlage als Abteilungsvorlage fest (Schritt 6).
 
 4.  Wenn Sie **Benutzerdefiniert**ausgewählt haben, klicken Sie auf die Schaltfläche „Weiter“, und wählen Sie dann diese benutzerdefinierten Rechte aus.
 
@@ -112,7 +110,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Weitere Informationen zu Abteilungsvorlagen: Standardmäßig sehen alle Benutzer in Ihrem Azure-Verzeichnis alle veröffentlichten Vorlagen, und die Benutzer können dann die Vorlagen aus Anwendungen auswählen, wenn Inhalt geschützt werden soll. Wenn Sie möchten, dass nur bestimmte Benutzer einige der veröffentlichten Vorlagen sehen können, müssen Sie den Bereich der Vorlagen auf diese Benutzer beschränken. Dann können diese Vorlagen nur von diesen Benutzern ausgewählt werden. Andere Benutzer, die Sie nicht angegeben haben, sehen die Vorlagen nicht und können diese daher nicht auswählen. Diese Vorgehensweise kann das Auswählen der richtigen Vorlage für Benutzer vereinfachen, insbesondere wenn Sie Vorlagen erstellen, die für eine Verwendung durch bestimmte Gruppen oder Abteilungen vorgesehen sind. Benutzer sehen dann nur die Vorlagen, die für sie entwickelt wurden.
 
-    Angenommen, Sie haben eine Vorlage für die Personalabteilung erstellt, mit der die Leseberechtigung für Mitarbeiter der Finanzabteilung erteilt wird. Damit nur Mitarbeiter der Personalabteilung diese Vorlage anwenden können, wenn sie die Rights Management-Freigabeanwendung verwenden, legen Sie den Bereich der Vorlage auf die E-Mail-aktivierte Gruppe "Personalabteilung" fest. Dann können nur Mitglieder dieser Gruppe diese Vorlage sehen und anwenden.
+    Angenommen, Sie haben eine Vorlage für die Personalabteilung erstellt, mit der die Leseberechtigung für Mitarbeiter der Finanzabteilung erteilt wird. Damit nur Mitarbeiter der Personalabteilung diese Vorlage anwenden können, wenn sie den Azure Information Protection-Client verwenden, legen Sie den Bereich der Vorlage auf die E-Mail-aktivierte Gruppe „Personalabteilung“ fest. Dann können nur Mitglieder dieser Gruppe diese Vorlage anwenden. Wenn Benutzer darüber hinaus den Azure Information Protection-Client im [reinen Schutzmodus](../rms-client/client-protection-only-mode.md) ausführen, wird diese Vorlage nicht angezeigt.
 
 7.  Wählen Sie auf der Seite **VORLAGENSICHTBARKEIT** die Benutzer und Gruppen aus, für die es möglich sein soll, die Vorlage in den RMS-fähigen Anwendungen auszuwählen. Wie bereits zuvor sollten Sie Gruppen statt Benutzer verwenden, und die Gruppen oder Benutzer, die Sie auswählen, müssen E-Mail-Adressen haben.
 
@@ -120,7 +118,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Warum müssen Sie möglicherweise Anwendungskompatibilität konfigurieren? Nicht alle Anwendungen können Abteilungsvorlagen unterstützen. Dazu muss sich die Anwendung zunächst beim RMS-Dienst authentifizieren, bevor die Vorlagen heruntergeladen werden. Wird der Authentifizierungsprozess nicht ausgeführt, wird standardmäßig keine der Abteilungsvorlagen heruntergeladen. Sie können dieses Verhalten außer Kraft setzen, indem Sie angeben, dass alle Abteilungsvorlagen heruntergeladen werden sollen. Dazu konfigurieren Sie die Anwendungskompatibilität und aktivieren das Kontrollkästchen **Zeigen Sie diese Vorlage allen Benutzern, wenn die Anwendungen die Benutzeridentität nicht unterstützen** .
 
-    Wenn Sie beispielsweise keine Anwendungskompatibilität für die Abteilungsvorlage im Personalabteilungsbeispiel konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie die RMS-Freigabeanwendung verwenden. Benutzer, die Outlook Web Access (OWA) aus Exchange Server 2013 verwenden, können die Abteilungsvorlage dagegen nicht sehen, weil Exchange OWA und Exchange ActiveSync zurzeit keine Abteilungsvorlagen unterstützen. Wenn Sie dieses Standardverhalten außer Kraft setzen, indem Sie die Anwendungskompatibilität konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie die RMS-Freigabeanwendung verwenden, aber alle Benutzer können die Abteilungsvorlage sehen, wenn sie Outlook Web Access (OWA) verwenden. Wenn Benutzer OWA oder Exchange ActiveSync aus Exchange Online verwenden, können entweder alle Benutzer die Abteilungsvorlagen sehen oder kein Benutzer, je nach dem Status der Vorlage ("Archivierung" oder "Veröffentlicht") in Exchange Online.
+    Wenn Sie beispielsweise keine Anwendungskompatibilität für die Abteilungsvorlage im Personalabteilungsbeispiel konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie den Azure Information Protection-Client im [reinen Schutzmodus](../rms-client/client-protection-only-mode.md) verwenden. Benutzer, die Outlook Web Access (OWA) aus Exchange Server 2013 verwenden, können die Abteilungsvorlage dagegen nicht sehen, weil Exchange OWA und Exchange ActiveSync zurzeit keine Abteilungsvorlagen unterstützen. Wenn Sie dieses Standardverhalten außer Kraft setzen, indem Sie die Anwendungskompatibilität konfigurieren, können nur Benutzer in der Personalabteilung die Abteilungsvorlage sehen, wenn sie den Azure Information Protection-Client im reinen Schutzmodus verwenden, aber alle Benutzer können die Abteilungsvorlage sehen, wenn sie Outlook Web Access (OWA) verwenden. Wenn Benutzer OWA oder Exchange ActiveSync aus Exchange Online verwenden, können entweder alle Benutzer die Abteilungsvorlagen sehen oder kein Benutzer, je nach dem Status der Vorlage ("Archivierung" oder "Veröffentlicht") in Exchange Online.
 
     Office 2016 unterstützt Abteilungsvorlagen nativ, und Gleiches gilt für Office 2013 ab Version 15.0.4727.1000, die im Juni 2015 als Bestandteil von [KB 3054853](https://support.microsoft.com/kb/3054853) veröffentlicht wurde.
 
@@ -140,10 +138,10 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     Überprüfen Sie dann, ob Sie Änderungen an den folgenden Einstellungen vornehmen möchten:
 
-    |Einstellung|Weitere Informationen|
-    |-----------|--------------------|
-    |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen für diese Vorlage, nach deren Ablauf Dateien, die durch diese Vorlage geschützt sind, nicht mehr geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen angeben, beginnend ab dem Zeitpunkt, zu dem der Schutz auf die Datei angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|
-    |**Offlinezugriff**|Verwenden Sie diese Einstellung, um Sicherheitsanforderungen zu erfüllen, wenn Benutzer in der Lage sein müssen, geschützte Dateien ohne Internetverbindung zu öffnen.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und Zugriffe werden protokolliert. Sollte dies eintreten, werden Benutzer, wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, aufgefordert, sich anzumelden, bevor sie die Datei öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dieselbe Datei zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf die Datei Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben.|
+    |Einstellung|Weitere Informationen| Empfohlene Einstellung
+    |-----------|--------------------|--------------------|
+    |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen für diese Vorlage, nach deren Ablauf Dateien, die durch diese Vorlage geschützt sind, nicht mehr geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen angeben, beginnend ab dem Zeitpunkt, zu dem der Schutz auf die Datei angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
+    |**Offlinezugriff**|Verwenden Sie diese Einstellung, um Sicherheitsanforderungen zu erfüllen, wenn Benutzer in der Lage sein müssen, geschützte Dateien ohne Internetverbindung zu öffnen.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und Zugriffe werden protokolliert. Sollte dies eintreten, werden Benutzer, wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, aufgefordert, sich anzumelden, bevor sie die Datei öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dieselbe Datei zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf die Datei Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Inhalt ist nur mit Internetverbindung verfügbar** für sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Bei dieser Empfehlung erhält die Sicherheit Priorität vor der Flexibilität. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
 
 10. Wenn Sie sicher sind, dass die Vorlage für Ihre Benutzer ordnungsgemäß konfiguriert wurde, klicken Sie auf **VERÖFFENTLICHEN** , um die Vorlage für Benutzer sichtbar zu machen, und klicken Sie auf **Speichern**.
 
@@ -164,10 +162,7 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 > [!WARNING]
 > Wenn Sie Änderungen an einer zuvor gespeicherten Vorlage vornehmen, werden diese Vorlagenänderungen bei Clients erst sichtbar, nachdem die Vorlagen auf deren Computern aktualisiert wurden. Weitere Informationen finden Sie unter [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md).
 
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
-
-<!--HONumber=Oct16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
