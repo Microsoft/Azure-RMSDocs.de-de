@@ -78,4 +78,4 @@ Auf ähnliche Weise bleibt „Active Directory Rights Management Services“ (AD
 
 Weitere Informationen zum Erwerb oder zum Testen von Azure Information Protection sowie zu den verschiedenen Features der einzelnen Abonnementpläne finden Sie auf der Website [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection).
 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
