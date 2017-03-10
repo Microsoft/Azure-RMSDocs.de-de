@@ -14,13 +14,10 @@ ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
-ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
-
-
+ms.openlocfilehash: 0e923d1bb3d4fd8b9b84f065b9dd32ddd041f7ba
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="terms"></a>Nutzungsbedingungen
 
 Sammlung mit Terminologiedefinitionen für Entwickler, die speziell für Azure Information Protection gelten.
@@ -40,8 +37,3 @@ Das PFile-Format ist für den Anwendungsentwickler transparent, da es in den Ent
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

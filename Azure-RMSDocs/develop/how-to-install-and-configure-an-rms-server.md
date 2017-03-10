@@ -14,13 +14,10 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: a0192d8210c8163a298cb7da8eff62e4eb9a87ad
-
-
+ms.openlocfilehash: 3f08823903b9da03c10e27c82d3edeb3067efd8e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
 In diesem Thema werden die Schritte zum Herstellen einer Verbindung mit einem RMS-Server oder Azure RMS zum Testen der rechtlich geschützten Anwendung behandelt.
@@ -54,7 +51,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
     -   **Onlineregistrierung**
 
-        Wenn Sie AD RMS 1.0 SP2 verwenden, können Sie den Server online registrieren. Die Registrierung findet während des Bereitstellungsvorgangs im Hintergrund statt; Sie müssen jedoch über eine Internetverbindung verfügen.
+        Wenn Sie AD RMS&1;.0 SP2 verwenden, können Sie den Server online registrieren. Die Registrierung findet während des Bereitstellungsvorgangs im Hintergrund statt; Sie müssen jedoch über eine Internetverbindung verfügen.
 
         **HKEY\_LOCAL\_MACHINE**\\**Software**\\**Microsoft**\\**DRMS**\\**1.0**\\**UddiProvider** = 0e3d9bb8-b765-4a68-a329-51548685fed3
 
@@ -106,8 +103,3 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
             ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

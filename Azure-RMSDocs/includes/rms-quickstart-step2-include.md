@@ -25,8 +25,3 @@ Sie können nun mit dem Schutz von Dateien beginnen, deren Inhalt Sie ausgewähl
 |Lokale Installation der Rights Management-Freigabeanwendung für Windows und Anweisungen für Benutzer   →|[Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md)|
 |Skriptgesteuerte Installation der Rights Management-Freigabeanwendung für Windows und weiterführende technische Informationen   →|[Administratorhandbuch der Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md)|
 |Unterschied zwischen systemeigenem und generischem Schutz   →|[Wo liegt der Unterschied zwischen allgemeinem und integriertem (nativem) Schutz?](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

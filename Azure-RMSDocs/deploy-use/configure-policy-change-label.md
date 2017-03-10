@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: e800818f87ab5b0b39ffdc244f871c04305039ae
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
@@ -49,6 +45,5 @@ Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
 Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

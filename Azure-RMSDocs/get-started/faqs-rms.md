@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: dccc643ae49521262d5327b4d3d98801f88b3894
-ms.openlocfilehash: ed200df12b3d0665920091c7772ed88a79143e70
-ms.lasthandoff: 02/25/2017
-
-
+ms.openlocfilehash: 8b1d8a3df125f4d1950e4e657c535f128c6d0b3a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -161,6 +157,5 @@ Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen 
 Trotz ihres Namens und ihres Erscheinungsbilds ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“, noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt [Option „Nicht weiterleiten“ für E-Mails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) in [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 
