@@ -14,13 +14,10 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
-
-
+ms.openlocfilehash: 46aba2289f0e3a41cc2fb09db3d5727cd77feb40
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
 In diesem Beispiel erstellen Sie eine einfache Konsolenanwendung, die mit dem AIP-Dienst (Azure Information Protection-Dienst) interagiert.  Sie übernimmt als Eingabe den Pfad eines zu schützenden Dokuments und schützt es anschließend mit einer Ad-hoc-Richtlinie oder einer Azure-Vorlage. Die Anwendung wendet dann die richtigen Richtlinien entsprechend den Eingaben an, um ein geschütztes Dokument zu erstellen. Der zu verwendende Beispielcode ist eine [Azure IP-Testanwendung](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test), die sich auf Github befindet.
@@ -232,8 +229,3 @@ Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung w
 6. Abschließend geben Sie einige Richtlinienmetadaten ein: Richtlinienname, Beschreibung und Anzeigename des Ausstellers (Azure AD-Mandant) ![App-Ausgabe – Schritt 6](../media/develop/app-output-6.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

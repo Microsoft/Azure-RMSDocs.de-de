@@ -40,8 +40,3 @@ Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfän
 |--------------------------------|--------------------------|
 |Umfassende Anweisungen und alternative Methoden zum Schutz der per E-Mail freigegebenen Dateien   →|[Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](../rms-client/sharing-app-protect-by-email.md)|
 |Optionen im Dialogfeld **Geschützt freigeben** →|[Dialogfeldoptionen der Rights Management-Freigabeanwendung](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-
