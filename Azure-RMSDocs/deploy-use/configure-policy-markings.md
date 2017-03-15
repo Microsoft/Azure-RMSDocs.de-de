@@ -4,27 +4,25 @@ description: "Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f1ac1ed3aada5d332764db962794d8d6b5428bd7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen:
 
-Diese visuellen Kennzeichnungen werden beim Anwenden der Bezeichnung auf Word-, Excel- und PowerPoint-Dokumente angewendet sowie beim Speichern des Dokuments. Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden der E-Mail angewendet.
+Diese visuellen Kennzeichnungen werden beim Anwenden der Bezeichnung auf Word-, Excel- und PowerPoint-Dokumente angewendet sowie beim Speichern des Dokuments in diesen Office-Anwendungen. Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden der E-Mail von Outlook angewendet.
+
+Visuelle Kennzeichnungen werden nicht auf Dokumente angewendet, wenn die Bezeichnung mit dem Datei-Explorer und durch Klicken mit der rechten Maustaste angewendet wird. Das gleiche gilt, wenn ein Dokument mithilfe von PowerShell klassifiziert wird.
 
 Weitere Informationen zu diesen visuellen Kennzeichnungen finden Sie hier:
 
@@ -81,5 +79,4 @@ Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${i
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

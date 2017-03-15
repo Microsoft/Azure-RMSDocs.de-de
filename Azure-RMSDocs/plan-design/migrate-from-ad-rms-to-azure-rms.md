@@ -4,7 +4,7 @@ description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Dire
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: b82132d45f1d671c11355c44104dacf521e18082
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
@@ -59,12 +55,6 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
         
         - Windows Server 2016 (x64)
         
-    - Kryptografiemodus 2:
-
-        - Die AD RMS-Server und -Clients müssen vor Beginn der Migration zu Azure Information Protection im Kryptografiemodus 2 ausgeführt werden.
-        
-        Obwohl das aktuelle lizenzgebende Serverzertifikat (Server Licensor Certificate, SLC) den Kryptografiemodus 2 verwenden muss, werden vorherige Schlüssel, die für den Kryptografiemodus 1 konfiguriert wurden, von Azure Information Protection als archivierte Schlüssel unterstützt. Weitere Informationen zu den Kryptografiemodi sowie zum Wechsel zu Kryptografiemodus 2, finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-        
     - Alle gültigen AD RMS-Topologien werden unterstützt:
     
         - Einzelne Gesamtstruktur, einzelner RMS-Cluster
@@ -73,7 +63,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
         
         - Mehrere Gesamtstrukturen, mehrere RMS-Cluster
         
-    Hinweis: Mehrere RMS-Cluster werden standardmäßig zu einem einzelnen Azure Information Protection-Mandanten migriert. Wenn Sie separate Azure Information Protection-Mandanten wünschen, müssen Sie sie als getrennte Migrationen behandeln. Ein Schlüssel von einem RMS-Cluster kann nur in einen einzigen Azure Information Protection-Mandanten importiert werden.
+    Hinweis: Mehrere AD RMS-Cluster werden standardmäßig zu einem einzelnen Azure Information Protection-Mandanten migriert. Wenn Sie separate Azure Information Protection-Mandanten wünschen, müssen Sie sie als getrennte Migrationen behandeln. Ein Schlüssel von einem RMS-Cluster kann nur in einen einzigen Azure Information Protection-Mandanten importiert werden.
 
 - **Alle Anforderungen für die Ausführung von Azure Information Protection, einschließlich eines Azure Information Protection-Mandanten (nicht aktiviert):**
 
@@ -104,7 +94,22 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
     - Für diese optionale Konfiguration sind Azure Key Vault und ein Azure-Abonnement erforderlich, das Key Vault mit HSM-geschützten Schlüsseln unterstützt. Weitere Informationen finden Sie auf der [Seite mit den Azure Key Vault-Preisen](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
-Einschränkungen:
+### <a name="cryptographic-mode-considerations"></a>Überlegungen zum Kryptografiemodus
+
+Es ist zwar keine Voraussetzung für die Migration, doch Sie sollten Ihre AD RMS-Server und -Clients im Kryptografiemodus 2 ausführen, bevor Sie die Migration starten. 
+
+Weitere Informationen zu den verschiedenen Modi, und wie sie aktualisiert werden, finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
+
+Wenn Ihr AD RMS-Cluster sich im Kryptografiemodus 1 befindet, und Sie ihn nicht aktualisieren können, müssen Sie Ihren Azure Information Protection-Mandantenschlüssel nach Abschluss der Migration neu vergeben. Die Neuvergabe erstellt einen neuen Mandantenschlüssel, der Kryptografiemodus 2 verwendet. Die Verwendung des Azure Rights Management-Diensts mit Kryptografiemodus 1 wird nur während der Migration unterstützt.
+
+So bestätigen Sie den AD RMS-Kryptografiemodus:
+ 
+- Für Windows Server 2012 R2 und Windows 2012: AD RMS-Clustereigenschaften > Registerkarte **Allgemein**. 
+
+- Für alle unterstützten Versionen von AD RMS: Verwenden Sie den [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) und die Option**AD RMS-Admin** zur Anzeige des Kryptografiemodus in den **RMS-Dienstinformationen**.
+
+
+### <a name="migration-limitations"></a>Einschränkungen bei der Migration
 
 -   Obwohl der Migrationsvorgang die Migration des Schlüssels Ihres lizenzgebenden Serverzertifikats (SLC) zu einem Hardwaresicherheitsmodul (HSM) für Azure Information Protection unterstützt, wird diese Konfiguration derzeit von Exchange Online für den von Azure Information Protection verwendeten Rights Management-Dienst nicht unterstützt. Wenn Sie nach der Migration zu Azure Information Protection die vollständige IRM-Funktionalität mit Exchange Online nutzen möchten, muss Ihr Azure Information Protection-Mandantenschlüssel [von Microsoft verwaltet](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) werden. Sie können IRM auch mit eingeschränkter Funktionalität in Exchange Online ausführen, wenn Ihr Azure Information Protection-Mandant von Ihnen verwaltet wird (BYOK). Weitere Informationen zur Verwendung von Exchange Online mit dem Azure Rights Management-Dienst finden Sie unter [Schritt 6. Konfigurieren der IRM-Integration mit Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online) in diesen Anweisungen.
 
@@ -192,11 +197,10 @@ Die Migrationsschritte können in vier Phasen unterteilt werden, die zu untersch
 
 - **Schritt 9: Erneuern Ihres Azure Information Protection-Mandantenschlüssels**
 
-    Dieser Schritt ist optional, wird jedoch empfohlen, wenn Ihre in Schritt 2 ausgewählte Azure Information Protection-Mandantenschlüsseltopologie „von Microsoft verwaltet“ ist. Dieser Schritt ist nicht anwendbar, wenn die ausgewählte Azure Information Protection-Mandantenschlüsseltopologie „vom Kunden verwaltet“ (BYOK) ist.
+    Dieser Schritt ist erforderlich, wenn Sie den Kryptografiemodus 2 vor der Migration nicht ausgeführt haben, und wird für alle anderen Migrationen als optionaler Schritt empfohlen, um die Sicherheit Ihres Azure Information Protection-Mandantenschlüssels zu gewährleisten.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 Um die Migration zu starten, wechseln Sie zu [Phase 1: Serverseitige Konfiguration](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

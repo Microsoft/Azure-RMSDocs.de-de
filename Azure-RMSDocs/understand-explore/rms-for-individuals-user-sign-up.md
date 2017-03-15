@@ -4,7 +4,7 @@ description: "Anweisungen zur Registrierung für dieses kostenlose Konto und tec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>Registrieren für RMS for Individuals
 
 >*Gilt für: Azure Information Protection*
@@ -87,7 +83,7 @@ Während des gesamten Prozesses fallen keine Kosten für die Organisation an, un
 
     -   Alle Aktivitäten für Rights Management protokollieren, wie sie in Ihrer Organisation verwendet werden. Dies ist sehr leistungsfähig, weil Sie nicht nur überwachen können, welche Dateien geschützt werden und wer erfolgreich auf diese geschützten Dateien zugreift, sondern auch potenziell verdächtiges Verhalten nicht autorisierter Personen identifizieren können, die versuchen, auf geschützte Dateien zuzugreifen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
-    -   Geben Sie Benutzern die Möglichkeit, ihre geschützten Dokumente nachzuverfolgen und zu widerrufen, sofern diese Features von Ihrem [Azure RMS-Abonnement](https://technet.microsoft.com/dn858608)unterstützt werden. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dateien](../rms-client/sharing-app-track-revoke.md) im [Rights Management-Freigabeanwendung – Benutzerhandbuch](../rms-client/sharing-app-user-guide.md).
+    -   Geben Sie Benutzern die Möglichkeit, ihre geschützten Dokumente nachzuverfolgen und zu widerrufen, sofern diese Features von Ihrem [Abonnement](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) unterstützt werden. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/client-track-revoke.md) im [Azure Information Protection-Benutzerhandbuch](../rms-client/client-user-guide.md).
 
     -   Eine BYOK-Lösung (Bring Your Own Key) implementieren, sodass Ihr Mandantenschlüssel für Azure Rights Management lokal und gemäß Ihren IT-Richtlinien generiert und sicher unter Verwendung eines HSM (Hardwaresicherheitsmodul) an Microsoft übertragen wird. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 

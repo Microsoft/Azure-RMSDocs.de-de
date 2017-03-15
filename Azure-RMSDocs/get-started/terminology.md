@@ -4,7 +4,7 @@ description: "Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Micro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
-
-
+ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -64,15 +61,10 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |RMS-Connector|Siehe *Rights Management-Connector*.|
 |RMS for Individuals|Ein kostenloses Abonnement, mit dessen Hilfe ein Benutzer [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] verwenden kann, wenn seine Organisation nicht über ein Abonnement für Office 365 oder Azure Active Directory verfügt.|
 |RMS-Freigabeanwendung|Siehe *Rights Management-Freigabeanwendung*.|
+|Reiner Schutzmodus|Ein Betriebsmodus für den Azure Information Protection-Client, wenn keine Azure Information Protection-Richtlinie zum Anwenden von Bezeichnungen vorliegt. In diesem Modus werden keine Klassifizierungsbezeichnungen angezeigt, aber Benutzer können weiterhin Rights Management-Schutz anwenden.|
 |Administrator|Eine Gruppe besonders vertrauenswürdiger Administratoren, die Dateien, die von der Organisation mithilfe eines Rights Management-Diensts geschützt wurden, entschlüsseln und anschließend öffnen kann. Normalerweise ist diese Zugangsstufe für rechtliche eDiscovery und Überwachungsteams erforderlich.|
 |Mandantenschlüssel|Auch als Schlüssel des lizenzgebenden Serverzertifikats bezeichnet (SLC, Server Licensor Certificate).<br /><br />Der eindeutige Schlüssel eines Unternehmens, der den Ursprung des Schutzes für alle Kryptografiefunktionen von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], die mit diesem Mandantenschlüssel verkettet sind, darstellt.|
 |Schutz aufheben|Entfernen von Rights Management-Überwachungen aus Dateien oder E-Mail-Nachrichten, in denen Verschlüsselungs-, Identitäts- und Zugriffskontrollrichtlinien verwendet wurden, um Ihre Daten zu schützen.|
 |Nutzungslizenz|Ein dokumentspezifisches Zertifikat, das einem Benutzer gewährt wird, wenn er eine Datei oder E-Mail öffnet, die durch einen Rights Management-Dienst geschützt wurde. Dieses Zertifikat enthält Benutzerrechte für die Datei oder E-Mail-Nachricht und den Verschlüsselungsschlüssel, der zum Verschlüsseln des Inhalts und zusätzliche Zugriffseinschränkungen, die in der Richtlinie für das Dokument definiert wurden.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

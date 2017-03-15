@@ -4,7 +4,7 @@ description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
-ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -49,16 +44,16 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     -   Gehen Sie im [klassischen Azure-Portal](http://go.microsoft.com/fwlink/p/?LinkID=275081) wie folgt vor:
 
-        1.  Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**.
+        1. Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**.
 
-        2.  Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
+        2. Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
 
-        3.  Wählen Sie das Verzeichnis aus, für das Sie Rights Management verwalten möchten.
-
-        4.  Wenn Sie Rights Management noch nicht aktiviert haben, klicken Sie auf **AKTIVIEREN** , und bestätigen Sie Ihre Aktion.
+        3. Wenn für den **RIGHTS MANAGEMENT-STATUS** **Inaktiv** angezeigt wird, klicken Sie auf **AKTIVIEREN**, und bestätigen Sie Ihre Aktion.
 
             > [!NOTE]
             > Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
+            >
+        4. Wenn für den **RIGHTS MANAGEMENT-STATUS** **Aktiv** angezeigt wird, wählen Sie den Namen Ihres Active Directory-Mandanten.
 
 2.  Erstellen einer neuen Vorlage:
 

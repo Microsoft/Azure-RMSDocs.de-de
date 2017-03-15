@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einer Version des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/01/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,22 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
-ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
-ms.lasthandoff: 03/02/2017
-
-
+ms.openlocfilehash: cfd5eae4191cb0b09d8d43f9f708c80ff724d136
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen
 
 >*Gilt für: Azure Information Protection*
 
-Das Azure Information Protection-Team aktualisiert den Azure Information Protection-Client regelmäßig, um Korrekturen und neue Funktionen zu implementieren. Der Client befindet sich im Microsoft Update-Katalog (Kategorie: **Azure Information Protection**). Die neueste Version können Sie stets aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen.
+Das Azure Information Protection-Team aktualisiert den Azure Information Protection-Client regelmäßig, um Korrekturen und neue Funktionen zu implementieren. Der Client befindet sich im Microsoft Update-Katalog (Kategorie: **Azure Information Protection**). Die aktuelle allgemein verfügbare endgültige Produktversion und die anstehende Version (Vorschauversion) können Sie stets aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen.
 
-Verwenden Sie die folgenden Informationen, um zu sehen, welche Neuerungen oder Änderungen eine Version bietet. Die neueste Version ist zuerst aufgeführt. Versionen vor „General Availability“ (allgemeine Verfügbarkeit) sind nicht aufgeführt.
+Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereitgestellt werden. Verwenden Sie die Vorschauversionen stattdessen, um neue Funktionalität oder Fixes kennenzulernen und zu testen, die in der nächsten allgemein verfügbaren Version enthalten sein werden. 
+
+Den folgenden Informationen können Sie entnehmen, welche Neuerungen oder Änderungen für eine allgemein verfügbare Version vorgenommen wurden. Die neueste Version ist zuerst aufgeführt. Informationen über die aktuelle Vorschauversion finden Sie auf der Downloadseite.
 
 > [!NOTE]
-> Kleinere Korrekturen sind nicht aufgelistet. Wenn ein Problem mit dem Azure Information Protection-Client auftreten sollte, vergewissern Sie sich zuerst, dass es sich nicht um ein Problem mit der neuesten Version handelt.
+> Kleinere Korrekturen sind nicht aufgelistet. Wenn ein Problem mit dem Azure Information Protection-Client auftreten sollte, vergewissern Sie sich zuerst, dass es sich nicht um ein Problem mit der neuesten allgemein verfügbaren Release handelt. Wenn dies der Fall, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Falls das Problem bestehen bleibt, finden Sie entsprechende Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 

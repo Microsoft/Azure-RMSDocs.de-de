@@ -14,14 +14,10 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 847d19feaea442da66296565f0ffb5b0663ad170
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 7fe417d8c2e0758fcb6c9dfc88be86208cb8e294
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="android-code-examples"></a>Codebeispiele für Android
 
 In diesem Thema werden wichtige Codeelemente der Android-Version des RMS SDK vorgestellt.
@@ -448,7 +444,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
 
 
 
-      // create userRights list   UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),     Arrays.asList( CommonRights.View, EditableDocumentRights.Print));   ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();   usersRigthsList.add(userRights);
+      // Erstellen Sie eine userRights-Liste   UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),     Arrays.asList( CommonRights.View, EditableDocumentRights.Print));   ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();   usersRigthsList.add(userRights);
 
       // Erstellen Sie PolicyDescriptor mithilfe der userRights-Liste   PolicyDescriptor policyDescriptor = PolicyDescriptor.createPolicyDescriptorFromUserRights(                                                          usersRigthsList);   policyDescriptor.setOfflineCacheLifetimeInDays(10);   policyDescriptor.setContentValidUntil(new Date());
 
