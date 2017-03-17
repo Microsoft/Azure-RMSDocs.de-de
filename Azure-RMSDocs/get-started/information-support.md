@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82a377e0b28e3f6614e8d79b5dae0e6f0abb9945
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d5566f7d2c3ac802f2d8078241be3057d2cb2529
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
@@ -45,7 +45,7 @@ In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembeh
 
 Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier Support-Kunden](https://premier.microsoft.com/), um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
 
-Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Verwenden Sie für andere Kunden die folgenden Supportkanäle, abhängig davon, wie Sie Azure Information Protection erworben haben:
 
