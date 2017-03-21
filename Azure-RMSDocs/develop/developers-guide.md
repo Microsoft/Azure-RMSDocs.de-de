@@ -1,10 +1,10 @@
 ---
-title: Azure Information Protection-Entwicklerhandbuch | Microsoft-Dokumentation
+title: "Entwicklerhandbuch – AIP"
 description: "Entwickler können mithilfe von Azure Information Protection Dateien aller Typen schützen und verwalten."
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea8a0f60997ca5d569f10969abfb9b010f0918da
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
+ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
@@ -79,9 +79,9 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 
 - [Aktivieren von Dokumentenverfolgung und -widerruf (Dienst)](tracking-content.md)
 - [So stellen Sie Ihren Client bereit](../rms-client/client-deployment-notes.md)
+- [Bereitstellen der Dienst-App in einem anderen Mandanten] (how-to-deploy-app.md)
 - [Installieren und Konfigurieren eines RMS-Servers (Dienst)](how-to-install-and-configure-an-rms-server.md)
 - [Verwenden der Dokumentenverfolgung (Benutzer)](how-to-use-document-tracking.md)
-
 
 ### <a name="security-and-authentication"></a>Sicherheit und Authentifizierung
 

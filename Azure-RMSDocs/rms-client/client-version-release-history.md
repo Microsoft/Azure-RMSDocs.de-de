@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einer Version des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cfd5eae4191cb0b09d8d43f9f708c80ff724d136
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen
@@ -30,6 +30,33 @@ Den folgenden Informationen können Sie entnehmen, welche Neuerungen oder Änder
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn ein Problem mit dem Azure Information Protection-Client auftreten sollte, vergewissern Sie sich zuerst, dass es sich nicht um ein Problem mit der neuesten allgemein verfügbaren Release handelt. Wenn dies der Fall, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Falls das Problem bestehen bleibt, finden Sie entsprechende Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
+
+## <a name="version-14210"></a>Version 1.4.21.0
+
+**Veröffentlicht**: 15.03.2017
+
+**Geänderte Anforderungen**:
+
+In der vorherigen Version wurde die neue Anforderung von Microsoft .NET Framework 4.6.2 für den vollständigen Client eingeführt. Sie können diese Anforderung mit dem benutzerdefinierten Installationsparameter **DowngradeDotNetRequirement** umgehen. Diese Vorgehensweise wird nicht empfohlen. Weitere Informationen finden Sie im [Abschnitt zur Clientinstallation](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) des Administratorhandbuchs.
+
+
+**Fixes**:
+
+- Unterstützung für zugeordnete Laufwerke zum Klassifizieren und Schützen von Dateien.
+
+- Unterstützung für große Dateien (über&250; MB) im Viewer. 
+
+- Wenn HYOK konfiguriert ist, kann Outlook Bezeichnungen anwenden, die für die Verwendung von Azure Rights Management-Vorlagen oder AD RMS-Vorlagen konfiguriert sind.
+
+
+**Neue Features**:
+
+- Die Möglichkeit, benutzerdefinierte Berechtigungen aus Ihrer Office-Anwendung festzulegen, sodass Sie den Schutz nur für sich selbst, für externe Gruppen oder für alle Benutzer in einer anderen Organisation einrichten können. Weitere Informationen finden Sie unter [Festlegen von benutzerdefinierten Berechtigungen für ein Dokument](client-classify-protect.md#set-custom-permissions-for-a-document) im Benutzerhandbuch.
+    
+- PDF-Dateien unterstützen jetzt Bezeichnungen, die nur für Klassifizierungen gelten.
+
+- Der Viewer unterstützt jetzt Optionen wie Suchen, Zoomen und Drehen für PDF-Dateien. Um diese Optionen zu verwenden, klicken Sie mit der rechten Maustaste auf die Datei, wenn sie im Viewer angezeigt wird.
+
 
 ## <a name="version-131552"></a>Version 1.3.155.2
 
@@ -75,7 +102,7 @@ Diese Clientversion ist die [allgemein verfügbare Version](https://blogs.techne
 
 - Diagnosetests und eine Option zum Zurücksetzen, die ein Benutzer in einer Office-Anwendung ausführen kann, wenn der Azure Information Protection-Client installiert ist: Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**, dann auf **Hilfe und Feedback** und schließlich auf **Diagnose ausführen**. 
 
-    Weitere Informationen zu dieser Option finden Sie im Abschnitt [Überprüfen der Installation, des Verbindungsstatus oder Senden von Feedback](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) der Dokumentation zur Clientinstallation.
+    Weitere Informationen zu dieser Option finden Sie im Abschnitt [Zusätzliche Überprüfungen](client-admin-guide.md#additional-checks-and-troubleshooting) im Administratorhandbuch.
 
 ## <a name="version-11230"></a>Version 1.1.23.0
 

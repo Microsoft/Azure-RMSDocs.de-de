@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6d727cdbfba193a80742441ae1a372d2e8fbd699
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
+ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
 translationtype: HT
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
@@ -28,9 +28,9 @@ Sie können Dateien jedoch auch über den **Datei-Explorer** klassifizieren und 
 
 Geschützte Dateien können für andere Personen sicher freigegeben werden. Sie können die Datei z. B. an eine E-Mail anhängen oder eine Einladung von Ihrer SharePoint-Website senden.
 
-Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ können Sie den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie sie freigeben. 
+Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ dazu können Sie Ihre [Office-App zum Festlegen von benutzerdefinierten Berechtigungen](#set-custom-permissions-for-a-document) oder den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie diese freigeben. 
 
-Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei. Verwenden Sie diese Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
+Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
 
 Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verwenden Sie den üblichen Freigabemechanismus zum Freigeben der Datei. Ist dies das erste Mal, dass diese Personen eine geschützte Datei per Freigabe erhalten, benötigen sie möglicherweise entsprechende Anweisungen zum Anzeigen der Datei. Für diese Personen können Sie die folgende Nachricht kopieren und einfügen: **Diese Datei ist mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in diesen [Anweisungen](https://aka.ms/rms-signup).**
 
@@ -61,9 +61,32 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
 
-- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Klicken Sie zum Überprüfen auf **Protect (Schützen)** > **Help and Feedback (Hilfe und Feedback)** und prüfen Sie, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
+- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Klicken Sie zum Überprüfen auf **Schützen** > **Hilfe und Feedback**, und prüfen Sie, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
 
 - Die Bezeichnung befindet sich möglicherweise in einer bereichsbezogenen Richtlinie, die Ihr Konto nicht umfasst. Wenden Sie sich an den Helpdesk oder Ihren Administrator.
+
+### <a name="set-custom-permissions-for-a-document"></a>Festlegen von benutzerdefinierten Berechtigungen für ein Dokument
+
+Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat.
+
+1. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen** > **Benutzerdefinierte Berechtigungen**:
+
+    ![Option „Benutzerdefinierte Berechtigungen“](../media/custom-permissions-callout.png)
+    
+    Beachten Sie Folgendes: Die von Ihnen angegebenen benutzerdefinierten Berechtigungen sind keine Ergänzung der vom Administrator für Ihre ausgewählte Bezeichnung definierten Schutzeinstellungen, sondern ersetzen diese.  
+
+2. Geben Sie im Dialogfeld **Microsoft Azure Information Protection** Folgendes an:
+
+    - **Mit benutzerdefinierten Berechtigungen schützen**: Stellen Sie sicher, dass diese Option aktiviert ist, sodass Sie Ihre benutzerdefinierten Berechtigungen angeben und anwenden können. Deaktivieren Sie diese Option, um alle benutzerdefinierten Berechtigungen zu entfernen.
+    
+    - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie andernfalls die Zugriffsebene aus, die die angegebenen Personen erhalten sollen.
+
+    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+        
+    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen angegebenen Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen angegebenen Tag die Datei nicht mehr öffnen.
+
+5. Klicken Sie auf **Übernehmen**, und warten Sie auf die Nachricht **Die benutzerdefinierten Berechtigungen wurden angewendet**. Klicken Sie anschließend auf **Schließen**.
+
 
 ### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tastenkombinationen für die Azure Information Protection-Leiste
 
@@ -71,7 +94,7 @@ Für den Zugriff auf die Azure Information Protection-Leiste über Tastenkürzel
 
 - Drücken Sie **STRG** + **UMSCHALT** + **~** 
 
-Verwenden Sie dann die TAB-TASTE, um die Bezeichnungen und andere Steuerelemente auf der Leiste auszuwählen (die Symbole **Hide Labels ** (Bezeichnungen ausblenden) und **Delete Label** (Bezeichnung löschen)), und drücken Sie die EINGABETASTE, um sie auszuwählen.
+Verwenden Sie dann die TAB-TASTE, um die Bezeichnungen und andere Steuerelemente auf der Leiste auszuwählen (die Symbole **Hide Labels** (Bezeichnungen ausblenden) und **Delete Label** (Bezeichnung löschen)), und drücken Sie die EINGABETASTE, um sie auszuwählen.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Verwenden des Datei-Explorer zum Klassifizieren und Schützen von Dateien
 

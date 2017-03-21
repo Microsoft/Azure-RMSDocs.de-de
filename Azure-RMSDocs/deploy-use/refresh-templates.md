@@ -4,7 +4,7 @@ description: "Wenn Sie den Azure Rights Management-Dienst verwenden, werden Vorl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e3f80781c9e998e3d7d0d515ed1b0b13b9656ab4
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: b1ff1345dd2b3cff8ccb5ff7b454e209403b1190
+ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
 translationtype: HT
 ---
 # <a name="refreshing-templates-for-users"></a>Aktualisieren von Vorlagen für Benutzer
@@ -26,9 +26,12 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |--------------------------|---------------------------------------------|
 |Exchange Online|Manuelle Konfiguration erforderlich zum Aktualisieren von Vorlagen.<br /><br />Die Konfigurationsschritte finden Sie im folgenden Abschnitt [Nur Exchange Online nur: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Office 365|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
-|Office 2016 und Office 2013<br /><br />RMS-Freigabeanwendung für Windows|Automatische Aktualisierung nach einem Zeitplan:<br /><br />Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Für die RMS-Freigabeanwendung für Windows: Ab Version 1.0.1784.0 ist das Standardaktualisierungsintervall jeden Tag. Frühere Versionen haben ein Standardaktualisierungsintervall von alle 7 Tage.<br /><br />Um vor diesem Zeitplan eine Aktualisierung zu erzwingen, lesen Sie den folgenden Abschnitt [Office 2016, Office 2013 und RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
-|Office 2010|Aktualisierung bei der Benutzeranmeldung.<br /><br />Um eine Aktualisierung zu erzwingen, bitten oder zwingen Sie Benutzer, sich abzumelden und erneut anzumelden. Oder lesen Sie den folgenden Abschnitt: [Nur Office 2010: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
-Bei mobilen Geräten, die die RMS-Freigabeanwendung verwenden, werden Vorlagen ohne zusätzliche Konfiguration automatisch heruntergeladen (und erforderlichenfalls aktualisiert).
+|Azure Information Protection-Client|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Alle 24 Stunden.<br /><br /> Da der Azure Information Protection-Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 2016 oder Office 2013 auch für den Azure Information Protection-Client aktualisiert.|
+|Office 2016 und Office 2013<br /><br />RMS-Freigabeanwendung für Windows|Automatische Aktualisierung nach einem Zeitplan:<br /><br />– Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />– Für die RMS-Freigabeanwendung für Windows: Ab Version 1.0.1784.0 gilt ein Standardaktualisierungsintervall von einem Tag. Frühere Versionen haben ein Standardaktualisierungsintervall von alle 7 Tage.<br /><br />Um vor dem Zeitplan eine Aktualisierung zu erzwingen, lesen Sie den folgenden Abschnitt: [Office 2016, Office 2013 und RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten benutzerdefinierten Vorlage](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2010|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten.|
+|Office 2016 für Mac|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
+|RMS-Freigabe-App für mobile Geräte|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
+
 
 ## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Nur Exchange Online: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen
 Wenn Sie die Verwaltung von Informationsrechten (IRM) für Exchange Online bereits konfiguriert haben, werden benutzerdefinierte Vorlagen für Benutzer erst heruntergeladen, nachdem Sie die folgenden Änderungen mithilfe der Windows PowerShell in Exchange Online vorgenommen haben.
@@ -146,40 +149,8 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 
 3.  Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
-## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Nur Office 2010: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
-Durch Bearbeiten der Registrierung auf Computern mit Office 2010 können Sie einen Wert festlegen, sodass geänderte Vorlagen auf Computern aktualisiert werden, ohne dass darauf gewartet wird, dass sich Benutzer ab- und wieder anmelden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
-> [!WARNING]
-> Die unsachgemäße Verwendung des Registrierungs-Editors kann zu schwerwiegenden Problemen führen, die eine Neuinstallation des Betriebssystems erforderlich machen können. Microsoft kann nicht garantieren, dass Sie Probleme, die durch die fehlerhafte Verwendung des Registrierungs-Editors entstehen, beheben können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
-
-### <a name="to-change-the-update-frequency"></a>So ändern Sie die Aktualisierungshäufigkeit
-
-1.  Erstellen Sie mit einem Registrierungs-Editor einen neuen Registrierungswert namens **UpdateFrequency** , und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgende Tabelle, um den Registrierungspfad zu finden, in dem dieser neue Registrierungswert erstellt werden soll.
-
-    **Registrierungspfad:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **Typ:** REG_DWORD
-
-    **Wert:** UpdateFrequency
-
-2.  Wenn Sie eine sofortige Aktualisierung der Vorlagen erzwingen möchten, führen Sie die nächste Schrittfolge aus. Starten Sie andernfalls jetzt Ihre Office-Anwendungen neu.
-
-### <a name="to-force-an-immediate-refresh"></a>So erzwingen Sie eine sofortige Aktualisierung
-
-1.  Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Tabelle, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
-
-    **Registrierungspfad:** HKEY_CURRENT_USER\Software\Microsoft\MSDRM\TemplateManagement
-
-    **Typ:** REG_SZ
-
-    **Wert:** lastUpdatedTime
-
-
-2.  Löschen Sie den folgenden Ordner und alle darin enthaltenen Dateien: **%localappdata%\Microsoft\MSIPC\Templates**
-
-3.  Starten Sie Ihre Office-Anwendungen neu.
-
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

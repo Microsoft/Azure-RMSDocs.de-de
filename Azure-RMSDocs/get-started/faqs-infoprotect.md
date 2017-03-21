@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: c6bdceba2b1cce25e5f49e92a59e3e3e83f25c31
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 854de3beea1f4b6e05461dee58cec6ca91f79034
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
@@ -112,6 +112,8 @@ Um sich als anderer Benutzer anzumelden, müssen Sie derzeit die Registrierung b
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
 Darüber hinaus gilt:
+
+- Wenn Sie das einmalige Anmelden verwenden, müssen Sie sich nach dem Bearbeiten der Registrierung von Windows abmelden und dann mit Ihrem anderen Benutzerkonto wieder anmelden. Der Azure Information Protection-Client wird automatisch mit Ihrem aktuell angemeldeten Benutzerkonto authentifiziert.
 
 - Um die Umgebung für den Azure Rights Management-Dienst (auch bekannt als Bootstrapping) erneut zu initialisieren, verwenden Sie die Option **Zurücksetzen** im [RMS Analyzer Tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
 

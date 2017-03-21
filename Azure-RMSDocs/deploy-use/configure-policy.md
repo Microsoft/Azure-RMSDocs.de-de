@@ -4,7 +4,7 @@ description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfiguri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64a3daa57d71087d11098a1e71465f17b6b8f3b7
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
@@ -48,7 +48,14 @@ Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen ha
 
 Klicken Sie auf **Publish** (Veröffentlichen), wenn Sie alle gewünschten Änderungen vorgenommen haben. 
 
-Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt er diese Änderungen dann als Azure Information Protection-Richtlinie herunter.
+Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt der Client diese Änderungen dann als neueste Azure Information Protection-Richtlinie herunter. Folgende zusätzliche Trigger aktualisieren die Richtlinie im Client ebenfalls:
+
+- Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen.
+
+- Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).
+
+- Alle 24 Stunden.
+
 
 ## <a name="configuring-your-organizations-policy"></a>Konfigurieren der Richtlinie Ihrer Organisation
 

@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8b1d8a3df125f4d1950e4e657c535f128c6d0b3a
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 0f399afe398f5e69cebf6df5564b2ceb7d84e607
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
@@ -35,7 +35,7 @@ Diese Verschlüsselungstechnologien ergänzen sich, und zur Verwendung müssen S
 
 ## <a name="whats-the-difference-between-byok-and-hyok-and-when-should-i-use-them"></a>Was ist der Unterschied zwischen BYOK und HYOK, und wann sollte ich welche Option verwenden?
 
-**Bring Your Own Key ** (BYOK) bedeutet im Kontext von Azure Information Protection, dass Sie Ihren eigenen Schlüssel für Azure Rights Management-Schutz lokal erzeugen. Sie übertragen diesen Schlüssel anschließend auf ein Hardwaresicherheitsmodul (HSM) in Azure Key Vault, bleiben nach wie vor Besitzer des Schlüssels und verwalten ihn weiterhin. Wenn Sie diesen Schritt nicht durchführen, würde Azure Rights Management Protection einen Schlüssel verwenden, der automatisch erstellt und für Sie in Azure verwaltet wird. Diese Standardkonfiguration wird als „von Microsoft-verwaltet“ bezeichnet, im Gegensatz zu „Kundenverwaltet“ (BYOK-Option).
+**Bring Your Own Key** (BYOK) bedeutet im Kontext von Azure Information Protection, dass Sie Ihren eigenen Schlüssel für Azure Rights Management-Schutz lokal erzeugen. Sie übertragen diesen Schlüssel anschließend auf ein Hardwaresicherheitsmodul (HSM) in Azure Key Vault, bleiben nach wie vor Besitzer des Schlüssels und verwalten ihn weiterhin. Wenn Sie diesen Schritt nicht durchführen, würde Azure Rights Management Protection einen Schlüssel verwenden, der automatisch erstellt und für Sie in Azure verwaltet wird. Diese Standardkonfiguration wird als „von Microsoft-verwaltet“ bezeichnet, im Gegensatz zu „Kundenverwaltet“ (BYOK-Option).
 
 Weitere Informationen zu BYOK und dazu, ob Sie diese Schlüsseltopologie für Ihre Organisation auswählen sollten, finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md). 
 
@@ -47,7 +47,7 @@ Weitere Informationen zu HYOK und zum Verständnis der dafür geltenden Einschr�
 
 ## <a name="where-can-i-find-information-about-3rd-party-solutions-that-integrate-with-azure-rms"></a>Wo finde ich Informationen zu Drittanbieterlösungen, die in Azure RMS integrierbar sind?
 
-Viele Softwarehersteller verfügen bereits über Lösungen oder sind dabei, Lösungen zu implementieren, die in Azure Rights Management integrierbar sind – und die Liste erweitert sich sehr schnell. Es könnte hilfreich sein, den [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) und die neuesten Updates von [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter zu lesen. Wenn Sie jedoch eine spezifische Frage haben, senden Sie eine E-Mail an das Information Protection-Team: askipteam@microsoft.com.
+Viele Softwarehersteller verfügen bereits über Lösungen oder sind dabei, Lösungen zu implementieren, die in Azure Rights Management integrierbar sind – und die Liste erweitert sich sehr schnell. Es könnte hilfreich sein, die Liste der [RMS-aktivierten Lösungen](requirements-applications.md#rms-enlightened-solutions) und die neuesten Updates von [Dan Plastina@TheRMSGuy](https://twitter.com/TheRMSGuy) auf Twitter zu lesen. Wenn Sie jedoch eine spezifische Frage haben, senden Sie eine E-Mail an das Information Protection-Team: askipteam@microsoft.com.
 
 ## <a name="is-there-a-management-pack-or-similar-monitoring-mechanism-for-the-rms-connector"></a>Gibt es ein Management Pack oder einen ähnlichen Überwachungsmechanismus für den RMS-Connector?
 
@@ -101,8 +101,12 @@ Weitere Informationen zu benutzerdefinierten Vorlagen finden Sie unter [Konfigur
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Funktioniert Azure RMS mit dynamischen Gruppen in Azure AD?
 Mit einer Azure AD Premium-Funktion können Sie die dynamische Mitgliedschaft für Gruppen durch Angeben von [attributbasierten Regeln](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) konfigurieren. Beim Erstellen einer Sicherheitsgruppe in Azure AD unterstützt dieser Gruppentyp die dynamische Mitgliedschaft, aber keine E-Mail-Adresse. Er kann daher nicht mit dem Azure Rights Management-Dienst verwendet werden. Allerdings können Sie jetzt einen neuen Gruppentyp in Azure AD erstellen, der die dynamische Mitgliedschaft und E-Mails unterstützt. Wenn Sie eine neue Gruppe im klassischen Azure-Portal hinzufügen, können Sie als **GRUPPENTYP** die Option **Office 365-„Vorschau“** auswählen. Da diese Gruppe E-Mail-fähig ist, können Sie sie mit Azure Rights Management-Schutz verwenden.
 
+## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Wie sende ich eine geschützte E-Mail an ein Gmail- oder Hotmail-Konto?
+
+Möglicherweise haben Sie in Demos oder anderen Materialien zu Azure Information Protection gesehen, dass geschützte E-Mails an Gmail- oder Hotmail-Konten gesendet wurden. Dieses Feature befindet sich noch in der privaten Vorschau, daher enthält diese Dokumentation keine weiteren Informationen dazu, solange das Feature nicht in die öffentliche Vorschau freigegeben wurde.
+
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Welche Geräte und welche Dateitypen werden von Azure RMS unterstützt?
-Eine Liste mit Geräten, die den Azure Rights Management-Dienst unterstützen, finden Sie unter [Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-client-devices.md). Da derzeit nicht alle unterstützten Geräte alle Rights Management-Funktionen unterstützen, sollten Sie sich auch die Tabelle unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md) ansehen.
+Eine Liste mit Geräten, die den Azure Rights Management-Dienst unterstützen, finden Sie unter [Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-client-devices.md). Da derzeit nicht alle unterstützten Geräte alle Rights Management-Funktionen unterstützen, sehen Sie sich auch die Tabelle unter [RMS-aktivierte Anwendungen](../get-started/requirements-applications.md#rms-enlightened-applications) an.
 
 Der Azure Rights Management-Diensts kann sämtliche Dateitypen unterstützen. Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen stellt Azure Rights Management nativen Schutz bereit, der Verschlüsselung und die Durchsetzung von Rechten (Berechtigungen) umfasst. Für alle anderen Anwendungen und Dateitypen bietet generischer Schutz Dateiverkapselung und Authentifizierung, damit überprüft wird, ob ein Benutzer zum Öffnen der Datei autorisiert ist.
 

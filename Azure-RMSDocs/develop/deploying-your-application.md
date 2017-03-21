@@ -1,21 +1,21 @@
 ---
-title: Bereitstellen der Anwendung
+title: "Bereitstellen Ihrer Anwendung – AIP"
 description: "Dieses Thema beschreibt und führt Sie durch die Bereitstellung Ihrer Anwendung."
 keywords: deploy, RMS, AIP
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: aaff9ff7cda961ab0d61115f84197e2c5c7ef8b0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
@@ -96,14 +96,13 @@ Wenn der Client nicht vorhanden ist, wird eine Fehlermeldung bereitgestellt, die
 
 Wenn der Client vorhanden ist wird die Anwendungsinstallation fortgesetzt.
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>Aktivieren von Azure Information Protection / Rights Management Services mit Ihrer Anwendung
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>Aktivieren von Azure Information Protection-Diensten für Ihre Anwendung
 
 > [!NOTE]
 > Wenn Sie zum neuen ADAL-Modell für die Authentifizierung migriert haben, müssen Sie **SIA** nicht installieren. Weitere Informationen finden Sie unter [ADAL-Authentifizierung für Ihre RMS-fähige Anwendung](adal-auth.md).
 > Außerdem können Sie **Ihre Anwendung für Windows 10 zertifizieren**: Durch Aktualisieren der Anwendung für die Verwendung der ADAL-Authentifizierung anstelle des Microsoft Online-Anmelde-Assistenten verfügen Sie und Ihre Kunden über folgende Möglichkeiten: Nutzen der Multi-Factor Authentication, Installieren des RMS Client 2.1 ohne Administratorrechte auf dem Computer
 
-
-Damit Endbenutzer Information Protection / Rights Management Services nutzen können, müssen Sie den *Online Services-Anmelde-Assistenten* (Sign-in Assistant, SIA) bereitstellen. Als Entwickler einer Anwendung wissen Sie nicht, ob Endbenutzer Information Protection über RMS (lokal) oder über Azure Information Protection verwenden werden.
+Damit Endbenutzer Information Protection-Dienste nutzen können, müssen Sie den *Online Services-Anmelde-Assistenten* bereitstellen. Als Entwickler einer Anwendung wissen Sie nicht, ob Endbenutzer Information Protection über RMS (lokal) oder über Azure Information Protection verwenden werden.
 
 
 > [!IMPORTANT]
@@ -113,6 +112,8 @@ Damit Endbenutzer Information Protection / Rights Management Services nutzen kö
 -   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](http://www.microsoft.com/en-us/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
 -   Stellen Sie sicher, dass die Bereitstellung einer rechtefähigen Anwendung eine Überprüfung der Voraussetzungen für diese Dienstauswahl enthält.
 -   Informationen zu eigenen Tests und zur Verwendung des Onlinediensts durch die Endbenutzer finden Sie im TechNet-Thema [Konfigurieren von Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
+
+Sie benötigen auch dieses Handbuch zum Konfigurieren Ihrer App: [Konfigurieren Ihrer App Service-Anwendung für die Azure Active Directory-Anmeldung](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights Management Services durch Ihre Anwendung finden Sie im Thema zum [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Anwendung](how-to-use-file-api-with-aadrm-cloud.md).
 

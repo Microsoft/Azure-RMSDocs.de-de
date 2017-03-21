@@ -4,14 +4,14 @@ description: "Schritt 3 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 30bb78ede8d882e18bca516d0d8da4c3946f000b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 61c0d2c97ae1db15bf2ec5c4586aa54270502117
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="step-3-install-the-client"></a>Schritt 3: installieren des Clients
@@ -39,7 +39,7 @@ Wenn das Dokument geladen wird, sehen Sie zwei neue Dinge:
 
 - Auf der Registerkarte **Start** wird die neue Gruppe **Protection** (Schutz) mit einer Schaltfläche namens **Protect** (Schützen) angezeigt.
 
-    Klicken Sie auf **Protect** > **Help and feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten eine aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Installation der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
+    Klicken Sie auf **Schützen** > **Hilfe und Feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten eine aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Installation der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
 
 - Unter dem Menüband wird eine neue Navigationsleiste angezeigt – die Information Protection-Navigationsleiste. Sie zeigt den **Sensitivity**-Titel (Vertraulichkeit) und die von Ihnen konfigurierte Standardbezeichnung **Internal** (Intern) an. 
     
