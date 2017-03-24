@@ -4,14 +4,14 @@ description: "Eine Übersicht über den Azure Information Protection-Dienst."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 482338f186e3008da155f961c649a80cc61c5780
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
@@ -22,7 +22,7 @@ Azure Information Protection ist eine cloudbasierte Lösung, die Organisationen 
 
 Die folgende Abbildung zeigt ein Beispiel für Azure Information Protection in Aktion. Der Administrator hat Regeln zum Erkennen vertraulicher Daten (in diesem Fall Kreditkarteninformationen) konfiguriert. Wenn ein Benutzer ein Word-Dokument speichert, das Kreditkarteninformationen enthält, wird eine benutzerdefinierte QuickInfo angezeigt, in der eine bestimmte, vom Administrator konfigurierte Bezeichnung empfohlen wird, die das Dokument klassifiziert und optional schützt. 
 
-![Beispiel für die empfohlene Klassifizierung mit Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Beispiel für die empfohlene Klassifizierung mit Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
 Nachdem Ihr Inhalt klassifiziert (und optional geschützt) wurde, können Sie nachverfolgen und steuern, wie er verwendet wird. Sie können die Datenflüsse analysieren, um Einblicke in Ihr Geschäft zu erhalten, riskante Verhalten zu erkennen und Korrekturmaßnahmen zu ergreifen, den Zugriff auf Dokumente zu verfolgen, Datenverluste oder Missbrauch zu verhindern usw.
 
@@ -32,7 +32,7 @@ Sie verwenden Azure Information Protection-Bezeichnungen, um Klassifizierungen a
 
 Die folgende E-Mail-Nachricht wurde beispielsweise als „Internal“ klassifiziert. Diese Bezeichnung wird der E-Mail-Nachricht als eine Fußzeile hinzugefügt, um als visueller Indikator für alle Empfänger anzugeben, dass sie für die interne Verwendung vorgesehen ist und nicht an Empfänger außerhalb des Unternehmens gesendet werden darf. Diese Bezeichnung wird auch in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
 
-![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](../media/example-email-footer-header.png)
+![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](../media/example-email-footerv2.png)
 
 
 ## <a name="how-data-is-protected"></a>So werden die Daten geschützt
@@ -63,7 +63,7 @@ Weitere Informationen zum Azure Rights Management-Schutz finden Sie unter [Was i
 
 Azure Information Protection kann in vorhandene Endbenutzer-Workflows integriert werden, wenn der Azure Information Protection-Client installiert ist. Dieser Client installiert die Information Protection-Leiste für Office-Anwendungen, die in der ersten Abbildung zu sehen war. Dieselbe Leiste wird in Excel, PowerPoint und Outlook hinzugefügt. Beispiel:
 
-![Beispiel für die Azure Information Protection-Leiste in Excel](../media/excel2016-infoprotect-bar.png)
+![Beispiel für die Azure Information Protection-Leiste in Excel](../media/excel2016-infoprotect-barv2.png)
 
 Diese Information Protection-Leiste vereinfacht die Auswahl der Bezeichnungen für die richtige Klassifizierung für die Endbenutzer. Bei Bedarf können diese Bezeichnungen auch automatisch ihre Dokumente und E-Mails schützen.
 
