@@ -35,7 +35,7 @@ Sie können Bezeichnungen und den Schutz auch über den **Datei-Explorer** entfe
 
 ## <a name="using-office-apps-to-remove-labels-and-protection-from-documents-and-emails"></a>Verwenden von Office-Apps zum Entfernen von Bezeichnungen und des Schutzes von Dokumenten und E-Mails
 
-Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label ** (Bezeichnung löschen):
+Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label** (Bezeichnung löschen):
 
 ![Azure Information Protection-Leiste – Bezeichnung löschen](../media/delete-label.png)
 
