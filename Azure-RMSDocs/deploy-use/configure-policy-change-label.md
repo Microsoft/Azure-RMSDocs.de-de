@@ -10,8 +10,8 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: e800818f87ab5b0b39ffdc244f871c04305039ae
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 4111fbaf678509cfb5b961f19dcc4b62f77c7a4a
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection
@@ -29,7 +29,7 @@ Verwenden Sie die folgenden Anleitungen, um eine Bezeichnung zu ändern.
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Um eine Bezeichnung der globalen Richtlinie zu ändern, damit sie für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus und nehmen dann Ihre Änderungen bei Bedarf am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. Um eine Bezeichnung von einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) zu ändern, damit sie für ausgewählte Benutzer gilt, wählen Sie zunächst diese Richtlinie auf dem Blatt **Azure Information Protection** aus.
+2. Um eine Bezeichnung der globalen Richtlinie zu ändern, damit sie für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy: Global** (Richtlinie: Global) aus und nehmen dann nach Bedarf Ihre Änderungen am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. Um eine Bezeichnung von einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) zu ändern, damit sie für ausgewählte Benutzer gilt, wählen Sie zunächst diese Richtlinie auf dem Blatt **Azure Information Protection** aus.
 
     Ausnahme: Wenn Sie die Position einer Bezeichnung ändern möchten, was Sie auf dem Richtlinienblatt der globalen Richtlinie oder der bereichsbezogenen Richtlinie ausführen: Klicken Sie entweder mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü für die Bezeichnung auf, und wählen Sie dann **Move up** (Nach oben) oder **Move down** (Nach unten).
 

@@ -4,14 +4,14 @@ description: "Wenngleich Azure Information Protection anpassbare Standardbezeich
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: eb9f68994d92695412c64a7795c6ae2b2b094218
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ff0a5af172fa7ae20406ab4362a02a9de3fff5c0
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Erstellen einer neuen Bezeichnung für Azure Information Protection
@@ -20,7 +20,7 @@ translationtype: HT
 
 Wenngleich Azure Information Protection anpassbare Standardbezeichnungen umfasst, können Sie auch eigene Bezeichnungen erstellen, die Benutzern auf der Information Protection-Leiste angezeigt werden.
 
-Sie können eine neue Bezeichnung hinzufügen oder einer vorhandenen Bezeichnung eine neue untergeordnete Bezeichnung hinzufügen, wenn eine weitere Klassifizierungsebene erforderlich ist. Die in der [Standardrichtlinie](configure-policy-default.md) enthaltene Bezeichnung **Secret** (Geheim) umfasst z. B. untergeordnete Bezeichnungen.
+Sie können eine neue Bezeichnung hinzufügen oder einer vorhandenen Bezeichnung eine neue untergeordnete Bezeichnung hinzufügen, wenn eine weitere Klassifizierungsebene erforderlich ist. Die letzte Bezeichnung in der [Standardrichtlinie](configure-policy-default.md) enthält z.B. untergeordnete Bezeichnungen.
 
 Verwenden Sie die folgenden Anleitungen, um der Azure Information Protection-Richtlinie eine neue Bezeichnung hinzuzufügen.
 
@@ -28,7 +28,7 @@ Verwenden Sie die folgenden Anleitungen, um der Azure Information Protection-Ric
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die neue Bezeichnung, die Sie hinzufügen möchten, für alle Benutzer gilt, führen Sie einen der folgenden Schritte auf dem Blatt **Policy:Global** (Richtlinie: Global) aus. 
+2. Wenn die neue Bezeichnung, die Sie hinzufügen möchten, für alle Benutzer gilt, führen Sie einen der folgenden Schritte auf dem Blatt **Policy: Global** (Richtlinie: Global) aus. 
 
     - So erstellen Sie eine neue Bezeichnung: Klicken Sie auf **Add a new label** (Neue Bezeichnung hinzufügen).
 
