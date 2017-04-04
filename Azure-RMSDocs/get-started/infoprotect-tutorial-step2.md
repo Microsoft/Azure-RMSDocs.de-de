@@ -4,14 +4,14 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 7db581d07698edf50fda8379d622e35414ad3671
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
@@ -24,16 +24,14 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
 
 2. Klicken Sie im Hubmenü auf **Neu**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit und Identität** aus. Wählen Sie auf dem Blatt **Sicherheit und Identität** in der Liste **AUSGEWÄHLTE APPS** die Option **Azure Information Protection** aus. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Erstellen**.
 
-    Dadurch wird der Dienst für Ihren Mandanten aktiviert und das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **More services** (Weitere Dienste) auswählen. 
+    Dadurch wird der Dienst für Ihren Mandanten aktiviert und das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **Weitere Dienste** auswählen. 
 
     > [!TIP] 
     > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
 
-3.  Klicken Sie auf dem Azure Information Protection-Blatt auf **Global**, und untersuchen Sie das Blatt **Policy: Global** (Richtlinie: Global), das die für Ihren Mandanten automatisch erstellte Standardrichtlinie von Information Protection anzeigt.
+3.  Erkunden Sie das Blatt **Richtlinie: Global**. Dieses wird automatisch geöffnet und zeigt die Information Protection-Standardrichtlinie an, die automatisch für Ihren Mandanten erstellt wird:
     
-    Auf dem Blatt **Policy: Global** (Richtlinie: Global) sehen Sie Folgendes:
-    
-    - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Beachten Sie, dass die beiden letzten Bezeichnungen erweitert werden können, um untergeordnete Bezeichnungen anzuzeigen: **All Employees** (Alle Mitarbeiter) und **Anyone (not protected)** (Jeder (nicht geschützt)) sind Beispiele für eine Klassifizierung mit Unterkategorien.
+    - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen: **Alle Mitarbeiter** und **Jeder (nicht geschützt)** sind Beispiele für eine Klassifizierung mit Unterkategorien.
     
        > [!NOTE]
        > Die Standardrichtlinie kann etwas anders aussehen als in diesem Tutorial. Zum Beispiel kann eine Bezeichnung **Internal** (Intern) heißen anstatt **General** (Allgemein) und **Secret** (Geheim) anstatt **Highly Confidential** (Streng vertraulich). Wenn dies der Fall ist, verwenden Sie wahrscheinlich eine ältere Version der Richtlinie. Oder Sie haben sie möglicherweise vor dem Start des Tutorials selbst bearbeitet.

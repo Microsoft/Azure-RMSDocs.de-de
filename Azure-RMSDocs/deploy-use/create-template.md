@@ -4,7 +4,7 @@ description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d0b71db6245e49765a0f79aaa901141a155372d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
 translationtype: HT
 ---
 # <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
@@ -75,6 +75,8 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     > [!NOTE]
     > Die von Ihnen ausgewählten Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung ist dies praktisch immer der Fall, aber in einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder Gruppen E-Mail-Adressen hinzufügen.
+    > 
+    > Wenn sich eine E-Mail-Adresse ändert, nachdem Sie den Benutzer oder die Gruppe ausgewählt und die Vorlage gespeichert haben, lesen Sie die Informationen im Abschnitt [Überlegungen bei einer Änderung der E-Mail-Adressen](../plan-design/prepare.md#considerations-if-email-addresses-change) in der Planungsdokumentation. 
 
     Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie jedoch Änderungen an der Gruppe durchführen, denken Sie daran, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). 
     

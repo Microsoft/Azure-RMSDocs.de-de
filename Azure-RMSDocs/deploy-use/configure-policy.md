@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
@@ -28,7 +28,7 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Dann wird das Blatt **Azure Information Protection** angezeigt, auf dem Sie die Richtlinie **Global** öffnen können, die alle Benutzer erhalten. Sie können optional auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinie **Global** enthält die folgenden Elemente, die Sie konfigurieren können:
+    Beim Laden des Blatts **Azure Information Protection** wird automatisch das Blatt **Richtlinie: Global** geladen, damit Sie die globale Richtlinie anzeigen und bearbeiten können, die für alle Benutzer konfiguriert wird. Sie können optional jedoch auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinien enthalten die folgenden Elemente, die Sie konfigurieren können:
 
     - Bezeichnungen, mit denen Sie und Ihre Benutzer Dokumente und E-Mails klassifizieren können.
 
