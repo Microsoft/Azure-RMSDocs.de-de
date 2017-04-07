@@ -4,7 +4,7 @@ description: "Hier finden Sie Anweisungen zum Installieren der Windows PowerShel
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 45b9415443de28d78b4bff28da25eaed02f3d052
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5dae84eea9e67be75530d69b6124b97c7c29f8a3
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+translationtype: HT
 ---
-
 # <a name="installing-windows-powershell-for-azure-rights-management"></a>Installieren der Windows PowerShell für Azure Rights Management
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -34,7 +30,7 @@ In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung 
 |Anforderung|Weitere Informationen|
 |---------------|--------------------|
 |Eine Version von Windows, die das [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul unterstützt|Überprüfen Sie die Liste der unterstützten Betriebssysteme im Bereich **Systemanforderungen** der [Downloadseite für das Azure Rights Management-Verwaltungstool](http://go.microsoft.com/fwlink/?LinkId=257721).|
-|Mindestversion von Windows PowerShell: 2.0|Die Unterstützung für das [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul wurde in Windows PowerShell 2.0 eingeführt.<br /><br />Standardmäßig werden die meisten Windows-Betriebssysteme mindestens mit Version 2.0 der Windows PowerShell installiert. Wenn Sie Windows PowerShell 2.0 installieren müssen, finden Sie Informationen dazu unter [Installieren von Windows PowerShell 2.0](http://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tipp: Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben.|
+|Mindestversion von Windows PowerShell: 2.0<br /><br /> |Standardmäßig werden die meisten Windows-Betriebssysteme mindestens mit Version 2.0 der Windows PowerShell installiert. Wenn Sie diese unterstützte Mindestversion installieren müssen, finden Sie weitere Informationen unter [Installieren von Windows PowerShell 2.0](https://msdn.microsoft.com/library/ff637750.aspx).<br /><br />Tipp: Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Wenn Sie diese Mindestversion verwenden, müssen Sie das Modul in Ihrer PowerShell-Sitzung manuell laden, indem Sie `Import-Module AADRM` ausführen, bevor Sie ein Cmdlet aus dem Rights Management-Verwaltungsmodul verwenden können. Wenn Sie über Windows PowerShell v3 oder eine höhere Version verfügen, wird das Modul automatisch geladen, und dieser zusätzliche Befehl ist nicht erforderlich.|
 |Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist im Lieferumfang neuerer Betriebssysteme enthalten. Deshalb sollten Sie eine manuelle Installation nur dann durchführen müssen, wenn Sie ein Clientbetriebssystem vor Windows 8.0 oder ein Serverbetriebssystem vor Windows Server 2012 verwenden.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](http://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist für einige Klassen erforderlich, die vom [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]-Administrationsmodul verwendet werden.|
 
 > [!NOTE]
@@ -54,25 +50,39 @@ In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung 
 Windows PowerShell für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] ist jetzt installiert.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Um anzuzeigen, welche Cmdlets verfügbar sind, starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen** , und geben Sie Folgendes ein:
+Starten Sie eine Windows PowerShell-Sitzung, und überprüfen Sie die Version des installierten Moduls. Diese Überprüfung ist besonders wichtig, wenn Sie ein Upgrade von einer älteren Version durchgeführt haben:
 
 ```
-Get-Command -Module aadrm
+(Get-Module AADRM –ListAvailable).Version
 ```
-Verwenden Sie den Befehl `the Get-Help <cmdlet_name>` , um die Hilfe für ein bestimmtes Cmdlet anzuzeigen.
+
+Hinweis: Wenn dieser Befehl nicht erfolgreich ist, führen Sie zunächst **Import-Module AADRM** aus.
+
+Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
+
+```
+Get-Command -Module AADRM
+```
+
+Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Beispiel:
+
+```
+Get-Help Connect-AadrmService -online
+```
+
 
 Weitere Informationen finden Sie unter:
 
--   Vollständige Liste verfügbarer Cmdlets: [Azure Rights Management-Cmdlets](https://msdn.microsoft.com/library/windowsazure/dn629398.aspx)
+-   Vollständige Liste der verfügbaren Cmdlets: [AADRM-Modul](/powershell/aadrm/vlatest/rightsmanagement)
 
--   Liste mit den Hauptkonfigurationsszenarien, die Windows PowerShell unterstützen: [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
+-   Liste mit den Hauptkonfigurationsszenarien, die PowerShell unterstützen: [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](administer-powershell.md)
 
-Vor dem Ausführen von Befehlen, die den [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst konfigurieren, müssen Sie mithilfe des Cmdlets [Connect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629415.aspx) eine Verbindung mit dem Dienst herstellen. Wenn Sie die gewünschten Konfigurationsbefehle ausgeführt haben, trennen Sie den Dienst mithilfe des [Disconnect-AadrmService](https://msdn.microsoft.com/library/windowsazure/dn629416.aspx) -Cmdlets.
+Vor dem Ausführen von Befehlen, die den [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Dienst konfigurieren, müssen Sie mithilfe des Cmdlets [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) eine Verbindung mit dem Dienst herstellen. 
+
+Wenn Sie die gewünschten Konfigurationsbefehle ausgeführt haben, trennen Sie als Best Practice den Dienst mithilfe des Cmdlets [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice). Wenn Sie die Verbindung nicht trennen, wird sie nach einiger Zeit der Inaktivität automatisch getrennt. Aufgrund des Verhaltens zum automatischen Trennen der Verbindung kann es vorkommen, dass Sie während einer PowerShell-Sitzung gelegentlich die Verbindung neu herstellen müssen. 
 
 > [!NOTE]
-> Azure Rights Management-Dienst noch nicht aktiviert wurde, können Sie dies nach dem Herstellen der Verbindung mit dem Dienst mithilfe des Cmdlets [Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) nachholen.
+> Wenn der Azure Rights Management-Dienst noch nicht aktiviert wurde, können Sie dies nach dem Herstellen der Verbindung mit dem Dienst mithilfe des Cmdlets [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) nachholen.
 
-## <a name="see-also"></a>Weitere Informationen
-[Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

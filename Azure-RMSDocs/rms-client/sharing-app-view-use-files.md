@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 43f083ffaf8aefd9b79b2cb64a6408e565818b9b
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
@@ -46,7 +42,7 @@ Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angez
 
 Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie können dies anhand der Dateinamenerweiterung erkennen. In jedem Fall kann das Öffnen der Datei überwacht werden, und die Überwachung erfolgt solange, wie die Datei geschützt ist. Wenn die Datei als E-Mail-Anhang gesendet wurde, wird der Absender möglicherweise jedes Mal, wenn Sie die Datei öffnen, per E-Mail benachrichtigt.
 
-- **Die Datei hat die Dateinamenerweiterung *.pfile*.
+- **Die Datei hat die Dateinamenerweiterung*.pfile*.
 
     Die Datei wurde generisch geschützt.
 
@@ -54,7 +50,7 @@ Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie kö
 
     ![Das Dialogfeld für eine pfile-Datei, die bei Verwendung der RMS-Freigabeanwendung per E-Mail freigegeben wird](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Die Datei hat eine *.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
+- **Die Datei hat eine*.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
 
     Die Datei wurde systemeigen als schreibgeschützte Kopie geschützt.
 
@@ -78,7 +74,7 @@ Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diens
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
 Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sondern z.B. auch bearbeiten, kopieren und drucken möchten), können Sie jeweils die Anleitung zur Dateinamenerweiterung befolgen:
 
-- **Die Datei hat die Dateinamenerweiterung *.pfile*.
+- **Die Datei hat die Dateinamenerweiterung*.pfile*.
 
     Speichern Sie die geöffnete Datei, und geben Sie ihr eine neue Dateinamenerweiterung, die mit der Anwendung verknüpft ist, die Sie verwenden möchten.
 
@@ -86,7 +82,7 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
 
     Die neue Datei ist nicht mehr geschützt. Wenn Sie sie schützen möchten, müssen Sie dies manuell tun. Eine Anleitung finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-in-place.md).
 
-- **Die Datei hat eine *.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
+- **Die Datei hat eine*.ppdf*-Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
 
     Sie können die Datei nur anzeigen, und wenn Sie sie umbenennen oder verschieben, bleibt die Datei weiterhin geschützt.
 

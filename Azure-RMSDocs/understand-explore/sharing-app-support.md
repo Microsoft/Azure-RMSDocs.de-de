@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3c96d8718f42dcedebba03354c149bb2b9667d66
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5d7b07de1612c55a39a3552e47a0053aa6127a0e
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>RMS-Freigabeanwendung für Windows und mobile Plattformen
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -61,4 +56,3 @@ Die RMS-Freigabeanwendung für mobile Geräte unterstützt die gängigsten verwe
 Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

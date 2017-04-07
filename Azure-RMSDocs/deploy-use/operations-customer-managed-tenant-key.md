@@ -4,7 +4,7 @@ description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 198de18664e2f94209ab3c7224e89c5a9d4c3196
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -42,7 +37,7 @@ Die Neuvergabe Ihres Schlüssels wird auch als „Rollover“ bezeichnet. Führe
 
 Wenn Sie Ihren Mandantenschlüssel neu vergeben, wird neuer Inhalt unter Verwendung des neuen Mandantenschlüssels geschützt. Dies geschieht in einer gestaffelten Weise, sodass für einen gewissen Zeitraum neue Inhalte noch teilweise durch den alten Mandantenschlüssel geschützt sind. Zuvor geschützte Inhalte bleiben durch den alten Mandantenschlüssel geschützt. Zur Unterstützung dieses Szenarios wird Ihr alter Mandantenschlüssel in Azure Information Protection beibehalten, damit Lizenzen für alte Inhalte erteilt werden können.
 
-Um Ihren Mandantenschlüssel zu erneuern, müssen Sie zunächst Ihren Azure Information Protection-Mandantenschlüssel in Key Vault erneuern. Führen Sie dann das Cmdlet „Add-AadrmKeyVaultKey“ erneut aus, und geben Sie dabei die neue Schlüssel-URL an.
+Um Ihren Mandantenschlüssel zu erneuern, müssen Sie zunächst Ihren Azure Information Protection-Mandantenschlüssel in Key Vault erneuern. Führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) erneut aus, und geben Sie dabei die neue Schlüssel-URL an.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Sie sind für das Sichern Ihres Mandantenschlüssels verantwortlich. Wenn Sie Ihren Mandantenschlüssel in einem Thales HSM generiert haben, sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern.
@@ -67,5 +62,4 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 |Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss Azure Key Vault oder Azure Information Protection so aktualisieren, dass neue, robuste Algorithmen und längere Schlüssellängen unterstützt werden, und alle Kunden anweisen, ihre Mandantenschlüssel zu erneuern.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

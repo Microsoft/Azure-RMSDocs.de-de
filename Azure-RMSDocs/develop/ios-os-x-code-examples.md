@@ -14,13 +14,10 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
-
-
+ms.openlocfilehash: 60874baeb5956c611e09901182673354d14c6eba
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="iosos-x-code-examples"></a>Codebeispiele für iOS/OS X
 
 In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vorgestellt.
@@ -281,8 +278,3 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
           }
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

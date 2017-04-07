@@ -14,15 +14,12 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-experimental: true
+experimental: True
 experiment_id: priyamo-TableVsFlatList-20160805
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 710d543b99c6226a350b26a1f1facf124a548485
-
-
+ms.openlocfilehash: 1cd9ae9b9051f4ee5e5890ef3f1f0a17958c4b59
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-use-built-in-rights"></a>Vorgehensweise: Verwenden integrierter Rechte
 
 Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Management SDK 4.2 bereitstellt, und die Nutzungseinschränkungen, die eine App im Rahmen dieser Einschränkungen erzwingen soll. Im Folgenden werden die integrierten Rechte, allgemeinen Rechte, editierbaren Dokumentrechte und E-Mail-Rechte gefolgt von einer Beschreibung und den Werten je nach Betriebssystem erläutert.
@@ -137,8 +134,3 @@ Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Manage
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

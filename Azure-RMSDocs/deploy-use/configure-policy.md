@@ -4,7 +4,7 @@ description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfiguri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ec57bae71b11b6505ccb94fcdf692f215862191d
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+translationtype: HT
 ---
-
 # <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
@@ -32,7 +28,7 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
 
-    Dann wird das Blatt **Azure Information Protection** angezeigt, auf dem Sie die Richtlinie **Global** öffnen können, die alle Benutzer erhalten. Sie können optional auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinie **Global** enthält die folgenden Elemente, die Sie konfigurieren können:
+    Beim Laden des Blatts **Azure Information Protection** wird automatisch das Blatt **Richtlinie: Global** geladen, damit Sie die globale Richtlinie anzeigen und bearbeiten können, die für alle Benutzer konfiguriert wird. Sie können optional jedoch auch bereichsbezogene Richtlinien hinzufügen und bearbeiten. Die Azure Information Protection-Richtlinien enthalten die folgenden Elemente, die Sie konfigurieren können:
 
     - Bezeichnungen, mit denen Sie und Ihre Benutzer Dokumente und E-Mails klassifizieren können.
 
@@ -44,15 +40,24 @@ So konfigurieren Sie die der Azure Information Protection-Richtlinie
 
     - Die Option, um Benutzer zur Angabe einer Begründung aufzufordern, wenn sie eine Bezeichnung mit einer niedrigeren Vertraulichkeitsstufe wählen.
 
+    - Die Möglichkeit zum automatischen Bezeichnen einer E-Mail-Nachricht nach deren Anlagen.
+
     - Die Möglichkeit zum Bereitstellen eines benutzerdefinierten Hilfelinks für Benutzer.
 
-Azure Information Protection umfasst eine [Standardrichtlinie](configure-policy-default.md), die die Bezeichnungen **Personal** (Persönlich), **Public** (Öffentlich), **Internal** (Intern), **Confidential** (Vertraulich) und **Secret** (Geheim) beinhaltet. Sie können die Standardbezeichnungen unverändert verwenden, diese Bezeichnungen anpassen oder löschen und neue Bezeichnungen erstellen.
+Azure Information Protection enthält eine [Standardrichtlinie](configure-policy-default.md) mit fünf Hauptbezeichnungen. Diese Bezeichnungen können mit dem vollständigen Bereich von Daten verwendet werden, die ein Unternehmen in der Regel erstellt und speichert, von der niedrigsten Klassifizierung für persönliche Daten bis zur höchsten Klassifizierung für streng vertrauliche Daten. Sie können die Standardbezeichnungen unverändert verwenden, diese Bezeichnungen anpassen oder löschen und neue Bezeichnungen erstellen.
 
 Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. 
 
 Klicken Sie auf **Publish** (Veröffentlichen), wenn Sie alle gewünschten Änderungen vorgenommen haben. 
 
-Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt er diese Änderungen dann als Azure Information Protection-Richtlinie herunter.
+Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt der Client diese Änderungen dann als neueste Azure Information Protection-Richtlinie herunter. Folgende zusätzliche Trigger aktualisieren die Richtlinie im Client ebenfalls:
+
+- Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen.
+
+- Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).
+
+- Alle 24 Stunden.
+
 
 ## <a name="configuring-your-organizations-policy"></a>Konfigurieren der Richtlinie Ihrer Organisation
 
@@ -81,4 +86,3 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

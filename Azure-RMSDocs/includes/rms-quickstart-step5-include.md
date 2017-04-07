@@ -38,8 +38,3 @@ In diesem Tutorial haben Sie nur ein Datenschutzszenario für Azure RMS kennenge
 
 Wenn Sie soweit sind, mit der Bereitstellung von Azure RMS zu beginnen, sollten Sie die [Roadmap für die Bereitstellung von Azure Rights Management](../plan-design/deployment-roadmap.md) für die Bereitstellungsschritte und die darin enthaltenen Links zu praktischen Anweisungen verwenden.
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

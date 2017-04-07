@@ -53,8 +53,3 @@ Obwohl hier nicht auf benutzerdefinierte Vorlagen eingegangen wird, müssen Sie 
 |--------------------------------|--------------------------|
 |Aktivieren von Rights Management und Festlegen der Benutzer, die Dateien und E-Mails nach der Dienstaktivierung schützen können   →|[Aktivieren von Azure Rights Management](../deploy-use/activate-azure-classic.md)|
 |Standardvorlagen und Erstellung neuer benutzerdefinierter Vorlagen   →|[Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](../deploy-use/create-template.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

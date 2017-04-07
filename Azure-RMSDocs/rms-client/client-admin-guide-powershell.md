@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
-
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
@@ -137,9 +132,7 @@ Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows Po
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>So rufen Sie „AppPrincipalId“ und den symmetrischen Schlüssel ab
 
-Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolServicePrincipal` aus dem PowerShell-Modul „MSOnline“ für Azure Active Directory oder `New-AzureADServicePrincipal` aus dem neueren PowerShell-Modul von Azure Active Directory Version 2 ausführen. 
-
-Die folgenden Anweisungen sind für „New-MsolServicePrincipal“ aus dem PowerShell-Modul „MSOnline“ für Azure Active Directory vorgesehen:
+Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolServicePrincipal` aus dem MSOnline-PowerShell-Modul für Azure Active Directory ausführen: 
 
 1. Wenn dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie entsprechende Informationen unter [Installieren des Azure AD-Moduls](/powershell/azuread/#install-the-azure-ad-module).
 
@@ -235,7 +228,7 @@ Geben Sie zunächst in einer PowerShell-Sitzung Folgendes ein, wenn Sie sich fü
 
 Geben Sie nach der entsprechenden Aufforderung die drei Bezeichner ein, wie unter [Voraussetzung 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) beschrieben.
 
-Bevor Sie Dateien schützen können, müssen Sie eine Liste von Rights Management-Vorlagen abrufen, um die zu verwendende Vorlage und ihre zugehörige ID-Nummer zu ermitteln. In der Ausgabe können Sie dann die Vorlagen-ID kopieren:
+Bevor Sie Dateien schützen können, müssen Sie die Rights Management-Vorlagen auf Ihren Computer herunterladen und die zu verwendende Vorlage sowie ihre zugehörige ID-Nummer ermitteln. In der Ausgabe können Sie dann die Vorlagen-ID kopieren:
 
     Get-RMSTemplate
     
@@ -301,6 +294,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------                             -------------
     C:\Test.docx                          C:\Test.docx
 
+Beachten Sie: Wenn die Rights Management-Vorlagen geändert werden, müssen Sie sie erneut mit `Get-RMSTemplate -force` herunterladen. 
 
 ## <a name="active-directory-rights-management-services"></a>Active Directory-Rechteverwaltungsdienste
 
@@ -430,4 +424,3 @@ Weitere Informationen, die möglicherweise zur Unterstützung des Azure Informat
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

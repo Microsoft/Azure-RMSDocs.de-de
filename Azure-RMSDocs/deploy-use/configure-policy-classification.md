@@ -10,14 +10,10 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: c4a0aab69ac8a01175528531fe11f17e86da9a6b
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
@@ -53,7 +49,7 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy:Global** (Richtlinie: Global) aus und nehmen dann Ihre Änderungen bei Bedarf am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. 
+2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy: Global** (Richtlinie: Global) aus und nehmen dann nach Bedarf Ihre Änderungen am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. 
 
      Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.  
 
@@ -223,6 +219,5 @@ Beispiele zum Durchführen von Tests:
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

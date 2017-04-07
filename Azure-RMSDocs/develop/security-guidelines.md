@@ -12,13 +12,10 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ea2783ec76505681ab60aee9d995e347d4310cad
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e940dfd1d3a053c14ea1adb6e72f4cde7d26bba0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="security-best-practices-for-azure-information-protection"></a>Best Practices zu Sicherheitsthemen für Azure Information Protection
 
 Das Software Development Kit (SDK) für Azure Information Protection (AIP) stellt ein stabiles System zum Veröffentlichen und Nutzen geschützter Informationen aller Art berei. Um ein möglichst sicheres AIP-System zu erzielen, müssen AIP-fähige Anwendungen unter Berücksichtigung der Best Practices für AIP erstellt werden. Alle AIP-fähigen Anwendungen sind gemeinsam dafür zuständig, die Sicherheit dieses Ökosystems aufrecht zu erhalten. Durch Identifizieren und Minimieren von Sicherheitsrisiken, die bei der Anwendungsentwicklung entstehen, lässt sich die Sicherheit bei der Software-Implementierung erhöhen.

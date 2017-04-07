@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/30/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: cb0a66071937ed5afdf1f86833bbc47bdb4ddd50
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+translationtype: HT
 ---
-
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -49,11 +45,11 @@ In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembeh
 
 Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier Support-Kunden](https://premier.microsoft.com/), um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
 
-Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Verwenden Sie für andere Kunden die folgenden Supportkanäle, abhängig davon, wie Sie Azure Information Protection erworben haben:
 
-- **Azure Information Protection Premium** (eigenständig): Öffnen Sie eine [Supportanfrage im Azure-Portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Um diese Option verwenden zu können, müssen Sie über ein Azure-Abonnement und einen Azure-Supportplan verfügen. Weitere Informationen finden Sie unter [Azure-Support für Kunden](https://azure.microsoft.com/support/plans/). 
+- **Azure Information Protection Premium** (eigenständig): Öffnen Sie eine [Supportanfrage im Azure-Portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
 
 - **Azure Information Protection mit Office 365-Abonnement:** Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal. 
 
@@ -81,6 +77,8 @@ Problembehandlung:
 
 - Wenn Sie den Rights Management-Connector für Ihre lokalen Server bereitgestellt haben: Lesen Sie die Informationen zum [Überwachen](../deploy-use/monitor-rms-connector.md) mit Einzelheiten zu Ereignisprotokolleinträgen, Leistungsindikatoren und Protokollierung.
 
+- Für den Azure Information Protection-Client für Windows: Siehe Abschnitt [Zusätzliche Prüfungen und Problembehandlung](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) im Administratorhandbuch.
+
 - Für automatisierte Überprüfungen, die automatische Wiederherstellung und die Ablaufverfolgung: Laden Sie das [RMS Analyzer-Tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und führen Sie es aus. Weitere Informationen zu diesem Tool finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**. 
 
 ### <a name="community-resources"></a>Communityressourcen
@@ -92,4 +90,3 @@ Problembehandlung:
 -   [Forum: RMS für Benutzer (Anwendungen)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
