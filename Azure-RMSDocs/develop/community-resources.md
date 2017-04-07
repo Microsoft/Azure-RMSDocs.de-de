@@ -14,13 +14,10 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 91a91b55c0dad4cf83d76d18b75e6b0d91c67190
-ms.openlocfilehash: d9ec87cea94248fb0bb34856d0ff7bd343da26f0
-
-
+ms.openlocfilehash: 437a9719c3efbfbbf51403e23a93609215508f33
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="community-resources"></a>Communityressourcen
 
 Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.
@@ -42,8 +39,3 @@ Im Abschnitt zu Rights Management Services auf der Connect-Website finden Sie ak
 >-   Klicken Sie auf **Beitreten**, um sich zu registrieren.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

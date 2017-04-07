@@ -4,20 +4,16 @@ description: "Schritt 3 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: 340cce9bec3eae7e507b5a33ebd380a38e9e7f19
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: ba10ce73d5bd9cbfa65d373e247b440150be826b
+ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
+translationtype: HT
 ---
-
 # <a name="step-3-install-the-client"></a>Schritt 3: installieren des Clients
 
 >*Gilt für: Azure Information Protection*
@@ -33,7 +29,7 @@ In diesem Schritt installieren Sie den Azure Information Protection-Client, dami
 
     Für dieses Tutorial ist es unerheblich, ob Sie die Option zum Installieren einer Demorichtlinie auswählen, da die Richtlinie, die Sie gerade konfiguriert haben, aus Azure heruntergeladen wird und die Demorichtlinie ersetzt, falls diese installiert ist. Sie könnten die Option für die Demorichtlinie jedoch verwenden, wenn Sie nur die Standardbezeichnungen testen möchten, ohne eine Verbindung mit Azure Information Protection herzustellen. 
 
-## <a name="verify-the-installations"></a>Überprüfen der Installationen
+## <a name="verify-the-installation"></a>Überprüfen Sie die Installation
 
 Stellen Sie sicher, dass die Installation erfolgreich durchgeführt wurde, indem Sie Word und ein neues leeres Dokument öffnen (speichern Sie es noch nicht). Wenn Sie aufgefordert werden, Ihren Benutzernamen und Ihr Kennwort einzugeben, geben Sie die Anmeldeinformationen Ihres globalen Administratorkontos ein. 
 
@@ -41,13 +37,13 @@ Wenn Sie den Client zum ersten Mal installiert haben, wird eine Seite mit **Glü
 
 Wenn das Dokument geladen wird, sehen Sie zwei neue Dinge:
 
-- Auf der Registerkarte **Start** wird die neue Gruppe **Protection** (Schutz) mit einer Schaltfläche namens **Protect** (Schützen) angezeigt.
+![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Client installiert](../media/word2016-calloutsv2.png)
 
-    Klicken Sie auf **Protect** > **Help and feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten eine aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Installation der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
+- Auf der Registerkarte **Start** wird die neue Gruppe **Protection** (Schutz) mit der Schaltfläche **Protect** (Schützen) angezeigt.
 
-- Unter dem Menüband wird eine neue Navigationsleiste angezeigt – die Information Protection-Navigationsleiste. Sie zeigt den **Sensitivity**-Titel (Vertraulichkeit) und die von Ihnen konfigurierte Standardbezeichnung **Internal** (Intern) an. 
-    
-    ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Client installiert](../media/word2013-callouts2.png)
+    Klicken Sie auf **Schützen** > **Hilfe und Feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten eine aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Installation der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
+
+- Unter dem Menüband wird eine neue Navigationsleiste angezeigt – die Information Protection-Navigationsleiste. Sie zeigt den Wert für **Sensitivity** (Vertraulichkeit) und die von Ihnen konfigurierte Standardbezeichnung **General** (Allgemein) an. 
 
 Sie können nun Azure Information Protection in Aktion sehen.
 

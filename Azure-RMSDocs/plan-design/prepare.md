@@ -4,7 +4,7 @@ description: "Überprüfen Sie, ob alles für die Verwendung des Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
-ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
-ms.lasthandoff: 02/25/2017
-
-
+ms.openlocfilehash: 4b074f9a9a3d72b4d1ab5810b69e92b4792b0711
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
 # <a name="preparing-for-azure-information-protection"></a>Vorbereiten für Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -38,10 +34,17 @@ Damit Sie Azure Information Protection für Ihre Organisation bereitstellen kön
 
 Aus Leistungsgründen wird die Gruppenmitgliedschaft vom Azure Rights Management-Dienst zwischengespeichert. Dies bedeutet, dass die Änderungen an der Gruppenmitgliedschaft bis zu drei Stunden benötigen, bis sie wirksam sind. Änderungen dieses Zeitraums sind vorbehalten. Denken Sie daran, diese Verzögerung in alle Änderungen oder Tests mit einzubeziehen, die Sie während der Verwendung von Gruppen in Ihrer Konfiguration des Azure Rights Management-Diensts vornehmen, z.B. das Konfigurieren von [benutzerdefinierten Vorlagen](../deploy-use/configure-custom-templates.md), oder wenn Sie eine Gruppe für die [Administratorfunktion](../deploy-use/configure-super-users.md) verwenden. 
 
+### <a name="considerations-if-email-addresses-change"></a>Überlegungen bei einer Änderung der E-Mail-Adressen
+
+Wenn Sie Nutzungsrechte für Benutzer oder Gruppen konfigurieren und diese nach ihrem Anzeigenamen auswählen, wird Ihre Auswahl mit der E-Mail-Adresse des jeweiligen Objekts gespeichert. Wenn die E-Mail-Adresse später geändert wird, werden die ausgewählten Benutzer nicht erfolgreich autorisiert.
+
+Bei einer Änderung von E-Mail-Adressen wird empfohlen, dass Sie die alte E-Mail-Adresse als Proxy-E-Mail-Adresse (auch Alias oder alternative E-Mail-Adresse genannt) zum Benutzer oder zur Gruppe hinzufügen. Auf diese Weise bleiben die zuvor zugewiesenen Nutzungsrechte erhalten. Wenn diese Vorgehensweise nicht möglich ist, müssen Sie den Benutzer oder die Gruppe aus Ihrer Konfiguration entfernen und erneut auswählen, um die aktualisierte E-Mail-Adresse zu speichern. Anschließend wird für neu geschützten Inhalt die neue E-Mail-Adresse verwendet.
+
+Beispielsweise können Benutzer oder Gruppen für benutzerdefinierte Rights Management-Vorlagen nach dem Anzeigenamen ausgewählt werden, um Nutzungsrechte zuzuweisen. Benutzer können Benutzer und Gruppen auch nach ihrem Anzeigenamen auswählen, wenn sie benutzerdefinierte Berechtigungen mit dem Azure Information Protection-Client konfigurieren.
+
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Aktivieren des Rights Management-Diensts für den Schutz von Daten
 Wenn alles für den Schutz von Dokumenten und E-Mails bereit ist, aktivieren Sie den Rights Management-Dienst, um diese Technologie anzuwenden. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

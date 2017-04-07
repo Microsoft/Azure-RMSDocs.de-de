@@ -4,7 +4,7 @@ description: Wenn Sie Active Directory Rights Management Services (AD RMS) berei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d0027fa04824b0c1172ef21da4736895965925d7
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 3ac73576f67bee8d63c714352bfa4e75413ab972
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Vergleich von Azure Information Protection und AD RMS
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
@@ -66,15 +62,17 @@ Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die 
 |Erfordert eine Azure Information Protection-Lizenz oder Azure Rights Management-Lizenz mit Office 365, um Inhalte zu schützen. Es ist keine Lizenz erforderlich, um Inhalte zu verwenden, die mit Azure Information Protection geschützt wurden (einschließlich Benutzern aus einer anderen Organisation).<br /><br />Weitere Informationen finden Sie in der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|Erfordert eine RMS-Lizenz, um Inhalte zu schützen, sowie zum Verwenden von Inhalten, die mit AD RMS geschützt wurden.<br /><br />Weitere, allgemeine Informationen zur Lizenzierung für AD RMS finden Sie unter [Clientzugriffslizenzen und Management-Lizenzen](https://www.microsoft.com/en-us/Licensing/product-licensing/client-access-license.aspx) . Wenn Sie spezifische Informationen benötigen, wenden Sie sich bitte an Ihren Microsoft-Partner oder den für Sie zuständigen Mitarbeiter von Microsoft.|
 
 ## <a name="cryptographic-controls-for-signing-and-encryption"></a>Kryptografiesteuerelemente zum Signieren und Verschlüsseln
-Azure Information Protection verwendet immer RSA 2048 für Kryptografieaufgaben mit öffentlichem Schlüssel und SHA 256 für Signaturvorgänge. Im Vergleich unterstützt AD RMS RSA 1024 und RSA 2048 sowie SHA 1 und SHA 256 für Signaturvorgänge.
+Azure Information Protection verwendet standardmäßig RSA 2048 für alle Kryptografieaufgaben mit öffentlichem Schlüssel und SHA 256 für Signaturvorgänge. Im Vergleich unterstützt AD RMS RSA 1024 und RSA 2048 sowie SHA 1 und SHA 256 für Signaturvorgänge.
 
 Sowohl Azure Information Protection als auch AD RMS verwenden AES 128 für die symmetrische Verschlüsselung.
 
-Azure Information Protection ist mit FIPS 140-2 kompatibel, wenn Ihr Mandantenschlüssel von Microsoft erstellt und verwaltet wird (Standard) oder wenn Sie Ihren eigenen Mandantenschlüssel verwalten (bekannt als BYOK). Weitere Informationen zum Verwalten Ihres Mandantenschlüssels finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
+Azure Information Protection ist mit FIPS 140-2 kompatibel, wenn Ihre Mandanten 2.048-Bit-Schlüssel verwenden, dem Standard, wenn der Azure Rights Management-Dienst aktiviert wird. 
+
+Weitere Informationen über die kryptografischen Steuerelemente finden Sie unter [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellänge](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie eine Migration von AD RMS zu Azure Information Protection durchführen möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md) nach.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

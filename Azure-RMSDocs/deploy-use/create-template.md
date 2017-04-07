@@ -4,7 +4,7 @@ description: "Anweisungen zum Erstellen und Verwalten benutzerdefinierter Vorlag
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
-ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: cf11e0ac3bb13dcb31d14bad5f97ad117bd09953
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
-
 # <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -49,16 +44,16 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     -   Gehen Sie im [klassischen Azure-Portal](http://go.microsoft.com/fwlink/p/?LinkID=275081) wie folgt vor:
 
-        1.  Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**.
+        1. Klicken Sie im linken Bereich auf **ACTIVE DIRECTORY**.
 
-        2.  Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
+        2. Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
 
-        3.  Wählen Sie das Verzeichnis aus, für das Sie Rights Management verwalten möchten.
-
-        4.  Wenn Sie Rights Management noch nicht aktiviert haben, klicken Sie auf **AKTIVIEREN** , und bestätigen Sie Ihre Aktion.
+        3. Wenn für den **RIGHTS MANAGEMENT-STATUS** **Inaktiv** angezeigt wird, klicken Sie auf **AKTIVIEREN**, und bestätigen Sie Ihre Aktion.
 
             > [!NOTE]
             > Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
+            >
+        4. Wenn für den **RIGHTS MANAGEMENT-STATUS** **Aktiv** angezeigt wird, wählen Sie den Namen Ihres Active Directory-Mandanten.
 
 2.  Erstellen einer neuen Vorlage:
 
@@ -80,6 +75,8 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
     > [!NOTE]
     > Die von Ihnen ausgewählten Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung ist dies praktisch immer der Fall, aber in einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder Gruppen E-Mail-Adressen hinzufügen.
+    > 
+    > Wenn sich eine E-Mail-Adresse ändert, nachdem Sie den Benutzer oder die Gruppe ausgewählt und die Vorlage gespeichert haben, lesen Sie die Informationen im Abschnitt [Überlegungen bei einer Änderung der E-Mail-Adressen](../plan-design/prepare.md#considerations-if-email-addresses-change) in der Planungsdokumentation. 
 
     Als bewährte Methode verwenden Sie besser Gruppen als Benutzer, was die Verwaltung der Vorlagen vereinfacht. Wenn Sie jedoch Änderungen an der Gruppe durchführen, denken Sie daran, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](../plan-design/prepare.md#group-membership-caching). 
     

@@ -14,13 +14,10 @@ ms.assetid: ae67523a-c094-44da-86b8-739bedba7111
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
-ms.openlocfilehash: 9906d300debd4d28e21b8fab2c44c30574d47f4b
-
-
+ms.openlocfilehash: 476410d14e4fdc8b1ac71124491849f30048bf38
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="developer-guidance"></a>Anleitung für Entwickler
 Ziel des Microsoft Rights Management SDK 4.2 ist es, die Erstellung von AD RMS-fähigen Anwendungen, für die Active Directory Rights Management Services (AD RMS) genutzt wird, so weit wie möglich zu vereinfachen.
 
@@ -32,8 +29,3 @@ Die folgenden Themen sollen Ihnen als Unterstützung für den Entwurfsprozess zu
 - [Vorgehensweise: Verwenden der Dokumentnachverfolgung](how-to-use-document-tracking.md): Zum Verwenden der Funktion für die Dokumentnachverfolgung sind einige grundlegende Kenntnisse bezüglich der Verwaltung der zugehörigen Metadaten und der Registrierung beim Dienst erforderlich.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

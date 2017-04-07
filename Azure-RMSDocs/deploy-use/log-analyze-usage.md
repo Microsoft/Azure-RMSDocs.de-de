@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokolli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
-ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
+ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
+translationtype: HT
 ---
-
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -149,7 +145,7 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |owner-email|String|Die E-Mail-Adresse des Besitzers des Dokuments.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com|
 |issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Zeichenfolge|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|Zeichenfolge|Der Dateiname des geschützten Dokuments. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|TopSecretDocument.docx|
+|file-name|Zeichenfolge|Der Dateiname eines geschützten Dokuments, das mit dem Azure Information Protection-Client für Windows oder mit der Rights Management-Freigabeanwendung für Windows nachverfolgt wird. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|TopSecretDocument.docx|
 |date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|2015-10-15T21:37:00|
 |c-info|String|Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
@@ -240,6 +236,5 @@ Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher gespeichert haben, die vor d
 Weitere Informationen zum Verwenden von Windows PowerShell für den Azure Rights Management-Dienst finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](administer-powershell.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

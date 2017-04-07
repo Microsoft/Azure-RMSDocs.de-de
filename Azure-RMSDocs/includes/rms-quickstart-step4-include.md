@@ -31,8 +31,3 @@ Nachdem der Empfänger die Anlage nun geöffnet und optional an einen anderen Em
 |Kostenloses RMS for Individuals-Abonnement   →|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|
 |Informationen zu den beiden Versionen der an die E-Mail angehängten Datei   →|[Erläuterung zur automatisch erstellten PPDF-Datei](../rms-client/sharing-app-dialog-box.md)|
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

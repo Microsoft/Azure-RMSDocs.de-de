@@ -1,26 +1,23 @@
 ---
-title: "Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS | Azure RMS"
+title: "Vorgehensweise: Registrieren Ihrer App bei Azure AD – AIP"
 description: "Beschreibt die Grundlagen der Benutzerauthentifizierung für Ihre RMS-fähige Anwendung."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f5b3de4607e5e889448b381f5835b4a75c9b0c2
-
-
+ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
-
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS
 
 In diesem Thema werden die Grundlagen der App-Registrierung und RMS-Aktivierung über das Azure-Portal vermittelt. Anschließend wird die Benutzerauthentifizierung mit der Azure Active Directory Authentication Library (ADAL) erläutert.
@@ -31,8 +28,8 @@ Benutzerauthentifizierung ist ein grundlegender Schritt beim Aufbau der Kommunik
 ## <a name="registration-via-azure-portal"></a>Registrierung über das Azure-Portal
 Befolgen Sie zunächst die Anleitungen unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md), um die Registrierung Ihrer App über das Azure-Portal zu konfigurieren. Kopieren und speichern Sie die **Client-ID** und den **Umleitungs-URI** aus diesem Prozess zur späteren Verwendung.
 
-## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Abschließen Ihres Rights Management-Lizenzvertrags (Rights Management License Agreement; RMLA)
-Bevor Sie Ihre Anwendung bereitstellen können, müssen Sie einen RMLA mit dem Microsoft Rights Management-Team abschließen. Ausführliche Informationen finden Sie im ersten Abschnitt des Themas [Bereitstellen in der Produktion – Anfordern eines Produktionslizenzvertrags](deploying-your-application.md).
+## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Schließen einer Integrationsvereinbarung für Information Protection (Information Protection Integration Agreement, IPIA)
+Bevor Sie Ihre Anwendung bereitstellen können, müssen Sie eine IPIA mit dem Microsoft Information Protection-Team abschließen. Ausführliche Informationen finden Sie im ersten Abschnitt des Themas: [Bereitstellen in der Produktion](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implementieren der Benutzerauthentifizierung für Ihre App
 Jede RMS-API verfügt über einen Rückruf, der implementiert werden muss, um eine Authentifizierung des Benutzers zu ermöglichen. Das RMS SDK 4.2 verwendet Ihre Implementierung des Rückrufs, wenn Sie kein Zugriffstoken angeben, wenn das Zugriffstoken aktualisiert werden muss oder wenn das Zugriffstoken abgelaufen ist.
@@ -268,8 +265,3 @@ Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Porta
     }
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

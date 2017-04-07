@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 7553e2719195448c71653ead9950f92bac3928c5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -62,4 +58,3 @@ Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Komponent
 -   [Sonstige Anwendungen, die die RMS-APIs unterstützen](api-support.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

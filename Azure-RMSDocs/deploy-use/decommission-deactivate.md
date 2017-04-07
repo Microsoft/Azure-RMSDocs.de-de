@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b88d4587be0549ea7364c9745c218865480a8d18
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f577337cf7ce904a82ff23b165fdc7befe319092
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Außerbetriebsetzen und Deaktivieren von Azure Rights Management
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -57,22 +53,13 @@ Verwenden Sie eine der folgenden Methoden, um [!INCLUDE[aad_rightsmanagement_1](
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>So deaktivieren Sie Rights Management über das Office 365 Admin Center
 
-1.  [Melden Sie sich bei Office 365 mit einem Geschäfts- oder Schulkonto an](https://portal.office.com/) , das als ein Administratorkonto für Ihre Office 365-Bereitstellung fungiert.
+1. Wechseln Sie zur [Rights Management-Seite](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Office 365-Administratoren.
+    
+    Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.    
 
-2.  Wenn das Office 365 Admin Center nicht automatisch angezeigt wird, wählen Sie in der linken oberen Ecke das Symbol für das App-Startprogramm aus, und wählen Sie dann **Administrator** aus. Die Kachel **Administrator** wird nur für Office 365-Administratoren angezeigt.
+2. Klicken Sie auf der Seite **Rights Management** auf **Deaktivieren**.
 
-    > [!TIP]
-    > Hilfe zum Admin Center finden Sie in [Informationen zum Office 365 Admin Center - Hilfe für Administratoren](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
-
-3.  Klicken Sie im linken Bereich auf **DIENSTEINSTELLUNGEN**.
-
-4.  Klicken Sie auf **Rights Management**.
-
-5.  Klicken Sie auf der Seite **RIGHTS MANAGEMENT** auf **Verwalten**.
-
-6.  Klicken Sie auf der Seite **Rights Management** auf **Deaktivieren**.
-
-7.  Wenn die Aufforderung **Möchten Sie Rights Management deaktivieren?**angezeigt wird, klicken Sie auf **Deaktivieren**.
+3.  Wenn die Aufforderung **Möchten Sie Rights Management deaktivieren?**angezeigt wird, klicken Sie auf **Deaktivieren**.
 
 Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die Option zum Aktivieren angezeigt werden.
 
@@ -84,11 +71,10 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
 
 3.  Klicken Sie auf der Seite **Active Directory** auf **RIGHTS MANAGEMENT**.
 
-4.  Wählen Sie das für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]zu verwaltende Verzeichnis aus, klicken Sie auf **DEAKTIVIEREN**, und bestätigen Sie den Vorgang.
+4.  Stellen Sie sicher, dass Ihr Mandantenname ausgewählt ist, klicken Sie auf **DEAKTIVIEREN**, und bestätigen Sie Ihre Aktion.
 
 Als **RIGHTS MANAGEMENT-STATUS** sollte jetzt **Inaktiv** angezeigt werden, und statt der Option **DEAKTIVIEREN** wird die Option **AKTIVIEREN**angezeigt.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

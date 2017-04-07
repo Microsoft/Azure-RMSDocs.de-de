@@ -2,7 +2,7 @@ Verwenden Sie dieses Tutorial, um Microsoft Azure Rights Management (auch bekann
 
 ![Quick Start-Lernprogramm – Alle Schritte](../media/AzRMS_QuickStartStepsAll.PNG)
 
-Dieses Tutorial richtet sich an IT-Administratoren und Berater, die Azure Rights Management als Datenschutzlösung für eine Organisation evaluieren. In einer Produktionsumgebung führt der Administrator die Schritte zum Aktivieren des Diensts und der Endbenutzer die Schritte zum Senden des Dokuments aus. Beide Vorgehensweisen sind Teil dieses Tutorials und veranschaulichen das End-to-End-Szenario für das sichere Versenden vertraulicher Dokumente an Empfänger, die einer anderen Organisation angehören. Falls beim Durcharbeiten dieses Tutorials Probleme auftreten, senden Sie eine E-Mail an [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) . Wir helfen Ihnen gerne weiter.
+Dieses Tutorial richtet sich an IT-Administratoren und Berater, die Azure Rights Management als Datenschutzlösung für eine Organisation evaluieren. In einer Produktionsumgebung führt der Administrator die Schritte zum Aktivieren des Diensts und der Endbenutzer die Schritte zum Senden des Dokuments aus. Beide Vorgehensweisen sind Teil dieses Tutorials und veranschaulichen das End-to-End-Szenario für das sichere Versenden vertraulicher Dokumente an Empfänger, die einer anderen Organisation angehören. Falls beim Durcharbeiten dieses Tutorials Probleme auftreten, senden Sie eine E-Mail an [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial). Wir helfen Ihnen gerne weiter.
 
 Voraussetzungen für dieses Tutorial:
 
@@ -15,8 +15,3 @@ Voraussetzungen für dieses Tutorial:
 -   Ein Computer unter Windows (mindestens Windows 7 SP1), auf dem Office 2016, Office 2013 oder Office 2010 installiert ist.
 
 Los geht’s!
-
-
-<!--HONumber=Jul16_HO3-->
-
-

@@ -14,13 +14,10 @@ ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: d4ee4581ebc485cf881c8d4970ee90ca4873820e
-ms.openlocfilehash: 07c6c6f918cc0e629583eb177222417dc420ea71
-
-
+ms.openlocfilehash: 8ed5897accf7bf4db08a5fc699af3f0f850740a2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 
 Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden. Eine Nutzungseinschränkung liegt vor, wenn ein Benutzer eine Aktion durchführen möchte (z.B. das Drucken eines Dokuments) und die RMS-Richtlinie für dieses Dokument keine Berechtigung bzw. kein Recht für die Durchführung der Aktion gewährt (z.B. das Recht DRUCKEN).
@@ -74,8 +71,3 @@ Jedes Benutzerrecht, das in der AD RMS-Rechtespalte aufgeführt wird, hat eine B
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Nov16_HO4-->
-
-

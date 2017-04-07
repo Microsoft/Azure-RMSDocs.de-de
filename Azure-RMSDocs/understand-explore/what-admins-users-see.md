@@ -4,7 +4,7 @@ description: "Hier finden Sie einige typische Beispiele dafür, wie Administrato
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/26/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4fb412ff1128842fd1f3c95d39a4a626c67f97a0
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 254386ad7cda2d3e178eb9520e6282abe609c158
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="azure-rms-in-action-what-administrators-and-users-see"></a>Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -128,7 +123,7 @@ In diesem Beispiel konfiguriert der Administrator eine Richtlinie, damit die Org
 
 Die Regeln sind so konfiguriert, dass auf E-Mail-Nachrichten, die diese Informationen enthalten und an Empfänger außerhalb des Unternehmens gesendet werden, automatisch Rechteschutz mithilfe einer RMS-Vorlage angewendet wird, die den Zugriff ausschließlich auf Mitarbeiter des Unternehmens einschränkt.
 
-Hier wird die Regel so konfiguriert, dass eine der Standardvorlagen verwendet wird: **VanArsdel, Ltd – Vertraulich**aus unserem ersten Beispiel. Sie können jedoch auch sehen, dass die Vorlagenauswahl alle benutzerdefinierten Vorlagen enthält, die Sie erstellt haben, sowie eine Option **Nicht weiterleiten** , die für Exchange spezifisch ist.
+Hier wird die Regel so konfiguriert, dass eine der Standardvorlagen verwendet wird: **VanArsdel, Ltd – Vertraulich**aus unserem ersten Beispiel. Sie können jedoch auch sehen, dass die Vorlagenauswahl alle benutzerdefinierten Vorlagen enthält, die Sie erstellt haben, sowie eine Option **Nicht weiterleiten**, die für Exchange spezifisch ist.
 
 > [!NOTE]
 > Wenn die angezeigten Konfigurationsoptionen von der Abbildung abweichen, müssen Sie beim Konfigurieren der Regel möglicherweise zunächst **Weitere Optionen** auswählen. Anschließend können Sie **Nachrichtensicherheit ändern** > **Rechteschutz anwenden** und dann die RMS-Vorlage auswählen.

@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
-ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
-ms.lasthandoff: 03/03/2017
-
-
+ms.openlocfilehash: 4b5dfe6e4c77a9b22e98cb2b7997a744730caac1
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
@@ -112,5 +108,4 @@ Wenn das Dokument von anderen geöffnet wird, werden sie zuerst authentifiziert.
 Ähnlich wie beim Anzeigen eines geschützten Dokuments, werden die Empfänger der E-Mail bei deren Empfang zuerst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten Nutzungsrechten, die für diesen Benutzer angegeben wurden, geöffnet. Wenn Sie beispielsweise **Nicht allen antworten**ausgewählt haben, ist die Option **ALLEN ANTWORTEN** im Nachrichtenfenster nicht verfügbar.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
