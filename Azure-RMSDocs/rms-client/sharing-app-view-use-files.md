@@ -42,7 +42,7 @@ Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angez
 
 Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie können dies anhand der Dateinamenerweiterung erkennen. In jedem Fall kann das Öffnen der Datei überwacht werden, und die Überwachung erfolgt solange, wie die Datei geschützt ist. Wenn die Datei als E-Mail-Anhang gesendet wurde, wird der Absender möglicherweise jedes Mal, wenn Sie die Datei öffnen, per E-Mail benachrichtigt.
 
-- **Die Datei hat die Dateinamenerweiterung*.pfile*.
+- **Die Datei hat die Dateinamenerweiterung*.pfile***.
 
     Die Datei wurde generisch geschützt.
 
@@ -82,7 +82,7 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
 
     Die neue Datei ist nicht mehr geschützt. Wenn Sie sie schützen möchten, müssen Sie dies manuell tun. Eine Anleitung finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-in-place.md).
 
-- **Die Datei hat eine* .ppdf* -Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa  *.ptxt* oder *.pjpg* )**
+- **Die Datei hat eine*.ppdf* -Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa  *.ptxt* oder *.pjpg* )**
 
     Sie können die Datei nur anzeigen, und wenn Sie sie umbenennen oder verschieben, bleibt die Datei weiterhin geschützt.
 
