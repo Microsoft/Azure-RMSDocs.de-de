@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
+ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
@@ -64,6 +64,10 @@ Bei der Verwendung von untergeordneten Bezeichnungen konfigurieren Sie optische 
 
 Nein. Wenn Sie einer E-Mail-Nachricht mit Anlagen eine Bezeichnung zuweisen, erben die Anlagen nicht dieselbe Bezeichnung. Die Anlagen erhalten entweder keine Bezeichnung, oder es wird eine separate Bezeichnung angewendet. Wenn aber mit der Bezeichnung für die E-Mail ein Schutz konfiguriert wird, wird dieser Schutz auch auf die Anlagen angewendet.
 
+## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Wie können DLP-Lösungen und andere Anwendungen in Azure Information Protection integriert werden?
+
+Da Azure Information Protection persistente Metadaten für die Klassifizierung verwendet, die eine Klartextbezeichnung enthalten, können diese Informationen von DLP-Lösungen und anderen Anwendungen gelesen werden. In Dateien werden diese Metadaten in benutzerdefinierten Eigenschaften gespeichert. In E-Mails befinden sich diese Informationen in den E-Mail-Kopfzeilen.
+
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Azure Information Protection-Klassifizierung für E-Mails von der Exchange-Nachrichtenklassifizierung?
 
 Die Exchange-Nachrichtenklassifizierung ist ein älteres Feature, das unabhängig von einer Azure Information Protection-Klassifizierung implementiert wird, und mit dem E-Mails klassifiziert werden können. Sie können jedoch beide Lösungen integrieren, damit die Azure Information Protection-Klassifizierung und entsprechende Bezeichnungsmarkierungen automatisch hinzugefügt werden, wenn Benutzer eine E-Mail mithilfe der Outlook Web-App und einiger mobiler E-Mail-Anwendungen klassifizieren. Exchange fügt die Klassifizierung hinzu und der Azure Information Protection-Client wendet die entsprechenden Bezeichnungseinstellungen für diese Klassifizierung an.
@@ -76,10 +80,15 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie eine Exchange-Transportregel für jede Bezeichnung. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-    Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Eigenschaften einer von Ihnen mit der Azure Information Protection-Bezeichnung klassifizierten Office-Datei untersuchen. Identifizieren Sie die Dateieigenschaft mit dem Format **MSIP_Label_<GUID>_Enabled**, und geben Sie diese Zeichenfolge für den Nachrichtenheader und dann **True** für den Headerwert an. Ihr Nachrichtenheader kann z. B. wie die folgende Zeichenfolge aussehen: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**.
+    Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Verwenden des vorherigen Beispiels:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
+    
+    ![Beispieltransportregel für Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
 
-
-Jetzt geschieht Folgendes, wenn Benutzer die Outlook Web Access-App oder einen Client auf einem mobilen Gerät verwenden, das den Rechteverwaltungsschutz unterstützt: 
+Bevor Sie dies testen, beachten Sie, dass es häufig zu einer Verzögerung beim Erstellen oder Bearbeiten von Transportregeln kommt (warten Sie eine Stunde). Wenn die Regel jedoch ausgeführt wird, geschieht Folgendes, wenn Benutzer die Outlook Web Access-App oder einen Client auf einem mobilen Gerät verwenden, das Rights Management Protection unterstützt: 
 
 - Benutzer wählen die Exchange-Nachrichtenklassifizierung aus, und senden die E-Mail.
 
@@ -91,11 +100,7 @@ Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Rechtev
 
 Sie können Transportregeln auch so konfigurieren, dass sie die umgekehrte Zuordnung vornehmen: Wenn eine Azure Information Protection-Bezeichnung erkannt wird, legen Sie eine entsprechende Exchange-Nachrichtenklassifizierung fest. Dazu gehen Sie folgendermaßen vor:
 
-- Erstellen Sie für jede Azure Information Protection-Bezeichnung eine Transportregel, die angewendet wird, wenn der Header **msip_labels** den Namen Ihrer Bezeichnung enthält (z.B. **Vertraulich**), und wenden Sie eine Nachrichtenklassifizierung an, die dieser Bezeichnung zugeordnet wird.
-
-## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Wie können DLP-Lösungen und andere Anwendungen in Azure Information Protection integriert werden?
-
-Da Azure Information Protection persistente Metadaten für die Klassifizierung verwendet, die eine Klartextbezeichnung enthalten, können diese Informationen von DLP-Lösungen und anderen Anwendungen gelesen werden. In Dateien werden diese Metadaten in benutzerdefinierten Eigenschaften gespeichert. In E-Mails befinden sich diese Informationen in den E-Mail-Kopfzeilen.
+- Erstellen Sie für jede Azure Information Protection-Bezeichnung eine Transportregel, die angewendet wird, wenn der Header **msip_labels** den Namen Ihrer Bezeichnung enthält (z.B. **Allgemein**), und wenden Sie eine Nachrichtenklassifizierung an, die dieser Bezeichnung zugeordnet wird.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
