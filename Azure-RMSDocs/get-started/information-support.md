@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
@@ -49,13 +49,17 @@ Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrac
 
 Verwenden Sie für andere Kunden die folgenden Supportkanäle, abhängig davon, wie Sie Azure Information Protection erworben haben:
 
-- **Azure Information Protection Premium** (eigenständig): Öffnen Sie eine [Supportanfrage im Azure-Portal](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
-
-- **Azure Information Protection mit Office 365-Abonnement:** Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal. 
-
-- **Azure Information Protection mit Enterprise Mobility + Security (EMS):** Wenn Sie auch über Office 365 verfügen, können Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) verwenden. Weitere Informationen finden Sie unter [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx) (Enterprise Mobility Suite: Häufig gestellte Fragen zum Support).
-
-- **Azure Information Protection mit Secure Productive Enterprise (SPE):** Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+- **Azure Information Protection** (eigenständig): 
+    - Erstellen Sie eine **neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal. Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
+    
+- **Azure Information Protection mit Office 365-Abonnement**: 
+    - Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal. 
+    
+- **Azure Information Protection mit Enterprise Mobility + Security (EMS)**: 
+    - Erstellen Sie eine **neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal. Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
+    
+- **Azure Information Protection mit Secure Productive Enterprise (SPE)**: 
+    - Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
 
