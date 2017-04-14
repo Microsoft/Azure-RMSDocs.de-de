@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63843acfe9f7b4ded77ccbdcaaab8cb98598dd9f
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: d442a9540243cd020b885f7dc2c13d999bbad868
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
@@ -174,7 +174,7 @@ Verwenden Sie die Option **Hilfe und Feedback**, um das Dialogfeld **Microsoft A
 
 ### <a name="help-and-feedback-section"></a>Abschnitt **Hilfe und Feedback**
 
-Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)-Website. Sie können aber auch eine benutzerdefinierte URL als eine der [Richtlinieneinstellungen](../deploy-use/configure-policy-settings.md) in der Azure Information Protection-Richtlinie festlegen.
+Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website. Sie können aber auch eine benutzerdefinierte URL als eine der [Richtlinieneinstellungen](../deploy-use/configure-policy-settings.md) in der Azure Information Protection-Richtlinie festlegen.
 
 Verwenden Sie den Link **Feedback senden**, um Vorschläge oder Anfragen an das Information Protection-Team zu senden. Verwenden Sie diese Option nicht für den technischen Support, sondern nutzen Sie dafür stattdessen die [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). 
 

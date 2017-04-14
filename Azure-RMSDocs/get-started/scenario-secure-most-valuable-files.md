@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f509efb599bd17d5a76c08e24a7d503394415785
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 8a0ca5fa2d7aa6f1f8f8b5ccab0a3a3bd122b50c
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---secure-your-most-few-valuable-files"></a>Szenario – Schutz Ihrer wertvollsten Dateien
@@ -51,7 +51,7 @@ Für dieses Szenario muss Folgendes vorhanden sein:
 |Sie haben wie nachfolgend beschrieben eine benutzerdefinierte Vorlage konfiguriert.|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
 |Die Rights Management-Freigabeanwendung wird auf Ihrem Windows-Computer bereitgestellt, damit Sie diese Dateien wie im nächsten Abschnitt beschrieben lokal schützen können.|[Herunterladen und Installieren der Rights Management-Freigabeanwendung](../rms-client/install-sharing-app.md)|
 |Autorisierte Benutzer verfügen als Mindestversion über Office 2013.|Benutzer mit Office 2010 müssen zusätzlich die Rights Management-Freigabeanwendung installieren.|
-|Ihr Azure Information Protection-Abonnement umfasst die Dokumentenverfolgung.|Wenn Ihr Abonnement keine Dokumentenverfolgung und -sperrung beinhaltet, können Sie die Website für die Dokumentenverfolgung nicht verwenden, um festzustellen, wer auf die Dokumente zugreift, und den Zugriff bei Bedarf zu widerrufen. Erwerben Sie in diesem Fall entweder ein Abonnement, das die Dokumentenverfolgung unterstützt, oder akzeptieren Sie diese Einschränkung. Sie sollten auch die Funktionen zur [Nutzungsprotokollierung](../deploy-use/log-analyze-usage.md) des Azure Rights Management-Diensts in Erwägung ziehen. Diese können Auskunft darüber geben, wer wann auf jede Datei zugegriffen hat, um potenziell verdächtige Verhaltensweisen zu erkennen.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
+|Ihr Azure Information Protection-Abonnement umfasst die Dokumentenverfolgung.|Wenn Ihr Abonnement keine Dokumentenverfolgung und -sperrung beinhaltet, können Sie die Website für die Dokumentenverfolgung nicht verwenden, um festzustellen, wer auf die Dokumente zugreift, und den Zugriff bei Bedarf zu widerrufen. Erwerben Sie in diesem Fall entweder ein Abonnement, das die Dokumentenverfolgung unterstützt, oder akzeptieren Sie diese Einschränkung. Sie sollten auch die Funktionen zur [Nutzungsprotokollierung](../deploy-use/log-analyze-usage.md) des Azure Rights Management-Diensts in Erwägung ziehen. Diese können Auskunft darüber geben, wer wann auf jede Datei zugegriffen hat, um potenziell verdächtige Verhaltensweisen zu erkennen.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 ### <a name="to-configure-the-custom-template"></a>So konfigurieren Sie benutzerdefinierte Vorlagen
 

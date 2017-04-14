@@ -4,7 +4,7 @@ description: "Führen Sie diese Schritte aus, um Azure Information Protection f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9300c6d06042a489dd256069da4faa88426df9aa
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: ec5e257152cf64c6a52dbb8d94f1baab7a5ea0a4
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
@@ -27,7 +27,7 @@ Falls Sie Azure Information Protection einmal schnell selbst ausprobieren möcht
 > [!IMPORTANT]
 > Lesen Sie sich vor dem Ausführen der folgenden Schritte den Artikel [Anforderungen für Azure Information Protection](../get-started/requirements-azure-rms.md) durch.
 
-Wählen Sie eine Roadmap für die Bereitstellung aus, die für Ihre Organisation anwendbar ist und die [Abonnementfunktionen und -features](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) umfasst, die Sie benötigen:
+Wählen Sie eine Roadmap für die Bereitstellung aus, die für Ihre Organisation anwendbar ist und die [Abonnementfunktionen und -features](https://www.microsoft.com/cloud-platform/azure-information-protection-features) umfasst, die Sie benötigen:
 
 - [Klassifizierung, Bezeichnung und Schutz](#deployment-roadmap-for-classification-labeling-and-protection)
 
@@ -40,7 +40,7 @@ Wählen Sie eine Roadmap für die Bereitstellung aus, die für Ihre Organisation
 > Verwenden Sie bereits den Azure Rights Management-Dienst für den Schutz von Daten? Sie können viele dieser Schritte überspringen und sich auf die Schritte 3 und 5.1 konzentrieren.
 
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Schritt 1: Bestätigen Ihres Abonnements und Zuweisen von Benutzerlizenzen
-Überprüfen Sie anhand der [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website, ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Klassifizierungen und Bezeichnung vornehmen und Dokumente und E-Mails schützen soll, eine Lizenz aus diesem Abonnement zu.
+Überprüfen Sie anhand der [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website, ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Klassifizierungen und Bezeichnung vornehmen und Dokumente und E-Mails schützen soll, eine Lizenz aus diesem Abonnement zu.
 
 Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../understand-explore/rms-for-individuals.md).
 
@@ -132,7 +132,7 @@ Wenn Sie mit der Verwendung des Azure Rights Management-Diensts beginnen, kann W
 ## <a name="deployment-roadmap-for-data-protection-only"></a>Roadmap für die Bereitstellung zum ausschließlichen Schutz von Daten
 
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-azure-rights-management"></a>Schritt 1: Sicherstellen, dass Sie über ein Abonnement verfügen, das Azure Rights Management umfasst
-Überprüfen Sie anhand der [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website, ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Dokumente und E-Mails mit dem Azure Rights Management-Dienst schützen soll, eine Lizenz aus diesem Abonnement zu.
+Überprüfen Sie anhand der [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website, ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Dokumente und E-Mails mit dem Azure Rights Management-Dienst schützen soll, eine Lizenz aus diesem Abonnement zu.
 
 Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../understand-explore/rms-for-individuals.md).
 

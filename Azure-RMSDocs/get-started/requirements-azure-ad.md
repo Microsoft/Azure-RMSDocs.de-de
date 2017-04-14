@@ -4,7 +4,7 @@ description: "Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 729d66e8d55d045b74ac5c794cf83ddcc2848d35
-ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
+ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
+ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
@@ -42,7 +42,7 @@ Computer mit Office 2010:
 
 Unterstützung für die zertifikatbasierte Authentifizierung (CBA):
 
-- Die Azure Information Protection-App für Android unterstützt die zertifikatbasierte Authentifizierung, wenn Sie über eine Mindestversion von Android 5.0 verfügen. Informationen zum Konfigurieren einer zertifikatbasierten Authentifizierung finden Sie unter [Erste Schritte mit zertifikatbasierter Authentifizierung in Azure Active Directory](/active-directory/active-directory-certificate-based-authentication-get-started).
+- Die Azure Information Protection-App für Android unterstützt die zertifikatbasierte Authentifizierung, wenn Sie über eine Mindestversion von Android 5.0 verfügen. Informationen zum Konfigurieren einer zertifikatbasierten Authentifizierung finden Sie unter [Erste Schritte mit zertifikatbasierter Authentifizierung in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Mobile Geräte oder Mac-Computer, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden:
 

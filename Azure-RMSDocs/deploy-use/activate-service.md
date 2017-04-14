@@ -4,7 +4,7 @@ description: "Sie müssen den Azure Rights Management-Dienst aktivieren, damit I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0e7feff31adb118439dfce082a831bdc51bc4a87
-ms.sourcegitcommit: 58d1f87763f8756621a6cba6dfe51e26ec38cd48
+ms.openlocfilehash: a11add0b0c712dd52f7ac560748f7986c915d0d1
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="activating-azure-rights-management"></a>Aktivieren von Azure Rights Management
@@ -27,7 +27,7 @@ Wenn Sie weitere Informationen zum Azure Rights Management-Dienst benötigen, be
 > [!IMPORTANT]
 > Bevor Sie [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] aktivieren, sollten Sie sicherstellen, dass Ihre Organisation über einen Diensttarif verfügt, der Azure Rights Management-Datenschutz umfasst. Ist dies nicht der Fall, können Sie Azure Rights Management nicht aktivieren.
 >
-> Die benötigen entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+> Die benötigen entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Wenn der Azure Rights Management-Dienst aktiviert wurde, können alle Benutzer in Ihrer Organisation Information Protection (Informationsschutz) auf die eigenen Dateien anwenden und Dateien öffnen (nutzen), die durch den Azure Rights Management-Dienst geschützt wurden. Bei Bedarf können Sie jedoch einschränken, wer Informationsschutz anwenden kann, indem Sie Onboardingsteuerungsrichtlinien für eine in Phasen vorgenommene Bereitstellung verwenden. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](#configuring-onboarding-controls-for-a-phased-deployment) in diesem Artikel.
 

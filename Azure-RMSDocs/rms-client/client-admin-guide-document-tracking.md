@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f47b177ece91f775d53c72d379d6ffa3a2f3c98b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: dad69e37e2908d155fd1be370d190fd91d5739a3
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
-Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
+Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
 
 Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
 

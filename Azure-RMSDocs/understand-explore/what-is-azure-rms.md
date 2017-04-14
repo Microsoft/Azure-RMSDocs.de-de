@@ -4,7 +4,7 @@ description: Azure Rights Management (Azure RMS) ist die Schutztechnologie von A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a85c6135be95bb51ba4ac336ab78131382232626
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 53712ee69ac7ab54feb3036ada4eb81383caf786
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
@@ -34,7 +34,7 @@ In der folgenden Abbildung wird verdeutlicht, wie Azure RMS als Lösung zur Rech
 
 ![Azure RMS – Funktionsweise](../media/AzRMS_elements.png)
 
-Sie können den Azure RMS-Schutz mit anderen Cloudabonnements verwenden, er unterstützt viele Funktionen. Weitere Informationen zu den verfügbaren Abonnements und den von diesen unterstützen Features finden Sie auf der [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection)-Website.
+Sie können den Azure RMS-Schutz mit anderen Cloudabonnements verwenden, er unterstützt viele Funktionen. Weitere Informationen zu den verfügbaren Abonnements und den von diesen unterstützen Features finden Sie auf der [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
