@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
-ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
+ms.openlocfilehash: c8afaa635f34f6d052cd646387d37f68bbcdff45
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
@@ -27,7 +27,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |Zeigen Sie die empfohlene Dokumentation für den Dienst an →|Verwenden Sie die Startseite der [Azure Information Protection-Dokumentation](https://docs.microsoft.com/information-protection/).|
 |Geben Sie Feedback zur Dokumentation, oder stellen Sie eine Frage zur Dokumentation →|E-Mail an [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |Erhalten Sie Tweets zu Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe →|Folgen Sie Dan Plastina, der bei der Leitung des Microsoft Information Protection-Teams hilft. Siehe [Dan Plastina@DanPlastina](https://twitter.com/DanPlastina)|
-|Überprüfen Sie Abonnementinformationen und die unterstützten Features →|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
+|Überprüfen Sie Abonnementinformationen und die unterstützten Features →|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informationen zu neuen Versionen und aktualisierter Dokumentation
