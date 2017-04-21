@@ -5,7 +5,7 @@ keywords: "Einige häufig gestellte Fragen, die Ihnen beim Verwenden der Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bc3d92cb0dc23ddd2d1f81daf2fc589ad4862977
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d797dd31c44d985becc92ec81266afbe23cd970c
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android
@@ -45,7 +45,7 @@ Wenn Sie über diese oder höhere Versionen verfügen, können Sie die App zur A
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Wie beginne ich mit der Viewer-App?
 
-Nachdem Sie die App installiert haben, müssen Sie zu diesem Zeitpunkt nichts weiter tun. Warten Sie, bis Sie eine geschützte E-Mail oder Datei erhalten, die Sie anzeigen möchten, und wählen Sie dann **AIP Viewer** aus, um sie zu öffnen. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden. Nachdem Ihre Anmeldeinformationen authentifiziert wurden, können Sie den Inhalt lesen.
+Nachdem Sie die App installiert haben, müssen Sie zu diesem Zeitpunkt nichts weiter tun. Warten Sie, bis Sie eine geschützte E-Mail oder Datei erhalten, die Sie anzeigen möchten, und wählen Sie dann **AIP Viewer** aus, um sie zu öffnen. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden oder aufgefordert, ein Zertifikat auszuwählen. Nachdem diese Anmeldeinformationen authentifiziert wurden, können Sie den Inhalt lesen.
 
 Wenn Sie nicht warten möchten, können Sie die folgenden Anweisungen verwenden, um sich selbst eine geschützte E-Mail oder Datei zum Anzeigen zu senden: [Get started with the Microsoft Azure Information Protection app for iOS and Android (Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android)](mobile-app-get-started.md) 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Welche Anmeldeinformationen sollte ich bei dieser App verwenden?

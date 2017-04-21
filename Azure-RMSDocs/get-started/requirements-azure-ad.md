@@ -4,7 +4,7 @@ description: "Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/12/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa0a9351177b44b4d770e37d24aee85e1e313c2d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 29bc3b414a1fde17aec03702a87f4364b565b848
+ms.sourcegitcommit: 65e2d607954dfb6c7529ff200602887b71c39312
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
@@ -36,7 +36,13 @@ Wenn Sie das Azure AD-Verzeichnis in Ihre lokalen AD-Gesamtstrukturen integriere
 
 Computer mit Office 2010: 
 
+- Diese Computer erfordern den [Azure Information Protection-Client](../rms-client/aip-client.md) (empfohlen) oder die [Rights Management-Freigabeanwendung für Windows](../rms-client/sharing-app-windows.md) für die Authentifizierung bei Azure Information Protection und den dazugehörigen Datenschutzdienst, Azure Rights Management.
+
 - Wenn Ihre Benutzerkonten verbunden sind (wenn Sie z. B. AD FS verwenden), müssen diese die integrierte Windows-Authentifizierung verwenden. Bei der formularbasierten Authentifizierung tritt in diesem Szenario beim Authentifizieren von Benutzern für Azure Information Protection ein Fehler auf.
+
+Unterstützung für die zertifikatbasierte Authentifizierung (CBA):
+
+- Die Azure Information Protection-App für Android unterstützt die zertifikatbasierte Authentifizierung, wenn Sie über eine Mindestversion von Android 5.0 verfügen. Informationen zum Konfigurieren einer zertifikatbasierten Authentifizierung finden Sie unter [Erste Schritte mit zertifikatbasierter Authentifizierung in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started).
 
 Mobile Geräte oder Mac-Computer, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden:
 
@@ -47,7 +53,7 @@ Damit Sie Multi-Factor Authentication (MFA) mit Azure Information Protection ver
 
 -   Office 2013 (Mindestversion):
 
-    -   Wenn Sie Office 2013 haben, müssen Sie auch das [Update vom 9. Juni 2015 für Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853) installieren. Weitere Informationen zu diesem Update sowie dazu, wie die moderne Authentifizierung ADAL-basierte Anmeldungen (Active Directory Authentication Library) in Office 2013 integriert, finden Sie im Office-Blog unter [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) (Ankündigung der öffentlichen Vorschau für moderne Authentifizierung in Office 2013).
+    -   Wenn Sie Office 2013 haben, müssen Sie möglicherweise ein weiteres Update zur Unterstützung der Active Directory-Authentifizierungsbibliothek(ADAL) installieren. Zum Beispiel das [Update vom 9. Juni 2015 für Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Weitere Informationen zu diesem Update sowie dazu, wie die moderne Authentifizierung ADAL-basierte Anmeldungen (Active Directory Authentication Library) in Office 2013 integriert, finden Sie im Office-Blog unter [Office 2013 modern authentication public preview announced](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) (Ankündigung der öffentlichen Vorschau für moderne Authentifizierung in Office 2013).
 
 - Azure Information Protection-Client:
 

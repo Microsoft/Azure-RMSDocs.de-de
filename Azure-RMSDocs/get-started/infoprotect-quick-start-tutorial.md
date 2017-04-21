@@ -4,14 +4,14 @@ description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 04e1776e4ef92585245ae8854ed63d2d2dc27f07
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 13dbb47088c33f72bdb0acdbb7cba1245df14f7f
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
@@ -27,7 +27,7 @@ Wenn Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden von Azu
 ## <a name="prerequisites"></a>Voraussetzungen 
 Voraussetzungen für dieses Tutorial:
 
-- Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Vergewissern Sie sich, dass diese Features in Ihrem Abonnement unterstützt werden. Weitere Informationen finden Sie in den [Abonnementinformationen](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
+- Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Vergewissern Sie sich, dass diese Features in Ihrem Abonnement unterstützt werden. Weitere Informationen finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
     
     Wenn Sie kein Abonnement für diese Features besitzen, können Sie sich für eine kostenlose Testversion für [Enterprise Mobility + Sicherheit E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) registrieren.
     

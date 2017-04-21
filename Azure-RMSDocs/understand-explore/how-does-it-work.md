@@ -4,7 +4,7 @@ description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1dcdb7017be2e2bdfbefcfaa348be977ed67f8c0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a5f189ab5ad1df43b14fa0b6d23bf4f0eef88142
+ms.sourcegitcommit: d44105d4d45fabf0f1d90765304e4b43dd97c0fc
 translationtype: HT
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Es ist wichtig, hinsichtlich der Funktionsweise von Azure RMS zu verstehen, dass der Rechteverwaltungsdienst (und Microsoft) Ihre Daten als Teil des Informationsschutzvorgangs weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. Durch Azure RMS werden die Daten in einem Dokument einfach nicht lesbar für Personen, die keine autorisierten Benutzer und Dienste sind:
+Es ist wichtig, hinsichtlich der Funktionsweise von Azure RMS zu verstehen, dass der Rights Management-Dienst (und Microsoft) Ihre Daten als Teil des Informationsschutzvorgangs weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, dass Sie diese explizit in Azure speichern oder einen anderen Cloud-Dienst verwenden, der sie in Azure speichert. Durch Azure RMS werden die Daten in einem Dokument einfach nicht lesbar für Personen, die keine autorisierten Benutzer und Dienste sind:
 
--   Die Daten werden auf der Anwendungsebene verschlüsselt und enthalten eine Richtlinie, die die autorisierte Verwendung für dieses Dokument definiert.
+- Die Daten werden auf der Anwendungsebene verschlüsselt und enthalten eine Richtlinie, die die autorisierte Verwendung für dieses Dokument definiert.
 
--   Wenn ein geschütztes Dokument von einem legitimen Benutzer verwendet oder von einem autorisierten Dienst verarbeitet wird, werden die Daten im Dokument entschlüsselt, und die Rechte, die in der Richtlinie definiert werden, werden durchgesetzt.
+- Wenn ein geschütztes Dokument von einem legitimen Benutzer verwendet oder von einem autorisierten Dienst verarbeitet wird, werden die Daten im Dokument entschlüsselt, und die Rechte, die in der Richtlinie definiert werden, werden durchgesetzt.
 
 Die folgende Abbildung zeigt die Funktionsweise dieses Vorgangs als Übersicht. Ein Dokument, das die geheime Formel enthält, ist geschützt und wird dann von einem autorisierten Benutzer oder Dienst erfolgreich geöffnet. Das Dokument wird durch einen Inhaltsschlüssel (der grüne Schlüssel in der Abbildung) geschützt. Er ist für jedes Dokument eindeutig und wird im Dateiheader gespeichert. Dort ist er durch den Stammschlüssel Ihres Azure Information Protection-Mandanten geschützt (der rote Schlüssel in der Abbildung). Ihr Mandantenschlüssel kann von Microsoft generiert und verwaltet werden, oder Sie generieren und verwalten Ihren eigenen Mandantenschlüssel.
 
@@ -68,7 +68,7 @@ Der Inhaltsschlüssel wird mit dem RSA-Schlüssel der Organisation (der „Azure
 
 Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und BYOK finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
-Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit der DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
+Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsaufnahme
@@ -103,7 +103,9 @@ Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Akt
 
 ![RMS-Dokumentenschutz – Schritt 2, die Richtlinie wird erstellt](../media/AzRMS_documentprotection2.png)
 
-**Das geschieht in Schritt 2**: Der RMS-Client erstellt dann ein Zertifikat, das eine Richtlinie für das Dokument enthält. Diese basiert entweder auf einer Vorlage oder auf der Angabe bestimmter Rechte für das Dokument. Diese Richtlinie umfasst die Rechte für verschiedene Benutzer oder Gruppen und andere Einschränkungen, z. B. ein Ablaufdatum.
+**Das passiert in Schritt 2**: Der RMS-Client erstellt ein Zertifikat, das eine Richtlinie für das Dokument enthält, das die [Benutzerrechte](../deploy-use/configure-usage-rights.md) für Benutzer oder Gruppen einschließt sowie andere Einschränkungen, z.B. ein Ablaufdatum. Diese Einstellungen können in einer Vorlage definiert werden, die zuvor von einem Administrator konfiguriert wurde, oder die zum Zeitpunkt angegeben wurde, als der Inhalt geschützt wurde (manchmal auch als „Ad-hoc-Richtlinie“ bezeichnet).   
+
+Das Attribut, das verwendet wird, um die ausgewählten Benutzer und Gruppen zu identifizieren, ist das „proxyAddress“-Attribut von Azure AD, das alle E-Mail-Adressen für einen Benutzer oder eine Gruppe speichert.
 
 Der RMS-Client verwendet dann den Schlüssel der Organisation, der abgerufen wurde, als die Benutzerumgebung initialisiert wurde. Er verwendet diesen Schlüssel zum Verschlüsseln der Richtlinie und des symmetrischen Inhaltsschlüssels. Der RMS-Client signiert die Richtlinie außerdem mit dem Zertifikat des Benutzers, das abgerufen wurde, als die Benutzerumgebung initialisiert wurde.
 
@@ -118,7 +120,7 @@ Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Clie
 
 ![RMS-Dokumentennutzung – Schritt 1, der Benutzer wird authentifiziert und erhält die Liste der Rechte](../media/AzRMS_documentconsumption1.png)
 
-**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt.
+**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Azure AD-proxyAttribute für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer ein Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](../plan-design/prepare.md#group-membership-caching).
 
 ![RMS-Dokumentennutzung – Schritt 2, die Nutzungslizenz wird an den Client zurückgegeben](../media/AzRMS_documentconsumption2.png)
 

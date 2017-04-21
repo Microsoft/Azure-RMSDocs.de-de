@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 629717055620af93c5870fff4ef833dc7931e622
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Szenario – Freigeben einer Office-Datei für Benutzer in einer anderen Organisation
@@ -46,7 +46,7 @@ Damit die Benutzeranweisungen in diesem Szenarion funktionieren, muss Folgendes 
 |Azure Rights Management ist aktiviert|[Aktivieren von Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Die Rights Management-Freigabeanwendung wird auf Benutzercomputern bereitgestellt, auf denen Windows ausgeführt wird.|[Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Benutzer verwenden Outlook aus Office 2013.|Wenn Benutzer Office 2016 oder Office 2010 verwenden, ersetzen Sie den Screenshot durch eine entsprechende Version, sodass die Abbildung mit der Version der Benutzer übereinstimmt.|
-|Ihr Abonnement für Azure Information Protection umfasst die Dokumentkontrolle.|Wenn Ihr Abonnement keine Dokumentkontrolle und keinen Widerruf von Dokumenten umfasst, können Benutzer nicht alle Schritte in den Benutzeranweisungen ausführen. Erwerben Sie in diesem Fall entweder ein Abonnement, das diese Funktionen unterstützt, oder ändern die Benutzeranweisungen som dass die Schritte entfernt werden, die diese Funktionen verwenden.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
+|Ihr Abonnement für Azure Information Protection umfasst die Dokumentkontrolle.|Wenn Ihr Abonnement keine Dokumentkontrolle und keinen Widerruf von Dokumenten umfasst, können Benutzer nicht alle Schritte in den Benutzeranweisungen ausführen. Erwerben Sie in diesem Fall entweder ein Abonnement, das diese Funktionen unterstützt, oder ändern die Benutzeranweisungen som dass die Schritte entfernt werden, die diese Funktionen verwenden.<br /><br />Überprüfen Sie die [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 ## <a name="user-documentation-instructions"></a>Anweisungen für Benutzerdokumentation
 Verwenden Sie die folgende Vorlage, kopieren Sie die Benutzeranweisungen, und fügen Sie sie in eine Nachricht für die Endbenutzer ein. Nehmen Sie als Anpassung an Ihre Umgebung die folgenden Änderungen vor:

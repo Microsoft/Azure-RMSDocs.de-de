@@ -5,7 +5,7 @@ keywords: "So zeigen Sie E-Mails oder Dateien mit der Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24e1b9df2284abde20d5308a313019d666afed5d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 96ab267f22abf31d39a77dcc5450b28a583096e8
+ms.sourcegitcommit: 81b5c111627246a4094ef87da17d260f66ae985c
 translationtype: HT
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
@@ -31,9 +31,9 @@ Sie müssen auf Ihrem mobilen Gerät eine Datei eines Formats öffnen, das die A
 
 - **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine [PDF-Datei zu schützen](client-classify-protect.md). Senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage einer E-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
 
-- **Eine PTXT- oder PJPG- oder PPNG-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine Text- oder Bilddatei zu schützen. Senden Sie diese geschützte Datei dann als Anlage einer E-Mail an sich selbst. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie im Abschnitt [Unterstützte Dateitypen und Dateierweiterungen für den Schutz](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) im Administratorhandbuch zum Azure Information Protection-Client. 
+- **Eine PTXT- oder PJPG- oder PPNG-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine Text- oder Bilddatei zu schützen. Senden Sie diese geschützte Datei dann als Anlage einer E-Mail an sich selbst. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) im Administratorhandbuch zum Azure Information Protection-Client. 
 
-Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie aufgefordert, sich an Ihrem Arbeits- oder Schulkonto anzumelden. Nachdem Sie sich erfolgreich authentifiziert haben, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
+Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden oder aufgefordert, ein Zertifikat auszuwählen. Nachdem diese Anmeldeinformationen authentifiziert sind, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
