@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 04/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c8afaa635f34f6d052cd646387d37f68bbcdff45
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
+ms.openlocfilehash: f22d997b69c5c88c5e83d29de137626facad5849
+ms.sourcegitcommit: 05b7e06e330a33936aeeef32934717f870963612
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
@@ -47,21 +47,17 @@ Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier 
 
 Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
-Verwenden Sie für andere Kunden die folgenden Supportkanäle, abhängig davon, wie Sie Azure Information Protection erworben haben:
+Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, abhängig von Ihrem Abonnement für Azure Information Protection.
 
-- **Azure Information Protection** (eigenständig): 
-    - Erstellen Sie eine **neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal. Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
-    
-- **Azure Information Protection mit Office 365-Abonnement**: 
-    - Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal. 
-    
-- **Azure Information Protection mit Enterprise Mobility + Security (EMS)**: 
-    - Erstellen Sie eine **neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal. Wählen Sie bei Aufforderung auf dem Blatt **Grundlagen** als **Problemtyp** die Option **Technisch** aus, und geben Sie für die Option **Abonnement** die Einstellung **Abonnement mit technischem Support** an.
-    
-- **Azure Information Protection mit Secure Productive Enterprise (SPE)**: 
-    - Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+|Abonnement|Anweisungen|
+|----------------|---------------|
+|Azure Information Protection (eigenständig):|Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischen Support - enthalten**: Sie finden diese Option, wenn Sie über ein kostenloses Azure-Abonnement zum Konfigurieren von Azure Active Directory und benutzerdefinierten Vorlagen für Azure Rights Management verfügen oder kein Azure-Abonnement besitzen.|
+|Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal.|
+|Azure Information Protection mit Enterprise Mobility + Security (EMS)|Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischen Support - enthalten**: Sie finden diese Option, wenn Sie über ein kostenloses Azure-Abonnement zum Konfigurieren von Azure Active Directory und benutzerdefinierten Vorlagen für Azure Rights Management verfügen oder kein Azure-Abonnement besitzen.|
+|Azure Information Protection mit Secure Productive Enterprise (SPE)|Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
+
 
 ### <a name="self-help"></a>Selbsthilfe
 
