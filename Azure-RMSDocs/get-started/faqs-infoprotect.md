@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
-ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
+ms.openlocfilehash: 69ff30dea84717557153bbd0bf2013d3fc06d320
+ms.sourcegitcommit: 0b5aa77825463eccfb4856aa549a2dae80a1e361
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
@@ -48,15 +48,15 @@ Damit Sie die Azure Information Protection-Richtlinie konfigurieren können, mü
 
 Wenn Sie die Option zum Installieren der Demorichtlinie bei der Installation des [Azure Information Protection-Clients](https://www.microsoft.com/en-us/download/details.aspx?id=53018) auswählen, müssen Sie sich nicht beim Portal anmelden, um die Bezeichnungsfunktion testen zu können. Die Demorichtlinie installiert lokal eine Standardrichtlinie für Azure Information Protection. Sie können das Bezeichnen von Dokumente und E-Mails ausprobieren. Sie werden jedoch nicht in der Lage sein, neue Bezeichnungen zu ändern oder hinzuzufügen, ohne sich beim Azure-Portal anzumelden. 
 
-## <a name="which-options-in-the-azure-portal-are-p1-or-p2"></a>Welche Optionen im Azure-Portal sind P1 oder P2?
+## <a name="which-options-in-the-azure-portal-are-p2"></a>Welche Optionen im Azure-Portal sind P2?
 
-Informationen dazu, welche Features im Abonnement **Azure Information Protection Premium 1** (P1) im Vergleich mit dem Abonnement **Azure Information Protection Premium 2** (P2) enthalten sind, finden Sie in der [Featureliste](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website. Als allgemeine Richtlinie sind die erweiterten Features wie automatische Klassifizierung und Hold Your Own Key (HYOK) jedoch für das Abonnement von Azure Informationen Protection Premium 2 spezifisch.
+Die Optionen im Azure-Portal, die ein **Azure Information Protection Premium P2**-Abonnement erfordern, besitzen nun eine Informationspopupmeldung, um es zu identifizieren. Weitere Informationen darüber, welche Funktionen in P1- und P2-Abonnements enthalten sind, finden Sie in der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Kann eine Datei über mehr als eine Klassifizierung verfügen?
 
 Benutzer können für jedes Dokument und jede E-Mail immer nur eine Bezeichnung gleichzeitig auswählen, was oft zu nur einer Klassifizierung führt. Wenn Benutzer jedoch eine untergeordnete Bezeichnung auswählen, werden zwei Bezeichnungen zur gleichen Zeit angewendet – eine primäre Bezeichnung und eine sekundäre Bezeichnung. Durch die Verwendung von untergeordneten Bezeichnungen kann eine Datei über zwei Klassifizierungen verfügen, die eine Über-/Untergeordnet-Beziehung für eine zusätzliche Kontrollebene markieren.
 
-Beispielsweise könnte die Bezeichnung **Confidential** (Vertraulich) Unterbezeichnungen wie z.B. **Legal** (Recht) und **Finance** (Finanzen) enthalten. Sie können unterschiedliche optische Klassifizierungskennzeichnungen und unterschiedliche Rights Management-Vorlagen auf diese Unterbezeichnungen anwenden. Ein Benutzer kann die Bezeichnung **Confidential** (Vertraulich) nicht selbst auswählen, sondern nur eine der untergeordneten Bezeichnungen, z.B. **Legal** (Recht). Daher wird als festgelegte Bezeichnung **Confidential \ Legal** (Vertraulich\Recht) angezeigt. Die Metadaten für diese Datei enthalten eine benutzerdefinierte Texteigenschaft für **Confidential** (Vertraulich), eine benutzerdefinierte Texteigenschaft für **Confidential** (Vertraulich) und eine weitere mit beiden Werten (**Confidential Legal** (Vertraulich Recht)). 
+Beispielsweise könnte die Bezeichnung **Confidential** (Vertraulich) Unterbezeichnungen wie z.B. **Legal** (Recht) und **Finance** (Finanzen) enthalten. Sie können unterschiedliche optische Klassifizierungskennzeichnungen und unterschiedliche Rights Management-Vorlagen auf diese Unterbezeichnungen anwenden. Ein Benutzer kann die Bezeichnung **Confidential** (Vertraulich) nicht selbst auswählen, sondern nur eine der untergeordneten Bezeichnungen, z.B. **Legal** (Recht). Daher wird als festgelegte Bezeichnung **Confidential \ Legal** (Vertraulich\Recht) angezeigt. Die Metadaten für diese Datei enthalten eine benutzerdefinierte Texteigenschaft für **Confidential** (Vertraulich), eine benutzerdefinierte Texteigenschaft für **Legal** (Recht) und eine weitere mit beiden Werten (**Confidential Legal** (Vertraulich Recht)). 
 
 Bei der Verwendung von untergeordneten Bezeichnungen konfigurieren Sie optische Kennzeichnungen, Schutz und Bedingungen für die primäre Bezeichnung. Bei der Verwendung von Unterebenen konfigurieren Sie diese Einstellungen nur für die untergeordnete Bezeichnung. Wenn Sie diese Einstellungen auf der übergeordneten und ihrer untergeordneten Bezeichnung konfigurieren, haben die Einstellungen der untergeordneten Bezeichnung Vorrang.
 

@@ -4,19 +4,19 @@ description: Phase 4 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d36f47e586ac1295dcc79e43a9e061b4c7c7fe1e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 51a689248834f2578655d62752c19b7a387068a5
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
 translationtype: HT
 ---
-# <a name="migration-phase-4---post-migration-tasks"></a>Migrationsphase 4: Aufgaben nach der Migration
+# <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
@@ -24,41 +24,200 @@ translationtype: HT
 Verwenden Sie die folgenden Informationen für Phase 4 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 8 bis 9 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
 
-## <a name="step-8-decommission-ad-rms"></a>Schritt 8: Außerbetriebsetzung von AD RMS
 
-Entfernen Sie den Dienstverbindungspunkt (Service Connection Point, SCP) aus Active Directory, um zu verhindern, dass Computer Ihre lokale Rights Management-Infrastruktur ermitteln. Dies ist für die vorhandenen Clients, die Sie migriert haben, optional, und zwar aufgrund der Umleitung, die Sie in der Registrierung konfiguriert haben (z. B. durch Ausführen des Migrationsskripts). Allerdings hindert das Entfernen des Dienstverbindungspunkts neue Clients und möglicherweise auf RMS bezogene Dienste und Tools am Auffinden des Dienstverbindungspunkts, wenn die Migration abgeschlossen ist und alle Verbindungen mit dem Azure Rights Management-Dienst hergestellt werden sollten. 
+## <a name="step-8-configure-irm-integration-for-exchange-online"></a>Schritt 8: Konfigurieren der IRM-Integration mit Exchange Online
 
-Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unternehmensadministrator einer Domäne angemeldet sind, und gehen Sie dann folgendermaßen vor:
+Wenn Sie Ihre TDP von AD RMS mit Exchange Online bereits importiert haben, müssen Sie diese TDP entfernen, um Konflikte verursachende Vorlagen und Richtlinien nach der Migration zu Azure Information Protection zu vermeiden. Verwenden Sie hierzu das Exchange Online-Cmdlet [Remove-RMSTrustedPublishingDomain](https://technet.microsoft.com/library/jj200720%28v=exchg.150%29.aspx).
 
-1. Klicken Sie in der Active Directory Rights Management Services-Konsole mit der rechten Maustaste auf den AD RMS-Cluster, und klicken Sie dann auf **Eigenschaften**.
+Bei Verwendung der Azure Information Protection-Mandantenschlüsseltopologie **von Microsoft verwaltet**:
 
-2. Klicken Sie auf die Registerkarte **SCP** .
+1. Verwenden Sie die Anweisungen im Abschnitt [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](../deploy-use/configure-office365.md). Dieser Abschnitt enthält typische auszuführende Befehle, die eine Verbindung mit dem Exchange Online-Dienst herstellen, den Mandantenschlüssel aus Azure Information Protection importieren und IRM-Funktionen für Exchange Online aktivieren. Nachdem Sie diese Schritte abgeschlossen haben, verfügen Sie über die volle Schutzfunktionalität von Azure Rights Management mit Exchange Online.
 
-3. Aktivieren Sie das Kontrollkästchen **SCP ändern** .
+2. Neben der Standardkonfiguration zur Aktivierung von IRM für Exchange Online führen Sie die folgenden PowerShell-Befehle aus, um sicherzustellen, dass Benutzer E-Mails lesen können, die unter dem AD RMS-Schutz gesendet wurden.
 
-4. Wählen Sie **Aktuellen SCP entfernen** aus, und klicken Sie dann auf **OK**.
+    Ersetzen Sie Ihren eigenen Domänennamen der Organisation mit *\<ihrunternehmen.domäne>*.
 
-Überwachen Sie die Aktivität Ihrer AD RMS-Server, z.B. durch Überprüfen der [Anforderungen im Systemintegritätsbericht](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx) und der [ServiceRequest-Tabelle](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) oder durch [Überwachung des Benutzerzugriffs auf geschützte Inhalte](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). Wenn Sie bestätigt haben, dass RMS-Clients nicht mehr mit diesen Servern kommunizieren und Clients erfolgreich Azure Information Protection verwenden, können Sie die AD RMS-Serverrolle von diesen Servern entfernen. Wenn Sie dedizierte Server verwenden, können Sie auch als Vorsichtsmaßnahme zuerst die Server für einen gewissen Zeitraum herunterfahren, um sicherzustellen, dass keine Probleme gemeldet werden, die möglicherweise einen Neustart dieser Server erfordern. Damit wird Dienstkontinuität gewährleistet, während Sie untersuchen, warum Clients nicht Azure Information Protection verwenden.
+        $irmConfig = Get-IRMConfiguration
+        $list = $irmConfig.LicensingLocation
+        $list += "https://adrms.<yourcompany.domain>/_wmcs/licensing"
+        Set-IRMConfiguration -LicensingLocation $list
+        Set-IRMConfiguration -internallicensingenabled $false
+        Set-IRMConfiguration -internallicensingenabled $true
 
-Nach der Außerbetriebsetzung Ihrer AD RMS-Server haben Sie die Gelegenheit, Ihre Vorlagen im klassischen Azure-Portal zu überprüfen und zu konsolidieren, sodass sich Benutzer unter weniger Vorlagen entscheiden müssen. Sie können die Vorlagen zu diesem Zeitpunkt auch neu konfigurieren oder sogar neue Vorlagen hinzufügen. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).
 
-## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Schritt 9: Erneuern Ihres Azure Information Protection-Mandantenschlüssels
-Dieser Schritt ist nach abgeschlossener Migration erforderlich, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Bei einer Schlüsseländerung wird ein neuer Mandantenschlüssel erstellt, der RMS-Kryptografiemodus 2 verwendet. Die Verwendung von Azure RMS mit Kryptografiemodus 1 wird nur während der Migration unterstützt.
+Bei Verwendung der Azure Information Protection-Mandantenschlüsseltopologie **vom Kunden verwaltet (BYOK)**:
 
-Dieser Schritt ist optional, wird jedoch empfohlen, wenn die Migration abgeschlossen ist, selbst wenn Sie sie im RMS-Kryptografiemodus 2 ausgeführt haben. In diesem Szenario schützt das Erneuern der Schlüssel Ihren Azure Information Protection-Mandantenschlüssel vor potenziellen Sicherheitslücken des AD RMS-Schlüssels.
+-   Sie verfügen hierbei über eine reduzierte Rights Management-Schutzfunktionalität für Exchange Online. Dies ist im Artikel [BYOK – Preise und Einschränkungen](byok-price-restrictions.md) beschrieben.
 
-Wenn Sie Ihren Azure Information Protection-Mandantenschlüssel erneuern (oder „neu vergeben“), wird ein neuer Schlüssel erstellt, und der ursprüngliche Schlüssel wird archiviert. Da der Wechsel von einem Schlüssel zu einem anderen jedoch nicht sofort erfolgt, sondern sich über einige Wochen zieht, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure Information Protection-Mandantenschlüssel ändern, sobald die Migration abgeschlossen ist.
 
-So erneuern Sie Ihren Azure Information Protection-Mandantenschlüssel:
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9: Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
 
-- Wenn Ihr Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), und erstellen Sie eine **Azure Information Protection-Supportanfrage für die Neuerstellung Ihres Azure Information Protection-Schlüssels nach der Migration von AD RMS**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie jedoch, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an. Die Neuvergabe Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+Wenn Sie die Information Rights Management-Funktion (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie den Rights Management-Connector (RMS) bereitstellen, der als Kommunikationsschnittstelle (ein Relais) zwischen ihren lokalen Servern und dem Schutzdienst für Azure Information Protection fungiert.
 
-- Wenn Ihr Mandantenschlüssel von Ihnen (BYOK) verwaltet wird: Vergeben Sie in Azure Key Vault den Mandantenschlüssel neu, den Sie für Ihren Azure Information Protection-Mandanten verwenden, und führen Sie dann das [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)-Cmdlet erneut aus, um die neue Schlüssel-URL anzugeben. 
+Dieser Schritt behandelt die Installation und Konfiguration des Connectors, was IRM für Exchange und SharePoint deaktiviert und diese Server so konfiguriert, dass sie den Connector verwenden. Wenn Sie AD RMS-Datenkonfigurationsdateien (XML) zum Schutz von E-Mail-Nachrichten in Azure Information Protection importiert haben, müssen Sie zum Schluss noch die Registrierung auf den Exchange Server-Computern manuell bearbeiten, um alle URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten.
+
+> [!NOTE]
+> Überprüfen Sie vor Beginn unter [Lokale Server, die Azure RMS unterstützen](../get-started/requirements-servers.md) die Versionen der lokalen Server, die der Azure Rights Management-Dienst unterstützt.
+
+### <a name="install-and-configure-the-rms-connector"></a>Installieren und Konfigurieren des RMS-Verbindungsdiensts
+
+Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Management-Verbindungsdiensts](../deploy-use/deploy-rms-connector.md), und führen Sie die Schritte 1 bis 4 aus. Beginnen Sie noch nicht mit Schritt 5 der Connectoranweisungen. 
+
+### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Deaktivieren von IRM auf Exchange Servern und Entfernen der AD RMS-Konfiguration
+
+1.  Suchen Sie auf jedem Exchange Server den folgenden Ordner, und löschen Sie alle Einträge in diesem Ordner: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+
+2. Führen Sie von einem der Exchange-Server die folgenden PowerShell-Befehle aus, um sicherzustellen, dass Benutzer E-Mails lesen können, die durch Azure Rights Management geschützt sind.
+
+    Bevor Sie diese Befehle ausführen, ersetzen Sie Ihre eigene Azure Rights Management-Dienst-URL durch die *\<URL Ihres Mandanten>*.
+
+        $irmConfig = Get-IRMConfiguration
+        $list = $irmConfig.LicensingLocation 
+        $list + "<Your Tenant URL>/_wmcs/licensing"
+        Set-IRMConfiguration -LicensingLocation $list
+
+3.  Deaktivieren Sie nun die IRM-Funktionen für Nachrichten, die an interne Empfänger gesendet werden:
+
+    ```
+    Set-IRMConfiguration -InternalLicensingEnabled $false
+    ```
+
+4. Verwenden Sie als anschließend das gleiche Cmdlet, um IRM in Microsoft Office Outlook Web App und Microsoft Exchange ActiveSync zu deaktivieren:
+
+    ```
+    Set-IRMConfiguration -ClientAccessServerEnabled $false
+    ```
+
+5.  Verwenden Sie schließlich das gleiche Cmdlet, um alle zwischengespeicherten Zertifikate zu löschen:
+
+    ```
+    Set-IRMConfiguration -RefreshServerCertificates
+    ```
+
+6.  Setzen Sie nun IIS auf jedem Exchange Server zurück, z.B. indem Sie eine Eingabeaufforderung als Administrator ausführen und **iisreset** eingeben.
+
+### <a name="disable-irm-on-sharepoint-servers-and-remove-ad-rms-configuration"></a>Deaktivieren von IRM auf SharePoint Servern und Entfernen der AD RMS-Konfiguration
+
+1.  Stellen Sie sicher, dass keine Dokumente aus RMS-geschützten Bibliotheken ausgecheckt sind. Wenn dies der Fall ist, kann am Ende dieses Verfahrens nicht mehr darauf zugegriffen werden.
+
+2.  Klicken Sie auf der Website der Microsoft SharePoint-Zentraladministration im Abschnitt **Schnellstart** auf **Sicherheit**.
+
+3.  Klicken Sie auf der Seite **Sicherheit** im Abschnitt **Informationsrichtlinie** auf **Verwaltung von Informationsrechten konfigurieren**.
+
+4.  Wählen Sie auf der Seite **Information Rights Management** im Abschnitt **Information Rights Management** **Verwenden Sie IRM nicht auf diesem Server**, und klicken Sie dann auf **OK**.
+
+5.  Löschen Sie auf jedem der SharePoint Server-Computer den Inhalt des Ordners „\ProgramData\Microsoft\MSIPC\Server\\<*SID des Kontos, das SharePoint Server ausführt>*“.
+
+### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Konfigurieren von Exchange und SharePoint zur Verwendung des Connectors
+
+1. Wechseln Sie zurück zu den Anweisungen für die Bereitstellung des RMS-Connectors: [Schritt 5: Konfigurieren von Servern für die Verwendung des RMS-Connectors](../deploy-use/configure-servers-rms-connector.md).
+
+    Wenn Sie nur über SharePoint Server verfügen, gehen Sie direkt zu [Nächste Schritte](#next-steps), um die Migration fortzusetzen. 
+
+2. Fügen Sie auf jedem Exchange Server die Registrierungsschlüssel im nächsten Abschnitt manuell für jede Konfigurationsdatendatei (XML) hinzu, um die URLs von vertrauenswürdigen Veröffentlichungsdomänen an den RMS-Connector umzuleiten. Diese Registrierungseinträge sind migrationsspezifisch und werden nicht vom Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst hinzugefügt.
+
+    Gehen Sie beim Vornehmen dieser Änderungen an der Registrierung wie folgt vor:
+
+    -   Ersetzen Sie *Connector FQDN* durch den Namen, den Sie im DNS für den Verbindungsdienst definiert haben. Beispielsweise **rmsconnector.contoso.com**.
+
+    -   Verwenden Sie das HTTP- oder HTTPS-Präfix für die Verbindungsdienst-URL, je nachdem, ob Sie HTTP oder HTTPS für die Kommunikation zwischen dem Verbindungsdienst und Ihren lokalen Servern konfiguriert haben.
+
+#### <a name="registry-edits-for-exchange"></a>Bearbeitung der Registrierung für Exchange
+
+Entfernen Sie für alle Exchange-Server die Registrierungswerte, die Sie für LicenseServerRedirection während der Vorbereitungsphase hinzugefügt haben. Diese Werte wurden den folgenden Pfaden hinzugefügt:
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+
+Für Exchange 2013 und Exchange 2016 – Bearbeitung der Registrierung 1:
+
+
+**Registrierungspfad:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
+
+**Typ:** Reg_SZ
+
+**Wert:** https://\<AD RMS-Intranetlizenzierungs-URL\>/_wmcs/licensing
+
+**Daten:**
+
+Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+
+- http://\<Connector FQDN\>/_wmcs/licensing
+
+- https://\<Connector FQDN\>/_wmcs/licensing
+
+
+---
+
+Für Exchange 2013 – Bearbeitung der Registrierung 2:
+
+**Registrierungspfad:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection 
+
+**Typ:** Reg_SZ
+
+**Wert:** https://\<AD RMS-Extranetlizenzierungs-URL\>/_wmcs/licensing
+
+**Daten:**
+
+Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+
+- http://\<Connector FQDN\>/_wmcs/licensing
+
+- https://\<Connector FQDN\>/_wmcs/licensing
+
+---
+
+Für Exchange 2010 – Bearbeitung der Registrierung 1:
+
+
+**Registrierungspfad:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Typ:** Reg_SZ
+
+**Wert:** https://\<AD RMS-Intranetlizenzierungs-URL\>/_wmcs/licensing
+
+**Daten:**
+
+Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+
+- http://\<Connector FQDN\>/_wmcs/licensing
+
+- https://\<connectorname\>/_wmcs/licensing
+
+
+---
+
+Für Exchange 2010 – Bearbeitung der Registrierung 2:
+
+
+**Registrierungspfad:**
+
+HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
+
+**Typ:** Reg_SZ
+
+**Wert:** https://\<AD RMS-Extranetlizenzierungs-URL\>/_wmcs/licensing
+
+**Daten:**
+
+Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
+
+- http://\<Connector FQDN\>/_wmcs/licensing
+
+- https://\<Connector FQDN\>/_wmcs/licensing
+
+---
+
 
 ## <a name="next-steps"></a>Nächste Schritte
-
-Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
-
-Nachdem Sie die Migration nun abgeschlossen haben, können Sie sich die [Roadmap für die Bereitstellung](deployment-roadmap.md) ansehen, um die ggf. erforderlichen weiteren Bereitstellungsaufgaben zu ermitteln.
+Fahren Sie mit [Phase 5: Aufgaben nach der Migration](migrate-from-ad-rms-phase5.md) fort, um die Migration fortzusetzen.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

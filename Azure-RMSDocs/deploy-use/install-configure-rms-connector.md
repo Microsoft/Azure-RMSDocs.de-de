@@ -4,7 +4,7 @@ description: "Informationen zur Unterstützung bei der Installation und Konfigur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 100ac0f42d82eb02635187dbb0c91422d3097872
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 21eab2a693147b4e6562a8bcdff8cece7d706432
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
 translationtype: HT
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
@@ -53,7 +53,7 @@ Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Ve
 ## <a name="entering-credentials"></a>Eingeben von Anmeldeinformationen
 Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie **admin@contoso.com** eingeben und dann das Kennwort für dieses Konto angeben.
 
-Es gibt einige Zeicheneinschränkungen für dieses Kennwort. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Verbindungsdienst fehl, und es wird die Fehlermeldung "Die Kombination aus Benutzername und Kennwort ist nicht korrekt" angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dies auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
+Es gibt einige Zeicheneinschränkungen für dieses Kennwort. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dies auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 
 Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf der Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein Andernfalls wird folgende Fehlermeldung angezeigt: **Fehler beim Versuch, den Speicherort des Verwaltungsdiensts und der Organisation zu ermitteln. Stellen Sie sicher, dass der Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
