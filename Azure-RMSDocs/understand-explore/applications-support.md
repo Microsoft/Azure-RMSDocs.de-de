@@ -4,7 +4,7 @@ description: "Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
@@ -31,9 +31,6 @@ Vorlagen erleichtern den Benutzern (und den Administratoren, die Richtlinien kon
 In den Fällen, in denen Benutzer Informationsschutz selber anwenden müssen, stellen Sie sicher, dass Sie ihnen Anweisungen und Anleitungen geben, wie und wann dies zu erfolgen hat. Die Anweisungen sollten spezifisch für die Anwendung und Version sein, die verwendet wird, sowie für deren Verwendungsart. Außerdem sollte die Anleitung dafür, wann und wie Informationsschutz angewendet werden sollte, für Ihr Geschäft geeignet sein. Weitere Informationen finden Sie unter [Unterstützung von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](../deploy-use/help-users.md).
 
 Informationen dazu, wie diese Anwendungen für den Azure Rights Management-Dienst von Azure Information Protection konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
-
-> [!TIP]
-> Beispiele und Screenshots von Anwendungen, die den Azure Rights Management-Diensts verwenden, finden Sie unter [Azure RMS in Aktion: Was für Administratoren und Benutzer angezeigt wird](what-admins-users-see.md).
 
 Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiel: 
 
