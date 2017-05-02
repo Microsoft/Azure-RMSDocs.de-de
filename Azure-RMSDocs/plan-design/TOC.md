@@ -13,7 +13,7 @@
 ### [Aufgaben nach der Migration](migrate-from-ad-rms-phase5.md)
 ## [Planen und Implementieren des Mandantenschlüssels](plan-implement-tenant-key.md)
 ### [BYOK – Preise und Einschränkungen](byok-price-restrictions.md)
-## [Vorbereiten für Azure Information Protection](prepare.md)
+## [Vorbereiten von Benutzern und Gruppen](prepare.md)
 # [Bereitstellen und Verwenden des Diensts](/information-protection/deploy-use/activate-service)
 # [Bereitstellen und Verwenden des Clients](/information-protection/rms-client/use-client)
 # [Entwickeln und Anpassen von Apps](/information-protection/develop/developers-guide)
