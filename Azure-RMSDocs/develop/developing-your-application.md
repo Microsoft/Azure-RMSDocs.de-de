@@ -211,7 +211,7 @@ Wenn Sie die Ad-hoc-Richtlinie auswählen, muss der Benutzer der Anwendung E-Mai
 
 Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung wie folgt aussehen:
 
-1. Sie werden zur Auswahl eines Verschlüsselungsverfahrens aufgefordert.
+1.Sie werden zur Auswahl eines Verschlüsselungsverfahrens aufgefordert.
 ![App-Ausgabe – Schritt 1](../media/develop/app-output-1.png)
 
 2. Sie werden aufgefordert, den Pfad zu der zu schützenden Datei bereitzustellen.
