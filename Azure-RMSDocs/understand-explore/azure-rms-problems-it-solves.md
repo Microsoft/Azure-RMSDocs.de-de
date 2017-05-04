@@ -4,7 +4,7 @@ description: "Identifizieren Sie Anforderungen oder Probleme, die möglicherweis
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95ece72f7261691f762c8786490c8010aa3e0778
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 65b9d369308505e74e0dde8d96973f9985d209a0
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
 translationtype: HT
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Welche Probleme werden von Azure RMS gelöst?
@@ -66,8 +66,6 @@ Weitere Informationen zu diesen externen Zertifizierungen finden Sie im [Azure T
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Informationen dazu, wie der Azure Rights Management-Dienst für Administratoren und Benutzer aussieht, finden Sie unter [Azure RMS in Aktion](what-admins-users-see.md).
-
-Wenn Sie eher an technischen Informationen zur Funktionsweise des Azure Rights Management-Diensts interessiert sind, finden Sie diese unter [Funktionsweise von Azure RMS](how-does-it-work.md).
+Weitere technische Informationen zur Funktionsweise des Azure Rights Management-Diensts finden Sie diese unter [Funktionsweise von Azure RMS](how-does-it-work.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

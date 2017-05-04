@@ -4,14 +4,14 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
-ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
@@ -20,7 +20,7 @@ translationtype: HT
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
-1. Melden Sie sich in einem neuen Browserfenster als globaler Administrator für Ihren Mandanten beim [Azure-Portal](https://portal.azure.com) an.
+1. Melden Sie sich in einem neuen Browserfenster als globaler Administrator oder Sicherheitsadministrator für Ihren Mandanten beim [Azure-Portal](https://portal.azure.com) an.
 
 2. Klicken Sie im Hubmenü auf **Neu**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit und Identität** aus. Wählen Sie auf dem Blatt **Sicherheit und Identität** in der Liste **AUSGEWÄHLTE APPS** die Option **Azure Information Protection** aus. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Erstellen**.
 
@@ -74,7 +74,7 @@ Wenn die Bezeichnung **Confidential** (Vertraulich) nicht über untergeordnete B
     
     Daraufhin öffnet sich das Blatt **Schutz**.
     
-3. Vergewissern Sie sich, dass im Blatt **Schutz** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Name Ihrer Organisation> – Vertraulich** aus.     
+3. Achten Sie darauf, dass auf dem Blatt **Schutz** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Name Ihrer Organisation> – Vertraulich** aus.     
     
     Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
     
