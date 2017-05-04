@@ -4,14 +4,14 @@ description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 696d744ae21d8957225a24d39547493515b63d76
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 608fa9fe48667c1419736243e5c069b48828ff1b
+ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
 translationtype: HT
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
@@ -50,7 +50,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 
 ## <a name="to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
-1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
 
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
@@ -78,9 +78,13 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     In den meisten Fällen wählen Sie **Azure RMS** für Ihre Berechtigungseinstellungen. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um die Konfiguration für HYOK (AD RMS) fortzufahren, gehen Sie zu Schritt 9.
     
-7. Wählen Sie entweder **Nicht weiterleiten** aus, wenn Sie diese Outlook-Option für E-Mails festlegen möchten, oder wählen Sie **Vorlage auswählen** aus. 
+7. Wählen Sie **Nicht weiterleiten** aus, wenn Sie diese Outlook-Option für E-Mails festlegen möchten, **Vordefinierte Vorlage auswählen**, um eine der Standardvorlagen oder eine benutzerdefinierte Vorlage zu benutzen, die Sie konfiguriert haben, oder wählen Sie **Benutzerdefiniert (Vorschau)** aus, um neue Schutzeinstellungen in diesem Portal zu definieren. 
     
-8. Falls Sie **Vorlage auswählen** für **Azure RMS** ausgewählt haben: Klicken Sie in der Dropdownliste auf die [Vorlage](../deploy-use/configure-custom-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen.
+    Beachten Sie, dass die Option **Benutzerdefiniert (Vorschau)** über die meisten Konfigurationsoptionen verfügt, die derzeit im klassischen Azure-Portal vorhanden sind. Darüber hinaus können Sie problemlos alle Benutzer aus Ihrer Organisation hinzufügen und externe E-Mail-Adressen für einzelne Benutzer oder Gruppen oder für alle Benutzer in einer anderen Organisation angeben, wenn Sie einen Domänennamen angeben. 
+    
+    Weitere Informationen zu dieser Vorschau-Konfiguration finden Sie im Blogbeitrag [Azure Information Protection unified administration now in Preview (Einheitliche Verwaltung für Azure Information Protection jetzt in der Vorschau)](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). Weitere Informationen zu den Berechtigungen, die Sie auswählen können, finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md).
+    
+8. Falls Sie **Vordefinierte Vorlage auswählen** für **Azure RMS** ausgewählt haben, klicken Sie in der Dropdownfeld auf die [Vorlage](../deploy-use/configure-custom-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen.
     
     Bei Auswahl einer **Abteilungsvorlage** oder wenn Sie [Onboardingsteuerelemente](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
     
