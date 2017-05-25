@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 90b26239979b42eadb008b11a963e35a74698910
-ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
-translationtype: HT
+ms.openlocfilehash: 04e04f6e3243283b98df94143773e4aa81351f48
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -58,21 +59,27 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
 Lesen Sie diesen Abschnitt, bevor Sie die PowerShell-Befehle verwenden, wenn Ihre Organisation Azure Information Protection und den Azure Rights Management-Datenschutzdienst oder nur den Azure Rights Management-Dienst verwendet.
 
 
-### <a name="prerequisites-for-aip-and-azure-rms"></a>Voraussetzungen für Azure Information Protection (AIP) und Azure RMS
+### <a name="prerequisites"></a>Voraussetzungen
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ sind weitere Komponenten für den Azure Information Protection-Dienst und den Azure Rights Management-Datenschutzdienst erforderlich:
 
 1. Der Azure Rights Management-Dienst muss aktiviert werden.
 
-2. So entfernen Sie den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos: Die Administratorfunktion muss für Ihre Organisation aktiviert werden. Zudem muss Ihr Konto als Administrator für Azure Rights Management konfiguriert sein.
+2. So entfernen Sie den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos: 
+    
+    - Die Administratorfunktion muss für Ihre Organisation aktiviert werden. Zudem muss Ihr Konto als Administrator für Azure Rights Management konfiguriert sein.
 
-3. So werden Dateien direkt ohne Benutzerinteraktion geschützt oder ihr Schutz entsprechend aufgehoben: Erstellen Sie ein Dienstprinzipalkonto, führen Sie „Set-RMSServerAuthentication“ aus und erwägen Sie, diesen Dienstprinzipal zum Administrator für Azure Rights Management zu machen.
+3. So werden Dateien direkt ohne Benutzerinteraktion geschützt oder ihr Schutz entsprechend aufgehoben: 
+    
+    - Erstellen Sie ein Dienstprinzipalkonto, führen Sie „Set-RMSServerAuthentication“ aus und erwägen Sie, diesen Dienstprinzipal zum Administrator für Azure Rights Management zu machen.
 
-4. Für Regionen außerhalb von Nordamerika: Bearbeiten Sie die Registrierung für die Authentifizierung für den Dienst.
+4. Für Regionen außerhalb von Nordamerika: 
+    
+    - Bearbeiten Sie die Registrierung für die Authentifizierung für den Dienst.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert werden.
 
-Für diese Voraussetzung können Sie den Datenschutz mithilfe von Bezeichnungen anwenden oder eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen. Konfiguration zur Anwendung des Datenschutzes.
+Für diese Voraussetzung können Sie den Datenschutz mithilfe von Bezeichnungen anwenden oder eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Datenschutz anzuwenden.
 
 Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie entsprechende Anweisungen zum [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
@@ -80,7 +87,7 @@ Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie en
 
 Typische Szenarien für das Entfernen des Schutzes von Dateien für andere Benutzer umfassen die Datenermittlung oder Datenwiederherstellung. Wenn Sie den Schutz mithilfe von Bezeichnungen anwenden, können Sie den Schutz durch Festlegen einer neuen Bezeichnung entfernen, durch die kein Schutz angewendet wird. Sie können dazu aber auch die Bezeichnung entfernen. Aber Sie werden wahrscheinlich eher eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Schutz zu entfernen.
 
-Sie müssen über Rights Management-Berechtigungen verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Feature und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../deploy-use/configure-super-users.md).
+Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Feature und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../deploy-use/configure-super-users.md).
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Voraussetzungen 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben.
 
@@ -132,9 +139,12 @@ Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows Po
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>So rufen Sie „AppPrincipalId“ und den symmetrischen Schlüssel ab
 
-Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolServicePrincipal` aus dem MSOnline-PowerShell-Modul für Azure Active Directory ausführen: 
+Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolServicePrincipal` aus dem MSOnline-PowerShell-Modul für Azure Active Directory ausführen und den nachstehenden Anweisungen folgen. 
 
-1. Wenn dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie entsprechende Informationen unter [Installieren des Azure AD-Moduls](/powershell/azuread/#install-the-azure-ad-module).
+> [!IMPORTANT]
+> Erstellen Sie diesen Dienstprinzipal nicht mit dem neueren Azure AD PowerShell-Cmdlet „New-AzureADServicePrincipal“. „New-AzureADServicePrincipal“ wird von den Azure Rights Management-Diensten nicht unterstützt. 
+
+1. Wenn das MSOnline-Modul nicht bereits auf Ihrem Computer installiert ist, führen Sie `Install-Module MSOnline` aus.
 
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 
@@ -187,7 +197,7 @@ Unser Beispielbefehl würde wie folgt aussehen:
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzelnen Befehl bereitstellen oder nur „RMSServerAuthentication“ eingeben und die Werte nacheinander bereitstellen, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, wird „**RmsServerAuthentication ist auf EIN festgelegt**“ angezeigt. Das bedeutet, dass Sie Dateien jetzt mithilfe des Dienstprinzipals schützen oder deren Schutz aufheben können.
+Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzelnen Befehl bereitstellen oder nur „RMSServerAuthentication“ eingeben und die Werte nacheinander bereitstellen, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, wird „**RmsServerAuthentication ist auf ON festgelegt**“ angezeigt, d. h., der Client wird jetzt im „Servermodus“ ausgeführt. Diese Meldung bestätigt nicht, dass die Authentifizierung mit den angegebenen Werten erfolgreich war, sondern, dass der Wechsel in den Servermodus erfolgreich war.
 
 Erwägen Sie es, diesen Dienstprinzipal zum Administrator zu machen: Dieser Dienstprinzipal kann als Administrator konfiguriert werden, um sicherzustellen, dass er für andere Benutzer immer Dateien schützen oder deren Schutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
 
@@ -301,7 +311,7 @@ Beachten Sie: Wenn die Rights Management-Vorlagen geändert werden, müssen Sie 
 Lesen Sie diesen Abschnitt, bevor Sie damit beginnen, Dateien mithilfe der PowerShell-Befehle zu schützen bzw. deren Schutz aufzuheben, wenn in Ihrer Organisation nur Active Directory Rights Management Services verwendet werden.
 
 
-### <a name="prerequisites-for-ad-rms"></a>Voraussetzungen für AD RMS
+### <a name="prerequisites"></a>Voraussetzungen
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ muss Ihr Konto über die Berechtigungen zum Lesen und Ausführen verfügen, um auf „ServerCertification.asmx“ zugreifen zu können:
 
