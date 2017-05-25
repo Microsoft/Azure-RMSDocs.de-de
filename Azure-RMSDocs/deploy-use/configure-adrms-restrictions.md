@@ -4,15 +4,16 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: b9217412778309917a5d259d09ab52a7bf121b41
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 984bc844187a419cb73ab30527278d1762b70fcb
+ms.sourcegitcommit: 45053160d956587fcf45e021065e452a4c48aa4c
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -62,6 +63,8 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
 - Verwenden Sie nicht die Option **Nicht weiterleiten**, wenn Sie für Azure RMS-Schutz eine Bezeichnung konfigurieren. Darüber hinaus müssen Sie Benutzer anweisen, diese Option in Outlook nicht manuell auszuwählen. 
 
     Wird die Option „Nicht weiterleiten“ durch eine Bezeichnung oder manuell durch Benutzer angewendet, wird die Option unter Umständen von Ihrer AD RMS-Bereitstellung angewendet und nicht wie beabsichtigt vom Azure Rights Management-Dienst. Bei diesem Szenario können Personen, denen Sie extern Inhalte zur Verfügung stellen, E-Mail-Nachrichten nicht öffnen, für die diese Option „Nicht weiterleiten“ aktiviert wurde.
+
+- Wenn Sie AD RMS (HYOK)- und Azure RMS-Schutz verwenden und Benutzer benutzerdefinierte Berechtigungen konfigurieren, werden Dokumente oder E-Mail-Adresse immer durch Azure Rights Management geschützt.
 
 - Wenn Benutzer in Outlook eine Bezeichnung auswählen, die AD RMS-Schutz anwendet, und dann vor dem Senden der E-Mail-Adresse ihre Meinung ändern und eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, kann die neu ausgewählte Bezeichnung nicht angewendet werden. Es wird die folgende Fehlermeldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Sie sind nicht berechtigt, diese Aktion auszuführen.**
     

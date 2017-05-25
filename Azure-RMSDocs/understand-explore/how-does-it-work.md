@@ -4,7 +4,7 @@ description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/21/2017
+ms.date: 04/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
-ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
-translationtype: HT
+ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -105,7 +106,7 @@ Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Akt
 
 **Das passiert in Schritt 2**: Der RMS-Client erstellt ein Zertifikat, das eine Richtlinie für das Dokument enthält, das die [Benutzerrechte](../deploy-use/configure-usage-rights.md) für Benutzer oder Gruppen einschließt sowie andere Einschränkungen, z.B. ein Ablaufdatum. Diese Einstellungen können in einer Vorlage definiert werden, die zuvor von einem Administrator konfiguriert wurde, oder die zum Zeitpunkt angegeben wurde, als der Inhalt geschützt wurde (manchmal auch als „Ad-hoc-Richtlinie“ bezeichnet).   
 
-Das Attribut, das verwendet wird, um die ausgewählten Benutzer und Gruppen zu identifizieren, ist das „proxyAddress“-Attribut von Azure AD, das alle E-Mail-Adressen für einen Benutzer oder eine Gruppe speichert.
+Das Azure AD-Attribut, das hauptsächlich verwendet wird, um die ausgewählten Benutzer und Gruppen zu identifizieren, ist das Attribut „Azure AD ProxyAddresses“, das alle E-Mail-Adressen für einen Benutzer oder eine Gruppe speichert. Wenn ein Benutzerkonto jedoch keine Werte im Attribut „Azure AD ProxyAddresses“ enthält, wird stattdessen der „UserPrincipalName“-Wert des Benutzers verwendet.
 
 Der RMS-Client verwendet dann den Schlüssel der Organisation, der abgerufen wurde, als die Benutzerumgebung initialisiert wurde. Er verwendet diesen Schlüssel zum Verschlüsseln der Richtlinie und des symmetrischen Inhaltsschlüssels. Der RMS-Client signiert die Richtlinie außerdem mit dem Zertifikat des Benutzers, das abgerufen wurde, als die Benutzerumgebung initialisiert wurde.
 
@@ -120,7 +121,7 @@ Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Clie
 
 ![RMS-Dokumentennutzung – Schritt 1, der Benutzer wird authentifiziert und erhält die Liste der Rechte](../media/AzRMS_documentconsumption1.png)
 
-**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das „proxyAddress“-Attribut von Azure AD für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](../plan-design/prepare.md#group-membership-caching).
+**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Attribut „Azure AD ProxyAddresses“ für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). Wenn das Benutzerkonto über keine Werte für das Attribut „Azure AD ProxyAddresses“ verfügt, wird stattdessen der Wert im Attribut „Azure AD UserPrincipalName“ verwendet.
 
 ![RMS-Dokumentennutzung – Schritt 2, die Nutzungslizenz wird an den Client zurückgegeben](../media/AzRMS_documentconsumption2.png)
 

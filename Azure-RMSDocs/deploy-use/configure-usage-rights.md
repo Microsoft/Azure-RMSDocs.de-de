@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 526a0ef3bcc5ebf07c4993b9e5dd602683593a45
-ms.sourcegitcommit: 85261fbc9e6ce71a2001d954cb2fc2d190695f6a
-translationtype: HT
+ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
+ms.sourcegitcommit: dd5a63bfee309c8b68ee9f8cd071a574ab0f6b4a
+ms.translationtype: HT
+ms.contentlocale: de-DE
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -51,20 +52,23 @@ In einigen Anwendungen werden Nutzungsrechte in Berechtigungsstufen gruppiert. D
 
 In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und alle darin enthaltenen Rechte.
 
-
 |Berechtigungsstufe|Anwendungen|Enthaltene Rechte (allgemeiner Name)|
 |---------------------|----------------|---------------------------------|
-|Anzeigender Benutzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Antworten; Allen Antworten<br /><br />Hinweis: Verwenden Sie für E-Mails den Prüfer statt dieser Berechtigungsebene, um sicherzustellen, dass eine Antwort auch als E-Mail und nicht als Anhang verschickt wird. Der Prüfer ist außerdem erforderlich, wenn Sie eine E-Mail an eine andere Organisation versenden, die den Outlook-Client oder Outlook Web App verwendet.|
-|Prüfer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
-|Mitautor|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[2]](#footnote-2); Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1)|
-|Mitbesitzer|Klassisches Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[1]](#footnote-1); Allen Antworten [[1]](#footnote-1); Weiterleiten [[1]](#footnote-1); Vollzugriff|
+|Anzeigender Benutzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br /> Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Antworten; Allen Antworten; Makros zulassen [[1]](#footnote-1)<br /><br />Hinweis: Verwenden Sie für E-Mails den Prüfer statt dieser Berechtigungsebene, um sicherzustellen, dass eine Antwort auch als E-Mail und nicht als Anhang verschickt wird. Der Prüfer ist außerdem erforderlich, wenn Sie eine E-Mail an eine andere Organisation versenden, die den Outlook-Client oder Outlook Web App verwendet.|
+|Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Antworten: Allen Antworten[[2]](#footnote-2); Weiterleiten [[2]](#footnote-2); Makros zulassen [[1]](#footnote-1)|
+|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[3]](#footnote-3); Drucken; Antworten [[2]](#footnote-2); Allen Antworten [[2]](#footnote-2); Weiterleiten [[2]](#footnote-2)|
+|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[2]](#footnote-2); Allen Antworten [[2]](#footnote-2); Weiterleiten [[2]](#footnote-2); Vollzugriff|
 
 ----
 
 ###### <a name="footnote-1"></a>Fußnote 1
-Gilt nicht für den Azure Information Protection-Client für Windows oder die Rights Management-Freigabeanwendung für Windows.
+
+Für den Azure Information Protection-Client für Windows ist dieses Recht derzeit für die Information Protection-Leiste in Office-Apps erforderlich.
 
 ###### <a name="footnote-2"></a>Fußnote 2
+Gilt nicht für den Azure Information Protection-Client für Windows oder die Rights Management-Freigabeanwendung für Windows.
+
+###### <a name="footnote-3"></a>Fußnote 3
 Nicht im Azure Information Protection-Client für Windows enthalten. In diesem Client umfasst das Nutzungsrecht zum Exportieren die Möglichkeit zum Aufheben des Schutzes.
 
 

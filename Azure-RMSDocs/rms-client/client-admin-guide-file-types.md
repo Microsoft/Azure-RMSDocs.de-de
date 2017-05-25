@@ -4,7 +4,7 @@ description: "Technische Details zu den unterstützten Dateitypen, Dateierweiter
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5899710615a1a875d3613b70b1c378db67942404
-ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
-translationtype: HT
+ms.openlocfilehash: ffd2ed8aa59c3d9eb1ab6d36a9ccac71d449d978
+ms.sourcegitcommit: dabea768a37aa56635b9123f628c1c2b2d6a0f55
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -117,17 +119,19 @@ Sie können auch erzwingen, dass der Azure Information Protection-Client den Sch
 
 Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information Protection-Client so zu konfigurieren, dass er generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch native Schutzfunktionen geschützt würden. Beachten Sie, dass Sie den Schlüssel „FileProtection“ manuell erstellen müssen, falls dieser nicht vorhanden ist.
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
+1. Erstellen Sie einen neuen Schlüssel mit dem Namen * für den folgenden Registrierungspfad, der Dateien mit beliebiger Erweiterung anzeigt:
+    
+    - Für 32-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    
+    - Für 64-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
-    Diese Einstellung gibt Dateien mit beliebiger Erweiterung an.
-
-2. Erstellen Sie im neu hinzugefügten Schlüssel für HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\* einen neuen Zeichenfolgenwert (REG_SZ) namens **Encryption** mit dem Datenwert **Pfile**.
+2. Erstellen Sie im neu hinzugefügten Schlüssel (zum Beispiel HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) einen neuen Zeichenfolgenwert (REG_SZ) mit dem Namen **Encryption** und dem Datenwert **Pfile**.
 
     Diese Einstellung führt dazu, dass der Azure Information Protection-Client den generischen Schutz anwendet.
 
 Diese beiden Einstellungen führen dazu, dass der Azure Information Protection-Client generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn dies Ihr Ziel ist, ist keine weitere Konfiguration erforderlich. Sie können aber auch Ausnahmen für bestimmte Dateitypen definieren, damit diese weiterhin systemeigen geschützt werden. Zu diesem Zweck müssen Sie drei zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: Fügen Sie einen neuen Schlüssel mit dem Namen der Dateierweiterung (ohne vorangestellten Punkt) hinzu.
+1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (32-Bit Windows) oder **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (64-Bit Windows): Fügen Sie einen neuen Schlüssel hinzu, der den Namen der Dateierweiterung trägt (ohne den vorangestellten Punkt).
 
     Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
