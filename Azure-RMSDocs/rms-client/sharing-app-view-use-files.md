@@ -43,7 +43,7 @@ Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angez
 
 Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie können dies anhand der Dateinamenerweiterung erkennen. In jedem Fall kann das Öffnen der Datei überwacht werden, und die Überwachung erfolgt solange, wie die Datei geschützt ist. Wenn die Datei als E-Mail-Anhang gesendet wurde, wird der Absender möglicherweise jedes Mal, wenn Sie die Datei öffnen, per E-Mail benachrichtigt.
 
-- **Die Datei hat die Dateinamenerweiterung* .pfile* .**
+- **Die Datei hat die Dateinamenerweiterung*.pfile* .**
 
     Die Datei wurde generisch geschützt.
 
@@ -75,7 +75,7 @@ Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diens
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
 Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sondern z.B. auch bearbeiten, kopieren und drucken möchten), können Sie jeweils die Anleitung zur Dateinamenerweiterung befolgen:
 
-- **Die Datei hat die Dateinamenerweiterung* .pfile* .**
+- **Die Datei hat die Dateinamenerweiterung*.pfile* .**
 
     Speichern Sie die geöffnete Datei, und geben Sie ihr eine neue Dateinamenerweiterung, die mit der Anwendung verknüpft ist, die Sie verwenden möchten.
 
