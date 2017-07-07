@@ -8,6 +8,7 @@
 ### [Azure Information Protection-Client](aip-client.md)
 #### [Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen](client-version-release-history.md)
 #### [Azure Information Protection-Client – Administratorhandbuch](client-admin-guide.md)
+##### [Anpassungen](client-admin-guide-customizations.md)
 ##### [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
 ##### [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
 ##### [Unterstützte Dateitypen](client-admin-guide-file-types.md)
