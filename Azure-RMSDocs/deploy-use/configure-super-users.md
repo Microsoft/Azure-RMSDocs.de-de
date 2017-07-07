@@ -13,9 +13,10 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 8b915ad2bf58352c41f1b534aa6c88f1640fb589
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung
 
@@ -54,13 +55,13 @@ Bewährte Sicherheitsmethoden für die Administratorfunktion:
 
 Der folgende Protokollauszug zeigt einige Beispieleinträge, die mit dem Cmdlet „Get-AadrmAdminLog“ erstellt wurden. In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für den Azure Rights Management-Dienst konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
 
-`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
+`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
+`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
 
-`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
+`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
 
 ## <a name="scripting-options-for-super-users"></a>Skriptoptionen für Administratoren
 Eine Person, die als Administrator für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] fungiert, muss häufig den Schutz von mehreren Dateien an mehreren Speicherorten aufheben. Dies kann zwar manuell erfolgen, es ist jedoch effizienter (und häufig auch zuverlässiger), wenn ein Skript verwendet wird. Verwenden Sie dazu die Cmdlets [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) und [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) gemäß Ihren Anforderungen. 

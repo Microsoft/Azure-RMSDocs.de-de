@@ -13,9 +13,11 @@ ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c408d7a8f068e2de6616534a58161a86482a2a9c
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-developers-guide"></a>RMS-Entwicklerhandbuch
 
@@ -27,7 +29,7 @@ Drei Generationen des Rights Management-SDK sind jetzt verfügbar: **Microsoft R
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Ein vereinfachtes Toolset der nächsten Generation, das eine einfache Entwicklung ermöglicht, um Ihren Android-, iOS-, Mac OS X-, Windows Phone/RT- und Linux/C++-Geräte-Apps den Schutz von Informationen über Microsoft Rights Management-Dienste zu ermöglichen |
 | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | Ein leistungsstarkes SDK-Angebot für Entwickler von Windows-Desktopanwendungen und serverbasierte Lösungsanbieter, um Rights Management für die Produkte zu ermöglichen|
-|[AD RMS SDK]()|** Hinweis ** – Das AD RMS SDK, das vom Client in „Msdrm.dll“ bereitgestellte Funktionen nutzt, steht für die Verwendung in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 7, Windows Server 2008 und Windows Vista zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen Microsoft Rights Management Services SDK 2.1, das vom Client in "Msipc.dll" bereitgestellte Funktionen nutzt.|
+|[AD RMS SDK]()|** Hinweis ** AD RMS SDK, das vom Client in "Msdrm.dll" bereitgestellte Funktionen nutzt, steht für die Verwendung in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows Server 7, Windows Server 2008 und Windows Vista zur Verfügung. Es kann in nachfolgenden Versionen geändert oder entfernt werden. Verwenden Sie stattdessen Microsoft Rights Management Services SDK 2.1, das vom Client in "Msipc.dll" bereitgestellte Funktionen nutzt.|
 |[AD RMS-Skripterstellungs-API]()| Wird zum Erstellen von Skripts zum Verwalten einer AD RMS-Installation verwendet|
 
 ## <a name="code-samples-and-tools"></a>Codebeispiele und Tools ##

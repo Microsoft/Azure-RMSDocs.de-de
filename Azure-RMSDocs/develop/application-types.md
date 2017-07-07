@@ -14,9 +14,11 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f93df5f204350a56f8280f299c04478cc1b5dfba
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: f7ebcb3a432a4521a71e3cc80c20b1af64e051c7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="application-types"></a>Anwendungstypen
 
@@ -31,7 +33,7 @@ Bei einer einfachen Anwendung kann es sich um ein Befehlszeilenprogramm handeln,
 
 ### <a name="server-mode-applications"></a>Servermodusanwendungen
 
-Der *Servermodus* ist für nicht interaktive Anwendungen vorgesehen, die RMS-geschützte Inhalte nutzen, schützen oder verarbeiten. Ein Beispiel wäre eine Anwendung zur *Verhinderung von Datenverlusten*, die als Dienst auf einem Dateiserver ausgeführt wird und automatisch vertrauliche Dokumente schützt. Ein Beispiel für diesen Anwendungstyp finden Sie unter [IpcDlp Beispiel](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d) .
+Der *Servermodus* ist für nicht interaktive Anwendungen vorgesehen, die RMS-geschützte Inhalte nutzen, schützen oder verarbeiten. Ein Beispiel wäre eine Anwendung zur *Verhinderung von Datenverlusten*, die als Dienst auf einem Dateiserver ausgeführt wird und automatisch vertrauliche Dokumente schützt. Ein Beispiel für diesen Anwendungstyp finden Sie unter [IpcDlp Beispiel](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) .
 
 Wenn Ihre Anwendung den *Servermodus* verwendet, sollte sie sich automatisch beim RMS-Server authentifizierten. Anders als beim *Clientmodus*, öffnet das RMS SDK 2.1 keine Anmeldeaufforderung, wenn die automatische Authentifizierung fehlschlägt. Zudem wird bei der Ausführung im *Servermodus* kein Anwendungsmanifest benötigt.
 
