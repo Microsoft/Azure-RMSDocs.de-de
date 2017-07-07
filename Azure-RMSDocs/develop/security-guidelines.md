@@ -12,9 +12,11 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: e940dfd1d3a053c14ea1adb6e72f4cde7d26bba0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 37b91a1b3e0a25f6014198998609d33dcc0979ae
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Best Practices zu Sicherheitsthemen für Azure Information Protection
 
@@ -51,8 +53,8 @@ Testergebnisse, die das Erfüllen des Mindeststandards betreffen, werden von Mic
 
 |Standardstufe|    Beschreibung|
 |---|---|
-|Mindeststandard|    Eine Anwendung, die AIP-geschützte Informationen verarbeitet, muss vor dem Signieren des von Microsoft zur Verfügung gestellten Produktionszertifikats so eingerichtet werden, dass sie den Mindeststandard erfüllt. In der Regel verwenden Partner das Produktionshierarchiezertifikat nur bei der endgültigen Veröffentlichung der Software, wenn durch die internen, von den Partnern selbst durchgeführten Tests bestätigt wurde, dass die Anwendung diesen Mindeststandard erfüllen. Das Erfüllen des Mindeststandards stellt keine von Microsoft bestätigte Sicherheitsgarantie dar und darf auch nicht als solche ausgelegt werden. Testergebnisse, die das Erfüllen des Mindeststandards betreffen, werden von Microsoft nicht getestet oder überprüft. Es obliegt der alleinigen Verantwortung des Partners, dass diese Mindeststandards erfüllt werden.|
-|Empfohlener Standard|    Die empfohlenen Richtlinien sind richtungsweisend für erhöhte Anwendungssicherheit und lassen darauf schließen, wie sich AIP möglicherweise entwickelt, wenn mehr Sicherheitskriterien implementiert werden. Anbieter können versuchen, ihre Anwendungen durch Einhalten dieser strikteren Richtlinien mit erhöhter Sicherheit auf dem Markt zu differenzieren.|
+|Mindeststandard|  Eine Anwendung, die AIP-geschützte Informationen verarbeitet, muss vor dem Signieren des von Microsoft zur Verfügung gestellten Produktionszertifikats so eingerichtet werden, dass sie den Mindeststandard erfüllt. In der Regel verwenden Partner das Produktionshierarchiezertifikat nur bei der endgültigen Veröffentlichung der Software, wenn durch die internen, von den Partnern selbst durchgeführten Tests bestätigt wurde, dass die Anwendung diesen Mindeststandard erfüllen. Das Erfüllen des Mindeststandards stellt keine von Microsoft bestätigte Sicherheitsgarantie dar und darf auch nicht als solche ausgelegt werden. Testergebnisse, die das Erfüllen des Mindeststandards betreffen, werden von Microsoft nicht getestet oder überprüft. Es obliegt der alleinigen Verantwortung des Partners, dass diese Mindeststandards erfüllt werden.|
+|Empfohlener Standard|  Die empfohlenen Richtlinien sind richtungsweisend für erhöhte Anwendungssicherheit und lassen darauf schließen, wie sich AIP möglicherweise entwickelt, wenn mehr Sicherheitskriterien implementiert werden. Anbieter können versuchen, ihre Anwendungen durch Einhalten dieser strikteren Richtlinien mit erhöhter Sicherheit auf dem Markt zu differenzieren.|
 |Bevorzugter Standard|    Dies ist die höchste Sicherheitsstufe, die derzeit festgelegt werden kann. Anbieter, die ihre Anwendungen als äußerst sicher vermarkten möchten, sollten sich für diese Stufe entscheiden. Anwendungen, die diesem Standard entsprechen, sind bei Angriffen wahrscheinlich dem geringsten Risiko ausgesetzt.|
 
 
