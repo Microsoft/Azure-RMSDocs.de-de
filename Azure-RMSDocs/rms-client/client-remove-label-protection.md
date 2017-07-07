@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9aa72b53a53c3cd7f0e49e42403a1669cc777c30
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: e6fe5edfeb165839260371942cbf59922853a342
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien und E-Mails, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden
 
@@ -35,7 +37,7 @@ Sie können Bezeichnungen und den Schutz auch über den **Datei-Explorer** entfe
 
 ## <a name="using-office-apps-to-remove-labels-and-protection-from-documents-and-emails"></a>Verwenden von Office-Apps zum Entfernen von Bezeichnungen und des Schutzes von Dokumenten und E-Mails
 
-Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label** (Bezeichnung löschen):
+Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label**  (Bezeichnung löschen):
 
 ![Azure Information Protection-Leiste – Bezeichnung löschen](../media/delete-label.png)
 

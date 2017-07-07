@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 10dfa64146587fe816df6a555e0a3b43c1290c45
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-to-find-out-if-your-users-have-signed-up-for-rms-for-individuals"></a>So ermitteln Sie, ob Ihre Benutzer sich für RMS for Individuals registriert haben
 
