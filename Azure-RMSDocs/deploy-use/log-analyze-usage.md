@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokolli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
-ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
-translationtype: HT
+ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -39,7 +41,7 @@ Sie können dann mithilfe dieser Protokolle des Azure Rights Management-Diensts 
     Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Art Fragen beantworten, wenn Sie diese Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die durch den Azure Rights Management-Dienst geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie diese Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe des Azure Rights Management-Diensts schützen.
 
 > [!NOTE]
-> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für den Azure Rights Management-Dienst interessiert sind und nicht nachverfolgen möchten, wie Benutzer den Rights Management-Dienst verwenden, können Sie das Windows PowerShell-Cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) für Azure Rights Management nutzen.
+> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für den Azure Rights Management-Dienst interessiert sind und nicht nachverfolgen möchten, wie Benutzer den Rights Management-Dienst verwenden, können Sie das Windows PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) für Azure Rights Management nutzen.
 > 
 > Sie können auch das klassische Azure-Portal für allgemeine Verwendungsberichte verwenden. Hierzu gehören **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. Klicken Sie für den Zugriff auf diese Berichte im klassischen Azure-Portal auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.
 
@@ -213,23 +215,23 @@ Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In
 
 
 ## <a name="windows-powershell-reference"></a>Windows PowerShell-Referenz
-Seit Februar 2016 ist [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx) das einzige Windows PowerShell-Cmdlet, das Sie für die Azure Rights Management-Verwendungsprotokollierung benötigen. 
+Seit Februar 2016 ist [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) das einzige Windows PowerShell-Cmdlet, das Sie für die Azure Rights Management-Verwendungsprotokollierung benötigen. 
 
 Vor dieser Änderung wurden die folgenden Cmdlets, die nun veraltet sind, für die Azure Rights Management-Verwendungsprotokolle benötigt:  
 
--   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
+-   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
+-   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629425.aspx)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](https://msdn.microsoft.com/library/azure/dn629423.aspx)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629419.aspx)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
 
 Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher gespeichert haben, die vor der Azure Rights Management-Protokollierungsänderung erstellt wurden, können Sie diese Protokolle wie bisher mit den alten Cmdlets Get-AadrmUsageLog und Get-AadrmUsageLogLastCounterValue herunterladen. Alle neuen Verwendungsprotokolle werden dagegen in den neuen Azure RMS-Speicher geschrieben und müssen mit „Get-AadrmUserLog“ heruntergeladen werden.
 
