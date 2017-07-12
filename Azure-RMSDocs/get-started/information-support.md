@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 06/02/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f22d997b69c5c88c5e83d29de137626facad5849
-ms.sourcegitcommit: 05b7e06e330a33936aeeef32934717f870963612
-translationtype: HT
+ms.openlocfilehash: 23a6e3a2ca5efb6718d4d1fc33312cd481eec000
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
+<a id="information-and-support-for-azure-information-protection" class="xliff"></a>
+
+# Informationen zu und Unterstützung von Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -24,24 +28,32 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|.. Vorgehensweise|
 |----------------|---------------|
-|Zeigen Sie die empfohlene Dokumentation für den Dienst an →|Verwenden Sie die Startseite der [Azure Information Protection-Dokumentation](https://docs.microsoft.com/information-protection/).|
-|Geben Sie Feedback zur Dokumentation, oder stellen Sie eine Frage zur Dokumentation →|E-Mail an [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Erhalten Sie Tweets zu Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe →|Folgen Sie Dan Plastina, der bei der Leitung des Microsoft Information Protection-Teams hilft. Siehe [Dan Plastina@DanPlastina](https://twitter.com/DanPlastina)|
-|Überprüfen Sie Abonnementinformationen und die unterstützten Features →|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
+|Empfohlene Dokumentation für den Dienst anzeigen|Verwenden Sie die Startseite der [Azure Information Protection-Dokumentation](https://docs.microsoft.com/information-protection/).|
+|Feedback zur Dokumentation bereitstellen oder eine Frage zur Dokumentation stellen|E-Mail an [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
+|Tweets zu Azure Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe erhalten|Folgen Sie [@DanPlastina](https://twitter.com/DanPlastina), der bei der Leitung des Azure Information Protection-Teams bei Microsoft hilft.|
+|Abonnementinformationen und die unterstützten Features überprüfen|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 
-## <a name="information-about-new-releases-and-updated-documentation"></a>Informationen zu neuen Versionen und aktualisierter Dokumentation
-Das Information Protection-Produktteam veröffentlicht Ankündigungen von neuen Releases und Updates im [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
+<a id="information-about-new-releases-and-updated-documentation" class="xliff"></a>
 
-Am Ende jedes Monats wird eine Zusammenfassung aller Änderungen an der Dokumentation mit dem Titel „**Azure Information Protection Documentation Update for \<Monat Jahr>**“ angezeigt. Diese Beiträge verfügen über das Inhaltstyp-Tag [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) und enthalten Dokumentationsupdates für neue Versionen sowie Korrekturen und Überarbeitungen für vorhandene Versionen.
+## Informationen zu neuen Versionen und aktualisierter Dokumentation
+Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im [Enterprise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
+
+Außerdem finden Sie Informationen zu neuen Funktionen und Vorschauen auf der [Azure Information Protection Yammer-Website](https://www.yammer.com/AskIPTeam), auf der Sie auch neue Funktionen anfordern können.
+
+Am Ende jedes Monats wird eine Zusammenfassung aller Änderungen an der Dokumentation mit dem Titel „**Aktualisierung der Azure Information Protection-Dokumentation für \<Monat Jahr>**“ veröffentlicht. Diese Beiträge verfügen über das Inhaltstyp-Tag [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) und enthalten Dokumentationsupdates für neue Versionen sowie Korrekturen und Überarbeitungen für vorhandene Versionen.
 
 > [!TIP]
 > Wenn Sie Anwendungen entwickeln, in denen Microsoft Rights Management Services (Azure RMS oder AD RMS) verwendet werden, haben Sie möglicherweise auch Interesse an dem englischsprachigen Blog [Active Directory Rights Management Services (AD RMS) Developer's Corner](https://blogs.msdn.microsoft.com/rms/).
 
-## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
+<a id="support-options-and-community-resources" class="xliff"></a>
+
+## Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
 
-### <a name="to-contact-microsoft-support"></a>So kontaktieren Sie den Microsoft Support
+<a id="to-contact-microsoft-support" class="xliff"></a>
+
+### So kontaktieren Sie den Microsoft Support
 
 Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier Support-Kunden](https://premier.microsoft.com/), um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
 
@@ -59,7 +71,9 @@ Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, ab
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
 
 
-### <a name="self-help"></a>Selbsthilfe
+<a id="self-help" class="xliff"></a>
+
+### Selbsthilfe
 
 Videos auf Abruf:
 
@@ -81,12 +95,12 @@ Problembehandlung:
 
 - Für automatisierte Überprüfungen, die automatische Wiederherstellung und die Ablaufverfolgung: Laden Sie das [RMS Analyzer-Tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und führen Sie es aus. Weitere Informationen zu diesem Tool finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**. 
 
-### <a name="community-resources"></a>Communityressourcen
+<a id="community-resources" class="xliff"></a>
 
--   [Yammer: Azure Information Protection](https://www.yammer.com/AskIPTeam)
+### Communityressourcen
 
--   [Forum: Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud)
+Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam), auf der Sie direkte Antworten vom Azure Information Protection-Team erhalten und von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater profitieren.
 
--   [Forum: RMS für Benutzer (Anwendungen)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmsapps)
+Wenn Sie keinen Zugriff auf Yammer haben, versuchen Sie es mit dem [TechNet-Forum für Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
