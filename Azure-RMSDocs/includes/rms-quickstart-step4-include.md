@@ -4,14 +4,15 @@ Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf
 
 Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. Die E-Mail wird den Empfängern mit dem folgenden vorangehenden Text angezeigt:
 
-**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms)
-      **, um sie zu öffnen.**
+**Der Absender hat die Anlagen mit Microsoft RMS geschützt. Sie müssen sich** [anmelden](http://aka.ms/rms)**, um sie zu öffnen.**
 
 Sobald der Empfänger auf den Link klickt, wird er weitergeleitet und erhält Anweisungen zur Installation der RMS-Freigabe-App und ggf. zur Registrierung für ein kostenloses Konto. Das kostenlose Konto gewährt Zugriff auf ein RMS for Individuals-Abonnement, mit dem autorisierte Benutzer ein geschütztes Dokument immer lesen können, auch wenn ihre Organisation nicht über Azure RMS verfügt. Sie können die geschützte Anlage dann mithilfe der folgenden Anweisungen lesen.
 
 ![RM-Lernprogramm – Screenshots](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### <a name="to-view-the-protected-document-attachment"></a>So zeigen Sie die Anlage des geschützten Dokuments an
+<a id="to-view-the-protected-document-attachment" class="xliff"></a>
+
+#### So zeigen Sie die Anlage des geschützten Dokuments an
 
 1.  Da die mit Azure Rights Management geschützte Datei ein Word-Dokument ist, verfügt die E-Mail über zwei Anlagen. Es handelt sich tatsächlich um zwei Versionen derselben Datei, aber mit unterschiedlichen Dateierweiterungen. Öffnen Sie die Version, die über die Dateinamenerweiterung **.ppdf** verfügt (**Confidential.ppdf**).
 

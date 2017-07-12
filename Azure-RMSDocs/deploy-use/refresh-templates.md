@@ -4,7 +4,7 @@ description: "Wenn Sie den Azure Rights Management-Dienst verwenden, werden Vorl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6f02bffa99719d5cd987bc0fa9c84baabe191ec5
-ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
-translationtype: HT
+ms.openlocfilehash: 374c807862d4922679e8622ee0d0d5a16a156bb0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="refreshing-templates-for-users"></a>Aktualisieren von Vorlagen für Benutzer
+<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
+
+# Aktualisieren von Vorlagen für Benutzer und Dienste
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -32,8 +36,11 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Office 2016 für Mac|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
 |Die RMS-Freigabeanwendung für Mac-Computer|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
 
+Beim Herunterladen von Vorlagen (beim ersten Mal oder bei Aktualisierungen mit Änderungen) durch Clientanwendungen müssen Sie voraussichtlich etwa bis zu 15 Minuten warten, bis der Download abgeschlossen ist und die neuen bzw. aktualisierten Vorlagen voll funktionsfähig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
 
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Nur Exchange Online: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen
+<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
+
+## Nur Exchange Online: Konfigurieren von Exchange für das Herunterladen geänderter, benutzerdefinierter Vorlagen
 Wenn Sie die Verwaltung von Informationsrechten (IRM) für Exchange Online bereits konfiguriert haben, werden benutzerdefinierte Vorlagen für Benutzer erst heruntergeladen, nachdem Sie die folgenden Änderungen mithilfe der Windows PowerShell in Exchange Online vorgenommen haben.
 
 > [!NOTE]
@@ -41,7 +48,9 @@ Wenn Sie die Verwaltung von Informationsrechten (IRM) für Exchange Online berei
 
 Sie müssen dieses Verfahren jedes Mal ausführen, wenn Sie eine Vorlage ändern.
 
-### <a name="to-update-templates-for-exchange-online"></a>So aktualisieren Sie Vorlagen für Exchange Online
+<a id="to-update-templates-for-exchange-online" class="xliff"></a>
+
+### So aktualisieren Sie Vorlagen für Exchange Online
 
 1.  Stellen Sie unter Verwendung von Windows PowerShell in Exchange Online eine Verbindung mit dem Dienst her:
 
@@ -94,13 +103,17 @@ Damit Benutzer diese Vorlagen nicht mehr sehen, stellen Sie unter Verwendung von
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
+<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
+
+## Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
 Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 2013 oder die RMS-Freigabeanwendung (Rights Management) für Windows ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als gemäß dem Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
 > Die unsachgemäße Verwendung des Registrierungs-Editors kann zu schwerwiegenden Problemen führen, die eine Neuinstallation des Betriebssystems erforderlich machen können. Microsoft kann nicht garantieren, dass Sie Probleme, die durch die fehlerhafte Verwendung des Registrierungs-Editors entstehen, beheben können. Die Verwendung des Registrierungs-Editors erfolgt auf Ihr eigenes Risiko.
 
-### <a name="to-change-the-automatic-schedule"></a>So ändern Sie den automatischen Zeitplan
+<a id="to-change-the-automatic-schedule" class="xliff"></a>
+
+### So ändern Sie den automatischen Zeitplan
 
 1.  Verwenden Sie einen Registrierungs-Editor, um einen der folgenden Registrierungswerte zu erstellen und festzulegen:
 
@@ -124,7 +137,9 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 
 2.  Wenn Sie eine sofortige Aktualisierung der Vorlagen erzwingen möchten, führen Sie die nächste Schrittfolge aus. Starten Sie andernfalls jetzt Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
-### <a name="to-force-an-immediate-refresh"></a>So erzwingen Sie eine sofortige Aktualisierung
+<a id="to-force-an-immediate-refresh" class="xliff"></a>
+
+### So erzwingen Sie eine sofortige Aktualisierung
 
 1.  Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
@@ -150,7 +165,9 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 3.  Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
 
-## <a name="see-also"></a>Siehe auch
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

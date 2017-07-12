@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/20/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
-ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
-translationtype: HT
+ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
+<a id="classify-and-protect-a-file-or-email-by-using-azure-information-protection" class="xliff"></a>
+
+# Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
@@ -24,7 +28,9 @@ Die einfachste Möglichkeit zum Klassifizieren und Schützen Ihrer Dokumente und
 
 Sie können Dateien jedoch auch über den **Datei-Explorer** klassifizieren und schützen, der zusätzliche Dateitypen unterstützt und eine bequeme Methode zum gleichzeitigen Klassifizieren und Schützen mehrerer Dateien darstellt. Diese Methode unterstützt den Schutz von Office-Dokumenten, PDF-Dateien, Text- und Bilddateien sowie einer Vielzahl anderer Dateien. 
 
-### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
+<a id="safely-share-a-file-with-people-outside-your-organization" class="xliff"></a>
+
+### Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
 
 Geschützte Dateien können für andere Personen sicher freigegeben werden. Sie können die Datei z. B. an eine E-Mail anhängen oder eine Einladung von Ihrer SharePoint-Website senden.
 
@@ -35,7 +41,9 @@ Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei
 Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verwenden Sie den üblichen Freigabemechanismus zum Freigeben der Datei. Ist dies das erste Mal, dass diese Personen eine geschützte Datei per Freigabe erhalten, benötigen sie möglicherweise entsprechende Anweisungen zum Anzeigen der Datei. Für diese Personen können Sie die folgende Nachricht kopieren und einfügen: **Diese Datei ist mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in diesen [Anweisungen](https://aka.ms/rms-signup).**
 
 
-## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
+<a id="using-office-apps-to-classify-and-protect-your-documents-and-emails" class="xliff"></a>
+
+## Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
 
 Verwenden Sie die Azure Information Protection-Leiste, und wählen Sie eine der Bezeichnungen aus, die für Sie konfiguriert wurde. 
 
@@ -51,13 +59,19 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 - Ihr Administrator konfiguriert empfohlene Aufforderungen zum Auswählen einer bestimmten Bezeichnung, wenn vertrauliche Daten erkannt wurden. Sie können die Empfehlung übernehmen (und die Bezeichnung anwenden) oder zurückweisen (empfohlene Bezeichnung wird nicht angewendet).
 
-### <a name="exceptions-for-the-azure-information-protection-bar"></a>Ausnahmen für die Azure Information Protection-Leiste 
+<a id="exceptions-for-the-azure-information-protection-bar" class="xliff"></a>
 
-##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:
+### Ausnahmen für die Azure Information Protection-Leiste 
+
+<a id="dont-see-this-information-protection-bar-in-your-office-apps" class="xliff"></a>
+
+##### Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:
 
 - Möglicherweise ist der Azure Information Protection-Client nicht [installiert](install-client-app.md) oder der Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt.
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>Wenn die erwartete Bezeichnung auf der Leiste nicht angezeigt wird: 
+<a id="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar" class="xliff"></a>
+
+##### Wenn die erwartete Bezeichnung auf der Leiste nicht angezeigt wird: 
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
 
@@ -65,7 +79,9 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 - Die Bezeichnung befindet sich möglicherweise in einer bereichsbezogenen Richtlinie, die Ihr Konto nicht umfasst. Wenden Sie sich an den Helpdesk oder Ihren Administrator.
 
-### <a name="set-custom-permissions-for-a-document"></a>Festlegen von benutzerdefinierten Berechtigungen für ein Dokument
+<a id="set-custom-permissions-for-a-document" class="xliff"></a>
+
+### Festlegen von benutzerdefinierten Berechtigungen für ein Dokument
 
 Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat.
 
@@ -79,24 +95,28 @@ Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen 
 
     - **Mit benutzerdefinierten Berechtigungen schützen**: Stellen Sie sicher, dass diese Option aktiviert ist, sodass Sie Ihre benutzerdefinierten Berechtigungen angeben und anwenden können. Deaktivieren Sie diese Option, um alle benutzerdefinierten Berechtigungen zu entfernen.
     
-    - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie andernfalls die Zugriffsebene aus, die die angegebenen Personen erhalten sollen.
+    - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie anderenfalls die Zugriffsebene aus, die Sie den Personen gewähren möchten.
 
     - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
         
-    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen angegebenen Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen angegebenen Tag die Datei nicht mehr öffnen.
+    - **Ablauf des Zugriffs**: Wählen Sie diese Option nur für zeitkritische Dateien, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht Ihre ausgewählte(n) Datei(en) öffnen können. Sie können dabei die ursprüngliche Datei weiterhin öffnen, jedoch können die von Ihnen angegebenen Personen nach Mitternacht (Ihrer aktuellen Zeitzone) des von Ihnen festgelegten Tages die Datei nicht öffnen.
 
 5. Klicken Sie auf **Übernehmen**, und warten Sie auf die Nachricht **Die benutzerdefinierten Berechtigungen wurden angewendet**. Klicken Sie anschließend auf **Schließen**.
 
 
-### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tastenkombinationen für die Azure Information Protection-Leiste
+<a id="keyboard-shortcuts-for-the-azure-information-protection-bar" class="xliff"></a>
+
+### Tastenkombinationen für die Azure Information Protection-Leiste
 
 Für den Zugriff auf die Azure Information Protection-Leiste über Tastenkürzel können Sie die folgenden Tastenkombinationen nutzen:
 
 - Drücken Sie **STRG** + **UMSCHALT** + **~** 
 
-Verwenden Sie dann die TAB-TASTE, um die Bezeichnungen und andere Steuerelemente auf der Leiste auszuwählen (die Symbole **Hide Labels** (Bezeichnungen ausblenden) und **Delete Label** (Bezeichnung löschen)), und drücken Sie die EINGABETASTE, um sie auszuwählen.
+Verwenden Sie dann die TAB-TASTE, um die Bezeichnungen und andere Steuerelemente auf der Leiste auszuwählen (die Symbole **Hide Labels**  (Bezeichnungen ausblenden) und **Delete Label** (Bezeichnung löschen)), und drücken Sie die EINGABETASTE, um sie auszuwählen.
 
-## <a name="using-file-explorer-to-classify-and-protect-files"></a>Verwenden des Datei-Explorer zum Klassifizieren und Schützen von Dateien
+<a id="using-file-explorer-to-classify-and-protect-files" class="xliff"></a>
+
+## Verwenden des Datei-Explorer zum Klassifizieren und Schützen von Dateien
 
 Wenn Sie den Datei-Explorer verwenden, können Sie eine einzelne Datei, mehrere Dateien oder einen Ordner schnell klassifizieren und schützen. 
 
@@ -109,7 +129,9 @@ Einige Dateien werden automatisch von der Klassifizierung und der Schutzfunktion
 Das Administratorhandbuch enthält eine vollständige Liste der unterstützten Dateitypen sowie die Dateien und Ordner, die automatisch ausgeschlossen werden: [Vom Azure Information Protection-Client unterstützte Dateitypen](client-admin-guide-file-types.md).
 
 
-### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>So klassifizieren und schützen Sie eine Datei mithilfe des Datei-Explorer
+<a id="to-classify-and-protect-a-file-by-using-file-explorer" class="xliff"></a>
+
+### So klassifizieren und schützen Sie eine Datei mithilfe des Datei-Explorer
 
 1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiel:
     
@@ -133,9 +155,11 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
     - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
     
-    - **Benutzer auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    - **Benutzer auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Sie können sie aus dem Adressbuch (z.B. Personen in Ihrer Organisation und Kontakte aus anderen Organisationen) auswählen. Geben Sie für andere Benutzer die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation für alle Benutzer in dieser Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
         
-    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen angegebenen Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen angegebenen Tag die Datei nicht mehr öffnen.
+    - **Ablauf des Zugriffs**: Wählen Sie diese Option nur für zeitkritische Dateien, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht Ihre ausgewählte(n) Datei(en) öffnen können. Sie können dabei die ursprüngliche Datei weiterhin öffnen, jedoch können die von Ihnen angegebenen Personen nach Mitternacht (Ihrer aktuellen Zeitzone) des von Ihnen festgelegten Tages die Datei nicht öffnen.
+    
+    Hinweis: Wenn diese Einstellung zuvor mit benutzerdefinierten Berechtigungen über eine Office 2010-App konfiguriert wurde, wird das angegebene Ablaufdatum zwar nicht in diesem Dialogfeld angezeigt, ist jedoch nach wie vor festgelegt. Dieses Anzeigeproblem tritt lediglich auf, wenn das Ablaufdatum in Office 2010 konfiguriert wurde.
 
 5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 
@@ -148,7 +172,9 @@ Wenn Sie Ihre Meinung hinsichtlich Klassifizierung und Schutz ändern oder Ihre 
 Die Klassifizierung und der Schutz, die Sie angegeben haben, bleiben der Datei zugeordnet, auch wenn Sie die Datei per E-Mail senden oder an einem anderen Ort speichern. Wenn Sie die Datei geschützt haben, können Sie verfolgen, wie sie von Personen verwendet wird und den Zugriff ggf. widerrufen. Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen Ihrer geschützten Dokumente bei Verwendung von Azure Information Protection](client-track-revoke.md). 
 
 
-## <a name="other-instructions"></a>Sonstige Anweisungen
+<a id="other-instructions" class="xliff"></a>
+
+## Sonstige Anweisungen
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)

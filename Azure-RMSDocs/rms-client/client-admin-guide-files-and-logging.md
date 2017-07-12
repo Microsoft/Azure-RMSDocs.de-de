@@ -4,7 +4,7 @@ description: "Informationen zu den Clientdateien und zur Verwendungsprotokollier
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 78c355acd1bc87347ef2d4b02ffbb24f2c08bc70
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: bf695772d545daca602903e156903da2aadaae7a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
+<a id="azure-information-protection-client-files-and-client-usage-logging" class="xliff"></a>
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+# Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
+
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Nachdem Sie den Azure Information Protection-Client installiert haben, müssen Sie möglicherweise wissen, wo die Dateien gespeichert sind und zudem überwachen, wie der Client verwendet wird.
 
-## <a name="file-locations-for-the-azure-information-protection-client"></a>Dateispeicherorte für den Azure Information Protection-Client
+<a id="file-locations-for-the-azure-information-protection-client" class="xliff"></a>
 
-Clientdateien:    
+## Dateispeicherorte für den Azure Information Protection-Client
+
+Clientdateien:   
 
 - Für 64-Bit-Betriebssysteme: **\ProgramFiles (x86)\Microsoft Azure Information Protection**
 
@@ -34,7 +40,9 @@ Clientprotokolldateien und aktuell installierte Richtliniendatei:
 
 - Für 64-Bit- und 32-Bit-Betriebssysteme: **%localappdata%\Microsoft\MSIP**
 
-## <a name="usage-logging-for-the-azure-information-protection-client"></a>Verwendungsprotokollierung für den Azure Information Protection-Client
+<a id="usage-logging-for-the-azure-information-protection-client" class="xliff"></a>
+
+## Verwendungsprotokollierung für den Azure Information Protection-Client
 
 Der Client protokolliert die Benutzeraktivität im lokalen Windows-**Anwendungen und Dienste**-Ereignisprotokoll, **Azure Information Protection**. Die Ereignisse umfassen die folgenden Informationen:
 
@@ -85,9 +93,12 @@ Informationen zur Verwendungsprotokollierung für den Azure Rights Management-Di
 
 
 
-## <a name="next-steps"></a>Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 Nachdem Sie alle Protokolldateien ermittelt haben, die dem Azure Information Protection-Client zugeordnet sind, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:
 
+- [Anpassungen](client-admin-guide-customizations.md)
 
 - [Dokumentenverfolgung](client-admin-guide-document-tracking.md)
 

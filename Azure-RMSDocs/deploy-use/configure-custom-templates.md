@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
+<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
+
+# Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -59,6 +63,10 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 -   [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md)
 
 -   [PowerShell-Referenz für benutzerdefinierte Vorlagen](configure-templates-with-powershell.md)
+
+> [!TIP]
+> Vorlagen und neue Optionen zum Konfigurieren des Azure Rights Management-Schutzes werden zum Azure-Portal migriert. Diese Funktion ist derzeit in der Vorschau verfügbar. Weitere Informationen finden Sie in der folgenden Blogbeitragsankündigung: [Azure Information Protection – Einheitliche Administration nun in der Vorschau verfügbar](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). 
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -4,17 +4,21 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
+<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
+
+# Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
@@ -29,7 +33,7 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
     > [!TIP] 
     > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
 
-3.  Erkunden Sie das Blatt **Richtlinie: Global**. Dieses wird automatisch geöffnet und zeigt die Information Protection-Standardrichtlinie an, die automatisch für Ihren Mandanten erstellt wird:
+3. Beachten Sie die Informationen auf der Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Sie können später zu dieser Seite zurückkehren. Klicken Sie in diesem Tutorial auf **Globale Richtlinie**, um das Blatt **Richtlinie: Global** zu öffnen. Dieses Blatt wird automatisch für nachfolgende Verbindungen mit dem Dienst geöffnet und zeigt die Information Protection-Standardrichtlinie an, die automatisch für Ihren Mandanten erstellt wird:
     
     - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen: **Alle Mitarbeiter** und **Jeder (nicht geschützt)** sind Beispiele für eine Klassifizierung mit Unterkategorien.
     
@@ -46,7 +50,9 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-settings.png)
 
-## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Ändern der Einstellungen für eine Standardbezeichnung und Aufforderung zur Eingabe einer Begründung
+<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
+
+## Ändern der Einstellungen für eine Standardbezeichnung und Aufforderung zur Eingabe einer Begründung
 
 Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Sie sehen, wie diese funktionieren:
 
@@ -56,7 +62,9 @@ Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Si
 
 2. Legen Sie **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten) auf **Ein** fest.
 
-## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
+<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
+
+## Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
 
 Wir ändern nun die Einstellungen der untergeordneten Bezeichnung **All Employees** (Alle Mitarbeiter) aus der Hauptbezeichnung **Confidential** (Vertraulich). 
 

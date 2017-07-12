@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einer Version des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen
+<a id="azure-information-protection-client-version-release-history" class="xliff"></a>
+
+# Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen
 
 >*Gilt für: Azure Information Protection*
 
@@ -32,7 +35,37 @@ Den folgenden Informationen können Sie entnehmen, welche Neuerungen oder Änder
 >  
 > Falls das Problem bestehen bleibt, finden Sie entsprechende Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-## <a name="version-14210"></a>Version 1.4.21.0
+
+<a id="version-172100" class="xliff"></a>
+
+## Version 1.7.210.0
+
+**Veröffentlicht**: 06.06.2017
+
+Diese Version umfasst die MSIPC-Version 1.0.2217.1 des RMS-Clients.
+
+**Fixes**:
+
+- Alle Bezeichnungs- und Klassifizierungs-Cmdlets werden nun auf Computern unterstützt, die nicht mit dem Internet verbunden sind, aber eine gültige Azure Information Protection-Richtlinie aufweisen.
+
+- Aus Konsistenzgründen wird ein Ausgabeparameter des Cmdlets [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) von britischem Englisch (**IsLabelled**) in amerikanisches Englisch (**IsLabeled**) geändert. Wenn Sie Skripts oder automatisierte Prozesse verwenden, die nach diesem Parameter suchen, aktualisieren Sie die Schreibweise dieses Parameters.
+
+- Die allgemeinen Fehlerbehebungen zur Verbesserung der Stabilität umfassen Folgende:
+
+    - Für Outlook: Fehlerbehebungen für Abstürze, hohen Speicherverbrauch und Anzeigeprobleme bei Menüs.
+    
+    - Für Word, Excel und PowerPoint: Fehlerbehebungen für hohe CPU-Auslastung, Anzeigeprobleme beim Speichern großer Excel-Dateien oder keine Reaktion der Anwendung. 
+    
+    Um die Leistung von Office 2016 bei SharePoint Online und OneDrive for Business zu verbessern, werden bei diesen Anwendungen außerdem automatische und empfohlene Bezeichnungen beim Schließen der Datei statt beim Speichern (beim automatischen Speichern oder Speichervorgang durch den Benutzer) angewendet. Gleichermaßen gilt: Wenn die Einstellung **Alle Dokumente und E-Mails müssen eine Bezeichnung haben** aktiviert ist, werden Benutzer erst aufgefordert, eine Bezeichnung zu wählen, wenn die Datei geschlossen wird. Die Ausnahme gilt für Word 2016 und Excel 2016, wenn der Benutzer die Option **Speichern unter** wählt. Diese Aktion löst dann diese Bezeichnungsverhalten aus, sofern diese konfiguriert sind. 
+
+**Neue Features**:
+
+- Neues PowerShell-Cmdlet [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Wenn Sie dieses Cmdlet ausführen, werden die Dateiinhalte überprüft und die Bezeichnungen werden gemäß den Bedingungen, die Sie in der Azure Information Protection-Richtlinie angeben, automatisch auf nicht bezeichnete Dateien angewendet.
+
+
+<a id="version-14210" class="xliff"></a>
+
+## Version 1.4.21.0
 
 **Veröffentlicht**: 15.03.2017
 
@@ -45,7 +78,7 @@ In der vorherigen Version wurde die neue Anforderung von Microsoft .NET Framewor
 
 - Unterstützung für zugeordnete Laufwerke zum Klassifizieren und Schützen von Dateien.
 
-- Unterstützung für große Dateien (über&250; MB) im Viewer. 
+- Unterstützung für große Dateien (über 250 MB) im Viewer. 
 
 - Wenn HYOK konfiguriert ist, kann Outlook Bezeichnungen anwenden, die für die Verwendung von Azure Rights Management-Vorlagen oder AD RMS-Vorlagen konfiguriert sind.
 
@@ -59,7 +92,9 @@ In der vorherigen Version wurde die neue Anforderung von Microsoft .NET Framewor
 - Der Viewer unterstützt jetzt Optionen wie Suchen, Zoomen und Drehen für PDF-Dateien. Um diese Optionen zu verwenden, klicken Sie mit der rechten Maustaste auf die Datei, wenn sie im Viewer angezeigt wird.
 
 
-## <a name="version-131552"></a>Version 1.3.155.2
+<a id="version-131552" class="xliff"></a>
+
+## Version 1.3.155.2
 
 **Veröffentlicht**: 08.02.2017
 
@@ -87,7 +122,9 @@ Diese Clientversion ist die [allgemein verfügbare Version](https://blogs.techne
 - [Azure Information Protection-Benutzerhandbuch](client-user-guide.md)
 
 
-## <a name="version-1240"></a>Version 1.2.4.0
+<a id="version-1240" class="xliff"></a>
+
+## Version 1.2.4.0
 
 **Veröffentlicht**: 27.10.2016
 
@@ -105,13 +142,17 @@ Diese Clientversion ist die [allgemein verfügbare Version](https://blogs.techne
 
     Weitere Informationen zu dieser Option finden Sie im Abschnitt [Zusätzliche Überprüfungen](client-admin-guide.md#additional-checks-and-troubleshooting) im Administratorhandbuch.
 
-## <a name="version-11230"></a>Version 1.1.23.0
+<a id="version-11230" class="xliff"></a>
+
+## Version 1.1.23.0
 
 **Veröffentlicht**: 01.10.2016
 
 Allgemeine Verfügbarkeit.
 
-## <a name="next-steps"></a>Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 
 Weitere Informationen zum Installieren des Clients:
 

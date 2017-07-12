@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f083ffaf8aefd9b79b2cb64a6408e565818b9b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
+<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+
+# Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -33,7 +36,9 @@ Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installie
 >     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
 > -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-view-a-protected-file"></a>So zeigen Sie eine geschützte Datei an
+<a id="to-view-a-protected-file" class="xliff"></a>
+
+## So zeigen Sie eine geschützte Datei an
 Doppelklicken Sie im Datei-Explorer oder in der E-Mail-Nachricht, die die Anlage enthält, auf die geschützte Datei, und geben Sie Ihre Anmeldeinformationen ein, wenn Sie dazu aufgefordert werden.
 
 Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angezeigt werden, öffnen Sie die Datei mit der PPDF-Erweiterung nur dann, wenn sich die andere Datei nicht öffnen lässt. Wenn Sie auch die PPDF-Version nicht öffnen können, installieren Sie zunächst die [RMS-Freigabeanwendung](install-sharing-app.md), mit der Dateien geöffnet werden können, die eine PPDF-Dateinamenerweiterung haben.
@@ -43,7 +48,7 @@ Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angez
 
 Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie können dies anhand der Dateinamenerweiterung erkennen. In jedem Fall kann das Öffnen der Datei überwacht werden, und die Überwachung erfolgt solange, wie die Datei geschützt ist. Wenn die Datei als E-Mail-Anhang gesendet wurde, wird der Absender möglicherweise jedes Mal, wenn Sie die Datei öffnen, per E-Mail benachrichtigt.
 
-- **Die Datei hat die Dateinamenerweiterung*.pfile* .**
+- **Die Datei weist die Erweiterung *PFILE* auf.**
 
     Die Datei wurde generisch geschützt.
 
@@ -51,7 +56,7 @@ Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie kö
 
     ![Das Dialogfeld für eine pfile-Datei, die bei Verwendung der RMS-Freigabeanwendung per E-Mail freigegeben wird](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Die Datei hat eine* .ppdf* Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
+- **Die Datei weist die Erweiterung *PPDF* auf oder ist eine geschützte Text- oder Bilddatei (z.B. *PTXT* oder *PJPG*).**
 
     Die Datei wurde systemeigen als schreibgeschützte Kopie geschützt.
 
@@ -72,10 +77,12 @@ Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diens
 > [!NOTE]
 > Wenn die Datei erwiesenermaßen durch Rights Management geschützt ist und sie sich dennoch nicht öffnen lässt, laden Sie das [RMS Analyzer-Tool](https://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und setzen Sie es ein. Befolgen Sie die Anweisungen in dem Tool und suchen Sie nach Problemen auf Ihrem Computer, die das Öffnen des geschützten Dokuments verhindern können.
 
-## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
+<a id="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file" class="xliff"></a>
+
+## So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
 Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sondern z.B. auch bearbeiten, kopieren und drucken möchten), können Sie jeweils die Anleitung zur Dateinamenerweiterung befolgen:
 
-- **Die Datei hat die Dateinamenerweiterung*.pfile* .**
+- **Die Datei weist die Erweiterung *PFILE* auf.**
 
     Speichern Sie die geöffnete Datei, und geben Sie ihr eine neue Dateinamenerweiterung, die mit der Anwendung verknüpft ist, die Sie verwenden möchten.
 
@@ -83,7 +90,7 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
 
     Die neue Datei ist nicht mehr geschützt. Wenn Sie sie schützen möchten, müssen Sie dies manuell tun. Eine Anleitung finden Sie unter [Schützen einer Datei auf einem Gerät (direkt schützen) mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-in-place.md).
 
-- **Die Datei hat eine* .ppdf* Dateierweiterung oder ist eine geschützte Text- oder Bilddatei (etwa *.ptxt* oder *.pjpg*)**
+- **Die Datei weist die Erweiterung *PPDF* auf oder ist eine geschützte Text- oder Bilddatei (z.B. *PTXT* oder *PJPG*).**
 
     Sie können die Datei nur anzeigen, und wenn Sie sie umbenennen oder verschieben, bleibt die Datei weiterhin geschützt.
 
@@ -94,14 +101,18 @@ Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sonder
     Anwendungen, die für Rights Management geeignet sind, wissen, wie Dateien zu öffnen sind, die durch andere Rights Management-fähige Anwendungen geschützt wurden. Sie behalten außerdem den auf sie angewendeten Schutz, selbst wenn Sie die Datei bearbeiten oder unter einem anderen Dateinamen oder an einem anderen Speicherort speichern. Diese Anwendungen ermöglichen es Ihnen, die Datei entsprechend den Berechtigungen zu verwenden, die derzeit auf sie angewendet sind. Wenn Sie also die Berechtigungen haben, die Datei zu verwenden, können Sie dies tun. Beispielsweise könnte es sein, dass Sie die Datei bearbeiten, aber nicht drucken können.
 
 
-## <a name="examples-and-other-instructions"></a>Beispiele und weitere Anweisungen
+<a id="examples-and-other-instructions" class="xliff"></a>
+
+## Beispiele und weitere Anweisungen
 Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weitere Anweisungen finden Sie in den folgenden Abschnitten des Benutzerhandbuchs für die Rights Management-Freigabeanwendung
 
 -   [Beispiele für die Nutzung der RMS-Freigabeanwendung](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Was möchten Sie tun?](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Siehe auch
+<a id="see-also" class="xliff"></a>
+
+## Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
