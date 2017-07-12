@@ -4,17 +4,21 @@ description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 13dbb47088c33f72bdb0acdbb7cba1245df14f7f
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
+<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a>
+
+# Schnellstart-Tutorial für Azure Information Protection 
 
 >*Gilt für: Azure Information Protection*
 
@@ -24,17 +28,17 @@ Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Info
 
 Wenn Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden von Azure Information Protection haben oder wissen möchten, was andere darüber sagen, besuchen Sie die [Yammer-Website von Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-## <a name="prerequisites"></a>Voraussetzungen 
+<a id="prerequisites" class="xliff"></a>
+
+## Voraussetzungen 
 Voraussetzungen für dieses Tutorial:
 
-- Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Vergewissern Sie sich, dass diese Features in Ihrem Abonnement unterstützt werden. Weitere Informationen finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
+- Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Stellen Sie sicher, dass Sie über ein Abonnement verfügen, das diese Funktionen für dieses Tutorial unterstützt. Weitere Informationen finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.
     
     Wenn Sie kein Abonnement für diese Features besitzen, können Sie sich für eine kostenlose Testversion für [Enterprise Mobility + Sicherheit E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) registrieren.
     
-- Sie müssen über ein Azure-Abonnement verfügen, um die Azure Information Protection-Richtlinien im Azure-Portal zu konfigurieren. Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden: Folgen Sie den Anweisungen auf der [Seite für die ersten Schritten mit Azure](https://account.windowsazure.com/organization).
-
   > [!TIP] 
-  > Wenn Sie ein oder mehrere Abonnements erwerben möchten, sollten Sie dies vorab erledigen, da es einige Zeit in Anspruch nehmen kann.
+  > Wenn Sie ein Abonnement beantragen müssen, sollten Sie dies rechtzeitig erledigen, da dies einige Zeit in Anspruch nehmen kann.
 
 - Ein globales Administratorkonto zur Anmeldung beim Azure-Portal, um die Azure Information Protection-Richtlinie zu konfigurieren. Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst (z. B. Exchange Online oder Exchange Server) verfügen.
 

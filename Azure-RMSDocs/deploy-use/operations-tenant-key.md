@@ -4,7 +4,7 @@ description: "Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24368df01f680958310b8d01c4f9a5a939e6f706
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
+<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
+
+# Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -36,8 +40,9 @@ In der folgenden Tabelle sind die Vorgänge aufgeführt, die Sie in der jeweilig
 
 Nachdem Sie die implementierte Topologie ermittelt haben, können Sie auf einen der folgenden Links klicken, um weitere Informationen zu diesen Vorgängen für Ihren Azure Information Protection-Mandantenschlüssel zu erhalten:
 
-
 - [Von Microsoft verwalteter Mandantenschlüssel](operations-microsoft-managed-tenant-key.md)
 - [Vom Kunden verwalteter Mandantenschlüssel](operations-customer-managed-tenant-key.md)
+
+Wenn Sie jedoch einen Mandantenschlüssel für Azure Information Protection erstellen möchten, indem Sie eine vertrauenswürdige Veröffentlichungsdomäne (TPD) aus Active Directory Rights Management Services importieren, ist dieser Importvorgang jedoch Teil der [Migration von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

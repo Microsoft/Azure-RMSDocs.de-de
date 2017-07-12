@@ -4,18 +4,21 @@ description: "Wenngleich Azure Information Protection anpassbare Standardbezeich
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/05/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 91feb6dfd9421d7c5cccf53b45f8a0f35e74007d
-ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.openlocfilehash: ac12ab9023499d5aac632159ef689a8f10a91418
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Erstellen einer neuen Bezeichnung für Azure Information Protection
+<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
+
+# Erstellen einer neuen Bezeichnung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -43,7 +46,11 @@ Verwenden Sie die folgenden Anleitungen, um der Azure Information Protection-Ric
 
 4. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## <a name="next-steps"></a>Nächste Schritte
+5. Wenn Sie diesen neuen Bezeichnungsnamen und eine Beschreibung in verschiedenen Sprachen anzeigen möchten, führen Sie die Verfahren unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md) aus. 
+
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 

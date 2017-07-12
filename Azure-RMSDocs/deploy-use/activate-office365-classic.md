@@ -1,10 +1,10 @@
 ---
-title: "Aktivieren von Azure RMS mit dem klassischen Office 365 Admin Center – AIP"
-description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, wenn Sie auf die klassische (Original-)Version von Office 365 Admin Center zugreifen können."
+title: "Aktivieren von Azure RMS mit der veralteten Version von Office 365 Admin Center – AIP"
+description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, wenn Sie die alte Version von Office 365 Admin Center verwenden."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,16 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: b6c42663-af01-49d5-94bc-98963c383379
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd08e94dffd3793675eb90e68f108114e5dcadcd
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 3282606e4ddc5747bf710e0a885318f07b7da457
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-office-365-classic-admin-center"></a>Aktivieren von Azure Rights Management über das klassische Office 365 Admin Center
+<a id="how-to-activate-azure-rights-management-from-the-old-office-365-admin-center" class="xliff"></a>
+
+# Informationen zum Aktivieren von Azure Rights Management über die alte Version von Office 365 Admin Center
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 
-Verwenden Sie diese Anleitung, wenn Sie die klassische Version (Originalversion) von Office 365 Admin Center verwenden.
+Verwenden Sie diese Anweisungen nur, wenn Sie die alte Version von Office 365 Admin Center verwenden.
 
 1. Nachdem Sie sich für einen Office 365-Plan angemeldet haben, der Rights Management umfasst, [melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an](https://portal.office.com/), das als globaler Administrator für Ihre Office 365-Bereitstellung fungiert.
 
@@ -47,7 +51,9 @@ Verwenden Sie diese Anleitung, wenn Sie die klassische Version (Originalversion)
 
 Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivieren angezeigt werden.
 
-## <a name="next-steps"></a>Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

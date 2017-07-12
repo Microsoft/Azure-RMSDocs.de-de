@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Konfigurier
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 06/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,35 +12,60 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dad69e37e2908d155fd1be370d190fd91d5739a3
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 3b7ed22afea6b8575d12f6f83dcfc8419200c003
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
+<a id="configuring-and-using-document-tracking-for-azure-information-protection" class="xliff"></a>
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+# Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
-Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623032) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](http://go.microsoft.com/fwlink/?LinkId=623037) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
-Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Durch die Dokumentkontrolle erhalten Benutzer und Administratoren Informationen darüber, wann auf ein geschütztes Dokument zugegriffen wird und ob ein nachverfolgtes Dokument ggf. gesperrt werden kann.
 
-> [!TIP]
-> Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
+<a id="privacy-controls-for-your-document-tracking-site" class="xliff"></a>
 
-Die folgenden URLs werden für die Dokumentenverfolgung verwendet und müssen zulässig sein (z. B. durch Hinzufügen zu Ihren vertrauenswürdigen Websites, wenn Sie Internet Explorer mit erhöhter Sicherheit verwenden):
+## Datenschutzkontrollen für Ihre Website für die Dokumentnachverfolgung
 
--   https://&#42;.azurerms.com
+Wenn das Anzeigen aller Informationen zur Dokumentnachverfolgung in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie die Dokumentnachverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) deaktivieren. 
 
--   https://ecn.dev.virtualearth.net
+Dieses Cmdlet deaktiviert den Zugriff auf die Website für die Dokumentnachverfolgung, damit keine Benutzer in Ihrer Organisation die von ihnen geschützten Dokumente nachverfolgen oder den Zugriff auf diese widerrufen können. Sie können die Dokumentnachverfolgung jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob die Dokumentnachverfolgung derzeit aktiviert oder deaktiviert ist. Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des AADRM-Moduls (Azure Rights Management) für PowerShell. 
 
-    > [!NOTE]
-    > Dieser URL ist für Bing-Karten.
+Wenn die Website für die Dokumentnachverfolgung aktiviert ist, werden standardmäßig Informationen angezeigt, wie z.B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Diese Art von Informationen kann sehr hilfreich sein, um festzulegen, wie die freigegebenen Dokumente verwendet und ob sie widerrufen werden sollen, wenn verdächtige Aktivitäten festgestellt werden. Aus Datenschutzgründen müssen diese Benutzerinformationen allerdings u.U. für einige oder alle Benutzer deaktiviert werden. 
 
--   https://&#42;.microsoftonline.com
+Wenn Benutzer vorhanden sind, bei denen die Nachverfolgung dieser Aktivität unterbunden werden soll, fügen Sie sie zu einer in Azure AD gespeicherten Gruppe hinzu, und legen Sie diese Gruppe mit dem Cmdlet [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup) fest. Wenn Sie dieses Cmdlet ausführen, dürfen Sie nur eine einzelne Gruppe angeben. Allerdings kann die Gruppe verschachtelte Gruppen enthalten. 
 
--   https://&#42;.microsoftonline-p.com
+Bei diesen Gruppenmitgliedern werden Aktivitäten im Zusammenhang mit Dokumenten, die andere für sie freigegeben haben, nicht auf Ihrer Website für die Dokumentnachverfolgung protokolliert. Darüber hinaus werden keine E-Mail-Benachrichtigungen an den Benutzer gesendet, der das Dokument freigegeben hat.
 
-## <a name="tracking-and-revoking-documents-for-users"></a>Nachverfolgen und Sperren von Dokumenten für Benutzer
+Wenn Sie diese Konfiguration verwenden, können alle Benutzer weiterhin die Website für die Dokumentnachverfolgung verwenden und den Zugriff auf die von ihnen geschützten Dokumente widerrufen. Sie können jedoch keine Aktivitäten von Benutzern einsehen, die Sie mit dem Cmdlet „Set-AadrmDoNotTrackUserGroup“ angegeben haben.
+
+Wenn Sie diese Option nicht mehr benötigen, können Sie das Cmdlet [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) verwenden. Um Benutzer selektiv zu entfernen, können Sie sie alternativ aus der Gruppe entfernen, müssen jedoch die [Gruppenzwischenspeicherung](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) berücksichtigen. Mithilfe von [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup) können Sie überprüfen, ob diese Option derzeit verwendet wird. Zum Ausführen dieser Cmdlets für diese Gruppenkonfiguration benötigen Sie mindestens Version **2.10.0.0** des AADRM-Moduls (Azure Rights Management) für PowerShell.
+
+Weitere Informationen zu den einzelnen Cmdlets finden Sie unter den angegebenen Links. Installationsanweisungen zum PowerShell-Modul finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md). Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
+
+
+<a id="destination-urls-used-by-the-document-tracking-site" class="xliff"></a>
+
+## Von der Website für die Dokumentnachverfolgung verwendete Ziel-URLs
+
+Die folgenden URLs dienen zum Nachverfolgen von Dokumenten und müssen auf allen Geräten und in allen Diensten zwischen den Clients zugelassen werden, auf denen der Azure Information Protection-Client und das Internet ausgeführt werden. Beispiel: Fügen Sie diese URLs zu Firewalls oder zu Ihren vertrauenswürdigen Websites hinzu, wenn Sie Internet Explorer mit erhöhter Sicherheit verwenden.
+
+-  `https://*.azurerms.com`
+
+- `https://*.microsoftonline.com`
+
+- `https://*.microsoftonline-p.com`
+
+- `https://ecn.dev.virtualearth.net`
+
+Dies sind die Standard-URLs für den Azure Rights Management-Dienst mit Ausnahme der URL virtualearth.net, die für Bing-Karten zur Anzeige des Benutzerstandorts verwendet wird.
+
+<a id="tracking-and-revoking-documents-for-users" class="xliff"></a>
+
+## Nachverfolgen und Sperren von Dokumenten für Benutzer
 
 Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe des Azure Information Protection-Clients oder der RMS-Freigabeanwendung freigegeben haben. Wenn Sie sich als Administrator für Azure Information Protection anmelden (globaler Administrator), können Sie auf das Adminsymbol klicken, um in den Administratormodus zu wechseln. So können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation freigegeben wurden:
 
@@ -56,7 +81,9 @@ Klicken Sie auf das **X** neben **Administratormodus beenden**, um den Administr
 
 Eine Anleitung zur Verwendung der Website zur Dokumentnachverfolgung finden Sie unter [Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung](client-track-revoke.md) im Benutzerhandbuch.
 
-## <a name="usage-logging-for-the-document-tracking-site"></a>Verwendungsprotokollierung für die Website zur Dokumentnachverfolgung
+<a id="usage-logging-for-the-document-tracking-site" class="xliff"></a>
+
+## Verwendungsprotokollierung für die Website zur Dokumentnachverfolgung
 
 Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokolldateien infrage: **AdminAction** und **ActingAsUser**.
 
@@ -71,8 +98,12 @@ Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokoll
 
 
 
-## <a name="next-steps"></a>Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 Nachdem Sie die Website für die Dokumentenverfolgung für den Azure Information Protection-Client konfiguriert haben, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:
+
+- [Anpassungen](client-admin-guide-customizations.md)
 
 - [Clientdateien und Nutzungsprotokollierung](client-admin-guide-files-and-logging.md)
 

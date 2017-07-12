@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,15 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
+<a id="step-5-see-sharing-of-protected-files-in-action-and-track-your-document" class="xliff"></a>
+
+# Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
 >*Gilt für: Azure Information Protection*
 
@@ -25,7 +29,9 @@ Verwenden Sie für diesen letzten Schritt des Tutorials ein Word-Dokument oder e
 
 Anschließend können Sie das Dokument sicher per E-Mail freigeben. 
 
-## <a name="to-safely-share-your-document-by-email"></a>So geben Sie Ihr Dokument sicher per E-Mail frei
+<a id="to-safely-share-your-document-by-email" class="xliff"></a>
+
+## So geben Sie Ihr Dokument sicher per E-Mail frei
 
 1. Klicken Sie im Datei-Explorer mit der rechten Maustaste auf das Dokument, und wählen Sie **Klassifizieren und schützen** aus. Das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** wird geöffnet:
 
@@ -63,7 +69,9 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
 Nachdem Sie Ihr geschütztes Dokument nun gesendet haben, bitten Sie die Empfänger, das Dokument anzunehmen und zu öffnen. 
 
-## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen.
+<a id="ask-your-recipients-to-open-the-emailed-document" class="xliff"></a>
+
+## Bitten Sie die Empfänger, das E-Mail-Dokument zu öffnen.
 
 Die Empfänger können das als E-Mail-Anlage gesendete, geschützte Dokument auf verschiedenen Geräten lesen. Die Geräte umfassen iPads, iPhones, Android-Tablets und -Smartphones sowie Macintosh- und Windows-Computer.
 
@@ -71,7 +79,9 @@ Bitten Sie die Empfänger, die gesendete E-Mail zu lesen. In der Annahme, dass d
 
 Wenn sie auf **Registrieren** klicken, prüft Azure Information Protection, ob ihre Organisation über ein Abonnement verfügt, das den Azure Rights Management-Datenschutzdienst umfasst. Wenn dies nicht der Fall ist, können sie ein kostenloses Konto beantragen.
 
-### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Anweisungen für Empfänger: So zeigen Sie die Anlage mit dem geschützten Dokument an
+<a id="instructions-for-recipient-to-view-the-protected-document-attachment" class="xliff"></a>
+
+### Anweisungen für Empfänger: So zeigen Sie die Anlage mit dem geschützten Dokument an
 
 1. Öffnen Sie die Anlage auf einem PC oder mobilen Gerät mit installiertem Office, um das Dokument zu lesen.  
 
@@ -83,7 +93,9 @@ Als optionalen Schritt kann der Empfänger die E-Mail an andere Personen weiterl
 
 Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfänger weitergeleitet hat, sind Sie bereit, Ihr Dokument nachzuverfolgen.
 
-## <a name="to-track-your-protected-document"></a>So verfolgen Sie das geschützte Dokument
+<a id="to-track-your-protected-document" class="xliff"></a>
+
+## So verfolgen Sie das geschützte Dokument
 
 1.  Öffnen Sie das Dokument, das Sie geschützt und freigegeben haben. Das Informationsbanner bestätigt die benutzerdefinierten Schutzeinstellungen, die Sie angegeben haben:
 
@@ -116,12 +128,14 @@ Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das ge
 |Verwenden der Website zur Dokumentennachverfolgung|[Nachverfolgen und Widerrufen Ihrer Dokumente](../rms-client/client-track-revoke.md)
 
 
-## <a name="next-steps"></a>Nächste Schritte
+<a id="next-steps" class="xliff"></a>
+
+## Nächste Schritte
 
 Nun, da Sie die standardmäßige Azure Information Protection-Richtlinie gesehen haben, und jetzt wissen, wie Sie sie anpassen können und wie das Bezeichnen in einem Word-Dokument funktioniert, testen Sie doch einige der anderen Einstellungen und lernen Sie die Funktionsweise der Office-Apps kennen, die Azure Information Protection verwenden: Excel, PowerPoint, Outlook. Falls diese Anwendungen geöffnet waren, als Sie den Azure Information Protection-Client installiert haben, schließen Sie sie, und öffnen Sie sie erneut, bevor Sie sie mit Azure Information Protection verwenden.
 
 Geben Sie weitere Dokumente frei, und verfolgen Sie deren Verwendung. Testen Sie auch den Widerruf von Dokumenten.
 
-Es empfiehlt sich zudem, einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) sein. 
+Es empfiehlt sich zudem, im Azure-Portal zur Seite **Schnellstart** zurückzukehren und einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md) sein. 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
