@@ -10,9 +10,7 @@ Sobald der Empfänger auf den Link klickt, wird er weitergeleitet und erhält An
 
 ![RM-Lernprogramm – Screenshots](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-<a id="to-view-the-protected-document-attachment" class="xliff"></a>
-
-#### So zeigen Sie die Anlage des geschützten Dokuments an
+#### <a name="to-view-the-protected-document-attachment"></a>So zeigen Sie die Anlage des geschützten Dokuments an
 
 1.  Da die mit Azure Rights Management geschützte Datei ein Word-Dokument ist, verfügt die E-Mail über zwei Anlagen. Es handelt sich tatsächlich um zwei Versionen derselben Datei, aber mit unterschiedlichen Dateierweiterungen. Öffnen Sie die Version, die über die Dateinamenerweiterung **.ppdf** verfügt (**Confidential.ppdf**).
 

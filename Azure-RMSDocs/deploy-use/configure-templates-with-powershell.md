@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="powershell-reference-for-custom-templates" class="xliff"></a>
-
-# PowerShell-Referenz für benutzerdefinierte Vorlagen
+# <a name="powershell-reference-for-custom-templates"></a>PowerShell-Referenz für benutzerdefinierte Vorlagen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -55,9 +53,7 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Siehe auch
+## <a name="see-also"></a>Siehe auch
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
-
-# Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
+# <a name="create-configure-and-publish-a-custom-template"></a>Erstellen, Konfigurieren und Veröffentlichen einer benutzerdefinierten Vorlage
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -34,9 +32,7 @@ Sie müssen über globale Administratorrechte verfügen, um Vorlagen im klassisc
 
 Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Rights Management zu erstellen, zu konfigurieren und zu veröffentlichen.
 
-<a id="to-create-a-custom-template" class="xliff"></a>
-
-## So erstellen Sie eine benutzerdefinierte Vorlage
+## <a name="to-create-a-custom-template"></a>So erstellen Sie eine benutzerdefinierte Vorlage
 
 1.  Je nachdem, ob Sie sich beim Office 365 Admin Center oder beim klassischen Azure-Portal angemeldet haben, führen Sie eine der folgenden Aktionen aus:
 
@@ -76,9 +72,7 @@ Verwenden Sie die folgenden Verfahren, um benutzerdefinierte Vorlagen für Right
 
 4. Klicken Sie auf der Schnellstartseite **Erste Schritte mit der Rechteverwaltung** auf **Vorlagen für Benutzerrechterichtlinien verwalten**. Ihre neu erstellte Vorlage wird mit dem Status **Archiviert**in der Liste der Vorlagen angezeigt. Zu diesem Zeitpunkt ist die Vorlage zwar erstellt, aber noch nicht konfiguriert und für die Benutzer noch nicht sichtbar.
 
-<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
-
-## So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
+## <a name="to-configure-and-publish-a-custom-template"></a>So konfigurieren und veröffentlichen Sie eine benutzerdefinierte Vorlage
 
 1.  Wählen Sie auf der Seite **VORLAGEN** im klassischen Azure-Portal Ihre neu erstellte Vorlage aus.
 
@@ -170,9 +164,7 @@ Um Änderungen an Ihrer Vorlage vorzunehmen, wählen Sie diese aus, und verwende
 > [!WARNING]
 > Wenn Sie Änderungen an einer zuvor gespeicherten Vorlage vornehmen, werden diese Vorlagenänderungen bei Clients erst sichtbar, nachdem die Vorlagen auf deren Computern aktualisiert wurden. Weitere Informationen finden Sie unter [Aktualisieren von Vorlagen für Benutzer](refresh-templates.md).
 
-<a id="see-also" class="xliff"></a>
-
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren benutzerdefinierter Vorlagen für Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

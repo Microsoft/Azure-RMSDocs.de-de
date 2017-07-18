@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
-
-# Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
+# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
