@@ -4,7 +4,7 @@ description: "Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f49d00317503f23d03ae64aa3608375b871b3854
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -72,7 +72,7 @@ Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen sowie zum Konfigurieren
 
 - Das Attribut **Azure AD proxyAddresses** speichert alle E-Mail-Adressen für ein Konto und kann auf unterschiedliche Weise aufgefüllt werden. Ein Benutzer in Office 365, der über ein Exchange Online-Postfach verfügt, erhält beispielsweise automatisch eine E-Mail-Adresse, die in diesem Attribut gespeichert ist. Wenn Sie einem Office 365-Benutzer eine alternative E-Mail-Adresse zuweisen, wird diese ebenfalls in diesem Attribut gespeichert. Das Attribut kann auch durch Synchronisierung mit den E-Mail-Adressen lokaler Konten aufgefüllt werden. 
     
-    Azure Information Protection kann beliebige Werte im Attribut „Azure AD proxyAddresses“ verwenden, wenn die Domäne Ihrem Mandanten hinzugefügt wurde („überprüfte Domäne“). Weitere Informationen zum Überprüfen von Domänen finden Sie unter:
+    Azure Information Protection kann beliebige Werte im Attribut „Azure AD proxyAddresses“ verwenden, vorausgesetzt die Domäne wurde Ihrem Mandanten hinzugefügt („überprüfte Domäne“). Weitere Informationen zum Überprüfen von Domänen finden Sie unter:
     
     - Für Azure AD: [Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/active-directory/active-directory-add-domain)
     
@@ -88,13 +88,13 @@ Azure Information Protection verwendet die Attribute „Azure AD proxyAddresses�
 
 Für die Zuweisung von Bezeichnungen:
 
-- Sie können alle Arten von Gruppen in Azure AD verwenden, um bereichsbezogene Richtlinien zu konfigurieren, über die Gruppenmitgliedern weitere Bezeichnungen zugewiesen werden.
+- Um bereichsbezogene Richtlinien zu konfigurieren, die Gruppenmembern zusätzliche Bezeichnungen zuweisen, können Sie alle Arten von Gruppen in Azure AD verwenden, die über eine E-Mail-Adresse einer überprüften Domäne für den Mandanten des Benutzers verfügen. Eine Gruppe mit einer E-Mail-Adresse wird häufig als E-Mail-aktivierte Gruppe bezeichnet.
+    
+    Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine Verteilergruppe (statisch oder dynamisch) und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Typ keine E-Mail-Adresse besitzt.
 
 Für die Zuweisung von Nutzungsrechten und Zugriffssteuerungen:
 
 - Sie können alle Arten von Gruppen in Azure AD verwenden, die über eine E-Mail-Adresse einer überprüften Domäne für den Mandanten des Benutzers verfügen. Eine Gruppe mit einer E-Mail-Adresse wird häufig als E-Mail-aktivierte Gruppe bezeichnet. 
-    
-    Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine Verteilergruppe (statisch oder dynamisch) und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Typ keine E-Mail-Adresse besitzt.
 
 Zum Deaktivieren des Azure Rights Management-Diensts:
 
