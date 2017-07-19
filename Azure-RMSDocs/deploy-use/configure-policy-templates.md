@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-and-managing-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-# Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie
+# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
@@ -43,9 +41,7 @@ Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlin
 - Rights Management-Vorlagen für Ihren Mandanten werden als Bezeichnungen angezeigt. Konfigurationseinstellungen speziell für die Klassifizierung und Bezeichnung sind zurzeit ebenfalls verfügbar. 
 
 
-<a id="considerations-for-templates-in-the-azure-portal" class="xliff"></a>
-
-## Überlegungen zu Vorlagen im Azure-Portal
+## <a name="considerations-for-templates-in-the-azure-portal"></a>Überlegungen zu Vorlagen im Azure-Portal
 
 Bevor Sie diese Vorlagen im Azure-Portal bearbeiten oder in Bezeichnungen konvertieren, beachten Sie bei der Verwaltung von Vorlagen im klassischen Azure-Portal die folgenden Änderungen an der Implementierung. Während der Vorschau werden voraussichtlich einige Beschränkungen aufgelöst:
 
@@ -69,9 +65,7 @@ Bevor Sie diese Vorlagen im Azure-Portal bearbeiten oder in Bezeichnungen konver
 
 - Statt eine neue Vorlage über den **Vorlagen**-Container zu erstellen, erstellen Sie eine Bezeichnung, die die Einstellung **Schützen** aufweist, und konfigurieren Sie die Nutzungsrechte und -einstellungen auf dem Blatt **Schutz**. Vollständige Anweisungen finden Sie unter [Erstellen einer neuen Vorlage](#to-create-a-new-template).
 
-<a id="to-configure-the-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-## Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
+## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
 1. Melden Sie sich in einem neuen Browserfenster als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an.
 
@@ -93,9 +87,7 @@ Bevor Sie diese Vorlagen im Azure-Portal bearbeiten oder in Bezeichnungen konver
 
 6. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Veröffentlichen**, um Ihre Änderungen für Benutzeranwendungen und -dienste verfügbar zu machen.
 
-<a id="to-convert-templates-to-labels" class="xliff"></a>
-
-## Konvertieren von Vorlagen in Bezeichnungen
+## <a name="to-convert-templates-to-labels"></a>Konvertieren von Vorlagen in Bezeichnungen
 
 Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst, können Sie eine Vorlage in eine Bezeichnung konvertieren. Dabei wird die ursprüngliche Vorlage beibehalten, jedoch im Azure-Portal nun als in einer neuen Bezeichnung enthalten angezeigt.
 
@@ -115,9 +107,7 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 - Die Originalvorlage wird nicht mehr unter **Vorlagen** angezeigt. Um diese im Azure-Portal zu bearbeiten, bearbeiten Sie nun die erstellte Bezeichnung. Die Vorlage ist weiterhin für den Azure Rights Management-Dienst verfügbar und kann nach wie vor mit [PowerShell-Befehlen](administer-powershell.md) verwaltet werden.  
 
-<a id="to-create-a-new-template" class="xliff"></a>
-
-## So erstellen Sie eine neue Vorlage
+## <a name="to-create-a-new-template"></a>So erstellen Sie eine neue Vorlage
 
 Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure RMS** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die in Rights Management-Vorlagen integriert werden, zugegriffen werden.
 
@@ -138,9 +128,7 @@ Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure RMS** erstellen
 5. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Veröffentlichen**, um diese Vorlagen für Benutzeranwendungen und -dienste verfügbar zu machen.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Wie bei allen Änderungen an der Azure Information Protection-Richtlinie kann es bis zu 15 Minuten dauern, bis der Download dieser Vorlagen auf einem Computer abgeschlossen ist, auf dem der Azure Information Protection-Client ausgeführt wird. Informationen zum Herunterladen und Aktualisieren von Vorlagen durch Computer und Dienste finden Sie unter [Aktualisieren von Vorlagen für Benutzer und Dienste](refresh-templates.md).
 

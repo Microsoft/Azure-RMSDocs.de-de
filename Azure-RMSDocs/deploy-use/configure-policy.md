@@ -18,17 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-azure-information-protection-policy" class="xliff"></a>
-
-# Konfigurieren der Azure Information Protection-Richtlinie
+# <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
 Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist.
 
-<a id="subscription-support" class="xliff"></a>
-
-## Abonnementsupport
+## <a name="subscription-support"></a>Abonnementsupport
 
 Die Azure Information Protection-Richtlinie unterstützt verschiedene Abonnementebenen:
 
@@ -46,9 +42,7 @@ Weitere Informationen zu Abonnements finden Sie unter [Welches Abonnement benöt
 
 Weitere Informationen zum Konfigurieren von bereichsbezogenen Richtlinien finden Sie unter [Konfigurieren der Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md).
 
-<a id="how-to-configure-the-azure-information-protection-policy" class="xliff"></a>
-
-## Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
+## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
 1. Melden Sie sich in einem neuen Browserfenster als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an.
 
@@ -91,9 +85,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 >[!NOTE]
 >Wenn der Client die Richtlinie herunterlädt, sollten Sie mit einigen Minuten Wartezeit rechnen, bevor sie vollständig einsatzbereit ist. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Richtlinienkonfiguration und der Netzwerkkonnektivität ab. Wenn die resultierende Aktion Ihrer Bezeichnungen nicht mit Ihren letzten Änderungen übereinstimmt, sollten Sie bis zu 15 Minuten warten und es dann erneut versuchen.
 
-<a id="configuring-your-organizations-policy" class="xliff"></a>
-
-### Konfigurieren der Richtlinie Ihrer Organisation
+### <a name="configuring-your-organizations-policy"></a>Konfigurieren der Richtlinie Ihrer Organisation
 
 Über die folgenden Links können Sie auf Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zugreifen:
 
@@ -119,9 +111,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md)
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
