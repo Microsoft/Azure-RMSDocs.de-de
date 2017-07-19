@@ -4,21 +4,19 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
-
-# Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
 >*Gilt für: Azure Information Protection*
 
@@ -46,13 +44,11 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-labelsv2.png)
     
-    Darüber hinaus werden einige Richtlinieneinstellungen nicht festgelegt, sodass zum Beispiel nicht alle Dokumente und E-Mails Bezeichnungen aufweisen müssen, es keine Standardbezeichnung gibt und Benutzer keine Begründung angeben müssen, wenn sie Bezeichnungen ändern:
+    Zusätzlich gibt es einige Richtlinieneinstellungen, die nicht festgelegt sind. Zum Beispiel müssen nicht alle Dokumente und E-Mails Bezeichnungen aufweisen, es gibt keine Standardbezeichnung und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-settings.png)
 
-<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
-
-## Ändern der Einstellungen für eine Standardbezeichnung und Aufforderung zur Eingabe einer Begründung
+## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Ändern der Einstellungen für eine Standardbezeichnung und Aufforderung zur Eingabe einer Begründung
 
 Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Sie sehen, wie diese funktionieren:
 
@@ -62,9 +58,7 @@ Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Si
 
 2. Legen Sie **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten) auf **Ein** fest.
 
-<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
-
-## Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Konfigurieren einer Bezeichnung für den Schutz, eines Wasserzeichens und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung
 
 Wir ändern nun die Einstellungen der untergeordneten Bezeichnung **All Employees** (Alle Mitarbeiter) aus der Hauptbezeichnung **Confidential** (Vertraulich). 
 
@@ -82,9 +76,11 @@ Wenn die Bezeichnung **Confidential** (Vertraulich) nicht über untergeordnete B
     
     Daraufhin öffnet sich das Blatt **Schutz**.
     
-3. Achten Sie darauf, dass auf dem Blatt **Schutz** die Optionen **Azure RMS** und **Vorlage auswählen** ausgewählt sind. Klicken Sie dann auf das Dropdownfeld, und wählen Sie die Standardvorlage **\<Name Ihrer Organisation> – Vertraulich** aus.     
+3. Stellen Sie auf dem Blatt **Schutz** sicher, dass **Azure RMS** ausgewählt ist und **Vordefinierte Vorlage auswählen** ebenso. Klicken Sie auf das Dropdown-Feld, und wählen Sie die Standardvorlage aus, mit der alle Benutzer in Ihrer Organisation geschützten Inhalt anzeigen und bearbeiten können. 
     
-    Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
+    Wenn Sie kürzlich den Azure Rights Management-Dienst aktiviert haben, wird diese Vorlage **Confidential (Vertraulich)\Alle Mitarbeiter** genannt. 
+    
+    Wenn der Azure Rights Management-Dienst bereits aktiviert wurde, bevor Sie dieses Tutorial gestartet haben, kann die Standardvorlage **\<Name Ihrer Organisation > – Vertraulich** genannt werden. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
     
     ![Schnellstarttutorial für Azure Information Protection Schritt 3 – Festlegen des Azure RMS-Schutzes](../media/step2-select-rms-template.png)
     

@@ -5,7 +5,7 @@ keywords: "Einige häufig gestellte Fragen, die Ihnen beim Verwenden der Azure I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 07/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ea28525653966d2de609c118bd18079cff99b2d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: dc6b9ee8c557ce04019534c4713c526265c207e0
+ms.sourcegitcommit: 0b097f0817fee0fb025caef3c46fdd887c782a43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android
 
@@ -60,7 +60,9 @@ Bisher nicht. Derzeit können Sie sich nur mit Ihrer geschäftlichen E-Mail-Adre
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Welche Dateierweiterungen kann ich mit dieser App öffnen?
 
-Sie können Dateien mit den Erweiterungen „.rpmsg“, „.pdf“, „.ppdf“, „.pjpg“, „.ptxt“ sowie viele weitere Text- und Bilddateiformate öffnen.
+Sie können Dateien mit den Erweiterungen „.rpmsg“, „.pdf“, „.ppdf“, „.pjpg“, „.pjpeg“, „.ptiff“, „.ppng“, „.ptxt“, „.pxml“ sowie viele weitere Text- und Bilddateiformate öffnen.
+
+Die vollständige Liste der Dateinamenerweiterungen für Text- und Bilddateien finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) des Administratorhandbuchs.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>Wie gebe ich Feedback zu dieser App?
 
