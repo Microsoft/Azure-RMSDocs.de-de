@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-labels-for-different-languages-in-azure-information-protection" class="xliff"></a>
-
-# Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
+# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
@@ -29,9 +27,7 @@ Standardmäßig wird für die Namen und Beschreibungen von Bezeichnungen eine ei
 
 Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Office und Windows entsprechen. Diese Bezeichnungsnamen und Beschreibungen werden dann in Office-Apps in der Azure Information Protection-Leiste bzw. im Dialogfeld **Klassifizierung und Schutz – Azure Information Protection** angezeigt. Weitere Informationen über die gewählte Sprache finden Sie auf dieser Seite im Abschnitt [Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client](#how-the-azure-information-protection-client-determines-the-language-to- display). 
 
-<a id="to-configure-labels-to-display-in-different-languages" class="xliff"></a>
-
-## Konfigurieren von Bezeichnungen zur Anzeige in verschiedenen Sprachen
+## <a name="to-configure-labels-to-display-in-different-languages"></a>Konfigurieren von Bezeichnungen zur Anzeige in verschiedenen Sprachen
 
 1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
     
@@ -66,9 +62,7 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
     
     Wenn der Import abgeschlossen ist, werden die lokalisierten Bezeichnungsnamen und Beschreibungen für Benutzer nach der Veröffentlichung der Azure Information Protection-Richtlinie heruntergeladen. Auf dem Blatt **Globale Richtlinie** oder **Bereichsbezogene Richtlinien** können Sie auf **Veröffentlichen** klicken.
 
-<a id="how-the-azure-information-protection-client-determines-the-language-to-display" class="xliff"></a>
-
-## Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client
+## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client
 
 Wenn Benutzer eine Azure Information Protection-Richtlinie mit verschiedenen unterstützten Sprachen herunterladen, wird die Sprache, in denen Bezeichnungsnamen und QuickInfos für Benutzer angezeigt werden, gemäß folgender Logik ausgewählt:
 
@@ -84,9 +78,7 @@ Wenn Benutzer eine Azure Information Protection-Richtlinie mit verschiedenen unt
 
 - Wenn keine direkte Übereinstimmung für die Sprache ihres Betriebssystems gefunden wird, werden Bezeichnungsnamen und Beschreibungen in der Sprache angezeigt, die Sie für alle Benutzer standardmäßig festgelegt haben. Bei dieser Sprache handelt es sich in der Regel um Englisch. Diese Sprache wird in der Standardrichtlinie verwendet.
 
-<a id="when-localized-label-names-are-not-used" class="xliff"></a>
-
-## Fälle, in denen lokalisierte Bezeichnungsnamen nicht verwendet werden
+## <a name="when-localized-label-names-are-not-used"></a>Fälle, in denen lokalisierte Bezeichnungsnamen nicht verwendet werden
 
 In folgenden Szenarien werden Namen für lokalisierte Bezeichnungen (und untergeordnete Bezeichnungen) nicht verwendet. Um Konsistenz innerhalb Ihres Mandanten sicherzustellen, wird die Standardsprache immer für Folgendes verwendet:
 
@@ -97,9 +89,7 @@ In folgenden Szenarien werden Namen für lokalisierte Bezeichnungen (und unterge
 - Dokumentmetadaten und E-Mail-Header
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
