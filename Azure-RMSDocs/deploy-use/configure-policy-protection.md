@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-# Konfigurieren einer Bezeichnung für Rights Management-Schutz
+# <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 >*Gilt für: Azure Information Protection*
 
@@ -26,9 +24,7 @@ Schützen Sie Ihre vertraulichen Dokumente und E-Mails mithilfe der Verschlüsse
 
 Bei der Vorlage kann es sich um eine der beim Aktivieren von Azure Rights Management automatisch erstellten Standardvorlagen oder um eine benutzerdefinierte Vorlage handeln. Azure Rights Management-Abteilungsvorlagen werden unterstützt, wenden den Schutz jedoch nur an, wenn der Verfasser des Dokuments oder der E-Mail zum konfigurierten Bereich der Vorlage gehört. Wenn der Benutzer nicht zu diesem Bereich gehört, wird in einer Meldung angezeigt, dass Azure Information Protection die Bezeichnung nicht anwenden kann.
 
-<a id="how-the-protection-works" class="xliff"></a>
-
-## Funktionsweise des Schutzes
+## <a name="how-the-protection-works"></a>Funktionsweise des Schutzes
 
 Wenn ein Dokument oder eine E-Mail mit Rights Management geschützt wird, werden die Inhalte in ruhendem Zustand und während der Übertragung verschlüsselt. Eine Entschlüsselung ist nur durch autorisierte Benutzer möglich. Diese Verschlüsselung wird auch dann beibehalten, wenn das Dokument oder die E-Mail umbenannt wird. Darüber hinaus können Sie Nutzungsrechte und Einschränkungen konfigurieren. Nachfolgend sind einige Beispiele aufgeführt:
 
@@ -54,9 +50,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 - Für lokales Exchange müssen Sie den [RMS-Connector bereitstellen und Ihre Exchange-Server konfigurieren](../deploy-use/deploy-rms-connector.md). 
 
 
-<a id="to-configure-a-label-for-rights-management-protection" class="xliff"></a>
-
-## Konfigurieren einer Bezeichnung für Rights Management-Schutz
+## <a name="to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
 
@@ -125,9 +119,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 
 13. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 

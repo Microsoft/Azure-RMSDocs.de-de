@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 06/30/2017
 ---
-<a id="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application" class="xliff"></a>
-
-# Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
+# <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
@@ -43,9 +41,7 @@ Ab der RMS-Version von Oktober 2013 können Sie Dokumente nativ mithilfe von Off
 
 Informationen zur Bereitstellung finden Sie unter [Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application).
 
-<a id="levels-of-protection--native-and-generic" class="xliff"></a>
-
-## Schutzebenen – systemeigen und generisch
+## <a name="levels-of-protection--native-and-generic"></a>Schutzebenen – systemeigen und generisch
 Die Microsoft Rights Management-Freigabeanwendung unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
 |Typ des Schutzes|Systemeigenes Format|Generisch|
@@ -55,9 +51,7 @@ Die Microsoft Rights Management-Freigabeanwendung unterstützt den Schutz auf zw
 |Standard für Dateitypen|Dies ist die Standardschutzebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt: [Unterstützte Dateitypen und Dateinamenerweiterungen](#supported-file-types-and-file-name-extensions).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den vollständigen Schutz unterstützt werden.|
 Sie können die Standardschutzebene ändern, die die RMS-Freigabeanwendung anwendet. Sie können die Standardebene von systemeigen zu generisch oder von generisch zu systemeigen ändern und sogar verhindern, dass die RMS-Freigabeanwendung Schutz anwendet. Weitere Informationen finden Sie im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files) dieses Artikels.
 
-<a id="supported-file-types-and-file-name-extensions" class="xliff"></a>
-
-## Unterstützte Dateitypen und Dateinamenerweiterungen
+## <a name="supported-file-types-and-file-name-extensions"></a>Unterstützte Dateitypen und Dateinamenerweiterungen
 Die folgende Tabelle enthält die Dateitypen, die systemeigen von der Microsoft Rights Management-Freigabeanwendung unterstützt werden. Für diese Dateitypen wird die ursprüngliche Namenserweiterung geändert, wenn systemeigener Schutz angewendet wird, und diese Dateien schreibgeschützt werden.
 
 Wenn die RMS-Freigabeanwendung darüber hinaus systemeigen eine Word-, Excel- oder PowerPoint-Datei schützt, die Benutzer durch Freigabe schützen, erstellt diese Aktion automatisch eine zweite Datei, die eine Kopie des Originals mit demselben Namen darstellt, aber mit der **PPDF** -Dateinamenerweiterung ¹. Diese Version der Datei stellt sicher, dass der Empfänger, die die RMS-Freigabeanwendung installiert, immer die Datei öffnen kann, die über systemeigenen Schutz verfügt.
@@ -90,9 +84,7 @@ In der folgende Tabelle werden die Dateitypen aufgeführt, die von der Microsoft
 |----------------------------------|----------------------------------|
 |DOC<br /><br />DOCM<br /><br />DOCX<br /><br />DOT<br /><br />DOTM<br /><br />DOTX<br /><br />POTM<br /><br />POTX<br /><br />PPS<br /><br />PPSM<br /><br />PPSX<br /><br />PPT<br /><br />PPTM|PPTX<br /><br />THMX<br /><br />XLA<br /><br />XLAM<br /><br />XLS<br /><br />XLSB<br /><br />XLT<br /><br />XLSM<br /><br />XLSX<br /><br />XLTM<br /><br />XLTX<br /><br />XPS|
 
-<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
-
-### Ändern der Standardschutzebene von Dateien
+### <a name="changing-the-default-protection-level-of-files"></a>Ändern der Standardschutzebene von Dateien
 Sie können ändern, wie die RMS-Freigabeanwendung Dateien durch Bearbeiten der Registrierung schützt. Beispielsweise können Sie erzwingen, dass Dateien, die systemeigenen Schutz unterstützen, durch die RMS-Freigabeanwendung generisch geschützt werden.
 
 Dafür kann es folgende Gründe geben:
@@ -139,9 +131,7 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 -   **Off**: Schutz blockieren
 
-<a id="see-also" class="xliff"></a>
-
-## Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
