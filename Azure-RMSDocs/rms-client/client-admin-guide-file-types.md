@@ -12,17 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4f187b3fa991fb4ed3a11ded34fa663dc6b4bafc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: cf36e96ff7399188818ef0afdbefc223a82b9900
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/17/2017
 ---
-<a id="file-types-supported-by-the-azure-information-protection-client" class="xliff"></a>
+# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Vom Azure Information Protection-Client unterstützte Dateitypen
 
-# Vom Azure Information Protection-Client unterstützte Dateitypen
-
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
+>*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Der Azure Information Protection-Client kann Folgendes auf Dokumente und E-Mails anwenden:
 
@@ -34,9 +32,7 @@ Der Azure Information Protection-Client kann Folgendes auf Dokumente und E-Mails
 
 Verwenden Sie die folgenden Informationen, um zu überprüfen, welche Dateitypen unterstützt werden, welche verschiedenen Schutzebenen verwendet werden, wie die Standardschutzebene geändert wird und welche Dateien automatisch von der Klassifizierung und dem Schutz ausgeschlossen (übersprungen) werden.
 
-<a id="file-types-supported-for-classification-only" class="xliff"></a>
-
-## Nur für die Klassifizierung unterstützte Dateitypen
+## <a name="file-types-supported-for-classification-only"></a>Nur für die Klassifizierung unterstützte Dateitypen
 
 Die ausschließliche Klassifizierung wird für die folgenden Dateitypen unterstützt. Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie auch geschützt sind (weitere Informationen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection)).
 
@@ -61,9 +57,7 @@ Die ausschließliche Klassifizierung wird für die folgenden Dateitypen unterst�
 
 - **Digital Negative**: .dng
 
-<a id="file-types-supported-for-protection" class="xliff"></a>
-
-## Für den Schutz unterstützte Dateitypen
+## <a name="file-types-supported-for-protection"></a>Für den Schutz unterstützte Dateitypen
 
 Der Azure Information Protection-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
@@ -77,9 +71,7 @@ Sie können die Standardschutzebene ändern, die der Azure Information Protectio
 
 Dieser Datenschutz kann automatisch angewendet werden, wenn ein Benutzer eine vom Administrator konfigurierte Bezeichnung auswählt. Benutzer können mithilfe von [Berechtigungsstufen](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels) auch eigene Schutzeinstellungen angeben. 
 
-<a id="file-sizes-supported-for-protection" class="xliff"></a>
-
-### Für den Schutz unterstützte Dateigrößen
+### <a name="file-sizes-supported-for-protection"></a>Für den Schutz unterstützte Dateigrößen
 
 Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Protection-Client unterstützt.
 
@@ -91,11 +83,13 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
     |Excel 2007 (nur von AD RMS unterstützt)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-Bit: 2 GB<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt|
     |PowerPoint 2007 (nur von AD RMS unterstützt)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
 
-- **Bei allen anderen Dateien**: 1 GB
+- **Bei allen anderen Dateien**:
+    
+    - Bei der allgemein verfügbaren Version des Clients: 1 GB
+    
+    - Beim Client der Vorschauversion (Mindestversion **1.8.41.0**): Nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
 
-<a id="supported-file-types-for-classification-and-protection" class="xliff"></a>
-
-### Unterstützte Dateitypen für Klassifizierung und Schutz
+### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 
 Die folgende Tabelle enthält eine Teilmenge der Typen von Dateien, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und die auch klassifiziert werden können. 
 
@@ -128,9 +122,7 @@ Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien
 |----------------------------------|----------------------------------|
 |DOC<br /><br />DOCM<br /><br />DOCX<br /><br />DOT<br /><br />DOTM<br /><br />DOTX<br /><br />POTM<br /><br />POTX<br /><br />PPS<br /><br />PPSM<br /><br />PPSX<br /><br />PPT<br /><br />PPTM|PPTX<br /><br />THMX<br /><br />XLA<br /><br />XLAM<br /><br />XLS<br /><br />XLSB<br /><br />XLT<br /><br />XLSM<br /><br />XLSX<br /><br />XLTM<br /><br />XLTX<br /><br />XPS|
 
-<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
-
-### Ändern der Standardschutzebene von Dateien
+### <a name="changing-the-default-protection-level-of-files"></a>Ändern der Standardschutzebene von Dateien
 Sie können ändern, wie der Azure Information Protection-Client Dateien durch Bearbeiten der Registrierung schützt. Beispielsweise können Sie erzwingen, dass Dateien, die systemeigenen Schutz unterstützen, durch den Azure Information Protection-Client generisch geschützt werden.
 
 Dafür kann es folgende Gründe geben:
@@ -179,9 +171,7 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 Weitere Informationen finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. 
 
-<a id="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client" class="xliff"></a>
-
-## Dateitypen, die von der Klassifizierung und vom Schutz durch den Azure Information Protection-Client ausgeschlossen sind
+## <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client"></a>Dateitypen, die von der Klassifizierung und vom Schutz durch den Azure Information Protection-Client ausgeschlossen sind
 
 Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Computer entscheidend sind, werden einige Dateitypen und Ordner von der Klassifizierung und dem Schutz automatisch ausgeschlossen. Wenn Benutzer versuchen, diese Dateien zu klassifizieren oder zu schützen, wird eine Meldung angezeigt, dass diese Dateien ausgeschlossen sind.
 
@@ -194,9 +184,7 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
     - \AppData (für alle Benutzer)
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Nächste Schritte
+## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protection-Client unterstützt werden, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:
 
 - [Anpassungen](client-admin-guide-customizations.md)
