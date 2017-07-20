@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2017
+ms.date: 07/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23a6e3a2ca5efb6718d4d1fc33312cd481eec000
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 666ea0288a06b7a7e7f25b4a6cff0ac62888587c
+ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/18/2017
 ---
-<a id="information-and-support-for-azure-information-protection" class="xliff"></a>
-
-# Informationen zu und Unterstützung von Azure Information Protection
+# <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -30,13 +28,11 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |----------------|---------------|
 |Empfohlene Dokumentation für den Dienst anzeigen|Verwenden Sie die Startseite der [Azure Information Protection-Dokumentation](https://docs.microsoft.com/information-protection/).|
 |Feedback zur Dokumentation bereitstellen oder eine Frage zur Dokumentation stellen|E-Mail an [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
-|Tweets zu Azure Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen aus der Produktgruppe erhalten|Folgen Sie [@DanPlastina](https://twitter.com/DanPlastina), der bei der Leitung des Azure Information Protection-Teams bei Microsoft hilft.|
+|Tweets aus der Produktgruppe zu Azure Information Protection sowie Ankündigungen von Dokumentationsaktualisierungen erhalten|Folgen Sie [@DanPlastina](https://twitter.com/DanPlastina), der bei der Leitung des Azure Information Protection-Teams bei Microsoft hilft.|
 |Abonnementinformationen und die unterstützten Features überprüfen|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
 
-<a id="information-about-new-releases-and-updated-documentation" class="xliff"></a>
-
-## Informationen zu neuen Versionen und aktualisierter Dokumentation
+## <a name="information-about-new-releases-and-updated-documentation"></a>Informationen zu neuen Versionen und aktualisierter Dokumentation
 Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im [Enterprise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
 Außerdem finden Sie Informationen zu neuen Funktionen und Vorschauen auf der [Azure Information Protection Yammer-Website](https://www.yammer.com/AskIPTeam), auf der Sie auch neue Funktionen anfordern können.
@@ -46,14 +42,10 @@ Am Ende jedes Monats wird eine Zusammenfassung aller Änderungen an der Dokument
 > [!TIP]
 > Wenn Sie Anwendungen entwickeln, in denen Microsoft Rights Management Services (Azure RMS oder AD RMS) verwendet werden, haben Sie möglicherweise auch Interesse an dem englischsprachigen Blog [Active Directory Rights Management Services (AD RMS) Developer's Corner](https://blogs.msdn.microsoft.com/rms/).
 
-<a id="support-options-and-community-resources" class="xliff"></a>
-
-## Supportoptionen und Communityressourcen
+## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
 
-<a id="to-contact-microsoft-support" class="xliff"></a>
-
-### So kontaktieren Sie den Microsoft Support
+### <a name="to-contact-microsoft-support"></a>So kontaktieren Sie den Microsoft Support
 
 Wenn Sie über Premier Support verfügen, besuchen Sie das [Portal für Premier Support-Kunden](https://premier.microsoft.com/), um Incidents zu melden, nach Lösungen zu suchen und Hilfe anzufordern.
 
@@ -71,9 +63,7 @@ Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, ab
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
 
 
-<a id="self-help" class="xliff"></a>
-
-### Selbsthilfe
+### <a name="self-help"></a>Selbsthilfe
 
 Videos auf Abruf:
 
@@ -93,13 +83,9 @@ Problembehandlung:
 
 - Für den Azure Information Protection-Client für Windows: Siehe Abschnitt [Zusätzliche Prüfungen und Problembehandlung](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting) im Administratorhandbuch.
 
-- Für automatisierte Überprüfungen, die automatische Wiederherstellung und die Ablaufverfolgung: Laden Sie das [RMS Analyzer-Tool](http://www.microsoft.com/en-us/download/details.aspx?id=46437) herunter, und führen Sie es aus. Weitere Informationen zu diesem Tool finden Sie auf der Downloadseite unter **Details** und **Installationsanweisungen**. 
+### <a name="community-resources"></a>Communityressourcen
 
-<a id="community-resources" class="xliff"></a>
-
-### Communityressourcen
-
-Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam), auf der Sie direkte Antworten vom Azure Information Protection-Team erhalten und von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater profitieren.
+Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht Ihnen, direkte Antworten vom Azure Information Protection-Team zu erhalten und von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater zu profitieren.
 
 Wenn Sie keinen Zugriff auf Yammer haben, versuchen Sie es mit dem [TechNet-Forum für Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
