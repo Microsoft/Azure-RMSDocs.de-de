@@ -4,17 +4,17 @@ description: "Schritt 4 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: 5ceb351e72ec30015697d2b27111ae76fb3b2b58
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Schritt 4: Klassifizierung, Bezeichnung und Schutz in Aktion 
 
@@ -80,9 +80,7 @@ Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokum
 |Weitere Informationen zu|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Vollständige Anweisungen zum Bezeichnen und Schützen von Dateien |[Klassifizieren und Schützen einer Datei oder E-Mail](../rms-client/client-classify-protect.md)|
-
-
-
+|Bezeichnungsaktivität ist Protokollierung |[Protokollieren der Verwendung für den Azure Information Protection-Client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
 
 
 >[!div class="step-by-step"]
