@@ -4,7 +4,7 @@ description: "Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Righ
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/19/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b2395ad67bfee226bf10f36613cb6465eb0b019
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: a85aafd3f3f23b1aa138fd3d44e206be143f7643
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -85,7 +85,7 @@ Weitere Informationen finden Sie im folgenden Beitrag auf dem „Enterprise und 
 
 Azure RMS ist eng in die Word-, Excel-, PowerPoint- und Outlook-Apps integriert. Dort wird diese Funktionalität oft als Information Rights Management (IRM) bezeichnet. 
 
-Die folgenden Editionen von Office-Clients unterstützen den Schutz von Dateien und E-Mails auf Windows-Computern mithilfe von Azure RMS:
+Die folgenden Office-Clientsuites unterstützen den Schutz von Dateien und E-Mails auf Windows-Computern mithilfe von Azure RMS:
 
 - Office 365 ProPlus: Office 2016 und Office 2013
 
@@ -105,11 +105,13 @@ Azure RMS mit Office Professional Plus 2010 mit Service Pack 2 oder Office Profe
 
 - Die formularbasierte Authentifizierung für Verbundbenutzerkonten wird nicht unterstützt. Diese Konten müssen die integrierte Windows-Authentifizierung verwenden.
 
-Die folgenden Editionen von Office-Clients unterstützen den Schutz von Dateien und E-Mails auf macOS-Computern mithilfe von Azure RMS:
+Die folgenden Office-Clientsuites unterstützen den Schutz von Dateien und E-Mails auf macOS-Computern mithilfe von Azure RMS:
 
 - Office 365 ProPlus: Office 2016
 
-- Office 2016 für Mac
+- Office Standard 2016 für Mac
+
+Siehe auch: [Dienstbeschreibung für Office-Anwendungen](https://technet.microsoft.com/library/office-applications-service-description.aspx)
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Weitere Informationen zur Azure Information Protection-App für iOS und Android
 

@@ -4,7 +4,7 @@ description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Info
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e2f8f92595b21d122dfe76918a604ce7ff21b7ef
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1a75a5db529ce3b520e38fb439c18a58230ceb0e
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -38,18 +38,18 @@ Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltreso
 
 
 > [!TIP]
-> Falls Sie die Konfigurationsschritte für Azure Key Vault ausführen möchten und noch nicht mit diesem Azure-Dienst vertraut sind, hilft Ihnen der Artikel [Erste Schritte mit Azure Key Vault ](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) möglicherweise weiter. 
+> Wenn Sie die Konfigurationsschritte für Azure Key Vault ausführen möchten und noch nicht mit diesem Azure-Dienst vertraut sind, finden Sie nützliche Informationen im Artikel [Erste Schritte mit Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
 
 ## <a name="part-1-transfer-your-hsm-key-to-azure-key-vault"></a>Teil 1: Übertragen Ihres HSM-Schlüssels in Azure Key Vault
 
 Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
 
-1. Führen Sie für jeden exportierten SLC-Schlüssel, den Sie in Azure Key Vault speichern möchten, die Schritte im Abschnitt [Implementieren von „Bring Your Own Key“ (BYOK) für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) der Azure Key Vault-Dokumentation durch – mit folgender Ausnahme:
+1. Führen Sie für jeden exportierten SLC-Schlüssel, den Sie in Azure Key Vault speichern möchten, die Schritte im Abschnitt [Implementieren von „Bring Your Own Key“ (BYOK) für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) der Azure Key Vault-Dokumentation durch – mit folgender Ausnahme:
 
     - Führen Sie nicht die Schritte zum **Generieren Ihres Mandantenschlüssels** aus, da Sie bereits über das Äquivalent aus Ihrer AD RMS-Bereitstellung verfügen. Stattdessen müssen Sie den vom AD RMS-Server verwendeten Schlüssel aus der Thales-Installation identifizieren und diesen Schlüssel während der Migration verwenden. Verschlüsselte Thales-Schlüsseldateien weisen meist einen Namen nach dem Muster **key<*Schlüsselanwendungsname*><*Schlüsselbezeichner*>** auf dem lokalen Server auf.
 
-    Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Dies sieht etwa so aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Sie sollten sich diese URL notieren, da der Azure Information Protection-Administrator ihn benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
+    Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Dies sieht etwa so aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Notieren Sie sich diese URL, da der Azure Information Protection-Administrator sie benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 
 2. Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Set AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) zum Autorisieren des Azure RMS-Dienstprinzipals, damit dieser auf den Schlüsseltresor zugreifen kann, in dem der Azure Information Protection-Mandantenschlüssel gespeichert werden soll. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
     
@@ -68,7 +68,7 @@ Diese Verfahren werden vom Administrator für Azure Information Protection durch
     
     Laden Sie dann mit dem Cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) jede exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
     
-    Um dieses Cmdlet auszuführen, benötigen Sie die Kennwörter, die Sie zuvor für die jeweiligen Konfigurationsdatendateien angegeben haben, sowie die URL für den Schlüssel, der im vorherigen Schlüssel identifiziert wurde.
+    Um dieses Cmdlet auszuführen, benötigen Sie die Kennwörter, die Sie zuvor für die jeweiligen Konfigurationsdatendateien angegeben haben, sowie die URL für den Schlüssel, der im vorherigen Schritt identifiziert wurde.
     
     Führen Sie den folgenden Befehl aus, um das Kennwort zu speichern. Als Beispiel dienen hier die Konfigurationsdatendatei „C:\contoso-tpd1.xml“ und der Wert für die Schlüssel-URL aus dem vorherigen Schritt:
     

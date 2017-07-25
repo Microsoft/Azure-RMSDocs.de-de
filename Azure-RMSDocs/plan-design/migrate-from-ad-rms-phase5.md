@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f7678af1314fe7130d1084309a43d7561f7b9494
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 85b00b8f1e6bd8612b4bd49770e2ff4a934d3177
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -70,18 +70,18 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-## <a name="step-12-re-key-your-azure-information-protection-tenant-key"></a>Schritt 12: Erneuern Ihres Azure Information Protection-Mandantenschlüssels
-Dieser Schritt ist nach abgeschlossener Migration erforderlich, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Bei einer Schlüsseländerung wird ein neuer Mandantenschlüssel erstellt, der RMS-Kryptografiemodus 2 verwendet. Die Verwendung von Azure RMS mit Kryptografiemodus 1 wird nur während der Migration unterstützt.
+## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels
+Dieser Schritt ist nach abgeschlossener Migration erforderlich, wenn Ihre AD RMS-Bereitstellung bisher RMS-Kryptografiemodus 1 verwendet hat. In diesem Schritt wird ein neuer Mandantenschlüssel erstellt, der RMS-Kryptografiemodus 2 verwendet. Die Verwendung von Azure RMS mit Kryptografiemodus 1 wird nur während der Migration unterstützt.
 
-Dieser Schritt ist optional, wird jedoch empfohlen, wenn die Migration abgeschlossen ist, selbst wenn Sie sie im RMS-Kryptografiemodus 2 ausgeführt haben. In diesem Szenario schützt das Erneuern der Schlüssel Ihren Azure Information Protection-Mandantenschlüssel vor potenziellen Sicherheitslücken des AD RMS-Schlüssels.
+Dieser Schritt ist optional, wird jedoch empfohlen, wenn die Migration abgeschlossen ist, selbst wenn Sie sie im RMS-Kryptografiemodus 2 ausgeführt haben. In diesem Szenario schützt die Neuerstellung Ihren Azure Information Protection-Mandantenschlüssel vor potenziellen Sicherheitslücken des AD RMS-Schlüssels.
 
-Wenn Sie Ihren Azure Information Protection-Mandantenschlüssel erneuern (oder „neu vergeben“), wird ein neuer Schlüssel erstellt, und der ursprüngliche Schlüssel wird archiviert. Da der Wechsel von einem Schlüssel zu einem anderen jedoch nicht sofort erfolgt, sondern sich über einige Wochen zieht, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure Information Protection-Mandantenschlüssel ändern, sobald die Migration abgeschlossen ist.
+Wenn Sie Ihren Azure Information Protection-Mandantenschlüssel neu erstellen (oder „neu vergeben“), wird ein neuer Schlüssel erstellt, und der ursprüngliche Schlüssel wird archiviert. Da der Wechsel von einem Schlüssel zu einem anderen jedoch nicht sofort erfolgt, sondern einige Wochen dauert, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure Information Protection-Mandantenschlüssel neu erstellen, sobald die Migration abgeschlossen ist.
 
-So erneuern Sie Ihren Azure Information Protection-Mandantenschlüssel:
+So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
-- Wenn Ihr Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), und erstellen Sie eine **Azure Information Protection-Supportanfrage für die Neuerstellung Ihres Azure Information Protection-Schlüssels nach der Migration von AD RMS**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie jedoch, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen die Standardgebühren für Support an. Die Neuvergabe Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+- Wenn Ihr Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), und erstellen Sie eine **Azure Information Protection-Supportanfrage für die Neuerstellung Ihres Azure Information Protection-Schlüssels nach der Migration von AD RMS**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Die Neuerstellung Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
-- Wenn Ihr Mandantenschlüssel von Ihnen (BYOK) verwaltet wird: Vergeben Sie in Azure Key Vault den Mandantenschlüssel neu, den Sie für Ihren Azure Information Protection-Mandanten verwenden, und führen Sie dann das [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)-Cmdlet erneut aus, um die neue Schlüssel-URL anzugeben. 
+- Wenn Ihr Mandantenschlüssel von Ihnen verwaltet wird (BYOK): Erstellen Sie in Azure Key Vault den Mandantenschlüssel neu, den Sie für Ihren Azure Information Protection-Mandanten verwenden, und führen Sie dann das [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)-Cmdlet erneut aus, um die neue Schlüssel-URL anzugeben. 
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
 
