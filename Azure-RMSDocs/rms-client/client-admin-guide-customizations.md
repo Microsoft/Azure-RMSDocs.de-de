@@ -4,7 +4,7 @@ description: "Informationen zum Anpassen des Azure Information Protection-Client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e9e8aff35727a40413e0bf18e46f1ad14e9222
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -24,11 +24,11 @@ ms.lasthandoff: 07/21/2017
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
-Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen. 
-
-Darüber hinaus stehen einige Einstellungen möglicherweise nur in einer Vorschauversion des Azure Information Protection-Clients zur Verfügung. Für diese Einstellungen ist eine Mindestversion des Clients angegeben. Für Einstellungen und Konfigurationen, die in der allgemein verfügbaren Version des Clients unterstützt werden, ist keine Mindestversion des Clients angegeben.
+Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen. Darüber hinaus stehen einige Einstellungen möglicherweise nur in einer Vorschauversion des Azure Information Protection-Clients zur Verfügung. Für diese Einstellungen ist eine Mindestversion des Clients angegeben. Für Einstellungen und Konfigurationen, die in der allgemein verfügbaren Version des Clients unterstützt werden, ist keine Mindestversion des Clients angegeben.
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter Clientkonfigurationseinstellungen im Portal
+
+Diese Konfiguration ist zurzeit als Vorschau verfügbar.
 
 1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**.
 
@@ -86,6 +86,8 @@ Darüber hinaus gilt:
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ausblenden der Menüoption „Klassifizieren und schützen“ im Windows-Dateiexplorer
 
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
+
 Sie können diese erweiterte Konfiguration einrichten, indem Sie die Registrierung bearbeiten, wenn Sie den Azure Information Protection-Client in der Version 1.3.0.0 oder höher verwenden. 
 
 Erstellen Sie den folgenden DWORD-Wert (mit beliebigen Wertdaten):
@@ -104,6 +106,8 @@ Stellen Sie sicher, dass der Client über eine gültige Richtliniendatei namens 
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook
 
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
+
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung erfordert auch eine Vorschauversion des Azure Information Protection-Clients mit der Mindestversion **1.8.41.0**.
 
 Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet. In Office-Menüs wird diese Option nicht ausgeblendet.
@@ -115,6 +119,8 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 - Wert: **TRUE**
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Die Optionen für benutzerdefinierte Berechtigungen für Benutzer nicht verfügbar machen
+
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 

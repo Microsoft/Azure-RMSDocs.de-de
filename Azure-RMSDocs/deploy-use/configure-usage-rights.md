@@ -4,7 +4,7 @@ description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a093ca8cdd02448c877554ff87e971e956eab789
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -78,8 +78,8 @@ In den Standardvorlagen sind folgende Rechte enthalten:
 
 |Anzeigename|Enthaltene Rechte (allgemeiner Name)|
 |----------------|---------------------------------|
-|&lt;*Name der Organisation*&gt; *– Vertraulich, nur Anzeige*|Anzeigen, Öffnen, Lesen|
-|&lt;*Name der Organisation*&gt; *– Vertraulich*|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
+|&lt;*Name der Organisation*&gt; *– Vertraulich, nur Anzeige* <br /><br />oder<br /><br /> *Streng vertraulich\Alle Mitarbeiter*|Anzeigen, Öffnen, Lesen|
+|&lt;*Name der Organisation*&gt; *– Vertraulich* <br /><br />oder <br /><br />*Vertraulich\Alle Mitarbeiter*|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Makros zulassen; Weiterleiten; Antworten; Allen antworten|
 
 ## <a name="do-not-forward-option-for-emails"></a>Option „Nicht weiterleiten“ für E-Mails
 

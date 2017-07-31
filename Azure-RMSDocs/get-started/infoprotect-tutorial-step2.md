@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
@@ -78,9 +78,9 @@ Wenn die Bezeichnung **Confidential** (Vertraulich) nicht über untergeordnete B
     
 3. Stellen Sie auf dem Blatt **Schutz** sicher, dass **Azure RMS** ausgewählt ist und **Vordefinierte Vorlage auswählen** ebenso. Klicken Sie auf das Dropdown-Feld, und wählen Sie die Standardvorlage aus, mit der alle Benutzer in Ihrer Organisation geschützten Inhalt anzeigen und bearbeiten können. 
     
-    Wenn Sie kürzlich den Azure Rights Management-Dienst aktiviert haben, wird diese Vorlage **Confidential (Vertraulich)\Alle Mitarbeiter** genannt. 
+    Wenn Sie kürzlich Ihr Abonnement erhalten haben, heißt die Vorlage **Confidential\Alle Mitarbeiter**. 
     
-    Wenn der Azure Rights Management-Dienst bereits aktiviert wurde, bevor Sie dieses Tutorial gestartet haben, kann die Standardvorlage **\<Name Ihrer Organisation > – Vertraulich** genannt werden. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
+    Wenn Sie Ihr Abonnement schon seit einer Weile haben, kann die Standardvorlage **\<Name Ihrer Organisation> – Vertraulich** heißen. Wenn der Name Ihrer Organisation beispielsweise „VanArsdel, Ltd“ lautet, wird der Name angezeigt. Wählen Sie **VanArsdel, Ltd - Confidential** (VanArsdel, Ltd – Vertraulich) aus: 
     
     ![Schnellstarttutorial für Azure Information Protection Schritt 3 – Festlegen des Azure RMS-Schutzes](../media/step2-select-rms-template.png)
     

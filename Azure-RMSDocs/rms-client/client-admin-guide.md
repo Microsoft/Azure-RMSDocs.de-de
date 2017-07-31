@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 07/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 036fae62087bf71e0f3bf5ef2859acac701c5e62
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 9359d83ec2ee85edeef6a3d2680f95633d22546e
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -115,8 +115,25 @@ Beispiel zur Veranschaulichung des Azure Information Protection-Client-Add-Ons i
     
     Wenn dieses Update benötigt wird und nicht installiert ist, werden Sie in der Clientinstallation gewarnt, dass es installiert werden muss. Dieses Update kann nach der Installation des Clients installiert werden, aber einige Aktionen werden blockiert, und die Meldung wird erneut angezeigt.  
 
+- Deaktivieren Sie die Add-Ins **Microsoft Azure Information Protection** nicht für Office-Anwendungen
+    
+    Wenn Sie die Einstellung **Liste der verwalteten Add-Ins** der Gruppenrichtlinie konfiguriert haben, fügen Sie das Add-In von Microsoft Azure Information Protection für Office-Anwendungen durch Angabe der folgenden programmgesteuerten Bezeichner (ProgID) für Azure Information Protection hinzu, und legen Sie die Option auf **1: Das Add-In ist immer aktiviert** fest.
+    
+    - Für Outlook: `MSIP.OutlookAddin`
+    
+    - Für Word: `MSIP.WordAddin`
+    
+    - Für Excel: `MSIP.ExcelAddin`
+    
+    - Für PowerPoint: `MSIP.PowerPointAddin`
+    
+    Auch wenn Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins** noch nicht konfiguriert haben, müssen Sie diese konfigurieren, wenn Sie Berichte erhalten, dass das Add-In von Microsoft Azure Information Protection deaktiviert wird. Wenn dieses Add-In deaktiviert ist, wird die Leiste von Azure Information Protection Benutzern in der Officeanwendung nicht angezeigt.
+    
+    Weitere Informationen zur Einstellung der Gruppenrichtlinie finden Sie unter [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs (Es wurden keine Add-Ins geladen aufgrund von Gruppenrichtlinieneinstellungen für die Programme Office 2013 und Office 2016)](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.
+
 
 ### <a name="options-to-install-the-azure-information-protection-client-for-users"></a>Optionen zum Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -305,6 +322,11 @@ Wenn die Meldung **Dieser Client ist nicht für Office Professional Plus lizenzi
 
 Verwenden Sie die Informationen unter **Version**, um zu bestätigen, welche Version des Clients installiert ist. Klicken Sie auf den Link **Neuigkeiten**, um den [Versionsveröffentlichungsverlauf](client-version-release-history.md) des Clients zu lesen und zu überprüfen, ob es sich um die neueste Version handelt und die entsprechenden Fixes und neuen Features installiert sind.
 
+## <a name="support-for-multiple-languages"></a>Unterstützung mehrerer Sprachen
+
+Der Azure Information Protection-Client unterstützt alle Clientsprachen, die Office unterstützt. Beispielsweise werden die Menüoptionen, Dialogfelder und Meldungen in der Sprache des Benutzers angezeigt. Es gibt ein Installationsprogramm, das die Sprache erkennt, weshalb keine weitere Konfiguration erforderlich ist, um den Client für verschiedene Sprachen zu installieren. 
+
+Allerdings werden die Bezeichnungsnamen, die Benutzern angezeigt werden, entweder für die [Standardrichtlinie](../deploy-use/configure-policy-default.md) oder für Bezeichnungsnamen, die Sie angeben, nicht automatisch übersetzt. Damit Benutzer Bezeichnungen in verschiedenen Sprachen angezeigt bekommen, müssen Sie eigene Übersetzungen bereitstellen und die Azure Information Protection-Richtlinie konfigurieren, um diese Übersetzungen zu verwenden. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 
