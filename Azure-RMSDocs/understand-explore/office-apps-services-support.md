@@ -4,7 +4,7 @@ description: Verwendung des Azure Rights Management-Diensts zum Schutz der Daten
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d812476d882525b1fd5686418151188e57afa80d
-ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
+ms.openlocfilehash: 96707d0790747b4dac668508f58e9584f4649370
+ms.sourcegitcommit: 72208cabecaa233cdade0dae0c448037370f2c2c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/21/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="office-applications-and-services"></a>Office-Anwendungen und -Dienste
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Endbenutzer-Office-Anwendungen (z.B. Word, Excel, PowerPoint und Outlook) und Office-Dienste (z.B. Exchange und SharePoint) können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden.
+Endbenutzer-Office-Anwendungen und Office-Dienste (z.B. Exchange und SharePoint) können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden. Diese Office-Anwendungen sind Word, Excel, PowerPoint und Outlook. Die Officedienste sind Exchange und SharePoint. 
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office-Anwendungen: Word, Excel, PowerPoint, Outlook
 Diese Anwendungen bieten systemeigene Unterstützung für Rights Management durch Verwendung von IRM (Information Rights Management, Verwaltung von Informationsrechten) und ermöglichen Benutzern das Schützen eines gespeicherten Dokuments oder einer zu sendenden E-Mail. Benutzer können Vorlagen anwenden oder für Word, Excel und PowerPoint individuell anpassbare benutzerdefinierte Einstellungen für Zugriff, Rechte und Nutzungseinschränkungen festlegen. 
@@ -78,12 +78,13 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > [!NOTE]
 > Gegenwärtig gibt es einige Beschränkungen bei der Verwendung von SharePoint-IRM:
 > 
-> - Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im klassischen Azure-Portal verwalten. 
+> - Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im Azure-Portal verwalten. 
 > 
 > - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateierweiterung PDF, die nativ von Rights Management geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine native Unterstützung von Rights Management bietet.
+> 
+> - Wenn Sie eine Datei schützen, die Sie dann in einer SharePoint-Bibliothek oder in OneDrive for Business hochladen, können Sie mit dieser Datei Folgendes nicht durchführen: Gemeinsame Dokumentenerstellung, Office Online, Indizierung und Suche.
 
-
-Wenn Sie IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
+Wenn Sie den SharePoint IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 
 Obwohl der folgende Beitrag im Office-Blog nicht mehr ganz neu ist, finden Sie darin möglicherweise weitere nützliche Informationen: [What’s New with Information Rights Management in SharePoint and SharePoint Online (Neuerungen bei Information Rights Management in SharePoint und SharePoint Online)](https://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 

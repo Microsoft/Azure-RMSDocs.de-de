@@ -4,7 +4,7 @@ description: "Informationen und Anweisungen für Administratoren zum Konfigurier
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,27 +12,27 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c3f066a373d253d8488c805828a65513370e3a4
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Nachdem Sie den Azure Rights Management-Dienst [aktiviert](activate-service.md) haben, sind Benutzer automatisch in der Lage, zwei Standardvorlagen zu verwenden, die ihnen die Anwendung von Rechteverwaltungsrichtlinien auf vertrauliche Dateien erleichtern, mit denen der Zugriff auf autorisierte Benutzer in Ihrer Organisation beschränkt wird. Diese zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
+Wenn der Azure Rights Management-Dienst [aktiviert](activate-service.md) wurde, können Benutzer automatisch zwei Standardvorlagen verwenden. Diese Vorlagen erleichtern den Benutzern das Anwenden der Rights Management-Richtlinien auf vertrauliche Dateien, die den Zugriff auf autorisierte Benutzer in Ihrer Organisation einschränken. Die zwei Vorlagen enthalten die folgenden Rechterichtlinieneinschränkungen:
 
 -   Schreibgeschützte Anzeige geschützter Inhalte
 
-    -   Anzeigename: **&lt;Organisationsname&gt; – Nur vertrauliche Ansicht**
+    -   Anzeigename: **&lt;Organisationsname&gt; – Nur vertrauliche Ansicht** oder **Streng vertraulich\Alle Mitarbeiter**
 
     -   Bestimmte Berechtigung: Inhalt anzeigen
 
 -   Lese- oder Änderungsberechtigungen für geschützten Inhalt
 
-    -   Anzeigename: **&lt;Organisationsname&gt; – Vertraulich**
+    -   Anzeigename: **&lt;Organisationsname&gt; – Vertraulich** oder **Vertraulich\Alle Mitarbeiter**
 
     -   Bestimmte Berechtigungen: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
 
@@ -63,7 +63,7 @@ In den folgenden Abschnitten finden Sie Informationen, wie Sie benutzerdefiniert
 -   [PowerShell-Referenz für benutzerdefinierte Vorlagen](configure-templates-with-powershell.md)
 
 > [!TIP]
-> Vorlagen und neue Optionen zum Konfigurieren des Azure Rights Management-Schutzes werden zum Azure-Portal migriert. Diese Funktion ist derzeit in der Vorschau verfügbar. Weitere Informationen finden Sie in der folgenden Blogbeitragsankündigung: [Azure Information Protection – Einheitliche Administration nun in der Vorschau verfügbar](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/). 
+> Vorlagen und neue Optionen zum Konfigurieren des Azure Rights Management-Schutzes werden zum Azure-Portal migriert. Diese Funktion ist derzeit in der Vorschau verfügbar. Weitere Informationen finden Sie in der folgenden Blogbeitragsankündigung: [Azure Information Protection unified administration now in Preview (Azure Information Protection – Einheitliche Administration nun in der Vorschau verfügbar)](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
