@@ -4,7 +4,7 @@ description: "Hier finden Sie Informationen, die Sie beim Überwachen des Connec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7d9e5a948aa0e81341eb99038302677268c522e
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: e759d47e45455616cac34d2b5703a567907a826f
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -33,7 +33,7 @@ Dazu zählen beispielsweise Informationsereignisse wie die folgenden:
 - ID 1000 bestätigt, dass der Connectordienst gestartet wurde.
 
 - ID 1002 bedeutet, dass ein Server erfolgreich eine Verbindung mit dem RMS-Connector hergestellt hat
-- 
+
 - 1004 bedeutet, dass die Liste autorisierter Konten (jedes Konto ist aufgeführt) in den Connector heruntergeladen wurde. 
 
 Wenn der Connector nicht für die Verwendung von HTTPS konfiguriert wurde, wird mit der Warnungs-ID 2002 angezeigt, dass ein Client eine nicht sichere Verbindung (HTTP) verwendet.
