@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
-ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
+ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Wenn Sie den Azure Information Protection-Client installieren, werden automatisch PowerShell-Befehle installiert, damit Sie den Client durch Ausführen von Befehlen verwalten können, die Sie zur Automatisierung in Skripts einfügen können.
+Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
 Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul ersetzt das Modul „RMSProtection“, das mit dem Tool „RMS-Schutz“ installiert wurde. Wenn beim Installieren des Azure Information Protection-Clients das RMS Protection-Tool installiert ist, wird das Modul „RMSProtection“ automatisch deinstalliert.
 
@@ -46,7 +46,7 @@ Wie beim Modul „RMSProtection“ weist die aktuelle Version des Moduls „Azur
 
 Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätzlichen Voraussetzungen und Anweisungen, die Ihrer Bereitstellung entsprechen:
 
-- [Azure Information Protection-Dienst und Azure Rights Management-Dienst](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection und Azure Rights Management-Dienst](#azure-information-protection-service-and-azure-rights-management-service)
 
     - Zutreffend, wenn Sie die ausschließliche Klassifizierung oder die Klassifizierung mit Rights Management-Schutz verwenden: Sie verfügen über ein Abonnement, das Azure Information Protection (z. B. „Enterprise Mobility + Security“) enthält.
     - Zutreffend, wenn Sie den ausschließlichen Schutz mit dem Azure Rights Management-Dienst verwenden: Sie verfügen über ein Abonnement, das den Azure Rights Management-Dienst (z. B. Office 365 E3 und Office 365 E5) enthält.
@@ -56,14 +56,14 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
     - Zutreffend, wenn Sie den ausschließlichen Schutz mit der lokalen Version von Azure Rights Management, Active Directory Rights Management Services (AD RMS), verwenden.
 
 
-## <a name="azure-information-protection-service-and-azure-rights-management-service"></a>Azure Information Protection-Dienst und Azure Rights Management-Dienst
+## <a name="azure-information-protection-and-azure-rights-management-service"></a>Azure Information Protection und Azure Rights Management-Dienst
 
-Lesen Sie diesen Abschnitt, bevor Sie die PowerShell-Befehle verwenden, wenn Ihre Organisation Azure Information Protection und den Azure Rights Management-Datenschutzdienst oder nur den Azure Rights Management-Dienst verwendet.
+Lesen Sie diesen Abschnitt, bevor Sie die PowerShell-Befehle verwenden, wenn Ihre Organisation Azure Information Protection für die Klassifizierung und den Schutz oder nur den Azure Rights Management-Dienst für den Datenschutz verwendet.
 
 
 ### <a name="prerequisites"></a>Voraussetzungen
 
-Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ sind weitere Komponenten für den Azure Information Protection-Dienst und den Azure Rights Management-Datenschutzdienst erforderlich:
+Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ sind weitere Komponenten für die Azure Information Protection-Bezeichnung und den Azure Rights Management-Datenschutzdienst erforderlich:
 
 1. Der Azure Rights Management-Dienst muss aktiviert werden.
 
@@ -93,9 +93,9 @@ Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrat
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Voraussetzungen 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben.
 
-Derzeit können Sie Bezeichnungen nicht ohne Interaktion anwenden, aber Sie können ohne Interaktion eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um Dateien zu schützen oder ihren Schutz aufzuheben.
+Sie können ohne Interaktion eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um Dateien zu schützen oder ihren Schutz aufzuheben.
 
-Sie müssen einen Dienstprinzipal verwenden, um die Verbindung mit dem Azure Rights Management-Dienst nicht interaktiv herzustellen, wozu Sie das `Set-RMSServerAuthentication`-Cmdlet verwenden. Sie müssen entsprechend für jede Windows PowerShell-Sitzung vorgehen, in der Cmdlets ausgeführt werden, die eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen. Bevor Sie dieses Cmdlet ausführen, stellen Sie sicher, dass Sie über die folgenden drei Bezeichner verfügen:
+Sie müssen einen Dienstprinzipal verwenden, um die Verbindung mit dem Azure Rights Management-Dienst nicht interaktiv herzustellen, wozu Sie das `Set-RMSServerAuthentication`-Cmdlet verwenden. Sie müssen entsprechend für jede Windows PowerShell-Sitzung vorgehen, in der Cmdlets ausgeführt werden, die eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen. Bevor Sie dieses Cmdlet ausführen, müssen Sie über die folgenden drei Bezeichner verfügen:
 
 - BposTenantId
 
@@ -103,7 +103,28 @@ Sie müssen einen Dienstprinzipal verwenden, um die Verbindung mit dem Azure Rig
 
 - Symmetrischer Schlüssel
 
-In den nächsten Abschnitten wird erläutert, wie Sie diese Bezeichner erhalten.
+Sie können die folgenden PowerShell-Befehle und kommentierte Anweisungen verwenden, um die Werte für die Bezeichner automatisch zu erhalten und um das Set-RMSServerAuthentication-Cmdlet auszuführen. Sie können alternativ die Werte manuell abrufen und angeben.
+
+So rufen Sie die Werte automatisch ab und führen Set-RMSServerAuthentication aus:
+
+````
+# Make sure that you have the AADRM and MSOnline modules installed
+
+$newServicePrincipalName="<new service principal name>"
+Connect-AadrmService
+$bposTenantID=(Get-AadrmConfiguration).BPOSId
+Disconnect-AadrmService
+New-MsolServicePrincipal -DisplayName $servicePrincipalName
+
+# Copy the value of the generated symmetric key
+
+$symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
+$appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $servicePrincipalName }).AppPrincipalId
+Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
+
+````
+
+In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen und angeben. Zudem erhalten Sie weitere Informationen über jeden Wert.
 
 ##### <a name="to-get-the-bpostenantid"></a>So rufen Sie „BposTenantId“ ab
 
@@ -117,7 +138,7 @@ Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows Po
     
         Connect-AadrmService
     
-    Geben Sie bei Aufforderung die Administratoranmeldeinformationen des Azure Information Protection-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
+    Geben Sie bei entsprechender Aufforderung die Anmeldeinformationen für den Azure Information Protection-Mandantenadministrator ein. In der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Office 365 ist.
     
 4. Führen Sie `Get-AadrmConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
     
@@ -185,7 +206,7 @@ Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolService
 
 5. Notieren Sie sich in dieser Ausgabe den symmetrischen Schlüssel und die „AppPrincialId“.
 
-    Es ist wichtig, eine Kopie des symmetrischen Schlüssels zu erstellen, da Sie ihn später nicht vollständig abrufen können. Wenn Sie den Schlüssel nicht kennen, müssen Sie einen neuen Dienstprinzipal erstellen, wenn Sie sich das nächste Mal für den Azure Rights Management-Dienst authentifizieren müssen.
+    Es ist wichtig, dass Sie sich jetzt eine Kopie dieses symmetrischen Schlüssels machen. Sie können diesen Schlüssel später nicht abrufen, wenn Sie ihn also bei der nächsten Authentifizierung für den Azure Rights Management-Dienst nicht kennen, müssen Sie einen neuen Dienstprinzipal erstellen.
 
 In diesen Anweisungen und Beispielen finden wir die drei Bezeichner, die zum Ausführen von „RMSServerAuthentication“ erforderlich sind:
 
@@ -208,6 +229,9 @@ Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Adm
 > [!NOTE]
 > Wenn Sie Ihr eigenes Konto zum Authentifizieren für den Azure Rights Management-Dienst verwenden möchten, müssen Sie „Set-RMSServerAuthentication“ nicht ausführen, bevor Sie Dateien schützen, den Schutz von Dateien aufheben oder Vorlagen abrufen.
 
+
+
+
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>Voraussetzung 4: Für Regionen außerhalb von Nordamerika
 
 Für die Authentifizierung außerhalb von Azure-Nordamerika müssen Sie die Registrierung wie folgt bearbeiten. Wenn sich Ihr Azure Information Protection-Mandant in Nordamerika befindet, führen Sie diesen Schritt nicht aus:
@@ -220,11 +244,15 @@ Für die Authentifizierung außerhalb von Azure-Nordamerika müssen Sie die Regi
 
 4. Erstellen Sie für den Schlüssel **ServiceLocation** zwei Schlüssel, wenn diese nicht bereits vorhanden sind: **EnterpriseCertification** und **EnterprisePublishing**. 
     
-    Wenn Sie diese REG_SZ-Schlüssel erstellen, ändern Sie nicht den Namen „(Standard)“, aber bearbeiten Sie sie, um die Daten für den Wert festzulegen:
+    Ändern Sie für den Zeichenfolgenwert, der für diese Schlüssel automatisch erstellt wird, nicht den Namen „(Default)“ (Standard), bearbeiten Sie jedoch die Zeichenfolge, um die Wertdaten festzulegen:
 
     - Fügen Sie für **EnterpriseCertification** den „CertificationExtranetDistributionPointUrl“-Wert ein.
     
     - Fügen Sie für **EnterprisePublishing** den „LicensingExtranetDistributionPointUrl“-Wert ein.
+    
+    Beispielsweise sollte Ihr Registrierungseintrag für EnterpriseCertification in etwa wie folgt aussehen:
+    
+    ![Bearbeiten der Registrierung für das PowerShell-Modul von Azure Information Protection für Regionen außerhalb von Nordamerika](../media/registry-example-rmsprotection.png)
 
 5. Schließen Sie den Registrierungs-Editor. Sie müssen den Computer nicht neu starten. Wenn Sie jedoch ein Dienstprinzipalkonto anstelle Ihres eigenen Benutzerkontos verwenden, müssen Sie den Befehl „Set-RMSServerAuthentication“ ausführen, nachdem dieser Registrierungseintrag bearbeitet wurde.
 
@@ -296,7 +324,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen die Cmdlets als Administrator ausführen, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
+Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiel:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -400,7 +428,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der RMS-Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel: 
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiel: 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 

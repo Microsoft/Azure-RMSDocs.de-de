@@ -4,7 +4,7 @@ description: "Informationen zur Unterstützung bei der Installation und Konfigur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be09e2c974d9d542b94bc16f140e764858cc9282
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: a8cfa6a5baf1661495fc8b485ac0a6535c22233d
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -116,6 +116,10 @@ Führen Sie auf der letzten Seite des Assistenten Folgendes durch, und klicken S
 > -   Stellen Sie aus einem Webbrowser heraus eine Verbindung zu **http://&lt;Connectoradresse&gt;/_wmcs/certification/servercertification.asmx** her, wobei Sie *&lt;Connectoradresse&gt;* durch die Adresse oder den Namen des Servers ersetzen, auf dem der RMS-Connector installiert ist. Bei einer erfolgreichen Verbindung wird eine Seite **ServerCertificationWebService** angezeigt.
 
 Wenn Sie den RMS-Verbindungsdienst deinstallieren müssen, führen Sie den Assistenten erneut aus, und wählen Sie die Option „Deinstallieren“ aus.
+
+Wenn während der Installation Probleme auftreten, überprüfen Sie das Installationsprotokoll: **%LocalAppData%\Temp\Microsoft Rights Management connector_\<Datum und Uhrzeit>.log** 
+
+Ihr Installationsprotokoll kann wie folgt aussehen: C:\Benutzer\Administrator\AppData\Local\Temp\Microsoft Rights Management connector_20170803110352.log
 
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorisieren von Servern für die Verwendung des RMS-Verbindungsdiensts
 Wenn Sie den RMS-Verbindungsdienst auf mindestens zwei Computern installiert haben, können Sie die Server und Dienste autorisieren, die den RMS-Verbindungsdienst verwenden sollen. Beispielsweise Server, die Exchange Server 2013 oder SharePoint Server 2013 ausführen.

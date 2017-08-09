@@ -4,7 +4,7 @@ description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1066ff9dc628c5df379fe3ce9126b42639ed23b1
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: d757d4fa93bfb1277ed38a955f563bcd2595fe4e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Aktivieren von Azure Rights Management über das klassische Azure-Portal
 
 >*Gilt für: Azure Information Protection*
 
+> [!NOTE]
+>Diese Funktion wird in das Azure-Portal verschoben und befindet sich derzeit in der Vorschau. Weitere Informationen finden Sie unter [How to activate Azure Rights Management from the Azure portal (Aktivieren von Azure Rights Management aus dem Azure-Portal)](activate-azure.md).
 
-Verwenden Sie diese Anleitung, wenn Sie Zugriff auf das Azure-Portal haben. Sie verfügen z.B. über ein Abonnement für Enterprise Mobility Suite oder Azure Information Protection Premium.
+Verwenden Sie diese Anleitung, wenn Sie Zugriff auf das klassische Azure-Portal haben. Sie verfügen z.B. über ein Abonnement für Enterprise Mobility Suite oder Azure Information Protection Premium.
 
 > [!TIP]
 > Zweiminütiges Video [How to activate Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms) (Aktivieren von Azure RMS)
@@ -55,6 +57,6 @@ Zusätzlich zum Status **Aktiv** , der angibt, dass der Rights Management-Dienst
 |**Nicht autorisiert**|Sie sind nicht berechtigt, den Status des [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] Services anzuzeigen. Ihr Konto ist z. B. gesperrt, oder Sie sind nicht der globale Administrator für den ausgewählten Mandanten.|
 
 ## <a name="next-steps"></a>Nächste Schritte
-Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
+Lesen Sie weiter unter [Aktivieren von Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

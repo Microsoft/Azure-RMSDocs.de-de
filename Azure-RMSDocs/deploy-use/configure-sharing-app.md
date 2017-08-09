@@ -4,7 +4,7 @@ description: "Informationen für Administratoren zum Bereitstellen der RMS-Freig
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: af5541ab5dcec7224d1048121460b58b1ca13c48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 65b4a60909f93090fa2e6d27660e1ed20f410955
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 > [!IMPORTANT]
-> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](../rms-client/aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](../rms-client/aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
  
 Die RMS-Freigabeanwendung bietet die Unterstützung der Authentifizierung für Office 2010 und integriert sich in Office-Anwendungen, indem ein Office-Add-In installiert wird, sodass Benutzer Dateien und E-Mails ganz einfach direkt über das Menüband schützen können. Diese Anwendung bietet auch allgemeinen Schutz für Dateitypen, die nicht nativ vom Azure Rights Management-Dienst unterstützt werden, sowie eine Website für die Dokumentenverfolgung, auf der Benutzer geschützte Dateien verfolgen und sperren können.
 

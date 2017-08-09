@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/31/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 666ea0288a06b7a7e7f25b4a6cff0ac62888587c
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 0d8c6a1ccfaf52af25ab0cfb5fb8074019939b90
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -35,12 +35,13 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informationen zu neuen Versionen und aktualisierter Dokumentation
 Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im [Enterprise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
-Außerdem finden Sie Informationen zu neuen Funktionen und Vorschauen auf der [Azure Information Protection Yammer-Website](https://www.yammer.com/AskIPTeam), auf der Sie auch neue Funktionen anfordern können.
+Monatlich veröffentlichen wir die folgenden [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates), damit Sie auf dem neuesten Stand bleiben:
 
-Am Ende jedes Monats wird eine Zusammenfassung aller Änderungen an der Dokumentation mit dem Titel „**Aktualisierung der Azure Information Protection-Dokumentation für \<Monat Jahr>**“ veröffentlicht. Diese Beiträge verfügen über das Inhaltstyp-Tag [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) und enthalten Dokumentationsupdates für neue Versionen sowie Korrekturen und Überarbeitungen für vorhandene Versionen.
+- Eine Statusaktualisierung für die Neuigkeiten und was ansteht. Diese Beiträge heißen „**Azure Information Protection-Statusupdate – \<Monat Jahr>**“.
 
-> [!TIP]
-> Wenn Sie Anwendungen entwickeln, in denen Microsoft Rights Management Services (Azure RMS oder AD RMS) verwendet werden, haben Sie möglicherweise auch Interesse an dem englischsprachigen Blog [Active Directory Rights Management Services (AD RMS) Developer's Corner](https://blogs.msdn.microsoft.com/rms/).
+- Eine Zusammenfassung der Dokumentationsänderungen, die Dokumentationen für neue Versionen enthalten, wird aktualisiert, um Anweisungen sowie Korrekturen und Überarbeitungen für vorhandene Versionen zu unterstützen. Diese Beiträge heißen „**Azure Information Protection-Dokumentationsupdates für \<Monat Jahr>**“. 
+
+Außerdem können Sie Informationen zu neuen Funktionen und Vorschauen auf der [Azure Information Protection Yammer-Website](https://www.yammer.com/AskIPTeam) finden, auf der Sie auch Fragen zu Azure Information Protection stellen können. Um neue Funktionen vorzuschlagen oder für neue Funktionen abzustimmen, besuchen sie die [User Voice-Website](https://msip.uservoice.com) für Azure Information Protection.
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
@@ -55,7 +56,7 @@ Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, ab
 
 |Abonnement|Anweisungen|
 |----------------|---------------|
-|Azure Information Protection (eigenständig):|Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischen Support - enthalten**: Sie finden diese Option, wenn Sie über ein kostenloses Azure-Abonnement zum Konfigurieren von Azure Active Directory und benutzerdefinierten Vorlagen für Azure Rights Management verfügen oder kein Azure-Abonnement besitzen.|
+|Azure Information Protection (eigenständig):|Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischer Support – enthalten**: Sie finden diese Option, wenn Sie über ein kostenloses Azure-Abonnement zum Konfigurieren von Azure Active Directory und Azure Rights Management im klassischen Azure verfügen oder wenn Sie kein Azure-Abonnement besitzen.|
 |Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Office 365 Business-Supports – Administratorhilfe](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Telefonnummern und Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal.|
 |Azure Information Protection mit Enterprise Mobility + Security (EMS)|Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischen Support - enthalten**: Sie finden diese Option, wenn Sie über ein kostenloses Azure-Abonnement zum Konfigurieren von Azure Active Directory und benutzerdefinierten Vorlagen für Azure Rights Management verfügen oder kein Azure-Abonnement besitzen.|
 |Azure Information Protection mit Secure Productive Enterprise (SPE)|Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
@@ -67,9 +68,9 @@ Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Konta
 
 Videos auf Abruf:
 
-- Sitzungen der Microsoft Ignite-Konferenz 2016 zu den Themen [Azure Information Protection und Azure Rights Management](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D)
+- Microsoft Ignite 2016-Sessions für [Azure Information Protection](https://myignite.microsoft.com/videos?f=%5B%7B%22name%22:%22Azure%20Rights%20Management%22,%22facetName%22:%22products%22%7D,%7B%22name%22:%22Azure%20Information%20Protection%22,%22facetName%22:%22products%22%7D%5D).
 
-- Microsoft Virtual Academy [Azure Rights Management Services Core Skills](https://mva.microsoft.com/en-us/training-courses/azure-rights-management-services-core-skills-10500?l=QLoxMwuCB_1805094681) (Grundlegende Kenntnisse der Azure Rights Management-Dienste)
+- Microsoft Virtual Academy-Sitzungen, die implizit [Azure Information Protection](https://mva.microsoft.com/search/SearchResults.aspx#!q=Azure%20Information%20protection) enthalten.
 
 Problembehandlung:
 
@@ -85,7 +86,7 @@ Problembehandlung:
 
 ### <a name="community-resources"></a>Communityressourcen
 
-Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht Ihnen, direkte Antworten vom Azure Information Protection-Team zu erhalten und von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater zu profitieren.
+Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht Ihnen, direkte Antworten vom Azure Information Protection-Team zu erhalten und zusätzlich von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater zu profitieren.
 
 Wenn Sie keinen Zugriff auf Yammer haben, versuchen Sie es mit dem [TechNet-Forum für Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 

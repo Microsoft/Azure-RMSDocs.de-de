@@ -4,7 +4,7 @@ description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Admi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8bc262e8f79b0c0485104b5bb0152dd0609c35c5
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 192f4ade987e9f9f88f5f30bb17c70e113569002
+ms.sourcegitcommit: 8b6fc2201d99d72ee9bb43bb73356040893eceeb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/02/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -25,48 +25,51 @@ ms.lasthandoff: 07/18/2017
 Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt und konfiguriert haben, können Sie Ihren Benutzern und Administratoren sowie Ihrem Helpdesk Hilfe und Anleitung bieten:
 
 -   **Endbenutzerinformationen:**
-
-    Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [benutzerdefinierte Vorlagen](configure-custom-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
-
+    
+    Informieren Sie Benutzer darüber, wie und wann sie Dokumente und E-Mails, die sensible Informationen enthalten, schützen können. Stellen Sie diese Informationen wann immer möglich für ihre vorhandenen Workflows bereit, sodass sie die zusätzlichen Schritte in einen bereits vertrauten Prozess implementieren können, anstatt neue Prozesse einzuführen. Stellen Sie sicher, dass sie die Vorteile (und Risiken) kennenlernen, die für Ihr Geschäft spezifisch sind, und bieten Sie Ihnen Anleitung, wann Dateien und E-Mails geschützt werden sollten. Wenn Sie [Vorlagen](configure-policy-templates.md) konfiguriert haben, sollten Sie Anleitungen zur Auswahl bereitstellen, wenn der Vorlagenname und die Beschreibung nicht aussagekräftig genug sind, um die richtige Vorlage auswählen zu können.
+    
     > [!TIP]
     > Beispielvideos für Endbenutzer:
-    >
     > -   [Azure RMS-Benutzererfahrung](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
--   **Administratorinformationen:**
-
-    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. Weitere Informationen finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für den Azure Rights Management-Dienst](configure-applications.md).
-
--   **Helpdesk-Informationen:**
-
+-   **Administratorinformationen**
     
-    Wenn Benutzer den Azure Information Protection-Client ausführen, können Helpdesk-Operatoren sie auffordern, die Option **Hilfe und Feedback**, **Ausführen von Diagnosen** zu verwenden und danach den Client zurückzusetzen. Jedoch wird der Benutzer bei der Zurücksetzung nicht abgemeldet, und es erfolgt auch kein Neustart des Clients und keine automatische Wartung.
-
+    Einige Anwendungen wenden automatisch Informationsschutz an, indem sie Richtlinien und Einstellungen verwenden, die von Administratoren konfiguriert werden. Für diese Anwendungen müssen Sie möglicherweise Anleitungen für andere Administratoren bereitstellen, die diese Anwendungen und Dienste verwalten. 
+    
+    Weitere Informationen finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md) und [Konfigurieren von Anwendungen für den Azure Rights Management-Dienst](configure-applications.md).
+    
+-   **Helpdesk-Informationen**
+    
+    Wenn Benutzer über den Azure Information Protection-Client verfügen, können Helpdesk-Operatoren sie auffordern, die Option **Hilfe und Feedback**, **Ausführen von Diagnosen** zu verwenden und danach den Client zurückzusetzen. Jedoch wird der Benutzer bei der Zurücksetzung nicht abgemeldet, und es erfolgt auch kein Neustart des Clients und keine automatische Wartung.
+    
     Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente sicher, dass der Helpdesk über Prozesse verfügt, mit denen dieser Zugriff unter Verwendung des Azure Rights Management-Features [Administrator](configure-super-users.md) angefordert werden kann. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat. 
-
+    
     Darüber hinaus finden Sie einige der möglicherweise auftretenden Probleme in den folgenden Kategorien:
-
-    -   **Hilfe bei der Anmeldung:**
-
-        Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Die erforderlichen Anmeldeinformationen gelten ist für das Geschäfts-, Schul- oder Unikonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Die erforderlichen Anmeldeinformationen gelten nicht für ein Microsoft-Konto (früher Microsoft Live ID) oder ein privates E-Mail-Konto, weil diese Konten vom Azure Rights Management-Dienst derzeit nicht unterstützt werden. Stellen Sie Benutzern und Ihrem Helpdesk Anweisungen bereit, welches Konto genutzt werden soll, wenn bei Verwendung dieser Anwendungen mit dem Azure Rights Management-Dienst Anmeldeinformationen abgefragt werden.
-
-    -   **Probleme beim Schützen oder Nutzen von Inhalten:**
-
-        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
-
-        Authentifizierung und Autorisierung basieren auf Konten und Gruppen in Azure Active Directory. Um zu bestätigen, dass ein bestimmter Benutzer oder eine bestimmte Gruppe für die Nutzung geschützter Inhalte autorisiert werden kann, verwenden Sie die unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md) beschriebenen Überprüfungen.
-
-        Wenn Benutzer melden, dass sie geschützte Inhalte nicht öffnen können, sie aber die erforderlichen Berechtigungen haben, besteht das Problem möglicherweise darin, dass sich der Benutzer nicht in der richtigen Gruppe befindet, die für eine Rights Management-Vorlage konfiguriert ist. Oder es ist erforderlich, dass die [Vorlage für den Benutzer oder die Gruppe neu konfiguriert wird](configure-policy-template.md). 
+    
+    - **Hilfe bei der Anmeldung**
         
-        Wenn die Rechte, die Benutzer haben, nicht wie erwartet sind, überprüfen Sie in der [Tabelle mit den Nutzungsrechten](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) deren Beschreibung und etwaige anwendungsspezifische Implementierungen.
+        Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Die erforderlichen Anmeldeinformationen gelten ist für das Geschäfts-, Schul- oder Unikonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Die erforderlichen Anmeldeinformationen gelten nicht für ein Microsoft-Konto (früher Microsoft Live ID) oder ein privates E-Mail-Konto, weil diese Konten vom Azure Rights Management-Dienst derzeit nicht unterstützt werden. 
+        
+        Stellen Sie Benutzern und Ihrem Helpdesk Anweisungen bereit, welches Konto zu verwenden ist, wenn Benutzer nach Anmeldeinformationen gefragt werden, wenn sie über Anwendungen verfügen, die den Azure Rights Management-Dienst verwenden.
+        
+    - **Probleme beim Schützen oder Nutzen von Inhalten**
+        
+        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
+        
+        Authentifizierung und Autorisierung basieren auf Konten und Gruppen in Azure Active Directory. Um zu bestätigen, dass ein bestimmter Benutzer oder eine bestimmte Gruppe für die Nutzung geschützter Inhalte autorisiert werden kann, verwenden Sie die unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md) beschriebenen Überprüfungen.
+        
+        Wenn Benutzer melden, dass sie geschützte Inhalte nicht öffnen können, sie aber die erforderlichen Berechtigungen haben, besteht das Problem möglicherweise darin, dass sich der Benutzer nicht in der richtigen Gruppe befindet, die für eine Rights Management-Vorlage konfiguriert ist. Oder das Problem ist, dass es erforderlich ist, dass die [Vorlage für den Benutzer oder die Gruppe neu konfiguriert wird](configure-policy-templates.md). 
+        
+        Wenn die Rechte, die Benutzer haben, nicht wie erwartet sind, überprüfen Sie in der [Tabelle mit den Nutzungsrechten](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) die Beschreibung und etwaige anwendungsspezifische Implementierungen der Rechte.
 
-Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen sensibler Dokumente und E-Mails zu helfen.
+Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um Benutzern beim Schützen von Dokumenten und E-Mails zu helfen.
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Verwenden des Informationsschutzes mit dem Azure Information Protection-Client
-Wenn Benutzer Office 2010 verwenden, ist der Azure Information Protection-Client (oder die ältere RMS-Freigabeanwendung) erforderlich, um geschützte Dokumente und E-Mails zu schützen und zu nutzen. Der Azure Information Protection-Client wird jedoch auch für alle Computer und mobilen Geräte empfohlen.
 
-Der Azure Information Protection-Client erleichtert Benutzern nicht nur, wichtige Dokumente und E-Mails zu schützen, sondern auch das Nachverfolgen der Dokumente, die sie geschützt haben. Nachverfolgte Dokumente können auch widerrufen werden, wenn die zuvor autorisierten Benutzer keinen Zugriff mehr darauf haben sollen.
+Wenn Benutzer Office 2010 verwenden, ist der Azure Information Protection-Client (oder die ältere RMS-Freigabeanwendung) erforderlich, um geschützte Dokumente und E-Mails zu schützen und zu nutzen. Der Azure Information Protection-Client wird jedoch auch für alle Computer und mobilen Geräte empfohlen, die diesen Dienst unterstützen.
+
+Der Azure Information Protection-Client erleichtert Benutzern nicht nur, Dokumente und E-Mails zu schützen, sondern auch das Nachverfolgen der Dokumente, die sie geschützt haben. Nachverfolgte Dokumente können auch widerrufen werden, wenn die zuvor autorisierten Benutzer keinen Zugriff mehr darauf haben sollen.
 
 Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](../rms-client/client-user-guide.md).
 
@@ -100,7 +103,7 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten** oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -112,7 +115,7 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1.  Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **Nicht allen antworten**, **&lt;Unternehmensname&gt; – Vertraulich** oder **&lt;Unternehmensname&gt; – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Zum Beispiel: **Nicht weiterleiten** oder **Nicht allen antworten**. Oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 

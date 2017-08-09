@@ -4,7 +4,7 @@ description: "Informationen zum Anpassen des Azure Information Protection-Client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32226274c8b50b02e453f1c1b6655fb01b4ec942
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 28b4e89cd6300c9b206abdf45f5d580b4474eaa5
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -103,6 +103,19 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** f
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Stellen Sie sicher, dass der Client über eine gültige Richtliniendatei namens **Policy.msip** im Ordner **%localappdata%\Microsoft\MSIP** verfügt. Falls erforderlich, können Sie die Richtlinie aus dem Azure-Portal exportieren und die exportierte Datei auf den Clientcomputer kopieren. Sie können mithilfe dieser Methode auch eine veraltete Richtliniendatei durch die neueste veröffentlichte Richtlinie ersetzen.
+
+Beim Exportieren der Richtlinie wird von dieser Aktion auch eine gezippte Datei mit mehreren Versionen der Richtlinie heruntergeladen, die mit unterschiedlichen Versionen des Azure Information Protection-Clients übereinstimmen:
+
+1. Entzippen Sie die Datei, und verwenden Sie die folgende Tabelle, um zu identifizieren, welche Richtliniendatei Sie benötigen. 
+    
+    |Dateiname|Entsprechende Clientversion|
+    |--------------------------|---------------------------------------------|
+    |Policy1.1.msip |Version 1.2|
+    |Policy1.2.msip |Version 1.3 – 1.7|
+    |Policy1.3.msip |Version 1.8 und höher|
+    
+2. Benennen Sie die identifizierte Datei zu **Policy.msip** um, und kopieren Sie sie in den Ordner **%LocalAppData%\Microsoft\MSIP** auf Computern, auf denen der Azure Information Protection-Client installiert ist. 
+
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook
 

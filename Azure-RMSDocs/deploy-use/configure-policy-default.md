@@ -4,17 +4,17 @@ description: "Erfahren Sie, wie die Standardrichtlinie für Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: decc5e3462a80e307201933e634c3ecfa03ee074
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 51b5f7d332a86c16ceb6928ea99039812dd54802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -28,9 +28,80 @@ Sie können auf die folgenden Werte verweisen, um die Richtlinie auf die Standar
 
 ## <a name="current-default-policy"></a>Aktuelle Standardrichtlinie
 
-Diese Version der Standardrichtlinie stammt vom 21. März 2017.
+Diese Version der Standardrichtlinie stammt vom 31. Juli 2017.
 
-Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die Schutz erfordern, sowie auf Nachverfolgung und Widerruf von Daten. Die Richtlinie konfiguriert diesen Schutz nicht für diese Bezeichnungen, sodass Sie zur Erfüllung dieser Beschreibung zusätzliche Schritte ausführen müssen. Konfigurieren Sie z.B. die Bezeichnung, um Azure RMS-Schutz anzuwenden, oder verwenden Sie eine Lösung zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Bevor Sie ein Dokument mithilfe der Website zur Dokumentennachverfolgung verfolgen und widerrufen können, muss das Dokument von Azure RMS geschützt werden. 
+Diese Standardrichtlinie wird nur erstellt, wenn der Azure Rights Management-Dienst aktiviert wurde, als die Richtlinie erstellt wurde. Wenn dieser Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie nicht den Schutz für die folgenden Unterbezeichnungen:
+
+- **Vertraulich\Alle Mitarbeiter**
+
+- **Vertraulich\Nur Empfänger**
+
+- **Streng vertraulich\Alle Mitarbeiter** 
+
+- **Streng Vertraulich\Nur Empfänger** 
+
+Wenn diese Unterbezeichnungen nicht automatisch für den Schutz konfiguriert werden, bleibt die Standardrichtlinie die gleiche wie die [vorherige Standardrichtlinie](#default-policy-before-july-31-2017).
+
+Wenn Schutz auf die Unterbezeichnung **Alle Mitarbeiter** angewendet wird, wird der Schutz mithilfe der Standardvorlagen konfiguriert, die automatisch im Azure-Portal in Bezeichnungen konvertiert werden. Weitere Informationen zu diesen Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).
+
+#### <a name="more-information-about-the-recipients-only-sub-label"></a>Weitere Informationen zu der Unterbezeichnung „Nur Empfänger“
+
+Benutzer sehen diese Bezeichnung nur in Outlook. Diese Bezeichnung wird in Word, Excel, PowerPoint oder vom Datei-Explorer nicht angezeigt. 
+
+Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht weiterleiten“ automatisch für die E-Mail angewendet. Die Empfänger, die die Benutzer angeben, können die E-Mail nicht weiterleiten und können die Inhalte kopieren oder drucken oder Anhänge speichern.
+
+
+### <a name="labels"></a>Bezeichnungen
+
+|Label|QuickInfo|Einstellungen|
+|-------------------------------|---------------------------|-----------------|
+|Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Allgemein|Geschäftsdaten, die nicht zur öffentlichen Nutzung vorgesehen sind. Sie können jedoch nach Bedarf für externe Partner freigegeben werden. Beispiele sind u.a. ein unternehmensinternes Telefonverzeichnis, Organigramme, interne Standards und die meiste interne Kommunikation.|**Aktiviert**: Ein <br /><br />**Farbe**: Blau <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Confidential (Vertraulich)|Sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.|**Aktiviert**: Ein <br /><br />**Farbe**: Orange<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Streng vertraulich|Sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+
+
+### <a name="sub-labels"></a>Untergeordnete Bezeichnungen
+
+|Label|QuickInfo|Einstellungen|
+|-------------------------------|---------------------------|-----------------|
+|Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure RMS [[1]](#footnote-1)|
+|Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Vertraulich\Nur Empfänger|Vertrauliche Daten ,die den Schutz benötigen und die nur von Empfängern angezeigt werden können.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Nicht weiterleiten|
+|Streng vertraulich\Alle Mitarbeiter|Streng vertrauliche Daten, deren Inhalte von allen Mitarbeitern angezeigt, bearbeitet und beantwortet werden dürfen. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als streng vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure RMS [[2]](#footnote-2)|
+|Streng vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als streng vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Streng Vertraulich\Nur Empfänger|Streng vertrauliche Daten,die den Schutz benötigen und die nur von Empfängern angezeigt werden können.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (E-Mail)<br /><br />Als streng vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Nicht weiterleiten|
+
+###### <a name="footnote-1"></a>Fußnote 1
+Einstellungen für den Schutz verwenden die die Standardvorlage **Vertraulich\Alle Mitarbeiter**.
+
+###### <a name="footnote-2"></a>Fußnote 2 
+Einstellungen für den Schutz verwenden die die Standardvorlage **Streng vertraulich\Alle Mitarbeiter**.
+
+
+### <a name="information-protection-bar"></a>Information Protection-Leiste
+
+|Einstellung|Wert|
+|-------------------------------|---------------------------|
+|Titel|Vertraulichkeit|
+|QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
+
+
+### <a name="settings"></a>Einstellungen
+
+|Einstellung|Wert|
+|-------------------------------|---------------------------|
+|All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Aus|
+|Select the default label (Standardbezeichnung auswählen)|Keine|
+|Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten.|Aus|
+|Wenden Sie für E-Mail-Nachrichten mit Anlagen eine Bezeichnung an, die der höchsten Einstufung dieser Anlagen entspricht|Aus|
+|Geben Sie eine benutzerdefinierte URL für die „Weitere Infos“-Webseite des Azure Information Protection-Clients an|Leer|
+
+
+## <a name="default-policy-before-july-31-2017"></a>Standardrichtlinie vor dem 31. Juli 2017
+
+Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die Schutz erfordern, sowie auf Nachverfolgung und Widerruf von Daten. Die Richtlinie konfiguriert diesen Schutz nicht für diese Bezeichnungen, sodass Sie zur Erfüllung dieser Beschreibung zusätzliche Schritte ausführen müssen. Konfigurieren Sie z.B. die Bezeichnung, um Azure RMS-Schutz anzuwenden, oder verwenden Sie eine Lösung zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Bevor Sie ein Dokument mithilfe der Website zur Dokumentkontrolle verfolgen und widerrufen können, muss das Dokument von Azure RMS geschützt und von der Person nachverfolgt werden, die das Dokument geschützt hat. 
 
 
 ### <a name="labels"></a>Bezeichnungen

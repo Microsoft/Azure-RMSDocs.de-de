@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c7678be03106719af4679ae06e2aaa84aff8ca3e
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
 
@@ -24,18 +24,19 @@ ms.lasthandoff: 06/30/2017
 
 Die einfachste Möglichkeit zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails bietet sich, wenn Sie sie in Ihren Office-Desktopanwendungen erstellen oder bearbeiten: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-Sie können Dateien jedoch auch über den **Datei-Explorer** klassifizieren und schützen, der zusätzliche Dateitypen unterstützt und eine bequeme Methode zum gleichzeitigen Klassifizieren und Schützen mehrerer Dateien darstellt. Diese Methode unterstützt den Schutz von Office-Dokumenten, PDF-Dateien, Text- und Bilddateien sowie einer Vielzahl anderer Dateien. 
+Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren und schützen. Diese Methode unterstützt weitere Dateitypen und ist ein bequemer Weg zum Klassifizieren und Schützen mehrerer Dateien gleichzeitig. Diese Methode unterstützt den Schutz von Office-Dokumenten, PDF-Dateien, Text- und Bilddateien sowie einer Vielzahl anderer Dateien. 
+
+Wenn Ihre Bezeichnung Schutz für ein Dokument anwendet, ist das geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen für geschützte Dateien keine gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur und eDiscovery. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
 
-Geschützte Dateien können für andere Personen sicher freigegeben werden. Sie können die Datei z. B. an eine E-Mail anhängen oder eine Einladung von Ihrer SharePoint-Website senden.
+Geschützte Dateien können für andere Personen sicher freigegeben werden. Beispielsweise können Sie die Datei an eine E-Mail anfügen.
 
 Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ dazu können Sie Ihre [Office-App zum Festlegen von benutzerdefinierten Berechtigungen](#set-custom-permissions-for-a-document) oder den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie diese freigeben. 
 
 Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
 
 Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verwenden Sie den üblichen Freigabemechanismus zum Freigeben der Datei. Ist dies das erste Mal, dass diese Personen eine geschützte Datei per Freigabe erhalten, benötigen sie möglicherweise entsprechende Anweisungen zum Anzeigen der Datei. Für diese Personen können Sie die folgende Nachricht kopieren und einfügen: **Diese Datei ist mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in diesen [Anweisungen](https://aka.ms/rms-signup).**
-
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
 
@@ -63,7 +64,7 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
 
-- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Klicken Sie zum Überprüfen auf **Schützen** > **Hilfe und Feedback**, und prüfen Sie, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
+- Wenn die fehlende Bezeichnung den Schutz anwendet, verwenden Sie möglicherweise eine Version von Office, die das Anwenden des Rights Management-Schutzes nicht unterstützt. Klicken Sie zum Überprüfen auf **Schützen** > **Hilfe und Feedback** Prüfen Sie im Dialogfeld, ob sich im Abschnitt für den **Clientstatus** eine Nachricht mit der Information befindet, dass **dieser Client nicht für Office Professional Plus lizenziert ist**. 
 
 - Die Bezeichnung befindet sich möglicherweise in einer bereichsbezogenen Richtlinie, die Ihr Konto nicht umfasst. Wenden Sie sich an den Helpdesk oder Ihren Administrator.
 
@@ -84,8 +85,10 @@ Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen 
     - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie anderenfalls die Zugriffsebene aus, die Sie den Personen gewähren möchten.
 
     - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    
+    Wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen, können Sie alternativ mithilfe die Schaltfläche **Benutzer, Gruppen oder Organisation auswählen** verwenden. Diese Schaltfläche zeigt das Dialogfeld **Benutzer oder Gruppen auswählen** für Ihr lokales Active Directory. Wenn sich die Benutzer oder Gruppen, die Sie angeben möchten, im Active Directory befinden, können Sie sie in diesem Dialogfeld suchen und markieren. Zur Verwendung dieser Option muss Ihr Computer mit dem internen Netzwerk verbunden sein und der Domäne hinzugefügt werden. Sie benötigen auch lokales Active Directory. Wenn eine dieser Bedingungen nicht erfüllt ist, wird die folgende Meldung angezeigt: **The program cannot open the required dialog box because no locations can be found** (Das Programm kann das angeforderte Dialogfeld nicht öffnen, da keine Speicherorte gefunden werden können).
         
-    - **Ablauf des Zugriffs**: Wählen Sie diese Option nur für zeitkritische Dateien, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht Ihre ausgewählte(n) Datei(en) öffnen können. Sie können dabei die ursprüngliche Datei weiterhin öffnen, jedoch können die von Ihnen angegebenen Personen nach Mitternacht (Ihrer aktuellen Zeitzone) des von Ihnen festgelegten Tages die Datei nicht öffnen.
+    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegte Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
 
 5. Klicken Sie auf **Übernehmen**, und warten Sie auf die Nachricht **Die benutzerdefinierten Berechtigungen wurden angewendet**. Klicken Sie anschließend auf **Schließen**.
 
@@ -135,7 +138,9 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
     - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
     
-    - **Benutzer auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Sie können sie aus dem Adressbuch (z.B. Personen in Ihrer Organisation und Kontakte aus anderen Organisationen) auswählen. Geben Sie für andere Benutzer die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation für alle Benutzer in dieser Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    
+    Alternativ können Sie die Schaltfläche **Benutzer, Gruppen oder Organisation auswählen** verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen. Wenn Sie über die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen, zeigt diese Schaltfläche das Dialogfeld **Benutzer oder Gruppen auswählen** für Ihr lokales Active Directory-Dienst an. Wenn sich die Benutzer oder Gruppen, die Sie angeben möchten, im Active Directory befinden, können Sie sie in diesem Dialogfeld suchen und markieren. Zur Verwendung dieser Option muss Ihr Computer mit dem internen Netzwerk verbunden sein und der Domäne hinzugefügt werden. Sie benötigen auch lokales Active Directory. Wenn eine dieser Bedingungen nicht erfüllt ist, wird die folgende Meldung angezeigt: **The program cannot open the required dialog box because no locations can be found** (Das Programm kann das angeforderte Dialogfeld nicht öffnen, da keine Speicherorte gefunden werden können).
         
     - **Ablauf des Zugriffs**: Wählen Sie diese Option nur für zeitkritische Dateien, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht Ihre ausgewählte(n) Datei(en) öffnen können. Sie können dabei die ursprüngliche Datei weiterhin öffnen, jedoch können die von Ihnen angegebenen Personen nach Mitternacht (Ihrer aktuellen Zeitzone) des von Ihnen festgelegten Tages die Datei nicht öffnen.
     

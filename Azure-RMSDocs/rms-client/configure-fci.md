@@ -4,7 +4,7 @@ description: "Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e67bc3d82c1269343cd4e64f8a608a2a86d381ef
+ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -46,11 +46,11 @@ Voraussetzungen für diese Anweisungen:
     
     Das PowerShell-Modul „AzureInformationProtection“ ist im Azure Information Protection-Client inbegriffen. Weitere Installationsanweisungen finden Sie im Azure Information Protection-Administratorhandbuch unter [Installieren des Azure Information Protection-Clients für Benutzer](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users). Bei Bedarf können Sie das PowerShell-Modul mithilfe des Parameters `PowerShellOnly=true` installieren.
     
-    Zu den [Voraussetzungen für die Verwendung dieses PowerShell-Moduls](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service) gehören das Aktivieren des Azure Rights Management-Diensts, das Erstellen eines Dienstprinzipals und das Bearbeiten der Registrierung, sofern sich Ihr Mandant außerhalb von Nordamerika befindet. Bevor Sie mit der Durchführung der Anweisungen in diesem Artikel beginnen, stellen Sie sicher, dass Sie Werte für **BposTenantId**, **AppPrincipalId** und **Symmetrischer Schlüssel** festgelegt haben, wie in diesen Voraussetzungen beschrieben wird. 
+    Zu den [Voraussetzungen für die Verwendung dieses PowerShell-Moduls](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) gehören das Aktivieren des Azure Rights Management-Diensts, das Erstellen eines Dienstprinzipals und das Bearbeiten der Registrierung, sofern sich Ihr Mandant außerhalb von Nordamerika befindet. Bevor Sie mit der Durchführung der Anweisungen in diesem Artikel beginnen, stellen Sie sicher, dass Sie Werte für **BposTenantId**, **AppPrincipalId** und **Symmetrischer Schlüssel** festgelegt haben, wie in diesen Voraussetzungen beschrieben wird. 
     
     - Wenn Sie die Standardstufe des Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie in der Anleitung [Ändern der Standardschutzebene von Dateien](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) beschrieben wird.
     
-    - Sie haben eine Internetverbindung mit konfigurierten Computereinstellungen, falls für einen Proxyserver erforderlich. Beispiel: `netsh winhttp import proxy source=ie`
+    - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, sollten diese für einen Proxyserver benötigt werden. Beispiel: `netsh winhttp import proxy source=ie`
     
 - Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).
     
@@ -216,14 +216,14 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
             `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
 
-            In diesem Befehl sind **[Quelldateipfad]** und **[Quelldateibesitzer-E-Mail]** FCI-spezifische Variablen. Geben Sie diese also genau wie im obigen Befehl ein. Die erste wird von FCI verwendet, um automatisch die identifizierte Datei im Ordner anzugeben, und die zweite wird verwendet, damit FCI automatisch die E-Mail-Adresse des benannten Besitzers der identifizierten Datei abrufen kann. Dieser Befehl wird für jede Datei im Ordner wiederholt, in unserem Beispiel für jede Datei im Ordner „C:\FileShare“, die außerdem noch RMS als Dateiklassifizierungseigenschaft aufweist.
+            In diesem Befehl sind **[Quelldateipfad]** und **[Quelldateibesitzer-E-Mail]** FCI-spezifische Variablen. Geben Sie diese also genau wie im vorherigen Befehl ein. Die erste Variable wird von FCI verwendet, um automatisch die identifizierte Datei im Ordner anzugeben, und die zweite Variable wird verwendet, damit FCI automatisch die E-Mail-Adresse des benannten Besitzers der identifizierten Datei abrufen kann. Dieser Befehl wird für jede Datei im Ordner wiederholt, in unserem Beispiel für jede Datei im Ordner „C:\FileShare“, die außerdem noch RMS als Dateiklassifizierungseigenschaft aufweist.
 
             > [!NOTE]
-            > Durch den **-OwnerMail [Source File Owner Email]**-Parameter und seinen Wert wird sichergestellt, dass dem ursprünglichen Besitzer der Datei nach dem Schutz der Datei die Berechtigung "Rights Management-Besitzer" gewährt wird. Dadurch wird sichergestellt, dass der ursprüngliche Dateibesitzer über alle Rights Management-Rechte für seine eigenen Dateien verfügt. Wenn Dateien von einem Domänenbenutzer erstellt werden, wird die E-Mail-Adresse automatisch aus Active Directory abgerufen, wobei der Benutzerkontoname aus der Eigenschaft "Besitzer" der Datei verwendet wird. Hierzu muss sich der Dateiserver in derselben Domäne bzw. vertrauenswürdigen Domäne wie der Benutzer befinden.
+            > Durch den **-OwnerMail [Source File Owner Email]**-Parameter und seinen Wert wird sichergestellt, dass dem ursprünglichen Besitzer der Datei nach dem Schutz der Datei die Berechtigung "Rights Management-Besitzer" gewährt wird. Durch diese Konfiguration wird sichergestellt, dass der ursprüngliche Dateibesitzer über alle Rights Management-Rechte für seine eigenen Dateien verfügt. Wenn Dateien von einem Domänenbenutzer erstellt werden, wird die E-Mail-Adresse automatisch aus Active Directory abgerufen, wobei der Benutzerkontoname aus der Eigenschaft "Besitzer" der Datei verwendet wird. Hierzu muss sich der Dateiserver in derselben Domäne bzw. vertrauenswürdigen Domäne wie der Benutzer befinden.
             > 
-            > Weisen Sie, sofern möglich, den ursprünglichen Besitzer geschützten Dokumenten zu, um sicherzustellen, dass diese Benutzer weiterhin die volle Kontrolle über die von ihnen erstellten Dateien haben. Wenn Sie aber die Variable [Quelldateibesitzer-E-Mail] wie oben beschrieben verwenden und für eine Datei kein Domänenbenutzer als Besitzer definiert wurde (wenn z. B. ein lokales Konto zum Erstellen der Datei verwendet wurde, sodass der Besitzer als "SYSTEM" angezeigt wird), verursacht das Skript einen Fehler.
+            > Weisen Sie, sofern möglich, den ursprünglichen Besitzer geschützten Dokumenten zu, um sicherzustellen, dass diese Benutzer weiterhin die volle Kontrolle über die von ihnen erstellten Dateien haben. Wenn Sie aber die Variable [Quelldateibesitzer-E-Mail] wie im vorherigen Kommentar beschrieben verwenden und für eine Datei kein Domänenbenutzer als Besitzer definiert wurde (wenn z.B. ein lokales Konto zum Erstellen der Datei verwendet wurde, sodass der Besitzer als "SYSTEM" angezeigt wird), verursacht das Skript einen Fehler.
             > 
-            > Für Dateien, die keinen Domänenbenutzer als Besitzer aufweisen, können Sie diese Dateien selbst als Domänenbenutzer kopieren und speichern, sodass Sie zum Besitzer nur dieser Dateien werden. Alternativ können Sie, wenn Sie über Berechtigungen verfügen, manuell den Besitzer ändern.  Oder alternativ können Sie eine bestimmte E-Mail-Adresse (z. B. Ihre eigene oder eine Gruppenadresse für die IT-Abteilung) anstelle der [Quelldateibesitzer-E-Mail]-Variablen angeben, was bedeutet, dass alle Dateien, die Sie mit diesem Skript schützen, diese E-Mail-Adresse zum Definieren des neuen Besitzers verwenden.
+            > Für Dateien, die keinen Domänenbenutzer als Besitzer aufweisen, können Sie diese Dateien selbst als Domänenbenutzer kopieren und speichern, sodass Sie zum Besitzer nur dieser Dateien werden. Alternativ können Sie, wenn Sie über Berechtigungen verfügen, manuell den Besitzer ändern.  Oder alternativ können Sie eine bestimmte E-Mail-Adresse (z.B. Ihre eigene oder eine Gruppenadresse für die IT-Abteilung) anstelle der [Quelldateibesitzer-E-Mail]-Variablen angeben, was bedeutet, dass alle Dateien, die Sie mit diesem Skript schützen, diese E-Mail-Adresse zum Definieren des neuen Besitzers verwenden.
 
     -   **Führen Sie den Befehl wie folgt aus**: Wählen Sie **Lokales System**
 
@@ -259,7 +259,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
     2.  Klicken Sie auf **Warten, bis die Aufgabe abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
-4.  Warten Sie, bis das Dialogfeld **Dateiverwaltungsaufgabe wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Daraufhin sollte die Anzahl der Dateien im ausgewählten Ordner im Feld **Dateien** angezeigt werden. Vergewissern Sie sich, dass die Dateien im ausgewählten Ordner jetzt durch Rights Management geschützt sind. Wenn z.B. der ausgewählte Ordner „C:\FileShare“ ist, geben Sie Folgendes in einer Windows PowerShell-Sitzung ein, und stellen sicher, dass keine Dateien den Status **Ungeschützt** haben:
+4.  Warten Sie, bis das Dialogfeld **Dateiverwaltungsaufgabe wird ausgeführt** geschlossen wurde, und sehen Sie sich dann die Ergebnisse im automatisch angezeigten Bericht an. Daraufhin sollte die Anzahl der Dateien im ausgewählten Ordner im Feld **Dateien** angezeigt werden. Vergewissern Sie sich, dass die Dateien im ausgewählten Ordner jetzt durch Rights Management geschützt sind. Wenn z.B. der ausgewählte Ordner „C:\FileShare“ ist, geben Sie den folgenden Befehl in einer Windows PowerShell-Sitzung ein, und stellen sicher, dass keine Dateien den Status **Ungeschützt** haben:
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -267,7 +267,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     > [!TIP]
     > Einige Tipps zur Problembehandlung:
     > 
-    > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist dies darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen, und führen sie es aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich beim Azure Rights Management-Dienst zu authentifizieren.
+    > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist diese Ausgabe darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen, und führen sie es aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich beim Azure Rights Management-Dienst zu authentifizieren.
     > 
     >     -   Wenn das Skript meldet, dass es keine Verbindung mit dem Azure Rights Management-Dienst herstellen konnte, überprüfen Sie die Werte, die für das Dienstprinzipalkonto, das Sie im Skript angegeben haben, angezeigt werden. Weitere Informationen zum Erstellen dieses Dienstprinzipalkontos finden Sie unter [Voraussetzung 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) im Administratorhandbuch zum Azure Information Protection-Client.
     >     -   Wenn das Skript meldet, dass es eine Verbindung zu Azure RMS herstellen konnte, überprüfen Sie, ob es die angegebene Vorlage durch Ausführen von [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) direkt von Windows PowerShell auf dem Server aus finden kann. Die angegebene Vorlage sollte in den Ergebnissen zurückgegeben werden.
@@ -278,15 +278,15 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     >     ```
     >     -   Wenn das Skript in dieser Windows PowerShell-Sitzung erfolgreich ausgeführt wurde, überprüfen Sie Ihre Einträge für **Executive** und **Argument** in der Dateiverwaltungsaufgaben-Aktion.  Wenn Sie **-OwnerEmail [Quelldateibesitzer-E-Mail]** angegeben haben, entfernen Sie diesen Parameter.
     > 
-    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie hierzu die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name** in der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in den Active Directory-Domänendiensten nachzuschlagen.
+    >         Wenn die Dateiverwaltungsaufgabe erfolgreich ohne **-OwnerEmail [Quelldateibesitzer-E-Mail]** funktioniert, überprüfen Sie, ob für die nicht geschützten Dateien anstelle von **SYSTEM** ein Domänenbenutzer als Dateibesitzer aufgeführt wird.  Verwenden Sie für diese Prüfung die Registerkarte **Sicherheit** für die Eigenschaften der Datei, und klicken Sie dann auf **Erweitert**. Der **Besitzer**-Wert wird sofort hinter dem **Name** in der Datei angezeigt. Überprüfen Sie außerdem, ob sich der Dateiserver in derselben Domäne bzw. einer vertrauenswürdigen Domäne befindet, um die E-Mail-Adresse des Benutzers in Active Directory Domain Services nachzuschlagen.
     > -   Wenn Sie die richtige Anzahl von Dateien im Bericht sehen, die Dateien aber nicht geschützt sind, versuchen Sie, die Dateien manuell mithilfe des [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) -Cmdlets zu schützen, um festzustellen, ob Fehler angezeigt werden.
 
 Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werden, können Sie den Dateiressourcen-Manager schließen. Neue Dateien werden automatisch klassifiziert und geschützt, wenn die geplanten Aufgaben ausgeführt werden. 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Ändern der Anweisungen zum selektiven Schutz von Dateien
-Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es sehr einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
+Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.
 
-Verwenden Sie hierzu eine der integrierten Klassifizierungseigenschaften (z. B. **Daten mit persönlich identifizierbaren Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
+Verwenden Sie zum Durchführen dieser Änderung eine der integrierten Klassifizierungseigenschaften (z.B. **personenbezogene Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
 
 Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS** -Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem **Operator** -Wert **Gleich** und dem **Wert** **Hoch**aus.
 
