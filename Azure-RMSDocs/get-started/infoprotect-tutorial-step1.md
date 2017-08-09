@@ -4,17 +4,17 @@ description: "Schritt 1 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: adc2baa875595d5044b47a9f014cc1381ba85dc2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 1779eb6f2bcf31ce3515b58b6ed955208fafb237
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Schritt 1: Aktivieren des Rights Management-Diensts
  
@@ -43,14 +43,14 @@ Für dieses Tutorial gehen wir direkt zur Aktivierungsseite im Verwaltungsportal
 
     **Rechteverwaltung ist aktiviert** und die Option zum Deaktivieren sollte jetzt angezeigt werden (Sie müssen die Seite u. U. manuell aktualisieren).
 
-    Klicken Sie zu diesem Zeitpunkt nicht auf **Erweiterte Funktionen**. Dadurch gelangen Sie zum klassischen Azure-Portal, wo Sie benutzerdefinierte Vorlagen konfigurieren können, die für dieses Tutorial jedoch nicht benötigt werden. Stattdessen können Sie diese Seite schließen.
+    Klicken Sie zu diesem Zeitpunkt nicht auf **Erweiterte Funktionen**. Stattdessen können Sie diese Seite schließen.
 
-Dies ist bereits alles im ersten Schritt dieses Tutorials. Für eine Produktionsbereitstellung sollten Sie benutzerdefinierte Vorlagen konfigurieren, zusätzlich zu den oder anstelle der beiden Standardvorlagen von Azure Rights Management. Da in diesem Tutorial aber keine benutzerdefinierten Vorlagen erforderlich sind, können Sie direkt zum zweiten Schritt übergehen.
+Dies ist bereits alles im ersten Schritt dieses Tutorials. Sie können nun mit Schritt 2 beginnen.
 
-|Weitere Informationen zu|Weitere Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Informationen zum Aktivieren von Rights Management|[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)|
-|Standardvorlagen und Erstellung neuer benutzerdefinierter Vorlagen|[Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Einführung in](infoprotect-quick-start-tutorial.md)

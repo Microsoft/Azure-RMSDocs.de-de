@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 85b00b8f1e6bd8612b4bd49770e2ff4a934d3177
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 2ab4d8c9d253098b4f9ecb7fb820a3df1891e124
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -43,7 +43,7 @@ Stellen Sie zum Entfernen des Dienstverbindungspunkts sicher, dass Sie als Unter
 
 Wenn Sie bestätigt haben, dass RMS-Clients nicht mehr mit diesen Servern kommunizieren und Clients erfolgreich Azure Information Protection verwenden, können Sie die AD RMS-Serverrolle von diesen Servern entfernen. Wenn Sie dedizierte Server verwenden, können Sie auch als Vorsichtsmaßnahme zuerst die Server für einen gewissen Zeitraum herunterfahren, um sicherzustellen, dass keine Probleme gemeldet werden, die möglicherweise einen Neustart dieser Server erfordern. Damit wird Dienstkontinuität gewährleistet, während Sie untersuchen, warum Clients nicht Azure Information Protection verwenden.
 
-Nach der Aufhebung der Bereitstellung Ihrer AD RMS-Server haben Sie die Gelegenheit, Ihre Vorlagen im klassischen Azure-Portal zu überprüfen und zu konsolidieren, sodass sich Benutzer unter weniger Vorlagen entscheiden müssen. Sie können die Vorlagen zu diesem Zeitpunkt auch neu konfigurieren oder sogar neue Vorlagen hinzufügen. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).
+Nach der Aufhebung der Bereitstellung Ihrer AD RMS-Server haben Sie die Gelegenheit, Ihre Vorlagen im Azure-Portal zu überprüfen und zu konsolidieren, sodass sich Benutzer unter weniger Vorlagen entscheiden müssen. Sie können die Vorlagen zu diesem Zeitpunkt auch neu konfigurieren oder sogar neue Vorlagen hinzufügen. Außerdem wäre dies ein guter Zeitpunkt, um die Standardvorlagen zu veröffentlichen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 
 >[!IMPORTANT]
 > Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.

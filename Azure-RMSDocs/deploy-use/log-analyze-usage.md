@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokolli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -175,27 +175,27 @@ Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In
 |AcquirePreLicense|Ein Client fordert im Auftrag des Benutzers eine Lizenz für RMS-geschützten Inhalt an.|
 |AcquireTemplates|Ein Aufruf wird ausgelöst, um Vorlagen anhand von Vorlagen-IDs abzurufen.|
 |AcquireTemplateInformation|Ein Aufruf wird ausgelöst, um die IDs der Vorlage vom Dienst abzurufen.|
-|AddTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Hinzufügen einer Vorlage ausgelöst.|
+|AddTemplate|Vom Azure-Portal wird ein Aufruf zum Hinzufügen einer Vorlage ausgelöst.|
 |AllDocsCsv|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Herunterladen der CSV-Datei von der Seite **Alle Dokumente**.|
 |BECreateEndUserLicenseV1|Von einem Mobilgerät wird ein Aufruf ausgelöst, um eine Endbenutzerlizenz zu erstellen.|
 |BEGetAllTemplatesV1|Von einem Mobilgerät (Back-End) wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
 |Certify|Der Client zertifiziert den Inhalt für den Schutz.|
-|DeleteTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage nach Vorlagen-ID zu löschen.|
+|DeleteTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage nach Vorlagen-ID zu löschen.|
 |DocumentEventsCsv|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Herunterladen der CSV-Datei für ein einziges Dokument.|
-|ExportTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage anhand einer Vorlagen-ID zu exportieren.|
+|ExportTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage anhand einer Vorlagen-ID zu exportieren.|
 |FECreateEndUserLicenseV1|Ähnlich wie bei der „AcquireLicense“-Anforderung, aber von mobilen Geräten aus.|
 |FECreatePublishingLicenseV1|Identisch mit „Certify“ und „GetClientLicensorCert“ in Kombination, von mobilen Clients aus.|
 |FEGetAllTemplates|Von einem Mobilgerät (Front-End) wird ein Aufruf ausgelöst, um die Vorlagen abzurufen.|
 |FindServiceLocationsForUser|Ein Aufruf zum Abfragen von URLs wird ausgelöst, die zum Aufrufen von „Certify“ oder von „AcquireLicense“ verwendet werden.|
 |GetAllDocs|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf zum Laden der Seite **Alle Dokumente** für einen Benutzer oder zum Durchsuchen aller Dokumente des Mandanten. Verwenden Sie diesen Wert in den Feldern „admin-action“ (Adminaktion) und „acting-as-user“ (Fungiert als Benutzer):<br /><br />- „admin-action“ ist leer: Einem Benutzer wird die Seite **Alle Dokumente** für seine eigenen Dokumente angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist leer: Einem Administrator werden alle Dokumente für seinen Mandanten angezeigt.<br /><br />- „admin-action“ ist TRUE und „acting-as-user“ ist nicht leer: Einem Administrator wird die Seite **Alle Dokumente** für einen Benutzer angezeigt.|
-|GetAllTemplates|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
+|GetAllTemplates|Vom Azure-Portal wird ein Aufruf ausgelöst, um alle Vorlagen abzurufen.|
 |GetClientLicensorCert|Der Client fordert von einem Windows-basierten Computer aus ein Veröffentlichungszertifikat an (das später zum Schützen von Inhalt verwendet wird).|
 |GetConfiguration|Ein Azure PowerShell-Cmdlet wird aufgerufen, um die Konfiguration des Azure RMS-Mandanten abzurufen.|
 |GetConnectorAuthorizations|Von den RMS-Connectors wird ein Aufruf ausgelöst, um deren Konfiguration aus der Cloud abzurufen.|
 |GetRecipients|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Listenansicht zu navigieren.|
 |GetSingle|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, zur Seite **Einzelnes Dokument** zu navigieren.|
-|GetTenantFunctionalState|Das klassische Azure-Portal überprüft, ob der Azure Rights Management-Dienst aktiviert ist.|
-|GetTemplateById|Vom klassischen Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID abzurufen.|
+|GetTenantFunctionalState|Das Azure-Portal überprüft, ob der Azure Rights Management-Dienst aktiviert ist.|
+|GetTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID abzurufen.|
 |KeyVaultDecryptRequest|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK) in Azure Key Vault.|
 |KeyVaultGetKeyInfoRequest|Ein Aufruf erfolgt, um zu überprüfen, ob der angegebene Schlüssel, der in Azure Key Vault als Azure Information Protection-Mandantenschlüssel verwendet werden soll, verfügbar ist und nicht bereits verwendet wird.|
 |KeyVaultSignDigest|Ein Aufruf erfolgt, wenn ein vom Kunden verwalteter Schlüssel (BYOK) in Azure Key Vault zu Signaturzwecken verwendet wird. Dieser Aufruf erfolgt normalerweise einmal pro „AcquireLicence“ (oder „FECreateEndUserLicenseV1“), „Certify“ und „GetClientLicensorCert“ (oder „FECreatePublishingLicenseV1“).|
@@ -204,14 +204,14 @@ Es gibt zahlreiche Anforderungstypen für den Azure Rights Management-Dienst. In
 |LoadEventsForMap|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Kartenansicht zu navigieren.|
 |LoadEventsForSummary|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Zeitachsenansicht zu navigieren.|
 |LoadEventsForTimeline|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Kartenansicht zu navigieren.|
-|ImportTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Importieren einer Vorlage ausgelöst.|
+|ImportTemplate|Vom Azure-Portal wird ein Aufruf zum Importieren einer Vorlage ausgelöst.|
 |RevokeAccess|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, ein Dokument zu sperren.|
 |SearchUsers |Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, alle Benutzer in einem Mandanten zu suchen.|
 |ServerCertify|Von einem RMS-fähigen Client (z. B. SharePoint) wird ein Aufruf zum Zertifizieren des Servers ausgelöst.|
 |SetUsageLogFeatureState|Ein Aufruf zum Aktivieren der Verwendungsprotokollierung wird ausgelöst.|
 |SetUsageLogStorageAccount|Ein Aufruf wird ausgelöst, um den Speicherort der Protokolle des Azure Rights Management-Diensts anzugeben.|
 |UpdateNotificationSettings|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, die Benachrichtigungseinstellungen für ein einzelnes Dokument zu ändern.|
-|UpdateTemplate|Vom klassischen Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
+|UpdateTemplate|Vom Azure-Portal wird ein Aufruf zum Aktualisieren einer vorhandenen Vorlage ausgelöst.|
 
 
 ## <a name="windows-powershell-reference"></a>Windows PowerShell-Referenz

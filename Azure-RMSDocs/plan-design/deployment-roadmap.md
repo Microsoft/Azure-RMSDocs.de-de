@@ -4,7 +4,7 @@ description: "Führen Sie diese Schritte aus, um Azure Information Protection f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54f72dad3f7dbc259df602f0f613124c46ce5846
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -88,7 +88,7 @@ Wenn Benutzer mit dem Bezeichnen von Dokumenten und E-Mails vertraut sind, könn
 
 Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
--   Benutzerdefinierte Vorlagen, wenn die Standardvorlagen für Rechterichtlinien für Ihre Organisation nicht ausreichend sind. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).
+-   Benutzerdefinierte Vorlagen, wenn die Standardvorlagen für Rechterichtlinien für Ihre Organisation nicht ausreichend sind. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 
 -   Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation Rights Management verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
@@ -154,7 +154,7 @@ Bevor Sie mit der Verwendung von [!INCLUDE[aad_rightsmanagement_2](../includes/a
 
 Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
--   Benutzerdefinierte Vorlagen, wenn die Standardvorlagen für Rechterichtlinien für Ihre Organisation nicht ausreichend sind. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Konfigurieren benutzerdefinierter Vorlagen für den Azure Rights Management-Dienst](../deploy-use/configure-custom-templates.md).
+-   Benutzerdefinierte Vorlagen, wenn die Standardvorlagen für Ihre Organisation nicht ausreichend sind. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 
 -   Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation Rights Management verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 

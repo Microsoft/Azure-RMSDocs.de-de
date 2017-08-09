@@ -4,7 +4,7 @@ description: "Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 02eab7970b98cbc0ed27a3928a9a3c68ebd2927a
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-user-guide"></a>Rights Management-Freigabeanwendung – Benutzerhandbuch
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
 
 Die Microsoft Rights Management-Freigabeanwendung (RMS) für Windows hilft Ihnen, wichtige Dokumente und Bilder vor Personen zu schützen, die diese Dateien nicht sehen dürfen – sogar, wenn Sie die Dateien per E-Mail senden oder auf einem anderen Gerät speichern. Sie können mit dieser Anwendung auch Dateien öffnen und verwenden, die von anderen Personen mit derselben Rights Management-Schutztechnologie geschützt wurden.
 

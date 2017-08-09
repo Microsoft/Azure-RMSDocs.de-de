@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zu Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/15/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cbceb3f3e68c558576cc275793dac6feb3b9245b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 7e8f49a9775ac6eab89b72a50f8ca866875313a5
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -45,7 +45,7 @@ Nein. Zwar wird bei den meisten Präsentationen und Demos zum Azure Information 
 
 Wenn der Azure Information Protection-Client für Windows installiert ist, aber keine Azure Information Protection-Richtlinie vorhanden ist, wird der Client automatisch im [reinen Schutzmodus](../rms-client/client-protection-only-mode.md) betrieben. In diesem Modus können Benutzer problemlos Rights Management-Vorlagen und benutzerdefinierte Berechtigungen anwenden. Wenn Sie zu einem späteren Zeitpunkt ein Abonnement erwerben, das Klassifizierungen und Bezeichnungen umfasst, wechselt der Client beim Herunterladen der Azure Informationen Protection-Richtlinie automatisch in den Standardmodus.
 
-Wenn Sie zurzeit die Rights Management-Freigabeanwendung für Windows verwenden, empfehlen wir, diese durch den Azure Information Protection-Client zu ersetzen. Die Unterstützung für die Freigabeanwendung endet am 31. Januar 2018. Informationen zum Übergang finden Sie unter [Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben](../rms-client/upgrade-client-app.md).
+Wenn Sie zurzeit die Rights Management-Freigabeanwendung für Windows verwenden, empfehlen wir, diese durch den Azure Information Protection-Client zu ersetzen. Die Unterstützung für die Freigabeanwendung endet am 31. Januar 2019. Informationen zum Übergang finden Sie unter [Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben](../rms-client/upgrade-client-app.md).
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Unterstützt Azure Information Protection lokale und hybride Szenarios?
 

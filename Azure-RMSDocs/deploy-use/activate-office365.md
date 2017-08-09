@@ -4,7 +4,7 @@ description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1a32450d7412006835ad6d3c37de3c6ec38b64d
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: ec41508974244a7abe4faf67831d348775cdc73c
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Informationen zum Aktivieren von Azure Rights Management über Office 365 Admin Center
 
@@ -50,6 +50,6 @@ Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivi
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Zurück zu [Aktivieren von Azure Rights Management](activate-service.md).
+Lesen Sie weiter unter [Aktivieren von Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

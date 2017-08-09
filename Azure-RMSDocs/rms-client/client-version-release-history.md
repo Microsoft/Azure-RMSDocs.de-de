@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9ee487f65f417c9faaf71f3c50b5d4e35659c55f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 28b7c2f8bbd058251f4edfd93b2fee181bd4d339
+ms.sourcegitcommit: ebf396cbe8eabed720b317f131884fe9f23b8691
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/29/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Azure Information Protection-Client: Verlauf der Versionsveröffentlichungen
 
@@ -140,7 +140,7 @@ Allgemeine Verfügbarkeit.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Installieren des Clients:
+Weitere Informationen zum Installieren und Verwenden des Clients:
 
 - Für Benutzer: [Herunterladen und Installieren des Clients](install-client-app.md)
 

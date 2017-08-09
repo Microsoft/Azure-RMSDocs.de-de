@@ -4,7 +4,7 @@ description: "Sie müssen den Azure Rights Management-Dienst aktivieren, damit I
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2b4e62ab14702beabe8692147b97c4464d672bdf
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="activating-azure-rights-management"></a>Aktivieren von Azure Rights Management
 
@@ -32,18 +32,23 @@ Wenn der Azure Rights Management-Dienst für Azure Information Protection für I
 Wenn Sie weitere Informationen zum Azure Rights Management-Dienst benötigen, bevor Sie ihn aktivieren (z.B. welche geschäftlichen Probleme gelöst werden, einige typische Anwendungsfälle sowie Informationen zur Funktionsweise), helfen Ihnen die Informationen unter [Was ist Azure Rights Management?](../understand-explore/what-is-azure-rms.md) weiter.
 
 > [!IMPORTANT]
-> Bevor Sie [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] aktivieren, sollten Sie sicherstellen, dass Ihre Organisation über einen Diensttarif verfügt, der Azure Rights Management-Datenschutz umfasst. Ist dies nicht der Fall, können Sie Azure Rights Management nicht aktivieren.
->
-> Sie benötigen entweder einen [Azure Information Protection-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+> Aktivieren Sie den Azure Rights Management-Dienst nicht, wenn Sie Active Directory Rights Management Services (AD RMS) für Ihre Organisation bereitgestellt haben. [Weitere Informationen](prepare-environment-adrms.md)
+
+Bevor Sie [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] aktivieren, sollten Sie sicherstellen, dass Ihre Organisation über einen Diensttarif verfügt, der Azure Rights Management-Datenschutz umfasst. Ist dies nicht der Fall, können Sie Azure Rights Management nicht aktivieren. Sie müssen eine der folgenden Komponenten besitzen:
+
+- Einen [Azure Information Protection-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) 
+
+- Einen [Office 365-Plan, der Rights Management enthält](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Wenn der Azure Rights Management-Dienst aktiviert wurde, können alle Benutzer in Ihrer Organisation Information Protection (Informationsschutz) auf die eigenen Dateien anwenden und Dateien öffnen (nutzen), die durch den Azure Rights Management-Dienst geschützt wurden. Bei Bedarf können Sie jedoch einschränken, wer Informationsschutz anwenden kann, indem Sie Onboardingsteuerungsrichtlinien für eine in Phasen vorgenommene Bereitstellung verwenden. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](#configuring-onboarding-controls-for-a-phased-deployment) in diesem Artikel.
 
-Wählen Sie aus, ob Sie Office 365 Admin Center oder das klassische Azure-Verwaltungsportal verwenden möchten, um Anweisungen zum Aktivieren des Rights Management-Diensts über Ihr Verwaltungsportal zu erhalten:
+Für Anleitungen zum Aktivieren des Rights Management-Diensts von Ihrem Verwaltungsportal aus, wählen Sie, ob Sie das Office 365-Admin Center, das klassische Azure-Portal oder das Azure-Portal verwenden möchten (die letzte Methode befindet sich derzeit in der Vorschau):
 
+- [**Office 365 Admin Center**](activate-office365.md): erfordert ein globales Administratorkonto
 
-- [Office 365 Admin Center](activate-office365.md)
+- [**Klassisches Azure-Portal**](activate-azure-classic.md): erfordert ein globalen Administratorkonto
 
-- [Klassisches Azure-Portal](activate-azure-classic.md)
+- [**Azure-Portal**](activate-azure.md): erfordert ein globales Administratorkonto oder ein [Sicherheitsadministratorkonto](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 
 Alternativ können Sie zum Aktivieren von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] PowerShell verwenden:
 
@@ -90,7 +95,7 @@ Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] jetzt für Ihre Organisation aktiviert haben, verwenden Sie die [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md), um herauszufinden, ob Sie vor dem Rollout von Azure Information Protection für Benutzer und Administratoren ggf. weitere Konfigurationsschritte ausführen müssen. 
 
-Angenommen, Sie möchten [benutzerdefinierte Vorlagen](configure-custom-templates.md) verwenden, um es den Benutzern zu erleichtern, Informationsschutz auf Dateien anzuwenden, Ihre lokalen Server durch Installation des [Rights Management-Connectors](deploy-rms-connector.md) für die Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verbinden und den [Azure Information Protection-Client](../rms-client/aip-client.md) bereitzustellen, der den Schutz aller Dateitypen auf allen Geräten unterstützt. 
+Angenommen, Sie möchten [Vorlagen](configure-policy-templates.md) verwenden, um es den Benutzern zu erleichtern, Informationsschutz auf Dateien anzuwenden, Ihre lokalen Server durch Installation des [Rights Management-Connectors](deploy-rms-connector.md) für die Verwendung von [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] zu verbinden und den [Azure Information Protection-Client](../rms-client/aip-client.md) bereitzustellen, der den Schutz aller Dateitypen auf allen Geräten unterstützt. 
 
 Office-Dienste (z.B. Exchange Online und SharePoint Online) erfordern zusätzliche Konfigurationsschritte, bevor Sie deren IRM-Features (Information Rights Management) verwenden können. Informationen dazu, wie Ihre Anwendungen mit dem Rights Management-Dienst funktionieren, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](../understand-explore/applications-support.md).
 

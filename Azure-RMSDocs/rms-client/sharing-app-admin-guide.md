@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cfe5822e426748dcf6df3bb0c25949a85f69db1f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
@@ -44,7 +44,7 @@ Die einzige Voraussetzung für Installationen besteht darin, dass der Computer m
 
 3.  Extrahieren Sie die Dateien aus den komprimierten Installationspaketen, z. B. durch Doppelklick. Kopieren Sie dann die extrahierten Dateien an einen Speicherort im Netzwerk, auf den Clientcomputer zugreifen können.
 
-Die Setuppakete für die RMS-Freigabeanwendung unterstützen verschiedene Bereitstellungsszenarien und enthalten Folgendes:
+Die Setuppakete für die RMS-Freigabeanwendung unterstützen verschiedene Bereitstellungsszenarios und enthalten Folgendes:
 
 |Beschreibung|Bereitstellungsszenario|
 |---------------|-----------------------|
@@ -187,7 +187,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
     Beispiel: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
-    Wenn diese Befehle nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
+    Wenn dieser Befehl nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
 
 2.  Installieren Sie das Office-Add-In mithilfe der folgenden Befehle, und geben Sie einen vorhandenen Ordner zum Erstellen der Protokolldatei an:
 
@@ -205,7 +205,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
     Beispiel: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
-    Wenn diese Befehle nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
+    Wenn dieser Befehl nicht erfolgreich ausgeführt werden, wird aufgrund des **/quiet**-Parameters keine Fehlermeldung angezeigt. Um den Fehler zu finden, warum die Installation fehlgeschlagen ist, führen Sie den Befehl ohne den /quiet-Parameter erneut aus, um mögliche Fehlermeldungen anzuzeigen.
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
