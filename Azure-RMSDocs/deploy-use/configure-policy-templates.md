@@ -4,7 +4,7 @@ description: "Derzeit können Sie in der Vorschau nun Rights Management-Vorlagen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b9c6b808de6c5967885f4937965b4e0e759668f3
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
+ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -32,7 +32,7 @@ Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlin
 
 **Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2):**
 
-- Rights Management-Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Vorlagen** nach den Bezeichnungen auf dem Blatt **Azure Information Protection – Globale Richtlinie** angezeigt. Sie können diese Vorlagen zu Bezeichnungen konvertieren oder weiterhin als separate Vorlagen verwalten und verknüpfen, wenn Sie den Schutz für Ihre Bezeichnungen konfigurieren. 
+- Rights Management-Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Vorlagen** nach den Bezeichnungen auf dem Blatt **Azure Information Protection – Globale Richtlinie** angezeigt. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
 
 **Bei einem Abonnement, das nur Schutz umfasst (ein Office 365-Abonnement mit dem Azure Rights Management-Dienst):**
 
@@ -69,7 +69,7 @@ Wenn Sie Ihr Abonnement für Azure Information Protection vor einer Weile erhalt
 - **\<Name der Organisation> – Nur vertrauliche Ansicht** für Lese- oder Änderungsberechtigungen für geschützten Inhalt 
 
 >[!NOTE]
->Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection – Globale Richtlinie** nicht sehen, werden sie zu Bezeichnungen konvertiert. Diese sind noch immer als Vorlage vorhanden, sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Azure RMS-Schutz enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
+>Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection – Globale Richtlinie** nicht sehen, werden sie zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden, sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Azure RMS-Schutz enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
 >
 >Sie können Vorlagen manuell konvertieren und diese bei Bedarf umbenennen, so wie unter [Konvertieren von Vorlagen in Bezeichnungen](#to-convert-templates-to-labels) beschrieben. Wenn Ihre Azure Information Protection-Standardrichtlinie kürzlich erstellt und der Azure Rights Management-Dienst für Ihren Mandanten zu dieser Zeit aktiviert wurde, werden sie automatisch konvertiert.
 

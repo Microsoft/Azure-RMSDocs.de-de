@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a9f592584c090d8b0bb62acabd5775238b5e411
-ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
+ms.openlocfilehash: a2c0a8ef4534f8d5149178986688c4d00b4cee9f
+ms.sourcegitcommit: 5ea919b1b2bcb9c4b3e5dd1939ff8d0d937e1168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -101,14 +101,11 @@ Der Azure Rights Management-Dienst verwendet immer ein Azure Active Directory-Ko
 
 Die Authentifizierungsmethode für diese Konten kann unterschiedlich sein, je nachdem, wie der Administrator in der anderen Organisation die Azure Active Directory-Konten konfiguriert hat. Beispielsweise können Kennwörter, die für diese Konten erstellt wurden, Multi-Factor Authentication (MFA, mehrstufige Authentifizierung), Verbund oder Kennwörter verwendet werden, die in Active Directory-Domänendienste erstellt und dann mit Azure Active Directory synchronisiert wurden.
 
-## <a name="can-i-add-external-users-people-from-outside-my-company-to-templates"></a>Kann ich externe Benutzer (die nicht zu meinem Unternehmen gehören) zu Vorlagen hinzufügen?
-Ja. Ein Erstellen von Vorlagen, die Endbenutzer (und Administratoren) in Anwendungen auswählen können, ermöglicht es Benutzern, schnell und problemlos Informationsschutz anzuwenden, indem sie vordefinierte Richtlinien verwenden, die Sie definiert haben. Eine der Einstellungen in der Vorlage bestimmt, wer auf den Inhalt zugreifen kann, und Sie können Benutzer und Gruppen aus Ihrer Organisation sowie Benutzer und Gruppen angeben, die nicht zu Ihrer Organisation gehören. Sie können auch alle Benutzer in einer anderen Organisation angeben.
+## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Kann ich externe Benutzer (die nicht zu meinem Unternehmen gehören) zu benutzerdefinierten Vorlagen hinzufügen?
 
-Sie erreichen diese Konfiguration, indem Sie das Azure-Portal bei der Konfiguration der [Schutzeinstellungen](../deploy-use/configure-policy-protection.md) verwenden. Sie können diese Konfiguration auch mithilfe von PowerShell durchführen. So verwenden Sie PowerShell:
+Ja. Wenn Sie eine Vorlage im Azure-Portal in eine Bezeichnung konvertieren, können Sie die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md) konfigurieren, um Benutzern und Gruppen außerhalb Ihrer Organisation Berechtigungen hinzuzufügen. Dies ist sogar für alle Benutzer einer anderen Organisation möglich. Sie können diese Konfiguration auch mithilfe von PowerShell durchführen.
 
--   **Erstellen oder Aktualisieren der Vorlage mithilfe eines Rechtedefinitionsobjekts**.  Geben Sie die externen E-Mail-Adressen und ihre Rechte in einem Rechtedefinitionsobjekt an, das Sie dann zum Erstellen oder Aktualisieren einer Vorlage verwenden. Sie geben das Rechtedefinitionsobjekt an, indem Sie mit dem [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition)-Cmdlet eine Variable erstellen und diese Variable anschließend mit dem [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)-Cmdlet (für eine neue Vorlage) oder mit dem [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty)-Cmdlet (zum Ändern einer vorhandenen Vorlage) für den „-RightsDefinition“-Parameter bereitstellen. Wenn Sie diese Benutzer jedoch zu einer vorhandenen Vorlage hinzufügen, müssen Sie nicht nur für die externen Benutzer Rechtedefinitionsobjekte definieren, sondern auch für die vorhandenen Gruppen in den Vorlagen.
-
-Weitere Informationen zu Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
+Weitere Informationen zum Konvertieren von benutzerdefinierten Vorlagen in Bezeichnungen zum unkomplizierten Hinzufügen externer Benutzer finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## <a name="does-azure-rms-work-with-dynamic-groups-in-azure-ad"></a>Funktioniert Azure RMS mit dynamischen Gruppen in Azure AD?
 Mit einer Azure AD Premium-Funktion können Sie die dynamische Mitgliedschaft für Sicherheitsgruppen durch Festlegen von [attributbasierten Regeln](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/) konfigurieren. Dieser Gruppentyp unterstützt keine E-Mail-Adressen und kann daher nicht mit dem Azure Rights Management-Dienst verwendet werden. Allerdings unterstützen Office 365-Gruppen sowohl dynamische Gruppenmitgliedschaften als auch E-Mail-aktivierte Mitgliedschaften. Da diese Gruppe E-Mail-fähig ist, können Sie sie mit Azure Rights Management-Schutz verwenden.
