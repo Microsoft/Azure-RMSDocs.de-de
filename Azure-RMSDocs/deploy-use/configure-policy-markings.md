@@ -4,27 +4,23 @@ description: "Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: efc60ee6126a6a0b2798f66c46c2242942878829
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
+ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
-Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen:
-
-Diese visuellen Kennzeichnungen werden beim Anwenden der Bezeichnung auf Word-, Excel- und PowerPoint-Dokumente angewendet sowie beim Speichern des Dokuments in diesen Office-Anwendungen. Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden der E-Mail von Outlook angewendet.
-
-Visuelle Kennzeichnungen werden nicht auf Dokumente angewendet, wenn die Bezeichnung mit dem Datei-Explorer und durch Klicken mit der rechten Maustaste angewendet wird. Das gleiche gilt, wenn ein Dokument mithilfe von PowerShell klassifiziert wird.
+Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 
 Weitere Informationen zu diesen visuellen Kennzeichnungen finden Sie hier:
 
@@ -33,10 +29,32 @@ Weitere Informationen zu diesen visuellen Kennzeichnungen finden Sie hier:
 - Wasserzeichen gelten für Word, Excel und PowerPoint:
 
     - Excel: Wasserzeichen sind nur im Modus „Seitenlayout“ und „Seitenansicht“ sichtbar sowie beim Drucken.
-
+    
     - PowerPoint: Wasserzeichen werden als Hintergrundbild auf den Folienmaster angewendet.
+    
+    - Mehrere Textzeilen werden unterstützt, wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients verwenden.
 
 - Sie können einfach eine Textzeichenfolge angeben oder [Variablen](#using-variables-in-the-text-string) verwenden, um die Textzeichenfolge dynamisch zu erstellen, wenn die Kopfzeile, die Fußzeile oder das Wasserzeichen angewendet wird.
+
+## <a name="when-visual-markings-are-applied"></a>Wann visuelle Kennzeichnungen angewendet werden
+
+Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden der E-Mail von Outlook angewendet.
+
+Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
+
+- **Für die allgemein verfügbare Version** des Azure Information Protection-Clients: 
+    
+    - In einer Office-App werden die visuellen Kennzeichnungen aus einer Bezeichnung angewendet, wenn die Bezeichnung angewendet und wenn das Dokument gespeichert wird. 
+    
+    - Wenn ein Dokument über den Datei-Explorer oder über PowerShell bezeichnet wird, werden visuelle Kennzeichnungen nicht sofort übernommen. Sie werden angewendet, wenn das Dokument in einer Office-App geöffnet wird und wenn es gespeichert wird.
+
+- **Für die aktuelle Vorschauversion** des Azure Information Protection-Clients: 
+    
+    - In einer Office-App werden die visuellen Kennzeichnungen aus einer Bezeichnung angewendet, wenn die Bezeichnung angewendet wird. Visuelle Kennzeichnungen werden ebenfalls angewendet, wenn ein bezeichnetes Dokument geöffnet und erstmals gespeichert wird.  
+    
+    - Wenn ein Dokument über den Datei-Explorer oder über PowerShell bezeichnet wird, werden visuelle Kennzeichnungen nicht sofort übernommen. Sie werden angewendet, wenn das Dokument in einer Office-App geöffnet und erstmals gespeichert wird.
+
+## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
 
 Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine Bezeichnung zu konfigurieren.
 

@@ -4,17 +4,17 @@ description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können S
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 510375dec4fc4e28197270e62655375698580b95
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -26,7 +26,7 @@ Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch
  
 - Die empfohlene Klassifizierung gilt beim Speichern von Dateien in Word, Excel und PowerPoint.
 
-Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z. B. für Kreditkartennummern oder US-Sozialversicherungsnummern. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
+Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z.B. für Kreditkartennummern oder US-Sozialversicherungsnummern. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
 
 So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten:
 
@@ -41,9 +41,9 @@ So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen g
 
 Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingung, um eine Bezeichnung als empfohlene Aktion anzuwenden (einschließlich eines benutzerdefinierten Richtlinientipps):
 
-![Azure Information Protection – Erkennung und Empfehlung](../media/info-protect-recommend-callouts.png)
+![Azure Information Protection – Erkennung und Empfehlung](../media/info-protect-recommend-calloutsv2.png)
 
-In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er die Leiste schließt.
+In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt.
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
@@ -51,7 +51,7 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Policy: Global** (Richtlinie: Global) aus und nehmen dann nach Bedarf Ihre Änderungen am Blatt **Label** (Bezeichnung) und allen nachfolgenden Blättern vor. 
+2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Richtlinie: Global** aus und nehmen dann nach Bedarf Ihre Änderungen am Blatt **Bezeichnung** und allen nachfolgenden Blättern vor. 
 
      Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.  
 
@@ -59,7 +59,7 @@ In diesem Beispiel kann der Benutzer auf **Change now** (Jetzt ändern) klicken,
 
 4. Wählen Sie auf dem Blatt **Condition** (Bedingung) die Option **Built-in** (Integriert) aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Custom** (Benutzerdefiniert), um eine eigene Bedingung anzugeben. Klicken Sie anschließend auf **Save** (Speichern):
 
-    - Für **Built-in** (Integriert): Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
+    - Für **Integriert**: Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
         Weitere Informationen zu den Erkennungsregeln für diese Bedingungen sowie eine Reihe von Beispielen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
 
