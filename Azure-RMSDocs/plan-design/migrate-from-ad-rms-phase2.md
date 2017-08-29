@@ -4,7 +4,7 @@ description: Phase 2 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9f04698064037343719d274e793eb560b703b031
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 22b43c2b149c7a7fd5ce79ca3ceef8100b9d5e7b
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -133,7 +133,9 @@ Die Änderungen an der Vorlage, die Sie für diesen Schritt möglicherweise vorn
 
 - Wenn Sie vor der Migration benutzerdefinierte Vorlagen in Azure Information Protection erstellt haben, müssen Sie diese manuell exportieren und erneut importieren.
 
-- Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, müssen Sie die entsprechende Gruppe und die Berechtigungen manuell hinzufügen.
+- Wenn Ihre Vorlagen in AD RMS die Gruppe **Jeder** verwendet haben, müssen Sie möglicherweise Benutzer oder Gruppen von außerhalb Ihrer Organisation hinzufügen. 
+    
+    In AD RMS hat die Gruppe „Jeder“ allen authentifizierten Benutzern Rechte gewährt. Diese Gruppe wird automatisch in alle Benutzer in Ihrem Azure AD-Mandanten konvertiert. Wenn Sie nicht noch zusätzlichen Benutzern Rechte gewähren müssen, ist keine weitere Aktion erforderlich. Wenn Sie jedoch die Gruppe „Jeder“ verwendet haben, um externe Benutzer einzuschließen, müssen Sie diese Benutzer sowie die Rechte, die Sie diesen gewähren möchten, manuell hinzufügen.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Prozedur, falls Sie benutzerdefinierte Vorlagen vor der Migration erstellt haben
 
@@ -149,24 +151,18 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
 
-Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, wird diese Gruppe beim Importieren der Vorlagen in Azure Information Protection automatisch entfernt. In diesem Fall müssen Sie den importierten Vorlagen manuell die entsprechende Gruppe oder die entsprechenden Benutzer hinzufügen und dieselben Rechte zuweisen. Die entsprechende Gruppe für Azure Information Protection heißt **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<Mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Wenn Ihre Vorlagen in AD RMS die Gruppe **Jeder** verwendet haben, wird diese Gruppe automatisch in die Gruppe mit dem Namen **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** konvertiert. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
-Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Verwalten von AD RMS mit Windows PowerShell](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
+Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen** an.
 
-Sie können die für Ihre Organisation automatisch erstellte Gruppe sehen, wenn Sie eine der Standardrichtlinienvorlagen für Rechte im klassischen Azure-Portal kopieren und dann auf der Seite **RECHTE** den **BENUTZERNAMEN** identifizieren. Allerdings können Sie diese Gruppe nicht über das klassische Azure-Portal einer Vorlage hinzufügen, die manuell erstellt oder importiert wurde, sondern müssen eine der folgenden Azure RMS PowerShell-Optionen verwenden:
+Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-- Verwenden Sie das PowerShell-Cmdlet [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) zum Definieren der Gruppe „AllStaff“ und der Rechte als ein Rechtedefinitionsobjekt. Wiederholen Sie diesen Befehl für alle anderen Gruppen oder Benutzer, denen in der ursprünglichen Vorlage zusätzlich zur Gruppe JEDER bereits Rechte gewährt wurden. Fügen Sie anschließend den Vorlagen alle diese Rechtedefinitionsobjekte mithilfe des Cmdlets [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) hinzu.
+Sie können externe Benutzer problemlos zu Vorlagen hinzufügen, wenn Sie diese Vorlagen im Azure-Portal in Bezeichnungen konvertieren. Klicken Sie anschließend auf dem Blatt **Berechtigungen hinzufügen** auf **Enter Details** (Details eingeben), um die E-Mail-Adressen für diese Benutzer manuell anzugeben. 
 
-- Exportieren Sie die Vorlage mithilfe des Cmdlets [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) in eine XML-Datei, die Sie so bearbeiten können, dass die Gruppe „AllStaff“ und die Rechte den vorhandenen Gruppen und Berechtigungen hinzugefügt werden. Importieren Sie anschließend diese Änderung über das Cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) in Azure Information Protection zurück.
-
-> [!NOTE]
-> Die äquivalente Gruppe "AllStaff" ist nicht exakt mit der Gruppe JEDER in AD RMS identisch: Die Gruppe "AllStaff" enthält alle Benutzer aus Ihrem Azure-Mandanten, während die Gruppe JEDER alle authentifizierten Benutzer enthält, die sich auch außerhalb Ihrer Organisation befinden können.
-> 
-> Wegen dieses Unterschieds zwischen den beiden Gruppen müssen Sie möglicherweise zusätzlich zur Gruppe „AllStaff“ noch externe Benutzer hinzufügen. Externe E-Mail-Adressen für Gruppen werden derzeit nicht unterstützt.
-
+Weitere Informationen zu dieser Konfiguration finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](../deploy-use/configure-policy-protection.md).
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Windows PowerShell-Beispielskript zum Bestimmen von AD RMS-Vorlagen, die die Gruppe JEDER enthalten
-Dieser Abschnitt enthält das Beispielskript, mit dessen Hilfe Sie AD RMS-Vorlagen bestimmen können, in denen die Gruppe JEDER definiert ist, wie im vorherigen Abschnitt beschrieben.
+Dieser Abschnitt enthält das Beispielskript, mit dessen Hilfe Sie AD RMS-Vorlagen, in denen die Gruppe „Jeder“ definiert ist, wie im vorherigen Abschnitt beschrieben bestimmen können.
 
 **Haftungsausschluss**: Dieses Beispielskript wird unter keinem Microsoft-Standardsupportprogramm oder -dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
 

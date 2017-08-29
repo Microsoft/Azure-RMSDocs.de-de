@@ -4,7 +4,7 @@ description: "Detaillierte Übersicht über die Funktionsweise von Azure RMS, di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -56,11 +56,13 @@ Auch wenn Sie selbst die Funktionsweise von RMS nicht kennen müssen, werden Sie
 
 2.048 Bits ist die Länge des Schlüssels, wenn der Azure Rights Management-Dienst aktiviert ist. 1.024 Bits werden für die folgenden optionalen Szenarien unterstützt:
 
-- Während einer Migration vom lokalen Computer, wenn der AD RMS-Cluster im Kryptografiemodus 1 ausgeführt wird und nicht auf den Kryptografiemodus 2 aktualisiert werden kann.
+- Während einer Migration vom lokalen Computer, wenn der AD RMS-Cluster im Kryptografiemodus 1 ausgeführt wird.
+
+- Nach der Migration vom lokalen Computer, wenn der AD RMS-Cluster Exchange Online verwendet hat.
 
 - Für archivierte Schlüssel, die vor der Migration lokal erstellt wurden, sodass Inhalte, die von AD RMS geschützt wurden, nach der Migration zu Azure Rights Management weiterhin geöffnet werden können.
 
-- Wenn Kunden ihren eigenen Schlüssel (BYOK) mithilfe von Azure Key Vault verwenden möchten. Eine minimale Schlüsselgröße von 2.048 Bits wird empfohlen, jedoch nicht erzwungen.
+- Wenn Kunden ihren eigenen Schlüssel (BYOK) mithilfe von Azure Key Vault verwenden möchten. Azure Information Protection unterstützt Schlüssellängen von 1024 Bits und 2048 Bits. Für eine erhöhte Sicherheit wird eine Schlüssellänge von 2048 Bits empfohlen.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>So werden die kryptografischen Azure RMS-Schlüssel gespeichert und geschützt:
 
@@ -68,7 +70,7 @@ Für jedes Dokument oder jede E-Mail, das bzw. die von Azure RMS geschützt wird
 
 Der Inhaltsschlüssel wird mit dem RSA-Schlüssel der Organisation (der „Azure Information Protection-Mandantenschlüssel“) als Teil der Richtlinie im Dokument geschützt, und die Richtlinie wird auch vom Autor des Dokuments signiert. Dieser Mandantenschlüssel gilt für alle Dokumente und E-Mails, die vom Azure Rights Management-Dienst für die Organisation geschützt werden, und dieser Schlüssel kann von einem Azure Information Protection-Administrator nur geändert werden, wenn die Organisation einen Mandantenschlüssel verwendet, der kundenverwaltet ist (bezeichnet als „Bring-Your-Own-Key“ oder BYOK). 
 
-Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen kundenverwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und BYOK finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
+Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und BYOK finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
 Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
@@ -130,7 +132,7 @@ Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Clie
 
 Der erneut verschlüsselte Inhaltsschlüssel wird dann in eine verschlüsselte Nutzungslizenz mit der Liste der Benutzerberechtigungen eingebettet, die dann an den RMS-Client zurückgegeben wird.
 
-![RMS-Dokumentennutzung – Schritt 3, das Dokument wird verschlüsselt und Rechte werden erzwungen](../media/AzRMS_documentconsumption3.png)
+![RMS-Dokumentennutzung – Schritt 3: Das Dokument wird verschlüsselt und Rechte werden erzwungen](../media/AzRMS_documentconsumption3.png)
 
 **Das geschieht in Schritt 3**: Schließlich verwendet der RMS-Client die verschlüsselte Nutzungslizenz und entschlüsselt diese mit dem privaten Schlüssel seines eigenen Benutzers. Auf diese Weise kann der RMS-Client den Text des Dokuments nach Bedarf entschlüsseln und auf dem Bildschirm darstellen.
 
@@ -149,7 +151,7 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 
 -   **Allgemeiner Schutz (PFILE)**: Wenn der Azure Rights Management-Dienst eine Datei allgemein schützt, ist der Datenfluss grundsätzlich mit der Ausnahme, dass der RMS-Client eine Richtlinie erstellt, die alle Rechte gewährt, identisch mit dem Inhaltsschutz. Wenn die Datei genutzt wird, wird sie entschlüsselt, bevor sie an die Zielanwendung übergeben wird. In diesem Szenario können Sie alle Dateien selbst dann schützen, wenn sie keine systemeigene Unterstützung für RMS besitzen.
 
--   **Geschützte PDF (PPDF)**: Wenn der Azure Rights Management-Dienst eine Office-Datei mit systemeigenem Schutz versieht, wird auch eine Kopie dieser Datei erstellt und auf die gleiche Weise geschützt. Der einzige Unterschied besteht darin, dass die Dateikopie im PPDF-Dateiformat vorliegt. Die RMS-Freigabeanwendung und der Azure Information Protection-Client-Viewer wissen, wie diese ausschließlich für die Anzeige geöffnet wird. In diesem Szenario können Sie geschützte Anlagen per E-Mail senden und dabei sicher sein, dass der Empfänger auf einem mobilen Gerät diese immer lesen kann – selbst dann, wenn das mobile Gerät nicht über eine App verfügt, die systemeigene Unterstützung für geschützte Office-Dateien bietet.
+-   **Geschützte PDF (PPDF)**: Wenn der Azure Rights Management-Dienst eine Office-Datei mit systemeigenem Schutz versieht, wird auch eine Kopie dieser Datei erstellt und auf die gleiche Weise geschützt. Der einzige Unterschied besteht darin, dass die Dateikopie im PPDF-Dateiformat vorliegt. Die RMS-Freigabeanwendung und der Azure Information Protection-Client-Viewer wissen, wie diese ausschließlich für die Anzeige geöffnet wird. In diesem Szenario können Sie geschützte Anlagen per E-Mail senden und dabei sicher sein, dass der Empfänger diese immer auf einem mobilen Gerät lesen kann – selbst dann, wenn das mobile Gerät nicht über eine App verfügt, die eine native Unterstützung für geschützte Office-Dateien bietet.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

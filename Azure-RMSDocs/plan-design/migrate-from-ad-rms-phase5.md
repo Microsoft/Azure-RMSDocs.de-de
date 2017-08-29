@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aeffd9780001f4c91ea8600f11d8fc3b36abce73
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
+ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -70,20 +70,28 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels
-Dieser Schritt ist nach dem Abschluss der Migration erforderlich, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Es wird ein neuer Mandantenschlüssel erstellt, der RMS-Kryptografiemodus 2 verwendet. Kryptografiemodus 1 wird für Azure Information Protection nur während der Migration unterstützt.
+## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
-Die Neuerstellung eines Schlüssels nach dem Abschluss der Migration schützt Ihren Azure Information Protection-Mandantenschlüssel vor potenziellen Sicherheitslücken des AD RMS-Schlüssels.
+Dieser Schritt wird nach dem Abschluss der Migration empfohlen, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Das Neuerstellen des Schlüssels führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. 
 
-Wenn Sie Ihren Azure Information Protection-Mandantenschlüssel neu erstellen (oder neu vergeben), wird ein neuer Schlüssel erstellt, und der ursprüngliche Schlüssel wird archiviert. Der Übergang von einem Schlüssel zum anderen geschieht nicht sofort, sondern über einige Wochen hinweg. Da dies nicht sofort erfolgt, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern Ihren Azure Information Protection-Mandantenschlüssel neu erstellen, sobald die Migration abgeschlossen ist.
+Auch wenn Ihre AD RMS-Bereitstellung den Kryptografiemodus 2 verwendet hat, wird dieser Schritt empfohlen, da ein neuer Schlüssel dabei hilft, Ihren Mandanten vor potenziellen Sicherheitsverletzungen Ihres AD RMS-Schlüssels zu schützen.
+
+Erstellen Sie jedoch keinen neuen Schlüssel, wenn Sie Exchange Online mit AD RMS verwendet haben. Exchange Online unterstützt keine Änderungen des Kryptografiemodus. 
+
+Wenn Sie für Ihren Azure Information Protection-Mandantenschlüssel einen neuen Schlüssel erstellen (oder neu vergeben), wird der aktuell aktive Schlüssel archiviert, und Azure Information Protection verwendet ab diesem Zeitpunkt einen anderen Schlüssel, den Sie angeben. Bei diesem anderen Schlüssel kann es sich um einen neuen Schlüssel handeln, den Sie in Azure Key Vault erstellen, oder um den Standardschlüssel, der automatisch für Ihren Mandanten erstellt wurde.
+
+Der Übergang von einem Schlüssel zum anderen geschieht nicht sofort, sondern über einige Wochen hinweg. Da dies nicht sofort erfolgt, sollten Sie nicht warten, bis Sie eine Verletzung Ihres ursprünglichen Schlüssels vermuten, sondern diesen Schritt ausführen, sobald die Migration abgeschlossen ist.
 
 So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
-- Wenn Ihr Mandantenschlüssel von Microsoft verwaltet wird: Wenden Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), und erstellen Sie eine **Azure Information Protection-Supportanfrage für die Neuerstellung Ihres Azure Information Protection-Schlüssels nach der Migration von AD RMS**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Die Neuerstellung Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+- **Wenn Ihr Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, und geben Sie die Schlüsselkennung für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den anzugebenden Wert identifizieren, indem Sie das Cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
+    
+        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- Wenn Ihr Mandantenschlüssel von Ihnen verwaltet wird (BYOK): Erstellen Sie in Azure Key Vault den Mandantenschlüssel neu, den Sie für Ihren Azure Information Protection-Mandanten verwenden, und führen Sie dann das [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey)-Cmdlet erneut aus, um die neue Schlüssel-URL anzugeben. 
+- **Wenn Ihr Mandantenschlüssel von Ihnen verwaltet wird (BYOK)**: Wiederholen Sie in Azure Key Vault den Schlüsselerstellungsvorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,10 +1,10 @@
 ---
-title: "Von Microsoft verwaltet – Lebenszyklusvorgänge für AIP-Mandantenschlüssel"
+title: "Von Microsoft verwaltet: Lebenszyklusvorgänge für AIP-Mandantenschlüssel"
 description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, wenn Ihr Mandantenschlüssel für Azure Information Protection von Microsoft verwaltet wird (Standard)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cacaa10d1a5cbf3a2de903cd4e9f893b546e5609
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -28,15 +28,27 @@ Wenn Ihr Mandantenschlüssel für Azure Information Protection von Microsoft ver
 Wenn Sie Ihr Abonnement für Azure Information Protection kündigen, wird Ihr Mandantenschlüssel in Azure Information Protection nicht mehr verwendet. Es ist keine weitere Aktion erforderlich.
 
 ## <a name="rekey-your-tenant-key"></a>Neuerstellung Ihres Mandantenschlüssels
-Die Neuerstellung eines Schlüssels wird auch als „Rollover“ bezeichnet. Erstellen Sie Ihren Mandantenschlüssel nur dann neu, wenn es wirklich notwendig ist. Ältere Clients wie Office 2010 wurden nicht darauf ausgelegt, problemlos mit Schlüsseländerungen umzugehen. In diesem Szenario müssen Sie den Rights Management-Status auf Computern löschen, indem Sie eine Gruppenrichtlinie oder einen entsprechenden Mechanismus verwenden. Es gibt jedoch einige berechtigte Ereignisse, die Sie zwingen können, Ihren Mandantenschlüssel neu zu erstellen. Beispiel:
+Die Neuerstellung eines Schlüssels wird auch als „Rollover“ bezeichnet. Wenn Sie diesen Vorgang ausführen, verwendet Azure Information Protection nicht mehr den vorhandenen Mandantenschlüssel zum Schützen von Dokumenten und E-Mails sondern einen anderen Schlüssel. Richtlinien und Vorlagen werden umgehend erneut signiert. Diese Umstellung erfolgt jedoch gestaffelt für vorhandene Kunden und Dienste, die Azure Information Protection verwenden. Daher werden neue Inhalte eine Zeit lang noch durch den alten Mandantenschlüssel geschützt.
 
--   Ihr Unternehmen wurde in zwei oder mehr Unternehmen aufgeteilt. Wenn Sie Ihren Mandantenschlüssel neu erstellen, hat das neue Unternehmen keinen Zugriff auf neue Inhalte, die von Ihren Mitarbeitern veröffentlicht werden. Sie können auf den alten Inhalt zugreifen, wenn sie eine Kopie des alten Mandantenschlüssels besitzen.
+Um einen neuen Schlüssel zu erstellen, müssen Sie das Mandantenschlüsselobjekt konfigurieren und den alternativen Schlüssel angeben, der verwendet werden soll. Anschließend wird der zuvor verwendete Schlüssel für Azure Information Protection automatisch als archiviert gekennzeichnet. Diese Konfiguration stellt sicher, dass der Inhalt, der mithilfe dieses Schlüssels geschützt wurde, weiterhin zugänglich ist.
 
--   Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels (die in Ihrem Besitz befindliche Kopie) kompromittiert wurde.
+Beispiele für Fälle, in denen Sie möglicherweise einen neuen Schlüssel für Azure Information Protection erstellen müssen:
 
-Sie können Ihren Mandantenschlüssel neu erstellen, indem Sie sich an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support) wenden und eine **Azure Information Protection-Supportanfrage öffnen, um die Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels anzufordern**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie jedoch, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Die Neuerstellung Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+- Sie haben die Migration von Active Directory Rights Management Services (AD RMS) mithilfe eines Schlüssels für den Kryptografiemodus 1 durchgeführt. Wenn die Migration abgeschlossen ist, sollten Sie einen Schlüssel verwenden, der den Kryptografiemodus 2 verwendet.
 
-Wenn Sie Ihren Mandantenschlüssel neu erstellen, werden neue Inhalte unter Verwendung des neuen Mandantenschlüssels geschützt. Dies geschieht in einer gestaffelten Weise, sodass eine Zeit lang neue Inhalte noch teilweise durch den alten Mandantenschlüssel geschützt sind. Zuvor geschützte Inhalte bleiben durch den alten Mandantenschlüssel geschützt. Zur Unterstützung dieses Szenarios wird Ihr alter Mandantenschlüssel in Azure Information Protection beibehalten, damit Lizenzen für alte Inhalte erteilt werden können.
+- Ihr Unternehmen wurde in zwei oder mehr Unternehmen aufgeteilt. Wenn Sie Ihren Mandantenschlüssel neu erstellen, hat das neue Unternehmen keinen Zugriff auf neue Inhalte, die von Ihren Mitarbeitern veröffentlicht werden. Sie können auf den alten Inhalt zugreifen, wenn sie eine Kopie des alten Mandantenschlüssels besitzen.
+
+- Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels kompromittiert wurde.
+
+Zum Erstellen eines neuen Schlüssels können Sie einen anderen von Microsoft verwalteten Schlüssel als Mandantenschlüssel auswählen, jedoch keinen neuen von Microsoft verwalteten Schlüssel erstellen. Um einen neuen Schlüssel zu erstellen, müssen Sie Ihre Mandantenschlüsseltopologie so ändern, dass sie vom Kunden verwaltet wird (BYOK).
+
+Sie verfügen über mehr als einen von Microsoft verwalteten Schlüssel, wenn Sie eine Migration von Active Directory Rights Management Services (AD RMS) durchgeführt und die Topologie für von Microsoft verwaltete Schlüssel für Azure Information Protection ausgewählt haben. In diesem Szenario verfügen Sie über mindestens zwei von Microsoft verwaltete Schlüssel für Ihren Mandanten. Sie haben mindestens einen Schlüssel aus AD Rights Management Services importiert. Sie verfügen auch über den Standardschlüssel, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde.
+
+Um einen anderen Schlüssel als Ihren aktiven Mandantenschlüssel für Azure Information Protection auszuwählen, verwenden Sie das Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus dem AADRM-Modul. Um Hilfe bei der Auswahl Ihres Schlüssels zu erhalten, verwenden Sie das Cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). Sie können den Standardschlüssel identifizieren, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde, indem Sie den folgenden Befehl ausführen:
+
+    (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+
+Information dazu, wie Sie Ihre Mandantenschlüsseltopologie so ändern, dass diese vom Kunden verwaltet wird (BYOK), finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Microsoft ist für die Sicherung Ihres Mandantenschlüssels verantwortlich, sodass von Ihnen keine weitere Aktion erforderlich ist.
@@ -46,7 +58,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
 ### <a name="step-1-initiate-export"></a>Schritt 1: Initiieren des Exports
 
--   Wenden Sie sich hierfür an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+- [Wenden Sie sich hierfür an den Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
 ### <a name="step-2-wait-for-verification"></a>Schritt 2: Warten auf Überprüfung
 
@@ -61,7 +73,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
     ```
     Hierdurch wird ein RSA-Schlüsselpaar generiert, und die öffentliche und private Hälfte wird jeweils als Datei im aktuellen Ordner gespeichert. Beispiel: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** und **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Antworten Sie auf die E-Mail des Kundendiensts, indem Sie die Datei mit dem Namen anfügen, der mit **PublicKey** beginnt. Der Kundendienst sendet Ihnen als Nächstes eine TPD-Datei als XML-Datei, die mit Ihrem RSA-Schlüssel verschlüsselt ist. Kopieren Sie diese Datei in den Ordner, in dem Sie das Tool „AadrmTpd“ ursprünglich ausgeführt haben, und führen Sie das Tool erneut aus, wobei Sie Ihre Datei, die mit **PrivateKey** beginnt, und die Datei vom Kundendienst verwenden. Beispiel:
+    Antworten Sie auf die E-Mail des Kundendiensts, indem Sie die Datei mit dem Namen anfügen, der mit **PublicKey** beginnt. CSS sendet Ihnen als Nächstes eine TPD-Datei als XML-Datei, die mit Ihrem RSA-Schlüssel verschlüsselt ist. Kopieren Sie diese Datei in den Ordner, in dem Sie das Tool „AadrmTpd“ ursprünglich ausgeführt haben, und führen Sie das Tool erneut aus, wobei Sie Ihre Datei, die mit **PrivateKey** beginnt, und die Datei vom Kundendienst verwenden. Beispiel:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -76,12 +88,12 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
 ### <a name="step-4-ongoing-protect-your-tenant-key"></a>Schritt 4: Fortlaufend: Schützen Ihres Mandantenschlüssels
 
--   Nachdem Sie Ihren Mandantenschlüssel erhalten haben, bewahren Sie ihn sicher auf, weil jede Person, die darauf zugreifen kann, alle Dokumente entschlüsseln kann, die mithilfe dieses Schlüssels geschützt werden.
+Nachdem Sie Ihren Mandantenschlüssel erhalten haben, bewahren Sie ihn sicher auf, weil jede Person, die darauf zugreifen kann, alle Dokumente entschlüsseln kann, die mithilfe dieses Schlüssels geschützt werden.
 
-    Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin liegt, dass Sie Azure Information Protection nicht mehr verwenden möchten, sollten Sie als bewährte Methode den Azure Rights Management-Dienst von Ihrem Azure Information Protection-Mandanten nun deaktivieren. Führen Sie diesen Vorgang unmittelbar nach dem Erhalt des Mandantenschlüssels aus, weil diese Vorsichtsmaßnahme die möglichen Konsequenzen minimiert, wenn auf Ihren Mandantenschlüssel durch eine Person zugegriffen wird, die nicht über diesen Schlüssel verfügen sollte. Eine Anleitung finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
+Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin liegt, dass Sie Azure Information Protection nicht mehr verwenden möchten, sollten Sie als bewährte Methode den Azure Rights Management-Dienst von Ihrem Azure Information Protection-Mandanten nun deaktivieren. Führen Sie diesen Vorgang unmittelbar nach dem Erhalt des Mandantenschlüssels aus, weil diese Vorsichtsmaßnahme die möglichen Konsequenzen minimiert, wenn auf Ihren Mandantenschlüssel durch eine Person zugegriffen wird, die nicht über diesen Schlüssel verfügen sollte. Eine Anleitung finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="respond-to-a-breach"></a>Reaktion auf eine Sicherheitsverletzung
-Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der HSM-Technologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen gefunden werden.
+Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der Schlüsseltechnologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen auftreten.
 
 Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Objekte auswirkt, wird Ihr Azure Information Protection-Mandantenadministrator per E-Mail von Microsoft unter der Adresse benachrichtigt, die Sie beim Abschluss des Abonnements angegeben haben.
 

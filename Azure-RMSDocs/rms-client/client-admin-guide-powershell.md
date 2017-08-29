@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
-ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
+ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -77,7 +77,7 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 
 4. Für Regionen außerhalb von Nordamerika: 
     
-    - Bearbeiten Sie die Registrierung für die Authentifizierung für den Dienst.
+    - Bearbeiten Sie die Registrierung für die Diensterkennung.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert werden.
 
@@ -229,12 +229,9 @@ Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Adm
 > [!NOTE]
 > Wenn Sie Ihr eigenes Konto zum Authentifizieren für den Azure Rights Management-Dienst verwenden möchten, müssen Sie „Set-RMSServerAuthentication“ nicht ausführen, bevor Sie Dateien schützen, den Schutz von Dateien aufheben oder Vorlagen abrufen.
 
-
-
-
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>Voraussetzung 4: Für Regionen außerhalb von Nordamerika
 
-Für die Authentifizierung außerhalb von Azure-Nordamerika müssen Sie die Registrierung wie folgt bearbeiten. Wenn sich Ihr Azure Information Protection-Mandant in Nordamerika befindet, führen Sie diesen Schritt nicht aus:
+Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterladen von Vorlagen außerhalb der Azure-Region Nordamerika verwenden, müssen Sie die Registrierung bearbeiten: 
 
 1. Führen Sie das Cmdlet „Get-AadrmConfiguration“ erneut aus, und notieren Sie sich die Werte für **CertificationExtranetDistributionPointUrl** und **LicensingExtranetDistributionPointUrl**.
 
