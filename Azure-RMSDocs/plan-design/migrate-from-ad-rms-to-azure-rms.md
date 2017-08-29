@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -102,9 +102,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 
 ### <a name="cryptographic-mode-considerations"></a>Überlegungen zum Kryptografiemodus
 
-Wenn Ihr Cluster von AD RMS sich aktuell im Kryptografiemodus 1 befindet, aktualisieren Sie das Cluster nicht auf Kryptografiemodus 2, bevor Sie mit der Migration beginnen. Migrieren Sie stattdessen im Kryptografiemodus 1, und erstellen Sie Ihren Mandantenschlüssel neu, wenn die Migration abgeschlossen ist, im Rahmen der Postmigrationstasks.
-
-Kryptografiemodus 1 wird nur während der Migration unterstützt.
+Wenn Ihr Cluster von AD RMS sich aktuell im Kryptografiemodus 1 befindet, aktualisieren Sie das Cluster nicht auf Kryptografiemodus 2, bevor Sie mit der Migration beginnen. Migrieren Sie stattdessen im Kryptografiemodus 1, und dann können Sie Ihren Mandantenschlüssel am Ende der Migration im Rahmen der Aufgaben nach der Migration neu erstellen.
 
 So bestätigen Sie den AD RMS-Kryptografiemodus:
  
@@ -215,7 +213,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 - **Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels**
 
-    Dieser Schritt ist erforderlich, wenn Sie den Kryptografiemodus 2 vor der Migration nicht ausgeführt haben, und wird für alle anderen Migrationen als optionaler Schritt empfohlen, um die Sicherheit Ihres Azure Information Protection-Mandantenschlüssels zu gewährleisten.
+    Dieser Schritt wird empfohlen, wenn Sie sich vor der Migration nicht im Kryptografiemodus 2 befunden haben.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
