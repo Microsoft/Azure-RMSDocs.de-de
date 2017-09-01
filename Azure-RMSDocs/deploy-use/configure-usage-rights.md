@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62ea1579b61b096e1f7fe6900d72b1b8077c9ff1
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 980d7eafa6490a00bc37de9b6f36052be0d70996
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -129,7 +129,7 @@ Der Rights Management-Besitzer eines Dokuments oder einer E-Mail ist als **owner
 Beachten Sie, dass der Rights Management-Besitzer vom Dateisystembesitzer von Windows unabhängig ist. Häufig stimmen sie überein, können aber auch unterschiedlich sein, auch wenn Sie weder die SDKs noch PowerShell verwenden.
 
 ## <a name="see-also"></a>Siehe auch
-[Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md)
+[Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
 [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)
 
