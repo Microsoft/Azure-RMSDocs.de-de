@@ -1,10 +1,10 @@
 ---
-title: Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie
-description: "Derzeit können Sie in der Vorschau nun Rights Management-Vorlagen aus der Azure Information Protection-Richtlinie konfigurieren und verwalten."
+title: "Konfigurieren und Verwalten von Vorlagen für Azure Information Protection"
+description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure-Portal.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
-ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
+ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -40,33 +40,40 @@ Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlin
 
 ## <a name="default-templates"></a>Standardvorlagen
 
-Wenn Sie Ihr Abonnement für Azure Information Protection oder für ein Office 365-Abonnement, das den Azure Rights Management-Dienst enthält, anfordern, werden automatisch zwei Standardvorlagen für Ihren Mandanten erstellt, die den Zugriff für autorisierte Benutzer in Ihrer Organisation beschränken. Diese zwei Vorlagen enthalten die folgenden Einschränkungen: 
+Wenn Sie Ihr Abonnement für Azure Information Protection oder für ein Office 365-Abonnement, das den Azure Rights Management-Dienst enthält, anfordern, werden automatisch zwei Standardvorlagen für Ihren Mandanten erstellt, die den Zugriff für autorisierte Benutzer in Ihrer Organisation beschränken. Diese zwei Vorlagen enthalten nach dem Erstellen die folgenden Einschränkungen: 
 
 - Lese- oder Änderungsberechtigungen für geschützten Inhalt
     
-    Bestimmte Berechtigungen: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
+    - **Bestimmte Berechtigungen**: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
 
 - Schreibgeschützte Anzeige geschützter Inhalte
     
-    - Bestimmte Berechtigung: Inhalt anzeigen
+    - **Bestimmte Berechtigung**: Inhalt anzeigen
 
-Diese Vorlagen erleichtern es Ihnen und anderen Personen, sofort mit dem Schutz sensibler Daten Ihrer Organisation zu beginnen. Diese Vorlagen können mit Azure Information Protection-Bezeichnungen oder alleine mit [Anwendungen und Diensten](../understand-explore/applications-support.md) verwendet werden, die Rights Management-Vorlagen verwenden.
+Zusätzlich werden die Vorlagen so konfiguriert, dass sie einen Offlinezugriff für sieben Tage zulassen und kein Ablaufdatum haben.
+
+>[!NOTE]
+> Sie können diese Einstellungen und die Namen und Beschreibungen der Standardvorlagen ändern. Dies war mit dem klassischen Azure-Portal nicht möglich und wird auch weiterhin nicht für PowerShell unterstützt.
+
+Diese Standardvorlagen erleichtern es Ihnen und anderen Personen, sofort mit dem Schutz sensibler Daten Ihrer Organisation zu beginnen. Diese Vorlagen können mit Azure Information Protection-Bezeichnungen oder alleine mit [Anwendungen und Diensten](../understand-explore/applications-support.md) verwendet werden, die Rights Management-Vorlagen verwenden.
 
 Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen wahrscheinlich nur einige Vorlagen, aber in Azure ist es möglich, maximal 500 gespeicherte benutzerdefinierte Vorlagen zu verwenden.
 
 ### <a name="default-template-names"></a>Namen für die Standardvorlage
 
-Wenn Sie vor kurzem ein Abonnement für Azure Information Protection erworben haben, lauten die Namen von Ihren Standardvorlagen wie folgt:
+Wenn Sie vor kurzem ein Abonnement für Azure Information Protection erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
 - **Vertraulich\Alle Mitarbeiter** für Lese- oder Änderungsberechtigungen für geschützten Inhalt
 
 - **Streng Vertraulich\Alle Mitarbeiter** für ausschließlich schreibgeschützte Anzeige für geschützten Inhalt
 
-Wenn Sie Ihr Abonnement für Azure Information Protection vor einer Weile erhalten haben, oder wenn Sie nicht über ein Azure Information Protection-Abonnement verfügen, aber ein Office 365-Abonnement mit Azure Rights Management besitzen, sehen die Namen Ihrer Standardvorlagen wie folgt aus:
+Wenn Sie Ihr Abonnement für Azure Information Protection vor einer Weile erhalten haben, oder wenn Sie nicht über ein Azure Information Protection-Abonnement verfügen, aber ein Office 365-Abonnement mit Azure Rights Management besitzen, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
 - **\<Name der Organisation> – Vertraulich** für Lese- oder Änderungsberechtigungen für geschützten Inhalt
 
 - **\<Name der Organisation> – Nur vertrauliche Ansicht** für Lese- oder Änderungsberechtigungen für geschützten Inhalt 
+
+Sie können diese Standardvorlagen umbenennen (und neu konfigurieren), wenn Sie das Azure-Portal verwenden.
 
 >[!NOTE]
 >Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection – Globale Richtlinie** nicht sehen, werden sie zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden, sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Azure RMS-Schutz enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
@@ -96,21 +103,21 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
     
     Darüber hinaus können Sie derzeit nicht die Anwendungskompatibilitätseinstellung für eine Abteilungsvorlage festlegen. Falls erforderlich, können Sie diese durch PowerShell mithilfe des Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) festlegen.
 
-- Derzeit werden diese Sprachen in Vorlagen, die Sie mit dem klassischen Azure-Portal oder PowerShell für mehrere Sprachen konfiguriert haben, nicht für den Namen und Beschreibungen angezeigt, werden jedoch beibehalten.
-
-- Wenn Sie eine Vorlage zu einer Bezeichnung konvertieren oder mit einer verknüpfen, kann sie nicht länger von anderen Bezeichnungen verwendet werden.
+- Wenn Sie eine Vorlage zu einer Bezeichnung konvertieren oder mit einer verknüpfen, kann sie nicht länger von anderen Bezeichnungen verwendet werden. Zusätzlich wird diese Vorlage nicht mehr im Abschnitt **Vorlagen** angezeigt.
 
 - Sie erstellen keine neue Vorlage aus dem Container **Vorlagen**. Sie erstellen stattdessen eine Bezeichnung, die die Einstellung **Schützen** aufweist, und konfigurieren die Nutzungsrechte und -einstellungen auf dem Blatt **Schutz**. Vollständige Anweisungen finden Sie unter [Erstellen einer neuen Vorlage](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
-1. Melden Sie sich in einem neuen Browserfenster als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an.
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+    
+    Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. Wenn die zu konfigurierende Vorlage für alle Benutzer verfügbar ist, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
+    
+    Wenn sich die zu konfigurierende Vorlage in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer verfügbar ist, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
 
-2. Wenn die zu konfigurierende Vorlage für alle Benutzer gilt, wählen Sie auf dem Blatt **Azure Information Protection** die Option **Global** aus. Wenn sich die zu konfigurierende Vorlage in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie stattdessen die bereichsbezogene Richtlinie aus.
-
-3. Suchen Sie auf dem Blatt „Richtlinie“ die Vorlage, die Sie konfigurieren möchten:
+3. Suchen Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie\<name>** nach der Vorlage, die Sie konfigurieren möchten:
     
     - Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst: Erweitern Sie **Vorlagen** neben Ihren Bezeichnungen.
     
@@ -122,7 +129,10 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
     
     Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
 
-6. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Veröffentlichen**, um Ihre Änderungen für Benutzeranwendungen und -dienste verfügbar zu machen.
+6. Klicken Sie auf dem ersten Blatt der **Azure Information Protection** auf **Veröffentlichen**, um Ihre Änderungen für Benutzeranwendungen und -dienste verfügbar zu machen.
+
+> [!NOTE]
+> Sie können eine Vorlage auch bearbeiten, indem Sie die Schaltfläche **Vorlage bearbeiten** auf dem Blatt **Schutz** verwenden, wenn Sie eine Bezeichnung so konfiguriert haben, dass eine vordefinierte Vorlage verwendet wird. Vorausgesetzt, dass keine andere Bezeichnung die ausgewählte Vorlage verwendet, konvertiert diese Schaltfläche die Vorlage in eine Bezeichnung, und Sie gelangen zu Schritt 5. Weitere Informationen darüber, was beim Konvertieren von Vorlagen zu Bezeichnungen geschieht, finden Sie im nächsten Abschnitt.
 
 ## <a name="to-convert-templates-to-labels"></a>Konvertieren von Vorlagen in Bezeichnungen
 
@@ -132,7 +142,9 @@ Wenn Sie beispielsweise eine Bezeichnung mit dem Namen **Marketing** konvertiere
 
 Es ist nicht erforderlich, alle Vorlagen in Bezeichnungen zu konvertieren, aber falls Sie es tun sollten, werden die Schutzeinstellungen vollständig in die gesamte Funktionalität der Bezeichnungen integriert, sodass Sie die Einstellungen nicht separat verwalten müssen.
 
-Um eine Vorlage in eine Bezeichnung zu konvertieren, klicken Sie mit der rechten Maustaste auf die Vorlage und wählen Sie **In Bezeichnung konvertieren** aus. Wählen Sie diese Option wahlweise über das Kontextmenü aus.
+Um eine Vorlage in eine Bezeichnung zu konvertieren, klicken Sie mit der rechten Maustaste auf die Vorlage und wählen Sie **In Bezeichnung konvertieren** aus. Wählen Sie diese Option wahlweise über das Kontextmenü aus. 
+
+Sie können eine Vorlage auch zu einer Bezeichnung konvertieren, wenn Sie eine Bezeichnung für den Schutz und eine vordefinierte Vorlage konfigurieren, indem Sie die Schaltfläche **Vorlage bearbeiten** verwenden. 
 
 Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
@@ -148,21 +160,23 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure RMS** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die in Rights Management-Vorlagen integriert werden, zugegriffen werden.
 
-1. Wenn die neue Vorlage, die Sie erstellen möchten, für alle Benutzer gilt, klicken Sie auf dem Blatt **Richtlinie: Global** auf **Neue Bezeichnung hinzufügen**.
+1. Wenn die neue Vorlage für alle Benutzer verfügbar ist, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
     
-     Wenn die neue zu erstellende Vorlage als Abteilungsvorlage eingesetzt wird, die nur für ausgewählte Benutzer gilt, wählen Sie zunächst auf dem ersten Blatt **Azure Information Protection** die bereichsbezogene Richtlinie aus oder erstellen Sie eine.
+     Wenn es sich bei der neuen Vorlage um eine Abteilungsvorlage handelt, sodass sie nur für ausgewählte Benutzer verfügbar ist, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Erstellen Sie dann Ihre [bereichsbezogene Richtlinie](configure-policy-scope.md), oder wählen Sie sie auf dem Blatt **Azure Information Protection - Scoped polices** (Azure Information Protection – Bereichsbezogene Richtlinien) aus.
 
-2. Behalten Sie auf dem Blatt **Bezeichnung** die Standardeinstellung **Aktiviert**: **Ein** bei, um diese neue Vorlage zu veröffentlichen, oder ändern Sie diese Einstellung in **Aus**, um die Vorlage als archiviert zu erstellen. Geben Sie dann einen Bezeichnungsnamen und eine Beschreibung für den Vorlagennamen und die Beschreibung ein.
+2. Klicken Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie:\<name>** auf **Neue Bezeichnung hinzufügen**.
 
-3. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
+3. Behalten Sie auf dem Blatt **Bezeichnung** die Standardeinstellung **Aktiviert**: **Ein** bei, um diese neue Vorlage zu veröffentlichen, oder ändern Sie diese Einstellung in **Aus**, um die Vorlage als archiviert zu erstellen. Geben Sie dann einen Bezeichnungsnamen und eine Beschreibung für den Vorlagennamen und die Beschreibung ein.
+
+4. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
     
-     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar.png)
+     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar-configured.png)
 
-4. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren dieser Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
+5. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren dieser Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
     
     Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
 
-5. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Veröffentlichen**, um diese Vorlagen für Benutzeranwendungen und -dienste verfügbar zu machen.
+6. Klicken Sie auf dem ersten Blatt der **Azure Information Protection** auf **Veröffentlichen**, um diese Vorlagen für Benutzeranwendungen und -dienste verfügbar zu machen.
 
 
 ## <a name="next-steps"></a>Nächste Schritte

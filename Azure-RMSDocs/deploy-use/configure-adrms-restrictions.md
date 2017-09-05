@@ -4,17 +4,17 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -61,13 +61,17 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
 
 - Office 2010 und Office 2007 werden nicht unterstützt.
 
-- Verwenden Sie nicht die Option **Nicht weiterleiten**, wenn Sie für Azure RMS-Schutz eine Bezeichnung konfigurieren. Darüber hinaus müssen Sie Benutzer anweisen, diese Option in Outlook nicht manuell auszuwählen. 
+- Weisen Sie die Benutzer an, in Outlook nicht **Nicht weiterleiten** auszuwählen, oder stellen Sie einen entsprechenden Leitfaden bereit. 
 
-    Wird die Option „Nicht weiterleiten“ durch eine Bezeichnung oder manuell durch Benutzer angewendet, wird die Option unter Umständen von Ihrer AD RMS-Bereitstellung angewendet und nicht wie beabsichtigt vom Azure Rights Management-Dienst. Bei diesem Szenario können Personen, denen Sie extern Inhalte zur Verfügung stellen, E-Mail-Nachrichten nicht öffnen, für die diese Option „Nicht weiterleiten“ aktiviert wurde.
+    Obwohl Sie einen Bezeichner für **Nicht weiterleiten** konfigurieren können, um HYOK oder den Azure Rights Management-Dienst zu verwenden, können Benutzer „Nicht weiterleiten“ auch selbst auswählen. Sie können diese Option auswählen, indem Sie die Schaltfläche **Nicht weiterleiten** auf der Registerkarte **Nachricht** des Office-Menübands oder die Outlook-Menüoptionen verwenden. Die Menüoptionen **Nicht weiterleiten** befinden sich in **Datei** > **Berechtigungen**. Die Schaltfläche **Berechtigungen** befindet sich in der Registerkarte **Optionen** des Menübands. 
     
-    Ab Version 1.9.58.0 des Azure Information Protection-Clients (zurzeit in der Vorschau) verwendet die Schaltfläche **Nicht weiterleiten** in Outlook immer Azure RMS. Diese Einstellung wirkt sich weder auf die Outlook-Menüoption **Nicht weiterleiten** noch auf die Option **Nicht weiterleiten** beim Konfigurieren einer Bezeichnung für den Schutz aus. Wenn Sie dieses Verhalten nicht wünschen, können Sie die Schaltfläche **Nicht weiterleiten** in Outlook ausblenden, indem Sie eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook) konfigurieren.
+    Wenn Benutzer auf die Schaltfläche „Nicht weiterleiten“ klicken, wird Azure RMS oder AD RMS verwendet. Diese Auswahl ist nicht deterministisch. Wenn Benutzer auf **Nicht weiterleiten** über eine Outlook-Menüoption klicken, können sie Azure RMS oder AD RMS wählen, wissen aber möglicherweise nicht, welche Option für ihre E-Mail-Nachrichten ausgewählt ist. Bei beiden Szenarios gilt: Wenn AD RMS verwendet wird, obwohl Azure RMS verwendet werden sollte, können externe Personen diese E-Mail-Nachrichten nicht öffnen.
+    
+    Die aktuelle Vorschauversion des Azure Information Protection-Clients verwendet immer Azure RMS, wenn ein Benutzer auf die Schaltfläche **Nicht weiterleiten** in Outlook klickt. Wenn Sie dieses Verhalten nicht wünschen, können Sie die Schaltfläche **Nicht weiterleiten** in Outlook ausblenden, indem Sie eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook) konfigurieren. 
 
-- Wenn Sie AD RMS (HYOK)- und Azure RMS-Schutz verwenden und Benutzer benutzerdefinierte Berechtigungen konfigurieren, werden Dokumente oder E-Mail-Adresse immer durch Azure Rights Management geschützt.
+- Für die aktuelle allgemein verfügbare Version des Azure Information Protection-Client: Wenn Sie AD RMS (HYOK)- und Azure RMS-Schutz verwenden und Benutzer benutzerdefinierte Berechtigungen konfigurieren, werden Dokumente oder E-Mail-Adresse immer durch Azure Rights Management geschützt. Diese Beschränkung gilt nicht für die aktuelle Vorschauversion des Clients.
+
+- Wenn Sie benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfigurieren, was von der aktuellen Vorschauversion des Azure Information Protection-Clients unterstützt wird: Im Datei-Explorer wird der Schutz immer mithilfe von Azure RMS statt mit HYOK (AD RMS) angewendet. 
 
 - Wenn Benutzer in Outlook eine Bezeichnung auswählen, die AD RMS-Schutz anwendet, und dann vor dem Senden der E-Mail-Adresse ihre Meinung ändern und eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, kann die neu ausgewählte Bezeichnung nicht angewendet werden. Es wird die folgende Fehlermeldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Sie sind nicht berechtigt, diese Aktion auszuführen.**
     
@@ -107,9 +111,11 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 
-Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Vorlagen-GUID und Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Sie können beide Werte in der Konsole von Active Directory Rights Management Services finden:
+Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
 
-- Suchen der Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
+Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die Konsole von Active Directory Rights Management Services suchen:
+
+- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Zum Beispiel: https://rmscluster.contoso.com 
     

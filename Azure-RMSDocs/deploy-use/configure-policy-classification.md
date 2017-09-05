@@ -4,17 +4,17 @@ description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können S
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -26,7 +26,7 @@ Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch
  
 - Die empfohlene Klassifizierung gilt beim Speichern von Dateien in Word, Excel und PowerPoint.
 
-Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z.B. für Kreditkartennummern oder US-Sozialversicherungsnummern. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
+Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z.B. für **Kreditkartennummern** oder **US-Sozialversicherungsnummern (SSN)**. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu diesen Bedingungen finden Sie im Abschnitt [Details about the information types (Einzelheiten zu den Informationstypen)](#details-about-the-information-types).
 
 So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten:
 
@@ -47,37 +47,42 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
-1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die Bezeichnung, die Sie für die automatische oder empfohlene Klassifizierung konfigurieren möchten, für alle Benutzer gilt, wählen Sie die zu ändernde Bezeichnung auf dem Blatt **Richtlinie: Global** aus und nehmen dann nach Bedarf Ihre Änderungen am Blatt **Bezeichnung** und allen nachfolgenden Blättern vor. 
+2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
+    
+    Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
 
-     Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, wählen Sie zunächst die bereichsbezogene Richtlinie auf dem ersten Blatt **Azure Information Protection** aus.  
+3. Wählen Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie\<name>** die zu konfigurierende Bezeichnung. 
 
-3. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
+4. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
 
-4. Wählen Sie auf dem Blatt **Condition** (Bedingung) die Option **Built-in** (Integriert) aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Custom** (Benutzerdefiniert), um eine eigene Bedingung anzugeben. Klicken Sie anschließend auf **Save** (Speichern):
-
-    - Für **Integriert**: Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
+5. Wählen Sie auf dem Blatt **Bedingung** die Option **Informationstypen** aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Benutzerdefiniert**, um eine eigene Bedingung anzugeben. Klicken Sie anschließend auf **Speichern**:
+    - Für **Informationstypen**: Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
-        Weitere Informationen zu den Erkennungsregeln für diese Bedingungen sowie eine Reihe von Beispielen finden Sie im Abschnitt [Informationen zu den integrierten Bedingungen](#information-about-the-built-in-conditions).
-
+        Sie müssen die aktuelle Vorschauversion des Azure Information Protection-Clients verwenden, um die vollständige Liste der Bedingungen zu verwenden. Wenn Sie die aktuelle allgemein verfügbare Version des Clients besitzen, werden die folgenden fünf Bestimmungen unterstützt: **SWIFT-Code**, **Kreditkartennummer**, **US-Bankleitzahl (ABA Routing Number)**, **US-Sozialversicherungsnummer (SSN)** und **International Banking Account Number (IBAN)**. [Weitere Informationen](#details-about-the-information-types)
+    
     - Für **Custom** (Benutzerdefiniert): Geben Sie einen Namen und eine Zeichenfolge für den Abgleich an. Diese darf weder Anführungszeichen noch Sonderzeichen enthalten. Legen Sie dann fest, ob für den Abgleich ein regulärer Ausdruck verwendet und ob die Groß-/Kleinschreibung beachtet werden soll. Legen Sie außerdem die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
-    **Beispiel für die Optionen zu Vorkommen**: Sie wählen die integrierte Option zum Ermitteln von US-Sozialversicherungsnummern und legen für die Mindestanzahl von Vorkommen den Wert 2 fest. Sie verfügen über ein Dokument, in dem dieselbe Sozialversicherungsnummer zweimal aufgeführt wird: Wenn Sie für **Count occurrences with unique values only** (Nur Vorkommen mit eindeutigen Werten zählen) die Einstellung **On** (Ein) wählen, wird die Bedingung nicht erfüllt. Wenn Sie für diese Option die Einstellung **Off** (Aus) festlegen, wird die Bedingung erfüllt.
+        Wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients besitzen, verwenden die regulären Ausdrücke die Regex-Muster von Office 365. Weitere Informationen finden Sie in der Office-Dokumentation unter [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) (Definieren von Matches, die auf regulären Ausdrücken basieren). 
+        
+    **Beispiel für die Optionen zu Vorkommen**: Sie wählen die integrierte Option zum Ermitteln von US-Sozialversicherungsnummern und legen für die Mindestanzahl von Vorkommen den Wert „2“ fest. Sie verfügen über ein Dokument, in dem dieselbe Sozialversicherungsnummer zweimal aufgeführt wird: Wenn Sie für **Nur Vorkommen mit eindeutigen Werten zählen** die Einstellung **Ein** wählen, wird die Bedingung nicht erfüllt. Wenn Sie diese Option auf **Aus** festlegen, wird die Bedingung erfüllt.
 
-5. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) die folgenden Einstellungen, und klicken Sie dann auf **Save** (Speichern):
-
+6. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) die folgenden Einstellungen, und klicken Sie dann auf **Save** (Speichern):
+    
     - Wählen Sie die automatische oder die empfohlene Klassifizierung: Wählen Sie für **Select how this label is applied: automatically or recommended to user** (Festlegen, wie diese Bezeichnung angewendet wird: automatisch oder empfohlen) die Einstellung **Automatic** (Automatisch) oder **Recommended** (Empfohlen).
-
+    
     - Geben Sie den Text für die Benutzeraufforderung oder den Richtlinientipp an: Übernehmen Sie den Standardtext, oder geben Sie eine eigene Zeichenfolge ein.
 
-6. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
+7. Klicken Sie auf dem anfänglichen Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
-## <a name="information-about-the-built-in-conditions"></a>Informationen zu den integrierten Bedingungen
+## <a name="details-about-the-information-types"></a>Einzelheiten zu den Informationstypen
 
-Es stehen folgende Bedingungen zur Auswahl:
+Wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients besitzen, wird die vollständige Liste der Informationstypen unterstützt. Diese verwendet die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Sie können aus vielen häufig verwendeten vertraulichen Informationstypen wählen. Einige davon sind spezifisch für verschiedene Regionen. Weitere Informationen finden Sie in der Office-Dokumentation unter [What the sensitive information types look for (Wonach die vertraulichen Informationstypen suchen)](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b). Wenn Azure Information Protection diese Informationstypen auswertet, verwendet es nicht die Office-DLP-Einstellung auf Konfidenzniveau, sondern sucht entsprechend der niedrigsten Konfidenz nach Übereinstimmungen.  
+
+Wenn Sie die aktuell verfügbare allgemeine Version des Clients besitzen, werden nur die folgenden Informationstypen unterstützt:
 
 - [SWIFT Code](#swift-code ) (SWIFT-Code)
 
@@ -89,6 +94,7 @@ Es stehen folgende Bedingungen zur Auswahl:
 
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
+In den folgenden Abschnitten finden Sie weitere Informationen zu jedem dieser Informationstypen für allgemein verfügbare Versionen des Clients.
 
 ### <a name="swift-code"></a>SWIFT Code (SWIFT-Code)
 

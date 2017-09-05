@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 88843833b87eb054f534a7c85e6a7c2e52797e9b
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -48,7 +48,7 @@ Weitere Informationen zum Konfigurieren von bereichsbezogenen Richtlinien finden
 
 2. Navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
-    Wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen, wird die Seite **Schnellstart** automatisch geöffnet. Um die Richtlinie zu konfigurieren, die alle Benutzer erhalten, klicken Sie auf **Globale Richtlinie**, um das Blatt **Richtlinie: Global** zu öffnen. Dieses Blatt wird für nachfolgende Verbindungen mit dem Dienst geöffnet, sodass Sie die globale Richtlinie, die alle Benutzer erhalten, anzeigen und bearbeiten können. 
+    Wenn Sie sich zum ersten Mal mit dem Dienst verbinden, wird das Blatt **Azure Information Protection - Quick start** (Azure Information Protection – Schnellstart) automatisch geöffnet. Klicken Sie zum Konfigurieren der Richtlinie, die für alle Benutzer gilt, in der Menüauswahl **RICHTLINIEN** auf **Globale Richtlinie**, um das Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) zu öffnen. Dieses Blatt wird für nachfolgende Verbindungen mit dem Dienst geöffnet, sodass Sie die globale Richtlinie, die alle Benutzer erhalten, anzeigen und bearbeiten können. 
     
     Die Azure Information Protection-Richtlinie enthält die folgenden Elemente, die Sie konfigurieren können:
     
@@ -70,7 +70,7 @@ Azure Information Protection enthält eine [Standardrichtlinie](configure-policy
 
 Sie können die Standardbezeichnungen unverändert verwenden, diese Bezeichnungen anpassen oder löschen und neue Bezeichnungen erstellen. Weitere Informationen zu den gewünschten Optionen und deren Konfiguration finden Sie unter den Links im nächsten Abschnitt. 
 
-Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. 
+Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen.
 
 Klicken Sie auf **Publish** (Veröffentlichen), wenn Sie alle gewünschten Änderungen vorgenommen haben. 
 
