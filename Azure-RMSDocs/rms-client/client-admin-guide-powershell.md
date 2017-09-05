@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
+ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 08/29/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -220,7 +220,7 @@ Unser Beispielbefehl würde wie folgt aussehen:
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzelnen Befehl bereitstellen oder nur „RMSServerAuthentication“ eingeben und die Werte nacheinander bereitstellen, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, wird „**RmsServerAuthentication ist auf ON festgelegt**“ angezeigt, d. h., der Client wird jetzt im „Servermodus“ ausgeführt. Diese Meldung bestätigt nicht, dass die Authentifizierung mit den angegebenen Werten erfolgreich war, sondern, dass der Wechsel in den Servermodus erfolgreich war.
+Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzigen Befehl bereitstellen. Dieser würde in einem Skript ohne Benutzereingriff ausgeführt werden. Zu Testzwecken können Sie jedoch einfach „Set-RMSServerAuthentication“ eintippen und die Werte nacheinander eingeben, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, arbeitet der Client nun im „Servermodus“, der für die Verwendung ohne Benutzereingriff wie bei Skripts und Windows Server-Dateiklassifizierungsinfrastruktur geeignet ist.
 
 Erwägen Sie es, diesen Dienstprinzipal zum Administrator zu machen: Dieser Dienstprinzipal kann als Administrator konfiguriert werden, um sicherzustellen, dass er für andere Benutzer immer Dateien schützen oder deren Schutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
 

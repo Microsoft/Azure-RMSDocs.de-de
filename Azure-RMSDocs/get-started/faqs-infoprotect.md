@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 80efd633bc814af1ac28e4b6bf2d0b3062b27d01
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -30,19 +30,15 @@ Probieren Sie unser Schnellstart-Tutorial aus, um zu sehen, wie dies innerhalb w
 
 Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind: Die aktuelle Version hat einige Einschränkungen, einschließlich der Folgenden:
 
-- Bezeichnungsnamen und QuickInfos werden nur in einer Sprache unterstützt. Die Unterstützung mehrerer Sprachen ist nun jedoch in der Vorschau verfügbar. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](../deploy-use/configure-policy-languages.md).
+- Bezeichnungsnamen und QuickInfos werden nur in einer Sprache unterstützt. Die Unterstützung mehrerer Sprachen ist nun jedoch in der Vorschau verfügbar. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen](../deploy-use/configure-policy-languages.md).
 
 - Es gibt keine zentrale Protokollierung für die Klassifizierung und die Bezeichnung.
 
-- Bedingungen für die automatische Klassifizierung müssen Ausdrücke oder Muster sein.
-
-- Keine Bezeichnungsmöglichkeit für Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer oder für die Office Web Apps (Office Online).
+- Keine Bezeichnungsmöglichkeit in Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer oder für die Office Web Apps (Office Online).
 
 - Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online.
 
-- Das SDK für Partner und Entwickler enthält noch keine Klassifizierung und Bezeichnung.
-
-Die Version von Februar entfernt viele zuvor enthaltene Einschränkungen. Weitere Informationen finden Sie in der [Ankündigung zum Blogbeitrag](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Anfordern neuer Features und Abstimmen für Anforderungen durch Besuchen der [User Voice-Website](https://msip.uservoice.com/) für Azure Information Protection.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>Muss ich ein globaler Administrator sein, um Klassifizierungen und Bezeichnungen zu konfigurieren?
 
