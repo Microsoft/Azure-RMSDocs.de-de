@@ -4,7 +4,7 @@ description: "Informationen für Benutzer, die den Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,30 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 84644f717a6005245847c9e9598b87c5af885aa7
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="protection-only-mode-for-the-azure-information-protection-client"></a>Reiner Schutzmodus für den Azure Information Protection-Client
 
-Wenn Sie den Azure Information Protection-Client ohne Azure Information Protection-Richtlinie ausführen, wird er im **reinen Schutzmodus** angezeigt. Wenn Sie z. B. den Windows-Datei-Explorer verwenden, klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**:
+Wenn der Azure Information Protection-Client keine Bezeichnungen aufweist, um Ihre Dokumente und E-Mails zu klassifizieren, wird er im **reinen Schutzmodus** ausgeführt. Wenn Sie in diesem Modus z.B. den Windows-Explorer verwenden und mit der rechten Maustaste auf **Klassifizieren und schützen** klicken, wird Folgendes angezeigt:
 
 ![Reiner Schutzmodus](../media/protection-only-mode.png)
 
- Dieser Modus wird für die folgenden Szenarien ausgeführt:
+Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
-- Ihre Organisation verfügt nicht über ein Abonnement für Azure Information Protection (zum Klassifizieren und Schützen von Daten), aber über ein Abonnement für den Azure Rights Management-Dienst (für den Datenschutz mit Office 365). 
-    - Dies ist ein unterstütztes Szenario, und Sie können den Azure Information Protection-Client zum Schützen von Dateien sowie zum Anzeigen geschützter Dateien verwenden.
+- Ihre Organisation verfügt nicht über ein Abonnement für Azure Information Protection, das Features zum Klassifizieren und Schützen von Daten enthält, besitzt aber ein Abonnement für Office 365, das Datenschutz über den Azure Rights Management-Dienst umfasst. 
+    
+    - Sie können den Azure Information Protection-Client zum Schützen von Dateien und zum Anzeigen geschützter Dateien verwenden. Sie können Dokumente und E-Mails nicht klassifizieren oder mit Bezeichnungen versehen.
+
+- Ihre Organisation besitzt ein Abonnement für Azure Information Protection, aber nur für einen Teil der Benutzer:
+    
+    - Bei einer solchen Kombination aus Abonnements liegt es in der Verantwortung des Administrators, sicherzustellen, dass nur diese Teilmenge der Benutzer die Klassifizierungs- und Bezeichnungsfeatures verwenden kann. Die anderen Benutzer sollten den Azure Information Protection-Client im reinen Schutzmodus ausführen. 
 
 - Ihre Organisation verfügt über ein Abonnement von Azure Information Protection, aber Sie können die Azure Information Protection-Richtlinie nicht herunterladen. 
+    
     - Dies kann aufgrund einer Fehlkonfiguration oder einer nicht erfolgreichen Anmeldung auftreten. Wenden Sie sich an den Helpdesk oder Ihren Administrator, aber in der Zwischenzeit können Sie möglicherweise mit dem Azure Information Protection-Client Dateien schützen und geschützte Dateien anzeigen.
 
 ## <a name="limitations-for-protection-only-mode"></a>Einschränkungen für den reinen Schutzmodus
