@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 954b69213c055c4b94981fabef40df29aa0e19ba
-ms.sourcegitcommit: 5a087ff509162a98f3d09fda4ef5a114028e5664
+ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
+ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
 
@@ -85,8 +85,6 @@ Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen 
     - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie anderenfalls die Zugriffsebene aus, die Sie den Personen gewähren möchten.
 
     - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
-    
-    Wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen, können Sie alternativ mithilfe die Schaltfläche **Benutzer, Gruppen oder Organisation auswählen** verwenden. Diese Schaltfläche zeigt das Dialogfeld **Benutzer oder Gruppen auswählen** für Ihr lokales Active Directory. Wenn sich die Benutzer oder Gruppen, die Sie angeben möchten, im Active Directory befinden, können Sie sie in diesem Dialogfeld suchen und markieren. Zur Verwendung dieser Option muss Ihr Computer mit dem internen Netzwerk verbunden sein und der Domäne hinzugefügt werden. Sie benötigen auch lokales Active Directory. Wenn eine dieser Bedingungen nicht erfüllt ist, wird die folgende Meldung angezeigt: **The program cannot open the required dialog box because no locations can be found** (Das Programm kann das angeforderte Dialogfeld nicht öffnen, da keine Speicherorte gefunden werden können).
         
     - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegte Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
 
@@ -131,7 +129,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
     
     - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
     
-    Alternativ können Sie die Schaltfläche **Benutzer, Gruppen oder Organisation auswählen** verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen. Wenn Sie über die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen, zeigt diese Schaltfläche das Dialogfeld **Benutzer oder Gruppen auswählen** für Ihr lokales Active Directory-Dienst an. Wenn sich die Benutzer oder Gruppen, die Sie angeben möchten, im Active Directory befinden, können Sie sie in diesem Dialogfeld suchen und markieren. Zur Verwendung dieser Option muss Ihr Computer mit dem internen Netzwerk verbunden sein und der Domäne hinzugefügt werden. Sie benötigen auch lokales Active Directory. Wenn eine dieser Bedingungen nicht erfüllt ist, wird die folgende Meldung angezeigt: **The program cannot open the required dialog box because no locations can be found** (Das Programm kann das angeforderte Dialogfeld nicht öffnen, da keine Speicherorte gefunden werden können).
+    Alternativ dazu können Sie das Adressbuchsymbol verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auszuwählen.
         
     - **Ablauf des Zugriffs**: Wählen Sie diese Option nur für zeitkritische Dateien, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht Ihre ausgewählte(n) Datei(en) öffnen können. Sie können dabei die ursprüngliche Datei weiterhin öffnen, jedoch können die von Ihnen angegebenen Personen nach Mitternacht (Ihrer aktuellen Zeitzone) des von Ihnen festgelegten Tages die Datei nicht öffnen.
     

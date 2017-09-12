@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokolli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 032fb5525d1bd4f32419358cdeae5efe1be30f56
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Anhand der folgenden Informationen erhalten Sie eine Übersicht darüber, wie Sie die Verwendungsprotokollierung für den Azure Rights Management-Dienst von Azure Information Protection verwenden können. Dieser Dienst stellt den Schutz von Daten für Dokumente und E-Mails Ihrer Organisation bereit und kann jede für ihn durchgeführte Anforderung protokollieren. Hierzu gehören die Anforderungen von Benutzern, die von Administratoren für diesen Dienst ausgeführten Aktionen und die von Microsoft-Mitarbeitern ausgeführten Aktionen, mit denen Ihre Azure Information Protection-Bereitstellung unterstützt wird.
+Anhand der folgenden Informationen erhalten Sie eine Übersicht darüber, wie Sie die Verwendungsprotokollierung für den Azure Rights Management-Dienst von Azure Information Protection verwenden können. Dieser Dienst stellt den Datenschutz für die Dokumente und E-Mails Ihrer Organisation bereit und kann jede diesbezügliche Anforderung protokollieren. Folgende Vorgänge zählen als Anforderungen: Benutzer schützen Dokumente und E-Mails und nutzen die Inhalte; Aktionen, die von Ihren Administratoren für diesen Dienst ausgeführt werden; Aktionen, die von Microsoft-Technikern zur Unterstützung Ihrer Azure Information Protection-Bereitstellung ausgeführt werden. 
 
 Sie können dann mithilfe dieser Protokolle des Azure Rights Management-Diensts die folgenden Geschäftsszenarios unterstützen:
 
@@ -40,12 +40,18 @@ Sie können dann mithilfe dieser Protokolle des Azure Rights Management-Diensts 
 
     Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Art Fragen beantworten, wenn Sie diese Protokollierung verwenden. Personen, die geschützte Inhalte verwenden, müssen nämlich immer eine Rights Management-Lizenz abrufen, um Dokumente und Bilder zu öffnen, die durch den Azure Rights Management-Dienst geschützt sind. Das gilt auch dann, wenn diese Dateien per E-Mail verschoben oder auf USB-Laufwerke oder andere Speichergeräte kopiert werden. Dies bedeutet, dass Sie diese Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten mithilfe des Azure Rights Management-Diensts schützen.
 
-> [!NOTE]
-> Wenn Sie nur an der Protokollierung von administrativen Aufgaben für den Azure Rights Management-Dienst interessiert sind und nicht nachverfolgen möchten, wie Benutzer den Rights Management-Dienst verwenden, können Sie das Windows PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) für Azure Rights Management nutzen.
-> 
-> Sie können auch das klassische Azure-Portal für allgemeine Verwendungsberichte verwenden. Hierzu gehören **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. Klicken Sie für den Zugriff auf diese Berichte im klassischen Azure-Portal auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.
+Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierungsoptionen zur Verfügung:
 
-In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollierung von Azure Rights Management.
+|Protokollierungsoption|Beschreibung|
+|----------------|---------------|
+|Administratorprotokoll|Protokolliert Verwaltungsaufgaben für den Azure Rights Management-Dienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Webberichte|Allgemeine Nutzungsberichte aus dem klassischen Azure-Portal: **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. <br /><br />Um im klassischen Azure-Portal auf diese Berichte zuzugreifen, klicken Sie auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.|
+|Dokumentkontrolle|Ermöglicht Benutzern das Nachverfolgen und Sperren von Dokumenten, die sie mit dem Azure Information Protection-Client oder der RMS-Freigabe-App nachverfolgt haben. Globale Administratoren können diese Dokumente im Auftrag von Benutzern nachverfolgen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
+|Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
+|Clientprotokolldateien|Problembehandlungsprotokolle für den Azure Information Protection-Client, zu finden in **%localappdata%\Microsoft\MSIP**. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
+
+
+In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollierung für den Azure Rights Management-Dienst. 
 
 ## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Aktivieren der Verwendungsprotokollierung von Azure Rights Management
 Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung standardmäßig für alle Kunden aktiviert. Dies gilt für Kunden, die ihren Azure Rights Management-Dienst vor Februar 2016 aktiviert haben, und für Kunden, die den Dienst nach Februar 2016 aktiviert haben. 
