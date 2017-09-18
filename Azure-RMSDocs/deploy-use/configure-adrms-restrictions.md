@@ -4,17 +4,17 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
+ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -85,7 +85,15 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
     
     - Mindestversion von Windows Server 2012 R2: erforderlich für Produktionsumgebungen. Für Tests oder zu Evaluierungszwecken können Sie jedoch eine Mindestversion von Windows Server 2008 R2 mit Service Pack 1 verwenden.
     
-    - Einzelner AD RMS-Stammcluster.
+    - Eine der folgenden Topologien:
+        
+        - Eine einzelne Gesamtstruktur mit einem einzelnen AD RMS-Stammcluster. 
+        
+        - Mehrere Gesamtstrukturen mit unabhängigen AD RMS-Stammclustern sowie Benutzer haben keinen Zugriff auf den Inhalt, der durch die Benutzer in den anderen Gesamtstrukturen geschützt wird.
+        
+        - Mehrere Gesamtstrukturen, die jeweils AD RMS-Cluster beinhalten. Jeder AD RMS-Cluster gibt eine Lizenzierungs-URL frei, die auf den gleichen AD RMS-Cluster zeigt. Sie müssen auf diesem AD RMS-Cluster alle Zertifikate der vertrauenswürdigen Benutzerdomänen (Truster User Domain, TUD) von allen anderen AD RMS-Clustern importieren. Weitere Informationen zu dieser Topologie finden Sie unter [Trusted User Domain (Vertrauenswürdige Benutzerdomäne)](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        
+    Wenn Sie über mehrere AD RMS-Cluster in separaten Gesamtstrukturen verfügen, löschen Sie Bezeichnungen in der globalen Richtlinie, die HYOK-Schutz (AD RMS) anwenden, und konfigurieren Sie eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für jeden Cluster. Weisen Sie anschließend Benutzer für jeden Cluster ihrer bereichsbezogenen Richtlinie zu. Stellen Sie dabei sicher, dass Sie keine Gruppen verwenden, die dazu führen würden, dass ein Benutzer mehr als einer bereichsbezogenen Richtlinie zugewiesen werden würde. Jeder Benutzer sollte letztendlich Bezeichnungen für nur einen AD RMS-Cluster besitzen. 
     
     - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können den Modus auf der Registerkarte **Allgemein** der AD RMS-Clustereigenschaften prüfen.
     

@@ -4,17 +4,17 @@ description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 2f6bc027353f38e272a6765c10e770643b739d26
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: fce3c905f2f48c2723ee7f0b55ff5ddb77f6258a
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -39,7 +39,7 @@ Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionswei
 > [!IMPORTANT]
 > Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Wenn Sie den Dienst noch nicht aktiviert haben, finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md) weitere Informationen.
 
-Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen für geschützte Dateien keine gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur und eDiscovery. 
+Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen für geschützte Dateien keine gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
 
 Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM konfiguriert ist. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, derartige E-Mails können nicht für die Suche indiziert werden, und Sie können Exchange Online DLP nicht für den Rights Management-Schutz konfigurieren. Weitere Informationen zum Konfigurieren von Exchange, um diese zusätzlichen Szenarien zu unterstützen, finden Sie in den folgenden Ressourcen:
 
@@ -73,8 +73,9 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar-configured.png)
 
-6. Wählen Sie auf dem Blatt **Schutz** die Option **Azure RMS** oder **HYOK (AD RMS)** aus.     
-    In den meisten Fällen wählen Sie **Azure RMS** für Ihre Berechtigungseinstellungen. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um mit der Konfiguration für HYOK (AD RMS) fortzufahren, wechseln Sie zu Schritt 10.
+6. Wählen Sie auf dem Blatt **Schutz** die Option **Azure RMS** oder **Azure (cloud key)** (Azure (Cloud-Schlüssel)) aus, oder wählen Sie **HYOK (AD RMS)** aus. Die erste Option wird zurzeit umbenannt.
+    
+    In den meisten Fällen wählen Sie **Azure RMS** oder **Azure (cloud key)** für Ihre Berechtigungseinstellungen. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um mit der Konfiguration für HYOK (AD RMS) fortzufahren, wechseln Sie zu Schritt 10.
     
 7. Wählen Sie eine der folgenden Optionen aus:
     
@@ -88,15 +89,15 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer wählen: Diese Option erfordert die Vorschauversion des Azure Information Protection-Clients. Wenn diese Option festgelegt ist und Benutzer den Client der Vorschauversion besitzen, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
 
-8. Falls Sie **Vordefinierte Vorlage auswählen** für **Azure RMS** ausgewählt haben, klicken Sie in der Dropdownfeld auf die [Vorlage](../deploy-use/configure-policy-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen. Archivierte Vorlagen oder Vorlagen, die bereits für eine andere Bezeichnung ausgewählt wurden, werden nicht angezeigt.
+8. Falls Sie **Vordefinierte Vorlage auswählen** für **Azure RMS** oder **Azure (cloud key)** ausgewählt haben, klicken Sie im Dropdownfeld auf die [Vorlage](../deploy-use/configure-policy-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen. Archivierte Vorlagen oder Vorlagen, die bereits für eine andere Bezeichnung ausgewählt wurden, werden nicht angezeigt.
     
     Bei Auswahl einer **Abteilungsvorlage** oder wenn Sie [Onboardingsteuerelemente](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
     
     - Benutzer, die sich außerhalb des konfigurierten Bereichs der Vorlage befinden oder von der Anwendung des Azure Rights Management-Schutzes ausgeschlossen sind, können die Bezeichnung weiterhin anzeigen, sie aber nicht anwenden. Wenn sie die Bezeichnung auswählen, wird die folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
         
-        Beachten Sie, dass immer alle veröffentlichten Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Azure RMS-Vorlagen, die Sie auswählen können, sind nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
+        Beachten Sie, dass immer alle veröffentlichten Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Vorlagen, die Sie auswählen können, sind nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
             
-9. Wenn Sie **Festlegen von Berechtigungen** für **Azure RMS** ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
+9. Wenn Sie **Festlegen von Berechtigungen** für **Azure RMS** oder **Azure (cloud key)** ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
     
     Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
@@ -143,7 +144,15 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 
 12. Klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
-13. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
+13. Verwenden Sie auf dem Blatt **Azure Information Protection** die Spalte **PROTECTION** (Schutz), um zu bestätigen, dass Ihre Bezeichnung nun die gewünschten Schutzeinstellungen darstellt:
+    
+    - **Azure RMS** oder **HYOK (AD RMS)** oder ein Häkchen, falls Sie den Schutz konfiguriert haben. 
+    
+    - **Schutz entfernen** oder das Zeichen „x“, um den Abbruch anzugeben, wenn Sie eine Bezeichnung zum Entfernen von Schutz konfiguriert haben.
+    
+    - Ein leeres Feld, wenn der Schutz nicht festgelegt ist. 
+
+13. Klicken Sie auf **Publish** (Veröffentlichen), um Ihre Änderungen für Benutzer verfügbar zu machen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

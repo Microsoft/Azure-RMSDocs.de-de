@@ -4,17 +4,17 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: dbe198f84ed092f815e2c419d039d4f926fb5892
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
@@ -67,7 +67,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     ![Schutz, der für eine Azure Information Protection-Bezeichnung konfiguriert ist](../media/info-protect-protection-bar-configured.png) 
     
-4. Stellen Sie auf dem Blatt **Schutz** sicher, dass **Azure RMS** und **Berechtigungen festlegen** ausgewählt sind. Klicken Sie dann auf **Berechtigungen hinzufügen**.
+4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure RMS** oder **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist. Diese Option wird zurzeit umbenannt. Stellen Sie sicher, dass **Berechtigungen festlegen** ebenfalls ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
 
 5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
     
@@ -123,7 +123,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Klicken Sie dann auf dem Blatt **Policy: Global** (Richtlinie: Global) erneut auf **Speichern**.
     
-    Ihnen wird nun Ihre neue untergeordnete Bezeichnung angezeigt, die für optische Kennzeichnungen und den Azure RMS-Schutz konfiguriert ist:
+    Ihnen wird nun Ihre neue untergeordnete Bezeichnung angezeigt, die für optische Kennzeichnungen und den Schutz konfiguriert ist. Beispiel:
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie konfiguriert](../media/info-protect-policy-configuredv2.png)
     

@@ -4,7 +4,7 @@ description: "Verwendung des Azure Rights Management-Diensts über AIP zum Schut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e4d753c6c58394c257466269c5a4f50df6c6fc4
-ms.sourcegitcommit: 869e42f35a851c412164a71b1f657621af07b2f5
+ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
+ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -48,7 +48,7 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Information
 
 -   **Transportregeln**, die von einem Administrator konfiguriert werden, um automatisch Schutzvorlagen für E-Mail-Nachrichten anzuwenden. Diese Regeln basieren auf Eigenschaften wie Sender, Empfänger, Betreff der Nachricht und Inhalt. Diese Regeln ähneln in ihrem Konzept den Schutzregeln; Benutzer können den Schutz jedoch nicht entfernen. Die Regeln können auf Outlook im Internet und auf E-Mails angewendet werden, die von mobilen Geräten aus gesendet werden. Zusätzlich verschlüsseln diese Regeln keine E-Mail-Nachrichten, bevor Sie vom Client aus gesendet werden. Weitere Informationen finden Sie unter [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432.aspx) in der Exchange-Bibliothek.
 
--   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)**, die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Vertrauliche oder sensible Inhalte sind z.B. persönliche Informationen oder Kreditkarteninformationen. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter [Verhinderung von Datenverlust](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx) in der Exchange-Bibliothek.
+-   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)**, die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Vertrauliche oder sensible Inhalte sind z.B. persönliche Informationen oder Kreditkarteninformationen. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter [Verhinderung von Datenverlust](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) in der Exchange-Bibliothek.
 
 -   **Office 365-Nachrichtenverschlüsselung**, die Transportregeln verwendet, um verschlüsselte E-Mails an Personen außerhalb Ihres Unternehmens zu senden, wobei die E-Mail in einem Browser gelesen wird, dessen Oberfläche Outlook im Internet ähnelt. Sie können den Haftungsausschluss- und Kopfzeilentext in den verschlüsselten E-Mails Ihres Unternehmens anpassen und sogar Ihr Firmenlogo hinzufügen. Weitere Informationen finden Sie unter [Office 365-Nachrichtenverschlüsselung](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) auf der Office-Website.
 
@@ -82,7 +82,9 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > 
 > - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateierweiterung PDF, die nativ von Rights Management geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine native Unterstützung von Rights Management bietet.
 > 
-> - Wenn Sie eine Datei schützen, die Sie dann in einer SharePoint-Bibliothek oder in OneDrive hochladen, können Sie mit dieser Datei Folgendes nicht durchführen: Gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur und eDiscovery.
+> - Die gemeinsame Dokumentenerstellung wird nicht unterstützt. Da Sie ein Dokument in einer mit IRM geschützten Bibliothek auschecken und herunterladen müssen, kann eine Person sie gleichzeitig bearbeiten.
+
+Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder in OneDrive hochladen, können Sie für Bibliotheken, die nicht durch IRM geschützt sind, mit dieser Datei Folgendes nicht durchführen: Gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur, eDiscovery und Verhinderung von Datenverlust (Data Loss Protection, DLP).
 
 Wenn Sie den SharePoint IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 

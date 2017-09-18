@@ -4,7 +4,7 @@ description: "Informationen und Anweisungen für den Fall, dass Sie diese Lösun
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/05/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 33566381cf4d45c82f7f1a5ab210bccfd953fa49
-ms.sourcegitcommit: eea0e4eacfeb7307b94181c28626177b4467623d
+ms.openlocfilehash: 1f8d7a56cec4df8f0ef50f4f83ef662ad8923f17
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Außerbetriebsetzen und Deaktivieren von Azure Rights Management
 
@@ -75,9 +75,9 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Einstellungen für RMS** aus. 
+2. Auf dem ersten **Azure Information Protection**-Blatt wählen Sie **Einstellungen für RMS** oder **Protection activation** (Aktivierung von Schutz) aus. Diese Option wird zurzeit umbenannt. 
 
-3.  Wählen Sie auf dem Blatt **Azure Information Protection – Einstellungen für RMS** die Option **Deaktivieren** aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
+3.  Wählen Sie auf dem Blatt **Azure Information Protection – Einstellungen für RMS** oder **Azure Information Protection - Protection activation** (Azure Information Protection – Aktivierung von Schutz) die Option **Deaktivieren** aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
 
 Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt. 
 
