@@ -4,17 +4,17 @@ description: "Schritt 3 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: ccc52f1fca6e968ac1794d7bad437c271f4bd485
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: cfe2fdf41174caf6184d3e160ce9f4d439d55566
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-3-install-the-client"></a>Schritt 3: installieren des Clients
 
@@ -25,7 +25,7 @@ In diesem Schritt installieren Sie den Azure Information Protection-Client, dami
 
 ## <a name="install-the-azure-information-protection-client"></a>Installieren des Azure Information Protection-Clients
 
-1. Laden Sie aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) **AzInfoProtection.exe** auf einen PC herunter, auf dem Office installiert aber Word gerade nicht geöffnet ist. Dies ist die allgemein verfügbare Version des Clients, die in Produktionsnetzwerken unterstützt wird. Wenn Sie allerdings die aktuelle Vorschauversion ausprobieren möchten, die die aktuellsten Funktionen und Problembehebungen beinhaltet, laden Sie **AzInfoProtection_PREVIEW_1.10.52.0.exe** herunter.
+1. Laden Sie aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) **AzInfoProtection.exe** auf einen PC herunter, auf dem Office installiert aber Word gerade nicht geöffnet ist.
     
 2. Führen Sie die ausführbaren Dateien aus, die Sie gerade heruntergeladen haben, und folgen Sie den Aufforderungen zur Installation des Clients.
     
