@@ -4,7 +4,7 @@ description: "Informationen zum Anpassen des Azure Information Protection-Client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e590bd7983b0f3e4e4d1348fbe120452e9ceb79b
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: d5345f794fb69ddbfb4d6ffcddfcffd41ecacff5
+ms.sourcegitcommit: ff2fadacf9ef4c6ee27d9d08c4c455ffd48f21f8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -24,17 +24,15 @@ ms.lasthandoff: 09/08/2017
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
-Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen. Darüber hinaus stehen einige Einstellungen möglicherweise nur in einer Vorschauversion des Azure Information Protection-Clients zur Verfügung. Für diese Einstellungen ist eine Mindestversion des Clients angegeben. Für Einstellungen und Konfigurationen, die in der allgemein verfügbaren Version des Clients unterstützt werden, ist keine Mindestversion des Clients angegeben.
+Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter Clientkonfigurationseinstellungen im Portal
-
-Diese Konfiguration ist zurzeit als Vorschau verfügbar.
 
 1. Sofern nicht bereits geschehen, melden Sie sich in einem neuen Browserfenster als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**.
 
 2. Wählen Sie auf dem ersten Azure Information Protection-Blatt **Bereichsbezogene Richtlinien** aus.
 
-3. Rufen Sie auf dem Blatt **Azure Information Protection – Bereichsbezogene Richtlinien** das Kontextmenü (**...** ) neben der Richtlinie mit den erweiterten Einstellungen auf. Wählen Sie dann **Erweiterte Einstellungen** aus.
+3. Rufen Sie auf dem Blatt **Azure Information Protection – Bereichsbezogene Richtlinien** das Kontextmenü (**... **) neben der Richtlinie mit den erweiterten Einstellungen auf. Wählen Sie dann **Erweiterte Einstellungen** aus.
     
     Sie können erweiterte Einstellungen für die globale Richtlinie sowie für bereichsbezogene Richtlinien konfigurieren.
 
@@ -42,7 +40,7 @@ Diese Konfiguration ist zurzeit als Vorschau verfügbar.
 
 5. Klicken Sie auf **Veröffentlichen**, und stellen Sie sicher, dass Benutzer, für die diese Richtlinie gilt, alle Office-Anwendungen neu starten, die geöffnet waren.
 
-6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten, gehen Sie so vor: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü (**...** ) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie dann auf **Speichern und schließen**, und veröffentlichen Sie die geänderte Richtlinie erneut.
+6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten, gehen Sie so vor: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü (**... **) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie dann auf **Speichern und schließen**, und veröffentlichen Sie die geänderte Richtlinie erneut.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Verhindern von Anmeldeaufforderungen für Computer, die nur AD RMS verwenden
 
@@ -64,11 +62,7 @@ Sie können mithilfe des Dialogfelds **Microsoft Azure Information Protection** 
 
 So melden Sie sich als ein anderer Benutzer an:
 
-1. Je nach Version des Azure Information Protection-Clients: 
-    
-    - Für die allgemein verfügbare Version des Azure Information Protection-Clients: Navigieren Sie im Registrierungs-Editor zu **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**, und löschen Sie den **TokenCache**-Wert (und die zugehörigen Wertdaten).
-    
-    - Für die aktuelle Vorschauversion des Azure Information Protection-Clients: Navigieren Sie zu **%localappdata%\Microsoft\MSIP**, und löschen Sie die **TokenCache**-Datei.
+1. Navigieren Sie zu **%localappdata%\Microsoft\MSIP**, und löschen Sie die Datei **TokenCache**.
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
@@ -78,11 +72,7 @@ Darüber hinaus gilt:
 
 - Wenn Sie einmaliges Anmelden nutzen, müssen Sie sich von Windows abmelden und sich mit einem anderen Benutzerkonto erneut anmelden, nachdem Sie die Registrierung bearbeitet haben. Der Azure Information Protection-Client wird automatisch mit Ihrem aktuell angemeldeten Benutzerkonto authentifiziert.
 
-- Wenn Sie die Benutzereinstellungen des Azure Rights Management-Diensts zurücksetzen möchten, Sie können dazu die Option **Hilfe und Feedback** nutzen.
-
-- Wenn Sie die aktuell heruntergeladene Azure Information Protection-Richtlinie löschen möchten, löschen Sie die Datei **Policy.msip** aus dem Ordner **%localappdata%\Microsoft\MSIP**.
-
-- Wenn Sie die aktuelle Vorschauversion des Azure Information Protection-Clients verwenden, können Sie die Option **Einstellungen zurücksetzen** unter **Hilfe und Feedback** verwenden, um sich abzumelden und die aktuell heruntergeladene Azure Information Protection-Richtlinie zu löschen.
+- Sie können die Option **Einstellungen zurücksetzen** unter **Hilfe und Feedback** verwenden, um sich abzumelden und die aktuell heruntergeladene Azure Information Protection-Richtlinie zu löschen.
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt
 
@@ -99,10 +89,6 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** f
 Überprüfen Sie außerdem, ob auf diesen Computern eine Datei namens **Policy.msip** im Ordner **%LocalAppData%\Microsoft\MSIP** vorhanden ist. Wenn diese Datei vorhanden ist, löschen Sie sie. Diese Datei enthält die Azure Information Protection-Richtlinie und wurde möglicherweise heruntergeladen, bevor Sie die Registrierung bearbeitet haben. Die Datei kann auch vorhanden sein, wenn der Azure Information Protection-Client mit der Demooption installiert wurde.
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ausblenden der Menüoption „Klassifizieren und schützen“ im Windows-Dateiexplorer
-
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
-
-Sie können diese erweiterte Konfiguration einrichten, indem Sie die Registrierung bearbeiten, wenn Sie den Azure Information Protection-Client in der Version 1.3.0.0 oder höher verwenden. 
 
 Erstellen Sie den folgenden DWORD-Wert (mit beliebigen Wertdaten):
 
@@ -133,9 +119,7 @@ Beim Exportieren der Richtlinie wird von dieser Aktion auch eine gezippte Datei 
 
 ## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
-
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung erfordert auch eine Vorschauversion des Azure Information Protection-Clients mit der Mindestversion **1.8.41.0**.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet. In Office-Menüs wird diese Option nicht ausgeblendet.
 
@@ -147,10 +131,8 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Die Optionen für benutzerdefinierte Berechtigungen für Benutzer nicht verfügbar machen
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar.
-
 > [!IMPORTANT]
-> Verwenden Sie diese Option nicht, wenn Sie über Bezeichnungen verfügen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Wenn Sie dies tun, wenn die Bezeichnung angewendet ist, werden Benutzer nicht dazu aufgefordert, die benutzerdefinierten Berechtigungen zu konfigurieren. Das führt dazu, dass das Dokument bezeichnet ist, aber nicht über den von Ihnen beabsichtigten Schutz verfügt.
+> Sofern Sie nicht die aktuelle Vorschauversion des Clients verwenden, verwenden Sie diese Option nicht, wenn Sie über Bezeichnungen verfügen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Wenn Sie dies tun, wenn die Bezeichnung angewendet ist, werden Benutzer nicht dazu aufgefordert, die benutzerdefinierten Berechtigungen zu konfigurieren. Das führt dazu, dass das Dokument bezeichnet ist, aber nicht über den von Ihnen beabsichtigten Schutz verfügt.
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
@@ -170,7 +152,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
-Diese Konfiguration verwendet eine erweiterte Einstellung, die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung erfordert auch eine Vorschauversion des Azure Information Protection-Clients mit der Mindestversion **1.9.58.0**.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
 Wenn Sie diese Einstellung konfigurieren, die Richtlinie für Benutzer veröffentlichen und ein Benutzer die Azure Information Protection-Leiste nicht in seinen Office-Anwendungen anzeigen möchte, bleibt die Leiste ausgeblendet. Dies geschieht, wenn der Benutzer auf der Registerkarte **Start** in der Gruppe **Schutz** unter **Schützen** die Option **Leiste anzeigen** deaktiviert. Diese Einstellung hat keine Auswirkung, wenn der Benutzer die Leiste mithilfe des Symbols **Diese Leiste schließen** schließt.
 
@@ -181,6 +163,39 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 - Schlüssel: **EnableBarHiding**
 
 - Wert: **TRUE**
+
+
+## <a name="enable-recommended-classification-in-outlook"></a>Aktivieren der empfohlenen Klassifizierung in Outlook
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+
+Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, werden Benutzer dazu aufgefordert, die empfohlene Bezeichnung in Word, Excel und PowerPoint anzunehmen oder abzulehnen. Diese Einstellung erweitert diese Bezeichnungsempfehlung, sodass sie auch in Outlook angezeigt wird.
+
+Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
+
+- Schlüssel: **OutlookRecommendationEnabled**
+
+- Wert: **TRUE**
+
+
+## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
+
+Diese Konfigurationsoption befindet sich derzeit in der Vorschau und erfordert die Vorschauversion des Clients.
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+
+Wenn Sie diese Einstellung konfigurieren, wendet Outlook für die Einstellung **Standardbezeichnung auswählen** nicht die in der Azure Information Protection-Richtlinie konfigurierte Standardbezeichnung an. Stattdessen kann Outlook eine andere Bezeichnung oder keine Bezeichnung anwenden.
+
+Um eine andere Bezeichnung anzuwenden, müssen Sie die Bezeichnungs-ID angeben. Der Wert der Bezeichnungs-ID wird auf dem Blatt **Bezeichnung** angezeigt, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
+
+Damit Outlook nicht die Standardbezeichnung anwendet, geben Sie **None** (Keine) an.
+
+Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
+
+- Schlüssel: **OutlookDefaultLabel**
+
+- Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integration in die Exchange-Nachrichtenklassifizierung für eine Lösung zur Bezeichnung mobiler Geräte
 

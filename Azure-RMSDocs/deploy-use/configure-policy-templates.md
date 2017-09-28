@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
 >[!NOTE]
->Diese Funktion ersetzt das Konfigurieren benutzerdefinierter Vorlagen im klassischen Azure-Portal.
+>Diese Funktion ersetzt das Konfigurieren benutzerdefinierter Vorlagen im klassischen Azure-Portal. Eine schnelle Anleitung finden Sie unter [Tasks that you used to do with the Azure classic portal (Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben)](migrate-portal.md).
 >
 >Obwohl Sie noch immer Vorlagen im klassischen Azure-Portal erstellen und verwalten können, empfiehlt es sich jedoch nicht, dass Sie die gleichen Vorlagen vom klassischen Azure-Portal und dem Azure-Portal verwalten. Die Implementierung zum Konfigurieren von Vorlagen in diesen anderen Portalen wurde geändert, es kann also durch das Konfigurieren der gleichen Vorlage in unterschiedlichen Portalen zu einer unzuverlässigen Konfiguration kommen.
 
@@ -109,8 +109,7 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
-1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
-    
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Wenn die zu konfigurierende Vorlage für alle Benutzer verfügbar ist, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
@@ -119,11 +118,11 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 3. Suchen Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie\<name>** nach der Vorlage, die Sie konfigurieren möchten:
     
-    - Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst: Erweitern Sie **Vorlagen** oder **Protection templates** neben Ihren Bezeichnungen.
+    - Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst: Erweitern Sie **Protection templates** (Schutzvorlagen) neben Ihren Bezeichnungen.
     
     - Bei einem Abonnement, das nur Schutz umfasst: Vorlagen werden als Bezeichnungen angezeigt.
 
-4. Wählen Sie die Vorlage aus. Auf dem Blatt **Bezeichnung** können Sie ggf. den Vorlagennamen und die Beschreibung ändern, indem Sie bei Bedarf **Bezeichnungsname** und **Beschreibung** bearbeiten. Wählen Sie dann **Schutz** mit dem Wert **Azure RMS** oder **Azure (cloud key)** (Azure (Cloud-Schlüssel)) aus, um das Blatt **Schutz** zu öffnen.
+4. Wählen Sie die Vorlage aus. Auf dem Blatt **Bezeichnung** können Sie ggf. den Vorlagennamen und die Beschreibung ändern, indem Sie bei Bedarf **Bezeichnungsname** und **Beschreibung** bearbeiten. Wählen Sie dann **Schutz** mit dem Wert **Azure (cloud key)** (Azure (Cloud-Schlüssel)) aus, um das Blatt **Schutz** zu öffnen.
 
 5. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren der Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
     

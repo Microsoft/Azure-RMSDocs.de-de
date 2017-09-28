@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 6786ffde8d9903ee5c9d553159710052a6d5e7a2
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -269,22 +269,9 @@ Verwenden Sie den Link **Feedback senden**, um Vorschläge oder Anfragen an das 
 
 Die Option **Protokolle exportieren** erfasst automatisch Protokolldateien für den Azure Information Protection-Client und hängt diese an, wenn Sie darum gebeten wurden, diese an den Microsoft Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
 
-Um Diagnoseinformationen zu erhalten und den Client zurückzusetzen, wählen Sie **Diagnose ausführen** aus. Wenn die Diagnosetests abgeschlossen sind, klicken Sie auf **Ergebnisse kopieren**, um die Informationen in eine E-Mail einzufügen, die Sie an den Microsoft Support bzw. Ihre Endbenutzer an Ihren Helpdesk senden können. Wenn die Tests abgeschlossen sind, können Sie auch den Client zurücksetzen.
+Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die derzeit heruntergeladene Azure Information Protection-Richtlinie und setzt die Benutzereinstellungen für den Azure Rights Management-Dienst zurück.
 
-> [!NOTE]
-> In der Vorschauversion des Clients wurde **Diagnose ausführen** entfernt und durch **Einstellungen zurücksetzen** ersetzt. Darüber hinaus wurde das Verhalten für diese Option [geändert](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client).
-
-#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Weitere Informationen über die Zurücksetzungsoption für die Azure Information Protection-Clientversion für die allgemeine Verfügbarkeit
-
-- Sie müssen kein lokaler Administrator sein, um diese Option zu verwenden, und diese Aktion wird nicht in der Ereignisanzeige protokolliert. 
-
-- Sofern Dateien nicht gesperrt sind, löscht diese Aktion alle Dateien im Ordner **%LocalAppData%\Microsoft\MSIPC**, in dem Clientzertifikate und Rights Management-Vorlagen gespeichert werden. Die Azure Information Protection-Richtlinie oder Clientprotokolldateien werden nicht gelöscht, und der Benutzer wird nicht abgemeldet.
-
-- Der folgende Registrierungsschlüssel wird samt Einstellungen gelöscht: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Wenn Sie Einstellungen für diesen Registrierungsschlüssel konfiguriert haben, müssen Sie die Registrierungseinstellungen nach dem Zurücksetzen des Clients konfigurieren. Sie haben z.B.Einstellungen für die Umleitung zu Ihrem Azure Information Protection-Mandanten konfiguriert, da Sie von AD RMS zu Azure Information Protection migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben.
-
-- Nachdem Sie den Client zurückgesetzt haben, müssen Sie die Benutzerumgebung erneut initialisieren. Hierdurch werden die Zertifikate für den Client sowie die neuesten Vorlagen heruntergeladen. Schließen Sie hierzu alle Instanzen von Office, und starten Sie eine Office-Anwendung neu. Diese Aktion prüft außerdem, ob Sie die neueste Azure Information Protection-Richtlinie heruntergeladen haben. Führen Sie die Diagnose erst erneut aus, nachdem Sie dies getan haben.
-
-#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Weitere Informationen über die Zurücksetzungsoption für die aktuelle Vorschauversion des Azure Information Protection-Clients
+#### <a name="more-information-about-the-reset-settings-option"></a>Weitere Informationen zur Option „Einstellungen“ zurücksetzen
 
 - Sie müssen kein lokaler Administrator sein, um diese Option zu verwenden, und diese Aktion wird nicht in der Ereignisanzeige protokolliert. 
 
