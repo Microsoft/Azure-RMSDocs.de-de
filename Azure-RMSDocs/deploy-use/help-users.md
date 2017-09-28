@@ -4,7 +4,7 @@ description: "Informationen, anhand derer Sie Unterstützung für Benutzer, Admi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 192f4ade987e9f9f88f5f30bb17c70e113569002
-ms.sourcegitcommit: 8b6fc2201d99d72ee9bb43bb73356040893eceeb
+ms.openlocfilehash: d4ce0ea6a3c04c5ca52dae1750e48d5618eeef76
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -41,9 +41,9 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
 -   **Helpdesk-Informationen**
     
-    Wenn Benutzer über den Azure Information Protection-Client verfügen, können Helpdesk-Operatoren sie auffordern, die Option **Hilfe und Feedback**, **Ausführen von Diagnosen** zu verwenden und danach den Client zurückzusetzen. Jedoch wird der Benutzer bei der Zurücksetzung nicht abgemeldet, und es erfolgt auch kein Neustart des Clients und keine automatische Wartung.
+    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Zusätzliche Prüfungen und Problembehandlung](../rms-client/client-admin-guide.md#additional-checks-and-troubleshooting).
     
-    Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente sicher, dass der Helpdesk über Prozesse verfügt, mit denen dieser Zugriff unter Verwendung des Azure Rights Management-Features [Administrator](configure-super-users.md) angefordert werden kann. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat. 
+    Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente sicher, dass der Helpdesk über Prozesse verfügt, mit denen dieser Zugriff unter Verwendung des Azure Rights Management-Features [Administrator](configure-super-users.md) angefordert werden kann. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
     
     Darüber hinaus finden Sie einige der möglicherweise auftretenden Probleme in den folgenden Kategorien:
     

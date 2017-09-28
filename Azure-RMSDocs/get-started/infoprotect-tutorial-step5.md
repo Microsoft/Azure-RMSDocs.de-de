@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
@@ -39,9 +39,11 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
     Mit dieser Einstellung können die Empfänger das Dokument anzeigen, jedoch nicht bearbeiten oder ausdrucken.
 
-4. Geben Sie für **Select users** (Benutzer auswählen) eine oder mehrere geschäftliche E-Mail-Adressen ein, wie beim Senden eines Dokuments an einen Geschäftspartner Ihrer Organisation. Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Information Protection momentan keine privaten E-Mail-Adressen unterstützt. 
+4. Geben Sie für **Select users** (Benutzer auswählen) eine oder mehrere geschäftliche E-Mail-Adressen ein, wie beim Senden eines Dokuments an einen Geschäftspartner Ihrer Organisation. Um mehr als eine Adresse anzugeben, verwenden Sie ein Semikolon, oder drücken Sie die EINGABETASTE. 
 
-    Klicken Sie alternativ auf das Adressbuch, um die E-Mail-Adresse eines Kollegen auszuwählen:
+    Sie müssen eine geschäftliche E-Mail-Adresse wie **janetm@contoso.com** oder **p.dover@fabrikam.com** angeben, weil Azure Information Protection momentan keine privaten E-Mail-Adressen für dieses Szenario unterstützt. 
+
+    Klicken Sie alternativ auf das Symbol **Select users, groups, or organization** (Benutzer, Gruppen oder Organisation auswählen), um die E-Mail-Adresse eines Kollegen auszuwählen:
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 5 – Mit benutzerdefinierten Berechtigungen schützen](../media/protect-custom-permissions.png)  
     
@@ -93,7 +95,7 @@ Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfä
 
 2.  Klicken Sie auf der Registerkarte **Start** auf **Schützen** > **Nachverfolgen und widerrufen**:
 
-    ![Option „Verwendung nachverfolgen“](../media/track-usage-calloutv2.png)
+    ![Option „Verwendung nachverfolgen“](../media/track-usage-calloutv3.png)
 
     Dadurch gelangen Sie zu der Website für die Dokumentennachverfolgung.
 
@@ -101,13 +103,13 @@ Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfä
 
 3.  Auf der Seite **Your shared documents** (Freigegebene Dokumente) wird der Name des freigegebenen Dokuments angezeigt. Zu diesem Zeitpunkt wird nur diese Datei angezeigt. Sobald Sie jedoch zusätzliche geschützte Dokumente freigeben, wird die Liste erweitert.
 
-    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d. h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie das Datum der letzten Aktivität und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
+    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d. h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie das Datum der letzten Aktivität und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
 
 4.  Auf der neuen Seite, die den Namen der angeklickten Datei hat, sehen Sie spezifische Übersichtsdetails für das Dokument und eine Liste weiterer Optionen, die für das Dokument verfügbar sind (**Liste**, **Zeitskala**, **Karte**, **Einstellungen**).
 
-    Klicken Sie auf die einzelnen Optionen, um verschiedene Möglichkeiten zum Verfolgen des geschützten Dokuments auszuprobieren. Sie können auf der Seite **Zusammenfassung** aber auch auf **In Excel öffnen** klicken, um die Informationen in eine Kalkulationstabelle zu exportieren, oder auf **Zugriff widerrufen** , um die Freigabe des Dokuments zu beenden.
+    Klicken Sie auf die einzelnen Optionen, um verschiedene Möglichkeiten zum Verfolgen des geschützten Dokuments auszuprobieren. Sie können auf der Seite **Zusammenfassung** aber auch auf **In Excel öffnen** klicken, um die Informationen in eine Kalkulationstabelle zu exportieren, oder auf **Zugriff widerrufen**, um die Freigabe des Dokuments zu beenden.
 
-Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem mobilen Gerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562)auswählen.
+Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem Mobilgerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562) auswählen.
 
 
 
