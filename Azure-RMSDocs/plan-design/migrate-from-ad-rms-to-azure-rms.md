@@ -4,7 +4,7 @@ description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Dire
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 10/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
+ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 10/05/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -111,8 +111,6 @@ So bestätigen Sie den AD RMS-Kryptografiemodus:
 - Für Windows Server 2008 R2: Prüfen Sie, ob der Hotfix unter [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) (RSA-Schlüssellänge für AD RMS wurde in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht) installiert wurde. Andernfalls wird Ihr AD RMS-Cluster im Kryptografiemodus 1 ausgeführt.
 
 ### <a name="migration-limitations"></a>Einschränkungen bei der Migration
-
--   Obwohl der Migrationsvorgang die Migration des Schlüssels Ihres lizenzgebenden Serverzertifikats (SLC) zu einem Hardwaresicherheitsmodul (HSM) für Azure Information Protection unterstützt, wird diese Konfiguration derzeit von Exchange Online für den von Azure Information Protection verwendeten Rights Management-Dienst nicht unterstützt. Wenn Sie nach der Migration zu Azure Information Protection die vollständige IRM-Funktionalität mit Exchange Online nutzen möchten, muss Ihr Azure Information Protection-Mandantenschlüssel [von Microsoft verwaltet](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) werden. Sie können IRM auch mit eingeschränkter Funktionalität in Exchange Online ausführen, wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK). Weitere Informationen zur Verwendung von Exchange Online mit dem Azure Rights Management-Dienst finden Sie unter [Schritt 8. Konfigurieren der IRM-Integration mit Exchange Online](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online) in diesen Anweisungen.
 
 -   Wenn Sie Software und Clients verwenden, die nicht vom Rights Management-Dienst von Azure Information Protection unterstützt werden, können diese weder Inhalte schützen noch Inhalte nutzen, die durch Azure Rights Management geschützt sind. Überprüfen Sie unbedingt den Abschnitt zu den unterstützten Anwendungen und Clients unter [Voraussetzungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
 
