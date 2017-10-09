@@ -4,7 +4,7 @@ description: "Technische Details zu den unterstützten Dateitypen, Dateierweiter
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -176,6 +176,22 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
     - Programme (\Programme und \Programme (x86))
     - \ProgramData 
     - \AppData (für alle Benutzer)
+
+### <a name="files-that-cannot-be-protected-by-default"></a>Dateien, die standardmäßig nicht geschützt werden können
+
+Jede Datei, die kennwortgeschützt ist, kann nativ nicht vom Azure Information Protection-Client geschützt werden. Am häufigsten sind PDF-Dateien kennwortgeschützt. Diese Funktion wird jedoch auch von anderen Anwendungen bereitgestellt, wie z.B. Office-Apps.
+
+Darüber hinaus kann der Azure Information Protection-Client für Windows PDF-Dateien unter den folgenden Umständen nicht nativ schützen oder deren Schutz aufheben:
+
+- eine formularbasierte PDF-Datei
+
+- eine geschützte PDF-Datei mit PDF-Erweiterung 
+    
+    Der Azure Information Protection-Client kann eine nicht geschützte PDF-Datei schützen und eine geschützte PDF-Datei erneut schützen, die eine PPDF-Erweiterung aufweist.
+
+Sie können das Problem für diese Dateien umgehen, indem Sie diese generisch schützen. Folgen Sie dazu den Anweisungen im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files). Dadurch wird allerdings die Schutzebene alle Dateien mit PDF-Erweiterung auf Computerebene geändert. Es ist nicht möglich, den generischen Schutz nur für die Dateien zu definieren, die die aufgelisteten Kriterien erfüllen.
+
+Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
