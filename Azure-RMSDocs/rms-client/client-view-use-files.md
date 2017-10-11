@@ -4,7 +4,7 @@ description: "Anweisungen zum Anzeigen und Verwenden eines geschützten Dokument
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8fd80d6ff97118cd37dd62e293768b145c98595
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 8ed2480892d5a48075d986ee64733b0144bbc5b4
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
@@ -50,13 +50,11 @@ Wenn Sie jedoch ein iOS- oder Android-Gerät besitzen, können Sie diese geschü
 
 Bevor Sie die geschützte Datei anzeigen können, muss der Rights Management-Dienst, mit dem die Datei geschützt wurde, bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft der Dienst Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
 
-Wenn Ihre Organisation kein cloudbasiertes Konto besitzt (für Office 365 oder Azure), das Sie verwenden können, und keine vergleichbare lokale Version (AD RMS) verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von Rights Management geschützt wurden:
+Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azure zur Verfügung stellt und auch keine gleichwertige lokale Version (AD RMS) verwendet, haben Sie zwei Optionen:
 
--   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
-    
-    Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
-    
--   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
+- Wenn Sie eine geschützte E-Mail erhalten haben, folgen Sie den Anweisungen zur Anmeldung bei Ihrem sozialen Netzwerk als Identitätsanbieter (z.B. Google bei einem Gmail-Konto), oder beantragen Sie eine einmalige Kennung.
+
+- Sie können ein kostenloses Konto beantragen, bei dem Sie sich mit Ihren Anmeldeinformationen anmelden können. Auf diese Weise können Sie Dokumente öffnen, die von Rights Management geschützt werden. Klicken Sie zur Beantragung eines Kontos auf den Link [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469). Verwenden Sie nicht Ihre private E-Mail-Adresse, sondern die Ihrer Organisation. 
 
 ## <a name="to-view-and-use-a-protected-document"></a>Anzeigen und Verwenden von geschützten Dokumenten
 
@@ -64,7 +62,7 @@ Wenn Ihre Organisation kein cloudbasiertes Konto besitzt (für Office 365 oder A
 
 2. Wenn eine Seite zum **Anmelden** oder **Registrieren** angezeigt wird: Klicken Sie auf **Anmelden**, und geben Sie Ihre Anmeldeinformationen ein. Wenn Ihnen die geschützte Datei als Anlage gesendet wurde, müssen Sie die gleiche E-Mail-Adresse angeben, die zum Senden der Datei verwendet wurde.
     
-    Wenn Sie nicht über ein akzeptiertes Konto verfügen, finden Sie weitere Informationen auf dieser Seite im Abschnitt [Aufforderung zur Authentifizierung](#prompts-for-authentication). Melden Sie sich für ein kostenloses Konto an, und kehren Sie zu diesen Anweisungen zurück.
+    Wenn Sie nicht über ein akzeptiertes Konto verfügen, finden Sie weitere Informationen auf dieser Seite im Abschnitt [Aufforderung zur Authentifizierung](#prompts-for-authentication).
 
 3. Eine schreibgeschützte Version der Datei wird im **Azure Information Protection-Viewer** geöffnet. Wenn Sie über entsprechende Berechtigungen verfügen, können Sie die Datei drucken und bearbeiten. 
 
@@ -77,8 +75,7 @@ Wenn Ihre Organisation kein cloudbasiertes Konto besitzt (für Office 365 oder A
 5. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 
 > [!TIP]
-> Wenn sich die geschützte Datei nicht öffnen lässt, verwenden Sie die Azure Information Protection-Option **Hilfe und Feedback**, und wählen Sie **Diagnosetests** aus. Nach Abschluss der Tests können Sie den Client zurücksetzen, wodurch Ihr Problem ggf. behoben wird.
-
+> Wenn die geschützte Datei nicht geöffnet wird, können Sie über **Schützen** > **Hilfe und Feedback** die Option **Diagnose ausführen** auswählen. Hierdurch sucht der Azure Information Protection-Client nach Problemen auf Ihrem Computer, die das Öffnen eines geschütztes Dokuments verhindern.
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:

@@ -4,7 +4,7 @@ description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
-# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
 
@@ -38,6 +38,8 @@ Beispiele für Fälle, in denen Sie möglicherweise einen neuen Schlüssel für 
 
 - Ihr Unternehmen wurde in zwei oder mehr Unternehmen aufgeteilt. Wenn Sie Ihren Mandantenschlüssel neu erstellen, hat das neue Unternehmen keinen Zugriff auf neue Inhalte, die von Ihren Mitarbeitern veröffentlicht werden. Sie können auf den alten Inhalt zugreifen, wenn sie eine Kopie des alten Mandantenschlüssels besitzen.
 
+- Sie möchten eine andere Schlüsselverwaltungstopologie verwenden.
+
 - Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels kompromittiert wurde.
 
 Zum Erstellen eines neuen Schlüssels können Sie einen anderen von Microsoft verwalteten Schlüssel als Mandantenschlüssel auswählen, jedoch keinen neuen von Microsoft verwalteten Schlüssel erstellen. Um einen neuen Schlüssel zu erstellen, müssen Sie Ihre Mandantenschlüsseltopologie so ändern, dass sie vom Kunden verwaltet wird (BYOK).
@@ -48,7 +50,7 @@ Um einen anderen Schlüssel als Ihren aktiven Mandantenschlüssel für Azure Inf
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-Information dazu, wie Sie Ihre Mandantenschlüsseltopologie so ändern, dass diese vom Kunden verwaltet wird (BYOK), finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Information dazu, wie Sie Ihre Mandantenschlüsseltopologie so ändern, dass diese vom Kunden verwaltet wird (BYOK), finden Sie unter [Implementing BYOK for your Azure Information Protection tenant key (Implementieren von BYOK für Ihren Azure Information Protection-Mandantenschlüssel)](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Microsoft ist für die Sicherung Ihres Mandantenschlüssels verantwortlich, sodass von Ihnen keine weitere Aktion erforderlich ist.
@@ -62,11 +64,11 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
 ### <a name="step-2-wait-for-verification"></a>Schritt 2: Warten auf Überprüfung
 
--   Microsoft überprüft, ob Ihre Anforderung zum Freigeben Ihres Azure Information Protection-Mandantenschlüssels legitim ist. Der Vorgang kann bis zu drei Wochen dauern.
+- Microsoft überprüft, ob Ihre Anforderung zum Freigeben Ihres Azure Information Protection-Mandantenschlüssels legitim ist. Der Vorgang kann bis zu drei Wochen dauern.
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>Schritt 3: Erhalten von Schlüsselanweisungen vom Kundendienst (CSS)
 
--   Microsoft Customer Support Services (CSS) sendet Ihren Ihre Azure Information Protection-Konfiguration und den Mandantenschlüssel verschlüsselt in einer kennwortgeschützten Datei zu. Diese Datei hat die Dateierweiterung **TPD**. Hierzu sendet Ihnen (als der Person, die den Export initiiert hat) der Kundendienst zuerst per E-Mail ein Tool. Sie müssen das Tool wie folgt an einer Eingabeaufforderung ausführen:
+- Microsoft Customer Support Services (CSS) sendet Ihren Ihre Azure Information Protection-Konfiguration und den Mandantenschlüssel verschlüsselt in einer kennwortgeschützten Datei zu. Diese Datei hat die Dateierweiterung **TPD**. Hierzu sendet Ihnen (als der Person, die den Export initiiert hat) der Kundendienst zuerst per E-Mail ein Tool. Sie müssen das Tool wie folgt an einer Eingabeaufforderung ausführen:
 
     ```
     AadrmTpd.exe -createkey
@@ -95,7 +97,7 @@ Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin liegt, dass
 ## <a name="respond-to-a-breach"></a>Reaktion auf eine Sicherheitsverletzung
 Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der Schlüsseltechnologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen auftreten.
 
-Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Objekte auswirkt, wird Ihr Azure Information Protection-Mandantenadministrator per E-Mail von Microsoft unter der Adresse benachrichtigt, die Sie beim Abschluss des Abonnements angegeben haben.
+Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Incident auf Ihre Ressourcen auswirkt, wird Ihr Azure Information Protection-Mandantenadministrator von Microsoft unter der E-Mail-Adresse benachrichtigt, die Sie beim Abschluss des Abonnements angegeben haben.
 
 Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorgehensweise auf Ihrer und auf Microsofts Seite vom Umfang der Sicherheitsverletzung ab. Microsoft führt diesen Prozess gemeinsam mit Ihnen durch. In der folgenden Tabelle finden Sie einige typische Situationen und die wahrscheinliche Reaktion darauf, obgleich die exakte Reaktion immer von allen Informationen abhängt, die im Rahmen der Untersuchung gewonnen werden.
 

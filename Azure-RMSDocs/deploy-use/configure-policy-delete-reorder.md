@@ -4,27 +4,39 @@ description: "Sie können die auf der Information Protection-Leiste angezeigten 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 2d11eb649ecec835d2ddf0045d8672c5b45af95f
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f17e149dcd8cfb7398909cbe3a83cdcf71b80b33
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
-Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen löschen oder deren Position ändern, indem Sie diese Einstellungen in der Azure Information Protection-Richtlinie konfigurieren.
+Sie können die auf der Information Protection-Leiste angezeigten Bezeichnungen löschen oder deren Position ändern, indem Sie die folgenden Aktionen in der Azure Information Protection-Richtlinie auswählen.
 
 ![Löschen oder Ändern der Position von Bezeichnungen in der Azure Information Protection-Richtlinie](../media/info-protect-contextmenu.png)
 
 Wenn Sie eine Bezeichnung löschen, die auf Dokumente und E-Mails angewendet wurde, und anschließend die Azure Information Protection-Richtlinie veröffentlichen, wird diese Bezeichnung automatisch von diesen Dokumenten oder E-Mails entfernt, wenn diese das nächste Mal vom Azure Information Protection-Client geöffnet werden.
+
+Wenn die Bezeichnung jedoch Schutz angewendet hat, wird dieser nicht entfernt. Die Schutzeinstellungen der Bezeichnung sind nach wie vor vorhanden und werden in den **Protection templates** (Schutzvorlagen) angezeigt. Eine solche Vorlage kann nun in eine neue Bezeichnung konvertiert oder mit einer Bezeichnung verknüpft werden. Solange diese Vorlage vorhanden ist, können Sie keine neue Bezeichnung mit dem Namen der gelöschten Bezeichnung erstellen. Wenn Sie diese Aktion dennoch ausführen möchten, habe Sie mehrere Möglichkeiten:
+
+- Konvertieren Sie die Vorlage in eine Bezeichnung. 
+    
+    Diese Aktion wird empfohlen, da Sie bei Bedarf den Namen der Vorlage ändern und die Schutzeinstellungen modifizieren können.
+
+- Verwenden Sie PowerShell zum Umbenennen oder Löschen der Vorlage.
+    
+    Achten Sie vor dem Ausführen dieser Aktion darauf, ob andere Administratoren oder Dienste die Vorlage verwenden, und identifizieren Sie diese anhand ihres aktuellen Namens. Löschen Sie eine Vorlage nur, wenn Sie Dokumente oder E-Mails, die durch diese Vorlage geschützt wurden, nicht öffnen müssen.
+
+Weitere Informationen zum Verwalten von Schutzvorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md).
 
 Bevor Sie eine Bezeichnung löschen, erwägen Sie, diese stattdessen zu deaktivieren. Wenn Sie eine Bezeichnung deaktivieren, die auf Dokumente und E-Mails angewendet wurde, wird die angewendete Bezeichnung nicht von diesen Dokumenten und E-Mails entfernt. Sie wird aber in der Information Protection-Leiste nicht mehr als Bezeichnung angezeigt, die von Benutzern ausgewählt werden kann. Durch Deaktivieren einer Bezeichnung können Sie zudem die ursprüngliche Konfiguration beibehalten, damit Benutzer die Bezeichnung zu einem späteren Zeitpunkt wieder auswählen können, wenn Sie diese wieder aktivieren.
 
@@ -36,7 +48,7 @@ Ordnen Sie die Bezeichnungen so an, dass Sie auf der Information Protection-Leis
 
 Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
 
-1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 

@@ -4,7 +4,7 @@ description: "Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75225e3a49b671449ee0f1d5fafd47de08660c41
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: afe33bcee3516589bd87642b0f15206b90a4bb41
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Abhängig von der Mandantenschlüsseltopologie (von Microsoft oder vom Kunden verwaltet) verfügen Sie über verschiedene Ebenen der Steuerung und Zuständigkeit für Ihren Azure Information Protection-Mandantenschlüssel, nachdem dieser implementiert wurde.
+Je nach Mandantenschlüsseltopologie für Azure Information Protection stehen unterschiedliche Kontroll- und Zuständigkeitsebenen für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung. Es gibt zwei Schlüsseltopologien: **von Microsoft verwaltete** und **kundenverwaltete**.
 
-Wenn Sie Ihren eigenen Mandantenschlüssel in Azure Key Vault verwalten, wird dies häufig als „Bring Your Own Key“ (BYOK) bezeichnet. Weitere Informationen zu diesem Szenario und zur Wahl zwischen den beiden Mandantenschlüssel-Topologien finden Sie unter [Planen und Implementieren Ihres Azure Rights Management-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
+Wenn Sie Ihren eigenen Mandantenschlüssel in Azure Key Vault verwalten, wird dies häufig als „Bring Your Own Key“ (BYOK) bezeichnet. Weitere Informationen zu diesem Szenario und zur Wahl zwischen den beiden Mandantenschlüsseltopologien finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md).
 
 In der folgenden Tabelle sind die Vorgänge aufgeführt, die Sie in der jeweiligen Topologie, die Sie für Ihren Azure Information Protection-Mandantenschlüssel ausgewählt haben, ausführen können.
 
