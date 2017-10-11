@@ -4,7 +4,7 @@ description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3220b1cbe93b110c838a4e85cc143b44de0d2d14
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 2f3ae7a0558cf209f3ec710a5114dbbc9a0dda9d
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -38,22 +38,28 @@ Beispiele für Fälle, in denen Sie möglicherweise einen neuen Schlüssel für 
 
 - Ihr Unternehmen wurde in zwei oder mehr Unternehmen aufgeteilt. Wenn Sie Ihren Mandantenschlüssel neu erstellen, hat das neue Unternehmen keinen Zugriff auf neue Inhalte, die von Ihren Mitarbeitern veröffentlicht werden. Sie können auf den alten Inhalt zugreifen, wenn sie eine Kopie des alten Mandantenschlüssels besitzen.
 
+- Sie möchten eine andere Schlüsselverwaltungstopologie verwenden. 
+
 - Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels (die in Ihrem Besitz befindliche Kopie) kompromittiert wurde.
 
-Um einen neuen Schlüssel zu erstellen, können Sie entweder einen neuen Schlüssel in Azure Key Vault erstellen oder einen anderen Schlüssel verwenden, der sich bereits in Azure Key Vault befindet. Führen Sie dann die gleichen Prozeduren durch, die Sie bereits beim Implementieren von BYOK für Azure Information Protection durchgeführt haben:
+Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neuen Schlüssel in Azure Key Vault erstellen oder einen anderen, bereits in Azure Key Vault vorhandenen Schlüssel verwenden. Führen Sie anschließend dieselben Schritte aus wie beim Implementieren von BYOK für Azure Information Protection.
 
 1. Nur wenn sich der neue Schlüssel in einem anderen Schlüsseltresor befindet als dem, den Sie bereits für Azure Information Protection verwenden: Autorisieren Sie Azure Information Protection mit dem Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) zur Verwendung des Schlüsseltresors.
 
-2. Konfigurieren Sie Azure Information Protection mithilfe des Cmdlets [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) so, dass es den neuen Schlüssel verwendet.
+2. Wenn Azure Information Protection den Schlüssel, den Sie verwenden möchten, nicht erkennt, führen Sie das Cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) aus.
 
 3. Konfigurieren Sie das Mandantenschlüsselobjekt mit dem Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
-Weitere Informationen zu jedem dieser Schritte finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
+
+- Eine Anleitung zur Nutzung eines anderen verwalteten Schlüssels finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+
+- Eine Anleitung zur Nutzung eines anderen, von Microsoft verwalteten Schlüssel finden Sie im Abschnitt [Neuerstellung Ihres Mandantenschlüssels](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) für von Microsoft verwaltete Vorgänge.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Sie sind für das Sichern Ihres Mandantenschlüssels verantwortlich. Wenn Sie Ihren Mandantenschlüssel in einem Thales HSM generiert haben, sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern.
 
-Da Sie den Schlüssel gemäß den Verfahren unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) übertragen haben, speichert Key Vault die Tokenschlüsseldatei dauerhaft, um Schutz vor Ausfällen jeglicher Dienstknoten zu bieten. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten dies aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht für Sie abrufen, da es lediglich über eine nicht wiederherstellbare Kopie verfügt.
+Da Sie den Schlüssel gemäß den Anweisungen unter [Implementieren von BYOK für Azure Information Protection-Mandantenschlüssel](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key) übertragen haben, speichert Azure Key Vault die Tokenschlüsseldatei dauerhaft, um Schutz vor Ausfällen jeglicher Dienstknoten zu bieten. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten dies aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht für Sie abrufen, da es lediglich über eine nicht wiederherstellbare Kopie verfügt.
 
 ## <a name="export-your-tenant-key"></a>Exportieren Ihres Mandantenschlüssels
 Wenn Sie BYOK verwenden, können Sie Ihren Mandantenschlüssel nicht aus Azure Key Vault oder Azure Information Protection exportieren. Die Kopie in Azure Key Vault ist nicht wiederherstellbar. 

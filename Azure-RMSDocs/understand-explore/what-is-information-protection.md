@@ -4,17 +4,17 @@ description: "Eine Übersicht über den Azure Information Protection-Dienst."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: fff96103544242510b7e53b1636f1f95fbd4bb2b
-ms.sourcegitcommit: c5e117f5329c6e5a93d5858a3b4609aadd8a6e7e
+ms.openlocfilehash: ba39c332437e2710554d1e8f69c3f676f0d870db
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -47,9 +47,9 @@ Beispielsweise können Sie ein Berichtsdokument oder eine Tabelle mit Verkaufspr
 
 ### <a name="rights-management-templates"></a>Rights Management-Vorlagen
 
-Sobald Sie den Azure Rights Management-Dienst aktivieren, werden zwei Standardvorlagen für Sie erstellt, die den Datenzugriff auf Benutzer in Ihrer Organisation beschränken. Mit diesen Vorlagen können Sie sofort verhindern, dass Daten außerhalb Ihrer Organisation offengelegt werden. Sie können diese Standardvorlagen auch ergänzen, indem Sie eigene benutzerdefinierten Vorlagen konfigurieren, die noch restriktivere Kontrollen anwenden.
+Sobald Sie den Azure Rights Management-Dienst aktivieren, stehen Ihnen zwei Standardvorlagen zur Verfügung, die den Datenzugriff auf Benutzer in Ihrer Organisation beschränken. Mit diesen Vorlagen können Sie sofort verhindern, dass Daten außerhalb Ihrer Organisation offengelegt werden. Sie können diese Standardvorlagen auch ergänzen, indem Sie eigene Schutzeinstellungen konfigurieren, durch die noch restriktivere Kontrollen angewendet werden.
 
-Diese Vorlagen können Teil einer Bezeichnungskonfiguration sein – wenn also eine bestimmte Bezeichnung auf ein Dokument oder eine E-Mail-Nachricht angewendet wird, sind die Daten sowohl klassifiziert als auch automatisch geschützt. Die Vorlagen können auch von Benutzern oder Administratoren in Produkten und Diensten, die die Azure Rights Management-Technologie unterstützen, ausgewählt werden.
+Vorlagen können in die Konfiguration von Bezeichnungen eingebunden werden. Wenn eine Bezeichnung mit Vorlage auf ein Dokument oder eine E-Mail angewendet wird, werden die Daten sowohl klassifiziert als auch automatisch geschützt. Die Vorlagen können auch von Benutzern oder Administratoren in Produkten und Diensten, die die Azure Rights Management-Technologie unterstützen, ausgewählt werden.
 
 Dieses Beispiel zeigt, wie Sie eine Vorlage für eine Bezeichnung auswählen, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal konfigurieren:
 
@@ -84,8 +84,6 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 ## <a name="resources-for-azure-information-protection"></a>Ressourcen für Azure Information Protection
 
-- Ankündigung: [Azure Information Protection ist jetzt allgemein verfügbar](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/)
-
 - Kostenlose Testversion: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - Download des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
@@ -98,17 +96,7 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
-    Darüber hinaus bietet Microsoft Ignite 2016 viele auf Abruf verfügbare Sitzungen für Azure Information Protection:
-
-    - [BRK2127: Adopt a comprehensive identity-driven solution for protecting and sharing data securely (BRK2127: Einführen einer umfassenden identitätsgesteuerten Lösung für den Schutz und die sichere Freigabe von Dateien)](https://myignite.microsoft.com/videos?q=BRK2127)
-    
-    - [THR2107: Collaborate securely using Azure Information Protection (THR2107: Sichere Zusammenarbeit mithilfe von Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2107)
-    
-    - [THR2108: Ensure comprehensive protection of your data with Azure Information Protection (THR2108: Sicherstellen des umfassenden Schutzes Ihrer Daten mit Azure Information Protection)](https://myignite.microsoft.com/videos?q=THR2108)
-    
-    - [BRK3095: Learn how classification, labeling, and protection delivers persistent data protection (BRK3095: Erlernen, wie Klassifizierung, Bezeichnung und Schutz persistenten Datenschutz bieten)](https://myignite.microsoft.com/videos?q=BRK3095)
-    
-    - [BRK2128: Send secure email to anyone with the power of Microsoft Office 365 and Azure Information Protection (BRK2128: Senden von sicheren E-Mails mithilfe von Microsoft Office 365 und Azure Information Protection)](https://myignite.microsoft.com/videos?q=BRK2128)
+Darüber hinaus werden bei **Microsoft Ignite 2017** viele auf Abruf verfügbare Sitzungen für Azure Information Protection zur Verfügung gestellt. Sie können auf der Ignite-Website nach diesen [suchen](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522), sobald sie verfügbar sind. Eine Zusammenfassung der Ankündigungen finden Sie unter [What’s new in Azure Information Protection @ Ignite 2017 (Neues in Azure Information Protection @ Ignite 2017)](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

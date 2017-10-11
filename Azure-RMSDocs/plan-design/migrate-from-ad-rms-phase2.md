@@ -4,7 +4,7 @@ description: Phase 2 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -75,10 +75,7 @@ Die aktuelle AD RMS-Bereitstellung verwendet eine der folgenden Konfigurationen 
 > [!NOTE]
 > Weitere Informationen zur Verwendung von Hardwaresicherheitsmodulen mit AD RMS finden Sie unter [Verwenden von AD RMS mit Hardwaresicherheitsmodulen](http://technet.microsoft.com/library/jj651024.aspx).
 
-Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Das Szenario, bei dem Sie Ihren eigenen Azure Information Protection-Mandantenschlüssel verwalten, wird auch als „Bring Your Own Key“ (BYOK) bezeichnet und erfordert ein Hardwaresicherheitsmodul (HSM) von Thales. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
-
-> [!IMPORTANT]
-> Exchange Online ist derzeit nicht mit BYOK in Azure Information Protection kompatibel. Wenn Sie BYOK nach der Migration verwenden möchten und die Verwendung von Exchange planen, sollten Sie verstehen, wie diese Konfiguration die IRM-Funktionalität für Exchange Online einschränkt. Lesen Sie die Informationen im Abschnitt [BYOK – Preise und Einschränkungen](byok-price-restrictions.md), um die beste Azure Information Protection-Mandantenschlüsseltopologie für Ihre Migration auszuwählen.
+Folgende zwei Optionen sind für die Azure Information Protection-Mandantenschlüsseltopologie verfügbar: Ihr Mandantenschlüssel wird von Microsoft (**von Microsoft verwaltet**) oder von Ihnen (**vom Kunden verwaltet**) in Azure Key Vault verwaltet. Das Szenario, bei dem Sie Ihren eigenen Azure Information Protection-Mandantenschlüssel verwalten, wird auch als „Bring Your Own Key“ (BYOK) bezeichnet. Weitere Informationen finden Sie im Artikel [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 Bestimmen Sie anhand der folgende Tabelle, welche Vorgehensweise für Ihre Migration zu verwenden ist. 
 

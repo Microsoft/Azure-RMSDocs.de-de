@@ -1,36 +1,60 @@
 ---
-title: Neuheiten und Versionshinweise | Azure RMS
+title: Neuheiten und Versionshinweise
 description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 09/25/2017
 ms.topic: article
-ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 9fd96c934d4f7a8e09035ff7eda4517f65a27e17
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: df78d1f1740128c79c944a6b5d33353141933d78
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
 ## <a name="whats-new"></a>Neuheiten
-Das Microsoft Rights Management SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung. In diesem Thema werden wichtige Änderungen und Funktionen in der Version des RMS SDK beschrieben.
 
-### <a name="new-for-june-2016"></a>Neu ab Juni 2016
+In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK v4.x beschrieben.
 
-- **Unterstützung moderner Authentifizierung**: Diese ermöglicht in RMS-fähigen Apps die Anmeldung mithilfe der Active Directory-Authentifizierungsbibliothek (Active Directory Authentication Library; ADAL). Dadurch werden Anmeldefunktionen wie Multi-Factor Authentication (MFA), SAML-basierte Identitätsanbieter (Drittanbieter) mit RMS-Clientanwendungen und die smartcard- und zertifikatbasierte Authentifizierung aktiviert. Außerdem müssen RMS-fähige Apps nicht mehr das Standardauthentifizierungsprotokoll verwenden.
+-   [Neu ab Juli 2017](#new-for-july-2017)
+-   [Oktober 2016 – Update](#October-2016-update)
+-   [Juni 2016 – Update](#new-for-June-2016)
+-   [Dezember 2015 – Update](#december-2015-update)
+-   [Juli 2015 – Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt](#july-2015-update-adds-support-for-linux-c-developm)
+-   [Mai 2015 – Update – Steuerung der Protokollierung hinzugefügt](#may-2015-update-adds-logging-control)
+-   [Februar 2015 – Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february-2015-update-adds-windows-store-application-support)
+-   [Januar 2015 – Update – Unterstützung für WinPhone-Plattform hinzugefügt](#january-2015-update-adds-winphone-platform-support)
+-   [Oktober 2014 – Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Anmerkungen zu dieser Version](#release-notes)
+-   [Häufig gestellte Fragen](#frequently-asked-questions)
+
+### <a name="new-for-july-2017"></a>Neu ab Juli 2017
+
+Das Update für unser Juli-Release enthält Version 4.2.5 des überarbeiteten SDK.
+
+- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging).
+- Das iOS SDK unterstützt keine Protokollierungsstufen. 
+- Das SDK gibt nun einen Fehler bei einem NULL-Zugriffstoken zurück.
+
+### <a name="october-2016-update"></a>Oktober 2016 – Update
+
+- Implementierung mehrerer Back-End-Fehlerbehebungen
+- Aktivierung von Bitcode für das Apple iOS/OS X SDK
+
+### <a name="june-2016-update"></a>Juni 2016 – Update
+
+- **Unterstützung moderner Authentifizierung**: ermöglicht in RMS-fähigen Apps die Anmeldung mithilfe der Active Directory Authentication Library (ADAL). Dadurch werden Anmeldefunktionen wie Multi-Factor Authentication (MFA), SAML-basierte Identitätsanbieter (Drittanbieter) mit RMS-Clientanwendungen und die smartcard- und zertifikatbasierte Authentifizierung aktiviert. Außerdem müssen RMS-fähige Apps nicht mehr das Standardauthentifizierungsprotokoll verwenden.
 - **Unterstützung von Dokumentkontrolle**: Entwickler können nun die Dokumentkontrolle aktivieren, wenn sie Dokumente in ihren Apps schützen
 - Leistungsverbesserungen
 - Fehlerbehebungen
-
 
 ### <a name="december-2015-update"></a>Dezember 2015-Update
 
@@ -38,7 +62,7 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 
 -   Dokumentenverfolgung, nur RMS Online für iOS/OS X- und Android-Betriebssysteme.
 
-    Details und Anleitungen für iOS/OS X erhalten Sie in der [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)-Klasse. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentnachverfolgung mit [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ähnliche Ergänzungen sind für Android für [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) und [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) vorhanden.
+    Details und Nutzungshinweise für iOS/OS X sind in der [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)-Klasse enthalten. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentnachverfolgung mit [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ähnliche Ergänzungen sind für Android für [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) und [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) vorhanden.
 
     Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden von Dokumentenverfolgung](how-to-use-document-tracking.md).
 
@@ -66,7 +90,7 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 
 ### <a name="july-2015-update---adds-support-for-linux--c-development"></a>Juli 2015-Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt
 
-Diese Version bietet folgende Zusätze:
+Dieses Release umfasst folgende Updates:
 
 -   RMS SDK 4.1 für Linux-Plattformen
 
@@ -74,7 +98,7 @@ Diese Version bietet folgende Zusätze:
 
 ### <a name="may-2015-update---adds-logging-control"></a>Mai 2015-Update – Steuerung der Protokollierung hinzugefügt
 
-Diese Version unterstützt Folgendes:
+Mit diesem Release wird Unterstützung für folgende Updates bereitgestellt:
 
 -   iOS
 
@@ -92,7 +116,7 @@ Diese Version unterstützt Folgendes:
 
 ### <a name="february-2015-update---adds-windows-store-application-support"></a>Februar 2015-Update – Unterstützung für Windows Store-Anwendung hinzugefügt
 
-Diese Version bietet Unterstützung für Windows Store-Anwendungen sowie funktionale Parität mit der Windows Phone-, Android- und iOS/OS X-Version des RMS SDK 4.1.
+Dieses Release bietet Unterstützung für Windows Store-Anwendungen sowie funktionale Parität mit dem Windows Phone-, Android- und iOS/OS X-Release des RMS SDK 4.1.
 
 ### <a name="january-2015-update---adds-winphone-platform-support"></a>Januar 2015-Update – Unterstützung für WinPhone-Plattform hinzugefügt
 
@@ -117,10 +141,10 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 **AD RMS SDK 4.1: Global verfügbare Versionen der iOS/OS X- und Android-Plattformen**
 
 -   **AD RMS-Unterstützung**: IT-Administratoren können RMS-fähige Apps auf mobilen Geräten mit den neuen Erweiterungen für mobile Geräte des AD RMS-Servers verwenden.
--   **Offlineverarbeitung**: Endbenutzer können auf RMS-geschützten Daten offline zugreifen.
+-   **Offlineverarbeitung**: Endbenutzer können auf RMS-geschützte Daten offline zugreifen.
 -   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (Azure AD Authentication Library; ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
 -   **Getrennte Benutzeroberfläche**: Entwickler können ihre Benutzeroberfläche zum Schutz und zur Nutzung von RMS-geschützten Dokumenten konfigurieren.
--   **Überarbeitete API**: Entwickler können jetzt von einer einfachen und transparenten Verschlüsselungs- und Entschlüsselungs-API profitieren, die mit minimalem Aufwand ein konsistentes RMS-Verhalten bietet.
+-   **Überarbeitete API**: Entwickler können ab sofort eine einfache und transparente Verschlüsselungs- und Entschlüsselungs-API verwenden, die mit minimalem Aufwand ein konsistentes RMS-Verhalten bietet.
 
 **Auf allen Plattformen**
 
@@ -130,7 +154,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Wenn Sie eine Beispiel-App auf einem Kindle-Gerät von Amazon® verwenden, um PTXT-Anlagen anzuzeigen, müssen Sie die Datei zum Anzeigen herunterladen.
 
-    **Lösung**: Dies ist ein bekanntes Problem, auf das später noch eingegangen wird.
+    **Lösung**: ein bekanntes Problem, das in der Zukunft behoben wird.
 
 -   Eine Anwendung, die das SDK verwendet, stürzt möglicherweise ab, wenn mehrere Instanzen zulässig sind.
 
@@ -152,13 +176,13 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Das RMS SDK 4.x zeigt keine Netzwerkaktivität an.
 
-    Dies ist gemäß den Apple Human Interface Guidelines (Richtlinien für menschliche Schnittstellen) ein bekanntes optionales Verhalten für iOS.
+    Dies ist gemäß den Apple Human Interface Guidelines (Apple-Richtlinien für Design von Anwendungen) ein bekanntes optionales Verhalten für iOS.
 
 **Nur OS X**
 
 -   Das RMS SDK 4.x zeigt keine Netzwerkaktivität an.
 
-    Dies ist gemäß den Apple Human Interface Guidelines (Richtlinien für menschliche Schnittstellen) ein bekanntes optionales Verhalten für OS X.
+    Dies ist gemäß den Apple Human Interface Guidelines (Apple-Richtlinien für Design von Anwendungen) ein bekanntes optionales Verhalten für OS X.
 
 -   **Lösung**: Wenn Sie eine Anwendung mit mehreren Dokumentschnittstellen (Multiple Document Interface, MDI) mithilfe unseres OS X SDK erstellen, gehen Sie wie folgt vor.
 
@@ -187,7 +211,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **A**: Es gibt bei den neuen AD RMS SDKs kein Testhierarchiekonzept. Sie arbeiten immer mit der Produktionshierarchie.
 
-**F**: In Version 2.1 des RMS SDK war ein generiertes Manifest für jede Anwendung erforderlich, die Datenschutz implementiert. Gilt dies auch für Version 4.0 und höhere SDK-Versionen?
+**F**: In Version 2.1 des RMS SDK war ein generiertes Manifest für jede Anwendung erforderlich, die Datenschutz implementiert. Gilt dies auch für Version 4.0 und neuere SDK-Versionen?
 
 **A**: Nein, ab Version 3.0 des Rights Management SDK und höher sind keine Manifeste mehr erforderlich.
 
@@ -212,7 +236,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **OS X**
 
-**F**: Das Beispiel-App-Framework wurde für Xcode 5 angepasst. Kann ich trotzdem Xcode 4.6 verwenden?
+**F**: Das Beispiel-App-Framework wurde an Xcode 5 angepasst. Kann ich trotzdem Xcode 4.6 verwenden?
 
 **A**: Das OS X-SDK funktioniert nur mit Xcode 4.6 und höher sowie OS X 10.8 und höher.
 

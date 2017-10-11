@@ -4,7 +4,7 @@ description: "Führen Sie diese Schritte aus, um Azure Information Protection f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 2a3e9eec089999d6ef2ab6fbb738260be23f6bb8
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -78,7 +78,7 @@ Wählen Sie zu diesem Zeitpunkt nicht die Option für den Schutz der Dokumente u
 
 Wenn Benutzer mit dem Bezeichnen von Dokumenten und E-Mails vertraut sind, können Sie mit der Einführung des Schutzes von Daten für Ihre vertraulichsten Daten beginnen. Diese Phase erfordert die folgenden Vorbereitungsschritte für den Azure Rights Management-Dienst:
 
-1. Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). Beachten Sie, dass Sie derzeit BYOK nicht verwenden können, wenn Sie Exchange Online nutzen. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
+1. Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 2. Installieren Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren von Windows PowerShell für den Azure Rights Management-Dienst](../deploy-use/install-powershell.md).
 
@@ -98,9 +98,9 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
     
     Ändern Sie Ihre Azure Information Protection-Richtlinie so, dass eine oder mehrere Bezeichnungen den Rights Management-Schutz anwenden. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](../deploy-use/configure-policy-protection.md).
     
-    Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
+    Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM oder die [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
 
-2. Konfigurieren von Office-Anwendungen und -Diensten für IRM
+2. Konfigurieren von Office-Anwendungen und -Diensten
     
     Konfigurieren Sie die Office-Anwendungen und -Dienste für die IRM-Features (Information Rights Management) in SharePoint Online oder Exchange Online. Weitere Informationen finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -144,7 +144,7 @@ Bevor Sie mit der Verwendung von [!INCLUDE[aad_rightsmanagement_2](../includes/a
 
 1.  Stellen Sie sicher, dass Ihr Office 365-Mandant die Benutzerkonten und -gruppen enthält, die Azure Information Protection zum Authentifizieren und Autorisieren von Benutzern in Ihrer Organisation verwendet. Falls erforderlich, erstellen Sie diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
-2. Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). Beachten Sie, dass Sie derzeit BYOK nicht verwenden können, wenn Sie Exchange Online nutzen. Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
+2. Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 3. Installieren Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
 
@@ -156,7 +156,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 -   Benutzerdefinierte Vorlagen, wenn die Standardvorlagen für Ihre Organisation nicht ausreichend sind. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 
--   Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation Rights Management verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
+- Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation Rights Management verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
 ### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>Schritt 3: Installieren des Clients und Konfigurieren von Anwendungen und Diensten für Rights Management
 
@@ -164,7 +164,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
     
     Installieren Sie Azure Information Protection für Benutzer, um Office 2010 zu unterstützen, andere Dateien als Office-Dokumente und E-Mails zu schützen und geschützte Dokumente nachzuverfolgen. Bieten Sie Benutzerschulungen für diesen Client an. Weitere Informationen finden Sie unter [Azure Information Protection-Client für Windows](../rms-client/aip-client.md).
 
-2. Konfigurieren von Office-Anwendungen und -Diensten für IRM
+2. Konfigurieren von Office-Anwendungen und -Diensten
     
     Konfigurieren Sie die Office-Anwendungen und -Dienste für die IRM-Features (Information Rights Management) in SharePoint Online oder Exchange Online. Weitere Informationen finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](../deploy-use/configure-applications.md).
 

@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
 
@@ -32,9 +32,7 @@ Wenn Ihre Bezeichnung Schutz für ein Dokument anwendet, ist das geschütztes Do
 
 Geschützte Dateien können für andere Personen sicher freigegeben werden. Beispielsweise können Sie die Datei an eine E-Mail anfügen.
 
-Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ dazu können Sie Ihre [Office-App zum Festlegen von benutzerdefinierten Berechtigungen](#set-custom-permissions-for-a-document) oder den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie diese freigeben. 
-
-Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
+Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ dazu können Sie Ihre [Office-App zum Festlegen von benutzerdefinierten Berechtigungen](#set-custom-permissions-for-a-document) oder den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie diese freigeben. Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
 
 Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verwenden Sie den üblichen Freigabemechanismus zum Freigeben der Datei. Ist dies das erste Mal, dass diese Personen eine geschützte Datei per Freigabe erhalten, benötigen sie möglicherweise entsprechende Anweisungen zum Anzeigen der Datei. Für diese Personen können Sie die folgende Nachricht kopieren und einfügen: **Diese Datei ist mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in diesen [Anweisungen](https://aka.ms/rms-signup).**
 
@@ -94,6 +92,16 @@ Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen 
     - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegte Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
 
 5. Klicken Sie auf **Übernehmen**, und warten Sie auf die Nachricht **Die benutzerdefinierten Berechtigungen wurden angewendet**. Klicken Sie anschließend auf **Schließen**.
+
+### <a name="safely-sharing-by-email"></a>Sichere Freigabe per E-Mail
+
+Wenn Sie ein Office-Dokument per E-Mail freigeben, können Sie dieses an eine geschützte E-Mail anfügen. Das Dokument wird in diesem Fall automatisch mit denselben Einschränkungen geschützt, die auf die E-Mail angewendet werden. 
+
+Empfohlen wird jedoch, das Dokument erst zu schützen und anschließend an die E-Mail anzufügen. Sie sollten die E-Mail auch schützen, wenn diese vertrauliche Informationen enthält. Das Schützen und anschließende Anfügen eines Dokuments an eine E-Mail bietet zwei Vorteile:
+
+- Sie können das Dokument nachverfolgen und ggf. widerrufen, nachdem Sie es per E-Mail gesendet haben.
+
+- Sie können für das Dokument und die E-Mail unterschiedliche Berechtigungen festlegen.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Verwenden des Datei-Explorer zum Klassifizieren und Schützen von Dateien
 

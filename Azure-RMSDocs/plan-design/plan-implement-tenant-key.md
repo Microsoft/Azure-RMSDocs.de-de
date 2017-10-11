@@ -4,7 +4,7 @@ description: "Informationen zum Planen und Verwalten Ihres Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/07/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e14a57a8bd8343113e2bfc3f71835f55f0ee2dee
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 9e8b7f3bbebe50fb6f219142a17961dc8b565f6c
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -24,16 +24,19 @@ ms.lasthandoff: 06/30/2017
 
 Verwenden Sie die Informationen in diesem Artikel zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
 
-> [!NOTE]
-> Die lokale Entsprechung des Azure Information Protection-Mandantenschlüssels wird als SLC-Schlüssel (Server Licensor Certificate) bezeichnet. Azure Information Protection verwaltet einen oder mehrere Schlüssel für jede Organisation, die über ein Abonnement von Azure Information Protection verfügt. Immer, wenn Schlüssel für Azure Information Protection in einer Organisation verwendet werden (z.B. Benutzerschlüssel, Computerschlüssel, Dokumentverschlüsselungsschlüssel), werden sie kryptografisch mit Ihrem Azure Information Protection-Mandantenschlüssel verkettet.
+Der Azure Information Protection-Mandantenschlüssel
+
+- Der Azure Information Protection-Mandantenschlüssel ist ein Stammschlüssel für Ihre Organisation. Andere Schlüssel wie Benutzer-, Computer- und Verschlüsselungsschlüssel für Dokumente können von diesem Stammschlüssel abgeleitet werden. Immer wenn Azure Information Protection diese Schlüssel für Ihre Organisation verwendet, werden sie kryptographisch an Ihren Azure Information Protection-Mandantenschlüssel gekettet.
+
+- Der Azure Information Protection-Mandantenschlüssel ist das online verfügbare Äquivalent zum Schlüssel des lizenzgebenden Serverzertifikats (Server Licensor Certificate, SLC) des Tools Active Directory Rights Management Services (AD RMS). 
 
 **Kurz zusammengefasst:** Verwenden Sie die folgende Tabelle als eine kurze Einführung in die empfohlene Mandantenschlüsseltopologie. Weitere Informationen finden Sie in der Zusatzdokumentation.
 
 |Geschäftliche Anforderung|Empfohlene Mandantenschlüsseltopologie|
 |------------------------|-----------------------------------|
-|Schnelles Bereitstellen von Azure Information Protection ohne spezielle Hardware|Von Microsoft verwaltet|
-|Volle IRM-Funktionalität in Exchange Online mit dem Azure Rights Management-Dienst|Von Microsoft verwaltet|
-|Schlüssel werden von Ihnen erstellt und in einem Hardwaresicherheitsmodul (HSM) geschützt|BYOK<br /><br />Derzeit führt diese Konfiguration zu eingeschränkter IRM-Funktionalität in Exchange Online. Weitere Informationen finden Sie unter [BYOK – Preise und Einschränkungen](byok-price-restrictions.md).|
+|Setzen Sie Azure Information Protection schnell und ohne besondere Hardware, zusätzliche Software oder Azure-Abonnement ein.<br /><br />Setzen Sie es beispielsweise in Testumgebungen ein oder wenn in Ihrem Unternehmen keine rechtlichen Bestimmungen für die Schlüsselverwaltung bestehen.|Von Microsoft verwaltet|
+|Konformitätsbestimmungen, zusätzliche Sicherheit und Kontrolle über alle Lebenszyklusvorgänge. <br /><br />Beispielsweise muss Ihr Schlüssel durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK [[1]](#footnote-1)|
+
 
 Falls nötig können Sie die Schlüsseltopologie Ihres Mandanten nach der Bereitstellung ändern, indem Sie das Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) verwenden.
 
@@ -41,65 +44,116 @@ Falls nötig können Sie die Schlüsseltopologie Ihres Mandanten nach der Bereit
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Wählen Sie Ihre Mandantenschlüsseltopologie aus: Verwaltet von Microsoft (Standard) oder verwaltet von Ihnen (BYOK)
 Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am besten geeignet ist. Standardmäßig generiert Azure Information Protection Ihren Mandantenschlüssel und verwaltet die meisten Aspekte des Lebenszyklus des Mandantenschlüssels. Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
-Alternativ könnten Sie uneingeschränkte Kontrolle über Ihren Mandantenschlüssel erreichen, indem Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) verwenden. Dieses Szenario umfasst die Erstellung Ihres Mandantenschlüssels und die lokale Aufbewahrung Ihrer Masterkopie. Dieses Szenario wird häufig als „Bring Your Own Key“ (BYOK) bezeichnet. Bei dieser Option geschieht Folgendes:
+Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am besten geeignet ist:
 
-1.  Sie generieren Ihren Mandantenschlüssel lokal, entsprechend Ihrer IT- und Sicherheitsrichtlinien.
+- **Von Microsoft verwaltet**: Azure Information Protection generiert automatisch einen Mandantenschlüssel für Ihre Organisation. Standardmäßig verwendet Microsoft diesen Schlüssel für Ihren Mandanten und verwaltet die meisten Aspekte des Lebenszyklusvorgangs für Ihren Mandantenschlüssel. 
+    
+    Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
-2.  Sie übertragen unter Verwendung von Azure Key Vault den Mandantenschlüssel sicher von einem Hardwaresicherheitsmodul (HSM), das sich in Ihrem Besitz befindet, auf HSMs, die Microsoft gehören und von Microsoft verwaltet werden. Während dieses Prozesses verlässt Ihr Mandantenschlüssel nie die Hardwareschutzgrenzen.
+- **Von Ihnen verwaltet (BYOK)**: Verwenden Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) zusammen mit Azure Information Protection, um die vollständige Kontrolle über Ihren Mandantenschlüssel zu erlangen. Erstellen Sie den Schlüssel für diese Mandantenschlüsseltopologie entweder in Key Vault direkt oder lokal. Wenn Sie ihn lokal erstellen, übertragen oder importieren Sie ihn anschließend auf bzw. in Key Vault. Konfigurieren Sie dann Azure Information Protection, um den Schlüssel zu verwenden. Verwalten Sie den Schlüssel in Azure Key Vault.
+    
 
-3.  Wenn Sie Ihren Mandantenschlüssel an Microsoft übertragen, bleibt er durch Azure Key Vault geschützt.
+### <a name="more-information-about-byok"></a>Nähere Informationen zu BYOK
+Sie haben folgende Optionen, um Ihren eigenen Schlüssel zu erstellen:
+
+- **Erstellen Sie den Schlüssel lokal, und übertragen oder importieren Sie ihn auf bzw. in Key Vault**:
+    
+    - Ein HSM-geschützter Schlüssel, den Sie lokal erstellen und auf Key Vault als HSM-geschützten Schlüssel übertragen.
+    
+    - Ein softwaregeschützter Schlüssel, den Sie lokal erstellen, konvertieren und auf Key Vault als HSM-geschützten Schlüssel übertragen. Diese Option wird nur unterstützt, wenn Sie eine [Migration von Active Directory Rights Management Services (AD RMS) vornehmen](migrate-from-ad-rms-to-azure-rms.md).
+    
+    - Ein softwaregeschützter Schlüssel, den Sie lokal erstellen, konvertieren und auf Key Vault als HSM-geschützten Schlüssel übertragen. Für diese Option benötigen Sie eine PFX-Zertifikatdatei.
+    
+- **Erstellen Sie den Schlüssel in Key Vault**:
+    
+    - Ein HSM-geschützter Schlüssel, den Sie in Key Vault erstellen.
+    
+    - Ein softwaregeschützter Schlüssel, den Sie in Key Vault erstellen.
+
+Aus diesen BYOK-Optionen wird üblicherweise der HSM-geschützte Schlüssel ausgewählt, der lokal erstellt und auf Key Vault als HSM-geschützter Schlüssel übertragen wird. Obwohl der Verwaltungsaufwand bei dieser Option am höchsten ist, muss Sie für Ihre Organisation möglicherweise ausgewählt werden, damit bestimmte Vorschriften eingehalten werden können. Die HSM, die von Azure Key Vault verwendet werden, sind FIPS 140-2 Level 2 geprüft.
+
+Bei dieser Option geschieht Folgendes:
+
+1. Sie generieren Ihren Mandantenschlüssel lokal, entsprechend Ihrer IT- und Sicherheitsrichtlinien. Der Schlüssel dient als Masterkopie. Er verbleibt auf lokaler Ebene, und Sie sind für das Backup verantwortlich.
+
+2. Sie erstellen eine Kopie des Schlüssels, die Sie anschließend sicher von Ihrem HSM auf Azure Key Vault übertragen. Während dieses Vorgangs verlässt die Masterkopie dieses Schlüssels nie die Hardwareschutzgrenzen.
+
+3. Die Kopie des Schlüssels wird durch Azure Key Vault geschützt.
+
+> [!NOTE]
+
+> Als zusätzliche Schutzmaßnahme verwendet Azure Key Vault in Regionen wie Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien getrennte Sicherheitsdomänen für seine Rechenzentren. Außerdem verwendet Azure Key Vault verschiedene Azure-Instanzen wie Microsoft Azure Deutschland und Azure Government. 
 
 Auch wenn dies optional ist, möchten Sie wahrscheinlich auch die beinahe in Echtzeit erstellten Nutzungsprotokolle von Azure Information Protection verwenden, um genau verfolgen zu können, wie und wann Ihr Mandantenschlüssel verwendet wird.
 
-> [!NOTE]
-> Als zusätzliche Schutzmaßnahme verwendet Azure Key Vault in Regionen wie Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien getrennte Sicherheitsdomänen für seine Rechenzentren. Gleiches gilt für verschiedene Azure-Instanzen wie Microsoft Azure Deutschland und Azure für Behörden. Wenn Sie Ihren eigenen Mandantenschlüssel verwalten, ist dieser an die Sicherheitsdomäne der Region oder Instanz gebunden, in der Ihr Azure Information Protection-Mandant registriert ist. Ein Mandantenschlüssel eines europäischen Kunden kann beispielsweise nicht in Rechenzentren in Nordamerika oder Asien verwendet werden.
+### <a name="when-you-have-decided-your-tenant-key-topology"></a>Vorgehensweise, nachdem Sie sich für eine Mandantenschlüsseltopologie entschlossen haben
 
-## <a name="the-tenant-key-lifecycle"></a>Der Lebenszyklus des Mandantenschlüssels
-Wenn Sie sich entschließen, dass Microsoft Ihren Mandantenschlüssel verwalten soll, wickelt Microsoft die meisten aller Vorgänge des Schlüssellebenszyklus ab. Wenn Sie sich jedoch entschließen, Ihren Mandantenschlüssel selbst zu verwalten, sind Sie für zahlreiche der Vorgänge des Schlüssellebenszyklus sowie einige zusätzliche Verfahren in Azure Key Vault verantwortlich.
+Gehen Sie wie folgt vor, wenn Sie sich dafür entschieden haben, dass ihr Mandantenschlüssel von Microsoft verwaltet werden soll: 
 
-Die folgenden Diagramme zeigen und vergleichen diese zwei Optionen. Das erste Diagramm zeigt, wie niedrig der Verwaltungsaufwand in der Standardkonfiguration ist, wenn Microsoft den Mandantenschlüssel verwaltet.
+- Wenn Sie keine Migration von AD RMS vornehmen, ist kein weiterer Schritt notwendig, damit der Schlüssel generiert wird. Sie können der Anleitung unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) folgen.
 
-![Lebenszyklus des Azure Information Protection-Mandantenschlüssels – verwaltet von Microsoft, Standardeinstellung](../media/RMS_BYOK_cloud.png)
-
-Das zweite Diagramm zeigt die zusätzlichen Schritte, die erforderlich sind, wenn Sie Ihren eigenen Mandantenschlüssel verwalten.
-
-![Lebenszyklus des Azure Information Protection-Mandantenschlüssels – verwaltet von Ihnen, BYOK](../media/RMS_BYOK_onprem4.png)
-
-Wenn Sie sich entschließen, Ihren Mandantenschlüssel von Microsoft verwalten zu lassen, müssen Sie nichts weiter unternehmen, damit der Schlüssel generiert wird. Sie können direkt unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) fortfahren.  
+- Nutzen Sie die folgenden Anweisungen, wenn Sie derzeit über AD RMS verfügen und zu Azure Information Protection migrieren möchten: Migrieren von AD RMS zu Azure Information Protection. 
 
 Wenn Sie sich entschließen, Ihren Mandantenschlüssel selbst zu verwalten, finden Sie in den folgenden Abschnitten weitere Informationen hierzu, die Sie lesen sollten.
 
-## <a name="implementing-your-azure-information-protection-tenant-key"></a>Implementieren Ihres Azure Information Protection-Mandantenschlüssels
+## <a name="implementing-byok-for-your-azure-information-protection-tenant-key"></a>BYOK-Implementierung für Ihren Azure Information Protection-Mandantenschlüssel
 
 Verwenden Sie die Informationen und Verfahren in diesem Abschnitt, wenn Sie sich entschieden haben, Ihren Mandantenschlüssel selber zu generieren und zu verwalten – das BYOK-Szenario (Bring Your Own Key):
 
-
-> [!IMPORTANT]
-> Wenn Sie Azure Information Protection zunächst mit einem von Microsoft verwalteten Mandantenschlüssel verwendet haben und jetzt Ihren Mandantenschlüssel selbst verwalten möchten (BYOK), bleiben die zuvor geschützten Dokumente und E-Mails über einen archivierten Schlüssel zugänglich. Wenn einige Ihrer Benutzer jedoch Office 2010 ausführen, [wenden Sie sich vor dem Durchführen dieser Verfahren an den Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support). Für diese Computer sind einige zusätzliche Konfigurationsschritte erforderlich.
-> 
-> Wenden Sie sich auch an den [Microsoft Support](../get-started/information-support.md#to-contact-microsoft-support), wenn Ihre Organisation über bestimmte Richtlinien für den Umgang mit Schlüsseln verfügt.
+> [!NOTE]
+> Wenn Sie Azure Information Protection zunächst mit einem von Microsoft verwalteten Mandantenschlüssel verwendet haben und jetzt Ihren Mandantenschlüssel selbst verwalten möchten (BYOK), bleiben die zuvor geschützten Dokumente und E-Mails über einen archivierten Schlüssel zugänglich. 
 
 ### <a name="prerequisites-for-byok"></a>Voraussetzungen für BYOK
 In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring Your Own Key“ (BYOK).
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Ein Abonnement, das Azure Information Protection unterstützt.|Weitere Informationen zu den verfügbaren Abonnements finden Sie auf der [Preisseite](https://go.microsoft.com/fwlink/?LinkId=827589) zu Azure Information Protection.|
-|Sie verwenden nicht Exchange Online.<br /><br /> Oder, falls Sie doch Exchange Online verwenden, verstehen und akzeptieren Sie die Einschränkungen, die bei der Verwendung von BYOK mit dieser Konfiguration einhergehen.|Weitere Informationen zu diesen und anderen Einschränkungen für BYOK finden Sie unter [BYOK – Preise und Einschränkungen](byok-price-restrictions.md) .<br /><br />**Wichtig**: Derzeit ist BYOK nicht mit Exchange Online kompatibel.|
-|Alle erforderlichen Komponenten für Key Vault BYOK, wozu ein kostenpflichtiges oder Testabonnement von Azure für Ihren vorhandenen Azure Information Protection-Mandanten zählt. |Siehe die [Voraussetzungen für BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für BYOK verwenden können, nutzen Sie die PowerShell-Cmdlets von [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und melden Sie sich mit dem folgenden Befehl als ein globaler Administrator für Ihren Azure Information Protection-Mandanten an: `Login-AzureRmAccount`<br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzureRmSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
+|Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für BYOK verwenden können, nutzen Sie die PowerShell-Cmdlets von [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und melden Sie sich mit dem folgenden Befehl als ein globaler Administrator für Ihren Azure Information Protection-Mandanten an: `Login-AzureRmAccount`<br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzureRmSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
+|Um einen HSM-geschützten Schlüssel, den Sie lokal erstellen, verwenden zu können, vgl. alle für Key Vault-BYOK aufgelisteten Voraussetzungen. |Siehe die [Voraussetzungen für BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
 |Das Azure Rights Management-Verwaltungsmodul für Windows PowerShell.|Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Wenn Sie dieses Windows PowerShell-Modul zuvor installiert haben, überprüfen Sie mit dem folgenden Befehl, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`|
 
 Weitere Informationen zu Thales-HSMs und deren Verwendung mit Azure Key Vault finden Sie auf der [Thales-Website](https://www.thales-esecurity.com/msrms/cloud).
 
+### <a name="choosing-your-key-vault-location"></a>Auswählen eines Speicherorts für Ihren Schlüsseltresor
+
+Wenn Sie einen Schlüsseltresor für den Schlüssel erstellen, der als Ihr Mandantenschlüssel für Azure Information verwendet werden soll, müssen Sie einen Speicherort bestimmen. Dieser Speicherort ist eine Azure-Region oder -Instanz.
+
+Treffen Sie Ihre Entscheidung vorrangig anhand von Konformitätsgründen. Die Minimierung der Netzwerklatenz ist zweitrangig:
+
+- Wenn Sie die BYOK-Mandantenschlüsseltopologie aus Konformitätsgründen ausgewählt haben sollten, wird die Azure-Region oder -Instanz, in der Ihr Azure Information Protection-Mandantenschlüssel gespeichert ist, anhand derselben Konformitätsgründe bestimmt.
+
+- Da alle kryptografischen Aufrufe zum Schutz mit Ihrem Azure Information Protection-Mandantenschlüssel verkettet sind, möchten Sie sicherlich die Netzwerklatenz minimieren, die durch diese Aufrufe hervorgerufen wird. Erstellen Sie dafür Ihren Schlüsseltresor in derselben Azure-Region oder -Instanz wie Ihren Azure Information Protection-Mandanten.
+
+Verwenden Sie das PowerShell-Cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration), um den Speicherort Ihres Azure Information Protection-Mandanten zu bestimmen. Anhand der URLs können Sie die Region ermitteln. Beispiel:
+
+    LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+
+**rms.na.aadrm.com** weist z.B. auf die Region Nordamerika hin.
+
+Anhand der folgenden Tabelle können Sie ermitteln, welche Azure-Region oder -Instanz empfohlen wird, um die Netzwerklatenz zu minimieren.
+
+|Azure-Region oder -Instanz|Empfohlener Speicherort für Ihren Schlüsseltresor|
+|---------------|--------------------|
+|rms.**na**.aadrm.com|**USA, Norden-Mitte** oder **USA, Osten**|
+|rms.**eu**.aadrm.com|**Nordeuropa** oder **Westeuropa**|
+|rms.**ap**.aadrm.com|**Ostasien** oder **Südostasien**|
+|rms.**sa**.aadrm.com|**USA, Westen**  oder **USA, Osten**|
+|rms.**govus**.aadrm.com|**USA, Mitte** oder **USA, Osten 2**|
+
+
 ### <a name="instructions-for-byok"></a>Hinweise zu BYOK
 
-Gehen Sie wie im Abschnitt [Gewusst wie: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) der Azure Key Vault-Dokumentation beschrieben vor, um Ihren eigenen Mandantenschlüssel zu generieren und an Azure Key Vault zu übertragen.
+Verwenden Sie die Azure Key Vault-Dokumentation, um einen Schlüsseltresor und den Schlüssel zu erstellen, den Sie für Azure Information Protection verwenden möchten. Weitere Informationen finden Sie unter [Get started with Azure Key Vault (Erste Schritte mit Azure Key Vault)](/azure/key-vault/key-vault-get-started).
 
-Wenn der Schlüssel an Key Vault übertragen wird, wird ihm in Key Vault eine Schlüssel-ID zugewiesen, bei der es sich um eine URL handelt, die den Namen des Schlüsseltresors, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Zum Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen den Azure Rights Management-Dienst von Azure Information Protection anweisen, diesen Schlüssel zu verwenden, indem Sie diese URL angeben.
+Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 1024 Bits liegt. Andere Schlüssellängen werden von Azure Information Protection nicht unterstützt.
 
-Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihrer Organisation autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) und erteilt dem Azure RMS-Dienstprinzipal, die Berechtigung, indem die GUID 00000012-0000-0000-c000-000000000000 verwendet wird. Beispiel:
+Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Zum Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen Azure Information Protection konfigurieren, indem Sie die Key Vault-URL bestimmen, um den Schlüssel verwenden zu können.
+
+Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihres Unternehmens autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) und erteilt dem Azure RMS-Dienstprinzipal, die Berechtigung, indem die GUID 00000012-0000-0000-c000-000000000000 verwendet wird. Beispiel:
+
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 Sie können Azure Information Protection jetzt so konfigurieren, dass dieser Schlüssel als Azure Information Protection-Mandantenschlüssel Ihrer Organisation verwendet wird. Stellen Sie unter Verwendung des Azure RMS-Cmdlets zunächst eine Verbindung mit dem Azure Rights Management-Dienst her, und melden Sie sich an:
 
@@ -112,20 +166,20 @@ Führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-
 > [!IMPORTANT]
 > In diesem Beispiel ist „aaaabbbbcccc111122223333“ die Version des zu verwendenden Schlüssels. Wenn Sie die Version nicht angeben, wird ohne Warnung die aktuelle Version des Schlüssels verwendet, und der Befehl scheint zu funktionieren. Wenn jedoch Ihr Schlüssel in Key Vault später aktualisiert (erneuert) wird, wird der Azure Rights Management-Dienst für Ihren Mandanten nicht mehr funktionieren, auch wenn Sie den Befehl „Use-AadrmKeyVaultKey“ erneut ausführen.
 >
->Stellen Sie sicher, dass Sie die Schlüsselversion zusätzlich zum Schlüsselnamen angeben, wenn Sie diesen Befehl ausführen. Sie können den Azure Key Vault-Befehl [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) verwenden, um die Versionsnummer des aktuellen Schlüssels zu erhalten. Beispiel: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+>Stellen Sie sicher, dass Sie die Schlüsselversion zusätzlich zum Schlüsselnamen angeben, wenn Sie diesen Befehl ausführen. Sie können den Azure Key Vault-Befehl [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) verwenden, um die Versionsnummer des aktuellen Schlüssels zu erhalten. Beispiel: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Falls Sie sicherstellen müssen, dass die Schlüssel-URL im Azure RMS-Dienst korrekt festgelegt wurde, können Sie in Azure Key Vault [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) ausführen, um die Schlüssel-URL anzuzeigen.
+Falls Sie sicherstellen müssen, dass die Schlüssel-URL für Azure Information Protection korrekt festgelegt wurde, können Sie in Azure Key Vault [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) ausführen, damit Ihnen die Schlüssel-URL angezeigt wird.
 
-Wenn der Azure Rights Management-Dienst bereits aktiviert ist, führen Sie schließlich [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um Azure Rights Management dazu aufzufordern, diesen Schlüssel als aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst zu verwenden. Wenn Sie dies nicht tun, wird Azure Rights Management weiterhin den von Microsoft verwalteten Standardschlüssel verwenden, der automatisch erstellt wurde, als der Dienst aktiviert wurde.
+Wenn der Azure Rights Management-Dienst bereits aktiviert ist, führen Sie zuletzt [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um Azure Information Protection den Befehl zu geben, diesen Schlüssel als aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst zu verwenden. Wenn Sie diesen Schritt nicht ausführen, wird Azure Information Protection weiterhin den von Microsoft verwalteten Standardschlüssel verwenden, der automatisch für Ihren Mandanten erstellt wurde.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben, führen Sie folgende Schritte aus:
+Nachdem Sie Ihren Mandantenschlüssel nun geplant und gegebenenfalls erstellt und konfiguriert haben, führen Sie folgende Schritte aus:
 
 1.  Beginnen Sie mit der Verwendung Ihres Mandantenschlüssels:
     
-    - Wenn noch nicht geschehen, müssen Sie jetzt den Rights Management-Dienst aktivieren, damit Ihre Organisation mit der Verwendung von Azure Information Protection beginnen kann. Benutzer beginnen sofort mit der Verwendung Ihres Mandantenschlüssels (verwaltet von Microsoft oder von Ihnen in Azure Key Vault).
+    - Wenn noch nicht geschehen, müssen Sie jetzt den Rights Management-Dienst aktivieren, damit Ihre Organisation mit der Verwendung von Azure Information Protection beginnen kann. Die Benutzer beginnen sofort mit der Verwendung Ihres Mandantenschlüssels (verwaltet von Microsoft oder von Ihnen in Azure Key Vault).
     
         Weitere Informationen zur Aktivierung finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
         
@@ -139,8 +193,8 @@ Nachdem Sie Ihren Mandantenschlüssel geplant und gegebenenfalls generiert haben
     
     Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
     
-3.  Pflegen Sie Ihren Mandantenschlüssel.
+3.  Verwaltung Ihres Mandantenschlüssels.
     
-    Weitere Informationen finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
+    Weitere Informationen über die Lebenszyklusvorgänge für Ihren Mandantenschlüssel finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

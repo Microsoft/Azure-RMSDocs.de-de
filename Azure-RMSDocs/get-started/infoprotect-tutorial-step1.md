@@ -1,6 +1,6 @@
 ---
 title: "Schnellstart-Tutorial Schritt 1 – AIP"
-description: "Schritt 1 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Aktivieren des Rights Management-Diensts."
+description: "Schritt 1 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Aktivieren des Schutzdiensts."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,20 +10,20 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>Schritt 1: Aktivieren des Rights Management-Diensts
+# <a name="step-1-activate-protection"></a>Schritt 1: Aktivieren des Schutzes
  
 >*Gilt für: Azure Information Protection*
 
 > [!NOTE]
 >Schließen Sie diesen Schritt auch dann ab, wenn Sie den Azure Rights Management-Dienst für Ihren Mandanten bereits abgeschlossen haben, um den Aktivierungsstatus zu bestätigen. Die Anweisungen beinhalten das Anmelden beim Azure-Portal und das Erstellen eines Azure Information Protection-Blatts, sodass Sie für Schritt 2 bereit sind. 
 
-Wenn der Azure Rights Management-Dienst aktiviert ist, können Sie die vertraulichen Dokumente und E-Mails Ihrer Organisation schützen und nachverfolgen, wie geschützte Dokumente verwendet werden, wenn Sie sie für andere Benutzer freigeben. Dieser Dienst kann auf verschiedene Weise aktiviert werden, z.B. mit Windows PowerShell oder über die Verwaltungsportale.
+Wenn der Azure Rights Management-Dienst aktiviert ist, können Sie die vertraulichen Dokumente und E-Mails Ihrer Organisation schützen und nachverfolgen, wie geschützte Dokumente verwendet werden, wenn Sie sie für andere Benutzer freigeben. Der Schutzdienst kann auf verschiedene Weise aktiviert werden, z.B. mit Windows PowerShell oder über die Verwaltungsportale.
 
 Für dieses Tutorial verwenden wir das Azure-Portal, dort werden auch die Bezeichnungen für Benutzer konfiguriert. 
 

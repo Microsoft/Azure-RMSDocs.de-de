@@ -4,7 +4,7 @@ description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec41508974244a7abe4faf67831d348775cdc73c
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 0bb1a1c466546582d4c21609ca86ba308d4bd9f9
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Informationen zum Aktivieren von Azure Rights Management über Office 365 Admin Center
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 
 Verwenden Sie diese Anweisungen, wenn Sie über Office 365 Admin Center auf den Azure Rights Management-Dienst zugreifen können. Sie besitzen beispielsweise ein Abonnement für Office 365 E3 oder Office 365 E5.
 
-1. Nachdem Sie sich für einen Office 365-Plan angemeldet haben, der Rights Management umfasst, [melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an](https://portal.office.com/), das die globale Administratorrolle für Ihre Office 365-Bereitstellung aufweist.
+1. Nachdem Sie sich für einen Office 365-Plan registriert haben, der Rights Management umfasst, [melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an](https://portal.office.com/), das die globale Administratorrolle für Ihre Office 365-Bereitstellung einschließt.
 
 2. Wenn das Office 365 Admin Center nicht automatisch angezeigt wird, wählen Sie in der linken oberen Ecke das Symbol für das App-Startprogramm und dann **Administrator** aus. Die Kachel **Administrator** wird nur für Office 365-Administratoren angezeigt.
 
@@ -35,7 +35,7 @@ Verwenden Sie diese Anweisungen, wenn Sie über Office 365 Admin Center auf den 
 
     - Navigieren: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Information Protection** > **Verwalten von Microsoft Azure Information Protection-Einstellungen**
 
-    - Suchen: Geben Sie im Suchfeld auf der **Startseite** **Information Protection** ein, und klicken Sie in den Suchergebnissen auf **Microsoft Azure Information Protection** und anschließend auf **Manage Microsoft Azure Information Protection settings** (Verwalten von Microsoft Azure Information Protection-Einstellungen). 
+    - Durchsuchen: Geben Sie in das Suchfeld auf der **Startseite** die Zeichenfolge **rights management** ein, und klicken Sie in den Suchergebnissen zuerst auf **Azure rights management settings** (Microsoft Azure Rights Management-Einstellungen) und anschließend auf **Manage Microsoft Azure Information Protection settings** (Verwalten von Microsoft Azure Information Protection-Einstellungen). 
     
     > [!NOTE]
     >Wenn Sie zu dieser Option navigieren, müssen Sie je nach Anzeige ggf. scrollen, um diese Option anzuzeigen. Wenn sie jedoch auf der Seite nicht angezeigt und in den Suchergebnissen nicht zurückgegeben wird, kann der Grund dafür sein, dass Ihr Diensttarif den Azure Rights Management-Dienst für Azure Information Protection nicht beinhaltet.

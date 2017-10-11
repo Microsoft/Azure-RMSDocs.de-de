@@ -4,7 +4,7 @@ description: "Verwendung des Azure Rights Management-Diensts über AIP zum Schut
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
-ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
+ms.openlocfilehash: eb40f6d2b43f175af71fd58b3bef4eb3d992152b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -50,7 +50,7 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Information
 
 -   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)**, die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Vertrauliche oder sensible Inhalte sind z.B. persönliche Informationen oder Kreditkarteninformationen. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter [Verhinderung von Datenverlust](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) in der Exchange-Bibliothek.
 
--   **Office 365-Nachrichtenverschlüsselung**, die Transportregeln verwendet, um verschlüsselte E-Mails an Personen außerhalb Ihres Unternehmens zu senden, wobei die E-Mail in einem Browser gelesen wird, dessen Oberfläche Outlook im Internet ähnelt. Sie können den Haftungsausschluss- und Kopfzeilentext in den verschlüsselten E-Mails Ihres Unternehmens anpassen und sogar Ihr Firmenlogo hinzufügen. Weitere Informationen finden Sie unter [Office 365-Nachrichtenverschlüsselung](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) auf der Office-Website.
+-   **Office 365-Nachrichtenverschlüsselung**, die das Versenden von geschützten E-Mail-Nachrichten und Office-Dokumenten als Anlagen an jede beliebige Adresse auf jedem beliebigen Gerät unterstützt. Eine Webanwendung unterstützt soziale Netzwerke als Identitätsanbieter oder eine beliebige Einmalkennung für Benutzerkonten, für die Azure AD nicht verwendet wird. Weitere Informationen finden Sie unter [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen, auf Azure Information Protection basierenden Funktionen der Office 365-Nachrichtenverschlüsselung)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) auf der Office-Website.
 
 Wenn Sie Exchange lokal verwenden, können Sie IRM-Funktionen mit dem Azure Rights Management-Dienst verwenden, indem Sie den Azure Rights Management-Connector bereitstellen. Dieser Connector fungiert als Relay zwischen den lokalen Servern und dem Azure Rights Management-Dienst.
 
