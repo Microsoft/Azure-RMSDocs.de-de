@@ -4,17 +4,17 @@ description: "Eine Übersicht über den Azure Information Protection-Dienst."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: ba39c332437e2710554d1e8f69c3f676f0d870db
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 1564f6dc0a21017151254b1ae1fab1586761e766
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -92,11 +92,18 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Video: „Top 5 Tips for Information Protection“ (Die 5 besten Tipps für Information Protection)
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
+Darüber hinaus werden bei **Microsoft Ignite 2017** viele auf Abruf verfügbare Sitzungen für Azure Information Protection zur Verfügung gestellt. Eine Zusammenfassung der Ankündigungen, die auf dieser Konferenz stattgefunden haben, finden Sie unter [What’s new in Azure Information Protection @ Ignite 2017 (Neues in Azure Information Protection @ Ignite 2017)](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
-Darüber hinaus werden bei **Microsoft Ignite 2017** viele auf Abruf verfügbare Sitzungen für Azure Information Protection zur Verfügung gestellt. Sie können auf der Ignite-Website nach diesen [suchen](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522), sobald sie verfügbar sind. Eine Zusammenfassung der Ankündigungen finden Sie unter [What’s new in Azure Information Protection @ Ignite 2017 (Neues in Azure Information Protection @ Ignite 2017)](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/).
+Sie können die Sitzungen [suchen und finden](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522), die für Azure Information Protection auf der Ignite-Website gekennzeichnet sind. Jedoch empfiehlt es sich, mit den folgenden Sitzungen zu beginnen:
+
+- [Protecting complete data lifecycle using Microsoft information protection capabilities (Schützen des gesamten Datenlebenszyklus mithilfe der Microsoft Information Protection-Funktionen)](https://myignite.microsoft.com/videos/55397)
+
+- [Accelerate Azure information protection deployment and adoption (Beschleunigen der Azure Information Protection-Bereitstellung und Einführung)](https://myignite.microsoft.com/videos/53454)
+
+- [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy (Erkunden, was es Neues zu Azure Information Protection gibt sowie Informationen zur Roadmap und Strategie)](https://myignite.microsoft.com/videos/53453)
+
+- [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities (Schützen und Steuern Ihrer vertraulichen E-Mails mit den neuen Funktionen der Office 365-Nachrichtenverschlüsselung)](https://myignite.microsoft.com/videos/53230)
 
 
 ## <a name="next-steps"></a>Nächste Schritte

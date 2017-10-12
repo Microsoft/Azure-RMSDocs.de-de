@@ -4,7 +4,7 @@ description: Wenn Sie Active Directory Rights Management Services (AD RMS) berei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4e9aa6a3e1742fc88f3c1e8e297f1391e2e89b75
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 60765865a0c422f4baac72ed88a6bca9b96ed66f
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Vergleich von Azure Information Protection und AD RMS
 
@@ -51,8 +51,8 @@ Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die 
 |Azure Information Protection|AD RMS|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Unterstützt IRM-Funktionen (Verwaltung von Informationsrechten) in Microsoft Online Services wie Exchange Online und SharePoint Online sowie in Office 365.<br /><br />Unterstützt ebenfalls lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|Unterstützt lokale Microsoft-Serverprodukte wie Exchange Server, SharePoint Server und Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden.|
-|Ermöglicht implizite Vertrauensstellungen zwischen Organisationen und Benutzern in jeder Organisation. Dies bedeutet, dass geschützter Inhalt zwischen Benutzern innerhalb derselben Organisation oder zwischen Organisationen freigegeben werden kann, wenn die Benutzer über [!INCLUDE[o365_1](../includes/o365_1_md.md)] oder [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] verfügen oder sich für RMS for Individuals registrieren.|Vertrauensstellungen müssen ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung zwischen Organisationen definiert werden, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (Active Directory Federation Services, AD FS) erstellen.|
-|Senden Sie eine geschützte E-Mail (mit Office-Dokumentanlagen, die automatisch geschützt sind) an Benutzer, wenn keine Vertrauensstellung vorhanden ist. Verwenden Sie dazu einen Verbund mit sozialen Netzwerken als Identitätsanbieter oder eine einmalige Kennung und einen Webbrowser zur Anzeige der E-Mail.|Unterstützt nicht das Senden geschützter E-Mails, wenn keine Vertrauensstellung besteht.|
+|Aktiviert automatisch die sichere Kollaboration an Dokumenten mit jeder beliebigen Organisation, die ebenso Azure AD für die Authentifizierung verwendet. Das bedeutet, dass Organisationen Dokumente schützen können, die sie intern oder für andere Organisationen freigeben.|Eine sichere Zusammenarbeit an Dokumenten außerhalb der Organisation erfordert, dass die Vertrauensstellung der Authentifizierung explizit in einer direkten Punkt-zu-Punkt-Beziehung zwischen den beiden Organisationen definiert ist. Sie müssen entweder vertrauenswürdige Benutzerdomänen (TUDs) oder Verbundvertrauensstellungen konfigurieren, die Sie mithilfe der Active Directory-Verbunddienste (AD FS) erstellen.|
+|Senden Sie eine geschützte E-Mail (optional mit Office-Dokumentanlagen, die automatisch geschützt sind) an Benutzer, wenn keine Vertrauensstellungsbeziehung für die Authentifizierung existiert. Dieses Szenario wird durch die Verwendung eines Verbunds mit sozialen Netzwerken oder einer Einmalkennung und eines Webbrowsers zur Ansicht möglich gemacht.|Unterstützt nicht das Senden geschützter E-Mails, wenn keine Vertrauensstellung für die Authentifizierung besteht.|
 |Stellt zwei Standardvorlagen für Rechterichtlinien bereit, die den Zugriff auf die Inhalte auf Ihre eigene Organisation beschränken. Eine, die die schreibgeschützte Anzeige geschützter Inhalte bietet, und eine andere Vorlage, die Schreib- oder Änderungsberechtigungen für den geschützten Inhalt bereitstellt.<br /><br />Sie können auch eigene benutzerdefinierte Vorlagen erstellen, wozu Abteilungsvorlagen gehören, die nur für eine Teilmenge von Benutzern sichtbar sind. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|Es sind keine standardmäßigen Vorlagen verfügbar. Sie müssen diese erstellen und dann verteilen. Weitere Informationen finden Sie unter [Überlegungen zur AD RMS-Richtlinienvorlage](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|
 |Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür der [Azure Information Protection-Client](../rms-client/aip-client.md) oder die RMS-Freigabeanwendung erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird nicht unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2007.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird unterstützt|
 |Unterstützt den [Azure Information Protection-Client](../rms-client/aip-client.md) für Windows, iOS und Android. Macintosh-Computer und Windows Phone-Geräte werden weiterhin von der RMS-Freigabeanwendung unterstützt.<br /><br />Zudem unterstützt der Azure Information Protection-Client Folgendes:<br /><br />– Freigeben für Personen in einer anderen Organisation<br /><br />– Eine Website für die Dokumentnachverfolgung für Benutzer mit der Möglichkeit, ein Dokument zu widerrufen|Unterstützt den [Azure Information Protection-Client](../rms-client/aip-client.md) für Windows, iOS und Android. Macintosh-Computer und Windows Phone-Geräte werden weiterhin von der RMS-Freigabeanwendung unterstützt. Allerdings unterstützt Freigeben weder ein Freigeben für Benutzer in einer anderen Organisation noch die Dokumentenverfolgung oder die Möglichkeit für Benutzer, Dokumente zu widerrufen.|

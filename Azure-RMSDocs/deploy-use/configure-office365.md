@@ -4,7 +4,7 @@ description: "Informationen und Anweisungen für Administratoren zum Konfigurier
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 53d93a36d4b18c93f54349633046e5fc242e7c2b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 5d652f938ac7a9008e36ee75b52f2b4b7b6612d1
+ms.sourcegitcommit: 9ed2c454a7aaf965ff1cceda0447928111001488
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für Clients und Onlinediensten zur Verwendung des Azure Rights Management-Diensts
 
@@ -31,7 +31,7 @@ Informationen zur Funktionsweise von Exchange Online IRM mit dem Azure Rights Ma
 
 Informationen zum Konfigurieren von Exchange Online zur Verwendung des Azure Rights Management-Diensts finden Sie unter [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen, auf Azure Information Protection basierenden Funktionen in der Office 365-Nachrichtenverschlüsselung)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).
 
-Wenn Sie bereits Exchange Online für die Verwendung des Azure Rights Management-Diensts konfiguriert haben, indem Sie eine vertrauenswürdige Veröffentlichungsdomäne (TPD) importieren haben, verwenden Sie dieselben Anweisungen, um die neuen Funktionen in Exchange Online zu aktivieren.
+Wenn Sie bereits Exchange Online für IRM durch Importieren Ihrer vertrauenswürdige Veröffentlichungsdomäne (TPD) aus dem Azure Rights Management-Dienst konfiguriert haben, verwenden Sie dieselben Anweisungen, um die neuen Funktionen in Exchange Online zu aktivieren.
 
 Nach dem Konfigurieren von Exchange Online zur Verwendung des Azure Rights Management-Diensts können Sie Funktionen konfigurieren, die den Informationsschutz automatisch anwenden. Hierzu gehören z.B. [Transportregeln](https://technet.microsoft.com/library/dd302432.aspx), [DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) und [geschützte Voicemail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
