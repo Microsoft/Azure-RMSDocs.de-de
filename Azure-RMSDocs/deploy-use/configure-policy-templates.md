@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
+ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/08/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -40,15 +40,7 @@ Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlin
 
 ## <a name="default-templates"></a>Standardvorlagen
 
-Wenn Sie Ihr Abonnement für Azure Information Protection oder für ein Office 365-Abonnement, das den Azure Rights Management-Dienst enthält, anfordern, werden automatisch zwei Standardvorlagen für Ihren Mandanten erstellt, die den Zugriff für autorisierte Benutzer in Ihrer Organisation beschränken. Diese zwei Vorlagen enthalten nach dem Erstellen die folgenden Einschränkungen: 
-
-- Lese- oder Änderungsberechtigungen für geschützten Inhalt
-    
-    - **Bestimmte Berechtigungen**: Inhalt anzeigen, Datei speichern, Inhalt bearbeiten, Zugewiesene Rechte anzeigen, Makros zulassen, Weiterleiten, Antworten, Allen antworten
-
-- Schreibgeschützte Anzeige geschützter Inhalte
-    
-    - **Bestimmte Berechtigung**: Inhalt anzeigen
+Wenn Sie Ihr Abonnement für Azure Information Protection oder für ein Office 365-Abonnement, das den Azure Rights Management-Dienst enthält, anfordern, werden automatisch zwei Standardvorlagen für Ihren Mandanten erstellt, die den Zugriff für autorisierte Benutzer in Ihrer Organisation beschränken. Wenn diese zwei Vorlagen erstellt werden, verfügen sie über die Berechtigungen, die in der Dokumentation [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates) aufgelistet sind.
 
 Zusätzlich werden die Vorlagen so konfiguriert, dass sie einen Offlinezugriff für sieben Tage zulassen und kein Ablaufdatum haben.
 
@@ -63,22 +55,22 @@ Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen w
 
 Wenn Sie vor kurzem ein Abonnement für Azure Information Protection erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
-- **Vertraulich\Alle Mitarbeiter** für Lese- oder Änderungsberechtigungen für geschützten Inhalt
+- **Vertraulich\Alle Mitarbeiter** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
 
-- **Streng Vertraulich\Alle Mitarbeiter** für ausschließlich schreibgeschützte Anzeige für geschützten Inhalt
+- **Streng vertraulich\Alle Mitarbeiter** erteilt Leseberechtigungen für den geschützten Inhalt.
 
 Wenn Sie Ihr Abonnement für Azure Information Protection vor einer Weile erhalten haben, oder wenn Sie nicht über ein Azure Information Protection-Abonnement verfügen, aber ein Office 365-Abonnement mit Azure Rights Management besitzen, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
-- **\<Name der Organisation> – Vertraulich** für Lese- oder Änderungsberechtigungen für geschützten Inhalt
+- **\<Name der Organisation> – Vertraulich** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
 
-- **\<Name der Organisation> – Nur vertrauliche Ansicht** für Lese- oder Änderungsberechtigungen für geschützten Inhalt 
+- **\<Name der Organisation> – Nur vertrauliche Ansicht** erteilt Leseberechtigungen für den geschützten Inhalt. 
 
 Sie können diese Standardvorlagen umbenennen (und neu konfigurieren), wenn Sie das Azure-Portal verwenden.
 
 >[!NOTE]
 >Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection – Globale Richtlinie** nicht sehen, werden sie zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden, sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Azure RMS-Schutz enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
 >
->Sie können Vorlagen manuell konvertieren und diese bei Bedarf umbenennen, so wie unter [Konvertieren von Vorlagen in Bezeichnungen](#to-convert-templates-to-labels) beschrieben. Wenn Ihre Azure Information Protection-Standardrichtlinie kürzlich erstellt und der Azure Rights Management-Dienst für Ihren Mandanten zu dieser Zeit aktiviert wurde, werden sie automatisch konvertiert.
+>Sie können Vorlagen manuell konvertieren und diese bei Bedarf umbenennen, so wie unter [Konvertieren von Vorlagen in Bezeichnungen](#to-convert-templates-to-labels) beschrieben. Wenn Ihre Azure Information Protection-Standardrichtlinie kürzlich erstellt und der Azure Rights Management-Dienst für Ihren Mandanten zu diesem Zeitpunkt aktiviert wurde, werden sie automatisch konvertiert.
 
 Vorlagen, die archiviert werden, werden auf dem Blatt **Azure Information Protection – Globale Richtlinie** als nicht verfügbar angezeigt. Diese Vorlagen können nicht für Bezeichnungen ausgewählt werden, aber sie können zu Bezeichnungen konvertiert werden.
 
@@ -97,11 +89,11 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 - Sie können eine Vorlage im Azure-Portal weder kopieren noch löschen. Wenn die Vorlage zu einer Bezeichnung konvertiert wird, können Sie die Bezeichnung so konfigurieren, dass sie die Vorlage nicht mehr verwendet. Dies erreichen Sie, indem Sie für die Option **Berechtigungen für Dokumente und E-Mails mit Bezeichnung festlegen** **Nicht konfiguriert** auswählen. Alternativ können Sie die Bezeichnung löschen. In beiden Szenarios wird die Vorlage jedoch nicht gelöscht und bleibt aktiviert.
     
-    Sie können nun die Vorlage mithilfe des PowerShell-Cmdlets [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) löschen. Sie können dieses PowerShell-Cmdlet auch für Vorlagen verwenden, die nicht zu Bezeichnungen konvertiert werden. Wenn Sie aber eine Vorlage löschen, die zum Schutz von Inhalt verwendet wurde, kann dieser Inhalt nicht länger geöffnet werden. Löschen Sie die Vorlagen nur, wenn Sie sicher sind, dass sie nicht zum Schützen von Dokumenten oder E-Mails in der Produktion verwendet wurden. Als Vorsichtsmaßnahme möchten Sie möglicherweise zuerst die Vorlage als Sicherung mithilfe des [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)-Cmdlets exportieren. 
+    Sie können nun die Vorlage mithilfe des PowerShell-Cmdlets [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) löschen. Sie können dieses PowerShell-Cmdlet auch für Vorlagen verwenden, die nicht zu Bezeichnungen konvertiert werden. Wenn Sie aber eine Vorlage löschen, die zum Schutz von Inhalt verwendet wurde, kann dieser Inhalt nicht länger geöffnet werden. Löschen Sie die Vorlagen nur, wenn Sie sicher sind, dass sie nicht zum Schützen von Dokumenten oder E-Mails in der Produktion verwendet wurden. Als Vorsichtsmaßnahme sollten Sie zuerst die Vorlage als Sicherung mithilfe des [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)-Cmdlets exportieren. 
 
 - Abteilungsvorlagen (für einen Bereich konfigurierte Vorlagen) werden in der globalen Richtlinie angezeigt. Wenn Sie derzeit eine Abteilungsvorlage bearbeiten und speichern, wird die Bereichskonfiguration entfernt. Eine bereichsbezogene Vorlage entspricht in der Azure Information Protection-Richtlinie einer [bereichsbezogenen Richtlinie](configure-policy-scope.md). Wenn Sie die Vorlage in eine Bezeichnung konvertieren, können Sie einen vorhandenen Bereich auswählen.
     
-    Darüber hinaus können Sie derzeit nicht die Anwendungskompatibilitätseinstellung für eine Abteilungsvorlage festlegen. Falls erforderlich, können Sie diese durch PowerShell mithilfe des Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) festlegen.
+    Darüber hinaus können Sie derzeit nicht die Anwendungskompatibilitätseinstellung für eine Abteilungsvorlage festlegen. Falls erforderlich, können Sie die Einstellung für Anwendungskompatibilität durch PowerShell und das Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) festlegen.
 
 - Wenn Sie eine Vorlage zu einer Bezeichnung konvertieren oder mit einer verknüpfen, kann sie nicht länger von anderen Bezeichnungen verwendet werden. Zusätzlich wird diese Vorlage nicht mehr im Abschnitt **Vorlagen** oder **Protection Templates** (Vorlagen zum Schutz) angezeigt. Dieser Abschnitt wird zurzeit umbenannt.
 

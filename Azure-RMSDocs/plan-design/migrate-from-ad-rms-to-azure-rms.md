@@ -4,7 +4,7 @@ description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Dire
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6651c812c207494bc98d5a1b22e359910a94c3cc
-ms.sourcegitcommit: 7d07b82da9aca52fe9e38fa1bada144226168a6b
+ms.openlocfilehash: 910d131ece4bae0cf5ef2685291431a3dc319264
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/05/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -181,12 +181,9 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 [**PHASE 3: CLIENTSEITIGE KONFIGURATION**](migrate-from-ad-rms-phase3.md)
 
-- **Schritt 7: Neukonfigurieren von Clients zur Verwendung von Azure Information Protection**
+- **Schritt 7: Erneutes Konfigurieren von Windows-Computern zur Verwendung von Azure Information Protection**
 
     Vorhandene Windows-Computer müssen neu konfiguriert werden, um den Azure Rights Management-Dienst anstelle von AD RMS zu verwenden. Dieser Schritt gilt für Computer in Ihrer Organisation und für Computer in Partnerorganisationen, wenn Sie mit diesen zusammengearbeitet haben, während AS RMS ausgeführt wurde.
-
-    Außerdem müssen Sie, wenn Sie die [Erweiterungen für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx) zur Unterstützung mobiler Geräte wie iOS-Telefone und iPads, Android-Telefone und Tablets, Windows Phone und Mac-Computer bereitgestellt haben, die SRV-Einträge im DNS entfernen, mit denen diese Clients zu AD RMS umgeleitet wurden.
-
 
 [**PHASE 4: UNTERSTÜTZUNG DER DIENSTEKONFIGURATION**](migrate-from-ad-rms-phase4.md)
 
@@ -203,10 +200,12 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 - **Schritt 10: Aufheben der Bereitstellung von AD RMS**
 
-    Wenn sichergestellt ist, dass alle Clients den Azure Rights Management-Dienst verwenden und nicht mehr auf die AD RMS-Server zugreifen, können Sie Ihre AD RMS-Bereitstellung außer Betrieb setzen.
+    Wenn sichergestellt ist, dass alle Windows-Computer den Azure Rights Management-Dienst verwenden und nicht mehr auf die AD RMS-Server zugreifen, können Sie Ihre AD RMS-Bereitstellung außer Betrieb setzen.
 
-- **Schritt 11: Entfernen von Onboarding-Steuerelementen**
+- **Schritt 11: Rekonfigurieren von Clients für mobile Geräte und Mac-Computer und Entfernen von Onboarding-Steuerelementen**
 
+    Wenn Sie die [Erweiterungen für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx) zur Unterstützung mobiler Geräte wie iOS-Telefone und iPads, Android-Telefone und Tablets, Windows Phone und Mac-Computer bereitgestellt haben, müssen Sie die SRV-Einträge im DNS entfernen, mit denen diese Clients zu AD RMS umgeleitet wurden. 
+    
     Die Onboarding-Steuerelemente, die Sie während der Vorbereitungsphase konfiguriert haben, werden nicht länger benötigt.
 
 - **Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels**

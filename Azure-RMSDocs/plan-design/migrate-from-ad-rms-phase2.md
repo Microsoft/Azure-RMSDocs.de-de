@@ -4,7 +4,7 @@ description: Phase 2 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -112,11 +112,7 @@ Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad
     
         Enable-Aadrm
 
-**Was geschieht, wenn Ihr Azure Information Protection-Mandant bereits aktiviert wurde?** Wenn der Azure Rights Management-Dienst für Ihre Organisation bereits aktiviert ist, verwenden Benutzer Azure Information Protection möglicherweise schon, um Inhalte mit einem automatisch generierten Mandantenschlüssel (und den Standardvorlagen) anstelle der vorhandenen Schlüssel (und Vorlagen) von AD RMS zu schützen. Dies ist unwahrscheinlich auf Computern, die in Ihrem Intranet ordnungsgemäß verwaltet werden, da diese automatisch für die AD RMS-Infrastruktur konfiguriert sind. Aber es kann auf dem Arbeitsgruppencomputern oder Computern passieren, die selten mit dem Intranet verbunden sind. Leider ist es auch schwierig, diese Computer zu identifizieren, weshalb wir empfehlen, dass Sie den Dienst nicht vor dem Import der Konfigurationsdaten aus AD RMS aktivieren.
-
-Wenn Ihr Azure Information Protection-Mandant bereits aktiviert ist und Sie diese Computer identifizieren können, stellen Sie sicher, dass Sie das Skript „CleanUpRMS.cmd“ auf diesen Computern wie in [Schritt 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection) beschrieben ausführen. Durch das Ausführen dieses Skripts erzwingen sie, die Benutzerumgebung erneut zu initialisieren, damit sie den aktualisierten Mandantenschlüssel und die importierten Vorlagen herunterladen.
-
-Falls Sie außerdem benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese Vorlagen zunächst exportieren und wieder importieren. Diese Prozedur wird im nächsten Schritt behandelt. 
+**Was geschieht, wenn Ihr Azure Information Protection-Mandant bereits aktiviert wurde?** Wenn der Azure Rights Management-Dienst bereits für Ihre Organisation aktiviert ist, und Sie benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese Vorlagen exportieren und importieren. Diese Prozedur wird im nächsten Schritt behandelt. 
 
 ## <a name="step-6-configure-imported-templates"></a>Schritt 6: Konfigurieren importierter Vorlagen
 
