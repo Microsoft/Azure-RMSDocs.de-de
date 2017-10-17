@@ -4,7 +4,7 @@ description: "Technische Details zu den unterstützten Dateitypen, Dateierweiter
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -34,7 +34,7 @@ Verwenden Sie die folgenden Informationen, um zu überprüfen, welche Dateitypen
 
 ## <a name="file-types-supported-for-classification-only"></a>Nur für die Klassifizierung unterstützte Dateitypen
 
-Die ausschließliche Klassifizierung wird für die folgenden Dateitypen unterstützt. Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie auch geschützt sind (weitere Informationen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection)).
+Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschützt sind.
 
 - **Adobe Portable Document Format**: .pdf
 
@@ -45,15 +45,22 @@ Die ausschließliche Klassifizierung wird für die folgenden Dateitypen unterst�
 - **Microsoft Publisher**: .pub
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
+
 - **Microsoft XPS**: .xps .oxps
 
-- **Bilder**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff
+- **Bilder**: JPG, JPE, JPEG, JIF, JFIF, JFI PNG, TIF, TIFF
 
 - **Autodesk Design Review 2013**: .dwfx
 
 - **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
+
+Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie zudem geschützt sind. Weitere Informationen zu diesen Dateitypen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).
+
+In der aktuellen [Standardrichtlinie](../deploy-use/configure-policy-default.md) wendet die Bezeichnung **Allgemein** zum Beispiel die Klassifizierung, aber nicht den Schutz an. Sie können die Bezeichnung **Allgemein** auf eine Datei namens „sales.pdf“, aber nicht auf eine Datei namens „sales.txt“ anwenden. 
+
+In der aktuellen Standardrichtlinie werden Klassifizierung und Schutz durch **Vertraulich\Alle Mitarbeiter** angewendet. Sie können diese Bezeichnung auf eine Datei namens „sales.pdf“ und eine Datei namens „sales.txt“ anwenden. Sie können den Schutz auch ohne die Klassifizierung auf diese Dateien anwenden.
 
 ## <a name="file-types-supported-for-protection"></a>Für den Schutz unterstützte Dateitypen
 
@@ -108,13 +115,15 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |JFIF|PJFIF|
 |JT|PJT|
 
+
 Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. 
 
 Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 
 |Von Office unterstützte Dateitypen|Von Office unterstützte Dateitypen|
 |----------------------------------|----------------------------------|
-|DOC<br /><br />DOCM<br /><br />DOCX<br /><br />DOT<br /><br />DOTM<br /><br />DOTX<br /><br />POTM<br /><br />POTX<br /><br />PPS<br /><br />PPSM<br /><br />PPSX<br /><br />PPT<br /><br />PPTM|PPTX<br /><br />THMX<br /><br />XLA<br /><br />XLAM<br /><br />XLS<br /><br />XLSB<br /><br />XLT<br /><br />XLSM<br /><br />XLSX<br /><br />XLTM<br /><br />XLTX<br /><br />XPS|
+|DOC<br /><br />DOCM<br /><br />DOCX<br /><br />DOT<br /><br />DOTM<br /><br />DOTX<br /><br />POTM<br /><br />POTX<br /><br />PPS<br /><br />PPSM<br /><br />PPSX<br /><br />PPT<br /><br />PPTM<br /><br />PPTX<br /><br />PPTX<br /><br />THMX|VSDM<br /><br />VSDX<br /><br />VSSM<br /><br />VSSX<br /><br />VSTM<br /><br />VSTX<br /><br />XLA<br /><br />XLAM<br /><br />XLS<br /><br />XLSB<br /><br />XLT<br /><br />XLSM<br /><br />XLSX<br /><br />XLTM<br /><br />XLTX<br /><br />XPS|
+
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Ändern der Standardschutzebene von Dateien
 Sie können ändern, wie der Azure Information Protection-Client Dateien durch Bearbeiten der Registrierung schützt. Beispielsweise können Sie erzwingen, dass Dateien, die systemeigenen Schutz unterstützen, durch den Azure Information Protection-Client generisch geschützt werden.
@@ -181,15 +190,15 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 Jede Datei, die kennwortgeschützt ist, kann nativ nicht vom Azure Information Protection-Client geschützt werden. Am häufigsten sind PDF-Dateien kennwortgeschützt. Diese Funktion wird jedoch auch von anderen Anwendungen bereitgestellt, wie z.B. Office-Apps.
 
-Darüber hinaus kann der Azure Information Protection-Client für Windows PDF-Dateien unter den folgenden Umständen nicht nativ schützen oder deren Schutz aufheben:
+Darüber hinaus kann der Azure Information Protection-Client für Windows die folgenden Dateien anzeigen, aber unter folgenden Umständen keine PDF-Dateien schützen oder deren Schutz aufheben:
 
 - eine formularbasierte PDF-Datei
 
 - eine geschützte PDF-Datei mit PDF-Erweiterung 
     
-    Der Azure Information Protection-Client kann eine nicht geschützte PDF-Datei schützen und eine geschützte PDF-Datei erneut schützen, die eine PPDF-Erweiterung aufweist.
+    Der Azure Information Protection-Client kann eine nicht geschützte PDF-Datei schützen, deren Schutz aufheben und eine geschützte PDF-Datei erneut schützen, wenn diese eine PPDF-Erweiterung aufweist.
 
-Sie können das Problem für diese Dateien umgehen, indem Sie diese generisch schützen. Folgen Sie dazu den Anweisungen im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files). Dadurch wird allerdings die Schutzebene alle Dateien mit PDF-Erweiterung auf Computerebene geändert. Es ist nicht möglich, den generischen Schutz nur für die Dateien zu definieren, die die aufgelisteten Kriterien erfüllen.
+Sie können das Problem mit dem Schutz dieser Dateien umgehen, indem Sie diese generisch schützen. Folgen Sie dazu den Anweisungen im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files). Dadurch wird allerdings die Schutzebene alle Dateien mit PDF-Erweiterung auf Computerebene geändert. Es ist nicht möglich, den generischen Schutz nur für die Dateien zu definieren, die die aufgelisteten Kriterien erfüllen.
 
 Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren.
 
