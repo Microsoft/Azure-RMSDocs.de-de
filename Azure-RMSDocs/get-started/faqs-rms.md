@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 381eaee2aa33a2a6a715c31616ad92a0f957e8b0
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -86,6 +86,18 @@ Benutzerdefinierte Vorlagen werden zum Azure-Portal migriert, in dem Sie diese w
 
 Weitere Informationen zu Vorlagen im Azure-Portal finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 
+## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>Ich habe ein Dokument geschützt und möchte nun die Nutzungsrechte ändern oder Benutzer hinzufügen – muss ich das Dokument erneut schützen?
+
+Wenn das Dokument durch eine Bezeichnung oder eine Vorlage geschützt war, muss es nicht erneut geschützt werden. Ändern Sie die Bezeichnung oder Vorlage, indem Sie Ihre Änderungen an den Nutzungsrechten vornehmen oder neue Gruppen (oder Benutzer) hinzufügen und diese Änderungen dann speichern oder veröffentlichen:
+
+- Wenn ein Benutzer noch nicht auf dieses Dokument zugegriffen hat, bevor Sie die Änderungen vorgenommen haben, werden die Änderungen wirksam, sobald der Benutzer das Dokument öffnet. 
+
+- Wenn ein Benutzer bereits auf das Dokument zugegriffen hat, werden diese Änderungen wirksam, wenn dessen [Nutzungslizenz](../deploy-use/configure-usage-rights.md#rights-management-use-license) abläuft. Schützen Sie das Dokument nur erneut, wenn Sie nicht darauf warten können, dass die Nutzungslizenz abläuft. Das erneute Schützen erstellt im Grunde eine neue Version des Dokuments und somit eine neue Nutzungslizenz für den Benutzer.
+
+Wenn Sie bereits eine Gruppe für die erforderlichen Berechtigungen konfiguriert haben, können Sie alternativ die Gruppenmitgliedschaft ändern, um Benutzer ein- oder auszuschließen, damit die Bezeichnung oder Vorlage nicht geändert werden muss. Die Änderungen werden möglicherweise mit einer kurzen Verzögerung wirksam, da die Gruppenmitgliedschaft vom Azure Rights Management-Dienst [zwischengespeichert](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) wird.
+
+Wenn das Dokument mithilfe von benutzerdefinierten Berechtigungen geschützt wurde, können Sie die Berechtigungen für das vorhandene Dokument nicht ändern. Sie müssen das Dokument erneut schützen und alle Benutzer und Nutzungsrechte angeben, die für die neue Version des Dokument erforderlich sind. Sie müssen über das Nutzungsrecht „Vollzugriff“ verfügen, um ein geschütztes Dokument erneut zu schützen. 
+
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Ich habe eine Hybridbereitstellung von Exchange mit einigen Benutzern auf Exchange Online und anderen auf Exchange Server – wird dies von Azure RMS unterstützt?
 Ja, und das Gute ist, dass Benutzer über zwei Exchange-Bereitstellungen hinweg E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Führen Sie für diese Konfiguration folgende Schritte aus: [Aktivieren von Azure RMS](../deploy-use/activate-service.md) , [Aktivieren von IRM für Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)und [Bereitstellen und Konfigurieren des RMS-Connectors](../deploy-use/deploy-rms-connector.md) für Exchange Server.
 
@@ -115,8 +127,6 @@ Wenn Sie eine E-Mail mit einer Office-Dokumentanlage an einen Benutzer senden, d
 Ja. Wenn Sie eine Vorlage im Azure-Portal in eine Bezeichnung konvertieren, können Sie die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md) konfigurieren, um Benutzern und Gruppen außerhalb Ihrer Organisation Berechtigungen hinzuzufügen. Dies ist sogar für alle Benutzer einer anderen Organisation möglich. Sie können diese Konfiguration auch mithilfe von PowerShell durchführen.
 
 Weitere Informationen zum Konvertieren von benutzerdefinierten Vorlagen in Bezeichnungen zum unkomplizierten Hinzufügen externer Benutzer finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
-
-Weitere Informationen zum Konvertieren von benutzerdefinierten Vorlagen in Bezeichnungen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Welche Art von Gruppen kann ich mit Azure RMS verwenden?
 Für die meisten Szenarios können Sie alle Gruppentypen in Azure AD verwenden, die über eine E-Mail-Adresse verfügen. Diese Faustregel gilt immer dann, wenn Sie Nutzungsrechte zuweisen, es aber einige Ausnahmen beim Verwalten des Azure Rights Management-Diensts gibt. Weitere Informationen finden Sie unter [Azure Information Protection-Anforderungen für Gruppenkonten](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -178,15 +188,13 @@ Verwenden Sie die [Administratorfunktion](../deploy-use/configure-super-users.md
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Wenn ich die Sperrung in der Website zur Dokumentnachverfolgung teste, erhalte ich eine Meldung, die angibt, dass Personen für bis zu 30 Tage auf das Dokument zugreifen können. Kann ich diesen Zeitraum konfigurieren?
 
-Ja. Diese Meldung gibt die Nutzungslizenz für diese bestimmte Datei wieder. Eine Nutzungslizenz ist ein pro-Dokument-Zertifikat, das einem Benutzer gewährt wird, der eine geschützte Datei- oder E-Mail-Nachricht öffnet. Dieses Zertifikat enthält Benutzerrechte für die Datei oder E-Mail-Nachricht und den Verschlüsselungsschlüssel, der zum Verschlüsseln des Inhalts verwendet wurde, und zusätzliche Zugriffseinschränkungen, die in der Richtlinie für das Dokument definiert wurden. Wenn die Gültigkeitsdauer der Nutzungslizenz abgelaufen ist, und ein Benutzer versucht, die Datei oder die E-Mail zu öffnen, müssen deren Benutzeranmeldeinformationen neu an den Azure Rights Management-Dienst übermittelt werden. 
+Ja. Diese Meldung gibt die [Nutzungslizenz](../deploy-use/configure-usage-rights.md#rights-management-use-license) für diese bestimmte Datei wieder. 
 
 Wenn Sie eine Datei widerrufen, kann diese Aktion nur erzwungen werden, wenn der Benutzer sich beim Azure Rights Management-Dienst authentifiziert. Wenn eine Datei über eine gültige Nutzungslizenz von 30 Tagen verfügt, und der Benutzer das Dokument bereits geöffnet hat, erhält dieser Benutzer weiterhin Zugriff auf das Dokument, solange die Nutzungslizenz gültig ist. Wenn die Nutzungslizenz ausläuft, muss sich der Benutzer erneut authentifizieren. Zu diesem Zeitpunkt wird der Zugriff für den Benutzer verweigert, da das Dokument nun gesperrt ist.
 
 Der Benutzer, der das Dokument geschützt hat, der [Rights Management-Aussteller](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) wird von diesem Widerruf ausgeschlossen und kann immer auf ihre Dokumente zugreifen. 
 
-Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für einen Mandanten 30 Tage, und Sie können diesen Wert mithilfe des PowerShell-Cmdlets **Set-AadrmMaxUseLicenseValidityTime** konfigurieren. Diese Einstellung kann durch eine restriktivere Einstellung in einer Vorlage überschrieben werden. 
-
-Weitere Informationen und Beispiele für die Funktionsweise der Nutzungslizenz finden Sie in der ausführlichen Beschreibung für [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime).
+Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandanten beträgt 30 Tage. Diese Einstellung kann nicht von einer restriktiveren Einstellung in einer Bezeichnung oder Vorlage überschrieben werden. Weitere Informationen zur Nutzungslizenz und deren Konfiguration finden Sie in der Dokumentation [Rights Management-Nutzungslizenz](../deploy-use/configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Kann Rights Management Bildschirmaufnahmen verhindern?
 Rights Management kann durch Verweigerung des [Nutzungsrechts](../deploy-use/configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows Phone) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. Auf iOS- und Mac-Geräten ist es aber für keine App zulässig, Bildschirmaufnahmen zu verhindern, und Browser (z. B. bei Verwendung mit Outlook Web App und Office Online) können ebenfalls keine Bildschirmaufnahmen verhindern.

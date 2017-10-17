@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 1564f6dc0a21017151254b1ae1fab1586761e766
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 1cbbad16590bde0fa6278764fe9351b1a4e0b996
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -88,6 +88,8 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 - Download des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
+- Download des anpassbaren Benutzerhandbuchs: [Azure Information Protection End User Adoption Guide (Benutzerhandbuch für die Einführung in Azure Information Protection)](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+
 - Häufig gestellte Fragen: [Häufig gestellte Fragen zu Azure Information Protection](../get-started/faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
@@ -102,6 +104,8 @@ Sie können die Sitzungen [suchen und finden](https://myignite.microsoft.com/vid
 - [Accelerate Azure information protection deployment and adoption (Beschleunigen der Azure Information Protection-Bereitstellung und Einführung)](https://myignite.microsoft.com/videos/53454)
 
 - [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy (Erkunden, was es Neues zu Azure Information Protection gibt sowie Informationen zur Roadmap und Strategie)](https://myignite.microsoft.com/videos/53453)
+
+- [Encryption key management strategies for compliance (Verwaltungsstrategien für die Konformität von Verschlüsselungsschlüsseln)](https://myignite.microsoft.com/videos/53455)
 
 - [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities (Schützen und Steuern Ihrer vertraulichen E-Mails mit den neuen Funktionen der Office 365-Nachrichtenverschlüsselung)](https://myignite.microsoft.com/videos/53230)
 

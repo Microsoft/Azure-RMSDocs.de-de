@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
-ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
+ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -48,11 +48,35 @@ Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie
 >[!IMPORTANT]
 > Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.
 
-## <a name="step-11-remove-onboarding-controls"></a>Schritt 11: Entfernen von Onboarding-Steuerelementen
+## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>Schritt 11: Erneutes Konfigurieren von Clients für mobile Geräte und Mac-Computer und Entfernen von Onboarding-Steuerelementen
 
-Wenn alle vorhandenen Clients zu Azure Information Protection migriert wurden, gibt es keinen Grund, weiterhin Onboarding-Steuerelemente zu verwenden und die **AIPMigrated**-Gruppe beizubehalten, die Sie für den Migrationsprozess erstellt haben. 
+Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx) erstellt haben.
 
-Entfernen Sie zuerst die Onboarding-Steuerelemente, dann können Sie die **AIPMigrated**-Gruppe und alle Aufgaben für die Softwarebereitstellung entfernen, die Sie zur Bereitstellung der Umleitungen erstellt haben.
+Wenn die DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese Clients den Azure Rights Management-Dienst automatisch. Mac-Computer, die Office Mac ausführen, speichern jedoch die Informationen von AD RMS zwischen. Für diese Computer kann der Vorgang bis zu 30 Tage dauern. 
+
+Suchen Sie im Schlüsselbund nach „adal“, und löschen Sie alle ADAL-Einträge, um Mac-Computer zum sofortigen Ausführen des Ermittlungsprozesses zu zwingen. Führen Sie dann folgende Befehle auf diesen Computern aus:
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+Wenn alle vorhandenen Windows-Computer zu Azure Information Protection migriert wurden, gibt es keinen Grund, weiterhin Onboarding-Steuerelemente zu verwenden und die **AIPMigrated**-Gruppe beizubehalten, die Sie für den Migrationsprozess erstellt haben. 
+
+Entfernen Sie zuerst die Onboarding-Steuerelemente, dann können Sie die Gruppe **AIPMigrated** und alle Methoden für die Softwarebereitstellung entfernen, die Sie zur Bereitstellung der Migrationsskripts erstellt haben.
 
 So entfernen Sie die Onboarding-Steuerelemente:
 
@@ -63,6 +87,8 @@ So entfernen Sie die Onboarding-Steuerelemente:
 2. Führen Sie den folgenden Befehl aus, und geben Sie **Y** zur Bestätigung ein:
 
         Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Beachten Sie, dass dieser Befehl alle Lizenzerzwingungen für den Schutzdienst Azure Rights Management entfernt, sodass alle Computer Dokumente und E-Mails schützen können.
 
 3. Bestätigen Sie, dass Onboarding-Steuerelemente nicht länger festgelegt sind:
 
