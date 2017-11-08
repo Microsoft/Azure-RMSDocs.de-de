@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -124,16 +124,24 @@ Wenn Sie eine E-Mail mit einer Office-Dokumentanlage an einen Benutzer senden, d
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Kann ich externe Benutzer (die nicht zu meinem Unternehmen gehören) zu benutzerdefinierten Vorlagen hinzufügen?
 
-Ja. Wenn Sie eine Vorlage im Azure-Portal in eine Bezeichnung konvertieren, können Sie die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md) konfigurieren, um Benutzern und Gruppen außerhalb Ihrer Organisation Berechtigungen hinzuzufügen. Dies ist sogar für alle Benutzer einer anderen Organisation möglich. Sie können diese Konfiguration auch mithilfe von PowerShell durchführen.
+Ja. Über die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md), die Sie im Azure-Portal konfigurieren können, können Sie Berechtigungen für Benutzer und Gruppen, die nicht Ihrer Organisation angehören, sowie sogar für sämtliche Benutzer einer anderen Organisation hinzufügen. Fügen Sie keine Konten sozialer Identitäten (wie Gmail oder Microsoft) oder anderer Konten außerhalb von Azure AD hinzu, es sei denn, die Vorlage ausschließlich zum Senden von E-Mails mithilfe von [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) verwendet.
 
-Weitere Informationen zum Konvertieren von benutzerdefinierten Vorlagen in Bezeichnungen zum unkomplizierten Hinzufügen externer Benutzer finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Beachten Sie, dass Sie erst ihre benutzerdefinierte Vorlage in eine Bezeichnung konvertieren müssen, wenn Azure Information Protection-Bezeichnungen vorhanden sind, bevor Sie diese Schutzeinstellungen im Azure-Portal konfigurieren können. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
+
+Stattdessen können Sie mithilfe von PowerShell externe Benutzer für benutzerdefinierte Dokumente (und Bezeichnungen) hinzufügen. Für die Konfiguration müssen Sie ein Rechtedefinitionsobjekt zum Aktualisieren Ihrer Vorlage verwenden:
+
+1. Geben Sie die externen E-Mail-Adressen und deren Rechte in einem Rechtedefinitionsobjekt an, indem Sie das Cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) zum Erstellen einer Variablen nutzen.
+
+2. Fügen Sie diese Variable zu dem RightsDefinition-Parameter mit dem Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) hinzu.
+    
+    Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) für das Cmdlet. 
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Welche Art von Gruppen kann ich mit Azure RMS verwenden?
 Für die meisten Szenarios können Sie alle Gruppentypen in Azure AD verwenden, die über eine E-Mail-Adresse verfügen. Diese Faustregel gilt immer dann, wenn Sie Nutzungsrechte zuweisen, es aber einige Ausnahmen beim Verwalten des Azure Rights Management-Diensts gibt. Weitere Informationen finden Sie unter [Azure Information Protection-Anforderungen für Gruppenkonten](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Wie sende ich eine geschützte E-Mail an ein Gmail- oder Hotmail-Konto?
 
-Wenn Sie Exchange Online und den Azure Rights Management-Dienst verwenden, senden Sie die E-Mail einfach als geschützte Nachricht. Beispielsweise können Sie in Outlook im Web in der Befehlsleiste auf die neue Schaltfläche **Schützen** klicken, die Outlook-Option „Nicht weiterleiten“ verwenden oder eine Azure Information Protection-Bezeichnung auswählen, mit der Schutz von Azure Rights Management angewendet wird. Schutz kann alternativ auch durch Exchange Online-Datentransportregeln angewendet werden.
+Wenn Sie Exchange Online und den Azure Rights Management-Dienst verwenden, senden Sie die E-Mail einfach als geschützte Nachricht an den Benutzer. Beispielsweise können Sie die neue Schaltfläche **Schützen** in der Befehlsleiste in Outlook im Web auswählen und die Schaltfläche bzw. Menüoption **Nicht weiterleiten** in Outlook verwenden. Stattdessen können Sie auch eine Azure Information Protection-Bezeichnung auswählen, die automatisch „Nicht weiterleiten“ anwendet und die E-Mail klassifiziert. 
 
 Dem Empfänger wird eine Option angezeigt, mit der dieser sich bei seinem Gmail-, Yahoo- oder Microsoft-Konto anmelden und die geschützte E-Mail lesen kann. Alternativ können Empfänger die Option zur Anforderung einer einmaligen Kennung verwenden, mit der sie die E-Mail in einem Browser lesen können.
 

@@ -4,17 +4,17 @@ description: "Erfahren Sie, wie die Standardrichtlinie für Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 712d273e735d2c9fc791a1f15c3f8dc9e917a1c3
-ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
+ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -44,7 +44,7 @@ Wenn diese Unterbezeichnungen nicht automatisch für den Schutz konfiguriert wer
 
 Wenn Schutz auf die Unterbezeichnung **Alle Mitarbeiter** angewendet wird, wird der Schutz mithilfe der Standardvorlagen konfiguriert, die automatisch im Azure-Portal in Bezeichnungen konvertiert werden. Weitere Informationen zu diesen Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).
 
-Ab dem 30. August 2017 enthält diese Version der Standardrichtlinie übersetzte Versionen der Bezeichnungsnamen und -beschreibungen. 
+Ab dem 30. August 2017 enthält diese Version der Standardrichtlinie mehrsprachige Versionen der Bezeichnungsnamen und -beschreibungen. 
 
 #### <a name="more-information-about-the-recipients-only-sub-label"></a>Weitere Informationen zu der Unterbezeichnung „Nur Empfänger“
 
@@ -68,10 +68,10 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 |Label|QuickInfo|Einstellungen|
 |-------------------------------|---------------------------|-----------------|
-|Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure RMS [[1]](#footnote-1)|
+|Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[1]](#footnote-1)|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Vertraulich\Nur Empfänger|Vertrauliche Daten ,die den Schutz benötigen und die nur von Empfängern angezeigt werden können.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Festlegen von benutzerdefinierten Berechtigungen (Vorschau) bzw. Anwenden von „Nicht weiterleiten“ in Outlook|
-|Streng vertraulich\Alle Mitarbeiter|Streng vertrauliche Daten, deren Inhalte von allen Mitarbeitern angezeigt, bearbeitet und beantwortet werden dürfen. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als streng vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure RMS [[2]](#footnote-2)|
+|Streng vertraulich\Alle Mitarbeiter|Streng vertrauliche Daten, deren Inhalte von allen Mitarbeitern angezeigt, bearbeitet und beantwortet werden dürfen. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als streng vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[2]](#footnote-2)|
 |Streng vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als streng vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Streng Vertraulich\Nur Empfänger|Streng vertrauliche Daten,die den Schutz benötigen und die nur von Empfängern angezeigt werden können.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (E-Mail)<br /><br />Als streng vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Festlegen von benutzerdefinierten Berechtigungen (Vorschau) bzw. Anwenden von „Nicht weiterleiten“ in Outlook|
 
@@ -103,7 +103,7 @@ Die Berechtigungen für den Schutz stimmen mit denen in der [Standardvorlage](co
 
 ## <a name="default-policy-before-july-31-2017"></a>Standardrichtlinie vor dem 31. Juli 2017
 
-Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die Schutz erfordern, sowie auf Nachverfolgung und Widerruf von Daten. Die Richtlinie konfiguriert diesen Schutz nicht für diese Bezeichnungen, sodass Sie zur Erfüllung dieser Beschreibung zusätzliche Schritte ausführen müssen. Konfigurieren Sie z.B. die Bezeichnung, um Azure RMS-Schutz anzuwenden, oder verwenden Sie eine Lösung zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Bevor Sie ein Dokument mithilfe der Website zur Dokumentkontrolle verfolgen und widerrufen können, muss das Dokument von Azure RMS geschützt und von der Person nachverfolgt werden, die das Dokument geschützt hat. 
+Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die Schutz erfordern, sowie auf Nachverfolgung und Widerruf von Daten. Die Richtlinie konfiguriert diesen Schutz nicht für diese Bezeichnungen, sodass Sie zur Erfüllung dieser Beschreibung zusätzliche Schritte ausführen müssen. Konfigurieren Sie z.B. die Bezeichnung, um den Schutz anzuwenden, oder verwenden Sie eine Lösung zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Bevor Sie ein Dokument mithilfe der Website zur Dokumentkontrolle verfolgen und widerrufen können, muss das Dokument von dem Dienst Azure Rights Management geschützt und von der Person nachverfolgt werden, die das Dokument geschützt hat. 
 
 
 ### <a name="labels"></a>Bezeichnungen

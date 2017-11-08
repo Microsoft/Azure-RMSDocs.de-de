@@ -4,28 +4,28 @@ description: "Entwickler können mithilfe von Azure Information Protection Datei
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea13c3dbf37dd22a6e93786390bd6be4da7a6959
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 
-Dieses Handbuch ist auf Tools zum Erweitern und Integrieren des Rechteverwaltungsdiensts von Azure Information Protection ausgerichtet. Mithilfe dieses Handbuchs soll es Entwicklern, die das Rechteverwaltungssystem nutzen möchten, ermöglicht werden, verschiedene Arten von Anwendungen für eine Reihe unterstützter Plattformen zu erstellen.
+Dieses Handbuch ist auf Tools zum Erweitern und Integrieren des Rechteverwaltungsdiensts von Azure Information Protection ausgerichtet.
 
->Das aktuelle Azure Information Protection-SDK verfügt über die Komponente zur Rechteverwaltung und die Klassifizierung und Bezeichnung befinden sich in der Entwicklung.
+>Das derzeitige Azure Information Protection SDK verfügt über die Komponente zur Rechteverwaltung. Eine Klassifizierung und eine Bezeichnungskomponente werden entwickelt.
 
 ## <a name="service-applications"></a>Dienstanwendungen
 
-Dienstanwendungen bieten Funktionen zum Schutz von Informationen beim Exportieren aus einem Enterprise Content Management-System, aus einer Geschäftsanwendung oder einer cloudbasierten Geschäftslösung. DLP (Data Loss Prevention) und CAS (Cloud Application Security) sind Beispiele für Dienstanwendungen. Unser SDK zum Entwickeln von Dienstanwendungen steht über zwei Programmiermodelle zur Verfügung.
+Dienstanwendungen bieten Funktionen zum Schutz von Informationen beim Exportieren aus einem Enterprise Content Management-System, einer Geschäftsanwendung oder einer cloudbasierten Geschäftslösung. DLP (Data Loss Prevention) und CAS (Cloud Application Security) sind Beispiele für Dienstanwendungen. Unser SDK zum Entwickeln von Dienstanwendungen steht über zwei Programmiermodelle zur Verfügung.
 
 - [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
 - [C#-verwaltete API](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
@@ -39,15 +39,12 @@ Dienstanwendungen bieten Funktionen zum Schutz von Informationen beim Exportiere
 
 ## <a name="powershell-guides"></a>PowerShell-Anleitungen
 
-Diese Skripts, die im Allgemeinen von Administratoren für Azure Rights Management verwendet werden, sind beim Entwickeln und Testen Ihrer Dienstanwendungen hilfreich.
-
-- Mit [Azure Rights Management-Cmdlets](https://msdn.microsoft.com/library/azure/dn629398.aspx) können Sie Azure RMS über die Befehlszeile verwalten. Auf diese Weise wird einerseits Automatisierung ermöglicht, andererseits werden aber auch zuverlässige und wiederholte Prozesse unterstützt, um den Verwaltungsaufwand zu verringern. Außerdem erfordern einige erweiterte Azure RMS-Konfigurationen und -Vorgänge Azure PowerShell.
-- [RMS Protection-Cmdlets](https://msdn.microsoft.com/library/azure/mt433195.aspx) können mit dem Azure Rights Management-Datenschutz (Azure RMS) in Azure Information Protection oder mit Active Directory Rights Management Services (AD RMS) verwendet werden und andere PowerShell-Module für diese Rights Management-Bereitstellungen ergänzen. Mit diesen RMS Protection-Cmdlets können Sie Dateien beliebiger Typen in einem Massenvorgang schützen bzw. deren Schutz aufheben.
+PowerShell-Cmdlets, die von Administratoren für Azure Rights Management verwendet werden, sind außerdem beim Entwickeln und Testen Ihrer Dienstanwendungen hilfreich. Weitere Informationen finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](/information-protection/rms-client/client-admin-guide-powershell).
 
 ## <a name="user-applications"></a>Benutzeranwendungen
 
 Benutzeranwendungen können mit dem RMS SDK 2.1 oder dem RMS SDK 4.2 erstellt werden.
-Die Version 4.2 basiert auf dem REST-Client mit betriebssystemspezifischen APIs für eine Reihe beliebter Betriebssysteme wie iOS/OSX, Android, Linux und Windows. Version 2.1 dient zum Erstellen systemeigener Windows-basierter Anwendungen.
+Die Version 4.2 basiert auf dem REST-Client mit betriebssystemspezifischen APIs für eine Reihe beliebter Betriebssysteme wie iOS/OSX, Android, Linux und Windows. Version 2.1 dient zum Erstellen nativer Windows-basierter Anwendungen.
 
 ### <a name="user-application-development-guides"></a>Anleitungen zur Entwicklung von Benutzeranwendungen
 
@@ -123,6 +120,17 @@ Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
 - [Unterstützte Plattformen](supported-platforms.md)
 - [Grundlegendes zu Nutzungseinschränkungen](understanding-usage-restrictions.md)
 
+### <a name="message-protocol-and-file-formats"></a>Nachrichtenprotokoll und Dateiformate
+
+- [Client-an-Server-Protokolle](https://msdn.microsoft.com/library/cc243191.aspx)
+- [E-Mail-Objektprotokoll mit verwalteten Rechten](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
+- [Format für die Verbunddatei der Binärdatei](https://msdn.microsoft.com/library/dd942138.aspx)
+
+#### <a name="rights-managed-email-message"></a>E-Mail-Nachricht mit verwalteten Rechten
+
+- [.MSG Dateiformat (Teil 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [.MSG Dateiformat (Teil 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
+
 ### <a name="api-reference"></a>API-Referenz
 
 - [Windows-API-Referenz](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
@@ -139,7 +147,7 @@ Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
 
 ### <a name="see-also"></a>Weitere Informationen:
 
-- [Entwicklerterminlogie](terms.md)
+- [Entwicklerterminologie](terms.md)
 - [Terminologie zu Azure Information Protection – ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

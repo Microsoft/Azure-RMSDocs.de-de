@@ -1,6 +1,6 @@
 ---
 title: Neuheiten und Versionshinweise
-description: "Beschreibt wichtige Änderungen und Funktionen in dieser neuen Version des RMS SDK."
+description: "Beschreibt wichtige Änderungen und Funktionen in dieser Version und in vorherigen Versionen."
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
@@ -12,11 +12,11 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: df78d1f1740128c79c944a6b5d33353141933d78
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 6587685e3bd40d696ce24a9aa0ed80d1f6f43f55
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
