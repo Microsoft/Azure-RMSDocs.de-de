@@ -1,10 +1,10 @@
 ---
-title: "Klassifizieren und Schützen mithilfe von Azure Informationen Protection"
+title: "Klassifizieren und Schützen von Dateien und E-Mails mithilfe von Azure Information Protection"
 description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: bbd2d81149dd860d7707b6eee83dacce9c13dd54
+ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 11/03/2017
 ---
-# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
+# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+
+> [!NOTE]
+> Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren und schützen. Wenn Sie Ihre Dokumente und E-Mails nur klassifizieren und nicht schützen müssen, lesen Sie die [Anleitung zum Klassifizieren](client-classify-protect.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.
 
 Die einfachste Möglichkeit zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails bietet sich, wenn Sie sie in Ihren Office-Desktopanwendungen erstellen oder bearbeiten: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
@@ -163,5 +166,8 @@ Die Klassifizierung und der Schutz, die Sie angegeben haben, bleiben der Datei z
 Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protection-Benutzerhandbuch:
 
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
+Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

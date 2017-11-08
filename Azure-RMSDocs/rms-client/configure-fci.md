@@ -4,7 +4,7 @@ description: "Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e67bc3d82c1269343cd4e64f8a608a2a86d381ef
-ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
+ms.openlocfilehash: cd580b14e35697d00a3c42abd51d2afc94d6959d
+ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2017
+ms.lasthandoff: 10/21/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -44,7 +44,7 @@ Voraussetzungen für diese Anweisungen:
     
     - Sie haben das PowerShell-Modul „AzureInformationProtection“ installiert und die erforderlichen Komponenten für dieses Modul konfiguriert, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
     
-    Das PowerShell-Modul „AzureInformationProtection“ ist im Azure Information Protection-Client inbegriffen. Weitere Installationsanweisungen finden Sie im Azure Information Protection-Administratorhandbuch unter [Installieren des Azure Information Protection-Clients für Benutzer](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users). Bei Bedarf können Sie das PowerShell-Modul mithilfe des Parameters `PowerShellOnly=true` installieren.
+    Das PowerShell-Modul „AzureInformationProtection“ ist im Azure Information Protection-Client inbegriffen. Eine Installationsanleitung finden Sie im Azure Information Protection-Administratorhandbuch unter [Install the Azure Information Protection client for users (Installieren des Azure Information Protection-Clients für Benutzer)](client-admin-guide-install.md). Bei Bedarf können Sie das PowerShell-Modul mithilfe des Parameters `PowerShellOnly=true` installieren.
     
     Zu den [Voraussetzungen für die Verwendung dieses PowerShell-Moduls](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) gehören das Aktivieren des Azure Rights Management-Diensts, das Erstellen eines Dienstprinzipals und das Bearbeiten der Registrierung, sofern sich Ihr Mandant außerhalb von Nordamerika befindet. Bevor Sie mit der Durchführung der Anweisungen in diesem Artikel beginnen, stellen Sie sicher, dass Sie Werte für **BposTenantId**, **AppPrincipalId** und **Symmetrischer Schlüssel** festgelegt haben, wie in diesen Voraussetzungen beschrieben wird. 
     

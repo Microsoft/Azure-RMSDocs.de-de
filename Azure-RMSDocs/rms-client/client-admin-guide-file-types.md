@@ -4,7 +4,7 @@ description: "Technische Details zu den unterstützten Dateitypen, Dateierweiter
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="file-types-supported-by-the-azure-information-protection-client"></a>Vom Azure Information Protection-Client unterstützte Dateitypen
+# <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -88,7 +88,11 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
     |Excel 2007 (nur von AD RMS unterstützt)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-Bit: 2 GB<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt|
     |PowerPoint 2007 (nur von AD RMS unterstützt)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
 
-- **Bei allen anderen Dateien**: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
+- **Bei allen anderen Dateien**: 
+    
+    - So schützen Sie diese Dateien: Die Dateigröße wird nur durch den verfügbaren Speicherplatz und den Arbeitsspeicher beschränkt.
+    
+    - So öffnen Sie diese Dateien im Azure Information Protection-Viewer: Die maximale Dateigröße, die für textbasierte Dateien (.ptxt und .pxml) unterstützt wird, ist 20 MB. Bei bildbasierten und PDF-Dateien wird die maximale Dateigröße nur durch den Arbeitsspeicher beschränkt.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 
@@ -202,6 +206,13 @@ Sie können das Problem mit dem Schutz dieser Dateien umgehen, indem Sie diese g
 
 Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren.
 
+### <a name="limitations-for-container-files-such-as-zip-files"></a>Einschränkungen für Containerdateien, z.B. ZIP-Dateien
+
+Containerdateien sind Dateien, die andere Dateien enthalten. Ein typisches Beispiel sind ZIP-Dateien, die komprimierte Dateien enthalten. Weitere Beispiele sind RAR-, 7z- und MSG-Dateien.
+
+Sie können diese Containerdateien klassifizieren und schützen, jedoch werden die Klassifizierung und der Schutz nicht auf jede Datei im Container angewendet.
+
+Bei einer Containerdatei, die klassifizierte und geschützte Dateien enthält, müssen Sie zuerst die Dateien extrahieren, um die Einstellungen für die Klassifizierung oder den Schutz zu ändern. Es ist jedoch auch möglich, den Schutz für alle Dateien in unterstützten Containerdateien mit dem Cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) zu entfernen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protection-Client unterstützt werden, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:
