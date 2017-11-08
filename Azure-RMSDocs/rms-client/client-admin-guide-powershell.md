@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c0fc9052199486653cb0d9ac3865af4e2174d30f
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="using-powershell-with-the-azure-information-protection-client"></a>Verwenden von PowerShell mit dem Azure Information Protection-Client
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -36,7 +36,9 @@ Das Modul „AzureInformationProtection“ umfasst alle Rights Management-Cmdlet
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 
-Eine Übersicht über alle Cmdlets und die entsprechende Hilfe finden Sie unter [AzureInformationProtection-Modul](/powershell/module/azureinformationprotection). Geben Sie in einer PowerShell-Sitzung `Get-Help <cmdlet name> -online` ein, um die neueste Hilfe für unterstützte Sprachen außer Englisch anzuzeigen.  
+Die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) (derzeit nur in der Vorschauversion verfügbar) verwendet außerdem Cmdlets, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
+
+Eine Übersicht über alle Cmdlets und die entsprechende Hilfe finden Sie unter [AzureInformationProtection-Modul](/powershell/module/azureinformationprotection). Geben Sie in einer PowerShell-Sitzung `Get-Help <cmdlet name> -online` ein, um die neueste Hilfe aufzurufen.  
 
 Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Protection** und fügt diesen Ordner der Systemvariablen **PSModulePath** hinzu. Die DLL-Datei für dieses Modul lautet **AIP.dll**.
 
