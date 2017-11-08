@@ -5,7 +5,7 @@ keywords: "So zeigen Sie E-Mails oder Dateien mit der Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,19 +13,26 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 351074937c45866f882d51b19e3cd3e4792ae649
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: db44f73c20d7440d403b1d3a7a7ea0201f8a7abb
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
 *Gilt für: Active Directory Rights Management Services, Azure Information Protection*
 
-Die meisten Benutzer werden in der Regel automatisch die Azure Information Protection-App verwenden, wenn sie eine geschützte E-Mail oder Datei öffnen müssen. Wenn Sie jedoch ein Administrator sind, der die App für die Benutzer testen oder einfach nur vor der Verwendung ausprobieren möchte, können Sie die folgenden Anweisungen verwenden.
+Bevor Sie den Anweisungen auf dieser Seite folgen, stellen Sie sicher, dass Sie die [Häufig gestellten Fragen für die Azure Information Protection-App für iOS und Android gelesen haben](mobile-app-faq.md). Auf dieser Seite wird die Funktion der App beschrieben und angegeben, welche Geräte unterstützt werden. Außerdem werden grundlegende Informationen zur Verwendung der App zur Verfügung gestellt.
 
-Sie müssen auf Ihrem mobilen Gerät eine Datei eines Formats öffnen, das die App unterstützt, um den Viewer ausprobieren zu können. Beispiel:
+Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App, wenn sie eine geschützte E-Mail oder Datei öffnen müssen. Wenn Sie jedoch ein Administrator sind, der die App für die Benutzer testen oder einfach nur vor der Verwendung ausprobieren möchte, können Sie die folgenden Anweisungen verwenden.
+
+> [!NOTE]
+> Öffnen Sie nicht zuerst die App, und wählen Sie anschließend Dokumente und E-Mails aus, die angezeigt werden sollen. Öffnen Sie stattdessen Ihr Dokument oder die E-Mail, und wählen Sie dann die App aus, um das Dokument oder die E-Mail anzusehen.
+>
+> Versuchen Sie außerdem erst, sich in der App anzumelden, wenn Sie dazu aufgefordert werden.
+
+Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilgerät aus auf die Dateien, die die App unterstützt, zugreifen. Beispiel:
 
 - **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. 
     
@@ -39,8 +46,8 @@ Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tipp
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie weitere Fragen zu dieser App haben, überprüfen Sie, ob diese in [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](mobile-app-faq.md) behandelt werden. 
+Besuchen Sie unsere [Yammer-Website](https://www.yammer.com/AskIPTeam), wenn Sie Fragen zu dieser App haben, die nicht in den [Häufig gestellten Fragen](mobile-app-faq.md) behandelt werden, oder Feedback geben möchten.
 
-Besuchen Sie für andere Fragen unsere [Yammer-Website](https://www.yammer.com/AskIPTeam), oder [senden Sie eine E-Mail an das Information Protection-Team](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Wenn die App nicht wie beschrieben funktioniert, prüfen Sie die Liste der Ressourcen auf unserer Seite mit [Regeln](../house-rules.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,40 +4,27 @@ description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können S
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: aa41d4f34f0ed43682f9ba426ec18204457980c3
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 1c37f1b05126b8e8d9a5e64f033c503f27a8a1fc
+ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
-Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen: 
+Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 
-- Die automatische Klassifizierung gilt beim Speichern von Dateien in Word, Excel und PowerPoint sowie beim Senden von E-Mails in Outlook. Sie können die automatische Klassifizierung nicht für Dateien verwenden, für die zuvor bereits manuell eine Bezeichnung festgelegt wurde.
- 
-- Die empfohlene Klassifizierung gilt beim Speichern von Dateien in Word, Excel und PowerPoint.
+Beim Konfigurieren dieser Bedingungen können Sie vordefinierte Muster verwenden, z.B. für **Kreditkartennummern** oder **US-Sozialversicherungsnummern (SSN)**. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu den Bedingungen finden Sie im Schritt 5 der [folgenden Vorgehensweise](#to-configure-recommended-or-automatic-classification-for-a-label).
 
-Beim Konfigurieren von Bedingungen können Sie vordefinierte Muster verwenden, z.B. für **Kreditkartennummern** oder **US-Sozialversicherungsnummern (SSN)**. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu den Bedingungen finden Sie im Schritt 5 der [folgenden Vorgehensweise](#to-configure-recommended-or-automatic-classification-for-a-label).
-
-So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten:
-
-1. Die Bezeichnungen werden zur Auswertung basierend auf der jeweiligen Position sortiert, die Sie in der Richtlinie angeben: Die an erster Stelle positionierte Bezeichnung steht an unterster Stelle (geringste Vertraulichkeitsstufe), die an letzter Stelle positionierte Bezeichnung steht an höchster Stelle (höchste Vertraulichkeitsstufe).
-
-2. Die Bezeichnung mit der höchsten Vertraulichkeitsstufe wird angewendet.
- 
-3. Die letzte untergeordnete Bezeichnung wird angewendet.
-
-> [!TIP]
->Um eine bestmögliche Benutzererfahrung und Geschäftskontinuität zu gewährleisten, wird empfohlen, zunächst nicht die automatische Klassifizierung, sondern die empfohlene Klassifizierung zu verwenden. Bei dieser Konfiguration haben Ihre Benutzer die Möglichkeit, die Bezeichnungs- oder Schutzaktion zu akzeptieren bzw. diese Empfehlungen zu überschreiben, wenn sie nicht für das jeweilige Dokument oder die jeweilige E-Mail-Nachricht geeignet sind.
+Um eine bestmögliche Benutzererfahrung und Geschäftskontinuität zu gewährleisten, wird empfohlen, zunächst nicht die automatische Klassifizierung, sondern die empfohlene Klassifizierung zu verwenden. Bei dieser Konfiguration haben Ihre Benutzer die Möglichkeit, die Klassifizierung und zugeordnete Schutzaktionen zu akzeptieren bzw. diese Empfehlungen zu überschreiben, wenn sie nicht für das jeweilige Dokument oder die jeweilige E-Mail-Nachricht geeignet sind.
 
 Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingung, um eine Bezeichnung als empfohlene Aktion anzuwenden (einschließlich eines benutzerdefinierten Richtlinientipps):
 
@@ -45,10 +32,54 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt.
 
+> [!IMPORTANT]
+>Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.
+>
+>Wenn eine Bezeichnung für die automatische Klassifizierung und benutzerdefinierte Berechtigungen konfiguriert ist, wird der Inhalt für die Bedingungen geprüft, und die benutzerdefinierte Berechtigung wird nicht angewendet. Sie können empfohlene Klassifizierungen und benutzerdefinierte Berechtigungen verwenden.
+
+## <a name="how-automatic-or-recommended-labels-are-applied"></a>Anwendung von automatischen oder empfohlenen Bezeichnungen
+
+**Für die allgemein verfügbare Version des Azure Information Protection-Clients:**
+
+- Die automatische Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint sowie beim Senden von E-Mails in Outlook. 
+    
+    Sie können die automatische Klassifizierung nicht für Dokumente und E-Mails verwenden, die zuvor bereits manuell oder automatisch mit einer höheren Klassifizierung benannt wurden. 
+
+- Die empfohlene Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint. Sie können für Outlook keine empfohlene Klassifizierung verwenden.
+    
+    Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
+
+
+**Für die aktuelle Vorschauversion des Azure Information Protection-Clients:**
+
+- Die automatische Klassifizierung ist für Word, Excel, PowerPoint und Outlook geeignet. Die automatische Klassifizierung wird für Dokumente [ständig im Hintergrund](#more-information-about-running-continuously) ausgeführt. Die automatische Klassifizierung in Outlook wird beim Senden von E-Mails ausgeführt. 
+    
+    Sie können die automatische Klassifizierung nicht für Dokumente verwenden, die zuvor bereits manuell oder automatisch mit einer höheren Klassifizierung benannt wurden. Eine Ausnahme gilt nur, wenn Sie den Parameter OverrideLabel für die Azure Information Protection-Überprüfung aktivieren.
+
+- Die empfohlene Klassifizierung wird in Word, Excel und PowerPoint angewendet. Die empfohlene Klassifizierung wird für diese Dokumente [ständig im Hintergrund](#more-information-about-running-continuously) ausgeführt. Sie können für Outlook keine empfohlene Klassifizierung verwenden.
+    
+    Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
+
+#### <a name="more-information-about-running-continuously"></a>Weitere Informationen zum dauerhaften Ausführen
+
+Die aktuelle Vorschauversion des Azure Information Protection-Clients überprüft regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungsregeln. Dieses Verhalten aktiviert die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden. 
+
+Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird. 
+
+### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten
+
+Für die allgemein verfügbare Version des Azure Information Protection-Clients und die aktuelle Vorschauversion des Clients:
+
+1. Die Bezeichnungen werden zur Auswertung basierend auf der jeweiligen Position sortiert, die Sie in der Richtlinie angeben: Die an erster Stelle positionierte Bezeichnung steht an unterster Stelle (geringste Vertraulichkeitsstufe), die an letzter Stelle positionierte Bezeichnung steht an höchster Stelle (höchste Vertraulichkeitsstufe).
+
+2. Die Bezeichnung mit der höchsten Vertraulichkeitsstufe wird angewendet.
+ 
+3. Die letzte untergeordnete Bezeichnung wird angewendet.
+
+
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Konfigurieren der empfohlenen oder der automatischen Klassifizierung für eine Bezeichnung
 
-1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
-    
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich als Sicherheitsadministrator oder globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
@@ -86,8 +117,9 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
+Ziehen Sie in Betracht, die [Azure Information Protection-Überprüfung](deploy-aip-scanner.md) bereitzustellen. Dadurch können Ihre automatischen Klassifizierungsregeln genutzt werden, um Dateien aus Netzwerkfreigaben und lokalen Dateispeichern zu suchen, zu klassifizieren und zu schützen.  
+
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

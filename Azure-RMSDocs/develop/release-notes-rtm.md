@@ -1,11 +1,11 @@
 ---
-title: Versionshinweise | Azure RMS
-description: 
+title: Anmerkungen zu dieser Version
+description: "SDK-Updates durch Revision, und andere Informationen für Entwickler."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,15 +14,20 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 875584683bcf1d35037691f21ac7d78d17806a07
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52733dd7cac356879408e774c79331d705a71ea0
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
-Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen von RMS SDK 2.1.
+Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases von RMS SDK 2.1.
+
+## <a name="october-2017---update"></a>Oktober 2017: Update
+
+- Hinzufügen von zwei neuen APIs zur Initialisierung bzw. zur Aufhebung der Initialisierung von Umgebungen. Weitere Informationen finden Sie unter [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) und [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Visio-Dateitypen werden jetzt unterstützt. Weitere Informationen finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Februar 2016 – SDK-Dokumentationsupdate
 
@@ -37,7 +42,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
  - Installieren des RMS-Client 2.1 ohne Administratorrechte auf dem Computer
  - Zertifizieren Ihrer Anwendung für Windows 10
 
-- **Die Unterstützung für den Microsoft Online Services-Anmeldeassistenten (SIA) mit dem RMS SDK wird entfernt.** Wir werden die Verwendung von SIA noch für sechs Monate unterstützen und danach endet die Zeitunterstützung.
+- **Die Unterstützung für den Microsoft Online Services-Anmeldeassistenten (SIA) mit dem RMS SDK wird entfernt.** Die Verwendung von SIA wird noch für sechs Monate unterstützt. Danach endet die Zeitunterstützung.
 
 
 ## <a name="december-2015-update"></a>Dezember 2015-Update
@@ -52,7 +57,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 
 ## <a name="may-2015-update"></a>Mai 2015-Update
 
--   **Dienst-Apps und cloudbasiertes RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) benötigt drei Angaben: den symmetrischen Schlüssel, **AppPrincipalId** und **TenantBposId**. Dieses Thema wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Dienst-Apps und cloudbasiertes RMS** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) benötigt drei Angaben: den symmetrischen Schlüssel, **AppPrincipalId** und **TenantBposId**. Dieser Artikel wurde aktualisiert, um Hilfestellung für die Verarbeitung dieser Informationen zu bieten. Lesen Sie zu diesem Update die überarbeitete Version von [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>April 2015-Update
 
@@ -68,7 +73,7 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 ## <a name="january-2015-update"></a>Januar 2015-Update
 
 -   **Vergrößerung der unterstützten geschützten Datei (PFILE)**: Jetzt werden PFILE-Dateien über 1 GB unterstützt. Weitere Informationen zu PFILE-Dateien finden Sie unter [Unterstützte Dateiformate](supported-file-formats.md).
--   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **INFO** protokolliert.
+-   **Verbesserte Protokollierung für eine bessere Diagnose**: Die Protokollierungsstufen zeigen **FEHLER** oder **WARNUNG** für Nachrichten, die geprüft werden müssen. Alle anderen Nachrichten, einschließlich Ausnahmen, die weiterhin angezeigt werden, werden als **Info** protokolliert.
 
     Auf diese Weise bleiben Ihre Details erhalten. Jetzt werden nur die wichtigsten Nachrichten als WARNUNG angezeigt.
 
@@ -82,14 +87,14 @@ Dieses Thema enthält wichtige Informationen zu dieser und früheren Versionen v
 
 ## <a name="july-2014-update"></a>Juli 2014-Update
 
-Die Datei-API-Komponenten von SDK wurde erweitert und bieten folgende Funktionen:
+Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 -   Identifiziert die zu verwendende Schutzvorrichtung.
 -   Bietet RMS-Schutz auf der Detailebene einer Datei.
 
     In dieser Version hinzugefügte Funktionen:
 
-    **Hinweis** – Weitere, hier nicht aufgeführte unterstützende Datentypen und -strukturen wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Themen, die für diese Version aktualisiert wurden, sind als **vorläufig** markiert und können geändert werden.
+    **Hinweis** – Weitere, hier nicht aufgeführte unterstützende Datentypen und -strukturen wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)

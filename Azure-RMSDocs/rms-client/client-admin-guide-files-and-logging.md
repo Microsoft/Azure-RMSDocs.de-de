@@ -4,7 +4,7 @@ description: "Informationen zu den Clientdateien und zur Verwendungsprotokollier
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
 >*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -76,9 +76,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-**Anwendungen
     
     - System (zum Anmelden und Herunterladen der Richtlinie)
     
-    - DefaultAutomatic
+    - Standard
         
-        Diese **DefaultAutomatic**-Quellaktion ist nur für den Vorschauclient gedacht und bezieht sich auf die Bezeichnung, die durch die Verwendung von **Standardbezeichnung auswählen** in der Azure Information Protection-Richtlinie festgelegt wird.
+        Diese Quellaktion **Default** (Standard) ist nur für den Vorschauclient gedacht und bezieht sich auf die Bezeichnung, die durch die Verwendung der Option **Standardbezeichnung auswählen** in der Azure Information Protection-Richtlinie festgelegt wird.
 
     
 - Bezeichnung vor und nach Aktion 
