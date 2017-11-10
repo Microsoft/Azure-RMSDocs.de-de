@@ -4,19 +4,20 @@ description: "Aktivierungsanweisungen für den Azure Rights Management-Dienst, w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2017
+ms.date: 11/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
+ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bb1a1c466546582d4c21609ca86ba308d4bd9f9
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: a614e65e4c8e401c9add41d4594d8261eef69d12
+ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Informationen zum Aktivieren von Azure Rights Management über Office 365 Admin Center
 
@@ -32,15 +33,17 @@ Verwenden Sie diese Anweisungen, wenn Sie über Office 365 Admin Center auf den 
     > Hilfe zum Admin Center finden Sie unter [Informationen zu Office 365 Admin Center](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
 
 3. Navigieren Sie zur Seite der **Rechteverwaltung**, oder verwenden Sie die Suchfunktion.
-
+    
     - Navigieren: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Information Protection** > **Verwalten von Microsoft Azure Information Protection-Einstellungen**
-
+    
     - Durchsuchen: Geben Sie in das Suchfeld auf der **Startseite** die Zeichenfolge **rights management** ein, und klicken Sie in den Suchergebnissen zuerst auf **Azure rights management settings** (Microsoft Azure Rights Management-Einstellungen) und anschließend auf **Manage Microsoft Azure Information Protection settings** (Verwalten von Microsoft Azure Information Protection-Einstellungen). 
     
     > [!NOTE]
     >Wenn Sie zu dieser Option navigieren, müssen Sie je nach Anzeige ggf. scrollen, um diese Option anzuzeigen. Wenn sie jedoch auf der Seite nicht angezeigt und in den Suchergebnissen nicht zurückgegeben wird, kann der Grund dafür sein, dass Ihr Diensttarif den Azure Rights Management-Dienst für Azure Information Protection nicht beinhaltet.
     >
-    >Zum Aktivieren des Azure Rights Management-Diensts benötigen Sie entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie Hilfe zu diesem Problem benötigen, senden Sie eine E-Mail-Nachricht an das [Askipteam](mailto:askipteam@microsoft.com?subject=I%20cannot%20activate%20RMS).
+    >Zum Aktivieren des Azure Rights Management-Diensts benötigen Sie entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). 
+    
+    Wenn Sie Hilfe bei der Aktivierung des Diensts benötigen oder Fragen zu den Abonnementanforderungen haben, [wenden Sie sich an den Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
 
 4. Klicken Sie auf der Seite **Rights Management** auf **Aktivieren**.
 
