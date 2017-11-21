@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
+ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -454,11 +454,14 @@ Ihre Ausgabe sieht etwa wie folgt aus:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
-Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das Cmdlet **Set-AIPAuthentication** verwenden.
+Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das Cmdlet **Set-AIPAuthentication** verwenden. Auch für die Azure Information Protection-Überprüfung, für die derzeit nur die Vorschauversion erhältlich ist, ist ein nicht interaktiver Vorgang erforderlich.
 
 Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihrem eigenen Benutzerkontext in einer interaktiven PowerShell-Sitzung ausgeführt. Um sie unbeaufsichtigt auszuführen, erstellen Sie für diesen Zweck ein neues Azure AD-Benutzerkonto. Führen Sie dann im Kontext dieses Benutzers das Cmdlet „Set-AIPAuthentication“ zum Festlegen und Speichern von Anmeldeinformationen mithilfe eines Azure AD-Zugriffstokens aus. Dieses Benutzerkonto wird dann authentifiziert und für den Azure Rights Management-Dienst gestartet. Das Konto lädt die Azure Information Protection-Richtlinie und alle Rights Management-Vorlagen herunter, die die Bezeichnungen verwenden.
 
-Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Namen und das Kennwort des Benutzerkontos ein, das Sie für unbeaufsichtigte Benutzer erstellt haben. Danach kann dieses Konto dann die Bezeichnungs-Cmdlets bis zum Ablaufen des Authentifizierungstokens ohne Benutzereingriff ausführen. Wenn das Token abläuft, führen Sie das Cmdlet erneut aus, um ein neues Token abzurufen:
+> [!NOTE]
+> Wenn Sie [bereichsbezogene Richtlinien](../deploy-use/configure-policy-scope.md) verwenden, denken Sie bitte daran, dass Sie dieses Konto möglicherweise zu Ihren bereichsbezogenen Richtlinien hinzufügen müssen.
+
+Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Namen und das Kennwort des Benutzerkontos ein, das Sie für den unbeaufsichtigten Benutzer erstellt haben. Danach kann dieses Konto dann die Bezeichnungs-Cmdlets bis zum Ablaufen des Authentifizierungstokens ohne Benutzereingriff ausführen. Wenn das Token abläuft, führen Sie das Cmdlet erneut aus, um ein neues Token abzurufen:
 
 Wenn Sie dieses Cmdlet ohne Parameter ausführen, erhält das Konto ein Zugriffstoken, das 90 Tage oder bis zum Ablauf des Kennworts gültig ist.  
 
@@ -512,6 +515,13 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
     
     Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit Parametern benötigen.
 
+
+> [!TIP]
+> Wenn Set-AIPAuthentication nicht erfolgreich ausgeführt werden kann und Sie vorhandene Apps verwendet haben, anstatt neue Apps mithilfe der vorherigen Anweisungen zu erstellen, müssen Sie möglicherweise die erforderlichen Berechtigungen für Ihre Apps zurücksetzen. Dies kann ebenfalls unter Umständen erforderlich sein, wenn Sie die Anweisungen zum Erstellen neuer Apps für Set-AIPAuthentication zwar befolgt, aber anschließend die App-Einstellungen geändert haben.
+> 
+> Verwenden Sie die folgenden Konfigurationsschritte, um die erforderlichen Berechtigungen für beide Apps zurückzusetzen: Klicken Sie auf **Alle Einstellungen** > **Erforderliche Berechtigungen** > **Berechtigungen erteilen** und anschließend auf **Ja**, um die Einstellung zu bestätigen.
+> 
+> Stattdessen können Sie auch neue Apps anhand der vorstehenden Anweisungen erstellen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiel: 
