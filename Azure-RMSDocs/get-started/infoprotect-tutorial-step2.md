@@ -4,17 +4,17 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 11/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: cf9c30baab257c9a90c3383eaf6bfcadd0275184
+ms.sourcegitcommit: 63a8186d727bec185903a5201f3b1efc9b4fa8b5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
@@ -33,11 +33,11 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
        > 
        > Wenn die Standardrichtlinie anders aussieht, können Sie dieses Tutorial dennoch verwenden, sollten sich dieser Änderungen aber bei den folgenden Anweisungen und Abbildungen bewusst sein. Wenn Sie die Standardrichtlinie ändern möchten, damit sie der aktuellen Standardrichtlinie entspricht, finden Sie dazu Informationen unter [Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md).
     
-    - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiele: 
+    - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiel: 
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-labelsv2.png)
     
-3. Es werden auch einige Richtlinieneinstellungen angezeigt, die nicht festgelegt sind. Nicht alle Dokumente und E-Mails müssen Bezeichnungen aufweisen, es gibt keine Standardbezeichnung und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
+3. Es werden auch einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-settings.png)
 
@@ -81,7 +81,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Sie können unterschiedliche Berechtigungsstufen auswählen oder einzelne Nutzungsrechte mithilfe der Option **Benutzerdefiniert** angeben. Behalten Sie jedoch für dieses Tutorial die Option **Prüfer** bei. Sie können später mit unterschiedlichen Berechtigungen experimentieren und sich einlesen, wie diese das Verwenden der geschützten Dokumente oder E-Mails durch die angegebenen Benutzer einschränken können.
 
-7. Klicken Sie auf **OK**, um das Blatt **Berechtigungen hinzufügen** zu schließen und Ihnen wird angezeigt, wie das Blatt **Schutz** entsprechend Ihrer Konfiguration aktualisiert wird. Beispiele:
+7. Klicken Sie auf **OK**, um das Blatt **Berechtigungen hinzufügen** zu schließen und Ihnen wird angezeigt, wie das Blatt **Schutz** entsprechend Ihrer Konfiguration aktualisiert wird. Beispiel:
     
      ![Anzeige der Berechtigungskonfigurationen für eine Azure Information Protection-Bezeichnung auf dem Blatt „Schutz“](../media/info-protect-protection-configured.png)
     
@@ -123,7 +123,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Klicken Sie dann auf dem Blatt **Policy: Global** (Richtlinie: Global) erneut auf **Speichern**.
     
-    Ihnen wird nun Ihre neue untergeordnete Bezeichnung angezeigt, die für optische Kennzeichnungen und den Schutz konfiguriert ist. Beispiele:
+    Ihnen wird nun Ihre neue untergeordnete Bezeichnung angezeigt, die für optische Kennzeichnungen und den Schutz konfiguriert ist. Beispiel:
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie konfiguriert](../media/info-protect-policy-configuredv2.png)
     
@@ -139,7 +139,7 @@ Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal en
 
 Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, den Azure Information Protection-Client zu installieren.
 
-|Weitere Informationen zu...|Zusätzliche Informationen|
+|Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Über die Standardrichtlinie und verschiedene Versionen|[Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md)|
 |Informationen zu den Konfigurationsoptionen für die Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md)|
