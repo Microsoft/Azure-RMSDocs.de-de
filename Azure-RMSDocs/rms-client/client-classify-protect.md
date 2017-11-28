@@ -4,7 +4,7 @@ description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
-ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
+ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -41,16 +41,13 @@ Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verw
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
 
-Verwenden Sie die Azure Information Protection-Leiste, und wählen Sie eine der Bezeichnungen aus, die für Sie konfiguriert wurde. 
+Verwenden Sie die Azure Information Protection-Leiste oder die Schaltfläche **Schützen** auf dem Menüband, um eine der Bezeichnungen auszuwählen, die für Sie konfiguriert wurde. 
 
-Die folgende Abbildung zeigt beispielsweise, dass das Dokument noch keine Bezeichnung erhalten hat, da für **Vertraulichkeit** die Option **Nicht festgelegt** angezeigt wird. Um eine Bezeichnung wie „Allgemein“ festzulegen, klicken Sie auf **Allgemein**. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten. 
+Die folgende Abbildung zeigt beispielsweise, dass das Dokument noch keine Bezeichnung erhalten hat, da für **Vertraulichkeit** die Option **Nicht festgelegt** auf der Azure Information Protection-Leiste angezeigt wird. Um eine Bezeichnung wie „Allgemein“ festzulegen, klicken Sie auf **Allgemein**. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten. 
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-bar-not-set-callout.png)
 
 Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn die Bezeichnungen nicht auf der Leiste angezeigt werden, klicken Sie zunächst neben dem aktuellen Bezeichnungswert auf das Symbol **Edit label** (Bezeichnung bearbeiten).
-
-> [!TIP]
-> Sie können auch Bezeichnungen über die Schaltfläche **Schützen** auf der Registerkarte **Datei** auswählen.
 
 Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die folgende Weise angewendet werden:
 
@@ -62,9 +59,17 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:
 
-- Möglicherweise ist der Azure Information Protection-Client nicht [installiert](install-client-app.md) oder der Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt.
+Mögliche Gründe:
+
+- Der Azure Information Protection-Client ist auf Ihrem Computer [nicht installiert](install-client-app.md).
+
+- Der Client ist installiert, jedoch hat Ihr Administrator eine Einstellung vorgenommen, sodass die Leiste nicht angezeigt wird. Wählen Sie stattdessen Bezeichnungen über die Schaltfläche **Schützen** auf der Registerkarte **Datei** im Office-Menüband aus. 
+
+- Ihr Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt.
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>Wenn die erwartete Bezeichnung auf der Leiste nicht angezeigt wird: 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Wird die erwartete Bezeichnung nicht angezeigt? 
+
+Mögliche Gründe:
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
 
@@ -74,11 +79,13 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 ### <a name="set-custom-permissions-for-a-document"></a>Festlegen von benutzerdefinierten Berechtigungen für ein Dokument
 
-Sie können eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat.
+Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat.
 
 1. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen** > **Benutzerdefinierte Berechtigungen**:
 
     ![Option „Benutzerdefinierte Berechtigungen“](../media/custom-permissions-callout.png)
+    
+    Wenn Sie keine **benutzerdefinierten Berechtigungen** auswählen können, erlaubt Ihr Administrator Ihnen die Verwendung dieser Option nicht.
     
     Beachten Sie Folgendes: Die von Ihnen angegebenen benutzerdefinierten Berechtigungen sind keine Ergänzung der vom Administrator für Ihre ausgewählte Bezeichnung definierten Schutzeinstellungen, sondern ersetzen diese.  
 
@@ -135,7 +142,9 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
     
     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Wenn Sie lieber eigene Schutzeinstellungen angeben möchten, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat, wählen Sie **Mit benutzerdefinierten Berechtigungen schützen** aus.
+3. Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat. Wählen Sie zu diesem Zweck die Option **Protect with custom permissions** (Mit benutzerdefinierten Berechtigungen schützen) aus.
+    
+    Wenn Sie **Protect with custom permissions** nicht auswählen können, erlaubt Ihr Administrator Ihnen die Verwendung dieser Option nicht.
     
     Die von Ihnen angegebenen benutzerdefinierten Berechtigungen sind keine Ergänzung der vom Administrator für Ihre ausgewählte Bezeichnung definierten Schutzeinstellungen, sondern ersetzen diese.  
 

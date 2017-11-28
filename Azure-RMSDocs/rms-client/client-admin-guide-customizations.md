@@ -4,7 +4,7 @@ description: "Informationen zum Anpassen des Azure Information Protection-Client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
-ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
+ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -117,46 +117,40 @@ Beim Exportieren der Richtlinie wird von dieser Aktion auch eine gezippte Datei 
 2. Benennen Sie die identifizierte Datei zu **Policy.msip** um, und kopieren Sie sie in den Ordner **%LocalAppData%\Microsoft\MSIP** auf Computern, auf denen der Azure Information Protection-Client installiert ist. 
 
 
-## <a name="hide-the-do-not-forward-button-in-outlook"></a>Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook
+## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ausblenden oder Anzeigen der Schaltfläche „Nicht weiterleiten“ in Outlook
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Die Schaltfläche „Nicht weiterleiten“ dem Outlook-Menüband hinzufügen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen.
 
-Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet. In Office-Menüs wird diese Option nicht ausgeblendet.
+Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet oder angezeigt. Diese Einstellung hat keine Auswirkung auf die Option „Nicht weiterleiten“ der Office-Menüs.
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
 - Schlüssel: **DisableDNF**
 
-- Wert: **TRUE**
+- Wert: **TRUE** zum Ausblenden der Schaltfläche, **FALSE** zum Anzeigen der Schaltfläche
 
-## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Die Optionen für benutzerdefinierte Berechtigungen für Benutzer nicht verfügbar machen
+## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer
 
-> [!IMPORTANT]
-> Sofern Sie nicht die aktuelle Vorschauversion des Clients verwenden, verwenden Sie diese Option nicht, wenn Sie über Bezeichnungen verfügen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Wenn Sie dies tun, wenn die Bezeichnung angewendet ist, werden Benutzer nicht dazu aufgefordert, die benutzerdefinierten Berechtigungen zu konfigurieren. Das führt dazu, dass das Dokument bezeichnet ist, aber nicht über den von Ihnen beabsichtigten Schutz verfügt.
+Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users** (Die benutzerdefinierte Berechtigungsoption für Benutzer verfügbar machen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen. 
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
-
-Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröffentlichen, sind die Optionen für benutzerdefinierte Berechtigungen an den folgenden Speicherorten für Benutzer nicht auswählbar:
-
-- In Office-Anwendungen: Registerkarte **Start** > Gruppe **Schutz** > **Schützen** > **Benutzerdefinierte Berechtigungen**
-
-- In Datei-Explorer: Klicken mit der rechten Maustaste > **Klassifizieren und schützen** > **Benutzerdefinierte Berechtigungen**
-
-Diese Einstellung hat keine Auswirkungen auf benutzerdefinierte Berechtigungen, die Sie über Office-Menüoptionen konfigurieren können. 
+Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröffentlichen, werden die benutzerdefinierten Berechtigungsoptionen für Benutzer verfügbar, woraufhin diese ihre eigenen Schutzeinstellungen auswählen können. Alternativ werden die Optionen nicht verfügbar gemacht, damit Benutzer ihre Schutzeinstellungen nicht wählen können, es sei denn, sie werden dazu aufgefordert.
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
 - Schlüssel: **EnableCustomPermissions**
 
-- Wert: **FALSE**
+- Wert: **TRUE**, um die benutzerdefinierte Berechtigungsoption verfügbar zu machen; **FALSE**, um diese Option abzublenden.
+
+> [!IMPORTANT]
+> Sofern Sie nicht die aktuelle Vorschauversion des Clients verwenden, legen Sie diese Option nicht auf **FALSE** fest, wenn Sie über Bezeichnungen verfügen, für die benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Wenn Sie dies tun, wenn die Bezeichnung angewendet ist, werden Benutzer nicht dazu aufgefordert, die benutzerdefinierten Berechtigungen zu konfigurieren. Das führt dazu, dass das Dokument bezeichnet ist, aber nicht über den von Ihnen beabsichtigten Schutz verfügt.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Verwenden Sie diese nur, wenn die [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Die Information Protection-Leiste in Office-Apps anzeigen) auf **Ein** festgelegt ist.
 
 Wenn Sie diese Einstellung konfigurieren, die Richtlinie für Benutzer veröffentlichen und ein Benutzer die Azure Information Protection-Leiste nicht in seinen Office-Anwendungen anzeigen möchte, bleibt die Leiste ausgeblendet. Dies geschieht, wenn der Benutzer auf der Registerkarte **Start** in der Gruppe **Schutz** unter **Schützen** die Option **Leiste anzeigen** deaktiviert. Diese Einstellung hat keine Auswirkung, wenn der Benutzer die Leiste mithilfe des Symbols **Diese Leiste schließen** schließt.
 
-Obwohl die Azure Information Protection-Leiste ausgeblendet bleibt, können Benutzer weiterhin eine Bezeichnung auf der vorübergehend angezeigten Leiste auswählen, wenn Sie die empfohlene Klassifizierung konfiguriert haben oder ein Dokument oder eine E-Mail-eine Bezeichnung aufweisen muss. Die Einstellung wirkt sich auch nicht auf Bezeichnungen, die Sie oder andere konfigurieren, wie z.B. manuelle oder automatische Klassifizierung, oder das Festlegen einer Standardbezeichnung aus.
+Obwohl die Azure Information Protection-Leiste ausgeblendet bleibt, können Benutzer weiterhin eine Bezeichnung auf der vorübergehend angezeigten Leiste auswählen, wenn Sie die empfohlene Klassifizierung konfiguriert haben oder ein Dokument oder eine E-Mail-eine Bezeichnung aufweisen muss. 
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
@@ -219,6 +213,8 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 - Schlüssel 2: **SyncPropertyState**
 
 - Wert von Schlüssel 2: **OneWay**
+
+Verwenden Sie diesen Schlüssel und die entsprechenden Werte für lediglich eine benutzerdefinierte Eigenschaft.
 
 Es gibt zum Beispiel eine SharePoint-Spalte mit dem Namen **Classification** und den möglichen Werten **Public**, **General** und **Confidential**. Dokumente werden in SharePoint gespeichert, und für sie ist einer dieser Werte für die Klassifizierungseigenschaft festgelegt.
 

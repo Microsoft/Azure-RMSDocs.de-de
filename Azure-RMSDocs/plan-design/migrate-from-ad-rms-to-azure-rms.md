@@ -4,7 +4,7 @@ description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Dire
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b1c7a084aa5d81a0abfd50021b95ae8af32d034
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
+ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -202,11 +202,13 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     Wenn sichergestellt ist, dass alle Windows-Computer den Azure Rights Management-Dienst verwenden und nicht mehr auf die AD RMS-Server zugreifen, können Sie Ihre AD RMS-Bereitstellung außer Betrieb setzen.
 
-- **Schritt 11: Rekonfigurieren von Clients für mobile Geräte und Mac-Computer und Entfernen von Onboarding-Steuerelementen**
+- **Schritt 11: Durchführen von Clientmigrationstasks**
 
     Wenn Sie die [Erweiterungen für mobile Geräte](http://technet.microsoft.com/library/dn673574.aspx) zur Unterstützung mobiler Geräte wie iOS-Telefone und iPads, Android-Telefone und Tablets, Windows Phone und Mac-Computer bereitgestellt haben, müssen Sie die SRV-Einträge im DNS entfernen, mit denen diese Clients zu AD RMS umgeleitet wurden. 
     
     Die Onboarding-Steuerelemente, die Sie während der Vorbereitungsphase konfiguriert haben, werden nicht länger benötigt. Wenn Sie allerdings keine Onboarding-Steuerelemente verwendet haben, weil Sie sich dafür entschieden haben, alles gleichzeitig zu migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie die Anweisungen zum Entfernen von Onboarding-Steuerelementen überspringen.
+    
+    Wenn Office 2010 auf Ihren Windows-Computern ausgeführt wird, überprüfen Sie, ob Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** deaktivieren müssen.
 
 - **Schritt 12: Neuerstellung Ihres Azure Information Protection-Mandantenschlüssels**
 

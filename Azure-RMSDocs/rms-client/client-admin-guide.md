@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 96eb4a9fde5c5664a41ad7f68c550af697e8216f
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -46,7 +46,7 @@ Beispiel:
 
 Der Azure Information Protection-Client umfasst Folgendes:
 
-- Ein Add-In für Office, das die Azure Information Protection-Leiste für Benutzer zum Auswählen der Klassifizierungsbezeichnungen sowie die Schaltfläche **Schützen** im Menüband für weitere Optionen installiert. Für Outlook wurde dem Menüband zusätzlich eine Schaltfläche **Nicht weiterleiten** hinzugefügt.
+- Ein Add-In für Office, das die Azure Information Protection-Leiste für Benutzer zum Auswählen der Klassifizierungsbezeichnungen sowie die Schaltfläche **Schützen** im Menüband für weitere Optionen installiert. Für Outlook ist auf dem Menüband zusätzlich die Schaltfläche **Nicht weiterleiten** verfügbar.
 
 - Kontextmenüoptionen für den Windows-Datei-Explorer für Benutzer, um Klassifizierungsbezeichnungen und den entsprechenden Schutz auf Dateien anzuwenden.
 
@@ -127,7 +127,9 @@ Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die d
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- Die folgenden Registrierungsschlüssel und -einstellungen werden gelöscht. Wenn Sie Einstellungen für einen dieser Registrierungsschlüssel konfiguriert haben, müssen Sie diese nach dem Zurücksetzen des Clients erneut konfigurieren. Sie haben z.B. Einstellungen für die Umleitung zu Ihrem Azure Information Protection-Mandanten konfiguriert, da Sie von AD RMS migrieren und noch ein Dienstverbindungspunkt in Ihrem Netzwerk vorhanden ist:
+- Die folgenden Registrierungsschlüssel und -einstellungen werden gelöscht. Wenn die Einstellungen für einen dieser Registrierungsschlüssel benutzerdefinierte Werte aufweisen, müssen diese nach dem Zurücksetzen des Clients erneut konfiguriert werden. 
+    
+    In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     

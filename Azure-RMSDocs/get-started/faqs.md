@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zu Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 324eb3eb5d749021da93213e807f6316ca784485
-ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
+ms.openlocfilehash: da0ba7876b1098671428e87117bed97c4f464071
+ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -78,6 +78,27 @@ Zusätzliche Informationen:
 Durch Bezeichnungen in Azure Information Protection können Sie eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden. Diese Klassifizierung und der Schutz sind unabhängig davon, wo der Inhalt gespeichert ist und wie dieser verschoben wird. Durch [Bezeichnungen in Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) können Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren, wenn der Inhalt sich in den Office 365-Diensten befindet. 
 
 Aktuell müssen Sie diese Bezeichnungen noch separat anwenden und verwalten, Microsoft arbeitet jedoch an einer umfassenden und einheitlichen Bezeichnungsstrategie für mehrere Dienste, einschließlich Azure Information Protection, Office 365, Microsoft Cloud App Security und Windows Information Protection. Das gleiche Bezeichnungsschema und der gleiche Bezeichnungsspeicher werden auch für Softwareanbieter verfügbar sein. Weitere Informationen finden Sie in der Ignite 2017-Sitzung [Protecting complete data lifecycle using Microsoft information protection capabilities (Schützen des gesamten Datenlebenszyklus mithilfe der Microsoft Information Protection-Funktionen)](https://myignite.microsoft.com/videos/55397).
+
+## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?
+
+Sie konnten für einen gewissen Zeitraum die Windows Server-Dateiklassifizierungsinfrastruktur verwenden, um Dokumente zu klassifizieren und diese dann mithilfe des [Rights Management-Connectors](../deploy-use/deploy-rms-connector.md) (nur Office-Dokumente) oder einem [PowerShell-Skript](../rms-client/configure-fci.md) (alle Dateitypen) zu schützen. 
+
+Dazu können Sie nun die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) verwenden, die sich derzeit in der Vorschau befindet. Die Überprüfung nutzt den Azure Information Protection-Client und Ihre Azure Information Protection-Richtlinie, um Dokumente (alle Dateitypen) zu bezeichnen, sodass diese Dokumente alle klassifiziert und optional auch geschützt werden.
+
+Zwischen den beiden Lösungen bestehen die folgenden wesentlichen Unterschiede:
+
+|Windows Server-Dateiklassifizierungsinfrastruktur|Azure Information Protection-Überprüfung|
+|--------------------------------|-------------------------------------|
+|Unterstützte Datenspeicher: <br /><br />– Lokale Ordner unter Windows Server|Unterstützte Datenspeicher: <br /><br />– Lokale Ordner unter Windows Server<br /><br />– Windows-Dateifreigaben und Network Attached Storage<br /><br />– SharePoint Server 2016 und SharePoint Server 2013|
+|Betriebsmodus: <br /><br />– Echtzeit|Betriebsmodus: <br /><br />– Füllt Datenspeicher automatisch auf. Dieser Zyklus kann einmal oder wiederholt ausgeführt werden|
+
+Derzeit besteht ein Unterschied beim Festlegen des [Rights Management-Besitzers](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für Dateien, die in einem lokalen Ordner oder einer Netzwerkfreigabe geschützt sind. Standardmäßig wird für beide Lösungen der Rights Management-Besitzer für das Konto festgelegt, das die Datei schützt. Sie können diese Einstellung aber auch außer Kraft setzen:
+
+- Für die Windows-Dateiklassifizierungsinfrastruktur: Sie können festlegen, dass alle Dateien einen einzigen Rights Management-Besitzer haben, oder Sie können den Rights Management-Besitzer für jede Datei dynamisch festlegen. Um den Rights Management-Besitzer dynamisch festzulegen, verwenden Sie den Parameter **-OwnerMail [Source File Owner Email]** und seinen Wert. Durch diese Konfiguration wird die E-Mail-Adresse des Benutzers von Active Directory mithilfe des Benutzerkontonamens in der Owner-Eigenschaft der Datei abgerufen.
+
+- Für die Azure Information Protection-Überprüfung: Sie können festlegen, dass alle Dateien einen einzigen Rights Management-Besitzer haben, aber Sie können den Rights Management-Besitzer nicht für jede Datei dynamisch festlegen. Um das Konto festzulegen, geben Sie den optionalen Parameter **-DefaultOwner** für die [Überprüfungskonfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters) an.
+
+Wenn die Überprüfung Dateien auf Websites und in Bibliotheken von SharePoint schützt, wird der Rights Management-Besitzer dynamisch für jede Datei mithilfe des SharePoint-Autorenwerts festgelegt.
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Ich habe gehört, dass bald eine neue Version von Azure Information Protection verfügbar sein wird. Wann wird diese veröffentlicht?
 

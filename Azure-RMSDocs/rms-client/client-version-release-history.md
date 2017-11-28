@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einem Release des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e107d796ebda1b1942e19ede8c794f79defbf64e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -35,7 +35,6 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 ### <a name="release-history"></a>Verlauf der Releases
 
 Im Folgenden wird erläutert, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. 
-
 
 > [!NOTE]
 > Kleinere Korrekturen werden nicht aufgelistet. Wenn also ein Problem mit dem Azure Information Protection-Client auftreten sollte, wird empfohlen, dass Sie zuerst überprüfen, ob dieses Problem mit dem neusten allgemein verfügbaren Release behoben wird. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
@@ -60,17 +59,19 @@ Diese Version umfasst die MSIPC-Version 1.0.3219.0619 des RMS-Clients.
 
 - Unterstützung für Bezeichnungen, für die benutzerdefinierte Aktionen konfiguriert sind. Bei Outlook wendet diese Bezeichnung automatisch die Outlook-Option „Nicht weiterleiten“ an. Bei Word, Excel, PowerPoint und dem Datei-Explorer fordert diese Bezeichnung den Benutzer dazu auf, benutzerdefinierte Berechtigungen anzugeben. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](../deploy-use/configure-policy-protection.md).
 
+- Bezeichnungen unterstützen mehrere Sprachen. Ab dem 30. August 2017 enthält die [Standardrichtlinie](../deploy-use/configure-policy-default.md) Unterstützung für mehrere Sprachen, die den Benutzern in dieser Clientversion angezeigt werden. Unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](../deploy-use/configure-policy-languages.md) finden Sie Informationen darüber, wie Benutzer vor diesem Datum Bezeichnungen aus einer Standardrichtlinie bzw. die von Ihnen konfigurierten Bezeichnungen in ihrer bevorzugten Sprache anzeigen können.
+
 - Bezeichnungen werden zusätzlich zu der Anzeige auf der Information Protection-Leiste über die Schaltfläche **Schützen** auf dem Office-Menüband angezeigt. 
 
 - Nativer Schutz für folgende Visio-Dateitypen: VSDM, VSDX, VSSM, VSSX, VSTM, VSTX
 
 - Unterstützung für erweiterte Clientkonfigurationen, die Sie im Azure-Portal konfigurieren können. Diese Konfigurationen umfassen Folgendes:
     
-    - [Schaltfläche „Nicht weiterleiten“ in Outlook ausblenden](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Die Optionen für benutzerdefinierte Berechtigungen für Benutzer nicht verfügbar machen](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Die Azure Information Protection-Leiste dauerhaft ausblenden](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Die Azure Information Protection-Leiste dauerhaft ausblenden](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Die empfohlene Klassifizierung in Outlook aktivieren](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
@@ -98,7 +99,7 @@ Fixes für eine bessere Benutzererfahrung, die Folgendes umfassen:
 
 - E-Mail-Validierung, wenn Benutzer benutzerdefinierte Berechtigungen angeben. Darüber hinaus können jetzt durch Drücken der EINGABETASTE mehrere E-Mail-Adressen angegeben werden.
 
-- Die übergeordnete Bezeichnung wird nicht angezeigt, wenn ihre untergeordneten Bezeichnungen für den Schutz konfiguriert sind und der Client nicht über eine Edition von Office verfügt, die den Schutz unterstützt. 
+- Die übergeordnete Bezeichnung wird nicht angezeigt, wenn für ihre untergeordneten Bezeichnungen Schutz konfiguriert ist und der Client nicht über eine Edition von Office verfügt, die den Schutz unterstützt. 
 
 ## <a name="version-172100"></a>Version 1.7.210.0
 

@@ -4,7 +4,7 @@ description: Anleitung zum Klassifizieren Ihrer Dokumente und E-Mails
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cb8e7bab70ab6b135b7741a8f7ae6ba82b3585a7
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: aee3ec8673217cf130c4705e750532c7aeefe084
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -53,7 +53,9 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:
 
 - Möglicherweise ist der Azure Information Protection-Client auf Ihrem Computer nicht [installiert](install-client-app.md).
- 
+
+- Der Client ist installiert, jedoch hat Ihr Administrator eine Einstellung vorgenommen, sodass die Leiste nicht angezeigt wird. Wählen Sie stattdessen Bezeichnungen über die Schaltfläche **Schützen** auf der Registerkarte **Datei** im Office-Menüband aus. 
+
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>Wenn die erwartete Bezeichnung auf der Leiste nicht angezeigt wird: 
 
 - Wenn Ihr Administrator kürzlich eine neue Bezeichnung für Sie konfiguriert hat, schließen Sie alle Instanzen der Office-App und öffnen Sie sie anschließend erneut. Durch diese Aktion werden Änderungen an den Bezeichnungen gesucht.
