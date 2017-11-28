@@ -4,7 +4,7 @@ description: "Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd580b14e35697d00a3c42abd51d2afc94d6959d
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: dfa751ef7cd4c8405fa02299576cb57083d63495
+ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -289,5 +289,9 @@ Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es einfach
 Verwenden Sie zum Durchführen dieser Änderung eine der integrierten Klassifizierungseigenschaften (z.B. **personenbezogene Informationen**), oder erstellen Sie eine eigene neue Eigenschaft. Erstellen Sie dann eine neue Regel, die diese Eigenschaft verwendet. Sie können z. B. die **Inhaltsklassifizierung**und die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem Wert **Hoch**auswählen und die Zeichenfolge oder das Ausdrucksmuster konfigurieren, die bzw. das die Datei identifiziert, die für diese Eigenschaft konfiguriert werden soll (z. B. die Zeichenfolge „**Geburtsdatum**“).
 
 Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleiche Skript verwendet, aber möglicherweise mit einer anderen Vorlage, und die Bedingung für die Klassifizierungseigenschaft, die Sie gerade konfiguriert haben, konfigurieren. Wählen Sie beispielsweise anstatt der Bedingung, die wir zuvor konfiguriert haben (**RMS** -Eigenschaft, **Gleich**, **Ja**), die **Daten mit persönlich identifizierbaren Informationen** -Eigenschaft mit dem **Operator** -Wert **Gleich** und dem **Wert** **Hoch**aus.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../get-started/faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

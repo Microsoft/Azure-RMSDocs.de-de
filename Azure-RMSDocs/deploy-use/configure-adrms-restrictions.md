@@ -4,17 +4,17 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -65,7 +65,7 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
 
     Obwohl Sie einen Bezeichner für **Nicht weiterleiten** konfigurieren können, um HYOK oder den Azure Rights Management-Dienst zu verwenden, können Benutzer „Nicht weiterleiten“ auch selbst auswählen. Sie können diese Option auswählen, indem Sie die Schaltfläche **Nicht weiterleiten** auf der Registerkarte **Nachricht** des Office-Menübands oder die Outlook-Menüoptionen verwenden. Die Menüoptionen **Nicht weiterleiten** befinden sich in **Datei** > **Berechtigungen**. Die Schaltfläche **Berechtigungen** befindet sich in der Registerkarte **Optionen** des Menübands. 
     
-    Der Azure Information Protection-Client verwendet immer Azure RMS, wenn ein Benutzer auf die Schaltfläche **Nicht weiterleiten** in Outlook klickt. Wenn Sie dieses Verhalten nicht wünschen, können Sie die Schaltfläche **Nicht weiterleiten** in Outlook ausblenden, indem Sie eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook) konfigurieren. 
+    Der Azure Information Protection-Client verwendet immer Azure RMS, wenn ein Benutzer auf die Schaltfläche **Nicht weiterleiten** in Outlook klickt. Wenn Sie dieses Verhalten unterbinden möchten, können Sie diese Schaltfläche ausblenden, indem Sie die [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Die Schaltfläche „Nicht weiterleiten“ dem Outlook-Menüband hinzufügen) auf **Aus** festlegen. 
     
     Wenn Benutzer auf **Nicht weiterleiten** über eine Outlook-Menüoption klicken, können sie Azure RMS oder AD RMS wählen, wissen aber möglicherweise nicht, welche Option für ihre E-Mail-Nachrichten ausgewählt ist. Wenn AD RMS verwendet wird, obwohl Azure RMS verwendet werden sollte, können externe Personen diese E-Mail-Nachrichten nicht öffnen.
 

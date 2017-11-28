@@ -4,17 +4,17 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf9c30baab257c9a90c3383eaf6bfcadd0275184
-ms.sourcegitcommit: 63a8186d727bec185903a5201f3b1efc9b4fa8b5
+ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/14/2017
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
-1. Klicken Sie im Azure-Portal auf **Globale Richtlinie**, um das Blatt **Policy: Global** (Richtlinie: Global) zu öffnen. Dieses Blatt wird automatisch für nachfolgende Verbindungen mit dem Dienst geöffnet und zeigt die Information Protection-Standardrichtlinie an, die für Ihren Mandanten erstellt wird.
+1. Fahren Sie nach [Schritt 1](infoprotect-tutorial-step1.md) im Azure-Portal fort, und klicken Sie auf **Globale Richtlinie**, um das Blatt **Policy: Global** (Richtlinie: Global) zu öffnen. Dieses Blatt wird automatisch für nachfolgende Verbindungen mit dem Dienst geöffnet und zeigt die Information Protection-Standardrichtlinie an, die für Ihren Mandanten erstellt wird.
 
 2. Nehmen Sie sich ein paar Minuten Zeit, um sich mit den angezeigten Bezeichnungen vertraut zu machen:
     

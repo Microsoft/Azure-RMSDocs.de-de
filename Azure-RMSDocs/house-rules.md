@@ -4,7 +4,7 @@ description: "Umfang und Inhalt von Livefyre-Kommentaren und Randleisten für di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 64f354ed87fbfaccfcc6a102c6d8c2ea88b75b39
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 4040e67a7bae2ee5a208d61134b842762ef4ace1
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Regeln für Kundenkommentare zur Azure Information Protection-Dokumentation
 
@@ -29,7 +29,9 @@ Bevor Sie Ihren Kommentar veröffentlichen, stellen Sie sicher, dass dieser them
  
 Veröffentlichen Sie in den folgenden Fällen keine Livefyre-Kommentare und -Anmerkungen:
  
-- **Technischer Support**. Der Support ist zuständig, wenn z.B. eine Funktion auch nach Prüfen sämtlicher Anforderungen und trotz Befolgen der Dokumentationsanweisungen fehlerhaft ist. Vielleicht haben Sie auch eine Frage zur Lizenzierung. Wenden Sie sich in derartigen Fällen an die üblichen Supportkanäle oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support). Tauschen Sie sich alternativ mit der Community auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection aus.
+- **Fragen zum Abonnement für Ihre Organisation**. Beispielsweise die Frage, ob Ihre vorhandenen Abonnements ein Feature unterstützen, das Sie verwenden möchten, nachdem Sie sichergestellt haben, dass Sie die [Anforderungen für das Abonnement für Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection) erfüllen. Wenden Sie sich diesbezüglich an Ihren Microsoft-Kontomanager oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support).
+
+- **Technischer Support**. Der Support ist zuständig, wenn z.B. eine Funktion auch nach Prüfen sämtlicher Anforderungen und trotz Befolgen der Dokumentationsanweisungen fehlerhaft ist. Sie haben ebenfalls geprüft, dass Sie eine [unterstützte Version](./rms-client/client-version-release-history.md#servicing-information-and-timelines) des Azure Information Protection-Clients verwenden. Wenden Sie sich in derartigen Fällen an die üblichen Supportkanäle oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support). Tauschen Sie sich alternativ mit der Community auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection aus.
 
 - **Roadmapinformationen**. Informationen beispielsweise zur Verfügbarkeit einer neuen Version verfügbar oder zur Planung weiterer Funktionen. Diese Informationen finden Sie im [Enterprise Mobility and Security-Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). Alternativ können Sie auch auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection nachfragen. Darüber hinaus können Sie die [UserVoice-Website](https://msip.uservoice.com) von Azure Information Protection besuchen, wo Sie neue Features anfordern können.
 

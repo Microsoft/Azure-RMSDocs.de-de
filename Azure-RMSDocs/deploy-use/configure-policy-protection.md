@@ -4,17 +4,17 @@ description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -87,9 +87,11 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
     
-    - **Vordefinierte Vorlage auswählen**: Zum Verwenden einer der Standardvorlagen oder einer benutzerdefinierten Vorlage, die Sie konfiguriert haben. Diese Vorlage muss veröffentlicht werden (nicht archiviert) und darf nicht bereits mit einer anderen Bezeichnung verknüpft werden. Wenn Sie diese Option auswählen, können Sie die Schaltfläche **Vorlage bearbeiten** verwenden, um [die Vorlage in eine Bezeichnung umzuwandeln](configure-policy-templates.md#to-convert-templates-to-labels).
+    - **Vordefinierte Vorlage auswählen**: Zum Verwenden einer der Standardvorlagen oder einer benutzerdefinierten Vorlage, die Sie konfiguriert haben. Beachten Sie, dass diese Option nicht angezeigt wird, wenn Sie eine Bezeichnung bearbeiten, die zuvor die Option **Berechtigungen festlegen** verwendet hat.
     
-    Tipp: Wenn Sie die Schaltfläche **Vorlage bearbeiten** verwenden, ist folgender Artikel möglicherweise hilfreich: [Tasks that you used to do with the Azure classic portal (Aufgaben, die Sie über das klassische Azure-Portal ausgeführt haben)](migrate-portal.md).
+    Diese Vorlage muss veröffentlicht werden (nicht archiviert) und darf nicht bereits mit einer anderen Bezeichnung verknüpft sein, damit Sie eine vordefinierte Vorlage auswählen können. Wenn Sie diese Option auswählen, können Sie die Schaltfläche **Vorlage bearbeiten** verwenden, um [die Vorlage in eine Bezeichnung umzuwandeln](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tipp: Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
 
 8. Wenn Sie **Festlegen von Berechtigungen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
     
@@ -216,7 +218,7 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 
 6. Wiederholen Sie die Schritte 4 und 5 für jeden Benutzer (oder jede Gruppe), den (oder die) Sie dieser Bezeichnung hinzufügen wollen. Klicken Sie dann auf **OK**.
 
-7. Klicken Sie auf **OK** auf der Seite **Schutz**, und veröffentlichen Sie anschließend Ihre Änderungen.
+7. Klicken Sie auf der Seite **Schutz** auf **OK**, und veröffentlichen Sie anschließend Ihre Änderungen.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Beispiel 4: Bezeichnung für geschützte E-Mails, die weniger einschränkende Berechtigungen als „Nicht weiterleiten“ unterstützt
 
