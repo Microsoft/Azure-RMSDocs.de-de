@@ -4,17 +4,17 @@ description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren v
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
@@ -50,6 +50,10 @@ Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Si
     Wenn Sie nicht über diese Bezeichnung verfügen, da Sie eine ältere Version der Richtlinie verwenden, wählen Sie **Internal** (Intern) als entsprechende Bezeichnung.
 
 2. Legen Sie die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierung festlegen, eine Kennzeichnung oder den Schutz entfernen möchten** auf **Ein** fest.
+
+3. Suchen Sie außerdem die Einstellung **Die Option „benutzerdefinierte Berechtigungen“ für Benutzer verfügbar machen**. Wenn sie auf **Aus** festgelegt ist, ändern Sie die Einstellung auf **Ein**.
+    
+    Möglicherweise müssen Sie diese Einstellung nicht ändern, da die Standardeinstellung davon abhängt, wann Sie Ihr Abonnement erhalten haben. Wir werden später in diesem Tutorial benutzerdefinierte Berechtigungen verwenden, um ein geschütztes Dokument mit einem Benutzer zu teilen, den Sie durch Klicken auf die Datei mit der rechten Maustaste im Datei-Explorer angeben.
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Erstellen einer neuen Bezeichnung für Schutz, optische Kennzeichnungen und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung.
 
@@ -142,7 +146,7 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 |Weitere Informationen zu...|Weitere Informationen|
 |--------------------------------|--------------------------|
 |Über die Standardrichtlinie und verschiedene Versionen|[Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md)|
-|Informationen zu den Konfigurationsoptionen für die Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md)|
+|Informationen zum Konfigurieren der Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md)|
 |Detaillierte Anweisungen zum Konfigurieren einer Bezeichnung für den Schutz|[How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](../deploy-use/configure-policy-protection.md)|
 |Detaillierte Informationen über die Berechtigungen|[Configuring usage rights for Azure Rights Management (Konfigurieren von Nutzungsrechten für Azure Rights Management)](../deploy-use/configure-usage-rights.md)|
 

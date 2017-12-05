@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 6dfda21368713c652df6c815dbb3895517182af1
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 690cbc194be79a4e4fe9d85cda0e731d31d33822
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -52,7 +52,7 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 |Anforderung|Weitere Informationen|
 |---------------|--------------------|
-|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- 4 Prozesse<br /><br />- 4 GB RAM|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](../get-started/requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](../get-started/requirements.md#firewalls-and-network-infrastructure) verfügt. Andernfalls müssen Sie ihn als einen [getrennten Computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers) konfigurieren. |
+|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- 4 Prozessoren<br /><br />- 4 GB RAM|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](../get-started/requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](../get-started/requirements.md#firewalls-and-network-infrastructure) verfügt. Andernfalls müssen Sie ihn als einen [getrennten Computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers) konfigurieren. |
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |Dienstkonto zum Ausführen der Überprüfung|Dieses Konto muss ein Active Directory-Konto sein, das mit Azure AD synchronisiert wird, und die folgenden zusätzlichen Anforderungen erfüllen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann.<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).|
 |Der Azure Information Protection-Client ist auf dem Windows Server-Computer installiert.|Die Azure Information Protection-Überprüfung erfordert zurzeit die Vorschauversion des Azure Information Protection-Clients.<br /><br />Bei Bedarf können Sie den Client nur mit dem PowerShell-Modul (AzureInformationProtection) installieren, mit dem die Überprüfung installiert und konfiguriert wird.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](../rms-client/client-admin-guide.md).|
@@ -78,6 +78,8 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
     - Für eine benannte Instanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
     - Für SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    
+    Verwenden Sie die Onlinehilfe zu diesem Cmdlet, wenn Sie [ausführlichere Beispiele](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples) benötigen.
 
 4. Stellen Sie unter **Verwaltung** > **Dienste** sicher, dass der Dienst jetzt installiert ist. 
     
@@ -162,6 +164,48 @@ Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den 
 Sie können erzwingen, dass die Überprüfung alle Dateien erneut untersucht, indem Sie [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) ausführen, während der Parameter `-Type` auf **Vollständig** festgelegt ist. Diese Konfiguration ist hilfreich, wenn Sie möchten, dass die Berichte alle Dateien umfassen. Standardmäßig wird sie verwendet, wenn die Überprüfung im Suchmodus ausgeführt wird. Wenn eine vollständige Überprüfung abgeschlossen ist, ändert sich der Überprüfungstyp automatisch auf „inkrementell“, sodass bei nachfolgenden Überprüfungen nur noch neue oder geänderte Dateien untersucht werden.
 
 Außerdem werden alle Dateien untersucht, wenn die Überprüfung eine Azure Information Protection-Richtlinie herunterlädt, die über neue oder geänderte Bedingungen verfügt. Die Überprüfung aktualisiert die Richtlinie jede Stunde und wenn der Dienst gestartet wird.
+
+## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Leistungsoptimierung der Azure Information Protection-Überprüfung
+
+So maximieren Sie die Überprüfungsleistung:
+
+- **Verwenden Sie eine schnelle und zuverlässige Netzwerkverbindung zwischen dem Überprüfungscomputer und dem überprüften Datenspeicher**
+    
+    Platzieren Sie beispielsweise den überprüfenden Computer im gleichen LAN oder (vorzugsweise) im gleichen Netzwerksegment wie den überprüften Datenspeicher.
+    
+    Die Qualität der Netzwerkverbindung wirkt sich auf die Überprüfungsleistung aus, da die Überprüfung die Dateien zur Untersuchung auf den Computer überträgt, auf dem der Überprüfungsdienst ausgeführt wird. Durch Reduzieren (oder Ausschalten) der Anzahl der Netzwerkhops, über die diese Daten transportiert werden, verringern Sie zugleich Ihre Netzwerkauslastung. 
+
+- **Achten Sie darauf, dass der überprüfende Computer verfügbare Prozessorressourcen aufweist**
+    
+    Das Untersuchen der Dateiinhalte auf eine Übereinstimmung mit den von Ihnen konfigurierten Bedingungen sowie Ver- und Entschlüsseln der Dateien sind prozessorlastige Aktionen. Überprüfen Sie typische Überprüfungszyklen für Ihre angegebenen Datenquellen, um zu bestimmen, ob ein Mangel an Prozessorressourcen sich negativ auf die Überprüfungsleistung auswirkt.
+    
+- **Überprüfen Sie keine lokalen Ordner auf dem Computer, auf dem der Überprüfungsdienst ausgeführt wird**
+    
+    Wenn Ordner auf einem Windows-Servercomputer untersucht werden müssen, installieren Sie die Überprüfung auf einem anderen Computer, und konfigurieren Sie diese Ordner als zu überprüfende Netzwerkfreigaben. Das Trennen der beiden Funktionen des Hostens der Dateien und des Überprüfens der Dateien bedeutet, dass die Computerressourcen für diese Dienste nicht in Konkurrenz miteinander stehen.
+
+Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
+
+- Die aktuelle Last und die Antwortzeiten der Datenspeicher, in denen die zu überprüfenden Dateien enthalten sind
+
+- Ob die Überprüfung im Suchmodus oder im Durchsetzungsmodus ausgeführt wird
+    
+    Im Suchmodus wird normalerweise eine höhere Überprüfungsrate als im Durchsetzungsmodus erreicht, da für die Ermittlung ein einzelner Dateilesevorgang erforderlich ist, während für den Durchsetzungsmodus Lese- und Schreibvorgänge erforderlich sind.
+
+- Sie können die Bedingungen in Azure Information Protection ändern
+    
+    Der erste Überprüfungszyklus, in dem die Überprüfung jede Datei untersuchen muss, benötigt naturgemäß mehr Zeit als die nachfolgenden Überprüfungszyklen, in denen standardmäßig nur neue und geänderte Dateien untersucht werden. Wenn Sie jedoch die Bedingungen in der Azure Information Protection-Richtlinie ändern, werden alle Dateien erneut untersucht, wie im [vorhergehenden Abschnitt](#when-files-are-rescanned-by-the-azure-information-protection-scanner) beschrieben.
+
+- Der ausgewählte Protokolliergrad
+    
+    Sie können für die Überprüfungsberichte zwischen **Debuggen**, **Info**, **Fehler** und **Aus** wählen. **Aus** führt zur besten Leistung; **Debuggen** verlangsamt die Überprüfung erheblich und sollte nur zur Problembehebung verwendet werden. Weitere Informationen finden Sie beim Parameter *ReportLevel* für das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+
+- Die Dateien selbst:
+    
+    - Office-Dateien lassen sich schneller überprüfen als PDF-Dateien.
+    
+    - Ungeschützte Dateien sind schneller zu überprüfen als geschützte Dateien.
+    
+    - Das Überprüfen großer Dateien beansprucht naturgemäß mehr Zeit als das Überprüfen kleiner Dateien.
 
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Liste der Cmdlets für die Azure Information Protection-Überprüfung 
 
