@@ -4,7 +4,7 @@ description: "Ressourcen für Administratoren, einschließlich Informationen zu 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/08/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89f0863f11d43a19a81b31a648de13fd1733df75
-ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
+ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -26,9 +26,9 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|.. Vorgehensweise|
 |----------------|---------------|
-|Die am häufigsten verwendete Dokumentation aufrufen|Lesen Sie die fünf beliebtesten Seiten: <br /><br />[Erste Schritte – AIP-App für iOS und Android](../rms-client/mobile-app-get-started.md) <br /><br /> [Was ist Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [Was ist Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br /><br />[Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Anforderungen an Azure Information Protection](../get-started/requirements.md)|
+|Die am häufigsten verwendete Dokumentation aufrufen|Lesen Sie die fünf beliebtesten Seiten:<br /><br /> - [Was ist Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Was ist Azure Rights Management?](../understand-explore/what-is-azure-rms.md)<br />- [Erste Schritte – AIP-App für iOS und Android](../rms-client/mobile-app-get-started.md) <br />- [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md)<br />- [Anforderungen an Azure Information Protection](../get-started/requirements.md)|
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Wir empfehlen die [Yammer-Website](https://www.yammer.com/AskIPTeam) für Azure Information Protection.|
-|Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die [Website für Benutzerfeedback](https://msip.uservoice.com) zu Azure Information Protection.|
+|Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die [User Voice](https://msip.uservoice.com)-Website zu Azure Information Protection.|
 |Tweets vom Produktteam erhalten|Folgen Sie [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) auf Twitter.|
 |Abonnementinformationen und die unterstützten Features überprüfen|Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website.|
 
@@ -83,12 +83,14 @@ Problembehandlung:
 
 - Wenn Sie den Rights Management-Connector für Ihre lokalen Server bereitgestellt haben: Lesen Sie die Informationen zum [Überwachen](../deploy-use/monitor-rms-connector.md) mit Einzelheiten zu Ereignisprotokolleinträgen, Leistungsindikatoren und Protokollierung.
 
-- Informationen zum Azure Information Protection-Client für Windows finden Sie im Abschnitt [Installationsüberprüfungen und Problembehandlung](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) des Administratorhandbuchs.
+- Informationen zum Azure Information Protection-Client für Windows finden Sie im Abschnitt [Installationsüberprüfungen und Problembehandlung](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) des Administratorhandbuchs, und vergewissern Sie sich, dass Sie eine [unterstützte Version](../rms-client/client-version-release-history.md#servicing-information-and-timelines) verwenden.
 
 ### <a name="community-resources"></a>Communityressourcen
 
 Wir empfehlen die [Yammer-Website für Azure Information Protection](https://www.yammer.com/AskIPTeam). Diese Ressource ermöglicht Ihnen, direkte Antworten vom Azure Information Protection-Team zu erhalten und zusätzlich von einer gemeinsamen Erfahrung und dem Wissen anderer Administratoren und Berater zu profitieren.
 
-Wenn Sie keinen Zugriff auf Yammer haben, versuchen Sie es mit dem [TechNet-Forum für Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Sehen Sie sich in der schnell wachsenden [Tech Community](https:/techcommunity.microsoft.com) um, die über einen [Azure Information Protection-Bereich](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) verfügt, in dem Fragen gestellt und Informationen geteilt werden können.
+
+Wenn Sie keinen Zugriff auf diese Websites besitzen, versuchen Sie es im [TechNet-Forum für Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

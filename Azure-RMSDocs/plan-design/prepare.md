@@ -4,7 +4,7 @@ description: "Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 41269f709df4b00a6f127e81aa060a062ab1005f
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 8f29aec107c344489ae38afabfa79129fd3fa000
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -207,7 +207,7 @@ In den beiden Konfigurationsszenarien des Azure Rights Management-Diensts, in de
 
 Wenn Sie die E-Mail-Adresse eines Benutzers oder einer Gruppe ändern, wird empfohlen, die alte E-Mail-Adresse als zweite E-Mail-Adresse (auch als Proxyadresse, Alias oder alternative E-Mail-Adresse bezeichnet) für den Benutzer oder die Gruppe hinzuzufügen. Dadurch wird die alte E-Mail-Adresse zum Attribut „Azure AD proxyAddresses“ hinzugefügt. Durch dieses Vorgehen wird die Geschäftskontinuität für alle Nutzungsrechte oder anderen Konfigurationen gewährleistet, die gespeichert wurden, als noch die alte E-Mail-Adresse verwendet wurde. 
 
-Ist dies nicht möglich, riskiert der Benutzer oder die Gruppe mit der neuen E-Mail-Adresse, dass ihm der Zugriff auf zuvor geschützte Dokumente und E-Mails verweigert wird, und es können andere Fehlkonfigurationen durch die alten Werte auftreten. In diesem Fall müssen Sie die Konfiguration wiederholen, um die neue E-Mail-Adresse zu speichern.
+Ist dies nicht möglich, riskiert der Benutzer oder die Gruppe mit der neuen E-Mail-Adresse, dass ihm bzw. ihr der Zugriff auf zuvor geschützte Dokumente und E-Mails verweigert wird, die zuvor mit der alten E-Mail-Adresse geschützt waren. In diesem Fall müssen Sie die Schutzkonfiguration wiederholen, um die neue E-Mail-Adresse zu speichern. Wenn dem Benutzer oder der Gruppe beispielsweise Nutzungsrechte in Vorlagen oder Bezeichnungen erteilt wurden, bearbeiten Sie diese Vorlagen oder Bezeichnungen, und geben Sie die neue E-Mail-Adresse mit den gleichen Nutzungsrechten an, die Sie der alten E-Mail-Adresse erteilt hatten.
 
 Beachten Sie, dass Gruppen nur selten ihre E-Mail-Adresse ändern, und wenn Sie Nutzungsrechte einer Gruppe und nicht einzelnen Benutzer zuweisen, ist es unerheblich, ob sich E-Mail-Adressen von Benutzern ändern. Die Nutzungsrechte werden in diesem Szenario der Gruppen-E-Mail-Adresse und nicht den einzelnen Benutzer-E-Mail-Adressen zugewiesen. Dies ist die wahrscheinlichste (und empfohlene) Methode, wie ein Administrator Nutzungsrechte zum Schutz von Dokumenten und E-Mails konfiguriert. Allerdings ist es nicht unüblich, dass Benutzer einzelnen Benutzern benutzerdefinierte Berechtigungen zuweisen. Da Sie nicht immer wissen, ob der Zugriff einem Benutzerkonto oder einer Gruppe gewährt wurde, ist es am sichersten, die alte E-Mail-Adresse immer als zweite E-Mail-Adresse hinzuzufügen.
 

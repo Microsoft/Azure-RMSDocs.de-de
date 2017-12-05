@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
+ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -53,13 +53,13 @@ Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen w
 
 ### <a name="default-template-names"></a>Namen für die Standardvorlage
 
-Wenn Sie vor kurzem ein Abonnement für Azure Information Protection erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
+Wenn Sie Ihr Abonnement erst vor Kurzem erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
 - **Vertraulich\Alle Mitarbeiter** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
 
 - **Streng vertraulich\Alle Mitarbeiter** erteilt Leseberechtigungen für den geschützten Inhalt.
 
-Wenn Sie Ihr Abonnement für Azure Information Protection vor einer Weile erhalten haben, oder wenn Sie nicht über ein Azure Information Protection-Abonnement verfügen, aber ein Office 365-Abonnement mit Azure Rights Management besitzen, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
+Wenn Sie Ihr Abonnement schon vor einiger Zeit erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
 - **\<Name der Organisation> – Vertraulich** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
 

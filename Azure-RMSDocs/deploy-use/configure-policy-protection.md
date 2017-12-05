@@ -4,17 +4,17 @@ description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 1b16d3ab7923592a011b6be39586a02a378f39f0
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -101,7 +101,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Die Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung ist dies praktisch immer der Fall, aber in einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder Gruppen E-Mail-Adressen hinzufügen.
         
-    - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können dies auch tun, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines Domänennamens aus dieser Organisation anzugeben. 
+    - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können dies auch tun, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines Domänennamens aus dieser Organisation anzugeben. Verwenden Sie keine Domänennamen aus sozialen Netzwerken, die persönliche E-Mail-Konten unterstützen. Geben Sie z. B. nicht **gmail.com**, **hotmail.com** oder **outlook.com** ein.
         
     >[!NOTE]
     >Wenn sich eine E-Mail-Adresse ändert, nachdem Sie den Benutzer oder die Gruppe ausgewählt haben, lesen Sie die Informationen im Abschnitt [Überlegungen bei einer Änderung der E-Mail-Adressen](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) in der Planungsdokumentation.
