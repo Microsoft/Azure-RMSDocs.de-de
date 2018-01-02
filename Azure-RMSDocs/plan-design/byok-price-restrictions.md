@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 981f7349c9ae279d48f5cb4795ffc2087f5ae4d8
-ms.sourcegitcommit: 850869505942f9d1b74720085d253de4b54b19c1
+ms.openlocfilehash: 837026a45529312dbdb1657cc563e8b02bff6675
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK – Preise und Einschränkungen
 
@@ -45,7 +45,7 @@ Weitere Vorteile der Verwendung von Azure Key Vault für den Azure Information P
 
 - Azure Key Vault bietet Rollentrennung als anerkannte und bewährte Sicherheitsmethode. Azure Information Protection-Administratoren können sich auf die Verwaltung von Datenklassifizierung und -Datenschutz konzentrieren, und Azure Key Vault-Administratoren können sich auf die Verwaltung von Verschlüsselungsschlüsseln und speziellen Richtlinien konzentrieren, die möglicherweise aus Sicherheits- oder Compliancegründen erforderlich sind.
 
-- In einigen Organisationen gibt es Einschränkungen für die Verwahrung ihres Hauptschlüssels. Azure Key Vault bietet ein hohes Maß an Kontrolle über den Speicherort des Hauptschlüssels, da der Dienst in viele Azure-Regionen verfügbar ist. Derzeit können Sie unter 28 Azure-Regionen wählen, und Sie dürfen davon ausgehen, dass diese Anzahl noch steigen wird. Weitere Informationen finden Sie auf der Seite „Produkte nach Region“ (https://azure.microsoft.com/regions/services/) auf der Azure-Website.
+- In einigen Organisationen gibt es Einschränkungen für die Verwahrung ihres Hauptschlüssels. Azure Key Vault bietet ein hohes Maß an Kontrolle über den Speicherort des Hauptschlüssels, da der Dienst in viele Azure-Regionen verfügbar ist. Derzeit können Sie aus 28 Azure-Regionen wählen, und diese Zahl wird aller Wahrscheinlichkeit nach noch steigen. Weitere Informationen finden Sie auf der Seite „Produkte nach Region“ (https://azure.microsoft.com/regions/services/) auf der Azure-Website.
 
 Zusätzlich zum Verwalten von Schlüsseln bietet Azure Key Vault Ihren Sicherheitsadministratoren die gleiche Verwaltungsumgebung zum Speichern von, Zugreifen auf und Verwalten von Zertifikaten und geheimen Schlüsseln (z. B. Kennwörtern) für andere Dienste und Anwendungen, die Verschlüsselung verwenden. 
 

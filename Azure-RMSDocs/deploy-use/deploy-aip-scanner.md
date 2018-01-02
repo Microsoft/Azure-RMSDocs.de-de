@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 986603d54b69fcf85bafecef2691fbd44af94942
-ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
+ms.openlocfilehash: 3e78fd3c306136c57b75e74c8846e38670e9eb94
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -65,21 +65,23 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 2. Starten Sie eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen**.
 
-3. Führen Sie das Cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server-Instanz an, auf der eine Datenbank für die Azure Information Protection-Überprüfung erstellt werden soll. Wenn Sie dazu aufgefordert werden, geben Sie die Anmeldeinformationen für das Überprüfungsdienstkonto (\<Domäne/Benutzername>) und das Kennwort ein: 
+3. Führen Sie das Cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus, und geben Sie dabei die SQL Server-Instanz an, auf der eine Datenbank für die Azure Information Protection-Überprüfung erstellt werden soll: 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
     Beispiele:
-        
-    - Für eine Standardinstanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - Für eine benannte Instanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    Für eine Standardinstanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - Für SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    Für eine benannte Instanz: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    
+    Für SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
     Verwenden Sie die Onlinehilfe zu diesem Cmdlet, wenn Sie [ausführlichere Beispiele](/powershell/module/azureinformationprotection/install-aipscanner#examples) benötigen.
+    
+    Wenn Sie dazu aufgefordert werden, geben Sie die Anmeldeinformationen für das Überprüfungsdienstkonto (\<Domäne/Benutzername>) und das Kennwort ein.
 
 4. Stellen Sie unter **Verwaltung** > **Dienste** sicher, dass der Dienst jetzt installiert ist. 
     

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
+ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -44,7 +44,7 @@ Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierung
 
 |Protokollierungsoption|Beschreibung|
 |----------------|---------------|
-|Administratorprotokoll|Protokolliert Verwaltungsaufgaben für den Azure Rights Management-Dienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
+|Administratorprotokoll|Protokolliert administrative Aufgaben für den Azure Rights Management-Dienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
 |Webberichte|Allgemeine Nutzungsberichte aus dem klassischen Azure-Portal: **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. <br /><br />Um im klassischen Azure-Portal auf diese Berichte zuzugreifen, klicken Sie auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.|
 |Dokumentkontrolle|Ermöglicht Benutzern das Nachverfolgen und Sperren von Dokumenten, die sie mit dem Azure Information Protection-Client oder der RMS-Freigabe-App nachverfolgt haben. Globale Administratoren können diese Dokumente im Auftrag von Benutzern nachverfolgen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
