@@ -4,17 +4,17 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: d7788b909da4219ae80475bac4bd26b2a2ec8da9
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -43,13 +43,13 @@ In diesem HYOK-Szenario werden die Richtlinien und der private Schlüssel der Or
 >
 > Sogar für Organisationen, die diese Konfiguration verwenden, eignet sie sich in der Regel nur für weniger als 10 % des gesamten Inhalts, der geschützt werden muss. Als Leitfaden gilt: Verwenden Sie es nur für Dokumente oder E-Mails, die alle folgenden Kriterien erfüllen:
 > 
-> - Der Inhalt weist die höchste Klassifizierung in Ihrer Organisation auf („Streng geheim“), und der Zugriff ist auf einige wenige Personen beschränkt.
+> **Der Inhalt weist den höchsten Geheimhaltungsgrad in Ihrer Organisation auf („Streng geheim“), und der Zugriff ist auf einige wenige Personen beschränkt.**
 > 
-> - Der Inhalt wird niemals außerhalb der Organisation freigegeben.
+> **Der Inhalt wird niemals außerhalb der Organisation freigegeben.**
 > 
-> - Der Inhalt wird nur im internen Netzwerk genutzt.
+> **Der Inhalt wird nur im internen Netzwerk genutzt.**
 > 
-> - Auf den Inhalt muss nicht von Macintosh-Computern oder mobilen Geräten zugegriffen werden.
+> **Auf den Inhalt muss nicht von Mac-Computern oder Mobilgeräten aus zugegriffen werden.**
 
 Benutzer erkennen nicht, wenn eine Bezeichnung AD RMS-Schutz und nicht Azure RMS-Schutz verwendet. Stellen Sie aufgrund der Einschränkungen, die mit AD RMS-Schutz einhergehen sicher, dass Sie klare Anweisungen über die Ausnahmen für den Fall bieten, wenn Benutzer Bezeichnungen auswählen, die für den AD RMS-Schutz gelten. 
 
