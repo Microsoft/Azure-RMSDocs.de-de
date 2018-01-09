@@ -4,7 +4,7 @@ description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 5d57f1cc7728fef1b877fc25fce01bbc9c768b3c
+ms.sourcegitcommit: 24b35e27b3aa861ae8ba6bacab571b0071b058d7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -53,12 +53,12 @@ In einigen Anwendungen werden Nutzungsrechte in Berechtigungsstufen gruppiert. D
 
 In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und alle darin enthaltenen Nutzungsrechte. Die Nutzungsrechte sind nach ihrem [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
 
-|Berechtigungsstufe|Anwendungen|Enthaltene Nutzungsrechte|
+|Berechtigungsstufe|Applications|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
 |Anzeigender Benutzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br /> Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Antworten; Allen Antworten; Makros zulassen [[1]](#footnote-1)<br /><br />Hinweis: Verwenden Sie für E-Mails den Prüfer statt dieser Berechtigungsebene, um sicherzustellen, dass eine Antwort auch als E-Mail und nicht als Anhang verschickt wird. Der Prüfer ist außerdem erforderlich, wenn Sie eine E-Mail an eine andere Organisation versenden, die den Outlook-Client oder Outlook Web App verwendet. Des Weiteren ist diese Berechtigung für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts aufgrund der Implementierung von [Onboarding-Steuerelementen](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) ausgeschlossen sind.|
 |Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Antworten: Allen Antworten[[2]](#footnote-2); Weiterleiten [[2]](#footnote-2); Makros zulassen [[1]](#footnote-1)|
-|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[3]](#footnote-3); Drucken; Antworten [[2]](#footnote-2); Allen Antworten [[2]](#footnote-2); Weiterleiten [[2]](#footnote-2)|
-|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[2]](#footnote-2); Allen Antworten [[2]](#footnote-2); Weiterleiten [[2]](#footnote-2); Vollzugriff|
+|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen, Speichern, Inhalt bearbeiten, Bearbeiten, Kopieren, Makros zulassen, Speichern unter, Exportieren [[3]](#footnote-3), Drucken, Antworten [[2]](#footnote-2), Allen Antworten [[2]](#footnote-2), Weiterleiten [[2]](#footnote-2)|
+|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen, Speichern, Inhalt bearbeiten, Bearbeiten, Kopieren, Rechte anzeigen, Makros zulassen, Speichern unter, Exportieren, Drucken, Antworten [[2]](#footnote-2), Allen Antworten [[2]](#footnote-2), Weiterleiten [[2]](#footnote-2), Vollzugriff|
 
 ----
 
@@ -70,8 +70,7 @@ Für den Azure Information Protection-Client für Windows ist dieses Recht derze
 Gilt nicht für den Azure Information Protection-Client für Windows oder die Rights Management-Freigabeanwendung für Windows.
 
 ###### <a name="footnote-3"></a>Fußnote 3
-Nicht im Azure Information Protection-Client für Windows enthalten. In diesem Client umfasst das Nutzungsrecht zum Exportieren die Möglichkeit zum Aufheben des Schutzes.
-
+Nicht im Azure-Portal oder Azure Information Protection-Client für Windows enthalten.
 
 ## <a name="rights-included-in-the-default-templates"></a>In den Standardvorlagen enthaltene Rechte
 In der folgenden Tabelle werden die Nutzungsrechte aufgelistet, die enthalten sind, wenn die Standardvorlagen erstellt werden. Die Nutzungsrechte sind nach ihrem [allgemeinen Namen](#usage-rights-and-descriptions) aufgelistet.
@@ -149,7 +148,7 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für ein
     Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung mithilfe von PowerShell finden Sie in der Hilfe für jedes Cmdlet.
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
 [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)

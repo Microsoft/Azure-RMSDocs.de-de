@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb2af56222f686149e40afcd54b20c04114c2a1f
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -97,7 +97,9 @@ Wenn das Dokument durch eine Bezeichnung oder eine Vorlage geschützt war, muss 
 
 Wenn Sie bereits eine Gruppe für die erforderlichen Berechtigungen konfiguriert haben, können Sie alternativ die Gruppenmitgliedschaft ändern, um Benutzer ein- oder auszuschließen, damit die Bezeichnung oder Vorlage nicht geändert werden muss. Die Änderungen werden möglicherweise mit einer kurzen Verzögerung wirksam, da die Gruppenmitgliedschaft vom Azure Rights Management-Dienst [zwischengespeichert](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) wird.
 
-Wenn das Dokument mithilfe von benutzerdefinierten Berechtigungen geschützt wurde, können Sie die Berechtigungen für das vorhandene Dokument nicht ändern. Sie müssen das Dokument erneut schützen und alle Benutzer und Nutzungsrechte angeben, die für die neue Version des Dokument erforderlich sind. Sie müssen über das Nutzungsrecht „Vollzugriff“ verfügen, um ein geschütztes Dokument erneut zu schützen. 
+Wenn das Dokument mithilfe von benutzerdefinierten Berechtigungen geschützt wurde, können Sie die Berechtigungen für das vorhandene Dokument nicht ändern. Sie müssen das Dokument erneut schützen und alle Benutzer und Nutzungsrechte angeben, die für die neue Version des Dokument erforderlich sind. Sie müssen über das Nutzungsrecht „Vollzugriff“ verfügen, um ein geschütztes Dokument erneut zu schützen.
+
+Tipp: Um zu sehen, ob ein Dokument durch eine Vorlage oder eine benutzerdefinierte Berechtigung geschützt war, können Sie das [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) PowerShell-Cmdlet verwenden. Sie sehen immer eine Beschreibung der Vorlage der **Zugriffsbeschränkung** für benutzerdefinierte Berechtigungen mit einer einzigartigen Vorlagen-ID, der nicht angezeigt wird wenn Sie [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate) ausführen.
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Ich habe eine Hybridbereitstellung von Exchange mit einigen Benutzern auf Exchange Online und anderen auf Exchange Server – wird dies von Azure RMS unterstützt?
 Ja, und das Gute ist, dass Benutzer über zwei Exchange-Bereitstellungen hinweg E-Mails und Anlagen nahtlos schützen sowie geschützte E-Mails und Anlagen nutzen können. Führen Sie für diese Konfiguration folgende Schritte aus: [Aktivieren von Azure RMS](../deploy-use/activate-service.md) , [Aktivieren von IRM für Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx)und [Bereitstellen und Konfigurieren des RMS-Connectors](../deploy-use/deploy-rms-connector.md) für Exchange Server.

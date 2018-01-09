@@ -4,7 +4,7 @@ description: "Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Micro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f2c0053a8f1f4cde5193b65e5b8e521a2b6934c1
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: da20ac2ea327b5b97f021c85f62d97b9aa1b9824
+ms.sourcegitcommit: fc205eae0c0b378d41da5f1eceb0c699e60ad66f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -26,8 +26,8 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 
 |Ausdruck|Definition|
 |--------|--------------|
-|AADRM|Der Name des Windows PowerShell-Moduls für den Azure Rights Management-Dienst, der aus der inoffiziellen Abkürzung für [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] abgeleitet wurde, als er noch den Namen (Windows) Azure Active Directory Rights Management hatte.|
-|Aktivieren|Aktivieren des [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]-Diensts, damit eine Organisation ihre Dokumente und E-Mails schützen kann. Dieser Vorgang aktiviert außerdem die Features zur Rechteverwaltung in Exchange Online und SharePoint Online.|
+|AADRM|Der Name des Windows PowerShell-Moduls für den Azure Rights Management-Dienst, der aus der inoffiziellen Abkürzung für Azure Rights Management abgeleitet wurde, als er noch den Namen (Windows) Azure Active Directory Rights Management hatte.|
+|Aktivieren|Aktivieren des Azure Rights Management-Diensts, damit eine Organisation ihre Dokumente und E-Mails schützen kann. Dieser Vorgang aktiviert außerdem die Features zur Rechteverwaltung in Exchange Online und SharePoint Online.|
 |Active Directory-Rechteverwaltungsdienste|Häufig als *AD RMS*abgekürzt.<br /><br />Eine Windows Server-Rolle, die Rights Management-Schutz mithilfe von Verschlüsselung und Richtlinien bereitstellt, die das Schützen von Dokumenten, Dateien und E-Mails unterstützen.|
 |AD RMS|Siehe *Active Directory Rights Management Services*.|
 |Azure Information Protection|Ein cloudbasierter Dienst, der Klassifizierungen, Bezeichnungen und Schutz verwendet, um Dokumente und E-Mails zu schützen. Azure Rights Management stellt Schutz mithilfe von Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien bereit.|
@@ -58,6 +58,8 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |Schützen|Anwenden von Rights Management-Überwachungen auf Dateien oder E-Mail-Nachrichten mithilfe von Verschlüsselungs-, Identitäts- und Access Control-Richtlinien für den Schutz Ihrer Daten.|
 |publish|Schützen einer Datei, um sie vor unberechtigtem Zugriff und unberechtigter Verwendung zu schützen.|
 |Rights Management-Connector|Ein ausgehendes Proxyrelay, das für lokale Dienste wie Exchange Server und SharePoint bereitgestellt werden kann, um Daten mithilfe von des Azure Rights Management-Diensts zu schützen.|
+|Rights Management-Aussteller|Das Konto, das ein Dokument oder eine E-Mail schützt.|
+|Rights Management-Besitzer|Das Konto, das volle Zugriffsrechte über ein geschütztes Dokument oder eine geschützte E-Mail behält, da es automatisch das Nutzungsrecht über den Vollzugriff auf Rights Management erhält, und von allen Ablaufdaten oder Offline-Einstellungen ausgenommen ist.|
 |Rights Management Services|Der allgemeine Ausdruck, der sich sowohl auf die Cloudversion von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) als auch auf die lokale Version von [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS) bezieht.|
 |Rights Management-Freigabeanwendung|Eine optional herunterladbare Anwendung für Windows und besonders verbreitete mobile Geräte, die das sichere Freigeben von Dateien per Einbindung und per E-Mail unterstützt und jetzt durch den Azure Information Protection-Client ersetzt wurde.|
 |RMS|Siehe *Rights Management Services*.|
