@@ -4,7 +4,7 @@ description: "Sofort erkennbare Administratoraufgaben, die Sie bisher im klassis
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 194c746298024ef294c8a6a6fa0361d21cbd869e
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
+ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
 
@@ -31,7 +31,9 @@ Sind Sie mit der Verwaltung des Azure Rights Management-Diensts über das klassi
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Ausführen Ihrer bekannten Administratoraufgaben
 
-Verwenden Sie die folgenden Informationen, um schnell zum neueren Portal überzugehen:
+Verwenden Sie die folgenden Informationen, um schnell zum neueren Portal überzugehen.
+
+Jedoch können Kunden mit einem Abonnement für Office 365 US Government (Government Community Cloud) zurzeit das Azure-Portal nicht verwenden und müssen stattdessen [PowerShell](configure-templates-with-powershell.md) nutzen, um ihre Vorlagen zu verwalten. 
 
 |Klassisches Azure-Portal|So führen Sie die Aufgabe im Azure-Portal aus
 |-----------|--------------------|
@@ -42,7 +44,7 @@ Verwenden Sie die folgenden Informationen, um schnell zum neueren Portal überzu
 |Erstellen einer bereichsbezogenen Vorlage|Erstellen Sie eine bereichsbezogene Richtlinie, und erstellen Sie in diesem Bereich eine Bezeichnung, die Schutz anwendet. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md).
 |Kopieren einer Vorlage|Sie können eine Vorlage im Azure-Portal nicht kopieren. Wenn Sie möchten, dass zwei Vorlagen über die gleichen Schutzeinstellungen verfügen, müssen Sie die Berechtigungen für jede Bezeichnung festlegen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Löschen einer Vorlage|Das Löschen von Vorlagen kann zu nicht zugreifbaren Daten führen, weshalb das Azure-Portal diesen Vorgang nicht unterstützt. Sie können die Bezeichnung jedoch löschen und dann das PowerShell-Cmdlet [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) verwenden, um die Vorlage zu entfernen. <br /><br />Weitere Informationen finden Sie unter [Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection](configure-policy-delete-reorder.md).
-|Unterstützung mehrerer Sprachen|Wählen Sie in der Menüauswahl **Verwalten** **Sprachen (Vorschau)** aus, um die anpassbaren Felder zu exportieren, die den Namen und die Beschreibung der Vorlage umfassen. Übersetzen Sie die Zeichenfolgen, und importieren Sie diese anschließend in das Portal. <br /><br />Weitere Informationen finden Sie unter [Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](configure-policy-languages.md).
+|Unterstützung mehrerer Sprachen|Wählen Sie in der Menüauswahl **Verwalten** **Sprachen** aus, um die anpassbaren Felder zu exportieren, die den Namen und die Beschreibung der Vorlage umfassen. Übersetzen Sie die Zeichenfolgen, und importieren Sie diese anschließend in das Portal. <br /><br />Weitere Informationen finden Sie unter [Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](configure-policy-languages.md).
 |Rights Management-Webberichte|Verwenden Sie das PowerShell-Cmdlet [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog), um Nutzungsprotokolle für den Azure Rights Management-Dienst herunterzuladen. Sie können diese Daten dann dazu verwenden, benutzerdefinierte Berichte zu erstellen. <br /><br />Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).<br /><br />Tipp: Im [Blog von Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) finden Sie immer die aktuellsten Ankündigungen einer neuen zentralisierten Berichterstellungslösung für Azure Information Protection. 
 |Aktivieren und Deaktivieren des Rights Management-Diensts|Wählen Sie aus den Menüoptionen **VERWALTEN** **RMS-Einstellungen** oder **Protection activation** (Schutzaktivierung) aus. Diese Option wird zurzeit umbenannt.<br /><br />Weitere Informationen finden Sie unter [How to activate Azure Rights Management from the Azure portal (Aktivieren von Azure Rights Management aus dem Azure-Portal)](activate-azure.md).
 
@@ -62,7 +64,7 @@ Unterstützung für die Rolle „Sicherheitsadministrator“: Während Sie sich 
 Die PowerShell-Cmdlets zum Erstellen und Verwalten von Vorlagen und zum Aktivieren oder Deaktivieren des Diensts bleiben unverändert unterstützt.
 
 
-## <a name="see-also"></a>Weitere Informationen:
+## <a name="see-also"></a>Siehe auch
 Ausführlichere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

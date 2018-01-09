@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
-ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
+ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -260,7 +260,7 @@ Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterlade
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Beispielszenarien für die Verwendung der Cmdlets für Azure Information Protection und den Azure Rights Management-Dienst
 
-Es ist effizienter, Dateien mithilfe von Bezeichnungen zu klassifizieren und zu schützen, da nur zwei Cmdlets erforderlich sind, die einzeln oder gemeinsam ausgeführt werden können: [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) und [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Weitere Informationen und Beispiele finden Sie in der Hilfe zu diesen beiden Cmdlets.
+Es ist effizienter, Dateien mithilfe von Bezeichnungen zu klassifizieren und zu schützen, da nur zwei Cmdlets erforderlich sind, die einzeln oder gemeinsam ausgeführt werden können: [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) und [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Weitere Informationen und Beispiele finden Sie in der Hilfe zu diesen beiden Cmdlets.
 
 Wenn Sie Dateien jedoch über eine direkte Verbindung mit dem Azure Rights Management-Dienst schützen oder den Schutz aufheben möchten, müssen Sie in der Regel eine Reihe von Cmdlets gemäß der folgenden Beschreibung ausführen.
 
@@ -487,13 +487,15 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 4. Wählen Sie die Anwendung aus, die Sie gerade erstellt haben, z.B. **AIPOnBehalfOf**. Klicken Sie auf dem Blatt **Einstellungen** auf **Eigenschaften**. Kopieren Sie auf dem Blatt **Eigenschaften** den Wert von **Anwendungs-ID**, und schließen Sie dann dieses Blatt. 
     
-    Dieser Wert wird für den Parameter `WebAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen.
+    Dieser Wert wird für den Parameter `WebAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen. Fügen Sie ihn ein, und speichern Sie ihn für spätere Bezugnahme.
 
-5. Klicken Sie auf dem Blatt **Einstellungen** auf **Schlüssel**. Fügen Sie einen neuen Schlüssel hinzu, indem Sie eine Beschreibung und die Dauer (1 Jahr 2 Jahre oder „Läuft nie ab“) angeben. Klicken Sie dann auf **Speichern**, und kopieren Sie die Zeichenfolge von **Wert**, die angezeigt wird. Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Bewahren Sie den gespeicherten Wert sorgfältig auf, und beschränken Sie den Zugriff darauf – wie bei jedem anderen Schlüssel auch, den Sie verwenden.
+5. Klicken Sie auf dem Blatt **Einstellungen** auf **Erforderliche Berechtigungen**. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
+
+6. Klicken Sie auf dem Blatt **Einstellungen** auf **Schlüssel**. Fügen Sie einen neuen Schlüssel hinzu, indem Sie eine Beschreibung und die Dauer (1 Jahr 2 Jahre oder „Läuft nie ab“) angeben. Klicken Sie dann auf **Speichern**, und kopieren Sie die Zeichenfolge von **Wert**, die angezeigt wird. Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Bewahren Sie den gespeicherten Wert sorgfältig auf, und beschränken Sie den Zugriff darauf – wie bei jedem anderen Schlüssel auch, den Sie verwenden.
     
     Dieser Wert wird für den Parameter `WebAppKey` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen.
 
-6. Zurück auf dem Blatt **App-Registrierungen** klicken Sie auf **Neue Anwendungsregistrierung**, um Ihre native Anwendung zu erstellen. Geben Sie für die Bezeichnung **Erstellen** die folgenden Werte an, und klicken Sie dann auf **Erstellen**:
+7. Zurück auf dem Blatt **App-Registrierungen** klicken Sie auf **Neue Anwendungsregistrierung**, um Ihre native Anwendung zu erstellen. Geben Sie für die Bezeichnung **Erstellen** die folgenden Werte an, und klicken Sie dann auf **Erstellen**:
     
     - Name: **AIPClient**
     
@@ -503,25 +505,19 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
     
     - Anmelde-URL: **http://localhost**
 
-7. Wählen Sie die Anwendung aus, die Sie gerade erstellt haben, z.B. **AIPClient**. Klicken Sie auf dem Blatt **Einstellungen** auf **Eigenschaften**. Kopieren Sie auf dem Blatt **Eigenschaften** den Wert von **Anwendungs-ID**, und schließen Sie dann dieses Blatt.
+8. Wählen Sie die Anwendung aus, die Sie gerade erstellt haben, z.B. **AIPClient**. Klicken Sie auf dem Blatt **Einstellungen** auf **Eigenschaften**. Kopieren Sie auf dem Blatt **Eigenschaften** den Wert von **Anwendungs-ID**, und schließen Sie dann dieses Blatt.
     
-    Dieser Wert wird für den Parameter `NativeAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen.
+    Dieser Wert wird für den Parameter `NativeAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen. Fügen Sie ihn ein, und speichern Sie ihn für spätere Bezugnahme.
 
-8. Klicken Sie auf dem Blatt **Einstellungen** auf **Erforderliche Berechtigungen**. 
+9. Klicken Sie auf dem Blatt **Einstellungen** auf **Erforderliche Berechtigungen**. 
 
-9. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Hinzufügen** und dann auf **API auswählen**. Geben Sie in das Suchfeld **AIPOnBehalfOf** ein. Wählen Sie diesen Wert im Listenfeld aus, und klicken Sie dann auf **Auswählen**.
+10. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Hinzufügen** und dann auf **API auswählen**. Geben Sie in das Suchfeld **AIPOnBehalfOf** ein. Wählen Sie diesen Wert im Listenfeld aus, und klicken Sie dann auf **Auswählen**.
 
-10. Klicken Sie auf dem Blatt **Zugriff aktivieren** auf **AIPOnBehalfOf**, dann auf **Auswählen** und abschließend auf **Fertig**.
+11. Klicken Sie auf dem Blatt **Zugriff aktivieren** auf **AIPOnBehalfOf**, dann auf **Auswählen** und abschließend auf **Fertig**.
+
+12. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
     
-    Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit Parametern benötigen.
-
-
-> [!TIP]
-> Wenn Set-AIPAuthentication nicht erfolgreich ausgeführt werden kann und Sie vorhandene Apps verwendet haben, anstatt neue Apps mithilfe der vorherigen Anweisungen zu erstellen, müssen Sie möglicherweise die erforderlichen Berechtigungen für Ihre Apps zurücksetzen. Dies kann ebenfalls unter Umständen erforderlich sein, wenn Sie die Anweisungen zum Erstellen neuer Apps für Set-AIPAuthentication zwar befolgt, aber anschließend die App-Einstellungen geändert haben.
-> 
-> Verwenden Sie die folgenden Konfigurationsschritte, um die erforderlichen Berechtigungen für beide Apps zurückzusetzen: Klicken Sie auf **Alle Einstellungen** > **Erforderliche Berechtigungen** > **Berechtigungen erteilen** und anschließend auf **Ja**, um die Einstellung zu bestätigen.
-> 
-> Stattdessen können Sie auch neue Apps anhand der vorstehenden Anweisungen erstellen.
+Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit Parametern benötigen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiel: 

@@ -4,7 +4,7 @@ description: "Eine Anleitung und Informationen für Administratoren zum Bereitst
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 675afc962da542a03b90bea2dcb5d004829e361a
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
+ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -50,6 +50,12 @@ ms.lasthandoff: 10/24/2017
     
     Wenn dieses Update benötigt wird und nicht installiert ist, werden Sie in der Clientinstallation gewarnt, dass es installiert werden muss. Dieses Update kann nach der Installation des Clients installiert werden, aber einige Aktionen werden blockiert, und die Meldung wird erneut angezeigt.  
 
+- Visual C++ Redistributable für Visual Studio 2015 (32-Bit Version)
+    
+    Installieren Sie bei Computern mit Windows 7 Service Pack 1 **vc_redist.x86.exe** von der Downloadseite [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    
+    Die Installation des Clients überprüft nicht auf diese Voraussetzung, sie ist jedoch für den Azure Information Protection-Client notwendig, um PDF-Dateien zu klassifizieren und zu schützen.
+
 - Deaktivieren Sie die Add-Ins **Microsoft Azure Information Protection** nicht für Office-Anwendungen
     
     Wenn Sie die Einstellung **Liste der verwalteten Add-Ins** der Gruppenrichtlinie konfiguriert haben, fügen Sie das Add-In von Microsoft Azure Information Protection für Office-Anwendungen durch Angabe der folgenden programmgesteuerten Bezeichner (ProgID) für Azure Information Protection hinzu, und legen Sie die Option auf **1: Das Add-In ist immer aktiviert** fest.
@@ -65,6 +71,14 @@ ms.lasthandoff: 10/24/2017
     Auch wenn Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins** noch nicht konfiguriert haben, müssen Sie diese konfigurieren, wenn Sie Berichte erhalten, dass das Add-In von Microsoft Azure Information Protection deaktiviert wird. Wenn dieses Add-In deaktiviert ist, wird die Leiste von Azure Information Protection Benutzern in der Officeanwendung nicht angezeigt.
     
     Weitere Informationen zur Einstellung der Gruppenrichtlinie finden Sie unter [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs (Es wurden keine Add-Ins geladen aufgrund von Gruppenrichtlinieneinstellungen für die Programme Office 2013 und Office 2016)](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
+- Für Office Versionen 16.0.8628.2010 und höher (Klick-und-Los): Aktivieren Sie die Legacyunterstützung für Monitore
+    
+    Aktivieren Sie die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Konfigurieren der Office-Anwendungen: **Datei** > **Allgemein** > **Benutzeroberflächenoptionen**:
+    
+    - Wenn die Option **bei Verwendung mehrerer Bildschirme** auf **Optimieren für beste Darstellung** eingestellt ist, klicken Sie stattdessen auf **die Kompatibilität optimieren (Neustart der Anwendung erforderlich)**. 
+        
+    - Falls die Option **Beste Einstellungen für meinen Bildschirm verwenden** ausgewählt ist, entfernen Sie die Auswahl.
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.
@@ -183,8 +197,8 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|
     |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|„Installieren“ zu klicken.|
     |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB 3125574 nicht installiert ist|
+    |Nicht verfügbar|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|„Installieren“ zu klicken.|
     |Nicht verfügbar|Windows 7|KB2627273 <br /><br /> Im Dateinamen enthaltene Versionsnummer: v4|Deinstallieren|
-    
 
 3. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection.msi /quiet`. Allerdings müssen möglicherweise weitere Installationsparameter angegeben werden, die in den [Anweisungen zum ausführbaren Installationsprogramm](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) dokumentiert sind.  
 

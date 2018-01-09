@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3e78fd3c306136c57b75e74c8846e38670e9eb94
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 7dfd670df89b652f8ff55452198d8483b55c59cd
+ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -50,12 +50,12 @@ Beachten Sie, dass die Überprüfung nicht in Echtzeit sucht und bezeichnet. Sie
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Voraussetzungen für die Azure Information Protection-Überprüfung
 Stellen Sie vor der Installation der Azure Information Protection-Überprüfung sicher, dass folgende Voraussetzungen erfüllt sind.
 
-|Anforderung|Weitere Informationen|
+|Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- 4 Prozessoren<br /><br />- 4 GB RAM|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](../get-started/requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](../get-started/requirements.md#firewalls-and-network-infrastructure) verfügt. Andernfalls müssen Sie ihn als einen [getrennten Computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers) konfigurieren. |
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |Dienstkonto zum Ausführen der Überprüfung|Dieses Konto muss ein Active Directory-Konto sein, das mit Azure AD synchronisiert wird, und die folgenden zusätzlichen Anforderungen erfüllen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann.<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).|
-|Der Azure Information Protection-Client ist auf dem Windows Server-Computer installiert.|Die Azure Information Protection-Überprüfung erfordert zurzeit die Vorschauversion des Azure Information Protection-Clients.<br /><br />Bei Bedarf können Sie den Client nur mit dem PowerShell-Modul (AzureInformationProtection) installieren, mit dem die Überprüfung installiert und konfiguriert wird.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](../rms-client/client-admin-guide.md).|
+|Der Azure Information Protection-Client ist auf dem Windows Server-Computer installiert.|Die Azure Information Protection-Überprüfung erfordert zurzeit die Vorschauversion des Azure Information Protection-Clients.<br /><br />Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](../rms-client/client-admin-guide.md).|
 |Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Weitere Informationen zur Konfiguration dieser Bedingungen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md).<br /><br />Weitere Informationen zum Konfigurieren dieser Bezeichnungen zum Anwenden des Schutzes auf Dateien finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).<br /><br />Diese Bezeichnungen sind in der globalen Richtlinie oder in [bereichsbezogenen Richtlinien](configure-policy-scope.md) zu finden.|
 
 
