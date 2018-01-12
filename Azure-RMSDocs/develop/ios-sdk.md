@@ -2,8 +2,8 @@
 title: Einrichten von iOS und OS X | Azure RMS
 description: "iOS- und OS X-Anwendungen können das RMS SDK 4.2 verwenden, um mithilfe von AAD RM integrierte Datenschutzfunktionen in ihrer Anwendung zu aktivieren."
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,13 +14,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed077a6d908ae5d9b6b3b187cee9c63f47dc826d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f2cb573f8c347215f130fd76321886ade2877a16
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
-# <a name="ios-and-os-x-setup"></a>Einrichten von iOS und OS X
+# <a name="ios-and-os-x-setup"></a>iOS- und OS X-Setup
 
 iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Rights Management (Azure RMS) zu ermöglichen.
 
@@ -100,7 +100,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 -   Sie können jetzt Ihre eigenen neuen iOS/OS X-Apps erstellen.
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen
 
 * [Erste Schritte](get-started.md)
 
