@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokolli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
-ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
+ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -45,7 +45,6 @@ Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierung
 |Protokollierungsoption|Beschreibung|
 |----------------|---------------|
 |Administratorprotokoll|Protokolliert administrative Aufgaben für den Azure Rights Management-Dienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Webberichte|Allgemeine Nutzungsberichte aus dem klassischen Azure-Portal: **Übersicht zu RMS**, **Aktive RMS-Benutzer**, **RMS-Geräteplattformen** und **RMS-Anwendungsnutzung**. <br /><br />Um im klassischen Azure-Portal auf diese Berichte zuzugreifen, klicken Sie auf **Active Directory**, wählen und öffnen Sie ein Verzeichnis, und klicken Sie dann auf **BERICHTE**.|
 |Dokumentkontrolle|Ermöglicht Benutzern das Nachverfolgen und Sperren von Dokumenten, die sie mit dem Azure Information Protection-Client oder der RMS-Freigabe-App nachverfolgt haben. Globale Administratoren können diese Dokumente im Auftrag von Benutzern nachverfolgen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Clientprotokolldateien|Problembehandlungsprotokolle für den Azure Information Protection-Client, zu finden in **%localappdata%\Microsoft\MSIP**. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
@@ -146,16 +145,16 @@ Jede der folgenden Zeilen stellt einen Protokolldatensatz dar. Die Werte der Fel
 |time|Zeit|Die UTC-Zeit im 24-Stunden-Format, zu der die Anforderung verarbeitet wurde.<br /><br />Die Quelle ist die lokale Uhr auf dem Server, von dem die Anforderung bearbeitet wurde.|21:59:28|
 |row-id|Text|Eindeutige GUID für diesen Protokolldatensatz. Wenn ein Wert nicht vorhanden ist, verwenden Sie zum Identifizieren des Eintrags die Korrelations-ID.<br /><br />Dieser Wert ist hilfreich, wenn Sie Protokolle aggregieren oder in ein anderes Format kopieren.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Name|Der Name der angeforderten RMS-API.|AcquireLicense|
-|user-id|String|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.|‘joe@contoso.com’|
+|user-id|Zeichenfolge|Der Benutzer, der die Anforderung gesendet hat.<br /><br />Der Wert steht in einfachen Anführungszeichen. Aufrufe von einem Mandantenschlüssel, der von Ihnen verwaltet wird (BYOK), haben einen Wert von **"**, der auch gilt, wenn die Anforderungstypen anonym sind.|‘joe@contoso.com’|
 |result|Zeichenfolge|'Success', wenn die Anforderung erfolgreich verarbeitet wurde.<br /><br />Der Fehlertyp in einfachen Anführungszeichen zeigt an, wenn die Anforderung fehlgeschlagen ist.|'Success'|
 |correlation-id|Text|Eine GUID, die das RMS-Clientprotokoll und das Serverprotokoll für eine bestimmte Anforderung gemeinsam haben.<br /><br />Dieser Wert kann bei der Behandlung von Clientproblemen hilfreich sein.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Text|Eine GUID in geschweiften Klammern, die den geschützten Inhalt identifiziert (z. B. ein Dokument).<br /><br />Dieses Feld hat nur dann einen Wert, wenn „request-type“ den Wert „AcquireLicense“ hat, und ist bei allen anderen Anforderungstypen leer.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|String|Die E-Mail-Adresse des Besitzers des Dokuments.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com|
-|issuer|String|Die E-Mail-Adresse des Ausstellers des Dokuments. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|owner-email|Zeichenfolge|Die E-Mail-Adresse des Besitzers des Dokuments.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com|
+|issuer|Zeichenfolge|Die E-Mail-Adresse des Ausstellers des Dokuments. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|alice@contoso.com (oder) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|Zeichenfolge|ID der Vorlage, die zum Schützen des Dokuments verwendet wurde. <br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|Zeichenfolge|Der Dateiname eines geschützten Dokuments, das mit dem Azure Information Protection-Client für Windows oder mit der Rights Management-Freigabeanwendung für Windows nachverfolgt wird. <br /><br />Derzeit werden einige Dateien (z.B. Office-Dokumente) als GUIDs und nicht beim tatsächlichen Dateinamen angezeigt.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|TopSecretDocument.docx|
 |date-published|Datum|Das Datum, an dem das Dokument geschützt wurde.<br /><br /> Dieses Feld ist leer, wenn der Anforderungstyp „RevokeAccess“ ist.|2015-10-15T21:37:00|
-|c-info|String|Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
+|c-info|Zeichenfolge|Informationen zur Clientplattform, von der die Anforderung gesendet wird.<br /><br />Die spezifische Zeichenfolge variiert in Abhängigkeit von der Anwendung (z. B. Betriebssystem oder Browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Adresse|Die IP-Adresse des Clients, von dem die Anforderung stammt.|64.51.202.144|
 |admin-aktion|Bool|Gibt an, ob ein Administrator auf die Website zur Dokumentennachverfolgung im Administratormodus zugegriffen hat.|True|
 |fungiert-als-benutzer|Zeichenfolge|Die E-Mail-Adresse des Benutzers von der aus ein Administrator auf die Website zur Dokumentennachverfolgung zugreift. |'joe@contoso.com'|
