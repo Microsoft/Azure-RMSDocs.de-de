@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection-Entwicklerhandbuch
 description: "Entwickler können mithilfe von Azure Information Protection Dateien aller Typen schützen und verwalten."
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
-ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
+ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 
@@ -98,15 +98,9 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 - [Verwenden integrierter Rechte (Benutzer)](built-in-rights-usage-restriction-reference.md)
 - [Aktivieren der Fehler- und Leistungsprotokollierung (Benutzer)](enabling-logging.md)
 
-## <a name="videos"></a>Videos
+## <a name="introduction-and-datasheets"></a>Einführung und Datenblätter
 
 [Einführung in Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
-
-- [E-Mail-Sicherheit im Unternehmen](https://myignite.microsoft.com/videos/2787)
-- [Einführen einer umfassenden identitätsgesteuerten Lösung für den Schutz und die sichere Freigabe von Dateien](https://myignite.microsoft.com/videos/2784)
-- [Informationen zum persistenten Datenschutz durch Klassifizierung, Bezeichnung und Schutz](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Weitere Ressourcen
 
@@ -145,7 +139,7 @@ Diese Videos stammen von der Microsoft 2016 Ignite-Konferenz.
 - Das [AD RMS-SDK](https://msdn.microsoft.com/library/cc530379.aspx) ist die erste Version des RMS-SDKs.
 - Das [AD RMS-Skripttool](https://msdn.microsoft.com/library/bb968797.aspx) ist ein Verwaltungstool für eine AD RMS-Installation.
 
-### <a name="see-also"></a>Weitere Informationen:
+### <a name="see-also"></a>Siehe auch
 
 - [Entwicklerterminologie](terms.md)
 - [Terminologie zu Azure Information Protection – ITPro](../get-started/terminology.md)
