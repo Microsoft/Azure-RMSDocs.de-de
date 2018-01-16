@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: d2f88d35550b47a4f73e87eeca9ecd6309a3c73e
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -70,7 +70,7 @@ Wie die Namen erkennen lassen, gewährt die erste Rolle die Berechtigungen zum A
 
 Einige Dinge sind zu beachten:
 
-- Nur globale Administratoren für Office 365 und globale Administratoren für Azure AD können Office 365 Admin Center oder das klassische Azure-Portal zum Konfigurieren von Azure RMS verwenden. Wenn Sie das Azure-Portal für Azure Information Protection verwenden, können Sie sich auch als ein Scherheitsadministrator anmelden
+- Nur globale Administratoren für Office 365 und globale Administratoren für Azure AD können Office 365 Admin Center zum Konfigurieren von Azure RMS verwenden. Wenn Sie das Azure-Portal für Azure Information Protection verwenden, können Sie sich als globaler Administrator oder als Sicherheitsadministrator anmelden.
 
 - Benutzer, denen Sie die Rolle „GlobalAdministrator“ für Azure RMS zuweisen, müssen Azure RMS-PowerShell-Befehle zum Konfigurieren von Azure RMS verwenden. Hilfe dazu, wie Sie die richtigen Cmdlets für bestimmte Aufgaben finden, erhalten Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](../deploy-use/administer-powershell.md).
 
