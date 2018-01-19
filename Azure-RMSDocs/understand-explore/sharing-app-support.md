@@ -4,7 +4,7 @@ description: "Unterstützung von Azure RMS durch die RMS-Freigabeanwendung als e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 16/01/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3c96d8718f42dcedebba03354c149bb2b9667d66
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: b7c2b05d9bf360b08ea6a35efd959559132df864
+ms.sourcegitcommit: 3a2177df7a23d65f93d3ce2eea3fc3e042ea901c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>RMS-Freigabeanwendung für Windows und mobile Plattformen
 
 >*Gilt für: Azure Information Protection, Office 365*
 
 > [!IMPORTANT]
-> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](../rms-client/aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2018 eingestellt. 
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](../rms-client/aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
  
 Die RMS-Freigabeanwendung ist eine herunterladbare Anwendung, die Office 2010 für Windows-Computer unterstützt und bisher für alle Windows-Computer und mobilen Geräte empfohlen wurde. Sie wird weiterhin für Macintosh-Computer und mobile Geräte mit Windows Phone empfohlen. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für den Azure Rights Management-Dienst bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](../rms-client/sharing-app-admin-guide.md).
 
