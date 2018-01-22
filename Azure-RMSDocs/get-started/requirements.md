@@ -4,7 +4,7 @@ description: "Voraussetzungen für die Bereitstellung von Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 01/18/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e6fa7c2912f2598f8eb2ad31d237caab80fd0273
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -71,7 +71,7 @@ Für die aufgelisteten Serverversionen wird der Azure Information Protection-Cli
 
 Wenn durch den Azure Information Protection-Client Daten mit dem Azure Rights Management-Dienst geschützt werden, können die Daten von den [gleichen Geräten](requirements-client-devices.md) genutzt werden, die auch den Azure Rights Management-Dienst unterstützen.
 
-## <a name="applications"></a>Anwendungen
+## <a name="applications"></a>Applications
 
 Der Azure Information Protection-Client kann Dokumente und E-Mails bezeichnen und schützen, indem er die Office-Anwendungen **Word**, **Excel**, **PowerPoint** und **Outlook** aus einer der folgenden Office-Suiten verwendet:
 
@@ -97,10 +97,15 @@ Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Inform
 
 - Lassen Sie auf TCP 443 HTTPS-Datenverkehr zu **api.informationprotection.azure.com** zu.
 
-- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z. B. zur Durchführung von Überprüfungen auf Paketebene). Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um ihre Kommunikation mit Azure RMS zu sichern.
-
 - Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
 
+- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z. B. zur Durchführung von Überprüfungen auf Paketebene). Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um deren Kommunikation mit dem Azure Rights Management-Dienst zu sichern.
+    
+    - Tipp: Aufgrund der Darstellungsweise von sicheren Verbindungen in der Adressleiste von Chrome können Sie diesen Browser verwenden, um schnell zu überprüfen, ob Ihre Clientverbindung beendet wird, bevor diese den Azure Rights Management-Dienst erreicht. Geben Sie folgende URL in die Adressleiste des Browsers ein: `https://admin.na.aadrm.com/admin/admin.svc` 
+    
+        Beachten Sie die im Browserfenster angezeigten Inhalte nicht. Klicken Sie stattdessen auf das Schloss in der Adressleiste, um die Websiteinformationen anzuzeigen. In den Websiteinformationen wird Ihnen die ausstellende Zertifizierungsstelle angezeigt. Wenn das Zertifikat nicht von einer Microsoft-Zertifizierungsstelle ausgestellt wird, ist es wahrscheinlich, dass Ihre Client-zu-Dienst-Verbindung beendet wurde und in Ihrer Firewall neu konfiguriert werden muss. In der folgenden Abbildung wird ein Beispiel für eine ausstellende Zertifizierungsstelle von Microsoft dargestellt. Wenn Sie feststellen, dass das Zertifikat von einer internen Zertifizierungsstelle ausgestellt wurde, ist diese Konfiguration nicht mit Azure Information Protection kompatibel.
+        
+        ![Überprüfen des ausgestellten Zertifikats für Azure Information Protection-Verbindungen](../media/certificate-checking.png)
 
 ### <a name="on-premises-servers"></a>Lokale Server
 
