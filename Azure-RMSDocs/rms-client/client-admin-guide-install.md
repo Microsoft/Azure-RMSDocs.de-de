@@ -4,7 +4,7 @@ description: "Eine Anleitung und Informationen für Administratoren zum Bereitst
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
-ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
+ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/05/2018
 
 - Für Office Versionen 16.0.8628.2010 und höher (Klick-und-Los): Aktivieren Sie die Legacyunterstützung für Monitore
     
-    Aktivieren Sie die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Konfigurieren der Office-Anwendungen: **Datei** > **Allgemein** > **Benutzeroberflächenoptionen**:
+    Aktivieren Sie die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Konfigurieren der Office-Anwendungen: **Datei** > **Optionen** > **Allgemein** > **Benutzeroberflächenoptionen**:
     
     - Wenn die Option **bei Verwendung mehrerer Bildschirme** auf **Optimieren für beste Darstellung** eingestellt ist, klicken Sie stattdessen auf **die Kompatibilität optimieren (Neustart der Anwendung erforderlich)**. 
         
@@ -191,7 +191,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     
     |Office-Version|Betriebssystem|Software|Aktion|
     |--------------------|--------------|----------------|---------------------|
-    |Office 2016|Alle unterstützten Versionen|64-Bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55073)<br /><br />32-Bit: [KB317866](https://www.microsoft.com/en-us/download/details.aspx?id=55058)<br /><br /> Version: 1.0|„Installieren“ zu klicken.|
+    |Office 2016|Alle unterstützten Versionen|64-Bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32-Bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Version: 1.0|„Installieren“ zu klicken.|
     |Office 2013|Alle unterstützten Versionen|64-Bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32-Bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Version: 1.0|„Installieren“ zu klicken.|
     |Office 2010|Alle unterstützten Versionen|[Microsoft Online Services-Anmeldeassistent](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Version: 2.1|„Installieren“ zu klicken.|
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|

@@ -2,20 +2,20 @@
 title: "So erneuern Sie einen symmetrischen Schlüssel in Azure Information Protection"
 description: "Dieser Artikel beschreibt den Prozess der Erneuerung eines symmetrischen Schlüssels in Azure Information Protection."
 keywords: 
-author: kkanakas
+author: lleonard-msft
 manager: mbaldwin
-ms.author: kartikk
+ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 6153067c308206cb93ad99de1075913c68d1fa3b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 159e5b58883490e4417ecbdb9815340c9ccaa66d
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Vorgehensweise: Erneuern eines symmetrischen Schlüssels in Azure Information Protection
 
@@ -23,7 +23,7 @@ Ein **symmetrischer Schlüssel** ist ein Geheimnis, das eine Nachricht in der Kr
 
 Wenn Sie in Azure Active Directory (Azure AD) ein Dienstprinzipalobjekt erstellen, um eine Anwendung darzustellen, generiert der Prozess ebenso einen 256-Bit symmetrischen Schlüssel, um die Anwendung zu verifizieren. Dieser symmetrische Schlüssel ist standardmäßig ein Jahr gültig. 
 
-Die folgenden Schritte beschreiben, wie der symmetrische Schlüssel erneuert wird. 
+In den folgenden Schritten wird das Erneuern eines symmetrischen Schlüssels veranschaulicht. 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -60,7 +60,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-Der im oben dargestellten Beispiel erstellte symmetrische Schlüssel läuft am 22.3.2018 um 15:27:53 ab. Um weiterhin den Dienstprinzipal nach diesem Zeitpunkt verwenden zu können, müssten Sie den symmetrischen Schlüssel erneuern. Hierzu können Sie den Befehl [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential) verwenden. 
+Dieser symmetrische Schlüssel läuft am 22.03.2018 um 15:27:53 Uhr ab. Sie müssen den symmetrischen Schlüssel erneuern, um den Dienstprinzipal nach diesem Zeitpunkt noch verwenden zu können. Verwenden Sie hierzu den Befehl [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -71,10 +71,10 @@ Dadurch wird ein neuer symmetrischer Schlüssel für die angegebene **AppPrincip
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-Sie können den Befehl [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) verwenden, um zu überprüfen, dass der neue symmetrische Schlüssel mit dem richtigen Dienstprinzipal verknüpft ist, wie hier dargestellt ist. Beachten Sie, dass der Befehl alle Schlüssel auflistet, die derzeit mit dem Dienstprinzipal verknüpft sind.
+Sie können den Befehl [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) verwenden, um zu überprüfen, dass der neue symmetrische Schlüssel mit dem richtigen Dienstprinzipal verknüpft ist, wie hier dargestellt ist. Beachten Sie, dass der Befehl alle Schlüssel auflistet, die dem Dienstprinzipal derzeit zugeordnet sind.
 
 ```
-Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues true
+Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
 
 Type : Symmetric
 Value :
@@ -101,5 +101,5 @@ Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcb
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
+* [How-to: enable your service application to work with cloud-based RMS (Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung)](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell reference (MSOnline-PowerShell-Referenz für Azure Active Directory)](https://docs.microsoft.com/powershell/msonline/)
