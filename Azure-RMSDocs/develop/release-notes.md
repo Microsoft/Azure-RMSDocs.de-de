@@ -26,7 +26,7 @@ In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version 
 
 Das Update für unser Juli-Release enthält Version 4.2.5 des überarbeiteten SDK.
 
-- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/en-us/information-protection/develop/enabling-logging).
+- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/information-protection/develop/enabling-logging).
 - Das iOS SDK unterstützt keine Protokollierungsstufen. 
 - Das SDK gibt nun einen Fehler bei einem NULL-Zugriffstoken zurück.
 
