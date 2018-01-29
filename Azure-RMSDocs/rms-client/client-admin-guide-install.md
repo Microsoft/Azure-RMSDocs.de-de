@@ -4,7 +4,7 @@ description: "Eine Anleitung und Informationen für Administratoren zum Bereitst
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
+ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -74,11 +74,15 @@ ms.lasthandoff: 01/19/2018
 
 - Für Office Versionen 16.0.8628.2010 und höher (Klick-und-Los): Aktivieren Sie die Legacyunterstützung für Monitore
     
-    Aktivieren Sie die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Konfigurieren der Office-Anwendungen: **Datei** > **Optionen** > **Allgemein** > **Benutzeroberflächenoptionen**:
+    Aktivieren Sie ggf. die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Wenn die Leiste in diesem Szenario nicht richtig angezeigt wird, wird Sie möglicherweise als **AdxTaskPane** angezeigt. 
+    
+    So konfigurieren Sie die Office-Anwendungen für diese Anforderung: **Datei** > **Optionen** > **Allgemein** > **Benutzeroberflächenoptionen**:
     
     - Wenn die Option **bei Verwendung mehrerer Bildschirme** auf **Optimieren für beste Darstellung** eingestellt ist, klicken Sie stattdessen auf **die Kompatibilität optimieren (Neustart der Anwendung erforderlich)**. 
         
     - Falls die Option **Beste Einstellungen für meinen Bildschirm verwenden** ausgewählt ist, entfernen Sie die Auswahl.
+    
+    - Wenn keine dieser Optionen angezeigt wird, ist keine zusätzliche Konfiguration erforderlich.
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.

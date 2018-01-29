@@ -4,17 +4,17 @@ description: "Eine Übersicht über den Azure Information Protection-Dienst."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
+ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -73,7 +73,7 @@ Benutzer können mit der rechten Maustaste auf Dateien oder einen Ordner im Wind
 
 Wenn ein Benutzer die Menüoption **Klassifizieren und schützen** im Datei-Explorer auswählt, dann kann er eine Bezeichnung auf ähnliche Weise wie über die Information Protection-Leiste in seinen Office-Desktopanwendungen auswählen. Sie können bei Bedarf auch ihre eigenen benutzerdefinierten Berechtigungen festlegen.
 
-Hauptbenutzer (und Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. Die dazu erforderlichen PowerShell-Befehle sind automatisch mit dem Client verfügbar, obwohl Sie das PowerShell-Modul auch separat installieren können.
+Hauptbenutzer (und Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. Die für diese Aktionen erforderlichen PowerShell-Befehle sind automatisch mit dem Client verfügbar, obwohl Sie das PowerShell-Modul auch separat installieren können.
 
 Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren eine Website für die Dokumentenverfolgung verwenden, um zu überwachen, wer wann auf die Dokumente zugreift. Wenn sie eine missbräuchliche Verwendung vermuten, können sie den Zugriff auf diese Dokumente auch widerrufen:
 
@@ -93,7 +93,7 @@ Ein Gmail-Benutzer sieht z.B. den folgenden Inhalt in einer E-Mail-Nachricht:
 
 Geschützte E-Mails, die an einen Benutzer in derselben Organisation gerichtet sind, werden über den gewohnten Workflow zum Senden von E-Mails gesendet. Beispielsweise können sie die Schaltfläche **Nicht weiterleiten** auswählen, die der Azure Information Protection-Client dem Outlook-Menüband hinzufügen kann. Die Funktion „Nicht weiterleiten“ kann auch in eine für Benutzer auswählbare Bezeichnung integriert werden, sodass die E-Mail klassifiziert und geschützt wird:
 
-![Auswählen einer für die Option „Nicht weiterleiten“ konfigurierten Bezeichnung](../media/recipients-only-label.png)
+![Auswählen einer Bezeichnung, für die die Option „Nicht weiterleiten“ konfiguriert ist](../media/recipients-only-label.png)
 
 Alternativ können Sie anhand von E-Mail-Flussregeln, bei denen Rechteschutz angewendet wird, automatisch Schutz für Benutzer gewährleisten. 
 
@@ -131,8 +131,8 @@ Sie können die Sitzungen [suchen und finden](https://myignite.microsoft.com/vid
 
 Lesen Sie den Blogbeitrag [Azure Information Protection: Ready, set, protect! (Azure Information Protection: Auf die Plätze, Fertig, Schützen!)](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
 
-Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnellstarttutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) in fünf Schritten.
+Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnellstarttutorial](../get-started/infoprotect-quick-start-tutorial.md) in fünf Schritten. Wenn Sie hingegen Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md).
 
-Kennen Sie vielleicht Azure Information Protection oder Azure Rights Management unter einem anderen Namen? Weitere Informationen dazu finden Sie in [unserer Liste alternativer Benennungen für den Dienst](azure-rms-aka.md).
+Es kann sein, dass Sie Azure Informationen Protection nur unter einem anderen Namen kennen. Dann finden Sie weitere Informationen dazu in [der Liste alternativer Benennungen für den Dienst](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
