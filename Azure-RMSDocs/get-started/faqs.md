@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zu Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da0ba7876b1098671428e87117bed97c4f464071
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 23c2b24a830b6d1ab7e0712fc1d1d70056f5d736
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -96,7 +96,7 @@ Derzeit besteht ein Unterschied beim Festlegen des [Rights Management-Besitzers]
 
 - Für die Windows-Dateiklassifizierungsinfrastruktur: Sie können festlegen, dass alle Dateien einen einzigen Rights Management-Besitzer haben, oder Sie können den Rights Management-Besitzer für jede Datei dynamisch festlegen. Um den Rights Management-Besitzer dynamisch festzulegen, verwenden Sie den Parameter **-OwnerMail [Source File Owner Email]** und seinen Wert. Durch diese Konfiguration wird die E-Mail-Adresse des Benutzers von Active Directory mithilfe des Benutzerkontonamens in der Owner-Eigenschaft der Datei abgerufen.
 
-- Für die Azure Information Protection-Überprüfung: Sie können festlegen, dass alle Dateien einen einzigen Rights Management-Besitzer haben, aber Sie können den Rights Management-Besitzer nicht für jede Datei dynamisch festlegen. Um das Konto festzulegen, geben Sie den optionalen Parameter **-DefaultOwner** für die [Überprüfungskonfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration?view=azureipps#optional-parameters) an.
+- Für die Azure Information Protection-Überprüfung: Sie können festlegen, dass alle Dateien in einem angegebenen Datenspeicher einen einzigen Rights Management-Besitzer haben, aber Sie können den Rights Management-Besitzer nicht für jede Datei dynamisch festlegen. Um das Konto festzulegen, geben Sie den Parameter **-DefaultOwner** für das [Datenrepositoryprofil](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters) an.
 
 Wenn die Überprüfung Dateien auf Websites und in Bibliotheken von SharePoint schützt, wird der Rights Management-Besitzer dynamisch für jede Datei mithilfe des SharePoint-Autorenwerts festgelegt.
 

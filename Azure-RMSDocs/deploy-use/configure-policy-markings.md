@@ -4,17 +4,17 @@ description: "Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 99aba6560f9dcdbd564f317e8d9e0ce89845f4a9
-ms.sourcegitcommit: f78f5209f0e19c6edfd1815d76e0e9750b4ce71d
+ms.openlocfilehash: 01208dda12b5989e546c1042b48c17e166d48687
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -87,6 +87,38 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
+
+## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
+
+Diese Einstellung ist derzeit als Vorschauversion verfügbar und erfordert die Vorschauversion des Azure Information Protection-Clients.
+
+Die von Ihnen angegebenen optischen Kennzeichnungen werden standardmäßig auf Word, Excel, PowerPoint und Outlook angewendet. Sie können optische Kennzeichnungen jedoch pro Office-Anwendungstyp festlegen, wenn Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp mithilfe der Werte **Word**, **Excel**, **PowerPoint** bzw. **Outlook** angeben. Sie können diese Werte auch abkürzen. Das ist notwendig, wenn Sie mehrere Werte in der gleichen If.App-Anweisung angeben möchten.
+
+Verwenden Sie die folgende Syntax:
+
+    ${If.App.<application type>}<your visual markings text> ${If.End}
+
+Bei der Syntax in dieser Anweisung muss die Groß-/Kleinschreibung beachtet werden.
+
+Beispiele:
+
+- **Legen Sie Headertext nur für Word-Dokumente fest:**
+    
+    `${If.App.Word}This Word document is sensitive ${If.End}`
+    
+    Die Bezeichnung legt nur in Headern von Word-Dokumenten den Headertext „This Word document is sensitive“ fest. Für andere Office-Anwendungen wird kein Headertext angewendet.
+
+- **Legen Sie einen Fußzeilentext für Word, Excel und Outlook und einen anderen Fußzeilentext für PowerPoint fest:**
+    
+    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
+    
+    In Word, Excel und Outlook wendet die Bezeichnung den Fußzeilentext „This content is confidential“ an. In PowerPoint wendet die Bezeichnung den Fußzeilentext „This presentation is confidential“ an.
+
+- **Legen Sie spezifischen Wasserzeichentext für Word und PowerPoint und Wasserzeichentext für Word, Excel und PowerPoint fest:**
+    
+    `${If.App.WP}This content is ${If.End}Confidential`
+    
+    In Word und PowerPoint wendet die Bezeichnung den Wasserzeichentext „This content is Confidential“ an. In Excel wird der Wasserzeichentext „Confidential“ angewendet. In Outlook wird kein Wasserzeichentext angewendet, da Wasserzeichen als optische Kennzeichnungen in Outlook nicht unterstützt werden.
 
 ### <a name="setting-the-font-name"></a>Festlegen des Schriftartnamens
 
