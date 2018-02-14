@@ -4,7 +4,7 @@ description: "Technische Details zu den unterstützten Dateitypen, Dateierweiter
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6a1c477a06c695a2183ad379c22492ea59d4bee
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: e1adb23e00b447d5633b37b310e3b9ce96d0becf
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -92,7 +92,7 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
     
     - So schützen Sie diese Dateien: Die Dateigröße wird nur durch den verfügbaren Speicherplatz und den Arbeitsspeicher beschränkt.
     
-    - So öffnen Sie diese Dateien im Azure Information Protection-Viewer: Die maximale Dateigröße, die für textbasierte Dateien (.ptxt und .pxml) unterstützt wird, ist 20 MB. Bei bildbasierten und PDF-Dateien wird die maximale Dateigröße nur durch den Arbeitsspeicher beschränkt.
+    - So öffnen Sie diese Dateien im Azure Information Protection-Viewer: Wenn Sie nicht die aktuelle Vorschauversion des Azure Information Protection-Clients besitzen, wird für textbasierte Dateien („.ptxt“ und „.pxml“) eine Dateigröße von maximal 20 MB unterstützt. Bei bildbasierten und PDF-Dateien wird die maximale Dateigröße nur durch den Arbeitsspeicher beschränkt.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 

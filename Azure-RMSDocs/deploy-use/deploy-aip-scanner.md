@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7dfd670df89b652f8ff55452198d8483b55c59cd
-ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
+ms.openlocfilehash: 21388d4a3617c50012f0f2055fce0ba48bdb66d5
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -54,7 +54,7 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 |---------------|--------------------|
 |Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- 4 Prozessoren<br /><br />- 4 GB RAM|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](../get-started/requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](../get-started/requirements.md#firewalls-and-network-infrastructure) verfügt. Andernfalls müssen Sie ihn als einen [getrennten Computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers) konfigurieren. |
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
-|Dienstkonto zum Ausführen der Überprüfung|Dieses Konto muss ein Active Directory-Konto sein, das mit Azure AD synchronisiert wird, und die folgenden zusätzlichen Anforderungen erfüllen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann.<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).|
+|Dienstkonto zum Ausführen der Überprüfung|Dieses Konto muss ein Active Directory-Konto sein, das mit Azure AD synchronisiert wird, und die folgenden zusätzlichen Anforderungen erfüllen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann.<br /><br />Hinweis: Falls aufgrund interner Richtlinien Dienstkonten nicht diese Berechtigung, aber die Berechtigung **Als Batchauftrag anmelden** erteilt werden kann, können Sie diese Voraussetzung durch zusätzliche Konfigurationsschritte erfüllen. Anweisungen finden Sie im Administratorhandbuch im Abschnitt [Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).|
 |Der Azure Information Protection-Client ist auf dem Windows Server-Computer installiert.|Die Azure Information Protection-Überprüfung erfordert zurzeit die Vorschauversion des Azure Information Protection-Clients.<br /><br />Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](../rms-client/client-admin-guide.md).|
 |Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Weitere Informationen zur Konfiguration dieser Bedingungen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md).<br /><br />Weitere Informationen zum Konfigurieren dieser Bezeichnungen zum Anwenden des Schutzes auf Dateien finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).<br /><br />Diese Bezeichnungen sind in der globalen Richtlinie oder in [bereichsbezogenen Richtlinien](configure-policy-scope.md) zu finden.|
 
@@ -159,6 +159,46 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
 
 Da der Zeitplan als fortlaufend konfiguriert wurde, startet die Überprüfung einen neuen Synchronisierungszyklus, sobald der alte abgeschlossen wurde, damit neue und geänderte Dateien gefunden werden.
 
+
+## <a name="how-files-are-scanned-by-the-azure-information-protection-scanner"></a>Überprüfen von Dateien durch die Azure Information Protection-Überprüfung
+
+Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlossene](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client) Dateien übersprungen, etwa ausführbare Dateien und Systemdateien.
+
+Die Überprüfung verwendet dann Windows-iFilter, um die folgenden Dateitypen zu überprüfen. Bei diesen Dateitypen wird das Dokument mithilfe der Bedingungen bezeichnet, die Sie für Ihre Bezeichnungen angegeben haben.
+
+|Anwendungstyp|Dateityp|
+|--------------------------------|-------------------------------------|
+|Word|.docx; .docm; .dotm; .dotx|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|Projekt|.mpp; .mpt|
+|PDF|PDF|
+|Text|.txt; .xml; .csv|
+
+
+Für die übrigen Dateitypen wendet die Überprüfung schließlich die Standardbezeichnung in der Azure Information Protection-Richtlinie an.
+
+|Anwendungstyp|Dateityp|
+|--------------------------------|-------------------------------------|
+|Projekt|.mpp; .mpt|
+|Herausgeber|.pub|
+|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
+|XPS|.xps; .oxps; .dwfx|
+|Solidworks|.sldprt; .slddrw; .sldasm|
+|JPEG |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
+|PNG |PNG|
+|GIF|GIF|
+|Bitmap|.bmp; .giff|
+|TIFF|.tif; .tiff|
+|Photoshop|.psdv|
+|DigitalNegative|.dng|
+|Pfile|PFILE|
+
+Beachten Sie Folgendes: Wenn eine Bezeichnung allgemeinen Schutz auf Dokumente anwendet, wird die Erweiterung in „.pfile“ geändert. Darüber hinaus ist die Datei schreibgeschützt, bis sie von einem autorisierten Benutzer geöffnet und in ihrem nativen Format gespeichert wird. Die Erweiterung von Text- und Bilddateien kann sich ebenfalls ändern, und diese Dateien können schreibgeschützt werden. Falls Sie dies nicht wünschen, können Sie verhindern, dass Dateien eines bestimmten Dateityps geschützt werden. Verhindern Sie beispielsweise, dass eine PDF-Datei zu einer geschützten PDF-Datei (.ppdf) oder eine Textdatei zu einer geschützten Textdatei (.ptxt) wird.
+
+Weitere Informationen zu den verschiedenen Schutzebenen für verschiedene Dateitypen sowie zum Steuern des Schutzverhaltens finden Sie im Administratorhandbuch im Abschnitt [Für den Schutz unterstützte Dateitypen](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
+
+
 ## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Erneutes Einlesen von Dateien durch die Azure Information Protection-Überprüfung
 
 Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den Datenspeichern. In den nachfolgenden Überprüfungen werden dann nur noch neue oder geänderte Dateien untersucht. 
@@ -226,6 +266,8 @@ Mit anderen Cmdlets für die Überprüfung können Sie das Dienstkonto und die D
 - [Set-AIPScanner](/powershell/module/azureinformationprotection/Set-AIPScanner)
 
 - [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration)
+
+- [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 

@@ -4,7 +4,7 @@ description: "Informationen zum Anpassen des Azure Information Protection-Client
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 3ee5bd789b62261867d6de4f56efaa3890dc1a57
+ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -52,6 +52,15 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie anschließend die Wertdat
 
 Unabhängig von dieser Einstellung folgt der Azure Information Protection-Client dem [Prozess zur RMS-Diensterkennung](../rms-client/client-deployment-notes.md#rms-service-discovery), um sein AD RMS-Cluster zu finden.
 
+## <a name="suppress-the-initial-congratulations-welcome-page"></a>Unterdrücken der Startseite „Herzlichen Glückwunsch!“
+
+Wenn der Azure Information Protection-Client zum ersten Mal auf einem Computer installiert wird und ein Benutzer Word, Excel, PowerPoint oder Outlook öffnet, wird die Seite **Herzlichen Glückwunsch!** mit kurzen Anweisungen dazu geöffnet, wie die neue Information Protection-Leiste zum Auswählen von Bezeichnungen verwendet wird. Sie können diese Seite durch Bearbeitung der Registrierung unterdrücken.
+
+Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** fest:
+
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+
+
 ## <a name="sign-in-as-a-different-user"></a>Anmelden als ein anderer Benutzer
 
 In einer Produktionsumgebung müssen sich Benutzer in der Regel nicht als ein anderer Benutzer anmelden, wenn sie den Azure Information Protection-Client verwenden. Allerdings müssen Sie sich als Administrator während einer Testphase möglicherweise als anderer Benutzer anmelden. 
@@ -73,6 +82,7 @@ Darüber hinaus gilt:
 - Wenn Sie einmaliges Anmelden nutzen, müssen Sie sich von Windows abmelden und sich mit einem anderen Benutzerkonto erneut anmelden, nachdem Sie die Registrierung bearbeitet haben. Der Azure Information Protection-Client wird automatisch mit Ihrem aktuell angemeldeten Benutzerkonto authentifiziert.
 
 - Sie können die Option **Einstellungen zurücksetzen** unter **Hilfe und Feedback** verwenden, um sich abzumelden und die aktuell heruntergeladene Azure Information Protection-Richtlinie zu löschen.
+
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt
 

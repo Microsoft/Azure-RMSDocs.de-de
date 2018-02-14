@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -461,7 +461,11 @@ Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihre
 > [!NOTE]
 > Wenn Sie [bereichsbezogene Richtlinien](../deploy-use/configure-policy-scope.md) verwenden, denken Sie bitte daran, dass Sie dieses Konto möglicherweise zu Ihren bereichsbezogenen Richtlinien hinzufügen müssen.
 
-Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Namen und das Kennwort des Benutzerkontos ein, das Sie für den unbeaufsichtigten Benutzer erstellt haben. Danach kann dieses Konto dann die Bezeichnungs-Cmdlets bis zum Ablaufen des Authentifizierungstokens ohne Benutzereingriff ausführen. Wenn das Token abläuft, führen Sie das Cmdlet erneut aus, um ein neues Token abzurufen:
+Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Namen und das Kennwort des Benutzerkontos ein, das Sie für den unbeaufsichtigten Benutzer erstellt haben. Danach kann dieses Konto dann die Bezeichnungs-Cmdlets bis zum Ablaufen des Authentifizierungstokens ohne Benutzereingriff ausführen. 
+
+Damit sich das Benutzerkonto beim ersten Mal interaktiv anmelden kann, muss dem Konto die Berechtigung **Lokales Anmelden** zugewiesen sein. Diese Berechtigung ist Benutzerkonten standardmäßig zugewiesen, aber Ihre Unternehmensrichtlinien lassen diese Konfiguration für Dienstkonten unter Umständen nicht zu. In diesem Fall können Sie „Set-AIPAuthentication“ mit dem *Token*-Parameter ausführen, sodass die Authentifizierung ohne Anmeldeaufforderung abgeschlossen wird. Sie können diesen Befehl als geplanten Task ausführen und dem Konto die niedrigere Berechtigung **Als Batchauftrag anmelden** erteilen. Weitere Informationen finden Sie in den folgenden Abschnitten. 
+
+Wenn das Token abläuft, führen Sie das Cmdlet erneut aus, um ein neues Token abzurufen.
 
 Wenn Sie dieses Cmdlet ohne Parameter ausführen, erhält das Konto ein Zugriffstoken, das 90 Tage oder bis zum Ablauf des Kennworts gültig ist.  
 
@@ -517,7 +521,85 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 12. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
     
-Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit Parametern benötigen.
+Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *WebAppId*, *WebAppKey* und *NativeAppId* benötigen. Beispiel:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Führen Sie diesen Befehl im Kontext des Kontos aus, das die Dokumente ohne Benutzereingriff bezeichnet und schützt. Beispiel: Ein Benutzerkonto für Ihre PowerShell-Skripts oder das Dienstkonto zum Ausführen der Azure Information Protection-Überprüfung.  
+
+Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufgefordert. Dadurch wird das Zugriffstoken für Ihr Konto erstellt und sicher unter „%localappdata%\Microsoft\MSIP“ gespeichert. Nach dieser ersten Anmeldung können Sie Dateien auf dem Computer ohne Benutzereingriff bezeichnen und schützen. Wenn Sie jedoch ein Dienstkonto zum Bezeichnen und Schützen von Dateien verwenden und sich dieses Dienstkonto nicht interaktiv anmelden kann, befolgen Sie die Anweisungen im folgenden Abschnitt, damit das Dienstkonto mithilfe eines Token authentifiziert werden kann.
+
+### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“
+
+> [!NOTE]
+> Diese Option ist als Vorschauversion verfügbar und erfordert die aktuelle Vorschauversion des Azure Information Protection-Clients.
+
+Führen Sie die folgenden zusätzlichen Schritte und Anweisungen aus, um die erste interaktive Anmeldung für ein Konto zu verhindern, das Dateien bezeichnet und schützt. In der Regel sind diese zusätzlichen Schritte nur erforderlich, wenn diesem Konto nicht die Berechtigung **Lokale Anmeldung** erteilt werden kann, ihm jedoch die Berechtigung **Als Batchauftrag anmelden** zugewiesen wird. Dies kann beispielsweise bei Ihrem Dienstkonto der Fall sein, das die Azure Information Protection-Überprüfung ausführt.
+
+1. Erstellen Sie ein PowerShell-Skript auf dem lokalen Computer.
+
+2. Führen Sie „Set-AIPAuthentication“ aus, um ein Zugriffstoken abzurufen und in die Zwischenablage zu kopieren.
+
+2. Ändern Sie das PowerShell-Skript, um das Token aufzunehmen.
+
+3. Erstellen Sie einen Task, der das PowerShell-Skript im Kontext des Dienstkontos ausführt, das zum Bezeichnen und Schützen von Dateien verwendet wird.
+
+4. Vergewissern Sie sich, dass das Token für das Dienstkonto gespeichert wurde, und löschen Sie das PowerShell-Skript.
+
+
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Schritt 1: Erstellen eines PowerShell-Skripts auf dem lokalen Computer
+
+1. Erstellen Sie auf Ihrem Computer ein neues PowerShell-Skript mit dem Namen „Aipauthentication.ps1“.
+
+2. Kopieren Sie den folgenden Befehl, und fügen Sie ihn in das folgende Skript ein:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Ändern Sie anhand der Anweisungen im vorhergehenden Abschnitt diesen Befehl. Geben Sie dabei Ihre eigenen Werte für die Parameter **WebAppId**, **WebAppkey** und **NativeAppId** an. Zu diesem Zeitpunkt besitzen Sie den Wert für den **Token**-Parameter noch nicht. Sie geben ihn später an. 
+    
+    Beispiel: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Schritt 2: Ausführen von „Set-AIPAuthentication“ zum Abrufen eines Zugriffstokens und Kopieren des Tokens in die Zwischenablage
+
+1. Öffnen Sie eine Windows PowerShell-Sitzung.
+
+2. Führen Sie den folgenden Befehl aus. Verwenden Sie dabei die gleichen Werte wie im Skript:
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    Beispiel: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Schritt 3: Ändern des PowerShell-Skripts zum Bereitstellen des Tokens
+
+1. Geben Sie in Ihrem PowerShell-Skript den Tokenwert ein, indem Sie die Zeichenfolge aus der Zwischenablage einfügen. Speichern Sie anschließend die Datei.
+
+2. Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (eine Signatur erhöht die Sicherheit), muss Windows PowerShell auf dem Computer konfiguriert werden, auf dem die Befehle zum Bezeichnen ausgeführt werden. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: `Set-ExecutionPolicy RemoteSigned`. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Computer gespeichert sind (weniger sicher).
+    
+    Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in der PowerShell-Dokumentationsbibliothek.
+
+3. Kopieren Sie dieses PowerShell-Skript auf den Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, und löschen Sie das Original auf Ihrem Computer. Beispiel: Sie kopieren das PowerShell-Skript in „C:\Scripts\Aipauthentication.ps1“ auf einem Windows Server-Computer.
+
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Schritt 4: Erstellen eines Tasks zum Ausführen des PowerShell-Skripts
+
+1. Stellen Sie sicher, dass das Dienstkonto, mit dem Dateien bezeichnet und geschützt werden, über die Berechtigung **Als Batchauftrag anmelden** verfügt.
+
+2. Öffnen Sie auf dem Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, die Aufgabenplanung, und erstellen Sie einen neuen Task. Konfigurieren Sie diesen Task so, dass er als Dienstkonto ausgeführt wird, mit dem Dateien bezeichnet und geschützt werden. Konfigurieren Sie anschließend die folgenden Werte für die **Aktionen**:
+    
+    - **Aktion**: `Start a program`
+    - **Programm/Skript**: `Powershell.exe`
+    - **Argumente hinzufügen (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    Geben Sie als Argumentzeile Ihren eigenen Pfad und Dateinamen an, wenn diese vom Beispiel abweichen.
+
+3. Führen Sie diesen Task manuell aus.
+
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Schritt 4: Sicherstellen, dass das Token gespeichert wurde, und Löschen des PowerShell-Skripts
+
+1. Vergewissern Sie sich, dass das Token nun im Ordner „%localappdata%\Microsoft\MSIP“ des Dienstkontoprofils gespeichert ist. Dieser Wert wird durch das Dienstkonto geschützt.
+
+2. Löschen Sie das PowerShell-Skript, das den Tokenwert enthält (etwa „Aipauthentication.ps1“).
+    
+    Löschen Sie optional den Task. Wenn das Token abläuft, müssen Sie diese Schritte wiederholen. Daher ist es unter Umständen praktischer, den konfigurierten Task zu behalten, damit er einfacher erneut ausgeführt werden kann, wenn Sie das neue PowerShell-Skript mit dem neuen Tokenwert kopieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiel: 

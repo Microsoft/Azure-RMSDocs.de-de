@@ -4,7 +4,7 @@ description: "Anweisungen zum Anzeigen und Verwenden eines geschützten Dokument
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/10/2018
+ms.date: 01/30/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
-ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
+ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 
@@ -71,6 +71,8 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
     Ausführlichere Informationen zu den Berechtigungen und den jeweils enthaltenen Nutzungsrechten, finden Sie unter [In Berechtigungsstufen enthaltene Rechte](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. Klicken Sie zum Bearbeiten der Datei auf **Speichern unter**, wodurch Sie die Datei ohne Schutz mit der ursprünglichen Dateierweiterung speichern können. Sie können die Datei dann mithilfe der Anwendung bearbeiten, die diesem Dateityp zugeordnet ist.
+    
+    Wenn Sie später im Datei-Explorer mit der rechten Maustaste auf diese neu gespeicherte Datei klicken und versuchen, sie erneut zu schützen, ist dies nicht möglich. Dieses bekannte Problem wurde in der aktuellen Vorschauversion des Azure Information Protection-Clients behoben. Beim Vorschauclient werden durch Auswählen von **Speichern unter** die Bezeichnung und der Schutz entfernt. Wenn Sie mit der rechten Maustaste auf die Kachel klicken, können Sie die Bezeichnung neu anwenden, wodurch auch der Schutz erneut angewendet wird.
 
 5. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 

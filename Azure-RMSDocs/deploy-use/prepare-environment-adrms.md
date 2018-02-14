@@ -1,10 +1,10 @@
 ---
 title: "Vorbereiten der Umgebung für Azure RMS und AD RMS"
-description: Leitfaden, wenn Sie Azure Rights Management mit AD RMS bereitgestellt haben
+description: Hier finden Sie eine Anleitung, falls Sie Azure Rights Management und AD RMS bereitgestellt haben.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,39 +12,39 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b20bbc1fe0de90b9b0151098e1b77d3c7a98c431
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: 6d7a1d2ed61e1d12d6ca50db50c5b516e6e4f54e
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management, wenn Sie auch über Active Directory-Rechteverwaltungsdienste (AD RMS) verfügen
+# <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management bei gleichzeitiger Verwendung von Active Directory Rights Management Services (AD RMS)
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Wichtiger Leitfaden, wenn Sie bereits Active Directory Rights Management Services (AD RMS) nutzen und das folgende Szenario vorliegt:
+Hier finden Sie wichtige Hinweise, wenn Sie bereits Active Directory Rights Management Services (AD RMS) verwenden und das folgende Szenario vorliegt:
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Eine Option zum Aktivieren des Schutzes wird angezeigt, wenn Sie Azure Information Protection konfigurieren.
 
-Das Blatt **Azure Information Protection – Schutzaktivierung** verfügt über eine Option zum Aktivieren des Diensts für Azure Rights Management (Azure RMS). 
+Auf dem Blatt **Azure Information Protection - Protection activation** (Azure Information Protection – Schutzaktivierung) wird eine Option zum Aktivieren des Azure Rights Management-Diensts (Azure RMS) angezeigt. 
 
-Wenn Sie auch Active Directory Rights Management Services (AD RMS) verwenden, wählen Sie nicht die Option **Aktivieren** aus. Das Aktivieren von Azure Rights Management, wenn Sie auch über AD RS verfügen, ist keine kompatible Kombination. Dieses Szenario wird nicht unterstützt und hat unzuverlässige Ergebnisse zur Folge. Es ist daher wichtig, dass Sie Azure Rights Management zu diesem Zeitpunkt nicht aktivieren. 
+Wenn Sie außerdem Active Directory Rights Management Services (AD RMS) verwenden, wählen Sie nicht die Option **Aktivieren**. Azure Rights Management kann nicht aktiviert werden, wenn Sie AD RS nutzen. Dieses Szenario wird nicht unterstützt und führt zu unzuverlässigen Ergebnissen. Daher ist es wichtig, Azure Rights Management zu diesem Zeitpunkt nicht zu aktivieren. 
 
-Wenn Sie Computer von AD RMS in den Azure Rights Management-Dienst verschieben möchten, können Sie einen Migrationsprozess starten. Einer der Schritte bei der Migration ist das Aktivieren des Diensts. Dies machen Sie jedoch erst, nachdem Sie Informationen zur Konfiguration von AD RMS in den Azure Rights Management-Dienst exportiert haben. Dieser Prozess stellt sicher, dass Dokumente und E-Mails, die durch AD RMS geschützt wurden, immer noch geöffnet werden können.
+Wenn Sie Computer von AD RMS zum Azure Rights Management-Dienst migrieren möchten, können Sie einen Migrationsprozess starten. Einer der Schritte bei der Migration besteht im Aktivieren des Diensts. Sie führen diesen Schritt jedoch erst aus, nachdem Sie Konfigurationsinformationen aus AD RMS in den Azure Rights Management-Dienst exportiert haben. Durch diese Vorgehensweise wird sichergestellt, dass durch AD RMS geschützte Dokumente und E-Mails weiterhin geöffnet werden können.
 
-Wenn der Azure Rights Management-Dienst nicht aktiviert ist, können Sie Azure Information Protection weiterhin für Bezeichnungen verwenden, die nur für die Klassifizierung gelten. Eine spezielle Standardrichtlinie wurde für Sie erstellt, die den Datenschutz nicht einschließt, und diese Konfigurationsoptionen bleiben nicht verfügbar, bis der Azure Rights Management-Dienst aktiviert ist.
+Wenn der Azure Rights Management-Dienst nicht aktiviert ist, können Sie dennoch Azure Information Protection für Bezeichnungen verwenden, die nur für die Klassifizierung gelten. Eine spezielle Standardrichtlinie wird für Sie erstellt, die keinen Schutz von Daten beinhaltet, und diese Konfigurationsoptionen sind bis zur Aktivierung des Azure Rights Management-Diensts nicht verfügbar.
 
-### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Schritt 1: Konfigurieren Sie Ihre Azure Information Protection-Richtlinie für die Klassifizierung und Bezeichnung – ohne Schutz
+### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Schritt 1: Konfigurieren der Azure Information Protection-Richtlinie für die Klassifizierung und Bezeichnung – ohne Schutz
 
-Klicken Sie auf dem ersten Blatt **Azure Information Protection** auf **Globale Richtlinie**, um Ihre Standardrichtlinie anzuzeigen und zu konfigurieren, die keine Optionen für den Datenschutz enthält. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
+Klicken Sie auf dem Startblatt **Azure Information Protection** auf **Globale Richtlinie**, um Ihre Standardrichtlinie anzuzeigen und zu konfigurieren, die keine Optionen für den Schutz von Daten beinhaltet. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
-### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen Sie mit der Planung der Migration
+### <a name="step-2-start-planning-for-migration"></a>Schritt 2: Beginnen mit der Planung für die Migration
 
-Folgen Sie dem Migrationsleitfaden: [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
+Befolgen Sie die Anweisungen zur Migration unter [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
-### <a name="step-3-start-to-configure-labels-for-protection"></a>Schritt 3: Beginnen Sie mit der Konfiguration der Bezeichnungen für den Schutz
+### <a name="step-3-start-to-configure-labels-for-protection"></a>Schritt 3: Beginnen mit dem Konfigurieren von Bezeichnungen für den Schutz
 
-Nachdem Sie den Azure Rights Management-Dienst im Rahmen des Migrationsprozesses aktiviert haben, können Sie Bezeichnungen für den Schutz von Daten konfigurieren. Wenn Sie jedoch Benutzer in Batches migrieren, stellen Sie sicher, dass Bezeichnungen, die Schutz anwenden, nur auf die migrierten Benutzer [ausgerichtet](configure-policy-scope.md) sind.
+Nachdem Sie den Azure Rights Management-Dienst im Rahmen der Migration aktiviert haben, können Sie Bezeichnungen für den Schutz von Daten konfigurieren. Beim Migrieren von Benutzern in Batches müssen Sie jedoch sicherstellen, dass der [Geltungsbereich](configure-policy-scope.md) von Bezeichnungen zum Anwenden von Schutz auf die migrierten Benutzer begrenzt ist.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
