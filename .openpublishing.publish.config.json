@@ -20,7 +20,7 @@
     "live-oldev",
     "live"
   ],
-  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/Azure-RMSDocs.de-de",
+  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/Azure-RMSDocs.de-de",
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "contribution_branch_mappings": {
