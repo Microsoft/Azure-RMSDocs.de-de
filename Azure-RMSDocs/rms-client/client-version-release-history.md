@@ -4,7 +4,7 @@ description: "Erfahren Sie, was in einem Release des Azure Information Protectio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/22/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
-ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
+ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -43,9 +43,63 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 
 ## <a name="versions-later-than-110560"></a>1.10.56.0 und spätere Versionen
 
-Wenn Ihre Version des Clients höher als 1.10.56.0 ist, handelt es sich um einen Vorschaubuild für Test- und Auswertungszwecke. 
+Wenn Ihre Version des Clients höher als 1.10.56.0 ist, handelt es sich um einen Vorschaubuild für Test- und Auswertungszwecke.
 
-Alle Neuerungen und Änderungen in der aktuellen Vorschauversion gegenüber der letzten allgemein verfügbaren Version des Clients finden Sie im Abschnitt **Details** auf der [Downloadseite](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Die aktuelle Version lautet **1.21.203.0** und weist seit der aktuellen GA-Version des Clients die unten angegebenen Änderungen auf.
+
+Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
+
+**Neue Features**:
+
+- Azure Information Protection-Überprüfung: Das im Client enthaltene PowerShell-Modul verfügt über neue Cmdlets zum Installieren und Konfigurieren des Überprüfungsmoduls, mit denen Sie Dateien in Ihren lokalen Datenspeichern ermitteln, klassifizieren und schützen können. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-use/deploy-aip-scanner.md). 
+
+- Für Office-Apps wird die automatische und empfohlene Klassifizierung ständig im Hintergrund ausgeführt, anstatt beim Speichern von Dokumenten. Aufgrund dieses veränderten Verhaltens können Sie jetzt eine automatische und empfohlene Klassifizierung auf Dokumente anwenden, die in SharePoint Online gespeichert sind. [Weitere Informationen](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
+
+- Sie haben jetzt die Möglichkeit, verschiedene optische Kennzeichnungen für Word, Excel, PowerPoint und Outlook festzulegen, indem Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp identifizieren. [Weitere Informationen](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- Unterstützung der [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md), **Information Protection-Leiste in Office-Apps anzeigen**. Wenn diese Einstellung deaktiviert ist, wählen Benutzer Bezeichnungen über die Schaltfläche **Schützen** im Menüband aus.
+
+- Eine neue erweiterte Clienteinstellung, mit der verhindert wird, dass Outlook die Standardbezeichnung anwendet, die in der Azure Information Protection-Richtlinie konfiguriert ist. Stattdessen kann Outlook eine andere Standardbezeichnung oder gar keine Bezeichnung anwenden. [Weitere Informationen](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
+
+- Für Office-Apps können Sie beim Angeben von benutzerdefinierten Berechtigungen über ein Adressbuchsymbol jetzt nach Benutzern suchen und diese auswählen. Diese Option sorgt für Parität auf der Benutzeroberfläche, wenn Sie benutzerdefinierte Berechtigungen mit dem Datei-Explorer angeben.
+
+- Unterstützung einer Authentifizierungsmethode ganz ohne Interaktion für Dienstkonten, für die PowerShell genutzt wird und denen das Recht für **Lokales Anmelden** nicht gewährt werden kann. Bei dieser Authentifizierungsmethode ist es erforderlich, dass Sie den neuen Parameter *Token* mit [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) verwenden und ein PowerShell-Skript als Aufgabe ausführen. [Weitere Informationen](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+
+- Neuer Parameter *IntegratedAuth* für [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). Dieser Parameter unterstützt den Servermodus für AD RMS, der benötigt wird, damit Windows Server FCI von AD RMS unterstützt werden kann.
+
+
+**Fixes**:
+
+Fixes für Stabilität und für bestimmte Szenarios, die Folgendes umfassen:
+
+- Für die Office-Versionen 16.0.8628.2010 und höher (Klick-und-Los) unterstützt die Azure Information Protection-Leiste die neuesten Anzeigeoptionen für Monitore. Bisher konnte es passieren, dass die Leiste außerhalb von Office-Anwendungen angezeigt wurde.
+
+- Wenn zwei Organisationen Dokumente und E-Mails über eine Azure Information Protection-Freigabe verwenden, werden jeweils die eigenen Bezeichnungen beibehalten und nicht durch die Bezeichnungen der anderen Organisation ersetzt.
+
+- Unterstützung für Zellen in Excel, die Querverweise enthalten. Bisher konnte es in diesen Zellen zu einer Beschädigung des Texts kommen.
+
+- Unterstützung für die Änderung von Office- oder Windows-Designs. Bisher wurden in Excel nach dem Ändern des Designs keine Daten angezeigt.
+
+- Dateien mit der Dateinamenerweiterung „.xml“ können jetzt für die empfohlene bzw. automatische Klassifizierung untersucht werden.
+
+- Mit dem Viewer können jetzt geschützte textbasierte Dateien (PTXT und PXML) geöffnet werden, die größer als 20 MB sind. 
+
+- Es wird verhindert, dass Outlook hängt, wenn Outlook-Erinnerungen genutzt werden.
+
+- Bootstrap funktioniert für die 64-Bit-Version von Office, sodass Sie Dokumente und E-Mails schützen können.
+
+- Sie können für Word, Excel, PowerPoint und den Datei-Explorer jetzt eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren und außerdem die erweiterte Clienteinstellung verwenden, um die Optionen zu den benutzerdefinierten Berechtigungen auszublenden. [Weitere Informationen](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+
+- Fallback auf die Schriftart Calibri, wenn optische Kennzeichnungen in der Azure Information Protection-Richtlinie für einen Schriftartnamen konfiguriert sind, der auf dem Client nicht installiert ist.
+
+- Verhinderung von Office-Abstürzen nach einem Upgrade des Azure Information Protection-Clients.
+
+- Verbesserung der Leistung und der Arbeitsspeichernutzung für Office-Apps.
+
+- Wenn Sie eine Bezeichnung für benutzerdefinierte Berechtigungen und die Schutzart „HYOK (AD RMS)“ konfigurieren, wird für den Schutz nicht mehr fälschlicherweise der Azure Rights Management-Dienst genutzt.
+
+- Unterbezeichnungen erben keine optischen Kennzeichnungen und Schutzeinstellungen von der übergeordneten Bezeichnung mehr, um die Verwaltungsumgebung einheitlicher zu gestalten.
+
 
 ## <a name="version-110560"></a>Version 1.10.56.0
 
