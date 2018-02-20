@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -24,9 +24,7 @@ ms.lasthandoff: 02/09/2018
 
 Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul ersetzt das Modul „RMSProtection“, das mit dem Tool „RMS-Schutz“ installiert wurde. Wenn beim Installieren des Azure Information Protection-Clients das RMS Protection-Tool installiert ist, wird das Modul „RMSProtection“ automatisch deinstalliert.
-
-Das Modul „AzureInformationProtection“ umfasst alle Rights Management-Cmdlets aus dem Tool „RMS-Schutz“. Es gibt auch neue Cmdlets, die den Azure Information Protection-Dienst (AIP) für die Bezeichnung verwenden. Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch neue Cmdlets, die den Azure Information Protection-Dienst (AIP) für die Bezeichnung verwenden. Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielsyntax|
 |----------------|---------------|
@@ -36,13 +34,13 @@ Das Modul „AzureInformationProtection“ umfasst alle Rights Management-Cmdlet
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 
-Die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) (derzeit nur in der Vorschauversion verfügbar) verwendet außerdem Cmdlets, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
+Der [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) verwendet außerdem Cmdlets, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
 
 Eine Übersicht über alle Cmdlets und die entsprechende Hilfe finden Sie unter [AzureInformationProtection-Modul](/powershell/module/azureinformationprotection). Geben Sie in einer PowerShell-Sitzung `Get-Help <cmdlet name> -online` ein, um die neueste Hilfe aufzurufen.  
 
 Dieses Modul installiert **\ProgramFiles (x86) \Microsoft Azure Information Protection** und fügt diesen Ordner der Systemvariablen **PSModulePath** hinzu. Die DLL-Datei für dieses Modul lautet **AIP.dll**.
 
-Wie beim Modul „RMSProtection“ weist die aktuelle Version des Moduls „AzureInformationProtection“ die folgenden Einschränkungen auf:
+Das aktuelle Release des Moduls „AzureInformationProtection“ weist die folgenden Einschränkungen auf:
 
 - Sie können den Schutz von persönlichen Outlook-Ordnern (PST-Dateien) aufheben, aber Sie können diese Dateien oder andere Containerdateien derzeit nicht mithilfe dieses PowerShell-Moduls systemeigen schützen.
 
@@ -147,7 +145,7 @@ Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows Po
     
 4. Führen Sie `Get-AadrmConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
     
-    Nachfolgend finden Sie ein Beispiel für die Ausgabe von „Get-AadrmConfiguration“:
+    Beispiel für die Ausgabe von „Get-AadrmConfiguration“:
     
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
@@ -454,7 +452,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection
 
-Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das Cmdlet **Set-AIPAuthentication** verwenden. Auch für die Azure Information Protection-Überprüfung, für die derzeit nur die Vorschauversion erhältlich ist, ist ein nicht interaktiver Vorgang erforderlich.
+Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das Cmdlet **Set-AIPAuthentication** verwenden. Auch für die Azure Information Protection-Überprüfung ist ein nicht interaktiver Vorgang erforderlich.
 
 Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihrem eigenen Benutzerkontext in einer interaktiven PowerShell-Sitzung ausgeführt. Um sie unbeaufsichtigt auszuführen, erstellen Sie für diesen Zweck ein neues Azure AD-Benutzerkonto. Führen Sie dann im Kontext dieses Benutzers das Cmdlet „Set-AIPAuthentication“ zum Festlegen und Speichern von Anmeldeinformationen mithilfe eines Azure AD-Zugriffstokens aus. Dieses Benutzerkonto wird dann authentifiziert und für den Azure Rights Management-Dienst gestartet. Das Konto lädt die Azure Information Protection-Richtlinie und alle Rights Management-Vorlagen herunter, die die Bezeichnungen verwenden.
 
@@ -521,6 +519,7 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 12. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
     
+
 Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *WebAppId*, *WebAppKey* und *NativeAppId* benötigen. Beispiel:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -532,7 +531,7 @@ Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufge
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“
 
 > [!NOTE]
-> Diese Option ist als Vorschauversion verfügbar und erfordert die aktuelle Vorschauversion des Azure Information Protection-Clients.
+> Für diese Option ist die allgemein verfügbare Version der Azure Information Protection-Überprüfung oder die aktuelle Vorschauversion des Microsoft Azure Information Protection-Clients erforderlich.
 
 Führen Sie die folgenden zusätzlichen Schritte und Anweisungen aus, um die erste interaktive Anmeldung für ein Konto zu verhindern, das Dateien bezeichnet und schützt. In der Regel sind diese zusätzlichen Schritte nur erforderlich, wenn diesem Konto nicht die Berechtigung **Lokale Anmeldung** erteilt werden kann, ihm jedoch die Berechtigung **Als Batchauftrag anmelden** zugewiesen wird. Dies kann beispielsweise bei Ihrem Dienstkonto der Fall sein, das die Azure Information Protection-Überprüfung ausführt.
 
@@ -540,12 +539,11 @@ Führen Sie die folgenden zusätzlichen Schritte und Anweisungen aus, um die ers
 
 2. Führen Sie „Set-AIPAuthentication“ aus, um ein Zugriffstoken abzurufen und in die Zwischenablage zu kopieren.
 
-2. Ändern Sie das PowerShell-Skript, um das Token aufzunehmen.
+3. Ändern Sie das PowerShell-Skript, um das Token aufzunehmen.
 
-3. Erstellen Sie einen Task, der das PowerShell-Skript im Kontext des Dienstkontos ausführt, das zum Bezeichnen und Schützen von Dateien verwendet wird.
+4. Erstellen Sie einen Task, der das PowerShell-Skript im Kontext des Dienstkontos ausführt, das zum Bezeichnen und Schützen von Dateien verwendet wird.
 
-4. Vergewissern Sie sich, dass das Token für das Dienstkonto gespeichert wurde, und löschen Sie das PowerShell-Skript.
-
+5. Vergewissern Sie sich, dass das Token für das Dienstkonto gespeichert wurde, und löschen Sie das PowerShell-Skript.
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Schritt 1: Erstellen eines PowerShell-Skripts auf dem lokalen Computer
 

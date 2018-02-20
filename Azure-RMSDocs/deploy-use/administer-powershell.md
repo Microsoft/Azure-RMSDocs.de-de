@@ -4,7 +4,7 @@ description: "Erfahren Sie, wie Sie das PowerShell-Modul für den Azure Rights M
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94ec0107930e64d42ed55bce407c4b8c92f1df32
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 597590dbf33dd43329d27ccadf081e5e8d9fd0b6
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell
 
 >*Gilt für: Azure Information Protection, Office 365*
 
-Müssen Sie PowerShell zum Verwalten des Azure Rights Management-Diensts für Azure Information Protection verwenden? Dies ist möglicherweise nicht erforderlich, wenn Sie ein globaler Administrator oder ein [Sicherheitsadministrator](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) sind und die einzige für diesen Dienst erforderliche Konfiguration darin besteht, ihn zu aktivieren (oder zu deaktivieren) und Rights Management-Vorlagen zu konfigurieren.
-
-Sie müssen PowerShell jedoch für komplexere Konfigurationen und auch dann verwenden, wenn Sie kein globaler Administrator oder Sicherheitsadministrator sind, sondern die Berechtigungen zum Verwalten des Diensts von einem globalen Administrator erhalten haben. Möglicherweise bevorzugen Sie die Verwendung von PowerShell auch zur effizienteren Kontrolle der Befehlszeile und für die Skripterstellung.
+Müssen Sie PowerShell zum Verwalten des Azure Rights Management-Diensts für Azure Information Protection verwenden? Dies ist unter Umständen nicht erforderlich, wenn all Ihre Konfigurationen im Azure-Portal oder im Office 365-Portal ausgeführt werden können. Allerdings müssen Sie PowerShell für einige erweiterte Konfigurationen verwenden. Außerdem bevorzugen Sie möglicherweise die Verwendung von PowerShell für eine effizientere Steuerung und Skripterstellung über die Befehlszeile.
 
 Die Tabelle im nächsten Abschnitt enthält einige Szenarien mit erweiterter Konfiguration, die PowerShell verwenden. Wenn die Konfiguration auch ohne PowerShell durchgeführt werden kann, sind diese Informationen ebenfalls in der Tabelle enthalten.
 

@@ -4,17 +4,17 @@ description: "Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft A
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
 
@@ -36,7 +36,7 @@ Voraussetzungen für dieses Tutorial:
   > [!TIP] 
   > Wenn Sie ein Abonnement beantragen müssen, sollten Sie dies rechtzeitig erledigen, da dies einige Zeit in Anspruch nehmen kann.
 
-- Ein globales Administrator- oder Sicherheitsadministratorkonto zur Anmeldung im Azure-Portal, um den Schutz zu aktivieren und die Azure Information Protection-Richtlinie zu konfigurieren. Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst, z.B. Exchange Online, verfügen.
+- Ein globales Administratorkonto zur Anmeldung im Azure-Portal, um den Schutz zu aktivieren und die Azure Information Protection-Richtlinie zu konfigurieren. Alternativ können Sie ein Konto mit folgenden administrativen Rollen verwenden: [Information Protection-Administrator oder Sicherheitsadministrator](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst, z.B. Exchange Online, verfügen.
 
 - Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Office 365 ProPlus mit 2016-Apps oder 2013-Apps, Office Professional Plus 2016, Office Professional Plus 2013 mit Service Pack 1 oder Office Professional Plus 2010 mit Service Pack 2 installiert ist. 
     

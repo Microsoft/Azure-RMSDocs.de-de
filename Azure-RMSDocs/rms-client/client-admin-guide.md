@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren in einem Untern
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: a7412378655ea75500bd1339c0ba41f677fe4d9a
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -54,7 +54,7 @@ Der Azure Information Protection-Client umfasst Folgendes:
 
 - Ein PowerShell-Modul zum Anwenden und Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien. 
     
-    Dieses Modul beinhaltet Cmdlets zur Installation und konfiguriert die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) (derzeit nur die Vorschauversion verfügbar), die als Dienst auf Windows Server ausgeführt wird. Mithilfe dieses Dienstes können Sie Dateien in Datenspeichern wie Netzwerkfreigaben und Serverbibliotheken in SharePoint suchen, klassifizieren und schützen.
+    Dieses Modul beinhaltet Cmdlets zur Installation und konfiguriert die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md), die als Dienst unter Windows Server ausgeführt wird. Mithilfe dieses Dienstes können Sie Dateien in Datenspeichern wie Netzwerkfreigaben und Serverbibliotheken in SharePoint suchen, klassifizieren und schützen.
 
 - Der Rights Management-Client, der mit Azure Rights Management (Azure RMS) oder Active Directory Rights Management Services (AD RMS) kommuniziert.
 
@@ -73,7 +73,7 @@ Stellen Sie den Azure Information Protection-Client bereit, wenn eine der folgen
 
 - Sie möchten Skripts ausführen, die Dokumente mithilfe von PowerShell-Befehlen klassifizieren (und optional schützen).
 
-- Sie möchten einen Dienst ausführen, der lokal gespeicherte Dateien sucht, klassifiziert (und gegebenenfalls schützt). Derzeit ist nur eine Vorschauversion des Überprüfungsdiensts verfügbar.
+- Sie möchten einen Dienst ausführen, der lokal gespeicherte Dateien sucht, klassifiziert (und gegebenenfalls schützt).
 
 - Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
