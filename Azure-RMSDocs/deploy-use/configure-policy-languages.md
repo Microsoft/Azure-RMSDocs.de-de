@@ -4,17 +4,17 @@ description: "Sie können die Unterstützung für verschiedene Sprachen für die
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 7a77b517531d5b4586871abbcb22d2158673d56c
-ms.sourcegitcommit: 222318da363a45c3a533f7b77b02f4e31a258979
+ms.openlocfilehash: f57b3802386aced71967a5ab619cdabf2fd67a37
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
@@ -40,7 +40,7 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen
 
-1. Sofern nicht bereits geschehen, melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an, und navigieren Sie zum Blatt **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
     
     Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
@@ -89,7 +89,7 @@ Wenn Benutzer eine Azure Information Protection-Richtlinie mit verschiedenen unt
 
 ## <a name="when-localized-label-names-are-not-used"></a>Fälle, in denen lokalisierte Bezeichnungsnamen nicht verwendet werden
 
-In folgenden Szenarien werden Namen für lokalisierte Bezeichnungen (und untergeordnete Bezeichnungen) nicht verwendet. Um Konsistenz innerhalb Ihres Mandanten sicherzustellen, wird die Standardsprache immer für Folgendes verwendet:
+In folgenden Szenarios werden keine Namen für lokalisierte Bezeichnungen (und untergeordnete Bezeichnungen) verwendet. Um Konsistenz innerhalb Ihres Mandanten sicherzustellen, wird die Standardsprache immer für Folgendes verwendet:
 
 - Clientnutzungsprotokolle
 

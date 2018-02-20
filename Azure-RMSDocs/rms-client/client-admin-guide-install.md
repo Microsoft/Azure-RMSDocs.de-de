@@ -4,7 +4,7 @@ description: "Eine Anleitung und Informationen für Administratoren zum Bereitst
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d91c52ac5ae1f70ed664e54a549c906d934fdb16
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 92e4f6c05378b36165db0628f14941b0ccd26cb7
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -211,7 +211,11 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Installieren der Azure Information Protection-Überprüfung
 
-Die aktuelle Vorschauversion des Azure Information Protection-Clients enthält die Azure Information Protection-Überprüfung. Das im Client enthaltene PowerShell-Modul hat Cmdlets zum Installieren und Konfigurieren der Überprüfung.
+Derzeit muss die allgemein verfügbare Version der Azure Information Protection-Überprüfung (**AzInfoProtectionScanner.exe**) separat über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) heruntergeladen werden. Nachfolgende Releases der Überprüfung sollen im Lieferumfang des Azure Information Protection-Clients enthalten sein.
+
+Die aktuelle Vorschauversion des Azure Information Protection-Clients enthält ebenfalls die Azure Information Protection-Überprüfung. 
+
+Das im Überprüfungs- und Vorschauclient enthaltene PowerShell-Modul verfügt über Cmdlets für das Installieren und Konfigurieren der Überprüfung.
 
 Um den Client für die Überprüfung zu installieren, befolgen Sie die Anleitungen in den vorangehenden Abschnitten. Wenn Sie nicht alle Komponenten des Clients wie z.B. die Office-Add-Ins und -Viewer benötigen, können Sie nur das PowerShell-Modul installieren. Die ausführbare Datei lässt sich z.B. mit `PowerShellOnly=true /quiet` ausführen.
 
