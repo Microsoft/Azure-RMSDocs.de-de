@@ -101,7 +101,7 @@ Sie können auch erzwingen, dass die RMS-Freigabeanwendung den Schutz von Dateie
 
 Bearbeiten Sie die folgenden Registrierungseinträge, um die RMS-Freigabeanwendung so zu konfigurieren, dass sie generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch native Schutzfunktionen geschützt würden. Beachten Sie, dass Sie die Schlüssel „RmsSharingApp“ oder „FileProtection“ manuell erstellen müssen, falls diese nicht vorhanden sind.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen \*.
 
     Diese Einstellung gibt Dateien mit beliebiger Erweiterung an.
 
