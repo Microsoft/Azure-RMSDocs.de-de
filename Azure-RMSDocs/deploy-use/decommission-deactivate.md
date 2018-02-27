@@ -4,7 +4,7 @@ description: "Informationen und Anweisungen für den Fall, dass Sie den cloudbas
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 14887bb14599b24d95a19ee111ec3ab30ea95612
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 18eff00f6b316c48dbca5a9a8ec2c2ab4e58f76c
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
@@ -45,7 +45,7 @@ Weitere Informationen zu den Vorgehensweisen in dieser Tabelle finden Sie in den
 
 - Anweisungen zum Importieren Ihres Azure Information Protection-Mandantenschlüssels als eine TPD-Datei finden Sie unter [Hinzufügen einer vertrauenswürdigen Veröffentlichungsdomäne](https://technet.microsoft.com/library/cc771460.aspx).
 
-- Informationen zum Installieren des Windows PowerShell-Moduls für Azure Information Protection zum Festlegen der Migrations-URL finden Sie unter [Installieren von Windows PowerShell für Azure Rights Management](install-powershell.md).
+- Informationen zum Installieren des Windows PowerShell-Moduls für Azure Rights Management, um die Migrations-URL festzulegen, finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).
 
 - Informationen zum Verwenden von PowerShell mit dem Azure Information Protection-Client finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](../rms-client/client-admin-guide-powershell.md).
 
@@ -73,7 +73,7 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
     
-    Klicken Sie z.B. im Hubmenü auf **Weitere Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
 2. Wählen Sie auf dem ersten **Azure Information Protection**-Blatt **Protection activation** (Schutzaktivierung) aus. 
 

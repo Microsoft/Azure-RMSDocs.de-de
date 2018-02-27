@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 02257ddd15886d01aa0e4e8c136078fb21bb4875
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: bfe4074710bd93c92e383056f587994ec805b6c2
+ms.sourcegitcommit: 4234de57201411cd9b292492fddc683df0e6b4cc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -50,7 +50,7 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- 4 Prozessoren<br /><br />- 4 GB RAM|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](../get-started/requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](../get-started/requirements.md#firewalls-and-network-infrastructure) verfügt. Andernfalls müssen Sie ihn als einen [getrennten Computer](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers) konfigurieren. |
-|SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
+|SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz<br /><br />– Sysadmin-Rolle zum Installieren der Überprüfung|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Das Konto, das die Überprüfung installiert, benötigt Berechtigungen zum Schreiben in die Masterdatenbank (muss ein Mitglied der Rolle „db_datawriter“ sein). Der Installationsvorgang gewährt dem Dienstkonto die Rolle „db_owner“, das die Überprüfung ausführt. Alternativ können Sie die Datenbank „AzInfoProtectionScanner“ manuell erstellen, bevor Sie die Überprüfung installieren und dem Überprüfungsdienstkonto die Rolle „db_owner“ zuweisen.|
 |Dienstkonto zum Ausführen der Überprüfung|Dieses Konto muss ein Active Directory-Konto sein, das mit Azure AD synchronisiert wird, und die folgenden zusätzlichen Anforderungen erfüllen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. <br /><br />Hinweis: Falls aufgrund interner Richtlinien Dienstkonten nicht diese Berechtigung, aber die Berechtigung **Als Batchauftrag anmelden** erteilt werden kann, können Sie diese Voraussetzung durch zusätzliche Konfigurationsschritte erfüllen. Anweisungen finden Sie im Administratorhandbuch im Abschnitt [Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).|
 |Die Azure Information Protection-Überprüfung ist auf dem Windows Server-Computer installiert.|Derzeit müssen Sie die Azure Information Protection-Überprüfung (**AzInfoProtectionScanner.exe**) separat über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. Nachfolgende Releases der Überprüfung sollen im Lieferumfang des Azure Information Protection-Clients enthalten sein.|
 |Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Weitere Informationen zur Konfiguration dieser Bedingungen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md).<br /><br />Weitere Informationen zum Konfigurieren dieser Bezeichnungen zum Anwenden des Schutzes auf Dateien finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).<br /><br />Diese Bezeichnungen sind in der globalen Richtlinie oder in [bereichsbezogenen Richtlinien](configure-policy-scope.md) zu finden.|

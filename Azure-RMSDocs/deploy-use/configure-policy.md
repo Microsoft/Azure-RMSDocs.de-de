@@ -4,7 +4,7 @@ description: "Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfiguri
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 67d38d19408c67c5da8db188395e00a7d3f9d999
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -63,11 +63,11 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 1. Melden Sie sich im Azure-Portal an.
 
-2. Klicken Sie im Hubmenü auf **Neu**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit und Identität** aus. 
+2. Klicken Sie im Hubmenü auf **Ressource erstellen**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit + Identität** aus. 
     
 3. Wählen Sie auf dem Blatt **Sicherheit und Identität** in der Liste **AUSGEWÄHLTE APPS** die Option **Azure Information Protection** aus. Klicken Sie dann auf dem Blatt **Azure Information Protection** auf **Erstellen**.
     
-    Dadurch wird das Blatt **Azure Information Protection** für Ihren Mandanten erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **Weitere Dienste** auswählen. 
+    Dadurch wird das Blatt **Azure Information Protection** für Ihren Mandanten erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **Alle Dienste** auswählen. 
     
     > [!TIP] 
     > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
@@ -80,7 +80,7 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 1. Stellen Sie sicher, dass Sie sich beim Azure-Portal mit einer der folgenden Administratorrollen angemeldet haben: Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
 
-2. Wenn nötig, navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Weitere Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. Wenn nötig, navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Alle Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
     Das Blatt **Azure Information Protection: Globale Richtlinien** öffnet sich automatisch, damit Sie die globale Richtlinie ansehen und bearbeiten können, die für alle Benutzer konfiguriert wird. 
     

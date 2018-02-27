@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e8b7f3bbebe50fb6f219142a17961dc8b565f6c
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -110,7 +110,7 @@ In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring
 |---------------|--------------------|
 |Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für BYOK verwenden können, nutzen Sie die PowerShell-Cmdlets von [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und melden Sie sich mit dem folgenden Befehl als ein globaler Administrator für Ihren Azure Information Protection-Mandanten an: `Login-AzureRmAccount`<br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzureRmSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
 |Um einen HSM-geschützten Schlüssel, den Sie lokal erstellen, verwenden zu können, vgl. alle für Key Vault-BYOK aufgelisteten Voraussetzungen. |Siehe die [Voraussetzungen für BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
-|Das Azure Rights Management-Verwaltungsmodul für Windows PowerShell.|Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Wenn Sie dieses Windows PowerShell-Modul zuvor installiert haben, überprüfen Sie mit dem folgenden Befehl, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`|
+|Das Azure Rights Management-Verwaltungsmodul für Windows PowerShell.|Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md). <br /><br />Wenn Sie dieses Windows PowerShell-Modul zuvor installiert haben, überprüfen Sie mit dem folgenden Befehl, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`|
 
 Weitere Informationen zu Thales-HSMs und deren Verwendung mit Azure Key Vault finden Sie auf der [Thales-Website](https://www.thales-esecurity.com/msrms/cloud).
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -133,7 +133,7 @@ In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen 
 
 Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows PowerShell-Modul aus:
 
-1. Wenn dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie entsprechende Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+1. Wenn dieses Modul noch nicht auf Ihrem Computer installiert ist, lesen Sie [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md).
 
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 

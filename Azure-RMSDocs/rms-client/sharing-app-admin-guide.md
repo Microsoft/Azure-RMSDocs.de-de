@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
@@ -31,7 +31,7 @@ Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure Information Pr
 
 Eine technische Übersicht über die Rights Management-Freigabeanwendung und Informationen zu nativem und generischem Schutz, den unterstützten Dateitypen, Dateierweiterungen und der Vorgehensweise zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md). 
 
-## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung
+## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.
 Die Windows-Version des RMS-Freigabeanwendung unterstützt eine skriptbasierte Installation, sodass sie auch für Unternehmensbereitstellungen geeignet ist.
 
 Die einzige Voraussetzung für Installationen besteht darin, dass der Computer mindestens Windows 7 Service Pack 1 ausführt und dass mindestens das Microsoft-Framework Version 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [es zur Installation über das Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718).
@@ -344,7 +344,7 @@ Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das f
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Nur Azure Information Protection: Konfigurieren der Dokumentkontrolle
 Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
 
-Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`

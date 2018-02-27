@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3b1662275b051ea75dcc104c4f09b5db53dbe3e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="powershell-reference-for-custom-templates"></a>PowerShell-Referenz für benutzerdefinierte Vorlagen
 
@@ -31,7 +31,7 @@ Sie können das Exportieren und Importieren auch zum Sichern und Wiederherstelle
 > 
 > Wenn Sie dieses PowerShell-Modul bereits zuvor installiert hatten, führen Sie den folgenden Befehl in einem PowerShell-Fenster aus, um die Versionsnummer zu überprüfen: `(Get-Module aadrm -ListAvailable).Version`
 
-Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).
+Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
 
 Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
@@ -53,7 +53,7 @@ Die Cmdlets, die das Erstellen und Verwalten von Vorlagen unterstützen:
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,17 +4,17 @@ description: "Erfahren Sie, wie die Standardrichtlinie für Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -30,7 +30,7 @@ Sie können auf die folgenden Werte verweisen, um die Richtlinie auf die Standar
 
 Diese Version der Standardrichtlinie stammt vom 31. Juli 2017.
 
-Diese Standardrichtlinie wird nur erstellt, wenn der Azure Rights Management-Dienst aktiviert wurde, als die Richtlinie erstellt wurde. Wenn dieser Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie nicht den Schutz für die folgenden Unterbezeichnungen:
+Diese Standardrichtlinie wird nur erstellt, wenn der Azure Rights Management-Dienst [aktiviert](activate-service.md) wurde, als die Richtlinie erstellt wurde. Wenn dieser Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie nicht den Schutz für die folgenden Unterbezeichnungen:
 
 - **Vertraulich\Alle Mitarbeiter**
 
@@ -46,7 +46,7 @@ Wenn Schutz auf die Unterbezeichnung **Alle Mitarbeiter** angewendet wird, wird 
 
 Ab dem 30. August 2017 enthält diese Version der Standardrichtlinie mehrsprachige Versionen der Bezeichnungsnamen und -beschreibungen. 
 
-#### <a name="more-information-about-the-recipients-only-sub-label"></a>Weitere Informationen zu der Unterbezeichnung „Nur Empfänger“
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>Weitere Informationen zu der Unterbezeichnung „Nur Empfänger“
 
 Benutzer sehen diese Bezeichnung nur in Outlook. Diese Bezeichnung wird in Word, Excel, PowerPoint oder vom Datei-Explorer nicht angezeigt. 
 
@@ -55,7 +55,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -64,9 +64,9 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 |Streng vertraulich|Sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 
 
-### <a name="sub-labels"></a>Untergeordnete Bezeichnungen
+### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[1]](#footnote-1)|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -90,7 +90,7 @@ Die Berechtigungen für den Schutz stimmen mit denen in der [Standardvorlage](co
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellungen
+### <a name="settings"></a>Einstellung
 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|
@@ -108,7 +108,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -117,9 +117,9 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |Streng vertraulich|Sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 
 
-### <a name="sub-labels"></a>Untergeordnete Bezeichnungen
+### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -134,7 +134,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellungen
+### <a name="settings"></a>Einstellung
 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|
@@ -148,7 +148,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Nur zur privaten Verwendung. This data will not be monitored by the organization. Personal information must not include any business-related data (Persönliche Informationen dürfen keine geschäftlichen Daten enthalten).|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Diese internen Informationen können von beliebigen Benutzern innerhalb oder außerhalb des Unternehmens verwendet werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -157,9 +157,9 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |Geheim|This data includes highly sensitive information for the business that must be protected. (Diese Daten umfassen äußerst sensible Informationen des Unternehmens, die geschützt werden müssen.) Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports. (Beispiele für geheime Informationen sind PINs, Kundendatensätze, Quellcode und unveröffentlichte Finanzberichte.)|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail):<br /><br /> Vertraulichkeit: Geheim<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 
 
-### <a name="sub-labels"></a>Untergeordnete Bezeichnungen
+### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellungen|
+|Label|QuickInfo|Einstellung|
 |-------------------------------|---------------------------|-----------------|
 |Secret > All Company (Geheim > Gesamtes Unternehmen)|This data includes sensitive business information - permitted for all company employees. (Diese Daten umfassen sensible Geschäftsinformationen, die für alle Mitarbeiter des Unternehmens zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Secret \ My Group (Geheim > Meine Gruppe)|This data includes sensitive business information - permitted for employee groups only (Diese Daten umfassen sensible Geschäftsinformationen, die nur für bestimmte Mitarbeitergruppen zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -172,7 +172,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |QuickInfo|Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business. (Für die Vertraulichkeit von Informationen sind vier Einstellungen verfügbar („Öffentlich“, „Intern“, „Vertraulich“ und „Geheim“). Anhand dieser Einstellungen erkennt der Benutzer, mit welchem Risiko die Offenlegung der Informationen gegenüber nicht autorisierten Benutzern innerhalb oder außerhalb des Unternehmens einhergeht.)|
 
 
-### <a name="settings"></a>Einstellungen
+### <a name="settings"></a>Einstellung
 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|

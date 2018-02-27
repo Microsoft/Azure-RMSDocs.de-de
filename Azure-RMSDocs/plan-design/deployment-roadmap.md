@@ -4,7 +4,7 @@ description: "Führen Sie diese Schritte aus, um Azure Information Protection f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71565ddaeccda9171a6cd8775c93e2ac0785ba59
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: d0ebe0456933fd3b5940d50479038200008d9a44
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -84,7 +84,7 @@ Wenn Benutzer mit dem Bezeichnen von Dokumenten und E-Mails vertraut sind, könn
 
 3. Wenn Sie derzeit lokale Rights Management Services verwenden: Führen Sie eine Migration durch, um die Schlüssel, Vorlagen und URLs in die Cloud zu verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Aktivieren Sie den Azure Rights Management-Dienst, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Nutzung auf bestimmte Benutzer zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
+4. Stellen Sie sicher, dass der Azure Rights Management-Dienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Nutzung auf bestimmte Benutzer zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
 Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
@@ -146,11 +146,11 @@ Bevor Sie mit der Verwendung von [!INCLUDE[aad_rightsmanagement_2](../includes/a
 
 2. Entscheiden Sie, ob Sie möchten, dass Microsoft Ihren Mandantenschlüssel verwaltet (Standard), oder ob Sie Ihren Mandantenschlüssel selber generieren und verwalten möchten (bekannt als BYOK, Bring Your Own Key). Weitere Informationen finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
-3. Installieren Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](../deploy-use/install-powershell.md).
+3. Installieren Sie das Windows PowerShell-Modul für [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md).
 
 4. Wenn Sie derzeit lokale Rights Management Services verwenden: Führen Sie eine Migration durch, um die Schlüssel, Vorlagen und URLs in die Cloud zu verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Aktivieren Sie Rights Management, damit Sie mit der Verwendung des Diensts beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Nutzung auf bestimmte Benutzer zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
+5. Stellen Sie sicher, dass der Azure Rights Management-Dienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Nutzung auf bestimmte Benutzer zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
 Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
