@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8925b2bf7cf599d580f1e3e25a8b96a433bfe8e
-ms.sourcegitcommit: e4199d243d9f6c80efccc0f0d5574d069d69f46d
+ms.openlocfilehash: 976493cd23c7690420094f80cade32179c3f7998
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -29,7 +29,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *\<IhreMandantenURL>* ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. So finden Sie diesen Wert
 
-    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx)-Cmdlet für den Azure Rights Management-Dienst aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, helfen Ihnen die Informationen unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md) weiter.
+    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx)-Cmdlet für den Azure Rights Management-Dienst aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 

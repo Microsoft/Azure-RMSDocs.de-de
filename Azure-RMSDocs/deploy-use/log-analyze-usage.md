@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -67,7 +67,7 @@ Der Azure Rights Management-Dienst schreibt Protokolle als eine Serie von Blobs 
 
 Es kann einen Moment dauern, bis nach einer Azure Rights Management-Aktion Protokolle in Ihrem Speicherkonto angezeigt werden. Die meisten Protokolle werden innerhalb von 15 Minuten angezeigt. Es empfiehlt sich, dass Sie die Protokolle in den lokalen Speicher herunterladen, z. B. einen lokalen Ordner, eine Datenbank oder ein Zuordnen/Reduzieren-Repository.
 
-Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Management-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, überprüfen Sie anhand des folgenden Befehls, ob Sie Version **2.4.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version` 
+Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das Azure Rights Management-Administrationsmodul für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md). Wenn Sie dieses Windows PowerShell-Modul zuvor heruntergeladen haben, überprüfen Sie anhand des folgenden Befehls, ob Sie Version **2.4.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>So laden Sie Ihre Verwendungsprotokolle mit PowerShell herunter
 

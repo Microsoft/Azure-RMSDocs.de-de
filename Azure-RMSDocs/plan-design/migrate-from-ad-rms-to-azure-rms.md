@@ -4,7 +4,7 @@ description: "Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Dire
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 2ba3ae79308ddee15dc77700b7b660fd4bd91b49
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -140,9 +140,9 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 [**PHASE 1: VORBEREITEN DER MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Schritt 1: Herunterladen des Azure RMS-Verwaltungstools und Identifizieren Ihrer Mandanten-URL**
+- **Schritt 1: Installieren des AADRM-PowerShell-Moduls und Identifizieren Ihrer Mandanten-URL**
 
-    Während der Migration müssen Sie eine oder mehrere der PowerShell-Cmdlets aus dem Azure RMS-Modul ausführen, das mit dem Azure RMS-Verwaltungstool installiert wurde. Sie müssen auch die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell ermitteln.
+    Sie müssen eines oder mehrere der PowerShell-Cmdlets aus dem AADRM-Modul für den Migrationsvorgang ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
 
 - **Schritt 2: Vorbereitung für die Clientmigration**
 
