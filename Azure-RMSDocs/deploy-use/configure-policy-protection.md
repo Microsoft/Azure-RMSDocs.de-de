@@ -4,17 +4,17 @@ description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Man
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e4f4ced3495af71cd36caf8fc54258cd77befd99
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -60,10 +60,14 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
 4. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus.
     
     - **Nicht konfiguriert**: Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
+        
+        Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
     
     - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und fahren Sie dann mit Schritt 5 fort.
     
     - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail-Adresse geschützt ist. Fahren Sie dann mit Schritt 11 fort.
+        
+        Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
         
         Beachten Sie, dass Benutzer zum Anwenden einer Bezeichnung mit dieser Option die Berechtigungen benötigen, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das **Nutzungsrecht** **Exportieren** oder [Vollzugriff](../deploy-use/configure-usage-rights.md) verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](../deploy-use/configure-super-users.md) fungieren. Die Azure Rights Management-Standardvorlagen umfassen nicht die Nutzungsrechte, die Benutzer zum Aufheben des Schutzes benötigen. 
         
@@ -113,7 +117,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     Falls erforderlich, können Sie jetzt einen zweiten Satz von Benutzern und Gruppen mit Nutzungsrechten hinzufügen. Wiederholen Sie diesen Prozess, bis Sie alle Benutzer und Gruppen mit den jeweiligen Berechtigungen angegeben haben.
 
     >[!TIP]
-    >Fügen Sie ggf. die benutzerdefinierte Berechtigung **Inhalt kopieren und extrahieren** hinzu, und gewähren Sie diese Administratoren für Datenwiederherstellung oder Mitarbeitern in anderen Rollen, die für die Informationswiederherstellung verantwortlich sind. Falls nötig können diese Benutzer dann den Schutz für Dateien und E-Mails entfernen, die mithilfe dieser Bezeichnung oder Vorlage geschützt werden. Diese Fähigkeit zum Entfernen des Schutzes auf Berechtigungsebene für ein Dokument oder eine E-Mail bietet eine präzisere Kontrolle als die [Administratorfunktion](configure-super-users.md).
+    >Fügen Sie ggf. die benutzerdefinierte Berechtigung **Speichern unter, Exportieren** hinzu, und gewähren Sie diese Administratoren für Datenwiederherstellung oder Mitarbeitern in anderen Rollen, die für die Informationswiederherstellung verantwortlich sind. Falls nötig können diese Benutzer dann den Schutz für Dateien und E-Mails entfernen, die mithilfe dieser Bezeichnung oder Vorlage geschützt werden. Diese Fähigkeit zum Entfernen des Schutzes auf Berechtigungsebene für ein Dokument oder eine E-Mail bietet eine präzisere Kontrolle als die [Administratorfunktion](configure-super-users.md).
     
     Überprüfen Sie nun auf dem Blatt **Schutz** für alle Benutzer und Gruppen, die Sie angegeben haben, ob Sie Änderungen an folgenden Einstellungen vornehmen möchten. Beachten Sie, dass diese Einstellungen wie bei den Berechtigungen nicht für den [Rights Management-Aussteller oder Rights Management-Besitzer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) oder einen beliebigen zugewiesenen [Administrator](configure-super-users.md) gelten.
     
@@ -225,6 +229,8 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 Diese Bezeichnung kann nicht auf Outlook beschränkt sein, sondern stellt weniger einschränkende Kontrollen dar als „Nicht weiterleiten“. Beispielsweise sollen die Empfänger aus einer E-Mail oder einem Anhang kopieren oder einen Anhang ausdrucken und speichern können.
 
 Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, stellen Sie sicher, dass Sie Ihren Benutzern die Anweisung erteilen, diese Bezeichnung nicht für Dokumente sondern nur für E-Mails zu verwenden. Exchange Online muss außerdem für die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert sein, damit diese externen Benutzer unterstützt werden.  
+> [!NOTE]
+> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar.
 
 Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese Adressen für dieselben Benutzer sein, die Sie für diese Bezeichnung festgelegt haben. Da Benutzer zu Gruppen gehören und mehr als eine E-Mail-Adresse haben können, muss die von ihnen angegebene E-Mail-Adresse nicht mit der von Ihnen für die Berechtigung angegebenen E-Mail-Adresse übereinstimmen. Die Angabe derselben E-Mail-Adresse ist allerdings der einfachste Weg, um sicherzustellen, dass der Empfänger erfolgreich autorisiert wird. Weitere Informationen zur Vorgehensweise bei der Autorisierung von Benutzern für Berechtigungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md). 
 

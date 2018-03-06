@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: bfe4074710bd93c92e383056f587994ec805b6c2
-ms.sourcegitcommit: 4234de57201411cd9b292492fddc683df0e6b4cc
+ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -202,7 +202,10 @@ Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den 
 
 Sie können erzwingen, dass die Überprüfung alle Dateien erneut untersucht, indem Sie [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) ausführen, während der Parameter `-Type` auf **Vollständig** festgelegt ist. Diese Konfiguration ist hilfreich, wenn Sie möchten, dass die Berichte alle Dateien umfassen. Standardmäßig wird sie verwendet, wenn die Überprüfung im Suchmodus ausgeführt wird. Wenn eine vollständige Überprüfung abgeschlossen ist, ändert sich der Überprüfungstyp automatisch auf „inkrementell“, sodass bei nachfolgenden Überprüfungen nur noch neue oder geänderte Dateien untersucht werden.
 
-Außerdem werden alle Dateien untersucht, wenn die Überprüfung eine Azure Information Protection-Richtlinie herunterlädt, die über neue oder geänderte Bedingungen verfügt. Die Überprüfung aktualisiert die Richtlinie jede Stunde und wenn der Dienst gestartet wird.
+Außerdem werden alle Dateien untersucht, wenn die Überprüfung eine Azure Information Protection-Richtlinie herunterlädt, die über neue oder geänderte Bedingungen verfügt. Die Überprüfung aktualisiert die Richtlinie entweder jede Stunde oder wenn der Dienst gestartet wird und die Richtlinie älter als eine Stunde ist.
+
+> [!TIP]
+> Wenn Sie die Richtlinie schon früher aktualisieren müssen, beispielsweise während einer Testphase, löschen Sie die Richtliniendatei **%LocalAppData%\Microsoft\MSIP\Policy.msip** von Hand, und starten Sie den Azure Information Protection-Überprüfungsdienst neu.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Leistungsoptimierung der Azure Information Protection-Überprüfung
 

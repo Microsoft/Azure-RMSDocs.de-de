@@ -4,7 +4,7 @@ description: "Hier finden Sie einige häufig gestellte Fragen zu Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 78d6e75b432635420405f9cb7280c5e2548b65f2
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: a6316872d3d3d0987da731a634c13fc4f4a0887b
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 02/15/2018
 
 Haben Sie eine Frage zu Azure Information Protection oder zum Azure Rights Management-Dienst (Azure RMS)? Vielleicht finden Sie hier eine Antwort darauf.
 
-Diese Seiten mit häufig gestellten Fragen werden regelmäßig aktualisiert. Dabei werden die neuen Beiträge in den Ankündigungen zu den monatlichen Dokumentationsupdates im [Enterprise Mobility and Security Blog (Informationen in englischer Sprache zu Enterprise Mobility und Sicherheit)](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) aufgelistet.
+Diese Seiten mit häufig gestellten Fragen werden regelmäßig aktualisiert. Dabei werden die neuen Beiträge in den Ankündigungen zu den monatlichen Dokumentationsupdates im [Azure Information Protection-Blog](https://aka.ms/AIPblog) aufgelistet.
 
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Was ist der Unterschied zwischen Azure Information Protection und Azure Rights Management?
 
@@ -37,7 +37,7 @@ Benutzer benötigen einen gültigen Benutzernamen und ein Kennwort, um auf durch
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Welches Abonnement benötige ich für Azure Information Protection, und welche Features sind enthalten?
 Informationen dazu finden Sie in den [Abonnementinformationen](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) und der [Featureliste](https://www.microsoft.com/cloud-platform/azure-information-protection-features) auf der Azure Information Protection-Website. 
 
-Wenn Sie über ein Office 365-Abonnement verfügen, das Rights Management umfasst, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) von der Seite **Features** herunter.
+Wenn Sie über ein Office 365-Abonnement verfügen, das Rights Management umfasst, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) herunter, das auch einige häufig gestellte Fragen zur Lizenzierung enthält.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Ist der Azure Information Protection-Client nur für Abonnements geeignet, die Funktionen für Klassifizierung und Bezeichnung umfassen?
 
@@ -106,7 +106,7 @@ Zusätzliche Informationen:
 
 Durch Bezeichnungen in Azure Information Protection können Sie eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden. Diese Klassifizierung und der Schutz sind unabhängig davon, wo der Inhalt gespeichert ist und wie dieser verschoben wird. Durch [Bezeichnungen in Office 365 Security & Compliance](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) können Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren, wenn der Inhalt sich in den Office 365-Diensten befindet. 
 
-Aktuell müssen Sie diese Bezeichnungen noch separat anwenden und verwalten, Microsoft arbeitet jedoch an einer umfassenden und einheitlichen Bezeichnungsstrategie für mehrere Dienste, einschließlich Azure Information Protection, Office 365, Microsoft Cloud App Security und Windows Information Protection. Das gleiche Bezeichnungsschema und der gleiche Bezeichnungsspeicher werden auch für Softwareanbieter verfügbar sein. Weitere Informationen finden Sie in der Ignite 2017-Sitzung [Protecting complete data lifecycle using Microsoft information protection capabilities (Schützen des gesamten Datenlebenszyklus mithilfe der Microsoft Information Protection-Funktionen)](https://myignite.microsoft.com/videos/55397).
+Aktuell müssen Sie diese Bezeichnungen noch separat anwenden und verwalten, Microsoft arbeitet jedoch an einer umfassenden und einheitlichen Bezeichnungsstrategie für mehrere Dienste, einschließlich Azure Information Protection, Office 365, Microsoft Cloud App Security und Windows Information Protection. Sie haben womöglich gehört, dass diese Strategie als „Microsoft Information Protection“ (MIP) bezeichnet wird. Das gleiche Bezeichnungsschema und der gleiche Bezeichnungsspeicher werden auch für Softwareanbieter verfügbar sein. Weitere Informationen finden Sie im Blogbeitrag [Consistent labeling and protection policies coming to Office 365 and Azure Information Protection (Konsistente Bezeichnungs- und Schutzrichtlinien, die für Office 365 und Azure Information Protection veröffentlicht werden)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553).
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?
 
@@ -133,8 +133,15 @@ Wenn die Überprüfung Dateien auf Websites und in Bibliotheken von SharePoint s
 
 Die technische Dokumentation enthält keine Informationen zu bevorstehenden Releases. Lesen Sie den [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) und die neuesten Updates von [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) auf Twitter, um diese Art von Informationen sowie Versionsankündigungen zu erhalten. Wenn Sie an einem Office-Release interessiert sind, lesen Sie auch den [Office Blog](https://blogs.office.com/).
 
-## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Wo finde ich weitere Informationen zu Azure Information Protection – z.B. rechtliche Hinweise, Informationen zur Compliance und SLAs?
+## <a name="is-azure-information-protection-suitable-for-my-country"></a>Ist Azure Information Protection für mein Land geeignet?
 
+Verschiedene Länder haben unterschiedliche Anforderungen und Bestimmungen. Auf der Seite [Suitability for different countries (Eignung für unterschiedliche Länder)](../understand-explore/compliance.md#suitability-for-different-countries) finden Sie Antworten zu den Fragen für Ihre Organisation.
+
+## <a name="how-can-azure-information-protection-help-with-gdpr"></a>Wie kann Azure Information Protection bei der Datenschutz-Grundverordnung (DSGVO) helfen?
+
+In der Blogbeitragsankündigung [Microsoft 365 provides an information protection strategy to help with the GDPR (Microsoft 365 stellt eine Datenschutzstrategie zur Unterstützung mit der DSGVO bereit)](https://blogs.office.com/2018/02/22/microsoft-365-provides-an-information-protection-strategy-to-help-with-the-gdpr) (mit Video) finden Sie Informationen darüber, wie Azure Information Protection Ihnen bei der Umsetzung der Datenschutz-Grundverordnung (DSGVO) helfen kann.
+
+## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Wo finde ich weitere Informationen zu Azure Information Protection – z.B. rechtliche Hinweise, Informationen zur Compliance und SLAs?
 Lesen Sie hierzu [Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection](../understand-explore/compliance.md).
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Wie kann ich ein Problem melden oder Feedback zu Azure Information Protection übermitteln?
