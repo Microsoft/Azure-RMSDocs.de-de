@@ -4,7 +4,7 @@ description: "Ergänzende Informationen zu Azure Information Protection, darunte
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,31 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1157eaff62100d4c47dd00c1ef1d99ea50c064c
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: ef0b40db5dbbb66d7cbf45028862576a58886051
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
 Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
+
+## <a name="suitability-for-different-countries"></a>Eignung für verschiedene Länder
+
+Aufgrund der Unterschiede zwischen Gesetzen und Bestimmungen in verschiedenen Ländern, zwischen Anwendungsfällen und-szenarios und aufgrund der verschiedenen Anforderungen in unterschiedlichen Geschäftssektoren müssen Sie mit Ihrem Rechtsberater sprechen, um zu bestimmen, ob Azure Information Protection für Ihr Land geeignet ist.
+
+Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der Beantwortung dieser Frage helfen können:
+
+- Azure Information Protection verwendet AES 256 und 128 zum Verschlüsseln von Dokumenten. [Weitere Informationen](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+
+- Alle Verschlüsselungsschlüssel, die von Azure Information Protection verwendet werden, werden mit einem kundenspezifischen Stammschlüssel geschützt, der RSA 2048-Bit verwendet. RSA 1024-Bit wird zur Rückwärtskompatibilität auch unterstützt. [Weitere Informationen](../understand-explore/how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+
+- Kundenspezifische Stammschlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem Thales-HSM mit [Bring Your Own Key (BYOK)](../plan-design/plan-implement-tenant-key.md) bereitgestellt. Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](../deploy-use/configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
+
+- Azure Information Protection wird weltweit in regionalen Rechenzentren gehostet. Schlüssel und Richtlinien von Azure Information Protection bleiben immer in der Region, in der sie ursprünglich bereitgestellt wurden.
+ 
+- Azure Information Protection überträgt keine Dokumentinhalte von Clients an den Azure Information Protection-Dienst. Vorgänge zum Ver- und Entschlüsseln von Inhalten werden direkt auf den Clientgerät durchgeführt. Für dienstbasiertes Rendern können diese Vorgänge auch im Dienst durchgeführt werden, der den Inhalt rendert. [Weitere Informationen](../understand-explore/how-does-it-work.md)
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
 
@@ -28,7 +44,7 @@ Azure Information Protection unterstützt weitere Dienste und verwendet zusätzl
 
 - Informationen zum Microsoft Azure-Datenschutz: [Datenschutzerklärung zu Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
 
-## <a name="security-compliance-and-auditing"></a>Sicherheit, Kompatibilität und Überwachung
+## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
 Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](../understand-explore/azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements). Zusätzlich:
 

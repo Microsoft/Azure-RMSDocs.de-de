@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 303b8d55faf3aa25389bf5810df4e65f18459bc6
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: c9c2ef1338f1d5e1c3d360ad261f89f652a804ec
+ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -30,11 +30,11 @@ Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlin
 
 **Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2):**
 
-- Rights Management-Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Protection templates** (Schutzvorlagen) nach den Bezeichnungen auf dem Blatt **Azure Information Protection – Globale Richtlinie** angezeigt. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
+- Rights Management-Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Protection templates** (Schutzvorlagen) nach den Bezeichnungen auf dem Blatt **Azure Information Protection > Alle > Cross Policy View** (Richtlinienübergreifende Ansicht) angezeigt. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
 
 **Bei einem Abonnement, das nur Schutz umfasst (ein Office 365-Abonnement mit dem Azure Rights Management-Dienst):**
 
-- Rights Management-Vorlagen für Ihren Mandanten werden auf dem Blatt **Azure Information Protection – Globale Richtlinie** im Abschnitt **Protection templates** (Schutzvorlagen) angezeigt. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
+- Rights Management-Vorlagen für Ihren Mandanten werden auf dem Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht** im Abschnitt **Protection templates** (Schutzvorlagen) angezeigt. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
 
 ## <a name="default-templates"></a>Standardvorlagen
 
@@ -66,11 +66,11 @@ Wenn Sie Ihr Abonnement schon vor einiger Zeit erworben haben, werden Ihre Stand
 Sie können diese Standardvorlagen umbenennen (und neu konfigurieren), wenn Sie das Azure-Portal verwenden.
 
 >[!NOTE]
->Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection – Globale Richtlinie** nicht sehen, werden sie zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden, sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Azure RMS-Schutz enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
+>Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht** nicht sehen, werden sie zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden. Sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Schutzeinstellungen für einen Cloud-Schlüssel enthält. Sie können stets überprüfen, über welche Vorlagen Ihr Mandant verfügt, indem Sie [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) aus dem [AADRM-PowerShell-Modul](administer-powershell.md) ausführen.
 >
 >Sie können Vorlagen manuell konvertieren und diese bei Bedarf umbenennen, so wie unter [Konvertieren von Vorlagen in Bezeichnungen](#to-convert-templates-to-labels) beschrieben. Wenn Ihre Azure Information Protection-Standardrichtlinie kürzlich erstellt und der Azure Rights Management-Dienst für Ihren Mandanten zu diesem Zeitpunkt aktiviert wurde, werden sie automatisch konvertiert.
 
-Vorlagen, die archiviert werden, werden auf dem Blatt **Azure Information Protection – Globale Richtlinie** als nicht verfügbar angezeigt. Diese Vorlagen können nicht für Bezeichnungen ausgewählt werden, aber sie können zu Bezeichnungen konvertiert werden.
+Vorlagen, die archiviert werden, werden auf dem Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht** als nicht verfügbar angezeigt. Diese Vorlagen können nicht für Bezeichnungen ausgewählt werden, aber sie können zu Bezeichnungen konvertiert werden.
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Überlegungen zu Vorlagen im Azure-Portal
 
@@ -86,9 +86,9 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
     
     Sie können nun die Vorlage mithilfe des PowerShell-Cmdlets [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) löschen. Sie können dieses PowerShell-Cmdlet auch für Vorlagen verwenden, die nicht zu Bezeichnungen konvertiert werden. Wenn Sie aber eine Vorlage löschen, die zum Schutz von Inhalt verwendet wurde, kann dieser Inhalt nicht länger geöffnet werden. Löschen Sie die Vorlagen nur, wenn Sie sicher sind, dass sie nicht zum Schützen von Dokumenten oder E-Mails in der Produktion verwendet wurden. Als Vorsichtsmaßnahme sollten Sie zuerst die Vorlage als Sicherung mithilfe des [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)-Cmdlets exportieren. 
 
-- Abteilungsvorlagen (für einen Bereich konfigurierte Vorlagen) werden in der globalen Richtlinie angezeigt. Wenn Sie derzeit eine Abteilungsvorlage bearbeiten und speichern, wird die Bereichskonfiguration entfernt. Eine bereichsbezogene Vorlage entspricht in der Azure Information Protection-Richtlinie einer [bereichsbezogenen Richtlinie](configure-policy-scope.md). Wenn Sie die Vorlage in eine Bezeichnung konvertieren, können Sie einen vorhandenen Bereich auswählen.
+- Wenn Sie derzeit eine Abteilungsvorlage bearbeiten und speichern, wird die Bereichskonfiguration entfernt. Eine bereichsbezogene Vorlage entspricht in der Azure Information Protection-Richtlinie einer [bereichsbezogenen Richtlinie](configure-policy-scope.md). Wenn Sie die Vorlage in eine Bezeichnung konvertieren, können Sie einen vorhandenen Bereich auswählen.
     
-    Darüber hinaus können Sie derzeit nicht die Anwendungskompatibilitätseinstellung für eine Abteilungsvorlage festlegen. Falls erforderlich, können Sie die Einstellung für Anwendungskompatibilität durch das Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) und den Parameter *EnableInLegacyApps* festlegen.
+    Darüber hinaus können Sie die Anwendungskompatibilitätseinstellung für eine Abteilungsvorlage nicht über das Azure-Portal festlegen. Falls erforderlich, können Sie die Einstellung für Anwendungskompatibilität durch das Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) und den Parameter *EnableInLegacyApps* festlegen.
 
 - Wenn Sie eine Vorlage zu einer Bezeichnung konvertieren oder mit einer verknüpfen, kann sie nicht länger von anderen Bezeichnungen verwendet werden. Darüber hinaus wird diese Vorlage nicht mehr im Abschnitt **Protection Templates** (Schutzvorlagen) angezeigt. 
 
@@ -96,15 +96,11 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht**.
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die zu konfigurierende Vorlage für alle Benutzer verfügbar ist, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
-    
-    Wenn sich die zu konfigurierende Vorlage in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer verfügbar ist, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
-
-3. Suchen Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie\<name>** nach der Vorlage, die Sie konfigurieren möchten:
+2. Suchen Sie auf dem Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht** nach der Vorlage, die Sie konfigurieren möchten:
     
     - Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst: Erweitern Sie **Protection templates** (Schutzvorlagen) neben Ihren Bezeichnungen.
     
@@ -115,8 +111,8 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 5. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren der Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
     
     Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
-
-6. Klicken Sie auf dem ersten Blatt der **Azure Information Protection** auf **Veröffentlichen**, um Ihre Änderungen für Benutzeranwendungen und -dienste verfügbar zu machen.
+    
+    Für diese Änderung müssen Sie nicht auf **Veröffentlichen** klicken.
 
 > [!NOTE]
 > Sie können eine Vorlage auch bearbeiten, indem Sie die Schaltfläche **Vorlage bearbeiten** auf dem Blatt **Schutz** verwenden, wenn Sie eine Bezeichnung so konfiguriert haben, dass eine vordefinierte Vorlage verwendet wird. Vorausgesetzt, dass keine andere Bezeichnung die ausgewählte Vorlage verwendet, konvertiert diese Schaltfläche die Vorlage in eine Bezeichnung, und Sie gelangen zu Schritt 5. Weitere Informationen darüber, was beim Konvertieren von Vorlagen zu Bezeichnungen geschieht, finden Sie im nächsten Abschnitt.
@@ -145,9 +141,9 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 ## <a name="to-create-a-new-template"></a>So erstellen Sie eine neue Vorlage
 
-Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure RMS** oder **Azure (cloud key)** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die in Rights Management-Vorlagen integriert werden, zugegriffen werden.
+Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüssel)** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die mit Rights Management-Vorlagen integriert werden, zugegriffen werden.
 
-1. Wenn die neue Vorlage für alle Benutzer verfügbar ist, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
+1. Wenn die neue Vorlage für alle Benutzer verfügbar ist, navigieren Sie zum Blatt **Azure Information Protection > Alle > Richtlinienübergreifende Ansicht**.
     
      Wenn es sich bei der neuen Vorlage um eine Abteilungsvorlage handelt, sodass sie nur für ausgewählte Benutzer verfügbar ist, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Erstellen Sie dann Ihre [bereichsbezogene Richtlinie](configure-policy-scope.md), oder wählen Sie sie auf dem Blatt **Azure Information Protection - Scoped polices** (Azure Information Protection – Bereichsbezogene Richtlinien) aus.
 
@@ -163,12 +159,12 @@ Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure RMS** oder **Az
     
     Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
 
-6. Klicken Sie auf dem ersten Blatt der **Azure Information Protection** auf **Veröffentlichen**, um diese Vorlagen für Benutzeranwendungen und -dienste verfügbar zu machen.
+6. Klicken Sie auf dem ersten Blatt **Azure Information Protection** auf **Veröffentlichen**.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wie bei allen Änderungen an der Azure Information Protection-Richtlinie kann es bis zu 15 Minuten dauern, bis der Download dieser Vorlagen auf einem Computer abgeschlossen ist, auf dem der Azure Information Protection-Client ausgeführt wird. Informationen zum Herunterladen und Aktualisieren von Vorlagen durch Computer und Dienste finden Sie unter [Aktualisieren von Vorlagen für Benutzer und Dienste](refresh-templates.md).
+Es kann bis zu 15 Minuten in Anspruch nehmen, bis ein Computer, auf dem der Azure Information Protection-Client ausgeführt wird, diese geänderten Einstellungen abrufen kann. Informationen zum Herunterladen und Aktualisieren von Vorlagen durch Computer und Dienste finden Sie unter [Aktualisieren von Vorlagen für Benutzer und Dienste](refresh-templates.md).
 
 Alle Vorgänge, die Sie im klassischen Azure-Portal zum Erstellen und Verwalten von Vorlagen konfigurieren können, können Sie auch mithilfe von PowerShell durchführen. PowerShell bietet darüber hinaus weitere Optionen, die nicht im Portal verfügbar sind. Weitere Informationen finden Sie in der [PowerShell-Referenz zum Schutz von Vorlagen](configure-templates-with-powershell.md). 
 
