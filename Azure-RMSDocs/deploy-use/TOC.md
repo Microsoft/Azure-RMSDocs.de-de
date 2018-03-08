@@ -19,7 +19,7 @@
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
 ### [Konfigurieren des Schutzes](configure-policy-protection.md)
-#### [HYOK-Einschränkungen](configure-adrms-restrictions.md)
+#### [HYOK](configure-adrms-restrictions.md)
 ### [Konfigurieren von visuellen Kennzeichnungen](configure-policy-markings.md)
 ### [Konfigurieren von Bedingungen](configure-policy-classification.md)
 ### [Konfigurieren von bereichsbezogenen Richtlinien](configure-policy-scope.md)
