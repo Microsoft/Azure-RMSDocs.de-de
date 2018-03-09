@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2cf486a5319d6addcd150351054d44db62c250b0
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -103,8 +103,6 @@ Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlage
 Dieser Schritt wird nach dem Abschluss der Migration empfohlen, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Das Neuerstellen des Schlüssels führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. 
 
 Auch wenn Ihre AD RMS-Bereitstellung den Kryptografiemodus 2 verwendet hat, wird dieser Schritt empfohlen, da ein neuer Schlüssel dabei hilft, Ihren Mandanten vor potenziellen Sicherheitsverletzungen Ihres AD RMS-Schlüssels zu schützen.
-
-Erstellen Sie jedoch keinen neuen Schlüssel, wenn Sie Exchange Online mit AD RMS verwendet haben. Exchange Online unterstützt keine Änderungen des Kryptografiemodus. 
 
 Wenn Sie für Ihren Azure Information Protection-Mandantenschlüssel einen neuen Schlüssel erstellen (oder neu vergeben), wird der aktuell aktive Schlüssel archiviert, und Azure Information Protection verwendet ab diesem Zeitpunkt einen anderen Schlüssel, den Sie angeben. Bei diesem anderen Schlüssel kann es sich um einen neuen Schlüssel handeln, den Sie in Azure Key Vault erstellen, oder um den Standardschlüssel, der automatisch für Ihren Mandanten erstellt wurde.
 
