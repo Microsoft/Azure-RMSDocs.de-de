@@ -4,7 +4,7 @@ description: "Informationen zu den Lebenszyklusvorgängen, die relevant sind, we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47f2e19e7eed107a44ac1bed744015c878876e9f
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 70d34253300e2bef442cdd7d8cf2c06ac8a9fd88
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -59,7 +59,7 @@ Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Da Sie Ihren Mandantenschlüssel verwalten, sind Sie verantwortlich für das Sichern des Schlüssels, den Azure Information Protection verwendet. 
 
-Wenn Sie Ihren Mandantenschlüssel lokal in einem Thales HSM generiert haben, sichern Sie die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Schlüssel zu sichern. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten dies aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht für Sie abrufen, da es lediglich über eine nicht wiederherstellbare Kopie verfügt.
+Wenn Sie Ihren Mandantenschlüssel lokal in einem Thales HSM generiert haben, sichern Sie die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Schlüssel zu sichern. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht für Sie abrufen, da es lediglich über eine nicht wiederherstellbare Kopie verfügt.
 
 Azure Key Vault besitzt ein [Sicherungs-Cmdlet](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey), das Sie zum Sichern eines Schlüssels verwenden können, indem Sie dieses herunterladen und in einer Datei speichern. Da der heruntergeladene Inhalt verschlüsselt ist, kann dieser nicht außerhalb von Azure Key Vault verwendet werden. 
 
@@ -75,10 +75,10 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 
 |Beschreibung des Vorfalls|Wahrscheinliche Reaktion|
 |------------------------|-------------------|
-|Ihr Mandantenschlüssel wurde abgegriffen.|Erstellen Sie Ihren Mandantenschlüssel neu. Siehe [Neuerstellung Ihres Mandantenschlüssels](#rkey-your-tenant-key).|
+|Ihr Mandantenschlüssel wurde abgegriffen.|Erstellen Sie Ihren Mandantenschlüssel neu. Siehe [Neuerstellung Ihres Mandantenschlüssels](#rekey-your-tenant-key).|
 |Eine nicht autorisierte Person oder Schadsoftware hat Rechte zur Verwendung Ihres Mandantenschlüssels erlangt, aber nicht den Schlüssel selbst.|Die Neuerstellung Ihres Mandantenschlüssels schafft hierbei keine Abhilfe, stattdessen ist eine Ursachenanalyse erforderlich. Wenn ein Prozess- oder Softwarefehler dafür verantwortlich war, dass die nicht autorisierte Person Zugriff erlangt hat, muss dieser Zustand behoben werden.|
-|Entdeckte Sicherheitslücke in HSM-Technologie der aktuellen Generation.|Microsoft muss die HSMs aktualisieren. Wenn es Anlass gibt, zu glauben, dass durch die Sicherheitslücke Schlüssel kompromittiert wurden, weist Microsoft alle Kunden an, ihre Mandantenschlüssel zu erneuern.|
-|Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss Azure Key Vault oder Azure Information Protection so aktualisieren, dass neue, robuste Algorithmen und längere Schlüssellängen unterstützt werden, und alle Kunden anweisen, ihre Mandantenschlüssel zu erneuern.|
+|Entdeckte Sicherheitslücke in HSM-Technologie der aktuellen Generation.|Microsoft muss die HSMs aktualisieren. Wenn es Anlass gibt, zu glauben, dass durch die Sicherheitslücke Schlüssel kompromittiert wurden, weist Microsoft alle Kunden an, ihre Mandantenschlüssel neu zu erstellen.|
+|Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss Azure Key Vault oder Azure Information Protection so aktualisieren, dass neue, robuste Algorithmen und längere Schlüssellängen unterstützt werden, und alle Kunden anweisen, ihre Mandantenschlüssel neu zu erstellen.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

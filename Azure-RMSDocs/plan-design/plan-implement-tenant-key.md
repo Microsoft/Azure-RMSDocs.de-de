@@ -4,7 +4,7 @@ description: "Informationen zum Planen und Verwalten Ihres Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/05/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 05b6a4facc4158cc7e2cb7ab4067c6b19566ef69
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -46,7 +46,7 @@ Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am b
 
 Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am besten geeignet ist:
 
-- **Von Microsoft verwaltet**: Azure Information Protection generiert automatisch einen Mandantenschlüssel für Ihre Organisation. Standardmäßig verwendet Microsoft diesen Schlüssel für Ihren Mandanten und verwaltet die meisten Aspekte des Lebenszyklusvorgangs für Ihren Mandantenschlüssel. 
+- **Von Microsoft verwaltet**: Microsoft generiert automatisch einen Mandantenschlüssel für Ihre Organisation. Dieser Schlüssel wird nur für Azure Information Protection verwendet. Standardmäßig verwendet Microsoft diesen Schlüssel für Ihren Mandanten und verwaltet die meisten Aspekte des Lebenszyklusvorgangs für Ihren Mandantenschlüssel. 
     
     Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
