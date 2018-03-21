@@ -4,7 +4,7 @@ description: "Anleitung zum Installieren, Konfigurieren und Ausführen der Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -58,7 +58,7 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Installieren der Azure Information Protection-Überprüfung
 
-1. Wenn Sie das Dienstkonto verwenden, das Sie für die Ausführung der Überprüfung erstellt haben, melden Sie sich auf dem Windows Server-Computer an, auf dem die Überprüfung ausgeführt wird.
+1. Melden Sie sich bei dem Windows Server-Computer an, auf dem die Überprüfung ausgeführt werden soll. Verwenden Sie ein Konto mit lokalen Administratorrechten und den Berechtigungen zum Schreiben in die SQL Server-Masterdatenbank.
 
 2. Starten Sie eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen**.
 
@@ -92,15 +92,17 @@ Nun, da Sie die Überprüfung installiert haben, müssen Sie ein Azure AD-Token 
     
     Um diese Anwendungen zu erstellen, folgen Sie der Anleitung unter [Unbeaufsichtigtes Bezeichnen von Dateien für Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administratorhandbuch.
 
-2. Führen Sie über den Windows Server-Computer, der weiterhin beim Überprüfungsdienstkonto angemeldet ist, [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) aus, und geben Sie dabei die Werte an, die Sie aus dem vorherigen Schritt kopiert haben:
+2. Gehen Sie auf dem Windows Server-Computer folgendermaßen vor, wenn dem Überprüfungsdienstkonto für die Installation das Recht zur **lokalen Anmeldung** erteilt wurde: Melden Sie sich mit diesem Konto an, und starten Sie eine PowerShell-Sitzung. Führen Sie [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) aus, und geben Sie die Werte an, die Sie aus dem vorherigen Schritt kopiert haben:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
+    
+    Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
+    
+    Wenn Ihrem Überprüfungsdienstkonto das Recht zur **lokalen Anmeldung** für die Installation nicht erteilt werden kann: Befolgen Sie die Anweisungen im Abschnitt [Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) im Administratorhandbuch. 
 
-3. Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
-
-Die Überprüfung verfügt jetzt über ein Token für die Authentifizierung bei Azure AD, die ein oder zwei Jahre gültig ist oder nie abläuft, je nach der Konfiguration der **Web-App/API** in Azure AD. Wenn das Token abgelaufen ist, müssen Sie die Schritte 1 bis 3 wiederholen.
+Die Überprüfung verfügt jetzt über ein Token für die Authentifizierung bei Azure AD, die ein oder zwei Jahre gültig ist oder nie abläuft, je nach der Konfiguration der **Web-App/API** in Azure AD. Wenn das Token abgelaufen ist, müssen Sie die Schritte 1 und 2 wiederholen.
 
 Sie können nun die zu überprüfenden Datenspeicher angeben. 
 
@@ -209,7 +211,7 @@ Außerdem werden alle Dateien untersucht, wenn die Überprüfung eine Azure Info
 > 
 > Wenn Sie die Schutzeinstellungen in der Richtlinie geändert haben, warten Sie 15 Minuten ab dem Zeitpunkt, an dem Sie die Schutzeinstellungen gespeichert haben, bevor Sie den Dienst neu starten.
 
-Wenn die Überprüfung eine Richtlinie heruntergeladen hat, für die keine automatischen Bedingungen konfiguriert wurden, wird die Kopie der Richtliniendatei im Überprüfungsordner nicht aktualisiert. In diesem Szenario müssen Sie die Datei **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** löschen, bevor die Überprüfung eine neu heruntergeladene Richtliniendatei verwenden kann, bei der Bezeichnungen für automatische Bedingungen ordnungsgemäß konfiguriert sind.
+Wenn die Überprüfung eine Richtlinie heruntergeladen hat, für die keine automatischen Bedingungen konfiguriert wurden, wird die Kopie der Richtliniendatei im Überprüfungsordner nicht aktualisiert. In diesem Szenario müssen Sie die Richtliniendatei **Policy.msip** sowohl aus **%LocalAppData%\Microsoft\MSIP\Policy.msip** als auch aus **%LocalAppData%\Microsoft\MSIP\Scanner** löschen, damit die Überprüfung eine neu heruntergeladene Richtliniendatei verwenden kann, bei der die Bezeichnungen für automatische Bedingungen ordnungsgemäß konfiguriert sind.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Leistungsoptimierung der Azure Information Protection-Überprüfung
 

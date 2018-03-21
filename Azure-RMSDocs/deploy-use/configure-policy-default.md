@@ -4,17 +4,17 @@ description: "Erfahren Sie, wie die Standardrichtlinie für Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -30,7 +30,11 @@ Sie können auf die folgenden Werte verweisen, um die Richtlinie auf die Standar
 
 Diese Version der Standardrichtlinie stammt vom 31. Juli 2017.
 
-Diese Standardrichtlinie wird nur erstellt, wenn der Azure Rights Management-Dienst [aktiviert](activate-service.md) wurde, als die Richtlinie erstellt wurde. Wenn dieser Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie nicht den Schutz für die folgenden Unterbezeichnungen:
+Diese Standardrichtlinie wird bei Aktivierung des Azure Rights Management-Diensts erstellt. Dies gilt für neue Mandanten ab Februar 2018. Weitere Informationen finden Sie in der Blogbeitragsankündigung [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Verbesserungen am Schutzstapel in Azure Information Protection).
+
+Diese Standardrichtlinie wird auch erstellt, wenn Sie [den Dienst manuell aktiviert haben](activate-service.md), bevor die Richtlinie erstellt wurde. 
+
+Wenn der Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie den Schutz nicht für die folgenden Unterbezeichnungen:
 
 - **Vertraulich\Alle Mitarbeiter**
 

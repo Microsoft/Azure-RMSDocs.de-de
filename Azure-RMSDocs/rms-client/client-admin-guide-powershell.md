@@ -4,7 +4,7 @@ description: "Anweisungen und Informationen für Administratoren zum Verwalten d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 714afa8c839d91ba61043a643433c5045a4aad7d
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -534,6 +534,8 @@ Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufge
 > Für diese Option ist die allgemein verfügbare Version der Azure Information Protection-Überprüfung oder die aktuelle Vorschauversion des Microsoft Azure Information Protection-Clients erforderlich.
 
 Führen Sie die folgenden zusätzlichen Schritte und Anweisungen aus, um die erste interaktive Anmeldung für ein Konto zu verhindern, das Dateien bezeichnet und schützt. In der Regel sind diese zusätzlichen Schritte nur erforderlich, wenn diesem Konto nicht die Berechtigung **Lokale Anmeldung** erteilt werden kann, ihm jedoch die Berechtigung **Als Batchauftrag anmelden** zugewiesen wird. Dies kann beispielsweise bei Ihrem Dienstkonto der Fall sein, das die Azure Information Protection-Überprüfung ausführt.
+
+Allgemeine Schritte:
 
 1. Erstellen Sie ein PowerShell-Skript auf dem lokalen Computer.
 
