@@ -4,7 +4,7 @@ description: "Ergänzende Informationen zu Azure Information Protection, darunte
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 03/12/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ef0b40db5dbbb66d7cbf45028862576a58886051
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 2980032c72905ec237dea799e8d6d13e11746df3
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
@@ -56,11 +56,11 @@ Weitere ausführliche technische Informationen über die Funktionsweise der Schu
 
 ## <a name="service-level-agreements"></a>Vereinbarungen zum Service Level
 
-- Vereinbarung zum Servicelevel für Azure Information Protection nach ausgewählter Region: [Download auf der Produktlizenzierungs-Suchseite](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
+- [SLA für Azure Information Protection](https://azure.microsoft.com/support/legal/sla/information-protection/v1_0/)
 
-    - Klicken Sie beispielsweise auf **OnlineSvcsConsolidatedSLA(WW)(English)(March2016)**, um die Vereinbarung zum Servicelevel für Nordamerika vom März 2016 herunterzuladen.
+- [SLA für Azure Active Directory](https://azure.microsoft.com/en-us/support/legal/sla/active-directory/v1_0/)
 
--   Vereinbarung zum Servicelevel für Azure Active Directory: [Vereinbarungen zum Servicelevel](http://azure.microsoft.com/support/legal/sla/)
+- [SLA für Azure Key Vault](https://azure.microsoft.com/en-us/support/legal/sla/key-vault/v1_0/)
 
 ## <a name="documentation"></a>Dokumentation
 

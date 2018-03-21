@@ -4,17 +4,17 @@ description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 6167b99593bacdf9e717c3b57839440bac39ecec
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: a0329d66ee71ee815c0700a63172617d1fddf30a
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -89,13 +89,19 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
         
         - Mehrere Gesamtstrukturen mit unabhängigen AD RMS-Stammclustern sowie Benutzer haben keinen Zugriff auf den Inhalt, der durch die Benutzer in den anderen Gesamtstrukturen geschützt wird.
         
-        - Mehrere Gesamtstrukturen, die jeweils AD RMS-Cluster beinhalten. Jeder AD RMS-Cluster gibt eine Lizenzierungs-URL frei, die auf den gleichen AD RMS-Cluster zeigt. Sie müssen auf diesem AD RMS-Cluster alle Zertifikate der vertrauenswürdigen Benutzerdomänen (Truster User Domain, TUD) von allen anderen AD RMS-Clustern importieren. Weitere Informationen zu dieser Topologie finden Sie unter [Trusted User Domain (Vertrauenswürdige Benutzerdomäne)](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        - Mehrere Gesamtstrukturen, die jeweils AD RMS-Cluster beinhalten. Jeder AD RMS-Cluster gibt eine Lizenzierungs-URL frei, die auf den gleichen AD RMS-Cluster zeigt. Sie müssen auf diesem AD RMS-Cluster alle Zertifikate der vertrauenswürdigen Benutzerdomänen (Truster User Domain, TUD) von allen anderen AD RMS-Clustern importieren. Weitere Informationen zu dieser Topologie finden Sie unter [Vertrauenswürdige Benutzerdomäne](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
         
     Wenn Sie über mehrere AD RMS-Cluster in separaten Gesamtstrukturen verfügen, löschen Sie Bezeichnungen in der globalen Richtlinie, die HYOK-Schutz (AD RMS) anwenden, und konfigurieren Sie eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für jeden Cluster. Weisen Sie anschließend Benutzer für jeden Cluster ihrer bereichsbezogenen Richtlinie zu. Stellen Sie dabei sicher, dass Sie keine Gruppen verwenden, die dazu führen würden, dass ein Benutzer mehr als einer bereichsbezogenen Richtlinie zugewiesen werden würde. Jeder Benutzer sollte letztendlich Bezeichnungen für nur einen AD RMS-Cluster besitzen. 
     
     - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können den Modus auf der Registerkarte **Allgemein** der AD RMS-Clustereigenschaften prüfen.
     
-    - Ein Dienstverbindungspunkt ist nicht in Active Directory registriert: Ein Dienstverbindungspunkt wird nicht verwendet, wenn Sie den AD RMS-Schutz mit Azure Information Protection verwenden. Wenn Sie über einen registrierten Dienstverbindungspunkt für Ihre AD RMS-Bereitstellung verfügen, müssen Sie diesen entfernen, sodass die [Dienstermittlung](../rms-client/client-deployment-notes.md#rms-service-discovery) für den Azure Rights Management-Schutz erfolgreich ist.
+    - Jeder AD RMS-Server wird für die Zertifizierungs-URL konfiguriert. [Anweisungen](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+    
+    - Ein Dienstverbindungspunkt ist nicht in Active Directory registriert: Ein Dienstverbindungspunkt wird nicht verwendet, wenn Sie den AD RMS-Schutz mit Azure Information Protection verwenden. 
+    
+        - Wenn Sie über einen registrierten Dienstverbindungspunkt für Ihre AD RMS-Bereitstellung verfügen, müssen Sie diesen entfernen, sodass die [Dienstermittlung](../rms-client/client-deployment-notes.md#rms-service-discovery) für den Azure Rights Management-Schutz erfolgreich ist. 
+        
+        - Bei der Installation eines neuen AD RMS-Clusters für HYOK überspringen Sie den Schritt zur Registrierung des Dienstverbindungspunkts bei der Konfiguration des ersten Knotens. Stellen Sie für jeden weiteren Knoten sicher, dass der Server für die Zertifizierungs-URL konfiguriert ist, bevor Sie die AD RMS-Rolle hinzufügen und dem vorhandenen Cluster beitreten.
     
     - Die AD RMS-Server sind so konfiguriert, dass sie SSL/TLS mit einem gültigen x.509-Zertifikat verwenden, welches von den Clients, die eine Verbindung herstellen, als vertrauenswürdig eingestuft wird: Dies ist erforderlich für Produktionsumgebungen, aber nicht für Tests oder zu Evaluierungszwecken.
     
@@ -115,6 +121,24 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
 Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Sie unter [Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx) in der Windows Server-Bibliothek. 
 
 
+## <a name="configuring-ad-rms-servers-to-locate-the-certification-url"></a>Konfigurieren von AD RMS-Servern zum Finden der Zertifizierungs-URL
+
+1. Erstellen Sie auf jedem AD RMS-Server im Cluster den folgenden Registrierungseintrag:
+
+    `Computer\HKEY_LOCAL_MACHINE\Software\Microsoft\DRMS\GICURL = "<string>"`
+    
+    Geben Sie für den \<Zeichenfolgenwert> einen der folgenden Einträge an:
+    
+    - Für AD RMS-Cluster mit SSL/TLS:
+
+            https://<cluster_name>/_wmcs/certification/certification.asmx
+    
+    - Für AD RMS-Cluster ohne SSL/TLS (nur für Testnetzwerke):
+        
+            http://<cluster_name>/_wmcs/certification/certification.asmx
+
+2. Starten Sie IIS neu.
+
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 
 Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
@@ -123,7 +147,7 @@ Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die
 
 - Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Zum Beispiel: https://rmscluster.contoso.com 
+- Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
     
     Wenn Sie über einen Extranetlizenzierungswert sowie über einen Intranetlizenzierungswert verfügen und diese verschieden sind: Geben Sie den Extranetwert nur an, wenn Sie geschützte Dokumente oder E-Mails für Partner freigeben, mit denen Sie Punkt-zu-Punkt-Vertrauensstellungen definiert haben. Verwenden Sie andernfalls den Intranetwert, und stellen Sie sicher, dass alle Clientcomputer, die AD RMS-Schutz mit Azure Information Protection verwenden, eine Verbindung über eine Intranetverbindung herstellen (z.B. verwenden Remotecomputer eine VPN-Verbindung).
 

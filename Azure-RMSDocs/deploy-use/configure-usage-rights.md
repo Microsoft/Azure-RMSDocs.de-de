@@ -4,7 +4,7 @@ description: "Lernen Sie die spezifischen Berechtigungen kennen, die verwendet w
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
-ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
+ms.openlocfilehash: 8411fd46305da69e8fe06ae3851d5066695cdc24
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -95,7 +95,7 @@ Diese Standardvorlagen werden beim Erwerb Ihres Abonnements erstellt. Die Namen 
 
 ## <a name="do-not-forward-option-for-emails"></a>Option „Nicht weiterleiten“ für E-Mails
 
-Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Transportregeln) haben eine zusätzliche Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
+Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Regeln zum E-Mail-Fluss) haben eine zusätzliche Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
 
 Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im Azure-Portal angezeigt, wenn Sie Vorlagen für Azure Rights Management anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
 
@@ -116,7 +116,7 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, wird die E-Mail-Option **Encrypt Only** (Nur verschlüsseln) verfügbar.
 
-Diese Option wird bei Mandanten bereitgestellt, die Exchange Online zunächst nur für Outlook im Web und als weitere Rechteschutzoption für eine Transportregel verwenden. Weitere Informationen finden Sie in der folgenden Ankündigung zum Blogbeitrag des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
+Diese Option wird für Mandanten bereitgestellt, die Exchange Online zunächst nur für Outlook im Web und als weitere Rechteschutzoption für eine E-Mail-Flussregel verwenden. Weitere Informationen finden Sie in der folgenden Ankündigung zum Blogbeitrag des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
 
 Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer „Vollzugriff“. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Beispielsweise kann ein Empfänger die E-Mail kopieren, drucken und weiterleiten. Auf ähnliche Weise können alle Office-Dokumente, die angefügt und automatisch geschützt sind, gespeichert, kopiert und gedruckt werden.
 
@@ -165,7 +165,6 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für ein
 - Wenn Sie eine Vorlage mithilfe von PowerShell konfigurieren, erhält die Gültigkeitsdauer der Nutzungslizenz ihren Wert aus dem Parameter *LicenseValidityDuration* in den Cmdlets [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) und [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     
     Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung mithilfe von PowerShell finden Sie in der Hilfe für jedes Cmdlet.
-
 
 ## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
