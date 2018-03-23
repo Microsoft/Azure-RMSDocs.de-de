@@ -1,22 +1,22 @@
 ---
 title: Der Azure Information Protection-Client&colon; Verlauf der Releases und Supportrichtlinie
-description: "Erfahren Sie, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde, und erhalten Sie Informationen zum Support der Lifecycle-Richtlinie."
+description: Erfahren Sie, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde, und erhalten Sie Informationen zum Support der Lifecycle-Richtlinie.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
+ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -154,30 +154,6 @@ Fixes für eine bessere Benutzererfahrung, die Folgendes umfassen:
 - E-Mail-Validierung, wenn Benutzer benutzerdefinierte Berechtigungen angeben. Darüber hinaus können jetzt durch Drücken der EINGABETASTE mehrere E-Mail-Adressen angegeben werden.
 
 - Die übergeordnete Bezeichnung wird nicht angezeigt, wenn für ihre untergeordneten Bezeichnungen Schutz konfiguriert ist und der Client nicht über eine Edition von Office verfügt, die den Schutz unterstützt. 
-
-## <a name="version-172100"></a>Version 1.7.210.0
-
-**Veröffentlicht**: 06.06.2017
-
-Diese Version umfasst die MSIPC-Version 1.0.2217.1 des RMS-Clients.
-
-**Neue Features**:
-
-- Neues PowerShell-Cmdlet [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Wenn Sie dieses Cmdlet ausführen, werden die Dateiinhalte überprüft und die Bezeichnungen werden gemäß den Bedingungen, die Sie in der Azure Information Protection-Richtlinie angeben, automatisch auf nicht bezeichnete Dateien angewendet.
-
-**Fixes**:
-
-- Alle Bezeichnungs- und Klassifizierungs-Cmdlets werden nun auf Computern unterstützt, die nicht mit dem Internet verbunden sind, aber eine gültige Azure Information Protection-Richtlinie aufweisen.
-
-- Aus Konsistenzgründen wird ein Ausgabeparameter des Cmdlets [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) von britischem Englisch (**IsLabelled**) in amerikanisches Englisch (**IsLabeled**) geändert. Wenn Sie Skripts oder automatisierte Prozesse verwenden, die nach diesem Parameter suchen, aktualisieren Sie die Schreibweise dieses Parameters.
-
-- Die allgemeinen Fehlerbehebungen zur Verbesserung der Stabilität umfassen Folgende:
-
-    - Für Outlook: Fehlerbehebungen für Abstürze, hohen Speicherverbrauch und Anzeigeprobleme bei Menüs.
-    
-    - Für Word, Excel und PowerPoint: Fehlerbehebungen für hohe CPU-Auslastung, Anzeigeprobleme beim Speichern großer Excel-Dateien oder keine Reaktion der Anwendung. 
-    
-    Um die Leistung von Office 2016 bei SharePoint Online und OneDrive for Business zu verbessern, werden bei diesen Anwendungen außerdem automatische und empfohlene Bezeichnungen beim Schließen der Datei statt beim Speichern (beim automatischen Speichern oder Speichervorgang durch den Benutzer) angewendet. Gleichermaßen gilt: Wenn die Einstellung **All documents and email must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) aktiviert ist, werden Benutzer erst aufgefordert, eine Bezeichnung auszuwählen, wenn die Datei geschlossen wird. Die Ausnahme gilt für Word 2016 und Excel 2016, wenn der Benutzer die Option **Speichern unter** wählt. Diese Aktion löst dann diese Bezeichnungsverhalten aus, sofern diese konfiguriert sind. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
