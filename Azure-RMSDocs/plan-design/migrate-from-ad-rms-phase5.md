@@ -1,22 +1,22 @@
 ---
-title: "Migrieren von AD RMS-Azure Information Protection – Phase 5"
+title: Migrieren von AD RMS-Azure Information Protection – Phase 5
 description: Phase 5 der Migration von AD RMS zu Azure Information Protection deckt die Schritte 10 bis 12 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 520773a2a893e7e88feb970a2539db4100287a72
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -116,7 +116,7 @@ So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
 - **Wenn Ihr Mandantenschlüssel von Ihnen verwaltet wird (BYOK)**: Wiederholen Sie in Azure Key Vault den Schlüsselerstellungsvorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
 
-Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Rights Management-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
+Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](../deploy-use/operations-tenant-key.md).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

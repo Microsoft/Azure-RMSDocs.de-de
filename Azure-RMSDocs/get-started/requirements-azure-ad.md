@@ -1,22 +1,22 @@
 ---
-title: "Azure Active Directory-Anforderungen für AIP"
-description: "Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azure Information Protection kennen, damit Benutzer erfolgreich authentifiziert werden können."
+title: Azure Active Directory-Anforderungen für AIP
+description: Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azure Information Protection kennen, damit Benutzer erfolgreich authentifiziert werden können.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
 
@@ -89,7 +89,13 @@ Konfigurieren Sie dann Ihre MFA-Lösung:
 
         Weitere Informationen zu diesem Szenario finden Sie unter [The Works with Office 365 – Identity program now streamlined](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) (Programm „Works with Office 365 – Identity“ wurde jetzt optimiert) im Office-Blog.
 
-Der Rights Management-Connector unterstützt nicht MFA. Wenn Sie diesen Connector für Ihre lokalen Server bereitstellen, müssen Sie ein Konto für den Connector verwenden, für den keine MFA erforderlich ist.
+Der Rights Management-Connector und der Azure Information Protection-Scanner unterstützen die MFA nicht. Wenn Sie den Connector oder den Scanner bereitstellen, dürfen die folgenden Konten keine MFA erfordern:
+
+- Das Konto, das den Connector installiert und konfiguriert.
+
+- Das Dienstprinzipalkonto in Azure AD, das der Connector erstellt: **Aadrm_S-1-7-0**.
+ 
+- Das Dienstkonto, das den Scanner ausführt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements-azure-rms.md).
