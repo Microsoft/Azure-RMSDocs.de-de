@@ -1,37 +1,64 @@
 ---
-title: RMS for individuals und Azure Information Protection
-description: "Informationen zu RMS for Individuals, ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, denen vertrauliche Dateien zugesandt wurden, die durch den Azure Rights Management-Dienst geschützt sind. RMS for Individuals kann eingesetzt werden, wenn diese Benutzer nicht authentifiziert werden können, da die IT-Abteilung für die Benutzer kein Konto in Azure verwaltet."
+title: RMS for Individuals und Azure Information Protection
+description: Informationen zu RMS for Individuals, einem kostenlosen Self-Service-Abonnement für Benutzer, denen vertrauliche Dateien zugesandt wurden, die aber nicht authentifiziert werden können, da die für die Benutzer zuständige IT-Abteilung kein Konto in Azure verwaltet.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a3dbed8d244847b9f649cdeff6714215b35a42de
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: bce7efc1f35f5e455f76a24f2f96e7d62f568425
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/20/2018
 ---
-# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
+# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for Individuals und Azure Information Protection
 
 >*Gilt für: Azure Information Protection*
 
-RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer in einer Organisation, die Dateien öffnen müssen, die vom Azure Rights Management-Dienst von Azure Information Protection geschützt wurden. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können und deren Organisation nicht über Active Directory Rights Management (AD RMS) verfügt, können mit diesem kostenlosen Anmeldedienst Konten in Azure Active Directory für Benutzer erstellt werden. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
+RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer, die durch Azure Information Protection geschützte Dateien öffnen müssen. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können und deren Organisation nicht über Active Directory Rights Management (AD RMS) verfügt, können mit diesem kostenlosen Anmeldedienst Konten in Azure Active Directory für Benutzer erstellt werden. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
 
-Durch die Nutzung des [Azure Information Protection-Clients](../rms-client/client-user-guide.md) auf Windows-Computern können Benutzer auch ihre eigenen Dateien schützen. Diese Funktion dient allerdings nur zu Testzwecken und wird in Zukunft möglicherweise entfernt.
+RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrierung. Wenn Benutzer Konten für Ihre Organisation erstellt haben, können Sie als Administrator Ihrer Organisation den Kontobesitz beanspruchen und die Kontrolle über die Konten übernehmen. 
 
-RMS for Individuals ist ein Beispiel für eine Self-Service-Anmeldung, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise finden Sie unter [Was ist die Self-Service-Registrierung für Azure?](/active-directory/active-directory-self-service-signup) in der Dokumentation zu Azure Active Directory. 
+
+> [!NOTE]
+> Das kostenlose Abonnement stellt eine Möglichkeit dar, sicherzustellen, dass autorisierte Personen außerhalb Ihrer Organisation jederzeit Dateien lesen können, die durch Ihre Organisation geschützt werden. Eine weitere Möglichkeit besteht in dem Senden von Dokumenten per E-Mail mithilfe der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese E-Mail-Lösung kann für sämtliche E-Mail-Adressen auf allen Geräten verwendet werden und wird zur sicheren Freigabe von Informationen und Anzeige von Office-Dokumenten empfohlen, die per E-Mail an Personen außerhalb Ihrer Organisation gesendet werden. 
+
+Um sich für dieses kostenlose Konto zu registrieren, rufen Sie die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf, und geben Sie Ihre geschäftliche E-Mail-Adresse an. Sie erhalten von Microsoft als Antwort eine E-Mail und schließen den Registrierungsprozess dann ab, indem Sie Details eingeben, um Ihr Konto zu erstellen. 
+
+Wenn das Konto erstellt wurde, finden Sie auf der letzten Seite Links zum Herunterladen des Azure Information Protection-Clients oder -Viewers, einen Link zum Benutzerhandbuch und einen Link zu einer aktuellen Liste der Anwendungen, die den Rights Management-Schutz nativ unterstützen. 
+
+## <a name="to-sign-up-for-rms-for-individuals"></a>So registrieren Sie sich für RMS for Individuals
+
+1. Rufen Sie auf einem Windows- oder Mac-Computer oder mobilen Gerät die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf.
+
+2. Geben Sie die E-Mail-Adresse ein, die zum Schützen des Dokuments verwendet wurde, das Sie öffnen möchten.
+
+3. Klicken Sie auf **Registrieren**.
+
+    Microsoft verwendet Ihre E-Mail-Adresse, um zu überprüfen, ob Ihre Organisation bereits über ein [Abonnement für Azure Information Protection Premium] (https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder ein [Office 365-Abonnement mit Datenschutz per Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) verfügt. Wenn eines dieser beiden Abonnements gefunden wird, ist es nicht nötig, dass Sie über RMS for Individuals verfügen. Sie werden sofort angemeldet, und die Self-Service-Registrierung für RMS for Individuals wird abgebrochen. Wird eines dieser Abonnements nicht gefunden, fahren Sie mit dem nächsten Schritt fort.
+
+4. Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Diese E-Mail wird vom Office 365-Team (support@email.microsoftonline.com) gesendet und hat den Betreff **Finish signing up for Microsoft Azure Information Protection** (Registrierung für Microsoft Azure Information Protection beenden).
+
+5. Wenn Sie die E-Mail erhalten, klicken Sie auf **Yes, that‘s me** (Ja, das bin ich), um Ihre E-Mail-Adresse zu bestätigen und den Registrierungsprozess abzuschließen.
+
+6. Es wird nun eine Seite **Nur noch eines...** angezeigt, mit der Sie Details zu Ihrem Konto angeben. Geben Sie Ihren Vornamen, Ihren Nachnamen und ein Kennwort Ihrer Wahl ein, und klicken Sie auf **Start**.
+
+7. Wenn Ihr Konto erstellt wurde, wird Ihnen eine neue Microsoft Azure Information Protection-Seite angezeigt, über die Sie den Azure Information Protection-Client herunterladen und installieren können. Sie können auch auf den Link zum [Benutzerhandbuch](../rms-client/client-user-guide.md) klicken, um eine Anleitung für Windows-Computer zu erhalten.
+
+Wenn Sie nach Erstellung des Kontos aufgefordert werden, sich anzumelden, um geschützte Dateien zu lesen, geben Sie dieselben Informationen – E-Mail-Adresse und Kennwort – ein, mit denen Sie das Konto für RMS for Individuals erstellt haben.
 
 > [!IMPORTANT]
-> Das kostenlose Abonnement stellt eine Möglichkeit dar, sicherzustellen, dass autorisierte Personen außerhalb Ihrer Organisation jederzeit Dateien lesen können, die durch Ihre Organisation geschützt werden. Eine weitere Möglichkeit besteht in dem Senden von Dokumenten per E-Mail mithilfe der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese E-Mail-Lösung kann für sämtliche E-Mail-Adressen auf allen Geräten verwendet werden und wird zur sicheren Freigabe von Informationen und Office-Dokumenten empfohlen, die per E-Mail an Personen außerhalb Ihrer Organisation gesendet werden. 
+> Sie können jetzt mit diesem Konto auch Dateien schützen; dies sollten Sie jedoch erst tun, wenn Ihre Organisation über ein [Testabonnement oder gebührenpflichtiges Abonnement](https://azure.microsoft.com/pricing/details/information-protection/) für Azure Information Protection verfügt. Wenn Sie Dateien und E-Mails mit diesem kostenlosen Abonnement schützen und Ihre Organisation dann die Kontrolle über Ihr Konto übernimmt, kann auf zuvor geschützte Inhalte möglicherweise nicht mehr zugegriffen werden.
+
 
 ## <a name="next-steps"></a>Nächste Schritte
-Eine Schritt-für-Schritt-Anleitung und eine technische Übersicht über die Vorgänge im Hintergrund finden Sie unter [Registrieren für RMS for Individuals](rms-for-individuals-user-sign-up.md). 
+RMS for Individuals ist ein Beispiel für eine Self-Service-Anmeldung, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise finden Sie unter [Was ist die Self-Service-Registrierung für Azure?](/active-directory/active-directory-self-service-signup) in der Dokumentation zu Azure Active Directory.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
