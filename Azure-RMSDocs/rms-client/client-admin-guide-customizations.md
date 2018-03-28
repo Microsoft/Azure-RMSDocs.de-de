@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/20/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
-ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
+ms.openlocfilehash: bb478a91a0af035bc07a77e4aae8c2f6c19eab4a
+ms.sourcegitcommit: c66da7a66f25a3c080e43c548e7945fec35ed751
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -204,7 +204,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem erfordert sie die Vorschauversion des Clients.
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem erfordert sie die Vorschauversion des Clients oder den Azure Information Protection-Scanner.
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
@@ -316,13 +316,13 @@ Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird 
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integration in die Exchange-Nachrichtenklassifizierung für eine Lösung zur Bezeichnung mobiler Geräte
 
-Obwohl Outlook im Web noch keine systemeigene Unterstützung für die Klassifizierung und den Schutz durch Azure Information Protection bietet, können Sie Ihre Azure Information Protection-Bezeichnungen mithilfe der Exchange-Nachrichtenklassifizierung auf Ihre mobilen Benutzer erweitern.
+Obwohl Outlook im Web noch keine systemeigene Unterstützung für die Klassifizierung und den Schutz durch Azure Information Protection bietet, können Sie Ihre Azure Information Protection-Bezeichnungen mithilfe der Exchange-Nachrichtenklassifizierung auf Ihre mobilen Benutzer erweitern, sofern sie Outlook im Web verwenden. Outlook Mobile unterstützt keine Exchange-Nachrichtenklassifizierung.
 
 So erreichen Sie diese Lösung 
 
 1. Verwenden Sie das Exchange PowerShell-Cmdlet [New-MessageClassification](https://technet.microsoft.com/library/bb124400), um Nachrichtenklassifizierungen mit der Name-Eigenschaft zu erstellen, die Ihren Bezeichnungsnamen in der Azure Information Protection-Richtlinie zugeordnet wird. 
 
-2. Erstellen Sie eine Exchange-Transportregel für jede Bezeichnung. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
+2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Verwenden des vorherigen Beispiels:
     
@@ -330,9 +330,9 @@ So erreichen Sie diese Lösung
     
     Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
     
-    ![Beispieltransportregel für Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
+    ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
 
-Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Verzögerung beim Erstellen oder Bearbeiten von Transportregeln kommt (warten Sie eine Stunde). Ist die Regel in Kraft, geschieht Folgendes, wenn Benutzer Outlook im Web oder einen Client für mobile Geräte mit Unterstützung für den Rights Management-Schutz verwenden: 
+Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Verzögerung beim Erstellen oder Bearbeiten von Regeln für den E-Mail-Verkehr kommt (warten Sie eine Stunde). Ist die Regel in Kraft, geschieht Folgendes, wenn Benutzer Outlook im Web oder einen Client für mobile Geräte mit Unterstützung für Exchange ActiveSync IRM verwenden: 
 
 - Benutzer wählen die Exchange-Nachrichtenklassifizierung aus, und senden die E-Mail.
 
@@ -340,11 +340,11 @@ Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Ver
 
 - Wenn Empfänger die E-Mail in Outlook anzeigen und der Azure Information Protection-Client installiert ist, sehen sie, dass die Azure Information Protection-Bezeichnung sowie alle entsprechenden Kopfzeilen, Fußzeilen oder Wasserzeichen der E-Mail zugewiesen sind. 
 
-Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Rechteverwaltungsschutz anwenden, fügen Sie diesen Schutz zur Regelkonfiguration hinzu, indem Sie die Option zum Ändern der Nachrichtensicherheit ändern, den Rechteschutz anwenden und dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ auswählen.
+Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Schutz anwenden, fügen Sie diesen Schutz zur Regelkonfiguration hinzu. Wählen Sie hierzu die Option zum Ändern der Nachrichtensicherheit aus, wenden Sie den Rechteschutz an, und wählen Sie dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ aus.
 
-Sie können Transportregeln auch so konfigurieren, dass sie die umgekehrte Zuordnung vornehmen. Wenn eine Azure Information Protection-Bezeichnung erkannt wird, legen Sie eine entsprechende Exchange-Nachrichtenklassifizierung fest:
+Sie können Regeln für den E-Mail-Verkehr auch so konfigurieren, dass sie die umgekehrte Zuordnung vornehmen. Wenn eine Azure Information Protection-Bezeichnung erkannt wird, legen Sie eine entsprechende Exchange-Nachrichtenklassifizierung fest:
 
-- Erstellen Sie für jede Azure Information Protection-Bezeichnung eine Transportregel, die angewendet wird, wenn der Header **msip_labels** den Namen Ihrer Bezeichnung enthält (z.B. **Allgemein**), und wenden Sie eine Nachrichtenklassifizierung an, die dieser Bezeichnung zugeordnet wird.
+- Erstellen Sie für jede Azure Information Protection-Bezeichnung eine Regel für den E-Mail-Verkehr. Diese wird angewendet, wenn der Header **msip_labels** den Namen Ihrer Bezeichnung enthält (z.B. **Allgemein**). Wenden Sie zudem eine Nachrichtenklassifizierung an, die dieser Bezeichnung zugeordnet wird.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
