@@ -1,24 +1,24 @@
 ---
-title: "Gewusst wie: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung | Azure RMS"
-description: "In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert."
-keywords: 
+title: 'Gewusst wie: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung | Azure RMS'
+description: In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: df82a503107aae3db61101eb468009e47f546ceb
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c1500b13a0c7ddabd3a01deb08c81fa3d4d72c7
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
 
@@ -30,7 +30,7 @@ Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.
 ## <a name="prerequisites"></a>Voraussetzungen
 
 -   RMS SDK 2.1 muss installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
--   [Erstellen Sie eine Dienstidentität über ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) mithilfe der symmetrischen Schlüsseloption oder auf andere Weise, und zeichnen Sie die Schlüsselinformation dieses Prozesses auf.
+-   [Erstellen Sie eine Dienstidentität über ACS](https://msdn.microsoft.com/library/gg185924.aspx) mithilfe der symmetrischen Schlüsseloption oder auf andere Weise, und zeichnen Sie die Schlüsselinformation dieses Prozesses auf.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Verbinden mit dem Azure-Rechteverwaltungsdienst
 
@@ -80,7 +80,7 @@ Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.
 
 ### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Anweisungen zum Ermitteln von **TenantBposId** und **Urls**
 
--   Installieren Sie das [Azure RMS Powershell-Modul](https://technet.microsoft.com/en-us/library/jj585012.aspx).
+-   Installieren Sie das [Azure RMS Powershell-Modul](https://technet.microsoft.com/library/jj585012.aspx).
 -   Starten Sie Powershell, und führen Sie die folgenden Befehle aus, um die RMS-Konfiguration des Mandanten abzurufen.
 
     `Import-Module aadrm`
@@ -164,9 +164,9 @@ Sie haben jetzt die erforderlichen Schritte zum Aktivieren der Anwendung für di
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
+* [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx)
 * [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
-* [Erstellen einer Dienstidentität über ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
+* [Erstellen einer Dienstidentität über ACS](https://msdn.microsoft.com/library/gg185924.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
 * [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
 * [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
