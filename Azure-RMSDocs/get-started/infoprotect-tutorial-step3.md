@@ -1,24 +1,24 @@
 ---
-title: "Schnellstart-Tutorial Schritt 3 – AIP"
-description: "Schritt 3 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Installieren des Clients"
+title: Schnellstart-Tutorial Schritt 3 – AIP
+description: Schritt 3 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Installieren des Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: cfe2fdf41174caf6184d3e160ce9f4d439d55566
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 363902fac8036b118ce28c3ea87c812e262c3d47
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-install-the-client"></a>Schritt 3: installieren des Clients
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 In diesem Schritt installieren Sie den Azure Information Protection-Client, damit die Richtlinie, die Sie gerade konfiguriert haben, auf einen Windows-PC heruntergeladen wird und die Bezeichnungen in Office-Anwendungen angezeigt werden.
 
@@ -49,7 +49,7 @@ Wenn das Dokument geladen wird, sehen Sie zwei neue Dinge:
 
 Sie können nun Azure Information Protection in Aktion sehen.
 
-|Weitere Informationen zu|Weitere Informationen|
+|Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
 |Informationen zur Installation des Azure Information Protection-Clients|[Herunterladen und Installieren des Azure Information Protection-Clients](../rms-client/install-client-app.md)|
 |Administratoranweisungen für den Azure Information Protection-Client|[Azure Information Protection-Client – Administratorhandbuch](../rms-client/client-admin-guide.md)|

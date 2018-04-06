@@ -1,24 +1,24 @@
 ---
-title: "Schnellstart-Tutorial Schritt 4 – AIP"
-description: "Schritt 4 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Bezeichnung und Schutz in Aktion."
+title: Schnellstart-Tutorial Schritt 4 – AIP
+description: Schritt 4 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Bezeichnung und Schutz in Aktion.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f92953acfe652238ef8a36f67cdd8051324c6f18
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Schritt 4: Klassifizierung, Bezeichnung und Schutz in Aktion 
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Nun, da Sie ein Word-Dokument mit dem installierten Azure Information Protection-Client geöffnet haben, können Sie sehen, wie einfach das Bezeichnen und Schützen Ihres Dokuments, mithilfe der Richtlinie ist, die wir konfiguriert haben.
 
@@ -76,7 +76,7 @@ Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen
 
 Sehen wir uns nach der Klassifizierung, der Bezeichnung und dem Schutz von Dokumenten nun an, wie Sie Ihre Dokumente schützen können, wenn diese für andere Benutzer in einer anderen Organisation freigegeben werden. Sie können sogar nachverfolgen, wie sie verwendet werden und den Zugriff auf diese Dokumente widerrufen.
 
-|Weitere Informationen zu|Weitere Informationen|
+|Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
 |Vollständige Anweisungen zum Bezeichnen und Schützen von Dateien |[Klassifizieren und Schützen einer Datei oder E-Mail](../rms-client/client-classify-protect.md)|
 |Bezeichnungsaktivität ist Protokollierung |[Protokollieren der Verwendung für den Azure Information Protection-Client](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|

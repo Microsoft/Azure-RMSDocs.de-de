@@ -1,26 +1,26 @@
 ---
 title: Azure Information Protection-Benutzerhandbuch
-description: "Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird."
+description: Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection-Benutzerhandbuch
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
 Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 

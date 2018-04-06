@@ -1,26 +1,26 @@
 ---
-title: "Installieren und Konfigurieren des Rights Management-Connectors – AIP"
-description: "Informationen zur Unterstützung bei der Installation und Konfiguration des RMS-Connectors (Azure Rights Management). Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter „Bereitstellen des Azure Rights Management-Connectors“."
+title: Installieren und Konfigurieren des Rights Management-Connectors – AIP
+description: Informationen zur Unterstützung bei der Installation und Konfiguration des RMS-Connectors (Azure Rights Management). Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter „Bereitstellen des Azure Rights Management-Connectors“.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 73cbcc73b2ce96b2e41f6fef90d70cee71ee3dff
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: a1526c3efea1a03a82baed526d65b748d2aa7bae
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Verwenden Sie folgende Informationen als Hilfestellung bei des Installation und Konfiguration der Azure Rights Management (RMS)-Verbindungsdiensts. Diese Verfahren beziehen sich auf die Schritte 1 bis 4 unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 

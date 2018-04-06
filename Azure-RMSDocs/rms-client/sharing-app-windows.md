@@ -1,26 +1,26 @@
 ---
-title: "Rights Management-Freigabeanwendung für Windows – AIP"
-description: "Informationsressourcen für die Rights Management-Freigabeanwendung für Windows. Dies ist eine kostenlose, herunterladbare Anwendung für Organisationen, die Active Directory Rights Management Services (AD RMS) oder Azure Information Protection verwenden, sowie für Organisationen, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure Information Protection geschützt sind."
+title: Rights Management-Freigabeanwendung für Windows – AIP
+description: Informationsressourcen für die Rights Management-Freigabeanwendung für Windows. Dies ist eine kostenlose, herunterladbare Anwendung für Organisationen, die Active Directory Rights Management Services (AD RMS) oder Azure Information Protection verwenden, sowie für Organisationen, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure Information Protection geschützt sind.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a496ed482f6973f03c63b3792fd1f3ccc4b9403e
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 4a5541e076fa4324c4a79df4d18daacc6b3dafb5
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Rights Management-Freigabeanwendung für Windows
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!IMPORTANT]
 > **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 

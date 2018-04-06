@@ -1,5 +1,5 @@
 ---
-title: RMS for Individuals und Azure Information Protection
+title: RMS for individuals und Azure Information Protection
 description: Informationen zu RMS for Individuals, einem kostenlosen Self-Service-Abonnement für Benutzer, denen vertrauliche Dateien zugesandt wurden, die aber nicht authentifiziert werden können, da die für die Benutzer zuständige IT-Abteilung kein Konto in Azure verwaltet.
 author: cabailey
 ms.author: cabailey
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bce7efc1f35f5e455f76a24f2f96e7d62f568425
-ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
+ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for Individuals und Azure Information Protection
+# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer, die durch Azure Information Protection geschützte Dateien öffnen müssen. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können und deren Organisation nicht über Active Directory Rights Management (AD RMS) verfügt, können mit diesem kostenlosen Anmeldedienst Konten in Azure Active Directory für Benutzer erstellt werden. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
 

@@ -1,27 +1,27 @@
 ---
-title: "RMS-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen – AIP"
-description: "Hier finden Sie Informationen zu Neuheiten oder Änderungen an einer Version der Rights Management-Freigabeanwendung für Windows."
+title: RMS-Freigabeanwendung&colon; Verlauf der Versionsveröffentlichungen – AIP
+description: Hier finden Sie Informationen zu Neuheiten oder Änderungen an einer Version der Rights Management-Freigabeanwendung für Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed3725f65d5e1b357a2cd1cda1e28a8ddcb8fae6
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Das Azure Information Protection-Team aktualisiert die Rights Management-Freigabeanwendung regelmäßig, um Fixes und neue Funktionen zu implementieren. Verwenden Sie die folgenden Informationen, um zu sehen, welche Neuerungen oder Änderungen eine Version bietet. Die neueste Version ist zuerst aufgeführt.
 

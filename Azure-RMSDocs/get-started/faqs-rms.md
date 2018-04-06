@@ -1,27 +1,27 @@
 ---
-title: "Häufig gestellte Fragen zu Azure RMS – AIP"
-description: "Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten."
+title: Häufig gestellte Fragen zu Azure RMS – AIP
+description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf640c7faf6bcd5ce7467547095b44f09e72fa8c
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Haben Sie eine Frage zum Azure Rights Management-Dienst von Azure Information Protection für den Schutz von Daten? Vielleicht finden Sie hier eine Antwort darauf.
 
@@ -156,7 +156,7 @@ Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://portal.of
 
 So schützen Sie eine E-Mail-Nachricht oder ein Dokument: Klicken Sie auf der Registerkarte **Optionen** auf **Berechtigungen**, und wählen Sie eine Option oder eine Vorlage zum Schutz Ihrer E-Mail oder Ihres Dokuments aus.
 
-So verfolgen Sie ein Dokument nach, nachdem Sie es geschützt haben: Registrieren Sie auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, das Dokument mit der Website für die Dokumentnachverfolgung. Verwenden Sie hierzu entweder eine Office-Anwendung oder den Datei-Explorer. Weitere Anweisungen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](../rms-client/client-track-revoke.md). Auf Ihrem Macintosh-Computer können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
+So verfolgen Sie ein Dokument nach, nachdem Sie es geschützt haben: Registrieren Sie auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, das Dokument mit der Website für die Dokumentnachverfolgung. Verwenden Sie hierzu entweder eine Office-Anwendung oder den Datei-Explorer. Weitere Anweisungen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](../rms-client/client-track-revoke.md). Auf Ihrem Mac können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com)) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Wenn ich ein RMS-geschütztes Office-Dokument öffne, wird die dazugehörige temporäre Datei ebenfalls von RMS geschützt?
 Nein. Die dazugehörige temporäre Datei enthält in diesem Szenario keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei soll die temporäre Datei offensichtlich nicht freigegeben werden und verbleibt auf dem Gerät, geschützt durch lokale Sicherheitskontrollen wie BitLocker und EFS.

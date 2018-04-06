@@ -1,27 +1,27 @@
 ---
-title: "Schnellstart-Tutorial Schritt 5 – AIP"
-description: "Schritt 5 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Freigeben und Nachverfolgen von geschützten Dokumenten."
-keywords: 
+title: Schnellstart-Tutorial Schritt 5 – AIP
+description: Schritt 5 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Freigeben und Nachverfolgen von geschützten Dokumenten.
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Verwenden Sie für diesen letzten Schritt des Tutorials ein Word-Dokument oder ein Excel-Arbeitsblatt, das Sie bereits erstellt haben und an einen Partner oder Kollegen senden möchten. In diesem Tutorial spielt der enthaltene Text keine Rolle. Etwas Text ist jedoch sinnvoll, damit Sie einfacher überprüfen können, ob der Inhalt vom autorisierten Empfänger gelesen werden kann.
 
@@ -59,7 +59,7 @@ Anschließend können Sie das Dokument sicher per E-Mail freigeben.
 
 7. Ändern Sie die Standardbeschreibung der Nachricht, damit sie für Ihre Empfänger geeignet ist. Fügen Sie jedoch den folgenden Text hinzu:
 
-    **Ich habe diese Datei mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in den folgenden Anweisungen: https://aka.ms/rms-signup**. 
+    **Ich habe diese Datei mit Microsoft Azure Information Protection geschützt. Wenn Ihnen diese Funktion zum ersten mal begegnet, finden Sie weitere Informationen unter: https://aka.ms/rms-signup.** 
 
     ![Schnellstarttutorial für Azure Information Protection Schritt 5 – Geschütztes Dokument per E-Mail freigeben](../media/share-protected-emailv2.png)
 
@@ -103,17 +103,17 @@ Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfä
 
 3.  Auf der Seite **Your shared documents** (Freigegebene Dokumente) wird der Name des freigegebenen Dokuments angezeigt. Zu diesem Zeitpunkt wird nur diese Datei angezeigt. Sobald Sie jedoch zusätzliche geschützte Dokumente freigeben, wird die Liste erweitert.
 
-    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d. h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie das Datum der letzten Aktivität und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
+    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d. h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie das Datum der letzten Aktivität und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
 
 4.  Auf der neuen Seite, die den Namen der angeklickten Datei hat, sehen Sie spezifische Übersichtsdetails für das Dokument und eine Liste weiterer Optionen, die für das Dokument verfügbar sind (**Liste**, **Zeitskala**, **Karte**, **Einstellungen**).
 
-    Klicken Sie auf die einzelnen Optionen, um verschiedene Möglichkeiten zum Verfolgen des geschützten Dokuments auszuprobieren. Sie können auf der Seite **Zusammenfassung** aber auch auf **In Excel öffnen** klicken, um die Informationen in eine Kalkulationstabelle zu exportieren, oder auf **Zugriff widerrufen**, um die Freigabe des Dokuments zu beenden.
+    Klicken Sie auf die einzelnen Optionen, um verschiedene Möglichkeiten zum Verfolgen des geschützten Dokuments auszuprobieren. Sie können auf der Seite **Zusammenfassung** aber auch auf **In Excel öffnen** klicken, um die Informationen in eine Kalkulationstabelle zu exportieren, oder auf **Zugriff widerrufen** , um die Freigabe des Dokuments zu beenden.
 
-Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem Mobilgerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562) auswählen.
+Sie können zu dieser Website zurückkehren, um weitere Aktivitäten für das geschützte Dokument zu verfolgen oder um den Zugriff ggf. zu widerrufen. Sie können auch von Ihrem mobilen Gerät oder Tablet auf die Website zugreifen, indem Sie den Browserlink [Dokumentenverfolgung](http://go.microsoft.com/fwlink/?LinkId=529562)auswählen.
 
 
 
-|Weitere Informationen zu|Weitere Informationen|
+|Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
 |Vollständige Anweisungen zum Schützen von Dateien, die dann sicher freigegeben werden können|[Klassifizieren und Schützen einer Datei oder E-Mail](../rms-client/client-classify-protect.md)|
 |Informationen zum kostenlosen Konto, für das sich andere Benutzer registrieren können|[RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md)|

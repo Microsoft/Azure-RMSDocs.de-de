@@ -1,26 +1,26 @@
 ---
-title: "Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel"
-description: "Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen kennen, die für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung stehen."
+title: Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
+description: Lernen Sie die verschiedenen Steuerungs- und Zuständigkeitsebenen kennen, die für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung stehen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: afe33bcee3516589bd87642b0f15206b90a4bb41
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: f459504f43c8e361e36832b19011f93d1cbaccc4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Je nach Mandantenschlüsseltopologie für Azure Information Protection stehen unterschiedliche Kontroll- und Zuständigkeitsebenen für Ihren Azure Information Protection-Mandantenschlüssel zur Verfügung. Es gibt zwei Schlüsseltopologien: **von Microsoft verwaltete** und **kundenverwaltete**.
 
@@ -30,11 +30,11 @@ In der folgenden Tabelle sind die Vorgänge aufgeführt, die Sie in der jeweilig
 
 |Lebenszyklusvorgang|Von Microsoft verwaltet (Standard)|Kundenverwaltet (BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Widerrufen Ihres Mandantenschlüssels|Nein (automatisch)|Ja|
-|Neuerstellung Ihres Mandantenschlüssels|Ja|Ja|
-|Sicherung und Wiederherstellung Ihres Mandantenschlüssels|Nein|Ja|
-|Exportieren Ihres Mandantenschlüssels|Ja|Nein|
-|Reaktion auf eine Sicherheitsverletzung|Ja|Ja|
+|Widerrufen Ihres Mandantenschlüssels|Nein (automatisch)|Ja |
+|Neuerstellung Ihres Mandantenschlüssels|Ja |Ja |
+|Sicherung und Wiederherstellung Ihres Mandantenschlüssels|Nein|Ja |
+|Exportieren Ihres Mandantenschlüssels|Ja |Nein|
+|Reaktion auf eine Sicherheitsverletzung|Ja |Ja |
 
 Nachdem Sie die implementierte Topologie ermittelt haben, können Sie auf einen der folgenden Links klicken, um weitere Informationen zu diesen Vorgängen für Ihren Azure Information Protection-Mandantenschlüssel zu erhalten:
 
