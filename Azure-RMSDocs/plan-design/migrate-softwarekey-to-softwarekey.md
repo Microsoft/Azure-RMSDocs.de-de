@@ -1,26 +1,26 @@
 ---
-title: "Migrieren softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln – AIP"
-description: "Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten."
+title: Migrieren softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln – AIP
+description: Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Information Protection sind und nur gelten, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bc87379406d45f3fb39cae214839e127f71a366f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 999d070a45d48fa997f8b320edfcc28543b331f4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Diese Anweisungen sind Teil des [Migrationspfads von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und gelten nur, wenn Ihr AD RMS-Schlüssel softwaregeschützt ist und Sie die Migration zu Azure Information Protection mit einem softwaregeschützten Mandantenschlüssel durchführen möchten. 

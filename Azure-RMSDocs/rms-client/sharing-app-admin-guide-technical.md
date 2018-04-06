@@ -1,26 +1,26 @@
 ---
-title: "Technische Übersicht für die RMS-Freigabeanwendung – AIP"
-description: "Technische Details für Administratoren in Unternehmensnetzwerken, die für die Bereitstellung der RMS-Freigabeanwendung für Windows verantwortlich sind."
+title: Technische Übersicht für die RMS-Freigabeanwendung – AIP
+description: Technische Details für Administratoren in Unternehmensnetzwerken, die für die Bereitstellung der RMS-Freigabeanwendung für Windows verantwortlich sind.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c4f37d2c3e7a90171662d91a4f78d61b629dd650
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 
 Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladbare Anwendung für Microsoft Windows und andere Plattformen, die Folgendes bereitstellt:
@@ -101,7 +101,7 @@ Sie können auch erzwingen, dass die RMS-Freigabeanwendung den Schutz von Dateie
 
 Bearbeiten Sie die folgenden Registrierungseinträge, um die RMS-Freigabeanwendung so zu konfigurieren, dass sie generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch native Schutzfunktionen geschützt würden. Beachten Sie, dass Sie die Schlüssel „RmsSharingApp“ oder „FileProtection“ manuell erstellen müssen, falls diese nicht vorhanden sind.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen \*.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
 
     Diese Einstellung gibt Dateien mit beliebiger Erweiterung an.
 

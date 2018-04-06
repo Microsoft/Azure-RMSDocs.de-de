@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9542eb6f679d931de556f706afa3b51cfd9d2bb8
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Damit Sie Azure Information Protection für Ihre Organisation bereitstellen können, müssen die folgenden Voraussetzungen erfüllt sein. 
 
@@ -86,6 +86,8 @@ Wenn durch den Azure Information Protection-Client Daten mit dem Azure Rights Ma
 Der Azure Information Protection-Client kann Dokumente und E-Mails bezeichnen und schützen, indem er die Office-Anwendungen **Word**, **Excel**, **PowerPoint** und **Outlook** aus einer der folgenden Office-Suiten verwendet:
 
 - Office 365 ProPlus mit 2016-Apps oder 2013-Apps (Klick-und-Los- oder Windows Installer-basierte Installation)
+    
+    Diese Editionen von Office sind in den meisten Office 365-Abonnements enthalten, bei denen durch Azure Information Protection Datenschutz gewährleistet wird. Überprüfen Sie Ihre Abonnementinformationen, um zu sehen, ob Office 365 ProPlus enthalten ist. Sie finden diese Informationen auch im [Datenblatt zu Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -93,7 +95,7 @@ Der Azure Information Protection-Client kann Dokumente und E-Mails bezeichnen un
 
 - Office Professional Plus 2010 mit Service Pack 2
 
-Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Bezeichnungen, die diesen Schutz anwenden, werden auf der Azure Information Protection-Leiste nicht angezeigt. 
+Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Deshalb werden Bezeichnungen, die Schutz anwenden, nicht in der Leiste für Azure Information Protection oder über die Schaltfläche **Schützen** des Office-Menübands angezeigt. 
 
 Der Azure Information Protection-Client unterstützt nur Computer, auf denen nur eine Office-Version installiert ist. Außerdem unterstützt der Client nicht das Wechseln zwischen mehreren Benutzerkonten in Office.
 

@@ -1,26 +1,26 @@
 ---
 title: Verwenden von PowerShell mit dem Azure Information Protection-Client
-description: "Anweisungen und Informationen für Administratoren zum Verwalten des Azure Information Protection-Clients mithilfe von PowerShell."
+description: Anweisungen und Informationen für Administratoren zum Verwalten des Azure Information Protection-Clients mithilfe von PowerShell.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
@@ -238,9 +238,11 @@ Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterlade
 
 1. Führen Sie das Cmdlet „Get-AadrmConfiguration“ erneut aus, und notieren Sie sich die Werte für **CertificationExtranetDistributionPointUrl** und **LicensingExtranetDistributionPointUrl**.
 
-2. Öffnen Sie auf jedem Computer, auf dem Sie die „AzureInformationProtection“-Cmdlets ausführen, den Registrierungs-Editor, und navigieren Sie zu: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. Öffnen Sie auf jedem Computer, auf dem Sie die AzureInformationProtection-Cmdlets ausführen möchten, den Registrierungs-Editor.
 
-3. Wenn der Schlüssel **ServiceLocation** nicht angezeigt wird, erstellen Sie ihn, damit der Registrierungspfad wie folgt aussieht: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. Navigieren Sie zu folgendem Pfad: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
+    
+    Wenn die Schlüssel **MSIPC** oder **ServiceLocation** nicht angezeigt werden, erstellen Sie sie.
 
 4. Erstellen Sie für den Schlüssel **ServiceLocation** zwei Schlüssel, wenn diese nicht bereits vorhanden sind: **EnterpriseCertification** und **EnterprisePublishing**. 
     

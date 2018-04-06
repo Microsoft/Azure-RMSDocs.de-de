@@ -1,26 +1,26 @@
 ---
 title: Azure Information Protection-Clientdateien und Verwendungsprotokollierung
-description: "Informationen zu den Clientdateien und zur Verwendungsprotokollierung für den Azure Information Protection-Client für Windows"
+description: Informationen zu den Clientdateien und zur Verwendungsprotokollierung für den Azure Information Protection-Client für Windows
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 33047865430004f91eb85ec7e32bbfc3f2f6bbde
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: a60169a2c98a751c787a7ca4a8aee31f99a18590
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Nachdem Sie den Azure Information Protection-Client installiert haben, müssen Sie möglicherweise wissen, wo die Dateien gespeichert sind und zudem überwachen, wie der Client verwendet wird.
 

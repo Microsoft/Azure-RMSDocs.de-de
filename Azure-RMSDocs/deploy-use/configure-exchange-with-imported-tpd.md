@@ -1,26 +1,26 @@
 ---
-title: "Konfigurieren von Exchange Online IRM für den Azure Rights Management-Dienst von Azure Information Protection"
-description: "Informationen und Anweisungen für Administratoren zum Konfigurieren von Exchange Online für den Azure Rights Management-Dienst, wenn der Office 365-Mandant nicht die neuen Funktionen in der Office 365-Nachrichtenverschlüsselung unterstützt."
+title: Konfigurieren von Exchange Online IRM für den Azure Rights Management-Dienst von Azure Information Protection
+description: Informationen und Anweisungen für Administratoren zum Konfigurieren von Exchange Online für den Azure Rights Management-Dienst, wenn der Office 365-Mandant nicht die neuen Funktionen in der Office 365-Nachrichtenverschlüsselung unterstützt.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/22/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0c6fe7f7b6a34eea21b646ce5573ca03b13be3c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 022eb960ef58e69c0a4c2d8a76962ed792a9ed38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="exchange-online-irm-configuration-when-you-have-imported-a-trusted-publishing-domain"></a>Konfigurieren von Exchange Online IRM nach Import einer vertrauenswürdigen Veröffentlichungsdomäne
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Verwenden Sie die folgenden Anweisungen nur, wenn Sie bereits Exchange Online für IRM durch den Import einer vertrauenswürdigen Veröffentlichungsdomäne (TPD) konfiguriert haben und verschlüsselte E-Mails entschlüsseln müssen.
 

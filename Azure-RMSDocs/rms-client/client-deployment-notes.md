@@ -1,26 +1,26 @@
 ---
-title: "Anmerkungen zur Bereitstellung des RMS-Clients – Azure Information Protection"
-description: "Informationen zu Installation, unterstützten Betriebssystemen, Registrierungseinstellungen und Dienstermittlung für den RMS-Client (Rights Management Service), Version 2, der auch MSIPC-Client genannt wird."
+title: Anmerkungen zur Bereitstellung des RMS-Clients – Azure Information Protection
+description: Informationen zu Installation, unterstützten Betriebssystemen, Registrierungseinstellungen und Dienstermittlung für den RMS-Client (Rights Management Service), Version 2, der auch MSIPC-Client genannt wird.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6518b9d91e8f73b9ac6c0fb9e4bb5c2bbcebd612
-ms.sourcegitcommit: 704700acf7302d258e9c58c365c3244e833a86cd
+ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Anmerkungen zur Bereitstellung des RMS-Clients
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 7 mit SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 mit SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
 Der RMS-Client, Version 2 (Rights Management Services) wird auch als MSIPC-Client bezeichnet. Es handelt sich um Software für Windows-Computer, die mit den Microsoft Rights Management Services, lokal oder in der Cloud, kommuniziert. Zweck ist der Schutz des Zugriffs auf die Nutzung von Informationen, die durch Anwendungen und Geräte fließen, und zwar innerhalb der Begrenzungen Ihrer Organisation oder außerhalb dieser verwalteten Begrenzungen. 
 
@@ -48,7 +48,7 @@ Sie können den RMS-Client mithilfe einer der folgenden Installationsmethoden in
     setup_msipc_x64.exe /quiet
     ```
 
-- **Interaktiver Modus.** Alternativ können Sie den RMS-Client über das interaktive GUI-basierte Setup installieren, das vom Installations-Assistenten für den RMS-Client bereitgestellt wird. Für eine interaktive Installation müssen Sie auf das RMS-Client-Installerpaket (**setup_msipc_*\<arch\>*.exe**) doppelklicken. Dieses befindet sich dort, wo es auf ihrem lokalen Computer kopiert oder heruntergeladen wurde.
+- **Interaktiver Modus.** Alternativ können Sie den RMS-Client über das interaktive GUI-basierte Setup installieren, das vom Installations-Assistenten für den RMS-Client bereitgestellt wird. Für eine interaktive Installation müssen Sie auf das RMS-Client-Installerpaket (**setup_msipc_*\<arch\>*.exe**) doppelklicken. Dieses finden Sie dort, wo es auf ihren lokalen Computer kopiert oder heruntergeladen wurde.
 
 ## <a name="questions-and-answers-about-the-rms-client"></a>Fragen und Antworten zum RMS-Client
 Der folgende Abschnitt enthält häufig gestellte Fragen zum RMS-Client und die dazugehörigen Antworten.
@@ -118,7 +118,7 @@ Sie können Windows-Registrierungsschlüssel zum Festlegen oder Ändern einiger 
 |**Ändern der Häufigkeit (in Tagen), mit der Vorlagen aktualisiert werden**|Mit den folgenden Registrierungswerten wird festgelegt, wie oft Vorlagen auf dem Computer des Benutzers aktualisiert werden, wenn der Wert „TemplateUpdateFrequencyInSeconds“ nicht festgelegt ist.  Wenn keiner dieser Werte festgelegt ist, ist das Standardaktualisierungsintervall für Anwendungen, die den RMS-Client (Version 1.0.1784.0) zum Herunterladen von Vorlagen verwenden, 1 Tag. Bei Vorversionen dieser Version ist der Standardwert 7 Tage.<br /><br />**Clientmodus:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Tage (mindestens 1) zwischen Downloads angegeben wird.<br /><br />**Servermodus:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Tage (mindestens 1) zwischen Downloads angegeben wird.|
 |**Ändern der Häufigkeit (in Sekunden), mit der Vorlagen aktualisiert werden**<br /><br />Wichtig: Wenn diese Einstellung angegeben ist, wird der Wert für das Aktualisieren von Vorlagen in Tagen ignoriert. Geben Sie einen oder den anderen, aber nicht beide an.|Mit den folgenden Registrierungswerten wird festgelegt, wie oft Vorlagen auf dem Computer des Benutzers aktualisiert werden. Wenn dieser Wert oder der Wert zum Ändern der Häufigkeit in Tagen (TemplateUpdateFrequency) nicht festgelegt ist, ist das Standardaktualisierungsintervall für Anwendungen, die den RMS-Client (Version 1.0.1784.0) zum Herunterladen von Vorlagen verwenden, 1 Tag. Bei Vorversionen dieser Version ist der Standardwert 7 Tage.<br /><br />**Clientmodus:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Sekunden zwischen Downloads (mindestens 1) angegeben wird.<br /><br />**Servermodus:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<*SID*><br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Sekunden zwischen Downloads (mindestens 1) angegeben wird.|
 |Nur AD RMS:<br /><br />**Sofortiges Herunterladen der Vorlagen bei der nächsten Veröffentlichungsanforderung**|Bei Tests und Bewertungen kann es wünschenswert sein, dass der RMS-Client Vorlagen so schnell wie möglich herunterlädt. Entfernen Sie für diese Konfiguration den folgenden Registrierungsschlüssel, damit der RMS-Client Vorlagen sofort bei der nächsten Veröffentlichungsanfrage herunterlädt, anstatt auf den in der Registrierungseinstellung „TemplateUpdateFrequency“ festgelegten Zeitpunkt zu warten:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*Servername*>\Template <br /><br />**Hinweis**: \<*Servername*> kann sowohl externe (corprights.contoso.com) als auch interne (corprights) URLs und damit zwei verschiedene Einträge haben.|
-|Nur AD RMS:<br /><br />**Aktivieren der Unterstützung der Verbundauthentifizierung**|Wenn der RMS-Clientcomputer mithilfe einer Verbundvertrauensstellung mit einem AD RMS-Cluster verbunden ist, müssen Sie den Verbundstartbereich konfigurieren.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Wert**: Der Wert dieses Registrierungseintrags ist der Uniform Resource Identifier (URI) für den Verbunddienst (z.B. „http://TreyADFS.trey.net/adfs/services/trust“).<br /><br /> **Hinweis**: Es ist wichtig, dass Sie HTTP und nicht HTTPS für diesen Wert angeben. Zudem ist der Speicherort HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation, wenn Ihre MSPIC-basierte 32-Bit-Anwendung auf einer 64-Bit-Version von Windows ausgeführt wird. Ein Beispiel für die Konfiguration finden Sie unter [Bereitstellen von Active Directory Rights Management Services mit Active Directory-Verbunddiensten](https://technet.microsoft.com/library/dn758110.aspx).|
+|Nur AD RMS:<br /><br />**Aktivieren der Unterstützung der Verbundauthentifizierung**|Wenn der RMS-Clientcomputer mithilfe einer Verbundvertrauensstellung mit einem AD RMS-Cluster verbunden ist, müssen Sie den Verbundstartbereich konfigurieren.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Wert**: Der Wert dieses Registrierungseintrags ist der Uniform Resource Identifier (URI) für den Verbunddienst, z.B. http://TreyADFS.trey.net/adfs/services/trust.<br /><br /> **Hinweis**: Es ist wichtig, dass Sie HTTP und nicht HTTPS für diesen Wert angeben. Zudem ist der Speicherort HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation, wenn Ihre MSPIC-basierte 32-Bit-Anwendung auf einer 64-Bit-Version von Windows ausgeführt wird. Ein Beispiel für die Konfiguration finden Sie unter [Bereitstellen von Active Directory Rights Management Services mit Active Directory-Verbunddiensten](https://technet.microsoft.com/library/dn758110.aspx).|
 |Nur AD RMS:<br /><br />**Unterstützen von Partnerverbundservern, die für Benutzereingaben die formularbasierte Authentifizierung erfordern**|Standardmäßig wird der RMS-Client im unbeaufsichtigten Modus betrieben, in dem keine Benutzereingabe erforderlich ist. Partnerverbundserver können allerdings so konfiguriert werden, dass Benutzereingaben, z. B. über formularbasierte Authentifizierung, erforderlich sind. In diesem Fall muss der RMS-Client so konfiguriert werden, dass der unbeaufsichtigte Modus ignoriert wird, sodass das Formular für die Verbundauthentifizierung in einem Browserfenster angezeigt und der Benutzer für die Authentifizierung heraufgestuft wird.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Hinweis**: Wenn der Verbundserver für die formularbasierte Authentifizierung konfiguriert ist, ist dieser Schlüssel erforderlich. Wenn der Verbundserver für eine Verwendung der integrierten Windows-Authentifizierung konfiguriert ist, ist dieser Schlüssel nicht erforderlich.|
 |Nur AD RMS:<br /><br />**Blockieren der ILS-Dienstnutzung**|Standardmäßig ermöglicht der RMS Client die Verwendung von durch den ILS-Dienst geschützten Inhalten. Er kann allerdings durch Einstellung des folgenden Registrierungsschlüssels so konfiguriert werden, dass dieser blockiert wird. Wenn dieser Registrierungsschlüssel für die Deaktivierung des ILS-Diensts festgelegt ist, wird bei allen Versuchen, vom ILS-Dienst geschützte Inhalte zu öffnen und zu nutzen, der folgende Fehler zurückgegeben:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Wert:** 1 zum Blockieren der ILS-Nutzung, 0 zum Zulassen der ILS-Nutzung (Standardwert)|
 
@@ -148,7 +148,7 @@ Der RMS-Client kann durch folgende Änderungen an der Windows-Registrierung auf 
     
     REG_SZ:*\<URL_oder_Hostname>*
     
-    **Wert**: Die Werte am Speicherort dieses Registrierungsschlüssels können entweder im DNS-Domänennamenformat (z. B. **adrms.contoso.com**) oder als vollständige URLs für vertrauenswürdige AD RMS-Server (z.B. **https://adrms.contoso.com**) angegeben werden. Wenn eine angegebene URL mit **https://** beginnt, verwendet der RMS-Client SSL oder TLS zum Kontaktieren des angegebenen AD RMS-Servers.
+    **Wert**: Die Werte am Speicherort dieses Registrierungsschlüssels können entweder im DNS-Domänennamenformat (z.B. **adrms.contoso.com**) oder als vollständige URLs für vertrauenswürdige AD RMS-Server (z.B. **https://adrms.contoso.com**) angegeben werden. Wenn eine angegebene URL mit **https://** beginnt, verwendet der RMS-Client SSL oder TLS zum Kontaktieren des angegebenen AD RMS-Servers.
 
 ## <a name="rms-service-discovery"></a>RMS-Diensterkennung
 Die RMS-Diensterkennung ermöglicht dem RMS-Client das Überprüfen, mit welchem RMS-Server oder -Dienst vor dem Schützen von Inhalten kommuniziert werden muss. Die Diensterkennung kann auch erfolgen, wenn der RMS-Client geschützte Inhalte nutzt. Diese Art der Erkennung ist allerdings weniger wahrscheinlich, da die den Inhalten zugeordnete Richtlinie den bevorzugten RMS-Server oder -Dienst enthält. Nur wenn diese Quellen nicht erfolgreich sind, führt der Client die Diensterkennung aus.
@@ -174,7 +174,7 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
 > [!NOTE]
 > Bei diesem Dienstermittlungsfluss gibt es drei wichtige Ausnahmen:
 > 
-> - Mobile Geräte sind am besten für die Nutzung eines Clouddiensts geeignet, weshalb sie standardmäßig die Dienstermittlung für den Azure Rights Management-Dienst (https://discover.aadrm.com) verwenden. Um diesen Standard so anzupassen, dass mobile Geräte AD RMS anstelle des Azure Rights Management-Diensts verwenden, geben Sie SRV-Einträge in DNS, und installieren Sie die Erweiterung für mobile Geräte (siehe dazu die Angaben unter [Active Directory Rights Management Services-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)). 
+> - Mobile Geräte sind am besten für die Nutzung eines Clouddiensts geeignet, weshalb sie standardmäßig die Dienstermittlung für den Azure Rights Management-Dienst (https://discover.aadrm.com)) verwenden. Um diesen Standard so anzupassen, dass mobile Geräte AD RMS anstelle des Azure Rights Management-Diensts verwenden, geben Sie SRV-Einträge in DNS, und installieren Sie die Erweiterung für mobile Geräte (siehe dazu die Angaben unter [Active Directory Rights Management Services-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)). 
 >
 > - Wenn der Rights Management-Dienst über eine Azure Information Protection-Bezeichnung aufgerufen wird, erfolgt keine Dienstermittlung. Stattdessen wird die URL direkt in der Einstellung der Bezeichnung angegeben, die in der Azure Information Protection-Richtlinie konfiguriert ist.  
 

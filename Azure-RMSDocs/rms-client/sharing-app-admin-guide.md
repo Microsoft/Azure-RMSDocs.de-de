@@ -1,26 +1,26 @@
 ---
-title: "Administratorhandbuch der RMS-Freigabeanwendung – AIP"
-description: "Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind."
+title: Administratorhandbuch der RMS-Freigabeanwendung – AIP
+description: Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung der Microsoft Rights Management-Freigabeanwendung für Windows zuständig sind.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: e1f3520a74b3ae57984e635ca68ba429dd6ad131
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
 > **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 

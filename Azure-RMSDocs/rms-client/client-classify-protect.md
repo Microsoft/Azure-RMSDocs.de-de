@@ -1,26 +1,26 @@
 ---
-title: "Klassifizieren und Schützen von Dateien und E-Mails mithilfe von Azure Information Protection"
-description: "Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails."
+title: Klassifizieren und Schützen von Dateien und E-Mails mithilfe von Azure Information Protection
+description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 49518c1324ad541c4880c7930b6e661a2aba46d8
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
 > [!NOTE]
 > Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren und schützen. Wenn Sie Ihre Dokumente und E-Mails nur klassifizieren und nicht schützen müssen, lesen Sie die [Anleitung zum Klassifizieren](client-classify.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.

@@ -1,26 +1,26 @@
 ---
-title: "PowerShell-Skript für Azure RMS und FCI – AIP"
+title: PowerShell-Skript für Azure RMS und FCI – AIP
 description: Beispielskript zum Kopieren und Bearbeiten, wie in den Anweisungen zum RMS-Schutz mit der Windows Server-Dateiklassifizierungsinfrastruktur beschrieben.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/19/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dc43fa78b7c13dc1b4891690e0e29bfe4b0cc07c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d00e0037634601cd92b9f0858c197975ea9f896b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
->*Gilt für: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure)](configure-fci.md) beschrieben.
 

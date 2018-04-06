@@ -1,26 +1,29 @@
 ---
-title: "Herunterladen & Installieren der RMS-Freigabeanwendung – AIP"
-description: "Anweisungen zur interaktiven Installation der RMS-Freigabeanwendung für Windows, damit Sie problemlos Dokumente für andere Benutzer freigeben können."
+title: Herunterladen & Installieren der RMS-Freigabeanwendung – AIP
+description: Anweisungen zur interaktiven Installation der RMS-Freigabeanwendung für Windows, damit Sie problemlos Dokumente für andere Benutzer freigeben können.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c9fe3e28cb44812a6f3a5830546128975522b5f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Herunterladen und Installieren der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+
+> [!IMPORTANT]
+> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt.
 
 Sie müssen kein lokaler Administrator sein, um die RMS-Freigabeanwendung zu installieren. Wenn Sie es jedoch nicht sind und Office 2010 verwenden, bestehen einige Einschränkungen. Weitere Informationen finden Sie im Abschnitt [Wenn Sie kein lokaler Administrator sind und Office 2010 verwenden](#if-you-are-not-a-local-administrator-and-use-office-2010) auf dieser Seite.
 

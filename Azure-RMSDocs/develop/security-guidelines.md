@@ -1,30 +1,30 @@
 ---
-title: "Bewährte Sicherheitsmethoden | Microsoft Information Protection"
-description: "RMS-fähige Anwendungen werden am besten mithilfe der bewährten Methoden von Azure Information Protection erstellt."
+title: Bewährte Sicherheitsmethoden | Microsoft Information Protection
+description: RMS-fähige Anwendungen werden am besten mithilfe der bewährten Methoden von Azure Information Protection erstellt.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 04fc73bac667b461a37e87a1c726c5a645495197
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Best Practices zu Sicherheitsthemen für Azure Information Protection
 
 Das Software Development Kit (SDK) für Azure Information Protection (AIP) stellt ein stabiles System zum Veröffentlichen und Nutzen geschützter Informationen aller Art berei. Um ein möglichst sicheres AIP-System zu erzielen, müssen AIP-fähige Anwendungen unter Berücksichtigung der Best Practices für AIP erstellt werden. Alle AIP-fähigen Anwendungen sind gemeinsam dafür zuständig, die Sicherheit dieses Ökosystems aufrecht zu erhalten. Durch Identifizieren und Minimieren von Sicherheitsrisiken, die bei der Anwendungsentwicklung entstehen, lässt sich die Sicherheit bei der Software-Implementierung erhöhen.
 
 Best Practices für die Implementierung von Anwendungen mithilfe des Software Development Kits (SDK) für Azure Information Protection umfassen die folgenden Vorschlagskategorien:
-- [Bedrohungsmodelle und Minimierungen](https://msdn.microsoft.com/en-us/library/aa362751.aspx)
-- [Angriffe auf die Sicherheit](https://msdn.microsoft.com/en-us/library/aa362736.aspx)
+- [Bedrohungsmodelle und Minimierungen](https://msdn.microsoft.com/library/aa362751.aspx)
+- [Angriffe auf die Sicherheit](https://msdn.microsoft.com/library/aa362736.aspx)
 
 Diese Informationen ergänzen den Vertrag, der unterzeichnet werden muss, um die für die Anwendungsimplementierung mithilfe des AIP-SDKs erforderlichen Zertifikate zu erhalten.
 
@@ -86,7 +86,7 @@ Das AIP-System fasst Rechte in einigen Gruppierungen zusammen. Weitere Informati
 AIP lässt Benutzern die Wahl, ob sie Informationen verschlüsseln. Die Informationen selbst verfügen über keinen eigenen Schutz. Wenn ein Benutzer das Recht besitzt, Informationen zu verschlüsseln, wird dies von AIP zugelassen, und die Anwendung sorgt für die Verwaltung und den Schutz dieser Informationen, sobald sie unverschlüsselt vorliegen. Eine Anwendung ist für die Verwaltung ihrer Umgebung und Benutzeroberfläche zuständig, um eine nicht autorisierte Nutzung von Informationen zu verhindern. Hierfür können z.B. die Schaltflächen **Drucken** und **Kopieren** deaktiviert werden, wenn eine Lizenz nur die Berechtigung zur Wiedergabe gewährt. Ihre Testsuite sollte überprüfen, ob sich Ihre Anwendung im Hinblick auf alle von ihr erkannten Lizenzrechte ordnungsgemäß verhält.
 
 ### <a name="minimum-standard"></a>Mindeststandard
-- Die Kundenimplementierung von XrML v.1.2-Rechten sollte mit den Definitionen dieser Rechte übereinstimmen, wie in den XrML-Spezifikationen beschrieben. Diese stehen auf der XrML-Website (http://www.xrml.org) zur Verfügung. Alle für Ihre Anwendung spezifischen Rechte müssen für sämtliche Entitäten definiert werden, die auf Ihre Anwendung möglicherweise zugreifen.
+- Die Kundenimplementierung von XrML v.1.2-Rechten sollte mit den Definitionen dieser Rechte übereinstimmen, die in den XrML-Spezifikationen beschrieben sind. Letztere finden Sie auf der XrML-Website, http://www.xrml.org). Alle für Ihre Anwendung spezifischen Rechte müssen für sämtliche Entitäten definiert werden, die auf Ihre Anwendung möglicherweise zugreifen.
 - Ihre Testsuite und Ihr Testprozess sollten überprüfen, ob Ihre Anwendung im Hinblick auf die von der Anwendung unterstützten Rechte ordnungsgemäß agiert, und ob sie bei nicht unterstützten Rechte entsprechend nicht agiert.
 - Wenn Sie eine Anwendung für die Veröffentlichung erstellen, müssen Sie Informationen zur Verfügung stellen, in denen erläutert wird, welche inhärenten Rechte von der Anwendung unterstützt werden und wie diese Rechte interpretiert werden sollten. Darüber hinaus sollte auf der Benutzeroberfläche für den Endbenutzer klar ersichtlich sein, welche Auswirkungen jedes der gewährten oder verweigerten Rechte für eine bestimmte Information hat.
 

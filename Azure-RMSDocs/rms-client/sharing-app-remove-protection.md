@@ -1,26 +1,26 @@
 ---
-title: "Entfernen des Schutzes mithilfe der RMS-Freigabeanwendung – AIP"
-description: "Anweisungen zum Aufheben des Schutzes für eine Datei, die zuvor mit der RMS-Freigabeanwendung geschützt wurde."
+title: Entfernen des Schutzes mithilfe der RMS-Freigabeanwendung – AIP
+description: Anweisungen zum Aufheben des Schutzes für eine Datei, die zuvor mit der RMS-Freigabeanwendung geschützt wurde.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 370b19894efb53604c798b38be02dda3f8804b8b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e467557f8e22c1bb41fdab07ae6335c85bdc2987
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="remove-protection-from-a-file-by-using-the-rights-management-sharing-application"></a>Entfernen des Schutzes von einer Datei mithilfe der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Um den Schutz von einer zu entfernen (d.h. den Dateischutz aufzuheben), die zuvor von der RMS-Freigabeanwendung geschützt wurde, verwenden Sie die Option **Schutz entfernen** im Datei-Explorer.
 

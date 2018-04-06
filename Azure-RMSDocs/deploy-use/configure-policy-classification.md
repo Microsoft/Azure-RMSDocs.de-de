@@ -1,24 +1,24 @@
 ---
-title: "Konfigurieren von Bedingungen für eine Azure Information Protection-Bezeichnung"
-description: "Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen."
+title: Konfigurieren von Bedingungen für eine Azure Information Protection-Bezeichnung
+description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: d24a38420c0ae9d543d0e9c6de54ad0ce4cbc804
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 80537b32bee11df72673b869932f2d59cef11469
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 

@@ -1,26 +1,26 @@
 ---
-title: "Dialogfeldoptionen für die RMS-Freigabeanwendung – AIP"
-description: "Informationen, die Sie bei der Festlegung der Optionen in den Dialogfeldern „Schutz hinzufügen“ oder „Geschützt freigeben“ der RMS-Freigabeanwendung unterstützen. Dieses Dialogfeld wird angezeigt, wenn Sie eine freizugebende Datei schützen oder eine Datei auf einem Gerät (direkt) schützen und benutzerdefinierte Berechtigungen auswählen."
+title: Dialogfeldoptionen für die RMS-Freigabeanwendung – AIP
+description: Informationen, die Sie bei der Festlegung der Optionen in den Dialogfeldern „Schutz hinzufügen“ oder „Geschützt freigeben“ der RMS-Freigabeanwendung unterstützen. Dieses Dialogfeld wird angezeigt, wenn Sie eine freizugebende Datei schützen oder eine Datei auf einem Gerät (direkt) schützen und benutzerdefinierte Berechtigungen auswählen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Dialogfeldoptionen der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Verwenden Sie diese Informationen als Hilfe bei der Angabe der Optionen in den Dialogfeldern **Schutz hinzufügen** oder **Geschützt freigeben** der RMS-Freigabeanwendung. Dieses Dialogfeld wird angezeigt, wenn Sie [eine freizugebende Datei schützen](sharing-app-protect-by-email.md) oder [eine Datei auf einem Gerät (direkt) schützen](sharing-app-protect-in-place.md) und benutzerdefinierte Berechtigungen auswählen.
 

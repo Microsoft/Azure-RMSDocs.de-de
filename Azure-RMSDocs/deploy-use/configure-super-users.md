@@ -1,26 +1,26 @@
 ---
-title: "Konfigurieren von Administratoren für Azure Rights Management – AIP"
-description: "Lernen Sie die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten."
+title: Konfigurieren von Administratoren für Azure Rights Management – AIP
+description: Lernen Sie die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection kennen, und implementieren Sie sie. So können autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 686b1dc007da43ca5fbd68e510a3bff374867431
-ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
+ms.openlocfilehash: 5d35f7faed0e02a253e5ba48cbdb2bca0aa76419
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Die Administratorfunktion des Azure Rights Management-Diensts aus Azure Information Protection stellt sicher, dass autorisierte Personen und Dienste immer auf die Daten, die mit Azure Rights Management für Ihre Organisation geschützt werden, zugreifen und diese überprüfen können. Falls notwendig, können diese Personen/Dienste auch den zuvor angewendeten Schutz aufheben oder ändern. 
 

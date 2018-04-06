@@ -4,7 +4,7 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d597be35e509fae655ee18fe9fc0344603385382
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Wenn Sie Schutz für Dateien oder E-Mails mithilfe des Azure Rights Management-Diensts von Azure Information Protection festlegen und keine Vorlage verwenden, müssen Sie die Nutzungsrechte selbst konfigurieren. Wenn Sie Vorlagen oder Bezeichnungen für den Azure Rights Management-Schutz konfigurieren, wählen Sie außerdem die Nutzungsrechte, die dann automatisch angewendet werden, wenn die Vorlage oder die Bezeichnung von Benutzern, Administratoren oder konfigurierten Diensten ausgewählt wird. Im Azure-Portal können Sie beispielsweise Rollen auswählen, die eine logische Gruppierung von Nutzungsrechte konfigurieren, oder Sie können die einzelnen Berechtigungen konfigurieren:
 
@@ -97,11 +97,15 @@ Diese Standardvorlagen werden beim Erwerb Ihres Abonnements erstellt. Die Namen 
 
 Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-App und Exchange-Regeln zum E-Mail-Fluss) haben eine zusätzliche Option zur Verwaltung von Informationsrechten für E-Mails: **Nicht weiterleiten**. 
 
-Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im Azure-Portal angezeigt, wenn Sie Vorlagen für Azure Rights Management anzeigen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
+Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im Azure-Portal angezeigt, wenn Sie Vorlagen für Azure RMS aufrufen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
 
 Wenn die Option **Nicht weiterleiten** auf eine E-Mail angewendet wird, wird sie verschlüsselt, und Empfänger müssen authentifiziert werden. Die E-Mail kann dann von den Empfängern nicht weitergeleitet, gedruckt oder kopiert werden. Außerdem können ihre Anhänge nicht gespeichert werden, und sie kann nicht unter einem anderen Namen gespeichert werden. Im Outlook-Client ist beispielsweise die Schaltfläche „Weiterleiten“ nicht verfügbar, die Menüoptionen **Speichern unter**, **Anlage speichern** und **Drucken** sind nicht verfügbar, und Sie können keine Empfänger in den Feldern **An**, **Cc** und **Bcc** hinzufügen oder ändern.
 
-Es besteht ein wichtiger Unterschied zwischen dem Anwenden der Option **Nicht weiterleiten** und dem Anwenden einer Vorlage, die die Berechtigung „Weiterleiten“ für eine E-Mail nicht gewährt: Bei der Option **Nicht weiterleiten** wird eine dynamische Liste autorisierter Benutzer verwendet, der die vom Benutzer ausgewählten Empfänger der ursprünglichen E-Mail zugrunde liegen; für die Berechtigungen in der Vorlage gilt hingegen eine statische Liste autorisierter Benutzer, die zuvor vom Administrator festgelegt wurden. Wie wirkt sich dieser Unterschied aus? Betrachten Sie das folgende Beispiel: 
+An eine E-Mail angehängte, ungeschützte [Office-Dokumente](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) unterliegen automatisch denselben Einschränkungen. Für diese Dokumente gelten folgende Nutzungsrechte: **Inhalt bearbeiten, Bearbeiten**; **Speichern**; **Anzeigen, Öffnen, Lesen** und **Makros zulassen**. Wenn für einen Anhang andere Nutzungsrechte gelten sollen oder es sich um ein Office-Dokument handelt, das diesen geerbten Schutz nicht unterstützt, schützen Sie die Datei, bevor Sie sie an eine E-Mail anhängen. So können Sie die nötigen Nutzungsrechte zuweisen. 
+
+### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>Unterschied zwischen der Option „Nicht weiterleiten“ und dem Nichtgewähren des Nutzungsrechts „Weiterleiten“
+
+Es besteht ein wichtiger Unterschied zwischen dem Anwenden der Option **Nicht weiterleiten** und dem Anwenden einer Vorlage, die das Nutzungsrecht **Weiterleiten** für eine E-Mail nicht gewährt: Bei der Option **Nicht weiterleiten** wird eine dynamische Liste autorisierter Benutzer verwendet, der die vom Benutzer ausgewählten Empfänger der ursprünglichen E-Mail zugrunde liegen. Für die Berechtigungen in der Vorlage gilt hingegen eine statische Liste autorisierter Benutzer, die zuvor vom Administrator festgelegt wurde. Wie wirkt sich dieser Unterschied aus? Betrachten Sie das folgende Beispiel: 
 
 Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen per E-Mail zusenden, die jedoch nicht für andere Personen zugänglich sein sollen. Sollte er die E-Mail mit einer Vorlage schützen, die die Rechte (Anzeigen, Antworten und Speichern) auf die Marketingabteilung beschränkt?  Oder sollte er die Option **Nicht weiterleiten** auswählen? In beiden Fällen wären die Empfänger nicht in der Lage, die E-Mail weiterzuleiten. 
 
@@ -118,7 +122,9 @@ Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenversch
 
 Diese Option wird für Mandanten bereitgestellt, die Exchange Online zunächst nur für Outlook im Web und als weitere Rechteschutzoption für eine E-Mail-Flussregel verwenden. Weitere Informationen finden Sie in der folgenden Ankündigung zum Blogbeitrag des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
 
-Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer „Vollzugriff“. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Beispielsweise kann ein Empfänger die E-Mail kopieren, drucken und weiterleiten. Auf ähnliche Weise können alle Office-Dokumente, die angefügt und automatisch geschützt sind, gespeichert, kopiert und gedruckt werden.
+Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer **Speichern unter, Exportieren** und **Vollzugriff**. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Sie können eine E-Mail aber kopieren, ausdrucken und weiterleiten. 
+
+Für an eine E-Mail angehängte, ungeschützte [Office-Dokumente](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) gelten dieselben Berechtigungen. Diese Dokumente sind automatisch geschützt, und sie können von den Empfängern gespeichert, bearbeitet, kopiert und ausgedruckt werden. Wenn ein Empfänger ein Dokument speichert, hat er die Möglichkeit, ihm einen neuen Namen zu geben und sogar ein anderes Format zu verwenden. Zur Auswahl stehen jedoch nur Dateiformate, die den Schutz unterstützten. So ist sichergestellt, dass dieser nicht durch Speichern umgangen wird. Wenn für einen Anhang andere Nutzungsrechte gelten sollen oder es sich um ein Office-Dokument handelt, das diesen geerbten Schutz nicht unterstützt, schützen Sie die Datei, bevor Sie sie an eine E-Mail anhängen. So können Sie die nötigen Nutzungsrechte zuweisen.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management-Aussteller und Rights Management-Besitzer
 

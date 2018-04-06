@@ -1,26 +1,26 @@
 ---
-title: "Direkter Schutz mithilfe der RMS-Freigabeanwendung – AIP"
-description: "Anweisungen zum sicheren Speichern einer Datei auf Ihrem Computer, einem Server oder einem anderen Speichergerät."
+title: Direkter Schutz mithilfe der RMS-Freigabeanwendung – AIP
+description: Anweisungen zum sicheren Speichern einer Datei auf Ihrem Computer, einem Server oder einem anderen Speichergerät.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0d819fd242e57402a790e9acb40ffa48eeb701b4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Schützen einer Datei auf einem Gerät (direkt schützen) durch Verwenden der Rights Management-Freigabeanwendung
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn Sie eine Datei direkt schützen, wird die ursprüngliche, nicht geschützte Datei ersetzt. Sie können die Datei dann dort belassen, wo sie ist, sie in einen anderen Ordner oder auf ein anderes Gerät kopieren oder den Ordner freigeben, in dem sie sich befindet. Die Datei bleibt in jedem Fall geschützt. Sie können die geschützte Datei auch an eine E-Mail anfügen, aber es empfiehlt sich, eine geschützte Datei direkt aus dem Datei-Explorer oder aus einer Office-Anwendung per E-Mail freizugeben. (Weitere Informationen finden Sie unter [Schützen einer per E-Mail freigegebenen Datei mithilfe der Rights Management-Freigabeanwendung](sharing-app-protect-by-email.md).)
 

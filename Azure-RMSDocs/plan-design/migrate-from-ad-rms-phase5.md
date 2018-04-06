@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 520773a2a893e7e88feb970a2539db4100287a72
-ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
+ms.openlocfilehash: 227a7f1f0ac08ed67648f97a78a5ff89e9b4a586
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Verwenden Sie die folgenden Informationen für Phase 5 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken die Schritte 10 bis 12 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.

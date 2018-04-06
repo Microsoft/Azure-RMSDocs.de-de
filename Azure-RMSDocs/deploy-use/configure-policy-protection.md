@@ -1,24 +1,24 @@
 ---
-title: "Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung"
-description: "Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Management-Schutz können Sie Ihre sensibelsten Dokumente und E-Mails schützen."
+title: Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung
+description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Management-Schutz können Sie Ihre sensibelsten Dokumente und E-Mails schützen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: d27dcff090aa33cb5c7a3bcb6641ac635ed8a104
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Sie können Ihre sensibelsten Dokumente und E-Mails mithilfe des Rights Management-Diensts schützen. Dieser Dienst verwendet Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien, um Datenverlust zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die so konfiguriert ist, dass der Rights Management-Schutz für Dokumente und E-Mails verwendet wird, und Benutzer können auch auf die Schaltfläche **Nicht weiterleiten** in Outlook klicken. 
 
@@ -63,7 +63,9 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
     
-    - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und fahren Sie dann mit Schritt 5 fort.
+    - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und konfigurieren Sie sie wie in Schritt 5 beschrieben.
+    
+    Hinweis: Sie können eine neue Bezeichnung auch ohne weitere Konfiguration speichern. Wenn Sie dies tun, ist sie so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail öffnen kann. Für sie gelten dabei uneingeschränkte Nutzungsrechte. Dies kann z.B. nützlich sein, wenn sichergestellt werden soll, dass das Dokument an einem beliebigen Ort gespeichert aber nur von dieser Person geöffnet werden darf. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, fahren Sie mit Schritt 12 statt mit Schritt 5 fort.
     
     - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail-Adresse geschützt ist. Fahren Sie dann mit Schritt 11 fort.
         
@@ -229,8 +231,9 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 Diese Bezeichnung kann nicht auf Outlook beschränkt sein, sondern stellt weniger einschränkende Kontrollen dar als „Nicht weiterleiten“. Beispielsweise sollen die Empfänger aus einer E-Mail oder einem Anhang kopieren oder einen Anhang ausdrucken und speichern können.
 
 Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, stellen Sie sicher, dass Sie Ihren Benutzern die Anweisung erteilen, diese Bezeichnung nicht für Dokumente sondern nur für E-Mails zu verwenden. Exchange Online muss außerdem für die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert sein, damit diese externen Benutzer unterstützt werden.  
+
 > [!NOTE]
-> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar.
+> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Sie können mit diesem Beispiel jedoch eine Bezeichnung mit denselben Nutzungsrechten konfigurieren.
 
 Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese Adressen für dieselben Benutzer sein, die Sie für diese Bezeichnung festgelegt haben. Da Benutzer zu Gruppen gehören und mehr als eine E-Mail-Adresse haben können, muss die von ihnen angegebene E-Mail-Adresse nicht mit der von Ihnen für die Berechtigung angegebenen E-Mail-Adresse übereinstimmen. Die Angabe derselben E-Mail-Adresse ist allerdings der einfachste Weg, um sicherzustellen, dass der Empfänger erfolgreich autorisiert wird. Weitere Informationen zur Vorgehensweise bei der Autorisierung von Benutzern für Berechtigungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md). 
 
@@ -242,9 +245,11 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
     
     Wiederholen Sie diesen Schritt, um zusätzliche Benutzer anzugeben, die über dieselben Berechtigungen verfügen sollen.
 
-4. Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen. 
+4. Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen.
     
-    Hinweis: Wählen Sie für E-Mails nicht die Option **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie **Bearbeiten und speichern** hinzufügen. 
+    Hinweis: Wählen Sie für E-Mails nicht die Option **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie **Bearbeiten und speichern** hinzufügen.
+    
+    Um dieselben Berechtigungen wie bei der neuen Exchange Online-Option **Nur verschlüsseln** zu haben, wählen Sie **Benutzerdefiniert** aus. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)**.
 
 5. Wiederholen Sie die Schritte 3 und 4, um zusätzliche Benutzer anzugeben, die über andere Berechtigungen verfügen sollen.
 

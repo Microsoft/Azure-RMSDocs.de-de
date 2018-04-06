@@ -1,24 +1,24 @@
 ---
-title: "Die Standardrichtlinie für Azure Information Protection"
-description: "Erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird. Wenn Sie die Standardrichtlinie ändern, können Sie mithilfe dieser Werte die Standardeinstellungen wiederherstellen."
+title: Die Standardrichtlinie für Azure Information Protection
+description: Erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird. Wenn Sie die Standardrichtlinie ändern, können Sie mithilfe dieser Werte die Standardeinstellungen wiederherstellen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/09/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 57c7321f9bcff12ff0afe4030038495ad4668020
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Anhand der folgenden Informationen erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird.
 

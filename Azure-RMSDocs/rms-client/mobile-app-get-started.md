@@ -1,7 +1,7 @@
 ---
-title: "Erste Schritte – AIP-App für iOS und Android"
-description: 
-keywords: "So zeigen Sie E-Mails oder Dateien mit der Azure Information Protection-App für iOS und Android an"
+title: Erste Schritte – AIP-App für iOS und Android
+description: ''
+keywords: So zeigen Sie E-Mails oder Dateien mit der Azure Information Protection-App für iOS und Android an
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,15 +13,15 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4fbec69d4185004f4ce10bcc8904b2dfb9a7f24
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: ccee69ba4f0b17440e9748787502a480e692de7c
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
-*Gilt für: Active Directory Rights Management Services, Azure Information Protection*
+*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Bevor Sie den Anweisungen auf dieser Seite folgen, stellen Sie sicher, dass Sie die [Häufig gestellten Fragen für die Azure Information Protection-App für iOS und Android gelesen haben](mobile-app-faq.md). Auf dieser Seite wird die Funktion der App beschrieben und angegeben, welche Geräte unterstützt werden. Außerdem werden grundlegende Informationen zur Verwendung der App zur Verfügung gestellt.
 

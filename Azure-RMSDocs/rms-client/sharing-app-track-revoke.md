@@ -1,26 +1,26 @@
 ---
-title: "Verfolgen und Widerrufen von Dokumenten mithilfe der RMS-Freigabeanwendung – AIP"
-description: "Nachdem Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden."
+title: Verfolgen und Widerrufen von Dokumenten mithilfe der RMS-Freigabeanwendung – AIP
+description: Nachdem Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
-ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
+ms.openlocfilehash: 86da59d624d197aaad25e3f6fb04cfdd47ad1c3e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
 
->*Gilt für: Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn Sie Ihre Dokumente mit der RMS-Freigabeanwendung geschützt haben und Ihre Organisation nicht Active Directory Rights Management Services, sondern Azure Information Protection verwendet, können Sie verfolgen, wie die Benutzer die geschützten Dokumente verwenden. Falls nötig, können Sie den Zugriff auf diese Dokumente widerrufen, um ein unerwünschtes Weitergeben und Teilen zu unterbinden. Verwenden Sie hierfür die **Website zum Nachverfolgen von Dokumenten**, auf die Sie von Windows-Computern, Mac-Computern und sogar mit Tablets und Smartphones zugreifen können.
 
@@ -38,7 +38,7 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 - Wenn Sie freigegebene Dokumente nachverfolgen und für andere sperren möchten: Azure Information Protection-Administratoren können Dokumente nachverfolgen und für andere sperren, indem sie auf das Adminsymbol klicken. Dieses Symbol wird ausschließlich Administratoren angezeigt.
     
-    Hinweis: Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin.
+    Hinweis: Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin
 
 -   Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
 

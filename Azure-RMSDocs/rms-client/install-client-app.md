@@ -1,28 +1,30 @@
 ---
 title: Herunterladen und Installieren des Azure Information Protection-Clients
-description: "Anweisungen für Benutzer zum Installieren des Azure Information Protection-Clients für Windows, damit Sie Ihre Dokumente und E-Mails klassifizieren und schützen können."
+description: Anweisungen für Benutzer zum Installieren des Azure Information Protection-Clients für Windows, damit Sie Ihre Dokumente und E-Mails klassifizieren und schützen können.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/20/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 190a6a371e67417139e033c0b5472042a24b2502
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: c5e048c5418b956ddb881ed2eb63ad0cc257bde4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Benutzerhandbuch: Herunterladen und Installieren des Azure Information Protection-Clients
 
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+
 Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
-Beachten Sie auch Folgendes:
+Zusätzlich:
 
 - Der Azure Information Protection-Client erfordert Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden.
 

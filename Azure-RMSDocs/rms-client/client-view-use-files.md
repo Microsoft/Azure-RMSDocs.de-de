@@ -1,26 +1,26 @@
 ---
-title: "Anzeigen und Verwenden von mit dem AIP-Client geschützten Dokumenten"
-description: "Anweisungen zum Anzeigen und Verwenden eines geschützten Dokuments, das die Installation des Azure Information Protection-Clients erfordert."
+title: Anzeigen und Verwenden von mit dem AIP-Client geschützten Dokumenten
+description: Anweisungen zum Anzeigen und Verwenden eines geschützten Dokuments, das die Installation des Azure Information Protection-Clients erfordert.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a81585ae1acb791dcf33f8d047268a9e4e9f2f2e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
 Sie können ein geschütztes Dokument beliebig oft anzeigen, indem Sie es öffnen. Sie können z. B. einfach auf eine Anlage einer E-Mail klicken oder im Datei-Explorer auf eine Datei doppelklicken. Alternativ können Sie auch auf den Link zu einer Datei klicken.
 

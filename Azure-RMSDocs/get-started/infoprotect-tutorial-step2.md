@@ -1,24 +1,24 @@
 ---
-title: "Schnellstart-Tutorial Schritt 2 – AIP"
-description: "Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Konfigurieren der Richtlinie"
+title: Schnellstart-Tutorial Schritt 2 – AIP
+description: Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren von Azure Information Protection – Konfigurieren der Richtlinie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren und Veröffentlichen der Azure Information Protection-Richtlinie
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
@@ -105,7 +105,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Klicken Sie auf **Neue Bedingung hinzufügen**, und wählen Sie anschließend auf dem Blatt **Bedingung** Folgendes aus:
     
-    a. **Choose the type of condition:** (Bedingungstyp auswählen) Behalten Sie den Standardwert **Informationstypen** bei.
+    ein. **Choose the type of condition:** (Bedingungstyp auswählen) Behalten Sie den Standardwert **Informationstypen** bei.
     
     b. Im Suchfeld **Informationstypen auswählen**: Tippen Sie **Kreditkartennummer** ein, Und wählen Sie dann in den Suchergebnissen **Kreditkartennummer** aus.
     
@@ -143,7 +143,7 @@ Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal en
 
 Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, den Azure Information Protection-Client zu installieren.
 
-|Weitere Informationen zu...|Weitere Informationen|
+|Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
 |Über die Standardrichtlinie und verschiedene Versionen|[Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md)|
 |Informationen zum Konfigurieren der Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md)|

@@ -1,26 +1,26 @@
 ---
-title: "Überprüfen von Azure Rights Management – AIP"
-description: "Anweisungen zum Überprüfen, ob der Dienst wie erwartet funktioniert. Hierbei wird eine Datei oder E-Mail unter Verwendung eines Benutzerkontos geschützt und anschließend versucht, diesen geschützten Inhalt von einem anderen Benutzerkonto aus zu öffnen und zu verwenden."
+title: Überprüfen von Azure Rights Management – AIP
+description: Anweisungen zum Überprüfen, ob der Dienst wie erwartet funktioniert. Hierbei wird eine Datei oder E-Mail unter Verwendung eines Benutzerkontos geschützt und anschließend versucht, diesen geschützten Inhalt von einem anderen Benutzerkonto aus zu öffnen und zu verwenden.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6dcc7fd3cfbb4bf1cf215936a4307244d62f0240
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 43689f942bae88c9b7099f45a980f0fd96b1bdaf
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Überprüfen des Azure Rights Management-Diensts
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection aktiviert und alle zusätzlichen Konfigurationsschritte, die für Ihre Organisation erforderlich sind, durchgeführt haben, können Sie überprüfen, ob dieser Schutzdienst wie erwartet funktioniert. 
 

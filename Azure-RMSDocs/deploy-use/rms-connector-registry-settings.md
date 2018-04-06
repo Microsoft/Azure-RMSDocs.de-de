@@ -1,26 +1,26 @@
 ---
-title: "Registrierungseinstellungen für den Rights Management-Connector – AIP"
-description: "Informationen zu den Registrierungseinträgen auf Servern, die den RMS-Connector verwenden. Die empfohlene Methode zum Konfigurieren dieser Einstellungen ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Connector."
+title: Registrierungseinstellungen für den Rights Management-Connector – AIP
+description: Informationen zu den Registrierungseinträgen auf Servern, die den RMS-Connector verwenden. Die empfohlene Methode zum Konfigurieren dieser Einstellungen ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Connector.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/01/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 976493cd23c7690420094f80cade32179c3f7998
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: bc0cb2a7349bf19ee19a42bdb283cd86297748bc
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Verwenden Sie die Tabellen in den folgenden Abschnitten nur, wenn Sie Registrierungseinstellungen auf den Servern manuell hinzufügen oder überprüfen möchten, die Exchange, SharePoint oder Windows Server ausführen. Diese Registrierungseinstellungen konfigurieren die Server zur Verwendung des [RMS-Connectors](deploy-rms-connector.md). Die empfohlene Methode zum Konfigurieren dieser Server ist die Verwendung des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst.
@@ -33,7 +33,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
-        Beispiel: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  Entfernen Sie im Wert den Text **/_wmcs/licensing** aus der Zeichenfolge. Die Zeichenfolge, die übrig bleibt, ist Ihre Azure Rights Management-Dienst-URL In unserem Beispiel wäre die Azure Rights Management-Dienst-URL der folgende Wert:
 

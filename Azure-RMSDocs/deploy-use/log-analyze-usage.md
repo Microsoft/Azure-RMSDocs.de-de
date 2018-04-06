@@ -1,26 +1,26 @@
 ---
-title: "Anmelden und Analysieren der Nutzung des Azure RMS-Diensts – AIP"
+title: Anmelden und Analysieren der Nutzung des Azure RMS-Diensts – AIP
 description: Informationen und Anweisungen zum Einsatz der Verwendungsprotokollierung mit Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Anhand der folgenden Informationen erhalten Sie eine Übersicht darüber, wie Sie die Verwendungsprotokollierung für den Azure Rights Management-Dienst von Azure Information Protection verwenden können. Dieser Dienst stellt den Datenschutz für die Dokumente und E-Mails Ihrer Organisation bereit und kann jede diesbezügliche Anforderung protokollieren. Folgende Vorgänge zählen als Anforderungen: Benutzer schützen Dokumente und E-Mails und nutzen die Inhalte; Aktionen, die von Ihren Administratoren für diesen Dienst ausgeführt werden; Aktionen, die von Microsoft-Technikern zur Unterstützung Ihrer Azure Information Protection-Bereitstellung ausgeführt werden. 
 

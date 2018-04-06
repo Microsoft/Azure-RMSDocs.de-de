@@ -1,26 +1,26 @@
 ---
-title: "Ihr Azure Information Protection-Mandantenschlüssel"
-description: "Informationen zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Sie können die Standardeinstellung, nach der Microsoft Ihren Mandantenschlüssel verwaltet, ändern und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als \"Bring Your Own Key\" (kurz BYOK) bezeichnet."
+title: Ihr Azure Information Protection-Mandantenschlüssel
+description: Informationen zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Sie können die Standardeinstellung, nach der Microsoft Ihren Mandantenschlüssel verwaltet, ändern und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/05/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05b6a4facc4158cc7e2cb7ab4067c6b19566ef69
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: 714d00036d263cc64e44b67b547d743ff4cbab4b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
->*Gilt für: Azure Information Protection, Office 365*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Verwenden Sie die Informationen in diesem Artikel zum Planen und Verwalten Ihres Azure Information Protection-Mandantenschlüssels. Angenommen, Sie möchten die Standardeinstellung ändern, dass Microsoft Ihren Mandantenschlüssel verwaltet, und Ihren eigenen Mandantenschlüssel verwalten, um bestimmte Vorschriften in Ihrer Organisation einzuhalten. Das Verwalten Ihres eigenen Mandantenschlüssels wird auch als "Bring Your Own Key" (kurz BYOK) bezeichnet.
 
@@ -149,7 +149,7 @@ Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 102
 
 Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
-Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Zum Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen Azure Information Protection konfigurieren, indem Sie die Key Vault-URL bestimmen, um den Schlüssel verwenden zu können.
+Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen Azure Information Protection konfigurieren, indem Sie die Key Vault-URL bestimmen, um den Schlüssel verwenden zu können.
 
 Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihres Unternehmens autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) und erteilt dem Azure RMS-Dienstprinzipal, die Berechtigung, indem die GUID 00000012-0000-0000-c000-000000000000 verwendet wird. Beispiel:
 

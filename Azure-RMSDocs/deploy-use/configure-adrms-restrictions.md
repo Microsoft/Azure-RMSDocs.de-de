@@ -1,24 +1,24 @@
 ---
-title: "HYOK-Schutz für Azure Information Protection"
-description: "Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie HYOK (AD RMS)-Schutz mit Azure Information Protection auswählen."
+title: HYOK-Schutz für Azure Information Protection
+description: Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfehlungen, wenn Sie HYOK (AD RMS)-Schutz mit Azure Information Protection auswählen.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: a0329d66ee71ee815c0700a63172617d1fddf30a
-ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
+ms.openlocfilehash: a768b373ad5fbcbeb66e82d72ff263a7ea16e56b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
->*Gilt für: Azure Information Protection*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Wenn Sie Ihre vertraulichsten Dokumente und E-Mails schützen, tun Sie dies für gewöhnlich durch Anwenden des Azure Rights Management-Schutzes (Azure RMS), um von folgenden Punkten zu profitieren:
 

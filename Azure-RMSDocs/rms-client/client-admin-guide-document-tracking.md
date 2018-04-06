@@ -1,26 +1,26 @@
 ---
-title: "Dokumentenverfolgung für Azure Information Protection"
-description: "Anweisungen und Informationen für Administratoren zum Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection."
+title: Dokumentenverfolgung für Azure Information Protection
+description: Anweisungen und Informationen für Administratoren zum Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/29/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 727ff705c4a90a9c029820332983b4cf7bec5e05
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 04b6f65495c6b7251d000ff438ecab20c3a44db7
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Durch die Dokumentkontrolle erhalten Benutzer und Administratoren Informationen darüber, wann auf ein geschütztes Dokument zugegriffen wird und ob ein nachverfolgtes Dokument ggf. gesperrt werden kann.
 
@@ -66,7 +66,7 @@ Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können si
 ![Adminsymbol auf der Website zur Dokumentenverfolgung](../media/tracking-site-admin-icon.png)
 
 > [!NOTE] 
-> Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin.
+> Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin
 
 Aktionen, die Sie im Administratormodus durchführen, werden geprüft und in Verwendungsprotokolldateien protokolliert, und Sie müssen Ihre Einwilligung geben, um den Vorgang fortzusetzen. Weitere Informationen über diese Protokollierung finden Sie im nächsten Abschnitt.
 

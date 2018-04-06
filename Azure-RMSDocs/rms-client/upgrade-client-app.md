@@ -1,26 +1,28 @@
 ---
-title: "Mit der RMS-Freigabeanwendung ausgeführte Aufgaben – AIP"
-description: "Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwendung auf den Azure Information Protection-Client durchgeführt haben."
+title: Mit der RMS-Freigabeanwendung ausgeführte Aufgaben – AIP
+description: Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwendung auf den Azure Information Protection-Client durchgeführt haben.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc0345ed289ecc95643c08ad86c1757848026826
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 58b0ab62b260e407aa9ae6a36b4a063fe147889b
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Benutzerhandbuch: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
-Haben Sie kürzlich ein Upgrade von der Rights Management-Freigabeanwendung (auch einfach nur als „RMS-Freigabeanwendung“ bezeichnet) auf den Azure Information Protection-Client durchgeführt? 
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+>Haben Sie kürzlich ein Upgrade von der Rights Management-Freigabeanwendung (auch einfach nur als „RMS-Freigabeanwendung“ bezeichnet) auf den Azure Information Protection-Client durchgeführt? 
 
 Verwenden Sie die folgenden Informationen als Hilfestellung, um schnell einsatzbereit zu sein.
 
