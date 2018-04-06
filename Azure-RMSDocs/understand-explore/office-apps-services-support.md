@@ -4,7 +4,7 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be1c41c2f17720d522770f9e023c7468602ceb67
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7ca9a9e85a1d76d2d7bdc505c884ee9f02ddb42
+ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -99,7 +99,7 @@ Wenn Sie bereit sind, SharePoint für IRM zu konfigurieren:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Wenn Sie Office 365 verwenden, könnte Sie der Artikelabschnitt [Schutz von Informationen für Office 365](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect) interessieren, der empfohlene Funktionen für den Schutz von Dateien in Office 365 beschreibt.
+Wenn Sie Office 365 verwenden, könnte Sie der Artikelabschnitt [Schutz von Informationen für Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect) interessieren, der empfohlene Funktionen für den Schutz von Dateien in Office 365 beschreibt.
 
 Informationen dazu, wie andere Anwendungen und Dienste den Azure Rights Management-Dienst von Azure Information Protection unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](applications-support.md).
 

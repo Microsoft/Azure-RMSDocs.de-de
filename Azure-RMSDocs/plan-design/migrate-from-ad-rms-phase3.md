@@ -1,26 +1,26 @@
 ---
-title: "Migrieren von AD RMS-Azure Information Protection – Phase 3"
+title: Migrieren von AD RMS-Azure Information Protection – Phase 3
 description: Phase 3 der Migration von AD RMS zu Azure Information Protection deckt den Schritt 7 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 18ddadd2f46cdf20d437b2f754084bc25f737d8e
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: e5e1f0fa043a0a15ef34c9e4d5690e974cf6bddd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Office 365*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren decken den Schritt 7 der [Migration von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) ab.
 
@@ -70,7 +70,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
 2. Legen Sie für Office 2016-Benutzer im AD RMS-Veröffentlichungsendpunkt eine DENY-Berechtigung fest:
 
-    a. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
+    ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
     b. Navigieren Sie zu **Default Web Site** > **_wmcs** > **licensing** > **publish.asmx** (Standardwebsite > _wmcs > Lizenzierung > publish.asmx).
 
@@ -132,7 +132,7 @@ Wenn Sie nicht alle Ihre Windows-Clients gleichzeitig migrieren können, führen
     > [!IMPORTANT]
     > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
     > 
-    > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Zum Beispiel: https:// rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Zum Beispiel: https://rms.treyresearch.net**:443**. 
+    > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Zum Beispiel: https:// rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:**443**. 
     
     Wenn Sie Ihre Azure Rights Management-Dienst-URL für *&lt;IhreMandantenURL&gt;* abrufen müssen, erhalten Sie die nötigen Informationen darüber unter [To identify your Azure Rights Management service URL (So identifizieren Sie Ihre Azure Rights Management-Dienst-URL)](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 

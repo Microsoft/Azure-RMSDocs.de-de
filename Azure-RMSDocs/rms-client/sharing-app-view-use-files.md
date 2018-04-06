@@ -1,26 +1,26 @@
 ---
-title: "Öffnen von RMS-geschützten Dateien mithilfe der RMS-Freigabeanwendung – AIP"
-description: "Informationen zum Anzeigen und Verwenden einer geschützten Datei, für die eine Installation der RMS-Freigabeanwendung (Rights Management) erforderlich ist."
+title: Öffnen von RMS-geschützten Dateien mithilfe der RMS-Freigabeanwendung – AIP
+description: Informationen zum Anzeigen und Verwenden einer geschützten Datei, für die eine Installation der RMS-Freigabeanwendung (Rights Management) erforderlich ist.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
->*Gilt für: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert](install-sharing-app.md) ist, können Sie eine geschützte Datei anzeigen, indem Sie einfach darauf doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden.
 
@@ -44,7 +44,7 @@ Sollten zwei Versionen der Datei mit verschiedenen Dateinamenerweiterungen angez
 
 Wie die Datei geöffnet wird, hängt davon ab, wie sie geschützt wurde. Sie können dies anhand der Dateinamenerweiterung erkennen. In jedem Fall kann das Öffnen der Datei überwacht werden, und die Überwachung erfolgt solange, wie die Datei geschützt ist. Wenn die Datei als E-Mail-Anhang gesendet wurde, wird der Absender möglicherweise jedes Mal, wenn Sie die Datei öffnen, per E-Mail benachrichtigt.
 
-- **Die Datei weist die*.pfile* Dateinamenerweiterung**auf
+- **Die Datei weist die Dateinamenerweiterung *.pfile* auf**
 
     Die Datei wurde generisch geschützt.
 
@@ -73,7 +73,7 @@ Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diens
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
 Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sondern z.B. auch bearbeiten, kopieren und drucken möchten), können Sie jeweils die Anleitung zur Dateinamenerweiterung befolgen:
 
-- **Die Datei weist die*.pfile* Dateinamenerweiterung**auf
+- **Die Datei weist die Dateinamenerweiterung *.pfile* auf**
 
     Speichern Sie die geöffnete Datei, und geben Sie ihr eine neue Dateinamenerweiterung, die mit der Anwendung verknüpft ist, die Sie verwenden möchten.
 
