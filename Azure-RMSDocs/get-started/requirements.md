@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 380b2f715ead6f3f8c8e497c911ff425c12424e8
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -111,9 +111,11 @@ Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Inform
 
 - Lassen Sie auf TCP 443 HTTPS-Datenverkehr zu **api.informationprotection.azure.com** zu.
 
+- Lassen Sie auf TCP 443 HTTPS-Datenverkehr zu **mobile.pipe.aria.microsoft.com** zu.
+
 - Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
 
-- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z. B. zur Durchführung von Überprüfungen auf Paketebene). Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um deren Kommunikation mit dem Azure Rights Management-Dienst zu sichern.
+- Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z.B. zur Durchführung von Überprüfungen auf Paketebene) zum Azure Rights Management-Dienst. Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um deren Kommunikation mit dem Azure Rights Management-Dienst zu sichern.
     
     - Tipp: Aufgrund der Darstellungsweise von sicheren Verbindungen in der Adressleiste von Chrome können Sie diesen Browser verwenden, um schnell zu überprüfen, ob Ihre Clientverbindung beendet wird, bevor diese den Azure Rights Management-Dienst erreicht. Geben Sie folgende URL in die Adressleiste des Browsers ein: `https://admin.na.aadrm.com/admin/admin.svc` 
     

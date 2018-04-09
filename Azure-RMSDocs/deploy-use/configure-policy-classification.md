@@ -4,17 +4,17 @@ description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Si
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 80537b32bee11df72673b869932f2d59cef11469
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -62,9 +62,11 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
 
 #### <a name="more-information-about-running-continuously"></a>Weitere Informationen zum dauerhaften Ausführen
 
-Die aktuelle Vorschauversion des Azure Information Protection-Clients überprüft regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungsregeln. Dieses Verhalten aktiviert die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden. 
+Standardmäßig überprüft die aktuelle Vorschauversion des Azure Information Protection-Clients regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungsregeln. Dieses Verhalten aktiviert die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden. 
 
-Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird. 
+Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird.
+
+Sie können dieses Verhalten anpassen, sodass der Azure Information Protection-Client automatische und empfohlene Bezeichnungen auf dieselbe Art und Weise anwendet wie bei der allgemein verfügbaren Version des Clients. Diese Konfiguration erfordert eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background).
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten
 
