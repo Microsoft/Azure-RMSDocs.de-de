@@ -4,7 +4,7 @@ description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 03/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 49518c1324ad541c4880c7930b6e661a2aba46d8
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0d5f4e081ea68f3e8c9ddcb46409370b486f6210
+ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -79,7 +79,7 @@ Mögliche Gründe:
 
 ### <a name="set-custom-permissions-for-a-document"></a>Festlegen von benutzerdefinierten Berechtigungen für ein Dokument
 
-Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat.
+Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat. Diese Option gilt nur für Dokumente und ist nicht in Outlook verfügbar.
 
 1. Klicken Sie auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen** > **Benutzerdefinierte Berechtigungen**:
 

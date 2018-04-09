@@ -4,7 +4,7 @@ description: Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Micros
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/15/2017
+ms.date: 03/30/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b3513a4ec00abf8727e2a5e07f9b4a67c96b7574
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 20ec9893bba090b1d17d67b06fb614a2baee3403
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -49,6 +49,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |Datenschutz|Manchmal als *IP*(Information Protection) abgekürzt.<br /><br />Ein branchenweiter allgemeiner Begriff, der sich auf den Schutz von Daten und Dateien vor nicht autorisiertem Zugriff bezieht, selbst nachdem die Daten und Dateien die Organisation durch E-Mails oder die Dokumentfreigabe verlassen haben. Microsoft Azure Information Protection ist ein Beispiel einer Lösung zum Schutz von Daten.|
 |Information Rights Management|Häufig als *IRM*abgekürzt.<br /><br />Ein Ausdruck, der in Verbindung mit den Office-Diensten, wie etwa Exchange Server, Word und SharePoint Online, verwendet wird, um die Fähigkeit zur Unterstützung von Microsoft Rights Management Services zu beschreiben.|
 |IRM|Siehe *Information Rights Management*.|
+|Office-Nachrichtenverschlüsselung|Häufig als *OME* abgekürzt<br /><br />Die neuen Office 365-Funktionen für die Nachrichtenverschlüsselung sind nativ in Azure Rights Management integriert. So sind E-Mails von internen und externen Benutzern gleichermaßen geschützt, Vorlagen werden automatisch aktualisiert und das BYOK-Szenario wird unterstützt. Die vorherige OME-Implementierung war nur für externe Empfänger gedacht, erforderte eine Regel für den E-Mail-Übertragung und bot keine BYOK-Unterstützung.|
 |MSDRM|Manchmal als Verweis auf den RMS-Client 1.0 verwendet, der durch den neueren Client MSIPC ersetzt wurde. Dieser ältere Client unterstützt Anwendungen, die mit dem RMS SDK 1.0 entwickelt wurden, und unterstützt Office 2010 und Office 2007, Exchange 2010 und Exchange 2013 und SharePoint 2010 und SharePoint 2007.|
 |MSIPC|Manchmal als Verweis auf den RMS-Client 2.0 verwendet, der an die Stelle des älteren RMS-Client, MSDRM, getreten ist. Dieser spätere Client unterstützt Anwendungen, die mit dem RMS SDK 2.0 entwickelt wurden, und außerdem Office 2016 und Office 2013, SharePoint 2013, die RMS-Freigabeanwendung und der Azure Information Protection-Client.|
 |Systemeigener Schutz|Eine Schutzstufe, die in allen RMS-aktivierten Anwendungen verfügbar ist und unberechtigte Personen daran hindert, eine Datei zu öffnen. Ferner können stringentere Richtlinien durchgesetzt werden, wie etwa "schreibgeschützt" und "nicht anzeigen". Darüber hinaus bleibt dieser Schutz für die Datei bestehen, auch wenn die Datei an andere Personen weitergeleitet oder an einem öffentlichen Speicherort, auf den andere zugreifen können, gespeichert wird.|

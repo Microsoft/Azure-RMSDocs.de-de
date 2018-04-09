@@ -4,7 +4,7 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2018
+ms.date: 04/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42d3437b204f97b5d9caa4a2fa67b60fc1a570e4
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 37619ad71fea842617556219c1684a3e837c3cc7
+ms.sourcegitcommit: 3af39b88d321d75038caad266e906f6e622011d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -37,7 +37,7 @@ Benutzer benötigen einen gültigen Benutzernamen und ein Kennwort, um auf durch
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Welches Abonnement benötige ich für Azure Information Protection, und welche Features sind enthalten?
 Informationen dazu finden Sie auf der [Preisseite von Azure Information Protection](https://azure.microsoft.com/en-us/pricing/details/information-protection). 
 
-Wenn Sie über ein Office 365-Abonnement verfügen, das Rights Management umfasst, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) herunter, das auch einige häufig gestellte Fragen zur Lizenzierung enthält.
+Wenn Sie ein Office 365-Abonnement mit Azure Rights Management haben, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) herunter, das auch Antworten auf einige häufig gestellte Fragen zur Lizenzierung enthält.
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Ist der Azure Information Protection-Client nur für Abonnements geeignet, die Funktionen für Klassifizierung und Bezeichnung umfassen?
 
@@ -51,7 +51,7 @@ Wenn Sie zurzeit die Rights Management-Freigabeanwendung für Windows verwenden,
 
 Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können alle administrativen Aufgaben für Azure Information Protection ausführen. Zum Zuweisen von Administratorrechten an andere Benutzer haben Sie folgende Optionen:
 
-- **Information Protection-Administrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator die Konfiguration aller Aspekte von Azure Information Protection, aber nicht das Konfigurieren anderer Dienste. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle [PowerShell-Cmdlets aus dem AADRM-Modul](../deploy-use/administer-powershell.md) ausführen. 
+- **Information Protection-Administrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator die Konfiguration aller Aspekte von Azure Information Protection, aber nicht das Konfigurieren anderer Dienste. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](../rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](../deploy-use/administer-powershell.md) ausführen. 
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 

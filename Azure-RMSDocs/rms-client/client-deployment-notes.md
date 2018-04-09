@@ -4,7 +4,7 @@ description: Informationen zu Installation, unterstützten Betriebssystemen, Reg
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/08/2018
+ms.date: 04/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: edaa24b6e86fc1cacecfa79185b7fe4ddb1d34c9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
+ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="rms-client-deployment-notes"></a>Anmerkungen zur Bereitstellung des RMS-Clients
 
@@ -112,7 +112,7 @@ Sie können Windows-Registrierungsschlüssel zum Festlegen oder Ändern einiger 
 
 |Aufgabe|Einstellung|
 |--------|------------|
-|Wenn der Client Version 1.03102.0221 oder höher ist:<br /><br />**Steuern der Datensammlung für die Anwendung**|**Wichtig**: Um die Datenschutzaspekte für Benutzer zu berücksichtigen, müssen Sie als Administrator den Benutzer um seine Zustimmung bitten, bevor Sie die Datensammlung aktivieren.<br /><br />Wenn Sie die Datensammlung aktivieren, stimmen Sie zu, Daten über das Internet an Microsoft zu senden. Microsoft verwendet diese Daten, um die Qualität, Sicherheit und Integrität von Microsoft-Produkten und -Diensten sicherzustellen und zu verbessern. Beispielsweise analysiert Microsoft die Leistung und Zuverlässigkeit, die von Ihnen verwendeten Features, die Reaktionsschnelligkeit der Features, die Geräteleistung, Interaktionen mit der Benutzeroberfläche und etwaige Probleme, die bei der Nutzung des Produkts auftreten. Zu den Daten gehören auch Informationen zur Konfiguration Ihrer Software, z.B. der Software, die derzeit ausgeführt wird, und die IP-Adresse.<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Wert:** 0 für die definierte Anwendung (Standard) mithilfe der Umgebungsvariable [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 für Deaktiviert, 2 für Aktiviert<br /><br />**Hinweis**:Der Speicherort ist HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC, wenn Ihre MSIPC-basierte 32-Bit-Anwendung auf einer 64-Bit-Version von Windows ausgeführt wird.|
+|Wenn der Client Version 1.03102.0221 oder höher ist:<br /><br />**Steuern der Datensammlung für die Anwendung**|**Wichtig**: Um die Datenschutzaspekte für Benutzer zu berücksichtigen, müssen Sie als Administrator den Benutzer um seine Zustimmung bitten, bevor Sie die Datensammlung aktivieren.<br /><br />Wenn Sie die Datensammlung aktivieren, stimmen Sie zu, Daten über das Internet an Microsoft zu senden. Microsoft verwendet diese Daten, um die Qualität, Sicherheit und Integrität von Microsoft-Produkten und -Diensten sicherzustellen und zu verbessern. Beispielsweise analysiert Microsoft die Leistung und Zuverlässigkeit, die von Ihnen verwendeten Features, die Reaktionsschnelligkeit der Features, die Geräteleistung, Interaktionen mit der Benutzeroberfläche und etwaige Probleme, die bei der Nutzung des Produkts auftreten. Zu den Daten gehören auch Informationen zur Konfiguration Ihrer Software, z.B. der Software, die derzeit ausgeführt wird, und die IP-Adresse.<br /><br />In Version 1.0.3356 und höher: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />In Versionen niedriger als 1.0.3356: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Wert:** 0 für die definierte Anwendung (Standard) mithilfe der Umgebungsvariable [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 für Deaktiviert, 2 für Aktiviert<br /><br />**Hinweis**:Der Speicherort ist HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC, wenn Ihre MSIPC-basierte 32-Bit-Anwendung auf einer 64-Bit-Version von Windows ausgeführt wird.|
 |Nur AD RMS:<br /><br />**Aktualisieren des Unternehmensdienstspeicherorts für einen Clientcomputer**|Aktualisieren Sie die folgenden Registrierungsschlüssel:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Wert:**\<http oder https > ://*RMS_Cluster_Name*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Wert:**\<http oder https > ://*RMS_Cluster_Name*/_wmcs/Licensing|
 |**So aktivieren und deaktivieren Sie die Ablaufverfolgung**|Aktualisieren Sie den folgenden Registrierungsschlüssel:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Wert:** 1 zum Aktivieren der Ablaufverfolgung, 0 zum Deaktivieren der Ablaufverfolgung (Standardwert)|
 |**Ändern der Häufigkeit (in Tagen), mit der Vorlagen aktualisiert werden**|Mit den folgenden Registrierungswerten wird festgelegt, wie oft Vorlagen auf dem Computer des Benutzers aktualisiert werden, wenn der Wert „TemplateUpdateFrequencyInSeconds“ nicht festgelegt ist.  Wenn keiner dieser Werte festgelegt ist, ist das Standardaktualisierungsintervall für Anwendungen, die den RMS-Client (Version 1.0.1784.0) zum Herunterladen von Vorlagen verwenden, 1 Tag. Bei Vorversionen dieser Version ist der Standardwert 7 Tage.<br /><br />**Clientmodus:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Tage (mindestens 1) zwischen Downloads angegeben wird.<br /><br />**Servermodus:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Wert:** Ein Ganzzahlwert, mit dem die Anzahl der Tage (mindestens 1) zwischen Downloads angegeben wird.|
