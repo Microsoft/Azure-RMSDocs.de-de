@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: c791baa300fff3c251c49ddb92b6bf3765933a99
+ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -363,7 +363,7 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 
 8. Fügen Sie Ihren Kontonamen hinzu. Wenn diese Cmdlets auch von anderen AD RMS-Administratoren oder Dienstkonten verwendet werden, um Dateien zu schützen oder deren Schutz aufzuheben, fügen Sie auch diese Konten hinzu. 
     
-    Um Dateien nicht interaktiv zu schützen oder deren Schutz aufzuheben, fügen Sie die relevanten Computerkonten hinzu. Fügen Sie beispielsweise das Computerkonto des Windows Server-Computers hinzu, für den die Dateiklassifizierungsinfrastruktur konfiguriert ist und der ein PowerShell-Skript verwendet, um Dateien zu schützen. Für dieses Szenario wird die aktuelle Vorschauversion des Azure Information Protection-Clients benötigt.
+    Um Dateien nicht interaktiv zu schützen oder deren Schutz aufzuheben, fügen Sie die relevanten Computerkonten hinzu. Fügen Sie beispielsweise das Computerkonto des Windows Server-Computers hinzu, für den die Dateiklassifizierungsinfrastruktur konfiguriert ist und der ein PowerShell-Skript verwendet, um Dateien zu schützen.
 
 9. Stellen Sie in der Spalte **Zulassen** sicher, dass die Kontrollkästchen für **Lesen und Ausführen** und **Lesen** aktiviert sind.
 
@@ -531,9 +531,6 @@ Führen Sie diesen Befehl im Kontext des Kontos aus, das die Dokumente ohne Benu
 Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufgefordert. Dadurch wird das Zugriffstoken für Ihr Konto erstellt und sicher unter „%localappdata%\Microsoft\MSIP“ gespeichert. Nach dieser ersten Anmeldung können Sie Dateien auf dem Computer ohne Benutzereingriff bezeichnen und schützen. Wenn Sie jedoch ein Dienstkonto zum Bezeichnen und Schützen von Dateien verwenden und sich dieses Dienstkonto nicht interaktiv anmelden kann, befolgen Sie die Anweisungen im folgenden Abschnitt, damit das Dienstkonto mithilfe eines Token authentifiziert werden kann.
 
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“
-
-> [!NOTE]
-> Für diese Option ist die allgemein verfügbare Version der Azure Information Protection-Überprüfung oder die aktuelle Vorschauversion des Microsoft Azure Information Protection-Clients erforderlich.
 
 Führen Sie die folgenden zusätzlichen Schritte und Anweisungen aus, um die erste interaktive Anmeldung für ein Konto zu verhindern, das Dateien bezeichnet und schützt. In der Regel sind diese zusätzlichen Schritte nur erforderlich, wenn diesem Konto nicht die Berechtigung **Lokale Anmeldung** erteilt werden kann, ihm jedoch die Berechtigung **Als Batchauftrag anmelden** zugewiesen wird. Dies kann beispielsweise bei Ihrem Dienstkonto der Fall sein, das die Azure Information Protection-Überprüfung ausführt.
 
