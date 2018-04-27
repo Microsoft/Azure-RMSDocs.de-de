@@ -16,6 +16,7 @@
 ### [Die Standardrichtlinie](configure-policy-default.md)
 ### [Konfigurieren der Richtlinieneinstellungen](configure-policy-settings.md)
 ### [Erstellen einer neuen Bezeichnung](configure-policy-new-label.md)
+### [Hinzufügen oder Entfernen einer Bezeichnung](configure-policy-add-remove-label.md)
 ### [Löschen oder Ändern der Position einer Bezeichnung](configure-policy-delete-reorder.md)
 ### [Ändern einer Bezeichnung](configure-policy-change-label.md)
 ### [Konfigurieren des Schutzes](configure-policy-protection.md)
