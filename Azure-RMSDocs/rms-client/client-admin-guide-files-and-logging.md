@@ -4,7 +4,7 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 04/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a60169a2c98a751c787a7ca4a8aee31f99a18590
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 13f82bc12fd77d4f145b059c2962af01094760c3
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -40,9 +40,9 @@ Clientprotokolldateien und aktuell installierte Richtliniendatei:
 
 Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste** > **Azure Information Protection**. Die Ereignisse umfassen die folgenden Informationen:
 
-- Datum, Clientversion, Richtlinien-ID
+- Clientversion, Richtlinien-ID
 
-- Angemeldeter Benutzername, Computername
+- IP-Adressen des angemeldeten Benutzers
 
 - Dateiname und Speicherort
 
@@ -77,9 +77,6 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     - System (zum Anmelden und Herunterladen der Richtlinie)
     
     - Standard
-        
-        Diese Quellaktion **Default** (Standard) ist nur für den Vorschauclient gedacht und bezieht sich auf die Bezeichnung, die durch die Verwendung der Option **Standardbezeichnung auswählen** in der Azure Information Protection-Richtlinie festgelegt wird.
-
     
 - Bezeichnung vor und nach Aktion 
     

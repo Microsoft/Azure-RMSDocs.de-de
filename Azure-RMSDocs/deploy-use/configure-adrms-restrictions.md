@@ -4,17 +4,17 @@ description: Identifizieren Sie die Einschränkungen, Voraussetzungen und Empfeh
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/14/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: a768b373ad5fbcbeb66e82d72ff263a7ea16e56b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8e9a29f01c3fe22a2eb30380510a3c532780fdf2
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz
 
@@ -69,8 +69,6 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
     
     Wenn Benutzer auf **Nicht weiterleiten** über eine Outlook-Menüoption klicken, können sie Azure RMS oder AD RMS wählen, wissen aber möglicherweise nicht, welche Option für ihre E-Mail-Nachrichten ausgewählt ist. Wenn AD RMS verwendet wird, obwohl Azure RMS verwendet werden sollte, können externe Personen diese E-Mail-Nachrichten nicht öffnen.
 
-- Wenn Sie benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfigurieren: Im Datei-Explorer wird der Schutz immer mithilfe von Azure RMS statt mit HYOK (AD RMS) angewendet. Diese Beschränkung gilt nicht für die aktuelle Vorschauversion des Clients.
-
 - Wenn Benutzer in Outlook eine Bezeichnung auswählen, die AD RMS-Schutz anwendet, und dann vor dem Senden der E-Mail-Adresse ihre Meinung ändern und eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, kann die neu ausgewählte Bezeichnung nicht angewendet werden. Es wird die folgende Fehlermeldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Sie sind nicht berechtigt, diese Aktion auszuführen.**
     
     Die einzige Problemumgehung besteht darin, die E-Mail-Nachricht zu schließen und von vorne zu beginnen. Die gleiche Einschränkung gilt, wenn Benutzer zunächst eine Bezeichnung auswählen, die Azure RMS-Schutz anwendet, und die Bezeichnung dann in eine Bezeichnung ändern, die AD RMS-Schutz anwendet.
@@ -111,7 +109,10 @@ Bei Verwendung von AD RMS-Schutz in Verbindung mit Azure Information Protection 
 
 - Wenn Sie Dokumente oder E-Mails, die mithilfe von AD RMS geschützt wurden, mit anderen Personen außerhalb Ihrer Organisation teilen: AD RMS wird für explizit definierte Vertrauensstellungen in einer direkten Punkt-zu-Punkt-Beziehung mit den anderen Organisationen konfiguriert, indem entweder vertrauenswürdige Benutzerdomänen (trusted user domains, TUDs) oder Verbundvertrauensstellungen verwendet werden, die mit Active Directory-Verbunddienste erstellt wurden.
 
-- Benutzer verfügen über eine Office-Version, und zwar Office 2013 Pro Plus mit Service Pack 1 oder Office 2016 Pro Plus, die auf Windows 7 Service Pack 1 oder höher ausgeführt wird. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
+- Benutzer haben eine Version von Office 2016 Professional Plus oder Office 2013 Professional Plus mit Service Pack 1, die auf Windows 7 Service Pack 1 oder höher ausgeführt wird. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
+    
+    
+    - Für Office 2016, auf Microsoft Installer (.msi) basierte Ausgabe: Sie haben [Update 4018295 für Microsoft Office 2016 vom 6. März 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) installiert.
 
 > [!IMPORTANT]
 > Wir empfehlen, dass sich Ihre AD RMS-Server nicht in Ihrem DMZ befinden und dass sie nur von ordnungsgemäß verwalteten Computern verwendet werden (z.B. keine mobilen Geräte oder Arbeitsgruppencomputer),um die hohe Sicherheit zu erfüllen, die dieses Szenario bietet. 

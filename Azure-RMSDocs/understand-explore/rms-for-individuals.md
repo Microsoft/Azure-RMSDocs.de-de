@@ -12,25 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer, die durch Azure Information Protection geschützte Dateien öffnen müssen. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können und deren Organisation nicht über Active Directory Rights Management (AD RMS) verfügt, können mit diesem kostenlosen Anmeldedienst Konten in Azure Active Directory für Benutzer erstellt werden. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
+RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer, die durch Azure Information Protection geschützte Dateien öffnen müssen. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können, kann dieser kostenlose Anmeldedienst ein Konto für einen Benutzer in Azure Active Directory erstellen. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
 
-RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrierung. Wenn Benutzer Konten für Ihre Organisation erstellt haben, können Sie als Administrator Ihrer Organisation den Kontobesitz beanspruchen und die Kontrolle über die Konten übernehmen. 
+RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrierung. Wenn Benutzer mithilfe dieses Abonnements Konten für Ihr Unternehmen erstellt haben, können Sie als Administrator für Ihr Unternehmen den Besitz dieser Konten beanspruchen, und die [Kontrolle über diese Konten übernehmen](/active-directory/domains-admin-takeover#external-admin-takeover). 
 
 
 > [!NOTE]
 > Das kostenlose Abonnement stellt eine Möglichkeit dar, sicherzustellen, dass autorisierte Personen außerhalb Ihrer Organisation jederzeit Dateien lesen können, die durch Ihre Organisation geschützt werden. Eine weitere Möglichkeit besteht in dem Senden von Dokumenten per E-Mail mithilfe der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese E-Mail-Lösung kann für sämtliche E-Mail-Adressen auf allen Geräten verwendet werden und wird zur sicheren Freigabe von Informationen und Anzeige von Office-Dokumenten empfohlen, die per E-Mail an Personen außerhalb Ihrer Organisation gesendet werden. 
 
-Um sich für dieses kostenlose Konto zu registrieren, rufen Sie die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf, und geben Sie Ihre geschäftliche E-Mail-Adresse an. Sie erhalten von Microsoft als Antwort eine E-Mail und schließen den Registrierungsprozess dann ab, indem Sie Details eingeben, um Ihr Konto zu erstellen. 
+Um sich für dieses kostenlose Konto zu registrieren, rufen Benutzer die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf und geben Ihre geschäftliche E-Mail-Adresse an. Sie erhalten eine E-Mail als Antwort von Microsoft, und können den Registrierungsprozess dann abschließen, indem sie die Angaben machen, um ihr Konto zu erstellen. 
 
 Wenn das Konto erstellt wurde, finden Sie auf der letzten Seite Links zum Herunterladen des Azure Information Protection-Clients oder -Viewers, einen Link zum Benutzerhandbuch und einen Link zu einer aktuellen Liste der Anwendungen, die den Rights Management-Schutz nativ unterstützen. 
 

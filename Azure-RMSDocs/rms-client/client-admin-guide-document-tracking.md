@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 04b6f65495c6b7251d000ff438ecab20c3a44db7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -24,11 +24,17 @@ ms.lasthandoff: 03/28/2018
 
 Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Durch die Dokumentkontrolle erhalten Benutzer und Administratoren Informationen darüber, wann auf ein geschütztes Dokument zugegriffen wird und ob ein nachverfolgtes Dokument ggf. gesperrt werden kann.
 
-## <a name="privacy-controls-for-your-document-tracking-site"></a>Datenschutzkontrollen für Ihre Website für die Dokumentnachverfolgung
+## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Verwalten der Website für die Dokumentnachverfolgung mithilfe von PowerShell
+
+In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie die Website für die Dokumentnachverfolgung mithilfe von PowerShell verwalten können. Installationsanweisungen für dieses PowerShell-Modul finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md). Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
+
+Weitere Informationen zu den einzelnen Cmdlets finden Sie unter den angegebenen Links.
+
+### <a name="privacy-controls-for-your-document-tracking-site"></a>Datenschutzkontrollen für Ihre Website für die Dokumentnachverfolgung
 
 Wenn das Anzeigen aller Informationen zur Dokumentnachverfolgung in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie die Dokumentnachverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) deaktivieren. 
 
-Dieses Cmdlet deaktiviert den Zugriff auf die Website für die Dokumentnachverfolgung, damit keine Benutzer in Ihrer Organisation die von ihnen geschützten Dokumente nachverfolgen oder den Zugriff auf diese widerrufen können. Sie können die Dokumentnachverfolgung jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob die Dokumentnachverfolgung derzeit aktiviert oder deaktiviert ist. Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des AADRM-Moduls (Azure Rights Management) für PowerShell. 
+Dieses Cmdlet deaktiviert den Zugriff auf die Website für die Dokumentnachverfolgung, damit keine Benutzer in Ihrer Organisation die von ihnen geschützten Dokumente nachverfolgen oder den Zugriff auf diese widerrufen können. Sie können die Dokumentnachverfolgung jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob die Dokumentnachverfolgung derzeit aktiviert oder deaktiviert ist. Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des AADRM-Moduls für PowerShell. 
 
 Wenn die Website für die Dokumentnachverfolgung aktiviert ist, werden standardmäßig Informationen angezeigt, wie z.B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Diese Art von Informationen kann hilfreich sein, um festzulegen, wie die freigegebenen Dokumente verwendet und ob sie widerrufen werden sollen, wenn verdächtige Aktivitäten festgestellt werden. Aus Datenschutzgründen müssen diese Benutzerinformationen allerdings u.U. für einige oder alle Benutzer deaktiviert werden. 
 
@@ -40,11 +46,19 @@ Wenn Sie diese Konfiguration verwenden, können alle Benutzer weiterhin die Webs
 
 Diese Einstellung gilt nur für Endbenutzer. Administratoren für Azure Information Protection können die Aktivitäten aller Benutzer immer nachverfolgen, selbst wenn die Benutzer mithilfe von Set-AadrmDoNotTrackUserGroup angegeben wurden. Weitere Informationen dazu, wie Administratoren Dokumente für Benutzer nachverfolgen können, finden Sie im Abschnitt [Nachverfolgen und Sperren von Dokumenten für Benutzer](#tracking-and-revoking-documents-for-users).
 
-Wenn Sie diese Option nicht mehr benötigen, können Sie das Cmdlet [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) verwenden. Um Benutzer selektiv zu entfernen, können Sie sie alternativ aus der Gruppe entfernen, müssen jedoch die [Gruppenzwischenspeicherung](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection) berücksichtigen. Mithilfe von [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup) können Sie überprüfen, ob diese Option derzeit verwendet wird. Zum Ausführen dieser Cmdlets für diese Gruppenkonfiguration benötigen Sie mindestens Version **2.10.0.0** des AADRM-Moduls (Azure Rights Management) für PowerShell.
 
-Weitere Informationen zu den einzelnen Cmdlets finden Sie unter den angegebenen Links. Installationsanweisungen für dieses PowerShell-Modul finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md). Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
+### <a name="logging-information-from-the-document-tracking-site"></a>Protokollieren von Informationen aus der Website für die Dokumentnachverfolgung
 
+Wenn Sie für das AADRM-Modul die Mindestversion **2.13.0.0** haben, können Sie mithilfe der folgenden Cmdlets Protokollinformationen von der Website für die Dokumentnachverfolgung herunterladen:
 
+- [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
+    
+    Dieses Cmdlet gibt Informationen zu geschützten Dokumenten für einen angegebenen Benutzer zurück, der Dokumente geschützt hat (Rights Management-Aussteller) oder der auf geschützte Dokumente zugegriffen hat. Mithilfe dieses Cmdlets können Sie die Frage beantworten, auf welche geschützten Dokumente ein bestimmter Benutzer zugegriffen und welche er nachverfolgt hat.
+
+- [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
+    
+    Dieses Cmdlet gibt Informationen zum Schutz der nachverfolgten Dokumente für einen bestimmten Benutzer zurück (Rights Management-Aussteller), falls dieser Benutzer Dokumente geschützt hat, Rights Management-Besitzer von Dokumenten war oder Dokumente geschützt hat, die so konfiguriert waren, dass dem Benutzer direkter Zugriff gewährt werden sollte. Mithilfe dieses Cmdlets können Sie die Frage beantworten, wie Dokumente für einen bestimmten Benutzer geschützt werden.
+ 
 ## <a name="destination-urls-used-by-the-document-tracking-site"></a>Von der Website für die Dokumentnachverfolgung verwendete Ziel-URLs
 
 Die folgenden URLs dienen zum Nachverfolgen von Dokumenten und müssen auf allen Geräten und in allen Diensten zwischen den Clients zugelassen werden, auf denen der Azure Information Protection-Client und das Internet ausgeführt werden. Beispiel: Fügen Sie diese URLs zu Firewalls oder zu Ihren vertrauenswürdigen Websites hinzu, wenn Sie Internet Explorer mit erhöhter Sicherheit verwenden.

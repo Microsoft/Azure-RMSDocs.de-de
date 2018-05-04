@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff9d6a4ce66deed8add68d7b1efc889ee9448f53
-ms.sourcegitcommit: 5866509c17872e274720d3014fe218ed95e86ee3
+ms.openlocfilehash: 02e54d3d1f324aa6d67e9fb81c3f5f83e785fe81
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -41,11 +41,9 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-## <a name="versions-later-than-110560"></a>1.10.56.0 und spätere Versionen
+## <a name="version-12660"></a>Version 1.26.6.0
 
-Wenn Ihre Version des Clients höher als 1.10.56.0 ist, handelt es sich um einen Vorschaubuild für Test- und Auswertungszwecke.
-
-Die aktuelle Version lautet **1.21.203.0** und weist seit der aktuellen GA-Version des Clients die unten angegebenen Änderungen auf.
+**Veröffentlicht:** 17.4.2018
 
 Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
@@ -53,11 +51,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 - Azure Information Protection-Überprüfung: Das im Client enthaltene PowerShell-Modul verfügt über neue Cmdlets zum Installieren und Konfigurieren des Überprüfungsmoduls, mit denen Sie Dateien in Ihren lokalen Datenspeichern ermitteln, klassifizieren und schützen können. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-use/deploy-aip-scanner.md). 
 
-- Für Office-Apps wird die automatische und empfohlene Klassifizierung ständig im Hintergrund ausgeführt, anstatt beim Speichern von Dokumenten. Aufgrund dieses veränderten Verhaltens können Sie jetzt eine automatische und empfohlene Klassifizierung auf Dokumente anwenden, die in SharePoint Online gespeichert sind. [Weitere Informationen](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) 
-
 - Sie haben jetzt die Möglichkeit, verschiedene optische Kennzeichnungen für Word, Excel, PowerPoint und Outlook festzulegen, indem Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp identifizieren. [Weitere Informationen](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Unterstützung der [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md), **Information Protection-Leiste in Office-Apps anzeigen**. Wenn diese Einstellung deaktiviert ist, wählen Benutzer Bezeichnungen über die Schaltfläche **Schützen** im Menüband aus.
+
+- Eine neue erweiterte Clienteinstellung (noch in der Vorschau), mit der Sie die Klassifizierung aktivieren können, die fortlaufend im Hintergrund ausgeführt wird. Ist diese Einstellung aktiviert, wird für Office-Apps die automatische und empfohlene Klassifizierung ständig im Hintergrund ausgeführt, anstatt beim Speichern von Dokumenten. Aufgrund dieses veränderten Verhaltens können Sie jetzt eine automatische und empfohlene Klassifizierung auf Dokumente anwenden, die in SharePoint Online gespeichert sind. [Weitere Informationen](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
 - Eine neue erweiterte Clienteinstellung, mit der verhindert wird, dass Outlook die Standardbezeichnung anwendet, die in der Azure Information Protection-Richtlinie konfiguriert ist. Stattdessen kann Outlook eine andere Standardbezeichnung oder gar keine Bezeichnung anwenden. [Weitere Informationen](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) 
 
@@ -76,14 +74,21 @@ Fixes für Stabilität und für bestimmte Szenarios, die Folgendes umfassen:
 
 - Wenn zwei Organisationen Dokumente und E-Mails über eine Azure Information Protection-Freigabe verwenden, werden jeweils die eigenen Bezeichnungen beibehalten und nicht durch die Bezeichnungen der anderen Organisation ersetzt.
 
-- Unterstützung für Zellen in Excel, die Querverweise enthalten. Bisher konnte es in diesen Zellen zu einer Beschädigung des Texts kommen.
+- Für Excel:
+        
+    - Unterstützung für die Änderung von Office- oder Windows-Designs. Bisher wurden in Excel nach dem Ändern des Designs keine Daten angezeigt.
+        
+    - Unterstützung für Zellen in Excel, die Querverweise enthalten. Bisher konnte es in diesen Zellen zu einer Beschädigung des Texts kommen.
+    
+    - Unterstützung für die Eingabe von japanischen, chinesischen und koreanischen Zeichen, was zuvor dazu führte, dass ein Fenster geschlossen wurde, sodass diese Zeichen nicht ausgewählt werden konnten.
+    
+    - Unterstützung für Kommentare, zuvor wurde der Kommentar während der Eingabe geschlossen.
 
-- Unterstützung für die Änderung von Office- oder Windows-Designs. Bisher wurden in Excel nach dem Ändern des Designs keine Daten angezeigt.
+- Für PowerPoint: Unterstützung für Mitverfasser, was zuvor zu Datenverlust führen konnte.
 
 - Dateien mit der Dateinamenerweiterung „.xml“ können jetzt für die empfohlene bzw. automatische Klassifizierung untersucht werden.
 
 - Mit dem Viewer können jetzt geschützte textbasierte Dateien (PTXT und PXML) geöffnet werden, die größer als 20 MB sind. 
-
 - Es wird verhindert, dass Outlook hängt, wenn Outlook-Erinnerungen genutzt werden.
 
 - Bootstrap funktioniert für die 64-Bit-Version von Office, sodass Sie Dokumente und E-Mails schützen können.

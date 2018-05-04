@@ -4,7 +4,7 @@ description: Detaillierte Übersicht über die Funktionsweise von Azure RMS, die
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a261e356e167687190cc71eed4b2da715ab45697
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 321b18946c934878a422bd28a115c06d443b8d18
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -96,7 +96,9 @@ Wenn das Konto des Benutzers einen Verbund mit Azure Active Directory aufweist, 
 
 **Das geschieht in Schritt 2**: Nachdem der Benutzer authentifiziert wurde, wird die Verbindung automatisch an den Azure Information Protection-Mandanten der Organisation umgeleitet, der Zertifikate ausstellt, mit denen sich der Benutzer beim Azure Rights Management-Dienst authentifiziert, um geschützte Inhalte zu nutzen und Inhalte offline zu schützen.
 
-Eine Kopie des Zertifikats des Benutzers wird in Azure gespeichert, damit die Zertifikate mithilfe der gleichen Schlüsseln erstellt werden, wenn der Benutzer ein anderes Gerät verwendet.
+Eines dieser Zertifikate ist das Rechtekontozertifikat (Rights Account Certificate, RAC). Dieses Zertifikat authentifiziert den Benutzer für Azure Active Directory und ist 31 Tage lang gültig. Das Zertifikat wird automatisch vom RMS-Client erneuert, vorausgesetzt das Benutzerkonto befindet sich noch in Azure Active Directory und das Konto ist aktiviert. Dieses Zertifikat kann nicht von einem Administrator konfiguriert werden. 
+
+Eine Kopie dieses Zertifikats wird in Azure gespeichert. Falls der Benutzer also ein anderes Gerät verwendet, werden die Zertifikate mithilfe derselben Schlüssel erstellt.
 
 ### <a name="content-protection"></a>Inhaltsschutz
 Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Aktionen für ein ungeschütztes Dokument aus:

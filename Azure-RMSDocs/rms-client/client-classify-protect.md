@@ -4,7 +4,7 @@ description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0d5f4e081ea68f3e8c9ddcb46409370b486f6210
-ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
+ms.openlocfilehash: 9462795fb46c6eef857d3fd42bfe873ac869e51c
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -97,7 +97,7 @@ Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstell
     
     - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
         
-        Wenn Sie über die aktuelle Vorschauversion des Clients verfügen, können Sie auch über das Adressbuchsymbol Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen.
+        Sie können mithilfe des Adressbuchsymbols Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen.
     
     - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegte Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
 

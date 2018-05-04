@@ -4,23 +4,28 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: d27dcff090aa33cb5c7a3bcb6641ac635ed8a104
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: b4db47cecb190b47854565beaeac72d768aa8e28
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Sie können Ihre sensibelsten Dokumente und E-Mails mithilfe des Rights Management-Diensts schützen. Dieser Dienst verwendet Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien, um Datenverlust zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die so konfiguriert ist, dass der Rights Management-Schutz für Dokumente und E-Mails verwendet wird, und Benutzer können auch auf die Schaltfläche **Nicht weiterleiten** in Outlook klicken. 
+>[!NOTE]
+> In diesem Artikel werden die neuesten Updates für das Azure-Portal beschrieben, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht aktualisiert wurde und diese Änderungen nicht unterstützt, wird beispielsweise für die Azure Information Protection-Richtlinie weiterhin die Option **Veröffentlichen** angezeigt, und die Menüoption **Klassifizierungen** wird nicht angezeigt. In diesem Fall sollten Sie einige Tage warten und sich anschließend diese Anweisungen erneut ansehen.
+
+Sie können Ihre sensibelsten Dokumente und E-Mails mithilfe des Rights Management-Diensts schützen. Dieser Dienst verwendet Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien, um Datenverlust zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die so konfiguriert ist, dass der Rights Management-Schutz für Dokumente und E-Mails verwendet wird, und Benutzer können auch auf die Schaltfläche **Nicht weiterleiten** in Outlook klicken.
+
+Wenn eine Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüssel)** konfiguriert wird, wird hierdurch im Hintergrund eine Schutzvorlage erstellt und eingerichtet. Auf diese kann dann über Dienste und Anwendungen zugegriffen werden, die in die Rights Management-Vorlagen integriert sind. Beispiele sind Exchange Online mit Regeln für den E-Mail-Fluss sowie Outlook on the Web. 
 
 ## <a name="how-the-protection-works"></a>Funktionsweise des Schutzes
 
@@ -41,23 +46,21 @@ Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionswei
 
 Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Diese Speicherorte unterstützen die folgenden Features für geschützte Dateien nicht: gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
 
-Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn für Exchange IRM konfiguriert ist. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, derartige E-Mails können nicht für die Suche indiziert werden, und Sie können für Exchange Online DLP nicht den Rights Management-Schutz konfigurieren. Weitere Informationen zum Konfigurieren von Exchange, um diese zusätzlichen Szenarien zu unterstützen, finden Sie in den folgenden Ressourcen:
+Exchange muss für Azure Information Protection nicht konfiguriert werden, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn für Azure Information Protection Exchange konfiguriert wird. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, derartige E-Mails können nicht für die Suche indiziert werden, und Sie können für Exchange Online DLP nicht den Rights Management-Schutz konfigurieren. In den folgenden Artikeln erhalten Sie Informationen, mit denen Sie sicherstellen können, dass Exchange diese zusätzlichen Szenarios unterstützt:
 
 - Anweisungen für Exchange Online finden Sie unter [Exchange Online: IRM-Konfiguration](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
 
 - Für lokales Exchange müssen Sie den [RMS-Connector bereitstellen und Ihre Exchange-Server konfigurieren](../deploy-use/deploy-rms-connector.md). 
 
-## <a name="to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
+## <a name="to-configure-a-label-for-protection-settings"></a>So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien). Wenn sich die Bezeichnung, die Sie konfigurieren möchten, jedoch in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
+2. Navigieren Sie über die Menüoption **Klassifizierungen** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection: Bezeichnungen), und wählen Sie dort die Bezeichnung aus, die Sie ändern möchten. 
 
-3. Wählen die Bezeichnung aus, die Sie konfigurieren möchten. Dadurch wird das Blatt **Bezeichnung** geöffnet. 
-
-4. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus.
+3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus:
     
     - **Nicht konfiguriert**: Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
         
@@ -75,15 +78,15 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Wenn ein Benutzer keine Berechtigungen zum Entfernen des Rights Management-Schutzes hat und eine mit der Option **Schutz entfernen** konfigurierte Bezeichnung auswählt, wird folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
 
-5. Wenn Sie **Schützen** ausgewählt haben, klicken Sie jetzt auf **Schutz**, um das Blatt **Schutz** zu öffnen:
+4. Wenn Sie **Schützen** ausgewählt haben, klicken Sie jetzt auf **Schutz**, um das Blatt **Schutz** zu öffnen:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](../media/info-protect-protection-bar-configured.png)
 
-6. Wählen Sie auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) oder **HYOK (AD RMS)** aus.
+5. Wählen Sie auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) oder **HYOK (AD RMS)** aus.
     
-    In den meisten Fällen wählen Sie **Azure (cloud key)** (Azure (Cloud-Schlüssel)) für Ihre Berechtigungseinstellungen aus. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um mit der Konfiguration für HYOK (AD RMS) fortzufahren, wechseln Sie zu Schritt 10.
+    In den meisten Fällen wählen Sie **Azure (cloud key)** (Azure (Cloud-Schlüssel)) für Ihre Berechtigungseinstellungen aus. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um die Konfiguration für HYOK (AD RMS) fortzufahren, gehen Sie zu Schritt 9.
     
-7. Wählen Sie eine der folgenden Optionen aus:
+6. Wählen Sie eine der folgenden Optionen aus:
     
     - **Berechtigungen festlegen**: Definieren neuer Schutzeinstellungen in diesem Portal.
     
@@ -99,7 +102,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     Tipp: Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
 
-8. Wenn Sie **Festlegen von Berechtigungen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
+7. Wenn Sie **Festlegen von Berechtigungen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
     
     Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
@@ -123,16 +126,18 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     Überprüfen Sie nun auf dem Blatt **Schutz** für alle Benutzer und Gruppen, die Sie angegeben haben, ob Sie Änderungen an folgenden Einstellungen vornehmen möchten. Beachten Sie, dass diese Einstellungen wie bei den Berechtigungen nicht für den [Rights Management-Aussteller oder Rights Management-Besitzer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) oder einen beliebigen zugewiesenen [Administrator](configure-super-users.md) gelten.
     
+    ###### <a name="information-about-the-protection-settings"></a>Informationen zu Schutzeinstellungen
+    
     |Einstellung|Weitere Informationen|Empfohlene Einstellung
     |-----------|--------------------|--------------------|
     |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente oder E-Mails, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
     |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](../rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
     
-    Wenn Sie das Konfigurieren der Berechtigungen abgeschlossen haben, klicken Sie auf **OK**. 
+    Wenn Sie das Konfigurieren der Berechtigungen und Einstellungen abgeschlossen haben, klicken Sie auf **OK**. 
     
     Bei dieser Gruppierung von Einstellungen wird eine benutzerdefinierte Vorlage für den Azure Rights Management-Dienst erstellt. Diese Vorlagen können in Anwendungen und Diensten verwendet werden, die in Azure Rights Management integriert sind. Informationen zum Herunterladen und Aktualisieren dieser Vorlagen durch Computer und Dienste finden Sie unter [Aktualisieren von Vorlagen für Benutzer und Dienste](refresh-templates.md).
 
-9. Falls Sie **Vordefinierte Vorlage auswählen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, klicken Sie im Dropdownmenü auf die [Vorlage](../deploy-use/configure-policy-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen. Archivierte Vorlagen oder Vorlagen, die bereits für eine andere Bezeichnung ausgewählt wurden, werden nicht angezeigt.
+8. Falls Sie **Vordefinierte Vorlage auswählen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, klicken Sie im Dropdownmenü auf die [Vorlage](../deploy-use/configure-policy-templates.md), die verwendet werden soll, um Dokumente und E-Mails mit dieser Bezeichnung zu schützen. Archivierte Vorlagen oder Vorlagen, die bereits für eine andere Bezeichnung ausgewählt wurden, werden nicht angezeigt.
     
     Bei Auswahl einer **Abteilungsvorlage** oder wenn Sie [Onboardingsteuerelemente](../deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben:
     
@@ -140,7 +145,7 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
         
         Beachten Sie, dass immer alle veröffentlichten Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Vorlagen, die Sie auswählen können, sind nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
 
-10. Wenn Sie **HYOK (AD RMS)** ausgewählt haben, klicken Sie entweder auf **Set AD RMS templates details** (Festlegen von Vorlagendetails für AD RMS) oder auf **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**. Geben Sie dann die Lizenzierungs-URL Ihres AD RMS-Clusters an.
+9. Wenn Sie **HYOK (AD RMS)** ausgewählt haben, klicken Sie entweder auf **Set AD RMS templates details** (Festlegen von Vorlagendetails für AD RMS) oder auf **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**. Geben Sie dann die Lizenzierungs-URL Ihres AD RMS-Clusters an.
     
     Anweisungen zum Angeben einer Vorlagen-GUID oder Ihrer Lizenzierungs-URL finden Sie unter [Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -148,13 +153,13 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option „Nicht weiterleiten“.
     
-    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer wählen: Die Bezeichnung wird in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen. Beachten Sie, dass diese Option für den Datei-Explorer immer den Azure RMS-Schutz anstatt des HYOK-Schutzes (AD RMS) verwendet, sofern Sie nicht über die Vorschauversion des Clients verfügen.
+    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer wählen: Die Bezeichnung wird in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
 
-11. Klicken Sie auf **OK**, um das Blatt **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** auf dem Blatt **Bezeichnung** anzuzeigen.
+10. Klicken Sie auf **OK**, um das Blatt **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** auf dem Blatt **Bezeichnung** anzuzeigen.
 
-12. Klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+11. Klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
-13. Verwenden Sie auf dem Blatt **Azure Information Protection** die Spalte **PROTECTION** (Schutz), um zu bestätigen, dass Ihre Bezeichnung nun die gewünschten Schutzeinstellungen darstellt:
+12. Verwenden Sie auf dem Blatt **Azure Information Protection** die Spalte **PROTECTION** (Schutz), um zu bestätigen, dass Ihre Bezeichnung nun die gewünschten Schutzeinstellungen darstellt:
     
     - Ein Häkchen, falls Sie den Schutz konfiguriert haben. 
     
@@ -162,7 +167,8 @@ Exchange muss für Information Rights Management (IRM) nicht konfiguriert sein, 
     
     - Ein leeres Feld, wenn der Schutz nicht festgelegt ist. 
 
-13. Klicken Sie auf **Publish** (Veröffentlichen), um Ihre Änderungen für Benutzer verfügbar zu machen.
+Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen automatisch Benutzern und Diensten zur Verfügung gestellt. Es gibt keine gesonderte Veröffentlichungsoption mehr.
+
 
 ## <a name="example-configurations"></a>Beispielkonfigurationen
 
@@ -184,7 +190,7 @@ Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  S
 
 4. Wenn die Option ausgewählt ist, deaktivieren Sie die folgende Option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions** (Vom Benutzer in Word, Excel, PowerPoint und dem Datei-Explorer benutzerdefinierte Berechtigungen verlangen).
 
-5. Klicken Sie auf der Seite **Schutz** auf **OK**, und veröffentlichen Sie anschließend Ihre Änderungen.
+5. Klicken Sie auf dem Blatt **Schutz** auf **OK**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Beispiel 2: Bezeichnung, die schreibgeschützte Berechtigungen für alle Benutzer in einer anderen Organisation einschränkt und sofortiges Sperren unterstützt
@@ -205,7 +211,7 @@ Diese Bezeichnung ist für E-Mails nicht geeignet.
 
 6. Wählen Sie erneut auf der Seite **Schutz** für die Einstellung **Allow offline access setting** (Offlinezugang zulassen) **Nie** aus.
 
-7. Klicken Sie auf **OK** auf der Seite **Schutz**, und veröffentlichen Sie anschließend Ihre Änderungen.
+7. Klicken Sie auf dem Blatt **Schutz** auf **OK**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label"></a>Beispiel 3: Hinzufügen von externen Benutzern zu einer bestehenden Bezeichnung
@@ -224,7 +230,7 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 
 6. Wiederholen Sie die Schritte 4 und 5 für jeden Benutzer (oder jede Gruppe), den (oder die) Sie dieser Bezeichnung hinzufügen wollen. Klicken Sie dann auf **OK**.
 
-7. Klicken Sie auf der Seite **Schutz** auf **OK**, und veröffentlichen Sie anschließend Ihre Änderungen.
+7. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Beispiel 4: Bezeichnung für geschützte E-Mails, die weniger einschränkende Berechtigungen als „Nicht weiterleiten“ unterstützt
 
@@ -253,9 +259,9 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
 
 5. Wiederholen Sie die Schritte 3 und 4, um zusätzliche Benutzer anzugeben, die über andere Berechtigungen verfügen sollen.
 
-6. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**. 
+6. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**.
 
-7. Klicken Sie auf der Seite **Schutz** auf **OK**, und veröffentlichen Sie anschließend Ihre Änderungen.
+7. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

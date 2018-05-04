@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -28,19 +28,22 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter Clientkonfigurationseinstellungen im Portal
 
+>[!NOTE]
+> Diese Anweisungen geben die neuesten Aktualisierungen für das Azure-Portal wieder. Wenn Sie keine Menüoption **KLASSIFIZIERUNGEN** sehen, aber noch die Option **Veröffentlichen**, werden die Navigationsanweisungen nicht genau mit dem übereinstimmen, was Sie sehen. In diesem Fall sollten Sie in Erwägung ziehen, in einigen Tagen zu dieser Prozedur zurückzukehren, wenn Ihr Mandant für die neuesten Änderungen aktualisiert wurde.
+
 1. Melden Sie sich ggf. in einem neuen Browserfenster beim [Azure-Portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal) an, und navigieren Sie zum Blatt **Azure Information Protection**.
 
-2. Wählen Sie auf dem ersten Azure Information Protection-Blatt **Bereichsbezogene Richtlinien** aus.
+2. Über die Menüoptionen **KLASSIFIZIERUNGEN** > **Bezeichnungen**: Wählen Sie **Richtlinien**.
 
-3. Rufen Sie auf dem Blatt **Azure Information Protection – Bereichsbezogene Richtlinien** das Kontextmenü (**...** ) neben der Richtlinie mit den erweiterten Einstellungen auf. Wählen Sie dann **Erweiterte Einstellungen** aus.
+3. Auf dem Blatt **Azure Information Protection – Richtlinien** wählen Sie das Kontextmenü (**...**) neben der Richtlinie aus, um die erweiterten Einstellungen einzuschließen. Wählen Sie dann **Erweiterte Einstellungen** aus.
     
     Sie können erweiterte Einstellungen für die globale Richtlinie sowie für bereichsbezogene Richtlinien konfigurieren.
 
 4. Geben Sie auf dem Blatt **Erweiterte Einstellungen** den Namen und Wert der erweiterten Einstellung ein, und klicken Sie dann auf **Speichern und schließen**.
 
-5. Klicken Sie auf **Veröffentlichen**, und stellen Sie sicher, dass Benutzer, für die diese Richtlinie gilt, alle Office-Anwendungen neu starten, die geöffnet waren.
+5. Stellen Sie sicher, dass Benutzer, für die diese Richtlinie gilt, alle Office-Anwendungen neu starten, die geöffnet waren.
 
-6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten, gehen Sie so vor: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü (**...** ) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie dann auf **Speichern und schließen**, und veröffentlichen Sie die geänderte Richtlinie erneut.
+6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten, gehen Sie so vor: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü (**...** ) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie anschließend auf **Speichern und Schließen**.
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Verhindern von Anmeldeaufforderungen für Computer, die nur AD RMS verwenden
 
@@ -151,8 +154,6 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: **TRUE**, um die benutzerdefinierte Berechtigungsoption verfügbar zu machen; **FALSE**, um diese Option abzublenden.
 
-> [!IMPORTANT]
-> Sofern Sie nicht die aktuelle Vorschauversion des Clients verwenden, legen Sie diese Option nicht auf **FALSE** fest, wenn Sie über Bezeichnungen verfügen, für die benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Wenn Sie dies tun, wenn die Bezeichnung angewendet ist, werden Benutzer nicht dazu aufgefordert, die benutzerdefinierten Berechtigungen zu konfigurieren. Das führt dazu, dass das Dokument bezeichnet ist, aber nicht über den von Ihnen beabsichtigten Schutz verfügt.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
@@ -171,9 +172,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Aktivieren der empfohlenen Klassifizierung in Outlook
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
-
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
 
 Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, werden Benutzer dazu aufgefordert, die empfohlene Bezeichnung in Word, Excel und PowerPoint anzunehmen oder abzulehnen. Diese Einstellung erweitert diese Bezeichnungsempfehlung, sodass sie auch in Outlook angezeigt wird.
 
@@ -185,8 +184,6 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
-
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem erfordert sie die Vorschauversion des Clients.
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
@@ -202,19 +199,45 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
 
-## <a name="turn-off-classification-running-continuously-in-the-background"></a>Deaktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung
-
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem erfordert sie die Vorschauversion des Clients.
+## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>„Not now“ („Nicht jetzt“) für Dokumente bei Verwendung der obligatorischen Bezeichnung entfernen
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
-Wenn Sie diese Einstellung konfigurieren, überprüft die aktuelle Vorschauversion des Azure Information Protection-Clients nicht regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungsregeln. Stattdessen werden automatische und empfohlene Bezeichnungen [auf dieselbe Art und Weise angewendet, wie in der allgemein verfügbaren Version des Azure Information Protection-Clients](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). Diese Einstellung kann aus Leistungsgründen erforderlich sein.
+Wenn Sie die [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md) **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) verwenden, werden die Benutzer beim ersten Speichern eines Offices-Dokuments und beim Senden einer E-Mail dazu aufgefordert, eine Bezeichnung zu wählen. Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
+
+Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jetzt) entfernt, sodass die Benutzer eine Bezeichnung wählen müssen, wenn das Dokument zum ersten Mal gespeichert wird.
+
+Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
+
+- Schlüssel: **PostponeMandatoryBeforeSave**
+
+- Wert: **FALSE**
+
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung
+
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+
+Wenn Sie diese Einstellung konfigurieren, ändert sich das [Standardverhalten](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied), wie der Azure Information Protection-Client automatische und empfohlene Bezeichnungen anwendet, wie folgt:
+
+- Die automatische Klassifizierung ist für Word, Excel, PowerPoint und Outlook geeignet. Die automatische Klassifizierung wird für Dokumente ständig im Hintergrund ausgeführt. Die automatische Klassifizierung in Outlook wird beim Senden von E-Mails ausgeführt. 
+    
+    Sie können die automatische Klassifizierung nicht für Dokumente verwenden, die zuvor bereits manuell oder automatisch mit einer höheren Klassifizierung benannt wurden. Eine Ausnahme gilt nur, wenn Sie den Parameter OverrideLabel für die Azure Information Protection-Überprüfung aktivieren.
+
+- Die empfohlene Klassifizierung wird in Word, Excel und PowerPoint angewendet. Die empfohlene Klassifizierung wird für diese Dokumente ständig im Hintergrund ausgeführt. Sie können für Outlook keine empfohlene Klassifizierung verwenden.
+    
+    Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
+
+Wenn der Azure Information Protection-Client Dokumente im Hintergrund periodisch auf die von Ihnen festgelegten Bedingungsregeln überprüft, aktiviert dieses Verhalten die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden. 
+
+Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird.
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
 - Schlüssel: **RunPolicyInBackground**
 
-- Wert: **FALSE**
+- Wert: **TRUE**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
@@ -296,8 +319,6 @@ Erweiterte Clienteinstellung:
 
 
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Hinzufügen einer Bezeichnung zu einem Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft
-
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
 
 > [!NOTE]
 > Wenn Sie diese Konfiguration und die Konfiguration aus dem vorherigen Abschnitt verwenden, um eine Migration von einer anderen Lösung zu migrieren, erhält die Einstellung der Bezeichnungsmigration Vorrang. 

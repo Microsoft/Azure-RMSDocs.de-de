@@ -4,7 +4,7 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 297e530406c33ca50d1e8287509e4c3a6f3c7a80
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -158,7 +158,9 @@ Beachten Sie, dass der Rights Management-Besitzer vom Dateisystembesitzer von Wi
 
 Wenn ein Benutzer ein Dokument oder eine E-Mail öffnet, die von Azure Rights Management geschützt wird, erhält der Benutzer eine Rights Management-Nutzungslizenz für diesen Inhalt. Diese Nutzungslizenz ist ein Zertifikat, das die Nutzungsrechte des Benutzers für das Dokument oder die E-Mail-Nachricht und den Verschlüsselungsschlüssel enthält, der zum Verschlüsseln des Inhalts verwendet wurde. Die Nutzungslizenz enthält auch ein Ablaufdatum, falls dies festgelegt wurde, sowie Angaben darüber, wie lange diese gültig ist.
 
-Für die Dauer der Nutzungslizenz wird der Benutzer nicht erneut authentifiziert oder autorisiert. Dadurch kann der Benutzer das geschützte Dokument oder die geschützte E-Mail weiterhin ohne Internetverbindung öffnen. Wenn die Gültigkeitsdauer der Nutzungslizenz abläuft, muss der Benutzer beim nächsten Zugriff auf das geschützte Dokument oder die geschützte E-Mail erneut authentifiziert und autorisiert werden. 
+Ein Benutzer muss zum Öffnen des Inhalts zusätzlich zu einer gültigen Nutzungslizenz über ein Rechtekontozertifikat (RAC) verfügen. Dieses Zertifikat wird erteilt, wenn die [Benutzerumgebung](../understand-explore/how-does-it-work.md#initializing-the-user-environment) initialisiert wird, und es wird anschließend alle 31 Tage erneuert.
+
+Für die Dauer der Nutzungslizenz wird der Benutzer für den Inhalt nicht erneut authentifiziert oder autorisiert. Dadurch kann der Benutzer das geschützte Dokument oder die geschützte E-Mail weiterhin ohne Internetverbindung öffnen. Wenn die Gültigkeitsdauer der Nutzungslizenz abläuft, muss der Benutzer beim nächsten Zugriff auf das geschützte Dokument oder die geschützte E-Mail erneut authentifiziert und autorisiert werden. 
 
 Wenn Dokumente und E-Mail-Nachrichten durch eine Bezeichnung oder eine Vorlage geschützt sind, die die Schutzeinstellungen definieren, können Sie diese Einstellungen in Ihrer Bezeichnung oder Vorlage ändern, ohne den Inhalt erneut schützen zu müssen. Wenn der Benutzer bereits auf den Inhalt zugegriffen hat, werden die Änderungen wirksam, nachdem dessen Nutzungslizenz abgelaufen ist. Wenn der Benutzer jedoch benutzerdefinierte Berechtigungen anwendet (auch als Ad-hoc-Richtlinie für Rechte bekannt) und diese Berechtigungen geändert werden müssen, nachdem das Dokument oder die E-Mail geschützt wurden, muss der Inhalt erneut mit den neuen Berechtigungen geschützt werden. Benutzerdefinierte Berechtigungen für E-Mail-Nachrichten werden über die Option „Nicht weiterleiten“ implementiert.
 

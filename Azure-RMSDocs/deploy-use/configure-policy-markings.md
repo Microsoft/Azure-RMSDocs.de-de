@@ -4,21 +4,24 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c5b0c4c82fc35ab560b55c4884cf67fe126ede2b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0b8bef6acd02abb664b274bc04fe77eea06de356
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> In diesem Artikel werden die neusten Updates zum Azure-Portal beschrieben, mit deren Hilfe Sie unabhängig von der globalen oder einer bereichsbezogenen Richtlinie eine Bezeichnung erstellen können. Außerdem wurde eine Option zum Veröffentlichen von Richtlinien entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde – wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin zwar die Option **Veröffentlichen**, aber nicht die Menüoption **KLASSIFIZIERUNGEN** angezeigt wird – sollten Sie einige Tage warten und anschließend diese Anweisungen erneut ausführen.
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 
@@ -56,9 +59,7 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
-    
-    Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
+2. Navigieren Sie über die Menüoption **KLASSIFIZIERUNGEN** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection: Bezeichnungen), und wählen Sie dort die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie ändern möchten.
 
 3. Konfigurieren Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Set visual marking (such as header or footer)** (Visuelle Kennzeichnung [z. B. Kopf- oder Fußzeile] festlegen) die Einstellungen für die gewünschten visuellen Kennzeichnungen, und klicken Sie dann auf **Save** (Speichern):
     
@@ -67,8 +68,9 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
     - So konfigurieren Sie eine Fußzeile: Wählen Sie für **Documents with this label have a footer** (Dokumente mit dieser Bezeichnung weisen eine Fußzeile auf) die Option **On** (Ein), wenn eine Fußzeile enthalten sein soll, und **Off** (Aus), wenn die Dokumente nicht über eine Fußzeile verfügen sollen. Geben Sie bei Auswahl von **On** (Ein) den Text, die Größe, die [Schriftart](#setting-the-font-name), die [Farbe](#setting-the-font-color) und die Ausrichtung der Fußzeile an.
     
     - So konfigurieren Sie ein Wasserzeichen: Wählen Sie für **Documents with this label have a watermark** (Dokumente mit dieser Bezeichnung weisen ein Wasserzeichen auf) die Option **On** (Ein), wenn ein Wasserzeichen enthalten sein soll, und **Off** (Aus), wenn die Dokumente nicht über ein Wasserzeichen verfügen sollen. Geben Sie bei Auswahl von **On** (Ein) den Text, die Größe, die [Schriftart](#setting-the-font-name), die [Farbe](#setting-the-font-color) und die Ausrichtung des Wasserzeichens an.
+    
+Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
-4. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
 
 ## <a name="using-variables-in-the-text-string"></a>Verwenden von Variablen in der Textzeichenfolge
 
@@ -89,8 +91,6 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
-
-Diese Einstellung ist derzeit als Vorschauversion verfügbar und erfordert die Vorschauversion des Azure Information Protection-Clients.
 
 Die von Ihnen angegebenen optischen Kennzeichnungen werden standardmäßig auf Word, Excel, PowerPoint und Outlook angewendet. Sie können optische Kennzeichnungen jedoch pro Office-Anwendungstyp festlegen, wenn Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp mithilfe der Werte **Word**, **Excel**, **PowerPoint** bzw. **Outlook** angeben. Sie können diese Werte auch abkürzen. Dies ist erforderlich, wenn Sie mehrere Werte in derselben If.App-Anweisung angeben möchten.
 
@@ -122,11 +122,9 @@ Beispiele:
 
 ### <a name="setting-the-font-name"></a>Festlegen des Schriftartnamens
 
-Diese Einstellung ist derzeit als Vorschau verfügbar.
+Calibri ist die Standardschriftart für den Text in Kopfzeilen, Fußzeilen und Wasserzeichen. Wenn Sie einen alternativen Schriftartnamen angeben, stellen Sie sicher, dass diese Schriftart auf den Client-Geräten verfügbar ist, die die visuellen Kennzeichnungen anwenden. 
 
-Calibri ist die Standardschriftart für den Text in Kopfzeilen, Fußzeilen und Wasserzeichen. Wenn Sie einen alternativen Schriftartnamen angeben, stellen Sie sicher, dass diese Schriftart auf den Client-Geräten verfügbar ist, die die visuellen Kennzeichnungen anwenden. Andernfalls ist die Schriftart, die verwendet wird, nicht deterministisch. 
-
-Wenn Sie über die Vorschauversion des Azure Information Protection-Clients verfügen, und die angegebene Schriftart nicht verfügbar ist, greift der Client auf die Schriftart Calibri zurück.
+Wenn die angegebene Schriftart nicht verfügbar ist, verwendet der Client die Schriftart Calibri.
 
 ### <a name="setting-the-font-color"></a>Festlegen der Schriftartfarbe
 

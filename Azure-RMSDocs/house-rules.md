@@ -4,7 +4,7 @@ description: Umfang und Inhalt von Livefyre-Kommentaren und Randleisten für die
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 04/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b337324d31fa2e12c6cac2d93545498e4f778f4b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 647e68050ebfd5cdb74b495a7823e7eb3a6f9307
+ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Regeln für Kundenkommentare zur Azure Information Protection-Dokumentation
 
@@ -29,7 +29,9 @@ Bevor Sie Ihren Kommentar veröffentlichen, stellen Sie sicher, dass dieser them
  
 Veröffentlichen Sie in den folgenden Fällen keine Livefyre-Kommentare und -Anmerkungen:
  
-- **Fragen zum Abonnement für Ihre Organisation**. Beispielsweise die Frage, ob Ihre vorhandenen Abonnements ein Feature unterstützen, das Sie verwenden möchten, nachdem Sie sichergestellt haben, dass Sie die [Anforderungen für das Abonnement für Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection) erfüllen. Wenden Sie sich diesbezüglich an Ihren Microsoft-Kontomanager oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support).
+- **Fragen zum Abonnement für Ihre Organisation**. Beispielsweise die Frage, ob Ihre vorhandenen Abonnements ein Feature unterstützen, das Sie verwenden möchten, oder die, ob Benutzer besondere Lizenzen brauchen, und Sie sichergestellt haben, dass Sie die [Anforderungen für das Abonnement für Azure Information Protection](./get-started/requirements.md#subscription-for-azure-information-protection) erfüllen. Wenden Sie sich diesbezüglich an Ihren Microsoft-Kontomanager oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support).
+    
+    Hinweis: Wir sammeln derzeit Feedback zu den Abonnement- und Lizenzinformationen für Azure Information Protection. Sie können es über den folgenden Yammer-Beitrag an das entsprechende Team senden: https://www.yammer.com/askipteam/#/threads/show?threadId=1048644961 
 
 - **Technischer Support**. Der Support ist zuständig, wenn z.B. eine Funktion auch nach Prüfen sämtlicher Anforderungen und trotz Befolgen der Dokumentationsanweisungen fehlerhaft ist. Sie haben ebenfalls geprüft, dass Sie eine [unterstützte Version](./rms-client/client-version-release-history.md#servicing-information-and-timelines) des Azure Information Protection-Clients verwenden. Wenden Sie sich in derartigen Fällen an die üblichen Supportkanäle oder an den [Microsoft-Support](./get-started/information-support.md#to-contact-microsoft-support). Tauschen Sie sich alternativ mit der Community auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection aus.
 

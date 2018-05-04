@@ -4,7 +4,7 @@ description: Phase 3 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 04/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e5e1f0fa043a0a15ef34c9e4d5690e974cf6bddd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 62f854264f48b51e6177c033d95dabaf75e2dc5d
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -72,17 +72,17 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
     ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
-    b. Navigieren Sie zu **Default Web Site** > **_wmcs** > **licensing** > **publish.asmx** (Standardwebsite > _wmcs > Lizenzierung > publish.asmx).
+    b. Navigieren Sie zur **Standardwebsite** > **_wmcs** > **licensing** > **licensing.asmx**
 
-    c. Klicken Sie mit der rechten Maustaste auf **publish.asmx** und dann auf **Eigenschaften** > **Bearbeiten**.
+    c. Klicken Sie mit der rechten Maustaste auf **licensing.asmx** > **Eigenschaften** > **Bearbeiten**
 
-    d. Klicken Sie im Dialogfeld **Permissions for publish.asmx** (Berechtigungen für ‚publish.asmx‘) entweder auf **Benutzer** oder auf **Hinzufügen**. Über „Benutzer“ können Sie die Umleitung für alle Benutzer festlegen, und über „Hinzufügen“ können Sie eine Gruppe angeben, die die Benutzer enthält, für die die Umleitung gelten soll.
+    d. Im Dialogfeld **Berechtigungen für licensing.asmx** wählen Sie entweder **Benutzer**, wenn Sie die Umleitung für alle Benutzer festlegen möchten, oder Sie klicken auf **Hinzufügen**, und geben dann eine Gruppe mit den Benutzern an, die Sie umleiten möchten.
     
     Auch wenn alle Ihre Benutzer Office 2016 verwenden, können Sie zunächst nur einen Teil der Benutzer festlegen, um die Migration phasenweise durchzuführen.
     
     e. Wählen Sie für die ausgewählte Gruppe **Verweigern** für die Berechtigungen **Lesen & Ausführen** und **Lesen** aus, und klicken Sie anschließend zweimal auf **OK**.
 
-    f. Versuchen Sie, eine Verbindung mit der Datei „publish.asmx“ direkt über den Browser herzustellen, um zu überprüfen, ob die Konfiguration erwartungsgemäß funktioniert. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 2016 ausführt, nach dem SRV-Eintrag sucht:
+    f. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 2016 ausführt, nach dem SRV-Eintrag sucht:
     
     **Fehlermeldung 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists)** (Mit den bereitgestellten Anmeldeinformationen haben Sie keine Berechtigung zum Anzeigen dieses Verzeichnisses oder dieser Seite (Zugriff aufgrund von Zugriffssteuerungslisten verweigert)).
 
@@ -132,7 +132,7 @@ Wenn Sie nicht alle Ihre Windows-Clients gleichzeitig migrieren können, führen
     > [!IMPORTANT]
     > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
     > 
-    > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Zum Beispiel: https:// rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:**443**. 
+    > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Beispiel: https://rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:**443**. 
     
     Wenn Sie Ihre Azure Rights Management-Dienst-URL für *&lt;IhreMandantenURL&gt;* abrufen müssen, erhalten Sie die nötigen Informationen darüber unter [To identify your Azure Rights Management service URL (So identifizieren Sie Ihre Azure Rights Management-Dienst-URL)](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 

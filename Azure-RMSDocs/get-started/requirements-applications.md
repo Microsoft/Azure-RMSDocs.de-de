@@ -4,7 +4,7 @@ description: Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Right
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2018
+ms.date: 04/23/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27187bce4247b2807b75ddc75839daf81a45ed7a
-ms.sourcegitcommit: aca094874febf59eddf84b0da325f4f1f61404d1
+ms.openlocfilehash: b304f65d70361b3fdb4dbf93291f408be93d363f
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -45,8 +45,8 @@ Informationen über die Tabellenspalten:
 |**Gerätebetriebssystem**|Word, Excel, PowerPoint|Geschützte PDF|E-Mail|Weitere Dateitypen|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office Online (Anzeige von geschützten Dokumenten) [[1]](#footnote-1)<br /><br />Webbrowser [[2]](#footnote-2)|Azure Information Protection-Client für Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />RMS-Freigabeanwendung|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Webbrowser [[3]](#footnote-3)<br /><br />Windows Mail[[4]](#footnote-4) |Azure Information Protection-Client für Windows: Text, Bilder, PFILE<br /><br />RMS-Freigabeanwendung für Windows: Text, Bilder, PFILE<br /><br />SealPath RMS-Plug-In für AutoCAD: .dwg|
-|**iOS**|Office Mobile (Anzeige und Bearbeitung von geschützten Dokumenten)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS-Dokumentation<br /><br />Webbrowser [[2]](#footnote-2)|Azure Information Protection-App (Anzeige von geschützten Dokumenten)<br /><br /> Foxit Reader<br /><br />TITUS-Dokumentation|Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />Citrix-WorxMail <br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für iPad und iPhone[[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)<br /><br />TITUS-Dokumentation: PFILE|
-|**Android**|GigaTrust App für Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (Anzeige und Bearbeitung von geschützten Dokumenten) <br /><br />Webbrowser [[2]](#footnote-2)|Azure Information Protection-App (Anzeige von geschützten Dokumenten) <br /><br />GigaTrust App für Android<br /><br />Foxit Reader|9Folders[[4]](#footnote-4)<br /><br />Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />GigaTrust App für Android[[4]](#footnote-4)<br /><br />Citrix-WorxMail <br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für Android [[4]](#footnote-4)<br /><br />Samsung E-Mail (S3 und neuer) [[4]](#footnote-4)<br /><br />TITUS-Klassifizierung für mobile Geräte <br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)|
+|**iOS**|Office Mobile (Anzeige und Bearbeitung von geschützten Dokumenten)<br /><br />Office Online [[1]](#footnote-1)<br /><br />GigaTrust<br /><br /> TITUS-Dokumentation<br /><br />Webbrowser [[2]](#footnote-2)|Azure Information Protection-App (Anzeige von geschützten Dokumenten)<br /><br /> Foxit Reader<br /><br />TITUS-Dokumentation|Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work<br /><br />Citrix-WorxMail <br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für iPad und iPhone[[4]](#footnote-4)<br /><br />TITUS Mail <br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)<br /><br />TITUS-Dokumentation: PFILE|
+|**Android**|GigaTrust App für Android<br /><br />Office Online [[1]](#footnote-1)<br /><br />Office Mobile (Anzeige und Bearbeitung von geschützten Dokumenten) <br /><br />Webbrowser [[2]](#footnote-2)|Azure Information Protection-App (Anzeige von geschützten Dokumenten) <br /><br />GigaTrust App für Android<br /><br />Foxit Reader|9Folders[[4]](#footnote-4)<br /><br />Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work <br /><br />GigaTrust App für Android[[4]](#footnote-4)<br /><br />Citrix-WorxMail <br /><br />NitroDesk[[4]](#footnote-4)<br /><br />Outlook für Android [[4]](#footnote-4)<br /><br />Samsung E-Mail (S3 und neuer) [[4]](#footnote-4)<br /><br />TITUS-Klassifizierung für mobile Geräte <br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)|
 |**macOS**|Office 2011 (nur AD RMS)<br /><br />Office 2016 für Mac<br /><br />Office Online [[1]](#footnote-1)<br /><br />Webbrowser [[2]](#footnote-2)|Foxit Reader<br /><br />RMS-Freigabe-App (Anzeige von geschützten Dokumenten)|Outlook 2011 (nur AD RMS)<br /><br />Outlook 2016 für Mac<br /><br />Outlook für Mac <br /><br />Webbrowser [[3]](#footnote-3)|RMS-Freigabe-App (Anzeige von geschützten Texten, Abbildungen und generisch geschützten Dateien)|
 |**Windows 10 Mobile**|Office Mobile-Apps (Anzeige von geschützter Dokumentation mit Azure RMS) <br /><br />Webbrowser [[2]](#footnote-2)|Nicht unterstützt|Citrix-WorxMail <br /><br />Outlook Mail (Ansicht von geschützten E-Mails) <br /><br />Webbrowser [[3]](#footnote-3)|Nicht unterstützt|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[1]](#footnote-1)<br /><br />Webbrowser [[2]](#footnote-2)|Nicht unterstützt|Outlook 2013 RT<br /><br />E-Mail-App für Windows<br /><br />Webbrowser [[3]](#footnote-3)<br /><br />Windows Mail[[4]](#footnote-4)|Siemens JT2Go: JT-Dateien|

@@ -4,21 +4,24 @@ description: Sie können die Unterstützung für verschiedene Sprachen für die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: b3341237d494766242ef790798ad1f97404919e9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 09bf1d5bd1e9435fe0b665243deeea8873bb368e
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> In diesem Artikel werden die neusten Updates zum Azure-Portal beschrieben, mit deren Hilfe Sie unabhängig von der globalen oder einer bereichsbezogenen Richtlinie eine Bezeichnung erstellen können. Außerdem wurde eine Option zum Veröffentlichen von Richtlinien entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde – wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin zwar die Option **Veröffentlichen**, aber nicht die Menüoption **KLASSIFIZIERUNGEN** angezeigt wird – sollten Sie einige Tage warten und anschließend diese Anweisungen erneut ausführen.
 
 Obwohl die Standardbezeichnungen für Azure Information Protection mehrere Sprachen unterstützen, müssen Sie eine Unterstützung für die Bezeichnungsnamen und -beschreibungen konfigurieren, die Sie angeben. Für diese Konfiguration müssen Sie folgende Aktionen ausführen:
 
@@ -44,11 +47,9 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Klicken Sie in der Menüauswahl **Verwalten** auf **Sprachen**.
+2. Navigieren Sie über die Menüoption **VERWALTEN** > **Sprachen** zum Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen), und klicken Sie auf **Add a new language for translation** (Neue Sprache für Übersetzung hinzufügen). Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
 
-3. Klicken Sie auf dem Blatt**Azure Information Protection - Languages** (Azure Information Protection: Sprachen) auf **Neue Sprache für Übersetzung hinzufügen**. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
-
-4. Ihre ausgewählten Sprachen werden nun auf dem Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) angezeigt:
+3. Ihre ausgewählten Sprachen werden nun auf dem Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) angezeigt:
     
     - Wählen Sie zum Hinzufügen einer anderen Sprache **Neue Sprache für die Übersetzung hinzufügen** aus, und wiederholen Sie die vorherigen Schritte. 
         
@@ -57,19 +58,19 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
         
     - Wenn Sie Ihre Entscheidung bezüglich einer hinzugefügten Sprache ändern möchten, wählen Sie den jeweiligen Eintrag aus der Liste aus, und klicken Sie dann auf **Entfernen**.
 
-5. Wenn alle Sprachen, die unterstützt werden sollen, aufgeführt sind, aktivieren Sie das Kontrollkästchen **SPRACHENNAME**, um alle Einträge (oder alternativ einzelne Einträge) auszuwählen. Klicken Sie anschließend auf **Exportieren**, um eine lokale Kopie der vorhandenen Bezeichnungsnamen und Beschreibungen in einer Datei zu speichern. 
+4. Wenn alle Sprachen, die unterstützt werden sollen, aufgeführt sind, aktivieren Sie das Kontrollkästchen **SPRACHENNAME**, um alle Einträge (oder alternativ einzelne Einträge) auszuwählen. Klicken Sie anschließend auf **Exportieren**, um eine lokale Kopie der vorhandenen Bezeichnungsnamen und Beschreibungen in einer Datei zu speichern. 
     
     Die heruntergeladene Datei heißt **exported localization.zip** und wird im lokalen Ordner „Downloads“ gespeichert. Sie kann auch durch Auswahl dieses Dateinamens in der Statusleiste des Azure-Portals aufgerufen werden.
 
-6. Extrahieren Sie die Dateien aus **exported localization.zip**, sodass für jede Sprache, die Sie für den Download ausgewählt haben, XML-Dateien verfügbar sind. 
+5. Extrahieren Sie die Dateien aus **exported localization.zip**, sodass für jede Sprache, die Sie für den Download ausgewählt haben, XML-Dateien verfügbar sind. 
 
-7. So bearbeiten Sie jede XML-Datei: Geben Sie für jede Zeichenfolge in `<LocalizedText>`-Tags die gewünschten Übersetzungen für jede ausgewählte Sprache an. 
+6. So bearbeiten Sie jede XML-Datei: Geben Sie für jede Zeichenfolge in `<LocalizedText>`-Tags die gewünschten Übersetzungen für jede ausgewählte Sprache an. 
 
-8. Wenn Sie alle XML-Dateien bearbeitet haben, erstellen Sie einen neuen ZIP-komprimierten Ordner, der diese Dateien enthält. Der komprimierte Ordner kann mit einem beliebigen Namen versehen werden, muss jedoch die Erweiterung ZIP aufweisen.
+7. Wenn Sie alle XML-Dateien bearbeitet haben, erstellen Sie einen neuen ZIP-komprimierten Ordner, der diese Dateien enthält. Der komprimierte Ordner kann mit einem beliebigen Namen versehen werden, muss jedoch die Erweiterung ZIP aufweisen.
 
-9. Kehren Sie zum Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) zurück, und klicken Sie auf **Importieren**. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
+8. Kehren Sie zum Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) zurück, und klicken Sie auf **Importieren**. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
     
-    Wenn der Import abgeschlossen ist, werden die lokalisierten Namen und Beschreibungen für Benutzer nach der Veröffentlichung der Azure Information Protection-Richtlinie heruntergeladen. Auf dem Blatt **Globale Richtlinie** oder **Bereichsbezogene Richtlinien** können Sie auf **Veröffentlichen** klicken.
+    Nachdem der Import abgeschlossen wurde, werden die lokalisierten Namen und Beschreibungen im Bereich „Benutzer“ heruntergeladen.
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client
 
@@ -100,7 +101,7 @@ In folgenden Szenarios werden keine Namen für lokalisierte Bezeichnungen (und u
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
+Um weitere Informationen zur Konfiguration der verfügbaren Optionen für eine Bezeichnung sowie zu weiteren Einstellungen für Ihre Azure Information Protection-Richtlinien zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

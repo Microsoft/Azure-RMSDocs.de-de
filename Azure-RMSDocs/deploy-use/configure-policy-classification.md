@@ -4,21 +4,24 @@ description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Si
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/02/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f7242c05d830ecd1b702e4e9bb049e72740843f3
-ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
+ms.openlocfilehash: 1019b7d7ea32b26a24aa2417a77345ff87e52e4b
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Dieser Artikel enthält die neuesten Updates für das Azure-Portal, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde (wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin die Option **Veröffentlichen** angezeigt wird und die Menüoption **Klassifizierungen** nicht angezeigt wird), sollten Sie einige Tage warten und anschließend zu diesen Anweisungen zurückkehren.
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 
@@ -30,7 +33,7 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 ![Azure Information Protection – Erkennung und Empfehlung](../media/info-protect-recommend-calloutsv2.png)
 
-In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt.
+In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt. 
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.
@@ -38,8 +41,6 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
 >Wenn eine Bezeichnung für die automatische Klassifizierung und benutzerdefinierte Berechtigungen konfiguriert ist, wird der Inhalt für die Bedingungen geprüft, und die benutzerdefinierte Berechtigung wird nicht angewendet. Sie können empfohlene Klassifizierungen und benutzerdefinierte Berechtigungen verwenden.
 
 ## <a name="how-automatic-or-recommended-labels-are-applied"></a>Anwendung von automatischen oder empfohlenen Bezeichnungen
-
-**Für die allgemein verfügbare Version des Azure Information Protection-Clients:**
 
 - Die automatische Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint sowie beim Senden von E-Mails in Outlook. 
     
@@ -49,28 +50,9 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
     
     Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
 
-
-**Für die aktuelle Vorschauversion des Azure Information Protection-Clients:**
-
-- Die automatische Klassifizierung ist für Word, Excel, PowerPoint und Outlook geeignet. Die automatische Klassifizierung wird für Dokumente [ständig im Hintergrund](#more-information-about-running-continuously) ausgeführt. Die automatische Klassifizierung in Outlook wird beim Senden von E-Mails ausgeführt. 
-    
-    Sie können die automatische Klassifizierung nicht für Dokumente verwenden, die zuvor bereits manuell oder automatisch mit einer höheren Klassifizierung benannt wurden. Eine Ausnahme gilt nur, wenn Sie den Parameter OverrideLabel für die Azure Information Protection-Überprüfung aktivieren.
-
-- Die empfohlene Klassifizierung wird in Word, Excel und PowerPoint angewendet. Die empfohlene Klassifizierung wird für diese Dokumente [ständig im Hintergrund](#more-information-about-running-continuously) ausgeführt. Sie können für Outlook keine empfohlene Klassifizierung verwenden.
-    
-    Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
-
-#### <a name="more-information-about-running-continuously"></a>Weitere Informationen zum dauerhaften Ausführen
-
-Standardmäßig überprüft die aktuelle Vorschauversion des Azure Information Protection-Clients regelmäßig Dokumente auf die von Ihnen angegebenen Bedingungsregeln. Dieses Verhalten aktiviert die automatische und empfohlene Klassifizierung und den Schutz für Dokumente, die in SharePoint Online gespeichert sind. Große Dateien werden schneller gespeichert, da die Bedingungsregeln bereits ausgeführt wurden. 
-
-Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, ausgeführt. Stattdessen werden sie regelmäßig als Hintergrundaufgabe ausgeführt, wenn das Dokument geändert wird.
-
-Sie können dieses Verhalten anpassen, sodass der Azure Information Protection-Client automatische und empfohlene Bezeichnungen auf dieselbe Art und Weise anwendet wie bei der allgemein verfügbaren Version des Clients. Diese Konfiguration erfordert eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#turn-off-classification-running-continuously-in-the-background).
+Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Client Dokumente regelmäßig auf die von Ihnen angegebenen Bedingungsregeln überprüft. Für diese Konfiguration ist eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) erforderlich, die derzeit als Vorschau verfügbar ist.
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten
-
-Für die allgemein verfügbare Version des Azure Information Protection-Clients und die aktuelle Vorschauversion des Clients:
 
 1. Die Bezeichnungen werden zur Auswertung basierend auf der jeweiligen Position sortiert, die Sie in der Richtlinie angeben: Die an erster Stelle positionierte Bezeichnung steht an unterster Stelle (geringste Vertraulichkeitsstufe), die an letzter Stelle positionierte Bezeichnung steht an höchster Stelle (höchste Vertraulichkeitsstufe).
 
@@ -85,15 +67,11 @@ Für die allgemein verfügbare Version des Azure Information Protection-Clients 
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wenn die zu konfigurierende Bezeichnung für alle Benutzer gilt, bleiben Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien).
-    
-    Wenn sich die Bezeichnung, die Sie konfigurieren möchten, in einer [bereichsbezogenen Richtlinie](configure-policy-scope.md) befindet, sodass sie nur für ausgewählte Benutzer zutrifft, klicken Sie in der Menüauswahl **RICHTLINIEN** auf **Bereichsbezogene Richtlinien**. Wählen Sie dann Ihre bereichsbezogene Richtlinie auf dem Blatt **Azure Information Protection - Scoped policies** (Azure Information Protection – Bereichsbezogene Richtlinien).
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie konfigurieren möchten.
 
-3. Wählen Sie auf dem Blatt **Azure Information Protection - Global policy** (Azure Information Protection – Globale Richtlinien) oder auf dem Blatt **Richtlinie\<name>** die zu konfigurierende Bezeichnung. 
+3. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
 
-4. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
-
-5. Wählen Sie auf dem Blatt **Bedingung** die Option **Informationstypen** aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Benutzerdefiniert**, um eine eigene Bedingung anzugeben:
+4. Wählen Sie auf dem Blatt **Bedingung** die Option **Informationstypen** aus, wenn Sie eine vordefinierte Bedingung verwenden möchten, oder **Benutzerdefiniert**, um eine eigene Bedingung anzugeben:
     - Für **Informationstypen**: Wählen Sie eine der verfügbaren Bedingungen aus der Liste aus, und legen Sie dann die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
         Die Informationstypen verwenden die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP). Sie können aus vielen häufig verwendeten vertraulichen Informationstypen wählen. Einige davon sind spezifisch für verschiedene Regionen. Weitere Informationen finden Sie in der Office-Dokumentation unter [What the sensitive information types look for (Wonach die vertraulichen Informationstypen suchen)](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b).
@@ -106,17 +84,17 @@ Für die allgemein verfügbare Version des Azure Information Protection-Clients 
         
         Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Weitere Informationen finden Sie in der Office-Dokumentation unter [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) (Definieren von Matches, die auf regulären Ausdrücken basieren). Darüber hinaus kann es hilfreich sein, die Programmbibliothek [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost als Referenz zu verwenden.
         
-6. Entscheiden Sie, ob Sie die Werte unter **Mindestanzahl an Vorkommen** und **Count occurrence with unique value only** (Nur Vorkommen mit eindeutigem Wert zählen) ändern müssen, und klicken Sie dann auf **Speichern**. 
+5. Entscheiden Sie, ob Sie die Werte unter **Mindestanzahl an Vorkommen** und **Count occurrence with unique value only** (Nur Vorkommen mit eindeutigem Wert zählen) ändern müssen, und klicken Sie dann auf **Speichern**. 
     
     Beispiel für die Optionen zu Vorkommen: Sie wählen den Informationstyp für die US-Sozialversicherungsnummer aus und legen für die Mindestanzahl von Vorkommen den Wert „2“ fest. Sie verfügen über ein Dokument, in dem dieselbe Sozialversicherungsnummer zweimal aufgeführt wird: Wenn Sie für **Count occurrences with unique value only** (Nur Vorkommen mit eindeutigem Wert zählen) die Einstellung **Ein** wählen, wird die Bedingung nicht erfüllt. Wenn Sie diese Option auf **Aus** festlegen, wird die Bedingung erfüllt.
 
-7. Konfigurieren Sie auf dem Blatt **Bezeichnung** die folgenden Einstellungen, und klicken Sie dann auf **Speichern**:
+6. Konfigurieren Sie auf dem Blatt **Bezeichnung** die folgenden Einstellungen, und klicken Sie dann auf **Speichern**:
     
     - Wählen Sie die automatische oder die empfohlene Klassifizierung: Wählen Sie für **Select how this label is applied: automatically or recommended to user** (Festlegen, wie diese Bezeichnung angewendet wird: automatisch oder empfohlen) die Einstellung **Automatic** (Automatisch) oder **Recommended** (Empfohlen).
     
     - Geben Sie den Text für die Benutzeraufforderung oder den Richtlinientipp an: Übernehmen Sie den Standardtext, oder geben Sie eine eigene Zeichenfolge ein.
 
-8. Klicken Sie auf dem anfänglichen Blatt **Azure Information Protection** auf **Publish** (Veröffentlichen), um Ihre Änderungen für die Benutzer verfügbar zu machen.
+Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
