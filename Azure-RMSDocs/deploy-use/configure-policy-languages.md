@@ -4,24 +4,21 @@ description: Sie können die Unterstützung für verschiedene Sprachen für die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 09bf1d5bd1e9435fe0b665243deeea8873bb368e
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 4131e3afae338d906011a9fe02a941baa61cf892
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> In diesem Artikel werden die neusten Updates zum Azure-Portal beschrieben, mit deren Hilfe Sie unabhängig von der globalen oder einer bereichsbezogenen Richtlinie eine Bezeichnung erstellen können. Außerdem wurde eine Option zum Veröffentlichen von Richtlinien entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde – wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin zwar die Option **Veröffentlichen**, aber nicht die Menüoption **KLASSIFIZIERUNGEN** angezeigt wird – sollten Sie einige Tage warten und anschließend diese Anweisungen erneut ausführen.
 
 Obwohl die Standardbezeichnungen für Azure Information Protection mehrere Sprachen unterstützen, müssen Sie eine Unterstützung für die Bezeichnungsnamen und -beschreibungen konfigurieren, die Sie angeben. Für diese Konfiguration müssen Sie folgende Aktionen ausführen:
 

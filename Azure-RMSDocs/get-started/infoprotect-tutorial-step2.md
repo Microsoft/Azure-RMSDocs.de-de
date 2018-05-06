@@ -4,24 +4,21 @@ description: Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Dieser Schritt des Tutorials enthält die neuesten Updates für das Azure-Portal. Wenn Ihnen die Menüoption **Klassifizierungen** nicht angezeigt wird und Sie die Option **Veröffentlichen** weiterhin sehen können, stimmen die Navigationsoptionen nicht exakt mit dem überein, was Sie sehen. In diesem Fall sollten Sie in Erwägung ziehen, in einigen Tagen zu diesem Schritt des Tutorials zurückzukehren, wenn Ihr Mandant für die neuesten Änderungen aktualisiert wurde.
 
 Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie ohne Konfiguration verwenden können, werden wir einen Blick auf die Richtlinie werfen und einige Änderungen vornehmen.
 
