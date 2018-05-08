@@ -4,7 +4,7 @@ description: Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 04/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,27 +12,23 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82e2fcb1cdbce0476e95b35b0faef7ada7637795
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 53d9d9b25ab71c91275bf770a6038eccbaa2659c
+ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Für die Verwendung von Azure Information Protection benötigen Sie ein Azure AD-Verzeichnis. Für die Anmeldung im Azure-Portal, in dem Sie z.B. Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie Ihr Organisationskonto für dieses Verzeichnis.
+Für die Verwendung von Azure Information Protection benötigen Sie ein Azure AD-Verzeichnis. Für die Anmeldung im Azure-Portal, in dem Sie z.B. Azure Information Protection-Bezeichnungen und Azure Rights Management-Vorlagen konfigurieren und verwalten können, verwenden Sie ein Konto aus diesem Verzeichnis.
 
-Falls Sie noch kein Azure-Abonnement für Ihre Organisation besitzen, können Sie sich für eine kostenlose Testversion anmelden. Wechseln Sie zur Seite [Erste Schritte mit Azure](https://account.windowsazure.com/organization), und befolgen Sie die Anweisungen.
+Wenn Sie ein Abonnement mit Azure Information Protection oder Azure Rights Management besitzen, wird Ihr Azure AD-Verzeichnis bei Bedarf automatisch für Sie erstellt.  
 
-Weitere Informationen finden Sie in den folgenden Ressourcen in der Azure Active Directory-Dokumentation:
+Weitere Informationen zu Azure AD finden Sie unter [Was ist ein Azure AD-Verzeichnis?](/active-directory/active-directory-whatis).
 
--   [Was ist ein Azure AD-Verzeichnis?](/active-directory/active-directory-whatis)
-
--   [Beziehung zwischen Azure-Abonnements und Azure AD-Verzeichnissen](/active-directory/active-directory-how-subscriptions-associated-directory)
-
-Wenn Sie das Azure AD-Verzeichnis in Ihre lokalen AD-Gesamtstrukturen integrieren möchten, helfen Ihnen die Informationen unter [Integrieren Ihrer lokalen Identitäten in Azure Active Directory](/active-directory/active-directory-aadconnect) weiter.
+Informationen zum Integrieren eines Azure AD-Verzeichnisses in Ihre lokalen AD-Gesamtstrukturen finden Sie unter [Integrieren Ihrer lokalen Identitäten in Azure Active Directory](/active-directory/active-directory-aadconnect).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Szenarien mit bestimmten Anforderungen 
 
