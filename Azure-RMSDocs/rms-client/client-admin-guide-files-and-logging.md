@@ -4,7 +4,7 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2018
+ms.date: 04/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13f82bc12fd77d4f145b059c2962af01094760c3
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: cb6f68e2d2009a67baadf1146f3c52cf7cf36aa2
+ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -83,9 +83,10 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 - Schutz vor und nach Aktion
     
 - Benutzerausrichtung (falls zutreffend)
-    
 
-Informationen zur Verwendungsprotokollierung für den Azure Rights Management-Dienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
+- Benutzerdefinierte Berechtigungen (falls zutreffend), die die [Nutzungsrechte über ihren Codierungsnamen](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) für die angegebenen Benutzer, Gruppen der Organisationen einschließen.
+    
+Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
 
 
 

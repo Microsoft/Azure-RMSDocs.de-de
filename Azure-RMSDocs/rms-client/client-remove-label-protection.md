@@ -4,7 +4,7 @@ description: Anweisungen zum Entfernen von Klassifizierungsbezeichnungen und des
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 05/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6e68a3ab1aca0d32f8105bad7d2b5e8985dab1ae
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: ce5a6de0c2f0ab1ad374b4a0fbc01e755f28abe3
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Benutzerhandbuch: Entfernen der Bezeichnungen und des Schutzes von Dateien und E-Mails, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden
 
@@ -47,6 +47,8 @@ Wenn das Symbol **Delete label** (Bezeichnung löschen) nicht sofort verfügbar 
 
 > [!NOTE]
 > Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:
+>
+> - Wenn die Schaltfläche **Schützen** auf dem Menüband angezeigt wird, klicken Sie auf **Schützen** und anschließend auf **Leiste anzeigen**.
 > 
 > - Möglicherweise ist der Azure Information Protection-Client nicht [installiert](install-client-app.md) oder der Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt.
 

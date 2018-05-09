@@ -4,7 +4,7 @@ description: Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer z
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,22 +12,21 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 78fb739de9af22f2e1ab8414482ac16b68a1893e
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: b5e7bd86ea2e46939b8c4655287e58e3e270feb4
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
->[!NOTE]
-> Dieser Artikel enthält die neuesten Updates für das Azure-Portal, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde (wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin die Option **Veröffentlichen** angezeigt wird und die Menüoption **Klassifizierungen** nicht angezeigt wird), sollten Sie einige Tage warten und anschließend zu diesen Anweisungen zurückkehren.
-
 Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** erstellen, die für diese Benutzer konfiguriert ist.
 
-Alle Benutzer erhalten die globale Richtlinie, die Titel und QuickInfo sowie globale Einstellungen und globale Bezeichnungen der Information Protection-Leiste enthält. Wenn Sie bereichsbezogene Richtlinien für bestimmte Benutzer konfiguriert haben, erhalten diese Benutzer diese zusätzlichen Einstellungen und Bezeichnungen. 
+Für Anwendungen, die den Azure Information Protection-Client verwenden erhalten alle Benutzer die globale Richtlinie, die Titel und QuickInfo sowie globale Einstellungen und globale Bezeichnungen der Information Protection-Leiste enthält. Wenn Sie bereichsbezogene Richtlinien für bestimmte Benutzer konfiguriert haben, erhalten diese Benutzer diese zusätzlichen Einstellungen und Bezeichnungen. 
+
+Beachten Sie, dass zusätzlich zu den Office-Desktopanwendungen, die dan Azure Information Protection-Client unterstützen, ebenfalls Bezeichnungen mit PowerShell sowie die Azure Information Protection-Überprüfung unterstützt werden. Das bedeutet, dass Sie bereichsbezogene Richtlinien für Konten, die PowerShell-Befehle ausführen, oder für die Überprüfung konfigurieren können. 
 
 Bereichsbezogene Richtlinien sind wie Bezeichnungen im Azure-Portal angeordnet. Wenn ein Benutzer für mehrere Bereiche konfiguriert ist, wird eine effektive Richtlinie für den Benutzer berechnet, bevor sie heruntergeladen wird. Gemäß der Reihenfolge der Richtlinien wird die letzte Einstellung angewendet. Die Bezeichnungen, die dem Benutzer angezeigt werden, stammen aus der globalen Richtlinie und allen zusätzlichen Bezeichnungen aus bereichsbezogenen Richtlinien, denen der Benutzer angehört. 
 

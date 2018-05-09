@@ -4,7 +4,7 @@ description: Ressourcen für Administratoren, einschließlich Informationen zu n
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9eafa28bb6a259c7f845f54268a30c8cdc6fc988
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -26,7 +26,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 |Zweck|Vorgehensweise|
 |----------------|---------------|
-|Die am häufigsten verwendete Dokumentation aufrufen|Lesen Sie die fünf beliebtesten Seiten:<br /><br /> - [Konfiguration von Benutzerrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md)<br /> - [Häufig gestellte Fragen zu Azure Information Protection](../get-started/faqs.md)<br />- [Anforderungen an Azure Information Protection](requirements.md) <br />- [Bereitstellen der Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md)<br />- [Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md)|
+|Die am häufigsten verwendete Dokumentation aufrufen|Lesen Sie die fünf beliebtesten Seiten:<br /><br /> - [Was ist Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Installieren des Azure Information Protection-Clients für Benutzer](../rms-client/client-admin-guide-install.md)<br />- [Anforderungen an Azure Information Protection](requirements.md) <br />- [Bereitstellen der Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md)<br />- [Die Azure Information Protection-Standardrichtlinie](../deploy-use/configure-policy-default.md)|
 |Mit dem Produktteam und Ihren Kollegen in Kontakt treten|Wir empfehlen die [Yammer-Website](https://www.yammer.com/AskIPTeam) für Azure Information Protection.|
 |Eine neue Funktion oder eine Funktionsänderung anfordern|Besuchen Sie die [User Voice](https://msip.uservoice.com)-Website zu Azure Information Protection.|
 |Tweets vom Produktteam erhalten|Folgen Sie [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) auf Twitter.|
@@ -37,8 +37,6 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu neuen Releases und Updates im [Enterprise Mobility and Security-Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Diese Blogposts ergänzen die Produktdokumentation und Supportinformationen.
 
 Zusätzlich wird jeden Monat eine Zusammenfassung zu Änderungen an Dokumentationen auf dem [Azure Information Protection-Blog](https://aka.ms/AIPblog) veröffentlicht. Diese Dokumentationsupdates beinhalten Informationen zu neuen Versionen, Updates zu Supporthinweisen sowie Korrekturen und Überarbeitungen für vorhandene Versionen. Diese Beiträge heißen „**Azure Information Protection-Dokumentationsupdates für \<Monat Jahr>**“.
-
-Vorherige Zusammenfassungen wurden im [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) veröffentlicht. 
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.

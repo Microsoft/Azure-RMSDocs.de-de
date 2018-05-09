@@ -4,7 +4,7 @@ description: Eine Anleitung und Informationen für Administratoren zum Bereitste
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2a3daec687739956bb0b7bd235b69cea30039171
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d52026fcffd3a3a0b51e361e6671f247eac5296d
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -71,20 +71,6 @@ ms.lasthandoff: 03/28/2018
     Auch wenn Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins** noch nicht konfiguriert haben, müssen Sie diese konfigurieren, wenn Sie Berichte erhalten, dass das Add-In von Microsoft Azure Information Protection deaktiviert wird. Wenn dieses Add-In deaktiviert ist, wird die Leiste von Azure Information Protection Benutzern in der Officeanwendung nicht angezeigt.
     
     Weitere Informationen zur Einstellung der Gruppenrichtlinie finden Sie unter [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs (Es wurden keine Add-Ins geladen aufgrund von Gruppenrichtlinieneinstellungen für die Programme Office 2013 und Office 2016)](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
-
-- Für Office Versionen 16.0.8628.2010 und höher (Klick-und-Los): Aktivieren Sie die Legacyunterstützung für Monitore
-    
-    Hinweis: Für die aktuelle Vorschauversion des Azure Information Protection-Clients gilt diese Voraussetzung nicht. 
-    
-    Aktivieren Sie ggf. die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Office-Versionen außerhalb der Office-Anwendungen angezeigt wird. Wenn die Leiste in diesem Szenario nicht richtig angezeigt wird, wird Sie möglicherweise als **AdxTaskPane** angezeigt. 
-    
-    So konfigurieren Sie die Office-Anwendungen für diese Anforderung: **Datei** > **Optionen** > **Allgemein** > **Benutzeroberflächenoptionen**:
-    
-    - Wenn die Option **bei Verwendung mehrerer Bildschirme** auf **Optimieren für beste Darstellung** eingestellt ist, klicken Sie stattdessen auf **die Kompatibilität optimieren (Neustart der Anwendung erforderlich)**. 
-        
-    - Falls die Option **Beste Einstellungen für meinen Bildschirm verwenden** ausgewählt ist, entfernen Sie die Auswahl.
-    
-    - Wenn keine dieser Optionen angezeigt wird, ist keine zusätzliche Konfiguration erforderlich.
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.
@@ -211,16 +197,9 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Installieren der Azure Information Protection-Überprüfung
 
-Derzeit muss die allgemein verfügbare Version der Azure Information Protection-Überprüfung (**AzInfoProtectionScanner.exe**) separat über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) heruntergeladen werden. Nachfolgende Releases der Überprüfung sollen im Lieferumfang des Azure Information Protection-Clients enthalten sein.
+Das im Azure Information Protection-Client enthaltene PowerShell-Modul verfügt über Cmdlets für das Installieren und Konfigurieren der Überprüfung. Um jedoch die Überprüfung verwenden zu können, müssen Sie die Vollversion des Clients installieren. Das PowerShell-Modul alleine reicht nicht aus.
 
-Die aktuelle Vorschauversion des Azure Information Protection-Clients enthält ebenfalls die Azure Information Protection-Überprüfung. 
-
-Das im Überprüfungs- und Vorschauclient enthaltene PowerShell-Modul verfügt über Cmdlets für das Installieren und Konfigurieren der Überprüfung.
-
-Um den Client für die Überprüfung zu installieren, befolgen Sie die Anleitungen in den vorangehenden Abschnitten. Wenn Sie nicht alle Komponenten des Clients wie z.B. die Office-Add-Ins und -Viewer benötigen, können Sie nur das PowerShell-Modul installieren. Die ausführbare Datei lässt sich z.B. mit `PowerShellOnly=true /quiet` ausführen.
-
-Nachdem Sie den Client installiert haben, können Sie die Überprüfung installieren. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-use/deploy-aip-scanner.md).
-
+Um den Client für die Überprüfung zu installieren, befolgen Sie die Anleitungen in den vorangehenden Abschnitten. Sie können daraufhin die Überprüfung installieren. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-use/deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie den Azure Information Protection-Client installiert haben, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:

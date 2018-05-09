@@ -4,24 +4,21 @@ description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Si
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 1019b7d7ea32b26a24aa2417a77345ff87e52e4b
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 053d8dfd51d8c79cdc733f4395226c12ab6e2102
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Dieser Artikel enthält die neuesten Updates für das Azure-Portal, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde (wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin die Option **Veröffentlichen** angezeigt wird und die Menüoption **Klassifizierungen** nicht angezeigt wird), sollten Sie einige Tage warten und anschließend zu diesen Anweisungen zurückkehren.
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 
@@ -48,7 +45,7 @@ In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfo
 
 - Die empfohlene Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint. Sie können für Outlook keine empfohlene Klassifizierung verwenden.
     
-    Sie können für Dokumente, die vorher bereits benannt wurden, die empfohlene Klassifizierung mit einer oder ohne eine höhere Klassifizierung verwenden. 
+    Sie können die empfohlene Klassifizierung nicht für Dokumente verwenden, die bereits eine höhere Klassifizierung aufweisen. 
 
 Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Client Dokumente regelmäßig auf die von Ihnen angegebenen Bedingungsregeln überprüft. Für diese Konfiguration ist eine [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) erforderlich, die derzeit als Vorschau verfügbar ist.
 
