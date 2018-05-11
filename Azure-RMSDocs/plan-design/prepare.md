@@ -4,7 +4,7 @@ description: Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer- 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
+ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -41,24 +41,6 @@ Wenn Sie Benutzer und Gruppen mit den ersten drei Methoden aus dieser Liste erst
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Verwendung von Benutzern und Gruppen durch Azure Information Protection
 
 Es gibt drei Szenarien für die Verwendung von Benutzern und Gruppen mit Azure Information Protection:
-
-- **Zum Zuweisen von Benutzerbezeichnungen**, wenn Sie Bezeichnungen und Klassifizierungen verwenden. Diese Gruppen werden nur von Administratoren ausgewählt:
-    
-    - Die Azure Information Protection-Standardrichtlinie wird automatisch allen Benutzern im Azure AD Ihres Mandanten zugewiesen. Allerdings können Sie einzelnen Benutzern oder Gruppen mithilfe von bereichsbezogenen Richtlinien auch zusätzliche Bezeichnungen zuweisen.
-
-- **Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen**, wenn Sie Dokumente und E-Mails mithilfe des Azure Rights Management-Diensts schützen. Administratoren und Benutzer können diese Benutzer und Gruppen auswählen:
-
-    - Nutzungsrechte bestimmen, ob ein Benutzer ein Dokument oder eine E-Mail öffnen kann, und wie er das Dokument oder die E-Mail verwenden darf. Sie bestimmen beispielsweise, ob er das Dokument oder die E-Mail nur lesen oder lesen und drucken oder lesen und bearbeiten darf.
-
-    - Zugriffssteuerungen umfassen ein Ablaufdatum und geben an, ob für den Zugriff eine Verbindung mit dem Internet erforderlich ist.
-
-- **Zum Konfigurieren des Azure Rights Management-Diensts**, um bestimmte Szenarien zu unterstützen. Daher werden diese Gruppen nur von Administratoren ausgewählt. Beispiele umfassen die Konfiguration folgender Elemente:
-
-    - Administratoren, damit bestimmte Dienste oder Personen verschlüsselte Inhalte öffnen können, wenn dies für eDiscovery oder die Wiederherstellung von Daten erforderlich ist.
-
-    - Delegierte Administration des Azure Rights Management-Diensts.
-
-    - Onboarding-Steuerelemente, zur Unterstützung einer stufenweisen Bereitstellung.
 
 **Zum Zuweisen von Bezeichnungen für Benutzer** beim Konfigurieren der Azure Information Protection-Richtlinie, damit Bezeichnungen auf Dokumente und E-Mails angewendet werden können. Nur Administratoren können diese Benutzer und Gruppen auswählen:
 
