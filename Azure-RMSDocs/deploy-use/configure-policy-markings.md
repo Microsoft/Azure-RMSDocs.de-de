@@ -4,24 +4,21 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0b8bef6acd02abb664b274bc04fe77eea06de356
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 3a732f49a299b4d66af70da3d26df193eaca36ac
+ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> In diesem Artikel werden die neusten Updates zum Azure-Portal beschrieben, mit deren Hilfe Sie unabhängig von der globalen oder einer bereichsbezogenen Richtlinie eine Bezeichnung erstellen können. Außerdem wurde eine Option zum Veröffentlichen von Richtlinien entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde – wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin zwar die Option **Veröffentlichen**, aber nicht die Menüoption **KLASSIFIZIERUNGEN** angezeigt wird – sollten Sie einige Tage warten und anschließend diese Anweisungen erneut ausführen.
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 
@@ -50,6 +47,8 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 - In einer Office-App werden die visuellen Kennzeichnungen aus einer Bezeichnung angewendet, wenn die Bezeichnung angewendet wird. Visuelle Kennzeichnungen werden ebenfalls angewendet, wenn ein bezeichnetes Dokument geöffnet und erstmals gespeichert wird.  
 
 - Wenn ein Dokument über den Datei-Explorer oder über PowerShell bezeichnet wird, werden visuelle Kennzeichnungen nicht sofort übernommen. Sie werden angewendet, wenn das Dokument in einer Office-App geöffnet und erstmals gespeichert wird.
+    
+    Eine Ausnahme gilt, wenn Sie [AutoSpeichern](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) in Office 2016 für Dateien verwenden, die in SharePoint Online, OneDrive oder OneDrive for Business gespeichert sind: Wenn „AutoSpeichern“ aktiviert ist, werden optische Kennzeichnungen nur dann angewendet, wenn Sie die [erweiterte Clienteinstellung](../rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) so konfigurieren, dass die Klassifizierung kontinuierlich im Hintergrund ausgeführt wird. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
 

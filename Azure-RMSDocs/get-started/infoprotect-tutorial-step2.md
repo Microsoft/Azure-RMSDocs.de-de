@@ -4,17 +4,17 @@ description: Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -55,11 +55,13 @@ Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Si
     
     Möglicherweise müssen Sie diese Einstellung nicht ändern, da die Standardeinstellung davon abhängt, wann Sie Ihr Abonnement erhalten haben. Wir werden später in diesem Tutorial benutzerdefinierte Berechtigungen verwenden, um ein geschütztes Dokument mit einem Benutzer zu teilen, den Sie durch Klicken auf die Datei mit der rechten Maustaste im Datei-Explorer angeben.
 
+4. Klicken Sie auf dem Blatt **Richtlinie: Global** auf **Speichern**, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, klicken Sie auf **OK**. Schließen Sie dieses Blatt.
+
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Erstellen einer neuen Bezeichnung für Schutz, optische Kennzeichnungen und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung.
 
 Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
-1. Klicken Sie mit der rechten Maustaste auf die Bezeichnung **Vertraulich**, und klicken Sie auf **Unterbezeichnung hinzufügen**.
+1. Öffnen Sie die Menüoption **KLASSIFIZIERUNGEN** > **Bezeichnungen**, klicken Sie mit der rechten Maustaste auf die Bezeichnung **Vertraulich**, und wählen Sie **Untergeordnete Bezeichnung hinzufügen** aus.
     
     Wenn Sie nicht über eine Bezeichnung namens **Vertraulich** verfügen, können Sie eine andere Bezeichnung auswählen oder stattdessen eine neue Bezeichnung erstellen und das Tutorial mit geringfügigen Unterschieden weiterhin befolgen.
 
@@ -125,9 +127,13 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 12. Geben Sie im Textfeld **Enter notes for internal housekeeping** (Notizen für interne Haushaltsführung eingeben) **For testing purposes only** (Ausschließlich für Testzwecke) ein.
 
-13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Klicken Sie dann auf dem Blatt **Policy: Global** (Richtlinie: Global) erneut auf **Speichern**.
-    
-    Ihnen wird nun Ihre neue untergeordnete Bezeichnung angezeigt, die für optische Kennzeichnungen und den Schutz konfiguriert ist. Beispiel:
+13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**. Die neue Bezeichnung wird erstellt und gespeichert, aber noch keiner Richtlinie hinzugefügt.
+
+14. Öffnen Sie die Menüoption **KLASSIFIZIERUNGEN** > **Richtlinien**, klicken Sie auf **Global**, und klicken Sie dann auf den Link **Bezeichnungen hinzufügen oder entfernen** hinter den Bezeichnungen.
+
+15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finance** aus, und klicken Sie auf **OK**.
+
+16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Beispiel:
 
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie konfiguriert](../media/info-protect-policy-configuredv2.png)
     
@@ -135,6 +141,9 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Einstellungen konfiguriert](../media/info-protect-settings-configuredv2.png)
     
+
+17. Klicken Sie auf dem Blatt **Richtlinie: Global** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**.
+
 Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal entweder schließen oder es offen lassen, um zusätzliche Konfigurationsoptionen auszuprobieren.
 
 Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenommen haben, lernen Sie im nächsten Schritt, den Azure Information Protection-Client zu installieren.

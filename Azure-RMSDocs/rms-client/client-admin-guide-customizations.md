@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 0b71519002816f5bae272f002bfec123186a65a1
+ms.sourcegitcommit: 22072325721cfd26b6546ef625e8b38f5551d30b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -27,9 +27,6 @@ Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die S
 Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere sind erweiterte Einstellungen, die Sie im Azure-Portal konfigurieren und anschließend für das Herunterladen durch Clients veröffentlichen müssen.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Konfigurieren erweiterter Clientkonfigurationseinstellungen im Portal
-
->[!NOTE]
-> Diese Anweisungen geben die neuesten Aktualisierungen für das Azure-Portal wieder. Wenn Sie keine Menüoption **KLASSIFIZIERUNGEN** sehen, aber noch die Option **Veröffentlichen**, werden die Navigationsanweisungen nicht genau mit dem übereinstimmen, was Sie sehen. In diesem Fall sollten Sie in Erwägung ziehen, in einigen Tagen zu dieser Prozedur zurückzukehren, wenn Ihr Mandant für die neuesten Änderungen aktualisiert wurde.
 
 1. Melden Sie sich ggf. in einem neuen Browserfenster beim [Azure-Portal](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal) an, und navigieren Sie zum Blatt **Azure Information Protection**.
 
@@ -59,10 +56,21 @@ Unabhängig von dieser Einstellung folgt der Azure Information Protection-Client
 
 Wenn der Azure Information Protection-Client zum ersten Mal auf einem Computer installiert wird und ein Benutzer Word, Excel, PowerPoint oder Outlook öffnet, wird die Seite **Herzlichen Glückwunsch!** mit kurzen Anweisungen dazu geöffnet, wie die neue Information Protection-Leiste zum Auswählen von Bezeichnungen verwendet wird. Sie können diese Seite durch Bearbeitung der Registrierung unterdrücken.
 
-Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** fest:
+1. Wenn der folgende Registrierungsschlüssel nicht vorhanden ist, erstellen Sie ihn:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnableWelcomeExperience** 
+2. Wenn kein DWORD-Wert (32 Bit) (REG-DWORD) namens **EnableWelcomeExperience** vorhanden ist, erstellen Sie ihn und legen den Datenwert auf **0** fest:
 
+## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Unterdrücken von „Neuigkeiten in Azure Information Protection“ Seite
+
+Wenn der Azure Information Protection-Client zum ersten Mal auf einem Computer installiert oder ein Upgrade dafür durchgeführt wird und die Azure Information Protection-Leiste in Word, Excel, PowerPoint oder Outlook angezeigt wird, wird die Seite **Neuigkeiten in Azure Information Protection** angezeigt, um die Benutzer über benutzerdefinierte Berechtigungen und die Nachverfolgung der Nutzung zu informieren. Sie können diese Seite durch Bearbeitung der Registrierung unterdrücken.
+
+1. Wenn der folgende Registrierungsschlüssel nicht vorhanden ist, erstellen Sie ihn:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
+
+2.  Wenn kein Zeichenfolgenwert (REG-SZ) namens **WhatsNewVersion** vorhanden ist, erstellen Sie ihn und legen den Datenwert auf **1.4** fest.
 
 ## <a name="sign-in-as-a-different-user"></a>Anmelden als ein anderer Benutzer
 

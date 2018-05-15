@@ -5,7 +5,7 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 05/09/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7c6acb5a4b5c8f33193cbf5d8833201e0d68287e
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
@@ -103,7 +103,7 @@ Nachdem der Empfänger die Anlage geöffnet und optional an einen anderen Empfä
 
 3.  Auf der Seite **Your shared documents** (Freigegebene Dokumente) wird der Name des freigegebenen Dokuments angezeigt. Zu diesem Zeitpunkt wird nur diese Datei angezeigt. Sobald Sie jedoch zusätzliche geschützte Dokumente freigeben, wird die Liste erweitert.
 
-    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d. h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie das Datum der letzten Aktivität und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
+    Auf dieser Seite sehen Sie, wann Sie das Dokument freigegeben (d.h. die E-Mail mit dem geschützten Anhang versendet) haben, sowie den aktuellen Status (aktiv, widerrufen oder abgelaufen) und den Namen des Empfängers der E-Mail. Klicken Sie auf den Dokumentnamen, um weitere Details zu sehen.
 
 4.  Auf der neuen Seite, die den Namen der angeklickten Datei hat, sehen Sie spezifische Übersichtsdetails für das Dokument und eine Liste weiterer Optionen, die für das Dokument verfügbar sind (**Liste**, **Zeitskala**, **Karte**, **Einstellungen**).
 

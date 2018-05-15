@@ -4,24 +4,21 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: b4db47cecb190b47854565beaeac72d768aa8e28
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
+ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> In diesem Artikel werden die neuesten Updates für das Azure-Portal beschrieben, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht aktualisiert wurde und diese Änderungen nicht unterstützt, wird beispielsweise für die Azure Information Protection-Richtlinie weiterhin die Option **Veröffentlichen** angezeigt, und die Menüoption **Klassifizierungen** wird nicht angezeigt. In diesem Fall sollten Sie einige Tage warten und sich anschließend diese Anweisungen erneut ansehen.
 
 Sie können Ihre sensibelsten Dokumente und E-Mails mithilfe des Rights Management-Diensts schützen. Dieser Dienst verwendet Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien, um Datenverlust zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die so konfiguriert ist, dass der Rights Management-Schutz für Dokumente und E-Mails verwendet wird, und Benutzer können auch auf die Schaltfläche **Nicht weiterleiten** in Outlook klicken.
 
@@ -58,7 +55,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Navigieren Sie über die Menüoption **Klassifizierungen** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection: Bezeichnungen), und wählen Sie dort die Bezeichnung aus, die Sie ändern möchten. 
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten. 
 
 3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus:
     
@@ -90,7 +87,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     - **Berechtigungen festlegen**: Definieren neuer Schutzeinstellungen in diesem Portal.
     
-    - **Festlegen benutzerdefinierter Berechtigungen (Vorschauversion)**: Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
+    - **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**: Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
         
         Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option „Nicht weiterleiten“.
         
@@ -106,7 +103,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
-    - Wählen Sie **Aus der Liste auswählen** aus, um alle Benutzer von Ihrer Organisation hinzuzufügen oder um sich das Verzeichnis anzusehen.
+    - Klicken Sie auf **Aus der Liste auswählen**, und wählen Sie **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch das Verzeichnis durchsuchen.
         
         Die Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
         
@@ -174,7 +171,7 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) stellen Beispiele für das Konfigurieren von Bezeichnungen, die Schutz anwenden, dar. Die folgenden Beispiele sollten Ihnen ebenfalls beim Konfigurieren von Schutz für verschiedene Szenarios helfen. 
 
-Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Beizeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
+Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Bezeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
 
@@ -184,7 +181,7 @@ Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  S
 
 1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
     
-2. Wählen Sie die Option **Set user defined permissions (Preview)** (Benutzerdefinierte Berechtigungen (Vorschau) einrichten) aus.
+2. Wählen Sie die Option **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** aus.
 
 3. Stellen Sie sicher, dass die folgende Option ausgewählt ist: **In Outlook apply Do Not Forward** („Nicht weiterleiten“ in Outlook anwenden).
 
@@ -247,7 +244,7 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
     
 2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Wählen Sie auf der Seite **Berechtigungen hinzufügen**, auf der Sie Benutzern in Ihrer Organisation Berechtigungen erteilen können, **Hinzufügen \<Name der Organisation> – All members** (Alle Mitglieder) aus, um sämtliche Benutzer in Ihrem Mandanten auszuwählen. Klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
+3. Wählen Sie auf dem Blatt **Berechtigungen hinzufügen** die Option **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um sämtliche Benutzer in Ihrem Mandanten auszuwählen und ihnen Berechtigungen zu erteilen. Diese Einstellung schließt Gastkonten aus. Alternativ dazu klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
     
     Wiederholen Sie diesen Schritt, um zusätzliche Benutzer anzugeben, die über dieselben Berechtigungen verfügen sollen.
 

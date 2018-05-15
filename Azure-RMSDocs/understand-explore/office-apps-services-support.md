@@ -4,7 +4,7 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2018
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f7ca9a9e85a1d76d2d7bdc505c884ee9f02ddb42
-ms.sourcegitcommit: d1987b1abb65f3466bbbb8f8c28e30668d629e50
+ms.openlocfilehash: caf89d6df51adcd556db319a8140cbe936102ef3
+ms.sourcegitcommit: fa64f9c2a4d367d7586d64def0fd02764ad2e00b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 05/06/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -46,7 +46,7 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Information
 
 -   **Schutzregeln** für Outlook-Clients, die ein Administrator so konfiguriert, dass sie automatisch Schutzvorlagen auf E-Mails für angegebene Empfänger anwenden. Wenn beispielsweise interne E-Mails an Ihre Rechtsabteilung gesendet werden, können sie nur von Mitgliedern der Rechtsabteilung gelesen und nicht weitergeleitet werden. Benutzer sehen den auf die E-Mail angewendeten Schutz vor dem Senden und können diesen standardmäßig entfernen, falls sie ihn für unnötig halten. E-Mails werden vor dem Senden verschlüsselt. Weitere Informationen finden Sie unter [Outlook-Schutzregeln](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) und [Erstellen einer Outlook-Schutzregel](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) in der Exchange-Bibliothek.
 
--   **Transportregeln**, die von einem Administrator konfiguriert werden, um automatisch Schutzvorlagen für E-Mail-Nachrichten anzuwenden. Diese Regeln basieren auf Eigenschaften wie Sender, Empfänger, Betreff der Nachricht und Inhalt. Diese Regeln ähneln in ihrem Konzept den Schutzregeln; Benutzer können den Schutz jedoch nicht entfernen. Die Regeln können auf Outlook im Internet und auf E-Mails angewendet werden, die von mobilen Geräten aus gesendet werden. Zusätzlich verschlüsseln diese Regeln keine E-Mail-Nachrichten, bevor Sie vom Client aus gesendet werden. Weitere Informationen finden Sie unter [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432.aspx) in der Exchange-Bibliothek.
+-   **Nachrichtenflussregeln**, die von einem Administrator konfiguriert werden, um automatisch Schutzvorlagen auf E-Mail-Nachrichten anzuwenden. Diese Regeln basieren auf Eigenschaften wie Sender, Empfänger, Betreff der Nachricht und Inhalt. Diese Regeln ähneln in ihrem Konzept den Schutzregeln; Benutzer können den Schutz jedoch nicht entfernen. Die Regeln können auf Outlook im Internet und auf E-Mails angewendet werden, die von mobilen Geräten aus gesendet werden. Zusätzlich verschlüsseln diese Regeln keine E-Mail-Nachrichten, bevor Sie vom Client aus gesendet werden. Weitere Informationen finden Sie unter [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432.aspx) in der Exchange-Bibliothek.
 
 -   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)**, die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Vertrauliche oder sensible Inhalte sind z.B. persönliche Informationen oder Kreditkarteninformationen. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter https://technet.microsoft.com/library/jj150527(v=exchg.160Verhinderung von Datenverlust\) in der Exchange-Bibliothek.
 
@@ -63,7 +63,7 @@ Wenn Sie bereit sind, Exchange für IRM zu konfigurieren:
 
 ## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online und SharePoint Server
 
-Wenn Sie SharePoint Online oder SharePoint Server verwenden, können Sie Dokumente mithilfe der Information Rights Management-Funktion (IRM) von SharePoint schützen. Mit dieser Funktion können Administratoren Listen und Bibliotheken schützen, damit eine heruntergeladene Datei, die von einem Benutzer ausgecheckt wird, geschützt ist, sodass nur autorisierte Personen sie entsprechend den von Ihnen angegebenen Informationsschutzrichtlinien anzeigen und verwenden können. So kann die Datei beispielsweise schreibgeschützt sein, das Kopieren von Text deaktivieren, das Speichern einer lokalen Kopie oder das Drucken der Datei verhindern.
+Wenn Sie SharePoint Online oder SharePoint Server verwenden, können Sie Dokumente mithilfe der Information Rights Management-Funktion (IRM) von SharePoint schützen. Mit dieser Funktion können Administratoren Listen und Bibliotheken schützen, damit eine heruntergeladene Datei, die von einem Benutzer ausgecheckt wird, geschützt ist und nur autorisierte Personen sie entsprechend den von Ihnen angegebenen Informationsschutzrichtlinien anzeigen und verwenden können. So kann die Datei beispielsweise schreibgeschützt sein, das Kopieren von Text deaktivieren, das Speichern einer lokalen Kopie oder das Drucken der Datei verhindern.
 
 Word, PowerPoint, Excel und PDF-Dokumente unterstützen diesen IRM-Schutz von SharePoint. Standardmäßig beschränkt sich der Schutz auf die Person, die das Dokument herunterlädt. Sie können diese Standardeinstellung durch eine Konfigurationsoption ändern, die den Schutz auf alle Benutzer mit Zugriff auf das Dokument in SharePoint oder auf eine von Ihnen festgelegte Gruppe erweitert.
 
@@ -78,11 +78,11 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > [!NOTE]
 > Gegenwärtig gibt es einige Beschränkungen bei der Verwendung von SharePoint-IRM:
 > 
-> - Sie können weder die standardmäßigen noch die benutzerdefinierten Vorlagen verwenden, die Sie im Azure-Portal verwalten. 
+> - Sie können weder die standardmäßigen noch die benutzerdefinierten Schutzvorlagen verwenden, die Sie im Azure-Portal verwalten. 
 > 
-> - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Dateierweiterung PDF, die nativ von Rights Management geschützt wurden, werden unterstützt, wenn Sie einen PDF-Reader verwenden, der eine native Unterstützung von Rights Management bietet.
+> - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Erweiterung „PDF“ werden unterstützt und können nach dem Herunterladen von einer PDF-Anwendung geöffnet werden, die Rights Management nativ unterstützt. Der Azure Information Protection-Client für Windows umfasst beispielsweise einen Viewer für diese geschützten PDF-Dateien. Alternative PDF-Viewer sind in der [Tabelle der RMS-aktivierten Anwendungen](../get-started/requirements-applications.md#rms-enlightened-applications) aufgeführt.
 > 
-> - Die gemeinsame Dokumentenerstellung wird nicht unterstützt. Da Sie ein Dokument in einer mit IRM geschützten Bibliothek auschecken und herunterladen müssen, kann eine Person sie gleichzeitig bearbeiten.
+> - Die gleichzeitige gemeinsame Bearbeitung eines Dokuments durch mehrere Personen wird nicht unterstützt. Um ein Dokument in einer durch IRM geschützten Bibliothek zu bearbeiten, müssen Sie es zuerst auschecken und herunterladen und können es dann in Ihrer Office-Anwendung bearbeiten. Daher kann nur jeweils eine Person ein Dokument bearbeiten.
 
 Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder in OneDrive hochladen, können Sie für Bibliotheken, die nicht durch IRM geschützt sind, mit dieser Datei Folgendes nicht durchführen: Gemeinsame Dokumentenerstellung, Office Online, Suche, Dokumentvorschau, Vorschauminiatur, eDiscovery und Verhinderung von Datenverlust (Data Loss Protection, DLP).
 
