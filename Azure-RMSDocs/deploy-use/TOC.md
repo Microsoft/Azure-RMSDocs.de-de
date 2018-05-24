@@ -41,6 +41,7 @@
 ## [Vorgänge für Ihren Mandantenschlüssel](operations-tenant-key.md)
 ### [Microsoft-verwaltet](operations-microsoft-managed-tenant-key.md)
 ### [Vom Kunden verwaltet](operations-customer-managed-tenant-key.md)
+## [Verwalten persönlicher Daten für Azure Information Protection](manage-personal-data.md)
 ## [Außerbetriebsetzen und Deaktivieren](decommission-deactivate.md)
 ## [Verwalten mit PowerShell](administer-powershell.md)
 ### [Installieren des AADRM-PowerShell-Moduls](install-powershell.md)
