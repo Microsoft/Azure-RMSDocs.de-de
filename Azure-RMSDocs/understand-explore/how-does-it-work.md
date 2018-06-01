@@ -4,7 +4,7 @@ description: Detaillierte Übersicht über die Funktionsweise von Azure RMS, die
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9c1fff4d9bcce892b9f671e590d9a670f9a4422a
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: f9df2e96e4194e3bf9b1bdcb91bad09242ba07a9
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444298"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -156,6 +157,8 @@ Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien.
 - **Allgemeiner Schutz (PFILE)**: Wenn der Azure Rights Management-Dienst eine Datei allgemein schützt, ist der Datenfluss grundsätzlich mit der Ausnahme, dass der RMS-Client eine Richtlinie erstellt, die alle Rechte gewährt, identisch mit dem Inhaltsschutz. Wenn die Datei genutzt wird, wird sie entschlüsselt, bevor sie an die Zielanwendung übergeben wird. In diesem Szenario können Sie alle Dateien selbst dann schützen, wenn sie keine systemeigene Unterstützung für RMS besitzen.
 
 - **Geschützte PDF (PPDF)**: Wenn der Azure Rights Management-Dienst eine Office-Datei mit systemeigenem Schutz versieht, wird auch eine Kopie dieser Datei erstellt und auf die gleiche Weise geschützt. Der einzige Unterschied besteht darin, dass die Dateikopie im PPDF-Dateiformat vorliegt. Die RMS-Freigabeanwendung und der Azure Information Protection-Client-Viewer wissen, wie diese ausschließlich für die Anzeige geöffnet wird. In diesem Szenario können Sie geschützte Anlagen per E-Mail senden und dabei sicher sein, dass der Empfänger diese immer auf einem mobilen Gerät lesen kann – selbst dann, wenn das mobile Gerät nicht über eine App verfügt, die eine native Unterstützung für geschützte Office-Dateien bietet.
+
+- **Microsoft-Konten:** Azure Information Protection kann E-Mail-Adressen für die Nutzung autorisieren, wenn sie mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="next-steps"></a>Nächste Schritte
 

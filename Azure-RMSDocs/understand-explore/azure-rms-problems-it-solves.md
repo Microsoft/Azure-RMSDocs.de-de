@@ -4,7 +4,7 @@ description: Identifizieren Sie Anforderungen oder Probleme, die möglicherweise
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ca7d733cfe1045f46cfe47ee99d0df51dcac347
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7d0205628502917d6bf35386d851403a40ed597a
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444094"
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Welche Probleme werden von Azure RMS gelöst?
 
@@ -33,7 +34,7 @@ Azure RMS ist die Schutztechnologie von [Azure Information Protection](what-is-i
 |Sicheres Freigeben von Informationen|√ Wenn eine Datei [geschützt](../rms-client/client-classify-protect.md) ist, kann sie sicher für andere Benutzer freigegeben werden. Beispielsweise eine Anlage einer E-Mail oder ein Link zu einer SharePoint-Website. Wenn sich die vertraulichen Informationen in einer E-Mail befinden, können Sie die E-Mail schützen oder einfach die Option „Nicht weiterleiten“ von Outlook verwenden. <br /><br />Der Vorteil beim Anhängen einer geschützten Datei gegenüber dem Schutz der ganzen E-Mail besteht darin, dass der E-Mail-Text nicht verschlüsselt wird. Daher können Sie Anweisungen für die erstmalige Verwendung hinzufügen, wenn die E-Mail an eine Adresse außerhalb Ihrer Organisation gesendet wird. Die Anweisungen können von jedem gelesen werden, aber da das angehängte Dokument geschützt ist, können nur autorisierte Benutzer das Dokument öffnen, auch wenn die E-Mail oder das Dokument an andere Personen weitergeleitet wird.|
 |Überprüfung und Überwachung|√ Sie können die [Nutzung Ihrer geschützten Dateien selbst dann noch überprüfen und überwachen](../deploy-use/log-analyze-usage.md), wenn diese Dateien die Grenzen Ihrer Organisation verlassen haben.<br /><br />Sie arbeiten z. B. für Contoso, Ltd. Sie arbeiten mit drei Mitarbeitern von Fabrikam, Inc. an einem gemeinsamen Projekt. Sie senden diesen drei Personen ein Dokument per E-Mail, das Sie schützen und mit einem Schreibschutz versehen. Die Azure Rights Management-Überprüfung kann die folgenden Informationen bereitstellen:<br /><br />- Ob und wann die von Ihnen angegebenen Fabrikam-Personen das Dokument geöffnet haben.<br /><br />- Ob andere Personen, die Sie nicht angegeben haben, versucht haben, das Dokument zu öffnen (und dabei gescheitert sind): Das Dokument wurde möglicherweise weitergeleitet oder in einem freigegebenen Speicherort gespeichert, auf den andere Personen Zugriff haben.<br /><br />- Ob eine der angegebenen Personen versucht hat (und gescheitert ist), das Dokument zu drucken oder zu ändern.<br /><br />Darüber hinaus können Benutzer und Administratoren über die [Website zur Dokumentenverfolgung](../rms-client/client-track-revoke.md) den Zugriff auf geschützte Dokumente nachverfolgen und bei Bedarf widerrufen.|
 |Unterstützung für häufig verwendete Geräte, nicht nur Windows-Computer|√ Zu den [unterstützten Geräten](../get-started/requirements-client-devices.md) gehören:<br /><br />- Windows-Computer und -Telefone<br /><br />- Mac-Computer<br /><br />- iOS-Tablets und -Telefone<br /><br />- Android-Tablets und -Telefone|
-|Unterstützung von Business-to-Business-Zusammenarbeit|√ Weil Azure Rights Management ein Clouddienst ist, ist es nicht erforderlich, explizit Vertrauensstellungen zu anderen Organisationen zu konfigurieren, bevor Sie geschützte Inhalte mit diesen gemeinsam nutzen können. Sofern diese Organisationen bereits ein Office 365- oder Azure AD-Verzeichnis haben, wird Zusammenarbeit zwischen Organisationen automatisch unterstützt. Ist dies nicht der Fall, können sich Benutzer für das kostenlose [RMS for Individuals](rms-for-individuals.md)-Abonnement registrieren.|
+|Unterstützung von Business-to-Business-Zusammenarbeit|√ Weil Azure Rights Management ein Clouddienst ist, ist es nicht erforderlich, explizit Vertrauensstellungen zu anderen Organisationen zu konfigurieren, bevor Sie geschützte Inhalte mit diesen gemeinsam nutzen können. Sofern diese Organisationen bereits ein Office 365- oder Azure AD-Verzeichnis haben, wird Zusammenarbeit zwischen Organisationen automatisch unterstützt. Wenn dies nicht der Fall ist, können Benutzer sich für ein kostenloses [Microsoft Rights Management for Individuals](rms-for-individuals.md)-Abonnement registrieren oder ein Microsoft-Konto für [Anwendungen verwenden, die diese Authentifizierung für Azure Information Protection unterstützen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
 |Unterstützung sowohl für lokale Dienste als auch für Office 365|√ Azure RMS arbeitet [nahtlos mit Office 365](office-apps-services-support.md) zusammen. Außerdem können Sie Azure Rights Management mit den folgenden lokalen Diensten verwenden, wenn Sie den [RMS-Connector](../deploy-use/deploy-rms-connector.md) bereitstellen:<br /><br />- Exchange Server<br /><br />- SharePoint Server<br /><br />- Windows Server mit Dateiklassifizierungsinfrastruktur|
 |Einfache Aktivierung|√ Bei neuen Abonnements erfolgt die Aktivierung automatisch. Bei vorhandenen Abonnement erfordert die [Aktivierung des Rights Management-Diensts](../deploy-use/activate-service.md) nur ein paar Mausklicks in Ihrem Verwaltungsportal. Falls Sie die Befehlszeilensteuerung bevorzugen, können Sie auch zwei PowerShell-Befehle verwenden.|
 |Fähigkeit, nach Bedarf über die gesamte Organisation zu skalieren|√ Weil Azure Rights Management als Clouddienst mit der Azure-Flexibilität für zentrales und horizontales Hochskalieren ausgeführt wird, müssen Sie keine zusätzlichen lokalen Server bereitstellen.|

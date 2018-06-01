@@ -4,7 +4,7 @@ description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9462795fb46c6eef857d3fd42bfe873ac869e51c
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: 223dd5681b6b5c6911a90cf6540b2ab4c9d7f54e
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444134"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -33,11 +34,14 @@ Wenn Ihre Bezeichnung Schutz für ein Dokument anwendet, ist das geschütztes Do
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
 
-Geschützte Dateien können für andere Personen sicher freigegeben werden. Beispielsweise können Sie die Datei an eine E-Mail anfügen.
+Geschützte Dateien können für andere Personen sicher freigegeben werden. Sie hängen z.B. ein geschütztes Dokument an eine E-Mail an.
 
-Wenn Sie Dateien regelmäßig für Personen außerhalb Ihrer Organisation freigeben, kann Ihr Administrator eine Bezeichnung für Sie konfigurieren, mit der der Schutz so festgelegt wird, dass die Dateien von diesen Personen gelesen werden können. Alternativ dazu können Sie Ihre [Office-App zum Festlegen von benutzerdefinierten Berechtigungen](#set-custom-permissions-for-a-document) oder den [Datei-Explorer zum Festlegen von benutzerdefinierten Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für eine Datei verwenden, bevor Sie diese freigeben. Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und die Datei bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.  
+Bevor Sie Dateien mit Personen außerhalb Ihrer Organisation teilen, wenden Sie sich an den Helpdesk oder Ihren Administrator, um herauszufinden, wie Dateien für externe Benutzer geschützt werden.
 
-Wenn die Datei mit Ihren benutzerdefinierten Berechtigungen geschützt ist, verwenden Sie den üblichen Freigabemechanismus zum Freigeben der Datei. Ist dies das erste Mal, dass diese Personen eine geschützte Datei per Freigabe erhalten, benötigen sie möglicherweise entsprechende Anweisungen zum Anzeigen der Datei. Für diese Personen können Sie die folgende Nachricht kopieren und einfügen: **Diese Datei ist mit Microsoft Azure Information Protection geschützt. Informationen zur erstmaligen Verwendung finden Sie in diesen [Anweisungen](https://aka.ms/rms-signup).**
+Wenn Ihre Organisation z.B. regelmäßig mit Personen einer anderen Organisation kommuniziert, hat Ihr Administrator womöglich Bezeichnungen konfiguriert, die Schutz in einem Umfang festlegen, damit diese Personen geschützte Dokumente lesen und verwenden können. Wählen Sie anschließend diese Bezeichnungen aus, um die Dokumente, die geteilt werden sollen, zu klassifizieren und zu schützen.
+
+Falls alternativ für externe Benutzer [Business-to-Business-Konten (B2B)](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) erstellt worden sind, können Sie Ihre [Office-App zum Festlegen von Berechtigungen](#set-custom-permissions-for-a-document) oder [Datei-Explorer zum Festlegen benutzerdefinierter Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für ein Dokument verwenden, bevor Sie es teilen. Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und das Dokument bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.
+
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
 
@@ -95,7 +99,7 @@ Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstell
     
     - **Berechtigungen auswählen**: Wenn Sie die Datei so schützen möchten, dass nur Sie darauf zugreifen können, wählen Sie **Nur für mich**. Wählen Sie anderenfalls die Zugriffsebene aus, die Sie den Personen gewähren möchten.
     
-    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. 
         
         Sie können mithilfe des Adressbuchsymbols Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen.
     
@@ -152,7 +156,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
     - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
     
-    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. Beachten Sie, dass persönliche E-Mail-Adressen derzeit nicht unterstützt werden.
+    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. 
     
     Alternativ dazu können Sie das Adressbuchsymbol verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auszuwählen.
         

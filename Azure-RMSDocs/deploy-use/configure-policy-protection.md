@@ -4,17 +4,18 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/10/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 8b1024a26e086cb8cbd4696dc37d66350968a0b4
-ms.sourcegitcommit: fbc83d699b9e4e9c8e0e7d36f574630af6a4e3d9
+ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444213"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -171,7 +172,7 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) stellen Beispiele für das Konfigurieren von Bezeichnungen, die Schutz anwenden, dar. Die folgenden Beispiele sollten Ihnen ebenfalls beim Konfigurieren von Schutz für verschiedene Szenarios helfen. 
 
-Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Bezeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
+Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Beizeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
 
@@ -231,9 +232,14 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Beispiel 4: Bezeichnung für geschützte E-Mails, die weniger einschränkende Berechtigungen als „Nicht weiterleiten“ unterstützt
 
-Diese Bezeichnung kann nicht auf Outlook beschränkt sein, sondern stellt weniger einschränkende Kontrollen dar als „Nicht weiterleiten“. Beispielsweise sollen die Empfänger aus einer E-Mail oder einem Anhang kopieren oder einen Anhang ausdrucken und speichern können.
+Diese Bezeichnung kann nicht auf Outlook beschränkt sein, sondern stellt weniger einschränkende Kontrollen dar als „Nicht weiterleiten“. Beispielsweise sollten Empfänger aus einer E-Mail oder einem Anhang kopieren oder einen Anhang speichern und bearbeiten können.
 
-Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, stellen Sie sicher, dass Sie Ihren Benutzern die Anweisung erteilen, diese Bezeichnung nicht für Dokumente sondern nur für E-Mails zu verwenden. Exchange Online muss außerdem für die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert sein, damit diese externen Benutzer unterstützt werden.  
+Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, gilt Folgendes:
+
+- Die Bezeichnung eignet sich für E-Mails, wenn Exchange Online die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) verwendet. 
+ 
+- Für Office-Anhänge, die automatisch geschützt sind, stehen diese Dokumente für eine Browservorschau zur Verfügung. Um diese Dokumente zu bearbeiten, laden Sie sie herunter, und bearbeiten Sie sie mit Office 2016-Klick-und-Los und einem Microsoft-Konto, das dieselbe E-Mail-Adresse verwendet. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
 
 > [!NOTE]
 > In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Sie können mit diesem Beispiel jedoch eine Bezeichnung mit denselben Nutzungsrechten konfigurieren.

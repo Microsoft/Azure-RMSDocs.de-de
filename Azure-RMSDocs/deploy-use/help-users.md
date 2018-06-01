@@ -4,7 +4,7 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 468550dd2389407b20d66adb814a7487988180bd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0243961b4dfdf3bb8c8b04059793098b26880615
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444264"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -49,7 +50,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
     - **Hilfe bei der Anmeldung**
         
-        Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Die erforderlichen Anmeldeinformationen gelten ist für das Geschäfts-, Schul- oder Unikonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Die erforderlichen Anmeldeinformationen gelten nicht für ein Microsoft-Konto (früher Microsoft Live ID) oder ein privates E-Mail-Konto, weil diese Konten vom Azure Rights Management-Dienst derzeit nicht unterstützt werden. 
+        Benutzer werden möglicherweise zur Eingabe von Anmeldeinformationen aufgefordert, wenn mit dem Azure Rights Management-Dienst ein Benutzer authentifiziert werden muss und dazu keine zwischengespeicherten Anmeldeinformationen verwendet werden können. Die erforderlichen Anmeldeinformationen gelten üblicherweise für das Geschäfts-, Schul- oder Unikonto des Benutzers, das Ihrem Office 365- oder Azure Active Directory-Mandanten zugeordnet ist. Obwohl Azure Rights Management AD-Konten authentifizieren kann, können einige Anwendungen auch geschützte Inhalte öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Stellen Sie Benutzern und Ihrem Helpdesk Anweisungen bereit, welches Konto zu verwenden ist, wenn Benutzer nach Anmeldeinformationen gefragt werden, wenn sie über Anwendungen verfügen, die den Azure Rights Management-Dienst verwenden.
         
@@ -57,7 +58,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
         
         Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](../get-started/requirements-azure-rms.md).
         
-        Authentifizierung und Autorisierung basieren auf Konten und Gruppen in Azure Active Directory. Um zu bestätigen, dass ein bestimmter Benutzer oder eine bestimmte Gruppe für die Nutzung geschützter Inhalte autorisiert werden kann, verwenden Sie die unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md) beschriebenen Überprüfungen.
+        Unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md) erfahren Sie, wie Sie prüfen können, ob ein bestimmter Benutzer oder eine bestimmte Gruppe von Azure Active Directory dafür autorisiert werden kann, geschützte Inhalte zu schützen oder zu nutzen.
         
         Wenn Benutzer melden, dass sie geschützte Inhalte nicht öffnen können, sie aber die erforderlichen Berechtigungen haben, besteht das Problem möglicherweise darin, dass sich der Benutzer nicht in der richtigen Gruppe befindet, die für eine Rights Management-Vorlage konfiguriert ist. Oder das Problem ist, dass es erforderlich ist, dass die [Vorlage für den Benutzer oder die Gruppe neu konfiguriert wird](configure-policy-templates.md). 
         

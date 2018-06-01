@@ -4,7 +4,7 @@ description: Informationen zu RMS for Individuals, einem kostenlosen Self-Servic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: 358ef172192b3bed65dd8f1853705c8f189cbf97
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444315"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -28,7 +29,9 @@ RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrier
 
 
 > [!NOTE]
-> Das kostenlose Abonnement stellt eine Möglichkeit dar, sicherzustellen, dass autorisierte Personen außerhalb Ihrer Organisation jederzeit Dateien lesen können, die durch Ihre Organisation geschützt werden. Eine weitere Möglichkeit besteht in dem Senden von Dokumenten per E-Mail mithilfe der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese E-Mail-Lösung kann für sämtliche E-Mail-Adressen auf allen Geräten verwendet werden und wird zur sicheren Freigabe von Informationen und Anzeige von Office-Dokumenten empfohlen, die per E-Mail an Personen außerhalb Ihrer Organisation gesendet werden. 
+> Das kostenlose Abonnement stellt eine Möglichkeit dar, sicherzustellen, dass autorisierte Personen außerhalb Ihrer Organisation jederzeit Dateien lesen können, die durch Ihre Organisation geschützt werden. Eine weitere Möglichkeit besteht in dem Senden von Dokumenten per E-Mail mithilfe der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Diese E-Mail-Lösung kann für sämtliche E-Mail-Adressen auf allen Geräten verwendet werden und wird zur sicheren Freigabe von Informationen und zur Anzeige von Office-Dokumenten empfohlen, die über einen Browser für Personen außerhalb Ihrer Organisation freigegeben werden.
+> 
+> Eine andere Möglichkeit ist die Verwendung von Microsoft-Konten. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
 
 Um sich für dieses kostenlose Konto zu registrieren, rufen Benutzer die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf und geben Ihre geschäftliche E-Mail-Adresse an. Sie erhalten eine E-Mail als Antwort von Microsoft, und können den Registrierungsprozess dann abschließen, indem sie die Angaben machen, um ihr Konto zu erstellen. 
 

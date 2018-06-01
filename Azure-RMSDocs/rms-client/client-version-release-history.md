@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02e54d3d1f324aa6d67e9fb81c3f5f83e785fe81
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: 4ff64b5bb4f73533352aa5497a98263c86842800
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423254"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -40,6 +41,40 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 > Kleinere Korrekturen werden nicht aufgelistet. Wenn also ein Problem mit dem Azure Information Protection-Client auftreten sollte, wird empfohlen, dass Sie zuerst überprüfen, ob dieses Problem mit dem neusten allgemein verfügbaren Release behoben wird. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
+
+## <a name="versions-later-than-12660"></a>Versionen ab 1.26.6.0
+
+Wenn Ihre Version des Clients höher als 1.26.6.0 ist, handelt es sich um eine Vorabversion für Test- und Evaluierungszwecke. 
+ 
+**Veröffentlicht:** 21.5.2018 
+
+Die aktuelle Version lautet **1.27.48.0** und weist seit der aktuellen allgemein verfügbaren Version des Clients die unten angegebenen Änderungen auf.  
+
+**Neue Features**: 
+
+- Für die Azure Information Protection-Überprüfung:
+    
+    - Sie können eine Liste mit Dateitypen angeben, die in die Überprüfung eingeschlossen oder von ihr ausgeschlossen werden sollen. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType) kann ein Dateityp aus der Liste entfernt werden.
+    
+    - Mithilfe der Standardbezeichnung können Sie Dateien bezeichnen, ohne deren Inhalt zu überprüfen. Verwenden Sie hierzu das Cmdlet [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository), und legen Sie den Parameter *MatchPolicy* auf **Off** fest. 
+    
+    - Dateien mit vertraulichen Informationstypen können Sie ohne Konfiguration der Bezeichnungen für die automatische Klassifizierung ermitteln. Verwenden Sie hierzu das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration), und legen Sie den Parameter *DiscoverInformationTypes* auf **All** fest.
+    
+    - Standardmäßig werden nur Office-Dokumenttypen geschützt. Sie können weitere Dateitypen schützen, indem Sie diese in der Registrierung definieren. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md).
+    
+    - Standardmäßig wird die Überprüfung für eine höhere Sicherheit mit einer niedrigen Integritätsebene ausgeführt. Dies gilt für den Fall, dass die Überprüfung mit einem Konto ausgeführt wird, das über privilegierte Rechte verfügt. Wenn das Dienstkonto, das die Überprüfung ausführt, nur über die unter [Voraussetzungen für die Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, ist eine niedrige Integritätsebene weder erforderlich noch empfehlenswert, da sie sich negativ auf die Leistung auswirkt. Sie können die niedrige Integritätsebene mithilfe der erweiterten Clienteinstellung deaktivieren. [Weitere Informationen](../rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
+    
+- Für [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus) beinhaltet die Ausgabe jetzt den Rights Management-Besitzer und den Rights Management-Aussteller sowie das Datum, an dem der Inhalt geschützt wurde.
+ 
+**Weitere Änderungen**:
+
+- Für die Azure Information Protection-Überprüfung: 
+    
+    - Der Parameter *ScanMode* von [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) wurde in **Enforce** umbenannt und kann die Werte Off und On enthalten.
+    
+    - Wenn Sie eine Standardbezeichnung verwenden möchten, müssen Sie diese nicht mehr als Richtlinieneinstellung konfigurieren. Sie können die Standardbezeichnung stattdessen mit der Repositorykonfiguration angeben. 
+
+- Die Seiten „Herzlichen Glückwunsch!“ sowie „Neuigkeiten in Azure Information Protection“, die bei der ersten Verwendung in Office-Anwendungen angezeigt wurden, wurden entfernt.
 
 ## <a name="version-12660"></a>Version 1.26.6.0
 

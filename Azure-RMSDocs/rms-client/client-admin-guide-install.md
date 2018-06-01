@@ -4,7 +4,7 @@ description: Eine Anleitung und Informationen für Administratoren zum Bereitste
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d52026fcffd3a3a0b51e361e6671f247eac5296d
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423288"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -30,11 +31,13 @@ ms.lasthandoff: 05/03/2018
 
 - Microsoft .NET Framework 4.6.2
     
-    Die vollständige Installation des Azure Information Protection-Clients erfordert standardmäßig Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht das Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden. Sie können diese Voraussetzung mit einem [benutzerdefinierten Installationsparameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter) umgehen. Diese Vorgehensweise wird jedoch nicht empfohlen.
+    Die vollständige Installation des Azure Information Protection-Clients erfordert standardmäßig Microsoft .NET Framework 4.6.2 oder höher. Wenn diese Version fehlt, versucht der Setup-Assistent, aus dem ausführbaren Installationsprogramm diese erforderliche Komponente herunterzuladen und zu installieren. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden. Sie können diese Voraussetzung mit einem [benutzerdefinierten Installationsparameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter) umgehen, wenn Sie den Setup-Assistenten verwenden. Diese Vorgehensweise wird jedoch nicht empfohlen.
+    
+    Diese Voraussetzung ist nicht automatisch installiert, wenn Sie den Client im Hintergrund über das ausführbare Installationsprogramm, Windows Update oder Windows Installer installieren. Für diese Szenarios müssen Sie diese Voraussetzung ggf. separat installieren, andernfalls schlägt die Installation fehl. Sie können Microsoft .NET Framework 4.6.2 (Offlineinstaller) aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344) herunterladen.
 
 - Microsoft .NET Framework 4.5.2
     
-    Wenn der Azure Information Protection-Viewer separat installiert wird, ist Microsoft .NET Framework 4.5.2 oder höher erforderlich. Wenn diese Version fehlt, wird sie vom Installationsprogramm nicht heruntergeladen oder installiert.
+    Wenn der Azure Information Protection-Viewer separat installiert wird, ist Microsoft .NET Framework 4.5.2 oder höher erforderlich. Wenn diese Version fehlt, wird sie vom ausführbaren Installationsprogramm nicht heruntergeladen oder installiert.
 
 - Windows PowerShell Version 4.0
     
@@ -71,6 +74,14 @@ ms.lasthandoff: 05/03/2018
     Auch wenn Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins** noch nicht konfiguriert haben, müssen Sie diese konfigurieren, wenn Sie Berichte erhalten, dass das Add-In von Microsoft Azure Information Protection deaktiviert wird. Wenn dieses Add-In deaktiviert ist, wird die Leiste von Azure Information Protection Benutzern in der Officeanwendung nicht angezeigt.
     
     Weitere Informationen zur Einstellung der Gruppenrichtlinie finden Sie unter [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs (Es wurden keine Add-Ins geladen aufgrund von Gruppenrichtlinieneinstellungen für die Programme Office 2013 und Office 2016)](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+
+- Für Outlook-Klick-und-Los-Versionen 16.0.9324.1000 und höher (Klick-und-Los): Aktivieren Sie die Legacyunterstützung für Monitore
+    
+    Aktivieren Sie ggf. die Legacyunterstützung für Monitore, um zu verhindern, dass die Azure Information Protection-Leiste in diesen Klick-und-Los-Versionen außerhalb von Outlook angezeigt wird. Wenn die Leiste in diesem Szenario nicht richtig angezeigt wird, wird Sie möglicherweise als **AdxTaskPane** angezeigt. 
+    
+    So konfigurieren Sie Outlook für diese Anforderung: **Datei** > **Optionen** > **Allgemein**:
+    
+    - Falls die Option **Beste Einstellungen für meinen Bildschirm verwenden** im Abschnitt **Benutzeroberflächenoptionen** ausgewählt ist, entfernen Sie die Auswahl.
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.
@@ -159,7 +170,7 @@ Beispiel zum automatischen Installieren des Clients für Office 2010 und Azure R
 
 #### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Weitere Informationen zum DowngradeDotNetRequirement-Installationsparameter
 
-Um automatische Upgrades über Windows Update zu unterstützen und für eine zuverlässige Integration in Office-Anwendungen zu sorgen, verwendet der Azure Information Protection-Client die Microsoft .NET Framework-Version 4.6.2. Diese Installation prüft standardmäßig, ob diese Version vorhanden ist, und versucht sie zu installieren, falls sie nicht vorhanden ist. Die Installation erfordert einen Neustart des Computers.
+Um automatische Upgrades über Windows Update zu unterstützen und für eine zuverlässige Integration in Office-Anwendungen zu sorgen, verwendet der Azure Information Protection-Client die Microsoft .NET Framework-Version 4.6.2. Eine interaktive Installation prüft standardmäßig mithilfe ausführbarer Überprüfungen, ob diese Version vorhanden ist, und versucht, sie zu installieren, falls sie nicht vorhanden ist. Die Installation erfordert einen Neustart des Computers.
 
 Wenn die Installation dieser höheren Version von Microsoft .NET Framework nicht praktikabel ist, können Sie den Client mit dem auf „True“ festgelegten Parameter **DowngradeDotNetRequirement** installieren. Dadurch wird dieses Erfordernis umgangen, wenn Microsoft .NET Framework, Version 4.5.1, installiert ist.
 

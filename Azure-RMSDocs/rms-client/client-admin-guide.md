@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 359e374f23b9a3b8931d67c765949befa5b7c105
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: 17fa8d2269bce0d6ef01506bcbadafd01fc768b6
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444230"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -162,6 +163,14 @@ Der Azure Information Protection-Client unterstützt alle Sprachen, die Office 3
 Für diese Sprachen werden Menüoptionen, Dialogfelder und Meldungen des Azure Information Protection-Client in der Sprache des Benutzers angezeigt. Es gibt ein Installationsprogramm, das die Sprache erkennt, weshalb keine weitere Konfiguration erforderlich ist, um den Azure Information Protection-Client für verschiedene Sprachen zu installieren. 
 
 Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch nicht automatisch übersetzt, wenn Sie Bezeichnungen in der Azure Information Protection-Richtlinie konfigurieren. Ab 30. August 2017 enthält die aktuelle [Standardrichtlinie](../deploy-use/configure-policy-default.md) Unterstützung für einige Sprachen. Damit Benutzer Bezeichnungen in ihrer bevorzugten Sprachen angezeigt bekommen, stellen Sie eigene Übersetzungen bereit, und konfigurieren Sie die Azure Information Protection-Richtlinie, um diese Übersetzungen zu verwenden. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](../deploy-use/configure-policy-languages.md). Optische Kennzeichnungen werden nicht übersetzt und unterstützen nicht mehr als eine Sprache.
+
+## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Upgraden und Verwalten des Azure Information Protection-Clients
+
+Das Azure Information Protection-Team aktualisiert den Azure Information Protection-Client regelmäßig, um Korrekturen und neue Funktionen zu implementieren. Ankündigungen werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) des Teams veröffentlicht.
+
+Wenn Sie den Client mithilfe der ausführbaren Datei oder der Windows Installer-Datei installiert haben, müssen Sie neue Releases manuell aus dem Microsoft Download Center herunterladen, um Updates für den Client zu installieren. Bei einer Installation des Clients mit Windows Update sind neue Releases ein paar Wochen nach der Veröffentlichung automatisch im Katalog zum Download verfügbar. 
+
+Im Artikel [Verlauf der Releases und Supportrichtlinie](../rms-client/client-version-release-history.md) finden Sie weitere Informationen zur Supportrichtlinie für den Azure Information Protection-Client, zu den derzeit unterstützten Versionen und zu den Neuerungen und Änderungen für die unterstützten Versionen. 
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 

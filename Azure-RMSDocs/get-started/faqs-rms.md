@@ -4,7 +4,7 @@ description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: af2157b8163d9ad5adbb69e057330b3b03259fd0
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444179"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -106,11 +107,15 @@ Der Azure Rights Management-Dienst verwendet standardmäßig ein Azure Active Di
 
 Die Authentifizierungsmethode für diese Konten kann unterschiedlich sein, je nachdem, wie der Administrator in der anderen Organisation die Azure Active Directory-Konten konfiguriert hat. Beispielsweise können Kennwörter, die für diese Konten erstellt wurden, Multi-Factor Authentication (MFA, mehrstufige Authentifizierung), Verbund oder Kennwörter verwendet werden, die in Active Directory-Domänendienste erstellt und dann mit Azure Active Directory synchronisiert wurden.
 
-Wenn Sie eine E-Mail mit einer Office-Dokumentanlage an einen Benutzer senden, der über ein Konto in Azure AD verfügt, und diese E-Mail schützen, ändert sich die Authentifizierungsmethode. Für den Azure Rights Management-Dienst ist ein Verbund mit einigen bekannten Identitätsanbietern sozialer Netzwerke wie Gmail vorhanden. Wenn der E-Mail-Anbieter des Benutzers unterstützt wird, kann der Benutzer sich bei diesem Dienst anmelden. Der Anbieter ist in diesem Fall für die Authentifizierung der Benutzer verantwortlich. Wenn der E-Mail-Anbieter des Benutzers nicht unterstützt wird oder der Benutzer eine andere Vorgehensweise bevorzugt, kann Letzterer eine einmalige Kennung anfordern, mit der dieser authentifiziert wird und mit der die E-Mail mit dem geschützten Dokument in einem Webbrowser angezeigt wird.
+Andere Authentifizierungsmethoden:
+
+- Wenn Sie eine E-Mail mit einer Office-Dokumentanlage an einen Benutzer senden, der über ein Konto in Azure AD verfügt, und diese E-Mail schützen, ändert sich die Authentifizierungsmethode. Für den Azure Rights Management-Dienst ist ein Verbund mit einigen bekannten Identitätsanbietern sozialer Netzwerke wie Gmail vorhanden. Wenn der E-Mail-Anbieter des Benutzers unterstützt wird, kann der Benutzer sich bei diesem Dienst anmelden. Der Anbieter ist in diesem Fall für die Authentifizierung der Benutzer verantwortlich. Wenn der E-Mail-Anbieter des Benutzers nicht unterstützt wird oder der Benutzer eine andere Vorgehensweise bevorzugt, kann Letzterer eine einmalige Kennung anfordern, mit der dieser authentifiziert wird und mit der die E-Mail mit dem geschützten Dokument in einem Webbrowser angezeigt wird.
+
+- Azure Information Protection kann Microsoft-Konten für unterstützte Anwendungen verwenden. Derzeit können nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Kann ich externe Benutzer (die nicht zu meinem Unternehmen gehören) zu benutzerdefinierten Vorlagen hinzufügen?
 
-Ja. Über die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md), die Sie im Azure-Portal konfigurieren können, können Sie Berechtigungen für Benutzer und Gruppen, die nicht Ihrer Organisation angehören, sowie sogar für sämtliche Benutzer einer anderen Organisation hinzufügen. Fügen Sie keine Konten sozialer Identitäten (wie Gmail oder Microsoft) oder anderer Konten außerhalb von Azure AD hinzu, es sei denn, die Vorlage ausschließlich zum Senden von E-Mails mithilfe von [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) verwendet.
+Ja. Über die [Schutzeinstellungen](../deploy-use/configure-policy-protection.md), die Sie im Azure-Portal konfigurieren können, können Sie Berechtigungen für Benutzer und Gruppen, die nicht Ihrer Organisation angehören, sowie sogar für sämtliche Benutzer einer anderen Organisation hinzufügen. Das ausführliche Beispiel [Secure document collaboration by using Azure Information Protection (Sichere Dokumentenzusammenarbeit durch Azure Information Protection)](secure-collaboration-documents.md) ist womöglich nützlich für Sie. 
 
 Beachten Sie, dass Sie erst ihre benutzerdefinierte Vorlage in eine Bezeichnung konvertieren müssen, wenn Azure Information Protection-Bezeichnungen vorhanden sind, bevor Sie diese Schutzeinstellungen im Azure-Portal konfigurieren können. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md).
 

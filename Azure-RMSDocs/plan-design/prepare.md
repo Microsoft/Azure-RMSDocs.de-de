@@ -4,7 +4,7 @@ description: Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer- 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
-ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
+ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444111"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -84,7 +85,11 @@ Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen sowie zum Konfigurieren
 
 Azure Information Protection verwendet die Attribute „Azure AD proxyAddresses“ und „Azure AD userPrincipalName“ nicht nur für Benutzer in Ihrem Mandanten, sondern auch in gleicher Weise zum Autorisieren von Benutzern aus einem anderen Mandanten.
 
-Wenn eine E-Mail mit der Office 365-Nachrichtenverschlüsselung und deren neuen Funktionen an einen Benutzer gesendet wird, für den in Azure AD kein Konto angelegt ist, wird dieser Benutzer zunächst authentifiziert, indem ein Verbund mit einem Sozialen Netzwerk als Identitätsanbieter hergestellt oder eine Einmalkennung verwendet wird. Anschließend wird die in der geschützten E-Mail angegebene E-Mail-Adresse verwendet, um den Benutzer zu autorisieren.
+Andere Autorisierungsmethoden:
+
+- Azure Information Protection kann E-Mail-Adressen autorisieren, die nicht in Azure AD vorhanden sind, wenn diese mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
+- Wenn eine E-Mail mit der Office 365-Nachrichtenverschlüsselung und deren neuen Funktionen an einen Benutzer gesendet wird, für den in Azure AD kein Konto angelegt ist, wird dieser Benutzer zunächst authentifiziert, indem ein Verbund mit einem Sozialen Netzwerk als Identitätsanbieter hergestellt oder eine Einmalkennung verwendet wird. Anschließend wird die in der geschützten E-Mail angegebene E-Mail-Adresse verwendet, um den Benutzer zu autorisieren.
 
 ## <a name="azure-information-protection-requirements-for-group-accounts"></a>Azure Information Protection-Anforderungen für Gruppenkonten
 

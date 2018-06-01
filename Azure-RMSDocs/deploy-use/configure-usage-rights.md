@@ -4,7 +4,7 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
-ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
+ms.openlocfilehash: 697fa4674699fd3b24f7f7353ff9f9d476040bd8
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423356"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -168,7 +169,7 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für ein
 
 - Wenn Sie eine Bezeichnung oder eine Vorlage im Azure-Portal konfigurieren, erhält die Gültigkeitsdauer der Nutzungslizenz ihren Wert aus der Einstellung **Offlinezugriff zulassen**. 
     
-    Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung im Azure-Portal finden Sie in Schritt 9 der Tabelle [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md).
+    Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung im Azure-Portal finden Sie in der Tabelle [Informationen zu Schutzeinstellungen](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings) der Anleitung zum Konfigurieren einer Bezeichnung für Azure Rights Management.
 
 - Wenn Sie eine Vorlage mithilfe von PowerShell konfigurieren, erhält die Gültigkeitsdauer der Nutzungslizenz ihren Wert aus dem Parameter *LicenseValidityDuration* in den Cmdlets [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) und [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     
