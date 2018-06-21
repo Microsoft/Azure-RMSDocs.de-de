@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30205913"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren einer Datei oder E-Mail mithilfe von Azure Information Protection
 

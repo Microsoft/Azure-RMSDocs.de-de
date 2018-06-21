@@ -4,24 +4,22 @@ description: Konfigurieren Sie die Einstellungen in der Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: f4b79f66bc3f747285b2811327ea158bb83af03d
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: cfdb1537ad5444ef478c18380b535f38b5f7c667
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32326547"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Dieser Artikel enthält die neuesten Updates für das Azure-Portal, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde (wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin die Option **Veröffentlichen** angezeigt wird und die Menüoption **Klassifizierungen** nicht angezeigt wird), sollten Sie einige Tage warten und anschließend zu diesen Anweisungen zurückkehren.
 
 Zusätzlich zum Titel und der QuickInfo für die Information Protection-Leiste gibt es einige Einstellungen in der Azure Information Protection-Richtlinie, die Sie unabhängig von den Bezeichnungen konfigurieren können:
 

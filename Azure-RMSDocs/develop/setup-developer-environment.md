@@ -1,13 +1,13 @@
 ---
 title: Einrichten der Entwicklerumgebung | Azure RMS
-description: "Es wird veranschaulicht, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten."
-keywords: 
+description: Es wird veranschaulicht, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27764473"
 ---
 # <a name="setup-developer-environment"></a>Einrichten der Entwicklerumgebung
 

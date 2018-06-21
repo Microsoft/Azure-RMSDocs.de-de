@@ -15,6 +15,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30205430"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/26/2018
+ms.locfileid: "31817218"
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für Clients und Onlinediensten zur Verwendung des Azure Rights Management-Diensts
 

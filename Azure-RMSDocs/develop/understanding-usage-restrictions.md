@@ -1,13 +1,13 @@
 ---
-title: "Grundlegendes zu Nutzungseinschränkungen | Azure RMS"
-description: "Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden."
-keywords: 
+title: Grundlegendes zu Nutzungseinschränkungen | Azure RMS
+description: Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765747"
 ---
 # <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 

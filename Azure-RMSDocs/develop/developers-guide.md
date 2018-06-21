@@ -1,6 +1,6 @@
 ---
 title: Azure Information Protection-Entwicklerhandbuch
-description: "Entwickler können mithilfe von Azure Information Protection Dateien aller Typen schützen und verwalten."
+description: Entwickler können mithilfe von Azure Information Protection Dateien aller Typen schützen und verwalten.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765526"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 

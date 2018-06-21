@@ -17,6 +17,7 @@ ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31441861"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 

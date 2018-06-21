@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206953"
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Verwenden von Tastenkombinationen in der Rights Management-Freigabeanwendung
 

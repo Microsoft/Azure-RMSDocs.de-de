@@ -18,6 +18,7 @@ ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33946435"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 

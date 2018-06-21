@@ -1,6 +1,6 @@
 ---
 title: Neues und Anmerkungen zu dieser Version
-description: "Beschreibt wichtige Änderungen und Funktionen in dieser und früheren Versionen."
+description: Beschreibt wichtige Änderungen und Funktionen in dieser und früheren Versionen.
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/29/2018
+ms.locfileid: "28878934"
 ---
 # <a name="whats-new-and-release-notes"></a>Neues und Anmerkungen zu dieser Version
 

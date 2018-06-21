@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30205035"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Informationen zum Aktivieren von Azure Rights Management über Office 365 Admin Center
 
@@ -47,7 +48,7 @@ Verwenden Sie diese Anweisungen, wenn Sie über Office 365 Admin Center auf den 
 
 4. Klicken Sie auf der Seite **Rights Management** auf **Aktivieren**.
 
-5. Klicken Sie, wenn Sie gefragt werden **Möchten Sie die Rechteverwaltung aktivieren?**auf **Aktivieren**.
+5. Klicken Sie, wenn Sie gefragt werden **Möchten Sie die Rechteverwaltung aktivieren?** auf **Aktivieren**.
 
 Es sollten jetzt **Rights Management ist aktiviert** und die Option zum Deaktivieren angezeigt werden.
 

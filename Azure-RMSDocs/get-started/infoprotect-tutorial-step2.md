@@ -15,6 +15,7 @@ ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33946367"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren der Azure Information Protection-Richtlinie
 

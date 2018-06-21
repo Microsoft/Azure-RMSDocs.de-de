@@ -17,6 +17,7 @@ ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34216765"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 

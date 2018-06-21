@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30208582"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 

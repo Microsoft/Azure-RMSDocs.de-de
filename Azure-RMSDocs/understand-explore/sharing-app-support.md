@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206916"
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>RMS-Freigabeanwendung für Windows und mobile Plattformen
 

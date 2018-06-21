@@ -1,13 +1,13 @@
 ---
 title: 'Vorgehensweise: Aktivieren der Dokumentnachverfolgung und -sperrung | Azure RMS'
-description: "Dieser Artikel bietet grundlegende Anleitungen zum Implementieren der Dokumentnachverfolgung für Inhalte sowie Beispielcode für Metadatenaktualisierungen und zum Erstellen einer Schaltfläche „Verwendung nachverfolgen“ für Ihre App."
-keywords: 
+description: Dieser Artikel bietet grundlegende Anleitungen zum Implementieren der Dokumentnachverfolgung für Inhalte sowie Beispielcode für Metadatenaktualisierungen und zum Erstellen einer Schaltfläche „Verwendung nachverfolgen“ für Ihre App.
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765424"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
 

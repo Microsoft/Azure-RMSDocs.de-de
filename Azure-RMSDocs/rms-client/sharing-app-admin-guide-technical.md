@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207477"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 

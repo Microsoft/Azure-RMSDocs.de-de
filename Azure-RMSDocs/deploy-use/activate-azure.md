@@ -18,6 +18,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30207171"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Aktivieren von Azure Rights Management über das Azure-Portal
 
