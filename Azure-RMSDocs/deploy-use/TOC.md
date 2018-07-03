@@ -29,6 +29,7 @@
 #### [PowerShell-Referenz](configure-templates-with-powershell.md)
 #### [Migrieren aus dem klassischen Azure-Portal](migrate-portal.md)
 ### [Konfigurieren von Sprachen](configure-policy-languages.md)
+## [Konfigurieren von Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen](configure-exo-rules.md)
 ## [Bereitstellen der Azure Information Protection-Überprüfung](deploy-aip-scanner.md)
 ## [Bereitstellen des RMS-Connectors](deploy-rms-connector.md)
 ### [Installieren und Konfigurieren des Connectors](install-configure-rms-connector.md)
