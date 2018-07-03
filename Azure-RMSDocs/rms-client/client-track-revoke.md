@@ -4,7 +4,7 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/04/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4e35659ab964a636c6ca0c7066b1c809cc5958b
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: 610a1e5f147ab8ce0cca3adb59191d145d01a1ae
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33823526"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088275"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
@@ -64,7 +64,7 @@ Um ein von Ihnen geschütztes Dokument nachzuverfolgen, müssen Sie es mit Ihrem
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Verwenden von Office zum Nachverfolgen oder Widerrufen des Dokuments
 
-Bei den Office-Anwendungen wie Word, Excel, PowerPoint und Outlook: 
+In den Office-Anwendungen, Word, Excel und PowerPoint: 
 
 1. Öffnen Sie das geschützte Dokument, das Sie nachverfolgen oder widerrufen möchten.
 
