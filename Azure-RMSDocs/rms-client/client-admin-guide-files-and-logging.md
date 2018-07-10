@@ -4,7 +4,7 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 05/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cb6f68e2d2009a67baadf1146f3c52cf7cf36aa2
-ms.sourcegitcommit: f4a97427d61e4b539c91c49c952658aa2dc729ce
+ms.openlocfilehash: 6bda82a913e4a9d8984a0354cde28bef3c119e81
+ms.sourcegitcommit: 2e85f87f7276b284b4f17de1d4e752c790eff651
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34568870"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -50,9 +51,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 
     - Bezeichnung festlegen: Informationen ID 101
     
-    - Bezeichnung festlegen (niedriger): Informations-ID 102
+    - Bezeichnung festlegen (niedriger): Informations-ID 101
     
-    - Bezeichnung festlegen (höher): Informations-ID 103
+    - Bezeichnung festlegen (höher): Informations-ID 101
     
     - Bezeichnung entfernen: Informations-ID 104
    

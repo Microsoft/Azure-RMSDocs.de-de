@@ -4,7 +4,7 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54106b67888f8c8a669d2c93e60f9967d484ebf3
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: f0ae817fb8b60b0086d2684b620fa17da970f8e8
+ms.sourcegitcommit: 92bb6d3163e455250a84281dac62b5af82f8c4f1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37043348"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -59,7 +60,7 @@ Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können a
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Weitere Informationen zu den Berechtigungen, über die ein Benutzer mit dieser Rolle verfügt, finden Sie im Abschnitt [Verfügbare Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) in der Azure Active Directory-Dokumentation.
 
-- **Globaler Administrator** und **Connectoradministrator** von Azure Rights Management: Bei diesen Administratorrollen von Azure Rights Management gewährt die erste dem Benutzer die Berechtigung, alle [PowerShell-Cmdlets aus dem AADRM-Modul](../deploy-use/administer-powershell.md) auszuführen, ohne ihm die globalen Administratorrechte für andere Cloud Services zuzuweisen, und die zweite Rolle gewährt die Rechte, nur den RMS-Connector (Rights Management) auszuführen. Keine dieser beiden administrativen Rollen gewährt Rechte für die Verwaltungskonsolen.
+- **Globaler Administrator** und **Connectoradministrator** von Azure Rights Management: Bei diesen Administratorrollen von Azure Rights Management gewährt die erste dem Benutzer die Berechtigung, alle [PowerShell-Cmdlets aus dem AADRM-Modul](../deploy-use/administer-powershell.md) auszuführen, ohne ihm die globalen Administratorrechte für andere Cloud Services zuzuweisen, und die zweite Rolle gewährt die Rechte, nur den RMS-Connector (Rights Management) auszuführen. Keine dieser administrativen Rollen vergibt Berechtigungen für Verwaltungskonsolen oder zur Verwendung des den Administratormodus auf der Website zum Nachverfolgen von Dokumenten.
 
     Verwenden Sie das AADRM-PowerShell-Cmdlet [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator), um eine dieser Administratorrollen zuzuweisen.
 
@@ -120,6 +121,7 @@ Zwischen den beiden Lösungen bestehen die folgenden wesentlichen Unterschiede:
 |--------------------------------|-------------------------------------|
 |Unterstützte Datenspeicher: <br /><br />– Lokale Ordner unter Windows Server|Unterstützte Datenspeicher: <br /><br />– Lokale Ordner unter Windows Server<br /><br />– Windows-Dateifreigaben und Network Attached Storage<br /><br />– SharePoint Server 2016 und SharePoint Server 2013|
 |Betriebsmodus: <br /><br />– Echtzeit|Betriebsmodus: <br /><br />– Füllt Datenspeicher automatisch auf. Dieser Zyklus kann einmal oder wiederholt ausgeführt werden|
+|Unterstützung für Dateitypen: <br /><br />– Standardmäßig werden alle Dateitypen geschützt. <br /><br />– Bestimmte Dateitypen können vom Schutz ausgeschlossen werden, indem Sie die Registrierung bearbeiten.|Unterstützung für Dateitypen: <br /><br />– Standardmäßig werden Office-Dateitypen geschützt. <br /><br />– Bestimmte Dateitypen können vom Schutz eingeschlossen werden, indem Sie die Registrierung bearbeiten.|
 
 Derzeit besteht ein Unterschied beim Festlegen des [Rights Management-Besitzers](../deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für Dateien, die in einem lokalen Ordner oder einer Netzwerkfreigabe geschützt sind. Standardmäßig wird für beide Lösungen der Rights Management-Besitzer für das Konto festgelegt, das die Datei schützt. Sie können diese Einstellung aber auch außer Kraft setzen:
 

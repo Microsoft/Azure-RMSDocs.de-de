@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c0e1011da16c9e3e91595cd06375cb744aa8fe00
-ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
+ms.openlocfilehash: c078536a3f8501b52c8980b4d71f9138971a8e05
+ms.sourcegitcommit: b1e739bd911579ab9af09654b5517c4d0a23f482
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402267"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271452"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -52,30 +52,6 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie anschließend die Wertdat
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Unabhängig von dieser Einstellung folgt der Azure Information Protection-Client dem [Prozess zur RMS-Diensterkennung](../rms-client/client-deployment-notes.md#rms-service-discovery), um sein AD RMS-Cluster zu finden.
-
-## <a name="suppress-the-initial-congratulations-welcome-page"></a>Unterdrücken der Startseite „Herzlichen Glückwunsch!“
-
-Im Preview-Client wird die Begrüßungsseite „Herzlichen Glückwunsch!“ nicht mehr angezeigt.
-
-Wenn der Azure Information Protection-Client zum ersten Mal auf einem Computer installiert wird und ein Benutzer Word, Excel, PowerPoint oder Outlook öffnet, wird die Seite **Herzlichen Glückwunsch!** mit kurzen Anweisungen dazu geöffnet, wie die neue Information Protection-Leiste zum Auswählen von Bezeichnungen verwendet wird. Sie können diese Seite durch Bearbeitung der Registrierung unterdrücken.
-
-1. Wenn der folgende Registrierungsschlüssel nicht vorhanden ist, erstellen Sie ihn:
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. Wenn kein DWORD-Wert (32 Bit) (REG-DWORD) namens **EnableWelcomeExperience** vorhanden ist, erstellen Sie ihn und legen den Datenwert auf **0** fest:
-
-## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Unterdrücken von „Neuigkeiten in Azure Information Protection“ Seite
-
-Im Preview-Client wird die Seite „What's new in Azure Information Protection?“ (Neuerungen in Azure Information Protection) nicht mehr angezeigt.
-
-Wenn der Azure Information Protection-Client zum ersten Mal auf einem Computer installiert oder ein Upgrade dafür durchgeführt wird und die Azure Information Protection-Leiste in Word, Excel, PowerPoint oder Outlook angezeigt wird, wird die Seite **Neuigkeiten in Azure Information Protection** angezeigt, um die Benutzer über benutzerdefinierte Berechtigungen und die Nachverfolgung der Nutzung zu informieren. Sie können diese Seite durch Bearbeitung der Registrierung unterdrücken.
-
-1. Wenn der folgende Registrierungsschlüssel nicht vorhanden ist, erstellen Sie ihn:
-    
-    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
-
-2. Wenn kein Zeichenfolgenwert (REG-SZ) namens **WhatsNewVersion** vorhanden ist, erstellen Sie ihn und legen den Datenwert auf **1.4** fest.
 
 ## <a name="sign-in-as-a-different-user"></a>Anmelden als ein anderer Benutzer
 
@@ -356,19 +332,17 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 Verwenden Sie diesen Schlüssel und die entsprechenden Werte für lediglich eine benutzerdefinierte Eigenschaft.
 
-Es gibt zum Beispiel eine SharePoint-Spalte mit dem Namen **Classification** und den möglichen Werten **Public**, **General** und **Confidential**. Dokumente werden in SharePoint gespeichert, und für sie ist einer dieser Werte für die Klassifizierungseigenschaft festgelegt.
+Es gibt zum Beispiel eine SharePoint-Spalte mit dem Namen **Klassifizierung** und den möglichen Werten **Öffentlich**, **Allgemein** und **Streng vertraulich\Alle Mitarbeiter**. Dokumente werden in SharePoint gespeichert, wobei deren Werte für die Klassifizierungseigenschaft auf **Öffentlich**, **Allgemein** oder **Streng vertraulich\Alle Mitarbeiter** festgelegt sind.
 
 Um einem Office-Dokument eine Bezeichnung dieser Klassifizierungswerte zuzuweisen, legen Sie **SyncPropertyName** auf **Classification** und **SyncPropertyState** auf **OneWay** fest. 
 
-Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird diesem eine der folgenden Bezeichnungen zugeordnet: **Öffentlich**, **Allgemein** oder **Vertraulich**. Dies geschieht allerdings nur, wenn Bezeichnungen mit diesen Namen in der Azure Information Protection-Richtlinie vorhanden sind. Wenn es keine Bezeichnungen mit diesen Namen gibt, erhält das Dokument keine Bezeichnung.
+Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird diesem eine der folgenden Bezeichnungen zugeordnet: **Öffentlich**, **Allgemein** oder **Streng vertraulich\Alle Mitarbeiter**. Dies geschieht allerdings nur, wenn Bezeichnungen mit diesen Namen in der Azure Information Protection-Richtlinie vorhanden sind. Wenn es keine Bezeichnungen mit diesen Namen gibt, erhält das Dokument keine Bezeichnung.
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Deaktivieren der niedrigen Integritätsebene für den Scanner
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Für dieses Szenario wird außerdem die aktuelle Vorschauversion des Azure Information Protection-Clients benötigt.
-
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
-Die Vorschauversion des Azure Information Protection-Scanners wird standardmäßig mit einer niedrigen Integritätsebene ausgeführt. Diese Einstellung bietet eine höhere Sicherheitsisolationsstufe, beeinträchtigt jedoch die Leistung. Eine niedrige Integritätsebene eignet sich, wenn Sie den Scanner mit einem Konto ausführen, das privilegierte Zugriffsrechte hat (z.B. ein lokales Administratorkonto), da diese Einstellung den Computer schützt, der den Scanner ausführt.
+Die Vorschauversion der Azure Information Protection-Überprüfung wird standardmäßig mit einer niedrigen Integritätsebene ausgeführt. Diese Einstellung bietet eine höhere Sicherheitsisolationsstufe, beeinträchtigt jedoch die Leistung. Eine niedrige Integritätsebene eignet sich, wenn Sie den Scanner mit einem Konto ausführen, das privilegierte Zugriffsrechte hat (z.B. ein lokales Administratorkonto), da diese Einstellung den Computer schützt, der den Scanner ausführt.
 
 Wenn das Dienstkonto, das den Scanner ausführt, nur über die unter [Voraussetzungen für die Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, ist eine niedrige Integritätsebene weder erforderlich noch empfehlenswert, da sie sich negativ auf die Leistung auswirkt. 
 
@@ -407,7 +381,7 @@ Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Ver
 
 - Die Exchange-Regel erkennt die Exchange-Klassifizierung und ändert entsprechend den Nachrichtenheader, um die Azure Information Protection-Klassifizierung hinzuzufügen.
 
-- Wenn Empfänger die E-Mail in Outlook anzeigen und der Azure Information Protection-Client installiert ist, sehen sie, dass die Azure Information Protection-Bezeichnung sowie alle entsprechenden Kopfzeilen, Fußzeilen oder Wasserzeichen der E-Mail zugewiesen sind. 
+- Wenn interne Empfänger die E-Mail in Outlook anzeigen und der Azure Information Protection-Client installiert ist, sehen sie, dass die Azure Information Protection-Bezeichnung zugewiesen ist. 
 
 Wenn die Azure Information Protection-Bezeichnungen einen entsprechenden Schutz anwenden, fügen Sie diesen Schutz zur Regelkonfiguration hinzu. Wählen Sie hierzu die Option zum Ändern der Nachrichtensicherheit aus, wenden Sie den Rechteschutz an, und wählen Sie dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ aus.
 

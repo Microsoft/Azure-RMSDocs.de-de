@@ -4,18 +4,18 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 0cac50caf3a7ecf9189d7731f1248e543871be9a
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444213"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37068939"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -100,13 +100,26 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Tipp: Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
 
+    - **Vordefinierte Vorlage auswählen**: Zum Verwenden einer der Standardvorlagen oder einer benutzerdefinierten Vorlage, die Sie konfiguriert haben. Beachten Sie, dass diese Option nicht angezeigt wird, wenn Sie eine Bezeichnung bearbeiten, die zuvor die Option **Berechtigungen festlegen** verwendet hat.
+    
+    Diese Vorlage muss veröffentlicht werden (nicht archiviert) und darf nicht bereits mit einer anderen Bezeichnung verknüpft sein, damit Sie eine vordefinierte Vorlage auswählen können. Wenn Sie diese Option auswählen, können Sie die Schaltfläche **Vorlage bearbeiten** verwenden, um [die Vorlage in eine Bezeichnung umzuwandeln](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Tipp: Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
+
 7. Wenn Sie **Festlegen von Berechtigungen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
     
     Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
-    - Klicken Sie auf **Aus der Liste auswählen**, und wählen Sie **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch das Verzeichnis durchsuchen.
+    - Wählen Sie **Aus der Liste auswählen**, wo Sie dann **Hinzufügen \<Organisationsname> – Alle Mitglieder** auswählen können, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Keine authentifizierten Benutzer (Vorschau) hinzufügen** auswählen oder das Verzeichnis durchsuchen.
         
-        Die Benutzer oder Gruppen müssen über eine E-Mail-Adresse verfügen. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
+        Wenn Sie alle Mitglieder auswählen oder das Verzeichnis durchsuchen, müssen die Benutzer oder Gruppen eine E-Mail-Adresse haben. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
+        
+        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Keine authentifizierten Benutzer hinzufügen** 
+        Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 2016 verwendet werden. 
+        
+        Einige typische Szenarien für die Einstellung „Keinen authentifizierten Benutzer hinzufügen“: Es spielt keine Rolle, wer den Inhalt sieht, aber Sie möchten die Verwendung einschränken. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.
+            – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.
+            – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.     
         
     - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können diese Option auch verwenden, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines beliebigen Domänennamens aus dieser Organisation anzugeben. Außerdem können Sie diese Option für soziale Netzwerke verwenden, indem Sie den Domänennamen, z.B. **gmail.com**, **hotmail.com** oder **outlook.com** eingeben.
         
@@ -188,7 +201,7 @@ Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  S
 
 4. Wenn die Option ausgewählt ist, deaktivieren Sie die folgende Option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions** (Vom Benutzer in Word, Excel, PowerPoint und dem Datei-Explorer benutzerdefinierte Berechtigungen verlangen).
 
-5. Klicken Sie auf dem Blatt **Schutz** auf **OK**.
+5. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Beispiel 2: Bezeichnung, die schreibgeschützte Berechtigungen für alle Benutzer in einer anderen Organisation einschränkt und sofortiges Sperren unterstützt
@@ -209,7 +222,7 @@ Diese Bezeichnung ist für E-Mails nicht geeignet.
 
 6. Wählen Sie erneut auf der Seite **Schutz** für die Einstellung **Allow offline access setting** (Offlinezugang zulassen) **Nie** aus.
 
-7. Klicken Sie auf dem Blatt **Schutz** auf **OK**.
+7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label"></a>Beispiel 3: Hinzufügen von externen Benutzern zu einer bestehenden Bezeichnung
@@ -228,7 +241,7 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 
 6. Wiederholen Sie die Schritte 4 und 5 für jeden Benutzer (oder jede Gruppe), den (oder die) Sie dieser Bezeichnung hinzufügen wollen. Klicken Sie dann auf **OK**.
 
-7. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
+7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Beispiel 4: Bezeichnung für geschützte E-Mails, die weniger einschränkende Berechtigungen als „Nicht weiterleiten“ unterstützt
 
@@ -238,11 +251,11 @@ Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, gilt Folgendes
 
 - Die Bezeichnung eignet sich für E-Mails, wenn Exchange Online die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) verwendet. 
  
-- Für Office-Anhänge, die automatisch geschützt sind, stehen diese Dokumente für eine Browservorschau zur Verfügung. Um diese Dokumente zu bearbeiten, laden Sie sie herunter, und bearbeiten Sie sie mit Office 2016-Klick-und-Los und einem Microsoft-Konto, das dieselbe E-Mail-Adresse verwendet. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Für Office-Anlagen, die automatisch geschützt sind, stehen diese Dokumente für eine Browservorschau zur Verfügung. Um diese Dokumente zu bearbeiten, laden Sie sie herunter, und bearbeiten Sie sie mit Office 2016-Klick-und-Los und einem Microsoft-Konto, das dieselbe E-Mail-Adresse verwendet. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
-> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Sie können mit diesem Beispiel jedoch eine Bezeichnung mit denselben Nutzungsrechten konfigurieren.
+> In Exchange Online wird eine neue Option eingeführt: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails). Diese Option ist für das Konfigurieren von Bezeichnungen nicht verfügbar. Wenn Sie die Empfänger jedoch kennen, können Sie mit diesem Beispiel eine Bezeichnung mit denselben Nutzungsrechten konfigurieren. 
 
 Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese Adressen für dieselben Benutzer sein, die Sie für diese Bezeichnung festgelegt haben. Da Benutzer zu Gruppen gehören und mehr als eine E-Mail-Adresse haben können, muss die von ihnen angegebene E-Mail-Adresse nicht mit der von Ihnen für die Berechtigung angegebenen E-Mail-Adresse übereinstimmen. Die Angabe derselben E-Mail-Adresse ist allerdings der einfachste Weg, um sicherzustellen, dass der Empfänger erfolgreich autorisiert wird. Weitere Informationen zur Vorgehensweise bei der Autorisierung von Benutzern für Berechtigungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md). 
 
@@ -264,10 +277,30 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
 
 6. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**.
 
-7. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
+7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+
+
+### <a name="example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it"></a>Beispiel 5: Bezeichnung, die Inhalt verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann
+
+Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domänen angeben müssen, um eine E-Mail oder ein Dokument zu schützen. Der Inhalt wird weiterhin verschlüsselt, und Sie können weiterhin Nutzungsrechte, ein Ablaufdatum und einen Offlinezugriff festlegen. Verwenden Sie diese Konfiguration nur, wenn Sie nicht einschränken müssen, wer das geschützte Dokument oder die E-Mail öffnen darf. [Weitere Informationen zu dieser Einstellung](#more-information-about-add-any-authenticated-users)
+
+1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+    
+2. Achten Sie darauf, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
+
+3. Wählen Sie auf dem Blatt **Berechtigungen hinzufügen** in der Registerkarte **Aus Liste auswählen** die Option **Keine authentifizierten Benutzer (Vorschau) hinzufügen** aus.
+
+4. Wählen Sie die gewünschten Berechtigungen aus, und klicken Sie auf **OK**.
+
+5. Zurück auf dem Blatt **Schutz** konfigurieren Sie die Einstellungen für **Inhaltsablauf** und **Offlinezugriff zulassen**, falls erforderlich, und klicken Sie dann auf **OK**.
+
+6. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
+Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy). 
+
+Mit den Nachrichtenflussregeln von Exchange können auch Schutzaktionen basierend auf Ihren Bezeichnungen angewendet werden. Weitere Informationen und Beispiele finden Sie unter [Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen](configure-exo-rules.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

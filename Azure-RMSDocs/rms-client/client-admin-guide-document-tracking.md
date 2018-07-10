@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: fbf672fbdbc5fcc0538a5c5bac6b656fac3fddc7
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31008980"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949765"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -76,9 +76,11 @@ Dies sind die Standard-URLs für den Azure Rights Management-Dienst mit Ausnahme
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Nachverfolgen und Sperren von Dokumenten für Benutzer
 
-Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe des Azure Information Protection-Clients oder der RMS-Freigabeanwendung freigegeben haben. Wenn Sie sich als Administrator für Azure Information Protection anmelden (globaler Administrator), können Sie auf das Adminsymbol klicken, um in den Administratormodus zu wechseln. In diesem Modus können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt oder mithilfe der Freigabeanwendung von Rights Management freigegeben wurden:
+Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe des Azure Information Protection-Clients oder der RMS-Freigabeanwendung freigegeben haben. Wenn Sie sich für Ihren Mandanten als globaler Azure AD-Administrator anmelden, können Sie auf das Administratorsymbol klicken, um in den Administratormodus zu wechseln. Dieser Modus für die Website zum Nachverfolgen von Dokumenten wird von anderen Administratorrollen nicht unterstützt. 
 
 ![Adminsymbol auf der Website zur Dokumentenverfolgung](../media/tracking-site-admin-icon.png)
+
+Im Administratormodus können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt oder mithilfe der Freigabeanwendung von Rights Management freigegeben wurden.
 
 > [!NOTE] 
 > Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin

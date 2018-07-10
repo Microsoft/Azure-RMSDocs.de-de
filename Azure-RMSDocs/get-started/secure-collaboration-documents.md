@@ -4,7 +4,7 @@ description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/21/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c24747bcb05f7004f7d42b0145ce6cc1bbade5
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 4a642960e81a7d1a5cb6f8433e4098bed06a663d
+ms.sourcegitcommit: dc98226f339339c10fd01535a1adf7e30a817a41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444340"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36300022"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection
 
@@ -27,7 +27,7 @@ Mit Azure Information Protection können Sie Ihre Dokumente schützen, ohne Einb
 
 Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen wie „anzeigen“, „bearbeiten“ und „drucken“. Nutzungsrechte lassen sich beim Schützen eines Dokuments individuell definieren. Alternativ können Sie eine Gruppe von Nutzungsrechten definieren, sogenannte Berechtigungsebenen. Berechtigungsebenen erleichtern die Auswahl von Nutzungsrechten, die in der Regel zusammen verwendet werden, z.B. „Prüfer“ und „Mitautor“. Weitere Informationen zu den Nutzungsberechtigungen und Berechtigungsebenen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
 
-Wenn Sie diese Berechtigungen konfigurieren, geben Sie auch an, für welche Benutzer sie gedacht sind:
+Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Benutzer sie gedacht sind:
 
 - **Für Benutzer in Ihrer oder einer anderen Organisation, die Azure Active Directory verwendet:** Sie können Azure AD-Benutzerkonten, Azure AD-Gruppen oder alle Benutzer in der Organisation angeben. 
 
@@ -35,12 +35,16 @@ Wenn Sie diese Berechtigungen konfigurieren, geben Sie auch an, für welche Benu
     
     Um Dokumente mit einem Microsoft-Konto zu öffnen, müssen Benutzer Office 2016-Klick-und-Los verwenden. In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
 
+- **Für alle authentifizierten Benutzer**: Diese Option ist geeignet, wenn Sie nicht steuern müssen, wer auf das geschützte Dokument zugreift, solange der Benutzer authentifiziert werden kann. Die Authentifizierung kann durch Azure AD, durch die Verwendung eines Microsoft-Kontos oder sogar durch einen Verbundanbieter sozialer Netzwerke oder eine Einmalkennung erfolgen, wenn der Inhalt durch die neuen Funktionen der Office 365-Nachrichtenverschlüsselung geschützt ist. 
+
 Als Administrator können Sie eine Azure Information Protection-Bezeichnung konfigurieren, die auf die Berechtigungen und auf die autorisierten Benutzer angewendet werden soll. Diese Konfiguration erleichtert es Benutzern und anderen Administratoren, die richtigen Schutzeinstellungen anzuwenden, denn sie können einfach die Bezeichnung nutzen, ohne Details angeben zu müssen. In den folgenden Abschnitten finden Sie eine exemplarische Vorgehensweise, die eine sichere Zusammenarbeit mit internen und externen Benutzern unterstützt. Damit können Sie ein Dokument schützen.
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Beispielkonfiguration für eine Schutzbezeichnung, mit der die interne und externe Zusammenarbeit unterstützt wird
 
-In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können. 
+In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können.
+
+Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](../deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
     
@@ -62,11 +66,11 @@ In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichn
         
     ![Konfigurieren von Berechtigungen für eine sichere Zusammenarbeit](../media/collaboration-permissions.png)
 
-
-
 5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**.
 
-6. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**. 
+6. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
+
+7. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Anwenden der Bezeichnung, die die sichere Zusammenarbeit unterstützt
 
@@ -98,8 +102,9 @@ Mit einem Klick auf die Schaltfläche **View Permission** (Berechtigung anzeigen
 
 ![Beispieldialogfeld zu Azure Information Protection-Berechtigungen](../media/example-permisisons-popup.png)
 
+Hinweis: Wenn das Dokument von externen Benutzern geöffnet wird, die ebenfalls Azure Information Protection verwenden, zeigt die Office-Anwendung Ihre Klassifizierungsbezeichnung für das Dokument nicht an, obwohl alle optischen Kennzeichnungen aus der Bezeichnung erhalten bleiben. Stattdessen können externe Benutzer ihre eigene Bezeichnung entsprechend der Klassifizierungstaxonomie ihrer Organisation anwenden. Wenn diese externen Benutzer dann das bearbeitete Dokument an Sie zurücksenden, zeigt Office beim erneuten Öffnen des Dokuments Ihre ursprüngliche Klassifizierungsbezeichnung an.
 
-Bevor das Dokument geöffnet wird, wird einer der folgenden Authentifizierungsflows gestartet:
+Vor dem Öffnen des geschützten Dokuments wird einer der folgenden Authentifizierungsflows durchlaufen:
 
 - Benutzer, die über ein Azure AD-Konto verfügen, authentifizieren sich über ihre Azure AD-Anmeldeinformationen bei Azure AD. Daraufhin wird das Dokument geöffnet. 
 
@@ -118,15 +123,19 @@ Bevor das Dokument geöffnet wird, wird einer der folgenden Authentifizierungsfl
 
 ### <a name="supported-scenarios-for-opening-protected-documents"></a>Unterstützte Szenarios für das Öffnen geschützter Dokumente
 
-In der folgenden Tabelle werden die verschiedenen Authentifizierungsmethoden zusammengefasst, die für das Öffnen und Bearbeiten geschützter Dokumente unterstützt werden.
+In der folgenden Tabelle werden die verschiedenen Authentifizierungsmethoden zusammengefasst, die für das Anzeigen und Bearbeiten geschützter Dokumente unterstützt werden.
 
-Darüber hinaus kann der Azure Information Protection-Viewer für iOS und Android Dateien als Vorschau öffnen, indem er ein Microsoft-Konto verwendet.
+Zusätzlich wird die Dokumentanzeige durch folgende Szenarien unterstützt:
 
-|Plattformen zum Öffnen und Bearbeiten von Dokumenten: <br />Word, Excel, PowerPoint|Authentifizierungsmethode:<br />Azure AD|Authentifizierungsmethode:<br />Microsoft-Konto|
+- Der Azure Information Protection-Viewer für Windows sowie für iOS und Android kann Dateien als Vorschau öffnen, indem er ein Microsoft-Konto verwendet. 
+
+- In einem Browser können geschützte Anlagen geöffnet werden, wenn Anbieter sozialer Netzwerke und Einmalkennungen für die Authentifizierung bei Exchange Online und den neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwendet werden. 
+
+|Plattformen zum Anzeigen und Bearbeiten von Dokumenten: <br />Word, Excel, PowerPoint|Authentifizierungsmethode:<br />Azure AD|Authentifizierungsmethode:<br />Microsoft-Konto|
 |---------------|----------|-----------|-----------|
 |Windows|Ja [[1]](#footnote-1)|Ja [[2]](#footnote-2)|
 |iOS|Ja [[1]](#footnote-1)|Nein|
-|Android|Ja [[1]](#footnote-1)|Nein |
+|Android|Ja [[1]](#footnote-1)|Nein|
 |MacOS|Ja [[1]](#footnote-1)|Nein|
 
 ###### <a name="footnote-1"></a>Fußnote 1
@@ -134,6 +143,8 @@ Unterstützt die Benutzerkonten, Gruppen mit aktivierter E-Mail-Funktion, alle M
 
 ###### <a name="footnote-2"></a>Fußnote 2
 Wird derzeit nur von Office 2016-Klick-und-Los unterstützt.
+
+
 
 
 ## <a name="next-steps"></a>Nächste Schritte

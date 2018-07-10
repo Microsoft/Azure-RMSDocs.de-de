@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ff64b5bb4f73533352aa5497a98263c86842800
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 732eb98b1cbd1af575f15ddc992349d77b436131
+ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423254"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37088258"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -25,7 +25,9 @@ ms.locfileid: "34423254"
 
 Das Azure Information Protection-Team aktualisiert den Azure Information Protection-Client regelmäßig, um Korrekturen und neue Funktionen zu implementieren. 
 
-Sie können das neuste allgemein verfügbare Release und die aktuelle Vorschauversion im [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. Diese Versionen sind außerdem im Microsoft Update-Katalog (Kategorie: **Azure Information Protection**) enthalten, damit Sie den Client über WSUS, den Konfigurationsmanager oder andere Mechanismen zur Bereitstellung von Software bereitstellen können, die Microsoft Update verwenden.
+Sie können das neueste allgemein verfügbare Release und die aktuelle Vorschauversion (sofern verfügbar) im [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. Die allgemein verfügbare Version ist außerdem im Microsoft Update-Katalog (Kategorie: **Azure Information Protection**) enthalten, sodass Sie ein Upgrade des Client über WSUS, den Konfigurationsmanager oder andere Mechanismen zur Bereitstellung von Software durchführen können, die Microsoft Update verwenden.
+
+Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Information Protection-Clients](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
@@ -42,19 +44,34 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-## <a name="versions-later-than-12660"></a>Versionen ab 1.26.6.0
+## <a name="version-12950"></a>Version 1.29.5.0 
 
-Wenn Ihre Version des Clients höher als 1.26.6.0 ist, handelt es sich um eine Vorabversion für Test- und Evaluierungszwecke. 
- 
-**Veröffentlicht:** 21.5.2018 
+**Veröffentlicht:** 26.6.2018
 
-Die aktuelle Version lautet **1.27.48.0** und weist seit der aktuellen allgemein verfügbaren Version des Clients die unten angegebenen Änderungen auf.  
+Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
+
+**Fixes**:
+
+- Für die Office-Versionen 16.0.9324.1000 und höher (Klick-und-Los) unterstützt die Azure Information Protection-Leiste die neuesten Anzeigeoptionen für Monitore. Bisher konnte es passieren, dass die Leiste außerhalb der Outlook-Anwendung angezeigt wurde.
+
+- Optische Kennzeichnungen, die Sie [pro Office-Anwendungstyp](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) konfigurieren können, ersetzen eine Kopf- und Fußzeile, die zuvor von einer Azure Information Protection-Bezeichnung angewendet wurde.
+
+- Wenn eine Excel-Datei bereits bezeichnet wurde und die Bezeichnung optische Kennzeichnungen anwendet, werden diese optischen Kennzeichnungen jetzt auch auf neue Tabellenblätter angewendet.
+
+- Wenn Sie die erweiterte Clienteinstellung verwenden, um einem [Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft eine Bezeichnung hinzuzufügen](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), setzt die automatische Bezeichnung nicht die manuelle Bezeichnung außer Kraft.
+
+
+## <a name="version-127480"></a>Version 1.27.48.0
+
+**Veröffentlicht:** 30.5.2018
+
+Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 **Neue Features**: 
 
 - Für die Azure Information Protection-Überprüfung:
     
-    - Sie können eine Liste mit Dateitypen angeben, die in die Überprüfung eingeschlossen oder von ihr ausgeschlossen werden sollen. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType) kann ein Dateityp aus der Liste entfernt werden.
+    - Sie können eine Liste mit Dateitypen angeben, die in die Überprüfung eingeschlossen oder von ihr ausgeschlossen werden sollen. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) kann ein Dateityp aus der Liste entfernt werden.
     
     - Mithilfe der Standardbezeichnung können Sie Dateien bezeichnen, ohne deren Inhalt zu überprüfen. Verwenden Sie hierzu das Cmdlet [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository), und legen Sie den Parameter *MatchPolicy* auf **Off** fest. 
     
@@ -69,6 +86,8 @@ Die aktuelle Version lautet **1.27.48.0** und weist seit der aktuellen allgemein
 **Weitere Änderungen**:
 
 - Für die Azure Information Protection-Überprüfung: 
+    
+    - Wenn Sie eine frühere Version der Überprüfung installiert haben, führen Sie nach dem Upgrade des Azure Information Protection-Clients den Befehl zur Installation der Überprüfung mit [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) erneut aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Die Neuinstallation der Überprüfung gewährt dem Überprüfungsdienstkonto Berechtigungen zum Löschen für die Überprüfungsdatenbank, die für Berichte benötigt werden.    
     
     - Der Parameter *ScanMode* von [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) wurde in **Enforce** umbenannt und kann die Werte Off und On enthalten.
     
@@ -128,7 +147,7 @@ Fixes für Stabilität und für bestimmte Szenarios, die Folgendes umfassen:
 
 - Bootstrap funktioniert für die 64-Bit-Version von Office, sodass Sie Dokumente und E-Mails schützen können.
 
-- Sie können für Word, Excel, PowerPoint und den Datei-Explorer jetzt eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren und außerdem die erweiterte Clienteinstellung verwenden, um die Optionen zu den benutzerdefinierten Berechtigungen auszublenden. [Weitere Informationen](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
+- Sie können für Word, Excel, PowerPoint und den Datei-Explorer jetzt eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren und außerdem die erweiterte Clienteinstellung verwenden, um die Optionen für die benutzerdefinierten Berechtigungen auszublenden. [Weitere Informationen](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users) 
 
 - Fallback auf die Schriftart Calibri, wenn optische Kennzeichnungen in der Azure Information Protection-Richtlinie für einen Schriftartnamen konfiguriert sind, der auf dem Client nicht installiert ist.
 
@@ -140,6 +159,9 @@ Fixes für Stabilität und für bestimmte Szenarios, die Folgendes umfassen:
 
 - Unterbezeichnungen erben keine optischen Kennzeichnungen und Schutzeinstellungen von der übergeordneten Bezeichnung mehr, um die Verwaltungsumgebung einheitlicher zu gestalten.
 
+**Weitere Änderungen**:
+
+- Für die [Protokollierung der Clientnutzung](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client ): Die Ereignis-IDs 102 und ID 103 werden durch Ereignis-ID 101 ersetzt.
 
 ## <a name="version-110560"></a>Version 1.10.56.0
 
