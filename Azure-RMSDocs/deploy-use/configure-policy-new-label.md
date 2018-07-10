@@ -4,24 +4,22 @@ description: Wenngleich Azure Information Protection anpassbare Standardbezeichn
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: e36daed0dafe970a273d153512387dda9c1dca40
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 5cfacba692cfd2c0e27981e8c41e45e4d9dcb3a3
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562584"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Erstellen einer neuen Bezeichnung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
->[!NOTE]
-> Dieser Artikel enthält die neuesten Updates für das Azure-Portal, durch die Sie eine Bezeichnung unabhängig von der globalen Richtlinie oder einer bereichsbezogenen Richtlinie erstellen können. Die Option für die Veröffentlichung von Richtlinien wird ebenfalls entfernt. Wenn Ihr Mandant noch nicht für diese Änderungen aktualisiert wurde (wenn Ihnen bei der Azure Information Protection-Richtlinie beispielsweise weiterhin die Option **Veröffentlichen** angezeigt wird und die Menüoption **Klassifizierungen** nicht angezeigt wird), sollten Sie einige Tage warten und anschließend zu diesen Anweisungen zurückkehren.
 
 Wenngleich Azure Information Protection anpassbare Standardbezeichnungen umfasst, können Sie auch eigene Bezeichnungen erstellen.
 
@@ -47,7 +45,7 @@ Fügen Sie mithilfe der folgenden Anweisungen eine neue Bezeichnung hinzu, die z
     
     Beachten Sie, dass neuen Bezeichnungen automatisch die Farbe Schwarz zugewiesen wird. Wählen Sie eine eindeutige Farbe aus der Liste der Farben aus, oder geben Sie ein hexadezimales Tripel für die Komponenten Rot, Grün und Blau (RGB) der Farbe ein. Beispiel: **#DAA520**. Wenn Sie eine Referenz für diese Codes benötigen, ist [Colors by Name (Farben nach Namen)](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) aus der MSDN-Dokumentation ein hilfreicher Ausgangspunkt. Sie finden diese Codes in vielen Bildbearbeitungsprogrammen wie Microsoft Paint, wo Sie eine benutzerdefinierte Farbe aus einer Palette auswählen und automatisch die RGB-Werte angezeigt werden.
 
-5. So stellen Sie Ihre neue Bezeichnung für Benutzer zur Verfügung: Wählen Sie über die Menüoption **Klassifizierungen** > **Richtlinien** die Richtlinie aus, die die neue Bezeichnung enthalten soll, und klicken Sie auf **Bezeichnungen hinzufügen oder entfernen**. Wählen Sie anschließend auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die Bezeichnung aus, und klicken Sie auf **OK** und anschließend auf **Speichern**.
+5. Um die neue Bezeichnung Benutzern zur Verfügung zu stellen, wählen Sie in der Menüoption **KLASSIFIZIERUNGEN** > **Richtlinien** die Richtlinie aus, die die neue Bezeichnung enthalten soll. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnung hinzufügen oder entfernen** die Bezeichnung aus, und klicken Sie nacheinander auf **OK** und **Speichern**.
     
     >[!TIP]
     >Bei neuen Bezeichnungen sollten Sie in Erwägung ziehen, diese zuerst zu einer bereichsbezogenen Richtlinie hinzuzufügen, die Sie zu Testzwecken verwenden. Wenn Sie mit den Ergebnissen zufrieden sind, können Sie die Bezeichnung aus diesem Testbereich entfernen und sie anschließend zu einer Richtlinie hinzufügen, die Sie zu Produktionszwecken verwenden.     

@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d26b69bc06a4c0d4f9c097e791b8b10bfc9feb1d
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562142"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -96,9 +97,6 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
->[!NOTE]
-> Diese Anweisungen geben die neuesten Updates für das Azure-Portal wieder. Wenn Ihnen die Menüoption **Klassifizierungen** nicht angezeigt wird und Sie die Option **Veröffentlichen** weiterhin sehen können, stimmen die Navigationsoptionen nicht exakt mit dem überein, was Sie sehen. In diesem Fall sollten Sie in Erwägung ziehen, in einigen Tagen zu dieser Prozedur zurückzukehren, wenn Ihr Mandant für die neuesten Änderungen aktualisiert wurde.
-
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection: Bezeichnungen**.
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
@@ -138,14 +136,11 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 ## <a name="to-create-a-new-template"></a>So erstellen Sie eine neue Vorlage
 
->[!NOTE]
-> Diese Anweisungen geben die neuesten Updates für das Azure-Portal wieder. Wenn Ihnen die Menüoption **Klassifizierungen** nicht angezeigt wird und Sie die Option **Veröffentlichen** weiterhin sehen können, stimmen die Navigationsoptionen nicht exakt mit dem überein, was Sie sehen. In diesem Fall sollten Sie in Erwägung ziehen, in einigen Tagen zu dieser Prozedur zurückzukehren, wenn Ihr Mandant für die neuesten Änderungen aktualisiert wurde.
-
 Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüssel)** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die mit Rights Management-Vorlagen integriert werden, zugegriffen werden.
 
 1. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** den Eintrag **Neue Bezeichnung hinzufügen** aus.
 
-2. Behalten Sie auf dem Blatt **Bezeichnung** die Standardeinstellung **Aktiviert**: **Ein** bei, um diese neue Vorlage zu veröffentlichen, oder ändern Sie diese Einstellung in **Aus**, um die Vorlage als archiviert zu erstellen. Geben Sie dann einen Bezeichnungsnamen und eine Beschreibung für den Vorlagennamen und die Beschreibung ein.
+2. Behalten Sie auf dem Blatt **Bezeichnung** für **Aktiviert** die Standardeinstellung **Ein** bei. Geben Sie dann einen Bezeichnungsnamen und eine Bezeichnungsbeschreibung für die Vorlage ein.
 
 3. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
     
@@ -156,19 +151,10 @@ Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüss
     Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
     
     Auf dem Blatt **Azure Information Protection: Bezeichnungen** können Sie jetzt Ihre neue Bezeichnung sehen, die mit der Spalte **Schutz** angezeigt wird. Dies bedeutet, dass sie Schutzeinstellungen enthält. Diese Schutzeinstellungen werden Anwendungen und Diensten, die den Azure Rights Management-Dienst unterstützen, als Vorlagen angezeigt.
+    
+    Obwohl die Bezeichnung aktiviert ist, wird die Vorlage standardmäßig archiviert. Damit Anwendungen und Dienste die Vorlage zum Schützen von Dokumenten und E-Mails verwenden können, führen Sie den letzten Schritt zum Veröffentlichen der Vorlage aus.
 
-5. Sollte die neu erstellte Vorlage nicht für alle Benutzer verfügbar sein, müssen Sie die neu erstellte Bezeichnung zu einer anderen Richtlinie als der globalen Richtlinie hinzufügen:
-    
-    ein. Wählen Sie über die Menüoption **Klassifizierungen** > **Richtlinien** den Eintrag **Richtlinien** aus.
-    
-    b. Klicken Sie auf **Neue Richtlinie hinzufügen**, und geben Sie anschließend auf dem Blatt **Richtlinie** einen Namen für den Benutzerkreis und eine Beschreibung an. Wählen Sie anschließend mithilfe der folgenden Option die Gruppe der Benutzer aus: **Select which users or groups get this policy. Groups must be email-enabled.** (Auswählen, welche Benutzer oder Gruppen diese Richtlinie abrufen können. Gruppen müssen E-Mail-fähig sein.)
-    
-    Wenn eine Richtlinie für Ihre Gruppe von Benutzern bereits vorhanden ist, können Sie diese Richtlinie alternativ über das Blatt **Richtlinie** abrufen.
-    
-    c. Wählen Sie über das Blatt **Richtlinie** den Eintrag **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie anschließend auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die Ihre Schutzeinstellungen enthält, und klicken Sie auf **OK**.
-    
-    d. Klicken Sie auf **Speichern**, wenn Sie das Blatt **Richtlinie** wieder aufgerufen haben.  
-
+5. Wählen Sie in der Menüoption **KLASSIFIZIERUNGEN** > **Richtlinien** die Richtlinie aus, die die neuen Schutzeinstellungen enthalten soll. Wählen Sie dann **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die Ihre Schutzeinstellungen enthält, und klicken Sie nacheinander auf **OK** und auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

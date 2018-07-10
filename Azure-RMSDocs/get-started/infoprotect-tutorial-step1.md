@@ -4,17 +4,18 @@ description: Schritt 1 eines Einführungstutorials zum schnellen Ausprobieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 05/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 5dcc63f6ffbd7402c94258fe0d8677908c603e1f
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: f5daff0083e653a9a4a4b2bdeb96daa85075428b
+ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "34562057"
 ---
 # <a name="step-1-activate-protection"></a>Schritt 1: Aktivieren des Schutzes
  
@@ -33,14 +34,14 @@ Es gibt verschiedene Möglichkeiten zur Aktivierung des Schutzes. Sie können so
     
     Wenn Sie nicht über globale Administratorrechte verfügen, können Sie die folgenden [administrativen Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) verwenden: **Information Protection-Administrator** oder **Sicherheitsadministrator**.
 
-2. Klicken Sie im Hubmenü auf **Ressource erstellen**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit + Identität** aus. 
+2. Wählen Sie im Hubmenü die Option **Ressource erstellen** aus, und geben Sie dann im Suchfeld für den Marketplace **Azure Information Protection** ein. 
     
-3.  Wählen Sie auf dem Blatt **Sicherheit und Identität** in der Liste **AUSGEWÄHLTE APPS** die Option **Azure Information Protection** aus. Klicken Sie dann auf dem Blatt **Azure Information Protection** auf **Erstellen**.
-    
-    Dadurch wird das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **Alle Dienste** auswählen. 
+3. Wählen Sie aus den Ergebnisliste **Azure Information Protection** aus. Klicken Sie auf dem Blatt **Azure Information Protection** auf **Erstellen**.
     
     > [!TIP] 
-    > Wählen Sie **An das Dashboard anheften** zum Erstellen einer **Azure Information Protection**-Kachel auf Ihrem Dashboard aus, damit Sie bei der nächsten Anmeldung nicht erneut nach dem Dienst suchen müssen können.
+    > Wählen Sie optional **An Dashboard anheften** aus, um eine **Azure Information Protection**-Kachel auf Ihrem Dashboard zu erstellen, damit Sie bei der nächsten Anmeldung beim Portal nicht erneut nach dem Dienst suchen müssen können.
+    
+    Klicken Sie erneut auf **Erstellen**.
 
 4. Beachten Sie die Informationen auf der Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Sie können später zu dieser Seite zurückkehren. Klicken Sie für dieses Tutorial auf **VERWALTEN** > **Schutzaktivierung**. 
 
