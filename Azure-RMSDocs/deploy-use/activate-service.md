@@ -4,7 +4,7 @@ description: Sie müssen den Azure Rights Management-Dienst aktivieren, damit Ih
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2018
+ms.date: 07/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8e8a5062efe3b14f1867cf8440dc91c368a810f5
-ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
+ms.openlocfilehash: 46c13b70e0b922b9b4d403d9801a192bb649497f
+ms.sourcegitcommit: 4bda470156d18ee8289752d37789feb1ae758a6b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137779"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37925023"
 ---
 # <a name="activating-azure-rights-management"></a>Aktivieren von Azure Rights Management
 
@@ -106,7 +106,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
 Weitere Informationen zu diesem Cmdlet und zusätzliche Beispiele finden Sie auf der Hilfeseite [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy).
 
-Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der Organisation immer geschützte Inhalte nutzen, die durch Ihre Teilmenge von Benutzern geschützt wurde, können aber Informationsschutz aus Clientanwendungen nicht selbst anwenden. Beispielsweise sehen sie nicht die Standardvorlagen in ihren Office-Clients, die automatisch veröffentlicht werden, wenn der Azure Rights Management-Dienst aktiviert ist, oder benutzerdefinierte Vorlagen, die Sie ggf. konfiguriert haben. Serverseitige Anwendung wie z.B. Exchange können eigene Steuerelemente pro Benutzer für die Rights Management-Integration implementieren, um das gleiche Ergebnis zu erzielen.
+Wenn Sie diese Onboarding-Steuerelemente verwenden, können alle Benutzer in der Organisation immer geschützte Inhalte nutzen, die durch Ihre Teilmenge von Benutzern geschützt wurde, können aber Informationsschutz aus Clientanwendungen nicht selbst anwenden. Beispielsweise sehen sie nicht die Standardvorlagen in ihren Office-Apps, die automatisch veröffentlicht werden, wenn der Azure Rights Management-Dienst aktiviert ist, oder benutzerdefinierte Vorlagen, die Sie ggf. konfiguriert haben. Serverseitige Anwendung wie z.B. Exchange können eigene Steuerelemente pro Benutzer für die Rights Management-Integration implementieren, um das gleiche Ergebnis zu erzielen. Sie können beispielsweise verhindern, dass Benutzer E-Mails in Outlook im Web schützen, indem Sie [Set-OwaMailboxPolicy](/powershell/module/exchange/client-access/set-owamailboxpolicy?view=exchange-ps) verwenden, um den Parameter *IRMEnabled* auf *$false* zu setzen.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
