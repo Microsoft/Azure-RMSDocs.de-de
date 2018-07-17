@@ -4,7 +4,7 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/03/2018
+ms.date: 07/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3df9e33542d40d00f601ded599b454b2a9f8f045
-ms.sourcegitcommit: 666308d042c079b2d6bedfbe85ab0bf2450f255b
+ms.openlocfilehash: 77204e78a46b536d7a5b42c2765d5eaea8cd745a
+ms.sourcegitcommit: f50b9bc28c6fff372651a3af7a6afc086645ba68
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37433630"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935731"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -113,7 +113,7 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 - Anweisungen für das Azure Active Directory-Konto finden Sie im Administratorhandbuch im Abschnitt [Angeben und Verwenden des Token-Parameters für „Set-AIPAuthentication“](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication).
 
 
-## <a name="install-the-azure-information-protection-scanner"></a>Installieren der Azure Information Protection-Überprüfung
+## <a name="install-the-scanner"></a>Installieren der Überprüfung
 
 1. Melden Sie sich bei dem Windows Server-Computer an, auf dem die Überprüfung ausgeführt werden soll. Verwenden Sie ein Konto mit lokalen Administratorrechten und den Berechtigungen zum Schreiben in die SQL Server-Masterdatenbank.
 
@@ -143,7 +143,9 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 
 Nun, da Sie die Überprüfung installiert haben, müssen Sie ein Azure AD-Token abrufen, damit das Überprüfungsdienstkonto authentifiziert werden und unbeaufsichtigt ausgeführt werden kann. 
 
-## <a name="get-an-azure-ad-token-for-the-scanner-service-account-to-authenticate-to-the-azure-information-protection-service"></a>Abrufen eines Azure AD-Tokens, damit das Überprüfungsdienstkonto bei Azure Information Protection authentifiziert werden kann
+## <a name="get-an-azure-ad-token-for-the-scanner"></a>Abrufen eines Azure AD-Tokens für die Überprüfung
+
+Mithilfe des Azure AD-Tokens kann das Überprüfungsdienstkonto bei Azure Information Protection authentifiziert werden.
 
 1. Melden Sie auf demselben Windows Server-Computer oder Ihrem Desktop beim Azure-Portal an, um zwei Azure AD-Anwendungen zu erstellen, die für die Angabe eines Zugriffstokens für die Authentifizierung erforderlich sind. Nach einer ersten interaktiven Anmeldung wird die Überprüfung mit diesem Token ohne Benutzereingriff ausgeführt.
     
@@ -163,7 +165,7 @@ Die Überprüfung verfügt jetzt über ein Token für die Authentifizierung bei 
 
 Sie können nun die zu überprüfenden Datenspeicher angeben. 
 
-## <a name="specify-data-stores-for-the-azure-information-protection-scanner"></a>Angeben der Datenspeicher für die Azure Information Protection-Überprüfung
+## <a name="specify-data-stores-for-the-scanner"></a>Angeben von Datenspeichern für die Überprüfung
 
 Verwenden Sie das Cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository), um die Datenspeicher anzugeben, die von der Azure Information Protection-Überprüfung gescannt werden sollen. Sie können lokale Ordner, UNC-Pfade und SharePoint Server-URLs für SharePoint-Websites und -Bibliotheken angeben. 
 
@@ -185,7 +187,7 @@ Unterstützte SharePoint-Versionen: SharePoint Server 2016 oder SharePoint Serve
 
 Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überprüfung im Suchmodus ausführen.
 
-## <a name="run-a-discovery-cycle-and-view-reports-for-the-azure-information-protection-scanner"></a>Ausführen eines Suchzyklus und Anzeigen von Berichten für die Azure Information Protection-Überprüfung
+## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Ausführen eines Ermittlungszyklus und Anzeigen von Berichten für die Überprüfung
 
 1. Starten Sie unter **Verwaltung** > **Dienste** den Dienst **Azure Information Protection-Überprüfung**.
 
@@ -199,7 +201,7 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
 
 Wenn Sie für das automatische Bezeichnen der Dateien, die die Überprüfung sucht, bereit sind, fahren Sie mit dem nächsten Abschnitt fort. 
 
-## <a name="configure-the-azure-information-protection-scanner-to-apply-classification-and-protection-to-discovered-files"></a>Konfigurieren der Azure Information Protection-Überprüfung zum Anwenden von Klassifizierung und Schutz auf gefundene Dateien
+## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Konfigurieren der Überprüfung zum Anwenden von Klassifizierung und Schutz
 
 In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für die Berichterstattung aufgeführt. Um diese Einstellungen zu ändern, führen Sie das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) aus.
 
@@ -216,9 +218,9 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
 Da der Zeitplan als fortlaufend konfiguriert wurde, startet die Überprüfung einen neuen Synchronisierungszyklus, sobald der alte abgeschlossen wurde, damit neue und geänderte Dateien gefunden werden.
 
 
-## <a name="how-files-are-scanned-by-the-azure-information-protection-scanner"></a>Überprüfen von Dateien durch die Azure Information Protection-Überprüfung
+## <a name="how-files-are-scanned"></a>So werden Dateien überprüft
 
-Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlossene](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client) Dateien übersprungen, etwa ausführbare Dateien und Systemdateien.
+Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlossene](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) Dateien übersprungen, etwa ausführbare Dateien und Systemdateien.
 
 Sie können dieses Verhalten ändern, indem Sie eine Liste mit Dateitypen definieren, die überprüft oder von der Überprüfung ausgeschlossen werden sollen. Wenn Sie diese Liste angeben, aber kein Datenrepository, gilt die Liste für alle Datenrepositorys, für die keine eigene Liste angegeben wurde. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) kann ein Dateityp aus der Liste entfernt werden.
 
@@ -256,7 +258,7 @@ Wenn die Überprüfung eine Bezeichnung mit Schutz anwendet, werden standardmä�
 
 Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet.
 
-## <a name="when-files-are-rescanned-by-the-azure-information-protection-scanner"></a>Erneutes Einlesen von Dateien durch die Azure Information Protection-Überprüfung
+## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
 
 Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den Datenspeichern. In den nachfolgenden Überprüfungen werden dann nur noch neue oder geänderte Dateien untersucht. 
 
@@ -273,7 +275,7 @@ Wenn die Überprüfung eine Richtlinie heruntergeladen hat, für die keine autom
 
 ## <a name="using-the-scanner-with-alternative-configurations"></a>Verwenden der Überprüfung mit alternativen Konfigurationen
 
-Für die Überprüfung stehen Ihnen zwei alternative unterstützte Szenarios zur Verfügung, bei denen keine Bezeichnungen für Bedingungen konfiguriert werden müssen: 
+Für die Überprüfung stehen Ihnen zwei alternative Szenarios zur Verfügung, die von Azure Information Protection unterstützt werden, bei denen keine Bezeichnungen für Bedingungen konfiguriert werden müssen: 
 
 - Anwenden einer Standardbezeichnung auf alle Dateien in einem Datenrepository:
     
@@ -288,7 +290,7 @@ Für die Überprüfung stehen Ihnen zwei alternative unterstützte Szenarios zur
     
     Bei der Überprüfung werden alle benutzerdefinierten Bedingungen verwendet, die Sie für Bezeichnungen in der Azure Information Protection-Richtlinie angegeben haben, sowie die Liste der Informationstypen, die zum Angeben von Bezeichnungen in der Azure Information Protection-Richtlinie verfügbar sind. 
 
-## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Leistungsoptimierung der Azure Information Protection-Überprüfung
+## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
 So maximieren Sie die Überprüfungsleistung:
 
@@ -339,7 +341,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
     - Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.
     
 
-## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Liste der Cmdlets für die Azure Information Protection-Überprüfung 
+## <a name="list-of-cmdlets-for-the-scanner"></a>Auflisten der Cmdlets für die Überprüfung 
 
 Mit anderen Cmdlets für die Überprüfung können Sie das Dienstkonto und die Datenbank für die Überprüfung ändern, die aktuellen Einstellungen für die Überprüfung abrufen und die Überprüfung deinstallieren. Die Überprüfung verwendet die folgenden Cmdlets:
 
@@ -368,7 +370,7 @@ Mit anderen Cmdlets für die Überprüfung können Sie das Dienstkonto und die D
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
 
 
-## <a name="event-log-ids-and-descriptions"></a>Ereignisprotokoll-IDs und Beschreibungen
+## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>Ereignisprotokoll-IDs und Beschreibungen für die Überprüfung
 
 Anhand der folgenden Abschnitte können Sie mögliche Ereignis-IDs und Beschreibungen für die Überprüfung ermitteln. Diese Ereignisse werden im Windows-Ereignisprotokoll für **Anwendungen und Dienste**, **Azure Information Protection**, auf dem Server erfasst, auf dem der Überprüfungsdienst ausgeführt wird.
 
