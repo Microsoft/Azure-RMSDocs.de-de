@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/28/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 44c1166ce4205d6e77b4877d6aca0eaf16911530
-ms.sourcegitcommit: 1bc4c9d6e773809893d02a6abb09aeb4ae28cb03
+ms.openlocfilehash: ba56e6b165cd378c957b2c54bd41ce54f1830797
+ms.sourcegitcommit: 1b0c387b2848b7dfaee0b0548dde7e41383ffe6e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "34562142"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39138303"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -77,7 +77,7 @@ Vorlagen, die archiviert werden, werden auf dem Blatt **Azure Information Protec
 
 Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen Sie sicher, dass Sie die folgenden Änderungen und Überlegungen zur Kenntnis genommen haben. Aufgrund der Implementierungsänderungen ist die folgende Liste besonders wichtig, falls Sie zuvor Vorlagen im klassischen Azure-Portal verwaltet haben.
 
-- Nachdem Sie eine Vorlage bearbeitet oder konvertiert und die Azure Information Protection-Richtlinie gespeichert haben, werden folgende Änderungen an den ursprünglichen [Nutzungsrechten](configure-usage-rights.md) vorgenommen. Falls erforderlich, können Sie individuelle Nutzungsrechte über das Azure-Portal hinzufügen oder entfernen. Alternativ können Sie auch PowerShell mit den Cmdlets [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) und [Set-AadrmTemplateProperty](/powershell/module/aadrm/new-aadrmrightsdefinition) verwenden.
+- Nachdem Sie eine Vorlage bearbeitet oder konvertiert und die Azure Information Protection-Richtlinie gespeichert haben, werden folgende Änderungen an den ursprünglichen [Nutzungsrechten](configure-usage-rights.md) vorgenommen. Falls erforderlich, können Sie individuelle Nutzungsrechte über das Azure-Portal hinzufügen oder entfernen. Alternativ können Sie auch PowerShell mit den Cmdlets [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) und [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) verwenden.
     
     - **Makros zulassen** (allgemeiner Name) wird automatisch hinzugefügt. Dieses Nutzungsrecht ist für die Azure Information Protection-Leiste in Office-Apps erforderlich.
 
