@@ -4,7 +4,7 @@ description: Informationen zu RMS for Individuals, einem kostenlosen Self-Servic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 358ef172192b3bed65dd8f1853705c8f189cbf97
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 3885dfcdf9c5858fe6e3a43b3980e0862dc4cb51
+ms.sourcegitcommit: 85a56a778973be1c95df08bcd5b56e4f0bc12ad7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444315"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39104929"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -45,7 +45,7 @@ Wenn das Konto erstellt wurde, finden Sie auf der letzten Seite Links zum Herunt
 
 3. Klicken Sie auf **Registrieren**.
 
-    Microsoft verwendet Ihre E-Mail-Adresse, um zu überprüfen, ob Ihre Organisation bereits über ein [Abonnement für Azure Information Protection Premium] (https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder ein [Office 365-Abonnement mit Datenschutz per Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) verfügt. Wenn eines dieser beiden Abonnements gefunden wird, ist es nicht nötig, dass Sie über RMS for Individuals verfügen. Sie werden sofort angemeldet, und die Self-Service-Registrierung für RMS for Individuals wird abgebrochen. Wird eines dieser Abonnements nicht gefunden, fahren Sie mit dem nächsten Schritt fort.
+    Microsoft verwendet Ihre E-Mail-Adresse, um zu überprüfen, ob Ihre Organisation bereits über ein [Abonnement für Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder ein [Office 365-Abonnement mit Datenschutz per Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) verfügt. Wenn eines dieser beiden Abonnements gefunden wird, ist es nicht nötig, dass Sie über RMS for Individuals verfügen. Sie werden sofort angemeldet, und die Self-Service-Registrierung für RMS for Individuals wird abgebrochen. Wird eines dieser Abonnements nicht gefunden, fahren Sie mit dem nächsten Schritt fort.
 
 4. Warten Sie darauf, dass eine Bestätigungs-E-Mail an die von Ihnen angegebene Adresse gesendet wird. Diese E-Mail wird vom Office 365-Team (support@email.microsoftonline.com) gesendet und hat den Betreff **Finish signing up for Microsoft Azure Information Protection** (Registrierung für Microsoft Azure Information Protection beenden).
 
