@@ -4,7 +4,7 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8472b8146aa80f00ae8c66f04ee253f7a0777da
-ms.sourcegitcommit: 3276c1f3f32137cb5450f335f4f55e3b5858694d
+ms.openlocfilehash: 90dac73ce15382b4be58e5eb191e44167bdee56f
+ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39157781"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39295439"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -55,7 +55,7 @@ Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschüt
 
 - **Microsoft Office**: Dateitypen in der folgenden Tabelle.
     
-    Unterstützte Dateiformate für diese Dateitypen: Mindestens Office 97-2003- und Open Office XML-Dokumente
+    Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint. 
     
     |Office-Dateityp|Office-Dateityp|
     |----------------------------------|----------------------------------|
@@ -95,9 +95,9 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
 
 - **Bei allen anderen Dateien**: 
     
-    - So schützen Sie diese Dateien: Die Dateigröße wird nur durch den verfügbaren Speicherplatz und den Arbeitsspeicher beschränkt.
+    - Beachten Sie zum Schutz anderer Dateitypen und zum Öffnen dieser Dateitypen im Azure Information Protection-Viewer: Die maximale Dateigröße ist nur durch den verfügbaren Speicherplatz begrenzt.
     
-    - So öffnen Sie diese Dateien im Azure Information Protection-Viewer: Wenn Sie nicht die aktuelle Vorschauversion des Azure Information Protection-Clients besitzen, wird für textbasierte Dateien („.ptxt“ und „.pxml“) eine Dateigröße von maximal 20 MB unterstützt. Bei bildbasierten und PDF-Dateien wird die maximale Dateigröße nur durch den Arbeitsspeicher beschränkt.
+    - Beachten Sie beim Aufheben des Dateischutzes mit dem [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile)-Cmdlet folgendes: Die maximale Dateigröße für PST-Dateien beträgt 5 GB. Die Dateigröße für alle anderen Dateitypen ist nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt.
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 
@@ -125,7 +125,7 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |JT|PJT|
 
 
-Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate sind die, die mindestens Office 97-2003- und Open Office XML-Dokumenten entsprechen. 
+Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
 
 Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 

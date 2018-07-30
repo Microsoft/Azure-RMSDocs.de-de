@@ -4,18 +4,18 @@ description: Eine Übersicht über den Azure Information Protection-Dienst.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/06/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: c851c2f6af3d355b017c7fbc3de188d15ed16e90
-ms.sourcegitcommit: 7a58d6bec0b504b889980c83e8551301d49e44f4
+ms.openlocfilehash: a30607f0a4be292827a3d8ef20f45332e688ae28
+ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37910090"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204491"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -114,6 +114,8 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 ## <a name="resources-for-azure-information-protection"></a>Ressourcen für Azure Information Protection
 
 - Kostenlose Testversion: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+
+- Abonnementoptionen und Preise: [Preise zu Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
 
 - Download des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 

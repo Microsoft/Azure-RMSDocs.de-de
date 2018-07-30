@@ -4,18 +4,18 @@ description: Schritt 2 eines Einführungstutorials zum schnellen Ausprobieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 07/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: 994b9fb3db3c4a1616896ffac7fcd68b0aff7887
+ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33946367"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204457"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -38,13 +38,13 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-labelsv2.png)
     
-3. Es werden auch einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
+3. Nach den Bezeichnungen werden im Abschnitt **Konfigurieren von Einstellungen, die für Information Protection-Endbenutzer angezeigt und angewendet werden** außerdem einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     
     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Ändern der Einstellungen für eine Standardbezeichnung und Aufforderung zur Eingabe einer Begründung
 
-Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Sie sehen, wie diese funktionieren:
+Für dieses Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Sie sehen, wie diese funktionieren:
 
 1. Legen Sie **Standardbezeichnung auswählen** auf **Allgemein** fest. 
 
@@ -52,7 +52,7 @@ Für unser Tutorial ändern wir einige dieser Richtlinieneinstellungen, damit Si
 
 2. Legen Sie die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierung festlegen, eine Kennzeichnung oder den Schutz entfernen möchten** auf **Ein** fest.
 
-3. Suchen Sie außerdem die Einstellung **Die Option „benutzerdefinierte Berechtigungen“ für Benutzer verfügbar machen**. Wenn sie auf **Aus** festgelegt ist, ändern Sie die Einstellung auf **Ein**.
+3. Suchen Sie außerdem die Einstellung **Die Option „benutzerdefinierte Berechtigungen“ für Benutzer verfügbar machen**. Wenn diese Einstellung **Aus** ist, ändern Sie sie in **Ein**.
     
     Möglicherweise müssen Sie diese Einstellung nicht ändern, da die Standardeinstellung davon abhängt, wann Sie Ihr Abonnement erhalten haben. Wir werden später in diesem Tutorial benutzerdefinierte Berechtigungen verwenden, um ein geschütztes Dokument mit einem Benutzer zu teilen, den Sie durch Klicken auf die Datei mit der rechten Maustaste im Datei-Explorer angeben.
 
@@ -74,7 +74,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     ![Schutz, der für eine Azure Information Protection-Bezeichnung konfiguriert ist](../media/info-protect-protection-bar-configured.png) 
     
-4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass **Berechtigungen festlegen** ebenfalls ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
+4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
 
 5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
     
@@ -92,7 +92,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
      ![Anzeige der Berechtigungskonfigurationen für eine Azure Information Protection-Bezeichnung auf dem Blatt „Schutz“](../media/info-protect-protection-configured.png)
     
-    Wenn Sie auf **Berechtigungen hinzufügen** klicken, wird das Blatt **Berechtigungen hinzufügen** erneut geöffnet, sodass Sie weitere Benutzer hinzufügen und diesen unterschiedliche Berechtigungen erteilen können. Sie können einer bestimmten Gruppe beispielsweise nur eine Anzeigeberechtigung erteilen. In diesem Tutorial bleiben wir jedoch bei einem Berechtigungssatz für alle Benutzer.
+    Wenn Sie auf **Berechtigungen hinzufügen** klicken, wird durch diese Aktion das Blatt **Berechtigungen hinzufügen** erneut geöffnet, sodass Sie weitere Benutzer hinzufügen und diesen unterschiedliche Berechtigungen erteilen können. Sie können einer bestimmten Gruppe beispielsweise nur eine Anzeigeberechtigung erteilen. In diesem Tutorial bleiben wir jedoch bei einem Berechtigungssatz für alle Benutzer.
 
 8. Überprüfen Sie die Standards für den Inhaltsablauf und den Offlinezugriff, und behalten Sie diese bei. Klicken Sie dann auf **OK**, um das Blatt **Schutz** zu speichern und zu schließen.
 
