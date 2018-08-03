@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3f012c58255e86c3a133348733e31327faa0417
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: 6c8561a54f80ff623881713c8dd05e334ec56ead
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32327380"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474408"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
@@ -37,7 +37,7 @@ Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilge
 
 - **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. 
     
-    Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der E-Mail-Clients, die von sich aus Rights Management unterstützen, finden Sie in der Spalte E-MAIL der Seite [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../get-started/requirements-applications.md).
+    Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der E-Mail-Clients, die von sich aus Rights Management unterstützen, finden Sie in der Spalte E-MAIL der Seite [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../requirements-applications.md).
 
 - **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine [PDF-Datei zu schützen](client-classify-protect.md). Senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage einer E-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
 
@@ -48,7 +48,3 @@ Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tipp
 ## <a name="next-steps"></a>Nächste Schritte
 
 Besuchen Sie unsere [Yammer-Website](https://www.yammer.com/AskIPTeam), wenn Sie Fragen zu dieser App haben, die nicht in den [Häufig gestellten Fragen](mobile-app-faq.md) behandelt werden, oder Feedback geben möchten.
-
-Wenn die App nicht wie beschrieben funktioniert, prüfen Sie die Liste der Ressourcen auf unserer Seite mit [Regeln](../house-rules.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

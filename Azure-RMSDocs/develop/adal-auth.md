@@ -14,12 +14,12 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5900a011a4470a46cc86e1bca1ada32b43cb0213
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 01202f34d31569d7835ad57a70e2a2d0d49a9678
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258960"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473415"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Konfigurieren Ihrer App für die ADAL-Authentifizierung
 
@@ -29,7 +29,7 @@ Dieses Thema beschreibt die Schritte zum Konfigurieren Ihrer App für die ADAL-b
 
 Folgendes wird benötigt:
 
-- Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie im Artikel zum [Registrieren für RMS for Individuals](../understand-explore/rms-for-individuals-user-sign-up.md).
+- Ein [Abonnement für Microsoft Azure](https://azure.microsoft.com/) (eine kostenlose Testversion ist ausreichend). Weitere Informationen finden Sie im Artikel zum [Registrieren für RMS for Individuals](../rms-for-individuals-user-sign-up.md).
 - Ein Abonnement für Microsoft Azure Rights Management (ein kostenloses [RMS für Einzelpersonen](https://technet.microsoft.com/library/dn592127.aspx)-Konto ist ausreichend).
 
 > [!NOTE]
@@ -104,4 +104,3 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Auswählen von SPEICHERN](../media/SaveApplication.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

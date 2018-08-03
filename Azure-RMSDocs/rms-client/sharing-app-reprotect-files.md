@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 766acd68d1c5c5f59530b0b61fadee315185ec4a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207800"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473711"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden
 
@@ -70,7 +70,7 @@ Weitere Informationen zum vollständigen Entfernen aller Berechtigungen, sodass 
 > -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
 >
 >     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
-> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-re-protect-a-file-that-you-have-emailed"></a>So schützen Sie eine Datei erneut, die Sie per E-Mail versendet haben
 
@@ -94,5 +94,3 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 ## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

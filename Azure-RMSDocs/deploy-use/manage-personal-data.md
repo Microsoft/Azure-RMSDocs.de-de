@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f0fc9b01b042c3210abf69804d552607d92c5928
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: f42e1318e8be0d805216cffd402a9b87a1259e1e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444347"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473847"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -254,7 +254,7 @@ Wenn Sie personenbezogene Daten in den Clientprotokolldateien und in den Scanner
 Befolgen Sie diese drei Schritte, um anzufordern, dass Microsoft personenbezogene Daten aus Dokumentnachverfolgungsprotokollen, Verwaltungsprotokollen oder Nutzungsprotokollen des Azure Rights Management-Diensts löscht. 
 
 **Schritt 1: Initiieren der Löschanforderung**
-[Wenden Sie sich an den Microsoft-Support](../get-started/information-support.md#to-contact-microsoft-support), und öffnen Sie eine Azure Information Protection-Supportanfrage für das Löschen von Daten aus Ihrem Mandanten. Sie müssen nachweisen, dass Sie der Administrator des Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Während Sie Ihre Anforderung übermitteln, müssen Sie zusätzliche Informationen bereitstellen, die von den Daten abhängig sind, die gelöscht werden sollen.
+[Wenden Sie sich an den Microsoft-Support](../information-support.md#to-contact-microsoft-support), und öffnen Sie eine Azure Information Protection-Supportanfrage für das Löschen von Daten aus Ihrem Mandanten. Sie müssen nachweisen, dass Sie der Administrator des Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Während Sie Ihre Anforderung übermitteln, müssen Sie zusätzliche Informationen bereitstellen, die von den Daten abhängig sind, die gelöscht werden sollen.
 
 - Wenn Sie das Verwaltungsprotokoll löschen möchten, stellen Sie das **Enddatum** bereit. Alle Verwaltungsprotokolle bis zu diesem Enddatum werden gelöscht.
 - Wenn Sie Nutzungsprotokolle löschen möchten, stellen Sie das **Enddatum** bereit. Alle Nutzungsprotokolle bis zu diesem Enddatum werden gelöscht.
@@ -277,4 +277,3 @@ Nur Benutzer mit [Administratorberechtigungen](#securing-and-controlling-access-
 
 Bei Löschaktionen fungiert die Supportanforderung als Nachverfolgung und Berichterstellung für von Microsoft durchgeführte Aktionen. Gelöschte Daten können nicht mehr gesucht und exportiert werden. Der Administrator kann dies überprüfen, indem er die Get-Cmdlets des AADRM-Moduls verwendet.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

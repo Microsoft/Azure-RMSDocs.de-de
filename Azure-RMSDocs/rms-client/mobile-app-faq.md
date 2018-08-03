@@ -14,12 +14,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190fce3f1725775ae699dbc523a810dc79b96f88
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 09e75b1d8fd841295924dccfbacf8dcb6d753182
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444247"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473473"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android
 
@@ -63,7 +63,7 @@ Wenn die Datei mit Ihrer privaten E-Mail-Adresse geschützt wurde, melden Sie si
 
 Ja, wenn Sie ein Microsoft-Konto beantragen, können Sie Ihre Hotmail- oder Gmail-Adresse oder eine andere E-Mail-Adresse angeben, die Sie besitzen. 
 
-Obwohl dieser Viewer mit diesem Konto geschützte Dateien öffnen kann, können nicht alle Anwendungen geschützte Inhalte öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+Obwohl dieser Viewer mit diesem Konto geschützte Dateien öffnen kann, können nicht alle Anwendungen geschützte Inhalte öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Welche Dateierweiterungen kann ich mit dieser App öffnen?
 
@@ -79,5 +79,3 @@ Wechseln Sie in der App zu **Einstellungen** > **Feedback senden**.
 ## <a name="my-question-has-not-been-answeredwhat-should-i-do"></a>Meine Frage wurde hier nicht beantwortet – was soll ich tun?
 
 Posten Sie Ihre Fragen auf unserer [Yammer-Website](https://www.yammer.com/AskIPTeam).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

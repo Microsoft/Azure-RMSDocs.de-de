@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ba56e6b165cd378c957b2c54bd41ce54f1830797
-ms.sourcegitcommit: 1b0c387b2848b7dfaee0b0548dde7e41383ffe6e
+ms.openlocfilehash: fed57de220a5448a16a866fae76969eb4f9332de
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138303"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473864"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -46,7 +46,7 @@ Zusätzlich werden die Vorlagen so konfiguriert, dass sie einen Offlinezugriff f
 >[!NOTE]
 > Sie können diese Einstellungen und die Namen und Beschreibungen der Standardvorlagen ändern. Dies war mit dem klassischen Azure-Portal nicht möglich und wird auch weiterhin nicht für PowerShell unterstützt.
 
-Diese Standardvorlagen erleichtern es Ihnen und anderen Personen, sofort mit dem Schutz sensibler Daten Ihrer Organisation zu beginnen. Diese Vorlagen können mit Azure Information Protection-Bezeichnungen oder alleine mit [Anwendungen und Diensten](../understand-explore/applications-support.md) verwendet werden, die Rights Management-Vorlagen verwenden.
+Diese Standardvorlagen erleichtern es Ihnen und anderen Personen, sofort mit dem Schutz sensibler Daten Ihrer Organisation zu beginnen. Diese Vorlagen können mit Azure Information Protection-Bezeichnungen oder alleine mit [Anwendungen und Diensten](../applications-support.md) verwendet werden, die Rights Management-Vorlagen verwenden.
 
 Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen wahrscheinlich nur einige Vorlagen, aber in Azure ist es möglich, maximal 500 gespeicherte benutzerdefinierte Vorlagen zu verwenden.
 
@@ -164,4 +164,3 @@ Alle Vorgänge, die Sie im klassischen Azure-Portal zum Erstellen und Verwalten 
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

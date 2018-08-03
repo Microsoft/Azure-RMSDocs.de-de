@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43689f942bae88c9b7099f45a980f0fd96b1bdaf
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4cdf429527bfc97b4e02438ae45aae80754e5fe1
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204954"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474350"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Überprüfen des Azure Rights Management-Diensts
 
@@ -32,12 +32,11 @@ Anweisungen zum Ausführen dieses Tests finden Sie unter [Unterstützen von Benu
 Wenn Ihre Tests nicht erfolgreich sind, überprüfen Sie die Konfigurationsschritte in der [Roadmap für die Bereitstellung von Azure Information Protection](../plan-design/deployment-roadmap.md).
 
 > [!TIP]
-> Falls Sie weitere Hilfe benötigen, lesen Sie sich den Abschnitt [Supportoptionen und Communityressourcen](../get-started/information-support.md#support-options-and-community-resources) im Artikel [Informationen zu und Unterstützung für Azure Information Protection](../get-started/information-support.md) durch.
+> Falls Sie weitere Hilfe benötigen, lesen Sie sich den Abschnitt [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources) im Artikel [Informationen zu und Unterstützung für Azure Information Protection](../information-support.md) durch.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
 Sie können überwachen, wie Ihre Organisation den Azure Rights Management-Dienst verwendet, indem Sie die Nutzung protokollieren. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

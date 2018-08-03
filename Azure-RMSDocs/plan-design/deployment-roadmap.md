@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b459babbf16b536b1cd73d0bb0ec2c36a499f9e1
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 2943d976e617a4ea2fae42f115b99d65774fb732
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207929"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473983"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -25,10 +25,10 @@ ms.locfileid: "30207929"
 
 Führen Sie die folgenden Schritte aus (empfohlen), um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten.
 
-Falls Sie Azure Information Protection einmal schnell selbst ausprobieren möchten, anstatt die Anwendung in eine Produktionsumgebung einzuführen, helfen Ihnen die Informationen unter [Schnellstarttutorial für Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md) weiter.
+Falls Sie Azure Information Protection einmal schnell selbst ausprobieren möchten, anstatt die Anwendung in eine Produktionsumgebung einzuführen, helfen Ihnen die Informationen unter [Schnellstarttutorial für Azure Information Protection](../infoprotect-quick-start-tutorial.md) weiter.
 
 > [!IMPORTANT]
-> Lesen Sie sich vor dem Ausführen der folgenden Schritte den Artikel [Anforderungen für Azure Information Protection](../get-started/requirements-azure-rms.md) durch.
+> Lesen Sie sich vor dem Ausführen der folgenden Schritte den Artikel [Anforderungen für Azure Information Protection](../requirements.md) durch.
 
 Wählen Sie eine Roadmap für die Bereitstellung aus, die für Ihre Organisation anwendbar ist und die [Abonnementfunktionen und -features](https://azure.microsoft.com/pricing/details/information-protection/) umfasst, die Sie benötigen:
 
@@ -45,7 +45,7 @@ Wählen Sie eine Roadmap für die Bereitstellung aus, die für Ihre Organisation
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Schritt 1: Bestätigen Ihres Abonnements und Zuweisen von Benutzerlizenzen
 Überprüfen Sie anhand der Abonnementinformationen und der Featureliste auf der [Azure Information Protection-Preisseite](https://azure.microsoft.com/pricing/details/information-protection), ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Klassifizierungen und Bezeichnung vornehmen und Dokumente und E-Mails schützen soll, eine Lizenz aus diesem Abonnement zu.
 
-Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../understand-explore/rms-for-individuals.md).
+Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../rms-for-individuals.md).
 
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Schritt 2: Vorbereiten Ihres Mandanten für Azure Information Protection
@@ -137,7 +137,7 @@ Wenn Sie mit der Verwendung des Schutzdiensts beginnen, kann PowerShell nützlic
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-the-protection-service-from-azure-information-protection"></a>Schritt 1: Bestätigen, dass Sie ein Abonnement besitzen, das den Schutzdienst von Azure Information Protection enthält
 Überprüfen Sie anhand der Abonnementinformationen und der Featureliste auf der [Azure Information Protection-Preisseite](https://azure.microsoft.com/pricing/details/information-protection), ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Dokumente und E-Mails schützen soll, eine Lizenz aus diesem Abonnement zu.
 
-Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../understand-explore/rms-for-individuals.md).
+Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](../rms-for-individuals.md).
 
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Schritt 2: Vorbereiten Ihres Mandanten für Azure Information Protection
@@ -190,4 +190,3 @@ Wenn Sie sich für den automatischen Schutz von Dateien mithilfe der Dateiklassi
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 5: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
 Wenn Sie mit der Verwendung des Schutzdiensts beginnen, kann PowerShell nützlich sein, um administrative Änderungen skriptgestützt oder automatisiert durchzuführen. Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](../deploy-use/administer-powershell.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

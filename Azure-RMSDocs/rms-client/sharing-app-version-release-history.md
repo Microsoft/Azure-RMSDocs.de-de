@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1ebeef2847a8404d5970673acd3163b336cf0406
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208616"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473354"
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Rights Management-Freigabeanwendung: Verlauf der Versionsveröffentlichungen
 
@@ -81,7 +81,7 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   Unterstützung für mehrstufige Authentifizierung (MFA) für Azure RMS, wodurch auch die Abhängigkeit vom Microsoft Anmelde-Assistenten für Anwendungen, die eine moderne Authentifizierung verwenden, entfernt wird.
 
-    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) unter [Azure Active Directory-Anforderungen für Azure Information Protection](../get-started/requirements-azure-ad.md).
+    Weitere Informationen finden Sie im Abschnitt [Multi-Factor Authentication (MFA) und Azure RMS](../requirements-servers.md) unter [Azure Active Directory-Anforderungen für Azure Information Protection](../requirements-servers.md).
 
 ## <a name="version-1017840"></a>Version 1.0.1784.0
 **Veröffentlicht**: 30.07.2015
@@ -130,4 +130,3 @@ Versionen vor dem 1. Januar 2015 sind nicht aufgeführt.
 
 -   **Unterstützung für mehrere E-Mail-Domänen innerhalb der Organisation**: Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation über mehrere E-Mail-Domänen verfügen, können die Benutzer durch dieses Update Inhalte verwenden, die von Benutzern in Ihrer Organisation in anderen Domänen geschützt wurden. Weitere Informationen finden Sie im Abschnitt [Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) im [Rights Management-Freigabeanwendung – Administratorhandbuch](sharing-app-admin-guide.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

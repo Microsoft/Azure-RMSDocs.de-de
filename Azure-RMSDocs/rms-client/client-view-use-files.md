@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb631b0153ce047177ef12887c025303acfac1db
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: a9b09347531bc27c965222e5d8b3c23fe593cd72
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31441861"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473323"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 
@@ -40,7 +40,7 @@ Dieser Viewer wird automatisch als Teil des Azure Information Protection-Clients
 > 
 > Installieren Sie den Viewer, wenn Ihnen von einer Person aus einer anderen Organisation ein geschütztes Dokument gesendet wurde oder Sie nicht über lokale Administratorrechte auf Ihrem PC verfügen.
 
-Um ein geschütztes Dokument öffnen zu können, muss es sich um eine RMS-fähige Anwendung handeln. Zu RMS-fähigen Anwendungen zählen beispielsweise Office-Apps und der Azure Informationen Protection-Viewer. Eine Liste der Anwendungen nach Typ und unterstützten Geräten finden Sie in der Tabelle [RMS-fähige Anwendungen](../get-started/requirements-applications.md#rms-enlightened-applications).  
+Um ein geschütztes Dokument öffnen zu können, muss es sich um eine RMS-fähige Anwendung handeln. Zu RMS-fähigen Anwendungen zählen beispielsweise Office-Apps und der Azure Informationen Protection-Viewer. Eine Liste der Anwendungen nach Typ und unterstützten Geräten finden Sie in der Tabelle [RMS-fähige Anwendungen](../requirements-applications.md#rms-enlightened-applications).  
 ## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg als E-Mail-Anhang
 
 Wenn in einer E-Mail **message.rpmsg** als Dateianlage angezeigt wird, handelt es sich bei dieser Datei nicht um ein geschütztes Dokument, sondern um eine geschützte, als Anlage angezeigte E-Mail-Nachricht. Sie können den Azure Information Protection-Viewer nicht bei Windows verwenden, um diese geschützte E-Mail-Nachricht auf Ihrem Windows-PC anzuzeigen. Stattdessen benötigen Sie eine E-Mail-Anwendung für Windows, die Rights Management-Schutz wie etwa bei Office Outlook unterstützt. Alternativ können Sie Outlook im Web verwenden.
@@ -87,5 +87,3 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

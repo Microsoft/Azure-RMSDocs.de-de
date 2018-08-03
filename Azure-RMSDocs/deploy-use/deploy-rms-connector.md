@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c49306a731bf629f3678dc9aa95b23b8ee46190e
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 5e7003c2b2dbcd81ee980dda1dfab14291e81088
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34217021"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473398"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Bereitstellen des Azure Rights Management-Verbindungsdiensts
 
@@ -41,7 +41,7 @@ Der RMS-Verbindungsdienst unterstützt die folgenden lokalen Server: Exchange Se
 > [!NOTE]
 > Wenn Sie mehrere Dateitypen (nicht nur Office-Dokumente) mit der Dateiklassifizierungsinfrastruktur schützen möchten, verwenden Sie nicht den RMS-Connector, sondern die [AzureInformationProtection-Cmdlets](/powershell/azureinformationprotection/vlatest/aip).
 
-Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unterstützt werden, finden Sie unter [Lokale Server, die Azure RMS unterstützen](..\get-started\requirements-servers.md).
+Informationen zu den Versionen dieser lokalen Server, die vom RMS-Connector unterstützt werden, finden Sie unter [Lokale Server, die Azure RMS unterstützen](../requirements-servers.md).
 
 
 ### <a name="support-for-hybrid-scenarios"></a>Unterstützung für Hybridszenarios
@@ -94,5 +94,3 @@ Der Connector überprüft nicht automatisch alle [Voraussetzungen](deploy-rms-co
 ## <a name="next-steps"></a>Nächste Schritte
 
 Weiter zu Schritt 1: [Installieren und Konfigurieren des Azure Rights Management-Connectors](install-configure-rms-connector.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

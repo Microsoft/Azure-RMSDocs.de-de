@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: e14844a5bd1b0ace4085eaaa9c15be6b3c814146
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444111"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473745"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -87,7 +87,7 @@ Azure Information Protection verwendet die Attribute „Azure AD proxyAddresses�
 
 Andere Autorisierungsmethoden:
 
-- Azure Information Protection kann E-Mail-Adressen autorisieren, die nicht in Azure AD vorhanden sind, wenn diese mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Azure Information Protection kann E-Mail-Adressen autorisieren, die nicht in Azure AD vorhanden sind, wenn diese mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - Wenn eine E-Mail mit der Office 365-Nachrichtenverschlüsselung und deren neuen Funktionen an einen Benutzer gesendet wird, für den in Azure AD kein Konto angelegt ist, wird dieser Benutzer zunächst authentifiziert, indem ein Verbund mit einem Sozialen Netzwerk als Identitätsanbieter hergestellt oder eine Einmalkennung verwendet wird. Anschließend wird die in der geschützten E-Mail angegebene E-Mail-Adresse verwendet, um den Benutzer zu autorisieren.
 
@@ -215,4 +215,3 @@ Wenn Sie sich vergewissert haben, dass Ihre Benutzer und Gruppen mit Azure Infor
 
 Weitere Informationen (darunter zur Überprüfung des Aktivierungsstatus) finden Sie unter [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
