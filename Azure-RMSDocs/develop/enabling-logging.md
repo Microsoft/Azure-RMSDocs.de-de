@@ -14,12 +14,12 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 906746990fd08a749d2879fbc04b054e49e65f01
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 68ed6db23caf5cab0a98e4704a36366c721d4194
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764478"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373388"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung
 Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von Diagnose- und Leistungsprotokollen über eine einzelne Geräteeigenschaft verwaltet.
@@ -98,5 +98,3 @@ Aktuelle Einstellung für Protokollierungssteuerungs-Flag abrufen
 **Hinweis**: Die obigen Windows-Codeausschnitte sind in C++ geschrieben. Aktualisieren Sie die Syntax für C\# mit „.“ anstelle von „::“.
 
 **Linux/C++**: Dieses SDK verfügt über einige grundlegende Funktionen für die Protokollierung, die nicht so umfangreich wie die Funktionen anderer Plattformen sind. Weitere Informationen finden Sie im Abschnitt **Troubleshooting** der Datei „README.md“ unter [RMS SDK for portable C++](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting) (RMS SDK für portables C++).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

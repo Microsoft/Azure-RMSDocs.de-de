@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 16ded8f9bbe06069e1fefb925166af491d1b0caa
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: d1c2f96dfd915134385fd4e790e9477c77fa17ad
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208225"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375173"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -81,5 +81,4 @@ Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorg
 |Entdeckte Sicherheitslücke in HSM-Technologie der aktuellen Generation.|Microsoft muss die HSMs aktualisieren. Wenn es Anlass gibt, zu glauben, dass durch die Sicherheitslücke Schlüssel kompromittiert wurden, weist Microsoft alle Kunden an, ihre Mandantenschlüssel neu zu erstellen.|
 |Im RSA-Algorithmus oder bei der Schlüssellänge entdeckte Sicherheitslücken oder auch Brute-Force-Angriffe werden von der Rechenleistung her möglich.|Microsoft muss Azure Key Vault oder Azure Information Protection so aktualisieren, dass neue, robuste Algorithmen und längere Schlüssellängen unterstützt werden, und alle Kunden anweisen, ihre Mandantenschlüssel neu zu erstellen.|
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

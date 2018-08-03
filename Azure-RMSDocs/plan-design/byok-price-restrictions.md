@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5380dc364255fd085c82fd9c0a834afea368c97
-ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
+ms.openlocfilehash: c40e1b628c4a6160d6ab665293c37b9cefa3fe0c
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34402148"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375248"
 ---
 # <a name="byok-pricing-and-restrictions"></a>BYOK – Preise und Einschränkungen
 
@@ -64,4 +64,3 @@ Wenn Sie sich für die Verwaltung Ihres eigenen Schlüssels entschieden haben, h
 
 Wenn Sie sich für die Standardkonfiguration entschieden haben, bei der Ihr Mandantenschlüssel von Microsoft verwaltet wird, helfen Ihnen die Informationen im Abschnitt [Nächste Schritte](plan-implement-tenant-key.md#next-steps) des Artikels „Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels“ weiter.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

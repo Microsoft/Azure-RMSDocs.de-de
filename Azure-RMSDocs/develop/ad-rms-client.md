@@ -14,12 +14,12 @@ ms.assetid: F7145090-C2EB-405A-A4CF-0240D57A36DA
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 33d8acec68aa334f261f1dfe3203d2b06d4427b4
-ms.sourcegitcommit: d1a3f35ea2d2c246a5b1e3f3da75df9c182fd0da
+ms.openlocfilehash: c516735abbdfc66cc4bc70c11f6ff4514b00861d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34480203"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374533"
 ---
 # <a name="client"></a>Client
 
@@ -38,5 +38,3 @@ Weitere Informationen finden Sie in der [TechNet-Dokumentation zum RMS Client 2.
 * [Übersicht](ad-rms-overview.md)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md)
 * [TechNet-Dokumentation zum RMS Client 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

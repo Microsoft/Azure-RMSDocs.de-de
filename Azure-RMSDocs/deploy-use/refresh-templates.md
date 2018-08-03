@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bbefccbcf5d529d64b613220013a0988fa4808a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: ce9e189ffdad0ab2020aa38258c06ac27230a280
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206016"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369889"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -98,4 +98,3 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 ## <a name="see-also"></a>Weitere Informationen
 [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](../deploy-use/configure-policy-templates.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -14,12 +14,12 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3b7ff758abeb3f1ddc1ae82349233e437d05dacc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3299981f6e45cc8c82da66e2fce07cece552c81f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/30/2017
-ms.locfileid: "20232835"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372273"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Bereitstellen einer Dienstanwendung in einen anderen Mandanten
 
@@ -51,5 +51,3 @@ Wenn dem IT-Administrator von *ABC* kein Benutzeroberflächendialogfeld für die
 ## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluss 2: Der *ABC*-IT-Administrator stellt den Schlüssel für das *CoolApp*-Team bereit
 
 Sobald der IT-Administrator von *ABC* den Dienstprinzipal erstellt, so wie in **Bild 1** gezeigt, stellt *ABC* die Informationen für das *CoolApp*-Team bereit. Das *CoolApp*-Team bettet dann weiterhin die Informationen in die *CoolApp*-Anwendung ein, um sie im *ABC*-Mandanten zu verwenden.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

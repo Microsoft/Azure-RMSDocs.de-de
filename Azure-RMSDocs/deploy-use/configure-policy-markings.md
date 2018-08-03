@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: c41dcb0a11e61be4a2dfd974d9bf6803a992b858
-ms.sourcegitcommit: ef3d187da900107095d499de7e7dac5c947e4b13
+ms.openlocfilehash: 85f2952dd9abcb6e22e8932e8479ded540af8ea2
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947453"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374197"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -138,4 +138,3 @@ Wenn Sie einen Verweis für diese Codes benötigen, ist der Artikel zu [Farben n
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

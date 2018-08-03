@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: cbb34f8417f3f4d63369399ffe962e7c957f65a6
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: cebfc618e4d1660bbae371d1f54f764b67f642b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37069599"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372783"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -69,7 +69,7 @@ In den Beispielen gibt es eine einzige Bedingung, die den Schutz anwendet, wenn 
 
 In diesem Beispiel weist die Bezeichnung **Allgemein** die GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 auf. Ersetzen Sie Ihre eigene Bezeichnungs- oder Unterbezeichnungs-GUID, die Sie mit dieser Regel verwenden möchten. 
 
-th In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Standardbezeichnung konfiguriert, um E-Mails als **Allgemein** zu klassifizieren, wobei die Bezeichnung keinen Schutz anwendet. 
+In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Standardbezeichnung konfiguriert, um E-Mails als **Allgemein** zu klassifizieren, wobei die Bezeichnung keinen Schutz anwendet. 
 
 1. Geben Sie unter **Name** einen Namen für die Regel ein, z.B. `Apply Do Not Forward for General emails sent externally`.
  
@@ -79,7 +79,7 @@ th In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als St
  
 4. Für **und**: Wählen Sie **einen Nachrichtenheader**, und wählen Sie dann **enthält eines dieser Wörter** aus:
      
-    a. Wählen Sie **Text eingeben** aus, und geben Sie `msip_labels` ein.
+    ein. Wählen Sie **Text eingeben** aus, und geben Sie `msip_labels` ein.
      
     b. Wählen Sie **Wörter eingeben** aus, und geben Sie `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;` ein.
     
@@ -107,7 +107,7 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
  
 4. Für **und**: Wählen Sie **Beliebige Anlage** aus, und wählen Sie dann **verfügt über Eigenschaften, die eines dieser Wörter enthalten**:
      
-    a. Wählen Sie **+** > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
+    ein. Wählen Sie **+** > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
   
     b. Geben Sie für **Eigenschaft** `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` ein.
     
@@ -131,4 +131,3 @@ Informationen zum Erstellen und Konfigurieren der Bezeichnungen für die Verwend
 Um die Klassifizierung von E-Mail-Nachrichten, die Anlagen enthalten, zu erleichtern, sollten Sie außerdem die folgende [Richtlinieneinstellung](configure-policy-settings.md) in Azure Information Protection verwenden: **Auf E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Klassifizierung dieser Anlagen entspricht.**
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

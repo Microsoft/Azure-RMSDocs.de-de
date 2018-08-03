@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6acedb72d270bb5d4153701a6d42aa2757fbacbd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4da8df0696ce011e2bbe91ee8a1fd53fd5e854f5
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204814"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371916"
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients
 
@@ -40,6 +40,5 @@ Sie können die RMS-Freigabeanwendung für Macintosh-Computer und Windows Phone-
 Sie können die RMS-Freigabeanwendung für iOS und Android nicht mehr über diese Seite herunterladen. Über die Links für diese mobilen Geräte wird jetzt der Azure Information Protection-Client heruntergeladen. 
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

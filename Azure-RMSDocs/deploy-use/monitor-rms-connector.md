@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8fc380b5d015ec055961b815117a0b5450c3661b
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 2be1df328867fa1ccb13b1d6bc53b59e58f12903
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34216765"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370787"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -192,4 +192,3 @@ Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, k�
 
 5.  Nachdem Sie die benötigten Ablaufverfolgungen erfasst haben, stellen Sie die Zeile in Schritt 3 wieder her. Anschließend halten Sie IIS erneut an und starten die Dienste neu.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

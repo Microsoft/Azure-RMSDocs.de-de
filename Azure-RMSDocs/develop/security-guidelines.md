@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258774"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371848"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Best Practices zu Sicherheitsthemen für Azure Information Protection
 
@@ -94,5 +94,3 @@ AIP lässt Benutzern die Wahl, ob sie Informationen verschlüsseln. Die Informat
 - Jedes Recht, das durch Einschluss in neue, von einer Anwendung implementierte Rechte abstrahiert wurde, muss der neuen Terminologie zugeordnet werden. Beispiel: Ein neues Recht, genannt MANAGER, beinhaltet möglicherweise Rechte wie Drucken, Kopieren und Bearbeiten als abstrahierte Rechte.
 Empfohlener Standard: zurzeit keiner.
 Bevorzugter Standard: zurzeit keiner.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

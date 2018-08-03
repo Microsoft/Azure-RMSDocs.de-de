@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07c6c1b925426ba599755042094df3e5a93fd237
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 78034d0c1d00da8cd3640ac6634884d84d96eda1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204672"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374969"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Weitere Informationen zu Thales-HSMs und Microsoft-Ergänzungen: INHALT VERALTET
 
@@ -25,4 +25,3 @@ ms.locfileid: "30204672"
 
 Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant sind, seitdem Azure Rights Management den Azure Key Vault-Dienst für von Kunden verwaltete Mandantenschlüssel (auch bekannt als „Bring Your Own Key“, kurz BYOK) verwendet. 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

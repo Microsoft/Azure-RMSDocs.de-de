@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 989f75361d96680bf0bedff00251b6d60aa999c5
-ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
+ms.openlocfilehash: 98fe9b957d577cc59a719dbe5a7ba3b532ea8c87
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34216867"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371406"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -243,6 +243,5 @@ Wenn Sie Protokolle in Ihrem eigenen Azure-Speicher gespeichert haben, die vor d
 
 Weitere Informationen zum Verwenden von Windows PowerShell für den Azure Rights Management-Dienst finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](administer-powershell.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

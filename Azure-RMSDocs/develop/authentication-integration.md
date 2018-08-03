@@ -14,12 +14,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1d7a5a41c16a8a1354933b13449875de7ec0902e
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: cb9e5ef5cd60fff43174071938525b7544e5eb9e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765380"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369597"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS
 
@@ -266,5 +266,3 @@ Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Porta
         throw;
       }
     }
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

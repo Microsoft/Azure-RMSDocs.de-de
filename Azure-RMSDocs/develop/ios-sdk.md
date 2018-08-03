@@ -14,12 +14,12 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f2cb573f8c347215f130fd76321886ade2877a16
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 34d11dc9b3c54f4b86710ce4f7866f0415f7bc8f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765627"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373626"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS- und OS X-Setup
 
@@ -110,5 +110,3 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 * [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
 * [iOS/OS X-API-Referenz](https://msdn.microsoft.com/library/dn758306.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

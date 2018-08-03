@@ -14,12 +14,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ec030c2bb5f29c5a9df39203e7e9df03f64d6d44
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 7e9f6d3d77b172fe05178d426f08a88dd93613af
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764613"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372885"
 ---
 # <a name="configure-visual-studio"></a>Konfigurieren von Visual Studio
 
@@ -73,5 +73,3 @@ Diese Anweisungen gelten für die Erstellung einer systemeigenen 32-Bit-Anwendun
 ## <a name="related-topics"></a>Verwandte Themen
 
 * [Installieren des SDK](install-the-rms-sdk.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

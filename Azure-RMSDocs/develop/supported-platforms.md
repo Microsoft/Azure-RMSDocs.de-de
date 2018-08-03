@@ -14,12 +14,12 @@ ms.assetid: 4E46521F-8C2F-401A-A481-113CE130ACF0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 88138c9060aa859a4f3a96ffdaad9e7a96768f4a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: c83ca097a7b01584e4e0268dab92400647f8e51f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765102"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372106"
 ---
 # <a name="supported-platforms"></a>Unterstützte Plattformen
 
@@ -36,5 +36,3 @@ In diesem Thema werden die vom Rights Management Services SDK 2.1 unterstützten
 
 **Hinweis** Die Verwendung der Vorlagenfunktion wird ab Windows Server 2008 unterstützt.
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

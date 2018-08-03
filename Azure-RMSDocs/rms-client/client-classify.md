@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 0d3abf33ada7c639c1e7b0bad67c36636a9a0951
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 045df42bf847630b89458dabb6e8438a6f97d5b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205913"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372980"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -101,4 +101,3 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

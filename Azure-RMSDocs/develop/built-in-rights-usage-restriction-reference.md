@@ -14,12 +14,12 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 3340b1c1f3c4495db9092ed741049f50d64596cb
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: f7efcec2b1bedd6e6013a857060255d38dec7421
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765665"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373582"
 ---
 # <a name="how-to-use-built-in-rights"></a>Vorgehensweise: Verwenden integrierter Rechte
 
@@ -133,5 +133,3 @@ Dieses Thema erläutert die integrierten Rechte, die das Microsoft Rights Manage
 - iOS und OS X: [MSEmailRights replyAll](https://msdn.microsoft.com/library/dn758319.aspx)
 - Windows Store und Windows Phone: [EmailRights.ReplyAll](https://msdn.microsoft.com/library/microsoft.rightsmanagement.emailrights.replyall.aspx)
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

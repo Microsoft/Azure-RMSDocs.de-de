@@ -4,7 +4,7 @@ description: Sofort erkennbare Administratoraufgaben, die Sie bisher im klassisc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ff1cae1695ac37c3e884053e6633a631e236efbe
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 0eb56adc41c18427a2f5058affc525ecfbbf68ba
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376524"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
 
@@ -31,9 +32,6 @@ Weitere Informationen zur Abschaltung des klassischen Azure-Portals finden Sie i
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Ausführen Ihrer bekannten Administratoraufgaben
 
 Verwenden Sie die folgenden Informationen, um schnell zum neuen Portal überzugehen.
-
-Jedoch können Kunden mit einem Abonnement für Office 365 US Government (Government Community Cloud) zurzeit das Azure-Portal nicht verwenden und müssen stattdessen [PowerShell](configure-templates-with-powershell.md) nutzen, um ihre Vorlagen zu verwalten.
-
 
 |Klassisches Azure-Portal|So führen Sie die Aufgabe im Azure-Portal aus
 |-----------|--------------------|
@@ -66,4 +64,3 @@ Die PowerShell-Cmdlets zum Erstellen und Verwalten von Vorlagen und zum Aktivier
 ## <a name="see-also"></a>Siehe auch
 Ausführlichere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

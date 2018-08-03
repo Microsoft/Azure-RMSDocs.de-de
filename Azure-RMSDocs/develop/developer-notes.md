@@ -14,12 +14,12 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 25a402ffe8a3cbae6913886a64488a5ebc3cbbeb
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: a7f561a7d44af7c7239f5e17d5ec85edcee9f5e6
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765626"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375479"
 ---
 # <a name="developer-guidance"></a>Anleitung für Entwickler
 
@@ -44,5 +44,3 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
  
 ## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht](ad-rms-overview.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

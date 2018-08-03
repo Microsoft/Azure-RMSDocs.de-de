@@ -14,12 +14,12 @@ ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2b21601a767f18106044548ada8d10b212b8cb5a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e94d83dc3e04aeb28d9d2000ee94e950c9752e84
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765382"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375040"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus
 
@@ -36,5 +36,3 @@ Weitere Informationen zum *Servermodus* finden Sie unter [Anwendungstypen](appli
 * [Anwendungstypen](application-types.md)
 * [API mode values (API-Moduswerte)](https://msdn.microsoft.com/library/hh535236.aspx)
 * [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
