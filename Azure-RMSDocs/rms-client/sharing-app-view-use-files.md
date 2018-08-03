@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 4143cd12138e82bcf94331ef0911033acdb1942c
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208582"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474374"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
 
@@ -33,7 +33,7 @@ Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installie
 > -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](http://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
 >
 >     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
-> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>So zeigen Sie eine geschützte Datei an
 Doppelklicken Sie im Datei-Explorer oder in der E-Mail-Nachricht, die die Anlage enthält, auf die geschützte Datei, und geben Sie Ihre Anmeldeinformationen ein, wenn Sie dazu aufgefordert werden.
@@ -74,7 +74,7 @@ Eine vollständige Liste der Dateierweiterungen, die von Rights Management-Diens
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>So verwenden Sie Dateien, die geschützt wurden (z. B. Bearbeiten und Drucken der Datei)
 Wenn Sie die geschützte Datei nach dem Öffnen nicht nur lesen möchten (sondern z.B. auch bearbeiten, kopieren und drucken möchten), können Sie jeweils die Anleitung zur Dateinamenerweiterung befolgen:
 
-- **Die Datei weist die Dateinamenerweiterung *.pfile* auf**
+- **Die Datei weist die Dateinamenerweiterung *.pfile* auf.**
 
     Speichern Sie die geöffnete Datei, und geben Sie ihr eine neue Dateinamenerweiterung, die mit der Anwendung verknüpft ist, die Sie verwenden möchten.
 
@@ -102,5 +102,3 @@ Beispiele für die Verwendung der Rights Management-Freigabeanwendung sowie weit
 
 ## <a name="see-also"></a>Siehe auch
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
