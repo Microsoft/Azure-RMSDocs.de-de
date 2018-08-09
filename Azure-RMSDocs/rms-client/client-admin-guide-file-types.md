@@ -4,7 +4,7 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 07/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 90dac73ce15382b4be58e5eb191e44167bdee56f
-ms.sourcegitcommit: 1f5a5cb650be2b4c302ad4b7a0b109246da3eb80
+ms.openlocfilehash: cdf710737c4bcf5ffbfdd3ab6476f6b5cd118854
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39295439"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371280"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -55,7 +55,7 @@ Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschüt
 
 - **Microsoft Office**: Dateitypen in der folgenden Tabelle.
     
-    Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint. 
+    Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint. Das Dokumentformat „Strict Open XML“ wird nur in der Vorschauversion des Azure Information Protection-Clients unterstützt.
     
     |Office-Dateityp|Office-Dateityp|
     |----------------------------------|----------------------------------|
@@ -114,7 +114,7 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |XML|PXML|
 |JPG|PJPG|
 |JPEG|PJPEG|
-|PDF|PPDF|
+|PDF|PPDF [[1]](#footnote-1)|
 |PNG|PPNG|
 |TIF|PTIF|
 |TIFF|PTIFF|
@@ -124,8 +124,10 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |JFIF|PJFIF|
 |JT|PJT|
 
+###### <a name="footnote-1"></a>Fußnote 1
+Wenn Sie die Vorschauversion des Azure Information Protection-Clients verwenden, und Sie diesen zum [Schutz von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfigurieren, bleibt die Erweiterung des geschützten PDF-Dokuments „.pdf“.
 
-Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
+Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint. Das Dokumentformat „Strict Open XML“ wird nur in der Vorschauversion des Azure Information Protection-Clients unterstützt.
 
 Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 
@@ -196,7 +198,9 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Dateitypen, die von der Klassifizierung und vom Schutz durch die Azure Information Protection-Überprüfung ausgeschlossen sind
 
-Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure Information Protection-Client ausgeschlossen. Dieses Verhalten bei der Überprüfung lässt sich jedoch durch Verwendung der folgenden PowerShell-Cmdlets ändern:
+Die Überprüfung schließt standardmäßig die gleichen Dateitypen wie der Azure Information Protection-Client aus, mit der Ausnahme, dass die Vorschauversion der Überprüfung auch RTF ausschließt. 
+
+Mithilfe der folgenden PowerShell-Cmdlets können Sie die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien ändern:
 
 - [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
 
@@ -204,23 +208,32 @@ Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure 
 
 - [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
 
+> [!NOTE]
+> Überwachen Sie die Überprüfung sorgfältig,wenn Sie RTF-Dateien in der Überprüfung miteinbeziehen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten. 
+
 Durch die Überprüfung werden standardmäßig nur Office-Dateitypen geschützt. Um das Verhalten bei der Überprüfung zu ändern, bearbeiten Sie die Registrierung und geben Sie weitere Dateitypen an, die Sie schützen möchten. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md).
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Dateien, die standardmäßig nicht geschützt werden können
 
 Jede Datei, die mit einem Kennwort geschützt ist, kann nur nativ vom Azure Information Protection-Client geschützt werden, wenn sie gerade in der Anwendung geöffnet ist, die für diesen Schutz sorgt. Am häufigsten sind PDF-Dateien kennwortgeschützt. Diese Funktion wird jedoch auch von anderen Anwendungen bereitgestellt, wie z.B. Office-Apps.
 
-Darüber hinaus kann der Azure Information Protection-Client für Windows die folgenden Dateien anzeigen, aber unter folgenden Umständen keine PDF-Dateien schützen oder deren Schutz aufheben:
+Darüber hinaus kann die GA-Version (General Availability, allgemeine Verfügbarkeit) des Azure Information Protection-Clients für Windows die folgenden Dateien anzeigen, aber unter folgenden Umständen keine PDF-Dateien schützen oder deren Schutz aufheben:
 
-- eine formularbasierte PDF-Datei
+- eine formularbasierte PDF-Datei 
 
-- eine geschützte PDF-Datei mit PDF-Erweiterung 
+- eine geschützte PDF-Datei mit PDF-Erweiterung
     
     Der Azure Information Protection-Client kann eine nicht geschützte PDF-Datei schützen, deren Schutz aufheben und eine geschützte PDF-Datei erneut schützen, wenn diese eine PPDF-Erweiterung aufweist.
 
 Sie können das Problem mit dem Schutz dieser Dateien umgehen, indem Sie diese generisch schützen. Folgen Sie dazu den Anweisungen im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files). Dadurch wird allerdings die Schutzebene alle Dateien mit PDF-Erweiterung auf Computerebene geändert. Es ist nicht möglich, den generischen Schutz nur für die Dateien zu definieren, die die aufgelisteten Kriterien erfüllen.
 
-Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren.
+Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren. Alternativ können Sie die Vorschauversion des Azure Information Protection-Clients verwenden.
+
+Wenn Sie die Vorschauversion des Azure Information Protection-Clients verwenden und dieser zum [Schutz von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfiguriert ist, können Sie PDF-Dateien unter den folgenden zwei Bedingungen nativ schützen oder den Schutz aufheben:
+
+- eine formularbasierte PDF-Datei
+
+- eine geschützte PDF-Datei mit PDF-Erweiterung 
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>Einschränkungen für Containerdateien, z.B. ZIP-Dateien
 
@@ -241,4 +254,3 @@ Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protectio
 
 - [PowerShell-Befehle](client-admin-guide-powershell.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

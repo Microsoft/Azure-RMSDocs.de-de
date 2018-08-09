@@ -4,7 +4,7 @@ description: Informationen zu Installation, unterstützten Betriebssystemen, Reg
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
-ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
+ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376534"
 ---
 # <a name="rms-client-deployment-notes"></a>Anmerkungen zur Bereitstellung des RMS-Clients
 
@@ -172,13 +173,15 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
     *\<YourTenantURL\>* weist folgendes Format auf: **{GUID}.rms.[Region].aadrm.com**. Sie finden diesen Wert durch Identifizieren des Werts **RightsManagementServiceId**, wenn Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx)-Cmdlet für Azure RMS ausführen.
 
 > [!NOTE]
-> Bei diesem Dienstermittlungsfluss gibt es drei wichtige Ausnahmen:
+> Bei diesem Dienstermittlungsfluss gibt es vier wichtige Ausnahmen:
 > 
 > - Mobile Geräte sind am besten für die Nutzung eines Clouddiensts geeignet, weshalb sie standardmäßig die Dienstermittlung für den Azure Rights Management-Dienst (https://discover.aadrm.com)) verwenden. Um diesen Standard so anzupassen, dass mobile Geräte AD RMS anstelle des Azure Rights Management-Diensts verwenden, geben Sie SRV-Einträge in DNS, und installieren Sie die Erweiterung für mobile Geräte (siehe dazu die Angaben unter [Active Directory Rights Management Services-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)). 
 >
-> - Wenn der Rights Management-Dienst über eine Azure Information Protection-Bezeichnung aufgerufen wird, erfolgt keine Dienstermittlung. Stattdessen wird die URL direkt in der Einstellung der Bezeichnung angegeben, die in der Azure Information Protection-Richtlinie konfiguriert ist.  
-
+> - Wenn der Rights Management-Dienst über eine Azure Information Protection-Bezeichnung aufgerufen wird, erfolgt keine Dienstermittlung. Stattdessen wird die URL direkt in der Einstellung der Bezeichnung angegeben, die in der Azure Information Protection-Richtlinie konfiguriert ist. 
+>  
 > - Wenn ein Benutzer eine Anmeldung aus einer Office-Anwendung einleitet, werden der Benutzername (und die Domäne) in den Authentifizierungsdaten zum Bestimmen des zu verwendenden Azure Information Protection-Mandanten genutzt. In diesem Fall sind keine Registrierungseinstellungen erforderlich, und der Dienstverbindungspunkt wird nicht überprüft.
+> 
+> - Wenn Sie die [DNS-Umleitung](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) für Klick-und-Los-Desktop-Apps für Office 2016 konfiguriert haben, sucht der RMS-Client den Azure Rights Management-Dienst, da ihm der Zugriff auf den AD RMS-Cluster verweigert wird, den er zuvor gefunden hat. Aufgrund dieser Ablehnungsaktion sucht der Client nach dem SRV-Eintrag, der den Client an den Azure Rights Management-Dienst für Ihren Mandanten umleitet. Mit diesem SRV-Eintrag kann Exchange Online E-Mails entschlüsseln, die durch Ihren AD RMS-Cluster geschützt wurden. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Nur AD RMS: Aktivieren der serverseitigen Diensterkennung mithilfe von Active Directory
 Wenn Ihr Konto über ausreichende Berechtigungen (Organisationsadministrator und lokaler Administrator für den AD RMS-Server) verfügt, können Sie bei der Installation des AD RMS-Stammclusterservers einen Dienstverbindungspunkt automatisch registrieren. Wenn bereits ein AD RMS-Dienstverbindungspunkt in der Gesamtstruktur vorhanden ist, müssen Sie zunächst den vorhandenen Dienstverbindungspunkt löschen, ehe Sie einen neuen erstellen können.
@@ -259,4 +262,3 @@ Mitunter müssen Sie ggf. Datenverkehr während einer Diensterkennung umleiten, 
 
 6.  Schließen Sie den Registrierungs-Editor.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
