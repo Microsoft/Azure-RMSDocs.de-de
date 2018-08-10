@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01bf7e0e090482a74c8f5e162bb8771cf8ee941b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 288b945f785f3f12226d48ad7a91aab8a2747c77
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474577"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489347"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Schritt 5: Freigeben geschützter Dateien in Aktion und Nachverfolgen des Dokuments 
 
@@ -127,4 +127,4 @@ Nun, da Sie die standardmäßige Azure Information Protection-Richtlinie gesehen
 
 Geben Sie weitere Dokumente frei, und verfolgen Sie deren Verwendung. Testen Sie auch den Widerruf von Dokumenten.
 
-Es empfiehlt sich zudem, im Azure-Portal zur Seite **Schnellstart** zurückzukehren und einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](./plan-design/deployment-roadmap.md) sein. 
+Es empfiehlt sich zudem, im Azure-Portal zur Seite **Schnellstart** zurückzukehren und einige der [häufig gestellten Fragen](faqs.md) zu Azure Information Protection sowie einige andere Artikel der Dokumentation zu lesen. Wenn Sie mit der Bereitstellung von Azure Information Protection für Ihre Organisation beginnen möchten, sollte Ihre nächste Station die [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md) sein. 

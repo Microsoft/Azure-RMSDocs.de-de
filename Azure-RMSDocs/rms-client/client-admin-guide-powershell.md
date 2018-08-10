@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7853cfc577329e04a1f378a419f0e1ef3eca0f2a
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: 69aa0078f854c04c6eaf360e8f17a0597523f832
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411069"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575640"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -39,7 +39,7 @@ Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** insta
 > 
 > Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
 
-Die [Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md) verwendet Cmdlets aus dem AzureInformationProtection-Modul, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
+Die [Azure Information Protection-Überprüfung](../deploy-aip-scanner.md) verwendet Cmdlets aus dem AzureInformationProtection-Modul, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
 
 Eine Übersicht über alle Cmdlets und die entsprechende Hilfe finden Sie unter [AzureInformationProtection-Modul](/powershell/module/azureinformationprotection). Geben Sie in einer PowerShell-Sitzung `Get-Help <cmdlet name> -online` ein, um die neueste Hilfe aufzurufen.  
 
@@ -92,13 +92,13 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 
 Für diese Voraussetzung können Sie den Datenschutz mithilfe von Bezeichnungen anwenden oder eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Datenschutz anzuwenden.
 
-Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie entsprechende Anweisungen zum [Aktivieren von Azure Rights Management](../deploy-use/activate-service.md).
+Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie entsprechende Anweisungen zum [Aktivieren von Azure Rights Management](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Voraussetzung 2: Den Schutz von Dateien für andere Benutzer mithilfe Ihres eigenen Kontos entfernen.
 
 Typische Szenarien für das Entfernen des Schutzes von Dateien für andere Benutzer umfassen die Datenermittlung oder Datenwiederherstellung. Wenn Sie den Schutz mithilfe von Bezeichnungen anwenden, können Sie den Schutz durch Festlegen einer neuen Bezeichnung entfernen, durch die kein Schutz angewendet wird. Sie können dazu aber auch die Bezeichnung entfernen. Aber Sie werden wahrscheinlich eher eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Schutz zu entfernen.
 
-Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Feature und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../deploy-use/configure-super-users.md).
+Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Feature und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Voraussetzungen 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben.
 
@@ -140,7 +140,7 @@ In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen 
 
 Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows PowerShell-Modul aus:
 
-1. Wenn dieses Modul noch nicht auf Ihrem Computer installiert ist, lesen Sie [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md).
+1. Wenn dieses Modul noch nicht auf Ihrem Computer installiert ist, lesen Sie [Installieren des AADRM-PowerShell-Moduls](../install-powershell.md).
 
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 
@@ -234,7 +234,7 @@ Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzigen Befeh
 
 Erwägen Sie, dieses Dienstprinzipalkonto zum Administrator zu machen: Dieses Dienstprinzipalkonto kann als Administrator konfiguriert werden, um sicherzustellen, dass es für andere Benutzer immer Dateien schützen oder deren Schutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
 
-Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../deploy-use/configure-super-users.md).
+Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
 
 > [!NOTE]
 > Wenn Sie Ihr eigenes Konto zum Authentifizieren für den Azure Rights Management-Dienst verwenden möchten, müssen Sie „Set-RMSServerAuthentication“ nicht ausführen, bevor Sie Dateien schützen, den Schutz von Dateien aufheben oder Vorlagen abrufen.
@@ -466,7 +466,7 @@ Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das 
 Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihrem eigenen Benutzerkontext in einer interaktiven PowerShell-Sitzung ausgeführt. Um sie unbeaufsichtigt auszuführen, erstellen Sie für diesen Zweck ein neues Azure AD-Benutzerkonto. Führen Sie dann im Kontext dieses Benutzers das Cmdlet „Set-AIPAuthentication“ zum Festlegen und Speichern von Anmeldeinformationen mithilfe eines Azure AD-Zugriffstokens aus. Dieses Benutzerkonto wird dann authentifiziert und für den Azure Rights Management-Dienst gestartet. Das Konto lädt die Azure Information Protection-Richtlinie und alle Rights Management-Vorlagen herunter, die die Bezeichnungen verwenden.
 
 > [!NOTE]
-> Wenn Sie [bereichsbezogene Richtlinien](../deploy-use/configure-policy-scope.md) verwenden, denken Sie bitte daran, dass Sie dieses Konto möglicherweise zu Ihren bereichsbezogenen Richtlinien hinzufügen müssen.
+> Wenn Sie [bereichsbezogene Richtlinien](../configure-policy-scope.md) verwenden, denken Sie bitte daran, dass Sie dieses Konto möglicherweise zu Ihren bereichsbezogenen Richtlinien hinzufügen müssen.
 
 Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Namen und das Kennwort des Benutzerkontos ein, das Sie für den unbeaufsichtigten Benutzer erstellt haben. Danach kann dieses Konto dann die Bezeichnungs-Cmdlets bis zum Ablaufen des Authentifizierungstokens ohne Benutzereingriff ausführen. 
 

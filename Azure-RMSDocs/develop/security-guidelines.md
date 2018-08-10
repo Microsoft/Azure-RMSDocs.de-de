@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cb4195b1b63c39d1d6e47d1c94d2f7e1c2c83e63
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371848"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575844"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Best Practices zu Sicherheitsthemen für Azure Information Protection
 
@@ -81,7 +81,7 @@ Microsoft hat Mindeststandards definiert, die Ihre Anwendung erfüllen muss, um 
 
 Wenn Ihre Anwendung die in der AIP-Veröffentlichungslizenz aufgeführten Rechte nicht ordnungsgemäß interpretiert und durchsetzt, könnten Sie möglicherweise Informationen in einer Weise zur Verfügung stellen, die vom Besitzer der Informationen nicht beabsichtigt wurde. Beispiel: Eine Anwendung erlaubt einem Benutzer, unverschlüsselte Informationen auf ein neues Medium zu speichern, während die Veröffentlichungslizenz lediglich das Recht gewährt, die Informationen anzuzeigen.
 
-Das AIP-System fasst Rechte in einigen Gruppierungen zusammen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](../deploy-use/configure-usage-rights.md).
+Das AIP-System fasst Rechte in einigen Gruppierungen zusammen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](../configure-usage-rights.md).
 
 ### <a name="azure-information-protection"></a>Azure Information Protection  
 AIP lässt Benutzern die Wahl, ob sie Informationen verschlüsseln. Die Informationen selbst verfügen über keinen eigenen Schutz. Wenn ein Benutzer das Recht besitzt, Informationen zu verschlüsseln, wird dies von AIP zugelassen, und die Anwendung sorgt für die Verwaltung und den Schutz dieser Informationen, sobald sie unverschlüsselt vorliegen. Eine Anwendung ist für die Verwaltung ihrer Umgebung und Benutzeroberfläche zuständig, um eine nicht autorisierte Nutzung von Informationen zu verhindern. Hierfür können z.B. die Schaltflächen **Drucken** und **Kopieren** deaktiviert werden, wenn eine Lizenz nur die Berechtigung zur Wiedergabe gewährt. Ihre Testsuite sollte überprüfen, ob sich Ihre Anwendung im Hinblick auf alle von ihr erkannten Lizenzrechte ordnungsgemäß verhält.

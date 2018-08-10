@@ -4,7 +4,7 @@ description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9780e355839edaa4b6eccea9692b2a1058affaa
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 850f57534287a7df0a93bfd88399e3417f6aff09
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474187"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575623"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -28,7 +28,7 @@ Dieser Artikel enthält Anweisungen und ein Skript zur Verwendung mit dem Azure 
 Mit dieser Lösung können Sie automatisch alle Dateien in einem Ordner auf einem Dateiserver unter Windows Server oder automatisch Dateien schützen, die bestimmten Kriterien entsprechen. Das sind z. B. Dateien, die vertrauliche Informationen enthalten und entsprechend klassifiziert wurden. Diese Lösung stellt eine direkte Verbindung mit dem Azure Rights Management-Dienst von Azure Information Protection her, um die Dateien zu schützen, daher müssen Sie diesen Dienst für Ihre Organisation bereitgestellt haben.
 
 > [!NOTE]
-> Obwohl Azure Information Protection einen [Connector](../deploy-use/deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z. B. Office-Dateien.
+> Obwohl Azure Information Protection einen [Connector](../deploy-rms-connector.md) enthält, der die Dateiklassifizierungsinfrastruktur unterstützt, unterstützt diese Lösung nur nativen Schutz, z. B. Office-Dateien.
 > 
 > Um mehrere Dateitypen mit der Dateiklassifizierungsinfrastruktur von Windows Server zu unterstützen, müssen Sie das Windows PowerShell-Modul **AzureInformationProtection** verwenden, wie in diesem Artikel beschrieben wird. Die Azure Information Protection-Cmdlets unterstützen wie der Azure Information Protection-Client den generischen als auch systemeigenen Schutz, was bedeutet, dass außer Office-Dokumenten auch andere Dateitypen geschützt werden können. Weitere Informationen finden Sie unter [Vom Azure Information Protection-Client unterstützte Dateitypen](client-admin-guide-file-types.md) im Administratorhandbuch für den Azure Information Protection-Client.
 
@@ -53,7 +53,7 @@ Voraussetzungen für diese Anweisungen:
     
     - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, sollten diese für einen Proxyserver benötigt werden. Beispiel: `netsh winhttp import proxy source=ie`
     
-- Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../plan-design/prepare.md).
+- Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     
 - Sie haben die Rights Management-Vorlagen auf den Dateiserver heruntergeladen und die Vorlagen-ID identifiziert, die die Dateien schützt. Verwenden Sie hierzu das [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate)-Cmdlet. Dieses Szenario unterstützt keine Abteilungsvorlagen, sodass Sie entweder eine Vorlage verwenden müssen, die nicht für einen Bereich konfiguriert ist, oder die Bereichskonfiguration muss die Anwendungskompatibilitätsoption einschließen, sodass das Kontrollkästchen **Zeigen Sie diese Vorlage allen Benutzern, wenn die Anwendungen die Benutzeridentität nicht unterstützen.** aktiviert ist.
 

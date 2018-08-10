@@ -4,7 +4,7 @@ description: Anweisungen zum Entfernen von Klassifizierungsbezeichnungen und des
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b7973c2f0a0edeeba262d647243bfce643f7f88
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373004"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575776"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Benutzerhandbuch: Entfernen der Bezeichnungen und des Schutzes von Dateien und E-Mails, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden
 
@@ -38,7 +38,7 @@ Sie können Bezeichnungen und den Schutz auch über den **Datei-Explorer** entfe
 
 ## <a name="using-office-apps-to-remove-labels-and-protection-from-documents-and-emails"></a>Verwenden von Office-Apps zum Entfernen von Bezeichnungen und des Schutzes von Dokumenten und E-Mails
 
-Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label**  (Bezeichnung löschen):
+Klicken Sie auf der Leiste „Information Protection“ auf das Symbol **Delete label** (Bezeichnung löschen):
 
 ![Azure Information Protection-Leiste – Bezeichnung löschen](../media/delete-label.png)
 
@@ -78,7 +78,7 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 - [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
-Konfigurationsanweisungen zum Aktivieren der Richtlinieneinstellung **Make the custom permissions option available to users** (Die Option der benutzerdefinierten Berechtigungen Benutzern zur Verfügung stellen) finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Azure Information Protection](../deploy-use/configure-policy-settings.md).
+Konfigurationsanweisungen zum Aktivieren der Richtlinieneinstellung **Make the custom permissions option available to users** (Die Option der benutzerdefinierten Berechtigungen Benutzern zur Verfügung stellen) finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Azure Information Protection](../configure-policy-settings.md).
 
-Weitere Konfigurationsanweisungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md).
+Weitere Konfigurationsanweisungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../configure-policy.md).
 

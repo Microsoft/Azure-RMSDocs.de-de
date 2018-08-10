@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 15df93cfe3a88e3aaafefcb0df05579a726e6d84
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473711"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575827"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Ändern von Berechtigungen für Dateien, die mit Rights Management geschützt wurden
 
@@ -33,7 +33,7 @@ Wenn eine Datei mit Rights Management geschützt wurde, können Sie die Berechti
 >
 > Wenn Sie eine Berechtigung hinzufügen oder entfernen möchten, dürfen Sie nicht bloß die Berechtigung angeben, die Sie hinzufügen oder entfernen möchten, sondern Sie müssen alle Berechtigungen angeben, über die die angegebenen Benutzer verfügen sollen.
 
-Wenn Sie der Besitzer der erneut zu schützenden Datei sind (die ursprünglich z.B. mithilfe der Freigabeanwendung geschützt wurde), verfügen Sie automatisch über die Berechtigung, die Datei erneut zu schützen. Wenn Sie nicht der Besitzer sind, hängt Ihre Berechtigung, die Datei erneut zu schützen, von den aktuellen Berechtigungen der geschützten Datei ab. Sie müssen über das [Nutzungsrecht „Vollzugriff“](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) verfügen, um eine Datei erneut schützen zu können.
+Wenn Sie der Besitzer der erneut zu schützenden Datei sind (die ursprünglich z.B. mithilfe der Freigabeanwendung geschützt wurde), verfügen Sie automatisch über die Berechtigung, die Datei erneut zu schützen. Wenn Sie nicht der Besitzer sind, hängt Ihre Berechtigung, die Datei erneut zu schützen, von den aktuellen Berechtigungen der geschützten Datei ab. Sie müssen über das [Nutzungsrecht „Vollzugriff“](../configure-usage-rights.md#usage-rights-and-descriptions) verfügen, um eine Datei erneut schützen zu können.
 
 Angenommen, eine andere Person hat die Datei mithilfe der Rights Management-Freigabeanwendung geschützt und eine Gruppe, der Sie angehören, und einen **Mitbesitzer** als benutzerdefinierte Berechtigung angegeben, dann verfügen Sie über die Berechtigung, die Datei erneut zu schützen. Wenn jedoch weder Ihr Name noch eine Gruppe, der Sie angehören, angegeben wurde oder wenn **Prüfer - Anzeigen und Bearbeiten** oder eine Vorlage aktiviert wurde, die nicht zulässt, dass Sie Berechtigungen entfernen, dann sind Sie nicht in der Lage, die Datei erneut zu schützen. Der einfachste Weg, dies zu ermitteln, ist der Versuch, die Datei erneut zu schützen.
 

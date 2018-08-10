@@ -4,7 +4,7 @@ description: Informationen für Benutzer, die den Azure Information Protection-C
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d55ef8caa7540cba2cd783613f5ea373ba1d545c
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: ce7d502a4d8f3515be67762cfa39a695a5b562fd
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372392"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575759"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Benutzerhandbuch: Reiner Schutzmodus für den Azure Information Protection-Client
 
@@ -57,7 +57,7 @@ Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Unterstützte Aufgaben für den reinen Schutzmodus
 
-- Dokumente und E-Mails mithilfe des Office Information Rights Management (IRM)-Features innerhalb von Office-Apps schützen (und den Schutz aufheben): Beispiel: Klicken Sie auf **Datei** > **Info** > **Dokument schützen** > **Zugriff einschränken**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013](../deploy-use/help-users.md).
+- Dokumente und E-Mails mithilfe des Office Information Rights Management (IRM)-Features innerhalb von Office-Apps schützen (und den Schutz aufheben): Beispiel: Klicken Sie auf **Datei** > **Info** > **Dokument schützen** > **Zugriff einschränken**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013](../help-users.md).
 
 - Dateien mithilfe des Windows-Datei-Explorer schützen (und den Schutz aufheben): Klicken Sie mit der rechten Maustaste auf die Datei, Dateien oder den Ordner, und wählen Sie dann **Klassifizieren und schützen** aus. Klicken Sie zum Anwenden von Schutz, der von Ihrem Administrator konfiguriert wurde, im Dialogfeld **Klassifizieren und schützen - Azure Information Protection** auf **Vorlage auswählen**, und wählen Sie dann eine der verfügbaren Vorlagen aus.
 

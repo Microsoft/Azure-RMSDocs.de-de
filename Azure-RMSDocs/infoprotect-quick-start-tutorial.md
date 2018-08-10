@@ -10,18 +10,18 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 601b60d7ece2cf1c67865b25b6e897b8f2905dc8
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b060288efd080397f754d6aecd71abc4bbaabf81
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475147"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488809"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Mit diesem Tutorial können Sie Azure Information Protection ohne großen Zeitaufwand testen – in nur fünf Schritten, die ungefähr 20 Minuten in Anspruch nehmen. In diesem leicht verständlichen Tutorial sollen einige der Features und Funktionen von Azure Information Protection präsentiert und demonstriert werden. Das Tutorial umfasst nicht alle verfügbaren Features und soll nicht als Bereitstellungshandbuch für Ihre Organisation dienen. Wenn Sie Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](./plan-design/deployment-roadmap.md). 
+Mit diesem Tutorial können Sie Azure Information Protection ohne großen Zeitaufwand testen – in nur fünf Schritten, die ungefähr 20 Minuten in Anspruch nehmen. In diesem leicht verständlichen Tutorial sollen einige der Features und Funktionen von Azure Information Protection präsentiert und demonstriert werden. Das Tutorial umfasst nicht alle verfügbaren Features und soll nicht als Bereitstellungshandbuch für Ihre Organisation dienen. Wenn Sie Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md). 
 
 Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Information Protection als Lösung zum Schutz von Unternehmensinformationen für eine Organisation evaluieren. In einer Produktionsumgebung werden die Schritte zur Konfiguration der Information Protection-Richtlinie und zur Installation des Clients für Benutzer von einem Administrator ausgeführt. Die Schritte zur Bezeichnung der Dokumente, zur sicheren Freigabe von Dokumenten per E-Mail und zur Nachverfolgung der Dokumente erfolgen durch die Endbenutzer. Das Tutorial beinhaltet all diese Schritte und veranschaulicht typische End-to-End-Szenarios für die Klassifizierung, die Bezeichnung und den Schutz der Daten Ihrer Organisation. 
 

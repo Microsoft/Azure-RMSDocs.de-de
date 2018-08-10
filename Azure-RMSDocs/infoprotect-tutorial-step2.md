@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 403d5d2222438136e5d449dbe4b26b693ad566d0
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: eb99fb447702dd2f453c1caacbb8ccd341ed127b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474637"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489483"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Schritt 2: Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -32,7 +32,7 @@ Obwohl Azure Information Protection eine Standardrichtlinie enthält, die Sie oh
        > [!NOTE]
        > Die Standardrichtlinie kann etwas anders aussehen als in diesem Tutorial. Zum Beispiel kann eine Bezeichnung **Internal** (Intern) heißen anstatt **General** (Allgemein) und **Secret** (Geheim) anstatt **Highly Confidential** (Streng vertraulich). Möglicherweise verfügen Sie nicht über die untergeordneten Bezeichnungen namens **Nur Empfänger**, oder Sie verfügen über gar keine Bezeichnungen. Der Grund für diese Änderungen ist, dass es unterschiedliche Versionen der Standardrichtlinie gibt, je nachdem wann sie für Ihren Mandanten erstellt wurde. Oder Sie haben sie möglicherweise vor dem Start des Tutorials selbst bearbeitet.
        > 
-       > Wenn die Standardrichtlinie anders aussieht, können Sie dieses Tutorial dennoch verwenden, sollten sich dieser Änderungen aber bei den folgenden Anweisungen und Abbildungen bewusst sein. Wenn Sie die Standardrichtlinie ändern möchten, damit sie der aktuellen Standardrichtlinie entspricht, finden Sie dazu Informationen unter [Die Azure Information Protection-Standardrichtlinie](./deploy-use/configure-policy-default.md).
+       > Wenn die Standardrichtlinie anders aussieht, können Sie dieses Tutorial dennoch verwenden, sollten sich dieser Änderungen aber bei den folgenden Anweisungen und Abbildungen bewusst sein. Wenn Sie die Standardrichtlinie ändern möchten, damit sie der aktuellen Standardrichtlinie entspricht, finden Sie dazu Informationen unter [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md).
     
     - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiel: 
     
@@ -151,10 +151,10 @@ Da Sie jetzt die Standardrichtlinie kennen und einige Änderungen daran vorgenom
 
 |Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
-|Über die Standardrichtlinie und verschiedene Versionen|[Die Azure Information Protection-Standardrichtlinie](./deploy-use/configure-policy-default.md)|
-|Informationen zum Konfigurieren der Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](./deploy-use/configure-policy.md)|
-|Detaillierte Anweisungen zum Konfigurieren einer Bezeichnung für den Schutz|[How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](./deploy-use/configure-policy-protection.md)|
-|Detaillierte Informationen über die Berechtigungen|[Configuring usage rights for Azure Rights Management (Konfigurieren von Nutzungsrechten für Azure Rights Management)](./deploy-use/configure-usage-rights.md)|
+|Über die Standardrichtlinie und verschiedene Versionen|[Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md)|
+|Informationen zum Konfigurieren der Richtlinie|[Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md)|
+|Detaillierte Anweisungen zum Konfigurieren einer Bezeichnung für den Schutz|[How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)|
+|Detaillierte Informationen über die Berechtigungen|[Configuring usage rights for Azure Rights Management (Konfigurieren von Nutzungsrechten für Azure Rights Management)](configure-usage-rights.md)|
 
 
 

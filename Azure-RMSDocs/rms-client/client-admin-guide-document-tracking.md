@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8153b189a6e4f77e2a4c1f7d630fbb2f32b667f1
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 00e044274f27409b39c06b4e6cbd2beaa58eb8f2
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39373735"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575429"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -27,7 +27,7 @@ Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Verwalten der Website für die Dokumentnachverfolgung mithilfe von PowerShell
 
-In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie die Website für die Dokumentnachverfolgung mithilfe von PowerShell verwalten können. Installationsanweisungen für dieses PowerShell-Modul finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md). Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
+In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie die Website für die Dokumentnachverfolgung mithilfe von PowerShell verwalten können. Installationsanweisungen für dieses PowerShell-Modul finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../install-powershell.md). Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
 
 Weitere Informationen zu den einzelnen Cmdlets finden Sie unter den angegebenen Links.
 
@@ -108,7 +108,7 @@ Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokollda
 Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur Dokumentnachverfolgung vonseiten der Benutzer und Administratoren. **RevokeAccess** ist beispielsweise der verwendete Anforderungstyp, wenn ein Benutzer oder Administrator im Auftrag eines Benutzers ein Dokument auf der Website zur Dokumentnachverfolgung gesperrt hat. Verwenden Sie diesen Anforderungstyp in Kombination mit dem AdminAction-Feld, um zu ermitteln, ob ein Benutzer sein eigenes Dokument gesperrt hat (AdminAction ist leer) oder ob der Administrator dies im Namen eines Benutzers getan hat (AdminAction ist TRUE).
 
 
-Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
+Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
 
 

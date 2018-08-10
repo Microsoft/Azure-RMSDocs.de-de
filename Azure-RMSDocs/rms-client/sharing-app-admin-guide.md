@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65fa46d7a978eb87b455d34075bdb3f939a133f7
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b535b90afe43cd262cb637606eb6060c7c2ee277
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474037"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575657"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
@@ -28,7 +28,7 @@ ms.locfileid: "39474037"
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
-Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure Information Protection geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z.B. E-Mail-Benachrichtigungen und Dokumentkontrolle mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure Information Protection und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Information Protection und AD RMS](../compare-on-premise.md). Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md) nach.
+Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure Information Protection geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z.B. E-Mail-Benachrichtigungen und Dokumentkontrolle mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure Information Protection und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Information Protection und AD RMS](../compare-on-premise.md). Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md) nach.
 
 Eine technische Übersicht über die Rights Management-Freigabeanwendung und Informationen zu nativem und generischem Schutz, den unterstützten Dateitypen, Dateierweiterungen und der Vorgehensweise zum Ändern der Standardschutzebene finden Sie unter [Technische Übersicht für die Microsoft Rights Management-Freigabeanwendung](sharing-app-admin-guide-technical.md). 
 
@@ -345,7 +345,7 @@ Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das f
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Nur Azure Information Protection: Konfigurieren der Dokumentkontrolle
 Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
 
-Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../deploy-use/install-powershell.md).
+Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../install-powershell.md).
 
 > [!TIP]
 > Wenn Sie das Modul bereits heruntergeladen und installiert haben, überprüfen Sie die Versionsnummer, indem Sie Folgendes ausführen: `(Get-Module aadrm –ListAvailable).Version`
@@ -388,7 +388,7 @@ Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokollda
 Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur Dokumentnachverfolgung vonseiten der Benutzer und Administratoren. **RevokeAccess** ist beispielsweise der verwendete Anforderungstyp, wenn ein Benutzer oder Administrator im Auftrag eines Benutzers ein Dokument auf der Website zur Dokumentnachverfolgung gesperrt hat. Verwenden Sie diesen Anforderungstyp in Kombination mit dem AdminAction-Feld, um zu ermitteln, ob ein Benutzer sein eigenes Dokument gesperrt hat (AdminAction ist leer) oder ob der Administrator dies im Namen eines Benutzers getan hat (AdminAction ist TRUE).
 
 
-Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
+Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
 ## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
 Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Domänen haben, möglicherweise aufgrund einer Fusion oder Übernahme, müssen Sie den folgenden Registrierungsschlüssel bearbeiten:

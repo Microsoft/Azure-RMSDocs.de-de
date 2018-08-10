@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb50971c3bdfd464927866a72e2657f7acffd515
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 8fccb3dccfdef523bf1ffdee4bc5be175b3f94fd
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474707"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488949"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -52,30 +52,30 @@ Wenn Sie zurzeit die Rights Management-Freigabeanwendung für Windows verwenden,
 
 Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können alle administrativen Aufgaben für Azure Information Protection ausführen. Zum Zuweisen von Administratorrechten an andere Benutzer haben Sie folgende Optionen:
 
-- **Information Protection-Administrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator die Konfiguration aller Aspekte von Azure Information Protection, aber nicht das Konfigurieren anderer Dienste. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](./deploy-use/administer-powershell.md) ausführen. 
+- **Information Protection-Administrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator die Konfiguration aller Aspekte von Azure Information Protection, aber nicht das Konfigurieren anderer Dienste. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen. 
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Sicherheitsadministrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator, alle Aspekte von Azure Information Protection im Azure-Portal sowie einige Aspekte anderer Azure-Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann keine der [PowerShell-Cmdlets aus dem AADRM-Modul](./deploy-use/administer-powershell.md) ausführen.
+- **Sicherheitsadministrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator, alle Aspekte von Azure Information Protection im Azure-Portal sowie einige Aspekte anderer Azure-Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann keine der [PowerShell-Cmdlets aus dem AADRM-Modul](administer-powershell.md) ausführen.
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Weitere Informationen zu den Berechtigungen, über die ein Benutzer mit dieser Rolle verfügt, finden Sie im Abschnitt [Verfügbare Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) in der Azure Active Directory-Dokumentation.
 
-- **Globaler Administrator** und **Connectoradministrator** von Azure Rights Management: Bei diesen Administratorrollen von Azure Rights Management gewährt die erste dem Benutzer die Berechtigung, alle [PowerShell-Cmdlets aus dem AADRM-Modul](./deploy-use/administer-powershell.md) auszuführen, ohne ihm die globalen Administratorrechte für andere Cloud Services zuzuweisen, und die zweite Rolle gewährt die Rechte, nur den RMS-Connector (Rights Management) auszuführen. Keine dieser administrativen Rollen vergibt Berechtigungen für Verwaltungskonsolen oder zur Verwendung des den Administratormodus auf der Website zum Nachverfolgen von Dokumenten.
+- **Globaler Administrator** und **Connectoradministrator** von Azure Rights Management: Bei diesen Administratorrollen von Azure Rights Management gewährt die erste dem Benutzer die Berechtigung, alle [PowerShell-Cmdlets aus dem AADRM-Modul](administer-powershell.md) auszuführen, ohne ihm die globalen Administratorrechte für andere Cloud Services zuzuweisen, und die zweite Rolle gewährt die Rechte, nur den RMS-Connector (Rights Management) auszuführen. Keine dieser administrativen Rollen vergibt Berechtigungen für Verwaltungskonsolen oder zur Verwendung des den Administratormodus auf der Website zum Nachverfolgen von Dokumenten.
 
     Verwenden Sie das AADRM-PowerShell-Cmdlet [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator), um eine dieser Administratorrollen zuzuweisen.
 
 Einige Dinge sind zu beachten:
 
-- Wenn Sie [Onboardingsteuerelemente](./deploy-use/activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben, wird die Möglichkeit zum Verwalten von Azure Information Protection mit Ausnahme des RMS-Connectors durch diese Konfiguration nicht beeinflusst. Wenn sie Onboarding-Steuerelemente beispielsweise so konfiguriert haben, dass die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt ist, muss das von Ihnen zum Installieren und Konfigurieren des RMS-Connectors verwendete Konto ein Member dieser Gruppe sein. 
+- Wenn Sie [Onboardingsteuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben, wird die Möglichkeit zum Verwalten von Azure Information Protection mit Ausnahme des RMS-Connectors durch diese Konfiguration nicht beeinflusst. Wenn sie Onboarding-Steuerelemente beispielsweise so konfiguriert haben, dass die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt ist, muss das von Ihnen zum Installieren und Konfigurieren des RMS-Connectors verwendete Konto ein Member dieser Gruppe sein. 
 
-- Benutzer, denen eine administrative Rolle zugewiesen wurde, können den Schutz von Dokumenten oder E-Mails nicht entfernen, die von Azure Information Protection geschützt wurden. Dies können nur Benutzer tun, denen Administratorrechte zugewiesen sind, wenn das Administratorfeature aktiviert ist. Allerdings kann jeder Benutzer, dem Sie Administratorberechtigungen für Azure Information Protection zugewiesen haben, anderen Benutzern Administratorrechte zuweisen, einschließlich ihres eigenen Kontos. Sie können auch das Superuserfeature aktivieren. Diese Aktionen werden in einem Administratorprotokoll aufgezeichnet. Weitere Informationen finden Sie im Abschnitt „Bewährte Sicherheitsmethoden“ unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](./deploy-use/configure-super-users.md). 
+- Benutzer, denen eine administrative Rolle zugewiesen wurde, können den Schutz von Dokumenten oder E-Mails nicht entfernen, die von Azure Information Protection geschützt wurden. Dies können nur Benutzer tun, denen Administratorrechte zugewiesen sind, wenn das Administratorfeature aktiviert ist. Allerdings kann jeder Benutzer, dem Sie Administratorberechtigungen für Azure Information Protection zugewiesen haben, anderen Benutzern Administratorrechte zuweisen, einschließlich ihres eigenen Kontos. Sie können auch das Superuserfeature aktivieren. Diese Aktionen werden in einem Administratorprotokoll aufgezeichnet. Weitere Informationen finden Sie im Abschnitt „Bewährte Sicherheitsmethoden“ unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](configure-super-users.md). 
 
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Unterstützt Azure Information Protection lokale und hybride Szenarios?
 
 Ja. Obwohl Azure Information Protection eine cloudbasierte Lösung ist, können damit Dokumente und E-Mails, die sowohl lokal als auch in der Cloud gespeichert sind, klassifiziert, bezeichnet und geschützt werden.
 
-Wenn Sie über Exchange Server, SharePoint Server und Windows-Dateiserver verfügen, können Sie den [Rights Management-Connector](./deploy-use/deploy-rms-connector.md) bereitstellen, damit diese lokalen Server den Azure Rights Management-Dienst verwenden können, um Ihre E-Mails und Dokumente zu schützen. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
+Wenn Sie über Exchange Server, SharePoint Server und Windows-Dateiserver verfügen, können Sie den [Rights Management-Connector](deploy-rms-connector.md) bereitstellen, damit diese lokalen Server den Azure Rights Management-Dienst verwenden können, um Ihre E-Mails und Dokumente zu schützen. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine übergangslosere Authentifizierungshandhabung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](http://azure.microsoft.com/documentation/articles/active-directory-aadconnect/)verwenden.
 
 Der Azure Rights Management-Dienst generiert und verwaltet XrML-Zertifikate automatisch nach Bedarf und verwendet daher keine lokale PKI. Weitere Informationen zur Verwendung von Zertifikaten in Azure Rights Management finden Sie im Abschnitt [Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsnutzung](./how-does-it-work.md#walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption) des Artikels [Funktionsweise von Azure RMS](./how-does-it-work.md).
 
@@ -111,9 +111,9 @@ Aktuell müssen Sie diese Bezeichnungen noch separat anwenden und verwalten, Mic
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?
 
-Sie konnten für einen gewissen Zeitraum die Windows Server-Dateiklassifizierungsinfrastruktur verwenden, um Dokumente zu klassifizieren und diese dann mithilfe des [Rights Management-Connectors](./deploy-use/deploy-rms-connector.md) (nur Office-Dokumente) oder einem [PowerShell-Skript](./rms-client/configure-fci.md) (alle Dateitypen) zu schützen. 
+Sie konnten für einen gewissen Zeitraum die Windows Server-Dateiklassifizierungsinfrastruktur verwenden, um Dokumente zu klassifizieren und diese dann mithilfe des [Rights Management-Connectors](deploy-rms-connector.md) (nur Office-Dokumente) oder einem [PowerShell-Skript](./rms-client/configure-fci.md) (alle Dateitypen) zu schützen. 
 
-Sie können die [Azure Information Protection-Überprüfung](./deploy-use/deploy-aip-scanner.md) nun verwenden. Die Überprüfung nutzt den Azure Information Protection-Client und Ihre Azure Information Protection-Richtlinie, um Dokumente (alle Dateitypen) zu bezeichnen, sodass diese Dokumente alle klassifiziert und optional auch geschützt werden.
+Sie können die [Azure Information Protection-Überprüfung](deploy-aip-scanner.md) nun verwenden. Die Überprüfung nutzt den Azure Information Protection-Client und Ihre Azure Information Protection-Richtlinie, um Dokumente (alle Dateitypen) zu bezeichnen, sodass diese Dokumente alle klassifiziert und optional auch geschützt werden.
 
 Zwischen den beiden Lösungen bestehen die folgenden wesentlichen Unterschiede:
 
@@ -123,7 +123,7 @@ Zwischen den beiden Lösungen bestehen die folgenden wesentlichen Unterschiede:
 |Betriebsmodus: <br /><br />– Echtzeit|Betriebsmodus: <br /><br />– Füllt Datenspeicher automatisch auf. Dieser Zyklus kann einmal oder wiederholt ausgeführt werden|
 |Unterstützung für Dateitypen: <br /><br />– Standardmäßig werden alle Dateitypen geschützt. <br /><br />– Bestimmte Dateitypen können vom Schutz ausgeschlossen werden, indem Sie die Registrierung bearbeiten.|Unterstützung für Dateitypen: <br /><br />– Standardmäßig werden Office-Dateitypen geschützt. <br /><br />– Bestimmte Dateitypen können vom Schutz eingeschlossen werden, indem Sie die Registrierung bearbeiten.|
 
-Derzeit besteht ein Unterschied beim Festlegen des [Rights Management-Besitzers](./deploy-use/configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für Dateien, die in einem lokalen Ordner oder einer Netzwerkfreigabe geschützt sind. Standardmäßig wird für beide Lösungen der Rights Management-Besitzer für das Konto festgelegt, das die Datei schützt. Sie können diese Einstellung aber auch außer Kraft setzen:
+Derzeit besteht ein Unterschied beim Festlegen des [Rights Management-Besitzers](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für Dateien, die in einem lokalen Ordner oder einer Netzwerkfreigabe geschützt sind. Standardmäßig wird für beide Lösungen der Rights Management-Besitzer für das Konto festgelegt, das die Datei schützt. Sie können diese Einstellung aber auch außer Kraft setzen:
 
 - Für die Windows-Dateiklassifizierungsinfrastruktur: Sie können festlegen, dass alle Dateien einen einzigen Rights Management-Besitzer haben, oder Sie können den Rights Management-Besitzer für jede Datei dynamisch festlegen. Um den Rights Management-Besitzer dynamisch festzulegen, verwenden Sie den Parameter **-OwnerMail [Source File Owner Email]** und seinen Wert. Durch diese Konfiguration wird die E-Mail-Adresse des Benutzers von Active Directory mithilfe des Benutzerkontonamens in der Owner-Eigenschaft der Datei abgerufen.
 

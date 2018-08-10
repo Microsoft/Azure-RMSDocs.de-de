@@ -4,7 +4,7 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdf710737c4bcf5ffbfdd3ab6476f6b5cd118854
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: fcba3a4bf59c3c18dab53de9e06d5484e092465c
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371280"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575589"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -63,7 +63,7 @@ Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschüt
 
 Zusätzliche Dateitypen unterstützen die Klassifizierung, wenn sie zudem geschützt sind. Weitere Informationen zu diesen Dateitypen finden Sie im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).
 
-In der aktuellen [Standardrichtlinie](../deploy-use/configure-policy-default.md) wendet die Bezeichnung **Allgemein** zum Beispiel die Klassifizierung, aber nicht den Schutz an. Sie können die Bezeichnung **Allgemein** auf eine Datei namens „sales.pdf“, aber nicht auf eine Datei namens „sales.txt“ anwenden. 
+In der aktuellen [Standardrichtlinie](../configure-policy-default.md) wendet die Bezeichnung **Allgemein** zum Beispiel die Klassifizierung, aber nicht den Schutz an. Sie können die Bezeichnung **Allgemein** auf eine Datei namens „sales.pdf“, aber nicht auf eine Datei namens „sales.txt“ anwenden. 
 
 In der aktuellen Standardrichtlinie werden Klassifizierung und Schutz durch **Vertraulich\Alle Mitarbeiter** angewendet. Sie können diese Bezeichnung auf eine Datei namens „sales.pdf“ und eine Datei namens „sales.txt“ anwenden. Sie können den Schutz auch ohne die Klassifizierung auf diese Dateien anwenden.
 
@@ -79,7 +79,7 @@ Der Azure Information Protection-Client unterstützt den Schutz auf zwei untersc
 
 Sie können die Standardschutzebene ändern, die der Azure Information Protection-Client anwendet. Sie können die Standardebene von systemeigen zu generisch oder von generisch zu systemeigen ändern und sogar verhindern, dass der Azure Information Protection-Client anwendet. Weitere Informationen finden Sie im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files) dieses Artikels.
 
-Dieser Datenschutz kann automatisch angewendet werden, wenn ein Benutzer eine vom Administrator konfigurierte Bezeichnung auswählt. Benutzer können mithilfe von [Berechtigungsstufen](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels) auch eigene Schutzeinstellungen angeben. 
+Dieser Datenschutz kann automatisch angewendet werden, wenn ein Benutzer eine vom Administrator konfigurierte Bezeichnung auswählt. Benutzer können mithilfe von [Berechtigungsstufen](../configure-usage-rights.md#rights-included-in-permissions-levels) auch eigene Schutzeinstellungen angeben. 
 
 ### <a name="file-sizes-supported-for-protection"></a>Für den Schutz unterstützte Dateigrößen
 

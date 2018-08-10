@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8f2facdeda749987bb1fffae84a3f1bf033e1ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f08c458ce779149d34d573ba145452f98d612c8c
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474717"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489500"
 ---
 # <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "39474717"
 
 Mit Azure Information Protection können Sie Ihre Dokumente schützen, ohne Einbußen bei der Zusammenarbeit für autorisierte Benutzer hinnehmen zu müssen. Die meisten Dokumente, die ein Benutzer erstellt und dann für andere zur Ansicht und Bearbeitung freigibt, sind Office-Dokumente aus Word, Excel und PowerPoint. Diese Dokumente unterstützen nativen Schutz. Das bedeutet, dass zusätzlich zur Autorisierung und Verschlüsselung auch eingeschränkte Berechtigungen für eine präzisere Kontrolle unterstützt werden. 
 
-Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen wie „anzeigen“, „bearbeiten“ und „drucken“. Nutzungsrechte lassen sich beim Schützen eines Dokuments individuell definieren. Alternativ können Sie eine Gruppe von Nutzungsrechten definieren, sogenannte Berechtigungsebenen. Berechtigungsebenen erleichtern die Auswahl von Nutzungsrechten, die in der Regel zusammen verwendet werden, z.B. „Prüfer“ und „Mitautor“. Weitere Informationen zu den Nutzungsberechtigungen und Berechtigungsebenen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](./deploy-use/configure-usage-rights.md).
+Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen wie „anzeigen“, „bearbeiten“ und „drucken“. Nutzungsrechte lassen sich beim Schützen eines Dokuments individuell definieren. Alternativ können Sie eine Gruppe von Nutzungsrechten definieren, sogenannte Berechtigungsebenen. Berechtigungsebenen erleichtern die Auswahl von Nutzungsrechten, die in der Regel zusammen verwendet werden, z.B. „Prüfer“ und „Mitautor“. Weitere Informationen zu den Nutzungsberechtigungen und Berechtigungsebenen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md).
 
 Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Benutzer sie gedacht sind:
 
@@ -44,7 +44,7 @@ Als Administrator können Sie eine Azure Information Protection-Bezeichnung konf
 
 In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können.
 
-Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](./deploy-use/configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
 1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
     
@@ -79,10 +79,10 @@ Da die Bezeichnung nun konfiguriert ist, kann sie auf verschiedene Weise auf Dok
 |Verschiedene Anwendungsmöglichkeiten der Bezeichnung|Weitere Informationen|
 |---------------|----------|
 |Der Benutzer wählt die Bezeichnung bei der Erstellung des Dokuments manuell in der Office-Anwendung aus.|Benutzer wählen die Bezeichnung im Office-Menüband über die Schaltfläche **Schützen** oder über die Azure Information Protection-Leiste aus.|
-|Benutzer werden beim Speichern eines neuen Dokuments dazu aufgefordert, eine Bezeichnung auszuwählen.|Sie haben die Azure Information Protection-[Richtlinieneinstellung](./deploy-use/configure-policy-settings.md) namens **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen) konfiguriert.|
+|Benutzer werden beim Speichern eines neuen Dokuments dazu aufgefordert, eine Bezeichnung auszuwählen.|Sie haben die Azure Information Protection-[Richtlinieneinstellung](configure-policy-settings.md) namens **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen) konfiguriert.|
 |Ein Benutzer gibt das Dokument per E-Mail frei und wählt die Bezeichnung manuell in Outlook aus.|Benutzer wählen die Bezeichnung im Office-Menüband über die Schaltfläche **Schützen** oder über die Azure Information Protection-Leiste aus, und das angefügte Dokument wird automatisch mit den gleichen Einstellungen geschützt.|
 |Ein Administrator wendet die Bezeichnung mit PowerShell auf das Dokument an.|Mithilfe des Cmdlets [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) lässt sich die Bezeichnung auf ein bestimmtes Dokument oder auf alle Dokumente in einem Ordner anwenden.|
-|Sie haben die Bezeichnung so konfiguriert, dass die automatische Klassifizierung jetzt mit dem Azure Information Protection-Scanner oder mit PowerShell angewendet werden kann.|Weitere Informationen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](./deploy-use/configure-policy-classification.md).|
+|Sie haben die Bezeichnung so konfiguriert, dass die automatische Klassifizierung jetzt mit dem Azure Information Protection-Scanner oder mit PowerShell angewendet werden kann.|Weitere Informationen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md).|
 
 Um diese exemplarische Vorgehensweise manuell abzuschließen, wenden Sie die Bezeichnung an, während Sie das Dokument in der Office-Anwendung erstellen: 
 
@@ -149,9 +149,9 @@ Wird derzeit nur von Office 2016-Klick-und-Los unterstützt.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu Schutzbezeichnungen für übliche Szenarios finden Sie unter [Beispielkonfigurationen](./deploy-use/configure-policy-protection.md#example-configurations). Dieser Artikel enthält außerdem ausführliche Informationen zu den Schutzeinstellungen.
+Weitere Informationen zu Schutzbezeichnungen für übliche Szenarios finden Sie unter [Beispielkonfigurationen](configure-policy-protection.md#example-configurations). Dieser Artikel enthält außerdem ausführliche Informationen zu den Schutzeinstellungen.
 
-Weitere Informationen zu den anderen Optionen und Einstellungen, die Sie für Ihre Bezeichnung konfigurieren können, finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](./deploy-use/configure-policy.md). 
+Weitere Informationen zu den anderen Optionen und Einstellungen, die Sie für Ihre Bezeichnung konfigurieren können, finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md). 
 
 Die Bezeichnung, die in diesem Artikel konfiguriert wurde, erstellt auch eine Schutzvorlage mit demselben Namen. Falls einige Ihrer Anwendungen und Dienste eine Integration mit Vorlagen aus Azure Information Protection unterstützen, können sie diese Vorlage anwenden. Beispiel: DLP-Lösungen und E-Mail-Flow-Regeln. Outlook im Web zeigt Schutzvorlagen aus der globalen Azure Information Protection-Richtlinie automatisch an. 
 

@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 81fd0bf7a85cdb0f59265bab22fee284bc248e26
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: c1c9d9eed2bc9a54500d13a93ce3d74187ee24a2
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474977"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488657"
 ---
 # <a name="step-1-activate-protection"></a>Schritt 1: Aktivieren des Schutzes
  
@@ -63,7 +63,7 @@ Dies ist bereits alles im ersten Schritt dieses Tutorials. Sie können nun mit S
 
 |Weitere Informationen zu|Zusätzliche Informationen|
 |--------------------------------|--------------------------|
-|Informationen zum Aktivieren des Schutzes|[Aktivieren von Azure Rights Management](./deploy-use/activate-service.md)|
+|Informationen zum Aktivieren des Schutzes|[Aktivieren von Azure Rights Management](activate-service.md)|
 
 
 >[!div class="step-by-step"]

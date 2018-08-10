@@ -14,12 +14,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 365d1bf0e36fda964f185713f5514a91f4c6df53
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 17590360f7e5111678496e2bb386e8a47ae0dd99
+ms.sourcegitcommit: 7ed2a257f68435fe6807af8975a5477801ec2537
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473632"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39501301"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
@@ -109,7 +109,7 @@ Damit Endbenutzer Information Protection-Dienste nutzen können, müssen Sie den
 
 
 > [!IMPORTANT]
-> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](./requirements-subscriptions.md).
+> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../requirements.md).
 > Weitere Informationen zur Ausführung mit Azure RMS finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](http://www.microsoft.com/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.

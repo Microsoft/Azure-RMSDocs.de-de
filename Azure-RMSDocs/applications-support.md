@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f529b761ef757612b621e948a49805448f9414ba
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: a450aabe8b2e318e4cb7be65f9c4d7d48941dc95
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474667"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488759"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
@@ -30,11 +30,11 @@ Erfahren Sie anhand der folgenden Informationen, wie die am häufigsten verwende
 
 In einigen Fällen wendet der Azure Rights Management-Dienst den Schutz automatisch gemäß den Richtlinien an, die von Administratoren konfiguriert wurden. Dies ist beispielsweise bei SharePoint-Bibliotheken und Exchange-Transportregeln der Fall. In anderen Fällen müssen Endbenutzer den Schutz selbst von ihren Anwendungen anwenden. Beispielsweise wählen Benutzer eine Klassifizierungsbezeichnung, die zum Anwenden des Schutzes konfiguriert ist, oder sie wählen eine Vorlage oder bestimmte Optionen aus. Von Benutzern angewendeter Schutz ist typisch, wenn Benutzer eine freizugebende Datei schützen und sie auch den Zugriff oder die Verwendung auf ausgewählte Benutzer oder auf Benutzer außerhalb der Organisation einschränken.
 
-Vorlagen erleichtern den Benutzern (und den Administratoren, die Richtlinien konfigurieren) das Anwenden der richtigen Schutzstufe und das Einschränken des Zugriffs auf Personen innerhalb Ihrer Organisation. Zwar verfügt der Azure Rights Management-Dienst über zwei Standardvorlagen, doch Sie können benutzerdefinierte Vorlagen erstellen, damit die Benutzer und Administratoren nicht so häufig einzelne Optionen angeben müssen. Weitere Informationen zu Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](./deploy-use/configure-policy-templates.md).
+Vorlagen erleichtern den Benutzern (und den Administratoren, die Richtlinien konfigurieren) das Anwenden der richtigen Schutzstufe und das Einschränken des Zugriffs auf Personen innerhalb Ihrer Organisation. Zwar verfügt der Azure Rights Management-Dienst über zwei Standardvorlagen, doch Sie können benutzerdefinierte Vorlagen erstellen, damit die Benutzer und Administratoren nicht so häufig einzelne Optionen angeben müssen. Weitere Informationen zu Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).
 
-In den Fällen, in denen Benutzer den Schutz selber anwenden müssen, stellen Sie sicher, dass Sie ihnen Anweisungen und Anleitungen geben, wie und wann dies zu erfolgen hat. Geben Sie die Anweisungen für die Anwendung und Versionen speziell an, die sie verwenden sollen sowie wie diese verwendet werden sollen. Stellen Sie auch Hilfestellung bereit, wann und wie Benutzer den Schutz, der für Ihr Unternehmen geeignet ist, anwenden müssen. Weitere Informationen finden Sie unter [Unterstützung von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./deploy-use/help-users.md).
+In den Fällen, in denen Benutzer den Schutz selber anwenden müssen, stellen Sie sicher, dass Sie ihnen Anweisungen und Anleitungen geben, wie und wann dies zu erfolgen hat. Geben Sie die Anweisungen für die Anwendung und Versionen speziell an, die sie verwenden sollen sowie wie diese verwendet werden sollen. Stellen Sie auch Hilfestellung bereit, wann und wie Benutzer den Schutz, der für Ihr Unternehmen geeignet ist, anwenden müssen. Weitere Informationen finden Sie unter [Unterstützung von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](help-users.md).
 
-Informationen dazu, wie diese Anwendungen für den Azure Rights Management-Dienst von Azure Information Protection konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](./deploy-use/configure-applications.md).
+Informationen dazu, wie diese Anwendungen für den Azure Rights Management-Dienst von Azure Information Protection konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
 Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiel: 
 

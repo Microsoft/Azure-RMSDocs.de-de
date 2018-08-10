@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e5af9843ef215ec074024179c71d577722096b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: cebca1f9ce2bb7d73f29e3e1ea7d6fd2fc6a5742
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474747"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489881"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -71,13 +71,13 @@ Für jedes Dokument oder jede E-Mail, das bzw. die von Azure RMS geschützt wird
 
 Der Inhaltsschlüssel wird mit dem RSA-Schlüssel der Organisation (der „Azure Information Protection-Mandantenschlüssel“) als Teil der Richtlinie im Dokument geschützt, und die Richtlinie wird auch vom Autor des Dokuments signiert. Dieser Mandantenschlüssel gilt für alle Dokumente und E-Mails, die vom Azure Rights Management-Dienst für die Organisation geschützt werden, und dieser Schlüssel kann von einem Azure Information Protection-Administrator nur geändert werden, wenn die Organisation einen Mandantenschlüssel verwendet, der kundenverwaltet ist (bezeichnet als „Bring-Your-Own-Key“ oder BYOK). 
 
-Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und BYOK finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](./plan-design/plan-implement-tenant-key.md).
+Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend kontrollierten Umgebung und unter enger Beobachtung geschützt. Wenn Sie einen vom Kunden verwalteten Mandantenschlüssel (BYOK) verwenden, wird diese Sicherheit erweitert, indem in jeder Azure-Region ein Array von hochleistungsfähigen Hardwaresicherheitsmodulen (HSMs) verwendet wird, ohne dass irgendeine Möglichkeit besteht, die Schlüssel zu extrahieren, zu exportieren oder freizugeben. Weitere Informationen zum Mandantenschlüssel und BYOK finden Sie unter [Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md).
 
 Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, Inhaltsaufnahme
-Sehen Sie sich zum besseren Verständnis der Funktionsweise von Azure RMS einen typischen Ablauf an, nachdem der [Azure Rights Management-Dienst aktiviert wurde](./deploy-use/activate-service.md) und ein Benutzer den Rights Management-Dienst erstmals auf seinem Windows-Computer verwendet (ein Vorgang, der auch als **Initialisierung der Benutzerumgebung** oder Bootstrapping bezeichnet wird), **Inhalte geschützt werden** (ein Dokument oder eine E-Mail) und dann ein Inhalt **genutzt** (geöffnet und verwendet) wird, der durch eine andere Person geschützt wurde.
+Sehen Sie sich zum besseren Verständnis der Funktionsweise von Azure RMS einen typischen Ablauf an, nachdem der [Azure Rights Management-Dienst aktiviert wurde](activate-service.md) und ein Benutzer den Rights Management-Dienst erstmals auf seinem Windows-Computer verwendet (ein Vorgang, der auch als **Initialisierung der Benutzerumgebung** oder Bootstrapping bezeichnet wird), **Inhalte geschützt werden** (ein Dokument oder eine E-Mail) und dann ein Inhalt **genutzt** (geöffnet und verwendet) wird, der durch eine andere Person geschützt wurde.
 
 Nach der Initialisierung der Benutzerumgebung kann der Benutzer Dokumente schützen oder geschützte Dokumente auf diesem Computer nutzen.
 
@@ -110,7 +110,7 @@ Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Akt
 
 ![RMS-Dokumentenschutz – Schritt 2, die Richtlinie wird erstellt](./media/AzRMS_documentprotection2.png)
 
-**Das passiert in Schritt 2**: Der RMS-Client erstellt ein Zertifikat, das eine Richtlinie für das Dokument enthält, das die [Benutzerrechte](./deploy-use/configure-usage-rights.md) für Benutzer oder Gruppen einschließt sowie andere Einschränkungen, z.B. ein Ablaufdatum. Diese Einstellungen können in einer zuvor von einem Administrator konfigurierten Vorlage definiert oder zu dem Zeitpunkt angegeben werden, zu dem der Inhalt geschützt wird (Letzteres wird zuweilen auch als „Ad-hoc-Richtlinie“ bezeichnet).   
+**Das passiert in Schritt 2**: Der RMS-Client erstellt ein Zertifikat, das eine Richtlinie für das Dokument enthält, das die [Benutzerrechte](configure-usage-rights.md) für Benutzer oder Gruppen einschließt sowie andere Einschränkungen, z.B. ein Ablaufdatum. Diese Einstellungen können in einer zuvor von einem Administrator konfigurierten Vorlage definiert oder zu dem Zeitpunkt angegeben werden, zu dem der Inhalt geschützt wird (Letzteres wird zuweilen auch als „Ad-hoc-Richtlinie“ bezeichnet).   
 
 Das Azure AD-Attribut, das hauptsächlich verwendet wird, um die ausgewählten Benutzer und Gruppen zu identifizieren, ist das Attribut „Azure AD ProxyAddresses“, das alle E-Mail-Adressen für einen Benutzer oder eine Gruppe speichert. Wenn ein Benutzerkonto jedoch keine Werte im Attribut „Azure AD ProxyAddresses“ enthält, wird stattdessen der „UserPrincipalName“-Wert des Benutzers verwendet.
 
@@ -127,7 +127,7 @@ Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Clie
 
 ![RMS-Dokumentennutzung – Schritt 1, der Benutzer wird authentifiziert und erhält die Liste der Rechte](./media/AzRMS_documentconsumption1.png)
 
-**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Attribut „Azure AD ProxyAddresses“ für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](./plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Wenn das Benutzerkonto über keine Werte für das Attribut „Azure AD ProxyAddresses“ verfügt, wird stattdessen der Wert im Attribut „Azure AD UserPrincipalName“ verwendet.
+**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Attribut „Azure AD ProxyAddresses“ für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn das Benutzerkonto über keine Werte für das Attribut „Azure AD ProxyAddresses“ verfügt, wird stattdessen der Wert im Attribut „Azure AD UserPrincipalName“ verwendet.
 
 ![RMS-Dokumentennutzung – Schritt 2, die Nutzungslizenz wird an den Client zurückgegeben](./media/AzRMS_documentconsumption2.png)
 
@@ -166,7 +166,7 @@ Wenn Sie weitere Informationen zum Azure Rights Management-Dienst benötigen, le
 
 Lesen Sie [Terminologie für Azure Information Protection](./terminology.md), um sich mit den Begriffen vertraut zu machen, auf die Sie möglicherweise stoßen werden, wenn Sie den Azure Rights Management-Dienst konfigurieren und verwenden. Außerdem sollten Sie unbedingt [Voraussetzungen für Azure Information Protection](requirements.md) lesen, bevor Sie mit der Bereitstellung beginnen. Wenn Sie es ohne weitere Vorbereitung gleich selbst ausprobieren möchten, verwenden Sie das [Schnellstart-Lernprogramm für Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
-Wenn Sie soweit sind, mit der Bereitstellung von Datenschutz für Ihre Organisation zu beginnen, finden Sie die Bereitstellungsschritte und Links zu praktischen Anweisungen in der [Roadmap für die Bereitstellung von Azure Information Protection](./plan-design/deployment-roadmap.md).
+Wenn Sie soweit sind, mit der Bereitstellung von Datenschutz für Ihre Organisation zu beginnen, finden Sie die Bereitstellungsschritte und Links zu praktischen Anweisungen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md).
 
 > [!TIP]
 > Weitere Informationen und Hilfe finden Sie in den Ressourcen und Links in [Informationen und Support für Azure Information Protection](information-support.md).

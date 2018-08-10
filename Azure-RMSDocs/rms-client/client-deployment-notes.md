@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 571545905a0fac6bb1ea9b80c351b96f9f70899b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376534"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489442"
 ---
 # <a name="rms-client-deployment-notes"></a>Anmerkungen zur Bereitstellung des RMS-Clients
 
@@ -158,7 +158,7 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
 
 1. **Die Windows-Registrierung auf dem lokalen Computer**: Wenn Diensterkennungseinstellungen in der Registrierung konfiguriert sind, werden diese Einstellungen zuerst ausprobiert. 
 
-    Standardmäßig sind diese Einstellungen nicht in der Registrierung konfiguriert. Ein Administrator kann diese jedoch für AD RMS gemäß den Angaben in einem [folgenden Abschnitt](#enabling-client-side-service-discovery-by-using-the-windows-registry) konfigurieren. Ein Administrator konfiguriert diese Einstellungen für den Azure Rights Management-Dienst in der Regel während des [Migrationsvorgangs](../plan-design/migrate-from-ad-rms-phase2.md) von AD RMS zu Azure Information Protection.
+    Standardmäßig sind diese Einstellungen nicht in der Registrierung konfiguriert. Ein Administrator kann diese jedoch für AD RMS gemäß den Angaben in einem [folgenden Abschnitt](#enabling-client-side-service-discovery-by-using-the-windows-registry) konfigurieren. Ein Administrator konfiguriert diese Einstellungen für den Azure Rights Management-Dienst in der Regel während des [Migrationsvorgangs](../migrate-from-ad-rms-phase2.md) von AD RMS zu Azure Information Protection.
 
 2. **Active Directory Domain Services**: Ein der Domäne beigetretener Computer fragt Active Directory auf einen Dienstverbindungspunkt ab. 
 
@@ -181,7 +181,7 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
 >  
 > - Wenn ein Benutzer eine Anmeldung aus einer Office-Anwendung einleitet, werden der Benutzername (und die Domäne) in den Authentifizierungsdaten zum Bestimmen des zu verwendenden Azure Information Protection-Mandanten genutzt. In diesem Fall sind keine Registrierungseinstellungen erforderlich, und der Dienstverbindungspunkt wird nicht überprüft.
 > 
-> - Wenn Sie die [DNS-Umleitung](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) für Klick-und-Los-Desktop-Apps für Office 2016 konfiguriert haben, sucht der RMS-Client den Azure Rights Management-Dienst, da ihm der Zugriff auf den AD RMS-Cluster verweigert wird, den er zuvor gefunden hat. Aufgrund dieser Ablehnungsaktion sucht der Client nach dem SRV-Eintrag, der den Client an den Azure Rights Management-Dienst für Ihren Mandanten umleitet. Mit diesem SRV-Eintrag kann Exchange Online E-Mails entschlüsseln, die durch Ihren AD RMS-Cluster geschützt wurden. 
+> - Wenn Sie die [DNS-Umleitung](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) für Klick-und-Los-Desktop-Apps für Office 2016 konfiguriert haben, sucht der RMS-Client den Azure Rights Management-Dienst, wenn ihm der Zugriff auf den AD RMS-Cluster verweigert wird, den er zuvor gefunden hat. Aufgrund dieser Ablehnungsaktion sucht der Client nach dem SRV-Eintrag, der den Client an den Azure Rights Management-Dienst für Ihren Mandanten umleitet. Mit diesem SRV-Eintrag kann Exchange Online E-Mails entschlüsseln, die durch Ihren AD RMS-Cluster geschützt wurden. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Nur AD RMS: Aktivieren der serverseitigen Diensterkennung mithilfe von Active Directory
 Wenn Ihr Konto über ausreichende Berechtigungen (Organisationsadministrator und lokaler Administrator für den AD RMS-Server) verfügt, können Sie bei der Installation des AD RMS-Stammclusterservers einen Dienstverbindungspunkt automatisch registrieren. Wenn bereits ein AD RMS-Dienstverbindungspunkt in der Gesamtstruktur vorhanden ist, müssen Sie zunächst den vorhandenen Dienstverbindungspunkt löschen, ehe Sie einen neuen erstellen können.

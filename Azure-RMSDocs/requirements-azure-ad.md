@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d15e4a5e22089fa1ac98303fb00b95d082be872a
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: f6aa26cb64a07e8ccc2415b874e7240897633cd0
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474997"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489255"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
 
@@ -47,7 +47,7 @@ Der UPN-Wert eines Benutzers entspricht nicht seiner E-Mail-Adresse:
 
 - Dies ist keine empfohlene Konfiguration. Wenn Sie den UPN-Wert nicht ändern können, konfigurieren Sie alternative Anmelde-IDs für Benutzer, und erläutern Sie den Benutzern, wie sie sich mit dieser alternativen Anmelde-ID bei Office anmelden. Weitere Informationen finden Sie unter [Konfigurieren einer alternativen Anmelde-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) und [Office-Anwendungen fordern regelmäßig Anmeldeinformationen für SharePoint Online, OneDrive und Lync Online an](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
-    Wenn der Domänenname im UPN-Wert eine Domäne ist, die für Ihren Mandanten überprüft wurde, fügen Sie den UPN-Wert des Benutzers als weitere E-Mail-Adresse zum Attribut „Azure AD proxyAddresses“ hinzu. Dadurch kann der Benutzer für Azure Rights Management autorisiert werden, wenn sein UPN-Wert zum Zeitpunkt der Gewährung der Nutzungsrechte festgelegt wird. Weitere Informationen hierzu und zum Autorisieren von Benutzerkonten finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](./plan-design/prepare.md).
+    Wenn der Domänenname im UPN-Wert eine Domäne ist, die für Ihren Mandanten überprüft wurde, fügen Sie den UPN-Wert des Benutzers als weitere E-Mail-Adresse zum Attribut „Azure AD proxyAddresses“ hinzu. Dadurch kann der Benutzer für Azure Rights Management autorisiert werden, wenn sein UPN-Wert zum Zeitpunkt der Gewährung der Nutzungsrechte festgelegt wird. Weitere Informationen hierzu und zum Autorisieren von Benutzerkonten finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
 Mobile Geräte oder Mac-Computer, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden:
 

@@ -4,7 +4,7 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/29/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74cd50008213b9a78745a14e7753d252b1adcf53
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 517113c447857800a585dccadd66314b131523a4
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374634"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575878"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -85,9 +85,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     
 - Benutzerausrichtung (falls zutreffend)
 
-- Benutzerdefinierte Berechtigungen (falls zutreffend), die die [Nutzungsrechte über ihren Codierungsnamen](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions) für die angegebenen Benutzer, Gruppen der Organisationen einschließen.
+- Benutzerdefinierte Berechtigungen (falls zutreffend), die die [Nutzungsrechte über ihren Codierungsnamen](../configure-usage-rights.md#usage-rights-and-descriptions) für die angegebenen Benutzer, Gruppen der Organisationen einschließen.
     
-Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../deploy-use/log-analyze-usage.md).
+Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
 
 

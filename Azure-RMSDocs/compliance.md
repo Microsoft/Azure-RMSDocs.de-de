@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e4db3996a201909fcf861a4190cbe6647a7326c
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 55d3b303a84a557ad5f65760d963221878a7b521
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474617"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488850"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
@@ -33,7 +33,7 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 - Alle Verschlüsselungsschlüssel, die von Azure Information Protection verwendet werden, werden mit einem kundenspezifischen Stammschlüssel geschützt, der RSA 2048-Bit verwendet. RSA 1024-Bit wird zur Rückwärtskompatibilität auch unterstützt. [Weitere Informationen](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Kundenspezifische Stammschlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem Thales-HSM mit [Bring Your Own Key (BYOK)](./plan-design/plan-implement-tenant-key.md) bereitgestellt. Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](./deploy-use/configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
+- Kundenspezifische Stammschlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem Thales-HSM mit [Bring Your Own Key (BYOK)](plan-implement-tenant-key.md) bereitgestellt. Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
 
 - Azure Information Protection wird weltweit in regionalen Rechenzentren gehostet. Schlüssel und Richtlinien von Azure Information Protection bleiben immer in der Region, in der sie ursprünglich bereitgestellt wurden.
  

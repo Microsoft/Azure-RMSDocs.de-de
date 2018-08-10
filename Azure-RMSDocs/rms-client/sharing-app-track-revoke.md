@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6d53635a7f86c9ecc27f654885f9d66569f2b1e
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 4c515388df31d0541ee88a21fa88da761a5cde30
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374238"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489051"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
 
@@ -54,7 +54,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
 Wenn diese Optionen für RMS nicht angezeigt werden, ist die RMS-Freigabeanwendung entweder nicht oder nicht in der neuesten Version auf Ihrem Computer installiert, oder der Computer muss neu gestartet werden muss, um die Installation abzuschließen. Weitere Informationen zum Installieren der Freigabeanwendung finden Sie unter [Herunterladen und Installieren der Rights Management-Freigabeanwendung](install-sharing-app.md).
 
 > [!NOTE] 
-> Wenn Sie den [Azure Information Protection-Client](../rms-client/info-protect-client.md) installiert haben, können Sie auch über die Schaltfläche **Schützen** auf die Website zur Dokumentkontrolle zugreifen: 
+> Wenn Sie den [Azure Information Protection-Client](info-protect-client.md) installiert haben, können Sie auch über die Schaltfläche **Schützen** auf die Website zur Dokumentkontrolle zugreifen: 
 > 
 > - Klicken Sie in einer Office-Anwendung auf der Registerkarte **Start** in der Gruppe **Schutz** auf **Schützen**  >  **Verwendung nachverfolgen**. 
 

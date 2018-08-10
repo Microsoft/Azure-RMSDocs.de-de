@@ -4,7 +4,7 @@ description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und E-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/12/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: baf3edc435672c8339c15ea74f5b5e14d6951f96
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: dbe983b1c777308a01a2c1c9b7a97571cb9a7d08
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371542"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575456"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Information Protection
 
@@ -181,7 +181,7 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 -   [Was möchten Sie tun?](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
-Konfigurationsanweisungen zum Aktivieren der Richtlinieneinstellung **Make the custom permissions option available to users** (Die Option der benutzerdefinierten Berechtigungen Benutzern zur Verfügung stellen) finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Azure Information Protection](../deploy-use/configure-policy-settings.md).
+Konfigurationsanweisungen zum Aktivieren der Richtlinieneinstellung **Make the custom permissions option available to users** (Die Option der benutzerdefinierten Berechtigungen Benutzern zur Verfügung stellen) finden Sie unter [Konfigurieren der Richtlinieneinstellungen für Azure Information Protection](../configure-policy-settings.md).
 
-Weitere Konfigurationsanweisungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../deploy-use/configure-policy.md).
+Weitere Konfigurationsanweisungen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](../configure-policy.md).
 
