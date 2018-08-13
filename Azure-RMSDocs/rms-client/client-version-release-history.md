@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61762157ff6419bb325d92470d5264dc9b55f840
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
+ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474214"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020599"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -52,7 +52,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
 
 **Neue Features**: 
 
-- Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../deploy-use/configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+- Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Unterstützung von Bezeichnungen für das Dokumentformat **Strict Open XML** in Word-, Excel- und PowerPoint- Dateien. Weitere Informationen zu den Open XML-Formaten finden Sie im Office-Blogbeitrag [New file format options in the new Office (Neue Dateiformate in der neuen Version von Office)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
@@ -92,7 +92,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
     
     - **OneTime**, **Continuous** und **Never** (Einmalig, Fortlaufend und Nie) sind nicht mehr Werte für den Parameter *Schedule*. Stattdessen gibt es nun die Werte **Manual** (Manuell) und **Always** (Immer).
         
-    - Der Parameter *Type* wurde entfernt, d.h. er wurde auch aus der Ausgabe entfernt, wenn Sie [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) ausführen.
+    - Der Parameter *Type* wurde entfernt, d.h. er wurde auch aus der Ausgabe entfernt, wenn Sie [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) ausführen. Standardmäßig werden nach dem ersten Überprüfungszyklus nur neue oder geänderte Dateien untersucht. Wenn Sie zuvor für den *Typ*-Parameter **Vollständig** festgelegt haben, um alle Dateien erneut zu überprüfen, führen Sie nun [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem *Zurücksetzen*-Parameter aus. Die Überprüfung muss auch für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass für den *Zeitplan*-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) die Option **Manuell** festgelegt wird.
     
 - Die Standardausschlussliste der Überprüfung umfasst nun RTF-Dateien. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
@@ -109,7 +109,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 - Für die Office-Versionen 16.0.9324.1000 und höher (Klick-und-Los) unterstützt die Azure Information Protection-Leiste die neuesten Anzeigeoptionen für Monitore. Bisher konnte es passieren, dass die Leiste außerhalb der Outlook-Anwendung angezeigt wurde.
 
-- Optische Kennzeichnungen, die Sie [pro Office-Anwendungstyp](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) konfigurieren können, ersetzen eine Kopf- und Fußzeile, die zuvor von einer Azure Information Protection-Bezeichnung angewendet wurde.
+- Optische Kennzeichnungen, die Sie [pro Office-Anwendungstyp](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) konfigurieren können, ersetzen eine Kopf- und Fußzeile, die zuvor von einer Azure Information Protection-Bezeichnung angewendet wurde.
 
 - Wenn eine Excel-Datei bereits bezeichnet wurde und die Bezeichnung optische Kennzeichnungen anwendet, werden diese optischen Kennzeichnungen jetzt auch auf neue Tabellenblätter angewendet.
 
@@ -133,7 +133,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
     
     - Standardmäßig werden nur Office-Dokumenttypen geschützt. Sie können weitere Dateitypen schützen, indem Sie diese in der Registrierung definieren. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md).
     
-    - Standardmäßig wird die Überprüfung für eine höhere Sicherheit mit einer niedrigen Integritätsebene ausgeführt. Dies gilt für den Fall, dass die Überprüfung mit einem Konto ausgeführt wird, das über privilegierte Rechte verfügt. Wenn das Dienstkonto, das die Überprüfung ausführt, nur über die unter [Voraussetzungen für die Azure Information Protection-Überprüfung](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, ist eine niedrige Integritätsebene weder erforderlich noch empfehlenswert, da sie sich negativ auf die Leistung auswirkt. Sie können die niedrige Integritätsebene mithilfe der erweiterten Clienteinstellung deaktivieren. [Weitere Informationen](../rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
+    - Standardmäßig wird die Überprüfung für eine höhere Sicherheit mit einer niedrigen Integritätsebene ausgeführt. Dies gilt für den Fall, dass die Überprüfung mit einem Konto ausgeführt wird, das über privilegierte Rechte verfügt. Wenn das Dienstkonto, das die Überprüfung ausführt, nur über die unter [Voraussetzungen für die Azure Information Protection-Überprüfung](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, ist eine niedrige Integritätsebene weder erforderlich noch empfehlenswert, da sie sich negativ auf die Leistung auswirkt. Sie können die niedrige Integritätsebene mithilfe der erweiterten Clienteinstellung deaktivieren. [Weitere Informationen](client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
     
 - Für [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus) beinhaltet die Ausgabe jetzt den Rights Management-Besitzer und den Rights Management-Aussteller sowie das Datum, an dem der Inhalt geschützt wurde.
  
@@ -157,11 +157,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 **Neue Features**:
 
-- Azure Information Protection-Überprüfung: Das im Client enthaltene PowerShell-Modul verfügt über neue Cmdlets zum Installieren und Konfigurieren des Überprüfungsmoduls, mit denen Sie Dateien in Ihren lokalen Datenspeichern ermitteln, klassifizieren und schützen können. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-use/deploy-aip-scanner.md). 
+- Azure Information Protection-Überprüfung: Das im Client enthaltene PowerShell-Modul verfügt über neue Cmdlets zum Installieren und Konfigurieren des Überprüfungsmoduls, mit denen Sie Dateien in Ihren lokalen Datenspeichern ermitteln, klassifizieren und schützen können. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md). 
 
-- Sie haben jetzt die Möglichkeit, verschiedene optische Kennzeichnungen für Word, Excel, PowerPoint und Outlook festzulegen, indem Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp identifizieren. [Weitere Informationen](../deploy-use/configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+- Sie haben jetzt die Möglichkeit, verschiedene optische Kennzeichnungen für Word, Excel, PowerPoint und Outlook festzulegen, indem Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp identifizieren. [Weitere Informationen]configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
-- Unterstützung der [Richtlinieneinstellung](../deploy-use/configure-policy-settings.md), **Information Protection-Leiste in Office-Apps anzeigen**. Wenn diese Einstellung deaktiviert ist, wählen Benutzer Bezeichnungen über die Schaltfläche **Schützen** im Menüband aus.
+- Unterstützung der [Richtlinieneinstellung](../configure-policy-settings.md), **Information Protection-Leiste in Office-Apps anzeigen**. Wenn diese Einstellung deaktiviert ist, wählen Benutzer Bezeichnungen über die Schaltfläche **Schützen** im Menüband aus.
 
 - Eine neue erweiterte Clienteinstellung (noch in der Vorschau), mit der Sie die Klassifizierung aktivieren können, die fortlaufend im Hintergrund ausgeführt wird. Ist diese Einstellung aktiviert, wird für Office-Apps die automatische und empfohlene Klassifizierung ständig im Hintergrund ausgeführt, anstatt beim Speichern von Dokumenten. Aufgrund dieses veränderten Verhaltens können Sie jetzt eine automatische und empfohlene Klassifizierung auf Dokumente anwenden, die in SharePoint Online gespeichert sind. [Weitere Informationen](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
@@ -169,7 +169,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 - Für Office-Apps können Sie beim Angeben von benutzerdefinierten Berechtigungen über ein Adressbuchsymbol jetzt nach Benutzern suchen und diese auswählen. Diese Option sorgt für Parität auf der Benutzeroberfläche, wenn Sie benutzerdefinierte Berechtigungen mit dem Datei-Explorer angeben.
 
-- Unterstützung einer Authentifizierungsmethode ganz ohne Interaktion für Dienstkonten, für die PowerShell genutzt wird und denen das Recht für **Lokales Anmelden** nicht gewährt werden kann. Bei dieser Authentifizierungsmethode ist es erforderlich, dass Sie den neuen Parameter *Token* mit [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) verwenden und ein PowerShell-Skript als Aufgabe ausführen. [Weitere Informationen](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
+- Unterstützung einer Authentifizierungsmethode ganz ohne Interaktion für Dienstkonten, für die PowerShell genutzt wird und denen das Recht für **Lokales Anmelden** nicht gewährt werden kann. Bei dieser Authentifizierungsmethode ist es erforderlich, dass Sie den neuen Parameter *Token* mit [Set-AIPAuthentication](/powershell/module/azureinformationprotection/Set-AIPAuthentication) verwenden und ein PowerShell-Skript als Aufgabe ausführen. [Weitere Informationen](client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication)
 
 - Neuer Parameter *IntegratedAuth* für [Set-RMSServerAuthentication](/powershell/module/azureinformationprotection/set-rmsserverauthentication). Dieser Parameter unterstützt den Servermodus für AD RMS, der benötigt wird, damit Windows Server FCI von AD RMS unterstützt werden kann.
 
@@ -225,11 +225,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3219.0619 des RMS-Clients.
 
 **Neue Features**:
 
-- Unterstützung für die neuen Office 365-DLP-Bedingungen, die Sie für eine Bezeichnung konfigurieren können. Weitere Informationen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](../deploy-use/configure-policy-classification.md).
+- Unterstützung für die neuen Office 365-DLP-Bedingungen, die Sie für eine Bezeichnung konfigurieren können. Weitere Informationen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](../configure-policy-classification.md).
 
-- Unterstützung für Bezeichnungen, für die benutzerdefinierte Aktionen konfiguriert sind. Bei Outlook wendet diese Bezeichnung automatisch die Outlook-Option „Nicht weiterleiten“ an. Bei Word, Excel, PowerPoint und dem Datei-Explorer fordert diese Bezeichnung den Benutzer dazu auf, benutzerdefinierte Berechtigungen anzugeben. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](../deploy-use/configure-policy-protection.md).
+- Unterstützung für Bezeichnungen, für die benutzerdefinierte Aktionen konfiguriert sind. Bei Outlook wendet diese Bezeichnung automatisch die Outlook-Option „Nicht weiterleiten“ an. Bei Word, Excel, PowerPoint und dem Datei-Explorer fordert diese Bezeichnung den Benutzer dazu auf, benutzerdefinierte Berechtigungen anzugeben. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für Rights Management-Schutz](../configure-policy-protection.md).
 
-- Bezeichnungen unterstützen mehrere Sprachen. Ab dem 30. August 2017 enthält die [Standardrichtlinie](../deploy-use/configure-policy-default.md) Unterstützung für mehrere Sprachen, die den Benutzern in dieser Clientversion angezeigt werden. Unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](../deploy-use/configure-policy-languages.md) finden Sie Informationen darüber, wie Benutzer vor diesem Datum Bezeichnungen aus einer Standardrichtlinie bzw. die von Ihnen konfigurierten Bezeichnungen in ihrer bevorzugten Sprache anzeigen können.
+- Bezeichnungen unterstützen mehrere Sprachen. Ab dem 30. August 2017 enthält die [Standardrichtlinie](../configure-policy-default.md) Unterstützung für mehrere Sprachen, die den Benutzern in dieser Clientversion angezeigt werden. Unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection]configure-policy-languages.md) finden Sie Informationen darüber, wie Benutzer Bezeichnungen aus einer Standardrichtlinie, die vor diesem Datum erstellt wurde, bzw. die von Ihnen konfigurierten Bezeichnungen in ihrer bevorzugten Sprache anzeigen können.
 
 - Bezeichnungen werden zusätzlich zu der Anzeige auf der Information Protection-Leiste über die Schaltfläche **Schützen** auf dem Office-Menüband angezeigt. 
 
@@ -237,15 +237,15 @@ Diese Version umfasst die MSIPC-Version 1.0.3219.0619 des RMS-Clients.
 
 - Unterstützung für erweiterte Clientkonfigurationen, die Sie im Azure-Portal konfigurieren können. Diese Konfigurationen umfassen Folgendes:
     
-    - [Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
+    - [Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook](client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
+    - [Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Die Azure Information Protection-Leiste dauerhaft ausblenden](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
+    - [Die Azure Information Protection-Leiste dauerhaft ausblenden](client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
-    - [Die empfohlene Klassifizierung in Outlook aktivieren](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
+    - [Die empfohlene Klassifizierung in Outlook aktivieren](client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 
-- Bei PowerShell: Unterstützung für die nicht interaktive Bezeichnung von Dateien unter Verwendung der neuen PowerShell-Cmdlets [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) und [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Weitere Informationen zur Verwendung dieser Cmdlets finden Sie im [PowerShell-Abschnitt](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) des Administratorhandbuchs.
+- Bei PowerShell: Unterstützung für die nicht interaktive Bezeichnung von Dateien unter Verwendung der neuen PowerShell-Cmdlets [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) und [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication). Weitere Informationen zur Verwendung dieser Cmdlets finden Sie im [PowerShell-Abschnitt](client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) des Administratorhandbuchs.
 
 - Für die PowerShell-Cmdlets [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) und [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) gibt es die neuen Parameter **Owner** und **PreserveFileDetails**. Mit diesen Parametern können Sie eine E-Mail-Adresse für die benutzerdefinierte Eigenschaft „Owner“ angeben und das Datum für Dokumente, die Sie bezeichnen, unverändert lassen.
 
@@ -259,7 +259,7 @@ Fixes für Stabilität und für bestimmte Szenarios, die Folgendes umfassen:
 
 - Unterstützung für die Bezeichnung und den Schutz von Dateien, die auf dem SharePoint-Server gespeichert sind.
 
-- Wasserzeichen unterstützen jetzt mehrere Zeilen. Darüber hinaus werden visuelle Kennzeichnungen jetzt [nur beim ersten Speichern](../deploy-use/configure-policy-markings.md#when-visual-markings-are-applied) angewendet, anstatt jedes Mal, wenn ein Dokument gespeichert wird.
+- Wasserzeichen unterstützen jetzt mehrere Zeilen. Darüber hinaus werden visuelle Kennzeichnungen jetzt nur beim [ersten Speichern ]configure-policy-markings.md#when-visual-markings-are-applied) angewendet, anstatt jedes Mal, wenn ein Dokument gespeichert wird.
 
 - Die Option **Diagnose ausführen** im Dialogfeld **Hilfe und Feedback** wird durch **Einstellungen zum Zurücksetzen** ersetzt. Das Verhalten für diese Aktion wurde geändert, sodass das Abmelden des Benutzers und das Löschen der Azure Information Protection-Richtlinie mit eingeschlossen ist. Weitere Informationen finden Sie unter [Weitere Informationen über die Zurücksetzungsoption für die aktuelle Vorschauversion des Azure Information Protection-Clients](..\rms-client\client-admin-guide.md#more-information-about-the-reset-settings-option) im Administratorhandbuch.
 

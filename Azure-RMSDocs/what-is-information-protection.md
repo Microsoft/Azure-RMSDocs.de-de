@@ -4,18 +4,18 @@ description: Eine Übersicht über den Azure Information Protection-Dienst.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/23/2018
+ms.date: 08/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9031309c7fbc109d23ea3ddba6fe97dc6db8c00d
-ms.sourcegitcommit: cf930d768536980b7754f7992f604aa99548ee73
+ms.openlocfilehash: 11ac7ab7a1c1b55811f2f62b426dceedfa9c4874
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39476957"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489398"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -106,7 +106,7 @@ Im Idealfall werden Dokumente und E-Mails bei deren Erstellung mit einer Bezeich
 
 Verwenden Sie für Ihre lokalen Datenspeicher die Azure Information Protection-Überprüfung, um Dokumente in lokalen Ordnern, Netzwerkfreigaben und SharePoint Server-Standorten und -Bibliotheken zu erkennen, zu klassifizieren und zu schützen. Die Überprüfung wird als Dienst unter Windows Server ausgeführt. Sie können die gleichen Regeln in der Richtlinie verwenden, um vertrauliche Informationen zu erkennen und für Dokumente spezielle Bezeichnungen anzuwenden. Oder Sie können eine Standardbezeichnung auf alle Dokumente in einem Datenrepository anwenden, ohne den Inhalt der Datei zu überprüfen. Zudem haben Sie die Möglichkeit, die Überprüfung auch nur im Berichterstellungsmodus zu verwenden, um vertrauliche Daten zu finden, von denen Sie vielleicht nicht wissen, dass sie vorhanden sind. 
 
-Weitere Informationen zur Bereitstellung und Verwendung der Überprüfung finden Sie im Artikel zum [Bereitstellen der Azure Rights Management-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](./deploy-use/deploy-rms-connector.md).
+Weitere Informationen zur Bereitstellung und Verwendung der Überprüfung finden Sie im Artikel zum [Bereitstellen der Azure Rights Management-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-rms-connector.md).
 
 Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre Bezeichnungen für Dokumente in Box, SharePoint Online und OneDrive for Business anzuwenden. Weitere Informationen finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](/cloud-app-security/use-case-information-protection) und [Integration mit Azure Information Protection](/cloud-app-security/azip-integration).
 
@@ -125,8 +125,11 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
+Zusätzliche Ressourcen: [Informationen und Support für Azure Information Protection](information-support.md)
 
-Darüber hinaus wurden bei **Microsoft Ignite 2017** viele auf Abruf verfügbare Sitzungen für Azure Information Protection zur Verfügung gestellt. Eine Zusammenfassung der Ankündigungen, die auf dieser Konferenz stattgefunden haben, finden Sie unter [What’s new in Azure Information Protection @ Ignite 2017 (Neues in Azure Information Protection @ Ignite 2017)](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
+### <a name="microsoft-ignite"></a>Microsoft Ignite
+
+Bei Microsoft Ignite 2017 wurden viele auf Abruf verfügbare Sitzungen für Azure Information Protection zur Verfügung gestellt. Eine Zusammenfassung der Ankündigungen, die auf dieser Konferenz stattgefunden haben, finden Sie unter [What’s new in Azure Information Protection @ Ignite 2017 (Neues in Azure Information Protection @ Ignite 2017)](https://cloudblogs.microsoft.com/ENTERPRISEMOBILITY/2017/09/27/whats-new-in-azure-information-protection-ignite-2017/). 
 
 Sie können die Sitzungen [suchen und finden](https://myignite.microsoft.com/videos?q=%2522azure%2520information%2520protection%2522), die für Azure Information Protection auf der Ignite-Website gekennzeichnet sind. Jedoch empfiehlt es sich, mit den folgenden Sitzungen zu beginnen:
 
@@ -145,7 +148,7 @@ Sie können die Sitzungen [suchen und finden](https://myignite.microsoft.com/vid
 
 Lesen Sie den Blogbeitrag [Azure Information Protection: Ready, set, protect! (Azure Information Protection: Auf die Plätze, Fertig, Schützen!)](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
 
-Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnellstarttutorial](infoprotect-quick-start-tutorial.md) in fünf Schritten. Wenn Sie hingegen Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](./plan-design/deployment-roadmap.md).
+Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnellstarttutorial](infoprotect-quick-start-tutorial.md) in fünf Schritten. Wenn Sie hingegen Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md).
 
 Es kann sein, dass Sie Azure Informationen Protection nur unter einem anderen Namen kennen. Dann finden Sie weitere Informationen dazu in [der Liste alternativer Benennungen für den Dienst](aka.md).
 
