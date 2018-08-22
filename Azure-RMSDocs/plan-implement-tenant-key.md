@@ -139,7 +139,7 @@ Anhand der folgenden Tabelle können Sie ermitteln, welche Azure-Region oder -In
 |rms.**na**.aadrm.com|**USA, Norden-Mitte** oder **USA, Osten**|
 |rms.**eu**.aadrm.com|**Nordeuropa** oder **Westeuropa**|
 |rms.**ap**.aadrm.com|**Ostasien** oder **Südostasien**|
-|rms.**sa**.aadrm.com|**USA, Westen ** oder **USA, Osten**|
+|rms.**sa**.aadrm.com|**USA, Westen** oder **USA, Osten**|
 |rms.**govus**.aadrm.com|**USA, Mitte** oder **USA, Osten 2**|
 
 
