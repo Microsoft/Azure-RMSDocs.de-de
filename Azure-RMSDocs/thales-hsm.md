@@ -6,18 +6,16 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 78034d0c1d00da8cd3640ac6634884d84d96eda1
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: c8621c690db38733e57429594d08703c57caadac
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39491023"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806395"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Weitere Informationen zu Thales-HSMs und Microsoft-Ergänzungen: INHALT VERALTET
 
