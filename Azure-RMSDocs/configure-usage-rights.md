@@ -4,20 +4,18 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 48a2cf7c8d827ce5a9be9b35e6f03e5d5479aa71
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490483"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808771"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -127,7 +125,13 @@ Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger 
 
 Ebenso übernehmen ungeschützte [Office-Dokumente](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM), die an die E-Mail angehängt sind, standardmäßig die gleichen Berechtigungen. Diese Dokumente sind automatisch geschützt, und sie können von den Empfängern nach dem Herunterladen aus Office-Anwendungen gespeichert, bearbeitet, kopiert und ausgedruckt werden. Wenn ein Empfänger ein Dokument speichert, hat er die Möglichkeit, ihm einen neuen Namen zu geben und sogar ein anderes Format zu verwenden. Zur Auswahl stehen jedoch nur Dateiformate, die den Schutz unterstützten. So ist sichergestellt, dass dieser nicht durch Speichern umgangen wird. Wenn für einen Anhang andere Nutzungsrechte gelten sollen oder es sich um ein Office-Dokument handelt, das diesen geerbten Schutz nicht unterstützt, schützen Sie die Datei, bevor Sie sie an eine E-Mail anhängen. So können Sie die nötigen Nutzungsrechte zuweisen.
 
-Alternativ können Sie diese Verschlüsselungsvererbung von Dokumenten für Empfänger ändern, die das Dokument in ihrem Browser betrachten. Erwägen Sie die Verwendung dieser Konfiguration, wenn Sie den ursprünglichen Schutz für das Dokument nach der Authentifizierung des Benutzers nicht beibehalten müssen. Um diese Änderung vorzunehmen, verwenden Sie den Exchange Online PowerShell-Befehl: `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Wenn diese Empfänger das Dokument dann herunterladen, wird der Schutz entfernt. Weitere Informationen finden Sie im Office-Blogbeitrag [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007) (Admin-Steuerelement für Anhänge jetzt in Office 365-Nachrichtenverschlüsselung verfügbar). Wenn der ursprüngliche Schutz nach dem Herunterladen des Dokuments beibehalten werden soll, finden Sie weitere Informationen in [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).      
+Alternativ können Sie die Vererbung des Schutzes von Dokumenten ändern, indem Sie einen der folgenden Konfigurationsparameter verwenden, die Sie mit dem [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps)-Befehl **Set-IRMConfiguration** festgelegt haben. Verwenden Sie diese Optionen, wenn Sie den ursprünglichen Schutz für das Dokument nach der Authentifizierung des Benutzers nicht beibehalten müssen:
+
+- So entfernen Sie den Schutz eines Dokuments nur für Empfänger, die das Dokument in ihrem Browser anzeigen (in der Regel, weil es an eine Adresse eines Anbieters wie Gmail gesendet wurde): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Wenn diese Empfänger das Dokument herunterladen, wird der Schutz entfernt.
+
+- So entfernen Sie den Schutz eines Dokuments immer für alle Empfänger: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Wenn diese Empfänger die E-Mail-Nachricht öffnen, wird das Dokument nicht geschützt.
+
+Weitere Informationen zum Entfernen des Schutzes für die Empfänger, die das Dokument in ihrem Browser anzeigen, finden Sie im Office-Blogbeitrag [Admin control for attachments now available in Office 365 Message Encryption (Administratorsteuerung für Anlagen ist nun in der Office 365-Nachrichtenverschlüsselung verfügbar)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Wenn der ursprüngliche Schutz eines angefügten Dokuments beibehalten werden soll, finden Sie weitere Informationen unter [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management-Aussteller und Rights Management-Besitzer
 

@@ -4,20 +4,18 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f9189de08c7089087ba37964a9d7acee3f537d02
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575674"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805441"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -204,11 +202,13 @@ Für ein Upgrade der Azure Information Protection-Überprüfung installieren Sie
 
 Bei der aktuellen GA-Version: 
 
-- Wenn Ihre zuvor installierte Version des Clients 1.26.6.0 oder eine ältere Version war, führen Sie den Installationsbefehl für die Überprüfung mit [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) erneut aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Die Neuinstallation der Überprüfung gewährt dem Überprüfungsdienstkonto Berechtigungen zum Löschen für die Überprüfungsdatenbank, die für Berichte benötigt werden.
+- Führen Sie den Befehl für die Überprüfungsinstallation erneut mit [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Die Neuinstallation der Überprüfung gewährt dem Überprüfungsdienstkonto Berechtigungen zum Löschen für die Überprüfungsdatenbank, die für Berichte benötigt werden.
 
 Bei der Vorschauversion: 
 
-- Wenn Ihre zuvor installierte Version des Clients 1.26.6.0 oder eine ältere Version war, führen Sie [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) nach der Installation des Clients aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Das Ausführen dieses Cmdlets ist zum Aktualisieren des Datenbankschemas für die Überprüfung erforderlich. Bei Bedarf erhält das Überprüfungsdienstkonto die Berechtigungen zum Löschen für die Überprüfungsdatenbank. Die Überprüfung wird nicht ausgeführt, bis Sie dieses Update-Cmdlet ausführen.
+- Führen Sie [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) nach der Installation des Clients aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Das Ausführen dieses Cmdlets ist zum Aktualisieren des Datenbankschemas für die Überprüfung erforderlich. Bei Bedarf erhält das Überprüfungsdienstkonto die Berechtigungen zum Löschen für die Überprüfungsdatenbank. 
+    
+    Diese Überprüfung wird erst ausgeführt, sobald dieses Update-Cmdlet ausgeführt wird. Ihnen wird in der Regel die Ereignis-ID **1000** im Windows-Ereignisprotokoll mit folgender Fehlermeldung angezeigt: **Ungültiger Objektname 'ScannerStatus'**.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 

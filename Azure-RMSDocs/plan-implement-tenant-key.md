@@ -4,20 +4,18 @@ description: Informationen zum Planen und Verwalten Ihres Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05aee77b60b5fd5a7239b51665e2afb122704afb
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490123"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807268"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -36,14 +34,13 @@ Der Azure Information Protection-Mandantenschlüssel
 |Geschäftliche Anforderung|Empfohlene Mandantenschlüsseltopologie|
 |------------------------|-----------------------------------|
 |Setzen Sie Azure Information Protection schnell und ohne besondere Hardware, zusätzliche Software oder Azure-Abonnement ein.<br /><br />Setzen Sie es beispielsweise in Testumgebungen ein oder wenn in Ihrem Unternehmen keine rechtlichen Bestimmungen für die Schlüsselverwaltung bestehen.|Von Microsoft verwaltet|
-|Konformitätsbestimmungen, zusätzliche Sicherheit und Kontrolle über alle Lebenszyklusvorgänge. <br /><br />Beispielsweise muss Ihr Schlüssel durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK [[1]](#footnote-1)|
+|Konformitätsbestimmungen, zusätzliche Sicherheit und Kontrolle über alle Lebenszyklusvorgänge. <br /><br />Beispielsweise muss Ihr Schlüssel durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK|
 
 
 Falls nötig können Sie die Schlüsseltopologie Ihres Mandanten nach der Bereitstellung ändern, indem Sie das Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) verwenden.
 
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Wählen Sie Ihre Mandantenschlüsseltopologie aus: Verwaltet von Microsoft (Standard) oder verwaltet von Ihnen (BYOK)
-Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am besten geeignet ist. Standardmäßig generiert Azure Information Protection Ihren Mandantenschlüssel und verwaltet die meisten Aspekte des Lebenszyklus des Mandantenschlüssels. Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
 Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am besten geeignet ist:
 
@@ -93,7 +90,7 @@ Gehen Sie wie folgt vor, wenn Sie sich dafür entschieden haben, dass ihr Mandan
 
 - Wenn Sie keine Migration von AD RMS vornehmen, ist kein weiterer Schritt notwendig, damit der Schlüssel generiert wird. Sie können der Anleitung unter [Nächste Schritte](plan-implement-tenant-key.md#next-steps) folgen.
 
-- Nutzen Sie die folgenden Anweisungen, wenn Sie derzeit über AD RMS verfügen und zu Azure Information Protection migrieren möchten: Migrieren von AD RMS zu Azure Information Protection. 
+- Nutzen Sie die folgenden Anweisungen, wenn Sie derzeit über AD RMS verfügen und zu Azure Information Protection migrieren möchten: [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 Wenn Sie sich entschließen, Ihren Mandantenschlüssel selbst zu verwalten, finden Sie in den folgenden Abschnitten weitere Informationen hierzu, die Sie lesen sollten.
 
@@ -172,7 +169,7 @@ Führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-
 
 Falls Sie sicherstellen müssen, dass die Schlüssel-URL für Azure Information Protection korrekt festgelegt wurde, können Sie in Azure Key Vault [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) ausführen, damit Ihnen die Schlüssel-URL angezeigt wird.
 
-Wenn der Azure Rights Management-Dienst bereits aktiviert ist, führen Sie zuletzt [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um Azure Information Protection den Befehl zu geben, diesen Schlüssel als aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst zu verwenden. Wenn Sie diesen Schritt nicht ausführen, wird Azure Information Protection weiterhin den von Microsoft verwalteten Standardschlüssel verwenden, der automatisch für Ihren Mandanten erstellt wurde.
+Wenn der Azure Rights Management-Dienst bereits aktiviert ist, führen Sie zuletzt [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um Azure Information Protection den Befehl zu geben, diesen Schlüssel als aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst zu verwenden. Wenn Sie diesen Schritt nicht ausführen, verwendet Azure Information Protection weiterhin den von Microsoft verwalteten Standardschlüssel, der automatisch für Ihren Mandanten erstellt wurde.
 
 
 ## <a name="next-steps"></a>Nächste Schritte
@@ -181,11 +178,11 @@ Nachdem Sie Ihren Mandantenschlüssel nun geplant und gegebenenfalls erstellt un
 
 1.  Beginnen Sie mit der Verwendung Ihres Mandantenschlüssels:
     
-    - Wenn noch nicht geschehen, müssen Sie jetzt den Rights Management-Dienst aktivieren, damit Ihre Organisation mit der Verwendung von Azure Information Protection beginnen kann. Die Benutzer beginnen sofort mit der Verwendung Ihres Mandantenschlüssels (verwaltet von Microsoft oder von Ihnen in Azure Key Vault).
+    - Wenn der Schutzdienst noch nicht aktiviert ist, müssen Sie jetzt den Rights Management-Dienst aktivieren, damit Ihre Organisation mit der Verwendung von Azure Information Protection beginnen kann. Die Benutzer beginnen sofort mit der Verwendung Ihres Mandantenschlüssels (verwaltet von Microsoft oder von Ihnen in Azure Key Vault).
     
         Weitere Informationen zur Aktivierung finden Sie unter [Aktivieren von Azure Rights Management](./activate-service.md).
         
-    - Wenn Sie den Rights Management-Dienst bereits aktiviert hatten und sich dann zur Verwaltung des eigenen Mandantenschlüssels entschlossen haben, erfolgt ein gestaffelter Übergang der Benutzer vom alten zum neuen Mandantenschlüssel, wobei dieser gestaffelte Übergang bis zum vollständigen Abschluss einige Wochen in Anspruch nehmen kann. Auf Dokumente und Dateien, die mit dem alten Mandantenschlüssel geschützt wurden, können autorisierte Benutzer weiterhin zugreifen.
+    - Wenn der Rights Management-Dienst bereits aktiviert wurde und Sie sich dann zur Verwaltung des eigenen Mandantenschlüssels entschlossen haben, erfolgt ein gestaffelter Übergang der Benutzer vom alten zum neuen Mandantenschlüssel. Dieser gestaffelte Übergang kann bis zum vollständigen Abschluss einige Wochen in Anspruch nehmen. Auf Dokumente und Dateien, die mit dem alten Mandantenschlüssel geschützt wurden, können autorisierte Benutzer weiterhin zugreifen.
         
 2. Erwägen Sie die Aktivierung der Verwendungsprotokollierung, durch die jede vom Azure Rights Management-Dienst durchgeführte Transaktion protokolliert wird.
     

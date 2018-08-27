@@ -4,20 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
-ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
+ms.openlocfilehash: b9f7381daac2398af459adbb945c548a6ca194c4
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020599"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806237"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -62,7 +60,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
 
 - Für die Azure Information Protection-Überprüfung:
 
-    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): einmalig nach dem Upgrade von Version 1.26.6.0 oder früher erforderlich.
+    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): einmalig nach dem Upgrade von allen vorherigen Versionen erforderlich.
     
     - Das neue Cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
     

@@ -4,18 +4,16 @@ description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Si
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2018
+ms.date: 08/16/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 1df91b83935054e6437f0f7d6922c483ca02cf09
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 7d9e128dd771f6d4d4882bedcd7f49aeefb41809
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490243"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42804182"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -83,7 +81,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
     
     - Für **Custom** (Benutzerdefiniert): Geben Sie einen Namen und eine Zeichenfolge für den Abgleich an. Diese darf weder Anführungszeichen noch Sonderzeichen enthalten. Legen Sie dann fest, ob für den Abgleich ein regulärer Ausdruck verwendet und ob die Groß-/Kleinschreibung beachtet werden soll. Legen Sie außerdem die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
-        Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Weitere Informationen finden Sie in der Office-Dokumentation unter [Defining regular expression based matches](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) (Definieren von Matches, die auf regulären Ausdrücken basieren). Darüber hinaus kann es hilfreich sein, die Programmbibliothek [Perl Regular Expression Syntax](http://www.boost.org/doc/libs/1_66_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost als Referenz zu verwenden.
+        Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Damit Sie reguläre Ausdrücke für Ihre benutzerdefinierten Bedingungen einfach angeben können, sehen Sie sich die folgende spezifische Version der [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost an.
         
 5. Entscheiden Sie, ob Sie die Werte unter **Mindestanzahl an Vorkommen** und **Count occurrence with unique value only** (Nur Vorkommen mit eindeutigem Wert zählen) ändern müssen, und klicken Sie dann auf **Speichern**. 
     

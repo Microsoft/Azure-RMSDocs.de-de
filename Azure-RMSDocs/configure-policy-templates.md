@@ -4,38 +4,35 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2018
+ms.date: 08/20/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9f3dc55f8443b4280cd5e108f1b5c5e3093748d4
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 0ce3fd1da5ee17baf8a778447f9e3aa6188d6eee
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490063"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806708"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
->[!NOTE]
->Diese Funktion ersetzt das Konfigurieren benutzerdefinierter Vorlagen im klassischen Azure-Portal. Das klassische Portal wurde abgeschaltet, deshalb müssen Sie das Azure-Portal verwenden. Eine schnelle Anleitung finden Sie unter [Tasks that you used to do with the Azure classic portal (Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben)](migrate-portal.md).
-
-
-Rights Management-Vorlagen sind nun in der Azure Information Protection-Richtlinie integriert. 
+Schutzvorlagen, auch als Rights Management-Vorlagen bekannt, sind eine Reihe von vom Administrator definierten Schutzeinstellungen für Azure Information Protection. Diese Einstellungen enthalten Ihre ausgewählten [Nutzungsrechte](configure-usage-rights.md) für autorisierte Benutzer sowie Zugriffssteuerungen für den Ablauf und den Offlinezugriff. Diese Vorlagen sind in der Azure Information Protection-Richtlinie integriert. 
 
 **Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2):**
 
-- Rights Management-Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Schutzvorlagen** nach den Bezeichnungen auf dem Blatt **Azure Information Protection: Bezeichnungen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
+- Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Schutzvorlagen** nach den Bezeichnungen auf dem Blatt **Azure Information Protection: Bezeichnungen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
 
 **Bei einem Abonnement, das nur Schutz umfasst (ein Office 365-Abonnement mit dem Azure Rights Management-Dienst):**
 
-- Rights Management-Vorlagen für Ihren Mandanten werden auf dem Blatt **Azure Information Protection: Bezeichnungen** im Abschnitt **Schutzvorlagen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
+- Vorlagen für Ihren Mandanten werden auf dem Blatt **Azure Information Protection: Bezeichnungen** im Abschnitt **Schutzvorlagen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
+
+>[!NOTE]
+>In einigen Anwendungen und Diensten wird möglicherweise die Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails) und [Nur verschlüsseln](configure-usage-rights.md#encrypt-only-option-for-emails) (oder **Verschlüsseln**) als Vorlage angezeigt. Dabei handelt es sich nicht um Vorlagen, die Sie bearbeiten oder löschen können, sondern vielmehr um Optionen, die standardmäßig mit dem Exchange-Dienst geliefert werden.
 
 ## <a name="default-templates"></a>Standardvorlagen
 
@@ -49,6 +46,7 @@ Zusätzlich werden die Vorlagen so konfiguriert, dass sie einen Offlinezugriff f
 Diese Standardvorlagen erleichtern es Ihnen und anderen Personen, sofort mit dem Schutz sensibler Daten Ihrer Organisation zu beginnen. Diese Vorlagen können mit Azure Information Protection-Bezeichnungen oder alleine mit [Anwendungen und Diensten](applications-support.md) verwendet werden, die Rights Management-Vorlagen verwenden.
 
 Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen wahrscheinlich nur einige Vorlagen, aber in Azure ist es möglich, maximal 500 gespeicherte benutzerdefinierte Vorlagen zu verwenden.
+
 
 ### <a name="default-template-names"></a>Namen für die Standardvorlage
 

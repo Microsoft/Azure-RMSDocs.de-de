@@ -4,20 +4,18 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/17/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aa1b24e24d05487014280fd6334d013466b6777f
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: c302972e8a048ec851af85cdba9d86bd7fbcc971
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489126"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42803818"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -66,7 +64,7 @@ Wenn Sie bereit sind, Exchange für IRM zu konfigurieren:
 
 Wenn Sie SharePoint Online oder SharePoint Server verwenden, können Sie Dokumente mithilfe der Information Rights Management-Funktion (IRM) von SharePoint schützen. Mit dieser Funktion können Administratoren Listen und Bibliotheken schützen, damit eine heruntergeladene Datei, die von einem Benutzer ausgecheckt wird, geschützt ist und nur autorisierte Personen sie entsprechend den von Ihnen angegebenen Informationsschutzrichtlinien anzeigen und verwenden können. So kann die Datei beispielsweise schreibgeschützt sein, das Kopieren von Text deaktivieren, das Speichern einer lokalen Kopie oder das Drucken der Datei verhindern.
 
-Word, PowerPoint, Excel und PDF-Dokumente unterstützen diesen IRM-Schutz von SharePoint. Standardmäßig beschränkt sich der Schutz auf die Person, die das Dokument herunterlädt. Sie können diese Standardeinstellung durch eine Konfigurationsoption ändern, die den Schutz auf alle Benutzer mit Zugriff auf das Dokument in SharePoint oder auf eine von Ihnen festgelegte Gruppe erweitert.
+Word, PowerPoint, Excel und PDF-Dokumente unterstützen diesen IRM-Schutz von SharePoint. Standardmäßig beschränkt sich der Schutz auf die Person, die das Dokument herunterlädt. Sie können diese Standardeinstellung mit einer Konfigurationsoption namens **Gruppenschutz zulassen** ändern, die den Schutz auf eine von Ihnen angegebene Gruppe erweitert. Sie können beispielsweise eine Gruppe angeben, die über die Berechtigung verfügt, Dokumente in der Bibliothek zu bearbeiten, sodass dieselbe Gruppe von Benutzern das Dokument (unabhängig davon, welcher Benutzer es heruntergeladen hat) außerhalb von SharePoint bearbeiten kann. Sie können alternativ auch eine Gruppe angeben, der keine Berechtigungen in SharePoint zugeteilt werden, aber deren Benutzer außerhalb von SharePoint auf das Dokumentation zugreifen müssen. 
 
 Bei SharePoint-Listen und -Bibliotheken wird dieser Schutz immer von einem Administrator und nie von einem Endbenutzer konfiguriert. Sie legen die Berechtigungen auf Websiteebene fest, und diese Berechtigungen werden in der Standardeinstellung von jeder Liste und Bibliothek in dieser Website geerbt. Wenn Sie SharePoint Online verwenden, können Benutzer auch ihre OneDrive for Business-Bibliothek für IRM-Schutz konfigurieren.
 

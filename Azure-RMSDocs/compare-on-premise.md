@@ -4,20 +4,18 @@ description: Wenn Sie Active Directory Rights Management Services (AD RMS) berei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/16/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5bf7bd4a4d82c40346694d243403ea2684174d9
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: bc93e9674c2f37f1e78487e5c5d051d63a5ed630
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489296"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42804762"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Vergleich von Azure Information Protection und AD RMS
 
@@ -55,7 +53,7 @@ Weitere Informationen und Unterschiede finden Sie in der folgenden Tabelle, die 
 |Aktiviert automatisch die sichere Kollaboration an Dokumenten mit jeder beliebigen Organisation, die ebenso Azure AD für die Authentifizierung verwendet. Das bedeutet, dass Organisationen Dokumente schützen können, die sie intern oder für andere Organisationen freigeben.|Eine sichere Zusammenarbeit an Dokumenten außerhalb der Organisation erfordert, dass die Vertrauensstellung der Authentifizierung explizit in einer direkten Punkt-zu-Punkt-Beziehung zwischen den beiden Organisationen definiert ist. Sie müssen entweder vertrauenswürdige Benutzerdomänen (TUDs) oder Verbundvertrauensstellungen konfigurieren, die Sie mithilfe der Active Directory-Verbunddienste (AD FS) erstellen.|
 |Senden Sie eine geschützte E-Mail (optional mit Office-Dokumentanlagen, die automatisch geschützt sind) an Benutzer, wenn keine Vertrauensstellungsbeziehung für die Authentifizierung existiert. Dieses Szenario wird durch die Verwendung eines Verbunds mit sozialen Netzwerken oder einer Einmalkennung und eines Webbrowsers zur Ansicht möglich gemacht.|Unterstützt nicht das Senden geschützter E-Mails, wenn keine Vertrauensstellung für die Authentifizierung besteht.|
 |Stellt zwei Standardvorlagen für Rechterichtlinien bereit, die den Zugriff auf die Inhalte auf Ihre eigene Organisation beschränken. Eine, die die schreibgeschützte Anzeige geschützter Inhalte bietet, und eine andere Vorlage, die Schreib- oder Änderungsberechtigungen für den geschützten Inhalt bereitstellt.<br /><br />Sie können auch eigene benutzerdefinierte Vorlagen erstellen, wozu Abteilungsvorlagen gehören, die nur für eine Teilmenge von Benutzern sichtbar sind. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|Es sind keine standardmäßigen Vorlagen verfügbar. Sie müssen Ihre eigenen Vorlagen erstellen und dann verteilen. Weitere Informationen finden Sie unter [Überlegungen zur AD RMS-Richtlinienvorlage](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Zusätzlich können Benutzer ihren eigenen Berechtigungssatz definieren, wenn die Vorlagen nicht ausreichen.|
-|Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür der [Azure Information Protection-Client](./rms-client/aip-client.md) oder die RMS-Freigabeanwendung erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird nicht unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2007.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt<br /><br />– Microsoft Office für Mac 2011: Wird unterstützt|
+|Die unterstützte Mindestversion von Microsoft Office ist Office 2010, wofür der [Azure Information Protection-Client](./rms-client/aip-client.md) oder die RMS-Freigabeanwendung erforderlich ist.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt|Die unterstützte Mindestversion von Microsoft Office ist Office 2010.<br /><br />Microsoft Office für Mac:<br /><br />– Microsoft Office für Mac 2016: Wird unterstützt|
 |Unterstützt den [Azure Information Protection-Client](./rms-client/aip-client.md) für Windows, iOS und Android. Mac-Computer und Windows Phone-Geräte werden weiterhin von der RMS-Freigabeanwendung unterstützt.<br /><br />Zudem unterstützt der Azure Information Protection-Client Folgendes:<br /><br />– Freigeben für Personen in einer anderen Organisation<br /><br />– Eine Website für die Dokumentnachverfolgung für Benutzer mit der Möglichkeit, ein Dokument zu widerrufen|Unterstützt den [Azure Information Protection-Client](./rms-client/aip-client.md) für Windows, iOS und Android. Macintosh-Computer und Windows Phone-Geräte werden weiterhin von der RMS-Freigabeanwendung unterstützt. Allerdings unterstützt Freigeben weder ein Freigeben für Benutzer in einer anderen Organisation noch die Dokumentenverfolgung oder die Möglichkeit für Benutzer, Dokumente zu widerrufen.|
 |Die meisten [Dateitypen](./rms-client/client-admin-guide-file-types.md) können mithilfe des Azure Information Protection-Clients klassifiziert und geschützt werden.<br /><br />Weitere Informationen zu anderen Anwendungen finden Sie in der Tabelle im [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](./requirements-applications.md).|Die meisten [Dateitypen](./rms-client/client-admin-guide-file-types.md) können mithilfe des Azure Information Protection-Clients geschützt werden.<br /><br />Weitere Informationen zu anderen Anwendungen finden Sie in der Tabelle im [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](./requirements-applications.md).|
 |Die unterstützte Mindestversion des Windows-Clients ist Windows 7 SP1.|Die unterstützte Mindestversion des Windows-Clients ist Windows 7 SP1.|

@@ -4,20 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1545c7bd931ab6aa4a76ddfd256a916d31d262bc
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490563"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806050"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -246,9 +244,14 @@ Die Überprüfung verwendet dann Windows-iFilter, um die folgenden Dateitypen zu
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF|PDF|
+|PDF |PDF|
 |Text|.txt; .xml; .csv|
 
+Standardmäßig werden nur Office-Dateitypen vom Scanner geschützt. PDF- und Textdateien werden also nicht geschützt, sofern Sie nicht die [Registrierung bearbeiten](develop/file-api-configuration.md), um die Dateitypen anzugeben:
+
+- Wenn Sie den PDF-Dateityp nicht zur Registrierung hinzufügen, werden Dateien mit dieser Erweiterung zwar mit einer Bezeichnung versehen, aber wenn diese nicht für den Schutz konfiguriert ist, wird dieser nicht angewendet.
+
+- Wenn Sie die TXT-, XML- oder CSV-Dateitypen nicht zur Registrierung hinzufügen, werden Dateien mit dieser Erweiterung nicht mit einer Bezeichnung versehen, da diese Dateitypen die ausschließliche Klassifizierung nicht unterstützen.
 
 Für die übrigen Dateitypen wendet die Überprüfung schließlich die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
 
@@ -270,7 +273,11 @@ Für die übrigen Dateitypen wendet die Überprüfung schließlich die Standardb
 
 Wenn die Überprüfung eine Bezeichnung mit Schutz anwendet, werden standardmäßig nur Office-Dateitypen geschützt. Sie können dieses Verhalten so ändern, dass zusätzliche Dateitypen geschützt werden. Wenn eine Bezeichnung jedoch allgemeinen Schutz auf Dokumente anwendet, wird die Erweiterung in „.pfile“ geändert. Darüber hinaus ist die Datei schreibgeschützt, bis sie von einem autorisierten Benutzer geöffnet und in ihrem nativen Format gespeichert wird. Die Erweiterung von Text- und Bilddateien kann sich ebenfalls ändern, und diese Dateien können schreibgeschützt werden. 
 
-Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Sie müssen spezifische Erweiterungen für den Scanner angeben. Dabei können Sie `*` nicht als Platzhalter verwenden.
+Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
+
+- Sie müssen spezifische Erweiterungen angeben. Dabei können Sie `*` nicht als Platzhalter verwenden.
+
+- Der Scanner hat sein eigenes Standardverhalten: Nur Office-Dateiformate werden standardmäßig geschützt. Andere Dateiformate, die nicht zur Registrierung hinzugefügt wurden, werden nicht vom Scanner geschützt.
 
 ## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
 

@@ -4,18 +4,16 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/14/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: b41add3430fbf00a372a5ec54d1ecd8c27fa7fa6
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490673"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807065"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -90,9 +88,9 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     - **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**: Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
         
-        Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option „Nicht weiterleiten“.
+        Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
         
-        Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
+        Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
     
     - **Vordefinierte Vorlage auswählen**: Zum Verwenden einer der Standardvorlagen oder einer benutzerdefinierten Vorlage, die Sie konfiguriert haben. Beachten Sie, dass diese Option nicht zur Anzeige für neue Bezeichnungen verfügbar ist, oder wenn Sie eine Bezeichnung bearbeiten, die zuvor die Option **Berechtigungen festlegen** verwendet hat.
     
@@ -110,10 +108,11 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Keine authentifizierten Benutzer hinzufügen** 
         Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 2016 verwendet werden. 
-        
-        Einige typische Szenarien für die Einstellung „Keinen authentifizierten Benutzer hinzufügen“: Es spielt keine Rolle, wer den Inhalt sieht, aber Sie möchten die Verwendung einschränken. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.
-            – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.
-            – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.     
+          
+        Einige typische Szenarios für die Einstellung „Keine authentifizierten Benutzer“:  
+                – Ihnen ist egal, wer den Inhalt sehen kann, Sie möchten jedoch einschränken, wie dieser verwendet wird. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.  
+                – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.  
+                – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.  
         
     - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können diese Option auch verwenden, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines beliebigen Domänennamens aus dieser Organisation anzugeben. Außerdem können Sie diese Option für soziale Netzwerke verwenden, indem Sie den Domänennamen, z.B. **gmail.com**, **hotmail.com** oder **outlook.com** eingeben.
         
@@ -156,9 +155,9 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Mit der Option für benutzerdefinierte Berechtigungen können Benutzer angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook wählen (Standardeinstellung) oder Word, Excel, PowerPoint und den Datei-Explorer. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
     
-    Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option „Nicht weiterleiten“.
+    Wenn Sie die Option für Outlook wählen: Die Bezeichnung wird in Outlook angezeigt und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
     
-    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer wählen: Die Bezeichnung wird in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld müssen Benutzer die Berechtigungen, die Benutzer oder Gruppen und ein beliebiges Ablaufdatum angeben. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
+    Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt wird, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
 
 10. Klicken Sie auf **OK**, um das Blatt **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** auf dem Blatt **Bezeichnung** anzuzeigen.
 
