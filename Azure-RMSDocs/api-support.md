@@ -4,18 +4,18 @@ description: Erfahren Sie, wie der Azure Rights Management-Dienst von Azure Info
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ace8d50b94b0ffbbf57adceda74229fe4612d58
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ff07578d34c010f44353b33be60ebb6b354cb00b
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808121"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242165"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Weitere Anwendungen, die die Rights Management-APIs unterstützen
 

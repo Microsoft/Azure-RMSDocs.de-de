@@ -4,16 +4,16 @@ description: Beim Konfigurieren von Bedingungen für eine Bezeichnung können Si
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7d9e128dd771f6d4d4882bedcd7f49aeefb41809
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 605173136442ed3af5b50e565cae79a94b16fb27
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804182"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43297989"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -96,9 +96,6 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
 Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Typen von vertraulichen Informationen, die eine Mindestversion des Clients erfordern
-
-> [!NOTE]
-> Die folgenden Typen vertraulicher Informationen werden jetzt für Mandanten eingeführt, aber werden Ihnen möglicherweise noch nicht zur Auswahl angezeigt. Wenn Sie die Azure Information Protection-Überprüfung jedoch zum [Identifizieren aller benutzerdefinierten Bedingungen und bekannter Typen vertraulicher Informationen](deploy-aip-scanner.md#using-the-scanner-with-alternative-configurations) konfigurieren, kann die Vorschauversion der Überprüfung diese neuen Informationstypen auch erkennen, wenn Sie diese nicht im Azure-Portal auswählen können.
 
 Die folgenden Typen vertraulicher Informationen erfordern zurzeit die Vorschauversion des Azure Information Protection-Clients:
 
