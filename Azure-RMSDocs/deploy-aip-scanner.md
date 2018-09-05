@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ddf9ebcdce4cf51e35dfc76b099194873796919f
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806050"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117884"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -275,9 +275,9 @@ Wenn die Überprüfung eine Bezeichnung mit Schutz anwendet, werden standardmä�
 
 Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
 
-- Sie müssen spezifische Erweiterungen angeben. Dabei können Sie `*` nicht als Platzhalter verwenden.
+- Der Scanner hat sein eigenes Standardverhalten: Nur Office-Dateiformate werden standardmäßig geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner geschützt.
 
-- Der Scanner hat sein eigenes Standardverhalten: Nur Office-Dateiformate werden standardmäßig geschützt. Andere Dateiformate, die nicht zur Registrierung hinzugefügt wurden, werden nicht vom Scanner geschützt.
+- Wenn Sie nicht die aktuelle Vorschauversion verwenden, müssen Sie spezifische Erweiterungen für den Scanner angeben. Dabei können Sie `*` nicht als Platzhalter verwenden. Die Vorschauversion des Scanners unterstützt diesen Platzhalter.
 
 ## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
 

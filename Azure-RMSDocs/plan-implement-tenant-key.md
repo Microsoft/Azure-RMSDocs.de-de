@@ -4,18 +4,18 @@ description: Informationen zum Planen und Verwalten Ihres Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9fa90627d3db00efcc577c838e78394d45fff81a
+ms.sourcegitcommit: 2b2cf599b8072cb8fe6a651743e27fbbe1a827c4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807268"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43222318"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -147,6 +147,8 @@ Verwenden Sie die Azure Key Vault-Dokumentation, um einen Schlüsseltresor und d
 Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 1024 Bits liegt. Andere Schlüssellängen werden von Azure Information Protection nicht unterstützt.
 
 Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
+
+Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind „verschlüsseln“, „entschlüsseln“, „umschließen“, „entpacken“, „signieren“ und „überprüfen“. Sie können die zulässigen Vorgänge eines Schlüssels überprüfen, indem Sie [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) verwenden und die *key-ops*-Werte, die unter **Schlüssel** zurückgegeben werden, überprüfen. Fügen Sie ggf. zulässige Vorgänge mithilfe der Parameter [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) und *KeyOps* hinzu.
 
 Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen Azure Information Protection konfigurieren, indem Sie die Key Vault-URL bestimmen, um den Schlüssel verwenden zu können.
 

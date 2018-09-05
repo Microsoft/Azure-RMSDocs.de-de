@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 7510350957c867e144704af261053b73fa04651a
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805441"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118005"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -106,7 +106,9 @@ Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und F
 
 Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website. Sie können aber auch eine benutzerdefinierte URL als eine der [Richtlinieneinstellungen](../configure-policy-settings.md) in der Azure Information Protection-Richtlinie festlegen.
 
-Verwenden Sie den Link **Feedback senden**, um Vorschläge oder Anfragen an das Information Protection-Team zu senden. Verwenden Sie diese Option nicht für den technischen Support, sondern nutzen Sie dafür stattdessen die [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). 
+Verwenden Sie den Link **Feedback senden** (allgemein verfügbare Versionen), um Vorschläge oder Anfragen an das Information Protection-Team zu senden. Verwenden Sie diese Option nicht für den technischen Support, sondern nutzen Sie dafür stattdessen die [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). 
+
+Der Link **Problem melden** ersetzt den Link **Feedback senden** in der Vorschauversion des Clients. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können jedoch die HTTP-Zeichenfolge für Ihre Benutzer konfigurieren, indem Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link) angeben. Geben Sie z.B. die E-Mail-Adresse Ihres Helpdesks an.
 
 Die Option **Protokolle exportieren** erfasst automatisch Protokolldateien für den Azure Information Protection-Client und hängt diese an, wenn Sie darum gebeten wurden, diese an den Microsoft Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
 
@@ -206,7 +208,7 @@ Bei der aktuellen GA-Version:
 
 Bei der Vorschauversion: 
 
-- Führen Sie [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) nach der Installation des Clients aus. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Das Ausführen dieses Cmdlets ist zum Aktualisieren des Datenbankschemas für die Überprüfung erforderlich. Bei Bedarf erhält das Überprüfungsdienstkonto die Berechtigungen zum Löschen für die Überprüfungsdatenbank. 
+- Führen Sie [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) aus, nachdem ein Upgrade für den Azure Information Protection-Client von der allgemeinen verfügbaren Version 1.29.5.0 oder früher durchgeführt haben. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Das Ausführen dieses Cmdlets ist zum Aktualisieren des Datenbankschemas für die Überprüfung erforderlich. Bei Bedarf erhält das Überprüfungsdienstkonto die Berechtigungen zum Löschen für die Überprüfungsdatenbank. 
     
     Diese Überprüfung wird erst ausgeführt, sobald dieses Update-Cmdlet ausgeführt wird. Ihnen wird in der Regel die Ereignis-ID **1000** im Windows-Ereignisprotokoll mit folgender Fehlermeldung angezeigt: **Ungültiger Objektname 'ScannerStatus'**.
 

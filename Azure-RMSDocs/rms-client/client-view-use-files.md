@@ -4,18 +4,18 @@ description: Anweisungen zum Anzeigen und Verwenden eines geschützten Dokuments
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 518fd44053f6a6ee0c4b45024d5be0ac0122ec22
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 54042dfd49c1f12fc50eca127dfc0441686b1513
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808220"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117957"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 
@@ -28,13 +28,7 @@ Wenn die Dateien nicht sofort geöffnet werden, kann eventuell der **Azure Infor
 Dieser Viewer wird automatisch als Teil des Azure Information Protection-Clients oder separat installiert. Sie können sowohl den Client als auch den Viewer über die Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) auf der Microsoft-Website installieren. Weitere Informationen zum Installieren des Clients finden Sie unter [Herunterladen und Installieren des Azure Information Protection-Clients](install-client-app.md).
 
 > [!NOTE]
-> Obwohl das Installieren des Clients mehr Funktionalität bietet, sind lokale Administratorberechtigungen erforderlich und die volle Funktionalität erfordert einen entsprechenden Dienst für Ihre Organisation:
-> 
->– Azure Information Protection
-> 
->– Azure Rights Management
-> 
->– Active Directory Rights Management Services 
+> Obwohl das Installieren des Clients mehr Funktionalität bietet, sind lokale Administratorberechtigungen erforderlich, und die volle Funktionalität erfordert einen entsprechenden Dienst für Ihre Organisation. Zum Beispiel Azure Information Protection oder Active Directory Rights Management Services.
 > 
 > Installieren Sie den Viewer, wenn Ihnen von einer Person aus einer anderen Organisation ein geschütztes Dokument gesendet wurde oder Sie nicht über lokale Administratorrechte auf Ihrem PC verfügen.
 

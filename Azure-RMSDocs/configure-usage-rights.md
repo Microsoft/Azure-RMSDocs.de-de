@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9f7c9ef4e6a6eccc1f42fa60a78550f53d4a64b6
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808771"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920668"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -98,7 +98,7 @@ Exchange-Clients und -Dienste (z.B. der Outlook-Client, die Outlook Web Access-A
 
 Obwohl diese Option für Benutzer (und Exchange-Administratoren) wie eine Rights Management-Standardvorlage angezeigt wird, die ausgewählt werden kann, handelt es sich bei **Nicht weiterleiten** um keine Vorlage. Aus diesem Grund wird sie nicht im Azure-Portal angezeigt, wenn Sie Vorlagen für Azure RMS aufrufen und verwalten. Stattdessen stellt die Option **Nicht weiterleiten** eine Reihe von Berechtigungen dar, die von Benutzern dynamisch auf ihre E-Mail-Empfänger angewendet werden.
 
-Wenn die Option **Nicht weiterleiten** auf eine E-Mail angewendet wird, wird sie verschlüsselt, und Empfänger müssen authentifiziert werden. Die E-Mail kann dann von den Empfängern nicht weitergeleitet, gedruckt oder kopiert werden. Außerdem können ihre Anhänge nicht gespeichert werden, und sie kann nicht unter einem anderen Namen gespeichert werden. Im Outlook-Client ist beispielsweise die Schaltfläche „Weiterleiten“ nicht verfügbar, die Menüoptionen **Speichern unter**, **Anlage speichern** und **Drucken** sind nicht verfügbar, und Sie können keine Empfänger in den Feldern **An**, **Cc** und **Bcc** hinzufügen oder ändern.
+Wenn die Option **Nicht weiterleiten** auf eine E-Mail angewendet wird, wird sie verschlüsselt, und Empfänger müssen authentifiziert werden. So können die Empfänger keine E-Mails weiterleiten, drucken oder Teile aus diesen kopieren. Im Outlook-Client ist beispielsweise die Schaltfläche „Weiterleiten“ nicht verfügbar, die Menüoptionen **Speichern unter** und **Drucken** sind nicht verfügbar, und Sie können keine Empfänger in den Feldern **An**, **Cc** und **Bcc** hinzufügen oder ändern.
 
 An eine E-Mail angehängte, ungeschützte [Office-Dokumente](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) unterliegen automatisch denselben Einschränkungen. Für diese Dokumente gelten folgende Nutzungsrechte: **Inhalt bearbeiten, Bearbeiten**; **Speichern**; **Anzeigen, Öffnen, Lesen** und **Makros zulassen**. Wenn für einen Anhang andere Nutzungsrechte gelten sollen oder es sich um ein Office-Dokument handelt, das diesen geerbten Schutz nicht unterstützt, schützen Sie die Datei, bevor Sie sie an eine E-Mail anhängen. So können Sie die nötigen Nutzungsrechte zuweisen. 
 
@@ -127,9 +127,9 @@ Ebenso übernehmen ungeschützte [Office-Dokumente](https://support.office.com/a
 
 Alternativ können Sie die Vererbung des Schutzes von Dokumenten ändern, indem Sie einen der folgenden Konfigurationsparameter verwenden, die Sie mit dem [Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps)-Befehl **Set-IRMConfiguration** festgelegt haben. Verwenden Sie diese Optionen, wenn Sie den ursprünglichen Schutz für das Dokument nach der Authentifizierung des Benutzers nicht beibehalten müssen:
 
-- So entfernen Sie den Schutz eines Dokuments nur für Empfänger, die das Dokument in ihrem Browser anzeigen (in der Regel, weil es an eine Adresse eines Anbieters wie Gmail gesendet wurde): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Wenn diese Empfänger das Dokument herunterladen, wird der Schutz entfernt.
+- So entfernen Sie den Schutz eines Dokuments für alle Empfänger: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Wenn diese Empfänger die E-Mail-Nachricht öffnen, wird das Dokument nicht geschützt.
 
-- So entfernen Sie den Schutz eines Dokuments immer für alle Empfänger: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Wenn diese Empfänger die E-Mail-Nachricht öffnen, wird das Dokument nicht geschützt.
+- So entfernen Sie den Schutz eines Dokuments nur für Empfänger, die das Dokument in ihrem Browser anzeigen (in der Regel, weil es an eine Adresse eines Anbieters wie Gmail gesendet wurde): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Wenn diese Empfänger das Dokument herunterladen, wird der Schutz entfernt.
 
 Weitere Informationen zum Entfernen des Schutzes für die Empfänger, die das Dokument in ihrem Browser anzeigen, finden Sie im Office-Blogbeitrag [Admin control for attachments now available in Office 365 Message Encryption (Administratorsteuerung für Anlagen ist nun in der Office 365-Nachrichtenverschlüsselung verfügbar)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007). Wenn der ursprüngliche Schutz eines angefügten Dokuments beibehalten werden soll, finden Sie weitere Informationen unter [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).
 

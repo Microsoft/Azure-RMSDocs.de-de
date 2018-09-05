@@ -4,18 +4,18 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e910ad5226310f0c76de437c30e95fb7f6ba8f87
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4dd322c95d9aadc6df73e426fb92d2bb77312ed4
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804052"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298037"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -41,7 +41,7 @@ Beispiele für Fälle, in denen Sie möglicherweise einen neuen Schlüssel für 
 
 - Sie glauben, dass die Masterkopie Ihres Mandantenschlüssels (die in Ihrem Besitz befindliche Kopie) kompromittiert wurde.
 
-Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neuen Schlüssel in Azure Key Vault erstellen oder einen anderen, bereits in Azure Key Vault vorhandenen Schlüssel verwenden. Führen Sie anschließend dieselben Schritte aus wie beim Implementieren von BYOK für Azure Information Protection.
+Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neuen Schlüssel in Azure Key Vault erstellen oder einen anderen, bereits in Azure Key Vault vorhandenen Schlüssel verwenden. Führen Sie anschließend dieselben Schritte aus wie beim Implementieren von BYOK für Azure Information Protection. 
 
 1. Nur wenn sich der neue Schlüssel in einem anderen Schlüsseltresor befindet als dem, den Sie bereits für Azure Information Protection verwenden: Autorisieren Sie Azure Information Protection mit dem Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) zur Verwendung des Schlüsseltresors.
 
@@ -52,6 +52,8 @@ Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neu
 Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 
 - Eine Anleitung zur Nutzung eines anderen verwalteten Schlüssels finden Sie unter [Implementieren Ihres Azure Information Protection-Mandantenschlüssels](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+    
+    Wenn Sie für einen durch HSM geschützten Schlüssel, den Sie lokal erstellt und an Key Vault übermittelt haben, neue Schlüssel erstellen, können Sie die gleiche Sicherheitsumgebung sowie Zugriffskarten verwenden wie bei Ihrem aktuellen Schlüssel.
 
 - Eine Anleitung zur Nutzung eines anderen, von Microsoft verwalteten Schlüssel finden Sie im Abschnitt [Neuerstellung Ihres Mandantenschlüssels](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) für von Microsoft verwaltete Vorgänge.
 

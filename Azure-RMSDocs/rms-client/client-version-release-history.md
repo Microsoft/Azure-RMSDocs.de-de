@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/13/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b9f7381daac2398af459adbb945c548a6ca194c4
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 945b05a99122b7caf1d9a73ea8b75717a5522660
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806237"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117926"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -46,21 +46,23 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 
 Wenn Ihre Version des Clients höher als 1.29.5.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.
 
-Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
+Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 **Neue Features**: 
+
+- Unterstützung für den ISO-Standard für die PDF-Verschlüsselung, damit die von Ihnen geschützten Dokumente ihre PDF-Erweiterung standardmäßig beibehalten und von PDF-Readern geöffnet werden können, die diesen ISO-Standard unterstützen. Derzeit müssen Sie Benutzer anweisen, diese geschützten PDF-Dateien manuell über den Azure Information Protection-Viewer zu öffnen. Damit Benutzern dabei zur Seite zu stehen, wird beim Öffnen dieser geschützten Dateien eine Seite mit Symbolen angezeigt, aus denen Sie ihr Betriebssystem auswählen können. Wenn Sie dieses Verhalten nicht wünschen und stattdessen Parität mit der allgemein verfügbaren Version des Azure Information Protection-Clients benötigen, können Sie eine [erweiterte Clientkonfiguration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfigurieren.
 
 - Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
 - Unterstützung von Bezeichnungen für das Dokumentformat **Strict Open XML** in Word-, Excel- und PowerPoint- Dateien. Weitere Informationen zu den Open XML-Formaten finden Sie im Office-Blogbeitrag [New file format options in the new Office (Neue Dateiformate in der neuen Version von Office)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
-- Unterstützung des ISO-Standards für die PDF-Verschlüsselung durch Konfiguration einer neuen [erweiterten Clientkonfiguration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Wenn diese Option konfiguriert wird, behalten PDF-Dokumente, die Sie schützen, ihre Erweiterung bei (anstelle einer Änderung in PPDF) und können von PDF-Readern geöffnet werden, die diesen ISO-Standard unterstützen. 
-
 - Unterstützung für Dateien, die von Secure Islands geschützt werden, wenn diese Dateien keine PDF- oder Office-Dokumente sind. Zum Beispiel geschützte Text- und Bilddateien oder Dateien mit der Erweiterung PFILE. Diese Unterstützung ermöglicht neue Szenarios, z.B. dass die Azure Information Protection-Überprüfung diese Dateien auf vertrauliche Informationen prüfen kann und diesen automatisch Bezeichnungen für Azure Information Protection hinzufügt. [Weitere Informationen](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
+
+- Der Link **Senden Sie uns Feedback** im Dialogfeld **Hilfe und Feedback** wird durch **Problem melden** ersetzt. Dies können Sie anpassen. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können diese E-Mail-Adresse ändern, damit eine von Ihnen angegebene HTTP-Zeichenfolge verwendet wird, sobald ein Benutzer diese Option auswählt. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. Verwenden Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link), um diese Adresse zu ändern.
 
 - Für die Azure Information Protection-Überprüfung:
 
-    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): einmalig nach dem Upgrade von allen vorherigen Versionen erforderlich.
+    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): einmalig nach dem Upgrade von der aktuellen GA-Version (1.29.5.0) oder früher erforderlich.
     
     - Das neue Cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
     
@@ -74,7 +76,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
     
     - Bei Dokumenten, die in SharePoint-Bibliotheken geschützt werden, wenn der Parameter *DefaultOwner* nicht für das Datenrepository verwendet wird, wird nun der Wert des SharePoint-Editors anstelle des Autorenwerts als Standardwert verwendet.
     
-    - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente. 
+    - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente.
 
 - Wenn Sie PowerShell oder die Überprüfung zum Klassifizieren oder Schützen verwenden, werden die Metadaten des Office-Dokuments weder entfernt noch verschlüsselt.
 
@@ -82,7 +84,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
 
 - Benutzerdefinierte Berechtigungen unterstützen nun Empfänger-E-Mail-Adressen, die ein Apostroph enthalten.
 
-- Die Computerumgebung wird erfolgreich gestartet (Bootstrap), wenn diese Aktion durch Öffnen eines geschützten Dokuments gestartet wird, das in SharePoint Online gespeichert ist. 
+- Die Computerumgebung wird erfolgreich gestartet (Bootstrap), wenn diese Aktion durch Öffnen eines geschützten Dokuments gestartet wird, das in SharePoint Online gespeichert ist.
+
+- Wenn Sie den Client für den Rechtsklick auf den Datei-Explorer, PowerShell oder den Scanner verwenden, wird die Bezeichnung für Dateien in WebDav-Positionen blockiert, da es sich hierbei um ein nicht unterstütztes Szenario handelt.
+
+- Das Symbol zum Löschen einer Bezeichnung wird in Client-Apps nicht angezeigt (Word, Excel, PowerPoint und Outlook), wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) der Option **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen) konfigurieren.
 
 **Weitere Änderungen**:
    
@@ -92,10 +98,9 @@ Diese Version umfasst die MSIPC-Version 1.0.3557.524 des RMS-Clients.
         
     - Der Parameter *Type* wurde entfernt, d.h. er wurde auch aus der Ausgabe entfernt, wenn Sie [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) ausführen. Standardmäßig werden nach dem ersten Überprüfungszyklus nur neue oder geänderte Dateien untersucht. Wenn Sie zuvor für den *Typ*-Parameter **Vollständig** festgelegt haben, um alle Dateien erneut zu überprüfen, führen Sie nun [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem *Zurücksetzen*-Parameter aus. Die Überprüfung muss auch für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass für den *Zeitplan*-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) die Option **Manuell** festgelegt wird.
     
-- Die Standardausschlussliste der Überprüfung umfasst nun RTF-Dateien. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- Die Standardausschlussliste des Scanners umfasst nun MSG-, RAR-, RTF- und ZIP-Dateien. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
 
-- Die Richtlinienversion wurde in 1.4 geändert. Das Identifizieren der Versionsnummer ist zum [Konfigurieren nicht verbundener Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) erforderlich. 
-
+- Die Richtlinienversion wurde in 1.4 geändert. Das Identifizieren der Versionsnummer ist zum [Konfigurieren nicht verbundener Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) erforderlich.
 
 ## <a name="version-12950"></a>Version 1.29.5.0 
 

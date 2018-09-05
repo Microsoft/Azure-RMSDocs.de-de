@@ -4,16 +4,16 @@ description: Schritt 4 eines Einführungstutorials zum schnellen Ausprobieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: caa7ea12daf9bd946e967dc71bcc5ed275e1a965
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 2429a56163c79468bab681a9544c828c6d218392
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803224"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242189"
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Schritt 4: Klassifizierung, Bezeichnung und Schutz in Aktion 
 
@@ -21,17 +21,17 @@ ms.locfileid: "42803224"
 
 Nun, da Sie ein Word-Dokument mit dem installierten Azure Information Protection-Client geöffnet haben, können Sie sehen, wie einfach das Bezeichnen und Schützen Ihres Dokuments, mithilfe der Richtlinie ist, die wir konfiguriert haben.
 
-Klassifizierung und Schutz treten in Kraft, wenn Sie das Dokument speichern. Bevor wir dies jedoch tun, verwenden wir unser nicht gespeichertes Dokument und können testen, wie einfach es ist, Bezeichnungen anzuwenden und zu ändern.
+Klassifizierung und Schutz treten in Kraft, wenn Sie das Dokument speichern. Bevor Sie dies jedoch tun, sollten Sie Ihr nicht gespeichertes Dokument verwenden und testen, wie einfach es ist, Bezeichnungen anzuwenden und zu ändern.
 
 ## <a name="to-manually-change-our-default-label"></a>So ändern Sie die Standardbezeichnung manuell
 
 Wählen Sie auf der Leiste „Information Protection“ die letzte Bezeichnung aus. Nun sehen Sie, wie untergeordnete Bezeichnungen dargestellt werden:
 
-![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Auswählen einer untergeordneten Bezeichnung](./media/info-protect-sub-labelsv2.png)
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4: Auswählen einer untergeordneten Bezeichnung](./media/info-protect-sub-labelsv2.png)
 
-Wählen Sie eine dieser untergeordneten Bezeichnungen aus. Nun sehen Sie, wie die anderen Bezeichnungen nicht länger auf der Leiste angezeigt werden, sobald Sie eine Bezeichnung für dieses Dokument ausgewählt haben. Für den Wert **Sensitivity** (Vertraulichkeit) werden nun der Name der Bezeichnung und der untergeordneten Bezeichnung sowie die dazugehörige Farbe angezeigt. Beispiel:
+Wählen Sie eine dieser untergeordneten Bezeichnungen aus. Nun sehen Sie, dass die anderen Bezeichnungen nicht länger auf der Leiste angezeigt werden, sobald Sie eine Bezeichnung für dieses Dokument ausgewählt haben. Für den Wert **Sensitivity** (Vertraulichkeit) werden nun der Name der Bezeichnung und der untergeordneten Bezeichnung sowie die dazugehörige Farbe angezeigt. Beispiel:
 
-![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – ausgewählte untergeordnete Bezeichnung](./media/info-protect-sub-label-selectedv2.png)
+![Schnellstart-Tutorial für Azure Information Protection Schritt 4: ausgewählte untergeordnete Bezeichnung](./media/info-protect-sub-label-selectedv2.png)
 
 Klicken Sie auf der Information Protection-Leiste neben dem aktuell ausgewählten Bezeichnungswert auf das Symbol **Edit Label** (Bezeichnung bearbeiten):
 
@@ -39,7 +39,7 @@ Klicken Sie auf der Information Protection-Leiste neben dem aktuell ausgewählte
 
 Dadurch werden die verfügbaren Bezeichnungen erneut angezeigt.
 
-Wählen Sie nun die erste Bezeichnung **Personal** (Persönlich) aus. Da Sie eine Bezeichnung ausgewählt haben, die eine niedrigere Klassifizierung als die ausgewählte Bezeichnung für dieses Dokument darstellt, werden Sie aufgefordert zu begründen, warum Sie die Klassifizierungsebene senken:
+Wählen Sie nun die erste Bezeichnung **Personal** (Persönlich) aus. Da Sie eine Bezeichnung ausgewählt haben, die eine niedrigere Klassifizierung als die ausgewählte Bezeichnung für dieses Dokument darstellt, werden Sie aufgefordert, zu begründen, warum Sie die Klassifizierungsebene senken:
 
 ![Schnellstart-Tutorial für Azure Information Protection Schritt 4 – Bestätigungsaufforderung bei Reduzierung](./media/info-protect-lower-justification.png)
 
@@ -69,7 +69,7 @@ Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen
 
     Das Dokument ist ebenfalls mit den Berechtigungen geschützt, die Sie für diese Bezeichnung angegeben haben. Sie können bestätigen, dass das Dokument geschützt ist, indem Sie auf die Registerkarte **Datei** klicken und die Informationen für **Dokument schützen** anzeigen lassen. Ihnen wird angezeigt, dass das Dokument durch **Confidential \ Finance** (Vertraulich\Finanzen) und die Beschreibung der Bezeichnung geschützt ist. 
     
-    Durch die Schutzkonfiguration der Bezeichnung können nur Angestellte das Dokument öffnen und einige Aktionen sind für diese eingeschränkt. Da sie zum Beispiel nicht über die Berechtigungen zum Drucken und zum Kopieren und Extrahieren von Inhalt verfügen, können sie das Dokument nicht drucken oder Teile daraus kopieren. Mit solchen Einschränkungen kann Datenverlust verhindert werden. Als Besitzer des Dokuments können Sie daraus kopieren und es drucken, aber wenn Sie es an einen anderen Benutzer in Ihrer Organisation per E-Mail senden, kann dieser diese Aktionen nicht durchführen.
+    Durch die Schutzkonfiguration der Bezeichnung können nur Angestellte das Dokument öffnen und einige Aktionen sind für diese eingeschränkt. Da sie zum Beispiel nicht über die Berechtigungen zum Drucken und zum Kopieren und Extrahieren von Inhalt verfügen, können sie das Dokument nicht drucken oder Teile daraus kopieren. Mit solchen Einschränkungen kann Datenverlust verhindert werden. Als Besitzer des Dokuments können Sie es drucken und Teile aus diesem kopieren. Wenn Sie das Dokument jedoch per E-Mail an einen anderen Benutzer innerhalb Ihrer Organisation senden, kann dieser diese Aktionen nicht vornehmen.
 
 4. Sie können das Dokument jetzt schließen.
 

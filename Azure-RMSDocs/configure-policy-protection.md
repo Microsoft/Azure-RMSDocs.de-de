@@ -4,16 +4,16 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/14/2018
+ms.date: 08/24/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: bc60f1791cd7c36f179851b1759a46ba3980dd96
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807065"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920306"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -62,9 +62,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
     
-    - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und konfigurieren Sie sie wie in Schritt 5 beschrieben.
-    
-    Hinweis: Sie können eine neue Bezeichnung auch ohne weitere Konfiguration speichern. Wenn Sie dies tun, ist sie so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail öffnen kann. Für sie gelten dabei uneingeschränkte Nutzungsrechte. Dies kann z.B. nützlich sein, wenn sichergestellt werden soll, dass das Dokument an einem beliebigen Ort gespeichert aber nur von dieser Person geöffnet werden darf. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, fahren Sie mit Schritt 12 statt mit Schritt 5 fort.
+    - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und fahren Sie dann mit Schritt 4 fort.
     
     - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail-Adresse geschützt ist. Fahren Sie dann mit Schritt 11 fort.
         

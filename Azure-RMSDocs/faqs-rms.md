@@ -4,19 +4,19 @@ description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0964d6de3f06d8620de89d9c4c9cca65a64b71c1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805952"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242213"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -73,7 +73,7 @@ Weitere Informationen zu Vorlagen im Azure-Portal finden Sie unter [Konfiguriere
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>Ich habe ein Dokument geschützt und möchte nun die Nutzungsrechte ändern oder Benutzer hinzufügen – muss ich das Dokument erneut schützen?
 
-Wenn das Dokument durch eine Bezeichnung oder eine Vorlage geschützt war, muss es nicht erneut geschützt werden. Ändern Sie die Bezeichnung oder Vorlage, indem Sie Ihre Änderungen an den Nutzungsrechten vornehmen oder neue Gruppen (oder Benutzer) hinzufügen und diese Änderungen dann speichern oder veröffentlichen:
+Wenn das Dokument durch eine Bezeichnung oder eine Vorlage geschützt war, muss es nicht erneut geschützt werden. Ändern Sie die Bezeichnung oder Vorlage, indem Sie Ihre Änderungen an den Nutzungsrechten vornehmen oder neue Gruppen (oder Benutzer) hinzufügen und diese Änderungen dann speichern:
 
 - Wenn ein Benutzer noch nicht auf dieses Dokument zugegriffen hat, bevor Sie die Änderungen vorgenommen haben, werden die Änderungen wirksam, sobald der Benutzer das Dokument öffnet.
 
