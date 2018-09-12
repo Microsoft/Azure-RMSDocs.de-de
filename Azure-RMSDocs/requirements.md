@@ -4,18 +4,18 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2018
+ms.date: 08/31/2018
 ms.topic: get-started-article
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 0cfaaa199178b7bede1d5b0d3fe54dd43dcfbf01
+ms.sourcegitcommit: beb4e480e0e821e32c9d35e86f2cf4321005c521
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808033"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43663398"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -110,7 +110,7 @@ Wenn Sie eine Firewall oder ähnliche Interventionsnetzwerkgeräte verwenden, di
 
 Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Information Protection:
 
-- Lassen Sie auf TCP 443 HTTPS-Datenverkehr zu **api.informationprotection.azure.com** zu.
+- Lassen Sie auf TCP 443 HTTPS-Datenverkehr zu **informationprotection.hosting.portal.azure.net** zu.
 
 - Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
 

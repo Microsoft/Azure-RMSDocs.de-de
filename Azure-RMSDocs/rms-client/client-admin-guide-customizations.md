@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
-ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
+ms.openlocfilehash: 3e6d5f30e3db48eced850649976ac4da56271622
+ms.sourcegitcommit: a42bb93adbb5be2cd39606fed3de0785ac52dd65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43298013"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43703929"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -309,6 +309,8 @@ Der Wert der Bezeichnungs-ID wird auf dem Blatt **Bezeichnung** angezeigt, wenn 
 
 Geben Sie einen Namen für die Migrationsregel an. Verwenden Sie einen aussagekräftigen Namen, der angibt, wie Bezeichnungen aus Ihrer vorherigen Bezeichnungslösung zu einer Azure Information Protection-Bezeichnung zugeordnet werden sollen. Der Name wird in den Scannerberichten und in der Ereignisanzeige angezeigt. 
 
+Beachten Sie, dass diese Einstellung keine optischen Kennzeichnungen entfernt, die von der alten Bezeichnung möglicherweise angewendet wurden. Weitere Informationen zum Entfernen von Kopf- und Fußzeilen finden Sie im nächsten Abschnitt unter [Remove headers and footers from other labeling solutions (Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen)](#remove-headers-and-footers-from-other-labeling-solutions).
+
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: Eine 1:1-Zuordnung des gleichen Bezeichnungsnamens
 
 Dokumente mit der Secure Islands-Bezeichnung „Confidential“ sollten in Azure Information Protection die Bezeichnung „Vertraulich“ erhalten.
@@ -362,10 +364,107 @@ Erweiterte Clienteinstellung:
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
 
 
+## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
+
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem ist die Vorschauversion des Azure Information Protection-Clients erforderlich.
+
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+
+Durch diese Einstellungen können Sie Kopf- oder Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
+
+Wenn der Client diese Konfiguration in seiner Richtlinie abruft, werden die alten Kopf- oder Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und Azure Information Protection-Bezeichnungen auf das Dokument angewendet wurden.
+
+Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem, dass die Verwendung mit Word, Excel und PowerPoint sich negativ auf die Leistung dieser Apps für Benutzer auswirken kann. Mithilfe der Konfiguration können Sie Einstellungen für jede einzelne Anwendung definieren, z.B. die Suche nach Text in Kopf- oder Fußzeilen von Word-Dokumenten, jedoch nicht von Excel-Tabellen oder PowerPoint-Präsentationen.
+
+Da der Musterabgleich sich auf die Leistung für Benutzer auswirkt, wird empfohlen, Office-Anwendungstypen (**W**ord, **E**xcel, **P**owerPoint) auf diejenigen einzuschränken, die durchsucht werden müssen:
+
+- Key: **RemoveExternalContentMarkingInApp**
+
+- Value: \<**Office-Anwendungstypen WXP**> 
+
+Beispiele:
+
+- Geben Sie **W** an, um nur Word-Dokumente zu durchsuchen.
+
+- Geben Sie **WP** an, um Word-Dokumente und PowerPoint-Präsentationen zu durchsuchen.
+
+Sie benötigen dann mindestens eine weitere erweiterte Clienteinstellung, **ExternalContentMarkingToRemove**, um die Inhalte der Kopf- oder Fußzeile anzugeben und diese zu entfernen oder zu ersetzen.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Konfigurieren von ExternalContentMarkingToRemove
+
+Wenn Sie den Zeichenfolgenwert für den Schlüssel **ExternalContentMarkingToRemove** angeben, stehen drei Optionen zur Verfügung, die reguläre Ausdrücke verwenden:
+
+- Partielle Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
+    
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten diese Kopf- oder Fußzeilen vollständig entfernen. Geben Sie den Wert `*TEXT*` an.
+
+- Vollständige Übereinstimmung, um nur bestimmte Wörter aus der Kopf- oder Fußzeile zu entfernen.
+    
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten nur das Wort **TEXT** entfernen, wodurch die Zeichenfolge der Kopf- oder Fußzeile **TO REMOVE** entspricht. Geben Sie den Wert `TEXT ` an.
+
+- Vollständige Übereinstimmung, um alles aus der Kopf- oder Fußzeile zu entfernen.
+    
+    Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten. Geben Sie den Wert `^TEXT TO REMOVE$` an.
+    
+
+Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichenfolgenlänge beträgt 255 Zeichen.
+
+Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
+
+- Key: **ExternalContentMarkingToRemove**
+
+- Value: \<**zu vergleichende Zeichenfolge; als regulärer Ausdruck definiert**> 
+
+#### <a name="multiline-headers-or-footers"></a>Mehrzeilige Kopf- oder Fußzeilen
+
+Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstellen Sie einen Schlüssel und einen Wert für jede Zeile. Angenommen, folgende Fußzeile mit zwei Zeilen ist vorhanden:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+Erstellen Sie folgende Einträge, um diese mehrzeilige Fußzeile zu entfernen:
+
+- Key 1: **ExternalContentMarkingToRemove**
+
+- Key Value 1: **\*Confidential***
+
+- Key 2: **ExternalContentMarkingToRemove**
+
+- Key Value 2: **\*Label applied*** 
+
+#### <a name="optimization-for-powerpoint"></a>Optimierung für PowerPoint
+
+In PowerPoint werden Fußzeilen als Formen implementiert. Wenn Sie vermeiden möchten, dass Formen entfernt werden, die den angegeben Text enthalten, jedoch keine Kopf- oder Fußzeilen sind, verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **PowerPointShapeNameToRemove**. Es wird empfohlen, diese Einstellung ebenfalls zu verwenden, um zu verhindern, dass der Text in allen Formen überprüft wird, denn dieser Prozess ist sehr ressourcenintensiv.
+
+Wenn Sie diese zusätzliche erweiterte Clienteinstellung nicht angeben und PowerPoint im Schlüsselwert **RemoveExternalContentMarkingInApp** eingeschlossen ist, werden alle Formen auf den Text überprüft, den Sie im Wert **ExternalContentMarkingToRemove** angeben. 
+
+So finden Sie den Namen der Form, die Sie als Kopf- oder Fußzeile verwenden:
+
+1. Zeigen Sie in PowerPoint den Bereich **Auswahl** an: **Format** > **Anordnen** > **Auswahlbereich**.
+
+2. Wählen Sie die Form auf der Folie aus, die die Kopf- oder Fußzeile enthält. Der Name der ausgewählten Form wird nun im Bereich **Auswahl** hervorgehoben.
+
+Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel **PowerPointShapeNameToRemove** anzugeben. 
+
+Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
+
+- Key: **PowerPointShapeNameToRemove**
+
+- Value: \<**Name der PowerPoint-Form**> 
+
+Wenn mehr als eine PowerPoint-Form entfernt werden soll, erstellen Sie so viele **PowerPointShapeNameToRemove**-Schlüssel wie Sie Formen entfernen möchten. Geben Sie für jeden Eintrag den Namen der zu entfernenden Form an.
+
+Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
+
+- Key: **RemoveExternalContentMarkingInAllSlides**
+
+- Wert: **TRUE**
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Hinzufügen einer Bezeichnung zu einem Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft
 
 > [!NOTE]
-> Wenn Sie diese Konfiguration und die Konfiguration aus dem vorherigen Abschnitt verwenden, um eine Migration von einer anderen Lösung zu migrieren, erhält die Einstellung der Bezeichnungsmigration Vorrang. 
+> Wenn Sie diese Konfiguration und die Konfiguration zum [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions) verwenden, erhält die Einstellung für die Bezeichnungsmigration Vorrang. 
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 

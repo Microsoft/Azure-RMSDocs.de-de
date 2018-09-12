@@ -4,18 +4,18 @@ description: Informationsquellen für den Azure Information Protection-Client f�
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c10558c9a24d5348bd3188cbdf352653df993867
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 33312efdaaa9a9b65e79f2f5b40fd910db35a686
+ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808915"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43380700"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Azure Information Protection-Client für Windows
 
@@ -33,5 +33,12 @@ Der Azure Information Protection-Client für Windows ist ein kostenloser, herunt
 > Es gibt auch eine Azure Information Protection-App für iOS und Android. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](mobile-app-faq.md ).
 > 
 > Weitere Informationen zu Mac-Computern und Windows Phones: Verwenden Sie die RMS-Freigabeanwendung für mobile Geräte, und lesen Sie die Informationen unter [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für mobile und Mac-Plattformen](http://technet.microsoft.com/dn451248).
+
+## <a name="install-instructions"></a>Installationsanweisungen
+
+- [Administratoren](client-admin-guide-install.md)
+
+- [Endbenutzer](install-client-app.md)
+
 
 

@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 945b05a99122b7caf1d9a73ea8b75717a5522660
-ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
+ms.openlocfilehash: 3e067f42b216efda48d46cd95be66c4939bf6240
+ms.sourcegitcommit: ba7ef4fe439bbf00cdad888017cbb8f44c801f77
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43117926"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348690"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -59,6 +59,8 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Unterstützung für Dateien, die von Secure Islands geschützt werden, wenn diese Dateien keine PDF- oder Office-Dokumente sind. Zum Beispiel geschützte Text- und Bilddateien oder Dateien mit der Erweiterung PFILE. Diese Unterstützung ermöglicht neue Szenarios, z.B. dass die Azure Information Protection-Überprüfung diese Dateien auf vertrauliche Informationen prüfen kann und diesen automatisch Bezeichnungen für Azure Information Protection hinzufügt. [Weitere Informationen](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
 - Der Link **Senden Sie uns Feedback** im Dialogfeld **Hilfe und Feedback** wird durch **Problem melden** ersetzt. Dies können Sie anpassen. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können diese E-Mail-Adresse ändern, damit eine von Ihnen angegebene HTTP-Zeichenfolge verwendet wird, sobald ein Benutzer diese Option auswählt. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. Verwenden Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link), um diese Adresse zu ändern.
+
+- Neue erweiterte Clienteinstellungen zum Entfernen von Kopf- und Fußzeilen, die von anderen Bezeichnungslösungen auf Dokumente angewendet wurden. [Weitere Informationen](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
 
 - Für die Azure Information Protection-Überprüfung:
 
@@ -161,7 +163,6 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 **Neue Features**:
 
 - Azure Information Protection-Überprüfung: Das im Client enthaltene PowerShell-Modul verfügt über neue Cmdlets zum Installieren und Konfigurieren des Überprüfungsmoduls, mit denen Sie Dateien in Ihren lokalen Datenspeichern ermitteln, klassifizieren und schützen können. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md). 
-
 - Sie haben jetzt die Möglichkeit, verschiedene optische Kennzeichnungen für Word, Excel, PowerPoint und Outlook festzulegen, indem Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp identifizieren. [Weitere Informationen]configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Unterstützung der [Richtlinieneinstellung](../configure-policy-settings.md), **Information Protection-Leiste in Office-Apps anzeigen**. Wenn diese Einstellung deaktiviert ist, wählen Benutzer Bezeichnungen über die Schaltfläche **Schützen** im Menüband aus.
