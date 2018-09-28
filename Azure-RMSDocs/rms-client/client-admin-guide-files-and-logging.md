@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6fd4c5768d29a231960b3e048c74d4c0e5ec3e7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7e72aa9af0d248f54880f8b5bb6df0ce75018f2b
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149921"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211223"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -87,7 +87,7 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     
 Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
-
+Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Protokolldateien ermittelt haben, die dem Azure Information Protection-Client zugeordnet sind, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:
