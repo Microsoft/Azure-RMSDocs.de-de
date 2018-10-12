@@ -1,5 +1,20 @@
+---
+title: Microsoft Information Protection-Klasse „ProtectionDescriptorBuilder“
+description: Referenz für die Microsoft Information Protection-Klasse „ProtectionDescriptorBuilder“
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 42e44cfaf269a43d0210c0c040ea70ccc1fb192e
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446633"
+---
 # <a name="class-mipprotectiondescriptorbuilder"></a>mip::ProtectionDescriptorBuilder-Klasse 
-Stellt eine Ad-hoc-Richtlinie dar, die geschütztem Inhalt zugeordnet ist.
+Erstellt eine [ProtectionDescriptor](class_mip_protectiondescriptor.md)-Instanz, die den Schutz für ein Inhaltsobjekt beschreibt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
@@ -50,7 +65,7 @@ Parameter:
 Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
 
 Parameter:  
-* **value**: Angabe, ob die Richtlinie den Zugang zu Offlineinhalten erlaubt
+* **value**: Angabe, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
 
 
   

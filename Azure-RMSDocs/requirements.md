@@ -4,18 +4,18 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e471cd5e4de5c4bd4c24fd5c5627e69f7db1ec90
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 00daf488568fef8569f97db378b771383a221ce3
+ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148340"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473816"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -78,6 +78,8 @@ Die folgenden Geräte unterstützen den Azure Information Protection-Client, mit
 
 - Windows Server 2008 R2 
 
+Der Azure Information Protection-Client lässt sich nicht nur auf physischen Computern, sondern auch auf VMs installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktoplösung zusätzliche Konfigurationen bereitstellt, die ggf. zum Ausführen des Azure Information Protection-Clients erforderlich sind. In Citrix-Lösungen müssen Sie beispielsweise für Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) und den Azure Information Protection-Client (msip.app.exe, msip.viewer.exe) die [Citrix-API-Hooks deaktivieren](https://support.citrix.com/article/CTX107825).
+
 Für die aufgelisteten Serverversionen wird der Azure Information Protection-Client für Remotedesktopdienste unterstützt. Wenn Sie bei der Verwendung des Azure Information Protection-Clients mit den Remotedesktopdiensten Benutzerprofile löschen, löschen Sie nicht den Ordner **%Appdata%\Microsoft\Protect**.
 
 Wenn durch den Azure Information Protection-Client Daten mit dem Azure Rights Management-Dienst geschützt werden, können die Daten von den [gleichen Geräten](requirements-client-devices.md) genutzt werden, die auch den Azure Rights Management-Dienst unterstützen.
@@ -88,9 +90,9 @@ Wenn durch den Azure Information Protection-Client Daten mit dem Azure Rights Ma
 
 Der Azure Information Protection-Client kann Dokumente und E-Mails bezeichnen und schützen, indem er die Office-Anwendungen **Word**, **Excel**, **PowerPoint** und **Outlook** aus einer der folgenden Office-Suiten verwendet:
 
+- Office 365 mit Office 2016-Apps (ab Version 1805, Build 9330.2078), wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“) zugewiesen wurde
+
 - Office 365 ProPlus mit 2016-Apps oder 2013-Apps (Klick-und-Los- oder Windows Installer-basierte Installation)
-    
-    Diese Editionen von Office sind in den meisten Office 365-Abonnements enthalten, bei denen durch Azure Information Protection Datenschutz gewährleistet wird. Überprüfen Sie Ihre Abonnementinformationen, um zu sehen, ob Office 365 ProPlus enthalten ist. Sie finden diese Informationen auch im [Datenblatt zu Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 

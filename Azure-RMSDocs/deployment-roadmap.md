@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f99a35104ecdc3bfb422ed9f6747043e895ac7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 20fcfa3790dc9ad1612a508f4fe28f72997fc475
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149836"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211274"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -118,9 +118,11 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Schritt 6: Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
 Sie sind jetzt bereit, Ihre Daten zu schützen und dabei zu protokollieren, wie die von Ihnen konfigurierten Bezeichnungen und der Datenschutz in Ihrem Unternehmen verwendet werden. Weitere Informationen zur Unterstützung dieser Phase der Bereitstellung finden Sie unter:
 
+- [Berichterstellung für Azure Information Protection](reports-aip.md)
+
 - [Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./help-users.md)
 
--  [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md)
+- [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md)
 
 - [Clientdateien und Nutzungsprotokollierung](./rms-client/client-admin-guide-files-and-logging.md)
 

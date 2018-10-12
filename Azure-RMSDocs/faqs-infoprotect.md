@@ -4,18 +4,18 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 6048867049046384a7a226d3caeed10fd09bb264
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a6df966c75a1d556aeb3341804fa18d912389e24
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147575"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233727"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -29,13 +29,17 @@ Probieren Sie unser Schnellstart-Tutorial aus, um zu sehen, wie dies innerhalb w
 
 Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind: Die aktuelle Version hat einige Einschränkungen, einschließlich der Folgenden:
 
-- Es gibt keine zentrale Protokollierung für die Klassifizierung und die Bezeichnung.
+- Keine Bezeichnungsoption in Office-Web-Apps (Office Online)
 
-- Keine Bezeichnungsmöglichkeit in Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer oder für die Office Web Apps (Office Online).
+- Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online
 
-- Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online.
+> [!NOTE]
+> **Jetzt in der Vorschau:**
+> - Zentralisierte Berichterstellung für die Klassifizierung und Bezeichnung. Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
+> - Bezeichnungsoption in Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer für Kunden des [Office Insider-Programms](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16). Weitere Informationen finden Sie unter [Anwenden von Vertraulichkeitsbezeichnungen auf Dokumente und E-Mails in Office](https://aka.ms/officemipdocs).
 
-Anfordern neuer Features und Abstimmen für Anforderungen durch Besuchen der [User Voice-Website](https://msip.uservoice.com/) für Azure Information Protection.
+
+Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https://msip.uservoice.com/) für Azure Information Protection über die Anforderungen ab.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>Muss ich ein globaler Administrator sein, um Klassifizierungen und Bezeichnungen zu konfigurieren?
 

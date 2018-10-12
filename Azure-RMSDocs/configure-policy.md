@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 57c410432377d5a98c132239ac1805293d1a5133
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151485"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211291"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -168,7 +168,11 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md)
 
+- [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md)
+
 ## <a name="next-steps"></a>Nächste Schritte
 
 Ein Beispiel für die Anpassung der Standardrichtlinie sowie das resultierende Verhalten in einer Office-Anwendung finden Sie im [Schnellstart-Tutorial für Azure Information Protection](infoprotect-quick-start-tutorial.md).
+
+Unter [Berichterstellung für Azure Information Protection](reports-aip.md) erfahren Sie, wie Ihre Richtlinie ausgeführt wird.
 

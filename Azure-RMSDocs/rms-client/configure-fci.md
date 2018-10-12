@@ -4,18 +4,18 @@ description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
-ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
+ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
+ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45540087"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45750627"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -53,7 +53,7 @@ Voraussetzungen für diese Anweisungen:
     
 - Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     
-- Sie haben die Rights Management-Vorlagen auf den Dateiserver heruntergeladen und die Vorlagen-ID identifiziert, die die Dateien schützt. Verwenden Sie hierzu das [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate)-Cmdlet. Dieses Szenario unterstützt keine Abteilungsvorlagen, sodass Sie entweder eine Vorlage verwenden müssen, die nicht für einen Bereich konfiguriert ist, oder die Bereichskonfiguration muss die Anwendungskompatibilitätsoption einschließen, sodass das Kontrollkästchen **Zeigen Sie diese Vorlage allen Benutzern, wenn die Anwendungen die Benutzeridentität nicht unterstützen.** aktiviert ist.
+- Dieses Szenario unterstützt keine Abteilungsvorlagen. Verwenden Sie daher entweder eine Vorlage, die nicht für einen Bereich konfiguriert ist, oder das Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) und den Parameter *EnableInLegacyApps*.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Anweisungen zum Konfigurieren der Ressourcen-Manager für Dateiserver-FCI für den Azure Rights Management-Schutz
 Folgen Sie diesen Anweisungen, um mithilfe eines PowerShell-Skripts als benutzerdefinierte Aufgabe alle Dateien in einem Ordner zu schützen. Führen Sie diese Verfahren in folgender Reihenfolge aus:
@@ -72,7 +72,7 @@ Folgen Sie diesen Anweisungen, um mithilfe eines PowerShell-Skripts als benutzer
 
 Am Ende dieser Anweisungen sind alle Dateien im ausgewählten Ordner mit der benutzerdefinierten Eigenschaft von RMS klassifiziert, und diese Dateien werden dann durch Rights Management geschützt. Dann können Sie für eine komplexere Konfiguration, die nur bestimmte Dateien selektiv schützt, eine andere Klassifizierungseigenschaft und -regel mit einer Dateiverwaltungsaufgabe, die nur diese Dateien schützt, erstellen oder verwenden.
 
-Beachten Sie: Wenn Sie Änderungen an der Rights Management-Vorlage vornehmen, die Sie für die FCI verwenden, müssen Sie `Get-RMSTemplate -Force` auf dem Dateiservercomputer ausführen, um die aktualisierte Vorlage abzurufen. Die aktualisierte Vorlage wird dann verwendet, um neue Dateien zu schützen. Wenn die Änderungen an der Vorlage wichtig genug sind, um die Dateien auf dem Dateiserver erneut zu schützen, können Sie hierzu das Protect-RMSFile-Cmdlet interaktiv mit einem Konto ausführen, das für die Dateien über die Nutzungsrechte „Exportieren“ oder „Vollzugriff“ verfügt. Sie müssen auch `Get-RMSTemplate -Force` auf diesem Dateiservercomputer ausführen, wenn Sie eine neue Vorlage veröffentlichen, die Sie für die FCI verwenden möchten.
+Beachten Sie, dass bei Änderungen an der Rights Management-Vorlage für die Dateiklassifizierungsinfrastruktur das Computerkonto, das das Skript zum Schutz der Dateien ausführt, nicht automatisch die aktualisierte Vorlage abruft. Damit das geschieht, entfernen Sie das Kommentarzeichen `#` aus dem auskommentierten Befehl `Get-RMSTemplate -Force`. Wenn die aktualisierte Vorlage heruntergeladen wurde (das Skript wurde mindestens einmal ausgeführt), können Sie diesen zusätzlichen Befehl auskommentieren, damit die Vorlagen nicht jedes Mal erneut heruntergeladen werden. Wenn die Änderungen an der Vorlage wichtig genug sind, um die Dateien auf dem Dateiserver erneut zu schützen, können Sie hierzu das „Protect-RMSFile“-Cmdlet interaktiv mit einem Konto ausführen, das für die Dateien über die Nutzungsrechte „Exportieren“ oder „Vollzugriff“ verfügt. Sie müssen auch `Get-RMSTemplate -Force` ausführen, wenn Sie eine neue Vorlage veröffentlichen, die Sie für die Dateiklassifizierungsinfrastruktur verwenden möchten.
 
 ### <a name="save-the-windows-powershell-script"></a>Speichern des Windows PowerShell-Skripts
 
@@ -266,7 +266,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     > [!TIP]
     > Einige Tipps zur Problembehandlung:
     > 
-    > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist diese Ausgabe darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen, und führen sie es aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich beim Azure Rights Management-Dienst zu authentifizieren.
+    > -   Wenn Sie im Bericht **0** anstatt der Anzahl der Dateien in Ihrem Ordner sehen, weist diese Ausgabe darauf hin, dass das Skript nicht ausgeführt wurde. Überprüfen Sie zunächst das Skript durch Laden in Windows PowerShell ISE, um die Inhalte des Skripts zu überprüfen. Führen Sie das Skript dann einmal in der gleichen PowerShell-Sitzung aus, um zu ermitteln, ob Fehler angezeigt werden. Wenn keine Argumente angegeben werden, versucht das Skript, eine Verbindung herzustellen und sich beim Azure Rights Management-Dienst zu authentifizieren.
     > 
     >     -   Wenn das Skript meldet, dass es keine Verbindung mit dem Azure Rights Management-Dienst herstellen konnte, überprüfen Sie die Werte, die für das Dienstprinzipalkonto, das Sie im Skript angegeben haben, angezeigt werden. Weitere Informationen zum Erstellen dieses Dienstprinzipalkontos finden Sie unter [Voraussetzung 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) im Administratorhandbuch zum Azure Information Protection-Client.
     >     -   Wenn das Skript meldet, dass es eine Verbindung zu Azure RMS herstellen konnte, überprüfen Sie, ob es die angegebene Vorlage durch Ausführen von [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) direkt von Windows PowerShell auf dem Server aus finden kann. Die angegebene Vorlage sollte in den Ergebnissen zurückgegeben werden.
@@ -281,6 +281,14 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
     > -   Wenn Sie die richtige Anzahl von Dateien im Bericht sehen, die Dateien aber nicht geschützt sind, versuchen Sie, die Dateien manuell mithilfe des [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) -Cmdlets zu schützen, um festzustellen, ob Fehler angezeigt werden.
 
 Wenn Sie sichergestellt haben, dass diese Aufgaben erfolgreich ausgeführt werden, können Sie den Dateiressourcen-Manager schließen. Neue Dateien werden automatisch klassifiziert und geschützt, wenn die geplanten Aufgaben ausgeführt werden. 
+
+## <a name="action-required-if-you-make-changes-to-the-rights-management-template"></a>Erforderliche Aktion beim Ändern der Rights Management-Vorlage
+
+Bei Änderungen an der vom Skript referenzierten Rights Management-Vorlage ruft das Computerkonto, das das Skript zum Schutz der Dateien ausführt, die aktualisierte Vorlage nicht automatisch ab. Entfernen Sie im Skript in der Funktion „Set-RMSConnection“ aus dem auskommentierten Befehl `Get-RMSTemplate -Force` das Kommentarzeichen am Anfang der Zeile. Beim nächsten Ausführen des Skripts wird die aktualisierte Vorlage heruntergeladen. Zur Leistungsoptimierung, um wiederholte Downloads von Vorlagen zu vermeiden, können Sie diese Zeile dann erneut auskommentieren. 
+
+Wenn die Änderungen an der Vorlage wichtig genug sind, um die Dateien auf dem Dateiserver erneut zu schützen, können Sie hierzu das „Protect-RMSFile“-Cmdlet interaktiv mit einem Konto ausführen, das für die Dateien über die Nutzungsrechte „Exportieren“ oder „Vollzugriff“ verfügt. 
+
+Führen Sie diese Zeile auch im Skript aus, wenn Sie eine neue Vorlage veröffentlichen, die Sie für die Dateiklassifizierungsinfrastruktur verwenden möchten, und ändern Sie die Vorlagen-ID in der Argumentzeile für die benutzerdefinierte Dateiverwaltungsaufgabe.
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Ändern der Anweisungen zum selektiven Schutz von Dateien
 Wenn Sie die zuvor beschriebenen Anweisungen abgeschlossen haben, ist es einfach, sie für eine komplexere Konfiguration zu ändern. Schützen Sie Dateien beispielsweise mithilfe des gleichen Skripts, jedoch nur für Dateien mit personenbezogenen Informationen, und wählen Sie vielleicht eine Vorlage aus, die über restriktivere Berechtigungen verfügt.

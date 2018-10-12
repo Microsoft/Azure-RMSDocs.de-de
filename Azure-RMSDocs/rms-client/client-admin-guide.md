@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63e84e8a5d072f0bb57bb72754f97ca8963a2c76
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c415868045e2064696181217f66262e90887e25a
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149105"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403011"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -106,9 +106,7 @@ Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und F
 
 Der Link **Weitere Infos** verweist standardmäßig auf die [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website. Sie können aber auch eine benutzerdefinierte URL als eine der [Richtlinieneinstellungen](../configure-policy-settings.md) in der Azure Information Protection-Richtlinie festlegen.
 
-Verwenden Sie den Link **Feedback senden** (allgemein verfügbare Versionen), um Vorschläge oder Anfragen an das Information Protection-Team zu senden. Verwenden Sie diese Option nicht für den technischen Support, sondern nutzen Sie dafür stattdessen die [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). 
-
-Der Link **Problem melden** ersetzt den Link **Feedback senden** in der Vorschauversion des Clients. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können jedoch die HTTP-Zeichenfolge für Ihre Benutzer konfigurieren, indem Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link) angeben. Geben Sie z.B. die E-Mail-Adresse Ihres Helpdesks an.
+Der Link **Problem melden** wird in Vorschauversionen des Clients angezeigt – nicht in allgemein verfügbaren Versionen. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können jedoch die HTTP-Zeichenfolge für Ihre Benutzer konfigurieren, indem Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link) angeben. Geben Sie z.B. die E-Mail-Adresse Ihres Helpdesks an.
 
 Die Option **Protokolle exportieren** erfasst automatisch Protokolldateien für den Azure Information Protection-Client und hängt diese an, wenn Sie darum gebeten wurden, diese an den Microsoft Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
 

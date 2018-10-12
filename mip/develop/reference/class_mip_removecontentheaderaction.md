@@ -1,5 +1,20 @@
+---
+title: Microsoft Information Protection-Klasse „RemoveContentHeaderAction“
+description: Referenz für die Microsoft Information Protection-Klasse „RemoveContentHeaderAction“
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: dc79ebf5d5c7cd35a8fc5ed854315179ed9190f0
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446446"
+---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction-Klasse 
-Eine Aktionsklasse, die angibt, dass der Inhaltsheader aus dem Dokument entfernt wird
+Eine Aktionsklasse, die angibt, dass der Inhaltsheader aus dem Dokument entfernt wird.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/04/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b4d0f104c0c0562f98c5418b9763adf62bdee97f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149772"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403096"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -90,11 +90,9 @@ Suchen Sie nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf **0** f
 
 ## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Ändern der E-Mail-Adresse für den Link „Problem melden“
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem ist die Vorschauversion des Azure Information Protection-Clients erforderlich.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung gilt nur für Vorschauversionen des Azure Information Protection-Clients, da allgemein verfügbare Versionen des Clients den Link **Problem melden** nicht anzeigen.
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
-
-Wenn Benutzer den Link **Problem melden** aus dem Clientdialogfeld **Hilfe und Feedback** anklicken, wird standardmäßig eine Microsoft-Adresse in einer E-Mail-Nachricht aufgefüllt. Verwenden Sie die folgende erweiterte Clienteinstellung, um diese Adresse zu ändern. Geben Sie z.B. `mailto:helpdesk@contoso.com` für die E-Mail-Adresse Ihres Helpdesks an. 
+Wenn Benutzer in Vorschauversionen des Clients im Clientdialogfeld **Hilfe und Feedback** den Link **Problem melden** auswählen, wird standardmäßig eine Microsoft-Adresse in einer E-Mail-Nachricht ausgefüllt. Verwenden Sie die folgende erweiterte Clienteinstellung, um diese Adresse zu ändern. Geben Sie z.B. `mailto:helpdesk@contoso.com` für die E-Mail-Adresse Ihres Helpdesks an. 
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
@@ -219,9 +217,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
-
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
 
 Wenn Sie diese Einstellung konfigurieren, ändert sich das [Standardverhalten](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied), wie der Azure Information Protection-Client automatische und empfohlene Bezeichnungen auf Dokumente anwendet, wie folgt: 
 
@@ -239,25 +235,61 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: **TRUE**
 
-## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung
-
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem ist die Vorschauversion des Azure Information Protection-Clients erforderlich.
+## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Schützen von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
-Wenn die allgemein verfügbare Version des Azure Information Protection-Clients eine PDF-Datei schützt, verfügt die resultierende Datei über die Erweiterung PPDF. Wenn die aktuelle Vorschauversion des Azure Information Protection-Clients jedoch eine PDF-Datei schützt, verbleibt die daraus resultierende Erweiterung bei PDF und entspricht somit dem ISO-Standard für die Verschlüsselung von PDF-Dateien. Weitere Informationen zu diesem Standard finden Sie im Abschnitt **7.6 Encryption** (7.6 Verschlüsselung) aus dem [Dokument, das von ISO 32000-1 abgeleitet](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) und von Adobe Systems Incorporated veröffentlicht wird.
+Wenn der Azure Information Protection-Client eine PDF-Datei schützt, verfügt die resultierende Datei standardmäßig über die Erweiterung PPDF. Sie können dieses Verhalten ändern, sodass die Erweiterung PDF beibehalten wird und dem ISO-Standard für die PDF-Verschlüsselung entspricht. Weitere Informationen zu diesem Standard finden Sie im Abschnitt **7.6 Encryption** (7.6 Verschlüsselung) aus dem [Dokument, das von ISO 32000-1 abgeleitet](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) und von Adobe Systems Incorporated veröffentlicht wird.
 
-Wenn die aktuelle Vorschauversion des Clients wieder das Verhalten der allgemeinen Verfügbarkeit annehmen soll, verwenden Sie die folgende erweiterte Einstellung, indem Sie folgende Zeichenfolge eingeben:
+Geben Sie die folgende Zeichenfolge zum Konfigurieren dieser erweiterten Einstellung ein:
 
 - Key: **EnablePDFv2Protection**
 
-- Wert: **FALSE**
+- Wert: **TRUE**
+
+Wenn der Azure Information Protection-Client eine PDF-Datei schützt, erstellt diese Aktion aufgrund dieser Konfigurationsoption ein geschütztes PDF-Dokument, das mit der aktuellen Azure Information Protection-Clientversion für Windows und anderen PDF-Readern, die den ISO-Standard für die PDF-Verschlüsselung unterstützen, geöffnet werden kann. Die Azure Information Protection-App für iOS und Android unterstützen zurzeit nicht den ISO-Standard für die PDF-Verschlüsselung. Die neuesten Informationen zu Adobe Acrobat Reader finden Sie unter [Ab Oktober: Verfügbarkeit von Adobe Acrobat Reader für mit Microsoft Information Protection geschützte PDFs](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738) (in englischer Sprache).
 
 Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden.
 
+Weitere Informationen zu dieser PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570).
+
+### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien
+
+Wenn der Azure Information Protection-Client die Clientrichtlinie mit der neuen Einstellung heruntergeladen hat, können Sie mit PowerShell-Befehlen vorhandene PPDF-Dateien in geschützte PDF-Dateien konvertieren, die den ISO-Standard für die PDF-Verschlüsselung verwenden. 
+
+Wenn Sie die folgenden Anweisungen für Dateien verwenden möchten, die Sie nicht selbst geschützt haben, benötigen Sie [Rights Management-Nutzungsrechte](../configure-usage-rights.md) zum Entfernen des Schutzes aus Dateien oder Administratorrechte. Informationen zum Aktivieren der Administratorfunktion und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder die Datenwiederherstellung](../configure-super-users.md).
+
+Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), wenn Sie diese Anweisungen für Dateien verwenden, die Sie nicht selbst geschützt haben. In diesem Szenario kann der Benutzer, der das Dokument ursprünglich geschützt hat, es nicht mehr nachverfolgen und den Zugriff darauf nicht mehr widerrufen. Wenn Benutzer ihre geschützten PDF-Dokumente nachverfolgen und den Zugriff darauf widerrufen möchten, müssen sie die Bezeichnung manuell entfernen und mit dem Datei-Explorer per Rechtsklick erneut anwenden.
+
+So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
+
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
+    
+        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+
+2. Beachten Sie bei der Ausgabe die folgenden Parameterwerte:
+    
+    - Den Wert (GUID) für **SubLabelId** (falls vorhanden). Wenn dieser Wert leer ist, wurde keine untergeordnete Bezeichnung verwendet. Verwenden Sie in diesem Fall stattdessen den Wert für **MainLabelId**.
+    
+    Hinweis: Wenn es auch keinen Wert für **MainLabelId** gibt, erhält die Datei keine Bezeichnung. In diesem Fall können Sie die Befehle [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) und [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) anstelle der Befehle in Schritt 3 und 4 verwenden.
+    
+    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
+
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    
+    Wenn Sie die Bezeichnung nicht entfernen können, weil Sie obligatorische Bezeichnungen als [Richtlinieneinstellung](../configure-policy-settings.md) verwenden (**Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**), wenden Sie stattdessen vorübergehend eine andere Bezeichnung an.
+
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+
+Die Datei behält die PDF-Erweiterung, wird jedoch wie zuvor klassifiziert und mit dem ISO-Standard für die PDF-Verschlüsselung geschützt.
+
 ## <a name="support-for-files-protected-by-secure-islands"></a>Unterstützung von durch Secure Islands geschützten Dateien
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem sind die Vorschauversionen des Azure Information Protection-Clients, der Azure Information Protection-Überprüfung oder des Azure Information Protection-Viewers erforderlich.
+Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
 
 Wenn Sie Secure Islands zum Schützen von Dokumenten verwendet haben, verfügen Sie aufgrund dieses Schutzes möglicherweise über geschützte Text- und Bilddateien sowie generisch geschützte Dateien. Zum Beispiel Dateien mit den Erweiterungen PTXT, PJPEG oder PFILE. Wenn Sie die Registrierung wie folgt bearbeiten, können diese Dateien von Azure Information Protection entschlüsselt werden:
 
@@ -282,9 +314,9 @@ Aufgrund dieser Änderung in der Registrierung werden die folgenden Szenarios un
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration ist derzeit nicht kompatibel mit der Einstellung [Schützen von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Wenn Sie beide Einstellungen zusammen verwenden, können PPDF-Dateien nicht mit Datei-Explorer, PowerShell oder der Überprüfung geöffnet werden.
 
 Sie können Office- und PDF-Dokumente, die eine Bezeichnung von Secure Islands erhalten haben, mit einer neuen Azure Information Protection-Bezeichnung versehen, indem Sie eine von Ihnen definierte Zuordnung verwenden. Mit dieser Methode können Sie auch Bezeichnungen aus anderen Lösungen wiederverwenden, wenn diese Bezeichnungen sich in Office-Dokumenten befinden. 
 
@@ -366,11 +398,9 @@ Erweiterte Clienteinstellung:
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen. Außerdem ist die Vorschauversion des Azure Information Protection-Clients erforderlich.
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellungen befinden sich in der Vorschauversion und können sich ändern.
 
-Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
-
-Durch diese Einstellungen können Sie Kopf- oder Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
+Mit diesen Einstellungen können Sie Kopf- und Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
 
 Wenn der Client diese Konfiguration in seiner Richtlinie abruft, werden die alten Kopf- oder Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und Azure Information Protection-Bezeichnungen auf das Dokument angewendet wurden.
 

@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c1ad35bde57822460f0f3e7346d05d95647eedd6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a61018b9e93a7a622c288f56110e9d99b30404f
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151859"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211308"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -29,7 +29,7 @@ Diese Überprüfung wird als Dienst unter Windows Server ausgeführt und bietet 
 
 - UNC-Pfade zu Netzwerkfreigaben mit dem Server Message Block (SMB)-Protokoll.
 
-- Websites und Bibliotheken für SharePoint Server 2016 und SharePoint Server 2013 SharePoint 2010 wird ebenfalls für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen und die Vorschauversion der Überprüfung verwenden.
+- Websites und Bibliotheken für SharePoint Server 2016 und SharePoint Server 2013 SharePoint 2010 wird außerdem für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
 
 Verwenden Sie zum Überprüfen und Bezeichnen von Dateien auf Cloudrepositorys [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
@@ -168,7 +168,7 @@ Sie können nun die zu überprüfenden Datenspeicher angeben.
 
 Verwenden Sie das Cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository), um die Datenspeicher anzugeben, die von der Azure Information Protection-Überprüfung gescannt werden sollen. Sie können lokale Ordner, UNC-Pfade und SharePoint Server-URLs für SharePoint-Websites und -Bibliotheken angeben. 
 
-Unterstützte SharePoint-Versionen: SharePoint Server 2016 oder SharePoint Server 2013 SharePoint Server 2010 wird ebenfalls für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen und die Vorschauversion der Überprüfung verwenden.
+Unterstützte SharePoint-Versionen: SharePoint Server 2016 oder SharePoint Server 2013 SharePoint Server 2010 wird außerdem für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
 
 1. Fügen Sie in der PowerShell-Sitzung über denselben Windows Server-Computer den ersten Datenspeicher hinzu, indem Sie den folgenden Befehl ausführen:
     
@@ -188,43 +188,34 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Ausführen eines Ermittlungszyklus und Anzeigen von Berichten für die Überprüfung
 
-1. Starten Sie unter **Verwaltung** > **Dienste** den Dienst **Azure Information Protection-Überprüfung**.
+1. Starten Sie in Ihrer PowerShell-Sitzung den Dienst **Azure Information Protection-Überprüfung** neu, indem Sie den folgenden Befehl ausführen:
     
-    Wenn Sie über die aktuelle Vorschauversion der Überprüfung verfügen, können Sie alternativ [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) in Ihrer PowerShell-Sitzung ausführen.
+        Start-AIPScan
 
 2. Warten Sie, bis die Überprüfung den Zyklus abgeschlossen hat. Wenn die Überprüfung alle Dateien in den von Ihnen angegebenen Datenspeichern durchforstet hat, wird der Dienst beendet. Mithilfe des lokalen Windows-Ereignisprototokolls für **Anwendungen und Dienste**, **Azure Information Protection-Überprüfung**, können Sie ermitteln, wann der Dienst beendet wurde. Suchen Sie einfach nach der Ereignis-ID **911**.
 
 3. Prüfen Sie die Berichte, die unter %*localappdata*%\Microsoft\MSIP\Scanner\Reports gespeichert sind und im CSV-Format vorliegen. Aufgrund der Standardkonfiguration der Überprüfung sind nur Dateien, die die Bedingungen für die automatische Klassifizierung erfüllen, in diesen Berichten enthalten.
     
+    > [!TIP]
+    > Die Informationen aus diesen Berichten werden an Azure Information Protection gesendet, sodass Sie im Azure-Portal angezeigt werden (derzeit in Vorschau). Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md). 
+        
     Wenn die Ergebnisse nicht wie erwartet ausfallen, müssen Sie die Bedingungen, die Sie in Ihrer Azure Information Protection-Richtlinie angegeben haben, möglicherweise optimieren. Wenn dies der Fall ist, wiederholen Sie die Schritte 1 bis 3, bis Sie die Konfiguration ändern können, um die Klassifizierung und optional den Schutz anzuwenden. 
-    
-    Unter Verwendung der aktuellen GA-Version der Überprüfung: Führen Sie jedes Mal erst den folgenden PowerShell-Befehl auf dem Windows Server-Computer aus, wenn Sie diese Schritte wiederholen:
-  
-        Set-AIPScannerConfiguration -Schedule OneTime
-    
-    Wenn Sie über die aktuelle Vorschauversion der Überprüfung verfügen, führen Sie den Befehl „Set-AIPScannerConfiguration“ nicht aus.
-  
+
 Wenn Sie für das automatische Bezeichnen der Dateien, die die Überprüfung sucht, bereit sind, fahren Sie mit dem nächsten Abschnitt fort. 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Konfigurieren der Überprüfung zum Anwenden von Klassifizierung und Schutz
 
 In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für die Berichterstattung aufgeführt. Um diese Einstellungen zu ändern, führen Sie das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) aus.
 
-1. Führen Sie einen der folgenden Befehle in der PowerShell-Sitzung auf dem Windows Server-Computer aus:
+1. Führen Sie auf dem Windows Server-Computer in der PowerShell-Sitzung den folgenden Befehl aus:
     
-    Bei der aktuellen GA-Version der Überprüfung:
-       
-        Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
-    
-    Bei der Vorschauversion der Überprüfung:
-       
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. In der [Onlinehilfe](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) finden Sie weitere Informationen zu den einzelnen Konfigurationseinstellungen. 
 
-2. Starten Sie unter **Verwaltung** > **Dienste** den Dienst **Azure Information Protection-Überprüfung** neu.
+2. Starten Sie den Dienst **Azure Information Protection-Überprüfung** neu, indem Sie den folgenden Befehl ausführen:
     
-    Wenn Sie über die aktuelle Vorschauversion der Überprüfung verfügen, können Sie alternativ [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) in Ihrer PowerShell-Sitzung ausführen.
+        Start-AIPScan
 
 3. Überwachen Sie wie zuvor das Ereignisprotokoll und die Berichte, um festzustellen, welche Dateien eine Bezeichnung haben, welche Klassifizierung vergeben wurde und ob Schutz angewendet wurde.
 
@@ -273,25 +264,16 @@ Für die übrigen Dateitypen wendet die Überprüfung schließlich die Standardb
 
 Wenn die Überprüfung eine Bezeichnung mit Schutz anwendet, werden standardmäßig nur Office-Dateitypen geschützt. Sie können dieses Verhalten so ändern, dass zusätzliche Dateitypen geschützt werden. Wenn eine Bezeichnung jedoch allgemeinen Schutz auf Dokumente anwendet, wird die Erweiterung in „.pfile“ geändert. Darüber hinaus ist die Datei schreibgeschützt, bis sie von einem autorisierten Benutzer geöffnet und in ihrem nativen Format gespeichert wird. Die Erweiterung von Text- und Bilddateien kann sich ebenfalls ändern, und diese Dateien können schreibgeschützt werden. 
 
-Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
+Wenn Sie das Standardverhalten der Überprüfung ändern möchten, um z.B. andere Dateitypen generisch zu schützen, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Alternativ können Sie alle Dateitypen schützen, indem Sie den Platzhalter `*` angeben. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
 
 - Der Scanner hat sein eigenes Standardverhalten: Nur Office-Dateiformate werden standardmäßig geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner geschützt.
 
-- Wenn Sie nicht die aktuelle Vorschauversion verwenden, müssen Sie spezifische Erweiterungen für den Scanner angeben. Dabei können Sie `*` nicht als Platzhalter verwenden. Die Vorschauversion des Scanners unterstützt diesen Platzhalter.
 
 ## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
 
 Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den Datenspeichern. In den nachfolgenden Überprüfungen werden dann nur noch neue oder geänderte Dateien untersucht. 
 
-Sie können erzwingen, dass die Überprüfung alle Dateien erneut überprüft, indem Sie den folgenden Befehl ausführen:
-
-- Bei der aktuellen GA-Version der Überprüfung:
-    
-    Führen Sie [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) mit dem auf **Full** festgelegten `-Type`-Parameter aus.
-
-- Bei der Vorschauversion der Überprüfung:
-    
-    Führen Sie [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem `-Reset`-Parameter aus. Die Überprüfung muss für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass der `-Schedule`-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) auf **Manual** festgelegt wird.
+Sie können erzwingen, dass die Überprüfung alle Dateien erneut untersucht, indem Sie den Befehl [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem Parameter `-Reset` ausführen. Die Überprüfung muss für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass der `-Schedule`-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) auf **Manual** festgelegt wird.
 
 Das erneute Überprüfen aller Dateien ist nützlich, wenn Sie möchten, dass die Berichte alle Dateien enthalten. Diese Konfiguration wird in der Regel verwendet, wenn die Überprüfung im Ermittlungsmodus ausgeführt wird. Wenn eine vollständige Überprüfung abgeschlossen ist, ändert sich der Überprüfungstyp automatisch auf „inkrementell“, sodass bei nachfolgenden Überprüfungen nur noch neue oder geänderte Dateien untersucht werden.
 
@@ -384,6 +366,8 @@ Mit anderen Cmdlets für die Überprüfung können Sie das Dienstkonto und die D
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
+- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
@@ -398,14 +382,9 @@ Mit anderen Cmdlets für die Überprüfung können Sie das Dienstkonto und die D
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
+- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
-
-
-Zusätzliche Cmdlets aus der Vorschauversion:
-
-- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
-
-- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) 
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 

@@ -1,20 +1,20 @@
 ---
-title: Microsoft Information Protection-Klasse „FileIOError“
-description: Referenz für die Microsoft Information Protection-Klasse „FileIOError“
+title: Microsoft Information Protection-Klasse „PolicySyncError“
+description: Referenz für die Microsoft Information Protection-Klasse „PolicySyncError“
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 754ecbc296b69b4071bcf50ae01109c2c8e7bd29
+ms.openlocfilehash: 29b107f94303d39a233b798996d1ee9fd28b3b40
 ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445443"
+ms.locfileid: "47446866"
 ---
-# <a name="class-mipfileioerror"></a>mip::FileIOError-Klasse 
-Datei-E/A-Fehler.
+# <a name="class-mippolicysyncerror"></a>mip::PolicySyncError-Klasse 
+Ein fehlgeschlagener Versuch, Richtliniendaten zu synchronisieren.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

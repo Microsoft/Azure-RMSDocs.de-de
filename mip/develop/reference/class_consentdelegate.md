@@ -1,3 +1,18 @@
+---
+title: ConsentDelegate-Klasse
+description: Referenz für die ConsentDelegate-Klasse
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 841049b1e6b369eb2f6a34d9701ed34eca028af6
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446361"
+---
 # <a name="class-consentdelegate"></a>ConsentDelegate-Klasse 
 Delegat für Vorgänge, die eine Zustimmung erfordern.
 Dieser Delegat wird von einer Clientanwendung implementiert, damit dem Benutzer zum richtigen Zeitpunkt eine Benachrichtigung mit einer Zustimmungsanforderung angezeigt wird.

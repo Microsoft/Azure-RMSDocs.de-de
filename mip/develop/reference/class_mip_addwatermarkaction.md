@@ -1,3 +1,18 @@
+---
+title: Microsoft Information Protection-Klasse „AddWatermarkAction“
+description: Referenz für die Microsoft Information Protection-Klasse „AddWatermarkAction“
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446089"
+---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
   

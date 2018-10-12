@@ -1,5 +1,20 @@
+---
+title: Microsoft Information Protection-Klasse „RemoveProtectionAction“
+description: Referenz für die Microsoft Information Protection-Klasse „RemoveProtectionAction“
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: a6f2d0b806491f286c8e80112bb1bd2024ddb3ee
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445576"
+---
 # <a name="class-mipremoveprotectionaction"></a>mip::RemoveProtectionAction-Klasse 
-Eine Aktionsklasse, mit der Schutz aus dem Dokument entfernt wird.
+Eine Aktionsklasse, die angibt, dass der Schutz aus dem Dokument entfernt wird.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

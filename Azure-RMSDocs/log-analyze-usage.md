@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f147ad04ec61e7a5796cbb1f02c7fa33afdeae7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149683"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211325"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts
 
@@ -48,6 +48,7 @@ Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierung
 |Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Clientprotokolldateien|Problembehandlungsprotokolle für den Azure Information Protection-Client, die sich unter **%localappdata%\Microsoft\MSIP** befinden. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
 
+Darüber hinaus werden Informationen aus den Azure Information Protection-Clientnutzungsprotokollen und der Azure Information Protection-Überprüfung gesammelt und zusammengefasst, um im Azure-Portal Berichte zu erstellen. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md).
 
 In den folgenden Abschnitten finden Sie Informationen zur Verwendungsprotokollierung für den Azure Rights Management-Dienst. 
 
@@ -58,8 +59,6 @@ Seit Februar 2016 ist die Azure Rights Management-Verwendungsprotokollierung sta
 > Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
 > 
 > Wenn Sie die Verwendungsprotokollierung für Azure Rights Management vor Februar 2016 verwendet haben, benötigten Sie ein Abonnement für Azure und ausreichend Speicherplatz auf Azure, was nun nicht mehr der Fall ist.
-
-
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Zugreifen auf und Verwenden von Azure Rights Management-Verwendungsprotokollen
 Der Azure Rights Management-Dienst schreibt Protokolle als eine Serie von Blobs in Ihr Azure-Speicherkonto. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-azure-rights-management-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.

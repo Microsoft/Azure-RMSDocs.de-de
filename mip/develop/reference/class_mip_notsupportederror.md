@@ -1,10 +1,25 @@
+---
+title: Microsoft Information Protection-Klasse „NotSupportedError“
+description: Referenz für die Microsoft Information Protection-Klasse „NotSupportedError“
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 6053c29463b34b938f919508cb24f4e03f504c47
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446463"
+---
 # <a name="class-mipnotsupportederror"></a>mip::NotSupportedError-Klasse 
 Der von der Anwendung angeforderte Vorgang wird vom SDK nicht unterstützt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Ruft eine CString-Fehlermeldung ab
+ public char const* what() const  |  Ruft die Fehlermeldung ab
 public std::shared_ptr<Error> Clone() const  |  Klont den Fehler
  public virtual ErrorType GetErrorType() const  |  Ruft den Fehlertyp ab
  public virtual const std::string& GetErrorName() const  |  Ruft den Fehlernamen ab
@@ -14,10 +29,10 @@ public std::shared_ptr<Error> Clone() const  |  Klont den Fehler
 ## <a name="members"></a>Member
   
 ### <a name="what"></a>what
-Ruft eine CString-Fehlermeldung ab
+Ruft die Fehlermeldung ab
 
   
-**Rückgabe**: CString-Fehlermeldung
+**Rückgabe**: Fehlermeldung.
   
 ### <a name="error"></a>Fehler
 Klont den Fehler

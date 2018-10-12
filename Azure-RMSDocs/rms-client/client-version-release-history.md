@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8bd70537bc3057ecb3087e790d529f499d07779d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 12d5674fdebd3c857e7458b84f430cf3ee6755c2
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149649"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403079"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -42,29 +42,40 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-## <a name="versions-later-than-12950"></a>Versionen ab 1.29.5.0
+## <a name="versions-later-than-137190"></a>Versionen ab 1.37.19.0
 
-Wenn Ihre Version des Clients höher als 1.29.5.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.
+Wenn Ihre Clientversion höher als 1.37.19.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.
+
+**Veröffentlicht**: 20.9.2018
+
+**Neue Funktionen:**
+
+- Unterstützung für die [zentrale Berichterstellung](../reports-aip.md) für die auf der Microsoft Ignite angekündigte Azure Information Protection-Analysefunktion
+
+
+## <a name="version-137190"></a>Version 1.37.19.0
+
+**Veröffentlicht**: 17.9.2018
 
 Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 **Neue Features**: 
 
-- Unterstützung für den ISO-Standard für die PDF-Verschlüsselung, damit die von Ihnen geschützten Dokumente ihre PDF-Erweiterung standardmäßig beibehalten und von PDF-Readern geöffnet werden können, die diesen ISO-Standard unterstützen. Derzeit müssen Sie Benutzer anweisen, diese geschützten PDF-Dateien manuell über den Azure Information Protection-Viewer zu öffnen. Damit Benutzern dabei zur Seite zu stehen, wird beim Öffnen dieser geschützten Dateien eine Seite mit Symbolen angezeigt, aus denen Sie ihr Betriebssystem auswählen können. Wenn Sie dieses Verhalten nicht wünschen und stattdessen Parität mit der allgemein verfügbaren Version des Azure Information Protection-Clients benötigen, können Sie eine [erweiterte Clientkonfiguration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfigurieren.
+- Unterstützung des ISO-Standards für die PDF-Verschlüsselung durch Konfiguration einer neuen [erweiterten Clientkonfiguration](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Wenn diese Option konfiguriert wird, behalten PDF-Dokumente, die Sie schützen, ihre Erweiterung bei (anstelle einer Änderung in PPDF) und können von PDF-Readern geöffnet werden, die diesen ISO-Standard unterstützen. Derzeit müssen Sie Benutzer anweisen, diese geschützten PDF-Dateien manuell über den Azure Information Protection-Viewer zu öffnen. Damit Benutzern dabei zur Seite zu stehen, wird beim Öffnen dieser geschützten Dateien eine Seite mit Symbolen angezeigt, aus denen Sie ihr Betriebssystem auswählen können.
 
 - Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
+
+- Bezeichnungen, die Schutz anwenden, werden jetzt in Office 2016-Apps (ab Version 1805, Build 9330.2078) angezeigt, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“) zugewiesen wurde.
 
 - Unterstützung von Bezeichnungen für das Dokumentformat **Strict Open XML** in Word-, Excel- und PowerPoint- Dateien. Weitere Informationen zu den Open XML-Formaten finden Sie im Office-Blogbeitrag [New file format options in the new Office (Neue Dateiformate in der neuen Version von Office)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
 - Unterstützung für Dateien, die von Secure Islands geschützt werden, wenn diese Dateien keine PDF- oder Office-Dokumente sind. Zum Beispiel geschützte Text- und Bilddateien oder Dateien mit der Erweiterung PFILE. Diese Unterstützung ermöglicht neue Szenarios, z.B. dass die Azure Information Protection-Überprüfung diese Dateien auf vertrauliche Informationen prüfen kann und diesen automatisch Bezeichnungen für Azure Information Protection hinzufügt. [Weitere Informationen](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
 
-- Der Link **Senden Sie uns Feedback** im Dialogfeld **Hilfe und Feedback** wird durch **Problem melden** ersetzt. Dies können Sie anpassen. In der Standardeinstellung sendet diese Option eine E-Mail an Microsoft. Sie können diese E-Mail-Adresse ändern, damit eine von Ihnen angegebene HTTP-Zeichenfolge verwendet wird, sobald ein Benutzer diese Option auswählt. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. Verwenden Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link), um diese Adresse zu ändern.
-
 - Neue erweiterte Clienteinstellungen zum Entfernen von Kopf- und Fußzeilen, die von anderen Bezeichnungslösungen auf Dokumente angewendet wurden. [Weitere Informationen](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
 
 - Für die Azure Information Protection-Überprüfung:
 
-    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): einmalig nach dem Upgrade von der aktuellen GA-Version (1.29.5.0) oder früher erforderlich.
+    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Muss nach dem Upgrade von der aktuellen allgemein verfügbaren Version (1.29.5.0) oder früher einmalig ausgeführt werden.
     
     - Das neue Cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
     
@@ -79,6 +90,8 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     - Bei Dokumenten, die in SharePoint-Bibliotheken geschützt werden, wenn der Parameter *DefaultOwner* nicht für das Datenrepository verwendet wird, wird nun der Wert des SharePoint-Editors anstelle des Autorenwerts als Standardwert verwendet.
     
     - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente.
+    
+    - Sie können nun alle Dateitypen mit dem Platzhalter `*` schützen, wenn Sie die Registrierung bearbeiten, wie in der Anleitung [Datei-API-Konfiguration](../develop/file-api-configuration.md) beschrieben.
 
 - Wenn Sie PowerShell oder die Überprüfung zum Klassifizieren oder Schützen verwenden, werden die Metadaten des Office-Dokuments weder entfernt noch verschlüsselt.
 
@@ -93,16 +106,18 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Das Symbol zum Löschen einer Bezeichnung wird in Client-Apps nicht angezeigt (Word, Excel, PowerPoint und Outlook), wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) der Option **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen) konfigurieren.
 
 **Weitere Änderungen**:
-   
+
 - Bei [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
     
     - **OneTime**, **Continuous** und **Never** (Einmalig, Fortlaufend und Nie) sind nicht mehr Werte für den Parameter *Schedule*. Stattdessen gibt es nun die Werte **Manual** (Manuell) und **Always** (Immer).
         
     - Der Parameter *Type* wurde entfernt, d.h. er wurde auch aus der Ausgabe entfernt, wenn Sie [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) ausführen. Standardmäßig werden nach dem ersten Überprüfungszyklus nur neue oder geänderte Dateien untersucht. Wenn Sie zuvor für den *Typ*-Parameter **Vollständig** festgelegt haben, um alle Dateien erneut zu überprüfen, führen Sie nun [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem *Zurücksetzen*-Parameter aus. Die Überprüfung muss auch für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass für den *Zeitplan*-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) die Option **Manuell** festgelegt wird.
     
-- Die Standardausschlussliste des Scanners umfasst nun MSG-, RAR-, RTF- und ZIP-Dateien. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner)
+- Die Standardausschlussliste des Clients und der Überprüfung umfasst nun MSG-, RAR- und ZIP-Dateien. Die Überprüfung schließt auch RTF-Dateien aus. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 - Die Richtlinienversion wurde in 1.4 geändert. Das Identifizieren der Versionsnummer ist zum [Konfigurieren nicht verbundener Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) erforderlich.
+
+- Der Link **Feedback senden** im Dialogfeld **Hilfe und Feedback** wurde entfernt. Er wurde vorübergehend durch **Problem melden** ersetzt, doch dieser Link wird nur noch in Vorschauversionen angezeigt. Standardmäßig sendet diese Option eine E-Mail an Microsoft, aber Sie können die E-Mail-Adresse in eine beliebige HTTP-Zeichenfolge ändern. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. Verwenden Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link), um diese Adresse zu ändern.
 
 ## <a name="version-12950"></a>Version 1.29.5.0 
 
