@@ -4,18 +4,18 @@ description: Informationen für Benutzer, die den Azure Information Protection-C
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5a2b01af0e246e732d087a344ecf037c13a47546
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c9f8408c4417b1b5131a51276a829a16687f1870
+ms.sourcegitcommit: ccc99efd2402a8b93912c8df4df330fa1311aacb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151577"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48812417"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Benutzerhandbuch: Reiner Schutzmodus für den Azure Information Protection-Client
 
@@ -34,7 +34,7 @@ Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
 - Ihre Organisation besitzt ein Abonnement für Azure Information Protection, aber nur für einen Teil der Benutzer:
     
-    - Bei einer solchen Kombination aus Abonnements liegt es in der Verantwortung des Administrators, sicherzustellen, dass nur diese Teilmenge der Benutzer die Klassifizierungs- und Bezeichnungsfeatures verwenden kann. Die anderen Benutzer sollten den Azure Information Protection-Client im reinen Schutzmodus ausführen. 
+    - Bei einer solchen Kombination aus Abonnements liegt es in der Verantwortung des Administrators sicherzustellen, dass nur diese Teilmenge der Benutzer die Klassifizierungs- und Bezeichnungsfeatures verwenden kann. Die anderen Benutzer sollten den Azure Information Protection-Client im reinen Schutzmodus ausführen. 
 
 - Ihre Organisation verfügt über ein Abonnement für Azure Information Protection, aber Ihre Bezeichner wurden noch nicht für Sie konfiguriert.
     
