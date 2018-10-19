@@ -8,12 +8,12 @@ ms.date: 05/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: 82a3f71a4c1bb99fc4d0af74f49dd43a706cb132
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: af3958d7c3bafc37772944e2cb39a9b3244eccc2
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147694"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169973"
 ---
 # <a name="step-1-activate-protection"></a>Schritt 1: Aktivieren des Schutzes
  
@@ -41,7 +41,7 @@ Es gibt verschiedene Möglichkeiten zur Aktivierung des Schutzes. Sie können so
     
     Klicken Sie erneut auf **Erstellen**.
 
-4. Beachten Sie die Informationen auf der Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Sie können später zu dieser Seite zurückkehren. Klicken Sie für dieses Tutorial auf **VERWALTEN** > **Schutzaktivierung**. 
+4. Beachten Sie die Informationen auf der Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Sie können später zu dieser Seite zurückkehren. Klicken Sie für dieses Tutorial auf **Verwalten** > **Schutzaktivierung**. 
 
 5. Dann sehen Sie, ob der Schutz für Ihren Mandanten aktiviert ist. 
     
