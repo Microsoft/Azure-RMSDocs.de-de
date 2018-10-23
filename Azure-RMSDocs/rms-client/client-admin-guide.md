@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c415868045e2064696181217f66262e90887e25a
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: b5eccdd62d828bc5104815746458d4c7036594fd
+ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403011"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100634"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -198,7 +198,7 @@ Im Artikel [Verlauf der Releases und Supportrichtlinie](client-version-release-h
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Upgrade der Azure Information Protection-Überprüfung
 
-Für ein Upgrade der Azure Information Protection-Überprüfung installieren Sie die aktuelle Version des Azure Information Protection-Clients. Führen Sie anschließend eine der folgenden einmaligen Aktionen aus:
+Für ein Upgrade der Azure Information Protection-Überprüfung installieren Sie die aktuelle Version des Azure Information Protection-Clients. Führen Sie anschließend eine der folgenden einmaligen Aktionen aus. Anschließend ist es nicht erforderlich, bereits überprüfte Dateien erneut zu überprüfen.
 
 Bei der aktuellen GA-Version: 
 
