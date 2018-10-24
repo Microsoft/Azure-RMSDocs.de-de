@@ -4,18 +4,18 @@ description: Anweisungen zum Anzeigen und Verwenden eines geschützten Dokuments
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 358463bbfd7cd89ccd11c815e73516f688086817
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3b4dfc62950166ca7221002169005fa3693a5998
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150754"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862090"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden von Dateien, die durch Rights Management geschützt wurden
 
@@ -63,11 +63,13 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
     
     Ausführlichere Informationen zu den Berechtigungen und den jeweils enthaltenen Nutzungsrechten, finden Sie unter [In Berechtigungsstufen enthaltene Rechte](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. Klicken Sie zum Bearbeiten der Datei auf **Speichern unter**, wodurch Sie die Datei ohne die Bezeichnung und ohne Schutz mit der ursprünglichen Dateierweiterung speichern können. Sie können die Datei dann mithilfe der Anwendung bearbeiten, die diesem Dateityp zugeordnet ist. 
+4. Klicken Sie zum Bearbeiten der Datei auf **Speichern unter**, wodurch Sie die geschützte Datei mit der ursprünglichen Dateierweiterung speichern können. Sie können die Datei dann mithilfe der Anwendung bearbeiten, die diesem Dateityp zugeordnet ist. Zu diesem Zeitpunkt werden die Bezeichnung und der Schutz der Datei entfernt.
     
-    Wenn Sie die Datei nicht weiter bearbeiten möchten, klicken Sie im Datei-Explorer mit der rechten Maustaste, um die Bezeichnung erneut anzuwenden, die wiederum Schutz aktiviert.
+    Da der Viewer für geschützte Dateien vorgesehen ist, beachten Sie, dass die Schaltfläche **Speichern unter** nur für geschützte Dateien aktiviert ist.
+    
+5. Wenn Sie die Datei nicht weiter bearbeiten möchten, klicken Sie im Datei-Explorer mit der rechten Maustaste, um die Bezeichnung erneut anzuwenden. Durch diesen Vorgang wird der Schutz erneut angewendet.
 
-5. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
+6. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 
 > [!TIP]
 > Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Klicken Sie dazu in einer Office-App auf **Schützen** > **Hilfe und Feedback** > **Einstellungen zurücksetzen**. 

@@ -4,18 +4,18 @@ description: Informationen zum Planen und Verwalten Ihres Azure Information Prot
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 72b2fe408f77742b8ca5f1ba8727e3a065818322
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42451d8b50b0ad1edb75d767e622e697b12acf90
+ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151145"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48907160"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -150,11 +150,26 @@ Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von H
 
 Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind „verschlüsseln“, „entschlüsseln“, „umschließen“, „entpacken“, „signieren“ und „überprüfen“. Sie können die zulässigen Vorgänge eines Schlüssels überprüfen, indem Sie [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) verwenden und die *key-ops*-Werte, die unter **Schlüssel** zurückgegeben werden, überprüfen. Fügen Sie ggf. zulässige Vorgänge mithilfe der Parameter [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) und *KeyOps* hinzu.
 
-Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie müssen Azure Information Protection konfigurieren, indem Sie die Key Vault-URL bestimmen, um den Schlüssel verwenden zu können.
+Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Um den Schlüssel verwenden zu können, müssen Sie Azure Information Protection konfigurieren, indem Sie die Schlüsseltresor-URL angeben.
 
-Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihres Unternehmens autorisiert werden. Hierzu verwendet der Azure Key Vault-Administrator das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) und erteilt dem Azure RMS-Dienstprinzipal, die Berechtigung, indem die GUID 00000012-0000-0000-c000-000000000000 verwendet wird. Beispiel:
+Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihres Unternehmens autorisiert werden. Hierzu kann der Azure Key Vault-Administrator das Azure-Portal oder Azure PowerShell benutzen:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+Konfiguration mithilfe des Azure-Portals:
+
+1. Navigieren Sie zu **Key vaults** > **\<*your key vault name*>** > **Access policies** > **Add new** (Schlüsseltresore)(Ihr Schlüsseltresorname)(Zugriffsrichtlinien)(Neu hinzufügen).
+
+2. Wählen Sie von dem Blatt **Add access policy** (Zugriffsrichtlinie hinzufügen) die Option **Azure Information Protection BYOK** aus dem Listenfeld **Configure from template (optional)** (Aus Vorlage konfigurieren (optional)) aus, und klicken Sie auf **OK**.
+    
+    Die ausgewählte Vorlage weist die folgende Konfiguration auf:
+    
+    - Für **Select principal** (Prinzipal auswählen) ist automatisch **Microsoft Rights Management Services** zugewiesen.
+    - Für die Schlüsselberechtigungen sind automatisch **Get**, **Decrypt** und **Sign** ausgewählt. 
+
+Konfiguration mithilfe von PowerShell:
+
+- Führen Sie das Key Vault-PowerShell-Cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) aus, und erteilen Sie dem Azure RMS-Dienstprinzipal Berechtigungen mithilfe der GUID **00000012-0000-0000-c000-000000000000**. Beispiel:
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 Sie können Azure Information Protection jetzt so konfigurieren, dass dieser Schlüssel als Azure Information Protection-Mandantenschlüssel Ihrer Organisation verwendet wird. Stellen Sie unter Verwendung des Azure RMS-Cmdlets zunächst eine Verbindung mit dem Azure Rights Management-Dienst her, und melden Sie sich an:
 

@@ -4,18 +4,18 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9def0ae81a3887f9f6e1c99f7e1f02c54581fdb
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
+ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168759"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072475"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -97,7 +97,9 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
     
     - Beachten Sie zum Schutz anderer Dateitypen und zum Öffnen dieser Dateitypen im Azure Information Protection-Viewer: Die maximale Dateigröße ist nur durch den verfügbaren Speicherplatz begrenzt.
     
-    - Beachten Sie beim Aufheben des Dateischutzes mit dem [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile)-Cmdlet folgendes: Die maximale Dateigröße für PST-Dateien beträgt 5 GB. Die Dateigröße für alle anderen Dateitypen ist nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt.
+    - Beachten Sie beim Aufheben des Dateischutzes mit dem [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile)-Cmdlet folgendes: Die maximale Dateigröße für PST-Dateien beträgt 5 GB. Die Dateigröße für andere Dateitypen ist nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt.
+    
+    Tipp: Wenn Sie geschützte Elemente in großen .pst-Dateien suchen oder wiederherstellen müssen, finden Sie hierzu weitere Informationen unter [Guidance for using Unprotect-RMSFile for eDiscovery (Anleitung für die Verwendung von Unprotect-RMSFile für eDiscovery)](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 
@@ -214,6 +216,22 @@ Mithilfe der folgenden PowerShell-Cmdlets können Sie die enthaltenen oder ausge
 > Überwachen Sie die Überprüfung sorgfältig,wenn Sie RTF-Dateien in der Überprüfung miteinbeziehen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten. 
 
 Durch die Überprüfung werden standardmäßig nur Office-Dateitypen geschützt. Um das Verhalten bei der Überprüfung zu ändern, bearbeiten Sie die Registrierung und geben Sie weitere Dateitypen an, die Sie schützen möchten. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md).
+
+#### <a name="to-scan-zip-files"></a>Überprüfen von ZIP-Dateien
+
+Der Überprüfung kann ZIP-Dateien überprüfen, wenn Sie diesen Anweisungen folgen:
+
+1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) für den Windows Server-Computer, auf dem die Überprüfung ausgeführt wird.
+
+2. Konfigurieren Sie die Überprüfung, um zu überprüfende ZIP-Dateien einzuschließen, wie im vorherigen Abschnitt beschrieben.
+
+3. Wenn ZIP-Dateien klassifiziert und geschützt statt auf sensible Informationen überprüft werden sollen, fügen Sie einen Registrierungseintrag für Dateien mit dieser Dateinamenerweiterung hinzu, um generischen Schutz (pfile) zu erhalten, wie im vorherigen Abschnitt beschrieben.
+
+Beispielszenario nach dem Ausführen dieser Schritte: 
+
+Eine Datei mit dem Namen **accounts.zip** enthält Excel-Kalkulationstabellen mit Kreditkartennummern. Ihre Azure Information Protection-Richtlinie verfügt über eine Bezeichnung mit dem Namen **Confidential \ Finance** (Vertraulich \ Finanzen), die zum Erkennen von Kreditkartennummern konfiguriert ist und verwendet automatisch die Bezeichnung geschützt, wodurch der Zugriff auf die Finanzgruppe einschränkt wird. 
+
+Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als **Confidential \ Finance** (Vertraulich \ Finanzen), wendet für die Datei einen generischen Schutz an, damit sie nur von Mitgliedern der Finanzgruppen entzippt werden kann, und benennt die Datei in **accounts.zip.pfile** um.
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Dateien, die standardmäßig nicht geschützt werden können
 

@@ -4,17 +4,17 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/28/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 64063af186f01a5829b7aa668260928e3b13656d
-ms.sourcegitcommit: 304702a3f2f2ab2b32493c4aedeb5ee8424b925c
+ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
+ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47415008"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100637"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -93,7 +93,7 @@ Wenn Ihr Mandant Vertraulichkeitsbezeichnungen im Security & Compliance Center u
 
 2. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
 
-Erfolgreich migrierte Bezeichnungen können nun von [Clients verwendet werden, die einheitliche Bezeichnungen](#clients-that-support-unified-labeling) unterstützen, wenn diese Bezeichnungen im Security & Compliance Center veröffentlicht werden.
+Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Kunden, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen im Security & Compliance Center veröffentlichen.
 
 
 ### <a name="clients-that-support-unified-labeling"></a>Clients, die einheitliche Bezeichnungen unterstützen
@@ -107,4 +107,4 @@ Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Konfigurieren migrierter Bezeichnungen im Office 365 Security & Compliance Center finden Sie im Blogbeitrag [Ankündigung der Verfügbarkeit einheitlicher Bezeichnungsverwaltung im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (in englischer Sprache).
+Weitere Informationen zum Konfigurieren und Veröffentlichen migrierter Bezeichnungen im Office 365 Security & Compliance Center finden Sie im Blogbeitrag [Announcing the availability of unified labeling management in the Security & Compliance Center (Ankündigung der Verfügbarkeit einheitlicher Bezeichnungsverwaltung im Security & Compliance Center)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (in englischer Sprache).

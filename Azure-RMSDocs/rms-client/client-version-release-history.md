@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12d5674fdebd3c857e7458b84f430cf3ee6755c2
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403079"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862174"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -44,7 +44,7 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 
 ## <a name="versions-later-than-137190"></a>Versionen ab 1.37.19.0
 
-Wenn Ihre Clientversion höher als 1.37.19.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.
+Wenn Ihre Clientversion höher als 1 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.
 
 **Veröffentlicht**: 20.9.2018
 
@@ -52,6 +52,17 @@ Wenn Ihre Clientversion höher als 1.37.19.0 ist, handelt es sich um eine Vorsch
 
 - Unterstützung für die [zentrale Berichterstellung](../reports-aip.md) für die auf der Microsoft Ignite angekündigte Azure Information Protection-Analysefunktion
 
+**Zusätzliche Informationen:**
+
+Damit Sie in dieser Vorschauversion die Überprüfung verwenden können, müssen Sie die folgenden Schritte befolgen:
+
+1. Installieren Sie die aktuelle GA-Version (1.37.19.0) des Clients.
+2. Installieren und konfigurieren Sie die Überprüfung.
+3. Starten Sie die Überprüfung.
+4. Führen Sie ein Upgrade für den Azure Information Protection-Client auf die Vorschauversion aus.
+5. Starten Sie die Überprüfung.
+
+Sie benötigen Anweisungen zum Installieren, Konfigurieren und Starten der Überprüfung. Diese finden Sie unter [Bereitstellen der Azure Rights Management-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md).
 
 ## <a name="version-137190"></a>Version 1.37.19.0
 
