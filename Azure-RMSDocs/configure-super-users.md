@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
-ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
+ms.openlocfilehash: c4b4df01be10ce033dd7369e71420e949750e667
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101833"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169906"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung
 
@@ -96,5 +96,5 @@ Wenn Sie Office 365 eDiscovery nicht verwenden können, verfügen Sie möglicher
 
 4. Führen Sie Unprotect-RMSFile für diese zweite PST-Datei zum Entschlüsseln der Inhalte dieser deutlich kleineren Datei aus. Importieren Sie aus der Ausgabe die nun entschlüsselte PST-Datei in Ihr Erkennungstool.
 
-Ausführlichere Informationen und Anleitungen zur Durchführung von eDiscovery über Postfächer und PST-Dateien hinweg finden Sie im folgenden Blogbeitrag: [Azure-Informationsprozess und eDiscovery-Prozesse](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
+Ausführlichere Informationen und Anleitungen zur Durchführung von eDiscovery für Postfächer und PST-Dateien finden Sie im folgenden Blogbeitrag zu [Azure Information Protection und eDiscovery-Prozesse](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 
