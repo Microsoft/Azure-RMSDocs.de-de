@@ -4,16 +4,16 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2b7b94c7e53cd59a72602a2b3076eaefbc49e2ef
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
+ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148867"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358974"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -32,6 +32,12 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
     - PowerPoint: Wasserzeichen werden als Hintergrundbild auf den Folienmaster angewendet. Stellen Sie sicher, dass auf der Registerkarte **Ansicht** im **Folienmaster** die Option **Hintergrundbilder ausblenden** aktiviert ist.
     
     - Es werden mehrere Zeilen Text unterstützt.
+
+- Maximale Zeichenfolgenlänge:
+    
+    - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Wenn Sie in Excel eine lange Zeichenfolge für Kopf- oder Fußzeilen eingeben, kann es sein, dass der Text nach 255 Zeichen oder weniger abgeschnitten wird.
+    
+    - Die maximale Zeichenfolgenlänge für Wasserzeichen beträgt 255 Zeichen.
 
 - Sie können einfach eine Textzeichenfolge angeben oder [Variablen](#using-variables-in-the-text-string) verwenden, um die Textzeichenfolge dynamisch zu erstellen, wenn die Kopfzeile, die Fußzeile oder das Wasserzeichen angewendet wird.
 
@@ -59,7 +65,7 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Navigieren Sie über die Menüoption **KLASSIFIZIERUNGEN** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection: Bezeichnungen), und wählen Sie dort die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie ändern möchten.
+2. Navigieren Sie über die Menüoption **Klassifizierungen** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection - Bezeichnungen), und wählen Sie dort die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie ändern möchten.
 
 3. Konfigurieren Sie auf dem Blatt **Bezeichnung** im Abschnitt **Optische Kennzeichnung festlegen (z. B. Kopf- oder Fußzeile)** die Einstellungen für die gewünschten optischen Kennzeichnungen, und klicken Sie dann auf **Speichern**:
     

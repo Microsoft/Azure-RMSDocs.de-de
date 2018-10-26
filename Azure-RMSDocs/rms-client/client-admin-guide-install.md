@@ -4,18 +4,18 @@ description: Eine Anleitung und Informationen für Administratoren zum Bereitste
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d8818ff71acbd338ebb4959f9eb3ef617655b25d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149275"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49367004"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -57,9 +57,9 @@ ms.locfileid: "44149275"
     
     Die Installation des Clients überprüft nicht auf diese Voraussetzung, sie ist jedoch für den Azure Information Protection-Client notwendig, um PDF-Dateien zu klassifizieren und zu schützen.
 
-- Deaktivieren Sie die Add-Ins **Microsoft Azure Information Protection** nicht für Office-Anwendungen
+- Konfiguration der Gruppenrichtlinie für die **Liste der verwalteten Add-Ins**
     
-    Wenn Sie die Einstellung **Liste der verwalteten Add-Ins** der Gruppenrichtlinie konfiguriert haben, fügen Sie das Add-In von Microsoft Azure Information Protection für Office-Anwendungen durch Angabe der folgenden programmgesteuerten Bezeichner (ProgID) für Azure Information Protection hinzu, und legen Sie die Option auf **1: Das Add-In ist immer aktiviert** fest.
+    Konfigurieren Sie für Office 2013 und spätere Versionen die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins**, und fügen Sie das Add-In **Microsoft Azure Information Protection** für Office-Anwendungen hinzu. Geben Sie die folgenden programmgesteuerten Bezeichner (ProgID) für Azure Information Protection an, und legen Sie die Option auf **1: The add-in is always enabled** (1: Das Add-In ist immer aktiviert) fest.
     
     - Für Outlook: `MSIP.OutlookAddin`
     
@@ -69,9 +69,9 @@ ms.locfileid: "44149275"
     
     - Für PowerPoint: `MSIP.PowerPointAddin`
     
-    Auch wenn Sie die Gruppenrichtlinieneinstellung **Liste der verwalteten Add-Ins** noch nicht konfiguriert haben, müssen Sie diese konfigurieren, wenn Sie Berichte erhalten, dass das Add-In von Microsoft Azure Information Protection deaktiviert wird. Wenn dieses Add-In deaktiviert ist, wird die Leiste von Azure Information Protection Benutzern in der Officeanwendung nicht angezeigt.
+    Wenn Sie diese Einstellung nicht konfigurieren, wird das Microsoft Azure Information Protection-Add-In möglicherweise deaktiviert, und Benutzer können ihre Dokumente und E-Mails in ihren Office-Anwendungen nicht kennzeichnen.
     
-    Weitere Informationen zur Einstellung der Gruppenrichtlinie finden Sie unter [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs (Es wurden keine Add-Ins geladen aufgrund von Gruppenrichtlinieneinstellungen für die Programme Office 2013 und Office 2016)](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off).
+    Weitere Informationen zum Konfigurieren dieser Gruppenrichtlinieneinstellung finden Sie in der Office-Dokumentation unter [Kontrolle des Systemadministrators über Add-Ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins).
 
 > [!IMPORTANT]
 > Für die Installation des Azure Information Protection-Clients sind lokale Administratorrechte erforderlich.

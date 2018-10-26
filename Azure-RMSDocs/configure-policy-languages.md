@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 01ea3e3e1838bf5a6eb16db579e3a7a60a94b430
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: c118abdf0f0b659b9ae330f44617901f8d11c300
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803175"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170263"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
@@ -43,7 +43,7 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Navigieren Sie über die Menüoption **VERWALTEN** > **Sprachen** zum Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen), und klicken Sie auf **Add a new language for translation** (Neue Sprache für Übersetzung hinzufügen). Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
+2. Navigieren Sie über die Menüoption **Verwalten** > **Sprachen** zum Blatt **Azure Information Protection - Languages** (Azure Information Protection - Sprachen), und klicken Sie auf **Add a new language for translation** (Neue Sprache für Übersetzung hinzufügen). Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
 
 3. Ihre ausgewählten Sprachen werden nun auf dem Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) angezeigt:
     

@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: cf951bba3cc74a82e31841986dde9e75ec34a630
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
+ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862123"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324885"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -90,7 +90,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
     
-2. Navigieren Sie zu den Menüoptionen **VERWALTEN**, und wählen Sie **Analyse konfigurieren (Vorschau)** aus.
+2. Navigieren Sie zu den Menüoptionen **Verwalten**, und wählen Sie **Analyse konfigurieren (Vorschau)** aus.
 
 3. Auf dem Blatt **Azure Information Protection-Protokollanalyse** sehen Sie eine Liste aller Log Analytics-Arbeitsbereiche, die Ihrem Mandanten gehören. Führen Sie eines der folgenden Verfahren aus:
     
@@ -104,11 +104,11 @@ Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 
 ## <a name="how-to-view-the-reports"></a>Anzeigen von Berichten
 
-Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **DASHBOARDS (VORSCHAU)**, und wählen Sie eine der folgenden Optionen aus:
+Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
 
-- **Nutzungsbericht**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden. 
+- **Nutzungsbericht (Vorschauversion)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden. 
 
-- **Datenermittlung**: Dieser Bericht enthält beim Überprüfen gefundene Informationen zu Dateien.
+- **Datenermittlung (Vorschauversion)**: Dieser Bericht enthält beim Überprüfen gefundene Informationen zu Dateien.
 
 ## <a name="how-to-modify-the-reports"></a>Ändern von Berichten
 
@@ -116,6 +116,8 @@ Wählen Sie im Dashboard das Abfragesymbol aus, um das Blatt **Protokollsuche** 
 
 ![Log Analytics-Symbol zum Anpassen von Azure Information Protection-Berichten](./media/log-analytics-icon.png)
 
+
+Die protokollierten Daten für Azure Information Protection werden in folgender Tabelle gespeichert: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie die Informationen in den Berichten überprüft haben, haben Sie die Möglichkeit, Änderungen an Ihrer Azure Information Protection-Richtlinie vorzunehmen. Eine Anleitung dazu finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
