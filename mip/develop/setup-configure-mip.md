@@ -6,32 +6,26 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c889c736b6e67ef3c581ee1acaa3c04138773d20
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
+ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862140"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "49476203"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration 
 
 Der Schnellstart und die Tutorialartikel drehen sich um das Erstellen von Anwendungen, die die MIP SDK-Bibliotheken und -APIs verwenden. Dieser Artikel zeigt Ihnen, wie Sie Ihr Office 365-Abonnement und Ihre Clientarbeitsstation einrichten und konfigurieren, um sich auf die Verwendung des SDK vorzubereiten.
 
+Das MIP SDK wird auf den folgenden Plattformen unterstützt:  
+
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+
 Lesen Sie unbedingt die folgenden Themen, bevor Sie beginnen:
 
-- [Was ist Office 365 Security & Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Wie funktioniert der Schutz in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
-
-Das MIP SDK wird auf den folgenden Plattformen unterstützt:
-
-| Betriebssystem | Versionen |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 mit Devtoolset-7 |
-| Debian  | 9 |
-| macOS   | High Sierra oder höher |
-| Windows | Alle unterstützten Versionen, 32-Bit und 64-Bit |
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Registrieren für ein Office 365-Abonnement
 
