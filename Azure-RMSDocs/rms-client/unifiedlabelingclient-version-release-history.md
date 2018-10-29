@@ -4,17 +4,17 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f05c1e96222eb70a7257123301d14ef7d885564d
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
+ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382594"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951838"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Der Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release
 
@@ -50,6 +50,8 @@ Die Vorschauversion des Azure Information Protection-Clients für einheitliche B
 - Aufforderungen zur Eingabe einer Begründung, wenn Benutzer die Vertraulichkeitsstufe herabsetzen
 
 - Die Dialogfelder „Hilfe“ und „Feedback“, die Einstellungen zum Zurücksetzen und Exportprotokolle umfassen
+
+- Richtlinienaktualisierung alle 4 Stunden über das Security & Compliance Center über die Office-App
 
 Die folgenden Funktionen können in dieser Vorschauversion nicht verwendet werden:
 
