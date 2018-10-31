@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef9a140c351ae2500da320733662025ab735fef
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 01c2e8d4dd476e0910a75fd5949362225743f322
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808987"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651959"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -27,7 +27,7 @@ Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Microsoft Azure Inf
 |--------|--------------|
 |AADRM|Der Name des PowerShell-Moduls für den Azure Rights Management-Dienst, der aus der inoffiziellen Abkürzung für Azure Rights Management abgeleitet wurde, als er noch den Namen (Windows) Azure Active Directory Rights Management hatte.|
 |Aktivieren|Aktivieren des Azure Rights Management-Diensts, damit eine Organisation ihre Dokumente und E-Mails schützen kann. Dieser Vorgang aktiviert außerdem die IRM-Features in Exchange Online und SharePoint Online.|
-|Active Directory-Rechteverwaltungsdienste|Häufig als *AD RMS*abgekürzt.<br /><br />Eine Windows Server-Rolle, die Rights Management-Schutz mithilfe von Verschlüsselung und Richtlinien bereitstellt, die das Schützen von Dokumenten, Dateien und E-Mails unterstützen.|
+|Active Directory-Rechteverwaltungsdienste|Häufig als *AD RMS*abgekürzt.<br /><br />Eine Windows Server-Rolle, die Rights Management-Schutz mithilfe von Verschlüsselung und Richtlinien zum Schutz von Dokumenten, Dateien und E-Mails bereitstellt.|
 |AD RMS|Siehe *Active Directory Rights Management Services*.|
 AzureInformationProtection|Der Name des PowerShell-Moduls für den Azure Information Protection-Client.
 |Azure Information Protection|Ein cloudbasierter Dienst, der Bezeichnungen zum Klassifizieren und Schützen von Dokumenten und E-Mails verwendet. Azure Rights Management stellt Schutz mithilfe von Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien bereit.|

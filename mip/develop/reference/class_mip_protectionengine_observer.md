@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5c5b5e807a80c8db3cbdb69ea5d09da1e79aec6e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.openlocfilehash: 9999b450d614b4465f151f0b2df80892a83bc143
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446582"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651344"
 ---
 # <a name="class-mipprotectionengineobserver"></a>mip::ProtectionEngine::Observer-Klasse 
 Schnittstelle, die Benachrichtigungen im Zusammenhang mit [ProtectionEngine](class_mip_protectionengine.md) empfängt
@@ -24,7 +24,7 @@ public virtual void OnGetTemplatesSuccess(const std::shared_ptr<std::vector<std:
 public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
 public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr<std::vector<std::string>>& rights, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
 public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
-public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& lableIds, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn Bezeichnungs-IDs erfolgreich abgerufen wurden.
+public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& labelIds, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn Bezeichnungs-IDs erfolgreich abgerufen wurden.
 public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn Bezeichnungs-IDs für den Benutzer abgerufen werden
   
 ## <a name="members"></a>Member
@@ -81,7 +81,7 @@ Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder �
 Wird aufgerufen, wenn Bezeichnungs-IDs erfolgreich abgerufen wurden.
 
 Parameter:  
-* **lableIds**: ein Verweis auf die Liste der abgerufenen Bezeichnungs-IDs 
+* **labelIds**: ein Verweis auf die Liste der abgerufenen Bezeichnungs-IDs 
 
 
 * **context**: derselbe Kontext, der an [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync) übergeben wurde
