@@ -4,17 +4,17 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100637"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382611"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -26,6 +26,15 @@ ms.locfileid: "49100637"
 Migrieren Sie Ihre Bezeichnungen, um Sie im Office 365 Security & Compliance Center zu verwenden. Dort können sie veröffentlicht und dann von [Clients, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), heruntergeladen werden. Der Azure Information Protection-Client lädt die Bezeichnungen mit ihrer Azure Information Protection-Richtlinie aus dem Azure-Portal herunter. 
 
 Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie diese im Azure-Portal oder im Office 365 Security & Compliance Center ändern. Die jeweiligen Clients laden dann ebendiese Änderungen herunter.
+
+### <a name="important-information-about-administrative-roles"></a>Wichtige Informationen zu Administratorrollen
+
+Die [Azure AD-Rollen](/active-directory/users-groups-roles/directory-assign-admin-roles) **Sicherheitsadministrator** und **Information Protection-Administrator** werden von der Plattform für einheitliche Bezeichnungen nicht unterstützt. Wenn diese Administratorrollen in Ihrer Organisation verwendet werden, fügen Sie vor der Migration Ihrer Bezeichnungen die Benutzer, die diese Rollen haben, dem **Complianceadministrator** oder den Rollengruppen für die **Organisationsverwaltung** für das Office 365 Security & Compliance Center hinzu. Alternativ können Sie für diese Benutzer eine neue Rollengruppe erstellen und dieser Gruppe entweder Rollen für die **Aufbewahrungsverwaltung** oder die **Organisationskonfiguration** hinzufügen. Anleitungen finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+
+Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen den Zugriff auf das Security & Compliance Center gewähren, können sie nach der Migration Ihrer Bezeichnungen nicht mehr auf die Bezeichnungen und Richtlinien im Azure-Portal zugreifen.
+
+Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Bezeichnungen weiterhin Bezeichnungen und Richtlinien sowohl im Azure-Portal als auch im Security & Compliance Center verwalten.
+
 
 ## <a name="considerations-for-unified-labels"></a>Überlegungen zu einheitlichen Bezeichnungen
 
@@ -89,6 +98,8 @@ Azure Information Protection-Clients können diese Bezeichnungseinstellungen pro
 
 Wenn Ihr Mandant Vertraulichkeitsbezeichnungen im Security & Compliance Center unterstützt, verwenden Sie die folgenden Anweisungen zum Migrieren Ihrer Mandanten und Azure Information Protection-Bezeichnungen.
 
+Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
+
 1. Öffnen Sie ein neues Browserfenster, und melden Sie sich über diesen Link im Azure-Portal an: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
 2. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
@@ -100,6 +111,8 @@ Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Kunden, die
 
 Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
+- [Azure Information Protection-Client für einheitliche Bezeichnungen](./rms-client/unifiedlabelingclient-version-release-history.md) (Vorschau)
+
 - Apps aus dem Office Insider-Programm. Weitere Informationen finden Sie in der Office-Dokumentation im Abschnitt [Wo ist das Feature heute verfügbar?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable).
     
 - Clients von Softwareherstellern und Entwicklern, die das [Microsoft Information Protection SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) verwenden.
@@ -107,4 +120,6 @@ Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Konfigurieren und Veröffentlichen migrierter Bezeichnungen im Office 365 Security & Compliance Center finden Sie im Blogbeitrag [Announcing the availability of unified labeling management in the Security & Compliance Center (Ankündigung der Verfügbarkeit einheitlicher Bezeichnungsverwaltung im Security & Compliance Center)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (in englischer Sprache).
+Weitere Informationen zu Ihren migrierten Bezeichnungen, die nun im Office 365 Security & Compliance Center konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeitsbezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
+
+Den Blogbeitrag mit der Ankündigung finden Sie hier: [Bekanntgabe der Verfügbarkeit der Verwaltung einheitlicher Bezeichnungen im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

@@ -4,18 +4,18 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 10/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b17e0f850fbd319011e0a50cccc2b661f773adc8
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 22df24a7af17dd87dd6f3947e39ea72d7b7b1372
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866168"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169939"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -83,7 +83,7 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > 
 > - Sie können weder die standardmäßigen noch die benutzerdefinierten Schutzvorlagen verwenden, die Sie im Azure-Portal verwalten. 
 > 
-> - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Dateien mit der Erweiterung „PDF“ werden unterstützt und können nach dem Herunterladen von einer PDF-Anwendung geöffnet werden, die Rights Management nativ unterstützt. Der Azure Information Protection-Client für Windows umfasst beispielsweise einen Viewer für diese geschützten PDF-Dateien. Alternative PDF-Viewer sind in der [Tabelle der RMS-aktivierten Anwendungen](./requirements-applications.md#rms-enlightened-applications) aufgeführt.
+> - Dateien mit der Dateinamenerweiterung PPDF für geschützte PDF-Dateien werden nicht unterstützt. Weitere Informationen zum Anzeigen geschützter PDF-Dokumente finden Sie unter [Reader für geschützte PDF-Dokumente für Microsoft Azure Information Protection](./rms-client/protected-pdf-readers.md).
 > 
 > - Die gleichzeitige gemeinsame Bearbeitung eines Dokuments durch mehrere Personen wird nicht unterstützt. Um ein Dokument in einer durch IRM geschützten Bibliothek zu bearbeiten, müssen Sie es zuerst auschecken und herunterladen und können es dann in Ihrer Office-Anwendung bearbeiten. Daher kann nur jeweils eine Person ein Dokument bearbeiten.
 
