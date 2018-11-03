@@ -4,18 +4,18 @@ description: Informationen zu RMS for Individuals, einem kostenlosen Self-Servic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 321464e50a517c17518e35a715e154d0c7c8b07d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 40cc70864d68b4bdcc1081f908539663ba8366a8
+ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146674"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915562"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "44146674"
 
 RMS for Individuals ist ein kostenloses Self-Service-Abonnement für Benutzer, die durch Azure Information Protection geschützte Dateien öffnen müssen. Wenn diese Benutzer nicht von Azure Active Directory authentifiziert werden können, kann dieser kostenlose Anmeldedienst ein Konto für einen Benutzer in Azure Active Directory erstellen. Solche Benutzer können sich nun mit ihrer geschäftlichen E-Mail-Adresse authentifizieren und anschließend die geschützten Dateien auf einem Computer oder mobilen Gerät lesen.
 
-RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrierung. Wenn Benutzer mithilfe dieses Abonnements Konten für Ihr Unternehmen erstellt haben, können Sie als Administrator für Ihr Unternehmen den Besitz dieser Konten beanspruchen, und die [Kontrolle über diese Konten übernehmen](/active-directory/domains-admin-takeover#external-admin-takeover). 
+RMS for Individuals verwendet die Azure Active Directory-Self-Service-Registrierung. Wenn Benutzer mithilfe dieses Abonnements Konten für Ihr Unternehmen erstellt haben, können Sie als Administrator für Ihr Unternehmen den Besitz dieser Konten beanspruchen, und die [Kontrolle über diese Konten übernehmen](/azure/active-directory/users-groups-roles/domains-admin-takeover#external-admin-takeover). 
 
 
 > [!NOTE]
@@ -60,5 +60,5 @@ Wenn Sie nach Erstellung des Kontos aufgefordert werden, sich anzumelden, um ges
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-RMS for Individuals ist ein Beispiel für eine Self-Service-Anmeldung, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise finden Sie unter [Was ist die Self-Service-Registrierung für Azure?](/active-directory/active-directory-self-service-signup) in der Dokumentation zu Azure Active Directory.
+RMS for Individuals ist ein Beispiel für eine Self-Service-Anmeldung, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise finden Sie in der Dokumentation zu Azure Active Directory unter [Was ist die Self-Service-Registrierung für Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup).
 

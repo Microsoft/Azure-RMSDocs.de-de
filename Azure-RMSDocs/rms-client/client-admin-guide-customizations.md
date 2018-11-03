@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/02/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7657969916f69424a2823cb8b1dd79f9a50b6011
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: beac842cdb8cfde5b3a209f3e37084828d3df7ba
+ms.sourcegitcommit: d969a82dc801f3d653163de2b18a3a772607b74c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382645"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915579"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -302,13 +302,11 @@ Aufgrund dieser Änderung in der Registrierung werden die folgenden Szenarios un
 
 - Der Azure Information Protection-Viewer kann diese geschützten Dateien öffnen.
 
-- Der Datei-Explorer und PowerShell können den Schutz dieser Dateien aufheben oder erneut mit Azure Information Protection schützen.
-
-- Datei-Explorer, PowerShell und die Azure Information Protection-Überprüfung können diese Dateien bezeichnen.
-
 - Die Azure Information Protection-Überprüfung kann diese Dateien auf vertrauliche Informationen prüfen.
 
-- Sie können die [Clientanpassung für die Bezeichnungsmigration](#migrate-labels-from-secure-islands-and-other-labeling-solutions) verwenden, um die Secure Islands-Bezeichnung dieser geschützten Dateien in eine Azure Information Protection-Bezeichnung zu konvertieren.
+- Datei-Explorer, PowerShell und die Azure Information Protection-Überprüfung können diese Dateien bezeichnen. Dementsprechend können Sie eine Azure Information Protection-Bezeichnung anwenden, die neuen Schutz von Azure Information Protection anwendet oder vorhandenen Schutz von Secure Islands entfernt.
+
+- Mit der [Clientanpassung für die Bezeichnungsmigration](#migrate-labels-from-secure-islands-and-other-labeling-solutions) können Sie die Secure Islands-Bezeichnung dieser geschützten Dateien automatisch in eine Azure Information Protection-Bezeichnung konvertieren.
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 

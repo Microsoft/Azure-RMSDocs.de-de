@@ -4,16 +4,16 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: dae8f654fbb6a5603d0324d474bd1f25e7c36118
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169769"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751167"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -100,17 +100,16 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
-    - Wählen Sie **Aus der Liste auswählen**, wo Sie dann **Hinzufügen \<Organisationsname> – Alle Mitglieder** auswählen können, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Keine authentifizierten Benutzer (Vorschau) hinzufügen** auswählen oder das Verzeichnis durchsuchen.
+    - Wählen Sie **Aus der Liste auswählen**, wo Sie dann **Hinzufügen \<Organisationsname> – Alle Mitglieder** auswählen können, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Alle authentifizierten Benutzer hinzufügen** auswählen oder das Verzeichnis durchsuchen.
         
         Wenn Sie alle Mitglieder auswählen oder das Verzeichnis durchsuchen, müssen die Benutzer oder Gruppen eine E-Mail-Adresse haben. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
         
-        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Keine authentifizierten Benutzer hinzufügen** 
+        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Alle authentifizierten Benutzer hinzufügen** 
         Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 2016 verwendet werden. 
           
-        Einige typische Szenarios für die Einstellung „Keine authentifizierten Benutzer“:  
-                – Ihnen ist egal, wer den Inhalt sehen kann, Sie möchten jedoch einschränken, wie dieser verwendet wird. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.  
-                – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.  
-                – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.  
+        Einige typische Szenarien für die Einstellung „Keinen authentifizierten Benutzer hinzufügen“: Es spielt keine Rolle, wer den Inhalt sieht, aber Sie möchten die Verwendung einschränken. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.  
+            – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.  
+            – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.
         
     - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können diese Option auch verwenden, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines beliebigen Domänennamens aus dieser Organisation anzugeben. Außerdem können Sie diese Option für soziale Netzwerke verwenden, indem Sie den Domänennamen, z.B. **gmail.com**, **hotmail.com** oder **outlook.com** eingeben.
         
@@ -133,7 +132,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     |Einstellung|Weitere Informationen|Empfohlene Einstellung
     |-----------|--------------------|--------------------|
     |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente oder E-Mails, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
-    |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (./einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
+    |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
     
     Wenn Sie das Konfigurieren der Berechtigungen und Einstellungen abgeschlossen haben, klicken Sie auf **OK**. 
     
@@ -216,7 +215,7 @@ Diese Bezeichnung ist für E-Mails nicht geeignet.
 7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
 
 
-### <a name="example-3-add-external-users-to-an-existing-label"></a>Beispiel 3: Hinzufügen von externen Benutzern zu einer bestehenden Bezeichnung
+### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Beispiel 3: Hinzufügen von externen Benutzern zu einer bestehenden Bezeichnung, die Inhalte schützt
 
 Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen, die bereits durch diese Bezeichnung geschützt sind. Die Berechtigungen, die Sie diesen Benutzern erteilen, können von den Berechtigungen der bestehenden Benutzer abweichen.
 
@@ -279,7 +278,7 @@ Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domä
     
 2. Achten Sie darauf, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Wählen Sie auf dem Blatt **Berechtigungen hinzufügen** in der Registerkarte **Aus Liste auswählen** die Option **Keine authentifizierten Benutzer (Vorschau) hinzufügen** aus.
+3. Wählen Sie auf dem Blatt **Berechtigungen hinzufügen** auf der Registerkarte **Aus Liste auswählen** die Option **Alle authentifizierten Benutzer hinzufügen** aus.
 
 4. Wählen Sie die gewünschten Berechtigungen aus, und klicken Sie auf **OK**.
 

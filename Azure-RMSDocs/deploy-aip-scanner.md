@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
-ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
+ms.openlocfilehash: 47a8633852139bf0a84e6c55321c69b1af2c2892
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991376"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751286"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -191,13 +191,23 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
 1. Starten Sie in Ihrer PowerShell-Sitzung den Dienst **Azure Information Protection-Überprüfung** neu, indem Sie den folgenden Befehl ausführen:
     
         Start-AIPScan
+    
+    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Jetzt überprüfen** verwenden.
 
-2. Warten Sie, bis die Überprüfung den Zyklus abgeschlossen hat. Wenn die Überprüfung alle Dateien in den von Ihnen angegebenen Datenspeichern durchforstet hat, wird die Überprüfung beendet, obwohl der Überprüfungsdienst weiterhin ausgeführt wird. Sie können mit dem lokalen Windows-Ereignisprotokoll für **Anwendungen und Dienste**, **Azure Information Protection**, überprüfen, wann die Überprüfung beendet wurde. Suchen Sie einfach nach der Ereignis-ID **911**.
+2. Warten Sie, bis die Überprüfung ihren Zyklus abgeschlossen hat, indem Sie den folgenden Befehl ausführen:
+    
+    Get-AIPScannerStatus
+    
+    Achten Sie darauf, dass der Status **Im Leerlauf** und nicht **Wird überprüft** angezeigt wird. Wenn die Überprüfung alle Dateien in den von Ihnen angegebenen Datenspeichern durchforstet hat, wird die Überprüfung beendet, obwohl der Überprüfungsdienst weiterhin ausgeführt wird. 
+    
+    Alternativ können Sie den Status im Azure-Portal vom Blatt **Azure Information Protection** anzeigen, indem Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Spalte **STATUS** aktivieren.
+    
+    Überprüfen Sie das lokale Ereignisprotokoll **Anwendungen und Dienste**, **Azure Information Protection**. Dieses Protokoll gibt außerdem an, wann die Überprüfung abgeschlossen wurde, und zeigt eine Zusammenfassung der Ergebnisse an. Suchen Sie einfach nach der Ereignis-ID **911**.
 
 3. Prüfen Sie die Berichte, die unter %*localappdata*%\Microsoft\MSIP\Scanner\Reports gespeichert sind und im CSV-Format vorliegen. Aufgrund der Standardkonfiguration der Überprüfung sind nur Dateien, die die Bedingungen für die automatische Klassifizierung erfüllen, in diesen Berichten enthalten.
     
     > [!TIP]
-    > Die Informationen aus diesen Berichten werden an Azure Information Protection gesendet, sodass Sie im Azure-Portal angezeigt werden (derzeit in Vorschau). Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md). 
+    > Derzeit in der Vorschauversion: Wenn Sie die Vorschauversion der Überprüfung haben, sendet die Überprüfung diese Informationen alle fünf Minuten an Azure Information Protection, so dass Sie die Ergebnisse nahezu in Echtzeit im Azure-Portal anzeigen können. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md). 
         
     Wenn die Ergebnisse nicht wie erwartet ausfallen, müssen Sie die Bedingungen, die Sie in Ihrer Azure Information Protection-Richtlinie angegeben haben, möglicherweise optimieren. Wenn dies der Fall ist, wiederholen Sie die Schritte 1 bis 3, bis Sie die Konfiguration ändern können, um die Klassifizierung und optional den Schutz anzuwenden. 
 
@@ -213,13 +223,17 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
     
     Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. In der [Onlinehilfe](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) finden Sie weitere Informationen zu den einzelnen Konfigurationseinstellungen. 
 
-2. Starten Sie den Dienst **Azure Information Protection-Überprüfung** neu, indem Sie den folgenden Befehl ausführen:
+2. Notieren Sie sich die aktuelle Uhrzeit, und starten Sie die Überprüfung erneut, indem Sie den folgenden Befehl ausführen:
     
         Start-AIPScan
+    
+    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Jetzt überprüfen** verwenden.
 
-3. Überwachen Sie wie zuvor das Ereignisprotokoll und die Berichte, um festzustellen, welche Dateien eine Bezeichnung haben, welche Klassifizierung vergeben wurde und ob Schutz angewendet wurde.
+3. Überwachen Sie das Ereignisprotokoll erneut, und achten Sie auf den Informationstyp **911** mit einem Zeitstempel, der nach der im vorherigen Schritt notierten Startzeit der Überprüfung liegt. 
+    
+    Überprüfen Sie die Berichte, um festzustellen, welche Dateien eine Bezeichnung erhalten haben, welche Klassifizierung für die einzelnen Dateien vergeben wurde und ob Schutz angewendet wurde. Oder verwenden Sie das Azure-Portal, um diese Informationen einfacher anzuzeigen.
 
-Da der Zeitplan als fortlaufend konfiguriert wurde, startet die Überprüfung einen neuen Synchronisierungszyklus, sobald der alte abgeschlossen wurde, damit neue und geänderte Dateien gefunden werden.
+Da der Zeitplan als fortlaufend konfiguriert wurde, startet die Überprüfung einen neuen Zyklus, sobald der alte abgeschlossen wurde, damit neue und geänderte Dateien gefunden werden.
 
 
 ## <a name="how-files-are-scanned"></a>So werden Dateien überprüft
@@ -283,6 +297,8 @@ Damit die Überprüfung beispielsweise neben Office-Dateien auch PDF-Dateien sch
 Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den Datenspeichern. In den nachfolgenden Überprüfungen werden dann nur noch neue oder geänderte Dateien untersucht. 
 
 Sie können erzwingen, dass die Überprüfung alle Dateien erneut untersucht, indem Sie den Befehl [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem Parameter `-Reset` ausführen. Die Überprüfung muss für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass der `-Schedule`-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) auf **Manual** festgelegt wird.
+
+Alternativ können Sie im Azure-Portal vom Blatt **Azure Information Protection** die Überprüfung aller Dateien erzwingen, indem Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Alle Dateien erneut überprüfen** verwenden.
 
 Das erneute Überprüfen aller Dateien ist nützlich, wenn Sie möchten, dass die Berichte alle Dateien enthalten. Diese Konfiguration wird in der Regel verwendet, wenn die Überprüfung im Ermittlungsmodus ausgeführt wird. Wenn eine vollständige Überprüfung abgeschlossen ist, ändert sich der Überprüfungstyp automatisch auf „inkrementell“, sodass bei nachfolgenden Überprüfungen nur noch neue oder geänderte Dateien untersucht werden.
 
@@ -425,6 +441,8 @@ Wenn die Überprüfung so konfiguriert wurde, dass sie einmalig und nicht kontin
 ----
 
 ## <a name="next-steps"></a>Nächste Schritte
+
+Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
 Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
 

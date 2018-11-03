@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
-ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
+ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49399908"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751252"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -103,6 +103,8 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     
     - SharePoint Server 2010 wird für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
     
+- Unterstützung für das neue Blatt **Azure Information Protection – Knoten (Vorschau)** im Azure-Portal, mit dem Sie die Überprüfung von einer zentralen Stelle aus verwalten können. Die Informationen von den bereitgestellten Überprüfungen, die mit Azure verbunden sind, werden alle fünf Minuten aktualisiert. Auf diesem Blatt können Sie eine einmalige Überprüfung starten, alle Dateien erneut überprüfen, den Status einer Überprüfung prüfen und die Überprüfungsgeschwindigkeit anzeigen.
+
 **Fehlerbehebungen**
 
 - Für die Azure Information Protection-Überprüfung:
@@ -111,7 +113,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     
     - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente.
     
-    - Sie können nun alle Dateitypen mit dem Platzhalter `*` schützen, wenn Sie die Registrierung bearbeiten, wie in der Anleitung [Datei-API-Konfiguration](../develop/file-api-configuration.md) beschrieben.
+    - Sie können nun beim Bearbeiten der Registrierung alle Dateitypen mit dem Platzhalter `*` schützen, wie im Abschnitt [Bearbeiten der Registrierung für die Überprüfung](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) beschrieben.
 
 - Wenn Sie PowerShell oder die Überprüfung zum Klassifizieren oder Schützen verwenden, werden die Metadaten des Office-Dokuments weder entfernt noch verschlüsselt.
 
