@@ -10,14 +10,14 @@ ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e7c6c078d992bc4d3be9480227715be2157178f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0269888af84f4f1b17ce5523bb5bbc8648d0d1a7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150785"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026705"
 ---
-# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Kompatibilitätsinformationen und ergänzende Informationen zu Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Konformitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
 Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
 
@@ -39,13 +39,13 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
 
-- Informationen zur Microsoft Azure-Vereinbarung: [Microsoft Azure-Vereinbarung](http://azure.microsoft.com/support/legal/subscription-agreement/)
+- Informationen zum Microsoft Azure-Vertrag: [Microsoft Azure-Vertrag](http://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Informationen zum Microsoft Azure-Datenschutz: [Datenschutzerklärung zu Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
+- Informationen zum Datenschutz bei Microsoft Azure: [Datenschutzerklärung zu Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
-Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](./azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements). Zusätzlich:
+Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Zusätzlich:
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](http://azure.microsoft.com/support/trust-center/)
 

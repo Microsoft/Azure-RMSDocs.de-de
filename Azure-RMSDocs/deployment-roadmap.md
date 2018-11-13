@@ -4,18 +4,18 @@ description: Führen Sie diese Schritte aus, um Azure Information Protection fü
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1a63ac3ea5fae9782588b1779d7c7950738e23
-ms.sourcegitcommit: 3b41a6e730fa40660a2bdf5b1a73d155c87aacc2
+ms.openlocfilehash: 4e2fa20d542a9509476c78ebe21143e49863b788
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48834605"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026824"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "48834605"
 
 Führen Sie die folgenden Schritte aus (empfohlen), um Azure Information Protection für Ihre Organisation vorzubereiten, zu implementieren und zu verwalten.
 
-Falls Sie Azure Information Protection einmal schnell selbst ausprobieren möchten, anstatt die Anwendung in eine Produktionsumgebung einzuführen, helfen Ihnen die Informationen unter [Schnellstarttutorial für Azure Information Protection](./infoprotect-quick-start-tutorial.md) weiter.
+Wenn Sie allerdings nach szenariobasierten Anweisungen suchen, lesen Sie [Schrittanleitungen für häufige Szenarien mit Azure Information Protection](how-to-guides.md).
 
 > [!NOTE]
 > Wenn Sie nach einer Roadmap für Produktreleases suchen, lesen Sie den Abschnitt [Informationen zu neuen Releases und Updates](information-support.md#information-about-new-releases-and-updates).
@@ -32,7 +32,7 @@ Falls Sie Azure Information Protection einmal schnell selbst ausprobieren möcht
 
 ### <a name="identify-your-deployment-roadmap"></a>Identifizieren Ihrer Bereitstellungsroadmap
 
-Lesen Sie vor dem Ausführen der folgenden Schritte zum Bereitstellen von Azure Information Protection den Artikel [Anforderungen für Azure Information Protection](./requirements.md).
+Lesen Sie vor dem Durchführen der folgenden Schritte zum Bereitstellen von Azure Information Protection den Artikel [Anforderungen für Azure Information Protection](./requirements.md).
 
 Wählen Sie dann eine Roadmap für die Bereitstellung aus, die für Ihre Organisation anwendbar ist und die [Abonnementfunktionen und -features](https://azure.microsoft.com/pricing/details/information-protection/) umfasst, die Sie benötigen:
 
@@ -52,14 +52,14 @@ Wählen Sie dann eine Roadmap für die Bereitstellung aus, die für Ihre Organis
 Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Office 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](./rms-for-individuals.md).
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Schritt 2: Vorbereiten Ihres Mandanten für Azure Information Protection
-Bevor Sie mit der Verwendung von Azure Information Protection beginnen, stellen Sie sicher, dass Sie über Benutzerkonten und Gruppen in Office 365 oder Azure Active Directory verfügen. Diese Benutzerkonten und Gruppen werden von Azure Information Protection verwendet, um Benutzer aus Ihrem Unternehmen zu authentifizieren und zu autorisieren. Falls erforderlich, erstellen Sie diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
+Bevor Sie mit der Verwendung von Azure Information Protection beginnen, stellen Sie sicher, dass Sie über Benutzerkonten und Gruppen in Office 365 oder Azure Active Directory verfügen. Diese Benutzerkonten und Gruppen werden von Azure Information Protection verwendet, um Benutzer aus Ihrer Organisation zu authentifizieren und zu autorisieren. Falls erforderlich, erstellen Sie diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
 
 Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Schritt 3: Konfigurieren und Bereitstellen von Klassifizierungen und Bezeichnungen
 
 > [!TIP]
-> **Optional, aber empfohlen**: Erwägen Sie, den [Azure Information Protection-Scanner](deploy-aip-scanner.md) einzusetzen, um herauszufinden, welche vertraulichen Informationen Sie in Ihren lokalen Datenspeichern gespeichert haben. Die Informationen, die der Scanner findet, können Ihnen bei Ihrer Klassifizierungstaxonomie helfen und wertvolle Informationen darüber liefern, welche Bezeichnungen Sie benötigen und welche Dateien geschützt werden müssen.
+> **Optional, aber empfohlen**: Erwägen Sie, den Azure Information Protection-Scanner einzusetzen, um herauszufinden, welche vertraulichen Informationen Sie in Ihren lokalen Datenspeichern gespeichert haben. Dieses Szenario wird in [diesem Schnellstart](quickstart-findsensitiveinfo.md) behandelt. Die Informationen, die der Scanner findet, können Ihnen bei Ihrer Klassifizierungstaxonomie helfen und wertvolle Informationen darüber liefern, welche Bezeichnungen Sie benötigen und welche Dateien geschützt werden müssen.
 > 
 > Der Scanner kann so konfiguriert werden, dass er nach bekannten vertraulichen Informationstypen in lokalen Dateien in Windows Server, Dateien in Netzwerkfreigaben und Dateien in lokalen Versionen von SharePoint sucht. Da diese Konfiguration nicht erfordert, dass Sie Bezeichnungen konfigurieren oder gar Ihre Klassifizierungstaxonomie definieren müssen, ist eine derartige Ausführung des Scanners für dieses sehr frühe Stadium Ihrer Bereitstellung geeignet. Sie können diese Konfiguration des Scanners auch parallel zu den folgenden Bereitstellungsschritten verwenden, bis Sie die Bedingungen für Ihre Bezeichnungen konfigurieren.
 
@@ -113,7 +113,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 3. Konfigurieren des Administratorfeatures für die Datenwiederherstellung
     
-    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen, Gateways zur Inhaltsverschlüsselung und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](./configure-super-users.md).
+    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen – Data Leak Prevention, Gateways zur Inhaltsverschlüsselung (Content Encryption Gateways, CEG) und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](./configure-super-users.md).
 
 4. Massenklassifizierung und -schützen vorhandener Dateien
     
@@ -179,7 +179,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 3. Konfigurieren des Administratorfeatures für die Datenwiederherstellung
     
-    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen, Gateways zur Inhaltsverschlüsselung und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](./configure-super-users.md).
+    Wenn vorhandene IT-Dienste von Azure Information Protection geschützte Dateien überprüfen müssen (z.B. DLP-Lösungen – Data Leak Prevention, Gateways zur Inhaltsverschlüsselung (Content Encryption Gateways, CEG) und Antischadsoftware), konfigurieren Sie die Dienstkonten mit Administratorberechtigungen für Azure Rights Management. Weitere Informationen finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Discovery Services oder die Datenwiederherstellung](./configure-super-users.md).
 
 4. Massenschützen vorhandener Dateien 
     

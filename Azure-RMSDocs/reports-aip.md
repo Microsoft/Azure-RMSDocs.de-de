@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/15/2018
+ms.date: 11/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
-ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
+ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
+ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49324885"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51273581"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -62,17 +62,25 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Die Bezeichnungsaktion. Z.B. das Festlegen oder Ändern einer Bezeichnung, das Hinzufügen oder Entfernen von Schutz, automatische und empfohlene Bezeichnungen.
 
+- Den Bezeichnungsnamen vor und nach der Bezeichnungsaktion
+
 - Die Mandanten-ID Ihrer Organisation.
 
 - Die Benutzer-ID (E-Mail-Adresse oder UPN).
 
-- Den Dateipfad und -namen von Dokumenten, die Bezeichnungen aufweisen.
+- Den Namen des Benutzergeräts
+
+- Für Dokumente: Den Dateipfad und -namen von Dokumenten, die Bezeichnungen aufweisen
+
+- Für E-Mails: Den Betreff, den Absender und die Empfänger für E-Mails mit Bezeichnung 
+
+- Die Typen vertraulicher Informationen ([vordefiniert](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) und benutzerdefiniert), die im Inhalt erkannt wurden.
 
 - Die Azure Information Protection-Clientversion.
 
 - Die Client-Betriebssystemversion.
 
-Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihnen gehört.
+Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihnen gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users).
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Voraussetzungen für Azure Information Protection-Analysen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.

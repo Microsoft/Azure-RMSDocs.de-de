@@ -4,16 +4,16 @@ description: Eine Übersicht über den Azure Information Protection-Dienst.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: b789697a398a0e201cbf041b36d7cd41a82a9e0d
-ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
+ms.openlocfilehash: 979f0acfc2177ba05e57f7c36d5bf3ca3840a65f
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236831"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026690"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -144,9 +144,4 @@ Eine Zusammenfassung der Ankündigungen dieser Ignite-Konferenz finden Sie im Bl
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Lesen Sie den Blogbeitrag [Azure Information Protection: Ready, set, protect! (Azure Information Protection: Auf die Plätze, Fertig, Schützen!)](https://cloudblogs.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/).
-
-Konfigurieren und testen Sie Azure Information Protection selbst mit dem [Schnellstarttutorial](infoprotect-quick-start-tutorial.md) in fünf Schritten. Wenn Sie hingegen Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md).
-
-Es kann sein, dass Sie Azure Informationen Protection nur unter einem anderen Namen kennen. Dann finden Sie weitere Informationen dazu in [der Liste alternativer Benennungen für den Dienst](aka.md).
-
+Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). Wenn Sie diesen Dienst für Ihre Organisation bereitstellen möchten, können Sie auch zu den [Schrittanleitungen für häufige Szenarien](how-to-guides.md) übergehen.

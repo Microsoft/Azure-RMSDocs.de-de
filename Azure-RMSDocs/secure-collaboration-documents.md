@@ -1,5 +1,5 @@
 ---
-title: Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection
+title: Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mit Azure Information Protection
 description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mit Azure Information Protection geschützt werden
 author: cabailey
 ms.author: cabailey
@@ -10,14 +10,14 @@ ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5cacc32cab0526e1083ec9e3caa7203a70a0ec6a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1b11f50bcf2090129211f3dd09cff867cfbdcb7b
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148176"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026654"
 ---
-# <a name="secure-document-collaboration-by-using-azure-information-protection"></a>Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection
+# <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 

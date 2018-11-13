@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: a6df966c75a1d556aeb3341804fa18d912389e24
-ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
+ms.openlocfilehash: f4a5cd07f072f1fa5ea6473cf0f1f75bcb2568f4
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233727"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026637"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -25,13 +25,13 @@ Haben Sie Fragen zu Azure Information Protection, die sich speziell auf Klassifi
 
 ## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Was kann ich mit den Klassifizierungsfunktionen in Azure Information Protection tun?
 
-Probieren Sie unser Schnellstart-Tutorial aus, um zu sehen, wie dies innerhalb weniger Minuten funktioniert: [Quick start tutorial for Azure Information Protection](infoprotect-quick-start-tutorial.md) (Schnellstart-Tutorial für Azure Information Protection).
+Absolvieren Sie unser [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md), um diese in nur wenigen Minuten selbst in Aktion zu sehen.
 
 Achten Sie auf Ankündigungen im [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind: Die aktuelle Version hat einige Einschränkungen, einschließlich der Folgenden:
 
 - Keine Bezeichnungsoption in Office-Web-Apps (Office Online)
 
-- Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online
+- Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online.
 
 > [!NOTE]
 > **Jetzt in der Vorschau:**

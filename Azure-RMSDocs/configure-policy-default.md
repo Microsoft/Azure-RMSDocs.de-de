@@ -4,16 +4,15 @@ description: Erfahren Sie, wie die Standardrichtlinie für Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
-ms.topic: article
+ms.date: 11/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: ada4e4b2b7f8ef4bcf95307184d9c262a930c9f0
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807321"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223975"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -21,19 +20,19 @@ ms.locfileid: "42807321"
 
 Anhand der folgenden Informationen erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird.
 
-Wenn ein Administrator erstmals über das Azure-Portal eine Verbindung mit dem Azure Information Protection-Dienst herstellt, wird die Standardrichtlinie für diesen Mandanten erstellt. Gelegentlich nimmt Microsoft möglicherweise Änderungen an der Standardrichtlinie vor. Wenn Sie den Dienst aber bereits verwendet haben, bevor die Standardrichtlinie überarbeitet wurde, wird die frühere Version der Standardrichtlinie nicht aktualisiert, da Sie sie konfiguriert und für die Produktion bereitgestellt haben könnten.
+Wenn ein Administrator erstmals über das Azure-Portal eine Verbindung mit dem Azure Information Protection-Dienst herstellt, wird die Azure Information Protection-Standardrichtlinie für diesen Mandanten erstellt. Gelegentlich nimmt Microsoft möglicherweise Änderungen an der Standardrichtlinie vor. Wenn Sie den Dienst aber bereits verwendet haben, bevor die Standardrichtlinie überarbeitet wurde, wird die frühere Version der Azure Information Protection-Standardrichtlinie nicht aktualisiert, da Sie sie konfiguriert und für die Produktion bereitgestellt haben könnten.
 
-Sie können auf die folgenden Werte verweisen, um die Richtlinie auf die Standardwerte zurückzusetzen, oder die Richtlinie auf die aktuellen Werte aktualisieren.
+Sie können auf die folgenden Werte verweisen, um die Azure Information Protection-Richtlinie auf die Standardwerte zurückzusetzen, oder die Werte der Azure Information Protection-Richtlinie aktualisieren.
 
 ## <a name="current-default-policy"></a>Aktuelle Standardrichtlinie
 
-Diese Version der Standardrichtlinie stammt vom 31. Juli 2017.
+Diese Version der Azure Information Protection-Standardrichtlinie stammt vom 31. Juli 2017.
 
-Diese Standardrichtlinie wird bei Aktivierung des Azure Rights Management-Diensts erstellt. Dies gilt für neue Mandanten ab Februar 2018. Weitere Informationen finden Sie in der Blogbeitragsankündigung [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Verbesserungen am Schutzstapel in Azure Information Protection).
+Diese Azure Information Protection-Standardrichtlinie wird bei Aktivierung des Azure Rights Management-Diensts erstellt. Dies gilt für neue Mandanten ab Februar 2018. Weitere Informationen finden Sie in der Blogbeitragsankündigung [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Verbesserungen am Schutzstapel in Azure Information Protection).
 
-Diese Standardrichtlinie wird auch erstellt, wenn Sie [den Dienst manuell aktiviert haben](activate-service.md), bevor die Richtlinie erstellt wurde. 
+Diese Azure Information Protection-Standardrichtlinie wird auch erstellt, wenn Sie [den Dienst manuell aktiviert haben](activate-service.md), bevor die Azure Information Protection-Richtlinie erstellt wurde. 
 
-Wenn der Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie den Schutz nicht für die folgenden Unterbezeichnungen:
+Wenn der Dienst nicht aktiviert wurde, konfiguriert die Azure Information Protection-Standardrichtlinie den Schutz nicht für die folgenden untergeordneten Bezeichnungen:
 
 - **Vertraulich\Alle Mitarbeiter**
 
@@ -43,11 +42,11 @@ Wenn der Dienst nicht aktiviert wurde, konfiguriert die Standardrichtlinie den S
 
 - **Streng Vertraulich\Nur Empfänger** 
 
-Wenn diese Unterbezeichnungen nicht automatisch für den Schutz konfiguriert werden, bleibt die Standardrichtlinie die gleiche wie die [vorherige Standardrichtlinie](#default-policy-before-july-31-2017).
+Wenn diese untergeordneten Bezeichnungen nicht automatisch für den Schutz konfiguriert werden, bleibt die Azure Information Protection-Standardrichtlinie die gleiche wie die [vorherige Standardrichtlinie](#default-policy-before-july-31-2017).
 
 Wenn Schutz auf die Unterbezeichnung **Alle Mitarbeiter** angewendet wird, wird der Schutz mithilfe der Standardvorlagen konfiguriert, die automatisch im Azure-Portal in Bezeichnungen konvertiert werden. Weitere Informationen zu diesen Vorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).
 
-Ab dem 30. August 2017 enthält diese Version der Standardrichtlinie mehrsprachige Versionen der Bezeichnungsnamen und -beschreibungen. 
+Ab dem 30. August 2017 enthält diese Version der Azure Information Protection-Standardrichtlinie mehrsprachige Versionen der Bezeichnungsnamen und -beschreibungen. 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>Weitere Informationen zu der Unterbezeichnung „Nur Empfänger“
 

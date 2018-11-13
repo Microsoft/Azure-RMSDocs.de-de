@@ -4,18 +4,18 @@ description: Sofort erkennbare Administratoraufgaben, die Sie bisher im klassisc
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2018
+ms.date: 11/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fa32a5d00c161d2f6a78acd7cbe45ce00b34660c
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 0f94a36f7653ef4aff590bb6815c75210768f7c5
+ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170143"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51272362"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
 
@@ -33,7 +33,7 @@ Verwenden Sie die folgenden Informationen, um schnell zum neuen Portal überzuge
 
 |Klassisches Azure-Portal|So führen Sie die Aufgabe im Azure-Portal aus
 |-----------|--------------------|
-|Erstmaliges Zugreifen auf die Konfigurationseinstellungen|1. [Melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Klicken Sie im Hubmenü auf **Ressource erstellen**, und wählen Sie dann in der Liste **MARKETPLACE** die Option **Sicherheit + Identität** aus.<br /><br />3. Wählen Sie auf dem Blatt **Sicherheit und Identität** in der Liste **AUSGEWÄHLTE APPS** die Option **Azure Information Protection** aus. Klicken Sie dann auf dem Blatt **Azure Information Protection** auf **Erstellen**.<br /><br />Dadurch wird das Blatt **Azure Information Protection** erstellt. Wenn Sie sich das nächste Mal beim Portal anmelden, können Sie den Dienst im Hubmenü aus der Liste unter **Alle Dienste** auswählen.
+|Erstmaliges Zugreifen auf die Konfigurationseinstellungen|1. [Melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Führen Sie die Anweisungen für [Der Erste Zugriff auf das Blatt „Azure Information Protection“](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) durch.
 |Erstellen einer neuen Vorlage|Erstellen Sie eine Bezeichnung, die Schutz anwendet, und verwenden Sie **Set permissions** (Berechtigungen festlegen), um die Berechtigungen, das Ablaufdatum und den Offlinezugriff zu definieren. <br /><br />Im Hintergrund wird durch diese Konfiguration eine neue benutzerdefinierte Vorlage erstellt, auf die dann über Dienste und Anwendungen zugegriffen werden kann, die in Rights Management-Vorlagen integriert werden.<br /><br />Weitere Informationen finden Sie unter [So erstellen Sie eine neue Vorlage](configure-policy-templates.md#to-create-a-new-template).
 |Bearbeiten der Vorlageneigenschaften: <br /><br />– Vorlagenname und -beschreibung<br /><br />– Einstellungen zu Nutzungsrechten, zum Ablauf von Inhalten und zum Offlinezugriff|Wenn nicht bereits geschehen, [konvertieren Sie die Vorlage in eine Bezeichnung](configure-policy-templates.md#to-convert-templates-to-labels), und gehen Sie dann wie folgt vor:<br /><br />1. Ändern Sie den Namen und die Beschreibung der Bezeichnung<br /><br />2. Ändern Sie die Projekteinstellungen der Bezeichnung, um die Einstellungen für Berechtigungen, das Ablaufdatum und den Offlinezugriff zu aktualisieren.<br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Archivieren einer Vorlage|Legen Sie den Status der Bezeichnung auf **Deaktiviert** fest.
@@ -41,7 +41,7 @@ Verwenden Sie die folgenden Informationen, um schnell zum neuen Portal überzuge
 |Kopieren einer Vorlage|Sie können eine Vorlage im Azure-Portal nicht kopieren. Wenn Sie möchten, dass zwei Vorlagen über die gleichen Schutzeinstellungen verfügen, müssen Sie die Berechtigungen für jede Bezeichnung festlegen. <br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Löschen einer Vorlage|Das Löschen von Vorlagen kann zu nicht zugreifbaren Daten führen, weshalb das Azure-Portal diesen Vorgang nicht unterstützt. Sie können die Bezeichnung jedoch löschen und dann das PowerShell-Cmdlet [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) verwenden, um die Vorlage zu entfernen. <br /><br />Weitere Informationen finden Sie unter [Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection](configure-policy-delete-reorder.md).
 |Unterstützung mehrerer Sprachen|Wählen Sie im Menü **Verwalten** **Sprachen** aus, um die anpassbaren Felder zu exportieren, die den Namen und die Beschreibung der Vorlage umfassen. Übersetzen Sie die Zeichenfolgen, und importieren Sie diese anschließend in das Portal. <br /><br />Weitere Informationen finden Sie unter [Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection](configure-policy-languages.md).
-|Rights Management-Webberichte|Verwenden Sie das PowerShell-Cmdlet [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog), um Nutzungsprotokolle für den Azure Rights Management-Dienst herunterzuladen. Sie können diese Daten dann dazu verwenden, benutzerdefinierte Berichte zu erstellen. <br /><br />Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).<br /><br />Tipp: Im [Blog von Enterprise Mobility and Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) finden Sie immer die aktuellsten Ankündigungen einer neuen zentralisierten Berichterstellungslösung für Azure Information Protection.
+|Rights Management-Webberichte|Die [zentralisierte Berichterstellung für Azure Information Protection](reports-aip.md) ist ab sofort in der Vorschauversion verfügbar.<br /><br />Sie können auch das PowerShell-Cmdlet [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) verwenden, um Nutzungsprotokolle für den Azure Rights Management-Dienst herunterzuladen. Sie können diese Daten dann dazu verwenden, benutzerdefinierte Berichte zu erstellen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).
 |Aktivieren und Deaktivieren des Rights Management-Diensts|Wählen Sie im Menü **Verwalten** die Option **Protection activation** (Schutzaktivierung) aus.<br /><br />Weitere Informationen finden Sie unter [How to activate Azure Rights Management from the Azure portal (Aktivieren von Azure Rights Management aus dem Azure-Portal)](activate-azure.md).
 
 Bevor Sie Ihre Vorlagen im Azure-Portal bearbeiten oder in Bezeichnungen konvertieren, informieren Sie sich unter [Überlegungen zu Vorlagen im Azure-Portal](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).

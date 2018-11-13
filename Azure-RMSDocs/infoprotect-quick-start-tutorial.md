@@ -1,43 +1,51 @@
 ---
-title: Schnellstart-Tutorial für Azure Information Protection
-description: Einführungstutorial, in dem beschrieben wird, wie Sie Microsoft Azure Information Protection in ungefähr 20 Minuten für Ihre Organisation testen können.
+title: 'Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung'
+description: Ein Einführungstutorial, in dem beschrieben wird, wie Sie die Azure Information Protection-Richtlinie für Ihre Organisation bearbeiten können, und das ungefähr 15 Minuten beansprucht.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/17/2018
-ms.topic: conceptual
+ms.date: 11/07/2018
+ms.topic: tutorial
 ms.service: information-protection
-ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 2eb58e0177ca397548b5dda6df7b6b5a5fde0031
-ms.sourcegitcommit: ea8207da513f61bc0691c952da1f8b61ceb10887
+ms.openlocfilehash: 9e5fb752e75a6b6616fa0ef347c6a6102cd859fa
+ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45696482"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51273598"
 ---
-# <a name="quick-start-tutorial-for-azure-information-protection"></a>Schnellstart-Tutorial für Azure Information Protection 
+# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Mit diesem Tutorial können Sie Azure Information Protection ohne großen Zeitaufwand testen – in nur fünf Schritten, die ungefähr 20 Minuten in Anspruch nehmen. In diesem leicht verständlichen Tutorial sollen einige der Features und Funktionen von Azure Information Protection präsentiert und demonstriert werden. Das Tutorial umfasst nicht alle verfügbaren Features und soll nicht als Bereitstellungshandbuch für Ihre Organisation dienen. Wenn Sie Azure Information Protection für Ihre Organisation bereitstellen möchten, finden Sie weiterführende Informationen in der [Roadmap für die Bereitstellung von Azure Information Protection](deployment-roadmap.md). 
+In diesem Tutorial lernen Sie Folgendes:
+> [!div class="checklist"]
+> * Konfigurieren von Richtlinieneinstellungen
+> * Erstellen einer neuen Bezeichnung 
+> * Konfigurieren der Bezeichnung für optische Kennzeichnungen, empfohlene Klassifizierung und Schutz
+> * Testen Ihrer Einstellungen und Bezeichnungen
 
-Dieses Tutorial ist für IT-Administratoren und Berater bestimmt, die Azure Information Protection als Lösung zum Schutz von Unternehmensinformationen für eine Organisation evaluieren. In einer Produktionsumgebung werden die Schritte zur Konfiguration der Information Protection-Richtlinie und zur Installation des Clients für Benutzer von einem Administrator ausgeführt. Die Schritte zur Bezeichnung der Dokumente, zur sicheren Freigabe von Dokumenten per E-Mail und zur Nachverfolgung der Dokumente erfolgen durch die Endbenutzer. Das Tutorial beinhaltet all diese Schritte und veranschaulicht typische End-to-End-Szenarios für die Klassifizierung, die Bezeichnung und den Schutz der Daten Ihrer Organisation. 
+Bei dieser Konfiguration sehen Benutzer, wie eine Standardbezeichnung angewendet wird, wenn sie ein neues Dokument erstellen oder eine neue E-Mail verfassen. Allerdings werden sie aufgefordert, die neue Bezeichnung anzuwenden, wenn Kreditkarteninformationen erkannt werden. Wenn die neue Bezeichnung angewendet wird, wird der Inhalt neu klassifiziert und durch eine entsprechende Fußzeile und ein Wasserzeichen geschützt. 
 
-Wenn Sie Probleme beim Abschließen dieses Tutorials oder beim Verwenden von Azure Information Protection haben oder wissen möchten, was andere darüber sagen, besuchen Sie die [Yammer-Website von Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
+Für dieses Tutorial benötigen Sie etwa 15 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen 
+
 Voraussetzungen für dieses Tutorial:
 
-- Zur Klassifizierung und Bezeichnung und zum Schutz von Daten müssen Sie über ein Abonnement verfügen, das Azure Information Protection umfasst. Dieses Tutorial behandelt einige der erweiterten Features, z.B. die automatisierte Datenklassifizierung mit Empfehlungen für Benutzer sowie die Website zur Dokumentkontrolle. Stellen Sie sicher, dass Sie über ein Abonnement verfügen, das diese Funktionen für dieses Tutorial unterstützt. Weitere Informationen finden Sie auf der [Preisseite](https://azure.microsoft.com/pricing/details/information-protection) auf der Azure Information Protection-Website.
+1. Ein Abonnement, das Azure Information Protection-Plan 2 beinhaltet.
     
-    Wenn Sie kein Abonnement für diese Features besitzen, können Sie sich für eine kostenlose Testversion für [Enterprise Mobility + Sicherheit E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) registrieren.
+    Wenn Sie kein Abonnement besitzen, das Azure Information Protection-Plan 2 enthält, können Sie ein [kostenloses](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
+
+2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
+
+    Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md)
+
+3. Der Azure Information Protection-Client ist auf Ihrem Computer installiert. 
     
-  > [!TIP] 
-  > Wenn Sie ein Abonnement beantragen müssen, sollten Sie dies rechtzeitig erledigen, da dies einige Zeit in Anspruch nehmen kann.
+    Um den Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
 
-- Ein globales Administratorkonto zur Anmeldung im Azure-Portal, um den Schutz zu aktivieren und die Azure Information Protection-Richtlinie zu konfigurieren. Alternativ können Sie ein Konto mit folgenden administrativen Rollen verwenden: [Information Protection-Administrator oder Sicherheitsadministrator](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Dieses Konto muss auch über eine E-Mail-Adresse und einen funktionierenden E-Mail-Dienst, z.B. Exchange Online, verfügen.
-
-- Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie in Office-Apps aus einer der folgenden Kategorien angemeldet sind:
+4. Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
     
     - Office 365 mit Office 2016-Apps (mindestens Version 1805, Build 9330.2078). Um diese Option zu nutzen, muss Ihrem Konto eine Azure Rights Management-Lizenz zugewiesen sein. Diese Lizenz ist im Azure Information Protection-Abonnement enthalten.
     
@@ -49,10 +57,214 @@ Voraussetzungen für dieses Tutorial:
     
     - Office Professional Plus 2010 mit Service Pack 2.
 
+Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
 Los geht’s!
 
->[!div class="step-by-step"]
-[&#187; Schritt 1](infoprotect-tutorial-step1.md)
+## <a name="edit-the-azure-information-protection-policy"></a>Bearbeiten der Azure Information Protection-Richtlinie
 
+Über das Azure-Portal ändern Sie zuerst eine Reihe von Richtlinieneinstellungen und erstellen dann eine neue Bezeichnung.
+
+### <a name="edit-the-policy-settings"></a>Bearbeiten der Richtlinieneinstellungen
+
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](https://portal.azure.com). Navigieren Sie anschließend zu **Azure Information Protection**. 
+    
+    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+
+2. Klicken Sie auf **Klassifizierungen** > **Richtlinien** > **Global**, um das Blatt **Richtlinie: Global** zu öffnen. 
+
+3. Suchen Sie die Richtlinieneinstellungen nach den Bezeichnungen im Abschnitt **Einstellungen konfigurieren, die für Information Protection-Endbenutzer angezeigt und angewendet werden**. 
+    
+    Notieren Sie sich, wie die Einstellungen aktuell konfiguriert sind. Dies gilt insbesondere für die Einstellungen **Standardbezeichnung auswählen** und **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierung festlegen, eine Kennzeichnung oder den Schutz entfernen möchten**. Beispiel:
+    
+    ![Azure Information Protection-Tutorial: Zu ändernde Richtlinieneinstellungen](./media/info-protect-policy-default-settings.png)
+    
+    Diese Richtlinieneinstellungen benötigen Sie später in diesem Tutorial, wenn Sie diese testen werden.
+
+4. Legen Sie **Standardbezeichnung auswählen** auf **Allgemein** fest. 
+
+    Wenn Sie nicht über diese Bezeichnung verfügen, da Sie eine ältere Version der Richtlinie verwenden, wählen Sie **Internal** (Intern) als entsprechende Bezeichnung.
+
+5. Falls noch nicht geschehen, legen Sie die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierung festlegen, eine Kennzeichnung oder den Schutz entfernen möchten** auf **Ein** fest.
+
+6. Stellen Sie außerdem sicher, dass **Die Information Protection-Leiste in Office-Apps anzeigen** auf **Ein** festgelegt ist.
+
+7. Klicken Sie auf dem Blatt **Richtlinie: Global** auf **Speichern**, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, klicken Sie auf **OK**. Schließen Sie dieses Blatt.
+
+### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Erstellen einer neuen Bezeichnung für Schutz, optische Kennzeichnungen und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung.
+
+Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
+
+1. Öffnen Sie die Menüoption **Klassifizierungen** > **Bezeichnungen**, klicken Sie mit der rechten Maustaste auf die Bezeichnung **Vertraulich**, und wählen Sie **Untergeordnete Bezeichnung hinzufügen** aus.
+    
+    Wenn Sie nicht über eine Bezeichnung namens **Vertraulich** verfügen, können Sie eine andere Bezeichnung auswählen oder stattdessen eine neue Bezeichnung erstellen und das Tutorial mit geringfügigen Unterschieden weiterhin befolgen.
+
+2. Geben Sie auf dem Blatt **Untergeordnete Bezeichnung** den Bezeichnungsnamen von **Finanzen** an, und fügen Sie folgende Beschreibung hinzu: **Vertrauliche Daten, die finanzielle Informationen enthalten, die nur auf Mitarbeiter beschränkt sind**.
+    
+    In diesem Text wird beschrieben, wie die ausgewählte Bezeichnung verwendet werden soll; er wird Benutzern als QuickInfo angezeigt, um ihnen bei der Auswahl der Bezeichnung zu helfen.
+
+3. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
+    
+    ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png) 
+    
+4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
+
+5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
+    
+    ![Allen Mitgliedern Berechtigungen für den Schutz einer Azure Information Protection-Bezeichnung erteilen.](./media/info-protect-protection-all-members.png) 
+    
+    Diese Option wählt automatisch alle Benutzer in Ihrer Organisation aus, denen Berechtigungen erteilt werden können. Sie können jedoch an den anderen Optionen erkennen, dass Sie Ihren Mandanten auch nach Gruppen oder Benutzern durchsuchen können. Wenn Sie die Option **Details eingeben** anklicken, können Sie auch einzelne E-Mail-Adressen oder sogar alle Benutzer einer anderen Organisation angeben.
+
+6. Wählen Sie für die Berechtigungen **Prüfer** aus den vordefinierten Optionen aus. Ihnen wird angezeigt, dass diese Berechtigungsebene automatisch manche der aufgelisteten Berechtigungen erteilt, aber nicht alle:
+    
+    ![Erteilen von Berechtigungen zum Schutz einer Azure Information Protection-Bezeichnung an einen Mitautor](./media/info-protect-protection-reviewer.png)
+    
+    Sie können unterschiedliche Berechtigungsstufen auswählen oder einzelne Nutzungsrechte mithilfe der Option **Benutzerdefiniert** angeben. Behalten Sie jedoch für dieses Tutorial die Option **Prüfer** bei. Sie können später mit unterschiedlichen Berechtigungen experimentieren und sich einlesen, wie diese das Verwenden der geschützten Dokumente oder E-Mails durch die angegebenen Benutzer einschränken können.
+
+7. Klicken Sie auf **OK**, um das Blatt **Berechtigungen hinzufügen** zu schließen und Ihnen wird angezeigt, wie das Blatt **Schutz** entsprechend Ihrer Konfiguration aktualisiert wird. Beispiel:
+    
+     ![Anzeige der Berechtigungskonfigurationen für eine Azure Information Protection-Bezeichnung auf dem Blatt „Schutz“](./media/info-protect-protection-configured.png)
+    
+    Wenn Sie auf **Berechtigungen hinzufügen** klicken, wird durch diese Aktion das Blatt **Berechtigungen hinzufügen** erneut geöffnet, sodass Sie weitere Benutzer hinzufügen und diesen unterschiedliche Berechtigungen erteilen können. Sie können einer bestimmten Gruppe beispielsweise nur eine Anzeigeberechtigung erteilen. In diesem Tutorial bleiben wir jedoch bei einem Berechtigungssatz für alle Benutzer.
+
+8. Überprüfen Sie die Standards für den Inhaltsablauf und den Offlinezugriff, und behalten Sie diese bei. Klicken Sie dann auf **OK**, um das Blatt **Schutz** zu speichern und zu schließen.
+
+8. Kehren Sie zum Blatt **Untergeordnete Bezeichnung**, und suchen Sie den Abschnitt **Optische Kennzeichnung festlegen**:
+    
+    Klicken Sie für die Einstellung **Dokumente mit dieser Bezeichnung besitzen eine Fußzeile** auf **Ein**, und geben Sie dann **Als vertraulich klassifiziert** im **Textfeld** ein. 
+    
+    Klicken Sie für die Einstellung **Documents with this label have a watermark** (Dokumente mit dieser Bezeichnung haben ein Wasserzeichen) auf **Ein**, und geben Sie dann im **Textfeld** den Namen Ihrer Organisation ein. In diesem Beispiel lautet er **VanArsdel, Ltd** 
+    
+    Sie können die Darstellung für diese optischen Kennzeichnungen zwar ändern, wir behalten jedoch hier die Standardwerte bei.
+    
+9. Suchen Sie den Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden):
+    
+    Klicken Sie auf **Neue Bedingung hinzufügen**, und wählen Sie anschließend auf dem Blatt **Bedingung** Folgendes aus:
+    
+    ein. **Choose the type of condition:** (Bedingungstyp auswählen) Behalten Sie den Standardwert **Informationstypen** bei.
+    
+    b. Für **Branche auswählen**: Übernehmen Sie die Standardeinstellung **Alle**.
+    
+    c. Im Suchfeld **Informationstypen auswählen**: Tippen Sie **Kreditkartennummer** ein, Und wählen Sie dann in den Suchergebnissen **Kreditkartennummer** aus.
+    
+    d. **Minimum number of occurrences:** (Mindestanzahl der Vorkommen) Behalten Sie den Standardwert **1** bei.
+    
+    e. **Count occurrences with unique values only:** (Nur Vorkommen mit eindeutigen Werten zählen) Behalten Sie den Standardwert **Aus** bei.
+    
+    ![Azure Information Protection-Tutorial: Konfigurieren der Bedingung für Kreditkarten](./media/step2-configure-condition.png)
+    
+    Klicken Sie auf **Save** (Speichern), um wieder auf das Blatt **Untergeordnete Bezeichnung** zurückzukehren.
+
+10. Auf dem Blatt **Untergeordnete Bezeichnung** können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** angezeigt wird, mit **1** **VORKOMMEN**:
+    
+    ![Azure Information Protection-Tutorial: Konfigurieren der Bedingung für Kreditkarten](./media/step2-see-condition.png)
+
+11. Behalten Sie für **Anwendungsweise dieser Bezeichnung auswählen** den Standardwert **Empfohlen** bei, und ändern Sie nicht den Tipp für die Standardrichtlinie. 
+
+12. Geben Sie in das Feld **Hinweise zur Verwendung durch den Administrator hinzufügen** den Text **Nur für Testzwecke** ein.
+
+13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**. Die neue Bezeichnung wird erstellt und gespeichert, aber noch keiner Richtlinie hinzugefügt.
+
+14. Öffnen Sie die Menüoption **Klassifizierungen** > **Richtlinien**, klicken Sie auf **Global**, und klicken Sie dann auf den Link **Bezeichnungen hinzufügen oder entfernen** hinter den Bezeichnungen.
+
+15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finanzen** aus, und klicken Sie auf **OK**.
+
+16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Beispiel:
+
+    ![Azure Information Protection-Tutorial: Neue untergeordnete Bezeichnung](./media/info-protect-policy-configuredv2.png)
+    
+    Sie sehen auch, dass die Einstellungen für die Standardbezeichnung und mit Ihrer Begründung konfiguriert werden:
+    
+    ![Azure Information Protection-Tutorial: Konfigurierte Einstellungen](./media/info-protect-settings-configuredv2.png)
+    
+
+17. Klicken Sie auf dem Blatt **Richtlinie: Global** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**.
+
+Nachdem Sie dieses Tutorial abgeschlossen haben, können Sie das Azure-Portal entweder schließen oder es geöffnet lassen, um zusätzliche Konfigurationsoptionen auszuprobieren.
+
+Sie können die Ergebnisse Ihrer Änderungen testen.
+
+## <a name="see-classification-labeling-and-protection-in-action"></a>Klassifizierung, Bezeichnung und Schutz in Aktion 
+
+Die Richtlinienänderungen, die Sie vorgenommen haben, und die neue Bezeichnung, die Sie erstellt haben, werden auf Word, Excel, PowerPoint und Outlook angewendet. Im Rahmen dieses Tutorials wird jedoch Word verwendet, um diese in Aktion zu sehen. 
+
+Öffnen Sie ein neues Dokument in Word. Da der Azure Information Protection-Client installiert ist, wird Folgendes angezeigt:
+
+![Azure Information Protection-Tutorial: Installierter Client](./media/word2016-calloutsv2.png)
+
+- Auf der Registerkarte **Start** in der Gruppe **Schutz** mit der Schaltfläche **Schützen**:
+    
+    Klicken Sie auf **Schützen** > **Hilfe und Feedback**, und bestätigen Sie im Dialogfeld **Microsoft Azure Information Protection** Ihren Clientstatus. Es sollte **Connected as** (Verbunden als) und Ihren Benutzernamen anzeigen. Darüber hinaus sollten die aktuelle Uhrzeit und das Datum der letzten Verbindung sowie der Download der Information Protection-Richtlinie angezeigt werden. Stellen Sie sicher, dass der angezeigte Benutzername für Ihren Mandanten korrekt ist.
+
+- Unter dem Menüband wird eine neue Navigationsleiste angezeigt – die Information Protection-Navigationsleiste. Diese zeigt **Empfindlichkeit** an sowie die Bezeichnungen, die wir aus dem Azure-Portal kennen.
+
+### <a name="to-manually-change-our-default-label"></a>So ändern Sie die Standardbezeichnung manuell
+
+1. Wählen Sie auf der Leiste „Information Protection“ die letzte Bezeichnung aus. Nun sehen Sie, wie untergeordnete Bezeichnungen dargestellt werden:
+    
+    ![Azure Information Protection-Tutorial: Anzeige untergeordneter Bezeichnungen](./media/info-protect-sub-labelsv2.png)
+
+2. Wählen Sie eine dieser untergeordneten Bezeichnungen aus. Nun sehen Sie, dass die anderen Bezeichnungen nicht länger auf der Leiste angezeigt werden, sobald Sie eine Bezeichnung für dieses Dokument ausgewählt haben. Für den Wert **Sensitivity** (Vertraulichkeit) werden nun der Name der Bezeichnung und der untergeordneten Bezeichnung sowie die dazugehörige Farbe angezeigt. Beispiel:
+    
+    ![Azure Information Protection-Tutorial: Ausgewählte untergeordnete Bezeichnung](./media/info-protect-sub-label-selectedv2.png)
+
+3. Klicken Sie auf der Information Protection-Leiste neben dem aktuell ausgewählten Bezeichnungswert auf das Symbol **Edit Label** (Bezeichnung bearbeiten):
+    
+    ![Azure Information Protection-Tutorial: Symbol „Bezeichnung bearbeiten“](./media/info-protect-edit-label-selectedv2.png)
+    
+    Durch diese Aktion werden die verfügbaren Bezeichnungen erneut angezeigt.
+
+4. Wählen Sie nun die erste Bezeichnung **Personal** (Persönlich) aus. Da Sie eine Bezeichnung ausgewählt haben, die eine niedrigere Klassifizierung als die ausgewählte Bezeichnung für dieses Dokument darstellt, werden Sie aufgefordert, zu begründen, warum Sie die Klassifizierungsebene senken:
+    
+    ![Azure Information Protection-Tutorial: Bestätigungsaufforderung bei Reduzierung](./media/info-protect-lower-justification.png)
+    
+    Wählen Sie **The previous label no longer applies** (Vorherige Bezeichnung gilt nicht mehr) aus, und klicken Sie auf **Bestätigen**. Der Wert **Sensitivity** (Vertraulichkeit) ändert sich in **Persönlich**, und die anderen Bezeichnungen werden wieder ausgeblendet.
+
+### <a name="to-remove-the-classification-completely"></a>So entfernen Sie die Klassifizierung vollständig
+
+1. Klicken Sie auf der Information Protection-Leiste erneut auf das Symbol **Edit label** (Bezeichnung bearbeiten). Klicken Sie auf das Symbol **Delete label** (Bezeichnung löschen), anstatt eine der Bezeichnungen auszuwählen:
+    
+    ![Azure Information Protection-Tutorial: Symbol „Löschen“](./media/delete-icon-from-personalv2.png)
+    
+2. Geben Sie dieses Mal „Dieses Dokument erfordert keine Klassifizierung“ ein, wenn Sie dazu aufgefordert werden, und klicken Sie dann auf **Confirm** (Bestätigen).  
+    
+    Der Wert **Vertraulichkeit** wird mit **Nicht festgelegt** angezeigt. Dies sehen Benutzer zunächst bei neuen Dokumenten, wenn Sie keine Standardbezeichnung als Richtlinieneinstellung festlegen.
+
+### <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>So wird eine Empfehlungsaufforderung für die Bezeichnung und den automatischen Schutz angezeigt
+
+1. Geben Sie im Word-Dokument eine gültige Kreditkartennummer ein, zum Beispiel: **4242-4242-4242-4242**. 
+
+2. Speichern Sie das Dokument lokal mit einem beliebigen Dateinamen. 
+
+3. Nun sehen Sie eine Aufforderung zur Anwendung der Bezeichnung, die Sie für den Schutz konfiguriert haben, wenn Kreditkartennummern erkannt werden. Falls Sie mit der Empfehlung nicht einverstanden sind, ermöglicht Ihnen die Richtlinieneinstellung, diese durch Auswählen von **Dismiss** (Verwerfen) abzulehnen. Indem eine Empfehlung gegeben wird, der Benutzer sie jedoch außer Kraft setzen kann, werden falsch positive Ergebnisse bei der Verwendung der automatischen Klassifizierung reduziert. Klicken Sie für dieses Tutorial auf **Change now** (Jetzt ändern).
+
+    ![Azure Information Protection-Tutorial: Empfehlungsaufforderung](./media/change-nowv2.png)
+
+    Das Dokument zeigt nun an, dass die konfigurierte Bezeichnung angewendet wird (z.B. **Confidential \ Finance** (Vertraulich\Finanzen)) und es wird auch sofort das Wasserzeichen Ihrer Organisation auf der Seite angezeigt. Zudem wird die Fußnote **Classified as Confidential** (Als vertraulich eingestuft) angewendet. 
+
+    Das Dokument ist ebenfalls mit den Berechtigungen geschützt, die Sie für diese Bezeichnung angegeben haben. Sie können bestätigen, dass das Dokument geschützt ist, indem Sie auf die Registerkarte **Datei** klicken und die Informationen für **Dokument schützen** anzeigen lassen. Ihnen wird angezeigt, dass das Dokument durch **Confidential \ Finance** (Vertraulich\Finanzen) und die Beschreibung der Bezeichnung geschützt ist. 
+    
+    Durch die Schutzkonfiguration der Bezeichnung können nur Angestellte das Dokument öffnen und einige Aktionen sind für diese eingeschränkt. Da sie zum Beispiel nicht über die Berechtigungen zum Drucken und zum Kopieren und Extrahieren von Inhalt verfügen, können sie das Dokument nicht drucken oder Teile daraus kopieren. Mit solchen Einschränkungen kann Datenverlust verhindert werden. Als Besitzer des Dokuments können Sie es drucken und Teile aus diesem kopieren. Wenn Sie das Dokument jedoch per E-Mail an einen anderen Benutzer innerhalb Ihrer Organisation senden, kann dieser diese Aktionen nicht vornehmen.
+
+4. Sie können das Dokument jetzt schließen.
+
+## <a name="clean-up-resources"></a>Bereinigen der Ressourcen
+
+Führen Sie die folgenden Schritte durch, wenn Sie die Änderungen, die Sie in diesem Tutorial vorgenommen haben, nicht beibehalten möchten:
+
+1. Klicken Sie auf **Klassifizierungen** > **Richtlinien** > **Global**, um das Blatt **Richtlinie: Global** zu öffnen.
+
+2. Setzen Sie die Richtlinieneinstellungen auf die ursprünglichen Werte zurück, die Sie zuvor notiert haben, und klicken Sie dann auf **Speichern**. 
+
+3. Über die Menüoption **Klassifizierungen** > **Bezeichnung**: Rufen Sie auf dem Blatt **Azure Information Protection: Bezeichnung** das Kontextmenü (**...**) für die Bezeichnung **Finanzen** auf, die Sie erstellt haben.
+
+4. Klicken Sie auf **Diese Bezeichnung löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
+
+Starten Sie Word, um diese Änderungen herunterzuladen.
+
+## <a name="next-steps"></a>Nächste Schritte
+
+Weitere Informationen zum Bearbeiten der Azure Information Protection-Richtlinie finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
+
+Weitere Informationen zum Speicherort, an dem die Bezeichnungsaktivität protokolliert wird, finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).
 

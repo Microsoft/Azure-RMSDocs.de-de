@@ -1,21 +1,23 @@
 ---
 title: Häufig gestellte Fragen und bekannte Probleme – Microsoft Information Protection SDK
-description: Häufig gestellte Fragen zum Microsoft Information Protection SDK (MSIP SDK) und Hilfestellung zur Fehlerbehebung bei bekannten Problemen
+description: Häufig gestellte Fragen zum Microsoft Information Protection SDK (MIP SDK) und Hilfestellung zur Fehlerbehandlung bei Problemen und Fehlern
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: cb3bdd6f2d9328a57156580f3d345d25983fccad
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476415"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223924"
 ---
-# <a name="microsoft-information-protection-mip-sdk-faqs-and-known-issues"></a>Microsoft Information Protection (MSIP) SDK: Häufig gestellte Fragen und bekannte Probleme
+# <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK: Häufig gestellte Fragen und Probleme
 
-## <a name="frequently-asked-questions-faqs"></a>Häufig gestellte Fragen
+Dieser Artikel enthält Antworten auf häufig gestellte Fragen (FAQs) und Anleitungen zur Fehlerbehandlung für bekannte Probleme und häufige Fehler.
+
+## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen 
 
 ### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>Frage: Welche Plattformen unterstützt das MSIP SDK?
 
@@ -33,7 +35,13 @@ Das SDK ist für die plattformübergreifende Verwendung konzipiert und nutzt [UT
 | .NET | Für SDK-Clients für .NET verwenden alle Zeichenfolgen die standardmäßige UTF-16-Codierung und ist keine spezielle Konvertierung erforderlich. Die Konvertierung von/in UTF-16 wird intern vom MSIP SDK verwaltet. |
 | Andere Plattformen | Alle anderen Plattformen, die vom MSIP SDK unterstützt werden, bieten native Unterstützung für UTF-8. |
 
-## <a name="known-issues"></a>Bekannte Probleme
+## <a name="issues-and-errors-reference"></a>Referenz zu Problemen und Fehlern
+
+### <a name="error-file-format-not-supported"></a>Fehler: „Nicht unterstütztes Dateiformat“  
+
+| Fehler | Lösung |
+|-|-|
+|*Nicht unterstütztes Dateiformat*| Diese Ausnahme resultiert aus dem Versuch, eine PDF-Datei zu schützen oder zu bezeichnen, die digital signiert wurde oder mit einem Kennwort geschützt ist. Weitere Informationen zum Schützen und Bezeichnen von PDF-Dateien finden Sie unter [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).|
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Fehlermeldung: Die abgerufene Konformitätsrichtlinie konnte nicht analysiert werden.  
 
