@@ -1,6 +1,6 @@
 ---
 title: 'Konzepte: Überwachung mit der Richtlinien-API für das Microsoft Information Protection SDK'
-description: In diesem Artikel erfahren Sie, wie Sie das Microsoft Information Protection SDK verwenden können, um Richtlinien-API-Überwachungsereignisse an Azure Information Protection Analytics zu übermitteln.
+description: In diesem Artikel erfahren Sie, wie Sie das Microsoft Information Protection SDK verwenden können, um Richtlinien-API-Überwachungsereignisse an die Azure Information Protection-Analyse zu übermitteln.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -20,7 +20,7 @@ ms.locfileid: "51297816"
 
 ## <a name="event-types"></a>Ereignistypen
 
-Es gibt drei Typen von Ereignissen, die über das SDK an Azure Informationen Protection Analytics übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
+Es gibt drei Typen von Ereignissen, die über das SDK an die Azure Informationen Protection-Analyse übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
 
 ### <a name="heartbeat-events"></a>Taktereignisse
 
@@ -40,7 +40,7 @@ Diese Ereignisse sind hilfreich, um Anwendungen in Ihrem Unternehmen zu erkennen
 
 Ermittlungsereignisse liefern Informationen über Daten mit Bezeichnungen, die von der Richtlinien-API gelesen oder verwendet werden. Diese Ereignisse sind hilfreich, da sie die Geräte, den Standort und die Benutzer erfassen, die auf Informationen in einer Organisation zugreifen.
 
-Durch Setzen eines Boolflags beim Erstellen des `mip::PolicyHandler`-Objekts über `mip::PolicyEngine` werden Ermittlungsereignisse in der Richtlinien-API generiert. Im folgenden Beispiel wird der Wert für **isAuditDiscoveryEnabled** auf TRUE festgelegt. Wenn `mip::ExecutionState` an `ComputeActions()` oder `GetSensitivityLabel()` (mit vorhandenen Metadateninformationen und Inhaltsbezeichnung) übergeben wird, werden diese Ermittlungsinformationen an Azure Information Protection Analytics übermittelt.
+Durch Setzen eines Boolflags beim Erstellen des `mip::PolicyHandler`-Objekts über `mip::PolicyEngine` werden Ermittlungsereignisse in der Richtlinien-API generiert. Im folgenden Beispiel wird der Wert für **isAuditDiscoveryEnabled** auf TRUE festgelegt. Wenn `mip::ExecutionState` an `ComputeActions()` oder `GetSensitivityLabel()` (mit vorhandenen Metadateninformationen und Inhaltsbezeichnung) übergeben wird, werden diese Ermittlungsinformationen an die Azure Information Protection-Analyse übermittelt.
 
 Die Ermittlungsüberwachung erfolgt, sobald die Anwendung `ComputeActions()` oder `GetSensitivityLabel()` aufruft und `mip::ExecutionState` bereitstellt. Dieses Ereignis wird nur einmal pro Handler generiert.
 
@@ -57,13 +57,13 @@ auto actions = handler->ComputeActions(*state);
 auto label = handler->GetSensitivityLabel(*state);
 ```
 
-In der Praxis sollte **isAuditDiscoveryEnabled** während der `mip::PolicyHandler`-Konstruktion `true` sein, damit Dateizugriffsinformationen an Azure Information Protection Analytics weitergeleitet werden können.
+In der Praxis sollte **isAuditDiscoveryEnabled** während der `mip::PolicyHandler`-Konstruktion `true` sein, damit Dateizugriffsinformationen an die Azure Information Protection-Analyse weitergeleitet werden können.
 
 ## <a name="change-event"></a>Änderungsereignis
 
 Änderungsereignisse liefern Informationen über die Datei, die Bezeichnung, die angewendet oder geändert wurde, und alle vom Benutzer angegebenen Begründungen. Änderungsereignisse werden durch den Aufruf von `NotifyCommittedActions()` auf der `mip::PolicyHandler`-Instanz generiert. Der Aufruf erfolgt nach dem erfolgreichen Commit einer Änderung in eine Datei, wobei das `mip::ExecutionState`-Element übergeben wurde, das zur Berechnung der Aktionen verwendet wurde.
 
-> Wenn die Anwendung diese Funktion nicht aufruft, werden auch keine Ereignisse an Azure Information Protection Analytics übergeben.
+> Wenn die Anwendung diese Funktion nicht aufruft, werden auch keine Ereignisse an die Azure Information Protection-Analyse übergeben.
 
 ```cpp
 handler->NotifyCommittedActions(*state);
@@ -71,7 +71,7 @@ handler->NotifyCommittedActions(*state);
 
 ## <a name="audit-dashboard"></a>Überwachungsdashboard
 
-An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Azure Information Protection Analytics befindet sich in der öffentlichen Vorschau und die Features bzw. Funktionen können sich ändern.
+An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Die Azure Information Protection-Analyse befindet sich in der öffentlichen Vorschau und die Features bzw. Funktionen können sich ändern.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

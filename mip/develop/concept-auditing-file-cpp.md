@@ -1,6 +1,6 @@
 ---
 title: 'Konzepte: Überwachung mit der Datei-API für das Microsoft Information Protection SDK'
-description: In diesem Artikel erfahren Sie, wie Sie das Microsoft Information Protection SDK verwenden können, um Datei-API-Überwachungsereignisse an Azure Information Protection Analytics zu übermitteln.
+description: In diesem Artikel erfahren Sie, wie Sie das Microsoft Information Protection SDK verwenden können, um Datei-API-Überwachungsereignisse an die Azure Information Protection-Analyse zu übermitteln.
 services: information-protection
 author: tommoser
 ms.service: information-protection
@@ -20,7 +20,7 @@ ms.locfileid: "51297805"
 
 ## <a name="event-types"></a>Ereignistypen
 
-Es gibt drei Typen von Ereignissen, die über das SDK an Azure Informationen Protection Analytics übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
+Es gibt drei Typen von Ereignissen, die über das SDK an die Azure Informationen Protection-Analyse übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
 
 ### <a name="heartbeat-events"></a>Taktereignisse
 
@@ -40,7 +40,7 @@ Diese Ereignisse sind hilfreich, um Anwendungen in Ihrem Unternehmen zu erkennen
 
 Ermittlungsereignisse liefern Informationen über Daten mit Bezeichnungen, die von der Datei-API gelesen oder verwendet werden. Diese Ereignisse sind hilfreich, da sie die Geräte, den Standort und die Benutzer erfassen, die auf Informationen in einer Organisation zugreifen.
 
-Diese Ereignisse werden durch Festlegen des Parameters `AuditDiscoveryEnabled` auf TRUE beim Erstellen eines neuen `mip::FileHandler`-Elements an Azure Informationen Protection Analytics übermittelt. Darüber hinaus wird eine Inhaltsbezeichner bereitgestellt, der die Datei in einem lesbaren Format identifiziert. Es wird empfohlen, den Dateipfad als Bezeichner zu verwenden.
+Diese Ereignisse werden durch Festlegen des Parameters `AuditDiscoveryEnabled` auf TRUE beim Erstellen eines neuen `mip::FileHandler`-Elements an die Azure Informationen Protection-Analyse übermittelt. Darüber hinaus wird eine Inhaltsbezeichner bereitgestellt, der die Datei in einem lesbaren Format identifiziert. Es wird empfohlen, den Dateipfad als Bezeichner zu verwenden.
 
 Im folgenden Beispiel wird ein neues `mip::FileHandler`-Element mit Überwachungsermittlung aktiviert. Die `CreateFileHandler()`-Methode wird für `mip::FileEngine` aufgerufen und `AuditDiscoveryEnabled` auf TRUE festgelegt. Sobald das `FileHanlder`-Element die Bezeichnung liest, wird ein Element für die Ermittlungsüberwachung generiert.
 
@@ -78,7 +78,7 @@ if(commitFuture.get()) {
 
 ## <a name="audit-dashboard"></a>Überwachungsdashboard
 
-An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Azure Information Protection Analytics befindet sich in der öffentlichen Vorschau und die Features bzw. Funktionen können sich ändern.
+An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Die Azure Information Protection-Analyse befindet sich in der öffentlichen Vorschau und die Features bzw. Funktionen können sich ändern.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

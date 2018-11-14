@@ -158,4 +158,4 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ## <a name="next-steps"></a>Nächste Schritte
 
 * Laden Sie als Nächstes die [Beispiele zur Richtlinien-API von GitHub herunter, und testen Sie die Richtlinien-API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi).
-* Erfahren Sie, wie Sie [Überwachungsereignisse an Azure Information Protection Analytics übergeben](concept-auditing-policy-cpp.md).
+* Erfahren Sie, wie Sie [Überwachungsereignisse an die Azure Information Protection-Analyse übergeben](concept-auditing-policy-cpp.md).

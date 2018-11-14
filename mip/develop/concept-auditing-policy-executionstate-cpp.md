@@ -61,7 +61,7 @@ struct ExecutionStateOptions {
 };
 ```
 
-Jede Eigenschaft wird durch die Anwendung festgelegt. Dann wird `ExecutionSateOptions` an den Konstruktor der aus `mip::ExecutionState` abgeleiteten Klasse übergeben. Anhand dieser Informationen wird bestimmt, welche Aktionen ausgeführt werden sollen. In der `mip::ExecutionState`-Klasse enthaltene Daten werden ebenfalls in Azure Informationen Protection Analytics angezeigt.
+Jede Eigenschaft wird durch die Anwendung festgelegt. Dann wird `ExecutionSateOptions` an den Konstruktor der aus `mip::ExecutionState` abgeleiteten Klasse übergeben. Anhand dieser Informationen wird bestimmt, welche Aktionen ausgeführt werden sollen. In der `mip::ExecutionState`-Klasse enthaltene Daten werden ebenfalls in der Azure Informationen Protection-Analyse angezeigt.
 
 ### <a name="next-steps"></a>Nächste Schritte
 
