@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: d4b9419ee12dfef0db29604dc7a396eedd7225fc
+ms.sourcegitcommit: a547dee247e4961e8f7c1f08e39b03dff710a74c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751252"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51628070"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -114,8 +114,6 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente.
     
     - Sie können nun beim Bearbeiten der Registrierung alle Dateitypen mit dem Platzhalter `*` schützen, wie im Abschnitt [Bearbeiten der Registrierung für die Überprüfung](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) beschrieben.
-
-- Wenn Sie PowerShell oder die Überprüfung zum Klassifizieren oder Schützen verwenden, werden die Metadaten des Office-Dokuments weder entfernt noch verschlüsselt.
 
 - Das Anzeigen von E-Mails mithilfe der Pfeilsymbole „Nächstes Element“ und „Vorheriges Element“ auf der Symbolleiste für den Schnellzugriff zeigt nun die richtige Bezeichnung für die jeweilige E-Mail an.
 
