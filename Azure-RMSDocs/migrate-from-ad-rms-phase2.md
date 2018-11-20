@@ -4,18 +4,18 @@ description: Phase 2 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04ca9cdfe3f528d71ee45a88a81b59268a6357aa
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ebc5a9867bad267b71f2f4ae6ebe0e22c9e7a607
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150465"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707758"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -125,9 +125,9 @@ Die Änderungen an der Vorlage, die Sie für diesen Schritt möglicherweise vorn
 
 - Wenn Sie vor der Migration benutzerdefinierte Vorlagen in Azure Information Protection erstellt haben, müssen Sie diese manuell exportieren und erneut importieren.
 
-- Wenn Ihre Vorlagen in AD RMS die Gruppe **Jeder** verwendet haben, müssen Sie möglicherweise Benutzer oder Gruppen von außerhalb Ihrer Organisation hinzufügen. 
+- Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, müssen Sie möglicherweise Benutzer oder Gruppen manuell hinzufügen. 
     
-    In AD RMS hat die Gruppe „Jeder“ allen authentifizierten Benutzern Rechte gewährt. Diese Gruppe wird automatisch in alle Benutzer in Ihrem Azure AD-Mandanten konvertiert. Wenn Sie nicht noch zusätzlichen Benutzern Rechte gewähren müssen, ist keine weitere Aktion erforderlich. Wenn Sie jedoch die Gruppe „Jeder“ verwendet haben, um externe Benutzer einzuschließen, müssen Sie diese Benutzer sowie die Rechte, die Sie diesen gewähren möchten, manuell hinzufügen.
+    In AD RMS hat die Gruppe JEDER Rechte an alle Benutzer erteilt, die von Ihrer lokalen Active Directory-Instanz authentifiziert wurden, und diese Gruppe wird von Azure Information Protection nicht unterstützt. Das nächste Äquivalent dazu ist eine Gruppe, die automatisch für alle Benutzer im Azure AD-Mandanten erstellt wird. Wenn Sie die Gruppe JEDER für Ihre AD RMS-Vorlagen verwendet haben, müssen Sie möglicherweise Benutzer und die ihnen zu erteilenden Rechte hinzufügen.
 
 ### <a name="procedure-if-you-created-custom-templates-before-the-migration"></a>Prozedur, falls Sie benutzerdefinierte Vorlagen vor der Migration erstellt haben
 
@@ -143,9 +143,9 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
 
-Wenn Ihre Vorlagen in AD RMS die Gruppe **Jeder** verwendet haben, wird diese Gruppe automatisch in die Gruppe mit dem Namen **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<tenant_name>.onmicrosoft.com** konvertiert. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
+Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, heißt die ähnlichste Gruppe in Azure Information Protection **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
-Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen** an.
+Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen an.
 
 Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 

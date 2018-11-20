@@ -4,18 +4,18 @@ description: Ressourcen für Administratoren, einschließlich Informationen zu n
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/01/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 145889772dd3d2a8e29967264c1f0f7de7a7c222
-ms.sourcegitcommit: d5669b9bcc4aebabf64e8891eda4e20ea3acb2a1
+ms.openlocfilehash: da86d4dbdc5b5ac98dad8aac21772c43354b4b90
+ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046987"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51707724"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -33,7 +33,7 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 |Verstehen eines bestimmten Azure Information Protection-Begriffes|Suchen Sie auf der Seite [Terminologie zu Azure Information Protection](terminology.md) nach dem Begriff oder der Abkürzung.|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informationen zu neuen Releases und Updates
-Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu wichtigen neuen Releases im [Enterprise Mobility and Security-Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Kleinere Releases werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection angekündigt, und unter Umständen finden Sie es auch sinnvoll, sich auf der [UserVoice-Website](https://msip.uservoice.com) über den Status angeforderter Features zu informieren.
+Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu wichtigen neuen Releases im [Enterprise Mobility + Security-Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Kleinere Releases werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection angekündigt, und unter Umständen finden Sie es auch sinnvoll, sich auf der [UserVoice-Website](https://msip.uservoice.com) über den Status angeforderter Features zu informieren.
 
 Zusätzliche und detailliertere Informationen finden Sie im [technischen Blog zu Azure Information Protection](https://aka.ms/AIPblog) (in englischer Sprache). Jeden Monat wird eine Zusammenfassung der Dokumentationsänderungen veröffentlicht, damit Sie sich über neue Releases, aktualisierte Supporthinweise sowie Korrekturen und Überarbeitungen für vorhandene Versionen informieren können. Diese Beiträge zur Aktualisierung der Dokumentation heißen „**Azure Information Protection-Dokumentationsupdates für \<Monat Jahr>**“.
 

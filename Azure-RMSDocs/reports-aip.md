@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 4cb496e6cca01d7a4ad6636acc315bd40dc4c58c
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
+ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273581"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51611419"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "51273581"
 
 Mit Azure Information Protection-Analysen für die zentrale Berichterstellung können Sie die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen sowie den Benutzerzugriff auf Dokumente bzw. E-Mails mit Bezeichnungen und alle Änderungen an ihrer Klassifizierung überwachen. Außerdem haben Sie die Möglichkeit, Dokumente zu identifizieren, die sensible Daten enthalten, die geschützt werden müssen.
 
-Die angezeigten Daten werden von Ihren Azure Information Protection-Clients, der Azure Information Protection-Überprüfung und [Clients, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), aggregiert.
+Zurzeit werden die angezeigten Daten von Ihren Azure Information Protection-Clients und der Azure Information Protection-Überprüfung aggregiert.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
