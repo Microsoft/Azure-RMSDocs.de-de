@@ -4,18 +4,18 @@ description: Die Informationen in diesem Artikel wurden entfernt, da sie nicht m
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
+ms.date: 11/19/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c8621c690db38733e57429594d08703c57caadac
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ac508190d48bc24b4c8ccc366d4136337269d48f
+ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806395"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52268120"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Weitere Informationen zu Thales-HSMs und Microsoft-Ergänzungen: INHALT VERALTET
 
@@ -23,3 +23,4 @@ ms.locfileid: "42806395"
 
 Die Informationen in diesem Artikel wurden entfernt, da sie nicht mehr relevant sind, seitdem Azure Rights Management den Azure Key Vault-Dienst für von Kunden verwaltete Mandantenschlüssel (auch bekannt als „Bring Your Own Key“, kurz BYOK) verwendet. 
 
+Weitere Informationen finden Sie unter [Implementieren von BYOK für den Azure Information Protection-Mandantenschlüssel](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).

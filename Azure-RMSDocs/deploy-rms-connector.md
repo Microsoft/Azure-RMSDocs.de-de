@@ -4,18 +4,18 @@ description: Hier finden Sie Anweisungen zur Bereitstellung des RMS-Connectors, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba7f0ec91b949f2d91d96bde5be06195c3facaf8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7c6a0f74752ea6d477b503bdfb9e92dd656c84ca
+ms.sourcegitcommit: 8d854ee417d9af1a85e7d4ecb3807a69a43b0313
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149819"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177210"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Bereitstellen des Azure Rights Management-Verbindungsdiensts
 
@@ -58,7 +58,7 @@ Stellen Sie vor der Installation des RMS-Verbindungsdiensts sicher, dass folgend
 |Anforderung|Weitere Informationen|
 |---------------|--------------------|
 |Der RMS-Verbindungsdienst (RMS) ist aktiviert.|[Aktivieren von Azure Rights Management](activate-service.md)|
-|Verzeichnissynchronisierung zwischen Ihren lokalen Active Directory-Gesamtstrukturen und Azure Active Directory|Nachdem RMS aktiviert wurde, muss Azure Active Directory so konfiguriert werden, dass es mit den Benutzern und Gruppen in Ihrer Active Directory-Datenbank arbeitet.<br /><br />**Wichtig**: Dieser Verzeichnissynchronisierungsschritt ist erforderlich, damit der RMS-Verbindungsdienst funktioniert, und zwar auch bei einem Testnetzwerk. Auch wenn Sie Office 365 und Azure Active Directory verwenden können, indem Sie manuell in Azure Active Directory erstellte Konten verwenden, erfordert der Verbindungsdienst, dass die Konten in Azure Active Directory mit den Active Directory-Domänendiensten synchronisiert werden. Die manuelle Kennwortsynchronisierung ist nicht ausreichend.<br /><br />Weitere Informationen finden Sie in den folgenden Ressourcen:<br /><br />[Integrieren Ihrer lokalen Identitäten in Azure Active Directory](/active-directory/active-directory-aadconnect)<br /><br />[Vergleich von Integrationstools für Hybrididentitätsverzeichnisse](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison)|
+|Verzeichnissynchronisierung zwischen Ihren lokalen Active Directory-Gesamtstrukturen und Azure Active Directory|Nachdem RMS aktiviert wurde, muss Azure Active Directory so konfiguriert werden, dass es mit den Benutzern und Gruppen in Ihrer Active Directory-Datenbank arbeitet.<br /><br />**Wichtig**: Dieser Verzeichnissynchronisierungsschritt ist erforderlich, damit der RMS-Verbindungsdienst funktioniert, und zwar auch bei einem Testnetzwerk. Auch wenn Sie Office 365 und Azure Active Directory verwenden können, indem Sie manuell in Azure Active Directory erstellte Konten verwenden, erfordert der Verbindungsdienst, dass die Konten in Azure Active Directory mit den Active Directory-Domänendiensten synchronisiert werden. Die manuelle Kennwortsynchronisierung ist nicht ausreichend.<br /><br />Weitere Informationen finden Sie in den folgenden Ressourcen:<br /><br />- [Integrieren von lokalen Active Directory-Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad)<br /><br />- [Vergleich von Tools für die Verzeichnisintegration für Hybrididentitäten](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-tools-comparison)|
 |Mindestens zwei Mitgliedscomputer, auf denen der RMS-Verbindungsdienst installiert wird:<br /><br />- Ein physischer oder virtueller 64-Bit-Computer unter einem der folgenden Betriebssysteme: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 oder Windows Server 2008 R2.<br /><br />- Mindestens 1 GB RAM<br /><br />- Mindestens 64 GB Datenträgerspeicherplatz<br /><br />- Mindestens eine Netzwerkschnittstelle<br /><br />- Zugriff auf das Internet über eine Firewall (oder einen Webproxy) ohne Anforderung einer Authentifizierung<br /><br />- Muss sich in einer Gesamtstruktur oder Domäne befinden, die eine Vertrauensstellung zu anderen organisationsinternen Gesamtstrukturen hat, die Installationen von Exchange- oder SharePoint-Servern enthalten, die Sie mit dem RMS-Connector verwenden möchten.|Für Fehlertoleranz und Hochverfügbarkeit müssen Sie den RMS-Verbindungsdienst auf mindestens zwei Computern installieren.<br /><br />**Tipp**: Wenn Sie Outlook Web Access oder mobile Geräte verwenden, die Exchange ActiveSync IRM nutzen, und es wichtig ist, dass Sie den Zugriff auf mit Azure RMS geschützte E-Mails und Anlagen aufrechterhalten, empfiehlt sich Folgendes: Stellen Sie eine Gruppe von Verbindungsdienstservern mit Lastenausgleich bereit, um Hochverfügbarkeit zu gewährleisten.<br /><br />Sie benötigen keine dedizierten Server zum Ausführen des Verbindungsdiensts, Sie müssen ihn jedoch auf einem anderen Computer als die Server installieren, die den Verbindungsdienst verwenden werden.<br /><br />**Wichtig**: Installieren Sie den Verbindungsdienst nicht auf einem Computer, auf dem Exchange Server, SharePoint Server oder ein Dateiserver ausgeführt wird, der für die Dateiklassifizierungsinfrastruktur konfiguriert ist, wenn Sie die Funktionalität dieser Dienste mit Azure RMS verwenden möchten. Darüber hinaus dürfen Sie diesen Verbindungsdienst nicht auf einem Domänencontroller installieren.<br /><br />Wenn Sie bestimmte Serverworkloads mit dem RMS-Connector verwenden möchten, die entsprechenden Server sich aber in Domänen befinden, denen von der Domäne, in der Sie den Connector ausführen möchten, nicht vertraut wird, können Sie weitere RMS-Connectorserver in diesen nicht vertrauenswürdigen Domänen oder in anderen Domänen in der Gesamtstruktur installieren. <br /><br />Es besteht keine Einschränkung hinsichtlich der Anzahl von Connectorservern, die Sie für Ihre Organisation ausführen können, und alle in der Organisation installierten Connectorserver verwenden die gleiche Konfiguration. Um jedoch den Connector für die Autorisierung von Servern zu konfigurieren, müssen Sie nach den Server- oder Dienstkonten suchen können, die Sie autorisieren möchten. Sie müssen also das RMS-Verwaltungstool in einer Gesamtstruktur ausführen, von der aus Sie nach diesen Konten suchen können.|
 
 
