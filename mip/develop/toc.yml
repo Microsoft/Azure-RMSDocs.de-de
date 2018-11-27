@@ -55,16 +55,18 @@ items:
     - name: Richtlinien-API-Handler (C++)
       href: concept-handler-policy-cpp.md
       items:
-      - name: Auditing
-        href: concept-auditing-policy-cpp.md
       - name: Ausführungsstatus
-        href: concept-auditing-policy-executionstate-cpp.md
+        href: concept-handler-policy-executionstate-cpp.md
       - name: Berechnen von Aktionen
-        href: concept-auditing-policy-computeactions-cpp.md
+        href: concept-handler-policy-computeactions-cpp.md
+      - name: Auditing
+        href: concept-handler-policy-auditing-cpp.md
     - name: Schutz-API-Handler (C++)
       href: concept-handler-protection-cpp.md
   - name: Bezeichnungen
     href: concept-classification-labels.md
+  - name: Metadaten
+    href: concept-mip-metadata.md
   - name: Observer-Klassen für async (C++)
     href: concept-async-observers.md
     items:
@@ -225,9 +227,9 @@ items:
     href: http://aka.ms/mipsdk
   - name: Beispiele
     href: https://azure.microsoft.com/resources/samples/?sort=0&term=mip+sdk
-ms.openlocfilehash: 44d1e464abc351e4e4e270c6992172d783e3f09e
-ms.sourcegitcommit: 05fdaf43f74013eecb5886b95b09dd5e00670753
+ms.openlocfilehash: 62fe0af32efa5c68828cb8ab307f70350c8992be
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51527923"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52304013"
