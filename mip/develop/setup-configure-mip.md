@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
-ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51508441"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386728"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration 
 
@@ -21,11 +21,18 @@ Das MIP SDK wird auf den folgenden Plattformen unterstützt:
 
 [!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
 
+## <a name="prerequisites"></a>Vorraussetzungen
+
 Lesen Sie unbedingt die folgenden Themen, bevor Sie beginnen:
 
 - [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Wie funktioniert der Schutz in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
+
+> [!IMPORTANT]
+> **Um die Datenschutzaspekte für Benutzer müssen Sie bitten, dass den Benutzer seine Zustimmung erteilen, bevor Sie automatische Protokollierung aktivieren.** Im folgende Beispiel wird eine Standardnachricht, die Microsoft zur protokollierungsbenachrichtigung nutzt:
+>
+> *Durch Aktivieren der Fehler- und Leistungsprotokollierung stimmen Sie dem Senden von Fehler- und Leistungsdaten an Microsoft zu. Microsoft erfasst Fehler- und Leistungsdaten automatisch über das Internet („Daten“). Microsoft verwendet diese Daten, um die Qualität, Sicherheit und Integrität von Microsoft-Produkten und -Diensten sicherzustellen und zu verbessern. Beispielsweise analysieren wir die Leistung und Zuverlässigkeit, die von Ihnen verwendeten Features, die Reaktionsschnelligkeit der Features, die Geräteleistung, Interaktionen mit der Benutzeroberfläche und etwaige Probleme, die bei der Nutzung des Produkts auftreten. Zu den Daten gehören auch Informationen zur Konfiguration Ihrer Software, z. B. der Software, die derzeit ausgeführt wird, und die IP-Adresse.*
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Registrieren für ein Office 365-Abonnement
 
@@ -41,7 +48,7 @@ Viele der SDK-Beispiele erfordern Zugriff auf ein Office 365-Abonnement. Wenn ni
 
 ## <a name="configure-sensitivity-labels"></a>Konfigurieren von Vertraulichkeitsbezeichnungen
 
-Wenn Sie zurzeit Azure Information Protection verwenden, müssen Schritte ausgeführt werden, um Ihre Bezeichnungen zum Office 365 Security & Compliance Center zu migrieren. Weitere Information zu diesem Vorgang finden Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) 
+Wenn Sie derzeit Azure Information Protection verwenden, müssen Sie Ihre Bezeichnungen auf Office 365 Security & Compliance Center migrieren. Weitere Information zu diesem Vorgang finden Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) 
 
 ## <a name="configure-your-client-workstation"></a>Konfigurieren der Clientarbeitsstation
 
