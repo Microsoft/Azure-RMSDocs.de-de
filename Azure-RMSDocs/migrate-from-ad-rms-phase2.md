@@ -145,7 +145,7 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, heißt die ähnlichste Gruppe in Azure Information Protection **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
-Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen an.
+Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen** an.
 
 Wenn Sie nicht sicher sind, ob Ihre AD RMS-Vorlagen die Gruppe JEDER enthalten, können Sie diese Vorlagen mithilfe des folgenden Windows PowerShell-Beispielskripts ermitteln. Weitere Informationen zur Verwendung von Windows PowerShell mit AD RMS finden Sie unter [Using Windows PowerShell to Administer AD RMS (Verwalten von AD RMS mit Windows PowerShell)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
