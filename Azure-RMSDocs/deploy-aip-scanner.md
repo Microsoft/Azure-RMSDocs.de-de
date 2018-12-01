@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9c5c07d09096d5d0f75c53fd03f85f5e29af1640
-ms.sourcegitcommit: 74d13c7162a0a94cda4762556a975a1d12433a13
+ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281308"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386796"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -39,7 +39,7 @@ Wenn Sie Ihre [Azure Information Protection-Richtlinie](configure-policy.md) fü
 
 ![Übersicht über die Architektur der Azure Information Protection-Überprüfung](./media/infoprotect-scanner.png)
 
-Die Überprüfung kann jede Datei überprüfen, die von Windows indiziert werden kann. Dazu verwendet er iFilters, die auf dem Computer installiert sind. Um zu bestimmen, ob die Dateien Bezeichnungen benötigen, verwendet die Überprüfung die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) oder Regex-Muster von Office 365. Da die Überprüfung den Azure Information Protection-Client verwendet, kann sie dieselben [Dateitypen](./rms-client/client-admin-guide-file-types.md) klassifizieren und schützen.
+Die Überprüfung kann jede Datei überprüfen, die von Windows indiziert werden kann. Dazu verwendet sie IFilters, die auf dem Computer installiert sind. Um zu bestimmen, ob die Dateien Bezeichnungen benötigen, verwendet die Überprüfung die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) oder Regex-Muster von Office 365. Da die Überprüfung den Azure Information Protection-Client verwendet, kann sie dieselben [Dateitypen](./rms-client/client-admin-guide-file-types.md) klassifizieren und schützen.
 
 Sie können die Überprüfung im Suchmodus ausführen. In diesem Modus überprüfen Sie anhand der Berichte, was geschähe, wenn die Dateien bezeichnet würden. Alternativ können Sie die Bezeichnungen mit der Überprüfung automatisch anwenden. Sie können die Überprüfung auch zum Ermitteln von Dateien mit vertraulichen Informationstypen ausführen, ohne Bezeichnungen für Bedingungen zu konfigurieren, die die automatische Klassifizierung anwenden.
 
@@ -192,7 +192,7 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
     
         Start-AIPScan
     
-    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Jetzt überprüfen** verwenden.
+    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie die Option **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> **Jetzt überprüfen** verwenden.
 
 2. Warten Sie, bis die Überprüfung ihren Zyklus abgeschlossen hat, indem Sie den folgenden Befehl ausführen:
     
@@ -207,7 +207,7 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
 3. Prüfen Sie die Berichte, die unter %*localappdata*%\Microsoft\MSIP\Scanner\Reports gespeichert sind und im CSV-Format vorliegen. Aufgrund der Standardkonfiguration der Überprüfung sind nur Dateien, die die Bedingungen für die automatische Klassifizierung erfüllen, in diesen Berichten enthalten.
     
     > [!TIP]
-    > Derzeit in der Vorschauversion: Wenn Sie die Vorschauversion der Überprüfung haben, sendet die Überprüfung diese Informationen alle fünf Minuten an Azure Information Protection, so dass Sie die Ergebnisse nahezu in Echtzeit im Azure-Portal anzeigen können. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md). 
+    > Überprüfungen senden diese Informationen alle fünf Minuten an Azure Information Protection, so dass Sie die Ergebnisse nahezu in Echtzeit im Azure-Portal anzeigen können. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md). 
         
     Wenn die Ergebnisse nicht wie erwartet ausfallen, müssen Sie die Bedingungen, die Sie in Ihrer Azure Information Protection-Richtlinie angegeben haben, möglicherweise optimieren. Wenn dies der Fall ist, wiederholen Sie die Schritte 1 bis 3, bis Sie die Konfiguration ändern können, um die Klassifizierung und optional den Schutz anzuwenden. 
 
@@ -242,7 +242,7 @@ Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlos
 
 Sie können dieses Verhalten ändern, indem Sie eine Liste mit Dateitypen definieren, die überprüft oder von der Überprüfung ausgeschlossen werden sollen. Wenn Sie diese Liste angeben, aber kein Datenrepository, gilt die Liste für alle Datenrepositorys, für die keine eigene Liste angegeben wurde. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) kann ein Dateityp aus der Liste entfernt werden.
 
-Die Überprüfung verwendet dann Windows-iFilter, um die folgenden Dateitypen zu überprüfen. Bei diesen Dateitypen wird das Dokument mithilfe der Bedingungen bezeichnet, die Sie für Ihre Bezeichnungen angegeben haben.
+Die Überprüfung verwendet dann Windows-IFilter, um die folgenden Dateitypen zu überprüfen. Bei diesen Dateitypen wird das Dokument mithilfe der Bedingungen bezeichnet, die Sie für Ihre Bezeichnungen angegeben haben.
 
 |Anwendungstyp|Dateityp|
 |--------------------------------|-------------------------------------|
@@ -252,13 +252,17 @@ Die Überprüfung verwendet dann Windows-iFilter, um die folgenden Dateitypen zu
 |PDF |PDF|
 |Text|.txt; .xml; .csv|
 
-Standardmäßig werden nur Office-Dateitypen vom Scanner geschützt. PDF- und Textdateien werden also nicht geschützt, sofern Sie nicht die [Registrierung bearbeiten](#editing-the-registry-for-the-scanner), um die Dateitypen anzugeben:
+Darüber hinaus kann die Überprüfung auch optische Zeichenerkennung (Optical Character Recognition, OCR) verwenden, um TIFF-Bilder mit der Dateinamenerweiterung „.tiff“ zu überprüfen, wenn Sie [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, der die Überprüfung ausführt.
+
+Standardmäßig werden nur Office-Dateitypen von der Überprüfung geschützt. PDF-Dokumente und Textdateien sowie TIFF-Bilder werden also nicht geschützt, sofern Sie nicht die [Registrierung bearbeiten](#editing-the-registry-for-the-scanner), um die Dateitypen anzugeben:
 
 - Wenn Sie den PDF-Dateityp nicht zur Registrierung hinzufügen, werden Dateien mit dieser Erweiterung zwar mit einer Bezeichnung versehen, aber wenn diese nicht für den Schutz konfiguriert ist, wird dieser nicht angewendet.
 
 - Wenn Sie die TXT-, XML- oder CSV-Dateitypen nicht zur Registrierung hinzufügen, werden Dateien mit dieser Erweiterung nicht mit einer Bezeichnung versehen, da diese Dateitypen die ausschließliche Klassifizierung nicht unterstützen.
 
-Für die übrigen Dateitypen wendet die Überprüfung schließlich die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
+- Wenn Sie den TIFF-Dateityp nach der Windows-TIFF-IFilter-Konfiguration nicht der Registrierung hinzufügen, werden Dateien mit dieser Erweiterung zwar mit einer Bezeichnung versehen, aber wenn diese Bezeichnung für der Schutz konfiguriert ist, wird der Schutz nicht angewendet.
+
+Schließlich überprüft die Überprüfung die übrigen Dateitypen zwar nicht, wendet aber die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
 
 |Anwendungstyp|Dateityp|
 |--------------------------------|-------------------------------------|

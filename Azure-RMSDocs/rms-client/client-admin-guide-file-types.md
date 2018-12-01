@@ -4,18 +4,18 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
-ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
+ms.openlocfilehash: 9bc0bbcf6eb74d889e7cd31e6d7ff3f0b6320050
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072475"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386745"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -192,7 +192,6 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 - **Ausgeschlossene Dateitypen**: .lnk, .exe, .com, .cmd, .bat, .dll, .ini, .pst, .sca, .drm, .sys, .cpl, .inf, .drv, .dat, .tmp, .msg,.msp, .msi, .pdb, .jar
     
-    Die folgenden Dateitypen werden nun ebenfalls ausgeschlossen: .zip, .msg und .rar. 
 
 - **Ausgeschlossener Ordner**: 
     - Windows
@@ -202,7 +201,9 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Dateitypen, die von der Klassifizierung und vom Schutz durch die Azure Information Protection-Überprüfung ausgeschlossen sind
 
-Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure Information Protection-Client ausgeschlossen, nur dass RTF-Dateien ebenfalls ausgeschlossen werden. 
+Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure Information Protection-Client ausgeschlossen – mit folgenden Ausnahmen:
+
+    - RTF, RAR und ZIP sind ebenfalls ausgeschlossen.
 
 Mithilfe der folgenden PowerShell-Cmdlets können Sie die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien ändern:
 

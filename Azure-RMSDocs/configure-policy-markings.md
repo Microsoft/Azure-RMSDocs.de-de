@@ -4,16 +4,16 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 23185d2d6b5b1bb14633647c345d0e58eeda3bdc
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292608"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52585991"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -21,9 +21,7 @@ ms.locfileid: "52292608"
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen. 
 
-Weitere Informationen zu diesen optische Kennzeichnungen:
-
-- Für optische Kennzeichnungen werden mehrere Zeilen Text unterstützt.
+Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 
 - Kopf- und Fußzeilen gelten für Word, Excel, PowerPoint und Outlook.
 
@@ -33,6 +31,8 @@ Weitere Informationen zu diesen optische Kennzeichnungen:
     
     - PowerPoint: Wasserzeichen werden als Hintergrundbild auf den Folienmaster angewendet. Stellen Sie sicher, dass auf der Registerkarte **Ansicht** im **Folienmaster** die Option **Hintergrundbilder ausblenden** aktiviert ist.
 
+- Mehrere Zeilen werden für Wasserzeichen und für Kopf- und Fußzeilen in Word, Excel und PowerPoint unterstützt. Wenn Sie mehrere Zeilen für die Kopf- oder Fußzeile einer Bezeichnung angeben, die in Outlook angewendet wird, werden die Zeilen verkettet. Ziehen Sie in diesem Szenario die Verwendung der Konfiguration zum [Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) in Betracht.
+
 - Maximale Zeichenfolgenlänge:
     
     - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Wenn Sie in Excel eine lange Zeichenfolge für Kopf- oder Fußzeilen eingeben, kann es sein, dass der Text nach 255 Zeichen oder weniger abgeschnitten wird.
@@ -41,7 +41,7 @@ Weitere Informationen zu diesen optische Kennzeichnungen:
 
 - Sie können einfach eine Textzeichenfolge angeben oder [Variablen](#using-variables-in-the-text-string) verwenden, um die Textzeichenfolge dynamisch zu erstellen, wenn die Kopfzeile, die Fußzeile oder das Wasserzeichen angewendet wird.
 
-- Optische Kennzeichnungen werden in Word, PowerPoint und Outlook in unterschiedlichen Farben unterstützt. Optische Kennzeichnungen, die für Farben konfiguriert sind, werden in Excel stets in Schwarz angezeigt.
+- Optische Kennzeichnungen werden in Word, PowerPoint, Outlook und jetzt auch Excel in unterschiedlichen Farben unterstützt.
 
 - Optische Kennzeichnungen unterstützen nur eine Sprache.
 
@@ -82,7 +82,7 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 
-- `${Item.Label}` für die ausgewählte Bezeichnung. Beispiel: intern
+- `${Item.Label}` für die ausgewählte Bezeichnung. Beispiel: Allgemein
 
 - `${Item.Name}` für den Dateinamen oder E-Mail-Betreff. Beispiel: JulySales.docx
 
@@ -95,6 +95,9 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
+
+>[!TIP]
+> Außerdem verwenden Sie einen [Feldcode zum Einfügen des Bezeichnungsnamens](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in ein Dokument oder eine Vorlage.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
 

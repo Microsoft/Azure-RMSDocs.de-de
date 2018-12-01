@@ -4,18 +4,18 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 2c0d391e2d00ec7d0bc09d98de3fe6f502f999a4
-ms.sourcegitcommit: 4c4af9766342272eaa18df720ba3738d44ba99c8
+ms.openlocfilehash: a4aa5b1a6375655b9b6ab20f092a7def47187225
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51707741"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421041"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -68,6 +68,24 @@ Nein. Wenn Sie einer E-Mail-Nachricht mit Anlagen eine Bezeichnung zuweisen, erb
 Da Azure Information Protection persistente Metadaten für die Klassifizierung verwendet, die eine Klartextbezeichnung enthalten, können diese Informationen von DLP-Lösungen und anderen Anwendungen gelesen werden. 
 
 Weitere Informationen und Beispiele für die Verwendung dieser Metadaten mit Exchange Online-Nachrichtenflussregeln finden Sie unter [Konfigurieren von Exchange Online-Nachrichtenflussregeln für Azure Information Protection-Bezeichnungen](configure-exo-rules.md).
+
+## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Kann ich eine Dokumentvorlage erstellen, die automatisch die Klassifizierung umfasst?
+
+Ja. Sie können eine Bezeichnung konfigurieren, um [eine Kopf- oder Fußzeile anzuwenden, die den Namen der Bezeichnung enthält](configure-policy-markings.md). Aber wenn dies nicht Ihren Anforderungen entspricht, können Sie eine Dokumentvorlage mit der gewünschte Formatierung erstellen und die Klassifizierung als Feldcode hinzufügen. 
+
+Beispielsweise könnten Sie eine Tabelle in der Kopfzeile des Dokuments einrichten, die die Klassifizierung angezeigt. Verwenden Sie alternativ eine bestimmte Formulierung für eine Einführung, die auf die Klassifizierung des Dokuments verweist.
+
+So fügen Sie diesen Feldcode Ihrem Dokument hinzu:
+
+1. Geben Sie dem Dokument eine Bezeichnung, und speichern Sie es. So werden neue Metadatenfelder erstellt, die Sie jetzt für Ihren Feldcode verwenden können.
+
+2. Positionieren Sie den Cursor im Dokument dort, wo Sie die Bezeichnung der Klassifizierung hinzufügen möchten, und wählen Sie anschließend auf der Registerkarte **Einfügen** **Text** > **Schnellbausteine** > **Feld** aus.
+
+3. Wählen Sie im Dialogfeld **Feld** in der Dropdownliste **Kategorien** **Dokumentinformationen** aus. Wählen Sie dann in der Dropdownliste **Feldernamen** **DocProperty** aus.
+
+4. Wählen Sie in der Dropdownliste **Eigenschaft** **Vertraulichkeit** und dann **OK**.
+
+Die aktuelle Klassifizierung der Bezeichnung wird im Dokument angezeigt, und dieser Wert wird automatisch aktualisiert, wenn Sie das Dokument öffnen oder die Vorlage verwenden. Wenn sich also die Bezeichnung ändert, wird die Klassifizierung, die für diesen Feldcode angezeigt wird, automatisch im Dokument aktualisiert.
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Azure Information Protection-Klassifizierung für E-Mails von der Exchange-Nachrichtenklassifizierung?
 

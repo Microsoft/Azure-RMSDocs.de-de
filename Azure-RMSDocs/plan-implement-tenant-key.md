@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42451d8b50b0ad1edb75d767e622e697b12acf90
-ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
+ms.openlocfilehash: 2f0088cb2b95a9c0f7a50c780d89dec0b91111f4
+ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48907160"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330292"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -107,7 +107,7 @@ In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie über ein Azure-Abonnement verfügen, das Sie für BYOK verwenden können, nutzen Sie die PowerShell-Cmdlets von [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und melden Sie sich mit dem folgenden Befehl als ein globaler Administrator für Ihren Azure Information Protection-Mandanten an: `Login-AzureRmAccount`<br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzureRmSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
-|Für die Verwendung eines HSM-geschützten Schlüssels, den Sie lokal erstellen: <br /><br />– Alle Voraussetzungen, die für Key Vault-BYOK aufgeführt sind. |Siehe die [Voraussetzungen für BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
+|Für die Verwendung eines HSM-geschützten Schlüssels, den Sie lokal erstellen: <br /><br />– Alle Voraussetzungen, die für Key Vault-BYOK aufgeführt sind. |Siehe die [Voraussetzungen für BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis** (zusätzlich zu den BYOK-Voraussetzungen): Wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren, muss die Thales-Firmware mindestens in der Version 11.62 vorliegen.|
 |Wenn der Schlüsseltresor, der Ihren Mandantenschlüssel enthalten soll, Virtual Network-Dienstendpunkte für Azure Key Vault verwendet: <br /><br />– Erlauben Sie vertrauenswürdigen Microsoft-Diensten, diese Firewall zu umgehen.|Weitere Informationen finden Sie im Blog [Virtual Network Service Endpoints for Azure Key Vault (Virtual Network-Dienstendpunkte für Azure Key Vault)](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Das Azure Rights Management-Verwaltungsmodul für Windows PowerShell.|Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](./install-powershell.md). <br /><br />Wenn Sie dieses Windows PowerShell-Modul zuvor installiert haben, überprüfen Sie mit dem folgenden Befehl, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`|
 
@@ -146,7 +146,7 @@ Verwenden Sie die Azure Key Vault-Dokumentation, um einen Schlüsseltresor und d
 
 Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 1024 Bits liegt. Andere Schlüssellängen werden von Azure Information Protection nicht unterstützt.
 
-Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
+Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
 Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind „verschlüsseln“, „entschlüsseln“, „umschließen“, „entpacken“, „signieren“ und „überprüfen“. Sie können die zulässigen Vorgänge eines Schlüssels überprüfen, indem Sie [Get-AzureKeyVauktKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) verwenden und die *key-ops*-Werte, die unter **Schlüssel** zurückgegeben werden, überprüfen. Fügen Sie ggf. zulässige Vorgänge mithilfe der Parameter [Update-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/update-azurekeyvaultkey) und *KeyOps* hinzu.
 

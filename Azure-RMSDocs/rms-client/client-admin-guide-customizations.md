@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/06/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4d3a44426de151ad9d1f1262cae967fdddf0da6f
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
+ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292591"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52386779"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -50,10 +50,12 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |EnableCustomPermissions|[Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Schützen von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Deaktivieren der niedrigen Integritätsebene für den Scanner](#disable-the-low-integrity-level-for-the-scanner)|
+|PullPolicy|[Unterstützung für getrennte Computer](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Ändern der E-Mail-Adresse für den Link „Problem melden“](#modify-the-email-address-for-the-report-an-issue-link)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)|
@@ -62,11 +64,11 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 
 ## <a name="prevent-sign-in-prompts-for-ad-rms-only-computers"></a>Verhindern von Anmeldeaufforderungen für Computer, die nur AD RMS verwenden
 
-Der Azure Information Protection-Client versucht standardmäßig, eine Verbindung mit dem Azure Information Protection-Dienst herzustellen. Diese Konfiguration kann bei Computern, die nur mit AD RMS kommunizieren, zu einer unnötigen Anmeldeaufforderung für Benutzer führen. Sie können diese Anmeldeaufforderung verhindern, indem Sie das Verzeichnis bearbeiten:
+Der Azure Information Protection-Client versucht standardmäßig, eine Verbindung mit dem Azure Information Protection-Dienst herzustellen. Diese Konfiguration kann bei Computern, die nur mit AD RMS kommunizieren, zu einer unnötigen Anmeldeaufforderung für Benutzer führen. Sie können diese Anmeldeaufforderung verhindern, indem Sie die Registrierung bearbeiten:
 
-Suchen Sie nach dem folgenden Wertnamen, und legen Sie anschließend die Wertdaten auf **0** fest:
-
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+ - Suchen Sie nach dem folgenden Wertnamen, und legen Sie anschließend die Wertdaten auf **0** fest:
+    
+    **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
 Unabhängig von dieser Einstellung folgt der Azure Information Protection-Client dem [Prozess zur RMS-Diensterkennung](client-deployment-notes.md#rms-service-discovery), um sein AD RMS-Cluster zu finden.
 
@@ -133,11 +135,28 @@ Der Azure Information Protection-Client versucht standardmäßig, eine Verbindun
 
 Beachten Sie, dass ohne Internetverbindung der Client keinen Schutz durch den cloudbasierten Schlüssel Ihrer Organisation anwenden (oder entfernen) kann. Stattdessen ist der Client auf die Verwendung von Bezeichnungen beschränkt, für die ausschließlich die Klassifizierung verwendet wird, oder auf den Schutz mit [HYOK](../configure-adrms-restrictions.md).
 
-Suchen Sie den folgenden Wertnamen in der Registrierung, und legen Sie die Daten des Werts auf **0** fest, um diese Einstellung zu konfigurieren:
+Sie können eine Anmeldeaufforderung für den Azure Information Protection-Dienst verhindern, indem Sie eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) verwenden. Diese müssen Sie im Azure-Portal konfigurieren und die Richtlinie dann für Computer herunterladen. Darüber hinaus können Sie dies diese Anmeldeaufforderung verhindern, indem Sie die Registrierung bearbeiten:
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+- So konfigurieren Sie die erweiterte Clienteinstellung:
+    
+    1. Geben Sie die folgende Zeichenfolge ein:
+    
+        - Schlüssel: **PullPolicy**
+        
+        - Wert: **FALSE**
+    
+    2. Laden Sie die Richtlinie mit dieser Einstellung herunter und installieren Sie sie auf Computern, indem Sie die folgenden Anweisungen befolgen.
 
-Stellen Sie sicher, dass der Client über eine gültige Richtliniendatei namens **Policy.msip** im Ordner **%localappdata%\Microsoft\MSIP** verfügt. Falls erforderlich, können Sie die globale oder eine bereichsbezogene Richtlinie aus dem Azure-Portal exportieren und die exportierte Datei auf den Clientcomputer kopieren. Sie können mithilfe dieser Methode auch eine veraltete Richtliniendatei durch die neueste veröffentlichte Richtlinie ersetzen. Der Export der Richtlinie unterstützt jedoch nicht das Szenario, in dem ein Benutzer zu mehr als einer bereichsbezogenen Richtlinie gehört. Beachten Sie auch Folgendes: Wenn Benutzer die Option **Einstellungen zurücksetzen** aus [Hilfe und Feedback](client-admin-guide.md#help-and-feedback-section) auswählen, löscht diese Aktion die Richtliniendatei und macht den Client funktionsunfähig, bis Sie die Richtliniendatei manuell ersetzen, oder der Client eine Verbindung mit dem Dienst zum Herunterladen der Richtlinie herstellt.
+- Alternativ können Sie auch die Registrierung bearbeiten:
+    
+    - Suchen Sie nach dem folgenden Wertnamen, und legen Sie anschließend die Wertdaten auf **0** fest:
+    
+        **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
+
+
+Der Client benötigt eine gültige Richtliniendatei **Policy.msip** im Ordner **%LocalAppData%\Microsoft\MSIP**.
+
+Sie können die globale oder eine bereichsbezogene Richtlinie aus dem Azure-Portal exportieren und die exportierte Datei auf den Clientcomputer kopieren. Sie können mithilfe dieser Methode auch eine veraltete Richtliniendatei durch die neueste Richtlinie ersetzen. Der Export der Richtlinie unterstützt jedoch nicht das Szenario, in dem ein Benutzer zu mehr als einer bereichsbezogenen Richtlinie gehört. Beachten Sie auch Folgendes: Wenn Benutzer die Option **Einstellungen zurücksetzen** aus [Hilfe und Feedback](client-admin-guide.md#help-and-feedback-section) auswählen, löscht diese Aktion die Richtliniendatei und macht den Client funktionsunfähig, bis Sie die Richtliniendatei manuell ersetzen, oder der Client eine Verbindung mit dem Dienst zum Herunterladen der Richtlinie herstellt.
 
 Wenn Sie die Richtlinie aus dem Azure-Portal exportieren, wird eine ZIP-Datei heruntergeladen, die mehrere Versionen der Richtlinie enthält. Diese Richtlinienversionen entsprechen verschiedenen Versionen des Azure Information Protection-Clients:
 
@@ -222,6 +241,46 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
 
+## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
+
+Verwenden Sie diese Einstellung nur, wenn Sie eine funktionierende [S/MIME-Bereitstellung](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) haben und eine Bezeichnung diese Schutzmethode automatisch auf E-Mails anwenden soll und nicht den Rights Management-Schutz vor Azure Information Protection. Der resultierende Schutz ist derselbe wie bei der manuellen Auswahl von S/MIME-Optionen in Outlook.
+
+In dieser Konfiguration müssen Sie eine erweiterte Clienteinstellung namens **LabelToSMIME** für jede Azure Information Protection-Bezeichnung angeben, die S/MIME-Schutz anwenden soll. Geben Sie dann für jeden Eintrag mithilfe der folgenden Syntax den Wert an:
+
+`[Azure Information Protection label ID];[S/MIME action]`
+
+Der Wert der Bezeichnungs-ID wird auf dem Blatt **Bezeichnung** angezeigt, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren. Um S/MIME mit einer untergeordneten Bezeichnung zu verwenden, geben Sie immer die ID der untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung. Wenn Sie eine untergeordnete Bezeichnung angegeben, muss sich die übergeordnete Bezeichnung im gleichen Bereich oder in der globalen Richtlinie befinden.
+
+Folgende S/MIME-Aktionen sind möglich:
+
+- `Sign;Encrypt`: Zum Anwenden einer digitalen Signatur und der S/MIME-Verschlüsselung
+
+- `Encrypt`: Nur zum Anwenden der S/MIME-Verschlüsselung
+
+- `Sign`: Nur zum Anwenden einer digitalen Signatur
+
+Beispielwerte für eine Bezeichnungs-ID von **dcf781ba-727f-4860-b3c1-73479e31912b**:
+
+- Zum Anwenden einer digitalen Signatur und der S/MIME-Verschlüsselung:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign;Encrypt**
+
+- Nur zum Anwenden der S/MIME-Verschlüsselung:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Encrypt**
+    
+- Nur zum Anwenden einer digitalen Signatur:
+    
+    **dcf781ba-727f-4860-b3c1-73479e31912b;Sign**
+
+Aufgrund dieser Konfiguration wird bei der Anwendung der Bezeichnung für eine E-Mail-Nachricht zusätzlich zur Klassifizierung der Bezeichnung auch der S/MIME-Schutz für die E-Mail angewendet.
+
+Wenn die von Ihnen angegebene Bezeichnung für den Rights Management-Schutz im Azure-Portal konfiguriert ist, ersetzt der S/MIME-Schutz den Rights Management-Schutz nur in Outlook. Für alle anderen Szenarien, die eine Bezeichnung unterstützen, wird der Rights Management-Schutz angewendet.
+
+Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie die Bezeichnung so, dass sie die einzelne benutzerdefinierte Aktion von **Nicht weiterleiten** anwendet, wie im Abschnitt [Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertraulichen Informationen enthalten](../quickstart-label-dnf-protectedemail.md) beschrieben.
+
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>„Not now“ („Nicht jetzt“) für Dokumente bei Verwendung der obligatorischen Bezeichnung entfernen
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
@@ -296,7 +355,8 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
     - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-
+4. settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -417,7 +477,7 @@ Erweiterte Clienteinstellung:
 
 Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellungen befinden sich in der Vorschauversion und können sich ändern.
 
-Mit diesen Einstellungen können Sie Kopf- und Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
+Mit diesen Einstellungen können Sie textbasierte Kopf- und Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Die ältere Fußzeile enthält beispielsweise den Namen einer alten Bezeichnung, die Sie nun mit einem neuen Bezeichnungsnamen und einer eigenen Fußzeile zu Azure Information Protection migriert haben.
 
 Wenn der Client diese Konfiguration in seiner Richtlinie abruft, werden die alten Kopf- oder Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und Azure Information Protection-Bezeichnungen auf das Dokument angewendet wurden.
 

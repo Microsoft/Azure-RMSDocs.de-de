@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 11/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
-ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
+ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51611419"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421010"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -44,6 +44,18 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Anwendungen zum Bezeichnen verwendet werden
 
+- In den **Aktivitätsprotokollen** (wo Sie einen Zeitraum auswählen können):
+    
+    - Welche Bezeichnungsaktionen von einem bestimmten Benutzer ausgeführt wurden
+    
+    - Welche Bezeichnungsaktionen von einem bestimmten Gerät ausgeführt wurden
+    
+    - Welche Benutzer auf ein bestimmtes bezeichnetes Dokument zugegriffen haben
+    
+    - Welche Bezeichnungsaktionen für einen bestimmten Dateipfad ausgeführt wurden
+    
+    - Welche Bezeichnungsaktionen von einer bestimmten Anwendung wie Datei-Explorer und Rechtsklicken oder dem AzureInformationProtection-PowerShell-Modul ausgeführt wurden
+
 - Im Bericht **Datenermittlung**:
 
     - Welche Dateien sich in Ihren überprüften Datenrepositorys befinden
@@ -52,7 +64,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Dateien vertrauliche Daten für bekannte Kategorien enthalten, z.B. Finanzdaten und persönliche Informationen, und den Speicherort von Dateien nach diesen Kategorien
     
-Die Berichte verwenden [Azure Log Analytics](/azure/log-analytics/log-analytics-overview), um die Daten in einem Arbeitsbereich zu speichern, der Ihnen gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Erste Schritte mit dem Log Analytics-Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Die Berichte verwenden [Azure Log Analytics](/azure/log-analytics/log-analytics-overview), um die Daten in einem Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Erste Schritte mit dem Log Analytics-Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
 Weitere Informationen finden Sie im Blogbeitrag [Datenermittlung, Berichterstattung und Analysen für alle Daten mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (in englischer Sprache).
 
@@ -80,7 +92,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Die Client-Betriebssystemversion.
 
-Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihnen gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users).
+Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users).
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Voraussetzungen für Azure Information Protection-Analysen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
@@ -88,7 +100,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Ein Azure-Abonnement, das Log Analytics umfasst|Eine Preisübersicht finden Sie auf der Seite [Azure Log Analytics – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
-|Die aktuelle Vorschauversion des Azure Information Protection-Clients|Wenn Sie die aktuelle Vorschauversion des Clients noch nicht installiert haben, können Sie sie über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen und installieren.|
+|Die aktuelle allgemein verfügbare Version des Azure Information Protection-Clients.|Wenn Sie diese Version des Clients noch nicht installiert haben, können Sie sie über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen und installieren.|
 |Für den Bericht **Ermittlung und Risiko**: <br /><br />– Mindestens eine Azure Information Protection-Überprüfungsinstanz (aktuelle Vorschauversion) wurde bereitgestellt|Eine Installationsanleitung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Wenn Sie ein Upgrade von einer vorherigen Version ausführen, lesen Sie [Upgrade der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 
 
@@ -115,6 +127,12 @@ Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
 
 - **Nutzungsbericht (Vorschauversion)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden. 
+
+- **Aktivitätsprotokolle (Vorschau)**: Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
+    
+    Dieser Bericht wird derzeit für Mandanten eingeführt – wenn er nicht angezeigt wird, versuchen Sie es in wenigen Tagen erneut. 
+    
+    Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Eine der Spalten ist für das **Geräterisiko** vorgesehen. Hier werden die Daten von Windows Defender angezeigt, wenn die Anwendung in Azure Information Protection integriert ist.
 
 - **Datenermittlung (Vorschauversion)**: Dieser Bericht enthält beim Überprüfen gefundene Informationen zu Dateien.
 

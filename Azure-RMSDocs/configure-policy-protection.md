@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751167"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303922"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -104,12 +104,13 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Wenn Sie alle Mitglieder auswählen oder das Verzeichnis durchsuchen, müssen die Benutzer oder Gruppen eine E-Mail-Adresse haben. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
         
-        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Alle authentifizierten Benutzer hinzufügen** 
+        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Keine authentifizierten Benutzer hinzufügen** 
         Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 2016 verwendet werden. 
           
-        Einige typische Szenarien für die Einstellung „Keinen authentifizierten Benutzer hinzufügen“: Es spielt keine Rolle, wer den Inhalt sieht, aber Sie möchten die Verwendung einschränken. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.  
-            – Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.  
-            – Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.
+        Einige typische Szenarios für die Einstellung „Keine authentifizierten Benutzer“:
+        - Ihnen ist egal, wer den Inhalt sehen kann, Sie möchten jedoch einschränken, wie dieser verwendet wird. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.
+        - Sie müssen nicht einschränken, wer auf den Inhalt zugreift, aber Sie möchten nachvollziehen können, wer ihn öffnet, und ihn möglicherweise widerrufen.
+        - Sie haben die Anforderung, dass der Inhalt im Ruhezustand und während der Übertragung verschlüsselt sein muss, aber es ist keine Zugriffssteuerung erforderlich.
         
     - Wählen Sie **Details eingeben** aus, um manuell E-Mail-Adressen für einzelne Benutzer oder Gruppen (intern oder extern) anzugeben. Sie können diese Option auch verwenden, um alternativ alle Benutzer in einer Organisation durch die Eingabe eines beliebigen Domänennamens aus dieser Organisation anzugeben. Außerdem können Sie diese Option für soziale Netzwerke verwenden, indem Sie den Domänennamen, z.B. **gmail.com**, **hotmail.com** oder **outlook.com** eingeben.
         
