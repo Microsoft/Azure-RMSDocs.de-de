@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
-ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
+ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52421010"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953311"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -25,10 +25,13 @@ ms.locfileid: "52421010"
 > [!NOTE]
 > Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen. Alle in dieser Vorschauversion gesammelten Daten werden möglicherweise nicht unterstützt, sobald die Funktion allgemein verfügbar ist.
 
+Verwenden Sie die Azure Information Protection Analysen für die zentrale Berichterstellung, um die Einführung Ihrer Azure Information Protection-Bezeichnungen zu verfolgen. Zusätzlich:
 
-Mit Azure Information Protection-Analysen für die zentrale Berichterstellung können Sie die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen sowie den Benutzerzugriff auf Dokumente bzw. E-Mails mit Bezeichnungen und alle Änderungen an ihrer Klassifizierung überwachen. Außerdem haben Sie die Möglichkeit, Dokumente zu identifizieren, die sensible Daten enthalten, die geschützt werden müssen.
+- Überwachen Sie den Benutzerzugriff auf bezeichnete Dokumente und E-Mails sowie alle Änderungen an deren Klassifizierung. 
 
-Zurzeit werden die angezeigten Daten von Ihren Azure Information Protection-Clients und der Azure Information Protection-Überprüfung aggregiert.
+- Identifizieren Sie Dokumente, die sensible Daten enthalten, die geschützt werden müssen.
+
+Derzeit werden die angezeigten Daten von Ihren Azure Information Protection- Clients und Azure Information Protection-Überprüfungen sowie von Windows-Computern mit [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview) zusammengefasst.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -58,7 +61,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
 
 - Im Bericht **Datenermittlung**:
 
-    - Welche Dateien sich in Ihren überprüften Datenrepositorys befinden
+    - Welche Dateien sich in Ihren überprüften Datenrepositorys oder auf Windows 10-Computern befinden
     
     - Welche Dateien Bezeichnungen aufweisen und geschützt werden sowie den Speicherort der Dateien nach Bezeichnung
     
@@ -101,8 +104,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |---------------|--------------------|
 |Ein Azure-Abonnement, das Log Analytics umfasst|Eine Preisübersicht finden Sie auf der Seite [Azure Log Analytics – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
 |Die aktuelle allgemein verfügbare Version des Azure Information Protection-Clients.|Wenn Sie diese Version des Clients noch nicht installiert haben, können Sie sie über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen und installieren.|
-|Für den Bericht **Ermittlung und Risiko**: <br /><br />– Mindestens eine Azure Information Protection-Überprüfungsinstanz (aktuelle Vorschauversion) wurde bereitgestellt|Eine Installationsanleitung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Wenn Sie ein Upgrade von einer vorherigen Version ausführen, lesen Sie [Upgrade der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
-
+|Für den Bericht **Ermittlung und Risiko**: <br /><br />– Um Daten aus lokalen Datenspeichern anzuzeigen, müssen Sie mindestens eine Azure Information Protection-Überprüfungsinstanz (aktuelle GA-Version) bereitstellen. <br /><br />– Um Daten von Windows 10-Computern anzuzeigen, müssen diese mindestens Build 1809 haben, Sie müssen Windows Defender Advanced Threat Protection (Windows Defender ATP) verwenden, und es muss das Integrationsfeature Azure Information Protection im Windows Defender Security Center aktiviert sein.|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). Wenn Sie ein Upgrade von einer vorherigen Version ausführen, lesen Sie [Upgrade der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />Informationen zur Konfiguration und Verwendung des Integrationsfeatures von Azure Information Protection aus dem Windows Defender Security Center finden Sie unter [Informationsschutz in der Windows-Übersicht](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Konfigurieren eines Log Analytics-Arbeitsbereichs für Berichte
 
@@ -130,11 +132,11 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
 
 - **Aktivitätsprotokolle (Vorschau)**: Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
     
-    Dieser Bericht wird derzeit für Mandanten eingeführt – wenn er nicht angezeigt wird, versuchen Sie es in wenigen Tagen erneut. 
+    Dieser Bericht wird derzeit für Mandanten eingeführt – wenn er nicht angezeigt wird, versuchen Sie es in wenigen Tagen erneut.
     
-    Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Eine der Spalten ist für das **Geräterisiko** vorgesehen. Hier werden die Daten von Windows Defender angezeigt, wenn die Anwendung in Azure Information Protection integriert ist.
+    Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können.
 
-- **Datenermittlung (Vorschauversion)**: Dieser Bericht enthält beim Überprüfen gefundene Informationen zu Dateien.
+- **Datenermittlung (Vorschauversion)**: Dieser Bericht enthält beim Überprüfen oder von Windows Defender ATP gefundene Informationen zu Dateien.
 
 ## <a name="how-to-modify-the-reports"></a>Ändern von Berichten
 

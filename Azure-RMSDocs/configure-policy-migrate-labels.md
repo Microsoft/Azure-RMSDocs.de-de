@@ -4,17 +4,17 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382611"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953328"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -48,7 +48,7 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
     
     Zur Optimierung der Benutzerfreundlichkeit empfehlen wir, die gleichen Bezeichnungen in den gleichen Bereichen im Security & Compliance Center zu veröffentlichen.
 
-- Nicht alle Einstellungen einer migrierten Bezeichnung werden vom Security & Compliance Center unterstützt. Verwenden Sie die Tabelle in Abschnitt [Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-security--compliance-center), um die entsprechenden Einstellungen zu ermitteln und festzulegen, ob die migrierten Bezeichnungen von der Veröffentlichung im Security & Compliance Center ausgeschlossen werden sollen.
+- Nicht alle Einstellungen einer migrierten Bezeichnung werden vom Security & Compliance Center unterstützt. Verwenden Sie die Tabelle in Abschnitt [Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-security--compliance-center), um die entsprechenden Einstellungen zu ermitteln, die vom Security & Compliance Center nicht unterstützt werden.
 
 - Schutzvorlagen:
     
@@ -66,17 +66,15 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
 
 - Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Sie müssen im Security & Compliance Center neue lokalisierte Zeichenfolgen für die migrierten Bezeichnungen definieren.
 
-- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch im Security & Compliance Center angezeigt. Wenn Sie eine migrierte Bezeichnung jedoch im Security & Compliance Center bearbeiten, müssen Sie sie im Azure-Portal aktualisieren, damit die Änderung übernommen wird. Bearbeiten Sie z.B. das Feld **Hinweise zur Verwendung durch den Administrator hinzufügen** auf dem Blatt **Bezeichnung**. 
-
-- Einheitliche Bezeichnungen werden weiterhin für Mandanten bereitgestellt. Wenn sie noch nicht für Ihren Mandanten unterstützt werden, wird die Migration fehlschlagen, und Änderungen werden rückgängig gemacht. Solange nicht alle Mandanten unterstützt werden, müssen Sie über einen speziellen Link auf die Option zum Migrieren Ihrer Mandanten und Bezeichnungen zugreifen. Diesen Link finden Sie in den folgenden Anweisungen.
+- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch im Security & Compliance Center angezeigt. Wenn Sie jedoch eine migrierte Kennzeichnung im Security & Compliance Center bearbeiten, müssen Sie im Azure-Portal zum Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurückkehren und **Veröffentlichen** auswählen. Diese zusätzliche Aktion ist erforderlich, damit die Clients von Azure Information Protection die Bezeichnungsänderungen übernehmen können.
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen
 
-Die folgende Tabelle zeigt, welche Konfigurationseinstellungen von migrierten Bezeichnungen nicht für Clients unterstützt werden, die diese Bezeichnungen verwenden, und ob Sie die migrierte Bezeichnung im Security & Compliance Center bearbeiten und veröffentlichen sollten. Wenn Sie Bezeichnungen veröffentlichen, die Sie vorher von der Veröffentlichung ausgeschlossen haben, werden für die Clients, die einheitliche Bezeichnungen unterstützen, keine Bezeichnungen angezeigt.
+Anhand der folgenden Tabelle können Sie feststellen, welche Konfigurationseinstellungen einer migrierten Bezeichnung von Clients für einheitliche Bezeichnungen nicht oder nur eingeschränkt unterstützt werden. Um Verwirrung zu vermeiden, empfehlen wir Ihnen, die Einstellungen, die keine Auswirkungen auf Clients für einheitliche Bezeichnungen haben, nicht zu konfigurieren.
 
 Azure Information Protection-Clients können diese Bezeichnungseinstellungen problemlos verwenden, weil sie die Bezeichnungen weiterhin aus dem Azure-Portal herunterladen.
 
-|Bezeichnungskonfiguration|Im Security & Compliance Center unterstützt|Im Security & Compliance Center von Bearbeitung und Veröffentlichung ausgeschlossen|
+|Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen|Im Security & Compliance Center von Bearbeitung ausgeschlossen|
 |-------------------|---------------------------------------------|-------------------------|
 |Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweis: Keine Synchronisierung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
 |Bezeichnungsfarbe: Auswahl aus der Liste oder Angabe mit RGB-Code<br /><br />Hinweis: Keine Unterstützung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
@@ -91,12 +89,7 @@ Azure Information Protection-Clients können diese Bezeichnungseinstellungen pro
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen
 
-> [!IMPORTANT]
-> Migrieren Sie Bezeichnungen erst, wenn Sie Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center bearbeiten und veröffentlichen können. Vertraulichkeitsbezeichnungen werden allmählich für Office 365-Mandanten bereitgestellt, sind allerdings noch nicht für alle Mandanten verfügbar.
-> 
-> So überprüfen Sie die Verfügbarkeit: Rufen Sie im Office 365 Security & Compliance Center **Klassifizierungen** > **Bezeichnungen** auf, und überprüfen Sie, ob die Registerkarte **Vertraulichkeit** vorhanden ist. Wenn diese Registerkarte nicht angezeigt wird, unterstützt Ihr Mandant noch nicht Vertraulichkeitsbezeichnungen. Migrieren Sie Ihre Azure Information Protection-Bezeichnungen nicht zu diesem Zeitpunkt.
-
-Wenn Ihr Mandant Vertraulichkeitsbezeichnungen im Security & Compliance Center unterstützt, verwenden Sie die folgenden Anweisungen zum Migrieren Ihrer Mandanten und Azure Information Protection-Bezeichnungen.
+Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten- und Azure Information Protection-Bezeichnungen zu migrieren und den neuen Speicher für einheitliche Bezeichnungen zu verwenden.
 
 Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
 
@@ -106,6 +99,8 @@ Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
 
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Kunden, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen im Security & Compliance Center veröffentlichen.
 
+> [!IMPORTANT]
+> Wenn Sie die Bezeichnungen außerhalb des Azure-Portals für Azure Information Protection-Clients bearbeiten, kehren Sie zu diesem Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurück, und wählen Sie **Veröffentlichen**.
 
 ### <a name="clients-that-support-unified-labeling"></a>Clients, die einheitliche Bezeichnungen unterstützen
 

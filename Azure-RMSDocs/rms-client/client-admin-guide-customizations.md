@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 41e092b379cfb52db286a61ad715703514e500d0
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d4e2af4a9123b7276f2afad6f0d41232f3555d62
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386779"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861182"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -48,7 +48,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |DisableDNF|[Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |EnableBarHiding|[Die Azure Information Protection-Leiste dauerhaft ausblenden](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
-|EnablePDFv2Protection|[Schützen von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung](#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|EnablePDFv2Protection|[Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung.](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
@@ -315,23 +315,21 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: **TRUE**
 
-## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Schützen von PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung
+## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
-Wenn der Azure Information Protection-Client eine PDF-Datei schützt, verfügt die resultierende Datei standardmäßig über die Erweiterung PPDF. Sie können dieses Verhalten ändern, sodass die Erweiterung PDF beibehalten wird und dem ISO-Standard für die PDF-Verschlüsselung entspricht. Weitere Informationen zu diesem Standard finden Sie im Abschnitt **7.6 Encryption** (7.6 Verschlüsselung) aus dem [Dokument, das von ISO 32000-1 abgeleitet](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) und von Adobe Systems Incorporated veröffentlicht wird.
+Wenn die aktuelle Version des Azure Information Protection-Clients eine PDF-Datei schützt, verbleibt die daraus resultierende Erweiterung bei PDF und entspricht somit dem ISO-Standard für die Verschlüsselung von PDF-Dateien. Weitere Informationen zu diesem Standard finden Sie im Abschnitt **7.6 Encryption** (7.6 Verschlüsselung) aus dem [Dokument, das von ISO 32000-1 abgeleitet](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) und von Adobe Systems Incorporated veröffentlicht wird.
 
-Geben Sie die folgende Zeichenfolge zum Konfigurieren dieser erweiterten Einstellung ein:
+Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Clients zurückkehrt, bei dem PDF-Dateien mit der .ppdf-Dateinamenerweiterung geschützt werden, verwenden Sie die folgende erweiterte Einstellung, indem Sie diese Zeichenfolge eingeben:
 
 - Key: **EnablePDFv2Protection**
 
-- Wert: **TRUE**
-
-Wenn der Azure Information Protection-Client eine PDF-Datei schützt, erstellt diese Aktion aufgrund dieser Konfigurationsoption ein geschütztes PDF-Dokument, das mit der aktuellen Azure Information Protection-Clientversion für Windows und anderen PDF-Readern, die den ISO-Standard für die PDF-Verschlüsselung unterstützen, geöffnet werden kann. Die Azure Information Protection-App für iOS und Android unterstützen zurzeit nicht den ISO-Standard für die PDF-Verschlüsselung. Die neuesten Informationen zu Adobe Acrobat Reader finden Sie unter [Ab Oktober: Verfügbarkeit von Adobe Acrobat Reader für mit Microsoft Information Protection geschützte PDFs](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738) (in englischer Sprache).
+- Wert: **FALSE**
 
 Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden.
 
-Weitere Informationen zu dieser PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+Weitere Informationen zu dieser neuen PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien
 

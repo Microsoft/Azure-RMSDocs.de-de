@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
+ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386796"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52731148"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -252,7 +252,7 @@ Die Überprüfung verwendet dann Windows-IFilter, um die folgenden Dateitypen zu
 |PDF |PDF|
 |Text|.txt; .xml; .csv|
 
-Darüber hinaus kann die Überprüfung auch optische Zeichenerkennung (Optical Character Recognition, OCR) verwenden, um TIFF-Bilder mit der Dateinamenerweiterung „.tiff“ zu überprüfen, wenn Sie [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, der die Überprüfung ausführt.
+Darüber hinaus kann die Überprüfung auch optische Zeichenerkennung (Optical Character Recognition, OCR) verwenden, um TIFF-Bilder mit der Dateinamenerweiterung „.tiff“ zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und die [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, der die Überprüfung ausführt.
 
 Standardmäßig werden nur Office-Dateitypen von der Überprüfung geschützt. PDF-Dokumente und Textdateien sowie TIFF-Bilder werden also nicht geschützt, sofern Sie nicht die [Registrierung bearbeiten](#editing-the-registry-for-the-scanner), um die Dateitypen anzugeben:
 

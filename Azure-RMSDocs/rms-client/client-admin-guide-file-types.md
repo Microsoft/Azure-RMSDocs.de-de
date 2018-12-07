@@ -4,18 +4,18 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9bc0bbcf6eb74d889e7cd31e6d7ff3f0b6320050
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: e228c1c49481a9772e2f86164926db6075fe2924
+ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386745"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861233"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -127,7 +127,7 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 |JT|PJT|
 
 ###### <a name="footnote-1"></a>Fußnote 1
-Wenn Sie den Azure Information Protection-Client zum [Schutz von PDF-Dateien mit dem ISO-Standard für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfigurieren, bleibt die Erweiterung des geschützten PDF-Dokuments „.pdf“.
+Mit der aktuellen Version des Azure Information Protection-Clients bleibt die Erweiterung des geschützten PDF-Dokuments [in der Regel](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) „.pdf“.
 
 Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
 
@@ -238,19 +238,13 @@ Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als 
 
 Jede Datei, die mit einem Kennwort geschützt ist, kann nur nativ vom Azure Information Protection-Client geschützt werden, wenn sie gerade in der Anwendung geöffnet ist, die für diesen Schutz sorgt. Am häufigsten sind PDF-Dateien kennwortgeschützt. Diese Funktion wird jedoch auch von anderen Anwendungen bereitgestellt, wie z.B. Office-Apps.
 
-Wenn der Azure Information Protection-Client nicht zum [Schutz von PDF-Dateien mit dem ISO-Standard für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfiguriert wurde, kann der Client die folgenden PDF-Dateitypen zwar anzeigen, sie jedoch nicht nativ schützen bzw. den Schutz für sie aufheben:
+Wenn Sie das [Standardverhalten](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) des Azure Information Protection-Clients so ändern, dass er PDF-Dateien mit der .ppdf-Dateinamenerweiterung schützt, kann der Client PDF-Dateien unter einem der folgenden Umstände nicht nativ schützen oder den Schutz aufheben:
 
 - eine formularbasierte PDF-Datei
 
 - eine geschützte PDF-Datei mit PDF-Erweiterung
-
-Sie können das Problem mit dem Schutz dieser Dateien umgehen, indem Sie diese generisch schützen. Folgen Sie dazu den Anweisungen im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files). Dadurch wird allerdings die Schutzebene alle Dateien mit PDF-Erweiterung auf Computerebene geändert. Es ist nicht möglich, den generischen Schutz nur für die Dateien zu definieren, die die aufgelisteten Kriterien erfüllen.
-
-Wenn der Schutz dieser Dateien von großer Bedeutung ist, können Sie sie vorübergehend auf einen anderen Computer kopieren, um Sie dort generisch zu schützen, und sie dann zurück an ihren ursprünglichen Speicherort kopieren. Alternativ lässt sich der Client zum [Schutz von PDF-Dateien mit dem ISO-Standard für die PDF-Verschlüsselung](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) konfigurieren, damit Sie die beiden folgenden PDF-Dateitypen nativ schützen oder den Schutz für sie aufheben können:
-
-- eine formularbasierte PDF-Datei
-
-- eine geschützte PDF-Datei mit PDF-Erweiterung
+    
+    Der Azure Information Protection-Client kann eine nicht geschützte PDF-Datei schützen, deren Schutz aufheben und eine geschützte PDF-Datei erneut schützen, wenn diese eine PPDF-Erweiterung aufweist.
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>Einschränkungen für Containerdateien, z.B. ZIP-Dateien
 
