@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 75a13413cbbbb1a7ab653522fcec9606c002f7d8
+ms.sourcegitcommit: dce7b4f95c216afc9ec6524a686a02287e6bdcf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644646"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "53007497"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -35,7 +35,7 @@ Für dieses Tutorial benötigen Sie etwa 15 Minuten.
 
 Voraussetzungen für dieses Tutorial:
 
-1. Ein Abonnement, das Azure Information Protection-Plan 2 beinhaltet.
+1. Ein Abonnement, das Azure Information Protection-Plan 1 oder -Plan 2 beinhaltet.
     
     Wenn Sie kein Abonnement besitzen, das diesen Plan enthält, können Sie ein [kostenloses](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
