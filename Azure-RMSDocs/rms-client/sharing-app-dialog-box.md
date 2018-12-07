@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 435432c1c759c040482096393c3a36cdee02691b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f6e84919653d68fb4f09671b233ccdc31bf1a82f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148493"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024279"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Dialogfeldoptionen der Rights Management-Freigabeanwendung
 
@@ -24,7 +24,7 @@ ms.locfileid: "44148493"
 Verwenden Sie diese Informationen als Hilfe bei der Angabe der Optionen in den Dialogfeldern **Schutz hinzufügen** oder **Geschützt freigeben** der RMS-Freigabeanwendung. Dieses Dialogfeld wird angezeigt, wenn Sie [eine freizugebende Datei schützen](sharing-app-protect-by-email.md) oder [eine Datei auf einem Gerät (direkt) schützen](sharing-app-protect-in-place.md) und benutzerdefinierte Berechtigungen auswählen.
 
 > [!IMPORTANT]
-> Wenn sich die angezeigten Optionen von den hier dokumentierten unterscheiden, haben Sie wahrscheinlich nicht die neueste Version der Freigabeanwendung installiert. Sie können die neueste Version von der Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) herunterladen.
+> Wenn sich die angezeigten Optionen von den hier dokumentierten unterscheiden, haben Sie wahrscheinlich nicht die neueste Version der Freigabeanwendung installiert. Sie können die neueste Version von der Seite [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) herunterladen.
 > 
 > Woher wissen Sie, ob Sie die neueste Version verwenden? Suchen Sie in der Liste „Programme und Features“ nach **Microsoft Rights Management-Freigabeanwendung** , und überprüfen Sie die entsprechende Versionsnummer. Damit Sie die Optionen in der Tabelle anzeigen und verwenden können, sollte die verwendete Version mindestens **1.0.1770.0**sein. Sie können die letzte Versionsnummer auf der Downloadseite überprüfen.
 
