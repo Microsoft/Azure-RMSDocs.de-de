@@ -12,17 +12,17 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2a239c802ae818a3b51eb0fb05f98f509f469e3c
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146318"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023291"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
 In diesem Thema werden die Schritte zum Herstellen einer Verbindung mit einem RMS-Server oder Azure RMS zum Testen der rechtlich geschützten Anwendung behandelt.
- 
+ 
 ## <a name="instructions"></a>Anweisungen
 
 ### <a name="step-1-setup-your-rms-server"></a>Schritt 1: Einrichten des RMS-Servers
@@ -38,7 +38,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
     Ab Windows Server 2008 sind sowohl die Client- als auch die Serverkomponenten im Betriebssystem enthalten. Sie können die Serverkomponenten für frühere Betriebssysteme vom folgenden Speicherort herunterladen.
 
-    -   [RMS Server v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [RMS Server v1.0 SP2](https://go.microsoft.com/fwlink/p/?linkid=73722)
 
     Um die Serverkomponente unter Windows Server 2008 zu konfigurieren, müssen Sie die AD RMS-Rolle installieren. Wenn Sie jedoch eine Anwendung für ein früheres Serverbetriebssystem bereitstellen, konfigurieren Sie die Registrierung nach der Installation von RMS Server v1.0 SP2, aber vor der Bereitstellung des RMS-Diensts.
 
@@ -48,7 +48,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
 
     -   **Selbstregistrierung**
 
-        Ab Windows Server 2008 können Sie einen RMS-Server in der entsprechenden Hierarchie registrieren, ohne die Informationen an Microsoft zu senden. Bei der Installation der RMS-Serverrolle werden auch ein Selbstregistrierungszertifikat und ein privater Schlüssel installiert. Diese werden zur automatischen Erstellung des lizenzgebenden Serverzertifikats verwendet. Mit Microsoft werden keine Informationen ausgetauscht.
+        Ab Windows Server 2008 können Sie einen RMS-Server in der entsprechenden Hierarchie registrieren, ohne Informationen an Microsoft zu senden. Bei der Installation der RMS-Serverrolle werden auch ein Selbstregistrierungszertifikat und ein privater Schlüssel installiert. Diese werden zur automatischen Erstellung des lizenzgebenden Serverzertifikats verwendet. Mit Microsoft werden keine Informationen ausgetauscht.
 
     -   **Onlineregistrierung**
 

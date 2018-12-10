@@ -1,5 +1,5 @@
 ---
-title: 'Schnellstart: Erste Schritte im Azure-Portal'
+title: 'Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal – AIP'
 description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information Protection besitzt, beginnen Sie an dieser Stelle, um den Dienst zum Azure-Portal hinzuzufügen, die Aktivierung des Schutzdiensts zu überprüfen und die Richtlinie anzuzeigen.
 author: cabailey
 ms.author: cabailey
@@ -7,14 +7,14 @@ manager: mbaldwin
 ms.date: 11/05/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 351b026429a803bf1ac74cdddd547c73a29dfa18
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953345"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023514"
 ---
-# <a name="quickstart-get-started-in-the-azure-portal"></a>Schnellstart: Erste Schritte im Azure-Portal
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
 In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, überprüfen, ob der Schutzdienst aktiviert ist, und zeigen die Standardrichtlinie Ihrer Organisation an. 
 

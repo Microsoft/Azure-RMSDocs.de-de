@@ -4,18 +4,18 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0359329513bdd2825f7121a95d4e940a76c401a5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148799"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024075"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -30,7 +30,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     > [!TIP]
     > Beispielvideos für Endbenutzer:
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Azure RMS-Dokumentenverfolgung und -widerruf](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    > -   [Azure RMS-Dokumentenverfolgung und -widerruf](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Administratorinformationen**
     
@@ -73,13 +73,13 @@ Der Azure Information Protection-Client erleichtert Benutzern nicht nur, Dokumen
 Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
+## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
 Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Zudem wird die Schaltfläche **Schützen** nicht im Menüband oder die Option **Klassifizieren und schützen** nicht im Datei-Explorer angezeigt. Mithilfe dieser Ergänzungen können Dokumente und E-Mails einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
 
-#### <a name="to-protect-a-document-in-word-2013"></a>So schützten Sie ein Dokument in Word 2013
+#### <a name="to-protect-a-document-in-word2013"></a>So schützten Sie ein Dokument in Word 2013
 
 1.  Erstellen Sie in Microsoft Word ein Dokument.
 
@@ -98,7 +98,7 @@ Beispielsweise gestattet ein Nutzungsrecht „Nur anzeigen“ dem Benutzer nicht
 
 Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsbanner angezeigt. In dem Banner können die Berechtigungen angezeigt werden, die auf das Dokument angewendet werden, oder es kann ein Link zu deren Anzeige vorhanden sein.
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>So schützten Sie eine E-Mail mithilfe von Outlook 2013 und Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>So schützten Sie eine E-Mail mithilfe von Outlook 2013 und Exchange Online
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 959d0b8fb8d36c7a3a9205140b33a2e71dce2d7a
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149377"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024432"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
@@ -24,7 +24,7 @@ ms.locfileid: "44149377"
 > [!IMPORTANT]
 > **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
 
-Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](http://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
+Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](https://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
 Die RMS-Freigabeanwendung ist am besten für die Arbeit mit Azure Information Protection geeignet, da diese Bereitstellungskonfiguration das Senden geschützter Anhänge an Benutzer in einer anderen Organisation sowie Optionen, wie z.B. E-Mail-Benachrichtigungen und Dokumentkontrolle mit Sperrung, unterstützt. Sie funktioniert aber auch mit einigen Einschränkungen mit der lokalen Version AD RMS. Einen umfassenden Vergleich der Funktionen, die von Azure Information Protection und AD RMS unterstützt werden, finden Sie unter [Vergleich zwischen Azure Information Protection und AD RMS](../compare-on-premise.md). Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md) nach.
 
@@ -33,7 +33,7 @@ Eine technische Übersicht über die Rights Management-Freigabeanwendung und Inf
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.
 Die Windows-Version des RMS-Freigabeanwendung unterstützt eine skriptbasierte Installation, sodass sie auch für Unternehmensbereitstellungen geeignet ist.
 
-Die einzige Voraussetzung für Installationen besteht darin, dass der Computer mindestens Windows 7 Service Pack 1 ausführt und dass mindestens das Microsoft-Framework Version 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [es zur Installation über das Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718).
+Die einzigen Voraussetzungen für die Installation bestehen darin, dass auf dem Computer die Mindestversion von Windows 7 Service Pack 1 ausgeführt wird und dass Microsoft-Framework mit Mindestversion 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [dieses zur Installation über das Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718).
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>So laden Sie die RMS-Freigabeanwendung für die automatische Bereitstellung herunter
 
@@ -48,10 +48,10 @@ Die Setuppakete für die RMS-Freigabeanwendung unterstützen verschiedene Bereit
 |Beschreibung|Bereitstellungsszenario|
 |---------------|-----------------------|
 |Microsoft Online-Anmelde-Assistent|Office 2010 und Azure Information Protection<br /><br />Office 2013 und Azure Information Protection, wenn Sie das [Update für Office 2013 vom 9. Juni 2015](https://support.microsoft.com/kb/3054853) (KB3054853) nicht installiert haben|
-|Hotfix für Office (KB 2596501)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS|
-|Hotfix, damit der AD RMS-Client 1.0 zusammen mit Azure Information Protection funktioniert (KB 2843630)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS|
-|AD RMS-Client und die RMS-Freigabeanwendung|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
-|Office-Add-in für Menüband|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
+|Hotfix für Office (KB 2596501)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und AD RMS|
+|Hotfix, damit der AD RMS-Client 1.0 zusammen mit Azure Information Protection funktioniert (KB 2843630)|Office 2010 und Azure Information Protection<br /><br />Office 2010 und AD RMS|
+|AD RMS-Client und die RMS-Freigabeanwendung|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und Active Directory RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
+|Office-Add-in für Menüband|Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS<br /><br />Office 2010 und Azure Information Protection<br /><br />Office 2010 und AD RMS<br /><br />Nur RMS-Freigabeanwendung und Office-Add-In|
 |Vorbereitungstool für Azure Active Directory Rights Management|Office 2010 und Azure Information Protection|
 Verwenden Sie die folgenden Verfahren, um die Befehle, die zum Bereitstellen der RMS-Freigabeanwendung für diese Bereitstellungsszenarien erforderlich sind, zu identifizieren:
 
@@ -72,11 +72,11 @@ Verwenden Sie die folgenden Verfahren, um die Befehle, die zum Bereitstellen der
     Ihre Benutzer führen Office 2016, Office 2013 oder Office 2010 aus, Ihre Organisation verwendet AD RMS, und die Benutzer müssen nicht mit anderen Organisationen zusammenarbeiten, die Azure Information Protection verwenden. Mit dieser Installation können Sie nur die Freigabeanwendung und das Office-Add-In installieren.
 
 > [!NOTE]
-> Wenn Ihre Organisation in diesen Szenarios AD RMS verwendet, können die Benutzer geschützte Inhalte von anderen Organisationen, die Azure Information Protection verwenden, empfangen, aber sie können keine geschützten Inhalte an Benutzer in einer Organisation senden, die Azure Information Protection verwendet. Wenn Ihre Organisation aber Azure Information Protection ausführt, können die Benutzer geschützte Inhalte an andere Organisationen senden bzw. von diesen empfangen.
+> Wenn Ihre Organisation in diesen Szenarios AD RMS verwendet, können die Benutzer geschützte Inhalte von anderen Organisationen empfangen, die Azure Information Protection verwenden, aber sie können keine geschützten Inhalte an Benutzer in einer Organisation senden, die Azure Information Protection verwendet. Wenn Ihre Organisation aber Azure Information Protection ausführt, können die Benutzer geschützte Inhalte an andere Organisationen senden bzw. von diesen empfangen.
 
 Um die Installation für jedes Verfahren abzuschließen, muss der Computer neu gestartet werden. Sie können einen automatischen Neustart initiieren, indem Sie einen Befehl wie **shutdown /i** verwenden.
 
-### <a name="to-deploy-the-rms-sharing-application-for-office-2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>So stellen Sie die RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS bereit
+### <a name="to-deploy-the-rms-sharing-application-for-office2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>So stellen Sie die RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS bereit
 
 -   Führen Sie auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung und zugehörige Komponenten installieren möchten, den folgenden Befehl mit erhöhten Rechten aus:
 
@@ -88,7 +88,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
 ### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>So stellen Sie die RMS-Freigabeanwendung für Office 2010 und Azure Information Protection bereit
 
-1.  Sie müssen der globale Administrator für Ihren Office 365- oder Azure Active Directory-Mandanten sein, damit Sie durch Ausführen des Vorbereitungstools für Azure Active Directory Rights Management die Zertifizierungsdienst-URL Ihrer Organisation abrufen können. Sie müssen dieses Tool nur ein Mal auf einem einzigen Computer ausführen. Sie verwenden die Zertifizierungsdienst-URL bei der Installation der RMS-Freigabeanwendung auf allen Computern:
+1.  Sie müssen als globaler Administrator für den Office 365- oder Azure Active Directory-Mandanten fungieren, um die Zertifizierungsdienst-URL Ihrer Organisation abrufen zu können. Dazu führen Sie das Vorbereitungstool des Azure Active Directory Rights Management aus. Sie müssen dieses Tool nur ein Mal auf einem einzigen Computer ausführen. Sie verwenden die Zertifizierungsdienst-URL bei der Installation der RMS-Freigabeanwendung auf allen Computern:
 
     1.  Melden Sie sich an einem Computer mit einem lokalen Administratorkonto an.
 
@@ -108,7 +108,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
             X86\aadrmprep.exe /findCertificationUrl /logfile "<log file path and name>"
             ```
 
-        -   Für Windows 7, 64 Bit:
+        -   Für Windows 7, 64 Bit:
 
             ```
             x64\win7\aadrmprep.exe /findCertificationUrl /logfile "<log file path and name>"
@@ -131,7 +131,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
 Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Abschnitt [Überprüfen der erfolgreichen Installation](#verifying-installation-success).
 
-### <a name="to-deploy-the-rms-sharing-application-for-office-2010-and-active-directory-rms"></a>So stellen Sie die RMS-Freigabeanwendung für Office 2010 und Active Directory RMS bereit
+### <a name="to-deploy-the-rms-sharing-application-for-office2010-and-active-directoryrms"></a>Bereitstellen der RMS-Freigabeanwendung für Office 2010 und Active Directory RMS
 
 1.  Führen Sie auf jedem Computer, auf dem Sie die RMS-Freigabeanwendung installieren werden, den folgenden Befehl mit erhöhten Rechten aus:
 
@@ -153,13 +153,13 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
         X86\aadrmprep.exe /configureO2010
         ```
 
-    -   Für Windows 7, 64 Bit:
+    -   Für Windows 7, 64 Bit:
 
             pushd x64\win7
             aadrmpep.exe /configureO2010
             popd
 
-    -   Für Windows 7, 32 Bit:
+    -   Für Windows 7, 32 Bit:
 
             pushd x86\win7
             aadrmpep.exe /configureO2010
@@ -211,7 +211,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 ## <a name="verifying-installation-success"></a>Überprüfen der erfolgreichen Installation
 Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen Installation verwenden.
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office-2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office2016-or-office-2013-and-azure-information-protection-or-active-directory-rms"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2016 oder Office 2013 und Azure Information Protection oder Active Directory RMS
 
 -   Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
@@ -219,7 +219,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
     Beispiel eines Protokolldateinamens: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office-2010-and-azure-information-protection"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Azure Information Protection
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office2010-and-azure-information-protection"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung für Office 2010 und Azure Information Protection
 
 1.  Um den Erfolg des Befehls „Setup.exe“ zu überprüfen, suchen Sie auf jedem Computer nach der Installationsprotokolldatei **RMInstaller.log** im Ordner *%temp%\RMS_installer_&lt;guid&gt;*, und identifizieren Sie anschließend den Exitcode.
 
@@ -293,7 +293,7 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 ## <a name="uninstall-commands"></a>Deinstallationsbefehle
 Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich sind, unterstützen einen Deinstallationsbefehl. Sie können den AD RMS-Client, die Freigabeanwendung und das Office-Add-in deinstallieren. Verwenden Sie die folgenden Befehle, um diese Elemente zu deinstallieren.
 
-### <a name="to-uninstall-the-ad-rms-client-and-the-rms-sharing-application"></a>So deinstallieren Sie den AD RMS-Client und die RMS-Freigabeanwendung
+### <a name="to-uninstall-the-adrms-client-and-the-rms-sharing-application"></a>So deinstallieren Sie den AD RMS-Client und die RMS-Freigabeanwendung
 
 -   Verwenden Sie die folgenden Befehle:
 
@@ -389,7 +389,7 @@ Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur
 Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
 ## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
-Wenn Sie AD RMS verwenden und Benutzer in Ihrer Organisation mehrere E-Mail-Domänen haben, möglicherweise aufgrund einer Fusion oder Übernahme, müssen Sie den folgenden Registrierungsschlüssel bearbeiten:
+Wenn Sie AD RMS verwenden und die Benutzer in Ihrer Organisation möglicherweise aufgrund einer Fusion oder Übernahme über mehrere E-Mail-Domänen verfügen, müssen Sie die folgende Änderung an der Registrierung vornehmen:
 
 1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**.
 

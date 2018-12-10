@@ -1,21 +1,21 @@
 ---
-title: Azure Active Directory-Anforderungen für AIP
+title: Azure AD-Anforderungen an Azure Information Protection – AIP
 description: Lernen Sie die Azure AD-Anforderungen für die Verwendung von Azure Information Protection kennen, damit Benutzer erfolgreich authentifiziert werden können.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 442c1b6ec44421696aef928c38692ded70911966
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 58de817eec541c4bbb1b5d4541469cda0d93e417
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146869"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024194"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Azure Active Directory-Anforderungen für Azure Information Protection
 
@@ -25,9 +25,9 @@ Für die Verwendung von Azure Information Protection benötigen Sie ein Azure AD
 
 Wenn Sie ein Abonnement mit Azure Information Protection oder Azure Rights Management besitzen, wird Ihr Azure AD-Verzeichnis bei Bedarf automatisch für Sie erstellt.  
 
-Weitere Informationen zu Azure AD finden Sie unter [Was ist ein Azure AD-Verzeichnis?](/active-directory/active-directory-whatis).
+Weitere Informationen zu Azure AD finden Sie unter [Was ist ein Azure AD-Verzeichnis?](/azure/active-directory/fundamentals/active-directory-whatis).
 
-Informationen zum Integrieren eines Azure AD-Verzeichnisses in Ihre lokalen AD-Gesamtstrukturen finden Sie unter [Integrieren Ihrer lokalen Identitäten in Azure Active Directory](/active-directory/active-directory-aadconnect).
+Informationen zum Integrieren eines Azure AD-Verzeichnisses in Ihre lokalen AD-Gesamtstrukturen finden Sie unter [Integrieren Ihrer lokalen Active Directory-Domänen in Azure Active Directory](/azure/architecture/reference-architectures/identity/azure-ad).
 
 ### <a name="scenarios-that-have-specific-requirements"></a>Szenarien mit bestimmten Anforderungen 
 
@@ -49,7 +49,7 @@ Der UPN-Wert eines Benutzers entspricht nicht seiner E-Mail-Adresse:
 
 Mobile Geräte oder Mac-Computer, die lokal mithilfe von AD FS oder einem äquivalenten Authentifizierungsanbieter authentifiziert werden:
 
-- Sie müssen AD FS mit einer Mindestserverversion von **Windows Server 2012 R2** oder einem alternativen Authentifizierungsanbieter verwenden, der das OAuth 2.0-Protokoll verwendet.
+- Sie müssen AD FS mit einer Mindestserverversion von **Windows Server 2012 R2** oder einem alternativen Authentifizierungsanbieter verwenden, der das OAuth 2.0-Protokoll unterstützt.
 
 ## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) und Azure Information Protection
 Damit Sie Multi-Factor Authentication (MFA) mit Azure Information Protection verwenden können, ist mindestens eine der folgenden Komponenten erforderlich:

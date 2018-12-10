@@ -1,5 +1,5 @@
 ---
-title: 'Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer'
+title: 'Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer – AIP'
 description: Erstellen und konfigurieren Sie eine neue Bezeichnung, die Dokumente und E-Mails für bestimmte Benutzer mithilfe einer bereichsbezogenen Richtlinie klassifiziert.
 author: cabailey
 ms.author: cabailey
@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 1a8af09681411e49936c067c6161376c9d4f9f16
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644647"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023569"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
 
@@ -52,7 +52,7 @@ Erstellen Sie zunächst Ihre neue Bezeichnung.
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
     
-    Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal).
+    Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Klicken Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** auf den Eintrag **Neue Bezeichnung hinzufügen**.
 

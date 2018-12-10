@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c20ead2b01b2a37d63bbf3b2b0295f37c9421fdd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d0efb37ee0d424593b9cdb4c2690088e11afc29d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151689"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024058"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung der RMS-Freigabeanwendung
 
@@ -37,7 +37,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
     
     Hinweis: Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin
 
-- Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
+- Wenn Sie Fragen haben oder Feedback zur Website zum Nachverfolgen von Dokumenten geben möchten: Klicken Sie auf das Symbol „Hilfe“, um auf die [Häufig gestellten Fragen zur Nachverfolgung von Dokumenten](https://go.microsoft.com/fwlink/?LinkId=523977)zuzugreifen.
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Verwenden von Office für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
@@ -67,19 +67,19 @@ Neben den Funktionen zum Nachverfolgen Ihrer Dokumente auf Windows-Computern mit
 
 #### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Verwenden eines Webbrowsers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 
-- Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Öffnen Sie einen der unterstützten Webbrowser, und wechseln Sie zur [Website zum Nachverfolgen von Dokumenten](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    Unterstützte Browser: Wir empfehlen Internet Explorer in der neuesten Version 10, Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
+    Unterstützte Browser: Wir empfehlen Internet Explorer in der Version 10 oder höher. Sie können aber auch jeden der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
 
-    -   Internet Explorer: Mindestens Version 10
+    -   Internet Explorer: mindestens Version 10
 
     -   Internet Explorer 9 mindestens mit MS12-037: Kumulatives Sicherheitsupdate für Internet Explorer: 12. Juni 2012
 
-    -   Mozilla Firefox: Mindestens Version 12
+    -   Mozilla Firefox: mindestens Version 12
 
-    -   Apple Safari 5: Mindestens Version 5
+    -   Apple Safari 5: mindestens Version 5
 
-    -   Google Chrome: Mindestens Version 18
+    -   Google Chrome: mindestens Version 18
 
 #### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Verwenden des Datei-Explorers für den Zugriff auf die Website zum Nachverfolgen von Dokumenten
 

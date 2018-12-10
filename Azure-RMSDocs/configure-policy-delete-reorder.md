@@ -1,5 +1,5 @@
 ---
-title: Löschen oder Ändern der Position einer Azure Information Protection-Bezeichnung
+title: Löschen oder Ändern der Position einer Azure Information Protection-Bezeichnung – AIP
 description: Sie können die Position der Azure Information Protection-Bezeichnungen, die Benutzern angezeigt werden, löschen oder ändern.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: cf5d5a97c03bca090b65e43d6db0393909d0572f
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: ccb5f4ff84e590640ed4e5204d2170384611775f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170075"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023395"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
 

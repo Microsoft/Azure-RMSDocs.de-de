@@ -4,18 +4,18 @@ description: Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer- 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0277b638f9d069d2cfb1084136068d7ef58b1e2b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151621"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024098"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -73,9 +73,9 @@ Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen sowie zum Konfigurieren
     
     Azure Information Protection kann beliebige Werte im Attribut „Azure AD proxyAddresses“ verwenden, vorausgesetzt die Domäne wurde Ihrem Mandanten hinzugefügt („überprüfte Domäne“). Weitere Informationen zum Überprüfen von Domänen finden Sie unter:
     
-    - Für Azure AD: [Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/active-directory/active-directory-add-domain)
+    - Für Azure AD: [Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Für Office 365: [Hinzufügen von Domäne und Benutzern zu Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121)
+    - Für Office 365: [Hinzufügen einer Domäne zu Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - Das Attribut **Azure AD userPrincipalName** wird nur verwendet, wenn ein Konto in Ihrem Mandanten im Attribut „Azure AD proxyAddresses“ keine Werte aufweist, beispielsweise, wenn Sie einen Benutzer im Azure-Portal erstellen oder einen Benutzer für Office 365 erstellen, der kein Postfach besitzt.
 

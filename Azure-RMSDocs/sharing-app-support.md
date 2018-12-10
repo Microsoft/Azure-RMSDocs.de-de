@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0538c66bcfcedf33854fdbc606fbedb25b112ee5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e78a870afea9828bf2020aca7007db9a766a1076
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147489"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023297"
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>RMS-Freigabeanwendung für Windows und mobile Plattformen
 
@@ -26,7 +26,7 @@ ms.locfileid: "44147489"
  
 Die RMS-Freigabeanwendung ist eine herunterladbare Anwendung, die Office 2010 für Windows-Computer unterstützt und bisher für alle Windows-Computer und mobilen Geräte empfohlen wurde. Sie wird weiterhin für Macintosh-Computer und mobile Geräte mit Windows Phone empfohlen. Einer ihrer Vorteile besteht darin, dass sie generischen Schutz für Anwendungen und Dateien anwenden kann, die keine native Unterstützung für den Azure Rights Management-Dienst bieten. Dies bedeutet, dass alle Dateien geschützt werden können. Weitere Informationen zu den verschiedenen Schutzstufen finden Sie im Abschnitt [Schutzstufen – systemeigen und generisch](./rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) im [Rights Management-Freigabeanwendung – Administratorhandbuch](./rms-client/sharing-app-admin-guide.md).
 
-Wenn Benutzer ihre Dateien mit der RMS-Freigabeanwendung schützen, können sie auch von ihnen geschützte Dokumente nachverfolgen und bei Bedarf den Zugriff hierauf widerrufen. Hierfür wird die [Website zum Nachverfolgen von Dokumenten](http://go.microsoft.com/fwlink/?LinkId=529562)verwendet.
+Wenn Benutzer ihre Dateien mit der RMS-Freigabeanwendung schützen, können sie auch von ihnen geschützte Dokumente nachverfolgen und bei Bedarf den Zugriff hierauf widerrufen. Hierfür wird die [Website zum Nachverfolgen von Dokumenten](https://go.microsoft.com/fwlink/?LinkId=529562)verwendet.
 
 Bei Windows-Computern integriert sich die RMS-Freigabeanwendung unauffällig in die bereits von Benutzern verwendeten Anwendungen und erweitert deren Funktionsumfang:
 
@@ -36,15 +36,15 @@ Bei Windows-Computern integriert sich die RMS-Freigabeanwendung unauffällig in 
 
 -   Ein Viewer zum Öffnen von Dateien, die mit dem Azure Rights Management-Dienst geschützt wurden. Diese Anzeige wird automatisch aufgerufen, wenn keine andere Anwendung installiert ist, mit der die geschützte Datei geöffnet werden kann.
 
--   Back-End-Konfiguration für Office 2010, die Word, Excel, PowerPoint und Outlook aus dieser Suite arbeiten problemlos mit dem Azure Rights Management-Dienst zusammen.
+-   Back-End-Konfiguration für Office 2010, mit der Word, Excel, PowerPoint und Outlook aus dieser Suite problemlos mit dem Azure Rights Management-Dienst zusammenarbeiten.
 
-Obwohl die RMS-Freigabeanwendung für Windows über die [Microsoft Rights Management-Seite](http://go.microsoft.com/fwlink/?LinkId=303970)auf einzelnen Computer heruntergeladen und installiert werden kann, wird auch eine Unternehmensbereitstellung mit automatischer Installation und benutzerdefinierter Konfiguration unterstützt. Weitere Informationen finden Sie in den folgenden Ressourcen:
+Obwohl die RMS-Freigabeanwendung für Windows über die [Microsoft Rights Management-Seite](https://go.microsoft.com/fwlink/?LinkId=303970)auf einzelnen Computer heruntergeladen und installiert werden kann, wird auch eine Unternehmensbereitstellung mit automatischer Installation und benutzerdefinierter Konfiguration unterstützt. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
 -   [Administratorhandbuch der Rights Management-Freigabeanwendung](./rms-client/sharing-app-admin-guide.md)
 
 -   [Rights Management-Freigabeanwendung – Benutzerhandbuch](./rms-client/sharing-app-user-guide.md)
 
-Die RMS-Freigabeanwendung für mobile Geräte unterstützt die gängigsten verwendeten mobilen Geräte wie iPad und iPhone, Android, Windows Phone und Windows RT. Benutzer können diese App aus dem relevanten Store herunterladen, zu denen es Links auf der Seite [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)gibt.
+Die RMS-Freigabeanwendung für mobile Geräte unterstützt die gängigsten verwendeten mobilen Geräte wie iPad und iPhone, Android, Windows Phone und Windows RT. Benutzer können diese App aus dem relevanten Store herunterladen, zu denen es Links auf der Seite [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970)gibt.
 
 **Bei Verwendung von Microsoft Intune**: Da die RMS-Freigabe-App das Microsoft Intune App Software Development Kit enthält, können Sie die folgenden Optionen verwenden:
 
