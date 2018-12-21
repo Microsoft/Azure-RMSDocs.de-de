@@ -4,19 +4,19 @@ description: Anweisungen für die Aktivierung von Schutz im Azure-Portal, damit 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82d1ee4267210b4fef989ab6a20385e24e2a8b35
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: cb90744828595b6cbf68962368fd001f3ca0eebd
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169888"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304824"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Aktivieren von Azure Rights Management über das Azure-Portal
 
@@ -30,7 +30,7 @@ Verwenden Sie diese Anweisungen, wenn Sie den Azure Rights Management-Dienst (Az
     
     Wenn Sie zuvor noch nie auf das Blatt „Azure Information Protection“ zugegriffen haben, sehen Sie sich die einmaligen [zusätzlichen Schritte](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) an, um dieses Blatt dem Portal hinzuzufügen.
     
-    Zum Öffnen des Information Protection-Blatts benötigen Sie entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie über eines dieser Abonnements verfügen, jedoch eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, [wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
+    Zum Öffnen des Information Protection-Blatts benötigen Sie entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie über eines dieser Abonnements verfügen, jedoch eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, [wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
 
 2. Navigieren Sie zu den Menüoptionen **Verwalten**, und klicken Sie auf **Protection activation** (Schutzaktivierung). 
     

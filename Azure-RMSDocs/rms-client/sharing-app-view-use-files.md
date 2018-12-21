@@ -1,5 +1,5 @@
 ---
-title: Öffnen von RMS-geschützten Dateien mithilfe der RMS-Freigabeanwendung – AIP
+title: Öffnen von RMS-geschützten Dateien mithilfe der Rights Management-Freigabeanwendung
 description: Informationen zum Anzeigen und Verwenden einer geschützten Datei, für die eine Installation der RMS-Freigabeanwendung (Rights Management) erforderlich ist.
 author: cabailey
 ms.author: cabailey
@@ -10,28 +10,31 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: f3e3158e8cd5fb054daab65a3b86a0e99074bee3
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023990"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319464"
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Anzeigen und Verwenden der durch Rights Management geschützten Dateien
+# <a name="use-the-rights-management-sharing-application-to-view-and-use-protected-files"></a>Verwenden der Rights Management-Freigabeanwendung zum Anzeigen und Verwenden von geschützten Dateien
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
-Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert](install-sharing-app.md) ist, können Sie eine geschützte Datei anzeigen, indem Sie einfach darauf doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden.
+> [!IMPORTANT]
+> **Benachrichtigung zum Ende der Unterstützung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt.
 
-> [!NOTE]
-> Bevor Sie die geschützte Datei anzeigen können, muss der Rights Management-Dienst bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft er Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
->
-> Wenn Ihre Organisation weder Azure Information Protection noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von RMS geschützt wurden:
->
-> -   Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen.
->
->     Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
-> -   Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../rms-for-individuals.md).
+Wenn die [Rights Management-Freigabeanwendung (RMS) auf Ihrem Computer installiert](install-sharing-app.md) ist, zeigen Sie eine geschützte Datei an, indem Sie einfach darauf doppelklicken. Die Datei ist möglicherweise eine Anlage einer E-Mail-Nachricht, oder sie wird möglicherweise angezeigt, wenn Sie den Datei-Explorer verwenden.
+
+Bevor Sie die geschützte Datei anzeigen können, muss der Rights Management-Dienst bestätigen, dass Sie zum Anzeigen der Datei berechtigt sind. Dazu überprüft er Ihren Benutzernamen und Ihr Kennwort. In einigen Fällen können Ihre Anmeldeinformationen zwischengespeichert sein, und Sie sehen keine Eingabeaufforderung, in der nach diesen Informationen gefragt wird. In anderen Fällen werden Sie aufgefordert, Ihre Anmeldeinformationen einzugeben.
+
+Wenn Ihre Organisation weder Azure Information Protection noch AD RMS verwendet, können Sie ein kostenloses Konto beantragen, für das Ihre Anmeldeinformationen akzeptiert werden, sodass Sie Dateien öffnen können, die mithilfe von RMS geschützt wurden:
+
+- Um dieses Konto zu beantragen, klicken Sie auf den Link, um [RMS for Individuals](https://go.microsoft.com/fwlink/?LinkId=309469)zu beantragen. 
+    
+    Wenn Sie sich anmelden, verwenden Sie Ihre Unternehmens-E-Mail-Adresse anstelle einer privaten E-Mail-Adresse. Wenn Sie sich anmelden, weil Sie per E-Mail eine geschützte Dateianlage erhalten haben, verwenden Sie die E-Mail-Adresse, die zum Senden der E-Mail-Nachricht an Sie verwendet wurde.
+
+- Weitere Informationen finden Sie unter [RMS for Individuals und Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>So zeigen Sie eine geschützte Datei an
 Doppelklicken Sie im Datei-Explorer oder in der E-Mail-Nachricht, die die Anlage enthält, auf die geschützte Datei, und geben Sie Ihre Anmeldeinformationen ein, wenn Sie dazu aufgefordert werden.

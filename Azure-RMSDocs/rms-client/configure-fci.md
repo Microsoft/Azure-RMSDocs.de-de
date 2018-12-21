@@ -4,18 +4,18 @@ description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/14/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
-ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
+ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750627"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305698"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -125,13 +125,13 @@ Sie können jetzt mit der Konfiguration des Ressourcen-Managers für Dateiserver
 
 -   Erstellen Sie im Ressourcen-Manager für Dateiserver in der Klassifizierungsverwaltung eine neue lokale Eigenschaft:
 
-    -   **Name**: Geben Sie **RMS**
+    -   **Name**: Geben Sie **RMS** ein.
 
-    -   **Beschreibung**:   Geben Sie **Rights Management-Schutz**
+    -   **Beschreibung**:   Geben Sie **Rights Management-Schutz** ein.
 
-    -   **Eigenschaftstyp**: Wählen Sie **Ja/Nein**
+    -   **Eigenschaftstyp**: Klicken Sie auf **Ja/Nein**.
 
-    -   **Wert**: Wählen Sie **Ja**
+    -   **Wert**: Klicken Sie auf **Ja**.
 
 Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verwendet.
 
@@ -141,25 +141,25 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
     -   Auf der Registerkarte **Allgemein** :
 
-        -   **Name**: Geben Sie **Für RMS klassifizieren**
+        -   **Name**: Geben Sie **Für RMS klassifizieren** ein.
 
-        -   **Enabled**: Behalten Sie die Standardeinstellung bei (das Kontrollkästchen ist aktiviert).
+        -   **Aktiviert**: Behalten Sie die Standardeinstellung bei (das Kontrollkästchen ist aktiviert).
 
         -   **Beschreibung**: Geben Sie **Alle Dateien im Ordner &lt;Ordnername&gt; für Rights Management klassifizieren** ein.
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
 
-        -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
+        -   **Bereich**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
     -   Auf der Registerkarte **Klassifizierung** :
 
-    -   **Klassifizierungsmethode**: Wählen Sie **Ordnerklassifizierung**
+    -   **Klassifizierungsmethode**: Klicken Sie auf **Ordnerklassifizierung**.
 
-    -   Name der**Eigenschaft** : Wählen Sie **RMS**aus.
+    -   **Eigenschaft**sname: Klicken Sie auf **RMS**.
 
-    -   **Wert**der Eigenschaft: Wählen Sie **Ja**aus.
+    -   Eigenschaft**swert**: Klicken Sie auf **Ja**.
 
 Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausführen können, sollten Sie diese Regel nach einem Zeitplan ausführen, damit neue Dateien mit der RMS-Eigenschaft klassifiziert werden.
 
@@ -183,23 +183,23 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
     -   Auf der Registerkarte **Allgemein** :
 
-        -   **Aufgabenname**: Geben Sie **Schützen von Dateien mit RMS**
+        -   **Name der Aufgabe**: Geben Sie **Schützen von Dateien mit RMS** ein.
 
         -   Vergewissern Sie sich, dass das Kontrollkästchen **Aktivieren** aktiviert ist.
 
-        -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript** ein.
+        -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript ein.**
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
-        -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
+        -   **Bereich**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
     -   Auf der Registerkarte **Aktion** :
 
-        -   **Typ**: Wählen Sie **Benutzerdefiniert**
+        -   **Typ**: Klicken Sie auf **Benutzerdefiniert**.
 
-        -   **Ausführbare Datei**: Geben Sie Folgendes an:
+        -   **Ausführbare Datei**: Legen Sie Folgendes fest:
 
             ```
             C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
@@ -224,15 +224,15 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
             > 
             > Für Dateien, die keinen Domänenbenutzer als Besitzer aufweisen, können Sie diese Dateien selbst als Domänenbenutzer kopieren und speichern, sodass Sie zum Besitzer nur dieser Dateien werden. Alternativ können Sie, wenn Sie über Berechtigungen verfügen, manuell den Besitzer ändern.  Oder alternativ können Sie eine bestimmte E-Mail-Adresse (z.B. Ihre eigene oder eine Gruppenadresse für die IT-Abteilung) anstelle der [Quelldateibesitzer-E-Mail]-Variablen angeben, was bedeutet, dass alle Dateien, die Sie mit diesem Skript schützen, diese E-Mail-Adresse zum Definieren des neuen Besitzers verwenden.
 
-    -   **Führen Sie den Befehl wie folgt aus**: Wählen Sie **Lokales System**
+    -   **Führen Sie den Befehl wie folgt aus**: Klicken Sie auf **Lokales System**.
 
     -   Auf der Registerkarte **Bedingung** :
 
-        -   **Eigenschaft**: Wählen Sie **RMS**
+        -   **Eigenschaft**: Klicken Sie auf **RMS**.
 
-        -   **Operator**: Wählen Sie **Gleich**
+        -   **Operator**: Klicken Sie auf **Gleich**.
 
-        -   **Wert**: Wählen Sie **Ja**
+        -   **Wert**: Klicken Sie auf **Ja**.
 
     -   Auf der Registerkarte **Zeitplan** :
 
@@ -299,5 +299,5 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
+Möglicherweise stellen Sie sich folgende Fragen: [Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
 

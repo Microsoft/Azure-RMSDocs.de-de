@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024098"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173875"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Bevor Sie Azure Information Protection für Ihre Organisation bereitstellen, vergewissern Sie sich, dass Sie in Azure AD über Benutzer und Gruppenkonten für die Mandanten Ihrer Organisation verfügen.
 
@@ -113,7 +113,7 @@ Azure Information Protection verwendet das Attribut „Azure AD proxyAddresses�
 
 ## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>Lokale Verwendung von Konten aus Active Directory für Azure Information Protection
 
-Wenn Sie über lokal verwaltete Konten verfügen, die Sie mit Azure Information Protection verwenden möchten, müssen Sie diese mit Azure AD synchronisieren. Zur einfacheren Bereitstellung empfehlen wir die Verwendung von [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect). Sie können jedoch jede Verzeichnissynchronisierungsmethode verwenden, die das gleiche Ergebnis erzielt.
+Wenn Sie über lokal verwaltete Konten verfügen, die Sie mit Azure Information Protection verwenden möchten, müssen Sie diese mit Azure AD synchronisieren. Zur einfacheren Bereitstellung empfehlen wir die Verwendung von [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect). Sie können jedoch jede Verzeichnissynchronisierungsmethode verwenden, die das gleiche Ergebnis erzielt.
 
 Wenn Sie Ihre Konten synchronisieren, brauchen Sie nicht alle Attribute zu synchronisieren. Eine Liste mit den Attributen, die synchronisiert werden müssen, finden Sie im [Abschnitt zu Azure RMS](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) in der Azure Active Directory-Dokumentation.
 
@@ -209,7 +209,7 @@ Wenn Sie sich vergewissert haben, dass Ihre Benutzer und Gruppen mit Azure Infor
 
 - Ab Februar 2018: Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und in oder nach diesem Monat erworben wurde, wird der Dienst automatisch aktiviert. 
 
-- Wenn das Abonnement vor Februar 2018 erworben wurde, müssen Sie den Dienst selbst aktivieren. 
+- Wenn Ihr Abonnement vor Februar 2018 erworben wurde: Sie müssen den Dienst selbst aktivieren. 
 
 Weitere Informationen (darunter zur Überprüfung des Aktivierungsstatus) finden Sie unter [Aktivieren von Azure Rights Management](./activate-service.md).
 

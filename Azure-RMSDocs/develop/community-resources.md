@@ -12,19 +12,20 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 08ea1a1dfda69221657e738459f2b758a5014b05
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c6a1c0fa6d3783ce7eb618f56316fdbe1141bd77
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150244"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266459"
 ---
 # <a name="community-resources"></a>Communityressourcen
 
 Active Directory Rights Management Services wird von einer wachsenden Community von Entwicklern auf mehreren Plattformen gut unterstützt.
 
 ## <a name="developers-blog"></a>Entwicklerblog
-Die [RMS Developer's Corner (Blog)](http://blogs.msdn.com/b/rms/) ist der aktive Treffpunkt für Entwickler, die sich mit dem Schützen von Daten befassen.
+[TechNet-Forum zur Microsoft RMS-Cloud](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+[Stack Overflow Azure RMS](https://stackoverflow.com/search?q=Azure+RMS)
 
 ## <a name="microsoft-connect"></a>Microsoft Connect
 Im Abschnitt zu Rights Management Services auf der Connect-Website finden Sie aktuelle „Deliverables“ und können Feedback geben.
@@ -33,7 +34,7 @@ Im Abschnitt zu Rights Management Services auf der Connect-Website finden Sie ak
 >
 >Gehen Sie wie folgt vor, falls Sie sich noch nicht unter Microsoft Connect registriert haben:
 >
->-   Öffnen Sie die Website von [Microsoft Connect](http://connect.microsoft.com) (http://connect.microsoft.com)
+>-   Öffnen Sie die Website von [Microsoft Connect](https://connect.microsoft.com) (https://connect.microsoft.com)
 >-   Melden Sie sich mit Ihrem Microsoft-Konto an.
 >-   Klicken Sie in der Befehlsleiste auf **Verzeichnis**.
 >-   Suchen Sie nach „Rights Management Services“.

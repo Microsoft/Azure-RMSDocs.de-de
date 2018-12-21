@@ -4,19 +4,19 @@ description: Beschreibt wichtige Änderungen und Funktionen in dieser Version un
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e3b4812f06c7ee86c48c0984e440d34f858bb4e7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6433352f05401fcaafc84704a0441941ff87bdf3
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148782"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266697"
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
@@ -26,13 +26,13 @@ In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version 
 
 -   [Neu ab Juli 2017](#new-for-july-2017)
 -   [Oktober 2016 – Update](#October-2016-update)
--   [Juni 2016 – Update](#new-for-June-2016)
+-   [Juni 2016 – Update](#june-2016-update)
 -   [Dezember 2015 – Update](#december-2015-update)
--   [Juli 2015 – Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt](#july-2015-update-adds-support-for-linux-c-developm)
--   [Mai 2015 – Update – Steuerung der Protokollierung hinzugefügt](#may-2015-update-adds-logging-control)
--   [Februar 2015 – Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february-2015-update-adds-windows-store-application-support)
--   [Januar 2015 – Update – Unterstützung für WinPhone-Plattform hinzugefügt](#january-2015-update-adds-winphone-platform-support)
--   [Oktober 2014 – Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Juli 2015 – Update – Unterstützung für Linux/C++-Entwicklung hinzugefügt](#july-2015-update---adds-support-for-linux--c-development)
+-   [Mai 2015 – Update – Steuerung der Protokollierung hinzugefügt](#may-2015-update---adds-logging-control)
+-   [Februar 2015 – Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february-2015-update---adds-windows-store-application-support)
+-   [Januar 2015 – Update – Unterstützung für WinPhone-Plattform hinzugefügt](#january-2015-update---adds-winphone-platform-support)
+-   [Oktober 2014 – Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [Anmerkungen zu dieser Version](#release-notes)
 -   [Häufig gestellte Fragen](#frequently-asked-questions)
 
@@ -40,7 +40,7 @@ In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version 
 
 Das Update für unser Juli-Release enthält Version 4.2.5 des überarbeiteten SDK.
 
-- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/information-protection/develop/enabling-logging).
+- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - Das iOS SDK unterstützt keine Protokollierungsstufen. 
 - Das SDK gibt nun einen Fehler bei einem NULL-Zugriffstoken zurück.
 
@@ -64,7 +64,7 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 
     Details und Nutzungshinweise für iOS/OS X sind in der [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)-Klasse enthalten. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentnachverfolgung mit [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ähnliche Ergänzungen sind für Android für [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) und [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) vorhanden.
 
-    Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden von Dokumentenverfolgung](how-to-use-document-tracking.md).
+    Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden der Dokumentenverfolgung](how-to-use-document-tracking.md).
 
 -   Eine Reihe synchroner Methoden, die parallel zu den asynchronen Versionen für die Android-API verwendet werden:
 
@@ -108,7 +108,7 @@ Mit diesem Release wird Unterstützung für folgende Updates bereitgestellt:
 
     Aktivierte Steuerungseinstellungen auf Protokollebene.
 
-    Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](enabling-logging.md).
+    Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Fehler- und Leistungsprotokollierung](enabling-logging.md)
 
     Unterstützung zum Löschen des Caches hinzugefügt.
 
@@ -193,7 +193,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 
 
-**Hinweis**  MDI-Anwendungen werden von unserer iOS-API nicht unterstützt.
+**Hinweis**  MDI-Anwendungen werden von unserer iOS-API nicht unterstützt.
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen
 
@@ -203,7 +203,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **A**: Dies ist ein bekanntes Problem, auf das später noch eingegangen wird.
 
-**F**: Wie erhalte ich die neue Organisationsmandanten, um das SDK und Beispielanwendungen zu testen?
+**F**: Wie erhalte ich neue Organisationsmandanten, um das SDK und Beispielanwendungen zu testen?
 
 **A**: Um Anmeldeinformationen für Azure AD RMS-Testorganisationen anzufordern, senden Sie eine E-Mail an <rmcstbeta@microsoft.com>.
 

@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a3385f260928dabc7254a49f3265b647c2920703
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b1525665fb488aed1ad98a77ac66f92f7ee4509b
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150057"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266680"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
@@ -67,7 +67,7 @@ Nach dem Senden der E-Mail kann es bis zu 72 Stunden dauern, bis der Empfang bes
 
 Um Ihre mit den Tools Azure Information Protection (AIP) / Rights Management Services (RMS) erstellte Anwendung bereitzustellen, müssen Sie den RMS Client 2.1 auf dem Computer des Endbenutzers bereitstellen.
 
-### <a name="rms-client-21"></a>RMS Client 2.1
+### <a name="rmsclient21"></a>RMS Client 2.1
 Der RMS Client 2.1 ist dafür konzipiert, den Zugriff auf und die Verwendung von Informationen zu schützen, die durch über AIP/RMS aktivierte Anwendungen fließen – unabhängig davon, ob diese und lokal oder in einem Microsoft-Rechenzentrum installiert sind.
 
 Der RMS Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der Client wird als optionaler Download ausgeliefert, der nach Bestätigung und Annahme der zugehörigen Lizenzvereinbarung kostenlos mit Ihrer Anwendung verteilt werden kann.
@@ -76,7 +76,7 @@ Der RMS Client 2.1 ist keine Komponente des Windows-Betriebssystems. Der Client 
 > Der RMS Client 2.1 ist architekturspezifisch und muss der Architektur des Zielbetriebssystems entsprechen.
 
 
-## <a name="rms-client-21-installation-options"></a>Installationsoptionen für den RMS Client 2.1
+## <a name="rmsclient21-installation-options"></a>Installationsoptionen für den RMS Client 2.1
 
 ### <a name="creating-your-deployment-package"></a>Erstellen des Bereitstellungspakets
 
@@ -89,7 +89,7 @@ Sie können den RMS Client 2.1 interaktiv durch Starten des RMS Client 2.1-Insta
 
 Ein Beispiel für die Integration des RMS Client 2.1 in Ihre Anwendung ist das [Rights Protected Folder Explorer](https://technet.microsoft.com/library/rights-protected-folder-explorer(v=ws.10).aspx)-Paket. Installieren Sie es selbst, um den Ansatz zu verstehen.
 
-### <a name="make-rms-client-21-a-pre-requisite-for-your-application-install"></a>Festlegen von RMS Client 2.1 als Voraussetzung für die Installation der Anwendung
+### <a name="make-rmsclient21-a-pre-requisite-for-your-application-install"></a>Festlegen von RMS Client 2.1 als Voraussetzung für die Installation der Anwendung
 
 In diesem Fall erstellen Sie eine Voraussetzung, z.B. dass die Installation der Anwendung fehlschlägt, wenn RMS Client 2.1 nicht auf dem Computer des Endbenutzers vorhanden ist.
 
@@ -101,16 +101,16 @@ Wenn der Client vorhanden ist wird die Anwendungsinstallation fortgesetzt.
 
 > [!NOTE]
 > Wenn Sie zum neuen ADAL-Modell für die Authentifizierung migriert haben, müssen Sie **SIA** nicht installieren. Weitere Informationen finden Sie unter [ADAL-Authentifizierung für Ihre RMS-fähige Anwendung](adal-auth.md).
-> Außerdem können Sie **Ihre Anwendung für Windows 10 zertifizieren**: Durch Aktualisieren der Anwendung für die Verwendung der ADAL-Authentifizierung anstelle des Microsoft Online-Anmelde-Assistenten verfügen Sie und Ihre Kunden über folgende Möglichkeiten: Nutzen der Multi-Factor Authentication, Installieren des RMS Client 2.1 ohne Administratorrechte auf dem Computer
+> **Zertifizieren Ihrer Anwendung für Windows 10**: Durch die Aktualisierung der Anwendung zur Verwendung der ADAL-Authentifizierung anstelle des Microsoft Online-Anmelde-Assistenten haben Sie und Ihre Kunden folgende Möglichkeiten: Verwenden der mehrstufigen Authentifizierung zum Installieren von RMS Client 2.1 ohne Administratorrechte auf dem Computer
 
 Damit Endbenutzer Information Protection-Dienste nutzen können, müssen Sie den *Online Services-Anmelde-Assistenten* bereitstellen. Als Entwickler einer Anwendung wissen Sie nicht, ob Endbenutzer Information Protection über RMS (lokal) oder über Azure Information Protection verwenden werden.
 
 
 > [!IMPORTANT]
-> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../requirements.md).
+> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloud-Abonnements, die Azure RMS unterstützen](../requirements.md).
 > Weitere Informationen zur Ausführung mit Azure RMS finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
--   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](http://www.microsoft.com/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
+-   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](https://www.microsoft.com/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
 -   Stellen Sie sicher, dass die Bereitstellung einer rechtefähigen Anwendung eine Überprüfung der Voraussetzungen für diese Dienstauswahl enthält.
 -   Informationen zu eigenen Tests und zur Verwendung des Onlinediensts durch die Endbenutzer finden Sie im TechNet-Thema [Konfigurieren von Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx).
 
@@ -120,7 +120,7 @@ Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights 
 
 ## <a name="related-topics"></a>Verwandte Themen
 
-* [Microsoft Online Services-Anmeldeassistent](http://www.microsoft.com/download/details.aspx?id=28177)
+* [Microsoft Online Services-Anmeldeassistent](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Konfigurieren von Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)
 * [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Anwendung](how-to-use-file-api-with-aadrm-cloud.md)
 

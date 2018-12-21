@@ -4,18 +4,18 @@ description: Informationen zu den Registrierungseinträgen auf Servern, die den 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
-ms.topic: article
+ms.date: 12/06/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b99f914e78adafbcfd0f01f0937c6d636f43159
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 6af7fe3a7b23f655a79d67421f67292416792792
+ms.sourcegitcommit: 0632c89a316ff31f588e9752dd474445983b1690
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808695"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53120580"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -28,11 +28,11 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *\<IhreMandantenURL>* ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. So finden Sie diesen Wert
 
-    1.  Führen Sie das [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx)-Cmdlet für den Azure Rights Management-Dienst aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+    1.  Führen Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)-Cmdlet für den Azure Rights Management-Dienst aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
-        Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Beispiel: **LicensingIntranetDistributionPointUrl:https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  Entfernen Sie im Wert den Text **/_wmcs/licensing** aus der Zeichenfolge. Die Zeichenfolge, die übrig bleibt, ist Ihre Azure Rights Management-Dienst-URL In unserem Beispiel wäre die Azure Rights Management-Dienst-URL der folgende Wert:
 
@@ -53,7 +53,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** https://*\<IhreMandantenURL>*/_wmcs/certification
 
@@ -63,7 +63,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** https://*\<IhreMandantenURL>*/_wmcs/certification
 
@@ -104,7 +104,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** https://*<\IhreMandantenURL>*/_wmcs/certification
 
@@ -114,7 +114,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** https://*<\IhreMandantenURL>*/_wmcs/Licensing
 
@@ -168,7 +168,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem SharePoint-Server zum RMS-Connector verwenden:
 
@@ -182,7 +182,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem SharePoint-Server zum RMS-Connector verwenden:
@@ -200,7 +200,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -210,7 +210,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Default
+**Wert:** Standard
 
 **Daten:** http://*<\ConnectorFQDN>*/_wmcs/certification
 
