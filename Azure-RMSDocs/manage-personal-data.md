@@ -4,18 +4,18 @@ description: Informationen zu den personenbezogenen Daten, die von Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 6904c8c1e879a4d076486fae17a1dbdbd71cb4b4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150431"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319413"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -262,7 +262,7 @@ Diese Daten werden dauerhaft gelöscht. Sie können nicht wiederhergestellt werd
 
 **Schritt 2: Warten auf Überprüfung** Microsoft überprüft, ob Ihre Löschanforderung für ein oder mehrere Protokolle legitim ist. Der Vorgang kann bis zu fünf Werktagen dauern.
 
-**Schritt 3: Bestätigung der Löschung** Sie erhalten eine E-Mail von Microsoft Customer Support Services (CSS), in der bestätigt wird, dass die Daten gelöscht wurden. 
+**Schritt 3: Bestätigung der Löschung** Sie erhalten eine E-Mail von Microsoft Customer Support Services (CSS), in der bestätigt wird, dass die Daten gelöscht wurden. 
 
 ## <a name="exporting-personal-data"></a>Exportieren von personenbezogenen Daten
 Wenn Sie die AADRM-PowerShell-Cmdlets verwenden, können personenbezogene Daten gesucht und als PowerShell-Objekt exportiert werden. Das PowerShell-Objekt kann in das JSON-Format konvertiert und mithilfe des `ConvertTo-Json`-Cmdlets gespeichert werden.

@@ -4,17 +4,17 @@ description: Grundlegendes zu Bezeichnungen und Einstellungen in einer Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: fe091165db7df8a9e2321ad5f93e11e984086dc1
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: e66a2c117523eb01089881b8210f12ed2f657ed4
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026981"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304892"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Übersicht über die Azure Information Protection-Richtlinie
 

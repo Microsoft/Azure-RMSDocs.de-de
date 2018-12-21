@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024075"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173892"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt und konfiguriert haben, können Sie Ihren Benutzern und Administratoren sowie Ihrem Helpdesk Hilfe und Anleitung bieten:
 
@@ -40,7 +40,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
 -   **Helpdesk-Informationen**
     
-    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installationsüberprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installieren von Überprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)
     
     Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente sicher, dass der Helpdesk über Prozesse verfügt, mit denen dieser Zugriff unter Verwendung des Azure Rights Management-Features [Administrator](configure-super-users.md) angefordert werden kann. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
     
@@ -102,7 +102,7 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten** oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -114,7 +114,7 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1.  Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Zum Beispiel: **Nicht weiterleiten** oder **Nicht allen antworten**. Oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten** oder **Nicht allen antworten**. Oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 

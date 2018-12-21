@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023785"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218475"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
@@ -34,7 +34,7 @@ Die Microsoft Rights Management-Freigabeanwendung ist eine optional herunterladb
 
 -   Vollständige Interoperabilität mit PDF-Dateien, die mit der Dateiklassifizierungsinfrastruktur (FCI) geschützt sind, sowie unterstützte PDF-Erstellungstools.
 
-Die Microsoft Rights Management-Freigabeanwendung verwendet die [AD RMS-Client 2.1-Runtime](http://www.microsoft.com/download/details.aspx?id=38396). Mithilfe der Funktionalität von AD RMS 2.1 stellt die Microsoft Rights Management-Freigabeanwendung Endbenutzern einen einfachen Schutz und eine einfache Nutzung bereit.
+Die Microsoft Rights Management-Freigabeanwendung verwendet die [AD RMS-Client 2.1-Runtime](https://www.microsoft.com/download/details.aspx?id=38396). Mithilfe der Funktionalität von AD RMS 2.1 stellt die Microsoft Rights Management-Freigabeanwendung Endbenutzern einen einfachen Schutz und eine einfache Nutzung bereit.
 
 Ab der RMS-Version von Oktober 2013 können Sie Dokumente nativ mithilfe von Office 2010 schützen und an andere Personen in einem anderen Unternehmen senden, die diese dann mithilfe des Azure Rights Management-Diensts von Azure Information Protection nutzen können. Darüber hinaus können Sie mit dieser Version bei Verwendung von AD RMS im Kryptografiemodus 2 RMS for Individuals verwenden und Inhalte von Personen in einem anderen Unternehmen, das den Azure Rights Management-Dienst verwendet, nutzen. Weitere Informationen zum Kryptografiemodus 2 finden Sie unter [AD RMS-Kryptografiemodi](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
@@ -100,7 +100,7 @@ Sie können auch erzwingen, dass die RMS-Freigabeanwendung den Schutz von Dateie
 
 Bearbeiten Sie die folgenden Registrierungseinträge, um die RMS-Freigabeanwendung so zu konfigurieren, dass sie generischen Schutz auf alle Dateien anwendet, die in der Standardeinstellung durch native Schutzfunktionen geschützt würden. Beachten Sie, dass Sie die Schlüssel „RmsSharingApp“ oder „FileProtection“ manuell erstellen müssen, falls diese nicht vorhanden sind.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel mit dem Namen *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Erstellen Sie einen neuen Schlüssel namens *.
 
     Diese Einstellung gibt Dateien mit beliebiger Erweiterung an.
 
@@ -110,7 +110,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um die RMS-Freigabeanwendu
 
 Diese beiden Einstellungen führen dazu, dass die RMS-Freigabeanwendung generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn dies Ihr Ziel ist, ist keine weitere Konfiguration erforderlich. Sie können aber auch Ausnahmen für bestimmte Dateitypen definieren, damit diese weiterhin systemeigen geschützt werden. Zu diesem Zweck müssen Sie drei zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangestellten Punkt) hinzu.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne den vorangestellten Punkt) hinzu.
 
     Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
@@ -124,11 +124,11 @@ Wiederholen Sie diese drei Schritte für andere Dateitypen, die Sie als Ausnahme
 
 Sie können ähnliche Registrierungseinträge für andere Szenarien durch Ändern des Werts der **Encryption** -Zeichenfolge vornehmen, die die folgenden Werte unterstützt:
 
--   **Pfile**: Allgemeiner Schutz
+-   **Pfile**: Generischer Schutz
 
--   **Native**: systemeigener Schutz
+-   **Native**: Systemeigener Schutz
 
--   **Off**: Schutz blockieren
+-   **Off**: Block-Schutz
 
 ## <a name="see-also"></a>Weitere Informationen
 [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)

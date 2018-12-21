@@ -4,19 +4,19 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861216"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335522"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -44,9 +44,9 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 ## <a name="version-141510"></a>Version 1.41.51.0
 
 > [!TIP]
-> Sind würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center veröffentlicht werden? Hier finden Sie weitere Informationen dazu: [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
+> Sind würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center veröffentlicht werden? Siehe [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
 
-**Veröffentlicht:** 27.11.2018
+**Veröffentlicht**: 27.11.2018
 
 Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
@@ -106,11 +106,13 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Für die Azure Information Protection-Überprüfung:
 
-    - Das neue Cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Muss nach dem Upgrade von der aktuellen allgemein verfügbaren Version (1.29.5.0) oder früher einmalig ausgeführt werden.
+    - Neues Cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Muss nach dem Upgrade von der aktuellen allgemein verfügbaren Version (1.29.5.0) oder früher einmalig ausgeführt werden.
     
-    - Das neue Cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
+    - Neues Cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
     
-    - Das neue Cmdlet [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Weist die Überprüfung an, eine einmalige Überprüfungszyklus zu starten, wenn der Zeitplan auf „manuell“ festgelegt ist.
+    - Neues Cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Weist die Überprüfung an, einen einmaligen Überprüfungszyklus zu starten, wenn der Zeitplan auf „manuell“ festgelegt ist.
+    
+    - PDF-Dokumente sind nun standardmäßig geschützt, wenn Sie den ISO-Standard für die PDF-Verschlüsselung verwenden.
     
     - SharePoint Server 2010 wird für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
     
@@ -150,11 +152,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Die Richtlinienversion wurde in 1.4 geändert. Das Identifizieren der Versionsnummer ist zum [Konfigurieren nicht verbundener Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) erforderlich.
 
-- Der Link **Feedback senden** im Dialogfeld **Hilfe und Feedback** wurde entfernt. Er wurde vorübergehend durch **Problem melden** ersetzt, doch dieser Link wird nur noch in Vorschauversionen angezeigt. Standardmäßig sendet diese Option eine E-Mail an Microsoft, aber Sie können die E-Mail-Adresse in eine beliebige HTTP-Zeichenfolge ändern. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. Verwenden Sie eine [erweiterte Clienteinstellung](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link), um diese Adresse zu ändern.
+- Der Link **Feedback senden** im Dialogfeld **Hilfe und Feedback** wurde entfernt. Er wurde temporär ersetzt durch die Option **Problem melden**, mit der standardmäßig eine E-Mail an Microsoft gesendet wurde. Seit Dezember 2018 wird die Option **Problem melden** nicht mehr standardmäßig angezeigt. Sie kann aber mit einer [erweiterten Clienteinstellung](client-admin-guide-customizations.md#add-report-an-issue-for-users), in der Sie eine HTTP-Zeichenfolge für den Link angeben, hinzugefügt werden. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. 
 
 ## <a name="version-12950"></a>Version 1.29.5.0 
 
-**Veröffentlicht:** 26.6.2018
+**Veröffentlicht**: 26.6.2018
 
 Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
@@ -170,7 +172,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 
 ## <a name="version-127480"></a>Version 1.27.48.0
 
-**Veröffentlicht:** 30.5.2018
+**Veröffentlicht**: 30.5.2018
 
 Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
 

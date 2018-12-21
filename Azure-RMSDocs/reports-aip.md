@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
-ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
+ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
+ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52953311"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068808"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -67,9 +67,13 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Dateien vertrauliche Daten für bekannte Kategorien enthalten, z.B. Finanzdaten und persönliche Informationen, und den Speicherort von Dateien nach diesen Kategorien
     
-Die Berichte verwenden [Azure Log Analytics](/azure/log-analytics/log-analytics-overview), um die Daten in einem Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Erste Schritte mit dem Log Analytics-Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Die Berichte verwenden [Azure Log Analytics](/azure/log-analytics/log-analytics-overview), um die Daten in einem Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Getting Started with the Analytics Portal (Erste Schritte mit dem Analytics-Portal)](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
 
-Weitere Informationen finden Sie im Blogbeitrag [Datenermittlung, Berichterstattung und Analysen für alle Daten mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (in englischer Sprache).
+Weitere Informationen finden Sie in den folgenden Blogbeiträgen: 
+
+- [Data discovery, reporting and analytics for all your data with Microsoft Information Protection (Datenermittlung, Berichterstattung und Analysen für alle Daten mit Microsoft Information Protection)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854)
+
+- [Discover and protect sensitive data through Azure Information Protection and Windows Defender ATP (Ermitteln und Schützen vertraulicher Daten mit Azure Information Protection und Windows Defender ATP)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discover-and-protect-sensitive-data-through-Azure-Information/ba-p/297292)
 
 ### <a name="information-collected-and-sent-to-microsoft"></a>Gesammelte und an Microsoft gesendete Informationen
 
@@ -85,7 +89,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Den Namen des Benutzergeräts
 
-- Für Dokumente: Den Dateipfad und -namen von Dokumenten, die Bezeichnungen aufweisen
+- Für Dokumente: Den Dateipfad und -namen von Dokumenten, die Bezeichnungen aufweisen.
 
 - Für E-Mails: Den Betreff, den Absender und die Empfänger für E-Mails mit Bezeichnung 
 
@@ -118,7 +122,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
     
     - Erstellen eines neuen Log Analytics-Arbeitsbereichs: Wählen Sie **Neuen Arbeitsbereich erstellen** aus, und geben Sie auf dem Blatt **Log Analytics-Arbeitsbereich** die erforderlichen Informationen ein.
     
-    - Verwenden eines vorhandenen Log Analytics-Arbeitsbereichs: Wählen Sie den gewünschten Arbeitsbereich aus der Liste aus.
+    - Verwenden eines vorhandenen Log Analytics-Arbeitsbereichs: Wählen Sie den Arbeitsbereich aus der Liste aus.
 
 Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
@@ -128,7 +132,7 @@ Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 
 Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
 
-- **Nutzungsbericht (Vorschauversion)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden. 
+- **Nutzungsbericht (Vorschau)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden. 
 
 - **Aktivitätsprotokolle (Vorschau)**: Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
     
@@ -136,7 +140,7 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
     
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können.
 
-- **Datenermittlung (Vorschauversion)**: Dieser Bericht enthält beim Überprüfen oder von Windows Defender ATP gefundene Informationen zu Dateien.
+- **Datenermittlung (Vorschau)**: Dieser Bericht enthält beim Überprüfen oder von Windows Defender ATP gefundene Informationen zu Dateien.
 
 ## <a name="how-to-modify-the-reports"></a>Ändern von Berichten
 
@@ -145,7 +149,7 @@ Wählen Sie im Dashboard das Abfragesymbol aus, um das Blatt **Protokollsuche** 
 ![Log Analytics-Symbol zum Anpassen von Azure Information Protection-Berichten](./media/log-analytics-icon.png)
 
 
-Die protokollierten Daten für Azure Information Protection werden in folgender Tabelle gespeichert: **InformationProtectionLogs_CL**
+Die protokollierten Daten für Azure Information Protection werden in der folgenden Tabelle gespeichert: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie die Informationen in den Berichten überprüft haben, haben Sie die Möglichkeit, Änderungen an Ihrer Azure Information Protection-Richtlinie vorzunehmen. Eine Anleitung dazu finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).

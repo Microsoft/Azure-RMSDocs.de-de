@@ -12,12 +12,12 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1adb21ac41a922ebb3636fcce9e13c9fd785930d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42a1944dcb643c1647ee7299456307815f1023b4
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151655"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266629"
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS
 
@@ -38,7 +38,7 @@ Jede RMS-API verfügt über einen Rückruf, der implementiert werden muss, um ei
 - Android: die Schnittstellen [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) und [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
 - iOS/OS X: das Protokoll [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
 -  Windows Phone/Windows RT: die Schnittstelle [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
-- Linux: die Schnittstelle [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
+- Linux: die Schnittstelle [IAuthenticationCallback](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
 ### <a name="what-library-to-use-for-authentication"></a>Welche Bibliothek zur Authentifizierung verwendet werden soll
 Zur Implementierung eines eigenen Authentifizierungsrückrufs müssen Sie eine entsprechende Bibliothek herunterladen und Ihre Entwicklungsumgebung für deren Verwendung konfigurieren. Auf GitHub finden Sie die ADAL-Bibliotheken für diese Plattformen.
@@ -51,8 +51,7 @@ Jede der folgenden Ressourcen enthält Anleitungen zum Einrichten Ihrer Umgebung
 -   [Windows Azure Active Directory Authentication Library (ADAL) for dotnet (Windows Azure Active Directory-Authentifizierungsbibliotheken (ADAL) für dotnet)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)
 -   Beim Linux-SDK befindet sich die ADAL-Bibliothek im SDK-Quellcodepaket, das über [Github](https://github.com/AzureAD/rms-sdk-for-cpp) verfügbar ist.
 
->[!NOTE]  
-> Es wird empfohlen, dass Sie selbst dann eine ADAL verwenden, wenn Sie andere Authentifizierungsbibliotheken verwenden könnten.
+>[!NOTE]   Es wird empfohlen, dass Sie selbst dann eine ADAL verwenden, wenn Sie andere Authentifizierungsbibliotheken verwenden könnten.
 
 ### <a name="authentication-parameters"></a>Authentifizierungsparameter
 
@@ -72,8 +71,7 @@ Diese stammt aus dem vorherigen Registrierungsschritt, der über das Azure-Porta
 
     iOS: `<app-scheme>://<bundle-id>`
 
->[!NOTE] 
-> Bei den Azure RMS- und Azure AD-Workflows tritt wahrscheinlich ein Fehler auf, und diese Workflows werden von Microsoft nicht unterstützt, wenn Ihre App diesen Richtlinien nicht entspricht. Darüber hinaus kann es einen Verstoß gegen die Rights Management License Agreement (RMLA) darstellen, wenn in einer Produktions-App eine ungültige Client-ID verwendet wird.
+>[!NOTE]  Bei den Azure RMS- und Azure AD-Workflows tritt wahrscheinlich ein Fehler auf, und diese Workflows werden von Microsoft nicht unterstützt, wenn Ihre App diesen Richtlinien nicht entspricht. Darüber hinaus kann es einen Verstoß gegen die Rights Management License Agreement (RMLA) darstellen, wenn in einer Produktions-App eine ungültige Client-ID verwendet wird.
 
 ### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Wie sollte die Implementieren eines Authentifizierungsrückrufs aussehen
 **Codebeispiele für die Authentifizierung** –Dieses SDK enthält Beispielcode, der die Verwendung von Authentifizierungsrückrufen veranschaulicht. Der Einfachheit halber werden diese Codebeispiele sowohl hier als auch in jedem der folgenden verknüpften Themen dargestellt.

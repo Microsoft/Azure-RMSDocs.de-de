@@ -5,19 +5,19 @@ keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f7fde149e080607633b0e916123d4da1e06d7715
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6d16237ff8d4fbfe1b26a73577c16b78b31849e1
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147507"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266357"
 ---
 # <a name="windows-store-setup"></a>Windows Store-Setup
 
@@ -35,11 +35,11 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 
 Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
 
--   [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)-Betriebssystem
+-   [Windows 8.1](https://windows.microsoft.com/windows-8/meet)-Betriebssystem
 -   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) oder höher oder Visual Studio Express 2012, das im Windows SDK für Windows 8.0/8.1 enthalten ist
--   MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) oder höher oder Visual Studio Express 2012, das im Windows SDK für Windows 8.0/8.1 enthalten ist
+-   Das MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
+-   Authentifizierungsbibliothek: Die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx) wird empfohlen. Auch andere Authentifizierungsbibliotheken können verwendet werden.
 
 Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
@@ -77,8 +77,8 @@ Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
 [Begriffe und Konzepte für Entwickler](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](https://windows.microsoft.com/windows-8/meet)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 [Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx)

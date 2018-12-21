@@ -4,22 +4,22 @@ description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Reg
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 9d30e7c3e15e9aa6b67c2e1b653d56c1af36ffe0
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366987"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305470"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Beispiel:
 
@@ -37,9 +37,9 @@ Weitere Informationen zur Konfiguration von Regeln für den Nachrichtenfluss zum
 
 Da eine Azure Information Protection-Bezeichnung in den Metadaten gespeichert ist, können die Nachrichtenflussregeln in Exchange Online diese Informationen für Nachrichten und Dokumentanlagen lesen:
 
-- In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;**. 
+- In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Für Word-Dokumente (DOC and DOCX), Excel-Tabellen (XLS and XLSX), PowerPoint-Präsentationen (PPT und PPTX) und PDF-Dokumente (PDF) werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**.  
+- Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX), PowerPoint-Präsentationen (PPT und PPTX) sowie PDF-Dokumente (PDF) werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
 
 Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung**, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
@@ -63,7 +63,7 @@ Erstellen Sie für die folgenden Beispiele eine neue Nachrichtenflussregel, inde
 In den Beispielen gibt es eine einzige Bedingung, die den Schutz anwendet, wenn eine E-Mail außerhalb des Unternehmens versendet wird. Weitere Informationen zu anderen Bedingungen, die Sie auswählen können, finden Sie unter [Bedingungen und Ausnahmen (Prädikate) zu Nachrichtenflussregeln in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Beispiel 1: Regel, die die Option „Nicht weiterleiten“ auf E-Mails mit der Bezeichnung **Allgemein** anwendet, wenn sie außerhalb der Organisation versendet werden.
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Beispiel 1: Regel, die die Option „Nicht weiterleiten“ auf E-Mails mit der Bezeichnung **Allgemein** anwendet, wenn diese an Empfänger außerhalb der Organisation versendet werden
 
 In diesem Beispiel weist die Bezeichnung **Allgemein** die GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 auf. Ersetzen Sie Ihre eigene Bezeichnungs- oder Unterbezeichnungs-GUID, die Sie mit dieser Regel verwenden möchten. 
 
@@ -71,11 +71,11 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
 
 1. Geben Sie unter **Name** einen Namen für die Regel ein, z.B. `Apply Do Not Forward for General emails sent externally`.
  
-2. Für **Diese Regel anwenden, wenn**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
+2. Für **Diese Regel anwenden, wenn...**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
 
 3. Wählen Sie **Weitere Optionen** und dann **Bedingung hinzufügen** aus.
  
-4. Für **und**: Wählen Sie **einen Nachrichtenheader**, und wählen Sie dann **enthält eines dieser Wörter** aus:
+4. Für **und**: Wählen Sie einen **Nachrichtenheader** aus, und wählen Sie dann **enthält eines dieser Wörter** aus:
      
     ein. Wählen Sie **Text eingeben** aus, und geben Sie `msip_labels` ein.
      
@@ -83,15 +83,15 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
     
     c. Wählen Sie **+** und dann **OK** aus.
 
-5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Nicht weiterleiten**, und wählen Sie dann **OK** aus.
+5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Nicht weiterleiten** aus, und wählen Sie dann **OK** aus.
     
-    Ihre Regelkonfiguration sollte nun wie folgt aussehen: ![Für eine Azure Information Protection-Bezeichnung konfigurierte Nachrichtenflussregel in Exchange Online – Beispiel 1](./media/aip-exo-rule-ex1.png)
+    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Für eine Azure Information Protection-Bezeichnung konfigurierte Exchange Online-E-Mail-Flussregel – Beispiel 1](./media/aip-exo-rule-ex1.png)
 
 7. Wählen Sie **Speichern** aus. 
 
 Weitere Informationen zur „Nicht weiterleiten“-Option finden Sie unter [Option „Nicht weiterleiten“ für E-Mails](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Beispiel 2: Regel, die die Option „Nur verschlüsseln“ auf E-Mails anwendet, wenn sie Anlagen mit der Bezeichnung **Vertraulich\ Partner** haben und außerhalb der Organisation versendet werden.
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Beispiel 2: Regel, die die Option „Nur verschlüsseln“ auf E-Mails anwendet, wenn sie Anlagen mit der Bezeichnung **Vertraulich \ Partner** haben und an Empfänger außerhalb der Organisation versendet werden
 
 In diesem Beispiel weist die Bezeichnung **Confidential \ Partners** die GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 auf. Ersetzen Sie Ihre eigene Bezeichnungs- oder Unterbezeichnungs-GUID, die Sie mit dieser Regel verwenden möchten. 
 
@@ -99,11 +99,11 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
 
 1. Geben Sie unter **Name** einen Namen für die Regel ein, z.B. `Apply Encrypt to emails sent externally if protected attachments`.
  
-2. Für **Diese Regel anwenden, wenn**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
+2. Für **Diese Regel anwenden, wenn...**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
 
 3. Wählen Sie **Weitere Optionen** und dann **Bedingung hinzufügen** aus.
  
-4. Für **und**: Wählen Sie **Beliebige Anlage** aus, und wählen Sie dann **verfügt über Eigenschaften, die eines dieser Wörter enthalten**:
+4. Für **und**: Wählen Sie **Beliebige Anlage** aus, und wählen Sie dann **verfügt über Eigenschaften, die eines dieser Wörter enthalten** aus:
      
     ein. Wählen Sie **+** > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
   
@@ -113,9 +113,9 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
     
     d. Wählen Sie **Speichern** und dann **OK** aus.
 
-5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Verschlüsseln**, und wählen Sie dann **OK** aus.
+5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Verschlüsseln** aus, und wählen Sie dann **OK** aus.
     
-    Ihre Regelkonfiguration sollte nun wie folgt aussehen: ![Für eine Azure Information Protection-Bezeichnung konfigurierte Nachrichtenflussregel in Exchange Online – Beispiel 1](./media/aip-exo-rule-ex2.png)
+    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Für eine Azure Information Protection-Bezeichnung konfigurierte Exchange Online-E-Mail-Flussregel – Beispiel 1](./media/aip-exo-rule-ex2.png)
 
 6. Wählen Sie **Speichern** aus. 
 
@@ -126,6 +126,6 @@ Weitere Informationen zur Verschlüsselungsoption finden Sie unter [Option „En
 
 Informationen zum Erstellen und Konfigurieren der Bezeichnungen für die Verwendung mit Exchange Online-Nachrichtenflussregeln finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
-Um die Klassifizierung von E-Mail-Nachrichten, die Anlagen enthalten, zu erleichtern, sollten Sie außerdem die folgende [Richtlinieneinstellung](configure-policy-settings.md) in Azure Information Protection verwenden: **Auf E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Klassifizierung dieser Anlagen entspricht.**
+Darüber hinaus sollten Sie die Verwendung der folgenden [Richtlinieneinstellung](configure-policy-settings.md) von Azure Information Protection in Erwägung ziehen, um E-Mail-Nachrichten zu klassifizieren, die Anlagen enthalten: **Wenden Sie für E-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht**.
 
 

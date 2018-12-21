@@ -4,22 +4,22 @@ description: Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8fa2bfd1957713f2c95deaf59bb740371c1ad375
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1b14ef6999f0852474f6f9de5eef2902f8863a8c
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151014"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305172"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Erfahren Sie anhand der folgenden Informationen, wie die am häufigsten verwendeten Anwendungen und Dienste für Endbenutzer den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und E-Mails Ihrer Organisation zu schützen. Diese Anwendungen sind unter anderem Word, Excel, PowerPoint und Outlook. Die Dienste sind unter anderem Exchange und SharePoint.
 

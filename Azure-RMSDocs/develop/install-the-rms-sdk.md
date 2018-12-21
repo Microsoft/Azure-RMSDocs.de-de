@@ -12,12 +12,12 @@ ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 1b801e3928c335846f5f2ec56953ec8bc4998718
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4a19f6d1bf594d6a181b41685ecc1f1ba82a4408
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148765"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266408"
 ---
 # <a name="install-the-sdk"></a>Installieren des SDK
 
@@ -27,7 +27,7 @@ In diesem Thema werden Sie durch die Installation der Entwicklertools geführt.
 
 ### <a name="install-the-developer-tools"></a>Installieren der Entwicklertools
 
-1.  Laden Sie das [Rights Management Services SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) aus dem Microsoft Download Center herunter. Achten Sie hierbei darauf, dass Sie die richtige Architekturversion für Ihren Computer auswählen.
+1.  Laden Sie das [Rights Management Services SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397) aus dem Microsoft Download Center herunter. Achten Sie hierbei darauf, dass Sie die richtige Architekturversion für Ihren Computer auswählen.
 2.  Führen Sie das Installationspaket an Ihrem Speicherort aus:
 
     **...\\setup\_sdk.exe**

@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 834c408e87e34415bb76041968f5bdee6db3e848
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d707f32062df54975237d9ae6f7218d33cfe337a
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151038"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305657"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -53,10 +53,10 @@ Das aktuelle Release des Moduls „AzureInformationProtection“ weist die folge
 
 Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätzlichen Voraussetzungen und Anweisungen, die Ihrer Bereitstellung entsprechen:
 
-- [Azure Information Protection und Azure Rights Management-Dienst](#azure-information-protection-service-and-azure-rights-management-service)
+- [Azure Information Protection und Azure Rights Management-Dienst](#azure-information-protection-and-azure-rights-management-service)
 
-    - Zutreffend, wenn Sie die ausschließliche Klassifizierung oder die Klassifizierung mit Rights Management-Schutz verwenden: Sie verfügen über ein Abonnement, das Azure Information Protection (z. B. „Enterprise Mobility + Security“) enthält.
-    - Zutreffend, wenn Sie den ausschließlichen Schutz mit dem Azure Rights Management-Dienst verwenden: Sie verfügen über ein Abonnement, das den Azure Rights Management-Dienst (z. B. Office 365 E3 und Office 365 E5) enthält.
+    - Gilt, wenn Sie die ausschließliche Klassifizierung oder die Klassifizierung mit Rights Management-Schutz verwenden: Sie haben ein Abonnement, das Azure Information Protection (z. B. Enterprise Mobility + Security) umfasst.
+    - Gilt, wenn Sie ausschließlichen Schutz mit dem Azure Rights Management-Dienst verwenden: Sie haben ein Abonnement, das den Azure Rights Management-Dienst (z. B. Office 365 E3 und Office 365 E5) umfasst.
 
 - [Active Directory Rights Management Services](#active-directory-rights-management-services)
 
@@ -86,19 +86,19 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
     
     - Bearbeiten Sie die Registrierung für die Diensterkennung.
 
-#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert werden.
+#### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert sein
 
 Für diese Voraussetzung können Sie den Datenschutz mithilfe von Bezeichnungen anwenden oder eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Datenschutz anzuwenden.
 
 Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie entsprechende Anweisungen zum [Aktivieren von Azure Rights Management](../activate-service.md).
 
-#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Voraussetzung 2: Den Schutz von Dateien für andere Benutzer mithilfe Ihres eigenen Kontos entfernen.
+#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Voraussetzung 2: Sie entfernen den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos
 
 Typische Szenarien für das Entfernen des Schutzes von Dateien für andere Benutzer umfassen die Datenermittlung oder Datenwiederherstellung. Wenn Sie den Schutz mithilfe von Bezeichnungen anwenden, können Sie den Schutz durch Festlegen einer neuen Bezeichnung entfernen, durch die kein Schutz angewendet wird. Sie können dazu aber auch die Bezeichnung entfernen. Aber Sie werden wahrscheinlich eher eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Schutz zu entfernen.
 
 Sie müssen über ein Rights Management-Nutzungsrecht verfügen oder Administrator sein, um den Schutz von Dateien zu entfernen. Für die Datenermittlung oder Datenwiederherstellung wird in der Regel die Administratorfunktion verwendet. Informationen zum Aktivieren dieses Feature und zum Konfigurieren Ihres Kontos als Administrator finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
 
-#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Voraussetzungen 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben.
+#### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Voraussetzung 3: So werden Dateien ohne Benutzerinteraktion geschützt bzw. wird deren Schutz aufgehoben
 
 Sie können ohne Interaktion eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um Dateien zu schützen oder ihren Schutz aufzuheben.
 
@@ -230,7 +230,7 @@ Unser Beispielbefehl würde wie folgt aussehen:
 
 Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzigen Befehl bereitstellen. Dieser würde in einem Skript ohne Benutzereingriff ausgeführt werden. Zu Testzwecken können Sie jedoch einfach „Set-RMSServerAuthentication“ eintippen und die Werte nacheinander eingeben, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, arbeitet der Client nun im „Servermodus“, der für die Verwendung ohne Benutzereingriff wie bei Skripts und Windows Server-Dateiklassifizierungsinfrastruktur geeignet ist.
 
-Erwägen Sie, dieses Dienstprinzipalkonto zum Administrator zu machen: Dieses Dienstprinzipalkonto kann als Administrator konfiguriert werden, um sicherzustellen, dass es für andere Benutzer immer Dateien schützen oder deren Schutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
+Erwägen Sie, dieses Dienstprinzipalkonto zum Administrator zu machen: Dieses Dienstprinzipalkonto kann als Administrator konfiguriert werden, um sicherzustellen, dass es für andere Benutzer stets den Dateischutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
 
 Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
 
@@ -265,7 +265,7 @@ Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterlade
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Beispielszenarien für die Verwendung der Cmdlets für Azure Information Protection und den Azure Rights Management-Dienst
 
-Es ist effizienter, Dateien mithilfe von Bezeichnungen zu klassifizieren und zu schützen, da nur zwei Cmdlets erforderlich sind, die einzeln oder gemeinsam ausgeführt werden können: [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) und [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Weitere Informationen und Beispiele finden Sie in der Hilfe zu diesen beiden Cmdlets.
+Es ist effizienter, Dateien mithilfe von Bezeichnungen zu klassifizieren und zu schützen, da nur zwei Cmdlets erforderlich sind, die einzeln oder gemeinsam ausgeführt werden können: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) und [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Weitere Informationen und Beispiele finden Sie in der Hilfe zu diesen beiden Cmdlets.
 
 Wenn Sie Dateien jedoch über eine direkte Verbindung mit dem Azure Rights Management-Dienst schützen oder den Schutz aufheben möchten, müssen Sie in der Regel eine Reihe von Cmdlets gemäß der folgenden Beschreibung ausführen.
 
@@ -273,7 +273,7 @@ Geben Sie zunächst in einer PowerShell-Sitzung Folgendes ein, wenn Sie sich fü
 
     Set-RMSServerAuthentication
 
-Geben Sie nach der entsprechenden Aufforderung die drei Bezeichner ein, wie unter [Voraussetzung 3: Dateien ohne Benutzerinteraktion schützen oder deren Schutz aufheben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) beschrieben.
+Geben Sie nach der entsprechenden Aufforderung die drei Bezeichner ein, wie unter [Voraussetzung 3: So werden Dateien ohne Benutzerinteraktion geschützt bzw. wird deren Schutz aufgehoben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) beschrieben.
 
 Bevor Sie Dateien schützen können, müssen Sie die Rights Management-Vorlagen auf Ihren Computer herunterladen und die zu verwendende Vorlage sowie ihre zugehörige ID-Nummer ermitteln. In der Ausgabe können Sie dann die Vorlagen-ID kopieren:
 
@@ -551,7 +551,7 @@ Allgemeine Schritte:
 
 5. Vergewissern Sie sich, dass das Token für das Dienstkonto gespeichert wurde, und löschen Sie das PowerShell-Skript.
 
-#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Schritt 1: Erstellen eines PowerShell-Skripts auf dem lokalen Computer
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Schritt 1: Erstellen Sie ein PowerShell-Skript auf dem lokalen Computer.
 
 1. Erstellen Sie auf Ihrem Computer ein neues PowerShell-Skript mit dem Namen „Aipauthentication.ps1“.
 
@@ -563,7 +563,7 @@ Allgemeine Schritte:
     
     Beispiel: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
     
-#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Schritt 2: Ausführen von „Set-AIPAuthentication“ zum Abrufen eines Zugriffstokens und Kopieren des Tokens in die Zwischenablage
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Schritt 2: Führen Sie „Set-AIPAuthentication“ aus, um ein Zugriffstoken abzurufen und in die Zwischenablage zu kopieren.
 
 1. Öffnen Sie eine Windows PowerShell-Sitzung.
 
@@ -573,7 +573,7 @@ Allgemeine Schritte:
     
     Beispiel: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
-#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Schritt 3: Ändern des PowerShell-Skripts zum Bereitstellen des Tokens
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Schritt 3: Ändern Sie das PowerShell-Skript zum Bereitstellen des Tokens.
 
 1. Geben Sie in Ihrem PowerShell-Skript den Tokenwert ein, indem Sie die Zeichenfolge aus der Zwischenablage einfügen. Speichern Sie anschließend die Datei.
 
@@ -583,7 +583,7 @@ Allgemeine Schritte:
 
 3. Kopieren Sie dieses PowerShell-Skript auf den Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, und löschen Sie das Original auf Ihrem Computer. Beispiel: Sie kopieren das PowerShell-Skript in „C:\Scripts\Aipauthentication.ps1“ auf einem Windows Server-Computer.
 
-#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Schritt 4: Erstellen eines Tasks zum Ausführen des PowerShell-Skripts
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Schritt 4: Erstellen Sie einen Task zum Ausführen des PowerShell-Skripts.
 
 1. Stellen Sie sicher, dass das Dienstkonto, mit dem Dateien bezeichnet und geschützt werden, über die Berechtigung **Als Batchauftrag anmelden** verfügt.
 
@@ -597,7 +597,7 @@ Allgemeine Schritte:
 
 3. Führen Sie diesen Task manuell aus.
 
-#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Schritt 4: Sicherstellen, dass das Token gespeichert wurde, und Löschen des PowerShell-Skripts
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Schritt 4: Stellen Sie sicher, dass das Token gespeichert wurde, und löschen Sie das PowerShell-Skript
 
 1. Vergewissern Sie sich, dass das Token nun im Ordner „%localappdata%\Microsoft\MSIP“ des Dienstkontoprofils gespeichert ist. Dieser Wert wird durch das Dienstkonto geschützt.
 

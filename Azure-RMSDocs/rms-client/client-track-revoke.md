@@ -4,18 +4,18 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 485b999ce8b5adcbe284d0ea8286cdf1183ac8da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151029"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305222"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
@@ -95,11 +95,11 @@ Nachdem Sie das geschützte Dokument mithilfe der Office-Apps oder des Datei-Exp
 
 - Besuchen Sie die [Website für die Dokumentverfolgung](https://go.microsoft.com/fwlink/?LinkId=529562) über Ihren Windows-PC, Macintosh-Computer oder Ihr mobiles Gerät.
 
-    **Unterstützte Browser**: Wir empfehlen Internet Explorer in der Version 10 oder höher. Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
+    **Unterstützte Browser**: Wir empfehlen Internet Explorer in der neuesten Version 10, Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
 
     - Internet Explorer: Mindestens Version 10
 
-    - Internet Explorer 9 mindestens mit MS12-037: Kumulatives Sicherheitsupdate für Internet Explorer: 12. Juni 2012
+    - Internet Explorer 9 mit mindestens MS12-037: Kumulatives Sicherheitsupdate für Internet Explorer: 12. Juni 2012
 
     - Mozilla Firefox: Mindestens Version 12
 

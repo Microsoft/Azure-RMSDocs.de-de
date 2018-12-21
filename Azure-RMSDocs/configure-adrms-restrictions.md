@@ -4,16 +4,16 @@ description: Übersicht über den HYOK-Schutz (AD RMS) mit Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d4d653f5244467b29fc2be7d4554d92d035d0f87
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: de278dbb9fd9f051c3a4e47ef719988df4706434
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151757"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305555"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -65,22 +65,22 @@ In der folgenden Tabelle werden die unterstützten Szenarios für den Schutz von
 
 |Plattform|Anwendung|Unterstützt|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Word, Excel, PowerPoint|Schutz: Ja<br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Outlook|Schutz: Ja<br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Client mit Datei-Explorer|Schutz: Ja <br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Client PowerShell-Cmdlets für die Bezeichnung|Schutz: Ja<br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Überprüfung|Schutz: Ja<br /><br />Verbrauch: Ja|
-|Windows|Rights Management-Freigabeanwendung|Schutz: Nein<br /><br />Verbrauch: Ja|
-|MacOS|Office für Mac <br /><br /> Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja|
-|MacOS|Office für Mac<br /><br />Outlook|Schutz: Nein<br /><br />Verbrauch: Ja|
-|MacOS|Rights Management-Freigabeanwendung|Schutz: Nein<br /><br />Verbrauch: Ja|
-|iOS|Office Mobile <br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja|
+|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Word, Excel, PowerPoint|Schutz: Ja <br /><br />Verbrauch: Ja |
+|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Outlook|Schutz: Ja <br /><br />Verbrauch: Ja |
+|Windows|Azure Information Protection-Client mit Datei-Explorer|Schutz: Ja  <br /><br />Verbrauch: Ja |
+|Windows|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja |
+|Windows|Azure Information Protection-Client PowerShell-Cmdlets für die Bezeichnung|Schutz: Ja <br /><br />Verbrauch: Ja |
+|Windows|Azure Information Protection-Überprüfung|Schutz: Ja <br /><br />Verbrauch: Ja |
+|Windows|Rights Management-Freigabeanwendung|Schutz: Nein<br /><br />Verbrauch: Ja |
+|MacOS|Office für Mac <br /><br /> Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja |
+|MacOS|Office für Mac<br /><br />Outlook|Schutz: Nein<br /><br />Verbrauch: Ja |
+|MacOS|Rights Management-Freigabeanwendung|Schutz: Nein<br /><br />Verbrauch: Ja |
+|iOS|Office Mobile <br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja |
 |iOS|Office Mobile <br /><br />Outlook|Schutz: Nein<br /><br />Verbrauch: Nein|
-|iOS|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja|
-|Android|Office Mobile <br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja|
+|iOS|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja |
+|Android|Office Mobile <br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Ja |
 |Android|Office Mobile <br /><br />Outlook|Schutz: Nein<br /><br />Verbrauch: Nein|
-|Android|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja|
+|Android|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja |
 |Web|Outlook im Web|Schutz: Nein<br /><br />Verbrauch: Nein|
 |Web|Office Online<br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Nein|
 |Universell|Universelle Office-Apps<br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Nein|
@@ -114,7 +114,7 @@ Eine AD RMS-Bereitstellung muss die folgenden Anforderungen erfüllen, um den HY
 
 - AD RMS-Konfiguration:
     
-    - Mindestversion von Windows Server 2012 R2: erforderlich für Produktionsumgebungen. Für Tests oder zu Evaluierungszwecken können Sie jedoch eine Mindestversion von Windows Server 2008 R2 mit Service Pack 1 verwenden.
+    - Mindestversion von Windows Server 2012 R2: Erforderlich für Produktionsumgebungen. Für Tests oder zu Auswertungszwecken können Sie jedoch eine Mindestversion von Windows Server 2008 R2 mit Service Pack 1 verwenden.
     
     - Eine der folgenden Topologien:
         
@@ -126,31 +126,31 @@ Eine AD RMS-Bereitstellung muss die folgenden Anforderungen erfüllen, um den HY
         
     Wenn Sie über mehrere AD RMS-Cluster in separaten Gesamtstrukturen verfügen, löschen Sie Bezeichnungen in der globalen Richtlinie, die HYOK-Schutz (AD RMS) anwenden, und konfigurieren Sie eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für jeden Cluster. Weisen Sie anschließend Benutzer für jeden Cluster ihrer bereichsbezogenen Richtlinie zu. Stellen Sie dabei sicher, dass Sie keine Gruppen verwenden, die dazu führen würden, dass ein Benutzer mehr als einer bereichsbezogenen Richtlinie zugewiesen werden würde. Jeder Benutzer sollte letztendlich Bezeichnungen für nur einen AD RMS-Cluster besitzen. 
     
-    - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können den Modus auf der Registerkarte **Allgemein** der AD RMS-Clustereigenschaften prüfen.
+    - [Kryptografiemodus 2](https://technet.microsoft.com/library/hh867439.aspx): Sie können den Modus auf der Registerkarte **Allgemein** der AD RMS-Clustereigenschaften prüfen.
     
     - Jeder AD RMS-Server wird für die Zertifizierungs-URL konfiguriert. [Anweisungen](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - Ein Dienstverbindungspunkt ist nicht in Active Directory registriert: Ein Dienstverbindungspunkt wird nicht verwendet, wenn Sie den AD RMS-Schutz mit Azure Information Protection verwenden. 
+    - Ein Dienstverbindungspunkt (SCP) ist nicht in Active Directory registriert: Ein SCP wird nicht verwendet, wenn Sie den AD RMS-Schutz mit Azure Information Protection verwenden. 
     
         - Wenn Sie über einen registrierten Dienstverbindungspunkt für Ihre AD RMS-Bereitstellung verfügen, müssen Sie diesen entfernen, sodass die [Dienstermittlung](./rms-client/client-deployment-notes.md#rms-service-discovery) für den Azure Rights Management-Schutz erfolgreich ist. 
         
         - Bei der Installation eines neuen AD RMS-Clusters für HYOK überspringen Sie den Schritt zur Registrierung des Dienstverbindungspunkts bei der Konfiguration des ersten Knotens. Stellen Sie für jeden weiteren Knoten sicher, dass der Server für die Zertifizierungs-URL konfiguriert ist, bevor Sie die AD RMS-Rolle hinzufügen und dem vorhandenen Cluster beitreten.
     
-    - Die AD RMS-Server sind so konfiguriert, dass sie SSL/TLS mit einem gültigen x.509-Zertifikat verwenden, welches von den Clients, die eine Verbindung herstellen, als vertrauenswürdig eingestuft wird: Dies ist erforderlich für Produktionsumgebungen, aber nicht für Tests oder zu Evaluierungszwecken.
+    - Die AD RMS-Server werden konfiguriert, um SSL/TLS mit einem gültigen x.509-Zertifikat zu verwenden, das von den verbundenen Clients als vertrauenswürdig eingestuft wird: Erforderlich für Produktionsumgebungen, jedoch nicht erforderlich für Test- oder Auswertungszwecke.
     
     - Konfigurierte Rechtevorlagen.
     
     - Nicht für Exchange IRM konfiguriert
     
-    - Für Mobilgeräte und Mac-Computer: [Active Directory Rights Management Services Mobile Device Extension (Active Directory Rights Management Services-Mobilgeräteerweiterung)](https://technet.microsoft.com/library/dn673574.aspx) ist installiert und konfiguriert.
+    - Für mobile Geräte und Mac-Computer: Die [Active Directory Rights Management Services Mobile Device Extension (Active Directory Rights Management Services-Mobilgeräteerweiterung)](https://technet.microsoft.com/library/dn673574.aspx) ist installiert und konfiguriert.
 
 - Die Verzeichnissynchronisierung ist zwischen Ihrem lokalen Active Directory und Azure Active Directory konfiguriert, und Benutzer, die den HYOK-Schutz verwenden, werden für einmaliges Anmelden konfiguriert.
 
-- Wenn Sie Dokumente oder E-Mails, die mithilfe von HYOK geschützt wurden, mit anderen Personen außerhalb Ihrer Organisation teilen: AD RMS wird für explizit definierte Vertrauensstellungen in einer direkten Punkt-zu-Punkt-Beziehung mit den anderen Organisationen konfiguriert, indem entweder vertrauenswürdige Benutzerdomänen (trusted user domains, TUDs) oder Verbundvertrauensstellungen verwendet werden, die mit Active Directory-Verbunddiensten erstellt wurden.
+- Wenn Sie mit HYOK geschützte Dokumente oder E-Mails für andere Personen außerhalb Ihrer Organisation freigeben: AD RMS wird für ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung mit anderen Organisationen definierte Vertrauensstellungen konfiguriert, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (AD FS) erstellen.
 
 - Benutzer haben eine Version von Office 2016 Professional Plus oder Office 2013 Professional Plus mit Service Pack 1, die auf Windows 7 Service Pack 1 oder höher ausgeführt wird. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
     
-    - Für Office 2016, auf Microsoft Installer (.msi) basierte Ausgabe: Sie haben [Update 4018295 für Microsoft Office 2016 vom 6. März 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295) installiert.
+    - Für Office 2016, auf Microsoft Installer (MSI) basierende Edition: Sie haben [Update 4018295 für Microsoft Office 2016, das am 6. März 2018 veröffentlicht wurde](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295), installiert.
 
 > [!IMPORTANT]
 > Zum Erfüllen der hohen Sicherheit des HYOK-Schutzes wird empfohlen, dass Ihre AD RMS-Server sich nicht in Ihrem Umkreisnetzwerk befinden und nur von verwalteten Geräten verwendet werden. 
@@ -184,11 +184,11 @@ Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müss
 
 Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die Konsole von Active Directory Rights Management Services suchen:
 
-- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Suchen der Lizenzierungs-URL: Klicken Sie auf den Clusternamen. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
+- Suchen der Lizenzierungs-URL: Klicken Sie auf den Namen des Clusters. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
     
-    Wenn Sie über einen Extranetlizenzierungswert sowie über einen Intranetlizenzierungswert verfügen und diese verschieden sind: Geben Sie den Extranetwert nur an, wenn Sie geschützte Dokumente oder E-Mails für Partner freigeben, mit denen Sie Punkt-zu-Punkt-Vertrauensstellungen definiert haben. Verwenden Sie andernfalls den Intranetwert, und stellen Sie sicher, dass alle Clientcomputer, die AD RMS-Schutz mit Azure Information Protection verwenden, eine Verbindung über eine Intranetverbindung herstellen (z.B. verwenden Remotecomputer eine VPN-Verbindung).
+    Wenn Sie sowohl einen Extranet- als auch einen Intranetlizenzierungswert haben und sich die beiden Werte unterscheiden: Geben Sie den Extranetwert nur an, wenn Sie geschützte Dokumente oder E-Mails für Partner freigeben, die Sie mit expliziten Punkt-zu-Punkt-Vertrauensstellungen definiert haben. Verwenden Sie andernfalls den Intranetwert, und stellen Sie sicher, dass alle Clientcomputer, die AD RMS-Schutz mit Azure Information Protection verwenden, eine Verbindung über eine Intranetverbindung herstellen (z.B. verwenden Remotecomputer eine VPN-Verbindung).
 
 
 ## <a name="next-steps"></a>Nächste Schritte

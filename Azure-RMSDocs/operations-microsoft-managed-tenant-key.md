@@ -4,22 +4,22 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6fd356e88cbd7581bfafaf9a946eaa8fd9eba15e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3cddb4660ddae7bb19ff2ef1994fb4fa3c0bf9a6
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149513"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305385"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Wenn Ihr Mandantenschlüssel für Azure Information Protection von Microsoft verwaltet wird (Standard), finden Sie in den folgenden Abschnitten weitere Informationen zu den Lebenszyklusvorgängen, die für diese Topologie relevant sind.
 
@@ -61,11 +61,11 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
 - [Wenden Sie sich hierfür an den Microsoft-Support](information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
-### <a name="step-2-wait-for-verification"></a>Schritt 2: Warten auf Überprüfung
+### <a name="step-2-wait-for-verification"></a>Schritt 2: Warten auf Überprüfung
 
 - Microsoft überprüft, ob Ihre Anforderung zum Freigeben Ihres Azure Information Protection-Mandantenschlüssels legitim ist. Der Vorgang kann bis zu drei Wochen dauern.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Schritt 3: Erhalten von Schlüsselanweisungen vom Kundendienst (CSS)
+### <a name="step-3-receive-key-instructions-from-css"></a>Schritt 3: Erhalten von Schlüsselanweisungen vom Kundendienst (CSS)
 
 - Microsoft Customer Support Services (CSS) sendet Ihren Ihre Azure Information Protection-Konfiguration und den Mandantenschlüssel verschlüsselt in einer kennwortgeschützten Datei zu. Diese Datei hat die Dateierweiterung **TPD**. Hierzu sendet Ihnen (als der Person, die den Export initiiert hat) der Kundendienst zuerst per E-Mail ein Tool. Sie müssen das Tool wie folgt an einer Eingabeaufforderung ausführen:
 
@@ -79,7 +79,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    Die Ausgabe dieses Befehls sollte aus zwei Dateien bestehen: Eine enthält das Klartextkennwort für die kennwortgeschützte TPD-Datei, die andere ist die kennwortgeschützte TPD-Datei selbst. Die Dateien weisen eine neue GUID auf, z.B.:
+    Die Ausgabe dieses Befehls sollte aus zwei Dateien bestehen: Eine enthält das Nur-Text-Kennwort für die kennwortgeschützte TPD-Datei und die andere die kennwortgeschützte TPD-Datei selbst. Die Dateien weisen eine neue GUID auf, z.B.:
      
     - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 

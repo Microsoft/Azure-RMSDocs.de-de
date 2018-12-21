@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 04a93c57e2ea940384a171284da57b5d7c1572d9
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b53bb0a914871ba2a53ad7ff4c3bd6fca0d32dde
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148561"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173263"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Diese Informationen sind für IT-Administratoren und Berater bestimmt, die Azure Information Protection bereitgestellt haben. Wenn Sie Hilfe und Informationen zur Verwendung der Rights Management-Funktionen für eine bestimmte Anwendung oder zum Öffnen einer Datei suchen, die mit Rights Management geschützt ist, verwenden Sie die Hilfe und Anleitungen, die zu der Anwendung gehören.
@@ -31,9 +31,9 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Voraussetzungen für Azure Rights Management](requirements.md).
 
--   [Office 365: Konfigurationen für Clients und Onlinedienste](configure-office365.md)
+-   [Office 365: Konfigurationen für Clients und Onlinedienste](configure-office365.md)
 
-    -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchange-online-irm-configuration)
+    -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchange-online-irm-configuration)
 
     -   [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration)
 
@@ -41,7 +41,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 
     -   [Office 2016 und Office 2013](configure-office-apps.md#office-2016-and-office-2013)
 
-    -   [Office 2010](configure-office-apps.md#office-2010)
+    -   [Office 2010](configure-office-apps.md#office-2010)
 
 -   [Azure Information Protection-Client: Installation und Konfiguration für Clients](configure-sharing-app.md)
 

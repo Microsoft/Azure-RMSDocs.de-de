@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f013014f0256a01c30d9518089f2604ed9a668
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024432"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246189"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Administratorhandbuch der Rights Management-Freigabeanwendung
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 mit SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Ende der Supportbenachrichtigung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
+> **Benachrichtigung zum Ende der Unterstützung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
 
 Verwenden Sie die folgenden Informationen, wenn Sie für die Microsoft Rights Management-Freigabeanwendung in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md) oder in [FAQ für die Microsoft Rights Management-Freigabeanwendung für Windows](https://go.microsoft.com/fwlink/?LinkId=303971) zur Verfügung gestellt werden.
 
@@ -33,11 +33,11 @@ Eine technische Übersicht über die Rights Management-Freigabeanwendung und Inf
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Automatische Bereitstellung für die Microsoft Rights Management-Freigabeanwendung.
 Die Windows-Version des RMS-Freigabeanwendung unterstützt eine skriptbasierte Installation, sodass sie auch für Unternehmensbereitstellungen geeignet ist.
 
-Die einzigen Voraussetzungen für die Installation bestehen darin, dass auf dem Computer die Mindestversion von Windows 7 Service Pack 1 ausgeführt wird und dass Microsoft-Framework mit Mindestversion 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [dieses zur Installation über das Microsoft Download Center herunterladen](http://www.microsoft.com/download/details.aspx?id=17718).
+Die einzigen Voraussetzungen für die Installation bestehen darin, dass auf dem Computer die Mindestversion von Windows 7 Service Pack 1 ausgeführt wird und dass Microsoft-Framework mit Mindestversion 4.0 installiert ist. Wenn Sie Microsoft .NET Framework 4.0 installieren müssen, können Sie [dieses zur Installation über das Microsoft Download Center herunterladen](https://www.microsoft.com/download/details.aspx?id=17718).
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>So laden Sie die RMS-Freigabeanwendung für die automatische Bereitstellung herunter
 
-1.  Klicken Sie auf der Seite [Microsoft Rights Management-Freigabeanwendung für Windows](http://www.microsoft.com/download/details.aspx?id=40857) im Microsoft Download Center auf **Herunterladen**.
+1.  Klicken Sie auf der Seite [Microsoft Rights Management-Freigabeanwendung für Windows](https://www.microsoft.com/download/details.aspx?id=40857) im Microsoft Download Center auf **Herunterladen**.
 
 2.  Wählen Sie die benötigten Dateien aus, und laden Sie sie herunter. Es sind zwei Client-Installationspakete verfügbar: eines für Windows 64 Bit (Microsoft Rights Management-Freigabeanwendung x64.zip) und eines für Windows 32 Bit (Microsoft Rights Management-Freigabeanwendung x86.zip).
 
@@ -92,7 +92,7 @@ Informationen zum Überprüfen des Erfolgs finden Sie in diesem Artikel im Absch
 
     1.  Melden Sie sich an einem Computer mit einem lokalen Administratorkonto an.
 
-    2.  Laden Sie auf diesem Computer [den Microsoft Online Services-Anmelde-Assistenten herunter, und installieren Sie ihn](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  Laden Sie auf diesem Computer [den Microsoft Online Services-Anmelde-Assistenten herunter, und installieren Sie ihn](https://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Führen Sie den folgenden Befehl aus, damit die Zertifizierungsdienst-URL, die Sie dann kopieren und für den nächsten Schritt speichern können, auf dem Bildschirm angezeigt wird:
 
@@ -274,21 +274,21 @@ Sie können die Installationsprotokolldateien zum Überprüfen der erfolgreichen
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>So überprüfen Sie die erfolgreiche Installation der RMS-Freigabeanwendung nur für das Office-Add-In
 
-1.  Um den Erfolg des Befehls "Setup_ipviewer.exe" zu überprüfen, suchen Sie den folgenden Text in der Installationsprotokolldatei: **Installation success or error status: 0**
+1.  Um einen Erfolg des Befehls Setup_ipviewer.exe zu bestätigen, suchen Sie in der Installationsprotokolldatei nach folgendem Text: **Installationserfolg oder Fehlerstatus: 0**
 
     Beispiel für Zeilen aus einer erfolgreichen Installation:
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Product: Active Directory Rights Management Services Client 2.1 – Installation completed successfully.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Produkt: Active Directory Rights Management Services-Client 2.1 – Installation wurde erfolgreich abgeschlossen.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer installed the product. Product Name: Active Directory Rights Management Services Client 2.1. Product Version: 1.0.1179.1. Product Language: 1033. Hersteller: Microsoft Corporation. Installation success or error status: 0.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer hat das Produkt installiert. Produktname: Active Directory Rights Management Services Client 2.1. Produktversion: 1.0.1179.1. Product Language: 1033. Hersteller: Microsoft Corporation. Installationserfolg oder Fehlerstatus: 0.**
 
-2.  Um den Erfolg des Office-Add-ins zu überprüfen, suchen Sie auf jedem Computer den folgenden Text in der Installationsprotokolldatei: **Installation success or error status: 0**
+2.  Um einen Erfolg des Office Add-Ins zu bestätigen, suchen Sie auf jedem Computer in der Installationsprotokolldatei nach folgendem Text: **Installationserfolg oder Fehlerstatus: 0**
 
     Beispiel für Zeilen aus einer erfolgreichen Installation:
 
-    **MSI (s) (9C:88) [18:49:04:007]: Product: Microsoft RMS Office Addins – Installation completed successfully.**
+    **MSI (s) (9C:88) [18:49:04:007]: Produkt: Microsoft RMS-Office-Add-ins – Installation wurde erfolgreich abgeschlossen.**
 
-    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product. Product Name: Microsoft RMS Office Addins. Product Version: 1.0.7. Product Language: 1033. Hersteller: Microsoft. Installation success or error status: 0.**
+    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer hat das Produkt installiert. Product Name: Microsoft RMS Office Addins. Product Version: 1.0.7. Produktsprache: 1033. Hersteller: Microsoft. Installationserfolg oder Fehlerstatus: 0.**
 
 ## <a name="uninstall-commands"></a>Deinstallationsbefehle
 Nicht alle Installationsbefehle, die für diese Bereitstellungen erforderlich sind, unterstützen einen Deinstallationsbefehl. Sie können den AD RMS-Client, die Freigabeanwendung und das Office-Add-in deinstallieren. Verwenden Sie die folgenden Befehle, um diese Elemente zu deinstallieren.
@@ -340,7 +340,7 @@ Da die RMS-Freigabeanwendung nicht von WSUS unterstützt wird, können Sie das f
 
 3.  Wenn die Tests abgeschlossen sind und alle Probleme gelöst wurden, können Sie die neueste Version allen Benutzern mithilfe der Anweisungen zur automatischen Bereitstellung in diesem Handbuch bereitstellen.
 
-## <a name="azure-information-protection-only-configuring-document-tracking"></a>Nur Azure Information Protection: Konfigurieren der Dokumentkontrolle
+## <a name="azure-information-protection-only-configuring-document-tracking"></a>Nur Azure Information Protection: Konfigurieren der Dokumentenverfolgung
 Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Die Dokumentenverfolgung zeigt Informationen, wie z. B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, die von Benutzern freigegeben wurden, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Wenn das Anzeigen dieser Informationen in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie den Zugriff auf die Website der Dokumentenverfolgung mithilfe des Cmdlets [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature) deaktivieren. Sie können den Zugriff auf die Website jederzeit mit dem Cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) wieder aktivieren und mit [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature) überprüfen, ob der Zugriff derzeit aktiviert oder deaktiviert ist.
 
 Zum Ausführen dieser Cmdlets benötigen Sie mindestens Version **2.3.0.0** des Azure Rights Management-Moduls für Windows PowerShell. Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](../install-powershell.md).
@@ -388,14 +388,14 @@ Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur
 
 Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 
-## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
+## <a name="ad-rms-only-support-for-multiple-email-domains-within-your-organization"></a>Nur AD RMS: Unterstützung für mehrere E-Mail-Domänen innerhalb Ihrer Organisation
 Wenn Sie AD RMS verwenden und die Benutzer in Ihrer Organisation möglicherweise aufgrund einer Fusion oder Übernahme über mehrere E-Mail-Domänen verfügen, müssen Sie die folgende Änderung an der Registrierung vornehmen:
 
 1.  Navigieren Sie zu **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC**, und erstellen Sie, sofern nicht bereits vorhanden, einen neuen Schlüssel mit dem Namen **RmsSharingApp**.
 
 2.  Wählen Sie **RmsSharingApp** aus, erstellen Sie einen neuen mehrteiligen Zeichenfolgenwert namens **FederatedDomains**, und fügen Sie die Domänen und alle Unterdomänen hinzu, die Ihre Organisation verwendet. Platzhalter werden nicht unterstützt.
 
-    Beispiel: Das Unternehmen Coho Vineyard &amp; Winery verfügt über die Standard-E-Mail-Domäne **cohovineyardandwinery.com**, aber durch Fusionen verwendet es auch die E-Mail-Domänen **cohowinery.com**, **eastcoast.cohowinery.com** und **cohovineyard**. Für den **FederatedDomains**-Wert gibt der Administrator **cohowinery.com; eastcoast.cohowinery.com; cohovineyard** ein.
+    Beispiel: Das Unternehmen Coho Vineyard &amp; Winery hat die Standard-E-Mail-Domäne **cohovineyardandwinery.com**, aber aufgrund von Fusionen verwendet das Unternehmen auch die E-Mail-Domänen **cohowinery.com**, **eastcoast.cohowinery.com** und **cohovineyard.com**. Für den **FederatedDomains**-Wert gibt der Administrator **cohowinery.com; eastcoast.cohowinery.com; cohovineyard** ein.
 
 Wenn Sie diese Registrierungsänderung nicht vornehmen, können Benutzer möglicherweise keine Inhalte nutzen, die von anderen Benutzern in ihrer Organisation geschützt wurden. Diese Bearbeitung der Registrierung ist nicht erforderlich, wenn Sie Azure Information Protection verwenden.
 

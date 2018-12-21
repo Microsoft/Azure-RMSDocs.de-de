@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 7c1d488ff738b0eea9042f1580ea74b7099f3ac5
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026773"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174113"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Ein wichtiger Punkt hinsichtlich der Funktionsweise von Azure RMS ist, dass dieser Datenschutzdienst von Azure Information Protection Ihre Daten im Rahmen des Schutzprozesses weder sieht noch speichert. Informationen, die Sie schützen, werden niemals an Azure gesendet oder dort gespeichert – es sei denn, Sie speichern die Daten explizit in Azure oder verwenden einen anderen Clouddienst, der sie in Azure speichert. Durch Azure RMS werden die Daten in einem Dokument einfach nicht lesbar für Personen, die keine autorisierten Benutzer und Dienste sind:
 
@@ -43,8 +43,8 @@ Auch wenn Sie die Funktionsweise dieser Technologie nicht in jedem Detail kennen
 
 |Kryptographische Steuerelemente|Verwendung in Azure RMS|
 |-|-|
-|Algorithmus: AES<br /><br />Schlüssellänge: 128 Bits und 256 Bits [[1]](#footnote-1)|Dokumentationsschutz|
-|Algorithmus: RSA<br /><br />Schlüssellänge: 2.048 Bits [[2]](#footnote-2)|Schlüsselschutz|
+|Algorithmus: AES<br /><br />Schlüssellänge: 128 Bit und 256 Bit [[1]](#footnote-1)|Dokumentationsschutz|
+|Algorithmus: RSA<br /><br />Schlüssellänge: 2048 Bit [[2]](#footnote-2)|Schlüsselschutz|
 |SHA-256|Zertifikatsignatur|
 
 ###### <a name="footnote-1"></a>Fußnote 1 
@@ -87,13 +87,13 @@ Bevor ein Benutzer Inhalte schützen oder geschützte Inhalte auf einem Windows-
 
 ![RMS-Client-Aktivierungsfluss – Schritt 1, Authentifizieren des Clients](./media/AzRMS.png)
 
-**Das geschieht in Schritt 1**: Der RMS-Client auf dem Computer stellt zunächst eine Verbindung mit dem Azure Rights Management-Dienst her und authentifiziert den Benutzer mithilfe seines Azure Active Directory-Kontos.
+**Das geschieht in Schritt 1**: Der RMS-Client auf dem Computer stellt zunächst eine Verbindung mit dem Azure Rights Management-Dienst her und authentifiziert den Benutzer mithilfe seines Azure Active Directory-Kontos.
 
 Wenn das Konto des Benutzers einen Verbund mit Azure Active Directory aufweist, erfolgt diese Authentifizierung automatisch, und der Benutzer wird nicht zur Eingabe von Anmeldeinformationen aufgefordert.
 
 ![RMS-Clientaktivierung – Schritt 2, Zertifikate werden für den Client heruntergeladen](./media/AzRMS_useractivation2.png)
 
-**Das geschieht in Schritt 2**: Nachdem der Benutzer authentifiziert wurde, wird die Verbindung automatisch an den Azure Information Protection-Mandanten der Organisation umgeleitet, der Zertifikate ausstellt, mit denen sich der Benutzer beim Azure Rights Management-Dienst authentifiziert, um geschützte Inhalte zu nutzen und Inhalte offline zu schützen.
+**Das geschieht in Schritt 2**: Nachdem der Benutzer authentifiziert wurde, wird die Verbindung automatisch an den Azure Information Protection-Mandanten der Organisation umgeleitet, der Zertifikate ausstellt, mit denen sich der Benutzer beim Azure Rights Management-Dienst authentifiziert, um geschützte Inhalte zu nutzen und Inhalte offline zu schützen.
 
 Eines dieser Zertifikate ist das Rechtekontozertifikat (Rights Account Certificate, RAC). Dieses Zertifikat authentifiziert den Benutzer für Azure Active Directory und ist 31 Tage lang gültig. Das Zertifikat wird automatisch vom RMS-Client erneuert, vorausgesetzt das Benutzerkonto befindet sich noch in Azure Active Directory und das Konto ist aktiviert. Dieses Zertifikat kann nicht von einem Administrator konfiguriert werden. 
 
@@ -104,11 +104,11 @@ Wenn ein Benutzer ein Dokument schützt, führt der RMS-Client die folgenden Akt
 
 ![RMS-Dokumentenschutz – Schritt 1, das Dokument wird verschlüsselt](./media/AzRMS_documentprotection1.png)
 
-**Das geschieht in Schritt 1**: Der RMS-Client erstellt einen zufälligen Schlüssel (den Inhaltsschlüssel) und verschlüsselt das Dokument mithilfe dieses Schlüssels mit dem symmetrischen Verschlüsselungsalgorithmus AES.
+**Das geschieht in Schritt 1**: Der RMS-Client erstellt einen zufälligen Schlüssel (den Inhaltsschlüssel) und verschlüsselt das Dokument mithilfe dieses Schlüssels mit dem symmetrischen Verschlüsselungsalgorithmus AES.
 
 ![RMS-Dokumentenschutz – Schritt 2, die Richtlinie wird erstellt](./media/AzRMS_documentprotection2.png)
 
-**Das passiert in Schritt 2**: Der RMS-Client erstellt ein Zertifikat, das eine Richtlinie für das Dokument enthält, das die [Benutzerrechte](configure-usage-rights.md) für Benutzer oder Gruppen einschließt sowie andere Einschränkungen, z.B. ein Ablaufdatum. Diese Einstellungen können in einer zuvor von einem Administrator konfigurierten Vorlage definiert oder zu dem Zeitpunkt angegeben werden, zu dem der Inhalt geschützt wird (Letzteres wird zuweilen auch als „Ad-hoc-Richtlinie“ bezeichnet).   
+**Das geschieht in Schritt 2**: Der RMS-Client erstellt dann ein Zertifikat, das eine Richtlinie für das Dokument enthält, die die [Benutzerrechte](configure-usage-rights.md) für Benutzer oder Gruppen sowie andere Einschränkungen wie z. B. ein Ablaufdatum einschließt. Diese Einstellungen können in einer zuvor von einem Administrator konfigurierten Vorlage definiert oder zu dem Zeitpunkt angegeben werden, zu dem der Inhalt geschützt wird (Letzteres wird zuweilen auch als „Ad-hoc-Richtlinie“ bezeichnet).   
 
 Das Azure AD-Attribut, das hauptsächlich verwendet wird, um die ausgewählten Benutzer und Gruppen zu identifizieren, ist das Attribut „Azure AD ProxyAddresses“, das alle E-Mail-Adressen für einen Benutzer oder eine Gruppe speichert. Wenn ein Benutzerkonto jedoch keine Werte im Attribut „Azure AD ProxyAddresses“ enthält, wird stattdessen der „UserPrincipalName“-Wert des Benutzers verwendet.
 
@@ -116,7 +116,7 @@ Der RMS-Client verwendet dann den Schlüssel der Organisation, der abgerufen wur
 
 ![RMS-Dokumentenschutz – Schritt 3, die Richtlinie wird im Dokument eingebettet](./media/AzRMS_documentprotection3.png)
 
-**Das geschieht in Schritt 3**: Schließlich bettet der RMS-Client die Richtlinie in eine Datei mit dem Text des zuvor verschlüsselten Dokuments ein. Zusammen ergibt dies ein geschütztes Dokument.
+**Das geschieht in Schritt 3**: Schließlich bettet der RMS-Client die Richtlinie in eine Datei mit dem Text des zuvor verschlüsselten Dokuments ein. Zusammen ergibt dies ein geschütztes Dokument.
 
 Dieses Dokument kann an einem beliebigen Ort gespeichert oder mithilfe einer beliebigen Methode freigegeben werden. Die Richtlinie verbleibt immer im verschlüsselten Dokument.
 
@@ -125,17 +125,17 @@ Wenn ein Benutzer ein geschütztes Dokument nutzen möchte, fordert der RMS-Clie
 
 ![RMS-Dokumentennutzung – Schritt 1, der Benutzer wird authentifiziert und erhält die Liste der Rechte](./media/AzRMS_documentconsumption1.png)
 
-**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Attribut „Azure AD ProxyAddresses“ für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn das Benutzerkonto über keine Werte für das Attribut „Azure AD ProxyAddresses“ verfügt, wird stattdessen der Wert im Attribut „Azure AD UserPrincipalName“ verwendet.
+**Das geschieht in Schritt 1**: Der authentifizierte Benutzer sendet die Dokumentrichtlinie und die Zertifikate des Benutzers an den Azure Rights Management-Dienst. Der Dienst entschlüsselt die Richtlinie und wertet sie aus und erstellt dann eine Liste der Rechte (sofern vorhanden), die der Benutzer für das Dokument besitzt. Um den Benutzer zu identifizieren, wird das Attribut „Azure AD ProxyAddresses“ für das Benutzerkonto und die Gruppen verwendet, in denen der Benutzer Mitglied ist. Aus Leistungsgründen wird die Gruppenmitgliedschaft [zwischengespeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn das Benutzerkonto über keine Werte für das Attribut „Azure AD ProxyAddresses“ verfügt, wird stattdessen der Wert im Attribut „Azure AD UserPrincipalName“ verwendet.
 
 ![RMS-Dokumentennutzung – Schritt 2, die Nutzungslizenz wird an den Client zurückgegeben](./media/AzRMS_documentconsumption2.png)
 
-**Das geschieht in Schritt 2**: Der Dienst extrahiert dann den AES-Inhaltsschlüssel aus der entschlüsselten Richtlinie. Dieser Schlüssel wird dann mit öffentlichen RSA-Schlüssel des Benutzers verschlüsselt, der mit der Anforderung abgerufen wurde.
+**Das geschieht in Schritt 2**: Der Dienst extrahiert dann den AES-Inhaltsschlüssel aus der entschlüsselte Richtlinie. Dieser Schlüssel wird dann mit öffentlichen RSA-Schlüssel des Benutzers verschlüsselt, der mit der Anforderung abgerufen wurde.
 
 Der erneut verschlüsselte Inhaltsschlüssel wird dann in eine verschlüsselte Nutzungslizenz mit der Liste der Benutzerberechtigungen eingebettet, die dann an den RMS-Client zurückgegeben wird.
 
 ![RMS-Dokumentennutzung – Schritt 3: Das Dokument wird verschlüsselt und Rechte werden erzwungen](./media/AzRMS_documentconsumption3.png)
 
-**Das geschieht in Schritt 3**: Schließlich verwendet der RMS-Client die verschlüsselte Nutzungslizenz und entschlüsselt diese mit dem privaten Schlüssel seines eigenen Benutzers. Auf diese Weise kann der RMS-Client den Text des Dokuments nach Bedarf entschlüsseln und auf dem Bildschirm darstellen.
+**Das geschieht in Schritt 3**: Schließlich verwendet der RMS-Client die verschlüsselte Nutzungslizenz und entschlüsselt diese mit dem privaten Schlüssel seines eigenen Benutzers. Auf diese Weise kann der RMS-Client den Text des Dokuments nach Bedarf entschlüsseln und auf dem Bildschirm darstellen.
 
 Der Client entschlüsselt außerdem die Rechteliste und übergibt sie an die Anwendung, die diese Rechte in der Benutzeroberfläche der Anwendung durchsetzt.
 
@@ -146,17 +146,17 @@ Der Client entschlüsselt außerdem die Rechteliste und übergibt sie an die Anw
 ### <a name="variations"></a>Variationen
 Die vorherigen exemplarischen Vorgehensweisen beschreiben die Standardszenarien. Es gibt jedoch einige Varianten:
 
-- **E-Mail-Schutz**: Wenn E-Mail-Nachrichten mit Exchange Online und Office 365-Nachrichtenverschlüsselung mit neuen Funktionen geschützt werden, kann bei der Authentifizierung für die Nutzung auch ein Verbund bei einem Social Identity-Anbieter oder ein Einmalpasscode verwendet werden. Dann sind die Prozessabläufe sehr ähnlich, außer dass die Inhaltsnutzung dienstseitig in einer Webbrowsersitzung über eine vorübergehend zwischengespeicherte Kopie der ausgehenden E-Mail erfolgt.
+- **E-Mail-Schutz**: Wenn E-Mail-Nachrichten mit Exchange Online und Office 365-Nachrichtenverschlüsselung mit neuen Funktionen geschützt werden, kann bei der Authentifizierung für die Nutzung auch ein Verbund bei einem sozialen Netzwerk als Identitätsanbieter oder eine Einmalkennung verwendet werden. Dann sind die Prozessabläufe sehr ähnlich, außer dass die Inhaltsnutzung dienstseitig in einer Webbrowsersitzung über eine vorübergehend zwischengespeicherte Kopie der ausgehenden E-Mail erfolgt.
 
-- **Mobile Geräte**: Wenn mobile Geräte Dateien mit dem Azure Rights Management-Dienst schützen oder nutzen, sind die Prozessabläufe wesentlich einfacher. Mobile Geräte durchlaufen nicht zuerst den Initialisierungsprozess, weil stattdessen jede Transaktion (zum Schützen oder Nutzen von Inhalten) unabhängig ist. Ebenso wie Windows-Computer stellen mobile Geräte eine Verbindung mit dem Azure Rights Management-Dienst her und authentifizieren sich. Zum Schützen von Inhalten übermitteln mobile Geräte eine Richtlinie, und der Azure Rights Management-Dienst sendet ihnen dann eine Veröffentlichungslizenz und einen symmetrischen Schlüssel zum Schützen des Dokuments. Zum Nutzen von Inhalten senden mobile Geräte die Dokumentrichtlinie an den Azure Rights Management-Dienst und fordern eine Nutzungslizenz an, um das Dokument zu nutzen, wenn sie eine Verbindung mit dem Azure Rights Management-Dienst herstellen und sich authentifizieren. Als Antwort sendet der Azure Rights Management-Dienst die erforderlichen Schlüssel und Einschränkungen an das mobile Gerät. Beide Prozesse verwenden TLS, um den Schlüsselaustausch und andere Kommunikation zu schützen.
+- **Mobile Geräte**: Wenn mobile Geräte Dateien mit dem Azure Rights Management-Dienst schützen oder nutzen, ist der Prozessflow wesentlich einfacher. Mobile Geräte durchlaufen nicht zuerst den Initialisierungsprozess, weil stattdessen jede Transaktion (zum Schützen oder Nutzen von Inhalten) unabhängig ist. Ebenso wie Windows-Computer stellen mobile Geräte eine Verbindung mit dem Azure Rights Management-Dienst her und authentifizieren sich. Zum Schützen von Inhalten übermitteln mobile Geräte eine Richtlinie, und der Azure Rights Management-Dienst sendet ihnen dann eine Veröffentlichungslizenz und einen symmetrischen Schlüssel zum Schützen des Dokuments. Zum Nutzen von Inhalten senden mobile Geräte die Dokumentrichtlinie an den Azure Rights Management-Dienst und fordern eine Nutzungslizenz an, um das Dokument zu nutzen, wenn sie eine Verbindung mit dem Azure Rights Management-Dienst herstellen und sich authentifizieren. Als Antwort sendet der Azure Rights Management-Dienst die erforderlichen Schlüssel und Einschränkungen an das mobile Gerät. Beide Prozesse verwenden TLS, um den Schlüsselaustausch und andere Kommunikation zu schützen.
 
-- **RMS-Connector**: Wenn der Azure Rights Management-Dienst mit dem RMS-Connector verwendet wird, bleiben die Prozessabläufe unverändert. Der einzige Unterschied besteht darin, dass der Connector als Relay zwischen den lokalen Diensten (z. B. Exchange Server und SharePoint Server) und dem Azure Rights Management-Dienst fungiert. Der Verbindungsdienst selbst führt keine Vorgänge aus, z. B. die Initialisierung der Benutzerumgebung oder Ver- und Entschlüsselung. Es leitet lediglich die Kommunikation weiter, die normalerweise an einen AD RMS-Server gesendet würde, der die Übersetzung zwischen den Protokollen verarbeitet, die auf jeder Seite verwendet werden. In diesem Szenarien können Sie den Azure Rights Management-Dienst mit lokalen Diensten verwenden.
+- **RMS-Connector**: Wenn der Azure Rights Management-Dienst mit dem RMS-Connector verwendet wird, bleibt der Prozessflow unverändert. Der einzige Unterschied besteht darin, dass der Connector als Relay zwischen den lokalen Diensten (z. B. Exchange Server und SharePoint Server) und dem Azure Rights Management-Dienst fungiert. Der Verbindungsdienst selbst führt keine Vorgänge aus, z. B. die Initialisierung der Benutzerumgebung oder Ver- und Entschlüsselung. Es leitet lediglich die Kommunikation weiter, die normalerweise an einen AD RMS-Server gesendet würde, der die Übersetzung zwischen den Protokollen verarbeitet, die auf jeder Seite verwendet werden. In diesem Szenarien können Sie den Azure Rights Management-Dienst mit lokalen Diensten verwenden.
 
-- **Allgemeiner Schutz (PFILE)**: Wenn der Azure Rights Management-Dienst eine Datei allgemein schützt, ist der Datenfluss grundsätzlich mit der Ausnahme, dass der RMS-Client eine Richtlinie erstellt, die alle Rechte gewährt, identisch mit dem Inhaltsschutz. Wenn die Datei genutzt wird, wird sie entschlüsselt, bevor sie an die Zielanwendung übergeben wird. In diesem Szenario können Sie alle Dateien selbst dann schützen, wenn sie keine systemeigene Unterstützung für RMS besitzen.
+- **Allgemeiner Schutz (PFILE)**: Wenn der Azure Rights Management-Dienst eine Datei allgemein schützt, ist der Flow grundsätzlich mit dem Inhaltsschutz identisch, allerdings mit der Ausnahme, dass der RMS-Client eine Richtlinie erstellt, die alle Rechte gewährt. Wenn die Datei genutzt wird, wird sie entschlüsselt, bevor sie an die Zielanwendung übergeben wird. In diesem Szenario können Sie alle Dateien selbst dann schützen, wenn sie keine systemeigene Unterstützung für RMS besitzen.
 
-- **Geschützte PDF (PPDF)**: Wenn der Azure Rights Management-Dienst eine Office-Datei mit systemeigenem Schutz versieht, wird auch eine Kopie dieser Datei erstellt und auf die gleiche Weise geschützt. Der einzige Unterschied besteht darin, dass die Dateikopie im PPDF-Dateiformat vorliegt. Die RMS-Freigabeanwendung und der Azure Information Protection-Client-Viewer wissen, wie diese ausschließlich für die Anzeige geöffnet wird. In diesem Szenario können Sie geschützte Anlagen per E-Mail senden und dabei sicher sein, dass der Empfänger diese immer auf einem mobilen Gerät lesen kann – selbst dann, wenn das mobile Gerät nicht über eine App verfügt, die eine native Unterstützung für geschützte Office-Dateien bietet.
+- **Geschützte PDF-Datei (PPDF)**: Wenn der Azure Rights Management-Dienst eine Office-Datei mit nativem Schutz versieht, wird auch eine Kopie dieser Datei erstellt und auf die gleiche Weise geschützt. Der einzige Unterschied besteht darin, dass die Dateikopie im PPDF-Dateiformat vorliegt. Die RMS-Freigabeanwendung und der Azure Information Protection-Client-Viewer wissen, wie diese ausschließlich für die Anzeige geöffnet wird. In diesem Szenario können Sie geschützte Anlagen per E-Mail senden und dabei sicher sein, dass der Empfänger diese immer auf einem mobilen Gerät lesen kann – selbst dann, wenn das mobile Gerät nicht über eine App verfügt, die eine native Unterstützung für geschützte Office-Dateien bietet.
 
-- **Microsoft-Konten:** Azure Information Protection kann E-Mail-Adressen für die Nutzung autorisieren, wenn sie mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- **Microsoft-Konten**: Azure Information Protection kann E-Mail-Adressen für die Nutzung autorisieren, wenn sie mit einem Microsoft-Konto authentifiziert werden. Es können jedoch nicht alle Anwendungen geschützten Inhalt öffnen, wenn ein Microsoft-Konto für die Authentifizierung verwendet wird. [Weitere Informationen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
