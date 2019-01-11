@@ -4,23 +4,23 @@ description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clien
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
-ms.translationtype: HT
+ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866135"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136230"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Client-Anwendung-Initialisierung (C++)
 
 In diesem Schnellstart lernen Sie, wie Sie das Muster für die Clientinitialisierung implementieren können, das zur Laufzeit vom MIP SDK für C++ verwendet wird. 
 
 > [!NOTE]
 > Die in diesem Schnellstart beschriebenen Schritte müssen für sämtliche Clientanwendungen ausgeführt werden, die MIP-Datei-, Richtlinien- oder Datenschutz-APIs verwenden. Dieser Schnellstart konzentriert sich zwar auf die Verwendung der Datei-APIs, das gleiche Muster ist jedoch auch auf Clients anwendbar, die Richtlinien- und Datenschutz-APIs verwenden. Beginnend mit diesem Schnellstart sollten die nächsten Schnellstarts nacheinander ausgeführt werden, da diese aufeinander aufbauen.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Stellen Sie Folgendes sicher, sofern dies noch nicht geschehen ist:
 
@@ -259,8 +259,8 @@ Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
-                 "<friendly-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
+                 "<application-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -312,8 +312,8 @@ Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und
 
    | Platzhalter | Wert | Beispiel |
    |:----------- |:----- |:--------|
-   | \<application-id\> | Die ID der Azure AD-Anwendung wird der unter „MIP SDK: Setup und Konfiguration“ registrierten Anwendung zugewiesen (zwei Instanzen).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<friendly-name\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. | AppInitialization |
+   | \<application-id\> | Die Azure AD Application ID (GUID) der Anwendung zugewiesen, die im registriert [Schritt #2 "MIP SDK-Setup und Konfiguration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) Artikel. Ersetzen Sie 2 Instanzen.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<Anwendungsname\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. Gültige ASCII-Zeichen enthalten (außer ';'), und im Idealfall entspricht den Anwendungsnamen, die Sie in Ihrem Azure AD-Registrierung verwendet haben. | AppInitialization |
    | \<engine-account\> | Das Konto, das für die Identität der Engine verwendet wird. Wenn Sie sich während des Tokenabrufs bei einem Benutzerkonto authentifizieren, muss es diesem Wert entsprechen. | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | Der benutzerdefinierte Status, der der Engine zugeordnet werden soll. | MyAppState |
 

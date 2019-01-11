@@ -4,14 +4,14 @@ description: Beschreibt die Setup- und Konfigurationsvoraussetzungen, um Anwendu
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: 2f84cfd8a0ae15a66cd624fe591f2891ff549768
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386728"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136229"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration 
 
@@ -113,9 +113,9 @@ Führen Sie nun die folgenden Schritte aus, um sicherzustellen, dass Ihr Clientc
 
    Jede ZIP- oder TAR-Datei enthält drei Verzeichnisse:
 
-   - **Bins:** Die kompilierten Binärdateien für jede Plattformarchitektur, sofern zutreffend.
-   - **Include:** Die Microsoft Information Protection SDK-Headerdateien.
-   - **Samples:** Quellcode für Beispielanwendungen.
+   - **Klassen:** Die Binärdateien für jede Plattformarchitektur, kompiliert, sofern zutreffend.
+   - **Umfassen:** Das Microsoft Information Protection SDK-Headerdateien
+   - **Beispiele:** Quellcode für Beispielanwendungen
 
    Wenn Sie Visual Studio-Entwicklung durchführen, kann das SDK auch über die NuGet-Paket-Manager-Konsole installiert werden:
 
@@ -139,7 +139,7 @@ Führen Sie nun die folgenden Schritte aus, um sicherzustellen, dass Ihr Clientc
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrieren einer Clientanwendung in Azure Active Directory
 
-Als Teil des Bereitstellungsvorgangs des Office 365-Abonnements wird ein zugeordneter Azure AD-Mandant erstellt. Der Azure AD-Mandant stellt Identitäts- und Zugriffsverwaltung für Office 365-*Benutzerkonten* und -*Anwendungskonten* bereit. Anwendungen, die Zugriff auf gesicherte APIs (z.B. MIP-APIs) erfordern, benötigen ein Anwendungskonto.
+Als Teil der Office 365-Abonnement, Bereitstellung wird eine zugeordnete Azure Active Directory (Azure AD)-Mandant erstellt. Der Azure AD-Mandant stellt Identitäts- und Zugriffsverwaltung für Office 365-*Benutzerkonten* und -*Anwendungskonten* bereit. Anwendungen, die Zugriff auf gesicherte APIs (z.B. MIP-APIs) erfordern, benötigen ein Anwendungskonto.
 
 Konten werden für die Authentifizierung und Autorisierung zur Laufzeit durch einen *Sicherheitsprinzipal* dargestellt, der aus den Identitätsinformationen des Kontos abgeleitet wird. Sicherheitsprinzipale, die ein Anwendungskonto darstellen, werden als ein [*Dienstprinzipal*](/azure/active-directory/develop/developer-glossary#service-principal-object) bezeichnet. 
 
@@ -149,7 +149,7 @@ So registrieren Sie ein Anwendungskonto in Azure AD für die Verwendung mit den 
   > Für den Zugriff auf die Azure AD-Mandantenverwaltung für die Kontoerstellung müssen Sie sich am Azure-Portal mit einem Benutzerkonto anmelden, das ein Mitglied der [Rolle „Besitzer“ für das Abonnement](/azure/billing/billing-add-change-azure-subscription-administrator) ist. Abhängig von der Konfiguration Ihres Mandanten müssen Sie möglicherweise auch Mitglied der Verzeichnisrolle „Globaler Administrator“ sein, um [eine Anwendung registrieren zu können](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > Es wird empfohlen, Tests mit einem eingeschränkten Konto auszuführen. Stellen Sie sicher, dass das Konto nur Zugriffsrechte für die erforderlichen SCC-Endpunkte besitzt. Klartextkennwörter, die über die Befehlszeile übergeben werden, können von Protokollierungssystemen erfasst werden.
 
-1. Führen Sie die Schritte unter [Integrieren von Anwendungen in Azure Active Directory im Abschnitt „Hinzufügen eines Anwendung“](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application) aus. Verwenden Sie zu Testzwecken die folgenden Werte für die angegebenen Eigenschaften, wenn Sie die Schritte der Anleitung durchlaufen: 
+1. Führen Sie die Schritte in [Registrieren einer app in Azure AD, eine neue Anwendung registrieren](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) Abschnitt. Verwenden Sie zu Testzwecken die folgenden Werte für die angegebenen Eigenschaften, wenn Sie die Schritte der Anleitung durchlaufen: 
     - **Anwendungstyp**: Wählen Sie „Nativ“ aus, da die Anwendungen, die durch das SDK veranschaulicht werden, nativ installierte Konsolenanwendungen sind. Native Anwendungen werden von OAuth2 als „öffentliche“ Clients betrachtet, da sie Anwendungsanmeldeinformationen nicht auf sichere Weise speichern bzw. verwenden können. Sie stehen im Gegensatz zu einer „vertraulichen“ serverbasierten Anwendung, z.B. einer Webanwendung, die mit ihren eigenen Anmeldeinformationen registriert ist. 
     - **Umleitungs-URI**: Da das SDK einfache Konsolenclientanwendungen verwendet, verwenden Sie einen URI im Format `<app-name>://authorize`.
 
@@ -174,7 +174,7 @@ Wenn Sie fertig sind, sollten die Anwendungsregistrierung und die API-Berechtigu
    [![Azure AD App-Registrierung](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Weitere Informationen zum Hinzufügen von APIs und Berechtigungen zu einer Registrierung finden Sie unter [„Aktualisieren einer Anwendung“ im Abschnitt „Konfigurieren einer Clientanwendung für den Zugriff auf Web-APIs“](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). Hier finden Sie Informationen zum Hinzufügen von APIs und Berechtigungen, die von einer Clientanwendung benötigt werden.  
+Weitere Informationen zum Hinzufügen von APIs und Berechtigungen zu einer Registrierung finden Sie unter [Aktualisieren einer Anwendung in Azure AD Konfigurieren einer Clientanwendung auf Web-APIs](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). Hier finden Sie Informationen zum Hinzufügen von APIs und Berechtigungen, die von einer Clientanwendung benötigt werden.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Anfordern einer Integrationsvereinbarung für Information Protection (Information Protection Integration Agreement, IPIA)
 
@@ -219,6 +219,6 @@ Nach dem Senden der E-Mail kann es bis zu 72 Stunden dauern, bis der Empfang bes
 ## <a name="next-steps"></a>Nächste Schritte
 
 - Bevor Sie mit dem Abschnitt „Schnellstarts“ beginnen, sollten Sie sich unbedingt über [Observer-Objekte im MIP SDK](concept-async-observers.md) informieren, da das MIP SDK fast vollständig asynchron konzipiert ist.
-- Wenn Sie bereit sind, praktische Erfahrungen mit dem SDK zu sammeln, beginnen Sie mit [Schnellstart: Initialisierung von Clientanwendungen (C++)](quick-app-initialization-cpp.md).
+- Wenn Sie praktische Erfahrungen mit dem SDK abrufen möchten, beginnen Sie mit [Schnellstart: Client-Anwendung-Initialisierung (C++)](quick-app-initialization-cpp.md).
 
 

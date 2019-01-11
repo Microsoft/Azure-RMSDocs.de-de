@@ -6,26 +6,26 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6f11944e7cceed39423af2a8104ce044d1f6eec6
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: 05a66dc7a00b976dfb9883f44b3c93a25b4b6975
+ms.sourcegitcommit: 0d3b43c9cedbaeae65299ac372fbfb9ad66ce27f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453417"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54183625"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK: Konzepte der Profile- und Engine-Objekte
 
 ## <a name="profiles"></a>Profile
 
-Das Profil ist die Stammklasse für alle Vorgänge im MIP SDK. Bevor Sie eine der drei APIs verwenden können, muss von der Clientanwendung ein Profil erstellt werden. Alle zukünftigen Vorgänge werden vom Profil oder von anderen Objekten, die dem Profil *hinzugefügt* wurden, ausgeführt.
+Das Profil ist die Stammklasse für alle Vorgänge im MIP SDK. Vor der Verwendung der drei-APIs, muss die Client-Anwendung ein Profil erstellen. Zukünftige Vorgänge werden ausgeführt, indem Sie das Profil oder andere Objekte *hinzugefügt* für das Profil.
 
 Es gibt drei Arten von Profilen im MIP SDK:
 
 - [`PolicyProfile`](reference/class_mip_policyprofile.md): Die Profilklasse für die MIP-Policy-API.
-- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): Die Profilklasse für die MIP-Protection-API.
-- [`FileProfile`](reference/class_mip_fileprofile.md): Die Profilklasse für die MIP-File-API.
+- [`ProtectionProfile`](reference/class_mip_protectionprofile.md): Die Profilklasse für die MIP-Datenschutz-API.
+- [`FileProfile`](reference/class_mip_fileprofile.md): Die Profilklasse für die MIP-Datei-API.
 
-Die in der verarbeitenden Anwendung verwendete API bestimmt, welche Profilklasse verwendet werden soll.
+In der verarbeitenden Anwendung verwendete API bestimmt, welche Profilklasse verwendet werden soll.
 
 Das Profil selbst bietet die folgenden Funktionen:
 
@@ -36,56 +36,56 @@ Das Profil selbst bietet die folgenden Funktionen:
 
 ### <a name="profile-settings"></a>Profileinstellungen
 
-- `Path`: der Dateipfad, unter dem Protokollierung, Telemetriedaten und andere persistente Zustände gespeichert werden.
-- `useInMemoryStorage`: Ein boolescher Wert, der definiert, ob der Zustand im Arbeitsspeicher oder auf dem Datenträger gespeichert werden soll.
-- `authDelegate`: Ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`. 
-- `consentDelegate`: Ein gemeinsamer Zeiger der Klasse `mip::ConsentDelegate`. 
-- `observer`: Ein gemeinsamer Zeiger auf die `Observer`-Implementierung des Profils (in `PolicyProfile`, `ProtectionProfile` und `EngineProfile`).
-- `applicationInfo`: Ein `mip::ApplicationInfo`-Objekt. Informationen zu der Anwendung, die das SDK nutzt.
+- `Path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
+- `useInMemoryStorage`: Ein boolescher Wert, der definiert, ob der Zustand im Arbeitsspeicher gespeichert werden sollen oder auf dem Datenträger.
+- `authDelegate`: Ein freigegebener Zeiger Klasse `mip::AuthDelegate`. 
+- `consentDelegate`: Ein freigegebener Zeiger Klasse [ `mip::ConsentDelegate` ](reference/class_consentdelegate.md). 
+- `observer`: Ein freigegebener Zeiger auf das Profil `Observer` Implementierung (im [ `PolicyProfile` ](reference/class_mip_policyprofile_observer.md), [ `ProtectionProfile` ](reference/class_mip_protectionprofile_observer.md), und [ `FileProfile` ](reference/class_mip_fileprofile_observer.md)).
+- `applicationInfo`: Ein [ `mip::ApplicationInfo` ](reference/mip-enums-and-structs.md#structures) Objekt. Informationen zur Anwendung, die das SDK-Nutzung Ihrer Azure Active Directory-Anwendung-Registrierungs-ID und Namen übereinstimmt.
 
 ## <a name="engines"></a>Engines
 
-Engines stellen in den File, Profile- und Protection-APIs eine Schnittstelle für Vorgänge bereit, die im Auftrag einer bestimmten Identität ausgeführt werden. Eine Engine wird dem Profile-Objekt für jeden Benutzer hinzugefügt, der sich bei der Anwendung anmeldet. Alle von der Engine ausgeführten Vorgänge erfolgen im Kontext dieser Identität.
+Die Datei, Profil- und Datenschutz-API-Engines bieten eine Schnittstelle für Vorgänge, die im Auftrag von einer bestimmten Identität ausgeführt. Auf das Profil-Objekt, für jeden Benutzer, die bei der Anwendung anmeldet, wird ein Modul hinzugefügt. Alle Vorgänge, die von der Engine sind im Kontext dieser Identität.
 
 Es gibt drei Engineklassen im SDK: eine für jede API. Die folgende Liste enthält die Engineklassen und einige der ihnen jeweils zugeordneten Funktionen:
 
-- [`mip::ProtectionEngine`]
+- [`mip::ProtectionEngine`](reference/class_mip_protectionengine.md)
 - [`mip::PolicyEngine`](reference/class_mip_policyengine.md)
-  - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
-  - `GetSensitivityLabel()`: Ruft die Bezeichnung aus vorhandenem Inhalt ab.
-  - `ComputeActions()`: Gibt die Liste der Aktionen zurück, die für ein bestimmtes Element ausgeführt werden sollen, wenn eine Bezeichnungs-ID und optional Metadaten angegeben werden.
+  - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für das geladene Modul ab.
+  - `GetSensitivityLabel()`: Ruft die Bezeichnung aus dem vorhandenen Inhalt ab.
+  - `ComputeActions()`: Bereitgestellt mit bezeichnungs-ID und optional gibt Metadaten, die Liste der Aktionen, die für ein bestimmtes Element erfolgen soll.
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-  - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
-  - `CreateFileHandler()`: Erstellt einen `mip::FileHandler` für eine bestimmte Datei oder einen Datenstrom.
+  - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für das geladene Modul ab.
+  - `CreateFileHandler()`: Erstellt eine `mip::FileHandler` für eine bestimmte Datei oder einen Stream.
 
 ### <a name="engine-states"></a>Enginezustände
 
 Eine Engine kann einen von zwei Zuständen aufweisen:
 
-- `CREATED`: „Erstellt“ gibt an, dass das SDK über ausreichende lokale Zustandsinformationen nach dem Aufrufen der erforderlichen Back-End-Dienste verfügt.
-- `LOADED`: Das SDK hat die erforderlichen Datenstrukturen erstellt, damit die Engine betriebsbereit ist.
+- `CREATED`: Erstellt gibt an, dass das SDK ausreichend lokalen Statusinformationen, die nach dem Aufrufen der erforderlichen Back-End-Dienste.
+- `LOADED`: Das SDK verfügt über die erforderlichen Datenstrukturen für die Engine funktionstüchtig ist erstellt haben.
 
 Eine Engine muss sowohl erstellt als auch geladen werden, um Vorgänge ausführen zu können. Die `Profile`-Klasse stellt einige Engineverwaltungsmethoden bereit: `AddEngineAsync`, `RemoveEngineAsync` und `UnloadEngineAsync`.
 
-Die folgende Tabelle beschreibt die möglichen Enginezustände und gibt an, welche Methode den jeweiligen Zustand ändern kann.
+Die folgende Tabelle beschreibt die möglichen-Engine-Status, und welche Methoden können diesen Status ändern:
 
-|         | NONE              | CREATED           | LOADED         |
+|         | KEINE              | ERSTELLT           | LOADED         |
 |---------|-------------------|-------------------|----------------|
-| NONE    |                   |                   | AddEngineAsync |
-| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
+| KEINE    |                   |                   | AddEngineAsync |
+| ERSTELLT | DeleteEngineAsync |                   | AddEngineAsync |
 | LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>Engine-ID
 
-Jede Engine besitzt einen eindeutigen Bezeichner (`id`), der in allen Engineverwaltungsvorgängen verwendet wird. Die Anwendung kann eine `id` bereitstellen, oder das SDK generiert einen neuen eindeutigen Bezeichner, wenn dieser nicht von der Anwendung bereitgestellt wird. Alle anderen Engineeigenschaften (z.B. die E-Mail-Adresse in den Identitätsinformationen) sind nicht transparente Nutzlasten für das SDK. Das SDK führt KEINE Logik aus, um die Eindeutigkeit der anderen Eigenschaften zu bewahren oder andere Einschränkungen zu erzwingen.
+Jede Engine besitzt einen eindeutigen Bezeichner (`id`), der in allen Engineverwaltungsvorgängen verwendet wird. Die Anwendung bereitstellen, kann ein `id`, oder das SDK generiert, wenn es nicht von der Anwendung bereitgestellt wird. Alle anderen Engineeigenschaften (z.B. die E-Mail-Adresse in den Identitätsinformationen) sind nicht transparente Nutzlasten für das SDK. Das SDK führt KEINE Logik aus, um die Eindeutigkeit der anderen Eigenschaften zu bewahren oder andere Einschränkungen zu erzwingen.
 
 ### <a name="engine-management-methods"></a>Engineverwaltungsmethoden
 
-Wie bereits erwähnt, gibt es im SDK drei Engineverwaltungsmethoden: `AddEngineAsync`, `DeleteEngineAsync` und `UnloadEngineAsync`.
+Wie bereits erwähnt, stehen Sie Ihnen drei Methoden der Engine-Verwaltung im SDK: `AddEngineAsync`, `DeleteEngineAsync`, und `UnloadEngineAsync`.
 
 #### <a name="addengineasync"></a>AddEngineAsync
 
-Diese Methode lädt eine vorhandene Engine oder erstellt eine neue, wenn noch keine Engine im lokalen Zustand vorhanden ist.
+Diese Methode eine vorhandene Engine lädt oder erstellt eine Falls nicht bereits im lokalen Zustand vorhanden.
 
 Wenn die Anwendung keine `id` bereitstellt, generiert `AddEngineAsync` eine neue `id`. Anschließend wird überprüft, ob eine Engine mit dieser `id` bereits im lokalen Zustand vorhanden ist. Wenn dies der Fall ist, wird diese Engine geladen. Wenn die-Engine *nicht* im lokalen Zustand vorhanden ist, wird eine neue Engine durch Aufrufen der erforderlichen APIs und Back-End-Dienste erstellt.
 
@@ -99,7 +99,7 @@ Löscht die Engine mit der angegebenen `id`. Alle Spuren der-Engine werden aus d
 
 Entlädt die In-Memory-Datenstrukturen für die Engine mit der angegebenen `id`. Der lokale Zustand dieser Engine ist noch intakt und kann mit `AddEngineAsync` erneut geladen werden.
 
-Diese Methode ermöglicht es der Anwendung, die Speichernutzung zu beurteilen, indem Engines entladen werden, von denen nicht erwartet wird, dass sie in Kürze verwendet werden.
+Diese Methode kann es sich um die Anwendung zur speicherauslastung, indem entladen Engines umsichtiger sein, die erwartungsgemäß nicht in Kürze verwendet werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
