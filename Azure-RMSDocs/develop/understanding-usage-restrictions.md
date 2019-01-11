@@ -2,8 +2,8 @@
 title: Grundlegendes zu Nutzungseinschränkungen | Azure RMS
 description: Für alle RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwungen werden.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: b53c36a6ddd0d726e21f9870ec040337b5b0f335
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1f46f11092270117686681662088c16f311963f7
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151451"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071521"
 ---
 # <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 
@@ -59,7 +59,7 @@ Jedes Benutzerrecht, das in der AD RMS-Rechtespalte aufgeführt wird, hat eine B
 |Kein AD RMS-Recht <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: Speichern | Deaktivieren Sie das Menü **Datei** > **Speichern**. <br><br> **Hinweis**: Dieses Recht steuert nicht **Datei** > **Speichern unter**, da dieses Recht keine Änderung des ursprünglichen Dokuments darstellt.<br><br> Alle Tastenkombination deaktivieren, die zum Auslösen eines Speichervorgangs verwendet werden können (z. B. STRG + S).<br><br> **Tipp**: Eine bewährte Methode ist das Aktualisieren des Kerncodes von **Datei** > **Speichern** dahingehend, dass ein Fehler auftritt, wenn der Benutzer nicht über dieses Recht verfügt. Dies dient als Sicherheitsnetz, falls Sie UX-Mechanismen übersehen, die verwendet werden können, um einen Speichervorgang auszulösen. |
 |**IPC_GENERIC_EXTRACT** <br><br> Das Recht zum Extrahieren des Inhalts aus einem geschützten Format und das Einfügen in einem ungeschützten Format. <br><br> **Allgemeine Erzwingungspunkte**: In Zwischenablage kopieren | Deaktivieren Sie das Menü **Bearbeiten** > **Kopieren**. Deaktivieren Sie das Menü **Bearbeiten** > **Ausschneiden**. <br><br>**Kopieren** und **Ausschneiden** in allen Kontextmenüs deaktivieren.<br><br>Alle Tastenkombination deaktivieren, die zum Auslösen eines Kopiervorgangs verwendet werden können (z. B. STRG + C oder STRG + X).<br><br>Fenstermeldungshandler für [**WM_CUT**](https://msdn.microsoft.com/library/ms649023) aktualisieren, um das Kopieren von Daten abzulehnen, wenn der Benutzer nicht über dieses Recht verfügt. Wenn das Fenster den standardmäßigen, von Windows bereitgestellten Meldungshandler verwendet, dieses Fenster als Unterklasse markieren und eigene Handler für **WM_COPY** und **WM_CUT** bereitstellen. |
 |Kein AD RMS-Recht <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: Speichern unter |Im Dialogfeld **Speichern unter** alle Dateiformate deaktivieren, die zu einem Speichern des Dokuments ohne RMS-Schutz führen würden.|
-|Kein AD RMS-Recht <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: ALT+DRUCK|Rufen Sie [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) für alle Fenster auf, die Dokumentinhalte rendern.|
+|Kein AD RMS-Recht <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: ALT + Druck|Rufen Sie [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) für alle Fenster auf, die Dokumentinhalte rendern.|
 |**IPC_GENERIC_EXPORT** <br><br> Das Recht zum Extrahieren des Inhalts aus einem geschützten Format und das Einfügen in einem anderen durch AD RMS geschützten Format. <br><br> **Allgemeine Erzwingungspunkte**: Speichern unter|Im Dialogfeld **Speichern unter** die Möglichkeit deaktivieren, in anderen Dateiformaten zu speichern.<br><br>**Tipp**: Eine bewährte Methode besteht darin, Ihren Kerncode von **Datei** > **Speichern unter** dahingehend zu aktualisieren, dass ein Fehler auftritt, wenn der Benutzer versucht, diese Datei in einem anderen Format zu speichern und nicht über dieses Recht verfügt. Dies dient als Sicherheitsnetz, falls Sie UX-Mechanismen übersehen, die verwendet werden können, um einen Speichern-unter-Vorgang auszulösen.|
 |**IPC_GENERIC_PRINT** <br><br> Das Recht, Dokumentinhalte zu drucken <br><br> **Allgemeine Erzwingungspunkte**: Drucken|Deaktivieren Sie das Menü **Datei** > **Drucken**.<br><br>Alle Tastenkombination deaktivieren, die zum Auslösen eines Druckvorgangs verwendet werden können (z. B. STRG + P).<br><br>Alle Kontextmenüeinträge deaktivieren, die verwendet werden können, um einen Druck auszulösen.<br><br>**Tipp**: Eine bewährte Methode ist das Aktualisieren des Kerncodes von **Datei** > **Drucken** dahingehend, dass ein Fehler auftritt, wenn der Benutzer nicht über dieses Recht verfügt. Dies dient als Sicherheitsnetz, falls Sie UX-Mechanismen übersehen, die verwendet werden können, um einen Druckvorgang auszulösen.|
 |**IPC_GENERIC_COMMENT** <br><br> Einige Programme unterstützen die Möglichkeit, Kommentare und Anmerkungen dem Dokument hinzuzufügen, ohne Dokumentkerninhalte zu aktualisieren.<br><br>Dieses Recht erteilt den Benutzer Zugriff auf diese Funktion. <br><br> **Allgemeine Erzwingungspunkte**: <br><br> Prüfung > Kommentar einfügen <br><br> Prüfung > Kommentar löschen | Alle Menüelemente deaktivieren, die zum Ändern von Dokumentkommentaren oder -anmerkungen verwendet werden können. **Prüfen** > **Kommentar einfügen** und **Prüfen** > **Kommentar löschen** sind Beispiele. <br><br>Alle Tastenkombination deaktivieren, die Änderungen der Dokumentkommentare auslösen könnten.<br><br>**Hinweis**: Eine standardmäßige Implementierung setzt voraus, dass **IPC_GENERIC_COMMENT** und **IPC_GENERIC_WRITE** neue Kommentare in einer Datei beibehalten. Anwendungen können Unterstützung für den Fall hinzufügen, dass das **IPC_GENERIC_COMMENT**-Recht erteilt wird, das **IPC_GENERIC_WRITE**-Recht aber nicht. In diesem Fall ist es zulässig, das Speichern zu ermöglichen, sofern Dokumentänderungen nur auf Kommentare beschränkt sind.|
