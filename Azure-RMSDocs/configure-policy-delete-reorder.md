@@ -4,16 +4,16 @@ description: Sie können die Position der Azure Information Protection-Bezeichnu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 1f957874649fe9e5697c3dd0164b0b0b255d1e6e
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6e5348eb55451747ff9f10b3bd4f7a2f868b03c5
+ms.sourcegitcommit: 95f16f89a46d9dffa8a114f7683816024d65ff02
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304875"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996064"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
 
@@ -33,7 +33,7 @@ Wenn die Bezeichnung Schutz angewendet hat, wird dieser zudem nicht entfernt. Di
 
 - Verwenden Sie PowerShell zum Umbenennen oder Löschen der Vorlage.
     
-    Achten Sie vor dem Ausführen dieser Aktionen darauf, ob andere Administratoren oder Dienste die Vorlage verwenden, und identifizieren Sie diese anhand ihres aktuellen Namens. Löschen Sie eine Vorlage nur, wenn Sie Dokumente oder E-Mails, die durch diese Vorlage geschützt wurden, nicht öffnen müssen.
+    Achten Sie vor dem Ausführen dieser Aktionen darauf, ob andere Administratoren oder Dienste die Vorlage derzeit verwenden oder in der Vergangenheit verwendet haben. Sie können die Vorlage anhand der unveränderlichen Vorlagen-ID oder anhand ihres (veränderlichen) Namens erkennen. Als bewährte Methode wird empfohlen, Vorlagen nur zu löschen, wenn Sie sicher sind, dass die Benutzer keine Dokumente oder E-Mails öffnen müssen, die durch diese Vorlage geschützt wurden.
 
 Weitere Informationen zum Verwalten von Schutzvorlagen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md).
 

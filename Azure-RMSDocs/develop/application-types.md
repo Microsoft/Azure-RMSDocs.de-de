@@ -2,8 +2,8 @@
 title: Anwendungstypen | Azure RMS
 description: Dieses Thema behandelt die Typen von Anwendungen, die Sie als rechtlich geschützte Anwendung erstellen können.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fbd49df82faec0f9ea198e0ba7ad334bc5b2a831
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 744a5648bc436bb903cf1b8feb47ca91b19bb7fc
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149938"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071657"
 ---
 # <a name="application-types"></a>Anwendungstypen
 
 
 Dieses Thema behandelt die Typen von Anwendungen, die Sie als rechtlich geschützte Anwendung erstellen können.
 
-Die folgenden Anwendungstypen werden derzeit von Rights Management Services SDK 2.1 unterstützt.
+Die folgenden Anwendungstypen werden derzeit vom Rights Management Services SDK 2.1 unterstützt.
 
 ## <a name="simple-applications"></a>Einfache Anwendungen
 
@@ -34,7 +34,7 @@ Bei einer einfachen Anwendung kann es sich um ein Befehlszeilenprogramm handeln,
 
 Der *Servermodus* ist für nicht interaktive Anwendungen vorgesehen, die RMS-geschützte Inhalte nutzen, schützen oder verarbeiten. Ein Beispiel wäre eine Anwendung zur *Verhinderung von Datenverlusten*, die als Dienst auf einem Dateiserver ausgeführt wird und automatisch vertrauliche Dokumente schützt. Ein Beispiel für diesen Anwendungstyp finden Sie unter [IpcDlp Beispiel](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp) .
 
-Wenn Ihre Anwendung den *Servermodus* verwendet, sollte sie sich automatisch beim RMS-Server authentifizierten. Anders als beim *Clientmodus*, öffnet das RMS SDK 2.1 keine Anmeldeaufforderung, wenn die automatische Authentifizierung fehlschlägt. Zudem wird bei der Ausführung im *Servermodus* kein Anwendungsmanifest benötigt.
+Wenn Ihre Anwendung den *Servermodus* verwendet, sollte sie sich automatisch beim RMS-Server authentifizierten. Anders als beim *Clientmodus* öffnet das RMS SDK 2.1 keine Administratoranmeldeaufforderung, wenn die automatische Authentifizierung fehlschlägt. Zudem wird bei der Ausführung im *Servermodus* kein Anwendungsmanifest benötigt.
 
 Weitere Informationen zum Festlegen des API-Sicherheitsmodus finden Sie unter [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md).
 
@@ -42,7 +42,7 @@ Weitere Informationen zum Festlegen des API-Sicherheitsmodus finden Sie unter [F
 
 Eine Rich-Client-Anwendung ermöglicht den Benutzern das Anzeigen und Bearbeiten von Daten über eine grafische Benutzeroberfläche (GUI). Häufig sind die in dieser GUI dargestellten Daten sehr wertvoll und vertraulich, sodass sie vor Diebstahl oder einer versehentlichen Offenlegung geschützt werden müssen. Die Datenschutzunterstützung verbessert in der Regel vorhandene Szenarien, ist jedoch nicht die primäre Motivation für die Entwicklung einer solchen Anwendung.
 
-Der Einsatz von RMS SDK 2.1 für Rich-Client-Anwendungen erleichtert Folgendes:
+Der Einsatz des RMS SDK 2.1 für Rich-Client-Anwendungen erleichtert Folgendes:
 
 -   Sicherstellen, dass diese Daten stets verschlüsselt sind.
 

@@ -4,18 +4,18 @@ description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2018
+ms.date: 12/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 412b84b705d12efd7259066c0fece68e2ab8c099
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 6147a065f6aff31dd40c339699f0dc35f1ebaa82
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173943"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814236"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -79,11 +79,11 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
     
     - **Makros zulassen** (allgemeiner Name) wird automatisch hinzugefügt. Dieses Nutzungsrecht ist für die Azure Information Protection-Leiste in Office-Apps erforderlich.
 
-- Die Einstellungen **Veröffentlicht** und **Archiviert** werden auf dem Blatt **Bezeichnung** als **Aktiviert**: **Ein** bzw. **Aktiviert**: **Aus** angezeigt. Legen Sie für Vorlagen, die beibehalten werden, aber nicht für Benutzer oder Dienste sichtbar sein sollen, **Aktiviert**: **Aus** fest.
+- Die Einstellungen **Veröffentlicht** und **Archiviert** werden auf dem Blatt **Bezeichnung** entsprechend als **Aktiviert**: **Ein** und **Aktiviert**: **Aus** angezeigt. Legen Sie für Vorlagen, die beibehalten werden, aber nicht für Benutzer oder Dienste sichtbar sein sollen, **Aktiviert**: **Aus** fest.
 
 - Sie können eine Vorlage im Azure-Portal weder kopieren noch löschen. Wenn die Vorlage zu einer Bezeichnung konvertiert wird, können Sie die Bezeichnung so konfigurieren, dass sie die Vorlage nicht mehr verwendet. Dies erreichen Sie, indem Sie für die Option **Berechtigungen für Dokumente und E-Mails mit Bezeichnung festlegen** **Nicht konfiguriert** auswählen. Alternativ können Sie die Bezeichnung löschen. In beiden Szenarios wird die Vorlage jedoch nicht gelöscht und bleibt aktiviert.
     
-    Sie können nun die Vorlage mithilfe des PowerShell-Cmdlets [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) löschen. Sie können dieses PowerShell-Cmdlet auch für Vorlagen verwenden, die nicht zu Bezeichnungen konvertiert werden. Wenn Sie aber eine Vorlage löschen, die zum Schutz von Inhalt verwendet wurde, kann dieser Inhalt nicht länger geöffnet werden. Löschen Sie die Vorlagen nur, wenn Sie sicher sind, dass sie nicht zum Schützen von Dokumenten oder E-Mails in der Produktion verwendet wurden. Als Vorsichtsmaßnahme sollten Sie zuerst die Vorlage als Sicherung mithilfe des [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)-Cmdlets exportieren. 
+    Sie können nun die Vorlage mithilfe des PowerShell-Cmdlets [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) löschen. Sie können dieses PowerShell-Cmdlet auch für Vorlagen verwenden, die nicht zu Bezeichnungen konvertiert werden. Es wird allerdings in der Regel empfohlen, keine Vorlagen zu löschen, denn dadurch wird sichergestellt, dass zuvor geschützte Inhalte geöffnet und wie gewünscht verwendet werden können. Als bewährte Methode wird empfohlen, Vorlagen nur zu löschen, wenn Sie sicher sind, dass sie nicht zum Schützen von Dokumenten oder E-Mails in der Produktion verwendet wurden. Als Vorsichtsmaßnahme sollten Sie zuerst die Vorlage als Sicherung mithilfe des [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)-Cmdlets exportieren. 
 
 - Wenn Sie derzeit eine Abteilungsvorlage bearbeiten und speichern, wird die Bereichskonfiguration entfernt. Eine bereichsbezogene Vorlage entspricht in der Azure Information Protection-Richtlinie einer [bereichsbezogenen Richtlinie](configure-policy-scope.md). Wenn Sie die Vorlage in eine Bezeichnung konvertieren, können Sie einen vorhandenen Bereich auswählen.
     
@@ -126,7 +126,7 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 - Der Name der Vorlage wird in den neuen Bezeichnungsnamen konvertiert, während die Beschreibung der Vorlage in eine QuickInfo für die Bezeichnung konvertiert wird. 
 
-- Wenn der Status der Vorlage veröffentlicht wurde, wird diese Einstellung für die Bezeichnung auf **Aktiviert**: **Ein** festgelegt. Diese wird Benutzern nun angezeigt, wenn Sie die Azure Information Protection-Richtlinie das nächste Mal veröffentlichen. Wenn der Status der Vorlage archiviert wurde, wird diese Einstellung für die Bezeichnung auf **Aktiviert**: **Aus** festgelegt und Benutzern nicht als verfügbare Bezeichnung angezeigt.
+- Wenn der Status der Vorlage veröffentlicht wurde, wird diese Einstellung für die Bezeichnung auf **Aktiviert**: **Ein** festgelegt. Diese wird Benutzern nun angezeigt, wenn Sie die Azure Information Protection-Richtlinie das nächste Mal veröffentlichen. Wenn der Status der Vorlage archiviert wurde, wird diese Einstellung für die Bezeichnung auf **Aktiviert**: **Aus** festgelegt, und die Bezeichnung wird dem Benutzer nicht als verfügbare Bezeichnung angezeigt.
 
 - Die Schutzeinstellungen werden beibehalten. Sie können diese bei Bedarf bearbeiten und auch andere Bezeichnungseinstellungen wie visuelle Kennzeichnungen und Bedingungen hinzufügen.
 
@@ -138,7 +138,7 @@ Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüss
 
 1. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Klicken Sie auf dem Blatt **Azure Information Protection - Bezeichnungen** auf **Neue Bezeichnung hinzufügen**.
 
-2. Behalten Sie auf dem Blatt **Bezeichnung** die Standardeinstellung **Aktiviert**: **Ein** bei. Geben Sie dann einen Bezeichnungsnamen und eine Bezeichnungsbeschreibung für die Vorlage ein.
+2. Behalten Sie auf dem Blatt **Bezeichnung** die Standardeinstellung **Aktiviert**: **Ein** bei, und geben Sie dann einen Bezeichnungsnamen und eine Beschreibung für den Vorlagennamen und die Beschreibung ein.
 
 3. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
     
@@ -152,7 +152,7 @@ Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüss
     
     Obwohl die Bezeichnung aktiviert ist, wird die Vorlage standardmäßig archiviert. Damit Anwendungen und Dienste die Vorlage zum Schützen von Dokumenten und E-Mails verwenden können, führen Sie den letzten Schritt zum Veröffentlichen der Vorlage aus.
 
-5. Wählen Sie in der Menüoption **Klassifizierungen** > **Richtlinien** die Richtlinie aus, die die neuen Schutzeinstellungen enthalten soll. Wählen Sie dann **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die Ihre Schutzeinstellungen enthält, und klicken Sie nacheinander auf **OK** und auf **Speichern**.
+5. Wählen Sie in der Menüoption **Klassifizierungen** > **Richtlinien** die Richtlinie aus, die die neuen Schutzeinstellungen enthalten soll. Wählen Sie dann **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die Ihre Schutzeinstellungen enthält, und klicken Sie erst auf **OK** und dann auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

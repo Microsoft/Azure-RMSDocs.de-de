@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/25/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d707f32062df54975237d9ae6f7218d33cfe337a
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
+ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305657"
+ms.lasthandoff: 12/26/2018
+ms.locfileid: "53786316"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -33,9 +33,11 @@ Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** insta
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 > [!TIP]
-> Um Cmdlets mit Pfadlängen über 260 Zeichen zu verwenden, nutzen Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/), die mit dem Windows 10 Anniversary Update verfügbar ist:<br /> **Lokale Computerrichtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** > **Alle Einstellungen** > **NTFS** > **Lange Win32-Pfade aktivieren** 
+> Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Lokale Computerrichtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** > **Alle Einstellungen** > **NTFS** > **Lange Win32-Pfade aktivieren** 
 > 
 > Bei Windows Server 2016 können Sie die gleiche Gruppenrichtlinieneinstellung verwenden, wenn Sie die neuesten administrativen Vorlagen (ADMX-Dateien) für Windows 10 installieren.
+>
+> Weitere Informationen finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 Die [Azure Information Protection-Überprüfung](../deploy-aip-scanner.md) verwendet Cmdlets aus dem AzureInformationProtection-Modul, um einen Dienst unter Windows Server zu installieren und zu konfigurieren. Mit der Überprüfung können Sie anschließend Dateien in Datenspeichern suchen, klassifizieren und schützen.
 
@@ -273,7 +275,7 @@ Geben Sie zunächst in einer PowerShell-Sitzung Folgendes ein, wenn Sie sich fü
 
     Set-RMSServerAuthentication
 
-Geben Sie nach der entsprechenden Aufforderung die drei Bezeichner ein, wie unter [Voraussetzung 3: So werden Dateien ohne Benutzerinteraktion geschützt bzw. wird deren Schutz aufgehoben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) beschrieben.
+Geben Sie wie im folgenden Artikel beschrieben die drei Bezeichner ein, wenn Sie dazu aufgefordert werden: [Voraussetzung 3: So werden Dateien ohne Benutzerinteraktion geschützt bzw. wird deren Schutz aufgehoben](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction).
 
 Bevor Sie Dateien schützen können, müssen Sie die Rights Management-Vorlagen auf Ihren Computer herunterladen und die zu verwendende Vorlage sowie ihre zugehörige ID-Nummer ermitteln. In der Ausgabe können Sie dann die Vorlagen-ID kopieren:
 

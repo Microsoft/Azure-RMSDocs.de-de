@@ -2,8 +2,8 @@
 title: 'Gewusst wie: Hinzufügen expliziter Besitzerrechte | Azure RMS'
 description: In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6322831ee15266a4709284da0f9eb113f6d3eaf0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ee003510feaebfb0615eaf8e8408e0276cc082d6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147118"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071164"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte
 
@@ -27,13 +27,12 @@ In Ihrer Anwendung sollten explizit Berechtigungen vom Typ „Besitzer“ hinzug
 
 Wenn Ihre Anwendung ein Lizenzhandle mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt, muss sie dem Besitzer auch explizit einen Vollzugriff (Berechtigungen) gewähren.
 
->[!NOTE] 
-> Wenn ein Benutzer über [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden dem Besitzer damit alle Berechtigungen gewährt.
+>[!NOTE]  Wenn ein Benutzer über [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) mit der **IPC\_LI\_OWNER**-Eigenschaft als Besitzer (Owner) festgelegt wird, werden ihm alle Berechtigungen gewährt.
 
 In diesem Codebeispiel werden nur die Schritte gezeigt, die zum Erstellen und Hinzufügen bestimmter Rechte zu einer Lizenz erforderlich sind.
 
 ## <a name="instructions"></a>Anweisungen
- 
+ 
 ## <a name="step-1-example-scenario"></a>Schritt 1: Beispielszenario
 
 In diesem Beispiel werden einer Lizenz, die mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wurde, die benötigten Rechte hinzugefügt. Im Beispiel wird die Erstellung und Zuweisung der Rechte zur Lizenz über eine Liste mit Rechten veranschaulicht.

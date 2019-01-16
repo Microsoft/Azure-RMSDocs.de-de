@@ -2,8 +2,8 @@
 title: Aktivieren von E-Mail-Benachrichtigungen | Azure RMS
 description: Mit E-Mail-Benachrichtigungen können Besitzer von geschützten Inhalten benachrichtigt werden, wenn auf ihre Inhalte zugegriffen wird.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: bbcc08f923cfc73e7c85557aba33c6c12916f3f4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 9f0b02e3beb8b18cb90d8a28f9fd0b5dccfe0dbd
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151468"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071334"
 ---
 # <a name="how-to-enable-email-notification"></a>Exemplarische Vorgehensweise: Aktivieren von E-Mail-Benachrichtigungen
 

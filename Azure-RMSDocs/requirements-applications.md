@@ -4,18 +4,18 @@ description: Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Right
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/13/2018
+ms.date: 12/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cc823bcb175c9f4181d365a8caf99da33171c338
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 51883da128580be5f6bfd4dd725b8dfdf10f844f
+ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173909"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429881"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -115,6 +115,8 @@ Die folgenden Office-Clientsuites unterstützen den Schutz von Dateien und E-Mai
 - Office 365 ProPlus: Office 2016
 
 - Office Standard 2016 für Mac
+
+Alle Versionen von Office 2016 für Mac können geschützte Inhalte nutzen.
 
 Tipp: Hilfreiche Hinweise zu den ersten Schritten zum Schützen von Dokumenten mithilfe von Office für Mac finden Sie im folgenden FAQ-Abschnitt: [Wie konfiguriere ich einen Macintosh-Computer für den Schutz und die Nachverfolgung von Dokumenten?](faqs-rms.md#how-do-i-configure-a-mac-computer-to-protect-and-track-documents)
 

@@ -4,15 +4,15 @@ description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
+ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023514"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411812"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -83,12 +83,12 @@ Wenn Sie erstmals über das Azure-Portal eine Verbindung mit dem Azure Informati
     
 3. Nach den Bezeichnungen werden im Abschnitt **Konfigurieren von Einstellungen, die für Information Protection-Endbenutzer angezeigt und angewendet werden** außerdem einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     
-    ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-settings.png) 
+    ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Da Sie nur die Bezeichnungen und Einstellungen anzeigen, können Sie alle Blätter schließen, die Sie geöffnet haben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Da Sie nun die Bezeichnungen und Richtlinieneinstellungen im Azure-Portal gesehen haben, können Sie als nächsten Schritt das folgende Tutorial durchführen: [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md).
+Da Sie nun die Bezeichnungen und Richtlinieneinstellungen im Azure-Portal gesehen haben, können Sie als nächsten Schritt das folgende Tutorial durchführen: [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
 
 Anstelle der ausführlichen Anweisungen zum Konfigurieren sämtlicher Aspekte der Azure Information Protection-Richtlinie können Sie [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md) lesen.

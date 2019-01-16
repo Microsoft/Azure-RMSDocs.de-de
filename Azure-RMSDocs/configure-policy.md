@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6c6c2be34250cca486004a0ed1b1fcd8fddfce35
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 6afbf2e95f6e9d21d1bfa9c4c05df288accf716d
+ms.sourcegitcommit: f13c6db055c1fc69cf92e47609465270a42bbdac
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023735"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54085074"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -33,19 +33,19 @@ Die Richtlinie enthält Bezeichnungen und Einstellungen:
 
 Azure Information Protection unterstützt verschiedene Abonnementebenen:
 
-- Azure Information Protection P2: Unterstützung für alle Klassifizierungs-, Bezeichnungs- und Schutzfunktionen
+- Azure Information Protection P2: Unterstützung für alle Klassifizierungs-, Bezeichnungs- und Schutzfeatures.
 
-- Azure Information Protection P1: Unterstützung für die meisten Klassifizierungs-, Bezeichnungs- und Schutzfunktionen, jedoch keine automatische Klassifizierung oder HYOK
+- Azure Information Protection P1: Unterstützung für die meisten Klassifizierungs-, Bezeichnungs- und Schutzfeatures, jedoch keine automatische Klassifizierung oder HYOK.
 
-- Office 365, einschließlich des Azure Rights Management-Diensts: Unterstützung für Schutzfunktionen, jedoch keine Klassifizierung und Bezeichnung
+- Office 365, einschließlich des Azure Rights Management-Diensts: Unterstützung des Schutzes, aber nicht der Klassifizierung und Bezeichnung.
 
 Optionen, die ein Azure Information Protection P2-Abonnement erfordern, werden im Portal identifiziert.
 
 Wenn in Ihrer Organisation eine Kombination aus verschiedenen Abonnements vorhanden ist, liegt es in Ihrer Verantwortung, sicherzustellen, dass Benutzer keine Features verwenden, für die ihr Konto nicht lizenziert ist. Der Azure Information Protection-Client ist nicht für die Überprüfung und Erzwingung von Lizenzen zuständig. Wenn Sie Optionen konfigurieren, für die nicht alle Benutzer eine Lizenz besitzen, verwenden Sie bereichsbezogene Richtlinien oder eine Registrierungseinstellung, um sicherzustellen, dass Ihre Organisation die Lizenzbestimmungen einhält:
 
-- **In Ihrer Organisation ist eine Kombination aus Azure Information Protection P1- und Azure Information Protection P2-Lizenzen vorhanden**: Erstellen und verwenden Sie mindestens eine [bereichsbezogene Richtlinie](configure-policy-scope.md) für Benutzer mit einer P2-Lizenz, wenn Sie Optionen konfigurieren, die eine Azure Information Protection P2-Lizenz erfordern. Stellen Sie sicher, dass Ihre globale Richtlinie keine Optionen umfasst, die eine Azure Information Protection P2-Lizenz erfordern.
+- **Wenn Ihre Organisation sowohl über Azure Information Protection P1- als auch über Azure Information Protection P2-Lizenzen verfügt:** Erstellen Sie für Benutzer mit einer P2-Lizenz mindestens eine [bereichsbezogene Richtlinie](configure-policy-scope.md), und verwenden Sie diese, wenn Sie Optionen konfigurieren, für die eine Azure Information Protection P2-Lizenz erforderlich ist. Stellen Sie sicher, dass Ihre globale Richtlinie keine Optionen umfasst, die eine Azure Information Protection P2-Lizenz erfordern.
 
-- **In Ihrer Organisation ist ein Abonnement für Azure Information Protection vorhanden, einige Benutzer verfügen aber nur über eine Lizenz für Office 365, die den Azure Rights Management-Dienst umfasst**: Bearbeiten Sie die Registrierung auf den Computern derjenigen Benutzer, die keine Lizenz für Azure Information Protection besitzen, damit diese Benutzer die Azure Information Protection-Richtlinie nicht herunterladen können. Anweisungen dazu finden Sie im Administratorhandbuch für die folgende Anpassung: [Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Wenn Ihre Organisation eine Abonnement für Azure Information Protection abgeschlossen hat, aber einige Benutzer nur über eine Office 365-Lizenz verfügen, die den Azur Rights Management-Dienst umfasst:** Bearbeiten Sie für Benutzer ohne eine Azure Information Protection-Lizenz die Registrierung auf ihren Computern, damit diese nicht die Azure Information Protection-Richtlinie herunterladen. Eine Anleitung für die folgende Anpassung finden Sie im Administratorleitfaden: [Erzwingen des reinen Schutzmodus, wenn die Organisation über eine Kombination verschiedener Lizenzen verfügt.](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses)
 
 Weitere Informationen zu Abonnements finden Sie unter [Welches Abonnement benötige ich für Azure Information Protection, und welche Features sind enthalten?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -85,9 +85,9 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
-1. Stellen Sie sicher, dass Sie sich beim Azure-Portal mit einer der folgenden Administratorrollen angemeldet haben: Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
+1. Vergewissern Sie sich unter Verwendung einer der folgenden Administratorrollen, dass Sie im Azure-Portal angemeldet sind: Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
 
-2. Wenn nötig, navigieren Sie zum Blatt **Azure Information Protection**: Klicken Sie im Hubmenü beispielsweise auf **Alle Dienste**, und beginnen Sie, **Information Protection** in das Feld „Filter“ einzugeben. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. Navigieren Sie wenn nötig zum Blatt **Azure Information Protection**: Klicken Sie z. B. im Hubmenü auf **Alle Dienste**, und geben Sie in das Filterfeld den Begriff **Information Protection** ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
     Das Blatt **Azure Information Protection: Bezeichnungen** wird automatisch geöffnet, damit Sie die verfügbaren Bezeichnungen anzeigen und bearbeiten können. Die Bezeichnungen können allen Benutzern, ausgewählten Benutzern oder keinem Benutzer zur Verfügung gestellt werden, indem diese zu einer Richtlinie hinzugefügt oder daraus entfernt werden.
 
@@ -108,7 +108,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - Alle 24 Stunden.
 
-- Für die [Azure Information Protection-Überprüfung](deploy-aip-scanner.md): Wenn der Dienst gestartet wird (wenn die Richtlinie älter als eine Stunde ist) und jede Stunde während des Vorgangs.
+- Für den [Azure Information Protection-Scanner:](deploy-aip-scanner.md) Wenn der Dienst gestartet wird (wenn die Richtlinie älter als eine Stunde ist) und während der Ausführung des Vorgangs jede Stunde.
 
 
 >[!NOTE]
@@ -148,7 +148,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 Beispiele zum Anpassen der Azure Information Protection-Richtlinie und das resultierende Verhalten für Benutzer finden Sie in den folgenden Tutorials:
 
-- [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
+- [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
 
 - [Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
 

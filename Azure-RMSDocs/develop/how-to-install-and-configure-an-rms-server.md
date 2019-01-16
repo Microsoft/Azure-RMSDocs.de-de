@@ -2,8 +2,8 @@
 title: 'Gewusst wie: Installieren, Konfigurieren und Testen mit einem RMS-Server | Azure RMS'
 description: Installieren und konfigurieren Sie den RMS-Server zum Testen der rechtlich geschützten Anwendung.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5a3fabd4d76dc86b52d0d8891b7032d1e017cf28
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 74330e8ea1cd709b594a41ffec826d4bdade67c3
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023291"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071504"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
 
@@ -77,7 +77,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
                 ServiceLocation
                   EnterpriseCertification
 
-   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Certification**
+   **Wert**: (Standard:) [**http|https**]://RMSClusterName/**_wmcs/Certification**
 
 2. **EnterprisePublishing**
 
@@ -88,7 +88,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
                 ServiceLocation
                   EnterprisePublishing
                   
-   **Value**: (Default): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
+   **Wert**: (Standard:) [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
 >[!NOTE] 
 > Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.

@@ -1,9 +1,9 @@
 ---
 title: Konfigurieren von Visual Studio | Azure RMS
-description: Anleitung zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des RMS SDK 2.1.
+description: Anleitung zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des RMS SDK 2.1
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 0713bbc51b90e95d93917f7c43c3401a7cbe8ef2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f26400ba1230ef1b274fa04120c22995d2f6620c
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151128"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071487"
 ---
 # <a name="configure-visual-studio"></a>Konfigurieren von Visual Studio
 
-Dieses Thema enthält Informationen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des Rights Management Services SDK 2.1.
+Dieser Artikel enthält Informationen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des Rights Management Services SDK 2.1.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -29,15 +29,15 @@ Dieses Thema enthält Informationen zum Konfigurieren eines Visual Studio-Projek
 
 **Anweisungen**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rms-sdk-21"></a>Schritt 1: Konfigurieren eines Visual Studio-Projekts für die Verwendung von RMS SDK 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Schritt 1: Konfigurieren eines Visual Studio-Projekts für die Verwendung des RMS SDK 2.1
 
 Diese Schritte sind spezifisch für Microsoft Visual Studio 2010. Wenn Sie eine andere Version von Microsoft Visual Studio verwenden, kann das Dialogfeld für Einstellungen bei Ihnen etwas anders aussehen.
 
 Diese Anweisungen gelten für die Erstellung einer systemeigenen 32-Bit-Anwendung erstellen.
 
-1.  Fügen Sie Ihrem Visual Studio 2010-Projekt das RMS SDK 2.1-Includeverzeichnis hinzu.
+1.  Fügen Sie Ihrem Visual Studio 2010-Projekt das Includeverzeichnis für das RMS SDK 2.1 hinzu.
 
-    Wählen Sie unter **Konfigurationseigenschaften** die Option **VC++-Verzeichnisse** aus, und fügen Sie das RMS SDK 2.1-Includeverzeichnis **$(MSIPCSDKDIR)\\inc** dem Feld **Includeverzeichnisse** hinzu.
+    Wählen Sie unter **Konfigurationseigenschaften** die Option **VC++-Verzeichnisse** aus, und fügen Sie das Includeverzeichnis für das RMS SDK 2.1 **$(MSIPCSDKDIR)\\inc** dem Feld **Includeverzeichnisse** hinzu.
 
     ![Feld „Includeverzeichnisse“ in „Konfigurationseigenschaften“](../media/include_directories.png)
 
@@ -58,7 +58,7 @@ Diese Anweisungen gelten für die Erstellung einer systemeigenen 32-Bit-Anwendun
 
 4.  Fügen Sie die RMS SDK 2.1-DLL (Dynamic Link Library) als eine verzögert geladene DLL hinzu.
 
-    Wählen Sie unter **Linker** die Option **Eingabe**, und fügen Sie die RMS-SDK 2.1-DLL-Datei **Msipc.dll** dem Feld **Verzögert geladene Dlls** hinzu.
+    Wählen Sie unter **Linker** die Option **Eingabe** aus, und fügen Sie die RMS SDK 2.1-DLL-Datei **Msipc.dll** dem Feld **Verzögert geladene DLLs** hinzu.
 
     ![Feld für verzögert geladene Bibliotheken unter „Linker“](../media/delay_loaded.png)
 

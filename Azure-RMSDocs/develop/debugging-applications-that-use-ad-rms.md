@@ -2,8 +2,8 @@
 title: 'Gewusst wie: Debuggen einer rechtlich geschützten Anwendung | Azure RMS'
 description: Im folgenden Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed627c98238028fc14f977f2ce7475f356ceb889
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: cb77177ecb0c92f3e991e0f6d06a55fa2c332873
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147371"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071551"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung
 
@@ -32,21 +32,21 @@ Sie können die Debugablaufverfolgung aktivieren, indem Sie den folgenden Regist
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         MSIPC
-            "Trace" = 00000001
-            Data type
-            dword
+   SOFTWARE
+      Microsoft
+         MSIPC
+            "Trace" = 00000001
+            Data type
+            dword
 ```
 
 ### <a name="application-logging-by-using-the-windows-event-log"></a>Anwendungsprotokollierung per Windows-Ereignisprotokoll
 
 Der Name des Ereignisprotokolls lautet „Microsoft-RMS-MSIPC/Debug“. Dies bedeutet, dass das Protokoll in der Windows-Ereignisanzeige als „Application and Services Logs\\Microsoft\\RMS\\MSIPC\\Debug“ angezeigt wird.
 
-**Hinweis**: Das Protokoll ist standardmäßig aktiviert und auf den Ausführlichkeitsgrad 3 festgelegt.
+**Hinweis:**   Das Protokoll ist standardmäßig aktiviert und auf den Ausführlichkeitsgrad 3 festgelegt.
 
- 
+ 
 
 Um die Einstellungen für die Protokollierungsfunktion zu ändern, können Sie entweder die Benutzeroberfläche der Windows-Ereignisanzeige oder Wevtutil, ein in Windows integriertes Befehlszeilentool, verwenden.
 
@@ -62,4 +62,4 @@ Mit dem folgenden Befehl wird beispielsweise das MSIPC-Ereignisprotokoll aktivie
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Hinweis**: Wählen Sie in der Windows-Ereignisanzeige im Menü **Ansicht** die Option **Analytische und Debugprotokolle einblenden**, um das MSIPC-Debugprotokoll anzuzeigen.
+**Hinweis:**   Wählen Sie in der Windows-Ereignisanzeige im Menü **Ansicht** die Option **Show Analytic and Debug Logs** (Analyse- und Debugprotokolle einblenden) aus, um das MSIPC-Debugprotokoll anzuzeigen.

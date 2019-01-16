@@ -2,8 +2,8 @@
 title: Azure Information Protection SDK 2.1-Entwicklerhandbuch | Microsoft-Dokumentation
 description: Themen mit Vorgehensweisen zur Entwicklung mit dem AIP SDK 2.1
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -12,18 +12,18 @@ ms.assetid: 5A9F04FD-0FCD-482F-8671-36FE93B783B0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5e85005cd497be45a2b92631a682121482e5997f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e6f4cbf9ec795ca73424bbd2ca35e5f1ae59fa7
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147476"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070587"
 ---
 # <a name="developer-guidance"></a>Anleitung für Entwickler
 
 Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklungsszenarien sowie allgemeine Informationen zur Entwicklung mit diesem SDK. Die Szenarien in diesem Abschnitt gelten speziell für diese Version des Rights Management Services SDK 2.1 und können sich in nachfolgenden Versionen ändern.
 - [Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung](how-to-use-adal-authentication.md): Authentifizierung mit Azure RMS für Ihre App mit der Azure Active Directory-Authentifizierungsbibliothek (ADAL).
-- [Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte](add-explicit-owner-rights.md): In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+- [Vorgehensweise: Hinzufügen expliziter Besitzerrechte:](add-explicit-owner-rights.md) In Ihrer Anwendung sollten explizit Rechte vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf neu erstellt wird ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Exemplarische Vorgehensweise: Debuggen einer rechtlich geschützten Anwendung](debugging-applications-that-use-ad-rms.md): In diesem Thema wird veranschaulicht, wie Sie Ihre Anwendung debuggen und das Windows-Ereignisprotokoll verwenden.
 - [Exemplarische Vorgehensweise: Bereitstellen einer App in einen Mandanten eines Kunden](how-to-deploy-app.md): Zeigt die Schritte zum Bereitstellen einer App aus dessen Entwicklungs-Azure AD-Mandanten zu einem Produktions-Azure AD-Mandanten.
 - [Exemplarische Vorgehensweise: Aktivieren von Dokumentennachverfolgung und -widerruf](tracking-content.md): Dieses Thema bietet grundlegende Anleitungen zum Implementieren der Dokumentennachverfolgung für Inhalte sowie Beispielcode für Metadaten-Aktualisierungen und zum Erstellen einer Schaltfläche **Verwendung nachverfolgen** für Ihre App.
@@ -39,6 +39,6 @@ Dieser Abschnitt enthält spezifische Leitfäden für mehrere wichtige Entwicklu
 - [Unterstützte Plattformen](supported-platforms.md): In diesem Thema werden die vom RMS SDK 2.1 unterstützten Client- und Serverplattformen identifiziert.
 - [Grundlegendes zu Nutzungsbeschränkungen](understanding-usage-restrictions.md): Sämtliche RMS-fähigen Anwendungen müssen Nutzungseinschränkungen erzwingen, die durch die in diesem Thema aufgeführten Konstanten definiert sind.
 
- 
+ 
 ## <a name="related-topics"></a>Verwandte Themen
 * [Übersicht](ad-rms-overview.md)

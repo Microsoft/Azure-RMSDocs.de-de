@@ -2,8 +2,8 @@
 title: Gewusst wie&#58; Aktivieren der Fehler- und Leistungsprotokollierung | Azure RMS
 description: Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von Diagnose- und Leistungsprotokollen über eine einzelne Geräteeigenschaft verwaltet.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dece185bdbfd83d8ee98d815ead5545ca007754
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147354"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071810"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung
+# <a name="how-to-enable-error-and-performance-logging"></a>Vorgehensweise: Aktivieren der Fehler- und Leistungsprotokollierung
 Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von Diagnose- und Leistungsprotokollen über eine einzelne Geräteeigenschaft verwaltet.
 
 ## <a name="overview"></a>Übersicht ##
@@ -79,7 +79,7 @@ Protokollebenensteuerung festlegen
 Einstellung für Protokollebenensteuerung abrufen
 
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+ 
 
 ## <a name="windows"></a>Windows ##
 Automatische Protokollierung aktivieren

@@ -4,18 +4,18 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 01/04/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e228c1c49481a9772e2f86164926db6075fe2924
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: 444181d82c028feb50df12d55d279ecbeda97560
+ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861233"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012006"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -28,6 +28,8 @@ Der Azure Information Protection-Client kann Folgendes auf Dokumente und E-Mails
 - Klassifizierung und Schutz
 
 - Nur Schutz
+
+Der Azure Information Protection-Client kann außerdem den Inhalt einiger Dateitypen überprüfen, indem er bekannte Typen von vertraulichen Informationen oder die von Ihnen definierten regulären Ausdrücke verwendet.
 
 Verwenden Sie die folgenden Informationen, um zu überprüfen, welche Dateitypen vom Azure Information Protection-Client unterstützt werden, welche verschiedenen Schutzebenen verwendet werden, wie die Standardschutzebene geändert wird und welche Dateien automatisch von der Klassifizierung und dem Schutz ausgeschlossen (übersprungen) werden.
 
@@ -53,9 +55,9 @@ Folgende Dateitypen können klassifiziert werden, auch wenn diese nicht geschüt
 
 - **Digital Negative**: .dng
 
-- **Microsoft Office**: Dateitypen in der folgenden Tabelle.
+- **Microsoft Office:** Dateitypen in der folgenden Tabelle.
     
-    Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
+    Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und XML-Formate für Office Open, die die folgenden Office-Programme betreffen: Word, Excel und PowerPoint.
     
     |Office-Dateityp|Office-Dateityp|
     |----------------------------------|----------------------------------|
@@ -89,17 +91,17 @@ Für den Schutz werden folgende maximale Dateigrößen vom Azure Information Pro
     
     |Office-Anwendung|Maximale unterstützte Dateigröße|
     |--------------------------------|-------------------------------------|
-    |Word 2007 (nur von AD RMS unterstützt)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32-Bit: 512 MB<br /><br />64-Bit: 512 MB
-    |Excel 2007 (nur von AD RMS unterstützt)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-Bit: 2 GB<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt|
-    |PowerPoint 2007 (nur von AD RMS unterstützt)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt<br /><br />64-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
+    |Word 2007 (nur von AD RMS unterstützt)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016|32-Bit: 512 MB<br /><br />64 Bit: 512 MB
+    |Excel 2007 (nur von AD RMS unterstützt)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016|32-Bit: 2 GB<br /><br />64 Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt|
+    |PowerPoint 2007 (nur von AD RMS unterstützt)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016|32-Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt<br /><br />64 Bit: nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt
 
 - **Bei allen anderen Dateien**: 
     
-    - Beachten Sie zum Schutz anderer Dateitypen und zum Öffnen dieser Dateitypen im Azure Information Protection-Viewer: Die maximale Dateigröße ist nur durch den verfügbaren Speicherplatz begrenzt.
+    - Gehen Sie wie folgt vor, um andere Dateitypen zu schützen und im Azure Information Protection-Viewer zu öffnen: Die maximale Dateigröße wird nur durch den verfügbaren Speicherplatz und den Arbeitsspeicher beschränkt.
     
-    - Beachten Sie beim Aufheben des Dateischutzes mit dem [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile)-Cmdlet folgendes: Die maximale Dateigröße für PST-Dateien beträgt 5 GB. Die Dateigröße für andere Dateitypen ist nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt.
+    - Gehen Sie wie folgt vor, um den Schutz von Dateien mithilfe des [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile)-Cmdlets aufzuheben: PST-Dateien dürfen eine Größe von höchstens 5 GB haben. Die Dateigröße für andere Dateitypen ist nur durch den verfügbaren Speicherplatz und Arbeitsspeicher beschränkt.
     
-    Tipp: Wenn Sie geschützte Elemente in großen .pst-Dateien suchen oder wiederherstellen müssen, finden Sie hierzu weitere Informationen unter [Guidance for using Unprotect-RMSFile for eDiscovery (Anleitung für die Verwendung von Unprotect-RMSFile für eDiscovery)](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
+    Tipp: Wenn Sie geschützte Elemente in großen PST-Dateien suchen oder wiederherstellen müssen, finden Sie hierzu weitere Informationen unter [Anleitung für die Verwendung von Unprotect-RMSFile für eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Unterstützte Dateitypen für Klassifizierung und Schutz
 
@@ -129,7 +131,7 @@ Diese Dateitypen sind separat aufgeführt, da wenn sie nativ geschützt sind, di
 ###### <a name="footnote-1"></a>Fußnote 1
 Mit der aktuellen Version des Azure Information Protection-Clients bleibt die Erweiterung des geschützten PDF-Dokuments [in der Regel](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) „.pdf“.
 
-Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und Office Open XML für die folgenden Office-Programme: Word, Excel und PowerPoint.
+Die nächste Tabelle enthält die verbleibenden Dateitypen, die den nativen Schutz durch den Azure Information Protection-Client unterstützen und auch klassifiziert werden können. Sie erkennen diese als Dateitypen für Microsoft Office-Apps. Die unterstützten Dateiformate für diese Dateitypen sind die 97-2003-Dateiformate und XML-Formate für Office Open, die die folgenden Office-Programme betreffen: Word, Excel und PowerPoint.
 
 Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 
@@ -154,9 +156,9 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
 1. Erstellen Sie einen neuen Schlüssel mit dem Namen * für den folgenden Registrierungspfad, der Dateien mit beliebiger Erweiterung anzeigt:
     
-    - Für 32-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    - Für eine 32-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
     
-    - Für 64-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
+    - Für eine 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
 2. Erstellen Sie im neu hinzugefügten Schlüssel (zum Beispiel HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) einen neuen Zeichenfolgenwert (REG_SZ) mit dem Namen **Encryption** und dem Datenwert **Pfile**.
 
@@ -164,7 +166,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
 Diese beiden Einstellungen führen dazu, dass der Azure Information Protection-Client generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn dies Ihr Ziel ist, ist keine weitere Konfiguration erforderlich. Sie können aber auch Ausnahmen für bestimmte Dateitypen definieren, damit diese weiterhin systemeigen geschützt werden. Zu diesem Zweck müssen Sie drei zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (32-Bit Windows) oder **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (64-Bit Windows): Fügen Sie einen neuen Schlüssel hinzu, der den Namen der Dateierweiterung trägt (ohne den vorangestellten Punkt).
+1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (32-Bit-Version von Windows) oder **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (64-Bit-Version von Windows): Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne den vorangestellten Punkt) hinzu.
 
     Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
@@ -178,11 +180,11 @@ Wiederholen Sie diese drei Schritte für andere Dateitypen, die Sie als Ausnahme
 
 Sie können ähnliche Registrierungseinträge für andere Szenarien durch Ändern des Werts der **Encryption** -Zeichenfolge vornehmen, die die folgenden Werte unterstützt:
 
-- **Pfile**: Allgemeiner Schutz
+- **Pfile**: Generischer Schutz
 
-- **Native**: systemeigener Schutz
+- **Native**: Systemeigener Schutz
 
-- **Off**: Schutz blockieren
+- **Off**: Block-Schutz
 
 Weitere Informationen finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. 
 
@@ -203,7 +205,7 @@ Um zu verhindern, dass Benutzer Dateien ändern, die für Vorgänge auf dem Comp
 
 Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure Information Protection-Client ausgeschlossen – mit folgenden Ausnahmen:
 
-    - RTF, RAR und ZIP sind ebenfalls ausgeschlossen.
+- RTF, RAR und ZIP sind ebenfalls ausgeschlossen.
 
 Mithilfe der folgenden PowerShell-Cmdlets können Sie die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien ändern:
 
@@ -216,23 +218,7 @@ Mithilfe der folgenden PowerShell-Cmdlets können Sie die enthaltenen oder ausge
 > [!NOTE]
 > Überwachen Sie die Überprüfung sorgfältig,wenn Sie RTF-Dateien in der Überprüfung miteinbeziehen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten. 
 
-Durch die Überprüfung werden standardmäßig nur Office-Dateitypen geschützt. Um das Verhalten bei der Überprüfung zu ändern, bearbeiten Sie die Registrierung und geben Sie weitere Dateitypen an, die Sie schützen möchten. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md).
-
-#### <a name="to-scan-zip-files"></a>Überprüfen von ZIP-Dateien
-
-Der Überprüfung kann ZIP-Dateien überprüfen, wenn Sie diesen Anweisungen folgen:
-
-1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) für den Windows Server-Computer, auf dem die Überprüfung ausgeführt wird.
-
-2. Konfigurieren Sie die Überprüfung, um zu überprüfende ZIP-Dateien einzuschließen, wie im vorherigen Abschnitt beschrieben.
-
-3. Wenn ZIP-Dateien klassifiziert und geschützt statt auf sensible Informationen überprüft werden sollen, fügen Sie einen Registrierungseintrag für Dateien mit dieser Dateinamenerweiterung hinzu, um generischen Schutz (pfile) zu erhalten, wie im vorherigen Abschnitt beschrieben.
-
-Beispielszenario nach dem Ausführen dieser Schritte: 
-
-Eine Datei mit dem Namen **accounts.zip** enthält Excel-Kalkulationstabellen mit Kreditkartennummern. Ihre Azure Information Protection-Richtlinie verfügt über eine Bezeichnung mit dem Namen **Confidential \ Finance** (Vertraulich \ Finanzen), die zum Erkennen von Kreditkartennummern konfiguriert ist und verwendet automatisch die Bezeichnung geschützt, wodurch der Zugriff auf die Finanzgruppe einschränkt wird. 
-
-Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als **Confidential \ Finance** (Vertraulich \ Finanzen), wendet für die Datei einen generischen Schutz an, damit sie nur von Mitgliedern der Finanzgruppen entzippt werden kann, und benennt die Datei in **accounts.zip.pfile** um.
+Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Um das Verhalten bei der Überprüfung zu ändern, bearbeiten Sie die Registrierung und geben Sie weitere Dateitypen an, die Sie schützen möchten. Weitere Informationen dazu finden Sie in den Anweisungen zur Bereitstellung des Scanners unter [Bearbeiten der Registrierung für die Überprüfung](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>Dateien, die standardmäßig nicht geschützt werden können
 
@@ -253,6 +239,46 @@ Containerdateien sind Dateien, die andere Dateien enthalten. Ein typisches Beisp
 Sie können diese Containerdateien klassifizieren und schützen, jedoch werden die Klassifizierung und der Schutz nicht auf jede Datei im Container angewendet.
 
 Bei einer Containerdatei, die klassifizierte und geschützte Dateien enthält, müssen Sie zuerst die Dateien extrahieren, um die Einstellungen für die Klassifizierung oder den Schutz zu ändern. Es ist jedoch auch möglich, den Schutz für alle Dateien in unterstützten Containerdateien mit dem Cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) zu entfernen.
+
+## <a name="file-types-supported-for-inspection"></a>Bei der Überprüfung unterstützte Dateitypen
+
+Wenn keine weiteren Konfigurationen vorhanden sind, verwendet der Azure Information Protection-Client Windows-IFilter, um die Inhalte der Dokumente zu überprüfen. Windows-IFilter wird von Windows Search für die Indizierung verwendet. Aus diesem Grund können die folgenden Dateitypen überprüft werden, wenn Sie den [Azure Information Protection-Scanner](../deploy-aip-scanner.md) oder den PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) verwenden.
+
+|Anwendungstyp|Dateityp|
+|--------------------------------|-------------------------------------|
+|Word|.docx; .docm; .dotm; .dotx|
+|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
+|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
+|PDF |PDF|
+|Text|.txt; .xml; .csv|
+
+Wenn zusätzliche Konfigurationen vorgenommen werden, können auch andere Dateitypen überprüft werden. Beispielsweise können Sie [eine benutzerdefinierte Erweiterung für die Verwendung des vorhandenen Windows-Filters für Textdateien registrieren](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters) und zusätzliche Filter von Softwareherstellern installieren.
+
+Wenn Sie überprüfen möchten, welche Filter installiert sind, finden Sie weitere Informationen im Windows Search-Leitfaden für Entwickler unter [Finding a Filter Handler for a Given File Extension (Finden eines Filterhandlers für eine angegebene Erweiterung)](https://docs.microsoft.com/windows/desktop/search/-search-ifilter-registering-filters#finding-a-filter-handler-for-a-given-file-extension).
+
+In den folgenden Abschnitten finden Sie Konfigurationsanweisungen zum Überprüfen von ZIP- und TIFF-Dateien.
+
+### <a name="to-inspect-zip-files"></a>Überprüfen von ZIP-Dateien
+
+Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können ZIP-Dateien überprüfen, wenn Sie die folgenden Anweisungen befolgen:
+
+1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) auf dem Computer, auf dem die Überprüfung ausgeführt wird.
+
+2. Für den Scanner: Gehen Sie wie im Abschnitt [Azure Information Protection-Scanner](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner) beschrieben vor, um zu überprüfende ZIP-Dateien hinzuzufügen.
+
+3. Für den Scanner: Wenn Sie vertrauliche Informationen gefunden haben und die ZIP-Datei durch eine Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungseintrag für diese Erweiterung hinzu, um generischen Schutz (.pfile) zu erhalten. Weitere Informationen dazu finden Sie in den Anweisungen zur Bereitstellung des Scanners unter [Editing the registry for the scanner (Bearbeiten der Registrierung für den Scanner)](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
+
+Beispielszenario nach dem Ausführen dieser Schritte: 
+
+Eine Datei mit dem Namen **accounts.zip** enthält Excel-Kalkulationstabellen mit Kreditkartennummern. Ihre Azure Information Protection-Richtlinie verfügt über eine Bezeichnung mit dem Namen **Confidential \ Finance** (Vertraulich \ Finanzen), die zum Erkennen von Kreditkartennummern konfiguriert ist und verwendet automatisch die Bezeichnung geschützt, wodurch der Zugriff auf die Finanzgruppe einschränkt wird. 
+
+Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als **Confidential \ Finance** (Vertraulich \ Finanzen), wendet für die Datei einen generischen Schutz an, damit sie nur von Mitgliedern der Finanzgruppen entzippt werden kann, und benennt die Datei in **accounts.zip.pfile** um.
+
+### <a name="to-inspect-tiff-files-by-using-ocr"></a>Überprüfen von TIFF-Dateien unter Verwendung der OCR
+
+Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die optische Zeichenerkennung (OCR) verwenden, um TIFF-Bilder zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und anschließend die [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, auf dem der Scanner oder die PowerShell-Sitzung ausgeführt wird.
+
+Für den Scanner: Wenn Sie vertrauliche Informationen gefunden haben und die TIFF-Datei durch eine Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungseintrag für diese Erweiterung hinzu, um nativen Schutz zu erhalten. Weitere Informationen dazu finden Sie in den Anweisungen zur Bereitstellung des Scanners unter [Editing the registry for the scanner (Bearbeiten der Registrierung für den Scanner)](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protection-Client unterstützt werden, helfen Ihnen die folgenden zusätzlichen Ressourcen möglicherweise bei der Unterstützung dieses Clients:

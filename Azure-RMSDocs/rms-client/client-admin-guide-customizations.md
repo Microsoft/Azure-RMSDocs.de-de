@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/04/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2ecb0376ac7d4d4ddd476e76a60053ff408e2bbd
-ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
+ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
+ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335539"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996943"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -122,6 +122,10 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 - Legende: **ReportAnIssueLink**
 
 - Wert: **\<HTTP-Zeichenfolge>**
+
+Beispielwert für eine Website: `https://support.contoso.com`
+
+Beispielwert für eine E-Mail-Adresse: `mailto:helpdesk@contoso.com`
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Ausblenden der Menüoption „Klassifizieren und schützen“ im Windows-Dateiexplorer
 
@@ -279,7 +283,7 @@ Aufgrund dieser Konfiguration wird bei der Anwendung der Bezeichnung für eine E
 
 Wenn die von Ihnen angegebene Bezeichnung für den Rights Management-Schutz im Azure-Portal konfiguriert ist, ersetzt der S/MIME-Schutz den Rights Management-Schutz nur in Outlook. Für alle anderen Szenarien, die eine Bezeichnung unterstützen, wird der Rights Management-Schutz angewendet.
 
-Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie sie so, dass sie die einzelne benutzerdefinierte Aktion **Nicht weiterleiten** anwendet, wie dies im Abschnitt [Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertraulichen Informationen enthalten](../quickstart-label-dnf-protectedemail.md) beschrieben wird.
+Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie sie so, dass sie die einzelne benutzerdefinierte Aktion **Do Not Forward** (Nicht weiterleiten) anwendet. Eine Anleitung dazu finden Sie im folgenden Artikel: [Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten](../quickstart-label-dnf-protectedemail.md).
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>„Not now“ („Nicht jetzt“) für Dokumente bei Verwendung der obligatorischen Bezeichnung entfernen
 
@@ -351,10 +355,9 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
     Hinweis: Wenn es auch keinen Wert für **MainLabelId** gibt, erhält die Datei keine Bezeichnung. In diesem Fall können Sie die Befehle [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) und [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) anstelle der Befehle in Schritt 3 und 4 verwenden.
     
-    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
+    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort, oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-
-4. settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 

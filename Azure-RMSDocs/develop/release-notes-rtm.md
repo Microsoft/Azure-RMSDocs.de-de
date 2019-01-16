@@ -2,8 +2,8 @@
 title: Anmerkungen zu dieser Version
 description: SDK-Updates durch Revision, und andere Informationen für Entwickler.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 05ac80a9032467fafe09e39941117c6b4c52d439
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151349"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071198"
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
-Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases von RMS SDK 2.1.
+Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases des RMS SDK 2.1.
 
 ## <a name="october-2017---update"></a>Oktober 2017: Update
 
@@ -63,7 +63,7 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 -   Die **Dokumentenverfolgung** ist jetzt über eine Reihe neuer APIs möglich. Weitere Informationen hierzu finden Sie unter [Nachverfolgung von Inhalten](tracking-content.md).
 -   **Verschlüsselungstyp**: Zur Auswahl des Verschlüsselungspakets wird jetzt die Steuerung auf API-Ebene unterstützt. Weitere Informationen finden Sie unter [Verwenden der Verschlüsselung](working-with-encryption.md).
 
-    **Hinweis** Das Flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** wird in unserer API nicht länger zur Verfügung gestellt. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen. Bereits erstellte Anwendungen sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen. Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Weitere Informationen finden Sie unter [Verwenden der Verschlüsselung](working-with-encryption.md).
+    **Hinweis:**  Das Flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** wird in unserer API nicht länger zur Verfügung gestellt. Zukünftige Anwendungen werden daher nicht mehr kompiliert, wenn sie auf dieses Flag verweisen. Bereits erstellte Anwendungen sind weiterhin funktionsfähig, da wir das Flag privat im API-Code berücksichtigen. Die Vorteile des veralteten Verschlüsselungsalgorithmusflags können weiterhin durch einfaches Ändern eines Flags erreicht werden. Weitere Informationen finden Sie unter [Verwenden der Verschlüsselung](working-with-encryption.md).
 
 -   **Servermodusanwendungen**, die **IPC\_API\_MODE\_SERVER** als [API-Moduswert](https://msdn.microsoft.com/library/hh535236.aspx) verwenden, benötigen kein Anwendungsmanifest mehr. Sie können Ihre Anwendung mit einem RMS-Produktionsserver testen. Beim Wechseln zur Produktionsumgebung müssen Sie keine Produktionslizenz beziehen. Weitere Informationen zu Servermodusanwendungen finden Sie unter [Anwendungstypen](application-types.md).
 -   **Protokollierung** wurde jetzt über die Datei- und Ereignisablaufverfolgung für Windows-Methoden implementiert.
@@ -93,7 +93,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
     In dieser Version hinzugefügte Funktionen:
 
-    **Hinweis** – Weitere, hier nicht aufgeführte unterstützende Datentypen und -strukturen wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
+    **Hinweis:**  Weitere, hier nicht aufgeführte unterstützende Datentypen und -strukturen wurden für die Datei-API-Erweiterungen hinzugefügt. Alle Artikel, die für dieses Release aktualisiert wurden, sind als **vorläufig markiert und können geändert werden**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -116,19 +116,19 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 -   **Native Unterstützung für alle Dateitypen**
 
-    Systemeigene Unterstützung kann für einen beliebigen Dateityp (Erweiterung) mit dieser Version des Rights Management Services SDK 2.1 hinzugefügt werden. Beispielsweise wird für jede &lt;ext&gt;-Erweiterung (nicht Office und PDF) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung NATIVE lautet.
+    Native Unterstützung kann für einen beliebigen Dateityp (Erweiterung) mit dieser Version des Rights Management Services SDK 2.1 hinzugefügt werden. Beispielsweise wird für jede &lt;ext&gt;-Erweiterung (nicht Office und PDF) \*.p&lt;ext&gt; verwendet, wenn die Administratorkonfiguration für diese Erweiterung NATIVE lautet.
 
     Weitere Informationen zu unterstützten Dateitypen finden Sie unter [Datei-API-Konfiguration](file-api-configuration.md).
 
 -   Auf **Windows 7 SP1- und Windows Server 2008 R2 SP1-Computern** ohne das Update [KB2533623](https://support.microsoft.com/kb/2533623) tritt möglicherweise der folgende Fehler beim Schutz von Office-Dateien auf: "Der Parameter ist falsch. Fehlercode: 0 x 80070057". Wenn dies angezeigt wird, installieren Sie das Update, und versuchen Sie es erneut. Wenn das Problem weiterhin auftritt, geben Sie uns Feedback zur Betaversion des RMS SDK unter <rmcstbeta@microsoft.com>.
 
-    **Hinweis**  Ab der April 2015-Version wurde dem Installationsvorgang eine Überprüfung für diese KB hinzugefügt.
+    **Hinweis:**  Seit der im April 2015 veröffentlichten Version ist in den Installationsvorgang eine Überprüfung für diese KB integriert.
 
-     
+     
 
 -   **Datei-API-Integration**
 
-    Die Active Directory Rights Management Services-Datei-API bietet durch das Hinzufügen der Datei-API die folgenden Vorteile und Funktionen.
+    Die Datei-API für Active Directory Rights Management Services bietet durch das Hinzufügen der Datei-API die folgenden Vorteile und Funktionen.
 
       - Vertrauliche Daten können automatisch geschützt werden, ohne die Details der Information Rights Management (IRM)-Implementierung zu kennen, die von verschiedenen Dateiformaten verwendet wird.
 
@@ -136,19 +136,19 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
       - Alle Dateien außer System- und Office-Dateien können mit dem geschützten RMS-Dateiformat (PFILE) geschützt werden.
 
-    Die Datei-API wird über die vier folgenden neuen Funktionen implementiert: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) und [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    Die Datei-API wird über die folgenden vier neuen Funktionen implementiert: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) und [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     Die Datei-API erfordert, dass der Rights Management Service Client 2.1 auf dem Clientcomputer installiert ist und dass der Computer mit einem RMS-Server verbunden ist. Weitere Informationen zu RMS-Server, RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu RMS für IT-Spezialisten](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
--   **Problem**: Wenn Sie eine Lizenz von Grund auf neu erstellen, müssen Sie Eigentumsrechte explizit gewähren.
+-   **Problem:** Wenn Sie eine Lizenz von Grund auf neu erstellen, müssen Sie Eigentumsrechte explizit gewähren.
 
     **Lösung**: Die Anwendung muss dem Lizenzinhaber explizit **Besitzerrechte** hinzufügen, wenn eine von Grund auf neue Lizenz mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wird. Weitere Informationen finden Sie unter [Hinzufügen expliziter Besitzerrechte](add-explicit-owner-rights.md).
 
--   **Problem**: Wenn eine Anwendung [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) oder [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) zweimal für das gleiche Fenster über dessen Handle aufruft, gibt das RMS SDK 2.1 in **HRESULT** einen Fehler zurück.
+-   **Problem:** Wenn eine Anwendung [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) oder [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) zweimal für das gleiche Fenster über deren Handle aufruft, gibt das RMS SDK 2.1 in **HRESULT** einen Fehler zurück.
 
-    **Lösung**: Spezielle Anweisungen hierzu finden Sie in [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) und [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) im Abschnitt „Hinweise“.
+    **Lösung**: Spezielle Anweisungen hierzu finden Sie unter [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) und [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) im Abschnitt „Hinweise“.
 
--   **Problem**: Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen verwenden.
+-   **Problem:** Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen befolgen.
 
     **Lösung**: Wenn Sie „Ipcsecproc\*isv.dll“ für eine andere Architektur verwenden möchten (Sie haben beispielsweise das 64-Bit-SDK auf einem 64-Bit-Computer installiert, möchten die Bereitstellung aber jetzt auf einem 32-Bit-Computer durchführen, auf dem „Ipcsecproc\*isv.dll“ erforderlich ist), müssen Sie das 32-Bit-SDK auf einem anderen Computer installieren und die Dateien „Ipcsecproc\*isv.dll“ vom Ordner „%PROGRAMFILES%\\Microsoft Information Protection And Control“ (dem Standardordner bzw. von dem Speicherort, den Sie für die Installation des SDK angegeben haben) dorthin kopieren.
 
@@ -156,7 +156,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 **F**: Welches Standardverhalten gilt für die Sprache bei Funktionen, die einen LCID-Parameter akzeptieren?
 
-**A**: Verwenden Sie 0 für das Standardgebietsschema. In diesem Fall sucht AD RMS-Client 2.1 in der folgenden Reihenfolge nach Namen und Beschreibungen und ruft die erste verfügbare Sprache auf:
+**A**: Verwenden Sie 0 (null) für das Standardgebietsschema. In diesem Fall sucht der AD RMS-Client 2.1 in der folgenden Reihenfolge nach Namen und Beschreibungen und ruft die erste verfügbare Sprache auf:
 
     1 - User preferred LCID.
     2 - System locale LCID.

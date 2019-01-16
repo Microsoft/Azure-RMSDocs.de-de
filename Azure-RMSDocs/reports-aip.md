@@ -4,19 +4,19 @@ description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2018
+ms.date: 12/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
-ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
+ms.openlocfilehash: 0c2309fb635a05f6b0c836b7d4caf04d1c17a23a
+ms.sourcegitcommit: 6651546fa69538e2099b5c2b92ab0902d568a96a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068808"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815121"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -101,6 +101,11 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users).
 
+> [!NOTE]
+> Ihr Log Analytics-Arbeitsbereich für Azure Information Protection umfasst ein Kontrollkästchen für übereinstimmende Dokumentinhalte. Wenn Sie dieses Kontrollkästchen aktivieren, werden auch die tatsächlichen Daten erfasst, die von den Typen von vertraulichen Informationen oder Ihren benutzerdefinierten Bedingungen ermittelt wurden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn diese Daten nicht erfasst werden sollen, deaktivieren Sie das Kontrollkästchen.
+>
+> Derzeit werden die Informationen nicht in den Berichten, sondern nur über Abfragen angezeigt.
+
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Voraussetzungen für Azure Information Protection-Analysen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
@@ -124,7 +129,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
     
     - Verwenden eines vorhandenen Log Analytics-Arbeitsbereichs: Wählen Sie den Arbeitsbereich aus der Liste aus.
 
-Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie sich den Artikel [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace) durch.
 
 Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 
@@ -141,6 +146,9 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können.
 
 - **Datenermittlung (Vorschau)**: Dieser Bericht enthält beim Überprüfen oder von Windows Defender ATP gefundene Informationen zu Dateien.
+
+> [!NOTE]
+> Es gibt derzeit ein bekanntes Problem beim Anzeigen von Fragezeichen (**?**) in Pfaden und Dateinamen anstelle von Zeichen, bei denen es sich nicht um ASCII-Zeichen handelt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
 
 ## <a name="how-to-modify-the-reports"></a>Ändern von Berichten
 

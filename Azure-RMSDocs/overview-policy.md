@@ -4,17 +4,17 @@ description: Grundlegendes zu Bezeichnungen und Einstellungen in einer Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66a2c117523eb01089881b8210f12ed2f657ed4
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 6483600d8ba74a29a54965010441fe10dc309d8e
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304892"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814185"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Übersicht über die Azure Information Protection-Richtlinie
 
@@ -42,7 +42,9 @@ Eine Azure Information Protection-Richtlinie enthält die folgenden Elemente, di
 
 - Die Möglichkeit zum Bereitstellen eines benutzerdefinierten Hilfelinks für Benutzer.
 
-Azure Information Protection enthält eine [Standardrichtlinie](configure-policy-default.md) mit fünf Hauptbezeichnungen. Zwei dieser Bezeichnungen enthalten untergeordnete Bezeichnungen für Unterkategorien, falls diese benötigt werden. Wenn für eine Bezeichnung untergeordnete Bezeichnungen konfiguriert werden, können Benutzer den Hauptbezeichner nicht auswählen und müssen stattdessen eine der untergeordneten Bezeichnungen auswählen.
+Azure Information Protection enthält eine [Standardrichtlinie](configure-policy-default.md) mit fünf Hauptbezeichnungen. Zwei dieser Bezeichnungen enthalten untergeordnete Bezeichnungen für Unterkategorien, falls diese benötigt werden. 
+
+Wenn für eine Bezeichnung untergeordnete Bezeichnungen konfiguriert werden, können Benutzer den Hauptbezeichner nicht auswählen und müssen stattdessen eine der untergeordneten Bezeichnungen auswählen. In diesem Szenario wird die Hauptbezeichnung als Container für das ausschließliche Anzeigen des Namens und der Farbe unterstützt.
 
 Die Azure Information Protection-Bezeichnungen können mit dem vollständigen Bereich von Daten verwendet werden, die ein Unternehmen in der Regel erstellt und speichert – von der niedrigsten Klassifizierung für persönliche Daten bis zur höchsten Klassifizierung für streng vertrauliche Daten. 
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab2ea0f153d33e192958bf84800fc713d1b5b336
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
+ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382502"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429898"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -38,7 +38,7 @@ Die **API-Konstante oder der API-Wert** ist der SDK-Name für einen MSIPC API-Au
 
 |Nutzungsrecht|Beschreibung|Implementierung|
 |-------------------------------|---------------------------|-----------------|
-|Allgemeiner Name: **Inhalt bearbeiten, Bearbeiten** <br /><br />Richtliniencodierung: **DOCEDIT**|Ermöglicht es dem Benutzer, den Inhalt innerhalb der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu sortieren. Gewährt nicht das Recht, die bearbeitete Kopie speichern zu können.<br /><br />In Word ist dieses Recht nur bei Office 365 ProPlus mit einer Mindestversion von [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25) ausreichend, um **Änderungen nachverfolgen** zu aktivieren oder zu deaktivieren oder alle Features zum Nachverfolgen von Änderungen zu verwenden. Ist dies nicht der Fall, ist das Recht **Vollzugriff** erforderlich, um alle Optionen der Änderungsnachverfolgung zu verwenden. |Benutzerdefinierte Office-Rechte: Als Teil der Optionen **Ändern** und **Vollzugriff** . <br /><br />Name im klassischen Azure-Portal: **Inhalt bearbeiten**<br /><br />Name im Azure-Portal: **Inhalt bearbeiten, Bearbeiten (DOCEDIT)**<br /><br />Name in AD RMS-Vorlagen: **Bearbeiten** <br /><br />API-Konstante oder -Wert Nicht zutreffend.|
+|Allgemeiner Name: **Inhalt bearbeiten, Bearbeiten** <br /><br />Richtliniencodierung: **DOCEDIT**|Ermöglicht es dem Benutzer, den Inhalt innerhalb der Anwendung zu ändern, neu anzuordnen, zu formatieren oder zu sortieren. Gewährt nicht das Recht, die bearbeitete Kopie speichern zu können.<br /><br />In Word ist dieses Recht nur bei Office 365 ProPlus mit einer Mindestversion von [1807](https://docs.microsoft.com/officeupdates/monthly-channel-2018#version-1807-july-25) ausreichend, um **Änderungen nachverfolgen** zu aktivieren oder zu deaktivieren oder alle Features zum Nachverfolgen von Änderungen zu verwenden. Ist dies nicht der Fall, ist die folgende Berechtigung erforderlich, um alle Optionen der Änderungsnachverfolgung zu verwenden: **Vollzugriff**. |Benutzerdefinierte Office-Rechte: Als Teil der Optionen **Ändern** und **Vollzugriff** . <br /><br />Name im klassischen Azure-Portal: **Inhalt bearbeiten**<br /><br />Name im Azure-Portal: **Inhalt bearbeiten, Bearbeiten (DOCEDIT)**<br /><br />Name in AD RMS-Vorlagen: **Bearbeiten** <br /><br />API-Konstante oder -Wert Nicht zutreffend.|
 |Allgemeiner Name: **Speichern** <br /><br />Richtliniencodierung: **BEARBEITEN**|Ermöglicht es dem Benutzer, das Dokument am aktuellen Speicherort zu speichern.<br /><br />In Office-Anwendungen ermöglicht dieses Recht dem Benutzer, das Dokument zu ändern und unter einem neuen Namen zu speichern, wenn das ausgewählte Dateiformat nativ Unterstützung für den Rights Management-Schutz bietet. Die Dateiformatbeschränkung stellt dabei sicher, dass der ursprüngliche Schutz nicht aus der Datei entfernt werden kann.|Benutzerdefinierte Office-Rechte: Als Teil der Optionen **Ändern** und **Vollzugriff** . <br /><br />Name im klassischen Azure-Portal: **Datei speichern**<br /><br />Name im Azure-Portal: **Speichern (BEARBEITEN)**<br /><br />Name in AD RMS-Vorlagen: **Speichern** <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_WRITE L"EDIT"`|
 |Allgemeiner Name: **Kommentar** <br /><br />Richtliniencodierung: **KOMMENTAR**|Aktiviert die Option, dem Inhalt Anmerkungen oder Kommentare hinzufügen zu können.<br /><br />Dieses Recht ist im SDK und als Ad-hoc-Richtlinie im AzureInformationProtection- und RMS-Schutzmodul für Windows PowerShell verfügbar und wurde in einigen Anwendungen von Softwarelieferanten implementiert. Es wird allerdings nicht häufig verwendet und wird derzeit nicht von Office-Anwendungen unterstützt.|Benutzerdefinierte Office-Rechte: Nicht implementiert. <br /><br />Name im klassischen Azure-Portal: Nicht implementiert.<br /><br />Name im Azure-Portal: Nicht implementiert.<br /><br />Name in AD RMS-Vorlagen: Nicht implementiert. <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_COMMENT L"COMMENT`|
 |Allgemeiner Name: **Speichern unter, Exportieren** <br /><br />Richtliniencodierung: **EXPORTIEREN**|Aktiviert die Option zum Speichern des Inhalts unter einem anderen Dateinamen (Speichern unter). <br /><br />Für Office-Dokumente und den Azure Information Protection-Client kann die Datei ohne Schutz gespeichert und auch mit neuen Einstellungen und Berechtigungen erneut geschützt werden. Diese zulässigen Aktionen bedeuten, dass ein Benutzer, der über dieses Recht verfügt, eine Azure Information Protection-Bezeichnung aus einem geschützten Dokument oder einer geschützten E-Mail ändern oder entfernen kann. <br /><br />Durch dieses Recht hat der Benutzer auch die Möglichkeit, andere Exportoptionen in Anwendungen auszuführen, beispielsweise **An OneNote senden**.<br /><br /> Hinweis: Wenn dieses Recht nicht gewährt wird, lassen Office-Anwendungen einen Benutzer ein Dokument unter einem neuen Namen speichern, wenn das ausgewählte Dateiformat nativ Unterstützung für den Rights Management-Schutz bietet.|Benutzerdefinierte Office-Rechte: Als Teil der Option **Vollzugriff**. <br /><br />Name im klassischen Azure-Portal: **Inhalt exportieren (Speichern unter)** <br /><br />Name im Azure-Portal: **Speichern unter, Exportieren (EXPORTIEREN)**<br /><br />Name in AD RMS-Vorlagen: **Exportieren (Speichern unter)** <br /><br />API-Konstante oder -Wert: `IPC_GENERIC_EXPORT L"EXPORT"`|
@@ -117,7 +117,7 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 ## <a name="encrypt-only-option-for-emails"></a>Option „Encrypt Only“ (Nur verschlüsseln) für E-Mails
 
-Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, wird die neue E-Mail-Option **Encrypt Only** (Nur verschlüsseln) verfügbar.
+Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, ist die folgende neue E-Mail-Option verfügbar: **Nur verschlüsseln.**
 
 Diese Option steht Mandanten zur Verfügung, die Exchange Online verwenden. Sie kann in Outlook im Web als weitere Option zum Schutz der Rechte für eine E-Mail-Flussregel, als Office 365 DLP-Aktion und in Outlook ausgewählt werden, wenn Sie Office 365 ProPlus Version [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) oder höher nutzen. Weitere Informationen finden Sie in der folgenden Blogbeitragsankündigung des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
 
@@ -129,7 +129,7 @@ Alternativ können Sie diese Vererbung des Schutzes von Dokumenten ändern, inde
 
 Wenn der ursprüngliche Schutz eines angefügten Dokuments beibehalten werden soll, finden Sie weitere Informationen unter [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).
 
-Hinweis: Wenn Sie Verweise auf **DecryptAttachmentFromPortal** sehen, beachten Sie, dass dieser Parameter inzwischen für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) veraltet und nicht mehr verfügbar ist.
+Hinweis: Wenn Sie Verweise auf **DecryptAttachmentFromPortal** sehen, beachten Sie, dass dieser Parameter inzwischen für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) als veraltet gilt. Sollten Sie den Parameter nicht zuvor festgelegt haben, ist er daher nicht verfügbar. 
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management-Aussteller und Rights Management-Besitzer
 

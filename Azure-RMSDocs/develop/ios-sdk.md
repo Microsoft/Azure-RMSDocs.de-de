@@ -1,9 +1,9 @@
 ---
 title: Einrichten von iOS und OS X | Azure RMS
-description: iOS- und OS X-Anwendungen können das RMS SDK 4.2 verwenden, um mithilfe von AAD RM integrierte Datenschutzfunktionen in ihrer Anwendung zu aktivieren.
+description: iOS- und OS X-Anwendungen können das RMS SDK 4.2 verwenden, um mithilfe von AAD RM integrierte Datenschutzfunktionen in der Anwendung zu aktivieren.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 39856dc34396e1aa32a73f436da9744583519c86
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 620412b55ca583d8a84cf8d167ba890cea742b7f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150363"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070224"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS- und OS X-Setup
 
@@ -25,7 +25,7 @@ iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwen
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
-**Hinweis**  Diese SDK bietet keine Unterstützung für iPod Touch.
+**Hinweis:**   Diese SDK bietet keine Unterstützung für iPod Touch.
 
 
 -   [Voraussetzungen](#prerequisites)
@@ -46,7 +46,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Dieses SDK kann für Entwicklungen für iOS 7.0 und OS X 10.8 und höher verwendet werden.
 
--   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
+-   Authentifizierungsbibliothek: Es wird empfohlen, die [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) zu verwenden. Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
 
     Weitere Informationen finden Sie unter [ADAL für iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) oder [ADAL für OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal).
 
@@ -78,12 +78,12 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
     ![Legen Sie den Verweis auf den SDK-Installationsordner fest](../media/iOS-create-groups.png)
 
--   Um das MS RMS SDK 4.2 für das Ressourcenpaket hinzuzufügen, ziehen Sie die Datei MSRightsManagementResources.bundle aus dem Ordner "MSRightsManagement.framework/Resources" in den Abschnitt **Frameworks** des Projektnavigators.
+-   Um das MS RMS SDK 4.2 für das Ressourcenpaket hinzuzufügen, ziehen Sie die Datei „MSRightsManagementResources.bundle“ aus dem Ordner „MSRightsManagement.framework/Resources“ in den Abschnitt **Frameworks** des Projektnavigators.
 
     ![Hinzufügen einer Ressourcengruppe](../media/iOS-add-resource-bundle-02a.png)
 
 -   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
--   Das SDK basiert auf anderen Frameworks wie: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** und **Security**. Um diese Frameworks hinzuzufügen, wechseln Sie zum Abschnitt **Linked Frameworks and Libraries** des Zielbereichs **Zusammenfassung**. Erweitern Sie diesen Abschnitt, um die Frameworks hinzuzufügen.
+-   Das SDK basiert auf anderen Frameworks, z. B.: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** und **Security**. Um diese Frameworks hinzuzufügen, wechseln Sie zum Abschnitt **Linked Frameworks and Libraries** des Zielbereichs **Zusammenfassung**. Erweitern Sie diesen Abschnitt, um die Frameworks hinzuzufügen.
 
     Die Frameworks **UIKit** und **Foundation** sind erforderlich und in der Regel standardmäßig vorhanden.
 

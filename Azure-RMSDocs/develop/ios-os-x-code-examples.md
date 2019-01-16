@@ -2,8 +2,8 @@
 title: Codebeispiele für iOS/OS X | Azure RMS
 description: In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vorgestellt.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fc918b10dc8924002efd5eb71725b8c157461d7e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c71fe41da2eb29645c3c25d0044f969ebdca1c9a
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150907"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070225"
 ---
 # <a name="iosos-x-code-examples"></a>Codebeispiele für iOS/OS X
 
@@ -35,7 +35,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
 ### <a name="scenario-consume-an-rms-protected-file"></a>Szenario: Nutzen einer RMS-geschützten Datei
 
 
-- **Schritt 1**: Erstellen eines [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekts
+- **Schritt 1**: Erstellen Sie ein [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekt.
 
  **Beschreibung**: Instanziieren Sie ein [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekt mit dessen create-Methode. Diese Methode implementiert die Dienstauthentifizierung mit [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx), um durch die Übergabe einer Instanz von **MSAuthenticationCallback** als Parameter *authenticationCallback* an die MSIPC-API ein Token abzurufen. Den Aufruf von [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) finden Sie im folgenden Beispielcodeabschnitt.
 
@@ -53,7 +53,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
             }];
         }
 
-- **Schritt 2**: Einrichten der Authentifizierung mit der Active Directory-Authentifizierungsbibliothek (ADAL).
+- **Schritt 2**: Richten Sie die Authentifizierung mit der Active Directory-Authentifizierungsbibliothek (ADAL) ein.
 
   **Beschreibung**: In diesem Schritt erfahren Sie, wie ADAL zum Implementieren von [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) mit Beispielauthentifizierungsparametern verwendet wird. Weitere Informationen zur Verwendung von ADAL finden Sie in der Azure AD-Authentifizierungsbibliothek (ADAL).
 
@@ -94,7 +94,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
                           }];
        }
 
--   **Schritt 3**: Überprüfen der Bearbeitungsrechte dieses Benutzers mit diesem Inhalt mithilfe der [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx)-Methode eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts
+-   **Schritt 3:** Überprüfen Sie mithilfe der [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx)-Methode eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts, ob die Bearbeitungsrechte dieses Benutzers mit diesem Inhalt vorhanden sind.
 
         - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
         {
@@ -112,7 +112,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
 
 In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx)) abgerufen. Dabei wird die erste Vorlage zum Erstellen einer Richtlinie ausgewählt und anschließend die neue geschützte Datei erstellt und in diese geschrieben.
 
--   **Schritt 1**: Abrufen der Liste der Vorlagen
+-   **Schritt 1**: Rufen Sie die Liste mit Vorlagen ab.
 
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -124,7 +124,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
                                    }];
         }
 
--   **Schritt 2**: Erstellen eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts mit der ersten Vorlage in der Liste
+-   **Schritt 2**: Erstellen Sie ein [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt mit der ersten Vorlage in der Liste.
 
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -139,7 +139,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
--   **Schritt 3**: Erstellen eines [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx)-Objekts und Füllen des Objekts mit Inhalt
+-   **Schritt 3:** Erstellen Sie ein [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx)-Objekt, und fügen Sie diesem Inhalt hinzu.
 
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
@@ -156,7 +156,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
 ### <a name="scenario-open-a-custom-protected-file"></a>Szenario: Öffnen einer benutzerdefinierten geschützten Datei
 
 
--   **Schritt 1**: Erstellen eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts aus einem *serializedContentPolicy*-Objekt
+-   **Schritt 1**: Erstellen Sie ein [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt aus einem *serializedContentPolicy*-Objekt.
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -227,7 +227,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **Schritt 2**: Erstellen eines benutzerdefinierten [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts aus der Richtlinienbeschreibung *selectedDescriptor*
+-   **Schritt 2**: Erstellen Sie ein benutzerdefiniertes [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt über den Richtliniendeskriptor *selectedDescriptor*.
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
@@ -241,7 +241,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
--   **Schritt 3**: Erstellen und Füllen des [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx)-Objekts mit Inhalt und anschließendes Schließen des Objekts
+-   **Schritt 3:** Erstellen Sie das [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx)-Objekt, fügen Sie Inhalt zu diesem hinzu, und schließen Sie es anschließend.
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {
