@@ -4,18 +4,18 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 01/08/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: fba2a1a804c085c44efc79d0f0ac69988f681aaa
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: 87e82a34e38bb66df2ecb10b91ec371f35bd5652
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382519"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071317"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -53,12 +53,13 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />- 4 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](requirements.md#firewalls-and-network-infrastructure) verfügt. Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).|
+|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />– 8 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|Windows Server 2016 oder Windows Server 2012 R2 <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br />Stellen Sie sicher, dass dieser Computer über die für Azure Information Protection erforderliche [Internetkonnektivität](requirements.md#firewalls-and-network-infrastructure) verfügt. Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).|
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz<br /><br />– Sysadmin-Rolle zum Installieren der Überprüfung|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Bei der Installation von mehreren Instanzen der Überprüfung erfordert jede Überprüfungsinstanz ihre eigene SQL Server-Instanz.<br /><br />Wenn Sie die Überprüfung installieren und Ihr Konto über die Sysadmin-Rolle verfügt, wird während des Installationsprozesses automatisch die AzInfoProtectionScanner-Datenbank erstellt und dem Dienstkonto, das die Überprüfung ausführt, die erforderliche Db_owner-Rolle gewährt. Wenn die Sysadmin-Rolle nicht gewährt wird oder aufgrund der Richtlinien Ihrer Organisation die manuelle Erstellung und Konfiguration von Datenbanken erforderlich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Die Größe der Konfigurationsdatenbank variiert je nach Bereitstellung. Allerdings empfehlen wir, 500 MB je 1.000.000 zu überprüfende Dateien zuzuordnen. |
 |Dienstkonto zum Ausführen der Überprüfung|Dieses Konto führt nicht nur den Überprüfungsdienst aus, sondern es wird auch für Azure AD authentifiziert und lädt die Azure Information Protection-Richtlinie herunter. Dieses Konto muss ein Active Directory-Konto sein und mit Azure AD synchronisiert werden. Wenn Sie dieses Konto aufgrund Ihrer Organisationsrichtlinien nicht synchronisieren können, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Für dieses Dienstkonto gelten die folgenden Anforderungen:<br /><br />Berechtigung - **Lokales Anmelden**. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. Wenn die Gewährung dieser Berechtigung selbst für einen kurzen Zeitraum aufgrund Ihrer Organisationsrichtlinien nicht möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Berechtigung - **Als Dienst anmelden**. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für die Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung stets Zugriff auf geschützte Dateien hat, muss dieses Konto im Azure Rights Management-Dienst ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). Wenn Sie darüber hinaus [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) für eine stufenweise Bereitstellung implementiert haben, stellen Sie sicher, dass dieses Konto in den von Ihnen konfigurierten Onboarding-Steuerelementen enthalten ist.|
 |Der Azure Information Protection-Client ist auf dem Windows Server-Computer installiert.|Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](./rms-client/client-admin-guide.md). Wenn Sie die Überprüfung bereits installiert haben und nun auf eine neuere Version aktualisieren müssen, finden Sie weitere Informationen hierzu unter [Aktualisieren der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Weitere Informationen zur Konfiguration dieser Bedingungen finden Sie unter [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md).<br /><br />Weitere Informationen zum Konfigurieren dieser Bezeichnungen zum Anwenden des Schutzes auf Dateien finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).<br /><br />Diese Bezeichnungen sind in der globalen Richtlinie oder in [bereichsbezogenen Richtlinien](configure-policy-scope.md) zu finden.<br /><br />Hinweis: Zwar können Sie die Überprüfung auch dann ausführen, wenn Sie über keine konfigurierten Bezeichnungen verfügen, die die automatische Klassifizierung anwenden, dieses Szenario wird in der vorliegenden Anleitung jedoch nicht behandelt. [Weitere Informationen](#using-the-scanner-with-alternative-configurations)|
-|Für zu scannende Office-Dokumente:<br /><br />-97-2003-Dateiformate und die offene Office-XML-Formate für Word, Excel und PowerPoint|Weitere Informationen zu den Dateitypen, die vom Scanner für diese Dateiformate unterstützt werden, finden Sie unter [Vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md). 
+|Für zu scannende Office-Dokumente:<br /><br />-97-2003-Dateiformate und die offene Office-XML-Formate für Word, Excel und PowerPoint|Weitere Informationen zu den Dateitypen, die vom Scanner für diese Dateiformate unterstützt werden, finden Sie unter [Vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md).|
+|Für lange Pfade:<br /><br />– höchstens 260 Zeichen, es sei denn, der Scanner ist unter Windows 2016 installiert und der Computer ist für die Unterstützung von langen Pfaden konfiguriert|Windows 10 und Windows Server 2016 unterstützen Pfade, die mehr als 260 Zeichen umfassen, mit der folgenden [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Lokale Computerrichtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** > **Alle Einstellungen** > **NTFS** > **Lange Win32-Pfade aktivieren**<br /><br /> Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 Wenn Sie nicht alle Anforderungen in der Tabelle erfüllen können, da sie aufgrund der Richtlinien Ihrer Organisation nicht zulässig sind, finden Sie im nächsten Abschnitt Alternativen.
 
@@ -192,7 +193,7 @@ Mit der Standardkonfiguration der Überprüfung können Sie nun die erste Überp
     
         Start-AIPScan
     
-    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie die Option **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> **Jetzt überprüfen** verwenden.
+    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie zu **Scanner** > **Knoten (Vorschau)** > **\<*Scannerknoten*>**> **Scan now** (Jetzt überprüfen) navigieren.
 
 2. Warten Sie, bis die Überprüfung ihren Zyklus abgeschlossen hat, indem Sie den folgenden Befehl ausführen:
     
@@ -227,7 +228,7 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
     
         Start-AIPScan
     
-    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Jetzt überprüfen** verwenden.
+    Alternativ können Sie die Überprüfung im Azure-Portal vom Blatt **Azure Information Protection** starten, wenn Sie zu **Scanner**\>**Knoten (Vorschau)** \> **\<*Scannerknoten*\>**\> **Scan now** (Jetzt überprüfen) navigieren.
 
 3. Überwachen Sie das Ereignisprotokoll erneut, und achten Sie auf den Informationstyp **911** mit einem Zeitstempel, der nach der im vorherigen Schritt notierten Startzeit der Überprüfung liegt. 
     
@@ -238,61 +239,72 @@ Da der Zeitplan als fortlaufend konfiguriert wurde, startet die Überprüfung ei
 
 ## <a name="how-files-are-scanned"></a>So werden Dateien überprüft
 
-Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlossene](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) Dateien übersprungen, etwa ausführbare Dateien und Systemdateien.
+Der Scanner führt die folgenden Prozesse zur Überprüfung von Dateien aus.
 
-Sie können dieses Verhalten ändern, indem Sie eine Liste mit Dateitypen definieren, die überprüft oder von der Überprüfung ausgeschlossen werden sollen. Wenn Sie diese Liste angeben, aber kein Datenrepository, gilt die Liste für alle Datenrepositorys, für die keine eigene Liste angegeben wurde. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) kann ein Dateityp aus der Liste entfernt werden.
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. Bestimmen, ob Dateien überprüft oder von der Überprüfung ausgeschlossen werden sollen 
+Bei der Überprüfung werden [von der Klassifizierung und vom Schutz ausgeschlossene](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection) Dateien wie ausführbare Dateien und Systemdateien übersprungen.
 
-Die Überprüfung verwendet dann Windows-IFilter, um die folgenden Dateitypen zu überprüfen. Bei diesen Dateitypen wird das Dokument mithilfe der Bedingungen bezeichnet, die Sie für Ihre Bezeichnungen angegeben haben.
+Sie können dieses Verhalten ändern, indem Sie eine Liste mit Dateitypen definieren, die überprüft oder von der Überprüfung ausgeschlossen werden sollen. Wenn Sie diese Liste angeben, aber kein Datenrepository, gilt die Liste für alle Datenrepositorys, für die keine eigene Liste angegeben wurde. Verwenden Sie zum Angeben der Liste [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). 
 
-|Anwendungstyp|Dateityp|
-|--------------------------------|-------------------------------------|
-|Word|.docx; .docm; .dotm; .dotx|
-|Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
-|PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF |PDF|
-|Text|.txt; .xml; .csv|
+Nachdem Sie die Liste mit Dateitypen angegeben haben, können Sie mithilfe von [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) einen neuen Dateityp zur Liste hinzufügen. Mit [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes) kann ein Dateityp aus der Liste entfernt werden.
 
-Darüber hinaus kann die Überprüfung auch optische Zeichenerkennung (Optical Character Recognition, OCR) verwenden, um TIFF-Bilder mit der Dateinamenerweiterung „.tiff“ zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und die [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, der die Überprüfung ausführt.
+### <a name="2-inspect-and-label-files"></a>2. Überprüfen und Bezeichnen von Dateien
 
-Standardmäßig werden nur Office-Dateitypen und PDF-Dateien bei der Überprüfung geschützt. Text- und Bilddateien werden also nicht geschützt, sofern Sie nicht die [Registrierung bearbeiten](#editing-the-registry-for-the-scanner), um die Dateitypen anzugeben:
+Anschließend verwendet der Scanner Filter, um unterstützte Dateitypen zu überprüfen. Diese Filter werden auch vom Betriebssystem für Windows Search und die Indizierung verwendet. Wenn keine anderen Konfigurationen vorhanden sind, wird Windows-IFilter verwendet, um Dateitypen zu überprüfen, die nicht für Word-, Excel-, PowerPoint- und PDF-Dokumente sowie Textdateien verwendet werden.
 
-- Wenn Sie die Dateitypen TXT, XML oder CSV nicht in der Registrierung hinzufügen: Dateien mit dieser Erweiterung werden nicht mit einer Bezeichnung versehen, da diese Dateitypen die ausschließliche Klassifizierung nicht unterstützen.
+Eine vollständige Liste der standardmäßig unterstützten Dateitypen und zusätzliche Informationen zum Konfigurieren vorhandener Filter, die ZIP- und TIFF-Dateien umfassen, finden Sie unter [File types supported for inspection (Für die Überprüfung unterstützte Dateitypen)](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection).
 
-- Wenn Sie nach dem Konfigurieren des Windows-TIFF-IFilters den Dateityp TIFF nicht in der Registrierung hinzufügen: Dateien mit dieser Erweiterung werden zwar mit einer Bezeichnung versehen, aber wenn diese nicht für den Schutz konfiguriert ist, wird dieser Schutz nicht angewendet.
+Nach der Überprüfung können diese Dateitypen mithilfe der Bedingungen bezeichnet werden, die Sie für Ihre Bezeichnungen angegeben haben. Wenn Sie den Suchmodus verwenden, ist für diese Dateien stattdessen festgelegt, dass sie die Bedingungen enthalten, die Sie für Ihre Bezeichnungen angegeben haben, oder dass sämtliche bekannten Typen von vertraulichen Informationen enthalten sind. 
 
-Schließlich überprüft die Überprüfung die übrigen Dateitypen zwar nicht, wendet aber die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
+Der Scanner kann die Dateien jedoch unter den folgenden Bedingungen nicht bezeichnen:
 
-|Anwendungstyp|Dateityp|
-|--------------------------------|-------------------------------------|
-|Projekt|.mpp; .mpt|
-|Herausgeber|.pub|
-|Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
-|XPS|.xps; .oxps; .dwfx|
-|Solidworks|.sldprt; .slddrw; .sldasm|
-|JPEG |.jpg; .jpeg; .jpe; .jif; .jfif; .jfi|
-|PNG |PNG|
-|GIF|GIF|
-|Bitmap|.bmp; .giff|
-|TIFF|.tif; .tiff|
-|Photoshop|.psdv|
-|DigitalNegative|.dng|
-|Pfile|PFILE|
+- Wenn die Bezeichnung zwar die Klassifizierung, aber keinen Schutz anwendet und der Dateityp nicht [ausschließlich die Klassifizierung unterstützt](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)
 
-Wenn die Überprüfung eine Bezeichnung mit Schutz anwendet, werden standardmäßig nur Office-Dateitypen und PDF-Dateien geschützt. Sie können dieses Verhalten so ändern, dass zusätzliche Dateitypen geschützt werden. Wenn eine Bezeichnung jedoch allgemeinen Schutz auf Dokumente anwendet, wird die Erweiterung in „.pfile“ geändert. Andere Dateitypen können auch ihre Erweiterung ändern. Darüber hinaus sind diese Dateien schreibgeschützt, bis sie von einem autorisierten Benutzer geöffnet und in ihrem nativen Format gespeichert werden.
+- Wenn die Bezeichnung zwar Klassifizierung und Schutz anwendet, aber der Scanner den Dateityp nicht schützt
+    
+    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Sie können andere Dateitypen schützen, indem Sie wie im folgenden Abschnitt beschrieben [die Registrierung bearbeiten](#editing-the-registry-for-the-scanner).
+
+Beispielsweise kann der Scanner, nachdem er TXT-Dateien überprüft hat, keine Bezeichnungen anwenden, die nur für die Klassifizierung und nicht für den Schutz konfiguriert sind, weil der TXT-Dateityp dies nicht unterstützt. Wenn die Bezeichnung für Klassifizierung und Schutz konfiguriert ist und die Registrierung für den TXT-Dateityp bearbeitet wird, kann der Scanner die Datei bezeichnen. 
+
+> [!TIP]
+> Möglicherweise müssen Sie dabei die Anzahl der dynamischen Ports für das Betriebssystem erhöhen, das die Datei hostet, wenn der Scanner angehalten wird und nicht mit der Überprüfung einer großen Anzahl an Dateien in einem Repository fortfährt. Ein Grund dafür, warum der Scanner die Anzahl an zulässigen Netzwerkverbindungen überschreitet und daher angehalten wird, ist die Serverhärtung für SharePoint.
+> 
+> Prüfen Sie in der „%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog“-Datei (wenn mehrere Protokolle vorhanden sind, werden diese gemeinsam in einer ZIP-Datei gespeichert), ob die folgende Fehlermeldung für den Scanner protokolliert wurde, um festzustellen, ob dies der Grund für die Beendigung des Scanner ist: **Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port.** (Die Verbindung mit dem Remoteserver kann nicht hergestellt werden. ---> System.Net.Sockets.SocketException: Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden IP:port)
+>
+> Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance). 
+
+
+
+### <a name="3-label-files-that-cant-be-inspected"></a>3. Bezeichnen von Dateien, die nicht überprüft werden können
+Bei Dateitypen, die nicht überprüft werden können, wendet der Scanner die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
+
+Wie im vorherigen Schritt kann der Scanner die Dateien jedoch unter den folgenden Bedingungen nicht bezeichnen:
+
+- Wenn die Bezeichnung zwar die Klassifizierung, aber keinen Schutz anwendet und der Dateityp nicht [ausschließlich die Klassifizierung unterstützt](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-classification-only)
+
+- Wenn die Bezeichnung zwar Klassifizierung und Schutz anwendet, aber der Scanner den Dateityp nicht schützt
+    
+    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Sie können andere Dateitypen schützen, indem Sie wie im folgenden Abschnitt beschrieben [die Registrierung bearbeiten](#editing-the-registry-for-the-scanner).
+
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Bearbeiten der Registrierung für die Überprüfung
 
-Um das Standardverhalten der Überprüfung zum Schutz von Nicht-Office- und Nicht-PDF-Dateien zu ändern, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
+Um das Standardverhalten der Überprüfung zum Schutz von Dateien zu ändern, bei denen es sich weder um Office- noch um PDF-Dateien handelt, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen, sowie den Typ des Schutzes (nativ oder generisch) festlegen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
 
-- Die Überprüfung hat ein eigenes Standardverhalten: Standardmäßig werden nur die Office-Dateiformate und PDF-Dokumente geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner geschützt.
+- Die Überprüfung hat ein eigenes Standardverhalten: Standardmäßig werden nur die Office-Dateiformate und PDF-Dokumente geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
 
 - Wenn Sie das gleiche Standardschutzverhalten wie beim Azure Information Protection-Client wünschen, bei dem alle Dateien automatisch nativen oder generischen Schutz haben, gehen Sie wie folgt vor: Geben Sie den Platzhalter `*` als Registrierungsschlüssel und `Default` als Wertdaten an.
 
 Wenn Sie die Registrierung bearbeiten, erstellen Sie manuell die beiden Schlüssel **MSIPC** und **FileProtection**, falls noch nicht vorhanden, sowie einen Schlüssel für jede Erweiterung.
 
-Damit die Überprüfung beispielsweise neben Office- und PDF-Dateien auch TIFF-Bilder schützt, sieht die Registrierung nach Ihrer Bearbeitung wie folgt aus:
+Damit die Überprüfung beispielsweise neben Office- und PDF-Dateien auch TIFF-Bilder schützt, sieht die Registrierung nach Ihrer Bearbeitung wie in der folgenden Abbildung aus. TIFF-Dateien unterstützen als Bilddateien den nativen Schutz. Die entsprechende Erweiterung lautet „.ptiff“.
 
 ![Bearbeiten der Registrierung für die Überprüfung zum Anwenden von Schutz](./media/editregistry-scanner.png)
+
+Eine Liste mit Text- und Bilddateitypen, die zwar ebenfalls den nativen Schutz unterstützen, aber in der Registrierung angegeben werden müssen, finden Sie im Administratorleitfaden unter [Unterstützte Dateitypen für Klassifizierung und Schutz](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
+
+Geben Sie für Dateien, die den nativen Schutz nicht unterstützten, die Erweiterung als einen neuen Schlüssel und **PFILE** für den generischen Schutz an. Die Erweiterung für die geschützte Datei lautet dann „.pfile“.
+
 
 ## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
 
@@ -300,7 +312,7 @@ Im ersten Überprüfungszyklus untersucht die Überprüfung alle Dateien in den 
 
 Sie können erzwingen, dass die Überprüfung alle Dateien erneut untersucht, indem Sie den Befehl [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem Parameter `-Reset` ausführen. Die Überprüfung muss für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass der `-Schedule`-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) auf **Manual** festgelegt wird.
 
-Alternativ können Sie im Azure-Portal vom Blatt **Azure Information Protection** die Überprüfung aller Dateien erzwingen, indem Sie unter **Überprüfung** > **Knoten (Vorschau)** > \**<* Überprüfungsknoten*>**> die Option **Alle Dateien erneut überprüfen** verwenden.
+Alternativ können Sie im Azure-Portal vom Blatt **Azure Information Protection** die Überprüfung aller Dateien erzwingen, indem Sie unter **Scanner** \> **Knoten (Vorschau)** \> **\<*Scannerknoten*\>**\> die Option **Rescan all files** (Alle Dateien erneut überprüfen) auswählen.
 
 Das erneute Überprüfen aller Dateien ist nützlich, wenn Sie möchten, dass die Berichte alle Dateien enthalten. Diese Konfiguration wird in der Regel verwendet, wenn die Überprüfung im Ermittlungsmodus ausgeführt wird. Wenn eine vollständige Überprüfung abgeschlossen ist, ändert sich der Überprüfungstyp automatisch auf „inkrementell“, sodass bei nachfolgenden Überprüfungen nur noch neue oder geänderte Dateien untersucht werden.
 
@@ -438,9 +450,9 @@ Information **911**
 
 **Scanner cycle finished.** (Überprüfungszyklus wurde abgeschlossen)
 
-Dieses Ereignis wird protokolliert, wenn die Überprüfung eine einmalige Überprüfung seit der Inbetriebnahme des Servers oder eine Schleife mit kontinuierlichen Ausführungen beendet hat.
+Dieses Ereignis wird protokolliert, wenn der Scanner eine manuelle Überprüfung oder eine Schleife mit kontinuierlichen Ausführungen beendet hat.
 
-Wenn die Überprüfung so konfiguriert wurde, dass sie einmalig und nicht kontinuierlich ausgeführt wird, müssen Sie zum erneuten Überprüfen der Dateien den Zeitplan auf **OneTime** (einmalig) oder **Continuous** (fortlaufend) festlegen und den Dienst anschließend manuell neu starten. Verwenden Sie zum Ändern des Zeitplans das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) und den Parameter **Schedule**.
+Wenn der Scanner so konfiguriert wurde, dass er manuell anstelle von fortlaufend ausgeführt wird, verwenden Sie das [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)-Cmdlet, um eine erneute Überprüfung durchzuführen. Verwenden Sie zum Ändern des Zeitplans das Cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) und den Parameter **Schedule**.
 
 ----
 
