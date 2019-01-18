@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c0fc5812eedd7cce5c0e17231d9ee19dbf4edd1b
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 57dd5faad33681bbf87045b61335e11baaa973a2
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305674"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393968"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -29,7 +29,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 ## <a name="installing-the-rms-connector"></a>Installieren des RMS-Verbindungsdiensts
 
 1.  Identifizieren Sie die Computer (mindestens zwei), auf denen
-2.   der RMS-Verbindungsdienst ausgeführt werden soll. Sie müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
+2.  der RMS-Verbindungsdienst ausgeführt werden soll. Sie müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
 
     > [!NOTE]
     > Sie installieren einen einzelnen RMS-Verbindungsdienst (bestehend aus mehreren Servern zwecks Hochverfügbarkeit) pro Mandant (Office 365-Mandant oder Azure AD-Mandant). Im Gegensatz zu Active Directory RMS müssen Sie nicht in jeder Gesamtstruktur einen RMS-Verbindungsdienst installieren.
@@ -53,7 +53,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Verbindungsdiensts ein.
 
 ## <a name="entering-credentials"></a>Eingeben von Anmeldeinformationen
-Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie **admin@contoso.com** eingeben und dann das Kennwort für dieses Konto angeben.
+Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie <strong>admin@contoso.com</strong> eingeben und dann das Kennwort für dieses Konto angeben.
 
 Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. 
 
@@ -63,40 +63,40 @@ Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#
 
 Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
--   **Globaler Administrator für Ihren Azure-Mandanten**: Konto, das als globaler Administrator für Ihren Office 365-oder Azure AD-Mandanten fungiert.
+- **Globaler Administrator für Ihren Azure-Mandanten**: Konto, das als globaler Administrator für Ihren Office 365-oder Azure AD-Mandanten fungiert.
 
--   **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
+- **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
 
--   **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungsdiensts für Ihre Organisation gewährt wurden.
+- **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungsdiensts für Ihre Organisation gewährt wurden.
 
-    > [!NOTE]
-    > Die Azure Rights Management-Rollen „GlobalAdministrator“ und „ConnectorAdministrator“ werden mithilfe des Azure RMS-Cmdlets [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) Konten zugewiesen.
-    > 
-    > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
-    >
-    > 1.  Falls noch nicht geschehen, müssen Sie Windows PowerShell für Azure Rights Management herunterladen und installieren. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
-    >
-    >     Starten Sie Windows PowerShell mit dem Befehl **Als Administrator ausführen**, und stellen Sie mithilfe des Befehls [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) eine Verbindung mit dem Azure RMS-Dienst her:
-    >
-    >     ```
-    >     Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
-    >     ```
-    > 2.  Führen Sie dann mit nur einem der folgenden Parameter den Befehl [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) aus:
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-    >     ```
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-    >     ```
-    >
-    >     ```
-    >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-    >     ```
-    >     Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
-    >
-    >     Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
+  > [!NOTE]
+  > Die Azure Rights Management-Rollen „GlobalAdministrator“ und „ConnectorAdministrator“ werden mithilfe des Azure RMS-Cmdlets [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) Konten zugewiesen.
+  > 
+  > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
+  > 
+  > 1. Falls noch nicht geschehen, müssen Sie Windows PowerShell für Azure Rights Management herunterladen und installieren. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+  > 
+  >    Starten Sie Windows PowerShell mit dem Befehl **Als Administrator ausführen**, und stellen Sie mithilfe des Befehls [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) eine Verbindung mit dem Azure RMS-Dienst her:
+  > 
+  >    ```
+  >    Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+  >    ```
+  > 2. Führen Sie dann mit nur einem der folgenden Parameter den Befehl [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) aus:
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
+  >    ```
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
+  >    ```
+  > 
+  >    ```
+  >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
+  >    ```
+  >    Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
+  > 
+  >    Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
 Während der Installation des RMS-Connectors werden alle Softwarevoraussetzungen überprüft und installiert, Internetinformationsdienste (IIS) wird installiert, falls noch nicht vorhanden, und die Conector-Software wird installiert und konfiguriert. Darüber hinaus wird Azure RMS für die Konfiguration vorbereitet, indem Folgendes erstellt wird:
 
