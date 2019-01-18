@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 10e381e68c75f2f401439ee330bf952b01b22c30
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 178e191a4099e0e077a45892b3b72310a995a528
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305283"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394011"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -69,30 +69,30 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 2016, Office 
 
 ### <a name="to-force-an-immediate-refresh"></a>So erzwingen Sie eine sofortige Aktualisierung
 
-1.  Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
+1. Löschen Sie mithilfe eines Registrierungs-Editors die Daten für den Wert **LastUpdatedTime** . Es kann beispielsweise **2015-04-20T15:52** angezeigt werden. Löschen Sie "2015-04-20T15:52", sodass keine Daten angezeigt werden. Verwenden Sie die folgende Informationen, um den Registrierungspfad zu finden, in dem diese Registrierungswertdaten gelöscht werden sollen.
 
-    **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
+   **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
-    **Typ:** REG_SZ
+   **Typ:** REG_SZ
 
-    **Wert:** LastUpdatedTime
+   **Wert:** LastUpdatedTime
 
-    > [!TIP]
-    > Im Registrierungspfad bezieht sich <*MicrosoftRMS_FQDN*> auf den FQDN Ihres Microsoft RMS-Diensts. Wenn Sie diesen Wert überprüfen möchten:
+   > [!TIP]
+   > Im Registrierungspfad bezieht sich <*MicrosoftRMS_FQDN*> auf den FQDN Ihres Microsoft RMS-Diensts. Wenn Sie diesen Wert überprüfen möchten:
+   > 
+   > Führen Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+   > 
+   > Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
+   > 
+   > Beispiel: **LicensingIntranetDistributionPointUrl:https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > 
+   > Entfernen Sie **https://** und **/_wmcs/licensing** aus dieser Zeichenfolge des Werts. Bei dem verbleibenden Wert handelt es sich um den FQDN Ihres Microsoft RMS-Diensts. In unserem Beispiel hat der FQDN des Microsoft RMS-Diensts folgenden Wert:
+   > 
+   > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    > Führen Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
-    >
-    > Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
-    >
-    > Beispiel: **LicensingIntranetDistributionPointUrl:https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
-    > 
-    > Entfernen Sie **https://** und **/_wmcs/licensing** aus dieser Zeichenfolge des Werts. Bei dem verbleibenden Wert handelt es sich um den FQDN Ihres Microsoft RMS-Diensts. In unserem Beispiel hat der FQDN des Microsoft RMS-Diensts folgenden Wert:
-    >
-    >**5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+2. Löschen Sie den folgenden Ordner und alle darin enthaltenen Dateien: **%localappdata%\Microsoft\MSIPC\Templates**
 
-2.  Löschen Sie den folgenden Ordner und alle darin enthaltenen Dateien: **%localappdata%\Microsoft\MSIPC\Templates**
-
-3.  Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
+3. Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
 
 
 ## <a name="see-also"></a>Weitere Informationen

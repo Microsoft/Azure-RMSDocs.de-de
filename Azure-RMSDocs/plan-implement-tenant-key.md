@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3efae21dfabdb347826b177d5c58a3498d3276c5
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 17de145dc063b7a79f07562b111a932aa5959065
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173960"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394389"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -79,7 +79,7 @@ Bei dieser Option geschieht Folgendes:
 3. Die Kopie des Schlüssels wird durch Azure Key Vault geschützt.
 
 > [!NOTE]
-
+> 
 > Als zusätzliche Schutzmaßnahme verwendet Azure Key Vault in Regionen wie Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien getrennte Sicherheitsdomänen für seine Rechenzentren. Außerdem verwendet Azure Key Vault verschiedene Azure-Instanzen wie Microsoft Azure Deutschland und Azure Government. 
 
 Auch wenn dies optional ist, möchten Sie wahrscheinlich auch die beinahe in Echtzeit erstellten Nutzungsprotokolle von Azure Information Protection verwenden, um genau verfolgen zu können, wie und wann Ihr Mandantenschlüssel verwendet wird.
@@ -181,10 +181,10 @@ Führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-
 
 > [!IMPORTANT]
 > In diesem Beispiel ist „aaaabbbbcccc111122223333“ die Version des zu verwendenden Schlüssels. Wenn Sie die Version nicht angeben, wird ohne Warnung die aktuelle Version des Schlüssels verwendet, und der Befehl scheint zu funktionieren. Wenn jedoch Ihr Schlüssel in Key Vault später aktualisiert (erneuert) wird, wird der Azure Rights Management-Dienst für Ihren Mandanten nicht mehr funktionieren, auch wenn Sie den Befehl „Use-AadrmKeyVaultKey“ erneut ausführen.
->
->Stellen Sie sicher, dass Sie die Schlüsselversion zusätzlich zum Schlüsselnamen angeben, wenn Sie diesen Befehl ausführen. Sie können den Azure Key Vault-Befehl [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) verwenden, um die Versionsnummer des aktuellen Schlüssels zu erhalten. Beispiel: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+> 
+> Stellen Sie sicher, dass Sie die Schlüsselversion zusätzlich zum Schlüsselnamen angeben, wenn Sie diesen Befehl ausführen. Sie können den Azure Key Vault-Befehl [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) verwenden, um die Versionsnummer des aktuellen Schlüssels zu erhalten. Beispiel: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Wenn Sie sicherstellen müssen, dass der Schlüssel-URL richtig für Azure Information Protection festgelegt ist: Führen Sie in Azure Key Vault [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) aus, um die Schlüssel-URL anzuzeigen.
+Wenn Sie sicherstellen müssen, dass der Schlüssel-URL richtig für Azure Information Protection festgelegt ist: Führen Sie in Azure Key Vault [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault/get-azurekeyvaultkey) aus, um die Schlüssel-URL anzuzeigen.
 
 Wenn der Azure Rights Management-Dienst bereits aktiviert ist, führen Sie zuletzt [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um Azure Information Protection den Befehl zu geben, diesen Schlüssel als aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst zu verwenden. Wenn Sie diesen Schritt nicht ausführen, verwendet Azure Information Protection weiterhin den von Microsoft verwalteten Standardschlüssel, der automatisch für Ihren Mandanten erstellt wurde.
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8c46dfb6aafa9162be6725202516f8d1fa871cc8
-ms.sourcegitcommit: 60223377a914269c93d73b3522d87b8161ecf854
+ms.openlocfilehash: 53a08a06351e4095e8e5662a4e1bf85f15f77f1d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53786316"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394318"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -77,15 +77,15 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 1. Der Azure Rights Management-Dienst muss aktiviert werden.
 
 2. So entfernen Sie den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos: 
-    
+
     - Die Administratorfunktion muss für Ihre Organisation aktiviert werden. Zudem muss Ihr Konto als Administrator für Azure Rights Management konfiguriert sein.
 
 3. So werden Dateien direkt ohne Benutzerinteraktion geschützt oder ihr Schutz entsprechend aufgehoben: 
-    
+
     - Erstellen Sie ein Dienstprinzipalkonto, führen Sie „Set-RMSServerAuthentication“ aus und erwägen Sie, diesen Dienstprinzipal zum Administrator für Azure Rights Management zu machen.
 
 4. Für Regionen außerhalb von Nordamerika: 
-    
+
     - Bearbeiten Sie die Registrierung für die Diensterkennung.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert sein
@@ -131,7 +131,6 @@ New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 $symmetricKey="<value from the display of the New-MsolServicePrincipal command>"
 $appPrincipalID=(Get-MsolServicePrincipal | Where { $_.DisplayName -eq $ServicePrincipalName }).AppPrincipalId
 Set-RMSServerAuthentication -Key $symmetricKey -AppPrincipalId $appPrincipalID -BposTenantId $bposTenantID
-
 ````
 
 In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen und angeben. Zudem erhalten Sie weitere Informationen über jeden Wert.
@@ -145,29 +144,29 @@ Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows Po
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 
 3. Stellen Sie die Verbindung mit dem Azure Rights Management-Dienst mithilfe des Cmdlets `Connect-AadrmService` her:
-    
+
         Connect-AadrmService
-    
+
     Geben Sie bei entsprechender Aufforderung die Anmeldeinformationen für den Azure Information Protection-Mandantenadministrator ein. In der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Office 365 ist.
-    
+
 4. Führen Sie `Get-AadrmConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
-    
+
     Beispiel für die Ausgabe von „Get-AadrmConfiguration“:
-    
+
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-        
+
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-        
+
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-        
+
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-        
+
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Trennen Sie die Verbindung mit dem Dienst:
-    
+
         Disconnect-AadrmService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>So rufen Sie „AppPrincipalId“ und den symmetrischen Schlüssel ab
@@ -182,25 +181,25 @@ Erstellen Sie einen neuen Dienstprinzipal, indem Sie das Cmdlet `New-MsolService
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 
 3. Verwenden Sie das Cmdlet **Connect-MsolService** zum Herstellen der Verbindung mit Azure AD:
-    
+
         Connect-MsolService
-    
+
     Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des Azure AD-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
 
 4. Führen Sie das Cmdlet „New-MsolServicePrincipal“ aus, um einen neuen Dienstprinzipal zu erstellen:
-    
+
         New-MsolServicePrincipal
-    
+
     Wenn Sie aufgefordert werden, geben Sie Ihren gewünschten Anzeigenamen für diesen Dienstprinzipal ein, der Ihnen dabei hilft, später seinen Zweck als Konto zu identifizieren, sobald Sie die Verbindung mit dem Azure Rights Management-Dienst herstellen, um Dateien zu schützen oder den Schutz aufzuheben.
-    
+
     Beispielausgabe von „New-MsolServicePrincipal“:
-    
+
         Supply values for the following parameters:
-        
+
         DisplayName: AzureRMSProtectionServicePrincipal
         The following symmetric key was created as one was not supplied
         zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=
-        
+
         Display Name: AzureRMSProtectionServicePrincipal
         ServicePrincipalNames: (b5e3f7g1-b5c2-4c96-a594-a0807f65bba4)
         ObjectId: 23720996-593c-4122-bfc7-1abb5a0b5109
@@ -248,20 +247,20 @@ Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterlade
 2. Öffnen Sie auf jedem Computer, auf dem Sie die AzureInformationProtection-Cmdlets ausführen möchten, den Registrierungs-Editor.
 
 3. Navigieren Sie zu folgendem Pfad: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
-    
+
     Wenn die Schlüssel **MSIPC** oder **ServiceLocation** nicht angezeigt werden, erstellen Sie sie.
 
 4. Erstellen Sie für den Schlüssel **ServiceLocation** zwei Schlüssel, wenn diese nicht bereits vorhanden sind: **EnterpriseCertification** und **EnterprisePublishing**. 
-    
+
     Ändern Sie für den Zeichenfolgenwert, der für diese Schlüssel automatisch erstellt wird, nicht den Namen „(Default)“ (Standard), bearbeiten Sie jedoch die Zeichenfolge, um die Wertdaten festzulegen:
 
-    - Fügen Sie für **EnterpriseCertification** den „CertificationExtranetDistributionPointUrl“-Wert ein.
-    
-    - Fügen Sie für **EnterprisePublishing** den „LicensingExtranetDistributionPointUrl“-Wert ein.
-    
-    Beispielsweise sollte Ihr Registrierungseintrag für EnterpriseCertification in etwa wie folgt aussehen:
-    
-    ![Bearbeiten der Registrierung für das PowerShell-Modul von Azure Information Protection für Regionen außerhalb von Nordamerika](../media/registry-example-rmsprotection.png)
+   - Fügen Sie für **EnterpriseCertification** den „CertificationExtranetDistributionPointUrl“-Wert ein.
+
+   - Fügen Sie für **EnterprisePublishing** den „LicensingExtranetDistributionPointUrl“-Wert ein.
+
+     Beispielsweise sollte Ihr Registrierungseintrag für EnterpriseCertification in etwa wie folgt aussehen:
+
+     ![Bearbeiten der Registrierung für das PowerShell-Modul von Azure Information Protection für Regionen außerhalb von Nordamerika](../media/registry-example-rmsprotection.png)
 
 5. Schließen Sie den Registrierungs-Editor. Sie müssen den Computer nicht neu starten. Wenn Sie jedoch ein Dienstprinzipalkonto anstelle Ihres eigenen Benutzerkontos verwenden, müssen Sie den Befehl „Set-RMSServerAuthentication“ ausführen, nachdem dieser Registrierungseintrag bearbeitet wurde.
 
@@ -280,7 +279,7 @@ Geben Sie wie im folgenden Artikel beschrieben die drei Bezeichner ein, wenn Sie
 Bevor Sie Dateien schützen können, müssen Sie die Rights Management-Vorlagen auf Ihren Computer herunterladen und die zu verwendende Vorlage sowie ihre zugehörige ID-Nummer ermitteln. In der Ausgabe können Sie dann die Vorlagen-ID kopieren:
 
     Get-RMSTemplate
-    
+
 Ihre Ausgabe sieht etwa wie folgt aus:
 
     TemplateId        : {82bf3474-6efe-4fa1-8827-d1bd93339119}
@@ -289,7 +288,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -369,7 +368,7 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 7. Klicken Sie im Dialogfeld **Berechtigungen für ServerCertification.asmx** auf **Hinzufügen**. 
 
 8. Fügen Sie Ihren Kontonamen hinzu. Wenn diese Cmdlets auch von anderen AD RMS-Administratoren oder Dienstkonten verwendet werden, um Dateien zu schützen oder deren Schutz aufzuheben, fügen Sie auch diese Konten hinzu. 
-    
+
     Um Dateien nicht interaktiv zu schützen oder deren Schutz aufzuheben, fügen Sie die relevanten Computerkonten hinzu. Fügen Sie beispielsweise das Computerkonto des Windows Server-Computers hinzu, für den die Dateiklassifizierungsinfrastruktur konfiguriert ist und der ein PowerShell-Skript verwendet, um Dateien zu schützen.
 
 9. Stellen Sie in der Spalte **Zulassen** sicher, dass die Kontrollkästchen für **Lesen und Ausführen** und **Lesen** aktiviert sind.
@@ -406,8 +405,8 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     Name              : Contoso, Ltd - Confidential View Only
     IssuerDisplayName : Contoso, Ltd
     FromTemplate      : True
-    
-    
+
+
     TemplateId        : {e6ee2481-26b9-45e5-b34a-f744eacd53b0}
     CultureInfo       : en-US
     Description       : This content is proprietary information intended for internal users only. This content can be modified but cannot be copied and printed.
@@ -487,37 +486,37 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 2. Für den Azure AD-Mandanten, den Sie mit Azure Information Protection verwenden, navigieren Sie zu **Azure Active Directory** > **App-Registrierungen**. 
 
 3. Wählen Sie **Neue Anwendungsregistrierung** aus, um Ihre Web-App-/API-Anwendung zu erstellen. Geben Sie für die Bezeichnung **Erstellen** die folgenden Werte an, und klicken Sie dann auf **Erstellen**:
-    
-    - Name: **AIPOnBehalfOf**
-    
-    Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
-    
-    - Anwendungstyp: **Web-App/API**
-    
-    - Anmelde-URL: **http://localhost**
+
+   - Name: **AIPOnBehalfOf**
+
+     Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
+
+   - Anwendungstyp: **Web-App/API**
+
+   - Anmelde-URL: **http://localhost**
 
 4. Wählen Sie die Anwendung aus, die Sie gerade erstellt haben, z.B. **AIPOnBehalfOf**. Klicken Sie auf dem Blatt **Einstellungen** auf **Eigenschaften**. Kopieren Sie auf dem Blatt **Eigenschaften** den Wert von **Anwendungs-ID**, und schließen Sie dann dieses Blatt. 
-    
+
     Dieser Wert wird für den Parameter `WebAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen. Fügen Sie ihn ein, und speichern Sie ihn für spätere Bezugnahme.
 
 5. Klicken Sie auf dem Blatt **Einstellungen** auf **Erforderliche Berechtigungen**. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
 
 6. Klicken Sie auf dem Blatt **Einstellungen** auf **Schlüssel**. Fügen Sie einen neuen Schlüssel hinzu, indem Sie eine Beschreibung und die Dauer (1 Jahr 2 Jahre oder „Läuft nie ab“) angeben. Klicken Sie dann auf **Speichern**, und kopieren Sie die Zeichenfolge von **Wert**, die angezeigt wird. Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Bewahren Sie den gespeicherten Wert sorgfältig auf, und beschränken Sie den Zugriff darauf – wie bei jedem anderen Schlüssel auch, den Sie verwenden.
-    
+
     Dieser Wert wird für den Parameter `WebAppKey` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen.
 
 7. Zurück auf dem Blatt **App-Registrierungen** klicken Sie auf **Neue Anwendungsregistrierung**, um Ihre native Anwendung zu erstellen. Geben Sie für die Bezeichnung **Erstellen** die folgenden Werte an, und klicken Sie dann auf **Erstellen**:
-    
-    - Name: **AIPClient**
-    
-    Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
-    
-    - Anwendungstyp: **Nativ**
-    
-    - Anmelde-URL: **http://localhost**
+
+   - Name: **AIPClient**
+
+     Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
+
+   - Anwendungstyp: **Nativ**
+
+   - Anmelde-URL: **http://localhost**
 
 8. Wählen Sie die Anwendung aus, die Sie gerade erstellt haben, z.B. **AIPClient**. Klicken Sie auf dem Blatt **Einstellungen** auf **Eigenschaften**. Kopieren Sie auf dem Blatt **Eigenschaften** den Wert von **Anwendungs-ID**, und schließen Sie dann dieses Blatt.
-    
+
     Dieser Wert wird für den Parameter `NativeAppId` verwendet, wenn Sie das Cmdlet „Set-AIPAuthentication“ ausführen. Fügen Sie ihn ein, und speichern Sie ihn für spätere Bezugnahme.
 
 9. Klicken Sie auf dem Blatt **Einstellungen** auf **Erforderliche Berechtigungen**. 
@@ -527,7 +526,7 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 11. Klicken Sie auf dem Blatt **Zugriff aktivieren** auf **AIPOnBehalfOf**, dann auf **Auswählen** und abschließend auf **Fertig**.
 
 12. Klicken Sie auf dem Blatt **Erforderliche Berechtigungen** auf **Berechtigungen erteilen**, klicken Sie dann zum Bestätigen auf **Ja**, und schließen Sie dann dieses Blatt.
-    
+
 
 Sie haben soeben die Konfiguration der beiden Apps abgeschlossen und verfügen nun über die Werte, die Sie zum Ausführen von [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) mit den Parametern *WebAppId*, *WebAppKey* und *NativeAppId* benötigen. Beispiel:
 
@@ -558,21 +557,21 @@ Allgemeine Schritte:
 1. Erstellen Sie auf Ihrem Computer ein neues PowerShell-Skript mit dem Namen „Aipauthentication.ps1“.
 
 2. Kopieren Sie den folgenden Befehl, und fügen Sie ihn in das folgende Skript ein:
-    
+
          Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application> -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
 
 3. Ändern Sie anhand der Anweisungen im vorhergehenden Abschnitt diesen Befehl. Geben Sie dabei Ihre eigenen Werte für die Parameter **WebAppId**, **WebAppkey** und **NativeAppId** an. Zu diesem Zeitpunkt besitzen Sie den Wert für den **Token**-Parameter noch nicht. Sie geben ihn später an. 
-    
+
     Beispiel: `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
-    
+
 #### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Schritt 2: Führen Sie „Set-AIPAuthentication“ aus, um ein Zugriffstoken abzurufen und in die Zwischenablage zu kopieren.
 
 1. Öffnen Sie eine Windows PowerShell-Sitzung.
 
 2. Führen Sie den folgenden Befehl aus. Verwenden Sie dabei die gleichen Werte wie im Skript:
-    
+
         (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
-    
+
     Beispiel: `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
 
 #### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Schritt 3: Ändern Sie das PowerShell-Skript zum Bereitstellen des Tokens.
@@ -580,7 +579,7 @@ Allgemeine Schritte:
 1. Geben Sie in Ihrem PowerShell-Skript den Tokenwert ein, indem Sie die Zeichenfolge aus der Zwischenablage einfügen. Speichern Sie anschließend die Datei.
 
 2. Signieren Sie das Skript. Sollten Sie das Skript nicht signieren (eine Signatur erhöht die Sicherheit), muss Windows PowerShell auf dem Computer konfiguriert werden, auf dem die Befehle zum Bezeichnen ausgeführt werden. Führen Sie beispielsweise eine Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** aus, und geben Sie Folgendes ein: `Set-ExecutionPolicy RemoteSigned`. Diese Konfiguration ermöglicht allerdings die Ausführung aller unsignierten Skripts, wenn diese auf diesem Computer gespeichert sind (weniger sicher).
-    
+
     Weitere Informationen zum Signieren von Windows PowerShell-Skripts finden Sie unter [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) in der PowerShell-Dokumentationsbibliothek.
 
 3. Kopieren Sie dieses PowerShell-Skript auf den Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, und löschen Sie das Original auf Ihrem Computer. Beispiel: Sie kopieren das PowerShell-Skript in „C:\Scripts\Aipauthentication.ps1“ auf einem Windows Server-Computer.
@@ -590,12 +589,12 @@ Allgemeine Schritte:
 1. Stellen Sie sicher, dass das Dienstkonto, mit dem Dateien bezeichnet und geschützt werden, über die Berechtigung **Als Batchauftrag anmelden** verfügt.
 
 2. Öffnen Sie auf dem Computer, der zum Bezeichnen und Schützen von Dateien verwendet wird, die Aufgabenplanung, und erstellen Sie einen neuen Task. Konfigurieren Sie diesen Task so, dass er als Dienstkonto ausgeführt wird, mit dem Dateien bezeichnet und geschützt werden. Konfigurieren Sie anschließend die folgenden Werte für die **Aktionen**:
-    
-    - **Aktion**: `Start a program`
-    - **Programm/Skript**: `Powershell.exe`
-    - **Argumente hinzufügen (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
-    
-    Geben Sie als Argumentzeile Ihren eigenen Pfad und Dateinamen an, wenn diese vom Beispiel abweichen.
+
+   - **Aktion**: `Start a program`
+   - **Programm/Skript**: `Powershell.exe`
+   - **Argumente hinzufügen (optional)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+
+     Geben Sie als Argumentzeile Ihren eigenen Pfad und Dateinamen an, wenn diese vom Beispiel abweichen.
 
 3. Führen Sie diesen Task manuell aus.
 
@@ -604,7 +603,7 @@ Allgemeine Schritte:
 1. Vergewissern Sie sich, dass das Token nun im Ordner „%localappdata%\Microsoft\MSIP“ des Dienstkontoprofils gespeichert ist. Dieser Wert wird durch das Dienstkonto geschützt.
 
 2. Löschen Sie das PowerShell-Skript, das den Tokenwert enthält (etwa „Aipauthentication.ps1“).
-    
+
     Löschen Sie optional den Task. Wenn das Token abläuft, müssen Sie diese Schritte wiederholen. Daher ist es unter Umständen praktischer, den konfigurierten Task zu behalten, damit er einfacher erneut ausgeführt werden kann, wenn Sie das neue PowerShell-Skript mit dem neuen Tokenwert kopieren.
 
 ## <a name="next-steps"></a>Nächste Schritte

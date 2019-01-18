@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411812"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393977"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -75,11 +75,11 @@ Wenn Sie erstmals über das Azure-Portal eine Verbindung mit dem Azure Informati
     
 2. Nehmen Sie sich ein paar Minuten Zeit, um sich mit den angezeigten Bezeichnungen vertraut zu machen:
     
-    - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen, die Beispiele für eine Klassifizierung mit Unterkategorien bereitstellen:
+   - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen, die Beispiele für eine Klassifizierung mit Unterkategorien bereitstellen:
     
-    - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiel: 
+   - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiel: 
     
-    ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-labelsv2.png)
+     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-labelsv2.png)
     
 3. Nach den Bezeichnungen werden im Abschnitt **Konfigurieren von Einstellungen, die für Information Protection-Endbenutzer angezeigt und angewendet werden** außerdem einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     

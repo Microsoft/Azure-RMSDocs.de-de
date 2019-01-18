@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: e707e84ccfafc7b3ed161d05cadac9f2314ad3ae
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173875"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394285"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -70,9 +70,9 @@ Zum Zuweisen von Nutzungsrechten und Zugriffssteuerungen sowie zum Konfigurieren
 - Für die Autorisierung von Benutzern werden in Azure AD zwei Attribute verwendet: **proxyAddresses** und **userPrincipalName**.
 
 - Das Attribut **Azure AD proxyAddresses** speichert alle E-Mail-Adressen für ein Konto und kann auf unterschiedliche Weise aufgefüllt werden. Ein Benutzer in Office 365, der über ein Exchange Online-Postfach verfügt, erhält beispielsweise automatisch eine E-Mail-Adresse, die in diesem Attribut gespeichert ist. Wenn Sie einem Office 365-Benutzer eine alternative E-Mail-Adresse zuweisen, wird diese ebenfalls in diesem Attribut gespeichert. Das Attribut kann auch durch Synchronisierung mit den E-Mail-Adressen lokaler Konten aufgefüllt werden. 
-    
+
     Azure Information Protection kann beliebige Werte im Attribut „Azure AD proxyAddresses“ verwenden, vorausgesetzt die Domäne wurde Ihrem Mandanten hinzugefügt („überprüfte Domäne“). Weitere Informationen zum Überprüfen von Domänen finden Sie unter:
-    
+
     - Für Azure AD: [Hinzufügen eines benutzerdefinierten Domänennamens zu Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
     - Für Office 365: [Hinzufügen einer Domäne zu Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
@@ -94,7 +94,7 @@ Andere Autorisierungsmethoden:
 Für die Zuweisung von Bezeichnungen:
 
 - Um bereichsbezogene Richtlinien zu konfigurieren, die Gruppenmembern zusätzliche Bezeichnungen zuweisen, können Sie alle Arten von Gruppen in Azure AD verwenden, die über eine E-Mail-Adresse einer überprüften Domäne für den Mandanten des Benutzers verfügen. Eine Gruppe mit einer E-Mail-Adresse wird häufig als E-Mail-aktivierte Gruppe bezeichnet.
-    
+
     Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine Verteilergruppe (statisch oder dynamisch) und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Typ keine E-Mail-Adresse besitzt.
 
 Für die Zuweisung von Nutzungsrechten und Zugriffssteuerungen:
@@ -148,16 +148,17 @@ Wenn die Spalte **ProxyAddresses** nicht aufgefüllt wurde, wird der Wert von **
 
 Beispiel:
 
-|Anzeigename|UserPrincipalName|ProxyAddresses
-|-------------------|-----------------|--------------------|
-|Jagannath Reddy |jagannathreddy@contoso.com|{}|
-|Ankur Roy|ankurroy@contoso.com|{SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com}|
+
+|  Anzeigename   |     UserPrincipalName      |                            ProxyAddresses                             |
+|-----------------|----------------------------|-----------------------------------------------------------------------|
+| Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
+|    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
 In diesem Beispiel:
 
-- Das Benutzerkonto für Jagannath Reddy wird mit **jagannathreddy@contoso.com** autorisiert.
+- Das Benutzerkonto für Jagannath Reddy wird mit <strong>jagannathreddy@contoso.com</strong> autorisiert.
 
--  Das Benutzerkonto für Ankur Roy kann mit **ankur.roy@contoso.com** und **ankur.roy@onmicrosoft.contoso.com**, aber nicht mit **ankurroy@contoso.com** autorisiert werden.
+- Das Benutzerkonto für Ankur Roy kann mit <strong>ankur.roy@contoso.com</strong> und <strong>ankur.roy@onmicrosoft.contoso.com</strong>, aber nicht mit <strong>ankurroy@contoso.com</strong> autorisiert werden.
 
 In den meisten Fällen entspricht der Wert für „UserPrincipalName“ einem der Werte im Feld „ProxyAddresses". Dies ist die empfohlene Konfiguration, aber wenn Sie Ihren UPN nicht entsprechend der E-Mail-Adresse ändern können, müssen Sie die folgenden Schritte ausführen:
 
@@ -165,7 +166,7 @@ In den meisten Fällen entspricht der Wert für „UserPrincipalName“ einem de
 
     Ist der Domänenname im UPN-Wert keine überprüfte Domäne für Ihren Mandanten, kann dieser nicht mit Azure Information Protection verwendet werden. Allerdings kann der Benutzer weiterhin als Mitglied einer Gruppe autorisiert werden, wenn die E-Mail-Adresse der Gruppe den Namen einer überprüften Domäne verwendet.
 
-2. Wenn der UPN nicht geroutet werden kann (z.B. **ankurroy@contoso.local**), konfigurieren Sie alternative Anmelde-IDs für Benutzer, und erläutern Sie den Benutzern, wie sie sich mit dieser alternativen Anmelde-ID bei Office anmelden. Sie müssen außerdem einen Registrierungsschlüssel für Office festlegen.
+2. Wenn der UPN nicht geroutet werden kann (z.B. <strong>ankurroy@contoso.local</strong>), konfigurieren Sie alternative Anmelde-IDs für Benutzer, und erläutern Sie den Benutzern, wie sie sich mit dieser alternativen Anmelde-ID bei Office anmelden. Sie müssen außerdem einen Registrierungsschlüssel für Office festlegen.
 
     Weitere Informationen finden Sie unter [Konfigurieren einer alternativen Anmelde-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) und [Office-Anwendungen fordern regelmäßig Anmeldeinformationen für SharePoint Online, OneDrive und Lync Online an](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 

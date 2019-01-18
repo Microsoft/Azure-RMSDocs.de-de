@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: daad2483fb850d06bbd62ff6b9a721160341d8b7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: bc1e1e3dc66b3dee00dbfac7db11a1aaaeeab4e3
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070314"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394299"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
 
@@ -27,7 +27,7 @@ Dieses Thema führt Sie durch den Bereitstellungsprozess für Ihre für Azure In
 Bevor Sie eine mit AIP/RMS entwickelte Anwendung freigeben können, müssen Sie eine formelle Vereinbarung mit Microsoft beantragen und abschließen.
 
 ### <a name="begin-the-process"></a>Beginn des Prozesses
-Beantragen Sie Ihre IPIA, indem Sie eine E-Mail mit folgenden Informationen an **IPIA@microsoft.com** senden:
+Beantragen Sie Ihre IPIA, indem Sie eine E-Mail mit folgenden Informationen an <strong>IPIA@microsoft.com</strong> senden:
 
 **Betreff:** Anfordern einer IPIA für *Name des Unternehmens*
 
@@ -38,7 +38,7 @@ Geben Sie im E-Mail-Text folgende Informationen ein:
 
 ### <a name="next-steps"></a>Nächste Schritte
 Nach Erhalt Ihrer IPIA-Anforderung senden wir Ihnen ein Formular (als Word-Dokument).
-Überprüfen Sie die Vertragsbedingungen der IPIA, und senden Sie das Formular mit folgenden Informationen an **IPIA@microsoft.com** zurück:
+Überprüfen Sie die Vertragsbedingungen der IPIA, und senden Sie das Formular mit folgenden Informationen an <strong>IPIA@microsoft.com</strong> zurück:
 - Offizieller Name des Unternehmens
 - Bundesstaat/Provinz (USA/Kanada) oder Land der Gründung oder Hauptverwaltung des Unternehmens
 - URL des Unternehmens
@@ -54,7 +54,7 @@ Nach Erhalt Ihrer IPIA-Anforderung senden wir Ihnen ein Formular (als Word-Dokum
 Nachdem wir Ihr Formular erhalten haben, senden wir Ihnen den Link zur endgültigen IPIA zur digitalen Unterzeichnung. Wenn Sie das Formular unterzeichnet haben, wird es vom zuständigen Microsoft-Vertreter ebenfalls unterzeichnet, womit die Vereinbarung abgeschlossen ist.
 
 ### <a name="already-have-a-signed-ipia"></a>Haben Sie bereits eine IPIA unterzeichnet?
-Wenn Sie bereits über eine unterzeichnete IPIA verfügen und eine neue *App-ID* für eine zu veröffentlichende Anwendung hinzufügen möchten, senden Sie eine E-Mail an **IPIA@microsoft.com**, und geben Sie folgende Informationen an:
+Wenn Sie bereits über eine unterzeichnete IPIA verfügen und eine neue *App-ID* für eine zu veröffentlichende Anwendung hinzufügen möchten, senden Sie eine E-Mail an <strong>IPIA@microsoft.com</strong>, und geben Sie folgende Informationen an:
 - Name der Unternehmensanwendung
 - Kurze Beschreibung der Anwendung
 - Azure-Mandanten-ID (auch wenn es die gleiche ist wie zuvor)

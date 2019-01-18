@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 580dc90bae499a5cc64238a6157612bea5eb3282
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071300"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394186"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
@@ -62,7 +62,7 @@ Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
 - Stellen Sie eine Verbindung mit Ihrem Onlinedienst mithilfe der zugewiesenen Benutzeranmeldeinformationen her: `Connect-MsolService`
 - Erstellen sie einen neuen Dienstprinzipal, indem Sie Folgendes ausführen: `New-MsolServicePrincipal`
 - Geben Sie einen Namen für Ihre Dienstprinzipal an.
-> Notieren Sie den symmetrischen Schlüssel und die Anwendungsprinzipal-ID für die spätere Verwendung.
+  > Notieren Sie den symmetrischen Schlüssel und die Anwendungsprinzipal-ID für die spätere Verwendung.
 
 *Beispielausgabe*
 ![Cmdlet-Ausgabe](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -80,8 +80,8 @@ Im folgenden Diagramm sind der Architektur- und Prozessverlauf für die zu erste
 ![Entwurfszusammenfassung](../media/develop/design-summary.png)
 
 1. Benutzereingabe:
-  - Pfad zu der zu schützenden Datei
-  - Vorlage auswählen oder Ad-hoc-Richtlinie erstellen
+   - Pfad zu der zu schützenden Datei
+   - Vorlage auswählen oder Ad-hoc-Richtlinie erstellen
 2. Anwendung fordert Authentifizierung mit AIP an
 3. AIP bestätigt Authentifizierung
 4. Anwendung fordert Vorlagen von AIP an
@@ -216,16 +216,16 @@ Nachdem alles erstellt und ausgeführt wurde, sollte die Ausgabe der Anwendung w
 ![App-Ausgabe – Schritt 1](../media/develop/app-output-1.png)
 
 2. Sie werden aufgefordert, den Pfad zu der zu schützenden Datei bereitzustellen.
-![App-Ausgabe – Schritt 2](../media/develop/app-output-2.png)
+   ![App-Ausgabe – Schritt 2](../media/develop/app-output-2.png)
 
 3. Sie werden aufgefordert, eine E-Mail-Adresse des Lizenzbesitzers einzugeben (dieser Besitzer muss über globale Administratorrechte auf dem Azure AD-Mandanten verfügen).
-![App-Ausgabe – Schritt 3](../media/develop/app-output-3.png)
+   ![App-Ausgabe – Schritt 3](../media/develop/app-output-3.png)
 
 4. Sie geben E-Mail-Adressen von Benutzern ein, die Zugriff auf die Datei haben sollen (E-Mails müssen durch Leerzeichen getrennt werden).
-![App-Ausgabe – Schritt 4](../media/develop/app-output-4.png)
+   ![App-Ausgabe – Schritt 4](../media/develop/app-output-4.png)
 
 5. Sie wählen aus einer Liste die Rechte aus, die die autorisierten Benutzer erhalten sollen.
-![App-Ausgabe – Schritt 5](../media/develop/app-output-5.png)
+   ![App-Ausgabe – Schritt 5](../media/develop/app-output-5.png)
 
 6. Abschließend geben Sie einige Richtlinienmetadaten ein: Richtlinienname, Beschreibung und Anzeigename des Ausstellers (Azure AD-Mandant) ![App-Ausgabe – Schritt 6](../media/develop/app-output-6.png)
 

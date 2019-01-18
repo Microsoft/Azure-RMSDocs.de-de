@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071198"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394254"
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
@@ -37,9 +37,9 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 
 - **Update zu ADAL**: Durch das Update der Anwendung dahingehend, dass sie die ADAL-Authentifizierung statt des Microsoft Online-Anmelde-Assistenten verwendet, ergeben sich für Sie und Ihre Kunden folgende Möglichkeiten:
 
- - Nutzen der mehrstufigen Authentifizierung
- - Installieren des RMS-Client 2.1 ohne Administratorrechte auf dem Computer
- - Zertifizieren Ihrer Anwendung für Windows 10
+  - Nutzen der mehrstufigen Authentifizierung
+  - Installieren des RMS-Client 2.1 ohne Administratorrechte auf dem Computer
+  - Zertifizieren Ihrer Anwendung für Windows 10
 
 - **Die Unterstützung für den Microsoft Online Services-Anmeldeassistenten (SIA) mit dem RMS SDK wird entfernt.** Die Verwendung von SIA wird noch für sechs Monate unterstützt. Danach endet die Zeitunterstützung.
 
@@ -124,7 +124,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
     **Hinweis:**  Seit der im April 2015 veröffentlichten Version ist in den Installationsvorgang eine Überprüfung für diese KB integriert.
 
-     
+     
 
 -   **Datei-API-Integration**
 

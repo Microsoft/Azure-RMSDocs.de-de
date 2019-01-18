@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 35f8ddcefb5cbc7ab07fd311edfa783fb5a83aa0
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305698"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394124"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -35,21 +35,21 @@ Die folgenden Anleitungen gelten für Windows Server 2012 R2 oder Windows Server
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Voraussetzungen für Azure Rights Management-Schutz mit Windows Server FCI
 Voraussetzungen für diese Anweisungen:
 
--  Auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen:
+- Auf jedem Dateiserver, auf dem Sie den Dateiressourcen-Manager mit Dateiklassifizierungsinfrastruktur ausführen:
     
-    - Sie haben den Dateiressourcen-Manager als einen der Rollendienste für die Dateidiensterolle installiert .
+  - Sie haben den Dateiressourcen-Manager als einen der Rollendienste für die Dateidiensterolle installiert .
     
-    - Sie haben einen lokalen Ordner identifiziert, der Dateien enthält, die mit Rights Management geschützt werden sollen. Beispielsweise „C:\FileShare“.
+  - Sie haben einen lokalen Ordner identifiziert, der Dateien enthält, die mit Rights Management geschützt werden sollen. Beispielsweise „C:\FileShare“.
     
-    - Sie haben das PowerShell-Modul „AzureInformationProtection“ installiert und die erforderlichen Komponenten für dieses Modul konfiguriert, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
+  - Sie haben das PowerShell-Modul „AzureInformationProtection“ installiert und die erforderlichen Komponenten für dieses Modul konfiguriert, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
     
     Das PowerShell-Modul „AzureInformationProtection“ ist im Azure Information Protection-Client inbegriffen. Eine Installationsanleitung finden Sie im Azure Information Protection-Administratorhandbuch unter [Install the Azure Information Protection client for users (Installieren des Azure Information Protection-Clients für Benutzer)](client-admin-guide-install.md). Bei Bedarf können Sie das PowerShell-Modul mithilfe des Parameters `PowerShellOnly=true` installieren.
     
     Zu den [Voraussetzungen für die Verwendung dieses PowerShell-Moduls](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) gehören das Aktivieren des Azure Rights Management-Diensts, das Erstellen eines Dienstprinzipals und das Bearbeiten der Registrierung, sofern sich Ihr Mandant außerhalb von Nordamerika befindet. Bevor Sie mit der Durchführung der Anweisungen in diesem Artikel beginnen, stellen Sie sicher, dass Sie Werte für **BposTenantId**, **AppPrincipalId** und **Symmetrischer Schlüssel** festgelegt haben, wie in diesen Voraussetzungen beschrieben wird. 
     
-    - Wenn Sie die Standardstufe des Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie in der Anleitung [Ändern der Standardschutzebene von Dateien](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) beschrieben wird.
+  - Wenn Sie die Standardstufe des Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie in der Anleitung [Ändern der Standardschutzebene von Dateien](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) beschrieben wird.
     
-    - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, sollten diese für einen Proxyserver benötigt werden. Beispiel: `netsh winhttp import proxy source=ie`
+  - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, sollten diese für einen Proxyserver benötigt werden. Beispiel: `netsh winhttp import proxy source=ie`
     
 - Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5fb3e3ab5d32bf5e590bec5b0a1380bf13a7d066
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174181"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394200"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -143,7 +143,7 @@ Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivi
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Prozedur, wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben
 
-Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, heißt die ähnlichste Gruppe in Azure Information Protection **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
+Wenn Ihre Vorlagen in AD RMS die Gruppe **JEDER** verwendet haben, heißt die ähnlichste Gruppe in Azure Information Protection **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<mandantenname>.onmicrosoft.com**. Für Contoso kann diese Gruppe folgendermaßen aussehen: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. Diese Gruppe enthält alle Benutzer aus Ihrem Azure AD-Mandanten.
 
 Bei der Verwaltung von Vorlagen und Bezeichnungen im Azure-Portal wird diese Gruppe als Domänenname Ihres Mandanten in Azure AD angezeigt. Für Contoso kann diese Gruppe beispielsweise wie folgt aussehen: **contoso.onmicrosoft.com**. Um diese Gruppe hinzuzufügen, zeigt die Option **\<Name der Organisation> – Alle Mitglieder hinzufügen** an.
 

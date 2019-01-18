@@ -12,22 +12,23 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d495abaec5bd32eb7082e8c1774011f9b765448b
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: a8c1917d8a73fd31020f06fec1d69bdd93d572ff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070227"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393811"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
 
 In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Verwendung von Azure Rights Management erläutert. Weitere Informationen finden Sie unter [Erste Schritte mit Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
-**Wichtig**   Sie müssen selbst Mandanten erstellen, um die Rights Management Services SDK 2.1-Dienstanwendung mit Azure RMS zu verwenden. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloud-Abonnements, die Azure RMS unterstützen](../requirements.md).
+**Wichtig**  
+Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.1-Dienstanwendung mit Azure RMS zu verwenden. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloud-Abonnements, die Azure RMS unterstützen](../requirements.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
--   Das RMS SDK 2.1 muss installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
+-   RMS SDK 2.1 muss installiert und konfiguriert sein. Weitere Informationen finden Sie unter [Erste Schritte mit RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   [Erstellen Sie eine Dienstidentität über ACS](https://msdn.microsoft.com/library/gg185924.aspx) mithilfe der symmetrischen Schlüsseloption oder auf andere Weise, und zeichnen Sie die Schlüsselinformation dieses Prozesses auf.
 
 ## <a name="connecting-to-the-azure-rights-management-service"></a>Verbinden mit dem Azure-Rechteverwaltungsdienst
@@ -40,9 +41,9 @@ In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Ver
         IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
 
-  **Hinweis**  Weitere Informationen finden Sie unter [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md).
+  **Hinweis**  Weitere Informationen finden Sie unter [Festlegen des API-Sicherheitsmodus](setting-the-api-security-mode-api-mode.md).
 
-     
+
 -   Mit den folgenden Schritten erstellen Sie eine Instanz einer [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)-Struktur. Das Mitglied *pcCredential* ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) wird dabei mit Verbindungsinformationen aus dem Azure Rights Management-Dienst aufgefüllt.
 -   Verwenden Sie die beim Erstellen der Dienstidentität für den symmetrischen Schlüssel aufgezeichneten Informationen (siehe die weiter oben aufgeführten Voraussetzungen), um die Parameter *wszServicePrincipal*, *wszBposTenantId* und *cbKey* festzulegen, wenn Sie eine Instanz der [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx)-Struktur erstellen.
 
@@ -53,9 +54,9 @@ In diesem Thema werden die Schritte zum Einrichten Ihrer Dienstanwendung zur Ver
 ### <a name="instructions-to-generate-a-symmetric-key"></a>Anweisungen zum Generieren eines symmetrischen Schlüssels
 
 -   Installieren Sie den [Microsoft Online-Anmeldeassistenten](https://go.microsoft.com/fwlink/p/?LinkID=286152).
--   Installieren Sie das [Azure AD PowerShell-Modul](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
+-   Installieren Sie das [Azure AD Powershell-Modul](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
-**Hinweis** : Sie müssen Mandantenadministrator sein, um die PowerShell-Cmdlets zu verwenden.
+**Hinweis** – Sie muss ein Mandantenadministrator sein, um die Powershell-Cmdlets verwenden zu können.
 
 - Starten Sie PowerShell, und führen Sie die folgenden Befehle zum Generieren eines Schlüssels aus.
 
@@ -103,7 +104,7 @@ Weitere Informationen finden Sie unter [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https:/
 
 -   Erstellen Sie eine Instanz der [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)-Struktur, die Ihre [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx)-Instanz enthält.
 
-**Hinweis** : Die *connectionInfo*-Elemente werden mit URLs aus dem vorherigen Aufruf von `Get-AadrmConfiguration` festgelegt und sind hier mit diesen Feldnamen angegeben.
+**Hinweis** – Die *connectionInfo*-Mitglieder sind durch URLs aus dem vorherigen Aufruf von `Get-AadrmConfiguration` festgelegt und hier mit diesen Feldnamen angegeben.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -132,9 +133,17 @@ Weitere Informationen finden Sie unter [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https:/
     Rufen Sie [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) auf, und übergeben Sie dieselbe Instanz von [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
 
-    PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
+~~~
+PCIPC_TIL pTemplates = NULL;
+IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
 
-    hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
+hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),
+       IPC_GTL_FLAG_FORCE_DOWNLOAD,
+       0,
+       &promptCtx,
+       NULL,
+       &pTemplates);
+~~~
 
 
 -   Rufen Sie mit der bereits in diesem Thema behandelten Vorlage [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx) auf, und übergeben Sie dieselbe Instanz von [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).

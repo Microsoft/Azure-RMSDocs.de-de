@@ -12,12 +12,12 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7e95243793251be2180b129893220c25142bcc98
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: c0edbda67c7c6faadd0c5d6bddb2695d88dc8420
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071222"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393421"
 ---
 # <a name="android-setup"></a>Android-Setup
 
@@ -39,7 +39,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 -   Java ab Java 1.6.
 -   [Android Developer Tools (ADT)-Plug-In](https://developer.android.com/studio/install). Hinweis – Sie werden unter Umständen aufgefordert, Eclipse zum Abschließen der Installation neu zu starten.
 
-     
+     
 
 -   Das MS RMS SDK 4.2-Paket für Android. Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
 
@@ -51,7 +51,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     **Hinweis**  Wenn Ihre Anwendung die ADAL-Bibliothek nicht als OAuth 2.0-Authentifizierungsbibliothek verwendet, sollten Sie folgende Hinweise zu Android lesen: [Some SecureRandom Thoughts (Überlegungen zu SecureRandom)](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+     
 
 Unter [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Versionshinweise und häufig gestellte Fragen (FAQ).
 
@@ -63,7 +63,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 **Hinweis**  MS RMS SDK 4.2-Vorschauversion: In dieser Vorschauversion wurden die Screenshots nicht aktualisiert, um die Änderung des Pfads von com/microsoft/protection in com/microsoft/rightsmanagment widerzuspiegeln. Der Text wurde allerdings aktualisiert.
 
- 
+ 
 -   Öffnen Sie die Eclipse-Entwicklungsumgebung.
 -   Um ein neues Android-Anwendungsprojekt zu erstellen, klicken Sie im Menü **File** auf **New**, klicken Sie auf **Project**, und wählen Sie dann **Android Application Project** aus.
 
@@ -94,45 +94,45 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 **Verweisen auf das SDK**
 
--   Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
--   Um auf das SDK zu verweisen, müssen Sie das SDK in den Arbeitsbereich importieren.
+- Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben. Stellen Sie sicher, dass die Dateien, stellen Sie sicher, dass *.classpath*-, *.projekt*- und *project.properties*-Dateien im Ordner "SDK > com > Microsoft > Rights Management" nicht als schreibgeschützt gekennzeichnet sind.
+- Um auf das SDK zu verweisen, müssen Sie das SDK in den Arbeitsbereich importieren.
 
-    Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **File** auf **Import**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
+  Klicken Sie in Eclipse auf **File**. Klicken Sie im Menü **File** auf **Import**. Wählen Sie im Dialogfeld **Import** die Option **Android / Existing Android Code into Workspace** aus.
 
-    ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
+  ![Importieren in den Arbeitsbereich](../media/Android-setup-07.png)
 
--   Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben, und wählen Sie ihn aus. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
+- Klicken Sie auf **Weiter**. Navigieren Sie zu dem Ordner, in den Sie die Datei *adrms\_android\_sdk.zip* extrahiert haben, und wählen Sie ihn aus. Das SDK sollte angezeigt werden, in der Liste als **com.microsoft.rightsmanagement** angezeigt werden.
 
-    ![Navigieren zum Auswählen des Ordners](../media/Android-setup-08c.jpg)
+  ![Navigieren zum Auswählen des Ordners](../media/Android-setup-08c.jpg)
 
--   Wenn Sie auf **Finish** klicken, wird das SDK-Projekt als gleichgeordnetes Element der zuvor erstellten Anwendung angezeigt.
+- Wenn Sie auf **Finish** klicken, wird das SDK-Projekt als gleichgeordnetes Element der zuvor erstellten Anwendung angezeigt.
 
-    ![Das SDK-Projekt wird als Ihrer Anwendung gleichgeordnet angezeigt](../media/Android-setup-09.jpg)
+  ![Das SDK-Projekt wird als Ihrer Anwendung gleichgeordnet angezeigt](../media/Android-setup-09.jpg)
 
--   Klicken Sie mit der rechten Maustaste auf das Symbol **Project**, und zeigen Sie die Eigenschaften für das Projekt an.
--   Navigieren Sie zu der Registerkarte **Android**.
--   Klicken Sie auf **Add**, und wählen Sie dann die Bibliothek *com.microsoft.rightsmanagement* im Arbeitsbereich aus.
+- Klicken Sie mit der rechten Maustaste auf das Symbol **Project**, und zeigen Sie die Eigenschaften für das Projekt an.
+- Navigieren Sie zu der Registerkarte **Android**.
+- Klicken Sie auf **Add**, und wählen Sie dann die Bibliothek *com.microsoft.rightsmanagement* im Arbeitsbereich aus.
 
-    ![Hinzufügen der Bibliothek](../media/Android-setup-10b.jpg)
+  ![Hinzufügen der Bibliothek](../media/Android-setup-10b.jpg)
 
--   Klicken Sie auf **OK**.
+- Klicken Sie auf **OK**.
 
-    Da das MS RMS SDK 4.2 eine Verbindung mit AAD RM herstellt, müssen der Anwendung die Berechtigungen **INTERNET** und **ACCESS\_NETWORK\_STATE** gewährt werden. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
+  Da das MS RMS SDK 4.2 eine Verbindung mit AAD RM herstellt, müssen der Anwendung die Berechtigungen **INTERNET** und **ACCESS\_NETWORK\_STATE** gewährt werden. Öffnen Sie dazu die Datei *AndroidManifest.xml* im Stammverzeichnis des Projekts.
 
-    Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
+  Um die Berechtigungen hinzuzufügen, klicken Sie auf **Add** und wählen dann **Uses Permissions**.
 
-    ![Hinzufügen der Berechtigungen](../media/Android-setup-11d.jpg)
+  ![Hinzufügen der Berechtigungen](../media/Android-setup-11d.jpg)
 
--   Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
+- Sie können diesen Schritt überprüfen, indem Sie das Manifest in der Text-Editor-Ansicht anzeigen. Vergewissern Sie sich, dass die folgenden Zeilen angezeigt werden:
 
-   ```
-    <uses-sdk
-         android:minSdkVersion="15"
-         android:targetSdkVersion="19"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission/>
-   ```
+  ```
+  <uses-sdk
+       android:minSdkVersion="15"
+       android:targetSdkVersion="19"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission/>
+  ```
 
 **Hinweis**  Das SDK verwendet *android.support.v4*
 

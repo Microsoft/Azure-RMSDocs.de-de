@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305697"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393466"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Benutzerhandbuch: Klassifizieren und Schützen einer Datei oder E-Mail mithilfe von Azure Informationen Protection
 
@@ -138,13 +138,13 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung und der Schutz gemäß der Definition Ihres Administrators festgelegt werden. 
 
-    - Wenn keine der Bezeichnungen ausgewählt werden kann (Bezeichnungen sind abgeblendet): Die ausgewählte Datei unterstützt die Klassifizierung nicht, aber Sie können sie mit benutzerdefinierten Berechtigungen (Schritt 3) schützen. Beispiel:
+   - Wenn keine der Bezeichnungen ausgewählt werden kann (Bezeichnungen sind abgeblendet): Die ausgewählte Datei unterstützt die Klassifizierung nicht, aber Sie können sie mit benutzerdefinierten Berechtigungen (Schritt 3) schützen. Beispiel:
 
-    ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/info-protect-dialog-labels-dimmed.png)
+     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/info-protect-dialog-labels-dimmed.png)
     
-    - Wenn keine Bezeichnung, aber eine Option für **unternehmensdefinierten Schutz** in diesem Dialogfeld angezeigt wird: Der Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt. Wählen Sie eine vom Administrator konfigurierte Vorlage zum Anwenden von Schutz oder die Option **Benutzerdefinierte Berechtigungen** aus, um eigene Schutzeinstellungen anzugeben, und wechseln Sie dann zu Schritt 4.
+   - Wenn keine Bezeichnung, aber eine Option für **unternehmensdefinierten Schutz** in diesem Dialogfeld angezeigt wird: Der Client wird im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt. Wählen Sie eine vom Administrator konfigurierte Vorlage zum Anwenden von Schutz oder die Option **Benutzerdefinierte Berechtigungen** aus, um eigene Schutzeinstellungen anzugeben, und wechseln Sie dann zu Schritt 4.
     
-    ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“**](../media/info-protect-dialog-labels-protection-only.png)
+     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“**](../media/info-protect-dialog-labels-protection-only.png)
     
 3. Sie können, sofern es von Ihrem Administrator erlaubt ist, eigene Schutzeinstellungen angeben, anstatt die Schutzeinstellungen zu verwenden, die der Administrator für Ihre Bezeichnung konfiguriert hat. Wählen Sie zu diesem Zweck die Option **Protect with custom permissions** (Mit benutzerdefinierten Berechtigungen schützen) aus.
     
@@ -154,15 +154,15 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
 4. Wenn Sie die Option der benutzerdefinierten Berechtigungen ausgewählt haben, geben Sie jetzt Folgendes an:
 
-    - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene aus, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
+   - **Berechtigungen auswählen**: Wählen Sie die Zugriffsebene aus, die die Benutzer erhalten sollen, wenn Sie die ausgewählte(n) Datei(en) schützen.
     
-    - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. 
+   - **Benutzer, Gruppen oder Organisationen auswählen**: Geben Sie die Personen an, die die Berechtigungen erhalten sollen, die Sie für Ihre Datei(en) ausgewählt haben. Geben Sie für jeden Benutzer in dieser Organisation die vollständige E-Mail-Adresse, eine Gruppen-E-Mail-Adresse oder einen Domänennamen der Organisation ein. 
     
-    Alternativ dazu können Sie das Adressbuchsymbol verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auszuwählen.
+     Alternativ dazu können Sie das Adressbuchsymbol verwenden, um Benutzer oder Gruppen aus dem Outlook-Adressbuch auszuwählen.
         
-    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitkritische Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegten Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (Ihre aktuelle Zeitzone) an dem von Ihnen festgelegten Tag können die betreffenden Personen die Datei nicht mehr öffnen.
+   - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitkritische Dateien aus, damit die von Ihnen angegebenen Personen die ausgewählte(n) Datei(en) nach einem von Ihnen festgelegten Datum nicht mehr öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (Ihre aktuelle Zeitzone) an dem von Ihnen festgelegten Tag können die betreffenden Personen die Datei nicht mehr öffnen.
     
-    Hinweis: Wenn diese Einstellung zuvor mit benutzerdefinierten Berechtigungen über eine Office 2010-App konfiguriert wurde, wird das angegebene Ablaufdatum zwar nicht in diesem Dialogfeld angezeigt, ist jedoch nach wie vor festgelegt. Dieses Anzeigeproblem tritt lediglich auf, wenn das Ablaufdatum in Office 2010 konfiguriert wurde.
+     Hinweis: Wenn diese Einstellung zuvor mit benutzerdefinierten Berechtigungen über eine Office 2010-App konfiguriert wurde, wird das angegebene Ablaufdatum zwar nicht in diesem Dialogfeld angezeigt, ist jedoch nach wie vor festgelegt. Dieses Anzeigeproblem tritt lediglich auf, wenn das Ablaufdatum in Office 2010 konfiguriert wurde.
 
 5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 

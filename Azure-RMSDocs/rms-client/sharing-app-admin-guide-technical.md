@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 8556bb8e2ba5df713b925cbb05628c73284b3df1
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218475"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393870"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Technische Übersicht und Details zur Schutzfunktion der Microsoft Rights Management-Freigabeanwendung
 
@@ -43,11 +43,13 @@ Informationen zur Bereitstellung finden Sie unter [Automatische Bereitstellung f
 ## <a name="levels-of-protection--native-and-generic"></a>Schutzebenen – systemeigen und generisch
 Die Microsoft Rights Management-Freigabeanwendung unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
-|Typ des Schutzes|Systemeigenes Format|Generisch|
-|----------------------|----------|-----------|
-|Beschreibung|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Schutzebene, die Dateiverkapselung mit dem PFILE-Dateityp und Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.|
-|Schutz|Dateien werden vollständig verschlüsselt, und der Schutz folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, wenn Dateien geschützt werden, vollständig erzwungen, wenn der Inhalt im IP-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Eine Überwachungsprotokollierung der autorisierten Benutzer, die auf Dateien zugreifen und diese öffnen, findet statt, es werden aber keine Nutzungsrechte durch nicht unterstützende Anwendungen erzwungen|
-|Standard für Dateitypen|Dies ist die Standardschutzebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt: [Unterstützte Dateitypen und Dateinamenerweiterungen](#supported-file-types-and-file-name-extensions).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den vollständigen Schutz unterstützt werden.|
+
+|   Typ des Schutzes   |                                                                                                                                                                                                                                                                             Systemeigenes Format                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                            Generisch                                                                                                                                                                                                                                                                             |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Beschreibung       |                                                                                                                                    Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.                                                                                                                                     |                                                                                                                                                              Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Schutzebene, die Dateiverkapselung mit dem PFILE-Dateityp und Authentifizierung umfasst, um zu überprüfen, ob ein Benutzer zum Öffnen der Datei autorisiert ist.                                                                                                                                                              |
+|       Schutz       | Dateien werden vollständig verschlüsselt, und der Schutz folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, wenn Dateien geschützt werden, vollständig erzwungen, wenn der Inhalt im IP-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird | Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Eine Überwachungsprotokollierung der autorisierten Benutzer, die auf Dateien zugreifen und diese öffnen, findet statt, es werden aber keine Nutzungsrechte durch nicht unterstützende Anwendungen erzwungen |
+| Standard für Dateitypen |                                                                                         Dies ist die Standardschutzebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt: [Unterstützte Dateitypen und Dateinamenerweiterungen](#supported-file-types-and-file-name-extensions).                                                                                         |                                                                                                                                                                                                              Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den vollständigen Schutz unterstützt werden.                                                                                                                                                                                                               |
+
 Sie können die Standardschutzebene ändern, die die RMS-Freigabeanwendung anwendet. Sie können die Standardebene von systemeigen zu generisch oder von generisch zu systemeigen ändern und sogar verhindern, dass die RMS-Freigabeanwendung Schutz anwendet. Weitere Informationen finden Sie im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files) dieses Artikels.
 
 ## <a name="supported-file-types-and-file-name-extensions"></a>Unterstützte Dateitypen und Dateinamenerweiterungen
@@ -60,24 +62,25 @@ Für Dateien, die generisch geschützt sind, wird die ursprüngliche Namenserwei
 > [!WARNING]
 > Wenn Sie Firewalls, Webproxys oder Sicherheitssoftware haben, die Dateinamenerweiterungen überprüfen und entsprechende Maßnahmen ergreifen, müssen Sie diese möglicherweise zur Unterstützung der neuen Dateinamenerweiterungen neu konfigurieren.
 
-|Ursprüngliche Dateinamenerweiterung|RMS-geschützte Dateinamenerweiterung|
-|--------------------------------|-------------------------------------|
-|TXT|PTXT|
-|XML|PXML|
-|JPG|PJPG|
-|JPEG|PJEG|
-|PDF|PPDF|
-|PNG|PPNG|
-|TIF|PTIF|
-|TIFF|PTIFF|
-|BMP|PBMP|
-|GIF|PGIF|
-|JPE|PJPE|
-|JFIF|PJFIF|
-|JT|PJT|
-¹ PDF-Rendering unterstützt von Foxit. Copyright © 2003–2014, Foxit Corporation.
+| Ursprüngliche Dateinamenerweiterung | RMS-geschützte Dateinamenerweiterung |
+|------------------------------|-----------------------------------|
+|             TXT             |               PTXT               |
+|             XML             |               PXML               |
+|             JPG             |               PJPG               |
+|            JPEG             |               PJEG               |
+|             PDF             |               PPDF               |
+|             PNG             |               PPNG               |
+|             TIF             |               PTIF               |
+|            TIFF             |              PTIFF               |
+|             BMP             |               PBMP               |
+|             GIF             |               PGIF               |
+|             JPE             |               PJPE               |
+|            JFIF             |              PJFIF               |
+|             JT              |               PJT                |
 
-In der folgenden Tabelle werden die Dateitypen aufgeführt, die von der Microsoft Rights Management-Freigabeanwendung in Microsoft Office 2016, Office 2013 und Office 2010 nativ unterstützt werden. Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
+¹ PDF-Rendering unterstützt von Foxit. Copyright © 2003–2014, Foxit Corporation.
+
+In der folgende Tabelle werden die Dateitypen aufgeführt, die von der Microsoft Rights Management-Freigabeanwendung in Microsoft Office 2016, Office 2013 und Office 2010 nativ unterstützt werden. Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien durch einen Rights Management-Dienst unverändert.
 
 |Von Office unterstützte Dateitypen|Von Office unterstützte Dateitypen|
 |----------------------------------|----------------------------------|

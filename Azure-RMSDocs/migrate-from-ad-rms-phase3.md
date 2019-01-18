@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 13729d124ce0e49eddeda6c4c19aeae2c62eb8c6
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5aa86c3806dd23787d2661b4a4ac2e6850d1e907
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174249"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393890"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -126,14 +126,14 @@ Wenn Sie nicht alle Ihre Windows-Clients gleichzeitig migrieren können, führen
 
 1. Kehren Sie zu den Migrationsskripts **Migrate-Client.cmd** und **Migrate-User.cmd** zurück, die Sie zuvor beim Herunterladen dieser Skripts in der [Vorbereitungsphase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration) extrahiert haben.
 
-2.  Befolgen Sie die Anweisungen in **Migrate-Client.cmd**, um das Skript so zu bearbeiten, dass es die Azure Rights Management-Dienst-URL Ihres Mandanten sowie die Servernamen Ihrer Extranet- und Intranetlizenzierungs-URLs des AD RMS-Clusters enthält. Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen der Skriptversionen wird empfohlen, das heutige Datum in folgendem Format zu verwenden: YYYYMMDD
+2. Befolgen Sie die Anweisungen in **Migrate-Client.cmd**, um das Skript so zu bearbeiten, dass es die Azure Rights Management-Dienst-URL Ihres Mandanten sowie die Servernamen Ihrer Extranet- und Intranetlizenzierungs-URLs des AD RMS-Clusters enthält. Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen der Skriptversionen wird empfohlen, das heutige Datum in folgendem Format zu verwenden: YYYYMMDD
     
-    > [!IMPORTANT]
-    > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
-    > 
-    > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Beispiel: https://rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:**443**. 
+   > [!IMPORTANT]
+   > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
+   > 
+   > Wenn Ihre AD RMS-Server zusätzlich SSL/TLS-Serverzertifikate verwenden, überprüfen Sie, ob die Werte der Lizenzierungs-URL die Portnummer **443** in der Zeichenfolge enthalten. Beispiel: https://rms.treyresearch.net:443/_wmcs/licensing. Diese Informationen können Sie in der Active Directory Rights Management Services-Konsole finden, wenn Sie auf den Clusternamen klicken und sich die **Clusterdetails** ansehen. Wenn Sie sehen, dass die URL die Portnummer 443 enthält, fügen Sie diesen Wert beim Ändern des Skripts hinzu. Beispiel: https://rms.treyresearch.net:<strong>443</strong>. 
     
-    Wenn Sie Ihre Azure Rights Management-Dienst-URL für *&lt;IhreMandantenURL&gt;* abrufen müssen, erhalten Sie die nötigen Informationen darüber unter [To identify your Azure Rights Management service URL (So identifizieren Sie Ihre Azure Rights Management-Dienst-URL)](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   Wenn Sie Ihre Azure Rights Management-Dienst-URL für *&lt;IhreMandantenURL&gt;* abrufen müssen, erhalten Sie die nötigen Informationen darüber unter [To identify your Azure Rights Management service URL (So identifizieren Sie Ihre Azure Rights Management-Dienst-URL)](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Konfigurieren Sie Ihre Skriptbereitstellungsmethoden mithilfe der Anweisungen am Anfang dieses Schritts, um **Migrate-Client.cmd** und **Migrate-User.cmd** auf den Windows-Clientcomputern auszuführen, die von den Mitgliedern der Gruppe „AIPMigrated“ verwendet werden. 
 

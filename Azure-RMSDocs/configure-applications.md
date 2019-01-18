@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b53bb0a914871ba2a53ad7ff4c3bd6fca0d32dde
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 99c0871d879d7326a4142b99753acfe00cd27cf5
+ms.sourcegitcommit: 73b5884ee9fe8aabb1a9fc9baace64d5fd433f4e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173263"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54324079"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
@@ -43,7 +43,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 
     -   [Office 2010](configure-office-apps.md#office-2010)
 
--   [Azure Information Protection-Client: Installation und Konfiguration für Clients](configure-sharing-app.md)
+-   [Azure Information Protection-Client: Installation und Konfiguration für Clients](configure-client.md)
 
 -   [Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients](configure-sharing-app.md)
 
