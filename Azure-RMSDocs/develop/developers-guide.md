@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: f995f0236728850884a2e58d727e0f2f12b3717e
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 7b7bf658fe0766091ddd33aab076c9a721fcc236
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070841"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393792"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
 
@@ -77,7 +77,7 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 
 - [Aktivieren von Dokumentenverfolgung und -widerruf (Dienst)](tracking-content.md)
 - [So stellen Sie Ihren Client bereit](../rms-client/client-deployment-notes.md)
-- [Bereitstellen der Dienst-App in einem anderen Mandanten] (how-to-deploy-app.md)
+- [Bereitstellen der Dienst-App in einem anderen Mandanten](how-to-deploy-app.md)
 - [Installieren und Konfigurieren eines RMS-Servers (Dienst)](how-to-install-and-configure-an-rms-server.md)
 - [Verwenden der Dokumentenverfolgung (Benutzer)](how-to-use-document-tracking.md)
 - [So erneuern Sie einen symmetrischen Schlüssel in Azure Information Protection](how-to-renew-symmetric-key.md)

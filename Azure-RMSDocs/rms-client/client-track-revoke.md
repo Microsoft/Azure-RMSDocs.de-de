@@ -4,18 +4,18 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ba53a7f4d3aa96e4e813c602d1d79f014550ea17
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305222"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314763"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
@@ -59,6 +59,8 @@ Sie können nur die von Ihnen geschützten Dokumente nachverfolgen und widerrufe
 > Wenn Ihr Administrator Datenschutzkontrollen für die Website für die Dokumentnachverfolgung konfiguriert hat, können Sie möglicherweise nicht sehen, wenn Benutzer in Ihrer Organisation auf ein von Ihnen nachverfolgtes Dokument zugegriffen haben. Administratoren können alle Benutzer oder nur bestimmte Benutzer ausschließen. Sie können jedoch den Zugriff auf die nachverfolgten Dokumente jederzeit widerrufen.
 
 Um ein von Ihnen geschütztes Dokument nachzuverfolgen, müssen Sie es mit Ihrem Windows-Computer bei der Website für die Dokumentnachverfolgung registrieren. Zu diesem Zweck verwenden Sie entweder den Datei-Explorer oder die Office-Apps.
+
+Wenn Sie über die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen und den Parameter *EnableTracking* mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) verwenden, können Sie das geschützte Dokument auch bei PowerShell registrieren.
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Verwenden von Office zum Nachverfolgen oder Widerrufen des Dokuments
 

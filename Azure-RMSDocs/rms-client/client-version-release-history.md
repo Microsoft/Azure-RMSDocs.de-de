@@ -4,17 +4,17 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/27/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 94120417c5e2e61f1d28fc16d714ec1c91a4ed0f
-ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
+ms.openlocfilehash: d120c9dea8ac49c48d7b47d4ee0a0b317ab8c5d6
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54011972"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314950"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -41,10 +41,77 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-## <a name="version-141510"></a>Version 1.41.51.0
+## <a name="versions-later-than-141510"></a>Versionen ab 1.41.51.0
+
+Wenn Ihre Clientversion 1 höher als 1.41.51.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.  
 
 > [!TIP]
 > Sind würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center veröffentlicht werden? Siehe [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
+
+**Veröffentlicht**: 15.1.2019
+
+Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
+
+**Neue Funktionen:**
+
+- Der Azure Information Protection-Scanner wird nun nicht mehr mithilfe von PowerShell, sondern über das Azure-Portal konfiguriert:
+    
+    - Wenn Sie eine allgemein verfügbare Version des Scanner upgraden, unterscheidet sich der Upgradevorgang von früheren Versionen. Informationen hierzu finden Sie unter [Upgrade der Azure Information Protection-Überprüfung](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+    
+    - Wenn Sie den Scanner nicht upgraden, sondern zum ersten Mal installieren, finden Sie entsprechende Informationen unter [Deploying the preview version of the Azure Information Protection scanner to automatically classify and protect files (Bereitstellen der Vorschauversion des Azure Information Protection-Scanners zum automatischen Klassifizieren und Schützen von Dateien)](../deploy-aip-scanner-preview.md).
+
+- Wenn Sie Dateien mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. [Weitere Informationen](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
+
+- Vom Azure Information Protection-Scanner werden ab sofort beim Angeben eines Profilnamens mehrere Konfigurationsdatenbanken auf einer SQL Server-Instanz unterstützt.
+
+- Unterstützung für die folgenden Typen vertraulicher Informationen, mit deren Hilfe Anmeldeinformationen in Dokumenten und E-Mails erkannt werden:
+    - Azure Service Bus-Verbindungszeichenfolge
+    - Azure IoT Verbindungszeichenfolge
+    - Azure Storage-Konto
+    - Azure IAAS-Datenbankverbindungszeichenfolge und Azure SQL-Verbindungszeichenfolge
+    - Azure Redis Cache-Verbindungszeichenfolge
+    - Azure SAS
+    - SQL Server-Verbindungszeichenfolge
+    - Azure DocumentDB-Authentifizierungsschlüssel
+    - Kennwort für Azure-Veröffentlichungseinstellungen
+    - Schlüssel für Azure Storage-Konto (allgemein)
+
+**Fixes**:
+
+- Neue optische Kennzeichnungen werden konsistent angewendet, wenn ein Benutzer einem Word-Dokument neue Abschnitte hinzufügt und das Dokument anschließend mit einer neuen Bezeichnung versieht.
+
+- Der Azure Information Protection-Client entfernt den Schutz ordnungsgemäß von einem PDF-Dokument, das durch die Rights Management-Freigabeanwendung geschützt wurde.
+
+- In Pfaden und Dateinamen werden in der Azure Information Protection-Analyse anstelle von ASCII-fremden Zeichen keine Fragezeichen (**?**) angezeigt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
+
+- Untergeordnete Bezeichnungen werden von PowerShell und vom Scanner ordnungsgemäß angewendet, wenn die übergeordnete Bezeichnung für benutzerdefinierte Berechtigungen konfiguriert wurde.
+
+- Vom Azure Information Protection-Client werden Bezeichnungen ordnungsgemäß angezeigt, die von [Clients angewendet wurden, die einheitliche Bezeichnungen unterstützen](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+
+- Dokumente werden in Office ordnungsgemäß ohne Wiederherstellungsmeldung geöffnet, nachdem der Schutz durch Datei-Explorer entfernt und mit der rechten Maustaste auf PowerShell oder den Scanner geklickt wurde.
+
+**Weitere Änderungen**:
+
+- Die folgenden Typen vertraulicher Informationen werden für Bezeichnungen nicht mehr unterstützt, die Sie für die empfohlene oder automatische Klassifizierung konfigurieren:
+    - EU Phone Number (EU-Telefonnummer)
+    - EU GPS Coordinates (EU-GPS-Koordinaten)
+
+- Da der Azure Information Protections-Scanner über das Azure-Portal konfiguriert wird, sind die folgenden Cmdlets inzwischen veraltet und können nicht zum Konfigurieren von Datenrepositorys oder der Dateitypenliste verwendet werden:
+    - Add-AIPScannerRepository
+    - Add-AIPScannerScannedFileTypes
+    - Get-AIPScannerRepository
+    - Remove-AIPScannerRepository
+    - Remove-AIPScannerScannedFileTypes
+    - Set-AIPScannerRepository
+    - Set-AIPScannerScannedFileTypes
+
+- Ein neues PowerShell-Cmdlet [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) für Szenarios, in denen der Azure Information Protection-Scanner die entsprechende Konfiguration vom Azure-Portal nicht herunterladen kann.
+
+- Vom Azure Information Protection-Scanner werden ZIP-Dateien nicht mehr standardmäßig ausgeschlossen. Informationen zum Überprüfen und Bezeichnen von ZIP-Dateien finden Sie im Abschnitt [Überprüfen von ZIP-Dateien](client-admin-guide-file-types.md#to-inspect-zip-files) des Administratorhandbuchs.
+
+- Die [Richtlinieneinstellung](../configure-policy-settings.md) **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** gilt für den Scanner nicht mehr. Vom Scanner werden diese Aktionen durchgeführt, wenn Sie die Einstellung **Dateien neu bezeichnen** im Scannerprofil mit **Ein** konfigurieren.
+
+## <a name="version-141510"></a>Version 1.41.51.0
 
 **Veröffentlicht**: 27.11.2018
 

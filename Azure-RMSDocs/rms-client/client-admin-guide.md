@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/18/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e66ad53b23a76a263d4ec74e184597db12fdaa9d
-ms.sourcegitcommit: 8deca8163a6adea73f28aaf300a958154f842e4a
+ms.openlocfilehash: 1ece9ab39045d1bb6f1388a33784a733618dd0d4
+ms.sourcegitcommit: 24c464bcb80db2d193cfd17ea8c264a327dcf54a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210497"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54366209"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -198,11 +198,69 @@ Im Artikel [Verlauf der Releases und Supportrichtlinie](client-version-release-h
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Upgrade der Azure Information Protection-Überprüfung
 
+Wie der Scanner upgegradet wird, hängt davon ab, ob Sie auf die aktuelle, allgemein verfügbare Version oder auf die aktuelle Vorschauversion upgraden.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>So upgraden Sie den Scanner auf die aktuelle, allgemein verfügbare Version
+
 Für ein Upgrade der Azure Information Protection-Überprüfung installieren Sie die aktuelle Version des Azure Information Protection-Clients. Führen Sie anschließend die einmalige Aktion aus. Anschließend ist es nicht erforderlich, bereits überprüfte Dateien erneut zu überprüfen.
 
 - Führen Sie [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) aus, nachdem ein Upgrade für den Azure Information Protection-Client durchgeführt haben. Ihre Konfigurationseinstellungen für Überprüfung und Repositorys werden beibehalten. Das Ausführen dieses Cmdlets ist zum Aktualisieren des Datenbankschemas für die Überprüfung erforderlich. Bei Bedarf erhält das Überprüfungsdienstkonto die Berechtigungen zum Löschen für die Überprüfungsdatenbank. 
     
     Diese Überprüfung wird erst ausgeführt, sobald dieses Update-Cmdlet ausgeführt wird. Ihnen wird in der Regel die Ereignis-ID **1000** im Windows-Ereignisprotokoll mit folgender Fehlermeldung angezeigt: **Ungültiger Objektname 'ScannerStatus'**.
+
+#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>So upgraden Sie den Scanner auf die aktuelle Vorschauversion
+
+> [!IMPORTANT]
+> Damit das Upgrade reibungslos abläuft, installieren Sie nicht gleich als Erstes beim Upgrade des Scanners die Vorschauversion des Azure Information Protection-Clients auf dem Computer, auf dem der Scanner ausgeführt wird. Verwenden Sie stattdessen die folgenden Upgradeanweisungen.
+
+Bei der aktuellen Vorschauversion des Scanners unterscheidet sich der Upgradevorgang von dem der vorherigen Versionen. Beim Upgraden des Scanners wird der Scanner automatisch so geändert, dass die Konfigurationseinstellungen vom Azure-Portal abgerufen werden. Ferner wird das Schema für die Konfigurationsdatenbank des Scanners aktualisiert, und diese Datenbank wird über AzInfoProtection umbenannt:
+
+- Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurationsdatenbank in **AIPScanner_\<Computername>** umbenannt. 
+
+- Wenn Sie einen eigenen Profilnamen angeben, wird die Konfigurationsdatenbank in **AIPScanner_\<Profilname>** umbenannt.
+
+Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden jedoch die folgenden Schritte empfohlen:
+
+1. Verwenden Sie das Azure-Portal, um ein neues Scannerprofil zu erstellen, das die Einstellungen für den Scanner und die Datenrepositorys mit allen erforderlichen Einstellungen enthält. Unterstützung zu diesem Schritt finden Sie im Abschnitt [Konfigurieren des Scanners im Azure-Portal](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) in den Anweisungen zur Bereitstellung der Vorschauversion des Scanners.
+    
+    Diesen Schritt müssen Sie auch dann ausführen, wenn der Computer, auf dem der Scanner ausgeführt wird, nicht mit dem Internet verbunden ist. Verwenden Sie anschließend im Azure-Portal die Option **Exportieren**, um das Scannerprofil in eine Datei zu exportieren.
+
+2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
+
+3. Upgraden Sie den Azure Information Protection-Client, indem Sie die aktuelle Vorschauversion aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen.
+
+4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile USWest`
+
+5. Nur für den Fall, dass der Scanner auf einem nicht verbundenen Computer ausgeführt wird: Führen Sie nun das Cmdlet [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) aus, und geben Sie die Datei an, in der die exportierten Einstellungen enthalten sind.
+
+6. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
+
+##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Upgraden in einer anderen Reihenfolge als der der empfohlenen Schritte
+
+Wenn Sie den Scanner nicht vor dem Ausführen des Befehls „Update-AIPScanner“ im Azure-Portal konfigurieren, gibt es keinen Profilnamen zum Angeben, anhand dessen die Konfigurationseinstellungen des Scanners für den Upgradevorgang erkannt werden. 
+
+Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen Sie genau den Profilnamen angeben, den Sie beim Ausführen des Befehls „Update-AIPScanner“ verwendet haben. Der Scanner wird nur mit Ihren Einstellungen konfiguriert, wenn die Namen identisch sind. 
+
+> [!TIP]
+> Verwenden Sie das Blatt **Azure Information Protection – Knoten** im Azure-Portal, um Scanner mit dieser fehlerhaften Konfiguration zu erkennen.
+>  
+> Für Scanner mit einer Internetverbindung wird der Computername mit der Nummer der Vorschauversion des Azure Information Protection-Clients, aber kein Profilname angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
+
+Wenn Sie beim Ausführen des Befehls „Update-AIPScanner“ keinen Profilnamen angegeben haben, wird automatisch der Computername zum Erstellen des Profilnamens für den Scanner verwendet.
+
+#### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Verschieben der Konfigurationsdatenbank des Scanners in eine andere SQL Server-Instanz
+
+Die aktuelle Vorschauversion weist ein bekanntes Problem auf, das beim Verschieben der Konfigurationsdatenbank des Scanners in eine neue SQL Server-Instanz nach dem Ausführen des Upgradebefehls auftritt.
+
+Gehen Sie wie folgt vor, wenn Sie wissen, dass Sie die Konfigurationsdatenbank des Scanners für die Vorschauversion verschieben möchten:
+
+1. Deinstallieren Sie den Scanner mit dem Befehl [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
+
+2. Wenn Sie die Vorschauversion des Azure Information Protection-Clients noch nicht upgegradet haben, upgraden Sie den Client jetzt.
+
+3. Installieren Sie den Scanner mithilfe des Befehls [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), und geben Sie dabei die neue SQL Server-Instanz und den Profilnamen an.
+
+4. Optional: Wenn Sie nicht möchten, dass der Scanner alle Dateien erneut überprüft, exportieren Sie die Tabelle „ScannerFiles“, und importieren Sie sie in die neue Datenbank.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 

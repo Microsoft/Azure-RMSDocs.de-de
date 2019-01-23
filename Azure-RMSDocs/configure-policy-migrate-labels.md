@@ -4,17 +4,17 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/20198
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 221b503fa3621e51c4822a6ad5a6d08fae4f1bad
+ms.sourcegitcommit: 8dec864bf25c7da62b9e0f628f1bf673c81c15ae
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174130"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54356010"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -78,10 +78,10 @@ Azure Information Protection-Clients können diese Bezeichnungseinstellungen pro
 |-------------------|---------------------------------------------|-------------------------|
 |Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweise: Keine Synchronisierung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
 |Bezeichnungsfarbe: Auswahl aus der Liste oder Angabe mit RGB-Code<br /><br />Hinweise: Keine Unterstützung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
-|Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Ja |
-|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen in Word, Excel und PowerPoint |Nein|Ja |
-|HYOK-Schutz mit benutzerdefinierten Berechtigungen in Outlook für „Nicht weiterleiten“ |Nein|Ja |
-|Entfernen von Schutz |Nein|Ja |
+|Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Ja|
+|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen in Word, Excel und PowerPoint |Nein|Ja|
+|HYOK-Schutz mit benutzerdefinierten Berechtigungen in Outlook für „Nicht weiterleiten“ |Nein|Ja|
+|Entfernen von Schutz |Nein|Ja|
 |Visuelle Kennzeichnung (Kopfzeile, Fußzeile, Wasserzeichen): Benutzerdefinierte Schriftart und benutzerdefinierte Schriftfarbe nach RGB-Code|Nein|Empfohlen beim Verwenden von Variablen<br /><br />– Auf Clients werden Variablen nicht als dynamische Werte, sondern als Text angezeigt|
 |Visuelle Kennzeichnungen pro App|Nein|Empfohlen beim Verwenden von Variablen<br /><br />– Auf Clients werden Variablen nicht als dynamische Werte, sondern als Text angezeigt|
 |Bedingungen und entsprechende Einstellungen <br /><br />Hinweise: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Nein|
@@ -93,9 +93,13 @@ Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten- und Azure Informatio
 
 Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
 
-1. Öffnen Sie ein neues Browserfenster, und melden Sie sich über diesen Link im Azure-Portal an: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+    
+    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
+2. Wählen Sie im Menü **Verwalten** die Option **Einheitliche Bezeichnungen (Vorschau)** aus.
+
+3. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
 
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Kunden, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen im Security & Compliance Center veröffentlichen.
 

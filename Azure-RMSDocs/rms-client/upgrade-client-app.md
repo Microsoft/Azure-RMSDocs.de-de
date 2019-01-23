@@ -4,18 +4,18 @@ description: Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwe
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c882c917a3a612b3fa362661cdcd94e77ec145f1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 7c39527945eb5f92c19e6cf8f89db6e8d7ae9a5a
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305521"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314712"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Leitfaden: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
@@ -30,7 +30,7 @@ Verwenden Sie die folgenden Informationen als Hilfestellung, um schnell einsatzb
 |Schützen einer Datei auf einem Gerät <br /><br />Auch bekannt als „direkter Schutz“|Für Office-Apps: Wählen Sie eine Bezeichnung aus, die den erforderlichen Schutz anwendet, oder legen Sie benutzerdefinierte Berechtigungen fest.<br /><br />Für andere Dateien: Verwenden Sie die Datei-Explorer-Option **Klassifizieren und schützen**, um das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** zu öffnen. Dann wählen Sie eine Bezeichnung aus, die den erforderlichen Schutz anwendet, oder geben Sie Ihre eigenen benutzerdefinierten Berechtigungen an. <br /><br />Weitere Informationen finden Sie unter [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md).
 |Schützen einer Datei, die per E-Mail freigegeben ist <br /><br />Auch bekannt als „geschütztes Freigeben“|Wenden Sie in Outlook eine Bezeichnung mit dem erforderlichen Schutz auf eine E-Mail an, oder wählen Sie die Outlook-Option **Nicht weiterleiten** aus. Ungeschützte Anhänge mit [unterstütztem Dateityp](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) werden automatisch geschützt.<br /><br />Hinweis: Zur Nachverfolgung eines geschützten Dokuments, das Sie per E-Mail senden, müssen Sie das Dokument erst schützen und dann der E-Mail anfügen.<br /><br />Weitere Informationen finden Sie unter [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md).
 |Ändern von Berechtigungen für geschützte Dateien <br /><br />Auch als „erneutes Schützen“ bezeichnet|Für Office-Apps, die die Azure Information Protection-Leiste anzeigen: Wählen Sie eine Bezeichnung aus, die den erforderlichen Schutz anwendet.<br /><br />Für andere Dateien und wenn der Azure Information Protection-Client im [reinen Schutzmodus](client-protection-only-mode.md) ausgeführt wird: Verwenden Sie die Datei-Explorer-Option **Klassifizieren und schützen**, um das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** zu öffnen. Dann wählen Sie eine Bezeichnung aus, die den erforderlichen Schutz anwendet, oder geben Sie Ihre eigenen benutzerdefinierten Berechtigungen an.<br /><br />Weitere Informationen finden Sie unter [Klassifizieren und Schützen einer Datei oder E-Mail](client-classify-protect.md).
-|Nachverfolgen und Widerrufen von Dokumenten|Für Word, Excel und PowerPoint: Öffnen Sie das Dokument, und klicken Sie dann auf der Registerkarte **Start** in der Gruppe **Protection** (Schutz) auf **Protect** (Schützen)  > **Track and revoke** (Nachverfolgen und widerrufen).<br /><br />Im Datei-Explorer: Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu **klassifizieren und zu schützen**. Klicken Sie dann im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf die Option **Track and revoke** (Nachverfolgen und widerrufen). <br /><br />Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](client-track-revoke.md).
+|Nachverfolgen und Widerrufen von Dokumenten|Für Word, Excel und PowerPoint: Öffnen Sie das Dokument, und klicken Sie dann auf der Registerkarte **Start** in der Gruppe **Protection** (Schutz) auf **Protect** (Schützen)  > **Track and revoke** (Nachverfolgen und widerrufen).<br /><br />Im Datei-Explorer: Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu **klassifizieren und zu schützen**. Klicken Sie dann im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf die Option **Track and revoke** (Nachverfolgen und widerrufen). <br /><br />Wenn Sie PowerShell aus der aktuellen Vorschauversion des Azure Information Protection-Clients verwenden, verwenden Sie den Parameter *EnableTracking* mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), um das bezeichnete Dokument für die Nachverfolgung zu registrieren.<br /><br />Weitere Informationen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](client-track-revoke.md).
 |Anzeigen und Verwenden von Dateien, die geschützt wurden|Für geschützte Office-Dokumente muss Office installiert sein. Der Azure Information Protection-Viewer kann viele andere geschützte Dateien öffnen, damit Sie sie lesen, drucken und auch speichern können, wenn Sie über die entsprechenden Berechtigungen für diese Aktionen verfügen. Dieser Viewer wird automatisch mit dem Client oder separat installiert.<br /><br />Weitere Informationen finden Sie unter [Öffnen von geschützten Dateien](client-view-use-files.md).
 |Entfernen des Schutzes von Dateien|Verwenden Sie die Datei-Explorer-Option **Klassifizieren und schützen**, um das Dialogfeld **Klassifizieren und schützen – Azure Information Protection** zu öffnen. <br /><br />Deaktivieren Sie dann für eine einzelne Datei die Option **Protect with custom permissions** (Mit benutzerdefinierten Berechtigungen schützen). Klicken Sie bei mehreren Dateien oder einem Ordner auf die Option **Remove custom permissions** (Benutzerdefinierte Berechtigungen entfernen).<br /><br />Weitere Informationen finden Sie unter [Entfernen von Bezeichnungen und des Schutzes von Dateien und E-Mails](client-remove-label-protection.md).|
 

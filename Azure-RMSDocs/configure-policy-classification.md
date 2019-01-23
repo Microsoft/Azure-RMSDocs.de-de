@@ -4,16 +4,16 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023854"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314797"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -63,7 +63,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie konfigurieren möchten.
+2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die konfiguriert werden soll.
 
 3. Klicken Sie auf dem Blatt **Label** (Bezeichnung) im Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden) auf **Add a new condition** (Neue Bedingung hinzufügen).
 
@@ -79,7 +79,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
         
         Wenn Azure Information Protection die von Ihnen ausgewählten Informationstypen auswertet, verwendet es nicht die Office-DLP-Einstellung auf Konfidenzniveau, sondern sucht entsprechend der niedrigsten Konfidenz nach Übereinstimmungen.
     
-    - Für **Custom** (Benutzerdefiniert): Geben Sie einen Namen und eine Zeichenfolge für den Abgleich an. Diese darf weder Anführungszeichen noch Sonderzeichen enthalten. Legen Sie dann fest, ob für den Abgleich ein regulärer Ausdruck verwendet und ob die Groß-/Kleinschreibung beachtet werden soll. Legen Sie außerdem die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
+    - Für **Benutzerdefiniert**: Geben Sie einen Namen und eine Zeichenfolge für den Abgleich an. Diese darf weder Anführungszeichen noch Sonderzeichen enthalten. Legen Sie dann fest, ob für den Abgleich ein regulärer Ausdruck verwendet und ob die Groß-/Kleinschreibung beachtet werden soll. Legen Sie außerdem die Mindestanzahl der Vorkommen sowie die Einstellung fest, ob das Vorkommen über einen eindeutigen Wert verfügen muss, um gezählt zu werden.
         
         Die regulären Ausdrücke verwenden die RegEx-Muster von Office 365. Damit Sie reguläre Ausdrücke für Ihre benutzerdefinierten Bedingungen einfach angeben können, sehen Sie sich die folgende spezifische Version der [Perl Regular Expression Syntax](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) von Boost an.
         
@@ -89,7 +89,7 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
 
 6. Konfigurieren Sie auf dem Blatt **Bezeichnung** die folgenden Einstellungen, und klicken Sie dann auf **Speichern**:
     
-    - Wählen Sie die automatische oder die empfohlene Klassifizierung: Wählen Sie für **Select how this label is applied: automatically or recommended to user** (Festlegen, wie diese Bezeichnung angewendet wird: automatisch oder empfohlen) die Einstellung **Automatic** (Automatisch) oder **Recommended** (Empfohlen).
+    - Wählen Sie die automatische oder die empfohlene Klassifizierung aus: Wählen Sie für **Select how this label is applied: automatically or recommended to user** (Festlegen, wie diese Bezeichnung angewendet wird: automatisch oder empfohlen) die Einstellung **Automatic** (Automatisch) oder **Recommended** (Empfohlen).
     
     - Geben Sie den Text für die Benutzeraufforderung oder den Richtlinientipp an: Übernehmen Sie den Standardtext, oder geben Sie eine eigene Zeichenfolge ein.
 
@@ -99,11 +99,9 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 Die folgenden Typen vertraulicher Informationen erfordern die Mindestversion 1.37.19.0 für den Azure Information Protection-Client:
 
-- **EU Phone Number** (EU-Telefonnummer)
 - **EU Mobile Phone Number** (EU-Mobiltelefonnummer)
 - **EU Passport Number** (EU-Reisepassnummer)
 - **EU Driver's License Number** (EU-Führerscheinnummer)
-- **EU GPS Coordinates** (EU-GPS-Koordinaten)
 - **EU National Identification Number** (Nationale EU-Identifikationsnummer)
 - **EU Social Security Number (SSN) or Equivalent ID** (EU-Sozialversicherungsnummer (SSN) oder entsprechende ID)
 - **EU Tax Identification Number (TIN)** (EU-Steueridentifikationsnummer)
@@ -111,6 +109,24 @@ Die folgenden Typen vertraulicher Informationen erfordern die Mindestversion 1.3
 - **EU National Identification Number** (Nationale türkische Identifikationsnummer)
 - **Japanese Residence Card Number** (Nummer einer japanischen Aufenthaltskarte)
 
+
+Die folgenden Typen vertraulicher Informationen erfordern die aktuelle Vorschauversion des Azure Information Protection-Clients:
+
+- **Azure Service Bus-Verbindungszeichenfolge**
+- **Azure IoT Verbindungszeichenfolge**
+- **Azure Storage-Konto**
+- **Azure IAAS-Datenbankverbindungszeichenfolge und Azure SQL-Verbindungszeichenfolge**
+- **Azure Redis Cache-Verbindungszeichenfolge**
+- **Azure SAS**
+- **SQL Server-Verbindungszeichenfolge**
+- **Azure DocumentDB-Authentifizierungsschlüssel**
+- **Kennwort für Azure-Veröffentlichungseinstellungen**
+- **Schlüssel für Azure Storage-Konto (allgemein)**
+
+Darüber hinaus werden die folgenden Typen für vertrauliche Informationen für die aktuelle Vorschauversion des Azure Information Protection-Clients nicht mehr unterstützt und im Azure-Portal nicht mehr angezeigt:
+
+- **EU Phone Number** (EU-Telefonnummer)
+- **EU GPS Coordinates** (EU-GPS-Koordinaten)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
