@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 57597f32660a4dfc3152257b61cc46df05b4581b
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: f105a971255cf93bd2d9d41e3f7e0f5cec9df3b4
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394274"
+ms.locfileid: "54397911"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
@@ -37,7 +37,7 @@ Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Inform
     
     Wenn dieser DNS-Eintrag vorhanden ist, können Benutzer, die Outlook im Web und mobile E-Mail-Clients verwenden, AD RMS-geschützte E-Mails in diesen Apps anzeigen. Zudem kann Exchange den von AD RMS importierten Schlüssel zum Entschlüsseln, Indizieren, Erfassen und Schützen von Inhalten verwenden, die durch AD RMS geschützt wurden.  
 
-2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, lesen Sie die Schrittanleitungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchange-online-irm-configuration).
+2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, lesen Sie die Schrittanleitungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration).
     
     Überprüfen Sie mithilfe der Ausgabe, ob **AzureRMSLicensingEnabled** auf **TRUE** festlegt ist:
     

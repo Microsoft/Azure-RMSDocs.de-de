@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1a44fb7cf6e4ad340a89f236920e5ff6d96b7d0
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: e05ade72a2dcd81eadd21fc4185b0845660a26eb
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173994"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397894"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -59,7 +59,7 @@ Weitere Informationen zu den E-Mail-Optionen, die Sie zum Schützen von E-Mails 
 
 Wenn Sie bereit sind, Exchange zum Schützen von E-Mails zu konfigurieren, dann sehen Sie sich folgende Seiten an:
 
-- Informationen zu Exchange Online finden Sie unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchange-online-irm-configuration).
+- Informationen zu Exchange Online finden Sie unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration).
 
 - Informationen zu Exchange lokal finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
@@ -95,7 +95,7 @@ Obwohl der folgende Beitrag im Office 365-Blog nicht mehr ganz neu ist, finden S
 
 Wenn Sie bereit sind, SharePoint für IRM zu konfigurieren:
 
-- Informationen zu SharePoint Online finden Sie unter [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+- Informationen zu SharePoint Online finden Sie unter [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration).
 
 - Informationen zu Sharepoint Server finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
