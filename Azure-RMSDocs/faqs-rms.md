@@ -11,12 +11,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6c4bd30c09ff54eab6da4bb63130a16373faebc
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: ac079a7046b6166b89c828054ed5f94e756fa99f
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174011"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397979"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -123,7 +123,7 @@ Stattdessen können Sie mithilfe von PowerShell externe Benutzer für benutzerde
 
 2. Fügen Sie diese Variable zu dem RightsDefinition-Parameter mit dem Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) hinzu.
 
-    Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) für das Cmdlet.
+    Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) für das Cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Welche Art von Gruppen kann ich mit Azure RMS verwenden?
 Für die meisten Szenarios können Sie alle Gruppentypen in Azure AD verwenden, die über eine E-Mail-Adresse verfügen. Diese Faustregel gilt immer dann, wenn Sie Nutzungsrechte zuweisen, es aber einige Ausnahmen beim Verwalten des Azure Rights Management-Diensts gibt. Weitere Informationen finden Sie unter [Azure Information Protection-Anforderungen für Gruppenkonten](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -134,7 +134,7 @@ Wenn Sie Exchange Online und den Azure Rights Management-Dienst verwenden, sende
 
 Dem Empfänger wird eine Option angezeigt, mit der dieser sich bei seinem Gmail-, Yahoo- oder Microsoft-Konto anmelden und die geschützte E-Mail anschließend lesen kann. Alternativ können Empfänger die Option zur Anforderung einer einmaligen Kennung verwenden, mit der sie die E-Mail in einem Browser lesen können.
 
-Für dieses Szenario muss Exchange Online für den Azure Rights Management-Dienst und für die neuen Funktionen in der Office 365-Nachrichtenverschlüsselung aktiviert sein. Weitere Informationen zu dieser Konfiguration finden Sie unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchange-online-irm-configuration).
+Für dieses Szenario muss Exchange Online für den Azure Rights Management-Dienst und für die neuen Funktionen in der Office 365-Nachrichtenverschlüsselung aktiviert sein. Weitere Informationen zu dieser Konfiguration finden Sie unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration).
 
 Weitere Informationen zu den neuen Funktionen, die u. a. sämtliche E-Mail-Konten auf allen Geräten unterstützen, finden Sie im folgenden Blogbeitrag: [Announcing new capabilities available in Office 365 Message Encryption (Ankündigung neuer Funktionen in der Office 365-Nachrichtenverschlüsselung)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801).
 
@@ -172,7 +172,7 @@ Wenn Sie an einer bestimmten Funktion interessiert sind, die noch nicht unterst�
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Wie konfiguriere ich OneDrive for Business in SharePoint Online, sodass Benutzer ihre Dateien sicher für Personen innerhalb und außerhalb des Unternehmens freigeben können?
 Als Office 365-Administrator konfigurieren Sie dies normalerweise nicht. Eine solche Konfiguration erfolgt durch Benutzer.
 
-Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für eine SharePoint-Bibliothek, deren Besitzer Sie sind. OneDrive for Business ist so konzipiert, dass die Benutzer IRM für ihre eigene OneDrive for Business-Bibliothek aktivieren und konfigurieren. Mithilfe von PowerShell können Sie das jedoch für sie übernehmen. Anweisungen finden Sie im Abschnitt [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) im Artikel [Office 365: Konfiguration für Clients und Onlinedienste](configure-office365.md).
+Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für eine SharePoint-Bibliothek, deren Besitzer Sie sind. OneDrive for Business ist so konzipiert, dass die Benutzer IRM für ihre eigene OneDrive for Business-Bibliothek aktivieren und konfigurieren. Mithilfe von PowerShell können Sie das jedoch für sie übernehmen. Anweisungen dazu finden Sie im Abschnitt [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) im Artikel [Office 365: Konfigurationen für Clients und Onlinedienste](configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Gibt es besondere Tipps und Tricks für eine erfolgreiche Bereitstellung?
 

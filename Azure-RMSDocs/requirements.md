@@ -4,18 +4,18 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef35134a8f5d6a3a8a615be6c956ec5e445557d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 66ebb49b3b161a63c80968104e681fad74bbef42
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173739"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898765"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -90,9 +90,9 @@ Wenn durch den Azure Information Protection-Client Daten mit dem Azure Rights Ma
 
 Der Azure Information Protection-Client kann Dokumente und E-Mails bezeichnen und schützen, indem er die Office-Anwendungen **Word**, **Excel**, **PowerPoint** und **Outlook** aus einer der folgenden Office-Suiten verwendet:
 
-- Office 365 mit Office 2016-Apps (ab Version 1805, Build 9330.2078), wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“) zugewiesen wurde
+- Office 365 mit Office-Apps von Office 365 Business oder Microsoft 365 Business, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde
 
-- Office 365 ProPlus mit 2016-Apps oder 2013-Apps (Klick-und-Los- oder Windows Installer-basierte Installation)
+- Office 365 ProPlus
 
 - Office Professional Plus 2016
 

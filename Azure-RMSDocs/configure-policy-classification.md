@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: b9cc4267ec4dd3ebaa24b23d996fde61f9b09799
+ms.sourcegitcommit: 719e3c758e414c5c95dea03cd78d7427af4ee8e7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314797"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443840"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -29,7 +29,9 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 ![Azure Information Protection – Erkennung und Empfehlung](./media/info-protect-recommend-calloutsv2.png)
 
-In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt. 
+In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt.
+
+Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in seinen Office-Apps angezeigt. Die Schaltflächen **Jetzt ändern** und **Schließen** werden jedoch durch **OK** ersetzt.
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.

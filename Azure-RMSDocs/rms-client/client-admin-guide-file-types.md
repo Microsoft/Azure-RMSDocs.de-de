@@ -4,18 +4,18 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd0279bb45c04bc6f62c9eb20ffc006c7838b286
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 3d4285b77e0ccbfd21b4ed536f8c002ffa8d2a28
+ms.sourcegitcommit: fb0a9593f1e69306040fabda9bc9ad4977b21be8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393867"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751535"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -188,7 +188,9 @@ Sie können ähnliche Registrierungseinträge für andere Szenarien durch Änder
 
 - **Off**: Block-Schutz
 
-Weitere Informationen finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. 
+Nachdem Sie diese Registrierungsänderungen vorgenommen haben, müssen Sie den Computer nicht neu starten. Wenn Sie jedoch PowerShell-Befehle zum Schützen von Dateien verwenden, müssen Sie eine neue PowerShell-Sitzung starten, damit die Änderungen wirksam werden.
+
+Weitere Informationen zum Bearbeiten der Registrierung, um die Standardschutzebene von Dateien zu ändern, finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet.
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Von der Klassifizierung und dem Schutz ausgeschlossene Dateitypen
 
@@ -254,11 +256,11 @@ Sie können diese Containerdateien klassifizieren und schützen, jedoch werden d
 
 Bei einer Containerdatei, die klassifizierte und geschützte Dateien enthält, müssen Sie zuerst die Dateien extrahieren, um die Einstellungen für die Klassifizierung oder den Schutz zu ändern. Es ist jedoch auch möglich, den Schutz für alle Dateien in unterstützten Containerdateien mit dem Cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) zu entfernen.
 
-Mit dem Azure Information Protection-Viewer können keine Anlagen in einem geschützten PDF-Dokument geöffnet werden.
+Mit dem Azure Information Protection-Viewer können keine Anlagen in einem geschützten PDF-Dokument geöffnet werden. In diesem Szenario sind die Anlagen bei geöffnetem Dokument im Viewer nicht sichtbar.
 
 ## <a name="file-types-supported-for-inspection"></a>Bei der Überprüfung unterstützte Dateitypen
 
-Wenn keine weiteren Konfigurationen vorhanden sind, verwendet der Azure Information Protection-Client Windows-IFilter, um die Inhalte der Dokumente zu überprüfen. Windows-IFilter wird von Windows Search für die Indizierung verwendet. Aus diesem Grund können die folgenden Dateitypen überprüft werden, wenn Sie den [Azure Information Protection-Scanner](../deploy-aip-scanner.md) oder den PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) verwenden.
+Wenn keine weiteren Konfigurationen vorhanden sind, verwendet der Azure Information Protection-Client Windows-IFilter, um die Inhalte der Dokumente zu überprüfen. Windows-IFilter wird von Windows Search für die Indizierung verwendet. Aus diesem Grund können die folgenden Dateitypen überprüft werden, wenn Sie den [Azure Information Protection-Scanner](../deploy-aip-scanner.md) oder den PowerShell-Befehl [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) verwenden.
 
 |Anwendungstyp|Dateityp|
 |--------------------------------|-------------------------------------|
@@ -276,7 +278,7 @@ In den folgenden Abschnitten finden Sie Konfigurationsanweisungen zum Überprüf
 
 ### <a name="to-inspect-zip-files"></a>Überprüfen von ZIP-Dateien
 
-Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können ZIP-Dateien überprüfen, wenn Sie die folgenden Anweisungen befolgen:
+Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) können ZIP-Dateien überprüfen, wenn Sie die folgenden Anweisungen befolgen:
 
 1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) auf dem Computer, auf dem die Überprüfung ausgeführt wird.
 

@@ -4,18 +4,18 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173892"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898799"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -79,11 +79,11 @@ Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information 
 > [!TIP]
 > Um anwendungsspezifische Hilfe und Anleitungen zur Verwendung des Informationsschutzes mit diesen Anwendungen zu finden, suchen Sie nach **IRM** sowie dem Anwendungsnamen und der -version.
 
-#### <a name="to-protect-a-document-in-word2013"></a>So schützten Sie ein Dokument in Word 2013
+#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Schützen eines Dokuments in Word von Office 365 ProPlus
 
 1.  Erstellen Sie in Microsoft Word ein Dokument.
 
-2.  Klicken Sie im Menü **Datei** auf **Info**, dann auf **Dokument schützen** und danach auf **Zugriff beschränken**.
+2.  Klicken Sie im Menü **Datei** auf **Info** > **Dokument schützen** >  **Zugriff beschränken**.
 
 3. Wählen Sie dann eine Vorlage aus, um schnell die entsprechenden Nutzungsrechte anzuwenden, oder klicken Sie auf **Zugriff beschränken**, und wählen Sie die Nutzungsrechte selbst aus.
 
@@ -98,11 +98,11 @@ Beispielsweise gestattet ein Nutzungsrecht „Nur anzeigen“ dem Benutzer nicht
 
 Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsbanner angezeigt. In dem Banner können die Berechtigungen angezeigt werden, die auf das Dokument angewendet werden, oder es kann ein Link zu deren Anzeige vorhanden sein.
 
-#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>So schützten Sie eine E-Mail mithilfe von Outlook 2013 und Exchange Online
+#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Schützen einer E-Mail-Nachricht mit Outlook von Office 365 ProPlus mit Verbindung zu Exchange Online
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf der Registerkarte **OPTIONEN** auf **Berechtigung**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Wählen Sie auf der Registerkarte **OPTIONEN** unter **Berechtigung** eine Option aus. Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -114,12 +114,10 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1.  Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Klicken Sie auf **...**, auf **Berechtigung festlegen**, und wählen Sie dann eine Option aus. Beispiel: **Nicht weiterleiten** oder **Nicht allen antworten**. Oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, wählen Sie **Berechtigungen ändern** und dann eine Option aus der Dropdownliste aus. Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
 
 3.  Senden Sie die Nachricht.
 
 Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der E-Mail zunächst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
 
-Wenn Sie beispielsweise **Nicht allen antworten**ausgewählt haben, ist die Option **ALLEN ANTWORTEN** im Nachrichtenfenster nicht verfügbar.
-
-
+Beispielsweise ist bei der Standardoption **Nicht weiterleiten** die Option **Weiterleiten** im Nachrichtenfenster nicht verfügbar.

@@ -4,18 +4,18 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394367"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898850"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -51,6 +51,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |EnablePDFv2Protection|[Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung.](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Ändern des lokalen Protokolliergrads](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -603,7 +604,7 @@ Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird 
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Deaktivieren der niedrigen Integritätsebene für den Scanner
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Die Vorschauversion der Azure Information Protection-Überprüfung wird standardmäßig mit einer niedrigen Integritätsebene ausgeführt. Diese Einstellung bietet eine höhere Sicherheitsisolationsstufe, beeinträchtigt jedoch die Leistung. Eine niedrige Integritätsebene eignet sich, wenn Sie den Scanner mit einem Konto ausführen, das privilegierte Zugriffsrechte hat (z.B. ein lokales Administratorkonto), da diese Einstellung den Computer schützt, der den Scanner ausführt.
 
@@ -617,6 +618,32 @@ Wenn Sie diese erweiterte Einstellung so konfigurieren möchten, dass der Scanne
 
 - Wert: **False**
 
+
+## <a name="change-the-local-logging-level"></a>Ändern des lokalen Protokolliergrads
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
+
+Der Azure Information Protection-Client schreibt Clientprotokolldateien standardmäßig in den Ordner **%localappdata%\Microsoft\MSIP**. Diese Dateien dienen zur Problembehandlung durch den Microsoft-Support.
+ 
+Zum Ändern des Protokolliergrads für diese Dateien konfigurieren Sie die folgende erweiterte Clienteinstellung:
+
+- Legende: **LogLevel**
+
+- Wert: **\<Protokolliergrad>**
+
+Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
+
+- **Off**: Keine lokale Protokollierung.
+
+- **Error**: Nur Fehler.
+
+- **Info**: Minimale Protokollierung, die keine Ereignis-IDs umfasst.
+
+- **Debug**: Vollständige Informationen (die Standardeinstellung).
+
+- **Trace**: Sehr ausführliche Protokollierung, die Auswirkungen auf die Leistung hat und nur aktiviert werden sollte, wenn dies vom Microsoft-Support gefordert wird. Wenn Sie angewiesen werden, diesen Protokolliergrad festzulegen, denken Sie nach dem Sammeln der relevanten Protokolle daran, einen anderen Wert festzulegen.
+
+Durch diese erweiterte Clienteinstellung ändern sich weder die Informationen, die für die [zentrale Berichterstellung](../reports-aip.md) an Azure Information Protection gesendet werden, noch die Informationen, die in das lokale [Ereignisprotokoll](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) geschrieben werden.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integration in die Exchange-Nachrichtenklassifizierung für eine Lösung zur Bezeichnung mobiler Geräte
 

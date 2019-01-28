@@ -4,17 +4,17 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d120c9dea8ac49c48d7b47d4ee0a0b317ab8c5d6
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 4ef6bd888c46d7882ada03554813a943861fb51d
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314950"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898816"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -163,7 +163,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
 
-- Bezeichnungen, die Schutz anwenden, werden jetzt in Office 2016-Apps (ab Version 1805, Build 9330.2078) angezeigt, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“) zugewiesen wurde.
+- Bezeichnungen, die Schutz anwenden, werden jetzt in Office 365-Apps von Office 365 Business oder Microsoft 365 Business angezeigt, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
 
 - Unterstützung von Bezeichnungen für das Dokumentformat **Strict Open XML** in Word-, Excel- und PowerPoint- Dateien. Weitere Informationen zu den Open XML-Formaten finden Sie im Office-Blogbeitrag [New file format options in the new Office (Neue Dateiformate in der neuen Version von Office)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
 
