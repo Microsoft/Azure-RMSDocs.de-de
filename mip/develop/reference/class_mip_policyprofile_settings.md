@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „PolicyProfile Settings“
-description: Referenz für die Microsoft Information Protection-Klasse „PolicyProfile Settings“
+title: mip::PolicyProfile::Settings-Klasse
+description: Dokumentiert die mip::policyprofile-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07cbcbc022c02a43f751e1cf55b5b0efdfb816d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d6a0c773226fff789889bd82a6075a65cff184bd
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446878"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651121"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings-Klasse 
 [Einstellungen](class_mip_policyprofile_settings.md), die während der Erstellung und Lebensdauer von [PolicyProfile](class_mip_policyprofile.md) verwendet werden
@@ -19,112 +19,112 @@ ms.locfileid: "47446878"
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, const std::shared_ptr<AuthDelegate>& authDelegate, const std::shared_ptr<PolicyProfile::Observer>& observer, const ApplicationInfo& applicationInfo)  |  Eine Schnittstelle für die Konfiguration des Profils
- public const std::string& GetPath() const  |  Ruft den Pfad zum gespeicherten Status ab.
- public bool GetUseInMemoryStorage() const  |  Ruft das Flag „Arbeitsspeicher verwenden“ ab.
-public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  Ruft den Authentifizierungsdelegaten ab.
-public const std::shared_ptr<PolicyProfile::Observer>& GetObserver() const  |  Ruft den Ereignisbeobachter ab.
- public const ApplicationInfo GetApplicationInfo() const  |  Ruft die Anwendungsinformationen ab.
-public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Überschreibt die Standardprotokollierung.
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
- public void OptOutTelemetry()  |  Deaktiviert die Sammlung sämtlicher Telemetriedaten.
- public bool IsTelemetryOptedOut() const  |  Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
- public void SetMinimumLogLevel(LogLevel logLevel)  |  Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
- public LogLevel GetMinimumLogLevel() const  |  Ruft das Mindestprotokolliergrad-Objekt ab.
+Einstellungen für die öffentliche (const Std:: String & Pfad, "bool" UseInMemoryStorage, const Std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const Std:: shared_ptr\<PolicyProfile::Observer\>& Observer, const ApplicationInfo & ApplicationInfo)  |  Eine Schnittstelle für die Konfiguration des Profils
+public const std::string& GetPath() const  |  Ruft den Pfad zum gespeicherten Status ab.
+public bool GetUseInMemoryStorage() const  |  Ruft das Flag „Arbeitsspeicher verwenden“ ab.
+Public const Std:: shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  Ruft den Authentifizierungsdelegaten ab.
+Public const Std:: shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  Ruft den Ereignisbeobachter ab.
+public const ApplicationInfo GetApplicationInfo() const  |  Ruft die Anwendungsinformationen ab.
+Public Std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
+Öffentliche void SetLoggerDelegate (const Std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate)  |  Überschreibt die Standardprotokollierung.
+Public Std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
+Öffentliche void SetHttpDelegate (const Std:: shared_ptr\<HttpDelegate\>& HttpDelegate)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
+public void OptOutTelemetry()  |  Deaktiviert die Sammlung sämtlicher Telemetriedaten.
+public bool IsTelemetryOptedOut() const  |  Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
+public void SetMinimumLogLevel(LogLevel logLevel)  |  Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
+public LogLevel GetMinimumLogLevel() const  |  Ruft das Mindestprotokolliergrad-Objekt ab.
   
 ## <a name="members"></a>Member
   
-### <a name="settings"></a>Einstellung
+### <a name="settings-function"></a>Settings-Funktion
 Eine Schnittstelle für die Konfiguration des Profils
 
 Parameter:  
-* **path**: Pfad zu einem Verzeichnis, in dem das SDK den Profilstatus speichert. 
+* **path**: Der Pfad zu einem Verzeichnis, in dem das SDK den Profilstatus speichert. 
 
 
-* **useInMemoryStorage**: Speichert jeden zwischengespeicherten Status im Arbeitsspeicher und nicht auf dem Datenträger. 
+* **useInMemoryStorage**: Store Sie alle zwischengespeicherten Zustand im Arbeitsspeicher und nicht auf dem Datenträger. 
 
 
-* **authDelegate**: Authentifizierungsdelegat, der vom SDK zum Abrufen von Authentifizierungstoken verwendet wird 
+* **authDelegate**: Der authentifizierungsdelegat, der vom SDK zum Abrufen von Authentifizierungstoken verwendet wird. 
 
 
-* **observer**: Klasse, die die Schnittstelle [PolicyProfile::Observer](class_mip_policyprofile_observer.md) implementiert. Kann „nullptr“ lauten. 
+* **observer**: Eine Klasse implementiert die [PolicyProfile::Observer](class_mip_policyprofile_observer.md) Schnittstelle. Kann „nullptr“ lauten. 
 
 
-* **applicationInfo**: Anwendungsbezeichner für den Dienstzugriff.
+* **applicationInfo**: Der Anwendungsbezeichner für den Dienstzugriff verwendet.
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>GetPath-Funktion
 Ruft den Pfad zum gespeicherten Status ab.
 
   
-**Rückgabe**: Pfad zum gespeicherten Status.
+**Gibt**: Der Pfad zum gespeicherten Status.
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage-Funktion
 Ruft das Flag „Arbeitsspeicher verwenden“ ab.
 
   
-**Rückgabe**: TRUE, wenn In-Memory-Speicher-Verwendung festgelegt ist; andernfalls wird FALSE zurückgegeben.
+**Gibt**: True, wenn die Verwendung in den Speicher andernfalls "false" festgelegt ist.
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>GetAuthDelegate-Funktion
 Ruft den Authentifizierungsdelegaten ab.
 
   
-**Rückgabe**: Authentifizierungsdelegat.
+**Gibt**: Der Authentifizierungsdelegat.
   
-### <a name="policyprofileobserver"></a>PolicyProfile::Observer
+### <a name="getobserver-function"></a>GetObserver-Funktion
 Ruft den Ereignisbeobachter ab.
 
   
-**Rückgabe**: Ereignisbeobachter.
+**Gibt**: Der ereignisbeobachter.
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo-Funktion
 Ruft die Anwendungsinformationen ab.
 
   
-**Rückgabe**: die Anwendungsinformationen.
+**Gibt**: Die Anwendungsinformationen.
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate-Funktion
 Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
 
   
-**Rückgabe**: Protokollierung.
+**Gibt**: Protokollierung
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate-Funktion
 Überschreibt die Standardprotokollierung.
 
 Parameter:  
-* **loggerDelegate**: Rückrufschnittstelle für die Protokollierung, die von Clientanwendungen implementiert wird.
+* **loggerDelegate**: Protokollieren die Rückrufschnittstelle implementiert, die von Clientanwendungen
 
 
 Diese Methode sollte durch Clientanwendungen aufgerufen werden, die ihre eigene Implementierung für die Protokollierung verwenden.
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate-Funktion
 Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 
   
-**Rückgabe**: HTTP-Delegat, der für HTTP-Vorgänge verwendet wird.
+**Gibt**: HTTP-Delegat, der für HTTP-Vorgänge verwendet werden
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate-Funktion
 Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
 
 Parameter:  
-* **httpDelegate**: HTTP-Rückrufschnittstelle, die von Clientanwendungen implementiert wird.
+* **httpDelegate**: HTTP-Rückrufschnittstelle, die von der Clientanwendung implementiert
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>OptOutTelemetry-Funktion
 Deaktiviert die Sammlung sämtlicher Telemetriedaten.
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut function
 Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
 
   
-**Rückgabe**: Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
+**Gibt**: True, wenn das Sammeln von Telemetriedaten deaktiviert werden soll else "false"
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel-Funktion
 Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
 
 Parameter:  
@@ -133,10 +133,10 @@ Parameter:
 
 
   
-**Rückgabe**: TRUE.
+**Gibt**: True
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel-Funktion
 Ruft das Mindestprotokolliergrad-Objekt ab.
 
   
-**Rückgabe**: Mindestprotokolliergrad, der ein Protokollierereignis auslöst.
+**Gibt**: Mindestprotokolliergrad, die ein Ereignis für die nachrichtenprotokollierung ausgelöst wird.

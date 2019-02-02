@@ -4,21 +4,21 @@ description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clien
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 01/08/2019
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
-ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.openlocfilehash: 2fb19aa5071fa13f9801de9e9ed1106717f5adf9
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136230"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651427"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Client-Anwendung-Initialisierung (C++)
 
-In diesem Schnellstart lernen Sie, wie Sie das Muster für die Clientinitialisierung implementieren können, das zur Laufzeit vom MIP SDK für C++ verwendet wird. 
+In dieser schnellstartanleitung erfahren Sie, wie Sie zum Implementieren des Musters des Client-Initialisierung dargestellt, der vom C++ MIP SDK zur Laufzeit verwendet. 
 
 > [!NOTE]
-> Die in diesem Schnellstart beschriebenen Schritte müssen für sämtliche Clientanwendungen ausgeführt werden, die MIP-Datei-, Richtlinien- oder Datenschutz-APIs verwenden. Dieser Schnellstart konzentriert sich zwar auf die Verwendung der Datei-APIs, das gleiche Muster ist jedoch auch auf Clients anwendbar, die Richtlinien- und Datenschutz-APIs verwenden. Beginnend mit diesem Schnellstart sollten die nächsten Schnellstarts nacheinander ausgeführt werden, da diese aufeinander aufbauen.
+> Die in diesem Schnellstart beschriebenen Schritte müssen für sämtliche Clientanwendungen ausgeführt werden, die MIP-Datei-, Richtlinien- oder Datenschutz-APIs verwenden. Dieser Schnellstart konzentriert sich zwar auf die Verwendung der Datei-APIs, das gleiche Muster ist jedoch auch auf Clients anwendbar, die Richtlinien- und Datenschutz-APIs verwenden. Führen Sie die verbleibenden Schnellstarts seriell als jeweils auf dem vorherigen Beispiel erstellt wurde, wird Sie mit diesem ersten.
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -27,12 +27,12 @@ Stellen Sie Folgendes sicher, sofern dies noch nicht geschehen ist:
 - Führen Sie die Schritte unter [Microsoft Information Protection (MIP) SDK: Setup und Konfiguration](setup-configure-mip.md) aus. Dieser Schnellstart „Initialisierung der Clientanwendung“ hat das ordnungsgemäße Setup und die ordnungsgemäße Konfiguration des SDK zum Thema.
 - Optional:
   - Überprüfen Sie [Profile and engine objects](concept-profile-engine-cpp.md) (Profil- und Engine-Objekte). Bei den Profil- und Engine-Objekten handelt es sich um universelle Konzepte, die von Clients benötigt werden, die die MIP-Datei-/Richtlinien-/Datenschutz-APIs verwenden. 
-  - Überprüfen Sie [Authentifizierungskonzepte](concept-authentication-cpp.md), um zu erfahren, wie die Authentifizierung und die Zustimmung von der SDK- und der Clientanwendung implementiert werden.
-  - Überprüfen Sie [Observer-Konzepte](concept-async-observers.md), um mehr über Observer und ihre Implementierung zu erfahren. Das MIP SDK implementiert mithilfe des Observer-Musters asynchrone Ereignisbenachrichtigungen.
+  - Überprüfen Sie [Authentifizierungskonzepte](concept-authentication-cpp.md) um zu erfahren, wie Authentifizierung und die Zustimmung vom SDK und die Client-Anwendung implementiert werden.
+  - Überprüfen Sie [Observer-Konzepte](concept-async-observers.md), um mehr über Observer und ihre Implementierung zu erfahren. Das MIP SDK verwendet das Observer-Muster, um asynchrone ereignisbenachrichtigungen zu implementieren.
 
 ## <a name="create-a-visual-studio-solution-and-project"></a>Erstellen einer Visual Studio-Lösung und eines -Projekts
 
-Zunächst erstellen und konfigurieren wir die erste Lösung und das erste Projekt in Visual Studio. Dies bildet die Grundlage für die anderen Schnellstarts. 
+Zuerst erstellen und konfigurieren den ersten Visual Studio-Projektmappe und das Projekt, auf der anderen Schnellstarts erstellen. 
 
 1. Öffnen Sie Visual Studio 2017, wählen Sie das Menü **Datei** und anschließend **Neu** > **Projekt** aus. Geben Sie im Dialogfeld **Neues Projekt** Folgendes ein:
    - Wählen Sie im linken Bereich unter **Installiert** > **Andere Sprachen** den Eintrag **Visual C++** aus.
@@ -43,7 +43,7 @@ Zunächst erstellen und konfigurieren wir die erste Lösung und das erste Projek
      [![Erstellen der Visual Studio-Projektmappe](media/quick-app-initialization-cpp/create-vs-solution.png)](media/quick-app-initialization-cpp/create-vs-solution.png#lightbox)
 
 2. Fügen Sie das Nuget-Paket für die Datei-API des MIP SDK zu Ihrem Projekt hinzu:
-   - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf den Projektknoten (direkt unter dem obersten Knoten bzw. dem Projektmappenknoten), und wählen Sie **NuGet-Pakete verwalten...** aus:
+   - In der **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektknoten (direkt unterhalb der Knoten oben/Projektmappe), und wählen Sie **NuGet-Pakete verwalten...** :
    - Gehen Sie wie folgt vor, wenn im Bereich „Editor-Gruppe“ die Registerkarte **NuGet-Paket-Manager** geöffnet wird:
      - Wählen Sie **Durchsuchen** aus.
      - Geben Sie „Microsoft.InformationProtection“ in das Suchfeld ein.
@@ -58,7 +58,7 @@ Nun erstellen Sie eine grundlegende Implementierung für eine Observer-Klasse de
 
 1. Fügen Sie eine neue Klasse zu Ihrem Projekt hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
 
-   - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen** und anschließend **Klasse** aus.
+   - In der **Projektmappen-Explorer**, mit der rechten Maustaste erneut auf des Projektknotens, wählen Sie **hinzufügen**, und wählen Sie dann **Klasse**.
    - Gehen Sie im Dialogfeld **Klasse hinzufügen** folgendermaßen vor:
      - Geben Sie im Feld **Klassenname** „profile_observer“ ein. Beachten Sie, dass sowohl das Feld **H-Datei** als auch das Feld **CPP-Datei** anhand des eingegebenen Namens automatisch aufgefüllt werden.
      - Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **OK**.
@@ -235,7 +235,7 @@ Nun erstellen Sie eine Implementierung für einen Zustimmungsdelegaten, indem Si
 
 ## <a name="construct-a-file-profile-and-engine"></a>Erstellen eines Profils und einer Engine für die Datei
 
-Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und Engine-Objekte erforderlich. Vervollständigen Sie den Codierungsabschnitt dieses Schnellstarts, indem Sie Code hinzufügen, um die Profil- und Engine-Objekte zu instanziieren: 
+Wie bereits erwähnt, sind die Profile und -Engine-Objekte für SDK-Clients mithilfe von MIP-APIs erforderlich. Vervollständigen Sie den Codierungsabschnitt dieses Schnellstarts, indem Sie Code hinzufügen, um die Profil- und Engine-Objekte zu instanziieren: 
 
 1. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CPP-Datei im Projekt, die die Implementierung der `main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben.
 
@@ -259,8 +259,9 @@ Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
-                 "<application-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
+                 "<application-name>",
+                 "<application-version>"};
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -277,8 +278,19 @@ Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
      auto profileFuture = profilePromise->get_future();
-     mip::FileProfile::LoadAsync(profileSettings, profilePromise);
-     auto profile = profileFuture.get();
+    try
+    { 
+        mip::FileProfile::LoadAsync(profileSettings, profilePromise);
+    }
+    catch (const std::exception& e)
+    {
+        cout << "An exception occurred... are the Settings and ApplicationInfo objects populated correctly?\n\n"
+            << e.what() << "'\n";
+        system("pause");
+        return 1;
+
+    }
+    auto profile = profileFuture.get();
 
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
@@ -303,28 +315,28 @@ Wie bereits erwähnt, sind für SDK-Clients, die MIP-APIs verwenden, Profil- und
        return 1;
      }
 
-      return 0;
-     }
-
+   return 0;
+   }
    ``` 
 
-3. Ersetzen Sie die Platzhalterwerte in dem Quellcode, den Sie gerade eingefügt haben, durch die folgenden Werte:
+3. Ersetzen Sie alle Platzhalterwerte im Quellcode, den Sie gerade in eingefügt Zeichenfolgenkonstanten mit:
 
    | Platzhalter | Wert | Beispiel |
    |:----------- |:----- |:--------|
-   | \<application-id\> | Die Azure AD Application ID (GUID) der Anwendung zugewiesen, die im registriert [Schritt #2 "MIP SDK-Setup und Konfiguration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) Artikel. Ersetzen Sie 2 Instanzen.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<Anwendungsname\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. Gültige ASCII-Zeichen enthalten (außer ';'), und im Idealfall entspricht den Anwendungsnamen, die Sie in Ihrem Azure AD-Registrierung verwendet haben. | AppInitialization |
-   | \<engine-account\> | Das Konto, das für die Identität der Engine verwendet wird. Wenn Sie sich während des Tokenabrufs bei einem Benutzerkonto authentifizieren, muss es diesem Wert entsprechen. | user1@tenant.onmicrosoft.com |
-   | \<engine-state\> | Der benutzerdefinierte Status, der der Engine zugeordnet werden soll. | MyAppState |
+   | \<application-id\> | Die Azure AD Application ID (GUID) der Anwendung zugewiesen, die im registriert [Schritt #2 "MIP SDK-Setup und Konfiguration"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) Artikel. Ersetzen Sie 2 Instanzen. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
+   | \<application-name\> | Ein benutzerdefinierter Anzeigename für Ihre Anwendung. Gültige ASCII-Zeichen enthalten (außer ';'), und im Idealfall entspricht den Anwendungsnamen, die Sie in Ihrem Azure AD-Registrierung verwendet haben. | `"AppInitialization"` |
+   | \<application-version\> | Benutzerdefiniertes Versionsinformationen für Ihre Anwendung. Gültige ASCII-Zeichen enthalten (außer ';'). | `"1.1.0.0"` |
+   | \<engine-account\> | Das Konto, das für die Identität der Engine verwendet wird. Wenn Sie sich während des Tokenabrufs bei einem Benutzerkonto authentifizieren, muss es diesem Wert entsprechen. | `"user1@tenant.onmicrosoft.com"` |
+   | \<engine-state\> | Der benutzerdefinierte Status, der der Engine zugeordnet werden soll. | `"My App State"` |
 
 
-4. Nun können Sie die Anwendung endgültig fertigstellen und etwaige Fehler beheben. Ihr Code müsste erfolgreich erstellt werden, wird jedoch erst dann ordnungsgemäß ausgeführt, wenn Sie den nächsten Schnellstart abgeschlossen haben. Bei der Ausführung der Anwendung wird Ihnen eine Ausgabe wie die folgende angezeigt. Sie können erst dann ein Zugriffstoken bereitstellen, wenn Sie den nächsten Schnellstart abgeschlossen haben.
+4. Nun können Sie die Anwendung endgültig fertigstellen und etwaige Fehler beheben. Ihr Code müsste erfolgreich erstellt werden, wird jedoch erst dann ordnungsgemäß ausgeführt, wenn Sie den nächsten Schnellstart abgeschlossen haben. Wenn Sie die Anwendung ausführen, erhalten Sie eine Ausgabe ähnlich der folgenden. Sie können erst dann ein Zugriffstoken bereitstellen, wenn Sie den nächsten Schnellstart abgeschlossen haben.
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Be sure to sign in with user account:
+   Sign in with user account:
    Enter access token:
    ```
 

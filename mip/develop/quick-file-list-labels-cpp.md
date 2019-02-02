@@ -4,31 +4,31 @@ description: In diesen Schnellstart wird veranschaulicht, wie Sie das Microsoft 
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: fc8d4b43bae9a7b74edef10947ef5aa22e5d1267
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 935e33a3e7f2c4cce8ac3e2137029377660acaea
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251776"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651478"
 ---
-# <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten der Vertraulichkeitsbezeichnungen (C++)
+# <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)
 
 In diesem Schnellstart erfahren Sie, wie Sie die MIP-File-API verwenden, um die für Ihre Organisation konfigurierten Vertraulichkeitsbezeichnungen aufzulisten.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Schließen Sie zunächst den [Schnellstart für die Initialisierung der Clientanwendung (C++)](quick-app-initialization-cpp.md) ab, in dem Sie eine Visual Studio-Startprojektmappe erstellen. Dieser Schnellstart zum „Auflisten der Vertraulichkeitsbezeichnungen“ baut auf der vorherigen Erstellung der Startprojektmappe auf.
-- Optional können Sie sich zusätzlich die Konzepte zu [Klassifizierungsbezeichnungen](concept-classification-labels.md) ansehen.
+- Vollständige [Schnellstart: Client-Anwendung-Initialisierung (C++)](quick-app-initialization-cpp.md) erste, die eine Starter-Visual Studio-Projektmappe erstellt. Dieser Schnellstart zum „Auflisten der Vertraulichkeitsbezeichnungen“ baut auf der vorherigen Erstellung der Startprojektmappe auf.
+- Optional: Überprüfen Sie [klassifizierungsbezeichnungen](concept-classification-labels.md) Konzepte.
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Hinzufügen von Logik zur Liste der Vertraulichkeitsbezeichnungen
 
 Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organisation Logik mithilfe des FileEnginge-Objekts hinzu. 
 
-1. Öffnen Sie die Visual Studio-Projektmappe, die Sie im vorherigen Schnellstart (Initialisierung der Clientanwendung (C++)) erstellt haben.
+1. Öffnen Sie die Visual Studio-Projektmappe, die Sie erstellt, in der vorherigen haben "Schnellstart: Client-Anwendung-Initialisierung (C++) "Artikel.
 
 2. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CPP-Datei im Projekt, die die Implementierung der `main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben. 
 
@@ -38,7 +38,7 @@ Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organi
    using std::endl;
    ```
 
-4. Fügen Sie den folgenden Code gegen Ende des `main()`-Texts zwischen der schließenden Klammer `}` des `catch`-Blocks und `return 0;` (wo Sie im vorherigen Schnellstart aufgehört haben) ein:
+4. Gegen Ende der `main()` Text unterhalb der schließenden geschweiften Klammer `}` des letzten `catch` Block und höher `return 0;` (im vorherigen Schnellstart Stelle), fügen Sie den folgenden Code:
 
    ```cpp
    // List sensitivity labels
@@ -58,23 +58,23 @@ Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organi
 
 ## <a name="create-a-powershell-script-to-generate-access-tokens"></a>Erstellen eines PowerShell-Skripts zum Generieren von Zugriffstoken
 
-Verwenden Sie das folgende PowerShell-Skript, um Zugriffstoken gemäß der Anforderungen des SDKs zu generieren. Das Skript nutzt das Cmdlet `Get-ADALToken` aus dem ADAL.PS-Modul, das Sie zuvor bei der „Einrichtung und Konfiguration des MIP SDKs“ installiert haben. 
+Verwenden Sie das folgende PowerShell-Skript zum Generieren von Zugriffstoken, die vom SDK in angefordert werden Ihre `AuthDelegateImpl::AcquireOAuth2Token` Implementierung. Das Skript nutzt das Cmdlet `Get-ADALToken` aus dem ADAL.PS-Modul, das Sie zuvor bei der „Einrichtung und Konfiguration des MIP SDKs“ installiert haben. 
 
 1. Erstellen Sie eine PowerShell-Skriptdatei (mit der Erweiterung „.ps1“), und fügen Sie das folgende Skript in die Datei ein:
 
-   - Aktualisieren Sie die Variablen `$appId` und `$redirectUri`, sodass Sie den Werten entsprechen, die in Ihrer Azure AD-Anwendungsregistrierung angegeben werden. 
    - Die Variablen `$authority` und `$resourceUrl` werden später im nachfolgenden Abschnitt aktualisiert.
+   - Update `$appId` und `$redirectUri`, um die Werte übereinstimmen, Sie in Ihrem Azure AD-app-Registrierung angegeben haben. 
 
    ```powershell
-   $authority = '<authority-url>'                   # Enforced by MIP SDK
-   $resourceUrl = '<resource-url>'                  # Enforced by MIP SDK; matches a resource/API URL requested in the app registration
+   $authority = '<authority-url>'                   # Specified when SDK calls AcquireOAuth2Token() 
+   $resourceUrl = '<resource-url>'                  # Specified when SDK calls AcquireOAuth2Token()
    $appId = '0edbblll-8773-44de-b87c-b8c6276d41eb'  # App ID of the Azure AD app registration
-   $redirectUri = 'bltest://authorize'              # Must match the redirect URI of the Azure AD app registration
+   $redirectUri = 'bltest://authorize'              # Redirect URI of the Azure AD app registration
    $response = Get-ADALToken -Resource $resourceUrl -ClientId $appId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:RefreshSession 
    $response.AccessToken | clip                     # Copy the access token text to the clipboard
    ```
 
-2. Speichern Sie die Skriptdatei, damit Sie sie später gemäß Ihrer Clientanwendung ausführen können.
+2. Speichern Sie die Skriptdatei aus, damit Sie später ausgeführt werden kann, wenn von der Clientanwendung angefordert.
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
@@ -82,22 +82,22 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 1. Verwenden Sie F6 (**Projektmappe erstellen**) zum Erstellen der Clientanwendung. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
-2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Sie können ein zuvor generiertes Token erneut verwenden, wenn Sie mehrmals dazu aufgefordert werden und die Werte gleich sind:
+2. Wenn das Projekt erstellt und ausgeführt wird, die Anwendung fordert ein Zugriffstoken, jedes Mal, wenn der SDK-Aufrufe Ihrer `AcquireOAuth2Token()` Methode. Sie können ein zuvor generiertes Token erneut verwenden, wenn Sie mehrmals dazu aufgefordert werden und die Werte gleich sind:
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
    Set $authority to: https://login.windows.net/common/oauth2/authorize
    Set $resourceUrl to: https://syncservice.o365syncservice.com/
-   Be sure to sign in with user account: user1@tenant.onmicrosoft.com
+   Sign in with user account: user1@tenant.onmicrosoft.com
    Enter access token:
    ```
 
-3. Um eine Antwort für die obige Eingabeaufforderung anzugeben, navigieren Sie zurück zu Ihrem PowerShell-Skript, und führen Sie die folgenden Anweisungen aus:
+3. Um ein Zugriffstoken für die Aufforderung zu generieren, wechseln Sie zurück zum PowerShell-Skript und:
 
    - Aktualisieren Sie die Variablen `$authority` und `$resourceUrl`. Sie müssen den Werten entsprechen, die in der Konsolenausgabe von Schritt 2 angegeben wurden. Diese Werte werden von dem MIP SDK im `challenge`-Parameter von `AcquireOAuth2Token()` bereitgestellt:
      - `$authority` sollte `https://login.windows.net/common/oauth2/authorize` entsprechen
      - `$resourceUrl` sollte `https://syncservice.o365syncservice.com/` oder `https://aadrm.com` entsprechen
-   - Führen Sie das PowerShell-Skript aus. Das Cmdlet `Get-ADALToken` löst eine Eingabeaufforderung für die Azure AD-Authentifizierung ähnlich dem folgenden Beispiel aus. Geben Sie das gleiche Konto an, das in der Konsolenausgabe von Schritt 2 angegeben wurde. Nachdem Sie sich erfolgreich angemeldet haben, wird das Zugriffstoken in der Zwischenablage gespeichert.
+   - Führen Sie das PowerShell-Skript aus. Die `Get-ADALToken` Cmdlet wird eine authentifizierungsaufforderung von Azure AD, ähnlich wie im folgenden Beispiel ausgelöst. Geben Sie das gleiche Konto an, das in der Konsolenausgabe von Schritt 2 angegeben wurde. Nachdem Sie sich erfolgreich angemeldet haben, wird das Zugriffstoken in der Zwischenablage gespeichert.
 
      [![Anmeldung in Visual Studio zum Erhalten des Tokens](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -105,7 +105,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
      [![Visual Studio-Einwilligung](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-4. Nachdem die Zugriffstoken bereitgestellt wurden, sollten die Vertraulichkeitsbezeichnungen in der Konsolenausgabe ähnlich dem folgenden Beispiel angezeigt werden:
+4. Nach dem Einfügen des Zugriffstokens in der Eingabeaufforderung aus Schritt #2, sollte die vertraulichkeitsbezeichnungen, ähnlich wie im folgenden Beispiel von der Konsolenausgabe angezeigt werden:
 
    ```console
    Non-Business : 87ba5c36-17cf-14793-bbc2-bd5b3a9f95cz
@@ -126,23 +126,15 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|
-| Falscher Umleitungs-URI in der Anwendungsregistrierung oder im PowerShell-Skript (AADSTS50011) |*AADSTS50011: The reply url specified in the request does not match the reply urls configured for the application: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'. (AADSTS50011: Die in der Anforderung angegebene Antwort-URL entspricht nicht den für die Anwendung konfigurierten Antwort-URLs: „ac6348d6-0d2f-4786-af33-07ad46e69bfc“.)* | Überprüfen Sie den verwendeten Umleitungs-URI, indem Sie einen der folgenden Schritte ausführen:<br><br><li>Aktualisieren Sie den Umleitungs-URI in der Azure AD-Anwendungskonfiguration, sodass er mit Ihrem PowerShell-Skript übereinstimmt. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie den Umleitungs-URI ordnungsgemäß konfiguriert haben.<br><li>Aktualisieren Sie die `redirectUri`-Variable in Ihrem PowerShell-Skript entsprechend Ihrer Anwendungsregistrierung. |
-| Falsches Anmeldekonto (AADSTS50020) | *AADSTS50020: User account 'user@domain.com' from identity provider 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/' does not exist in tenant 'Organization name' and cannot access the application '0edbblll-8773-44de-b87c-b8c6276d41eb' in that tenant. (Das Benutzerkonto „user@domain.com“ vom Identitätsanbieter „https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/“ ist im Mandanten „Name der Organisation“ nicht vorhanden und kann in diesem Mandanten nicht auf die Anwendung „0edbblll-8773-44de-b87c-b8c6276d41eb“ zugreifen.)* | Führen Sie einen der folgenden Schritte aus:<br><br><li>Führen Sie das PowerShell-Skript erneut aus, aber achten Sie darauf, ein Konto vom gleichen Mandanten zu verwenden, bei dem Ihre Azure AD-Anwendung registriert ist.<br><li>Wenn Ihr Anmeldekonto richtig war, ist Ihre PowerShell-Hostsitzung möglicherweise unter einem anderen Konto authentifiziert. Beenden Sie in diesem Fall den Skripthost, und öffnen Sie ihn erneut. Versuchen Sie dann erneut, das Skript auszuführen.<br><li>Wenn Sie diesen Schnellstart mit einer Web-App (anstelle einer nativen App) durchführen und sich mit einem Konto von einem anderen Mandanten anmelden müssen, stellen Sie sicher, dass Ihre Azure AD-Anwendungsregistrierung für die Verwendung mehrerer Mandanten aktiviert ist. Dies können Sie überprüfen, indem Sie das Feature „Manifest bearbeiten“ in der Anwendungsregistrierung verwenden und sicherstellen, dass `"availableToOtherTenants": true,` angegeben wird. |
-| Falsche Berechtigungen in der Anwendungsregistrierung (AADSTS65005) | *AADSTS65005: Invalid resource. The client has requested access to a resource, which is not listed in the requested permissions in the client's application registration. Client app ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Resource app ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. List of valid resources from app registration: 00000002-0000-0000-c000-000000000000. (Ungültige Ressource. Der Client hat den Zugriff auf eine Ressource angefordert, die in den angeforderten Berechtigungen in der Anwendungsregistrierung des Clients nicht aufgeführt ist. Client-App-ID: „0edbblll-8773-44de-b87c-b8c6276d41eb“. Liste der gültigen Ressourcen aus der Anwendungsregistrierung: „00000002-0000-0000-c000-000000000000“.)* | Aktualisieren Sie die Berechtigungsanforderungen in der Azure AD-Anwendungskonfiguration. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie die Berechtigungsanforderungen in Ihrer Anwendungsregistrierung ordnungsgemäß konfiguriert haben. |
+| Falscher Umleitungs-URI in der Anwendungsregistrierung oder im PowerShell-Skript (AADSTS50011) |*AADSTS50011: Die Antwort in der Anforderung angegebene Url entspricht nicht der Antwort-Urls, die für die Anwendung konfiguriert: "ac6348d6-0d2f-4786-af33-07ad46e69bfc".* | Überprüfen Sie den verwendeten Umleitungs-URI, indem Sie einen der folgenden Schritte ausführen:<br><br><li>Aktualisieren Sie den Umleitungs-URI in der Azure AD-Anwendungskonfiguration, sodass er mit Ihrem PowerShell-Skript übereinstimmt. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie den Umleitungs-URI ordnungsgemäß konfiguriert haben.<br><li>Aktualisieren Sie die `redirectUri`-Variable in Ihrem PowerShell-Skript entsprechend Ihrer Anwendungsregistrierung. |
+| Falsches Anmeldekonto (AADSTS50020) | *AADSTS50020: Benutzerkonto "user@domain.com"vom Identitätsanbieter"https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/" im Mandanten "Name der Organisation" nicht vorhanden und kann nicht auf die Anwendung "0edbblll-8773-44de-b87c-b8c6276d41eb" in diesem Mandanten zugreifen.* | Führen Sie einen der folgenden Schritte aus:<br><br><li>Führen Sie das PowerShell-Skript erneut aus, aber achten Sie darauf, ein Konto vom gleichen Mandanten zu verwenden, bei dem Ihre Azure AD-Anwendung registriert ist.<br><li>Wenn Ihr Anmeldekonto richtig war, ist Ihre PowerShell-Hostsitzung möglicherweise unter einem anderen Konto authentifiziert. Beenden Sie in diesem Fall den Skripthost, und öffnen Sie ihn erneut. Versuchen Sie dann erneut, das Skript auszuführen.<br><li>Wenn Sie diesen Schnellstart mit einer Web-App (anstelle einer nativen App) durchführen und sich mit einem Konto von einem anderen Mandanten anmelden müssen, stellen Sie sicher, dass Ihre Azure AD-Anwendungsregistrierung für die Verwendung mehrerer Mandanten aktiviert ist. Dies können Sie überprüfen, indem Sie das Feature „Manifest bearbeiten“ in der Anwendungsregistrierung verwenden und sicherstellen, dass `"availableToOtherTenants": true,` angegeben wird. |
+| Falsche Berechtigungen in der Anwendungsregistrierung (AADSTS65005) | *AADSTS65005: Ungültige Ressource. The client has requested access to a resource, which is not listed in the requested permissions in the client's application registration. Client-app-ID: 0edbblll-8773-44de-b87c-b8c6276d41eb. Resource value from request: https://syncservice.o365syncservice.com/. Ressourcen-app-ID: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Liste von gültigen Ressourcen aus dem app-Registrierung: 00000002-0000-0000-c000-000000000000.* | Aktualisieren Sie die Berechtigungsanforderungen in der Azure AD-Anwendungskonfiguration. Überprüfen Sie anhand des Artikels zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md#register-a-client-application-with-azure-active-directory), ob Sie die Berechtigungsanforderungen in Ihrer Anwendungsregistrierung ordnungsgemäß konfiguriert haben. |
 
 ### <a name="problems-during-execution-of-c-application"></a>Probleme bei der Ausführung der C++-Anwendung
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|
-| Ungültiges Zugriffstoken | *An exception occurred... is the access token incorrect/expired?<br><br>Failed API call: profile_add_engine_async Failed with: [class mip::PolicySyncException] Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request cannot be parsed.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) exited with code 0.<br><br>Press any key to close this window . . .
-
-(Eine Ausnahme ist aufgetreten... ist das Zugriffstoken fehlerhaft/abgelaufen?
-
-Fehlgeschlagener API-Aufruf: profile_add_engine_async Fehler bei: [class mip::PolicySyncException] Abrufen der Richtlinie fehlgeschlagen, Anforderung fehlgeschlagen mit HTTP-Statuscode: 401, x-ms-diagnostics: [2000001;reason=„Mit der Anforderung übermitteltes OAuth-Token kann nicht analysiert werden.“;error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'
-
-C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Prozess 29924) wurde mit Code 0 beendet.
-
-Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen . . .)* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Navigieren Sie zurück zum [Aktualisieren der Logik zum Abrufen des Tokens](#update-the-token-acquisition-logic-with-a-valid-access-token), stellen Sie das Zugriffstoken wieder her, aktualisieren Sie `AcquireOAuth2Token()` erneut, und führen Sie die Tests und die Erstellung erneut durch. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
+| Ungültiges Zugriffstoken | *... Ist eine Ausnahme aufgetreten ist das Zugriffstoken falsche/abgelaufen? <br> <br>Fehler bei API-Aufruf: Fehler bei der Profile_add_engine_async: [Klasse mip::PolicySyncException] Fehler beim Abrufen der Richtlinie, Fehler bei Anforderung mit http-Statuscode: 401, X-ms-Diagnostics: [2000001; Reason = "OAuth-Token, die mit der Anforderung übermittelte kann nicht analysiert werden."; Error_category = "Invalid_token"], CorrelationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Process 29924) wurde beendet mit Code 0.<br> <br>Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen...* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Navigieren Sie zurück zum [Aktualisieren der Logik zum Abrufen des Tokens](#update-the-token-acquisition-logic-with-a-valid-access-token), stellen Sie das Zugriffstoken wieder her, aktualisieren Sie `AcquireOAuth2Token()` erneut, und führen Sie die Tests und die Erstellung erneut durch. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
 | Vertraulichkeitsbezeichnungen sind nicht konfiguriert | Nicht zutreffend | Wenn Ihr Projekt erfolgreich erstellt wird, Sie aber keine Ausgabe im Konsolenfenster erhalten, stellen Sie sicher, dass die Vertraulichkeitsbezeichnungen Ihrer Organisation ordnungsgemäß konfiguriert sind. Ausführliche Informationen finden Sie unter „Definieren des Bezeichnungsschemas und der Schutzeinstellungen“ im Artikel zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md).  |
 
 ## <a name="next-steps"></a>Nächste Schritte

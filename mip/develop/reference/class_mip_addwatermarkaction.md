@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „AddWatermarkAction“
-description: Referenz für die Microsoft Information Protection-Klasse „AddWatermarkAction“
+title: mip::AddWatermarkAction-Klasse
+description: 'Beschreibt die Klasse:: addwatermarkaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d9a2049238e2b45f1c19265ed2f940b3fea079e6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446089"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650832"
 ---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
@@ -19,54 +19,54 @@ Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  Eine zum Markieren des Wasserzeichenelements genutzte API.
- public WatermarkLayout GetLayout() const  |  Eine zum Abrufen des Wasserzeichenlayouts genutzte API.
- public const std::string& GetText() const  |  Ruft den Text ab, der im Wasserzeichen enthalten sein soll.
- public const std::string& GetFontName() const  |  Ruft den Namen der Schriftart ab, in der das Wasserzeichen angezeigt wird.
- public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
- public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
- public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
+public const std::string& GetUIElementName()  |  Eine zum Markieren des Wasserzeichenelements genutzte API.
+public WatermarkLayout GetLayout() const  |  Eine zum Abrufen des Wasserzeichenlayouts genutzte API.
+public const std::string& GetText() const  |  Ruft den Text ab, der im Wasserzeichen enthalten sein soll.
+public const std::string& GetFontName() const  |  Ruft den Namen der Schriftart ab, in der das Wasserzeichen angezeigt wird.
+public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
+public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
+public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
   
 ## <a name="members"></a>Member
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName-Funktion
 Eine zum Markieren des Wasserzeichenelements genutzte API.
 
   
-**Rückgabe**: Name, der für das UI-Element verwendet werden soll, welches das Wasserzeichen enthält. Der gleiche Name wird in RemoveWatermarkingAction zurückgegeben, falls das Wasserzeichen entfernt werden muss.
+**Gibt**: Der Name, der für das UI-Element verwendet werden soll, die das Wasserzeichen enthält. Der gleiche Name wird in RemoveWatermarkingAction zurückgegeben, falls das Wasserzeichen entfernt werden muss.
   
-### <a name="getlayout"></a>GetLayout
+### <a name="getlayout-function"></a>GetLayout-Funktion
 Eine zum Abrufen des Wasserzeichenlayouts genutzte API.
 
   
-**Rückgabe**: WatermarkLayout Das Wasserzeichenlayout in der Form einer Enumeration HORIZONTAL|DIAGONAL. ,
+**Gibt**: WatermarkLayout Das Wasserzeichenlayout in der Form einer Enumeration HORIZONTAL|DIAGONAL. ,
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText-Funktion
 Ruft den Text ab, der im Wasserzeichen enthalten sein soll.
 
   
-**Rückgabe**: Text des Inhaltsheaders.
+**Gibt**: Text des inhaltsheaders.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName-Funktion
 Ruft den Namen der Schriftart ab, in der das Wasserzeichen angezeigt wird.
 
   
-**Rückgabe**: Schriftartname Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
+**Gibt**: Schriftartname. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize-Funktion
 Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
 
   
-**Rückgabe**: Schriftgrad als ganze Zahl.
+**Gibt**: Der Schriftgrad als ganze Zahl.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor-Funktion
 Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
 
   
-**Rückgabe**: Schriftfarbe als Zeichenfolge (z.B. „#000000“).
+**Gibt**: Schriftfarbe als Zeichenfolge (z. B. "#000000").
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 
   
-**Rückgabe**: ActionType, der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.

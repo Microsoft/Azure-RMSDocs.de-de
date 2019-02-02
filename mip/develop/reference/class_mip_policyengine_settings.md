@@ -1,17 +1,17 @@
 ---
-title: Die Klasse „mip::PolicyEngine::Settings“
-description: Referenz zur Klasse „mip::PolicyEngine::Settings“
+title: mip::PolicyEngine::Settings-Klasse
+description: 'Beschreibt die Klasse:: policyengine-Klasse von der Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6ac94d1e34615a0248dac85f28c55154b127574f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 33ae1bd2ceddc66c89d00adb44d6ef39b2ab69a8
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446344"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651257"
 ---
 # <a name="class-mippolicyenginesettings"></a>mip::PolicyEngine::Settings-Klasse 
 Definiert die einer [PolicyEngine](class_mip_policyengine.md)-Klasse zugeordneten Einstellungen.
@@ -19,57 +19,64 @@ Definiert die einer [PolicyEngine](class_mip_policyengine.md)-Klasse zugeordnete
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
- public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Erstellen einer neuen Engine
- public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
- public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
- public const Identity& GetIdentity() const  |  Ruft das Identity-Objekt ab.
- public void SetIdentity(const Identity& identity)  |  Legt das Identity-Objekt fest.
- public const std::string& GetClientData() const  |  Ruft die in den Einstellungen festgelegten Clientdaten ab.
- public void SetClientData(const std::string& clientData)  |  Legt die Zeichenfolge der Clientdaten fest.
- public const std::string& GetLocale() const  |  Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
-public void SetCustomSettings(const std::vector<std::pair<std::string, std::string>>& customSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
-public const std::vector<std::pair<std::string, std::string>>& GetCustomSettings() const  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
- public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
- public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Erstellen einer neuen Engine
+public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
+public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
+public const Identity& GetIdentity() const  |  Abrufen der [Identität](class_mip_identity.md) Objekt.
+public void SetIdentity(const Identity& identity)  |  Legen Sie die [Identität](class_mip_identity.md) Objekt.
+public const std::string& GetClientData() const  |  Ruft die in den Einstellungen festgelegten Clientdaten ab.
+public void SetClientData(const std::string& clientData)  |  Legt die Zeichenfolge der Clientdaten fest.
+public const std::string& GetLocale() const  |  Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
+Öffentliche void SetCustomSettings (const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
+Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
+public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
+public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
+public bool IsLoadSensitivityTypesEnabled() const  |  Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
   
 ## <a name="members"></a>Member
   
-### <a name="settings"></a>Einstellung
+### <a name="settings-function"></a>Settings-Funktion
 [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
 
 Parameter:  
-* **engineId**: Legen Sie diese auf die eindeutige, von AddEngineAsync erstellte oder auf eine selbst erstellte Engine-ID fest. Verwenden Sie beim Laden einer vorhandenen Engine die ID, andernfalls wird eine neue Engine erstellt. 
+* **engineId**: Legen Sie sie an, auf die eindeutige Engine-ID, die von addengineasync erstellte oder selbst generiert werden. Verwenden Sie beim Laden einer vorhandenen Engine die ID, andernfalls wird eine neue Engine erstellt. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
 
 
-* **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt.
+* **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt. 
+
+
+* **Optionale**: Flag zum angeben, wenn das Skriptmodul geladen ist sollte geladen werden auch benutzerdefinierte Empfindlichkeit-Typen, wenn "true" OnPolicyChange Beobachter für das Profil für Updates für benutzerdefinierte Empfindlichkeit-Typen sowie der Änderungen aufgerufen werden soll. Wenn "false" ListSensitivityTypes aufrufen, gibt immer eine leere Liste zurück.
 
 
   
-### <a name="settings"></a>Einstellung
+### <a name="settings-function"></a>Settings-Funktion
 [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Erstellen einer neuen Engine
 
 Parameter:  
-* **identity**: Informationen zur Identität des Benutzers, der der neuen Engine zugeordnet ist. 
+* **identity**: [Identität](class_mip_identity.md) Informationen des Benutzers, das neue Modul zugeordnet. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
 
 
-* **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt.
+* **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt. 
+
+
+* **Optionale**: Flag zum angeben, wenn das Skriptmodul geladen ist sollte geladen werden auch benutzerdefinierte Empfindlichkeit-Typen, wenn "true" OnPolicyChange Beobachter für das Profil für Updates für benutzerdefinierte Empfindlichkeit-Typen sowie der Änderungen aufgerufen werden soll. Wenn "false" ListSensitivityTypes aufrufen, gibt immer eine leere Liste zurück.
 
 
   
-### <a name="getengineid"></a>GetEngineId
+### <a name="getengineid-function"></a>GetEngineId-Funktion
 Ruft die Engine-ID ab.
 
   
-**Rückgabe**: Eindeutige Zeichenfolge, die die Engine identifiziert.
+**Gibt**: Eine eindeutige Zeichenfolge, die das Modul identifiziert.
   
-### <a name="setengineid"></a>SetEngineId
+### <a name="setengineid-function"></a>SetEngineId-Funktion
 Legt die Engine-ID fest.
 
 Parameter:  
@@ -77,31 +84,31 @@ Parameter:
 
 
   
-### <a name="getidentity"></a>GetIdentity
-Ruft das Identity-Objekt ab.
+### <a name="getidentity-function"></a>"Getidentity"-Funktion
+Abrufen der [Identität](class_mip_identity.md) Objekt.
 
   
-**Rückgabe**: Verweis auf die Identität im Einstellungsobjekt. 
+**Gibt**: Ein Verweis auf die Identität im Einstellungsobjekt. 
   
-**Weitere Informationen finden Sie unter:** mip::Identity
+**Siehe auch**: [MIP:: Identity](class_mip_identity.md)
   
-### <a name="setidentity"></a>SetIdentity
-Legt das Identity-Objekt fest.
+### <a name="setidentity-function"></a>SetIdentity-Funktion
+Legen Sie die [Identität](class_mip_identity.md) Objekt.
 
 Parameter:  
 * **identity**: Die eindeutige Identität eines Benutzers. 
 
 
   
-**Weitere Informationen finden Sie unter:** mip::Identity
+**Siehe auch**: [MIP:: Identity](class_mip_identity.md)
   
-### <a name="getclientdata"></a>GetClientData
+### <a name="getclientdata-function"></a>GetClientData-Funktion
 Ruft die in den Einstellungen festgelegten Clientdaten ab.
 
   
-**Rückgabe**: Vom Client angegebene Datenzeichenfolge.
+**Gibt**: Eine Zeichenfolge mit Daten, die vom Client angegeben.
   
-### <a name="setclientdata"></a>SetClientData
+### <a name="setclientdata-function"></a>SetClientData-Funktion
 Legt die Zeichenfolge der Clientdaten fest.
 
 Parameter:  
@@ -109,13 +116,13 @@ Parameter:
 
 
   
-### <a name="getlocale"></a>GetLocale
+### <a name="getlocale-function"></a>GetLocale-Funktion
 Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
 
   
-**Rückgabe**: Das Gebietsschema.
+**Gibt**: Das Gebietsschema.
   
-### <a name="setcustomsettings"></a>SetCustomSettings
+### <a name="setcustomsettings-function"></a>SetCustomSettings-Funktion
 Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
 
 Parameter:  
@@ -123,13 +130,13 @@ Parameter:
 
 
   
-### <a name="getcustomsettings"></a>GetCustomSettings
+### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
 Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 
   
-**Rückgabe**: Liste von Name-Wert-Paaren
+**Gibt**: Liste von Name-Wert-Paaren.
   
-### <a name="setsessionid"></a>SetSessionId
+### <a name="setsessionid-function"></a>SetSessionId-Funktion
 Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
 
 Parameter:  
@@ -137,8 +144,14 @@ Parameter:
 
 
   
-### <a name="getsessionid"></a>GetSessionId
+### <a name="getsessionid-function"></a>GetSessionId-Funktion
 Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
 
   
-**Rückgabe**: die Sitzungs-ID.
+**Gibt**: Die Sitzungs-ID.
+  
+### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled-Funktion
+Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
+
+  
+**Gibt**: True, wenn aktiviert, andernfalls False.

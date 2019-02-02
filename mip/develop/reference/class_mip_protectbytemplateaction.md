@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „ProtectByTemplateAction“
-description: Referenz für die Microsoft Information Protection-Klasse „ProtectByTemplateAction“
+title: mip::ProtectByTemplateAction-Klasse
+description: 'Beschreibt die Klasse:: protectbytemplateaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: cb5f42b25e6f499bc09f3f460ec4a253627b45a5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 1c05a04df39e6454eb934b5db48e96339afdac0c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445460"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650815"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>mip::ProtectByTemplateAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefügt wird.
@@ -19,19 +19,19 @@ Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefü
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public const std::string& GetTemplateId() const  |  Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
- public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
+public const std::string& GetTemplateId() const  |  Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
+public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
   
 ## <a name="members"></a>Member
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>GetTemplateId-Funktion
 Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
 
   
-**Rückgabe**: Die Schutzvorlagen-ID.
+**Gibt**: Die Schutz-Vorlagen-ID.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 
   
-**Rückgabe**: ActionType, der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.

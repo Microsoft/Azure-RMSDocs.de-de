@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „Label“
-description: Referenz für die Microsoft Information Protection-Klasse „Label“
+title: mip::Label-Klasse
+description: 'Dokumentiert die MIP:: Label-Klasse von der Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 2a80748430df83a16a4d5ee716344d17ce7deee4
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: aa2d5106f8da03b4cf6a9dbd99c440989dc7ff6d
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446276"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650662"
 ---
 # <a name="class-miplabel"></a>mip::Label-Klasse 
 Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
@@ -19,69 +19,76 @@ Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public const std::string& GetId() const  |  Ruft die Bezeichnungs-ID ab
- public const std::string& GetName() const  |  Ruft den Bezeichnungsnamen ab
- public const std::string& GetDescription() const  |  Ruft die Beschreibung der Bezeichnung ab
- public const std::string& GetColor() const  |  Ruft die Farbe ab, in der die Bezeichnung angezeigt werden soll
- public int GetSensitivity() const  |  Ruft die Vertraulichkeit der Bezeichnung ab
- public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
- public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
-public std::weak_ptr<Label> GetParent() const  |  Ruft die übergeordnete Bezeichnung ab
-public const std::vector<std::shared_ptr<Label>>& GetChildren() const  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+public const std::string& GetId() const  |  Ruft die Bezeichnungs-ID ab
+public const std::string& GetName() const  |  Ruft den Bezeichnungsnamen ab
+public const std::string& GetDescription() const  |  Ruft die Beschreibung der Bezeichnung ab
+public const std::string& GetColor() const  |  Ruft die Farbe ab, in der die Bezeichnung angezeigt werden soll
+public int GetSensitivity() const  |  Ruft die Vertraulichkeit der Bezeichnung ab.
+public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
+public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
+public std::weak_ptr\<Label\> GetParent() const  |  Ruft die übergeordnete Bezeichnung ab
+Public const Std:: vector\<Std:: shared_ptr\<Bezeichnung\>\>& GetChildren() const  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Rufen Sie die benutzerdefinierten Einstellungen einer Bezeichnung.
   
 ## <a name="members"></a>Member
   
-### <a name="getid"></a>GetId
+### <a name="getid-function"></a>GetId-Funktion
 Ruft die Bezeichnungs-ID ab
 
   
-**Rückgabe**: Bezeichnungs-ID.
+**Gibt**: Die bezeichnungs-ID
   
-### <a name="getname"></a>GetName
+### <a name="getname-function"></a>GetName-Funktion
 Ruft den Bezeichnungsnamen ab
 
   
-**Rückgabe**: der Bezeichnungsname.
+**Gibt**: Der Bezeichnungsname.
   
-### <a name="getdescription"></a>GetDescription
+### <a name="getdescription-function"></a>GetDescription-Funktion
 Ruft die Beschreibung der Bezeichnung ab
 
   
-**Rückgabe**: die Beschreibung der Bezeichnung.
+**Gibt**: Die Beschreibung der Bezeichnung.
   
-### <a name="getcolor"></a>GetColor
+### <a name="getcolor-function"></a>GetColor-Funktion
 Ruft die Farbe ab, in der die Bezeichnung angezeigt werden soll
 
   
-**Rückgabe**: der Farbwert des Zeichenfolgenformats. „#RRGGBB“, wobei jedes RR, GG, BB ein Hexadezimalwert von 0 bis f ist
+**Gibt**: Der Farbwert des Zeichenfolgenformats. „#RRGGBB“, wobei jedes RR, GG, BB ein Hexadezimalwert von 0 bis f ist
   
-### <a name="getsensitivity"></a>GetSensitivity
+### <a name="getsensitivity-function"></a>GetSensitivity-Funktion
 Ruft die Vertraulichkeit der Bezeichnung ab.
 
   
-**Rückgabe**: ein numerischer Wert Ein höherer Wert steht für eine höhere Vertraulichkeit.
+**Gibt**: Ein numerischer Wert. Ein höherer Wert steht für eine höhere Vertraulichkeit.
   
-### <a name="gettooltip"></a>GetTooltip
+### <a name="gettooltip-function"></a>GetTooltip-Funktion
 Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
 
   
-**Rückgabe**: eine QuickInfo-Zeichenfolge.
+**Gibt**: Eine QuickInfo-Zeichenfolge.
   
-### <a name="isactive"></a>IsActive
+### <a name="isactive-function"></a>IsActive-Funktion
 Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
 Es können nur aktive Bezeichnungen angewendet werden. Inaktive Bezeichnungen können nicht angewendet werden und werden nur zu Anzeigezwecken verwendet. 
 
   
-**Rückgabe**: TRUE, wenn die Bezeichnung aktiv ist; andernfalls wird FALSE zurückgegeben.
+**Gibt**: True, wenn die Bezeichnung aktiv ist; andernfalls "false".
   
-### <a name="label"></a>Label
+### <a name="getparent-function"></a>GetParent-Funktion
 Ruft die übergeordnete Bezeichnung ab
 
   
-**Rückgabe**: ein schwacher Zeiger auf das übergeordnete Element, sofern vorhanden; andernfalls wird ein leerer Zeiger zurückgegeben.
+**Gibt**: Ein schwacher Zeiger auf das übergeordnete Element zu bezeichnen, wenn vorhanden; andernfalls wird einen leeren Zeiger zurückgegeben.
   
-### <a name="label"></a>Label
+### <a name="getchildren-function"></a>GetChildren-Funktion
 Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
 
   
-**Rückgabe**: ein Vektor der freigegebenen Zeiger für Bezeichnungen.
+**Gibt**: Ein Vektor der freigegebenen Zeiger für Bezeichnungen.
+  
+### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
+Rufen Sie die benutzerdefinierten Einstellungen einer Bezeichnung.
+
+  
+**Gibt**: Ein Vektor von Schlüssel-Wert-Paaren, die benutzerdefinierte Einstellungen darstellt.

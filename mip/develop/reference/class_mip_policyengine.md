@@ -1,17 +1,17 @@
 ---
-title: Die Klasse „mip::PolicyProfile“
-description: Referenz zur Klasse „mip PolicyEngine“
+title: mip::PolicyEngine-Klasse
+description: 'Beschreibt die Klasse:: policyengine-Klasse von der Microsoft Information Protection (MIP) SDK.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 57dd325e9c00a3cb2a4056f7ef0b522efef5d0c4
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 298d9789fb46c2725401425af51a9de8b3436f53
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446038"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650968"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine-Klasse 
 Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
@@ -19,64 +19,76 @@ Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
-public const std::vector<std::shared_ptr<Label>>& ListSensitivityLabels()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
- public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
- public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
-public std::shared_ptr<Label> GetDefaultSensitivityLabel()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
-public std::shared_ptr<PolicyHandler> CreatePolicyHandler(const std::string& contentIdentifier)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
- public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
+public const Settings& GetSettings() const  |  Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
+public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
+public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  sind die Vertraulichkeit-Typen, die die Richtlinien-Engine zugeordnet.
+public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
+public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
+Public Std:: shared_ptr\<Bezeichnung\> GetDefaultSensitivityLabel()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
+public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
+public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
+public const std::string& GetPolicyDataXml() const  |  Ruft ab die Richtliniendaten XML werden die Einstellungen, Bezeichnungen und Regeln, die dieser Richtlinie unterliegen.
+Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Ruft eine Liste der benutzerdefinierten Einstellungen ab.
   
 ## <a name="members"></a>Member
   
-### <a name="settings"></a>Einstellung
+### <a name="getsettings-function"></a>GetSettings-Funktion
 Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
 
   
-**Rückgabe**: Einstellungen der Richtlinien-Engine. 
+**Gibt**: Einstellungen für Gruppenrichtlinien-Engine. 
   
 **Weitere Informationen finden Sie unter:** [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
   
-### <a name="label"></a>Label
+### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels-Funktion
 Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
 
   
-**Rückgabe**: Liste der Vertraulichkeitsbezeichnungen.
+**Gibt**: Eine Liste der vertraulichkeitsbezeichnungen.
   
-### <a name="getmoreinfourl"></a>GetMoreInfoUrl
+### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes-Funktion
+sind die Vertraulichkeit-Typen, die die Richtlinien-Engine zugeordnet.
+
+  
+**Gibt**: Eine Liste der vertraulichkeitsbezeichnungen. leer, wenn LoadSensitivityTypesEnabled wurde "false")
+  
+**Siehe auch**: [PolicyEngine::Settings](class_mip_policyengine_settings.md)).
+  
+### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl-Funktion
 Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
 
   
-**Rückgabe:** eine URL im Zeichenfolgenformat
+**Gibt**: Eine Url im Zeichenfolgenformat.
   
-### <a name="islabelingrequired"></a>IsLabelingRequired
+### <a name="islabelingrequired-function"></a>IsLabelingRequired-Funktion
 Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
 
   
-**Rückgabe:** TRUE, wenn eine Bezeichnung erforderlich ist; andernfalls FALSE.
+**Gibt**: True, wenn die Bezeichnung ist obligatorisch, andernfalls "false".
   
-### <a name="label"></a>Label
+### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel-Funktion
 Ruft die Standardvertraulichkeitsbezeichnung ab.
 
   
-**Rückgabe**: die Standardvertraulichkeitsbezeichnung, sofern vorhanden. Wenn keine Standardbezeichnung festgelegt ist, wird „nullptr“ zurückgegeben.
+**Gibt**: Vertraulichkeitsbezeichnung standardmäßig, wenn vorhanden, "nullptr", wenn es gibt keine standardbezeichnung festgelegt.
   
-### <a name="policyhandler"></a>PolicyHandler
+### <a name="createpolicyhandler-function"></a>CreatePolicyHandler-Funktion
 Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
 
 Parameter:  
-* **contentIdentifier**: ein lesbarer Inhaltsbezeichner. Dateibeispiel: „C:\mip-sdk-for-cpp\files\audit.docx“ [Pfad] E-Mail-Beispiel „RE: Überprüfung design:user1@contoso.com“ [Betreff:Sender]
+* **Ein**: "bool" darstellt, ob der Audit-Ermittlung aktiviert ist.
 
 
 
   
-**Rückgabe**: Richtlinienhandler
+**Gibt**: Richtlinie-Handler.
+Anwendung muss das Richtlinienobjekt für den Handler für die Lebensdauer des Dokuments beibehalten werden sollen.
   
-### <a name="sendapplicationauditevent"></a>SendApplicationAuditEvent
+### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent-Funktion
 Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
 
 Parameter:  
-* **description:** Beschreibung der Protokollebene: Information/Fehler/Warnung 
+* **Ebene**: der dem aktuellen Protokolliergrad: Info/Fehler/Warnung 
 
 
 * **eventType:** Beschreibung des Ereignistyps 
@@ -84,3 +96,16 @@ Parameter:
 
 * **eventData:** dem Ereignis zugeordnete Daten
 
+
+  
+### <a name="getpolicydataxml-function"></a>GetPolicyDataXml-Funktion
+Ruft ab die Richtliniendaten XML werden die Einstellungen, Bezeichnungen und Regeln, die dieser Richtlinie unterliegen.
+
+  
+**Gibt**: XML-Daten
+  
+### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
+Ruft eine Liste der benutzerdefinierten Einstellungen ab.
+
+  
+**Gibt**: Ein Vektor von benutzerdefinierten Einstellungen

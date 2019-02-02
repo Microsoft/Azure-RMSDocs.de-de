@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „HttpDelegate“
-description: Referenz für die Microsoft Information Protection-Klasse „HttpDelegate“
+title: class mip::HttpDelegate
+description: Dokumentiert die mip::httpdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 3e55f9aff5a9ebd97731ec21e408a33f22905648
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 68d26b23c1e3ea2e29c22316f80e18937ab78d5c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445369"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651019"
 ---
 # <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
@@ -19,20 +19,24 @@ Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<HttpResponse> Send(const std::shared_ptr<HttpRequest>& request, const std::shared_ptr<void>& context)  |  Sendet die HTTP-Anforderung.
+Public Std:: shared_ptr\<HttpResponse\> senden (const Std:: shared_ptr\<HttpRequest\>& Anforderung, const Std:: shared_ptr\<"void"\>& Kontext)  |  Sendet die HTTP-Anforderung.
+public void SendAsync(const std::shared_ptr\<HttpRequest\>& request, const std::shared_ptr\<void\>& context, const std::function\<void(std::shared_ptr\<HttpResponse\>)\>& fnCallback)  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
-### <a name="httpresponse"></a>HttpResponse
+### <a name="send-function"></a>Send-Funktion
 Sendet die HTTP-Anforderung.
 
 Parameter:  
-* **request**: Die HTTP-Anforderung. 
+* **request**: HTTP-Anforderung 
 
 
-* **context**: Der gleiche nicht transparente Clientkontext, der an die API übergeben wurde und zu dieser HTTP-Anforderung geführt habt.
+* **context**: Der gleiche-nicht transparent-Clientkontext, der an die API übergeben wurde, die diese HTTP-Anforderung geführt haben
 
 
 
   
-**Rückgabe**: Die HTTP-Antwort.
+**Gibt**: HTTP-Antwort
+  
+### <a name="sendasync-function"></a>SendAsync-Funktion
+_Noch nicht dokumentiert._

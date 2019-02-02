@@ -4,20 +4,23 @@ description: Microsoft Information Protection (MIP) stellt die Vereinheitlichung
 author: BryanLa
 ms.service: information-protection
 ms.topic: overview
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 775ae3d524947c8300de0e011b92c2cad106905a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 77d8fb8d32c0f75be49b29e95316f8da873d14c6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251725"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651138"
 ---
 # <a name="overview"></a>Übersicht
 
 ## <a name="microsoft-information-protection"></a>Microsoft Information Protection
 
-Microsoft Information Protection (MIP) stellt die Vereinheitlichung der Klassifizierungs-, Bezeichnungs- und Schutzdienste von Microsoft in eine einzelne Verwaltungsoberfläche und ein SDK (Software Development Kit) dar. Die vereinheitlichte Verwaltung wird über Office 365, Azure Information Protection, Windows Information Protection und andere Microsoft-Dienste hinweg bereitgestellt. Drittanbieter können das SDK für die Integration in Anwendungen mithilfe eines konsistenten Standardschemas für die Bezeichnung von Daten und eines Standardschutzdiensts verwenden.
+Microsoft Information Protection (MIP) ist die Zusammenführung von Microsoft Klassifizierung, Bezeichnung und Datenschutzdienste genutzt:
+
+- Die vereinheitlichte Verwaltung wird über Office 365, Azure Information Protection, Windows Information Protection und andere Microsoft-Dienste hinweg bereitgestellt. 
+- Drittanbieter können das MIP SDK für die Integration von Anwendungen mithilfe einer einheitlichen Bezeichnung Schema und Protection-Dienst verwenden.
 
 * [Was ist Office 365 Security and Compliance Center?](https://docs.microsoft.com/office365/securitycompliance/)
 * [Was ist Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
@@ -25,7 +28,7 @@ Microsoft Information Protection (MIP) stellt die Vereinheitlichung der Klassifi
 
 ## <a name="microsoft-information-protection-sdk"></a>Microsoft Information Protection SDK
 
-Das MIP SDK stellt die Bezeichnungs- und Schutzdienste des Office 365 Security and Compliance Centers für Anwendungen und Dienste von Drittanbietern zur Verfügung. Entwickler können das SDK verwenden, um native Unterstützung für das Anwenden von Bezeichnungen und Schutz auf Dateien zu erstellen. Entwickler können darüber argumentieren, welche Maßnahmen ergriffen werden sollten, wenn bestimmte Bezeichnungen ermittelt werden. Außerdem können sie über MIP-verschlüsselte Informationen diskutieren. 
+Das MIP SDK macht die Dienste Bezeichnung und Schutz von Office 365 Security & Compliance Center auf Drittanbieter-Anwendungen und Dienste verfügbar. Entwickler können das SDK verwenden, um native Unterstützung für das Anwenden von Bezeichnungen und Schutz auf Dateien zu erstellen. Entwickler können darüber argumentieren, welche Maßnahmen ergriffen werden sollten, wenn bestimmte Bezeichnungen ermittelt werden. Außerdem können sie über MIP-verschlüsselte Informationen diskutieren. 
 
 Die Bezeichnungen und der Schutz, die auf Informationen der Microsoft-Dienste angewendet werden, sind **konsistent**. Die Konsistenz ermöglicht Anwendungen und Diensten, die MIP unterstützen, Bezeichnungen auf eine allgemeine, vorhersehbare Weise zu lesen und zu schreiben.
 
@@ -39,5 +42,5 @@ Eine ausführlichere Liste finden Sie unter [API concepts (API-Konzepte)](concep
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Jetzt sind Sie bereit für Ihre ersten Schritte mit dem SDK. Zunächst müssen Sie die [Schritte zum Einrichten und Konfigurieren des MIP SDKs](setup-configure-mip.md) ausführen, um sicherzustellen, dass Ihr Office 365-Abonnement und Ihr Clientcomputer ordnungsgemäß eingerichtet sind.
+Jetzt sind Sie bereit für Ihre ersten Schritte mit dem SDK. Im ersten Schritt müssen Sie tun [führen Sie die MIP SDK-Setup und Konfiguration Schritte](setup-configure-mip.md). Diese Schritte werden Stellen Sie Ihr Office 365-Abonnement, und Clientcomputer ordnungsgemäß eingerichtet wurden.
 

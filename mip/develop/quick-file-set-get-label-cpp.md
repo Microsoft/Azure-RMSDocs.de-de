@@ -5,37 +5,37 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 651fc73c00f18d06ad1a824337a096331bc7e897
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251742"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651206"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen Sie und Abrufen Sie einer vertraulichkeitsbezeichnung (C++)
 
 In diesem Schnellstart wird gezeigt, wie Sie weitere MIP-Datei-APIs nutzen. Durch Verwendung einer der Vertraulichkeitsbezeichnungen, die Sie im vorherigen Schnellstart aufgelistet haben, verwenden Sie einen Dateihandler zum Festlegen/Abrufen der Bezeichnung für eine Datei. Die Dateihandlerklasse macht verschiedene Vorgänge für das Festlegen/Abrufen von Bezeichnungen oder Schutz für unterstützte Dateitypen verfügbar.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Schließen Sie zuerst [Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)](quick-file-list-labels-cpp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt. Dieser Schnellstart „Festlegen und Abrufen einer Vertraulichkeitsbezeichnung“ baut auf den vorherigen auf.
-- Optional: Sehen Sie sich die Konzepte zu [Dateihandlern im MIP SDK](concept-handler-file-cpp.md) an.
+- Vollständige [Schnellstart: Liste der vertraulichkeitsbezeichnungen (C++)](quick-file-list-labels-cpp.md) erste, die eine Starter-Visual Studio-Projektmappe, um die Liste der vertraulichkeitsbezeichnungen einer Organisation erstellt. Dieser Schnellstart „Festlegen und Abrufen einer Vertraulichkeitsbezeichnung“ baut auf den vorherigen auf.
+- Optional: Überprüfen Sie [Datei Handler das MIP SDK](concept-handler-file-cpp.md) Konzepte.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementieren einer Observer-Klasse zum Überwachen des Dateihandlerobjekts
 
 Ähnlich wie bei dem Observer, den Sie (für Dateiprofil und -Engine) im Schnellstart zur Anwendungsinitialisierung implementiert haben, implementieren Sie jetzt eine Observer-Klasse für ein Dateihandlerobjekt.
 
-Erstellen Sie eine grundlegende Implementierung für eine Observer-Klasse, indem Sie die `mip::FileHandler::Observer`-Klasse des SDK erweitern. Der Observer wird instanziiert und später zum Überwachen von Dateihandlervorgängen verwendet.
+Erstellen Sie eine grundlegende Implementierung für eine Datei Handler Beobachter, durch die SDK Erweiterung `mip::FileHandler::Observer` Klasse. Der Observer wird instanziiert und später zum Überwachen von Dateihandlervorgängen verwendet.
 
-1. Öffnen Sie die Visual Studio-Projektmappe, an der Sie im vorherigen Artikel „Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C++)“ gearbeitet haben.
+1. Öffnen Sie die Visual Studio-Projektmappe, die Sie in der vorherigen gearbeitet "Schnellstart: Liste der vertraulichkeitsbezeichnungen (C++) "Artikel.
 
-2. Fügen Sie Ihrem Projekt eine neue Klasse hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
+2. Fügen Sie eine neue Klasse zu Ihrem Projekt hinzu, durch die die Dateien „header/.h“ und „implementation/.cpp“ für Sie generiert werden:
 
-   - Klicken Sie im **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen** und anschließend **Klasse** aus.
+   - In der **Projektmappen-Explorer**, mit der rechten Maustaste erneut auf des Projektknotens, wählen Sie **hinzufügen**, und wählen Sie dann **Klasse**.
    - Gehen Sie im Dialogfeld **Klasse hinzufügen** folgendermaßen vor:
      - Geben Sie im Feld **Klassenname** „filehandler_observer“ ein. Beachten Sie, dass sowohl das Feld **H-Datei** als auch das Feld **CPP-Datei** anhand des eingegebenen Namens automatisch aufgefüllt werden.
      - Wenn Sie fertig sind, klicken Sie auf die Schaltfläche **OK**.
@@ -105,12 +105,19 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    ```cpp
    // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
+   string contentIdentifier = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathIn, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathIn, 
+             contentIdentifier,
+             mip::ContentState::REST, 
+             true, 
+             std::make_shared<FileHandlerObserver>(), 
+             handlerPromise);
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -160,11 +167,19 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    system("pause");
 
    // Set up async FileHandler for output file operations
+   contentIdentifier = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathOut, 
+             contentIdentifier,
+             mip::ContentState::REST,
+             true,
+             std::make_shared<FileHandlerObserver>(),
+             handlerPromise);
+
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -191,13 +206,14 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    system("pause");
    ```
 
-4. Ersetzen Sie die Platzhalterwerte in dem Quellcode, den Sie gerade eingefügt haben, durch die folgenden Werte:
+4. Ersetzen Sie die Platzhalterwerte im Quellcode, den Sie gerade im wie folgt eingefügt Zeichenfolgenkonstanten mit:
 
    | Platzhalter | Wert |
    |:----------- |:----- |
-   | \<input-file-path\> | Der vollständige Pfad zu einer Testeingabedatei. Beispiel: `c:\\Test\\Test.docx`. |
-   | \<label-id\> | Eine Vertraulichkeitsbezeichnungs-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wird. Beispiel: `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<output-file-path\> | Der vollständige Pfad zur Ausgabedatei, die eine bezeichnete Kopie der Eingabedatei ist. Beispiel: `c:\\Test\\Test_labeled.docx`. |
+   | \<input-file-path\> | Der vollständige Pfad zu einer Testeingabedatei. Beispiel: `"c:\\Test\\Test.docx"`. |
+   | \<content-identifier\> | Ein Benutzer lesbarer Bezeichner für den Inhalt. Zum Beispiel: <ul><li>Berücksichtigen Sie für eine Datei ' Pfad\Dateiname ' aus: `"c:\Test\Test.docx"`</li><li>Beachten Sie auf eine e-Mail Antragsteller: Absender aus: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<label-id\> | Eine Vertraulichkeitsbezeichnungs-ID, die aus der Konsolenausgabe im vorherigen Schnellstart kopiert wird. Beispiel: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
+   | \<output-file-path\> | Der vollständige Pfad zur Ausgabedatei, die eine bezeichnete Kopie der Eingabedatei ist. Beispiel: `"c:\\Test\\Test_labeled.docx"`. |
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
@@ -205,7 +221,7 @@ Erstellen und testen Sie die Clientanwendung.
 
 1. Verwenden Sie F6 (**Projektmappe erstellen**) zum Erstellen der Clientanwendung. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
-2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, fragt die Anwendung jedes Mal nach einem Zugriffstoken, wenn das SDK Ihre `AcquireOAuth2Token()`-Methode aufruft. Führen Sie das PowerShell-Skript wie zuvor im Schnellstart „Auflisten von Vertraulichkeitsbezeichnungen“ aus, um jedes Mal das Token anhand der angegebenen Werte abzurufen. `AcquireOAuth2Token()` versucht, ein zuvor generiertes Token zu nutzen, wenn die angeforderte Zertifizierungsstelle und die Ressource identisch sind:
+2. Wenn das Projekt erstellt und ausgeführt wird, die Anwendung fordert ein Zugriffstoken, jedes Mal, wenn der SDK-Aufrufe Ihrer `AcquireOAuth2Token()` Methode. Wie bereits zuvor in die "Liste der vertraulichkeitsbezeichnungen" Schnellstart führen Sie das PowerShell-Skript zum Abrufen des Tokens jeweils mit den Werten für $authority und $resourceUrl bereitgestellt. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

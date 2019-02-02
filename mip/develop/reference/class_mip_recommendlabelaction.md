@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „RecommendLabelAction“
-description: Referenz für die Microsoft Information Protection-Klasse „RecommendLabelAction“
+title: mip::RecommendLabelAction-Klasse
+description: Dokumentiert die mip::recommendlabelaction-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b8e56daed967523b7580087d7bb934c1b2164320
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: ec1f82ab5951a5b7813fff2ebd5be6650a80203b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446004"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651342"
 ---
 # <a name="class-miprecommendlabelaction"></a>mip::RecommendLabelAction-Klasse 
 Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag für eine Bezeichnung. Die Unterdrückung dieses Aufrufs, nachdem ein Benutzer die empfohlene Bezeichnung ignoriert hat, sollte durch die unterstützten Aktionen im Ausführungsstatus erfolgen.
@@ -19,19 +19,26 @@ Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public const std::string& GetLabelId() const  |  Ruft die vorgeschlagene Bezeichnungs-ID ab.
- public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
+public const std::string& GetLabelId() const  |  Ruft die vorgeschlagene Bezeichnungs-ID ab.
+public const std::vector\<std::string\>& GetClassificationIds() const  |  Erhalten Sie die Klassifizierung-IDs, die abgeglichen und verursacht diese Bezeichnung angezeigt werden.
+public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
   
 ## <a name="members"></a>Member
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>GetLabelId-Funktion
 Ruft die vorgeschlagene Bezeichnungs-ID ab.
 
   
-**Rückgabe**: Bezeichnungs-ID.
+**Gibt**: Die bezeichnungs-ID
   
-### <a name="actiontype"></a>ActionType
+### <a name="getclassificationids-function"></a>GetClassificationIds-Funktion
+Erhalten Sie die Klassifizierung-IDs, die abgeglichen und verursacht diese Bezeichnung angezeigt werden.
+
+  
+**Gibt**: Const Std:: Vector < Std:: String > und eine Liste der Klassifizierung-IDs, die Ursache dieser Bezeichnung, die angezeigt werden.
+  
+### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 
   
-**Rückgabe**: ActionType, der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.

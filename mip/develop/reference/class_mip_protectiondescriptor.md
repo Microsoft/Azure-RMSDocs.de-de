@@ -1,17 +1,17 @@
 ---
-title: Die Klasse „mip::ProtectionDescriptor“
-description: Referenz zur Klasse „mip::ProtectionDescriptor“
+title: mip::ProtectionDescriptor-Klasse
+description: Dokumentiert die mip::protectiondescriptor-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e723041af1eec7be7a839bf36f6d3db67b32447f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: f3bf856982f3e5b4c060a83fe1e822866fb1808b
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446548"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651716"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.
@@ -19,96 +19,103 @@ Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public ProtectionType GetProtectionType() const  |  Ruft den Schutztyp ab, unabhängig davon, ob er aus der Protection SDK-Vorlage stammt oder nicht.
- public std::string GetOwner() const  |  Ruft den Besitzer für den Schutz ab.
- public std::string GetName() const  |  Ruft den Schutznamen ab.
- public std::string GetDescription() const  |  Ruft eine Beschreibung zum Schutz ab.
- public std::string GetTemplateId() const  |  Ruft ggf. die Schutzvorlagen-ID ab.
- public std::string GetLabelId() const  |  Ruft ggf. die Bezeichnungs-ID ab.
-public std::vector<UserRights> GetUserRights() const  |  Ruft die Auflistung von Benutzerrechtszuordnungen ab.
-public std::vector<UserRoles> GetUserRoles() const  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
-public std::chrono::time_point<std::chrono::system_clock> GetContentValidUntil() const  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
- public bool DoesAllowOfflineAccess() const  |  Ruft ab, ob der Schutz den Zugriff auf Offlineinhalte erlaubt.
- public std::string GetReferrer() const  |  Ruft die Verweiseradresse des Schutzes ab.
-public std::map<std::string, std::string> GetEncryptedAppData() const  |  Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
-public std::map<std::string, std::string> GetSignedAppData() const  |  Ruft anwendungsspezifische Daten ab, die signiert waren.
+public ProtectionType GetProtectionType() const  |  Ruft den Schutztyp ab, unabhängig davon, ob er aus der Protection SDK-Vorlage stammt oder nicht.
+public std::string GetOwner() const  |  Ruft den Besitzer für den Schutz ab.
+public std::string GetName() const  |  Ruft den Schutznamen ab.
+public std::string GetDescription() const  |  Ruft eine Beschreibung zum Schutz ab.
+public std::string GetTemplateId() const  |  Ruft ggf. die Schutzvorlagen-ID ab.
+public std::string GetLabelId() const  |  Ruft ggf. die Bezeichnungs-ID ab.
+Public Std:: vector\<UserRights\> GetUserRights() const  |  Ruft die Auflistung von Benutzerrechtszuordnungen ab.
+Public Std:: vector\<UserRoles\> GetUserRoles() const  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
+public bool DoesContentExpire() const  |  Überprüft, ob der Inhalt eine Ablaufzeit hat oder nicht.
+public std::chrono::time_point\<std::chrono::system_clock\> GetContentValidUntil() const  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
+public bool DoesAllowOfflineAccess() const  |  Ruft ab, ob der Schutz den Zugriff auf Offlineinhalte erlaubt.
+public std::string GetReferrer() const  |  Ruft die Verweiseradresse des Schutzes ab.
+public std::map\<std::string, std::string\> GetEncryptedAppData() const  |  Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
+public std::map\<std::string, std::string\> GetSignedAppData() const  |  Ruft anwendungsspezifische Daten ab, die signiert waren.
   
 ## <a name="members"></a>Member
   
-### <a name="protectiontype"></a>ProtectionType
+### <a name="getprotectiontype-function"></a>GetProtectionType-Funktion
 Ruft den Schutztyp ab, unabhängig davon, ob er aus der Protection SDK-Vorlage stammt oder nicht.
 
   
-**Rückgabe**: Typ des Schutzes
+**Gibt**: Typ des Schutzes
   
-### <a name="getowner"></a>GetOwner
+### <a name="getowner-function"></a>GetOwner-Funktion
 Ruft den Besitzer für den Schutz ab.
 
   
-**Rückgabe**: Besitzer des Schutzes
+**Gibt**: Besitzer des Schutzes
   
-### <a name="getname"></a>GetName
+### <a name="getname-function"></a>GetName-Funktion
 Ruft den Schutznamen ab.
 
   
-**Rückgabe**: Schutzname
+**Gibt**: Schutz-name
   
-### <a name="getdescription"></a>GetDescription
+### <a name="getdescription-function"></a>GetDescription-Funktion
 Ruft eine Beschreibung zum Schutz ab.
 
   
-**Rückgabe:** Schutzbeschreibung
+**Gibt**: Beschreibung der Protection
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>GetTemplateId-Funktion
 Ruft ggf. die Schutzvorlagen-ID ab.
 
   
-**Rückgabe**: Vorlagen-ID
+**Gibt**: Vorlagen-ID
   
-### <a name="getlabelid"></a>GetLabelId
+### <a name="getlabelid-function"></a>GetLabelId-Funktion
 Ruft ggf. die Bezeichnungs-ID ab.
 
   
-**Rückgabe:** [Bezeichnung-ID](class_mip_label.md) Diese Eigenschaft wird nur in ProtectionDescriptors für bereits geschützten Inhalt aufgefüllt. Es handelt sich um ein Feld, das dann vom Server aufgefüllt wird, wenn geschützter Inhalt verarbeitet wird.
+**Gibt**: [Bezeichnung](class_mip_label.md) diese Eigenschaft nur in ProtectionDescriptors werden, für die bereits vorhandene aufgefüllt wird ID, geschützte Inhalte. Es handelt sich um ein Feld, das dann vom Server aufgefüllt wird, wenn geschützter Inhalt verarbeitet wird.
   
-### <a name="userrights"></a>UserRights
+### <a name="getuserrights-function"></a>GetUserRights-Funktion
 Ruft die Auflistung von Benutzerrechtszuordnungen ab.
 
   
-**Rückgabe**: Sammlung von Benutzerrechtszuordnungen: Der Wert der Eigenschaft [UserRights](class_mip_userrights.md) ist leer, wenn der aktuelle Benutzer keinen Zugriff auf diese Informationen hat (er also nicht der Besitzer ist und nicht über das Recht „VIEWRIGHTSDATA“ verfügt).
+**Gibt**: Auflistung von Zuordnungen für Benutzer-zu-Rechte den Wert des der [UserRights](class_mip_userrights.md) -Eigenschaft ist leer, wenn der aktuelle Benutzer keinen Zugriff auf diese Informationen hat (d.h., wenn der Benutzer nicht der Besitzer ist und verfügt nicht über das Recht ViewRightsData verfügt).
   
-### <a name="userroles"></a>UserRoles
+### <a name="getuserroles-function"></a>GetUserRoles-Funktion
 Ruft die Auflistung von Benutzerrollenzuordnungen ab.
 
   
-**Rückgabe**: Auflistung von Benutzerrollenzuordnungen
+**Gibt**: Auflistung von Benutzerrollenzuordnungen
   
-### <a name="getcontentvaliduntil"></a>GetContentValidUntil
+### <a name="doescontentexpire-function"></a>DoesContentExpire-Funktion
+Überprüft, ob der Inhalt eine Ablaufzeit hat oder nicht.
+
+  
+**Gibt**: True, wenn Inhalt ablaufen kann, andernfalls false
+  
+### <a name="getcontentvaliduntil-function"></a>GetContentValidUntil-Funktion
 Ruft den Ablaufzeitpunkt des Schutzes ab.
 
   
-**Rückgabe:** Ablaufzeitpunkt des Schutzes
+**Gibt**: Schutz für den Ablauf
   
-### <a name="doesallowofflineaccess"></a>DoesAllowOfflineAccess
+### <a name="doesallowofflineaccess-function"></a>DoesAllowOfflineAccess-Funktion
 Ruft ab, ob der Schutz den Zugriff auf Offlineinhalte erlaubt.
 
   
-**Rückgabe:** Legt fest, ob der Schutz den Zugriff auf Offlineinhalte erlaubt (standardmäßig auf TRUE festgelegt).
+**Gibt**: Wenn Schutz den Zugang zu Offlineinhalten oder nicht erlaubt (Standardwert = True)
   
-### <a name="getreferrer"></a>GetReferrer
+### <a name="getreferrer-function"></a>GetReferrer-Funktion
 Ruft die Verweiseradresse des Schutzes ab.
 
   
-**Rückgabe:** Verweiseradresse des Schutzes. Der Verweiser ist ein URI, der dem Benutzer angezeigt werden kann, wenn dieser den Schutz für den Inhalt nicht aufheben kann. Dieser enthält Informationen dazu, wie der Benutzer die Berechtigung erhalten kann, auf den Inhalt zuzugreifen.
+**Gibt**: Referreradresse der Schutz wird der Verweiser ein URI, der für den Benutzer anzeigbaren ist, wenn sie den Inhalt den Schutz aufheben können nicht an. Dieser enthält Informationen dazu, wie der Benutzer die Berechtigung erhalten kann, auf den Inhalt zuzugreifen.
   
-### <a name="getencryptedappdata"></a>GetEncryptedAppData
+### <a name="getencryptedappdata-function"></a>GetEncryptedAppData-Funktion
 Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
 
   
-**Rückgabe**: App-spezifische Daten. Ein [ProtectionHandler](class_mip_protectionhandler.md) kann ein Wörterbuch mit App-spezifischen Daten enthalten, die durch den Schutzdienst verschlüsselt wurden. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata) zugänglich sind
+**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst verschlüsselt wurde. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function) zugänglich sind
   
-### <a name="getsignedappdata"></a>GetSignedAppData
+### <a name="getsignedappdata-function"></a>GetSignedAppData-Funktion
 Ruft anwendungsspezifische Daten ab, die signiert waren.
 
   
-**Rückgabe**: App-spezifische Daten. Ein [ProtectionHandler](class_mip_protectionhandler.md) kann ein Wörterbuch mit App-spezifischen Daten enthalten, die durch den Schutzdienst signiert wurden. Diese signierten Daten sind unabhängig von den verschlüsselten Daten, die über [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata) zugänglich sind.
+**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst signiert wurde. Diese signierten Daten sind unabhängig von den verschlüsselten Daten, die über [ProtectionDescriptor::GetEncryptedAppData](class_mip_protectiondescriptor.md#getencryptedappdata-function) zugänglich sind.

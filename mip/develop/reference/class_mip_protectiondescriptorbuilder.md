@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „ProtectionDescriptorBuilder“
-description: Referenz für die Microsoft Information Protection-Klasse „ProtectionDescriptorBuilder“
+title: mip::ProtectionDescriptorBuilder-Klasse
+description: Dokumentiert die mip::protectiondescriptorbuilder-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 42e44cfaf269a43d0210c0c040ea70ccc1fb192e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: b6ac49c7cb4d6f7592abac041365191d90951b7a
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446633"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651285"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>mip::ProtectionDescriptorBuilder-Klasse 
 Erstellt eine [ProtectionDescriptor](class_mip_protectiondescriptor.md)-Instanz, die den Schutz für ein Inhaltsobjekt beschreibt.
@@ -19,33 +19,33 @@ Erstellt eine [ProtectionDescriptor](class_mip_protectiondescriptor.md)-Instanz,
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr<ProtectionDescriptor> Build()  |  Erstellt einen [ProtectionDescriptor](class_mip_protectiondescriptor.md), dessen Zugriffsberechtigungen von dieser [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)-Instanz definiert werden.
- public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
- public void SetDescription(const std::string& value)  |  Legt die Beschreibung der Schutzrichtlinie fest.
-public void SetContentValidUntil(const std::chrono::time_point<std::chrono::system_clock>& value)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
- public void SetAllowOfflineAccess(bool value)  |  Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
- public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der Schutzrichtlinie fest.
-public void SetEncryptedAppData(const std::map<std::string, std::string>& value)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
-public void SetSignedAppData(const std::map<std::string, std::string>& value)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
- public virtual ~ProtectionDescriptorBuilder()  | _Noch nicht dokumentiert._
+Öffentliche MIP_API Std:: shared_ptr\<ProtectionDescriptor\> Build()  |  Erstellt einen [ProtectionDescriptor](class_mip_protectiondescriptor.md), dessen Zugriffsberechtigungen von dieser [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)-Instanz definiert werden.
+public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
+public void SetDescription(const std::string& value)  |  Legt die Beschreibung der Schutzrichtlinie fest.
+public void SetContentValidUntil(const std::chrono::time_point\<std::chrono::system_clock\>& value)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
+public void SetAllowOfflineAccess(bool value)  |  Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
+public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der Schutzrichtlinie fest.
+public void SetEncryptedAppData(const std::map\<std::string, std::string\>& value)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
+public void SetSignedAppData(const std::map\<std::string, std::string\>& value)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
+public virtual ~ProtectionDescriptorBuilder()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
-### <a name="protectiondescriptor"></a>ProtectionDescriptor
+### <a name="build-function"></a>Funktion erstellen
 Erstellt einen [ProtectionDescriptor](class_mip_protectiondescriptor.md), dessen Zugriffsberechtigungen von dieser [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md)-Instanz definiert werden.
 
   
-**Rückgabe**: neue [ProtectionDescriptor](class_mip_protectiondescriptor.md)-Instanz
+**Gibt**: Neue [ProtectionDescriptor](class_mip_protectiondescriptor.md) Instanz
   
-### <a name="setname"></a>SetName
+### <a name="setname-function"></a>SetName-Funktion
 Legt den Namen für eine Schutzrichtlinie fest.
 
 Parameter:  
-* **value**: Name der Schutzrichtlinie
+* **value**: Name des Protection-Richtlinie
 
 
   
-### <a name="setdescription"></a>SetDescription
+### <a name="setdescription-function"></a>SetDescription-Funktion
 Legt die Beschreibung der Schutzrichtlinie fest.
 
 Parameter:  
@@ -53,7 +53,7 @@ Parameter:
 
 
   
-### <a name="setcontentvaliduntil"></a>GetContentValidUntil
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil-Funktion
 Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
 
 Parameter:  
@@ -61,15 +61,15 @@ Parameter:
 
 
   
-### <a name="setallowofflineaccess"></a>SetAllowOfflineAccess
+### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess-Funktion
 Legt fest, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
 
 Parameter:  
-* **value**: Angabe, ob die Schutzrichtlinie den Zugriff auf Offlineinhalte erlaubt oder nicht.
+* **value**: Wenn Richtlinie den Zugang zu Offlineinhalten oder nicht erlaubt
 
 
   
-### <a name="setreferrer"></a>SetReferrer
+### <a name="setreferrer-function"></a>SetReferrer-Funktion
 Legt die Referreradresse der Schutzrichtlinie fest.
 
 Parameter:  
@@ -78,23 +78,23 @@ Parameter:
 
 Der Referrer ist ein URI, der dem Benutzer angezeigt wird, nachdem die Beschaffung der Schutzrichtlinie fehlgeschlagen ist. Dieser enthält Informationen darüber, wie dieser Benutzer für den Zugriff auf den Inhalt berechtigt werden kann.
   
-### <a name="setencryptedappdata"></a>SetEncryptedAppData
+### <a name="setencryptedappdata-function"></a>SetEncryptedAppData-Funktion
 Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
 
 Parameter:  
-* **value**: Anwendungsspezifische Daten
+* **value**: App-spezifische Daten
 
 
 Eine Anwendung kann ein Wörterbuch von anwendungsspezifischen Daten angeben, das vom RMS-Dienst verschlüsselt wird. Diese verschlüsselten Daten sind durch „SetSignedAppData“ unabhängig von dem signierten Dataset.
   
-### <a name="setsignedappdata"></a>SetSignedAppData
+### <a name="setsignedappdata-function"></a>SetSignedAppData-Funktion
 Legt anwendungsspezifische Daten fest, die signiert werden sollten.
 
 Parameter:  
-* **value**: Anwendungsspezifische Daten
+* **value**: App-spezifische Daten
 
 
 Eine Anwendung kann ein Wörterbuch von anwendungsspezifischen Daten angeben, das vom Schutzdienst signiert wird. Diese signierten Daten sind durch „SetEncryptedAppData“ unabhängig von dem verschlüsselten Dataset.
   
-### <a name="protectiondescriptorbuilder"></a>~ProtectionDescriptorBuilder
+### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder-Funktion
 _Noch nicht dokumentiert._

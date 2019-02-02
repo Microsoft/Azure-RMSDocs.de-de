@@ -1,17 +1,17 @@
 ---
 title: Die Klasse „mip::PolicyHandler“
-description: Referenz zur Klasse „mip::PolicyHandler“
+description: Dokumentiert die mip::policyhandler-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 23de5616558a298189cb885727d69a20373a3609
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: ca644716d730a43d4455919b7555852e770e0cda
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445936"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651495"
 ---
 # <a name="class-mippolicyhandler"></a>Die Klasse „mip::PolicyHandler“ 
 Diese Klasse stellt eine Schnittstelle für alle Funktionen des Richtlinienhandler bereit.
@@ -19,24 +19,24 @@ Diese Klasse stellt eine Schnittstelle für alle Funktionen des Richtlinienhandl
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<ContentLabel> GetSensitivityLabel(const ExecutionState& state)  |  Ruft die Vertraulichkeitsbezeichnung aus dem vorhandenen Inhalt ab.
-public std::vector<std::shared_ptr<Action>> ComputeActions(const ExecutionState& state)  |  Führt die Regeln im Handler basierend auf dem angegebenen Status aus und gibt die Liste der auszuführenden Aktionen zurück.
- public void NotifyCommittedActions(const ExecutionState& state)  |  Wird aufgerufen, wenn die berechneten Aktionen angewendet wurden und die Daten auf den Datenträger committet wurden
+Public Std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (const ExecutionState & State)  |  Ruft die Vertraulichkeitsbezeichnung aus dem vorhandenen Inhalt ab.
+Public Std:: vector\<Std:: shared_ptr\<Aktion\> \> ComputeActions (const ExecutionState & State)  |  Führt die Regeln im Handler basierend auf dem angegebenen Status aus und gibt die Liste der auszuführenden Aktionen zurück.
+public void NotifyCommittedActions(const ExecutionState& state)  |  Wird aufgerufen, wenn die berechneten Aktionen angewendet wurden und die Daten auf den Datenträger committet wurden
   
 ## <a name="members"></a>Member
   
-### <a name="contentlabel"></a>ContentLabel
+### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel-Funktion
 Ruft die Vertraulichkeitsbezeichnung aus dem vorhandenen Inhalt ab.
 
 Parameter:  
-* **state:** der aktuelle Inhaltsstatus 
+* **state**: Aktuellen Status des Inhalts 
 
 
 
   
-**Rückgabe:** die derzeit auf den Inhalt angewendete Bezeichnung Wenn keine Bezeichnung vorhanden ist, ist die Rückgabe leer
+**Gibt**: Die Bezeichnung, die derzeit auf den Inhalt angewendet wird. Wenn keine Bezeichnung vorhanden ist, ist die Rückgabe leer
   
-### <a name="action"></a>Aktion
+### <a name="computeactions-function"></a>ComputeActions-Funktion
 Führt die Regeln im Handler basierend auf dem angegebenen Status aus und gibt die Liste der auszuführenden Aktionen zurück.
 
 Parameter:  
@@ -45,13 +45,13 @@ Parameter:
 
 
   
-**Rückgabe**: Liste der Aktionen, die auf den Inhalt angewendet werden sollten.
+**Gibt**: Liste der Aktionen, die auf den Inhalt angewendet werden soll.
   
-### <a name="notifycommittedactions"></a>NotifyCommittedActions
+### <a name="notifycommittedactions-function"></a>NotifyCommittedActions-Funktion
 Wird aufgerufen, wenn die berechneten Aktionen angewendet wurden und die Daten auf den Datenträger committet wurden
 
 Parameter:  
 * **state:** der aktuelle Ausführungsstatus des Inhalts, nachdem die Aktionen committet wurden 
 
 
-: Dieser Aufruf sendet ein Überprüfungsereignis
+: Dieser Aufruf sendet dann ein Überwachungsereignis

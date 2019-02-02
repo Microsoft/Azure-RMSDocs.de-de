@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „PolicyProfile Observer“
-description: Referenz für die Microsoft Information Protection-Klasse „PolicyProfile Observer“
+title: mip::PolicyProfile::Observer-Klasse
+description: Dokumentiert die mip::policyprofile-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 5de2156f4906c14e4ebc1418df8acb092c089d7d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 451cc2b9da086644e561d0a1dd1912de5f38c48c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446872"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651172"
 ---
 # <a name="class-mippolicyprofileobserver"></a>mip::PolicyProfile::Observer-Klasse 
 [Observer](class_mip_policyprofile_observer.md)-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für profilbezogene Ereignisse.
@@ -20,118 +20,136 @@ Alle Fehler erben von [mip::Error](class_mip_error.md). Der Client sollte die En
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void OnLoadSuccess(const std::shared_ptr<PolicyProfile>& profile, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
-public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
-public virtual void OnListEnginesSuccess(const std::vector<std::string>& engineIds, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
-public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn das Auflisten der Engines einen Fehler verursacht hat.
-public virtual void OnUnloadEngineSuccess(const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn eine Engine erfolgreich entladen wurde.
-public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn das Entladen einer Engine einen Fehler verursacht hat.
-public virtual void OnAddEngineSuccess(const std::shared_ptr<PolicyEngine>& engine, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
-public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
-public virtual void OnDeleteEngineSuccess(const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
-public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
- public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufgerufen, wenn die Richtlinie für die Engine mit der angegebenen ID geändert wurde.
+öffentliche virtuelle "void" OnLoadSuccess (const Std:: shared_ptr\<PolicyProfile\>& Profil, const Std:: shared_ptr\<"void"\>& Kontext)  |  Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
+public virtual void OnLoadFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
+public virtual void OnListEnginesSuccess(const std::vector\<std::string\>& engineIds, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
+public virtual void OnListEnginesFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Auflisten der Engines einen Fehler verursacht hat.
+öffentliche virtuelle "void" OnUnloadEngineSuccess (const Std:: shared_ptr\<"void"\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich entladen wurde.
+public virtual void OnUnloadEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Entladen einer Engine einen Fehler verursacht hat.
+öffentliche virtuelle "void" OnAddEngineSuccess (const Std:: shared_ptr\<"policyengine"\>&-Engine, const Std:: shared_ptr\<"void"\>& Kontext)  |  Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
+öffentliche virtuelle "void" OnAddEngineStarting (Bool RequiresPolicyFetch)  |  Wird aufgerufen, vor der Erstellung von beschreiben, und zwar unabhängig davon, ob der-Engine die Daten vom Server abgerufen werden müssen oder ob es von lokal zwischengespeicherten Daten erstellt werden kann.
+public virtual void OnAddEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
+öffentliche virtuelle "void" OnDeleteEngineSuccess (const Std:: shared_ptr\<"void"\>& Kontext)  |  Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
+public virtual void OnDeleteEngineFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
+public virtual void OnPolicyChanged(const std::string& engineId)  |  Wird aufgerufen, wenn die Richtlinie für die Engine mit der angegebenen ID geändert wurde oder die geladene benutzerdefinierte Empfindlichkeit geändert haben.
   
 ## <a name="members"></a>Member
   
-### <a name="onloadsuccess"></a>OnLoadSuccess
+### <a name="onloadsuccess-function"></a>OnLoadSuccess-Funktion
 Wird aufgerufen, wenn das Profil erfolgreich geladen wurde
 
 Parameter:  
 * **profile**: Das aktuelle Profil, über das der Vorgang gestartet wird. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, die die LoadAsync-Vorgang an.
 
 
   
-### <a name="onloadfailure"></a>OnLoadFailure
+### <a name="onloadfailure-function"></a>OnLoadFailure-Funktion
 Wird aufgerufen, wenn beim Laden eines Profils ein Fehler aufgetreten ist
 
 Parameter:  
 * **error**: Der Fehler, durch den der Ladevorgang fehlgeschlagen ist. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, die die LoadAsync-Vorgang an.
 
 
   
-### <a name="onlistenginessuccess"></a>OnListEnginesSuccess
+### <a name="onlistenginessuccess-function"></a>OnListEnginesSuccess-Funktion
 Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
 
 Parameter:  
-* **engineIds**: Liste der verfügbaren Engine-IDs. 
+* **engineIds**: Liste der verfügbaren Engine-IDs 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb ListEnginesAsync übergeben.
 
 
   
-### <a name="onlistenginesfailure"></a>OnListEnginesFailure
+### <a name="onlistenginesfailure-function"></a>OnListEnginesFailure-Funktion
 Wird aufgerufen, wenn das Auflisten der Engines einen Fehler verursacht hat.
 
 Parameter:  
 * **error**: Der Fehler, durch den das Auflisten der Engine fehlgeschlagen ist. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb ListEnginesAsync übergeben.
 
 
   
-### <a name="onunloadenginesuccess"></a>OnUnloadEngineSuccess
+### <a name="onunloadenginesuccess-function"></a>OnUnloadEngineSuccess-Funktion
 Wird aufgerufen, wenn eine Engine erfolgreich entladen wurde.
 
 Parameter:  
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb UnloadEngineAsync übergeben.
 
 
   
-### <a name="onunloadenginefailure"></a>OnUnloadEngineFailure
+### <a name="onunloadenginefailure-function"></a>OnUnloadEngineFailure-Funktion
 Wird aufgerufen, wenn das Entladen einer Engine einen Fehler verursacht hat.
 
 Parameter:  
 * **error**: Der Fehler, durch den das Entladen der Engine fehlgeschlagen ist. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb UnloadEngineAsync übergeben.
 
 
   
-### <a name="onaddenginesuccess"></a>OnAddEngineSuccess
+### <a name="onaddenginesuccess-function"></a>OnAddEngineSuccess-Funktion
 Wird aufgerufen, wenn eine neue Engine erfolgreich hinzugefügt wurde.
+
+Parameter:  
+* **Engine**: das neu hinzugefügte Modul 
+
+
+* **Kontext**: übergeben Sie der Kontext für den Betrieb von AddEngineAsync
+
+
   
-### <a name="onaddenginefailure"></a>OnAddEngineFailure
+### <a name="onaddenginestarting-function"></a>OnAddEngineStarting-Funktion
+Wird aufgerufen, vor der Erstellung von beschreiben, und zwar unabhängig davon, ob der-Engine die Daten vom Server abgerufen werden müssen oder ob es von lokal zwischengespeicherten Daten erstellt werden kann.
+
+Parameter:  
+* **requiresPolicyFetch**: Beschreibt, ob die Daten über HTTP abgerufen werden müssen oder wenn sie aus dem Cache geladen wird
+
+
+Diese optionale Rückruf kann von einer Anwendung verwendet werden, um darüber informiert werden, unabhängig davon, ob ein Vorgang AddEngineAsync ein HTTP-Vorgangs (mit der zugehörigen Verzögerung) benötigt wird wird abgeschlossen.
+  
+### <a name="onaddenginefailure-function"></a>OnAddEngineFailure-Funktion
 Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
 
 Parameter:  
-* **error**: Der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
+* **error**: der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb von AddEngineAsync übergeben.
 
 
   
-### <a name="ondeleteenginesuccess"></a>OnDeleteEngineSuccess
+### <a name="ondeleteenginesuccess-function"></a>OnDeleteEngineSuccess-Funktion
 Wird aufgerufen, wenn eine Engine erfolgreich gelöscht wurde.
 
 Parameter:  
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb DeleteEngineAsync übergeben.
 
 
   
-### <a name="ondeleteenginefailure"></a>OnDeleteEngineFailure
+### <a name="ondeleteenginefailure-function"></a>OnDeleteEngineFailure-Funktion
 Wird aufgerufen, wenn das Löschen einer Engine einen Fehler verursacht hat.
 
 Parameter:  
 * **error**: Der Fehler, durch den das Löschen der Engine fehlgeschlagen ist. 
 
 
-* **context**: Der an den Vorgang übergebene Kontext.
+* **Kontext**: der Kontext, der für den Betrieb DeleteEngineAsync übergeben.
 
 
   
-### <a name="onpolicychanged"></a>OnPolicyChanged
-Wird aufgerufen, wenn die Richtlinie für die Engine mit der angegebenen ID geändert wurde.
+### <a name="onpolicychanged-function"></a>OnPolicyChanged-Funktion
+Wird aufgerufen, wenn die Richtlinie für die Engine mit der angegebenen ID geändert wurde oder die geladene benutzerdefinierte Empfindlichkeit geändert haben.
 
 Parameter:  
 * **engineId**: Die Engine 

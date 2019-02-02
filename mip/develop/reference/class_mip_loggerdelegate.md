@@ -1,17 +1,17 @@
 ---
-title: Die Klasse „mip::LoggerDelegate“
-description: Referenz zur Klasse „mip::LoggerDelegate“
+title: mip::LoggerDelegate-Klasse
+description: Dokumentiert die mip::loggerdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b25cdb177735feccfa5c4d344613e4747d18b77f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d93bfb863bf97629a8b2361425a0d78187c88cdc
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445851"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55649999"
 ---
 # <a name="class-miploggerdelegate"></a>mip::LoggerDelegate-Klasse 
 Eine Klasse, die die Schnittstelle zur MIP SDK-Protokollierung definiert
@@ -19,14 +19,14 @@ Eine Klasse, die die Schnittstelle zur MIP SDK-Protokollierung definiert
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialisiert die Protokollierung.
- public LogLevel GetLogLevel() const  |  Ruft den niedrigsten Protokolliergrad ab, der ein Protokollierungsereignis auslösen würde.
- public void Flush()  |  Leert die Protokolldaten.
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Schreibt eine Protokollanweisung in eine Protokolldatei.
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  Initialisiert die Protokollierung.
+public LogLevel GetLogLevel() const  |  Ruft den niedrigsten Protokolliergrad ab, der ein Protokollierungsereignis auslösen würde.
+public void Flush()  |  Leert die Protokolldaten.
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Schreibt eine Protokollanweisung in eine Protokolldatei.
   
 ## <a name="members"></a>Member
   
-### <a name="init"></a>Init
+### <a name="init-function"></a>"Init"-Funktion
 Initialisiert die Protokollierung.
 
 Parameter:  
@@ -37,16 +37,16 @@ Parameter:
 
 
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getloglevel-function"></a>GetLogLevel-Funktion
 Ruft den niedrigsten Protokolliergrad ab, der ein Protokollierungsereignis auslösen würde.
 
   
-**Rückgabe:** ruft den niedrigsten Protokolliergrad ab, der ein Protokollierungsereignis auslösen würde
+**Gibt**: Die niedrigste Protokollebene, die ein Ereignis für die nachrichtenprotokollierung auslösen würde.
   
-### <a name="flush"></a>Leerung
+### <a name="flush-function"></a>Flush-Funktion
 Leert die Protokolldaten.
   
-### <a name="writetolog"></a>WriteToLog
+### <a name="writetolog-function"></a>WriteToLog-Funktion
 Schreibt eine Protokollanweisung in eine Protokolldatei.
 
 Parameter:  

@@ -1,17 +1,17 @@
 ---
-title: Microsoft Information Protection-Klasse „ClassificationResult“
-description: Referenz für die Microsoft Information Protection-Klasse „ClassificationResult“
+title: mip::ClassificationResult-Klasse
+description: Dokumentiert die mip::classificationresult-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ea312330c656b6daefbc1bcba690f53ebfbf419f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 28b174fe65de5980fb1922cfb4c3e5cee7cab1d8
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446293"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650747"
 ---
 # <a name="class-mipclassificationresult"></a>mip::ClassificationResult-Klasse 
 Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus enthält
@@ -19,23 +19,23 @@ Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus ent
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public std::string GetId() const  |  Ruft die ID der Klassifizierungsrichtlinie ab.
- public int GetCount() const  |  Ruft die Anzahl der Instanzen ab.
- public int GetConfidenceLevel() const  |  Ruft die Zuverlässigkeit des Ergebnisses ab.
+public std::string GetId() const  |  Ruft die ID der Klassifizierungsrichtlinie ab.
+public int GetCount() const  |  Ruft die Anzahl der Instanzen ab.
+public int GetConfidenceLevel() const  |  Ruft die Zuverlässigkeit des Ergebnisses ab.
   
 ## <a name="members"></a>Member
   
-### <a name="getid"></a>GetId
+### <a name="getid-function"></a>GetId-Funktion
 Ruft die ID der Klassifizierungsrichtlinie ab.
 
   
-**Rückgabe**: ID der Klassifizierungsrichtlinie.
+**Gibt**: Die ID der Richtlinie Klassifizierung.
   
-### <a name="getcount"></a>GetCount
+### <a name="getcount-function"></a>GetCount-Funktion
 Ruft die Anzahl der Instanzen ab.
 
   
-**Rückgabe**: Anzahl von Instanzen.
+**Gibt**: Die Anzahl der Instanzen.
   
-### <a name="getconfidencelevel"></a>GetConfidenceLevel
+### <a name="getconfidencelevel-function"></a>GetConfidenceLevel-Funktion
 Ruft die Zuverlässigkeit des Ergebnisses ab.

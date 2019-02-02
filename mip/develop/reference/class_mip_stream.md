@@ -1,37 +1,37 @@
 ---
-title: Microsoft Information Protection-Klasse „Stream“
-description: Referenz für die Microsoft Information Protection-Klasse „Stream“
+title: mip::Stream-Klasse
+description: 'MIP:: Stream-Klasse von der Microsoft Information Protection (MIP) SDK-Dokumente.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e6296c5e15590741e008979dcf12373ff5fcdf00
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 4289b39ba454b19c6836a7eaccb6333cbb9000b4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445222"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651699"
 ---
-# <a name="class-mipstream"></a>class mip::Stream 
+# <a name="class-mipstream"></a>mip::Stream-Klasse 
 Eine Klasse, die die Schnittstelle zwischen dem MIP SDK und dem streambasierten Inhalt definiert.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
- public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Wird in einen Puffer aus dem Stream eingelesen.
- public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Wird aus einem Puffer in den Stream geschrieben.
- public bool Flush()  |  Leert den Stream.
- public void Seek(int64_t position)  |  Sucht die aktuelle Position im Stream.
- public bool CanRead() const  |  Eine Überprüfung, ob aus dem Datenstrom gelesen werden kann.
- public bool CanWrite() const  |  Eine Überprüfung, ob in den Datenstrom geschrieben werden kann.
- public int64_t Position()  |  Ruft die aktuelle Position im Stream ab.
- public int64_t Size()  |  Ruft den Umfang des Inhalts im Stream ab.
- public void Size(int64_t value)  |  Legt die Größe des Streams fest.
+public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Wird in einen Puffer aus dem Stream eingelesen.
+public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Wird aus einem Puffer in den Stream geschrieben.
+public bool Flush()  |  Leert den Stream.
+public void Seek(int64_t position)  |  Sucht die aktuelle Position im Stream.
+public bool CanRead() const  |  Eine Überprüfung, ob aus dem Datenstrom gelesen werden kann.
+public bool CanWrite() const  |  Eine Überprüfung, ob in den Datenstrom geschrieben werden kann.
+public int64_t Position()  |  Ruft die aktuelle Position im Stream ab.
+public int64_t Size()  |  Ruft den Umfang des Inhalts im Stream ab.
+public void Size(int64_t value)  |  Legt die Größe des Streams fest.
   
 ## <a name="members"></a>Member
   
-### <a name="read"></a>Überwachungsdaten
+### <a name="read-function"></a>Read-Funktion
 Wird in einen Puffer aus dem Stream eingelesen.
 
 Parameter:  
@@ -43,9 +43,9 @@ Parameter:
 
 
   
-**Rückgabe**: Die Anzahl der gelesenen Bytes.
+**Gibt**: Die Anzahl der gelesenen Bytes.
   
-### <a name="write"></a>Überwachungsdaten
+### <a name="write-function"></a>Write-Funktion
 Wird aus einem Puffer in den Stream geschrieben.
 
 Parameter:  
@@ -57,15 +57,15 @@ Parameter:
 
 
   
-**Rückgabe**: Die Anzahl der geschriebenen Bytes.
+**Gibt**: Die Anzahl der geschriebenen Bytes.
   
-### <a name="flush"></a>Leerung
+### <a name="flush-function"></a>Flush-Funktion
 Leert den Stream.
 
   
-**Rückgabe**: TRUE bei erfolgreicher Ausführung; andernfalls wird FALSE zurückgegeben.
+**Gibt**: True, wenn erfolgreich, andernfalls False.
   
-### <a name="seek"></a>Seek
+### <a name="seek-function"></a>Seek-Funktion
 Sucht die aktuelle Position im Stream.
 
 Parameter:  
@@ -73,31 +73,31 @@ Parameter:
 
 
   
-### <a name="canread"></a>CanRead
+### <a name="canread-function"></a>"CanRead"-Funktion
 Eine Überprüfung, ob aus dem Datenstrom gelesen werden kann.
 
   
-**Rückgabe**: TRUE, wenn lesbar; andernfalls wird FALSE zurückgegeben.
+**Gibt**: True, wenn lesbar, andernfalls False.
   
-### <a name="canwrite"></a>CanWrite
+### <a name="canwrite-function"></a>CanWrite-Funktion
 Eine Überprüfung, ob in den Datenstrom geschrieben werden kann.
 
   
-**Rückgabe**: TRUE, wenn beschreibbar; andernfalls wird FALSE zurückgegeben.
+**Gibt**: True, wenn beschreibbar, andernfalls False.
   
-### <a name="position"></a>Position
+### <a name="position-function"></a>Position-Funktion
 Ruft die aktuelle Position im Stream ab.
 
   
-**Rückgabe**: Position im Stream.
+**Gibt**: Die Position im Stream.
   
-### <a name="size"></a>Size
+### <a name="size-function"></a>Size-Funktion
 Ruft den Umfang des Inhalts im Stream ab.
 
   
-**Rückgabe**: Größe des Streams.
+**Gibt**: Die Größe des Streams.
   
-### <a name="size"></a>Size
+### <a name="size-function"></a>Size-Funktion
 Legt die Größe des Streams fest.
 
 Parameter:  
