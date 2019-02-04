@@ -4,18 +4,18 @@ description: Phase 3 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/11/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5aa86c3806dd23787d2661b4a4ac2e6850d1e907
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 659f42f71ef49cd1e632c0ac46416d51b9c8cfb1
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393890"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067617"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -25,15 +25,15 @@ Verwenden Sie die folgenden Informationen für Phase 3 der Migration von AD RMS 
 
 ## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Schritt 7: Neukonfigurieren von Windows-Computern zur Verwendung von Azure Information Protection
 
-Für Windows-Computer, die Office 2016-Klick-und-Los-Desktop-Apps verwenden:
+Für Windows-Computer, die Office 365-Apps, Office 2019- oder Office 2016-Klick-und-Los-Desktop-Apps verwenden:
 
 - Sie können diese Clients mit der DNS-Umleitung so neu konfigurieren, dass sie Azure Information Protection verwenden. Dies ist die bevorzugte Methode der Clientmigration, da sie die unkomplizierteste ist. Diese Methode ist allerdings auf Klick-und-Los-Desktopanwendungen von Office 2016 und höher für Windows-Computer beschränkt.
     
     Für diese Methode müssen Sie einen neuen SRV-Eintrag erstellen und für Benutzer auf dem AD RMS-Veröffentlichungsendpunkt eine NTFS-DENY-Berechtigung festlegen.
 
-- Für Windows-Computer, die keine Office 2016-Klick-und-Los-Desktop-Apps verwenden:
+- Für Windows-Computer, die keine Office 2016- oder Office 2019-Klick-und-Los-Desktop-Apps verwenden:
     
-    Sie können die DNS-Umleitung nicht verwenden und müssen stattdessen Änderungen an der Registrierung vornehmen. Wenn Sie sowohl Office 2016 als auch andere Office-Versionen verwenden, können Sie diese Methode für alle Windows-Computer oder eine Kombination aus der DNS-Umleitung und dem Ändern der Registrierung verwenden. 
+    Sie können die DNS-Umleitung nicht verwenden und müssen stattdessen Änderungen an der Registrierung vornehmen. Wenn Sie eine Mischung aus Office-Versionen verwenden, die nur zum Teil mit DNS-Umleitung umgehen können, können Sie diese einzelne Methode für alle Windows-Computer oder eine Kombination aus der DNS-Umleitung und dem Ändern der Registrierung verwenden. 
     
     Änderungen der Registrierung werden Ihnen erleichtert, da Sie Skripts, die zum Download zur Verfügung stehen, bearbeiten und bereitstellen können. 
 
@@ -41,7 +41,7 @@ Weitere Informationen zum Neukonfigurieren der Windows-Clients finden Sie in den
 
 ## <a name="client-reconfiguration-by-using-dns-redirection"></a>Clientneukonfiguration mithilfe der DNS-Umleitung
 
-Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desktop-Apps von Office 2016 oder höher ausgeführt werden. 
+Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desktop-Apps von Office 365 und Office 2016 (oder höher) ausgeführt werden. 
 
 1. Erstellen Sie einen DNS-SRV-Eintrag im folgenden Format:
     
@@ -67,9 +67,9 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     |**Portnummer**|80|  
     |**Host, der diesen Dienst anbietet**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
-2. Legen Sie für Office 2016-Benutzer im AD RMS-Veröffentlichungsendpunkt eine DENY-Berechtigung fest:
+2. Legen Sie auf dem AD RMS-Veröffentlichungsendpunkt für Benutzer, die Office 365-Apps oder Office 2016 (oder höher) ausführen, eine Ablehnungsberechtigung fest:
 
-    ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
+    a. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
     b. Navigieren Sie zur **Standardwebsite** > **_wmcs** > **licensing** > **licensing.asmx**
 
@@ -77,18 +77,18 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
     d. Im Dialogfeld **Berechtigungen für licensing.asmx** wählen Sie entweder **Benutzer**, wenn Sie die Umleitung für alle Benutzer festlegen möchten, oder Sie klicken auf **Hinzufügen**, und geben dann eine Gruppe mit den Benutzern an, die Sie umleiten möchten.
     
-    Auch wenn alle Ihre Benutzer Office 2016 verwenden, können Sie zunächst nur einen Teil der Benutzer festlegen, um die Migration phasenweise durchzuführen.
+    Auch wenn alle Ihre Benutzer eine Version von Office verwenden, die DNS-Umleitung unterstützt, kann es sinnvoll sein, zunächst nur einen Teil der Benutzer festzulegen und eine phasenweise Migration durchzuführen.
     
     e. Wählen Sie für die ausgewählte Gruppe **Verweigern** für die Berechtigungen **Lesen & Ausführen** und **Lesen** aus, und klicken Sie anschließend zweimal auf **OK**.
 
-    f. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 2016 ausführt, nach dem SRV-Eintrag sucht:
+    f. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 365-Apps, Office 2019 oder Office 2016 ausführt, nach dem SRV-Eintrag sucht:
     
     **Fehlermeldung 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists)** (Mit den bereitgestellten Anmeldeinformationen haben Sie keine Berechtigung zum Anzeigen dieses Verzeichnisses oder dieser Seite (Zugriff aufgrund von Zugriffssteuerungslisten verweigert)).
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Clientneukonfiguration mithilfe von Änderungen an der Registrierung
 
-Diese Methode eignet sich für alle Windows-Clients und sollte verwendet werden, wenn diese eine Version vor Office 2016 ausführen. Diese Methode verwendet zwei Migrationsskripts zur Neukonfiguration von AD RMS-Clients:
+Diese Methode eignet sich für alle Windows-Clients und sollte verwendet werden, wenn diese keine Office 365-Apps, Office 2019 oder Office 2016, sondern stattdessen eine frühere Version von Office ausführen. Diese Methode verwendet zwei Migrationsskripts zur Neukonfiguration von AD RMS-Clients:
 
 - Migrate-Client.cmd
 

@@ -4,16 +4,16 @@ description: Übersicht über den HYOK-Schutz (AD RMS) mit Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 12f199f6bae08a2b57cbdae14b83175679446c1c
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393568"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067719"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -65,8 +65,8 @@ In der folgenden Tabelle werden die unterstützten Szenarios für den Schutz von
 
 |Plattform|Anwendung|Unterstützt|
 |----------------------|----------|-----------|
-|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Word, Excel, PowerPoint|Schutz: Ja<br /><br />Verbrauch: Ja|
-|Windows|Azure Information Protection-Client mit Office 2016 und Office 2013 <br /><br />Outlook|Schutz: Ja<br /><br />Verbrauch: Ja|
+|Windows|Azure Information Protection-Client mit Office 365-Apps, Office 2019, Office 2016 und Office 2013 <br /><br />Word, Excel, PowerPoint|Schutz: Ja<br /><br />Verbrauch: Ja|
+|Windows|Azure Information Protection-Client mit Office 365-Apps, Office 2019, Office 2016 und Office 2013 <br /><br />Outlook|Schutz: Ja<br /><br />Verbrauch: Ja|
 |Windows|Azure Information Protection-Client mit Datei-Explorer|Schutz: Ja <br /><br />Verbrauch: Ja|
 |Windows|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja|
 |Windows|Azure Information Protection-Client PowerShell-Cmdlets für die Bezeichnung|Schutz: Ja<br /><br />Verbrauch: Ja|
@@ -148,7 +148,7 @@ Eine AD RMS-Bereitstellung muss die folgenden Anforderungen erfüllen, um den HY
 
 - Wenn Sie mit HYOK geschützte Dokumente oder E-Mails für andere Personen außerhalb Ihrer Organisation freigeben: AD RMS wird für ausdrücklich in einer direkten Punkt-zu-Punkt-Beziehung mit anderen Organisationen definierte Vertrauensstellungen konfiguriert, indem entweder vertrauenswürdige Benutzerdomänen oder Verbundvertrauensstellungen verwendet werden, die Sie mithilfe der Active Directory-Verbunddienste (AD FS) erstellen.
 
-- Benutzer haben eine Version von Office 2016 Professional Plus oder Office 2013 Professional Plus mit Service Pack 1, die auf Windows 7 Service Pack 1 oder höher ausgeführt wird. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
+- Benutzer haben eine Version von Office, die Information Rights Management (IRM) unterstützt, und mindestens Office 2013 Professional Plus mit Service Pack 1, ausgeführt unter Windows 7 Service Pack 1 oder höher. Beachten Sie, dass Office 2010 und Office 2007 für dieses Szenario nicht unterstützt werden.
     
     - Für Office 2016, auf Microsoft Installer (MSI) basierende Edition: Sie haben [Update 4018295 für Microsoft Office 2016, das am 6. März 2018 veröffentlicht wurde](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295), installiert.
 

@@ -4,18 +4,18 @@ description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: cc62934195916f5db26e7a328957c7fb09f10a57
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393964"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067588"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -31,7 +31,7 @@ Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Be
 
 - **Für Benutzer, die nicht über ein Azure Active Directory-Konto verfügen**: Geben Sie eine E-Mail-Adresse an, die mit einem Microsoft-Konto verwendet wird. Dieses Konto kann bereits vorhanden sein. Alternativ können es Benutzer dann erstellen, wenn sie das geschützte Dokument öffnen. 
     
-    Um Dokumente mit einem Microsoft-Konto zu öffnen, müssen Benutzer Office 2016-Klick-und-Los verwenden. In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
+    Um Dokumente mit einem Microsoft-Konto zu öffnen, müssen Benutzer Office 365- Apps (Klick-und-Los) verwenden. In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
 
 - **Für alle authentifizierten Benutzer**: Diese Option ist geeignet, wenn Sie nicht steuern müssen, wer auf das geschützte Dokument zugreift, solange der Benutzer authentifiziert werden kann. Die Authentifizierung kann durch Azure AD, durch die Verwendung eines Microsoft-Kontos oder sogar durch einen Verbundanbieter sozialer Netzwerke oder eine Einmalkennung erfolgen, wenn der Inhalt durch die neuen Funktionen der Office 365-Nachrichtenverschlüsselung geschützt ist. 
 
@@ -140,7 +140,7 @@ Zusätzlich wird die Dokumentanzeige durch folgende Szenarien unterstützt:
 Unterstützt die Benutzerkonten, Gruppen mit aktivierter E-Mail-Funktion, alle Mitglieder. Benutzerkonten und Gruppen mit aktivierter E-Mail-Funktion schließen Gastkonten mit ein. Mitglieder beinhalten keine Gastkonten.
 
 ###### <a name="footnote-2"></a>Fußnote 2
-Wird derzeit nur von Office 2016-Klick-und-Los unterstützt.
+Wird derzeit nur von Office 365-Apps (Klick-und-Los) unterstützt.
 
 
 

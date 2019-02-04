@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba44c23b56c2832268f0ed6df122a347c9a8fdf3
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 0d1cae062602897fce6d36078cfac3b164c7d614
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218458"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146722"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -30,7 +30,7 @@ Als Beispiele seien genannt, dass Mitarbeiter ein Dokument per E-Mail an ein Par
 
 Es ist sehr wichtig, dass autorisierte Benutzer und Dienste (wie die Suche und die Indizierung) weiterhin die geschützten Daten lesen und untersuchen können. Diese Funktion ist mit anderen Schutzlösungen, die die Peer-zu-Peer-Verschlüsselung verwenden, nicht leicht zu erreichen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten.
 
-In der folgenden Abbildung wird verdeutlicht, wie dieser Dienst als Schutzlösung für Office 365 sowie für lokale Server und Dienste verwendet wird. Außerdem ist erkennbar, dass die Schutzlösung von gängigen Benutzergeräten unterstützt wird, auf denen Windows, Mac OS, iOS, Android oder Windows Phone ausgeführt wird.
+In der folgenden Abbildung wird verdeutlicht, wie dieser Dienst als Schutzlösung für Office 365 sowie für lokale Server und Dienste verwendet wird. Außerdem ist erkennbar, dass die Schutzlösung von gängigen Endbenutzergeräten unterstützt wird, auf denen Windows, macOS, iOS oder Android ausgeführt wird.
 
 
 ![Azure RMS – Funktionsweise](./media/AzRMS_elements.png)

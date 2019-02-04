@@ -4,18 +4,18 @@ description: Eine Anleitung und Informationen für Administratoren zum Bereitste
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8df9ded90829c620751529f011a0113e6f51b30e
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 156cb0311e93f506ce4dfcd822dcfd867a1417a8
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218526"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067804"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -58,7 +58,7 @@ ms.locfileid: "53218526"
 
 - Visual C++ Redistributable für Visual Studio 2015 (32-Bit Version)
     
-    Installieren Sie bei Computern mit Windows 7 Service Pack 1 **vc_redist.x86.exe** von der folgenden Downloadseite: [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    Installieren Sie bei Computern mit Windows 7 Service Pack 1 **vc_redist.x86.exe** von der folgenden Downloadseite: [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
     
     Die Installation des Clients überprüft nicht auf diese Voraussetzung, sie ist jedoch für den Azure Information Protection-Client notwendig, um PDF-Dateien zu klassifizieren und zu schützen.
 

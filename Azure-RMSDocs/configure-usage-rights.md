@@ -4,18 +4,18 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2018
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
+ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429898"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420791"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -119,7 +119,7 @@ Ein Benutzer möchte bestimmten Personen in der Marketingabteilung Informationen
 
 Wenn für Exchange Online die neuen Funktionen für Office 365-Nachrichtenverschlüsselung verwendet werden, ist die folgende neue E-Mail-Option verfügbar: **Nur verschlüsseln.**
 
-Diese Option steht Mandanten zur Verfügung, die Exchange Online verwenden. Sie kann in Outlook im Web als weitere Option zum Schutz der Rechte für eine E-Mail-Flussregel, als Office 365 DLP-Aktion und in Outlook ausgewählt werden, wenn Sie Office 365 ProPlus Version [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) oder höher nutzen. Weitere Informationen finden Sie in der folgenden Blogbeitragsankündigung des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
+Diese Option steht Mandanten zur Verfügung, die Exchange Online verwenden. Sie kann in Outlook im Web als weitere Option zum Schutz der Rechte für eine E-Mail-Flussregel, als Office 365 DLP-Aktion und in Outlook ausgewählt werden (Mindestversion [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) für Office 365 ProPlus und Mindestversion 1805, wenn Sie über [Office 365-Apps verfügen, die Azure RMS unterstützen](requirements-applications.md#windows-computers-for-information-rights-management-irm). Weitere Informationen über die Option „Encrypt-Only“ (Nur verschlüsseln) finden Sie in der folgenden Blogbeitragsankündigung des Office-Teams: [Encrypt only rolling out in Office 365 Message Encryption (Einführung von „Nur verschlüsseln“ in der Office 365-Nachrichtenverschlüsselung)](https://aka.ms/omefeb2018).
 
 Wenn diese Option aktiviert ist, wird die E-Mail verschlüsselt, und Empfänger müssen authentifiziert werden. Anschließend verfügen die Empfänger über alle Nutzungsrechte außer **Speichern unter, Exportieren** und **Vollzugriff**. Durch diese Kombination von Nutzungsrechten gilt für Empfänger als einzige Einschränkung, dass sie den Schutz nicht entfernen können. Sie können eine E-Mail aber kopieren, ausdrucken und weiterleiten. 
 

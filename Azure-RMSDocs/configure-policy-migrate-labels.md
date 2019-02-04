@@ -4,24 +4,24 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/17/20198
+ms.date: 01/26/2019
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 221b503fa3621e51c4822a6ad5a6d08fae4f1bad
-ms.sourcegitcommit: 8dec864bf25c7da62b9e0f628f1bf673c81c15ae
+ms.openlocfilehash: 58a563e3d1f43dd312c0d4c9d1ffdf612b1c8d12
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54356010"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231037"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform, die ebenfalls als Vorschau verfügbar ist. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von mehreren Clients und Diensten verwendet werden können.
+> Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von mehreren Clients und Diensten verwendet werden können.
 
 Migrieren Sie Ihre Bezeichnungen, um Sie im Office 365 Security & Compliance Center zu verwenden. Dort können sie veröffentlicht und dann von [Clients, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), heruntergeladen werden. Der Azure Information Protection-Client lädt die Bezeichnungen mit ihrer Azure Information Protection-Richtlinie aus dem Azure-Portal herunter. 
 
@@ -112,7 +112,7 @@ Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
 - [Azure Information Protection-Client für einheitliche Bezeichnungen](./rms-client/unifiedlabelingclient-version-release-history.md) (Vorschau)
 
-- Apps aus dem Office Insider-Programm. Weitere Informationen finden Sie in der Office-Dokumentation im Abschnitt [Wo ist das Feature heute verfügbar?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable).
+- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie im Abschnitt **Wo ist das Feature heute verfügbar?** unter [Anwenden von Vertraulichkeits-Beschriftungen auf Ihre Dokumente und E-Mails in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in der Office-Dokumentation.
     
 - Clients von Softwareherstellern und Entwicklern, die das [Microsoft Information Protection SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) verwenden.
 

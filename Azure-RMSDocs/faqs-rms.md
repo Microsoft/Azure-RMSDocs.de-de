@@ -4,19 +4,19 @@ description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac079a7046b6166b89c828054ed5f94e756fa99f
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 8f0e202b9404b114dd7ae48522a61bc8e524e618
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397979"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146824"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -147,7 +147,7 @@ Eine Liste der Dateierweiterungen, die systemintern von Azure Rights Management 
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Wie konfiguriere ich einen Macintosh-Computer für den Schutz und die Nachverfolgung von Dokumenten?
 
-Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://portal.office.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden Sie unter [Herunterladen und Installieren oder Neuinstallieren von Office 365 oder Office 2016 auf einem PC oder Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://portal.office.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden Sie unter [Herunterladen und Installieren oder Neuinstallieren von Office 365 oder Office 2019 auf einem PC oder Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Öffnen Sie Outlook, und erstellen Sie ein Profil mit Ihrem Geschäfts-, Schul- oder Unikonto bei Office 365. Erstellen Sie dann eine neue Nachricht, und führen Sie folgende Schritte durch, um Office für den Schutz von Dokumenten und E-Mails anhand des Azure Rights Management-Diensts zu konfigurieren:
 
@@ -194,7 +194,7 @@ Der Benutzer, der das Dokument geschützt hat, der [Rights Management-Aussteller
 Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandanten beträgt 30 Tage. Diese Einstellung kann nicht von einer restriktiveren Einstellung in einer Bezeichnung oder Vorlage überschrieben werden. Weitere Informationen zur Nutzungslizenz und deren Konfiguration finden Sie in der Dokumentation [Rights Management-Nutzungslizenz](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Kann Rights Management Bildschirmaufnahmen verhindern?
-Rights Management kann durch Verweigerung des [Nutzungsrechts](configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows Phone) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. Auf iOS- und Mac-Geräten ist es aber für keine App zulässig, Bildschirmaufnahmen zu verhindern, und Browser (z. B. bei Verwendung mit Outlook Web App und Office Online) können ebenfalls keine Bildschirmaufnahmen verhindern.
+Rights Management kann durch Verweigerung des [Nutzungsrechts](configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. Auf iOS- und Mac-Geräten ist es aber für keine App zulässig, Bildschirmaufnahmen zu verhindern, und Browser (z. B. bei Verwendung mit Outlook Web App und Office Online) können ebenfalls keine Bildschirmaufnahmen verhindern.
 
 Das Verhindern von Bildschirmaufnahmen kann dabei helfen, versehentliche oder fahrlässige Offenlegung von vertraulichen oder sensiblen Informationen zu vermeiden. Es gibt aber viele Möglichkeiten, wie Benutzer die auf dem Bildschirm angezeigten Daten weitergeben können. Das Erstellen von Screenshots ist nur eine davon. Beispielsweise kann ein Benutzer, der die angezeigten Informationen vorsätzlich weitergeben möchte, sie mit der Kamera seines Handys abfotografieren, sie abtippen oder einfach mündlich einer anderen Person mitteilen.
 

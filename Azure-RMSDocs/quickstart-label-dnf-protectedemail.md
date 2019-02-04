@@ -4,17 +4,17 @@ description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 217fbdc45967b5677f554410bca2ac1da58552d2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 6b892b1c845ea7d2e8670f054e0166eb160f3294
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023497"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231003"
 ---
-# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertraulichen Informationen enthalten
+# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
 In dieser Schnellstartanleitung konfigurieren Sie eine vorhandene Bezeichnung zum automatischen Anwenden der Schutzeinstellung „Nicht weiterleiten“.
 
@@ -42,17 +42,19 @@ Voraussetzungen für diesen Schnellstart:
 
 3. Eine Azure Information Protection-Bezeichnung, die konfiguriert werden soll. 
     
-    Sie können eine der Standardbezeichnungen verwenden oder eine Bezeichnung, die Sie erstellt haben. Wenn Sie Hilfe bei der Erstellung einer neuen Bezeichnung benötigen, lesen Sie [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md).
+    Sie können eine der Standardbezeichnungen verwenden oder eine Bezeichnung, die Sie erstellt haben. Wenn Sie Hilfe beim Erstellen einer neuen Bezeichnung benötigen, lesen Sie [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md).
 
-4. Um die neue Bezeichnung testen zu können, muss der Azure Information Protection-Client auf Computern für Benutzer installiert werden. 
+4. So testen Sie die neue Bezeichnung: Der Azure Information Protection-Client muss auf Computern für Benutzer installiert werden. 
     
     Um die Bezeichnung selbst zu testen, können Sie den Client installieren, indem Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und **AzInfoProtection.exe** herunterladen.
 
-5. Um die neue Bezeichnung zu testen, benötigen Sie einen Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
+5. So testen Sie die neue Bezeichnung: Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
     
-    - Office 365 mit Office 2016-Apps (mindestens Version 1805, Build 9330.2078). Um diese Option zu nutzen, muss Ihrem Konto eine Azure Rights Management-Lizenz zugewiesen sein. Diese Lizenz ist im Azure Information Protection-Abonnement enthalten.
+    - Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
     
-    - Office 365 ProPlus mit 2016-Apps oder 2013-Apps (Klick-und-Los- oder Windows Installer-basierte Installation).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -70,7 +72,7 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die für die Anwendung des Schutzes konfiguriert werden soll. 
+2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die für die Anwendung des Schutzes konfiguriert werden soll. 
 
 3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**. Klicken Sie auf **Schützen** und dann auf **Schutz**:
     
@@ -106,7 +108,7 @@ Dadurch können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus 
 
 Führen Sie die folgenden Schritte durch, wenn Sie diese Konfiguration nicht beibehalten möchten und kein Schutz auf Ihre Bezeichnung angewendet werden soll:
 
-1. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie konfigurieren möchten. 
+1. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die konfigurierte Bezeichnung aus. 
 
 3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und klicken Sie auf **Nicht konfiguriert** und dann auf **Speichern**.
 

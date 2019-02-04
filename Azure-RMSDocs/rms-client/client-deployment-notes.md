@@ -4,18 +4,18 @@ description: Informationen zu Installation, unterstützten Betriebssystemen, Reg
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 36f8452525f614b4cca1bed15d4d63b5e4ae33f0
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: ff0b5dd04673b7b8f4e1d458d1f02e66eee908d9
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394237"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067770"
 ---
 # <a name="rms-client-deployment-notes"></a>Anmerkungen zur Bereitstellung des RMS-Clients
 
@@ -180,7 +180,7 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
 >  
 > - Wenn ein Benutzer eine Anmeldung aus einer Office-Anwendung einleitet, werden der Benutzername (und die Domäne) in den Authentifizierungsdaten zum Bestimmen des zu verwendenden Azure Information Protection-Mandanten genutzt. In diesem Fall sind keine Registrierungseinstellungen erforderlich, und der Dienstverbindungspunkt wird nicht überprüft.
 > 
-> - Wenn Sie die [DNS-Umleitung](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) für Klick-und-Los-Desktop-Apps für Office 2016 konfiguriert haben, sucht der RMS-Client den Azure Rights Management-Dienst, wenn ihm der Zugriff auf den AD RMS-Cluster verweigert wird, den er zuvor gefunden hat. Aufgrund dieser Ablehnungsaktion sucht der Client nach dem SRV-Eintrag, der den Client an den Azure Rights Management-Dienst für Ihren Mandanten umleitet. Mit diesem SRV-Eintrag kann Exchange Online E-Mails entschlüsseln, die durch Ihren AD RMS-Cluster geschützt wurden. 
+> - Wenn Sie die [DNS-Umleitung](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) für Klick-und-Los-Desktop-Apps für Office konfiguriert haben, sucht der RMS-Client den Azure Rights Management-Dienst, wenn ihm der Zugriff auf den AD RMS-Cluster verweigert wird, den er zuvor gefunden hat. Aufgrund dieser Ablehnungsaktion sucht der Client nach dem SRV-Eintrag, der den Client an den Azure Rights Management-Dienst für Ihren Mandanten umleitet. Mit diesem SRV-Eintrag kann Exchange Online E-Mails entschlüsseln, die durch Ihren AD RMS-Cluster geschützt wurden. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Nur AD RMS: Aktivieren der serverseitigen Dienstermittlung mithilfe von Active Directory
 Wenn Ihr Konto über ausreichende Berechtigungen (Organisationsadministrator und lokaler Administrator für den AD RMS-Server) verfügt, können Sie bei der Installation des AD RMS-Stammclusterservers einen Dienstverbindungspunkt automatisch registrieren. Wenn bereits ein AD RMS-Dienstverbindungspunkt in der Gesamtstruktur vorhanden ist, müssen Sie zunächst den vorhandenen Dienstverbindungspunkt löschen, ehe Sie einen neuen erstellen können.

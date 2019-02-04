@@ -4,15 +4,15 @@ description: Ein Einführungstutorial, das Sie schrittweise durch das Konfigurie
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/24/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 0341ba1b232551f89e1ee43f77a3425b8c6e8ffb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024364"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231020"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -41,7 +41,7 @@ Voraussetzungen für dieses Tutorial:
 
 2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
 
-    Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md)
+    Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md)
 
 3. Der Azure Information Protection-Client ist auf Ihrem Computer installiert. 
     
@@ -49,9 +49,11 @@ Voraussetzungen für dieses Tutorial:
 
 4. Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
     
-    - Office 365 mit Office 2016-Apps (mindestens Version 1805, Build 9330.2078). Um diese Option zu nutzen, muss Ihrem Konto eine Azure Rights Management-Lizenz zugewiesen sein. Diese Lizenz ist im Azure Information Protection-Abonnement enthalten.
+    - Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
     
-    - Office 365 ProPlus mit 2016-Apps oder 2013-Apps (Klick-und-Los- oder Windows Installer-basierte Installation).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -94,7 +96,7 @@ Im Azure-Portal wird die globale Richtlinie bearbeitet, um Richtlinieneinstellun
     
     ![Azure Information Protection-Tutorial: Geänderte Standardeinstellungen](./media/defaultsettings-aip-changed.png)
 
-5. Klicken Sie auf dem Blatt **Richtlinie: Global** auf **Speichern**, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, klicken Sie auf **OK**. 
+5. Wählen Sie **Speichern** auf diesem Blatt **Richtlinie: Global** aus, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, wählen Sie **OK** aus. 
 
 ## <a name="see-your-policy-settings-in-action"></a>Testen Ihrer Richtlinieneinstellungen 
 

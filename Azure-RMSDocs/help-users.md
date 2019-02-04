@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898799"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067668"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -73,7 +73,7 @@ Der Azure Information Protection-Client erleichtert Benutzern nicht nur, Dokumen
 Anweisungen zur Verwendung dieses Clients für Windows-Computer finden Sie im [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2016 oder Office 2013
+## <a name="using-information-protection-with-office365-office-2019-office-2016-or-office2013"></a>Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013
 Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information Protection-Client nicht installiert haben, wird die Azure Information Protection-Leiste nicht in den Office-Desktopanwendungen der Benutzer angezeigt. Zudem wird die Schaltfläche **Schützen** nicht im Menüband oder die Option **Klassifizieren und schützen** nicht im Datei-Explorer angezeigt. Mithilfe dieser Ergänzungen können Dokumente und E-Mails einfacher geschützt werden. Diese Benutzer müssen ähnliche Anleitungen wie die nachfolgenden befolgen.
 
 > [!TIP]
@@ -112,11 +112,11 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 #### <a name="to-protect-an-email-message-using-outlook-on-the-web"></a>So schützen Sie eine E-Mail-Nachricht mithilfe von Outlook im Web
 
-1.  Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
+1. Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, wählen Sie **Berechtigungen ändern** und dann eine Option aus der Dropdownliste aus. Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
+2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, wählen Sie **Berechtigungen ändern** und dann eine Option aus der Dropdownliste aus. Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
 
-3.  Senden Sie die Nachricht.
+3. Senden Sie die Nachricht.
 
 Ähnlich wie beim Anzeigen eines geschützten Dokuments werden die Empfänger beim Öffnen der E-Mail zunächst authentifiziert. Wenn sie zum Anzeigen der E-Mail autorisiert sind, wird sie mit den eingeschränkten [Nutzungsrechten](configure-usage-rights.md) geöffnet, die für diesen Benutzer angegeben wurden. 
 
