@@ -4,16 +4,16 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: eafcbf02ea6585b8a1434e210c274648982c0894
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397843"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067294"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -105,7 +105,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
        Wenn Sie alle Mitglieder auswählen oder das Verzeichnis durchsuchen, müssen die Benutzer oder Gruppen eine E-Mail-Adresse haben. In einer Produktionsumgebung verfügen Benutzer und Gruppen fast immer über eine E-Mail-Adresse. In einer einfachen Testumgebung müssen Sie eventuell Benutzerkonten oder -gruppen E-Mail-Adressen hinzufügen.
         
        ###### <a name="more-information-about-add-any-authenticated-users"></a>Weitere Informationen zu **Keine authentifizierten Benutzer hinzufügen** 
-       Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 2016 verwendet werden. 
+       Diese Einstellung schränkt nicht ein, wer auf den von der Bezeichnung geschützten Inhalt zugreifen kann, während der Inhalt dennoch verschlüsselt wird und Ihnen Optionen zur Verfügung stehen, wie der Inhalt verwendet (Berechtigungen) und wie auf ihn zugegriffen werden kann (Ablauf und Offlinezugriff). Die Anwendung, die den geschützten Inhalt öffnet, muss jedoch die verwendete Authentifizierung unterstützen. Aus diesem Grund sollten Verbundanbieter sozialer Netzwerke wie Google und die Authentifizierung per Einmalkennung nur für E-Mails verwendet werden, und nur, wenn Sie Exchange Online und die neuen Funktionen der Office 365-Nachrichtenverschlüsselung verwenden. Microsoft-Konten können mit dem Azure Information Protection-Viewer und Klick-und-Los von Office 365-Apps verwendet werden. 
           
        Einige typische Szenarios für die Einstellung „Keine authentifizierten Benutzer“:
        - Ihnen ist egal, wer den Inhalt sehen kann, Sie möchten jedoch einschränken, wie dieser verwendet wird. Beispielsweise soll der Inhalt nicht bearbeitet, kopiert oder gedruckt werden.
@@ -242,7 +242,7 @@ Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, gilt Folgendes
 
 - Die Bezeichnung eignet sich für E-Mails, wenn Exchange Online die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) verwendet. 
  
-- Für Office-Anlagen, die automatisch geschützt sind, stehen diese Dokumente für eine Browservorschau zur Verfügung. Um diese Dokumente zu bearbeiten, laden Sie sie herunter, und bearbeiten Sie sie mit Office 2016-Klick-und-Los und einem Microsoft-Konto, das dieselbe E-Mail-Adresse verwendet. [Weitere Informationen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Für Office-Anlagen, die automatisch geschützt sind, stehen diese Dokumente für eine Browservorschau zur Verfügung. Um diese Dokumente zu bearbeiten, laden Sie sie herunter, und bearbeiten Sie sie mit Office 365-Apps (Klick-und-Los) und einem Microsoft-Konto, das dieselbe E-Mail-Adresse verwendet. [Weitere Informationen](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
