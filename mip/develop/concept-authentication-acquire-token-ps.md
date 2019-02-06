@@ -4,26 +4,30 @@ description: In diesem Artikel erfahren Sie, wie Sie mithilfe von PowerShell ein
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: a5ce346d044a9a56d37777e569582087026c9ce6
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 4148075c1fc8cf8c9b1393cfd3671a9413e274cf
+ms.sourcegitcommit: fa7551060aaecc62d0c1f9179dd07f035d86651f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223879"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742217"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Abrufen eines Zugriffstoken (PowerShell)
 
-Dieses Beispiel veranschaulicht den Abruf eines OAuth2-Token mithilfe des Aufrufs eines externen PowerShell-Skripts. Dieser Aufruf ist für die Implementierung des Authentifizierungsdelegaten erforderlich.
+Das Beispiel veranschaulicht rufen Sie ein externes Powershellskript, um eine OAuth2-Token zu erhalten. Ein gültiger OAuth2-Zugriffstoken ist durch die Implementierung von der authentifizierungsdelegat erforderlich.
 
-Der hier verwendete Code soll nicht für die Produktion verwendet werden, sondern nur zum Entwickeln und Nachvollziehen von Authentifizierungskonzepten. 
+## <a name="prerequisites"></a>Vorraussetzungen
+
+- Vollständige [(MIP) SDK-Setup und Konfiguration](setup-configure-mip.md). U.a. müssen Sie Ihre Client-Anwendung in Ihrem Mandanten für Azure Active Directory (Azure AD) registrieren. Azure AD bietet eine Anwendungs-ID, auch bekannt als Client-ID, die in Ihrer Logik tokenabruf verwendet wird.
+
+Dieser Code ist nicht für Produktionszwecke vorgesehen. Es kann nur für Entwicklungs- und Grundlegendes zu Auth Konzepten verwendet werden. 
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
 ### <a name="authh"></a>auth.h
 
-In diesem Beispiel wird deine einfache Funktion mit dem Namen AcquireToken erstellt. Da der Rückgabewert für dieses Tutorial hartcodiert wird, werden keine Parameter akzeptiert, und es wird nur eine Zeichenfolge zurückgegeben (das Token).
+In diesem Beispiel wird deine einfache Funktion mit dem Namen AcquireToken erstellt. Da der Rückgabewert hartcodierte für dieses Tutorial ist, werden wir keine Parameter annehmen und Zurückgeben einer Zeichenfolge (das Token).
 
 ```cpp
 //auth.h
@@ -38,7 +42,7 @@ namespace sample {
 
 ### <a name="authcpp"></a>auth.cpp
 
-Die hier verwendete Quelldatei gibt einen Tokenwert zurück, der in einem späteren Schritt hartcodiert wird.
+Die Quelldatei gibt einen Tokenwert, der in einem späteren Schritt hartcodiert werden.
 
 ```cpp
 //auth.cpp
@@ -57,9 +61,11 @@ namespace sample {
 
 ## <a name="mint-a-token"></a>Erstellen eines Token
 
-Erstellen Sie zuletzt ein Token, das der mToken-Variablen hinzugefügt werden soll. Im nachfolgenden Beispiel wird das PowerShell-Skript veranschaulicht, das verwendet werden kann, um unter Windows schnell ein OAuth2-Token über die Active Directory-Authentifizierungsbibliothek und PowerShell abzurufen. Dieses Token darf nur für den Office 365 Security & Compliance Center-Endpunkt verwendet werden. Aus diesem Grund schlagen die Aktionen zum Schutz fehl, wenn die Ressourcen-URL nicht aktualisiert wird. Wenn Sie an diesem Punkt unter Verwendung von Bezeichnungen und des Schutzes Tests durchführen möchten, sollten Sie die [nächsten Schritte](#next-steps) überspringen.
+Erstellen Sie zuletzt ein Token, das der mToken-Variablen hinzugefügt werden soll. Im nachfolgenden Beispiel wird das PowerShell-Skript veranschaulicht, das verwendet werden kann, um unter Windows schnell ein OAuth2-Token über die Active Directory-Authentifizierungsbibliothek und PowerShell abzurufen. Dieses Token darf nur für den Office 365 Security & Compliance Center-Endpunkt verwendet werden. Aus diesem Grund schlagen die Aktionen zum Schutz fehl, wenn die Ressourcen-URL nicht aktualisiert wird. 
 
 ### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>Installieren von [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) über den PS-Katalog
+
+Sie können diesen Schritt überspringen, wenn Sie diese zuvor im abgeschlossen [(MIP) SDK-Setup und Konfiguration](setup-configure-mip.md).
 
 ```PowerShell
 Install-Module -Name ADAL.PS
@@ -74,10 +80,9 @@ if(!(Get-Package adal.ps)) { Install-Package -Name adal.ps }
 $authority = "https://login.windows.net/common/oauth2/authorize" 
 #this is the security and compliance center endpoint
 $resourceUrl = "https://dataservice.o365filtering.com"
-#clientId and redirectUri are from the RMS Sharing Application. 
-#Once custom app registration is supported, a custom id and uri will be required. 
-$clientId = "0edbblll-8773-44de-b87c-b8c6276d41eb"
-$redirectUri = "com.microsoft.rms-sharing-for-win://authorize"
+#replace <application-id> and <redirect-uri>, with the Redirect URI and Application ID from your Azure AD application registration.
+$clientId = "<application-id>"
+$redirectUri = "<redirect-uri>"
 
 $response = Get-ADALToken -Resource $resourceUrl -ClientId $clientId -RedirectUri $redirectUri -Authority $authority -PromptBehavior:Always
 $response.AccessToken | clip
