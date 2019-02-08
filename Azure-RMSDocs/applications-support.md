@@ -4,18 +4,18 @@ description: Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z.B. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b14ef6999f0852474f6f9de5eef2902f8863a8c
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: d8e1164d82304bcf28aa91d2e1708b10fd946ba3
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305172"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559800"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
@@ -45,8 +45,6 @@ Suchdienste können auf unterschiedliche Weise in Rights Management integriert w
 ## <a name="next-steps"></a>Nächste Schritte
 
 Erfahren Sie, wie der Azure Rights Management-Dienst von den folgenden Anwendungen und Diensten unterstützt wird:
-
--   [RMS-Freigabeanwendung für Windows und mobile Plattformen](sharing-app-support.md)
 
 -   [Office-Anwendungen und -Dienste](office-apps-services-support.md)
 

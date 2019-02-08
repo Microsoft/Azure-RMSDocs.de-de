@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9026560849d04939799a013d28d6d6d4d38ae442
-ms.sourcegitcommit: 8d854ee417d9af1a85e7d4ecb3807a69a43b0313
+ms.openlocfilehash: 59f79f7ac24a575665a2d8350f39b87aaedec7e1
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177193"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559477"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -38,10 +38,6 @@ Die folgende Dokumentation enthält weitere Informationen zum Bereitstellen und 
 - [Hinweise zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
 
 - [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)](configure-fci.md)
-
-- [Rights Management-Freigabeanwendung für Windows](sharing-app-windows.md)
-
-Beachten Sie, dass die Rights Management-Freigabeanwendung für Windows und das RMS Protection Tool jetzt durch den Azure Information Protection-Client ersetzt wurden. 
 
 
 ## <a name="see-also"></a>Siehe auch

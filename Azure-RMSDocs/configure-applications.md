@@ -4,18 +4,18 @@ description: Hier finden Sie Anleitung für Administratoren zum Konfigurieren vo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b88360b593317f2be93bf1afa3b514a61783896
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 63444cf83ef6b4135d72fccea27baa4f4e0afa8c
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397945"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559545"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
@@ -44,9 +44,6 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
     -   [Office 2010](configure-office-apps.md#office2010)
 
 -   [Azure Information Protection-Client: Installation und Konfiguration für Clients](configure-client.md)
-
--   [Rights Management-Freigabeanwendung: Installation und Konfiguration für Clients](configure-sharing-app.md)
-
 
 Informationen zum Konfigurieren von lokalen Servern, z.B. Exchange Server und SharePoint Server, finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
 
