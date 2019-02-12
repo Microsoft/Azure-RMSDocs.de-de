@@ -4,18 +4,18 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 18c5028bf69f756b79328a26ce967f5e73492d2e
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: 51ff1b6185661c4ab0c4204e035ffe981a5a9710
+ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146790"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854186"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -35,6 +35,44 @@ Im Gegensatz zu Azure Information Protection ist Microsoft Information Protectio
 
 Weitere Informationen finden Sie unter [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
+## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Was ist der Unterschied zwischen Bezeichnungen in Azure Information Protection und Office 365?
+
+Ursprünglich hat Office 365 nur über [Aufbewahrungsbezeichnungen](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) verfügt, mit denen Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren können, wenn der Inhalt sich in Office 365-Diensten befindet. Im Gegensatz dazu können Sie mit Bezeichnungen in Azure Information Protection eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden.
+
+Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Aufbewahrungsbezeichnungen im Office 365 Security & Compliance Center verfügbar. Derzeit können Sie in der Vorschauversion Ihre vorhandenen Azure Information Protection-Bezeichnungen in den neuen einheitlichen Bezeichnungsspeicher migrieren, um sie als Vertraulichkeitsbezeichnungen mit Office 365 zu verwenden. 
+
+Weitere Informationen zum Verwalten einheitlicher Bezeichnungen und deren Unterstützung finden Sie im Blogbeitrag [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
+
+Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
+
+## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Wann ist der richtige Zeitpunkt, um meine Bezeichnungen zu Office 365 zu migrieren?
+
+Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), veröffentlicht und heruntergeladen werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
+
+Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen und dann Ihren Produktionsmandanten zu migrieren. Zusätzlich:
+
+- **Wenn Sie Azure Information Protection zum ersten Mal verwenden:** 
+    
+    Da Azure Information Protection für eine schnellere Bereitstellung über Standardbezeichnungen verfügt, wird empfohlen, zuerst diese Standardbezeichnungen zu migrieren und sie dann über das Office 365 Security & Compliance Center zu verwalten.
+
+- **Wenn Sie Azure Information Protection zum ersten Mal verwenden, aber bereits damit beschäftigt sind, die Bezeichnungen, die Sie verwenden möchten, zu definieren und zu konfigurieren:**
+    
+    Es wird empfohlen, die Konfiguration der Bezeichnungen im Azure-Portal abzuschließen und die Bezeichnungen anschließend zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann im Security & Compliance Center bearbeitet werden müssen.
+
+Bevor Sie Ihre Bezeichnungen migrieren, vergewissern Sie sich, dass Sie die [Überlegungen und Bezeichnungseinstellungen, die nicht vom Security & Compliance Center unterstützt werden](configure-policy-migrate-labels.md#considerations-for-unified-labels), verstanden haben.
+
+## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Welches Verwaltungsportal kann ich verwenden, nachdem ich meine Bezeichnungen migriert habe?
+
+Nachdem Sie Ihre Bezeichnungen im Azure-Portal migriert haben:
+
+- Wenn Sie über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) verfügen, veröffentlichen Sie diese Bezeichnungen über das Office 365 Security & Compliance Center, und konfigurieren Sie darüber auch die Richtlinieneinstellungen für Clients für einheitliche Bezeichnungen. Für zukünftige Bezeichnungsänderungen verwenden Sie dann das Security & Compliance Center. Die Bezeichnungen und Richtlinieneinstellungen werden von Clients für einheitliche Bezeichnungen aus dem Security & Compliance Center heruntergeladen.
+
+- Wenn Sie über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, verwenden Sie zur Bearbeitung Ihrer Bezeichnungen und Richtlinieneinstellungen weiter das Azure-Portal. Azure Information Protection-Clients werden weiterhin die Bezeichnungen und Richtlinieneinstellungen aus Azure herunterladen.
+
+- Wenn Sie sowohl über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) als auch über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, können Sie jedes der beiden Portale verwenden, um Bezeichnungsänderungen vorzunehmen. Damit jedoch Azure Information Protection-Clients die von Ihnen im Security & Compliance Center vorgenommenen Bezeichnungsänderungen übernehmen, müssen Sie wieder das Azure-Portal verwenden: Verwenden Sie die Option **Veröffentlichen** auf dem Blatt **Azure Information Protection - Unified labeling** (Azure Information Protection – einheitliche Bezeichnungen) im Azure-Portal. 
+
+Verwenden Sie weiterhin das Azure-Portal für die [zentrale Berichterstellung](reports-aip.md) und die [Überprüfung](deploy-aip-scanner-preview.md).
+
 ## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Was ist der Unterschied zwischen Azure Information Protection und Azure Rights Management?
 
 Azure Information Protection stellt Klassifizierungen, Bezeichnungen und den Schutz für Dokumente und E-Mails einer Organisation bereit. Die Schutztechnologie nutzt den Azure Rights Management-Dienst, der nun eine Komponente von Azure Information Protection ist.
@@ -44,17 +82,18 @@ Azure Information Protection stellt Klassifizierungen, Bezeichnungen und den Sch
 Benutzer benötigen einen gültigen Benutzernamen und ein Kennwort, um auf durch Azure Information Protection geschützte Inhalte zuzugreifen. Weitere Informationen zum Schutz Ihrer Daten mit Azure Information Protection finden Sie unter [Die Rolle von Azure Information Protection beim Schützen von Daten](/enterprise-mobility-security/solutions/azure-information-protection-securing-data). 
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Welches Abonnement benötige ich für Azure Information Protection, und welche Features sind enthalten?
-Informationen dazu finden Sie auf der [Preisseite von Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection). 
 
-Wenn Sie ein Office 365-Abonnement mit Azure Rights Management haben, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) herunter, das auch Antworten auf einige häufig gestellte Fragen zur Lizenzierung enthält.
+Informationen dazu finden Sie auf der [Preisseite von Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
+
+Wenn Sie über ein Office 365-Abonnement verfügen, das Datenschutz mit Azure Rights Management umfasst, laden Sie das [Datenblatt zur Azure Information Protection-Lizenz](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) herunter.
+
+Haben Sie noch Fragen zur Lizenzierung? Möglicherweise finden Sie passende Antworten im Abschnitt [Häufig gestellte Fragen zur Lizenzierung](https://azure.microsoft.com/pricing/details/information-protection#faq).
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Ist der Azure Information Protection-Client nur für Abonnements geeignet, die Funktionen für Klassifizierung und Bezeichnung umfassen?
 
 Nein. Zwar wird bei den meisten Präsentationen und Demos zum Azure Information Protection-Client gezeigt, wie dieser Klassifizierungen und Bezeichnungen unterstützt, Sie können den Client aber auch in Abonnements verwenden, die zum Datenschutz lediglich den Azure Rights Management-Dienst enthalten.
 
 Wenn der Azure Information Protection-Client für Windows installiert ist, aber keine Azure Information Protection-Richtlinie vorhanden ist, wird der Client automatisch im [reinen Schutzmodus](./rms-client/client-protection-only-mode.md) betrieben. In diesem Modus können Benutzer problemlos Rights Management-Vorlagen und benutzerdefinierte Berechtigungen anwenden. Wenn Sie zu einem späteren Zeitpunkt ein Abonnement erwerben, das Klassifizierungen und Bezeichnungen umfasst, wechselt der Client beim Herunterladen der Azure Informationen Protection-Richtlinie automatisch in den Standardmodus.
-
-Wenn Sie zurzeit die Rights Management-Freigabeanwendung für Windows verwenden, wird empfohlen, diese Anwendung durch den Azure Information Protection-Client zu ersetzen. Die Unterstützung für die Freigabeanwendung endet am 31. Januar 2019. Informationen zum Übergang finden Sie unter [Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben](./rms-client/upgrade-client-app.md).
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>Benötigt man globale Administratorrechte, um Azure Information Protection zu konfigurieren, oder kann ich das an andere Administratoren delegieren?
 
@@ -126,16 +165,6 @@ Die Azure Information Protection-Warnungen sind über die [Microsoft Graph Secur
 
 Weitere Informationen zur Microsoft Graph Security-API finden Sie in der [Übersicht zur Microsoft Graph Security-API](https://developer.microsoft.com/graph/docs/concepts/security-concept-overview).
 
-## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Was ist der Unterschied zwischen Bezeichnungen in Azure Information Protection und Office 365?
-
-Bis vor kurzem verfügte Office 365 nur über [Bezeichnungen für die Aufbewahrung](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30), mit denen Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren konnten, wenn der Inhalt sich in den Office 365-Diensten befindet. Im Gegensatz dazu können Sie mit Bezeichnungen in Azure Information Protection eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden.
-
-Wie auf der Microsoft Ignite 2018 angekündigt, wird nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Bezeichnungen für die Aufbewahrung im Office 365 Security & Compliance Center angezeigt. Darüber hinaus können Sie jetzt in der Vorschau Ihre vorhandenen Azure Information Protection-Bezeichnungen zum neuen Store für einheitliche Bezeichnungen migrieren. 
-
-Weitere Informationen zum Verwalten einheitlicher Bezeichnungen und deren Unterstützung finden Sie im Blogbeitrag [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
-Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
-
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?
 
 Die Windows Server-Dateiklassifizierungsinfrastruktur war eine Option, um Dokumente zu klassifizieren und diese dann mithilfe des [Rights Management-Connectors](deploy-rms-connector.md) (nur Office-Dokumente) oder einem [PowerShell-Skript](./rms-client/configure-fci.md) (alle Dateitypen) zu schützen. 
@@ -196,8 +225,4 @@ Darüber hinaus gibt es häufig gestellte Fragen (FAQs) für Benutzer:
 - [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](./rms-client/mobile-app-faq.md)
 
 - [Häufig gestellte Fragen (FAQ) zur RMS-Freigabeanwendung für Mac-Computer](https://technet.microsoft.com/dn451248)
-
-- [Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für Windows](https://technet.microsoft.com/dn467883)
-
-
 

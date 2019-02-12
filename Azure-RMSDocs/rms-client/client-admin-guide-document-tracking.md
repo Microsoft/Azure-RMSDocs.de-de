@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314732"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560004"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -74,20 +74,20 @@ Dies sind die Standard-URLs für den Azure Rights Management-Dienst mit Ausnahme
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Nachverfolgen und Sperren von Dokumenten für Benutzer
 
-Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können sie Dokumente nachverfolgen und sperren, die sie mithilfe des Azure Information Protection-Clients oder der RMS-Freigabeanwendung freigegeben haben. Wenn Sie sich für Ihren Mandanten als globaler Azure AD-Administrator anmelden, können Sie auf das Administratorsymbol klicken, um in den Administratormodus zu wechseln. Dieser Modus für die Website zum Nachverfolgen von Dokumenten wird von anderen Administratorrollen nicht unterstützt. 
+Wenn sich Benutzer auf der Website zur Dokumentenverfolgung anmelden, können sie mithilfe des Azure Information Protection-Clients Dokumente nachverfolgen und sperren, die sie freigegeben haben. Wenn Sie sich für Ihren Mandanten als globaler Azure AD-Administrator anmelden, können Sie auf das Administratorsymbol klicken, um in den Administratormodus zu wechseln. Dieser Modus für die Website zum Nachverfolgen von Dokumenten wird von anderen Administratorrollen nicht unterstützt. 
 
 ![Adminsymbol auf der Website zur Dokumentenverfolgung](../media/tracking-site-admin-icon.png)
 
-Im Administratormodus können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt oder mithilfe der Freigabeanwendung von Rights Management freigegeben wurden.
+Im Administratormodus können Sie die Dokumente anzeigen, die von den Benutzern in Ihrer Organisation zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt wurden.
 
 > [!NOTE] 
 > Wenn Sie dieses Symbol nicht sehen, obwohl Sie über globale Administratorrechte verfügen, liegt das daran, dass Sie selbst noch keine Dokumente freigegeben haben. Verwenden Sie in diesem Fall die folgende URL, um auf die Website zur Dokumentenverfolgung zu gelangen: https://portal.azurerms.com/#/admin
 
 Aktionen, die Sie im Administratormodus durchführen, werden geprüft und in Verwendungsprotokolldateien protokolliert, und Sie müssen Ihre Einwilligung geben, um den Vorgang fortzusetzen. Weitere Informationen über diese Protokollierung finden Sie im nächsten Abschnitt.
 
-Wenn Sie sich im Administratormodus befinden, können Sie nach Benutzern oder Dokumenten suchen. Wenn Sie nach Benutzer suchen, können Sie alle Dokumente anzeigen, die vom angegebenen Benutzer zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt oder mithilfe der Freigabeanwendung von Rights Management freigegeben wurden. 
+Wenn Sie sich im Administratormodus befinden, können Sie nach Benutzern oder Dokumenten suchen. Wenn Sie nach Benutzer suchen, können Sie alle Dokumente anzeigen, die vom angegebenen Benutzer zum Nachverfolgen durch den Azure Information Protection-Client ausgewählt wurden. 
 
-Wenn Sie nach Dokument suchen, können Sie alle Benutzer in Ihrer Organisation anzeigen, die dieses Dokument durch den Azure Information Protection-Client nachverfolgt oder mithilfe der Freigabeanwendung von Rights Management freigegeben haben. Sie können die Suchergebnisse näher betrachten, um die Dokumente zu überwachen, die Benutzer geschützt haben, und diese Dokumente, falls erforderlich, wieder zu sperren. 
+Wenn Sie nach Dokument suchen, können Sie alle Benutzer in Ihrer Organisation anzeigen, die dieses Dokument durch den Azure Information Protection-Client nachverfolgt haben. Sie können die Suchergebnisse näher betrachten, um die Dokumente zu überwachen, die Benutzer geschützt haben, und diese Dokumente, falls erforderlich, wieder zu sperren. 
 
 Klicken Sie auf das **X** neben **Administratormodus beenden**, um den Administratormodus zu verlassen.
 
@@ -99,7 +99,7 @@ Eine Anleitung zur Verwendung der Website zur Dokumentnachverfolgung finden Sie 
 
 Diese Option ist nur für die aktuelle Vorschauversion des Azure Information Protection-Clients verfügbar.
 
-Zum Nachverfolgen und Widerrufen eines Dokuments muss es zunächst bei der Website zur Dokumentnachverfolgung registriert werden. Diese Aktion wird ausgeführt, wenn Benutzer bei Verwendung des Azure Information Protection-Clients im Datei-Explorer oder über ihre Office-Apps die Option **Track and revoke** (Verfolgen und widerrufen) auswählen. Bei der Rights Management-Freigabeanwendung erfolgt diese Aktion automatisch, wenn Benutzer die Option **Geschütztes Freigeben** auswählen.
+Zum Nachverfolgen und Widerrufen eines Dokuments muss es zunächst bei der Website zur Dokumentnachverfolgung registriert werden. Diese Aktion wird ausgeführt, wenn Benutzer bei Verwendung des Azure Information Protection-Clients im Datei-Explorer oder über ihre Office-Apps die Option **Track and revoke** (Verfolgen und widerrufen) auswählen.
 
 Wenn Sie Dateien für Benutzer mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. Beispiel:
 

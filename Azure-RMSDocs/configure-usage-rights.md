@@ -4,18 +4,18 @@ description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet we
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
-ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
+ms.openlocfilehash: 02bdd294e30f0d773fcc29b4c7a13f9e418af9db
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420791"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559987"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -61,10 +61,10 @@ In der folgenden Tabelle finden Sie eine Liste dieser Berechtigungsstufen und al
 
 |Berechtigungsstufe|Applications|Enthaltene Nutzungsrechte|
 |---------------------|----------------|---------------------------------|
-|Anzeigender Benutzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br /> Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails den Prüfer statt dieser Berechtigungsebene, um sicherzustellen, dass eine Antwort auch als E-Mail und nicht als Anhang verschickt wird. Der Prüfer ist außerdem erforderlich, wenn Sie eine E-Mail an eine andere Organisation versenden, die den Outlook-Client oder Outlook Web App verwendet. Des Weiteren ist diese Berechtigung für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts aufgrund der Implementierung von [Onboarding-Steuerelementen](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) ausgeschlossen sind.|
-|Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
-|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[4]](#footnote-4); Drucken; Antworten [[3]](#footnote-3); Allen Antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3)|
-|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Rights Management-Freigabeanwendung für Windows<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[3]](#footnote-3); Allen Antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Vollzugriff|
+|Anzeigender Benutzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Rechte anzeigen; Antworten [[1]](#footnote-1); Allen antworten [[1]](#footnote-1); Makros zulassen [[2]](#footnote-2)<br /><br />Hinweis: Verwenden Sie für E-Mails den Prüfer statt dieser Berechtigungsebene, um sicherzustellen, dass eine Antwort auch als E-Mail und nicht als Anhang verschickt wird. Der Prüfer ist außerdem erforderlich, wenn Sie eine E-Mail an eine andere Organisation versenden, die den Outlook-Client oder Outlook Web App verwendet. Des Weiteren ist diese Berechtigung für Benutzer in Ihrer Organisation erforderlich, die von der Verwendung des Azure Rights Management-Diensts aufgrund der Implementierung von [Onboarding-Steuerelementen](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) ausgeschlossen sind.|
+|Prüfer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Rechte anzeigen; Antworten: Allen antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Makros zulassen [[2]](#footnote-2)|
+|Mitautor|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Makros zulassen; Speichern unter, Exportieren [[4]](#footnote-4); Drucken; Antworten [[3]](#footnote-3); Allen Antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3)|
+|Mitbesitzer|Klassisches Azure-Portal <br /><br />Azure-Portal<br /><br />Azure Information Protection-Client für Windows|Anzeigen, Öffnen, Lesen; Speichern; Inhalt bearbeiten, Bearbeiten; Kopieren; Rechte anzeigen; Rechte ändern; Makros zulassen; Speichern unter, Exportieren; Drucken; Antworten [[3]](#footnote-3); Allen Antworten [[3]](#footnote-3); Weiterleiten [[3]](#footnote-3); Vollzugriff|
 
 ----
 
@@ -77,7 +77,7 @@ Nicht im Azure-Portal vorhanden.
 Für den Azure Information Protection-Client für Windows ist dieses Recht derzeit für die Information Protection-Leiste in Office-Apps erforderlich.
 
 ###### <a name="footnote-3"></a>Fußnote 3
-Gilt nicht für den Azure Information Protection-Client für Windows oder die Rights Management-Freigabeanwendung für Windows.
+Gilt nicht für den Azure Information Protection-Client für Windows.
 
 ###### <a name="footnote-4"></a>Fußnote 4
 Nicht im Azure-Portal oder Azure Information Protection-Client für Windows enthalten.

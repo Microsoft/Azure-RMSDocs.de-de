@@ -1,43 +1,23 @@
 ---
 title: Rights Management-Freigabeanwendung für Windows – AIP
-description: Informationsressourcen für die Rights Management-Freigabeanwendung für Windows. Dies ist eine kostenlose, herunterladbare Anwendung für Organisationen, die Active Directory Rights Management Services (AD RMS) oder Azure Information Protection verwenden, sowie für Organisationen, die keine eigene Infrastruktur für den Informationsschutz einsetzen, aber trotzdem Inhalte verwenden möchten, die von anderen Organisationen mit Azure Information Protection geschützt sind.
+description: Die Rights Management-Freigabeanwendung (RMS-Freigabe-App) für Windows wird nicht mehr unterstützt.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
-ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60c07cd317fbdcacba7aa22d0ebf089a519ba87c
-ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
+ms.openlocfilehash: d2e68faf4c733b9e85b9471f5400ddb2c907a55d
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246155"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559426"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Rights Management-Freigabeanwendung für Windows
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-> [!IMPORTANT]
-> **Benachrichtigung zum Ende der Unterstützung**: Die Rights Management-Freigabeanwendung für Windows wird durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung wird am 31. Januar 2019 eingestellt. 
-
-
-Die Rights Management-Freigabeanwendung für Windows (kurz „RMS-Freigabe-App“) ist eine kostenlose, herunterladbare Anwendung für Organisationen, die [Active Directory-Rechteverwaltungsdienste](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) oder [Azure Information Protection](../what-is-information-protection.md) verwenden. Diese Anwendung ist auch für Organisationen bestimmt, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die den Azure Rights Management-Dienst von Azure Information Protection verwenden.
-
--   [Rights Management-Freigabeanwendung: Versionsverlauf](sharing-app-version-release-history.md)
-
--   [Administratorhandbuch der Rights Management-Freigabeanwendung](sharing-app-admin-guide.md)
-
--   [Rights Management-Freigabeanwendung – Benutzerhandbuch](sharing-app-user-guide.md)
-
-> [!TIP]
-> Es gibt auch eine Azure Information Protection-App für iOS und Android. Weitere Informationen finden Sie unter [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](mobile-app-faq.md ).
-> 
-> Für Mac-Computer und Windows Phones: [Häufig gestellte Fragen (FAQ) zur Rights Management-Freigabeanwendung für mobile und für Mac-Plattformen](https://technet.microsoft.com/dn451248)
-
-## <a name="see-also"></a>Weitere Informationen
-[Häufig gestellte Fragen zur Rights Management-Freigabeanwendung für Windows](https://technet.microsoft.com/dn467883)
-
+**Benachrichtigung zum Ende der Unterstützung**: Die Rights Management-Freigabeanwendung für Windows wird nun durch den [Azure Information Protection-Client](aip-client.md) ersetzt. Die Unterstützung dieser älteren Anwendung ist am 31. Januar 2019 eingestellt worden.

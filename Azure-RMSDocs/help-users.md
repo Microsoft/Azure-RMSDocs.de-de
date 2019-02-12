@@ -4,18 +4,18 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067668"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559936"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -66,7 +66,7 @@ Verwenden Sie folgende Abschnitte für anwendungsspezifische Informationen, um B
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Verwenden des Informationsschutzes mit dem Azure Information Protection-Client
 
-Wenn Benutzer Office 2010 verwenden, ist der Azure Information Protection-Client (oder die ältere RMS-Freigabeanwendung) erforderlich, um geschützte Dokumente und E-Mails zu schützen und zu nutzen. Der Azure Information Protection-Client wird jedoch auch für alle Computer und mobilen Geräte empfohlen, die diesen Dienst unterstützen.
+Wenn Benutzer Office 2010 verwenden, ist der Azure Information Protection-Client erforderlich, um geschützte Dokumente und E-Mails zu schützen und zu nutzen. Der Azure Information Protection-Client wird jedoch auch für alle Computer und mobilen Geräte empfohlen, die diesen Dienst unterstützen.
 
 Der Azure Information Protection-Client erleichtert Benutzern nicht nur, Dokumente und E-Mails zu schützen, sondern auch das Nachverfolgen der Dokumente, die sie geschützt haben. Nachverfolgte Dokumente können auch widerrufen werden, wenn die zuvor autorisierten Benutzer keinen Zugriff mehr darauf haben sollen.
 
