@@ -4,14 +4,15 @@ description: 'Beschreibt die Klasse:: fileHandler-Klasse von der Microsoft Infor
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 4edd9887313aa61b5be269e6685384928c05bcbc
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 664478f074334196b78b5583867224e1a9f482d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651104"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253066"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.

@@ -4,14 +4,15 @@ description: 'Beschreibt die Klasse:: badinputerror-Klasse von der Microsoft Inf
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 48d37a97bafaad3694645977eb3b3a71061d8b47
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 03c8aed444cb2859f3f1366cdb52bba3b2b17524
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650543"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56250758"
 ---
 # <a name="class-mipbadinputerror"></a>mip::BadInputError-Klasse 
 Der Fehler bei ungültiger Eingabe wird ausgegeben, wenn die Eingabe in eine SDK-API ungültig ist.

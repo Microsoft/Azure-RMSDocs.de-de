@@ -4,14 +4,15 @@ description: 'Beschreibt die Klasse:: metadataaction-Klasse von der Microsoft In
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 110a2b8fbaa10e87bcdf8617e9f7d22f749139b8
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 190bccc23ecb5c03faa0ab6748caf8fc206e265f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650883"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256990"
 ---
 # <a name="class-mipmetadataaction"></a>mip::MetadataAction-Klasse 
 Eine [Aktion](class_mip_action.md), die Metadateninformationen zum Inhalt hinzufügt

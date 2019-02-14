@@ -4,14 +4,15 @@ description: Dieser Artikel hilft Ihnen zu verstehen, wie Bezeichnungen für die
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a32193194b9806dbab5066db27192265566ca44f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: c913eab399eebbdc9af82d7365ea68c9a8430de9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446650"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259336"
 ---
 # <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>Microsoft Information Protection SDK: Klassifizierungsbezeichnungskonzepte
 
@@ -19,24 +20,24 @@ Im Rahmen einer umfassenden Datenschutzstrategie sollten Unternehmen ein Datenkl
 
 Attribute, die sich auf die Klassifizierung beziehen, beinhalten typischerweise das **Risiko** für das Unternehmen, wenn dieses Dokument oder diese Daten verloren gehen oder unbeabsichtigt für Personen offengelegt werden. In bekannten Klassifizierungssystem der US-Regierung gibt es drei Klassifizierungsebenen. Jede verfügt über eine Definition, die beschreibt, wann diese Klassifizierung angewendet werden soll:
 
-* **Top Secret** (streng geheim): Wird auf Informationen angewendet, bei deren unbefugter Weitergabe davon auszugehen ist, dass sie der nationalen Sicherheit wahrscheinlich außergewöhnlich schweren Schaden zufügen, den die ursprüngliche Klassifizierungsbehörde identifizieren oder beschreiben kann.
-* **Secret** (geheim): Wird auf Informationen angewendet, bei deren unbefugter Weitergabe davon auszugehen ist, dass sie der nationalen Sicherheit wahrscheinlich schweren Schaden zufügen, den die ursprüngliche Klassifizierungsbehörde identifizieren oder beschreiben kann.
-* **Confidential** (vertraulich): Wird auf Informationen angewendet, bei deren unbefugter Weitergabe davon auszugehen ist, dass sie der nationalen Sicherheit wahrscheinlich Schaden zufügen, den die ursprüngliche Klassifizierungsbehörde identifizieren oder beschreiben kann.
-* **Unclassified** (nicht klassifiziert): Dies ist tatsächlich keine Klassifizierung, sondern stattdessen das Fehlen einer der oben genannten drei Klassifizierungen.
+* **Top Secret**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, um außergewöhnlich Gravis Schäden an der nationalen Sicherheit verursachen, die die ursprünglichen Autorität für die Klassifizierung kann zu identifizieren oder zu beschreiben.
+* **Secret**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, um ernsthafte Schäden an der nationalen Sicherheit verursachen, die die ursprünglichen Autorität für die Klassifizierung kann zu identifizieren oder zu beschreiben.
+* **Vertrauliche**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, um Schaden für die nationale Sicherheit, die die ursprünglichen Autorität für die Klassifizierung kann zu identifizieren oder zu beschreiben.
+* **Nicht klassifizierte**: Dies ist tatsächlich eine Klassifizierung, sondern stattdessen das Fehlen einer der oben genannten drei.
 
 In einer kommerziellen Anwendung oder einer Anwendung im privaten Sektor können wir eine Liste mit angefügten Geldwerten definieren, die der Standardliste von Azure Information Protection Service ähnlich ist.
 
-* **Highly Confidential** (streng vertraulich): Wird auf Informationen angewendet, deren unbefugte Weitergabe wahrscheinlich einen Schaden von mehr als 1 Million USD verursachen könnte.
-* **Confidential** (vertraulich): Wird auf Informationen angewendet, deren unbefugte Weitergabe wahrscheinlich einen Schaden von mehr als 100.000 USD verursachen könnte.
-* **General** (allgemein): Wird auf Informationen angewendet, deren unbefugte Weitergabe nur einen kaum messbaren Schaden verursachen könnte.
-* **Public** (öffentlich): Wird auf Informationen angewendet, die für die öffentliche, externe Nutzung vorgesehen sind. 
-* **Non-Business** (nicht geschäftlich): Wird auf Informationen angewendet, die nichts mit dem direkten oder indirekten Geschäft des Unternehmens zu tun haben.
+* **Streng vertraulich**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, um Schäden, die größer als die $1 M US-Dollar zu verursachen.
+* **Vertrauliche**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, um Schäden, die größer als USD $100 KB zu verursachen.
+* **Allgemeine**: Muss auf Informationen angewendet werden die unbefugte, die Offenlegung der vernünftigerweise erwartet werden kann, wenig messbare Schaden verursachen.
+* **Public**: Muss auf Informationen, die für die öffentliche, externe Nutzung vorgesehen angewendet werden. 
+* **Geschäftsfremde**: Muss auf die Informationen angewendet werden, die nicht mit Unternehmens-Business, direkte oder indirekte verknüpft ist.
 
 Jede Klassifizierung beschreibt das Risiko für das Unternehmen im Falle einer unbefugten Weitergabe dieser Informationen. Nach der Identifizierung dieser Klassifizierung und Bedingungen sollten Attribute identifiziert werden, die den Besitzern von Daten helfen zu verstehen, welche Klassifizierung anzuwenden ist.
 
 ## <a name="labeling"></a>Bezeichnungen
 
-Der Vorgang der Zuordnung einer Datenklassifizierung zu einem Satz von Informationen wird als **Versehen mit Bezeichnungen** bezeichnet. Da das MIP SDK Klassifizierungs**bezeichnungen** auf Dokumente anwendet, beziehen wir uns nicht auf Klassifizierungen, sondern auf Bezeichnungen. Ein Benutzer oder Prozess hat die Daten aufgrund der Kenntnis der Informationen bereits  **klassifiziert**: Das MIP SDK wird dann die Informationen mit einer **Bezeichnung** versehen.
+Der Vorgang der Zuordnung einer Datenklassifizierung zu einem Satz von Informationen wird als **Versehen mit Bezeichnungen** bezeichnet. Da das MIP SDK Klassifizierungs**bezeichnungen** auf Dokumente anwendet, beziehen wir uns nicht auf Klassifizierungen, sondern auf Bezeichnungen. Ein Benutzer oder Prozess ist bereits **klassifiziert** die Daten anhand der Informationen: Das MIP SDK wird dann **Bezeichnung** Informationen.
 
 ## <a name="labels-in-the-mip-sdk"></a>Bezeichnungen im MIP SDK
 
@@ -53,8 +54,8 @@ Die Bezeichnung wendet Schutz und Inhaltsmarkierung basierend auf der Konfigurat
 
 Es gibt zwei Typen von Bezeichnungen im MIP SDK. `Label` und `ContentLabel`.
 
-* Label: Eine Bezeichnung, die von einem Benutzer oder Prozess wie in der Organisationsrichtlinie definiert angewendet werden kann.
-* ContentLabel: Eine Bezeichnung, die bereits für ein Dokument oder Informationen vorhanden ist. Sie kann gelesen, aktualisiert oder entfernt werden. 
+* Etikett: Eine Bezeichnung, die von einem Benutzer oder Prozess angewendet werden kann, wie in der Organisationsrichtlinie definiert.
+* ContentLabel: Eine Bezeichnung ist in einem Dokument oder die Informationen, die bereits vorhanden. Sie kann gelesen, aktualisiert oder entfernt werden. 
 
 Dies bedeutet, dass das `ContentLabel`-Element ein `Label`-Element ist, das auf eine Information angewendet wurde.
 

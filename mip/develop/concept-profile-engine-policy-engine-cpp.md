@@ -4,24 +4,25 @@ description: In diesem Artikel werden die Konzepte des Engine-Objekts der Richtl
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07e0fc59e0ed5ec1fc66fe3179fce07dfcb687d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 9aac5fb0e010c8c73776c3e62ba9e98bdeff77d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445273"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252774"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Richtlinien-API
 
 `mip::PolicyEngine` implementiert alle Vorgänge, die die Richtlinien-API ausführen kann, mit Ausnahme des Ladens des Profils. 
 
-## <a name="implementation-add-a-policy-engine"></a>Implementierung: Hinzufügen einer Richtlinien-Engine
+## <a name="implementation-add-a-policy-engine"></a>Implementierung: Fügen Sie eine Richtlinien-Engine hinzu.
 
-### <a name="implementation-create-policy-engine-settings"></a>Implementierung: Erstellen von Einstellungen für die Richtlinien-Engine
+### <a name="implementation-create-policy-engine-settings"></a>Implementierung: Erstellen Sie die Einstellungen der Gruppenrichtlinien-Engine
 
-Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). In diesem Objekt wird der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
 Im folgenden Beispiel wird ein `PolicyEngine::Settings`-Objekt mit dem Namen *engineSettings* erstellt.
 
@@ -31,7 +32,7 @@ PolicyEngine::Settings engineSettings("UniqueID", "");
 
 Als bewährte Methode sollte der erste Parameter (**id**) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer (am besten dem Benutzerprinzipalnamen) hergestellt werden kann.
 
-### <a name="implementation-add-the-policy-engine"></a>Implementierung: Hinzufügen der Richtlinien-Engine
+### <a name="implementation-add-the-policy-engine"></a>Implementierung: Fügen Sie die Richtlinien-Engine hinzu.
 
 Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-Muster berücksichtigen, das zum Laden des Profils verwendet wurde. In diesem Beispiel wird nicht das Promise für `mip::Profile` erstellt, sondern `mip::PolicyEngine` verwendet.
 
@@ -58,7 +59,7 @@ Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-
 
 Mithilfe des obenstehenden Codes wurde erfolgreich eine Engine für den authentifizierten Benutzer zum Profil hinzugefügt.
 
-## <a name="implementation-list-sensitivity-labels"></a>Implementierung: Auflisten von Vertraulichkeitsbezeichnungen
+## <a name="implementation-list-sensitivity-labels"></a>Implementierung: Auflisten der Vertraulichkeitsbezeichnungen
 
 Unter Verwendung der hinzugefügten Engine ist es jetzt möglich, sämtliche Vertraulichkeitsbezeichnungen aufzulisten, die dem authentifizierten Benutzer zur Verfügung stehen, indem `engine->ListSensitivityLabels()` aufgerufen wird.
 
@@ -70,7 +71,7 @@ Unter Verwendung der hinzugefügten Engine ist es jetzt möglich, sämtliche Ver
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>Implementierung: Ausgeben der Bezeichnungen
+### <a name="implementation-print-the-labels"></a>Implementierung: Drucken der Etiketten
 
 ```cpp
 //Iterate through all labels in the vector

@@ -4,24 +4,25 @@ description: In diesem Artikel werden die Konzepte des Engine-Objekts der File-A
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446599"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259285"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Engine-Objekt der File-API
 
 Die `mip::FileEngine` in der File-API des MIP SDK stellt eine Schnittstelle für alle Vorgänge bereit, die im Auftrag einer bestimmten Identität ausgeführt werden. Für jeden Benutzer, der sich bei der Anwendung anmeldet, wird eine Engine hinzugefügt, und alle Vorgänge, die die Engine ausführt, werden im Kontext dieser Identität ausgeführt.
 
-Die `FileEngine` hat zwei Hauptaufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer und Erstellen von Dateihandlern, um Dateivorgänge im Auftrag des Benutzers auszuführen. 
+Die `FileEngine` hat zwei primäre Aufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer aus, und erstellen Datei-Ereignishandler, um die Dateivorgänge im Auftrag des Benutzers ausführen. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
-- `CreateFileHandler()`: Erstellt einen `mip::FileHandler` für eine bestimmte Datei oder einen Datenstrom.
+- `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für das geladene Modul ab.
+- `CreateFileHandler()`: Erstellt eine `mip::FileHandler` für eine bestimmte Datei oder einen Stream.
 
 ## <a name="add-a-file-engine"></a>Hinzufügen einer Dateiengine
 

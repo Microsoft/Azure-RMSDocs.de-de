@@ -4,14 +4,15 @@ description: 'Dokumentiert die MIP:: contentlabel-Klasse von der Microsoft Infor
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: d608ca9229a9b8c4ef0bec3c0d2fe37b51b71f61
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6ef95a20be13123eec6ad17a9eef26f321e36cf8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651733"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254661"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel-Klasse 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.

@@ -4,14 +4,15 @@ description: Dokumentiert die mip::servicedisablederror-Klasse von der Microsoft
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e9b60dc767d0ccc03eb0c308bee551b6507c050
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: adcdb252fc6988f7047c2d940ddaa19fe8381405
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652437"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256446"
 ---
 # <a name="class-mipservicedisablederror"></a>Klasse mip::ServiceDisabledError 
 Der Benutzer konnte Zugriff auf den Inhalt, da ein Dienst, der deaktiviert werden nicht abgerufen werden.

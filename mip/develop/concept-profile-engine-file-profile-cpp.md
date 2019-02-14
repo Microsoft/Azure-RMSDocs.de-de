@@ -4,14 +4,15 @@ description: In diesem Artikel werden die Konzepte des Profile-Objekts der File-
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 33ec266068d15e827267b7d518344aebd0f8f072
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 74937f5ef157c7807b6519a6490af80d46de6a8f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445902"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254510"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profile-Objekt der File-API
 
@@ -32,16 +33,16 @@ Nachdem die `ProfileObserver`-, `ConsentDelegateImpl`- und `AuthDelegateImpl`-El
 
 Der `FileProfile::Settings`-Konstruktor nimmt die unten aufgeführten fünf Parameter an:
 
-- `std::string path`: Der Dateipfad, unter dem die Protokollierung, die Telemetriedaten und weitere persistente Zustände gespeichert sind.
-- `bool useInMemoryStorage`: Definiert, ob alle Zustände im Arbeitsspeicher anstatt auf dem Datenträger gespeichert werden sollen.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`. 
+- `std::string path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
+- `bool useInMemoryStorage`: Definiert, und zwar unabhängig davon, ob alle Status im Speicher statt auf dem Datenträger gespeichert werden soll.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein freigegebener Zeiger-Klasse `mip::AuthDelegate` 
 - `std::shared_ptr<mip::ConsentDelegate>`: 
-- `std::shared_ptr<mip::FileProfile::Observer> observer`: Ein gemeinsamer Zeiger auf die `FileProfile::Observer`-Implementierung.
+- `std::shared_ptr<mip::FileProfile::Observer> observer`: Ein freigegebener Zeiger auf die `FileProfile::Observer` Implementierung.
 - `mip::ApplicationInfo applicationInfo`: Ein Objekt. Wird verwendet, um Informationen zu der Anwendung bereitzustellen, die das SDK nutzt.
 
 Die folgenden Beispiele zeigen, wie das `profileSettings`-Objekt mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich im Arbeitsspeicher erstellt wird. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 
-#### <a name="store-state-in-memory-only"></a>Speichern der Zustands ausschließlich im Arbeitsspeicher
+#### <a name="store-state-in-memory-only"></a>Speichern der Status im Arbeitsspeicher (ausschließlich)
 
 ```cpp
 FileProfile::Settings profileSettings(
@@ -110,7 +111,7 @@ int main()
 }
 ```
 
-Somit wurde das Profil vollständig geladen und im `profile`-Objekt gespeichert.
+Somit wurde das Profil vollständig geladen und im Objekt `profile` gespeichert.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

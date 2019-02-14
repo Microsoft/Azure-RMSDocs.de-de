@@ -4,14 +4,15 @@ description: Dokumentiert die mip::policyprofile-Klasse von der Microsoft Inform
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 451cc2b9da086644e561d0a1dd1912de5f38c48c
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 1a07f71f54889d203ad47f38ad1b101240938b9b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651172"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254152"
 ---
 # <a name="class-mippolicyprofileobserver"></a>mip::PolicyProfile::Observer-Klasse 
 [Observer](class_mip_policyprofile_observer.md)-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für profilbezogene Ereignisse.

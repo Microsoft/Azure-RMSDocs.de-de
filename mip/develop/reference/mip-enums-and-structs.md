@@ -4,14 +4,15 @@ description: Referenzdokumentation für C++-MIP-SDK-Strukturen und Enumerationen
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: d3ca101d3141f2a1e36fcfec11e805907c125b8e
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 04abc581d94c0b05cf19d01362f7b416155a372c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651767"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256106"
 ---
 # <a name="summary"></a>Zusammenfassung
 
@@ -38,7 +39,7 @@ Struktur PublishingLicenseContext | Enthält die Details einer Veröffentlichung
 
 ### <a name="actionsource-enum"></a>ActionSource-Enumeration
 
-Definiert, wodurch die SetLabel-Ereignis ausgelöst wurde
+definiert, wodurch die SetLabel-Ereignis ausgelöst wurde
 
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------

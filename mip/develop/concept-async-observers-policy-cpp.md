@@ -4,14 +4,15 @@ description: Das MIP SDK ist so konzipiert, dass es beinahe vollständig asynchr
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 50bc3bfd9bcba8e90a386a6e0444f65389bcfa76
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445800"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251175"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK: Beobachter von Richtlinien-APIs
 
@@ -27,7 +28,7 @@ Im nachfolgenden Beispiel wird das Promise-Future-Muster dargestellt. Dieses wir
 
 Im folgenden Beispiel wurde eine Klasse (`ProfileObserver`) erstellt, die von `mip::Profile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
 
-**Hinweis:** Die nachfolgenden Beispiele wurden nur teilweise implementiert und beinhalten keine Überschreibungen der mit `mip::ProfileEngine` in Verbindung stehenden Beobachter.
+**Beachten Sie**: Die folgenden Beispiele werden nur teilweise implementiert und enthalten keine Außerkraftsetzungen für die `mip::ProfileEngine` Observer-Objekte beziehen.
 
 ### <a name="profileobserverh"></a>profile_observer.h
 

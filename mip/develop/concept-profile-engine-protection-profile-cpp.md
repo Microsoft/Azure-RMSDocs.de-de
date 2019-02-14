@@ -4,14 +4,15 @@ description: In diesem Artikel werden die Konzepte des Profilobjekts für den Sc
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ae6699212d45a6c8a2fa95f648e7f5a2be3de93e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 3fa8a7b9f787cef980722efa5036de5c3f583b35
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445307"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251703"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Schutz-API
 
@@ -23,11 +24,11 @@ Da die Objekte `ProtectionProfileObserverImpl` und `AuthDelegateImpl` bereits de
 
 ### <a name="protectionprofilesettings-parameters"></a>ProtectionProfile::Settings-Parameter
 
-- `std::string path`: Pfad, in dem Protokollierung, Telemetriedaten und weitere persistente Status zum Schutz gespeichert sind
-- `bool useInMemoryStorage`: definiert, ob alle Status im Arbeitsspeicher anstatt auf dem Datenträger gespeichert werden sollen
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: ein gemeinsamer Zeiger auf die `ProtectionProfile::Observer`-Implementierung
-- `mip::ApplicationInfo applicationInfo`: Objekt Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
+- `std::string path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
+- `bool useInMemoryStorage`: Definiert, und zwar unabhängig davon, ob alle Status im Speicher statt auf dem Datenträger gespeichert werden soll.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein freigegebener Zeiger Klasse `mip::AuthDelegate`.
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Ein freigegebener Zeiger auf die `ProtectionProfile::Observer` Implementierung.
+- `mip::ApplicationInfo applicationInfo`: Ein Objekt. Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
 
 Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 
@@ -63,7 +64,7 @@ auto profileFuture = profilePromise->get_future();
 ProtectionProfile::LoadAsync(profileSettings, profilePromise);
 ```
 
-Wenn ein Profil geladen und dieser Vorgang erfolgreich durchgeführt wird, wird `ProtectionProfileObserverImpl::OnLoadSuccess`, also die Implementierung von `mip::ProtectionProfile::Observer::OnLoadSuccess`, aufgerufen. Das daraus entstandene Objekt oder der Ausnahmezeiger sowie der Kontext werden der Funktion als Parameter übergeben. Beim Kontext handelt es sich auf einen Zeiger auf das `std::promise`-Objekt, das Sie erstellt haben, um den asynchronen Vorgang zu verarbeiten. Die Funktion legt nur den Wert des Promise an das ProtectionProfile-Objekt fest (Kontext). Wenn die Hauptfunktion `Future.get()` verwendet, kann das Ergebnis in einem neuen Objekt gespeichert werden.
+Wenn ein Profil geladen und dieser Vorgang erfolgreich durchgeführt wird, wird `ProtectionProfileObserverImpl::OnLoadSuccess`, also die Implementierung von `mip::ProtectionProfile::Observer::OnLoadSuccess`, aufgerufen. Das sich ergebende Objekt oder der Ausnahmezeiger sowie der Kontext werden an die Funktion als Parameter übergeben. Beim Kontext handelt es sich auf einen Zeiger auf das `std::promise`-Objekt, das Sie erstellt haben, um den asynchronen Vorgang zu verarbeiten. Die Funktion legt nur den Wert des Promise an das ProtectionProfile-Objekt fest (Kontext). Wenn die Hauptfunktion `Future.get()` verwendet, kann das Ergebnis in einem neuen Objekt gespeichert werden.
 
 ```cpp
 //get the future value and store in profile.
@@ -72,7 +73,7 @@ auto profile = profileFuture.get();
 
 ### <a name="putting-it-together"></a>Gesamtbild
 
-Da Sie nun die Beobachter und den Authentifizierungsdelegaten vollständig implementiert haben, können Sie jetzt ein vollständiges Profil laden. In dem nachfolgenden Codeausschnitt wird davon ausgegangen, dass alle benötigten Header bereits hinzugefügt wurden.
+Da Sie nun die Beobachter und den Authentifizierungsdelegaten vollständig implementiert haben, können Sie jetzt ein vollständiges Profil laden. In dem nachfolgenden Codeausschnitt wird davon ausgegangen, dass alle benötigten Header bereits eingebunden wurden.
 
 ```cpp
 int main()

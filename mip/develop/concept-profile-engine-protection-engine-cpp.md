@@ -4,24 +4,25 @@ description: In diesem Artikel werden die Konzepte des Engine-Objekts für den S
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453315"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258406"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Schutz-API
 
-## <a name="implementation-add-a-protection-engine"></a>Implementierung: Hinzufügen einer Schutz-Engine
+## <a name="implementation-add-a-protection-engine"></a>Implementierung: Fügen Sie ein Modul zum Schutz hinzu.
 
 In der Datei-API stellt die Klasse `mip::ProtectionProfile` die Stammklasse für sämtliche SDK-Vorgänge dar. Da Sie bereits das Profil erstellt haben, können Sie nun eine Engine zu diesem hinzufügen.
 
 Im nachfolgenden Beispiel wird die Verwendung einer einzelnen Engine für einen einzelnen authentifizierten Benutzer veranschaulicht.
 
-### <a name="implementation-create-protection-engine-settings"></a>Implementierung: Erstellen von Einstellungen für die Schutz-Engine
+### <a name="implementation-create-protection-engine-settings"></a>Implementierung: Erstellen des Protection-Engine-Einstellungen
 
 Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::ProtectionEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
@@ -31,7 +32,7 @@ Im folgenden Beispiel wird ein `ProtectionEngine::Settings`-Objekt mit dem Namen
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Hinweis:** Wenn Sie auf diese Methode zurückgreifen, um ein Objekt für die Schutzeinstellungen zu erstellen, müssen Sie manuell CloudEndpointBaseUrl auf https://api.aadrm.com festlegen.
+**Beachten Sie**: Wenn diese Methode verwenden, um das Einstellungsobjekt für den Schutz zu erstellen, müssen Sie auch manuell der CloudEndpointBaseUrl festlegen auf https://api.aadrm.com
 
 Als bewährte Methode sollte der erste Parameter (**id**) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer hergestellt werden kann, **oder** es sollte sich um ein `mip::Identity`-Objekt handeln. Gehen Sie wie folgt vor, um die Einstellungen mit `mip::Identity` zu initialisieren:
 
@@ -41,7 +42,7 @@ ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 
 Allerdings wird in der Regel eine Variable an die Identität übergeben und keine Hartcodierung vorgenommen.
 
-### <a name="implementation-add-the-protection-engine"></a>Implementierung: Hinzufügen der Schutz-Engine
+### <a name="implementation-add-the-protection-engine"></a>Implementierung: Fügen Sie das Modul zum Schutz hinzu.
 
 Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-Muster berücksichtigen, das zum Laden des Profils verwendet wurde. In diesem Beispiel wird nicht das Promise für `mip::ProtectionProfile` erstellt, sondern `mip::ProtectionEngine` verwendet.
 
@@ -68,7 +69,7 @@ Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-
 
 Mithilfe des obenstehenden Codes wurde erfolgreich eine Engine für den authentifizierten Benutzer zum Profil hinzugefügt.
 
-## <a name="implementation-list-templates"></a>Implementierung: Auflisten von Vorlagen
+## <a name="implementation-list-templates"></a>Implementierung: Listenvorlagen
 
 Unter Verwendung der hinzugefügten Engine ist es jetzt möglich, sämtliche Vertraulichkeitsvorlagen aufzulisten, die dem authentifizierten Benutzer zur Verfügung stehen, indem `engine->GetTemplatesAsync()` aufgerufen wird. 
 
@@ -83,7 +84,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Implementierung: Ausgeben der Vorlagen-IDs
+### <a name="implementation-print-the-template-ids"></a>Implementierung: Drucken Sie die Vorlagen-Ids
 
 ```cpp
 //Iterate through all template IDs in the vector

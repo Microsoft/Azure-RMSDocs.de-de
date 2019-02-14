@@ -4,14 +4,15 @@ description: Dieser Artikel hilft Ihnen, die Metadaten zu verstehen, die von der
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 9f9e4768a01d3d82f7b9563cb907533e53c7a228
-ms.sourcegitcommit: 03c9d1131177041e320d1bdbbdd92852a0d1d5cd
+ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52156849"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253968"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - Metadaten
 
@@ -41,7 +42,7 @@ Das MIP SDK gilt den folgenden Satz von Metadaten.
 | **Methode**    | Standard, Privileged oder automatisch        | Legen Sie über MIP:: assignmentmethod                                                                                                                                                                                                                 | Nein        |
 | **SetDate**   | Erweiterte ISO 8601-Datumsformat | Der Zeitstempel für die Bezeichnung festgelegt wurde.                                                                                                                                                                                                              | Nein        |
 | **Name**      | String                        | Bezeichnung eindeutiger Name innerhalb des Mandanten. Es entsprechen nicht unbedingt, um Namen anzuzeigen.                                                                                                                                                              | Nein      |
-| **ContentBits** | integer | Bitmaske, die die Arten von Inhalten, die markieren, die beschreibt, sollte in eine Datei angewendet werden. CONTENT_HEADER = 0 X 1, CONTENT_FOOTER = 0 X 2, WASSERZEICHEN = 0 X 4
+| **ContentBits** | integer | Bitmaske, die die Arten von Inhalten, die markieren, die beschreibt, sollte in eine Datei angewendet werden. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
  | Nein |
 
 Wenn in einer Datei angewendet wird, ist das Ergebnis ähnelt der folgenden Tabelle.

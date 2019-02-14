@@ -4,14 +4,15 @@ description: Dokumentiert die mip::nopermissionserror-Klasse von der Microsoft I
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 28068c80bc7d6e7fea5dc1bbeed3f64001fc47cc
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 4a7b1af035b8a341ef16cabb10c788e5f5bc276c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652063"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258860"
 ---
 # <a name="class-mipnopermissionserror"></a>Klasse mip::NoPermissionsError 
 Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.

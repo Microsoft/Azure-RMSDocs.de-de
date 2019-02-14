@@ -4,14 +4,15 @@ description: Dokumentiert die mip::authdelegate-Klasse von der Microsoft Informa
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 7ce9e336edfeeee07725b30c4d76c3b3c2073bc6
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: bef28489d16b040ff910103d9e0bf5a4719c66ff
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652046"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255970"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>Klasse mip::AuthDelegate::OAuth2Token 
 Eine Klasse definiert, wie das MIP SDK für die oauth2-Token wieder in das SDK übergeben werden erwartet.

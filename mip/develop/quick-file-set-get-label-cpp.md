@@ -5,14 +5,15 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651206"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256684"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen Sie und Abrufen Sie einer vertraulichkeitsbezeichnung (C++)
 

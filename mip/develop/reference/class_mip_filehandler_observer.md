@@ -4,14 +4,15 @@ description: 'Beschreibt die Klasse:: fileHandler-Klasse von der Microsoft Infor
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 33f8a9c0d90d7f64295d469004c36a4c4cc80338
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: f6362eab61228cdb161f514c643563f9c45a0857
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650628"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254746"
 ---
 # <a name="class-mipfilehandlerobserver"></a>mip::FileHandler::Observer-Klasse 
 [Observer](class_mip_filehandler_observer.md)-Schnittstelle für Clients zum Abrufen von Benachrichtigungen für verknüpfte Ereignisse, die im Zusammenhang mit dem Dateihandler stehen.

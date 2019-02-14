@@ -4,14 +4,15 @@ description: In diesem Artikel werden die Konzepte des Profilobjekts für die Ri
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b229148c3028f4478f83cbbc928e19666c2f44b5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 0eed59e82d32c3461e21cfcfb20514b4d615ea8c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445426"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252264"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Richtlinien-API
 
@@ -25,11 +26,11 @@ Da die Objekte `ProfileObserver` und `AuthDelegateImpl` bereits definiert sind, 
 
 ### <a name="profilesettings-parameters"></a>Profile::Settings-Parameter
 
-- `std::string path`: Pfad, in dem Protokollierung, Telemetriedaten und weitere persistente Status zum Schutz gespeichert sind
-- `bool useInMemoryStorage`: definiert, ob alle Status im Arbeitsspeicher anstatt auf dem Datenträger gespeichert werden sollen
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate` 
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: ein gemeinsamer Zeiger auf die `PolicyProfile::Observer`-Implementierung
-- `mip::ApplicationInfo applicationInfo`: Objekt. Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
+- `std::string path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
+- `bool useInMemoryStorage`: Definiert, und zwar unabhängig davon, ob alle Status im Speicher statt auf dem Datenträger gespeichert werden soll.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein freigegebener Zeiger-Klasse `mip::AuthDelegate` 
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Ein freigegebener Zeiger auf die `PolicyProfile::Observer` Implementierung.
+- `mip::ApplicationInfo applicationInfo`: Ein Objekt. Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
 
 Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 
@@ -72,7 +73,7 @@ auto profile = profileFuture.get();
 
 ### <a name="putting-it-together"></a>Gesamtbild
 
-Da Sie nun die Beobachter und den Authentifizierungsdelegaten vollständig implementiert haben, können Sie jetzt ein vollständiges Profil laden. In dem nachfolgenden Codeausschnitt wird davon ausgegangen, dass alle benötigten Header bereits hinzugefügt wurden.
+Da Sie nun die Beobachter und den Authentifizierungsdelegaten vollständig implementiert haben, können Sie jetzt ein vollständiges Profil laden. In dem nachfolgenden Codeausschnitt wird davon ausgegangen, dass alle benötigten Header bereits eingebunden wurden.
 
 ```cpp
 int main()

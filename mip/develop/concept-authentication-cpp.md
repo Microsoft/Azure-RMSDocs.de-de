@@ -4,14 +4,15 @@ description: Dieser Artikel wird Ihnen helfen zu verstehen, wie das MIP SDK die 
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
-ms.translationtype: HT
+ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230521"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257965"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK: Authentifizierungskonzepte
 
@@ -23,13 +24,13 @@ Die Authentifizierung im MIP SDK erfolgt durch Erweiterung der `mip::AuthDelegat
 
 `mip::AuthDelegate::AcquireOAuth2Token` nimmt die folgenden Parameter an und gibt einen booleschen Wert zurück, der angibt, ob der Tokenabruf erfolgreich war:
 
-- `mip::Identity`: Die Identität des zu authentifizierenden Benutzers oder Diensts, sofern bekannt.
-- `mip::AuthDelegate::OAuth2Challenge`: Nimmt zwei Parameter (**authority** und **resource**) an. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten.
-- `mip::AuthDelegate::OAuth2Token`: Das Tokenergebnis wird in dieses Objekt geschrieben. Es wird durch das SDK genutzt, wenn die Engine geladen wird. Außerhalb unserer Authentifizierungsimplementierung sollte das Abrufen oder Festlegen dieses Werts nirgendwo erforderlich sein.
+- `mip::Identity`: Die Identität des Benutzers oder der Dienst authentifiziert zu werden, sofern bekannt.
+- `mip::AuthDelegate::OAuth2Challenge`: Akzeptiert zwei Parameter: **Autorität** und **Ressource**. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten.
+- `mip::AuthDelegate::OAuth2Token`: Das token Ergebnis wird in dieses Objekt geschrieben. Es wird durch das SDK genutzt, wenn die Engine geladen wird. Außerhalb unserer Authentifizierungsimplementierung sollte das Abrufen oder Festlegen dieses Werts nirgendwo erforderlich sein.
 
-**Wichtig:** Anwendungen rufen `AcquireOAuth2Token` nicht direkt auf. Das SDK ruft diese Funktion bei Bedarf auf.
+**Wichtig:** Rufen Sie Anwendungen nicht `AcquireOAuth2Token` direkt. Das SDK ruft diese Funktion bei Bedarf auf.
 
-## <a name="consent"></a>Consent
+## <a name="consent"></a>Zustimmung
 
 Azure AD verlangt, dass einer Anwendung Zustimmung erteilt wird, bevor ihr die Erlaubnis zum Zugriff auf gesicherte Ressourcen/APIs unter der Identität eines Kontos erteilt wird. Zustimmung wird als dauerhafte Bestätigung der Berechtigung im Mandanten des Kontos für das jeweilige Konto ( Benutzerzustimmung) oder für alle Konten ( Administratorzustimmung) aufgezeichnet. Zustimmung tritt in verschiedenen Szenarien basierend auf der API auf, auf die zugegriffen wird, den Berechtigungen, nach denen die Anwendung sucht, und dem Konto, das für die Anmeldung verwendet wird: 
 
@@ -48,9 +49,9 @@ Wenn ein Benutzer einen Vorgang ausführt, der Zustimmung erfordert, ruft das SD
 
 ### <a name="consent-options"></a>Zustimmungsoptionen
 
-- **AcceptAlways**: Zustimmen und die Entscheidung speichern.
-- **Accept**: Ein Mal zustimmen.
-- **Reject**: Keine Zustimmung.
+- **AcceptAlways**: Stimmen Sie zu, und speichern Sie die Entscheidung.
+- **Akzeptieren Sie**: Nach Zustimmung.
+- **Ablehnen**: Nicht zustimmen.
 
 Wenn das SDK die Zustimmung des Benutzers mit dieser Methode anfordert, sollte die Clientanwendung dem Benutzer die URL anzeigen. Clientanwendungen sollten eine Möglichkeit bieten, die Zustimmung des Benutzers einzuholen und die entsprechende Zustimmungsenumeration zurückzugeben, die der Entscheidung des Benutzers entspricht.
 
