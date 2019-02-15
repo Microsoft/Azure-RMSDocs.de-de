@@ -3,19 +3,20 @@ title: Unterstützen von Benutzern beim Schützen von Dateien mithilfe von Azure
 description: Informationen, anhand derer Sie Unterstützung für Benutzer, Administratoren und Ihren Helpdesk bieten können, nachdem Sie den Azure Rights Management-Dienst von Azure Information Protection bereitgestellt und konfiguriert haben.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559936"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258996"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 

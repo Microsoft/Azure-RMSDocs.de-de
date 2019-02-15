@@ -3,19 +3,20 @@ title: Konfigurieren von Nutzungsrechten für Azure Rights Management – AIP
 description: Lernen Sie die spezifischen Berechtigungen kennen, die verwendet werden, wenn Sie Dateien oder E-Mails mithilfe des Azure Rights Management-Diensts von Azure Information Protection schützen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02bdd294e30f0d773fcc29b4c7a13f9e418af9db
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: f7eda5df7fad0a4b1a16ba9059c6adf76794372f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559987"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56260016"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 

@@ -3,19 +3,20 @@ title: Andere Apps, die RMS-APIs unterstützten – Installation und Konfigurati
 description: Erfahren Sie, wie der Azure Rights Management-Dienst von Azure Information Protection andere Anwendungen dabei unterstützen kann, die Daten Ihrer Organisation zu schützen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 08/28/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cc0977bab0bccf5a652fd0af13e1abe1f8e81e27
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: f1869a4de4c6c8a7328708f2dc3cc1f4f7982902
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53172821"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258894"
 ---
 # <a name="other-applications-that-support-the-rights-management-apis"></a>Weitere Anwendungen, die die Rights Management-APIs unterstützen
 
