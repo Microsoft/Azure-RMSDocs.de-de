@@ -4,20 +4,21 @@ description: In diesem Thema werden wichtige Szenarien Codeelemente der Linux-Ve
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 81177bcafa1595f27dd0bb1120c3ddd98b15b36f
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 5e955abc9d2d8fb488fa5c425cff44ac5e8c4222
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071283"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255818"
 ---
 # <a name="linux-code-examples"></a>Codebeispiele für Linux
 
@@ -74,7 +75,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     // create authentication context
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     auto pfs = PFileConverter::ConvertFromPFile(
       clientEmail,
       inFile,
@@ -193,7 +194,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     // create authentication callback
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     PFileConverter::ConvertToPFileTemplates(
       clientEmail, inFile, fileExt, outFile, auth,
       this->consent, this->templates);
@@ -341,7 +342,7 @@ Die folgenden Codeausschnitte stammen aus den Beispielanwendungen *rms\_sample* 
     // create authentication callback
     AuthCallback auth(clientId, redirectUrl);
     
-    // process convertion
+    // process conversion
     PFileConverter::ConvertToPFilePredefinedRights(
       clientEmail,
       inFile,

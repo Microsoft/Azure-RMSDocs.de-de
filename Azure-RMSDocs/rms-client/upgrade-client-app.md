@@ -3,19 +3,20 @@ title: Mit der RMS-Freigabeanwendung ausgeführte Aufgaben – AIP
 description: Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwendung auf den Azure Information Protection-Client durchgeführt haben.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f592047b8de26d3b0d536938cd5c6b7da8fe76cb
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 5d7ea7b1997615e3737bba7e906d7efad8bd3e06
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559834"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257874"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Leitfaden: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 

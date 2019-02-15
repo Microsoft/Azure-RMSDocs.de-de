@@ -3,19 +3,20 @@ title: Migrieren von AD RMS-Azure Information Protection – Phase 3
 description: Phase 3 der Migration von AD RMS zu Azure Information Protection deckt den Schritt 7 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 659f42f71ef49cd1e632c0ac46416d51b9c8cfb1
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: bdd5d17bc947b25f312baa498da057b409dcd07e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067617"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256973"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -69,7 +70,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
 2. Legen Sie auf dem AD RMS-Veröffentlichungsendpunkt für Benutzer, die Office 365-Apps oder Office 2016 (oder höher) ausführen, eine Ablehnungsberechtigung fest:
 
-    a. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
+    ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
     b. Navigieren Sie zur **Standardwebsite** > **_wmcs** > **licensing** > **licensing.asmx**
 

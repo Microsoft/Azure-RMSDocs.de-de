@@ -3,19 +3,20 @@ title: Unterstützung von Clientgeräten für den Schutz von Daten – AIP
 description: Stellen Sie fest, welche Geräte den Azure Rights Management-Dienst von Azure Information Protection unterstützen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/25/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54a93e3a70e6add6ebd69d529074e337ef0a7a35
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: e0672d3aecbe82d43cf2fd65de061c9ce09c660b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146671"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258367"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten
 

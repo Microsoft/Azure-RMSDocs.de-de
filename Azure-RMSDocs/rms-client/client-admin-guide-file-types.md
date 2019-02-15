@@ -3,19 +3,20 @@ title: Von Azure Information Protection unterstützte Dateitypen
 description: Technische Details zu den unterstützten Dateitypen, Dateierweiterungen und Schutzebenen für Administratoren, die für den Azure Information Protection-Client für Windows verantwortlich sind.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f886a2bbf555d1ed3db9c18d8c86ad1cfc03e3d9
-ms.sourcegitcommit: ebb3a8b64a8e18dee4436442e37b54b65171d087
+ms.openlocfilehash: efa968ab048d0c648d1b0351fa847d2a80a3d11a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55567586"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259532"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 

@@ -3,19 +3,20 @@ title: Herunterladen und Installieren des Azure Information Protection-Clients
 description: Anweisungen für Benutzer zum Installieren des Azure Information Protection-Clients für Windows, damit Sie Ihre Dokumente und E-Mails klassifizieren und schützen können.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d45c13a0cf3c7725c5b817339e9aadec96f27477
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: f97914525e8ff6f48e4566b3108c2ba65fb91deb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305221"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253743"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Leitfaden: Herunterladen und Installieren des Azure Information Protection-Clients
 

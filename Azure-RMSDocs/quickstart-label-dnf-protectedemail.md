@@ -3,18 +3,21 @@ title: 'Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfache
 description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benutzer schützt, indem die Schutzrichtlinie „Nicht weiterleiten“ automatisch angewendet wird.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/29/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 6b892b1c845ea7d2e8670f054e0166eb160f3294
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: 67fe46f94b83b219794251c9d7e1500f756669a3
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231003"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266028"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
+
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 In dieser Schnellstartanleitung konfigurieren Sie eine vorhandene Bezeichnung zum automatischen Anwenden der Schutzeinstellung „Nicht weiterleiten“.
 

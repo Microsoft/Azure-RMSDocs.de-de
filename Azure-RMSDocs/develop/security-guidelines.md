@@ -3,19 +3,20 @@ title: Best Practices zu Sicherheitsthemen für Information Protection
 description: RMS-fähige Anwendungen werden am besten mithilfe der bewährten Methoden von Information Protection erstellt.
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/13/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 3b22a8723a232cd05349a19987686c25dc5f320f
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 0a9d8c0c6c86481dbce38d2cafde1c37c54b7b3e
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070297"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252859"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Best Practices zu Sicherheitsthemen für Information Protection
 
