@@ -3,19 +3,20 @@ title: Erste Schritte – AIP-App für iOS und Android
 description: Anzeigen von E-Mails oder Dateien mit der Azure Information Protection-App für iOS und Android
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 05/01/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aea2c8734aa36cb5ca735e351abe27e4e6dcc4e2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 07391252e55f1b75df4d0fb57d167748d6d69853
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023780"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255001"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
@@ -32,7 +33,7 @@ Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App
 
 Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilgerät aus auf die Dateien, die die App unterstützt, zugreifen. Beispiel:
 
-- **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus keinen Datenschutz durch Rechteverwaltung unterstützt. 
+- **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus auf Ihrem mobilen Gerät keinen Datenschutz durch Rechteverwaltung unterstützt. 
     
     Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der E-Mail-Clients, die von sich aus Rights Management unterstützen, finden Sie in der Spalte E-MAIL der Seite [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../requirements-applications.md).
 

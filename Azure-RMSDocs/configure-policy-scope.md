@@ -3,19 +3,20 @@ title: Konfigurieren bereichsbezogener Richtlinien für Azure Information Protec
 description: Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer zu konfigurieren, müssen Sie eine bereichsbezogene Richtlinie für Azure Information Protection konfigurieren.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8d10ddf21842d944773c7d088c4c452bc618c29c
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 505e02c48a0090551cfb57ffb57605af5b27470c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024337"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255142"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien
 
@@ -41,7 +42,7 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection: Richtlinien** den Eintrag **Neue Richtlinie hinzufügen** aus. Ihnen wird dann das Blatt **Richtlinie** angezeigt, das Ihre bestehende globale Richtlinie anzeigt. Dort können Sie nun Ihre neue bereichsbezogene Richtlinie konfigurieren.
+2. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** die Option **Neue Richtlinie hinzufügen** aus. Ihnen wird dann das Blatt **Richtlinie** angezeigt, das Ihre bestehende globale Richtlinie anzeigt. Dort können Sie nun Ihre neue bereichsbezogene Richtlinie konfigurieren.
 
 3. Geben Sie einen Richtliniennamen und eine Beschreibung an, die nur für Administratoren im Azure-Portal angezeigt wird. Der Name muss für Ihren Mandanten eindeutig sein. Klicken Sie dann auf **Specify which users/groups get this policy** (Benutzer/Gruppen angeben, die diese Richtlinie erhalten). Auf den nachfolgenden Blättern können Sie dann die Benutzer und Gruppen für diese Richtlinie suchen und auswählen. Die Bezeichnungen und Einstellungen, die Sie in dieser bereichsbezogenen Richtlinie konfigurieren, werden nur auf diese Benutzer angewendet.
     

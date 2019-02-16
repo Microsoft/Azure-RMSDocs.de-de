@@ -3,17 +3,18 @@ title: Was ist Azure Information Protection? – AIP
 description: Eine Übersicht über den Azure Information Protection-Dienst.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/05/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9c7fd9070e6cc07a7b16043dd480addd2d0a4313
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024336"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257857"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -31,7 +32,7 @@ Nachdem Ihr Inhalt klassifiziert (und optional geschützt) wurde, können Sie na
 
 Sie verwenden Azure Information Protection-Bezeichnungen, um die Klassifizierung auf Dokumente und E-Mails anzuwenden. Damit ist die Klassifizierung identifizierbar – unabhängig davon, wo die Daten gespeichert sind oder für wen sie freigegeben wurden. Die Bezeichnungen können optische Kennzeichnungen wie Kopfzeilen, Fußzeilen oder Wasserzeichen enthalten. Metadaten werden Datei- und E-Mail-Header als Klartext hinzugefügt. Dieser Klartext stellt sicher, dass andere Dienste (z.B. Lösungen zur Verhinderung von Datenverlusten) die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können. 
 
-Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat eine Fußzeile „Vertraulichkeit: Allgemein“ zur E-Mail-Nachricht hinzugefügt. Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
+Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat die Fußzeile „Vertraulichkeit: Allgemein“ der E-Mail-Nachricht hinzugefügt. Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
 
 ![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](./media/example-email-footerv2.png)
 
@@ -80,7 +81,7 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 ### <a name="additional-integration-for-email"></a>Zusätzliche Integration für E-Mails
 
-Wenn Sie Azure Information Protection mit Exchange Online verwenden, profitieren Sie von einem weiteren Vorteil: Sie können geschützte E-Mails an Benutzer senden, mit der Gewissheit, dass sie diese auf jedem Gerät lesen können.
+Wenn Sie Azure Information Protection mit Exchange Online verwenden, erhalten Sie einen weiteren Vorteil: Die Fähigkeit, geschützte E-Mails an beliebige Benutzer senden zu können, mit der Gewissheit, dass sie sie auf jedem Gerät lesen können.
 
 Dies ist beispielsweise nützlich, wenn Benutzer vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden. Dies ist auch hilfreich, wenn vertrauliche Informationen an Benutzer gesendet werden müssen, die kein Office 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
@@ -113,17 +114,19 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 
 - Kostenlose Testversion: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- Abonnementoptionen und Preise: [Preise zu Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
+- Abonnementoptionen und Preise: [Azure Information Protection – Preise](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Download des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
+- Herunterladen des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Download des anpassbaren Benutzerhandbuchs: [Azure Information Protection End User Adoption Guide (Benutzerhandbuch für die Einführung in Azure Information Protection)](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
+- Herunterladen einer Bereitstellungsanleitung für Entscheidungsträger: [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
+
+- Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 
 - Häufig gestellte Fragen: [Häufig gestellte Fragen zu Azure Information Protection](faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-Zusätzliche Ressourcen: [Informationen und Support für Azure Information Protection](information-support.md)
+Zusätzliche Ressourcen: [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 

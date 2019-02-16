@@ -1,7 +1,7 @@
 ---
  Titel: Includedatei Beschreibung: Includedateidienste: azure-policy Autor: eross-msft
  
-ms.service: azure-policy ms.topic: include ms.date: 04/24/2018 ms.author: lizross ms.custom: include file
+ms.service: azure-policy ms.topic: include ms.collection: M365-security-compliance ms.date: 04/24/2018 ms.author: lizross ms.custom: include file
 ---
 
 >[!Note] 

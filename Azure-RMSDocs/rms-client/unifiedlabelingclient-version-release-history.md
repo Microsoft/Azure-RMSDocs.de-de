@@ -3,20 +3,21 @@ title: 'Der Azure Information Protection-Client für einheitliche Bezeichnungen:
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/23/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
-ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
+ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49951838"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254831"
 ---
-# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Der Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release
+# <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -33,7 +34,7 @@ Der Client wird als Add-On für Office installiert. Es gelten die gleichen [Vora
 
 ## <a name="current-preview-version"></a>Aktuelle Vorschauversion
 
-**Veröffentlicht:** 16.10.2018
+**Veröffentlicht**: 16.10.2018
 
 Die Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows unterstützt die folgenden Features: 
 
@@ -71,7 +72,7 @@ Die folgenden Funktionen können in dieser Vorschauversion nicht verwendet werde
 
 ## <a name="instructions"></a>Anweisungen
 
-1. Installieren Sie den Client, indem Sie die Anweisungen unter [User Guide: Download and install the Azure Information Protection client (Preview) (Benutzerleitfaden: Herunterladen und Installieren des Azure Information Protection-Clients (Vorschau))](install-unifiedlabelingclient-app.md) ausführen. 
+1. Installieren Sie den Client mithilfe der folgenden Anweisungen: [Leitfaden: Herunterladen und Installieren des Azure Information Protection-Clients (Vorschauversion)](install-unifiedlabelingclient-app.md) 
 
 2. Verwenden Sie den Client in Office-Apps genauso wie den Azure Information Protection-Client. Die einzige Ausnahme besteht darin, dass das Office-Menüband nicht **Schutz**, sondern **Vertraulichkeit** heißt:
     

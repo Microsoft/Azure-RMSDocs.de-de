@@ -3,19 +3,20 @@ title: Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für A
 description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 12/12/2018
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393353"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265994"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -39,7 +40,7 @@ Da eine Azure Information Protection-Bezeichnung in den Metadaten gespeichert is
 
 - In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX), PowerPoint-Präsentationen (PPT und PPTX) sowie PDF-Dokumente (PDF) werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
+- Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX) und PowerPoint-Präsentationen (PPT und PPTX) werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
 
 Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung**, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 

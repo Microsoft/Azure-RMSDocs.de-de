@@ -3,17 +3,18 @@ title: Konfigurieren optischer Kennzeichnungen für eine Azure Information Prote
 description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 549bf29cc6c4c70dd91d6e36ad3fbe26baa69535
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067736"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258962"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -35,7 +36,7 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 
 - Maximale Zeichenfolgenlänge:
     
-    - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Wenn Sie in Excel eine lange Zeichenfolge für Kopf- oder Fußzeilen eingeben, kann es sein, dass der Text nach 255 Zeichen oder weniger abgeschnitten wird.
+    - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Dieser Grenzwert schließt Zeichen ein, die nicht in Excel angezeigt werden, wie z.B. Formatierungscodes. Wenn Sie in Excel eine lange Zeichenfolge für Kopf- oder Fußzeilen eingeben, kann es sein, dass der Text nach 255 Zeichen oder weniger abgeschnitten wird.
     
     - Die maximale Zeichenfolgenlänge für Wasserzeichen beträgt 255 Zeichen.
 
@@ -101,7 +102,7 @@ Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${i
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
 
-Die von Ihnen angegebenen optischen Kennzeichnungen werden standardmäßig auf Word, Excel, PowerPoint und Outlook angewendet. Sie können optische Kennzeichnungen jedoch pro Office-Anwendungstyp festlegen, wenn Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp mithilfe der Werte **Word**, **Excel**, **PowerPoint** bzw. **Outlook** angeben. Sie können diese Werte auch abkürzen. Dies ist erforderlich, wenn Sie mehrere Werte in derselben If.App-Anweisung angeben möchten.
+Die von Ihnen angegebenen optischen Kennzeichnungen werden standardmäßig auf Word, Excel, PowerPoint und Outlook angewendet. Sie können optische Kennzeichnungen jedoch pro Office-Anwendungstyp festlegen, wenn Sie die Variablenanweisung „If.App“ in der Textzeichenfolge verwenden und den Anwendungstyp mithilfe der Werte **Word**, **Excel**, **PowerPoint** bzw. **Outlook** angeben. Sie können diese Werte auch abkürzen. Das ist notwendig, wenn Sie mehrere Werte in der gleichen If.App-Anweisung angeben möchten.
 
 Verwenden Sie die folgende Syntax:
 

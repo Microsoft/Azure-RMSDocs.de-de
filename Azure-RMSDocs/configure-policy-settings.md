@@ -3,17 +3,18 @@ title: Konfigurieren der Azure Information Protection – AIP-Richtlinieneinstel
 description: Konfigurieren Sie die Einstellungen in der Azure Information Protection-Richtlinie, die für alle Benutzer und alle Geräte gelten.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/16/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c3d95b0dc8328665c921ab4ff6b37e53ec726f03
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393484"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266062"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -37,7 +38,9 @@ So konfigurieren Sie diese Einstellungen:
 
 3. Konfigurieren Sie auf dem Blatt **Richtlinie** folgende Einstellungen:
     
-   - **Standardbezeichnung auswählen**: Wählen Sie bei Festlegung dieser Option die Bezeichnung aus, die Dokumenten und E-Mails zugewiesen werden sollen, die nicht über eine Bezeichnung verfügen. Bezeichnungen mit untergeordneten Bezeichnungen können nicht als Standardbezeichnungen festgelegt werden. 
+   - **Standardbezeichnung auswählen**: Wählen Sie bei Festlegung dieser Option die Bezeichnung aus, die Dokumenten und E-Mails zugewiesen werden sollen, die nicht über eine Bezeichnung verfügen. Bezeichnungen mit untergeordneten Bezeichnungen können nicht als Standardbezeichnungen festgelegt werden.
+        
+        Diese Einstellung gilt für Office-Apps und den Scanner. Sie gilt nicht für Datei-Explorer oder PowerShell.
     
    - **Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**: Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden.
         
@@ -51,11 +54,13 @@ So konfigurieren Sie diese Einstellungen:
         
        ![Azure Information Protection-Aufforderung, wenn die neue Klassifizierung eine niedrigere Vertraulichkeitsstufe aufweist](./media/info-protect-lower-justification.png)
         
-       Diese Option gilt nicht für die Senkung der Klassifizierung untergeordneter Bezeichnungen unter der gleichen übergeordneten Bezeichnung oder für die Vorschauversion des Scanners.
+       Diese Option gilt nicht für die Senkung der Klassifizierung untergeordneter Bezeichnungen unter der gleichen übergeordneten Bezeichnung.
         
    - **Wenden Sie für E-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht**: Wenn Sie diese Option auf **Recommended** (Empfohlen) festlegen, werden Benutzer aufgefordert, ihrer E-Mail-Nachricht eine Bezeichnung zuzuweisen. Die Bezeichnung wird dynamisch ausgewählt, basierend auf den Klassifizierungsbezeichnungen, die auf die Anlagen angewendet werden, und es wird die höchste Klassifizierungsbezeichnung ausgewählt. Die Anlage muss eine physische Datei sein, es darf sich nicht um einen Link zu einer Datei handeln (beispielsweise um einen Link zu einer Datei in SharePoint oder OneDrive for Business). Benutzer können die Empfehlung akzeptieren oder ablehnen. Wenn Sie diese Option auf **Automatisch** festlegen, wird die Bezeichnung automatisch angewendet, aber Benutzer können die Bezeichnung entfernen oder vor dem Senden der E-Mail eine andere Bezeichnung auswählen.
-    
-     Wenn die Anlage mit der höchsten Klassifizierungsbezeichnung für den Schutz mit der Vorschaueinstellung der benutzerdefinierten Berechtigungen konfiguriert ist, wird die E-Mail-Nachricht mit der gleichen Klassifizierung bezeichnet, aber der Schutz wird nicht angewendet.
+        
+        Um die Reihenfolge der untergeordneten Bezeichnungen bei der Verwendung dieser Richtlinieneinstellung zu berücksichtigen, müssen Sie [eine erweiterte Clienteinstellung konfigurieren](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
+        
+        Wenn die Anlage mit der höchsten Klassifizierungsbezeichnung für den Schutz mit der Vorschaueinstellung der benutzerdefinierten Berechtigungen konfiguriert ist, wird die E-Mail-Nachricht mit der gleichen Klassifizierung bezeichnet, aber der Schutz wird nicht angewendet.
     
    - **Information Protection-Leiste in Office-Apps anzeigen**: Wenn diese Einstellung deaktiviert ist, können Benutzer keine Bezeichnungen aus einer Leiste in Word, Excel, PowerPoint und Outlook auswählen. Stattdessen müssen sie Bezeichnungen über die Schaltfläche **Schützen** auf dem Menüband auswählen. Wenn diese Einstellung aktiviert ist, können Benutzer Bezeichnungen entweder über die Leiste oder die Schaltfläche auswählen.
         

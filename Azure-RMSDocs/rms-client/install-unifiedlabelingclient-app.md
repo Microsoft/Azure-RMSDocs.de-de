@@ -3,19 +3,20 @@ title: Herunterladen und Installieren des Azure Information Protection-Clients f
 description: Anweisungen für Benutzer zum Installieren der Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows, damit diese ihre Dokumente und E-Mails klassifizieren und schützen können.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/17/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5d2f5c07ebc7f4844b0d35879ae00c7b9066cb6d
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359006"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56250890"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (Vorschau)
 
@@ -69,5 +70,5 @@ Die Installation ist nun abgeschlossen, und Sie können den Azure Information Pr
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zum Speicher für eindeutige Bezeichnungen, die jetzt im Office 365 Security & Compliance Center verwendet werden, finden Sie im Blogbeitrag [Announcing the availability of unified labeling management in the Security & Compliance Center (Ankündigung der Verfügbarkeit einheitlicher Bezeichnungsverwaltung im Security & Compliance Center)](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+Um weitere Informationen zu dem Speicher für einheitliche Bezeichnungen zu erhalten, die das Security & Compliance-Center von Office 365 jetzt verwendet, lesen Sie folgenden Blogbeitrag: [Bekanntgabe der Verfügbarkeit der Verwaltung einheitlicher Bezeichnungen im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
 

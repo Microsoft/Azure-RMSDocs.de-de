@@ -3,18 +3,19 @@ title: Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 S
 description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center für Clients, die einheitliche Bezeichnungen unterstützen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+manager: barbkess
+ms.date: 02/12/2019
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737272"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254780"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -24,8 +25,6 @@ ms.locfileid: "55737272"
 > Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von mehreren Clients und Diensten verwendet werden können.
 
 Migrieren Sie Ihre Bezeichnungen, um Sie im Office 365 Security & Compliance Center zu verwenden. Dort können sie veröffentlicht und dann von [Clients, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), heruntergeladen werden. Der Azure Information Protection-Client lädt die Bezeichnungen mit ihrer Azure Information Protection-Richtlinie aus dem Azure-Portal herunter. 
-
-Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie diese im Azure-Portal oder im Office 365 Security & Compliance Center ändern. Die jeweiligen Clients laden dann ebendiese Änderungen herunter.
 
 Bevor Sie sich die ausführlichen Anweisungen zum Migrieren Ihrer Bezeichnungen durchlesen, sehen Sie nach, ob die folgenden häufig gestellten Fragen hilfreich für Sie sind:
 
@@ -61,6 +60,8 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
 - Schutzvorlagen:
     
     - Vorlagen, die einen cloudbasierten Schlüssel verwenden und Teil einer Bezeichnungskonfiguration sind, werden ebenfalls mit der Bezeichnung migriert. Andere Schutzvorlagen werden nicht migriert. 
+    
+    - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, [konvertieren Sie diese Vorlagen in Bezeichnungen](configure-policy-templates.md#to-convert-templates-to-labels), bevor Sie Ihre Bezeichnungen migrieren. Diese Konfiguration verhindert die Bezeichnungsmigration nicht, wird jedoch im Security & Compliance Center nicht unterstützt.
     
     - Nach der Migration einer Bezeichnung mit cloudbasierten Schutzeinstellungen ist der Ergebnisbereich der Schutzvorlage der Bereich, der im Azure-Portal (bzw. unter Verwendung des ADDRM PowerShell-Moduls) und im Security & Compliance Center definiert ist. 
 

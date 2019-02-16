@@ -3,27 +3,28 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: eb9ff9dd73422813a80b41ee516876bfc4c50663
-ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
+ms.openlocfilehash: 2a6602303e51c4bc1cce803ec43841a52992c8b8
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760785"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254491"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
-> Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen. Alle in dieser Vorschauversion gesammelten Daten werden möglicherweise nicht unterstützt, sobald die Funktion allgemein verfügbar ist.
+> Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.
 
 Verwenden Sie die Azure Information Protection Analysen für die zentrale Berichterstellung, um die Einführung Ihrer Azure Information Protection-Bezeichnungen zu verfolgen. Zusätzlich:
 
@@ -67,7 +68,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Dateien vertrauliche Daten für bekannte Kategorien enthalten, z.B. Finanzdaten und persönliche Informationen, und den Speicherort von Dateien nach diesen Kategorien
     
-Die Berichte verwenden [Azure Log Analytics](/azure/log-analytics/log-analytics-overview), um die Daten in einem Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Getting Started with the Analytics Portal (Erste Schritte mit dem Analytics-Portal)](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal). 
+Die Berichte verwenden [Azure Monitor](/azure/log-analytics/log-analytics-overview), um die Daten in einem Log Analytics-Arbeitsbereich zu speichern, der Ihrer Organisation gehört. Wenn Sie mit der Abfragesprache vertraut sind, können Sie die Abfragen ändern und neue Berichte und Power BI-Dashboards erstellen. Das folgende Tutorial dient als Einführung in die Abfragesprache: [Erste Schritte mit Abfragen in Log Analytics](/azure/azure-monitor/log-query/get-started-queries). 
 
 Weitere Informationen finden Sie in den folgenden Blogbeiträgen: 
 
@@ -99,7 +100,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Die Client-Betriebssystemversion.
 
-Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users).
+Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann von Benutzern eingesehen werden, die über die Zugriffsrechte für diesen Arbeitsbereich verfügen. Weitere Informationen zum Konfigurieren des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten von Konten und Benutzern](/azure/azure-monitor/platform/manage-access#manage-accounts-and-users).
 
 > [!NOTE]
 > Ihr Log Analytics-Arbeitsbereich für Azure Information Protection umfasst ein Kontrollkästchen für übereinstimmende Dokumentinhalte. Wenn Sie dieses Kontrollkästchen aktivieren, werden auch die tatsächlichen Daten erfasst, die von den Typen von vertraulichen Informationen oder Ihren benutzerdefinierten Bedingungen ermittelt wurden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn diese Daten nicht erfasst werden sollen, deaktivieren Sie das Kontrollkästchen.
@@ -111,9 +112,39 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Ein Azure-Abonnement, das Log Analytics umfasst|Eine Preisübersicht finden Sie auf der Seite [Azure Log Analytics – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
+|Ein Azure-Abonnement, das Log Analytics umfasst|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
 |Die aktuelle allgemein verfügbare Version oder Vorschauversion des Azure Information Protection-Clients|Wenn Sie diesen Client noch nicht installiert haben, können Sie ihn über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen und installieren.|
 |Für den Bericht **Ermittlung und Risiko**: <br /><br />– Sie müssen mindestens eine Azure Information Protection-Überprüfungsinstanz (aktuelle allgemein verfügbare Version oder Vorschauversion) bereitstellen, um Daten aus lokalen Datenspeichern anzuzeigen. <br /><br />– Um Daten von Windows 10-Computern anzuzeigen, müssen diese mindestens Build 1809 haben, Sie müssen Windows Defender Advanced Threat Protection (Windows Defender ATP) verwenden, und es muss das Integrationsfeature Azure Information Protection im Windows Defender Security Center aktiviert sein.|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). Wenn Sie ein Upgrade von einer vorherigen Version ausführen, lesen Sie [Upgrade der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />Informationen zur Konfiguration und Verwendung des Integrationsfeatures von Azure Information Protection aus dem Windows Defender Security Center finden Sie unter [Informationsschutz in der Windows-Übersicht](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+
+### <a name="permissions-required-for-azure-information-protection-analytics"></a>Erforderliche Berechtigungen für Azure Information Protection-Analysen
+
+Speziell für Azure Information Protection-Analysen können Sie die Azure AD-Administratorrolle des Benutzers mit Leseberechtigung für Sicherheitsfunktionen als Alternative zu den anderen Azure AD-Rollen verwenden, die die Verwaltung von Azure Information Protection unterstützen.
+
+Da dieses Feature Azure Log Analytics verwendet, steuert die rollenbasierte Zugriffssteuerung (Role-Based Access Control, RBAC) für Azure auch den Zugriff auf Ihren Arbeitsbereich. Wenn Sie noch keine Erfahrung mit Azure-Rollen haben, sollten Sie [Unterschiede zwischen Azure RBAC-Rollen und Azure AD-Administratorrollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles) lesen.
+
+Details:
+
+1. Um auf das Azure Information Protection-Analyseblatt im Azure-Portal zuzugreifen, müssen Sie eine der folgenden [Azure AD-Administratorrollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) besitzen:
+    
+    - **Benutzer mit Leseberechtigung für Sicherheitsfunktionen**
+    
+    - **Information Protection-Administrator**
+    
+   - **Sicherheitsadministrator**
+    
+    - **Globaler Administrator**
+
+2. Um Azure Log Analytics verwenden zu können, benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) oder standardmäßigen [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments):
+    
+    - Um einen Log Analytics-Arbeitsbereich oder benutzerdefinierte Abfragen zu erstellen, benötigen Sie eine der folgenden Rollen:
+    
+        - **Log Analytics-Mitwirkender**
+        - Azure-Rolle: **Besitzer** oder **Mitwirkender**
+    
+    - Zum Anzeigen der Daten in einem Log Analytics-Arbeitsbereich, den ein anderer Administrator erstellt hat:
+    
+        - **Log Analytics-Leser**
+        - Azure-Rolle: **Leser**
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Konfigurieren eines Log Analytics-Arbeitsbereichs für Berichte
 

@@ -3,18 +3,19 @@ title: 'Der Azure Information Protection-Client: Versionsgeschichte und Supportr
 description: Erfahren Sie, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde, und erhalten Sie Informationen zum Support der Lifecycle-Richtlinie.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef6bd888c46d7882ada03554813a943861fb51d
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898816"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266096"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -127,9 +128,12 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Excel unterstützt jetzt auch [optische Kennzeichnungen](../configure-policy-markings.md) in unterschiedlichen Farben.
 
-- Bei vorhandenen S/MIME-Bereitstellungen eine neue erweiterte Clienteinstellung (in der Vorschau) zum Konfigurieren einer Bezeichnung zum automatischen Anwenden des S/MIME-Schutzes in Outlook. [Weitere Informationen](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+- Bei vorhandenen S/MIME-Bereitstellungen eine neue erweiterte Clienteinstellung zum Konfigurieren einer Bezeichnung zum automatischen Anwenden des S/MIME-Schutzes in Outlook. [Weitere Informationen](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - Eine neue erweiterte Clienteinstellung als Alternative zum Bearbeiten der Registrierung, um Anmeldeaufforderungen für den Azure Information Protection-Dienst für [getrennte Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) zu verhindern.
+
+- Eine neue erweiterte Clienteinstellung zur [Unterstützung der Reihenfolge der untergeordneten Bezeichnungen](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) bei Verwendung der folgenden Richtlinieneinstellung:
+    - **Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht**
 
 **Fixes**:
 

@@ -3,16 +3,17 @@ title: 'Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneins
 description: Ein Einführungstutorial, das Sie schrittweise durch das Konfigurieren von Azure Information Protection-Richtlinieneinstellungen führt, um Dokumente und E-Mails Ihrer Organisation besser zu klassifizieren.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231020"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266079"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -157,7 +158,7 @@ Die Information Protection-Leiste wird dann erneut angezeigt, sodass Benutzer ei
 
 Da die Bezeichnung vor dem Senden der E-Mail ausgewählt ist, besteht keine Notwendigkeit, die E-Mail tatsächlich zu senden, um die Funktionsweise dieser Richtlinieneinstellung zu veranschaulichen. Sie können die E-Mail schließen, ohne sie zu senden oder zu speichern.
 
-Sie sollten diese Übung jedoch wiederholen, jedoch auch ein anderes Dokument mit einer höheren Klassifizierung anhängen (eine untergeordnete Bezeichnung der Bezeichnung **Streng vertraulich**). Sie werden dann sehen, dass die Eingabeaufforderung dahingehend geändert wird, dass die höhere Klassifizierungsbezeichnung angewendet wird.
+Sie sollten diese Übung jedoch wiederholen, jedoch auch ein anderes Dokument mit einer höheren Klassifizierung anhängen (eine untergeordnete Bezeichnung der Bezeichnung **Streng vertraulich**). Sie werden dann sehen, dass die Eingabeaufforderung dahingehend geändert wird, dass die höhere Klassifizierungsbezeichnung angewendet wird. Wenn Sie mehrere Anlagen mit untergeordneten Bezeichnungen mit gleicher übergeordneter Bezeichnung testen, müssen Sie [eine erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) zur Unterstützung ihrer Reihenfolge im Azure-Portal konfigurieren.
 
 ## <a name="clean-up-resources"></a>Bereinigen der Ressourcen
 

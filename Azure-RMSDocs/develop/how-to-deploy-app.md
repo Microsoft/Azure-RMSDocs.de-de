@@ -4,20 +4,21 @@ description: Dieser Artikel beschreibt den Prozess der Bereitstellung einer Dien
 keywords: ''
 author: kkanakas
 ms.author: kartikka
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/27/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: a7f31be3e7885e206d24ca4f193270b3ca1aa242
-ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
+ms.openlocfilehash: 5be6785c86cfeb104acc7f12d4cb7b830e9c9d36
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473782"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251874"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Bereitstellen einer Dienstanwendung in einen anderen Mandanten
 
@@ -46,6 +47,6 @@ Der IT-Administrator von *ABC* startet daraufhin die *CoolApp*-Anwendung als Die
 
 Wenn dem IT-Administrator von *ABC* kein Benutzeroberflächendialogfeld für die Dienstprizipalinformation bereitgestellt wird, dann ist **Fluss 2** die Methode, die ausgewählt werden sollte.
 
-## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluss 2: Der *ABC*-IT-Administrator stellt den Schlüssel für das *CoolApp*-Team bereit
+## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluss 2: Der *ABC*-IT-Administrator stellt den Schlüssel für das *CoolApp*-Team bereit.
 
 Sobald der IT-Administrator von *ABC* den Dienstprinzipal erstellt, so wie in **Bild 1** gezeigt, stellt *ABC* die Informationen für das *CoolApp*-Team bereit. Das *CoolApp*-Team bettet dann weiterhin die Informationen in die *CoolApp*-Anwendung ein, um sie im *ABC*-Mandanten zu verwenden.
