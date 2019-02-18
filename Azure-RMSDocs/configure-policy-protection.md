@@ -3,17 +3,18 @@ title: Konfigurieren einer Azure Information Protection-Bezeichnung für den Sch
 description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Management-Schutz können Sie Ihre sensibelsten Dokumente und E-Mails schützen.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: eafcbf02ea6585b8a1434e210c274648982c0894
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 74ec040b0999bfc9c2f3693cc8ceb3e0d438d67c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067294"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255205"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -176,7 +177,7 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) stellen Beispiele für das Konfigurieren von Bezeichnungen, die Schutz anwenden, dar. Die folgenden Beispiele sollten Ihnen ebenfalls beim Konfigurieren von Schutz für verschiedene Szenarios helfen. 
 
-Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Beizeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen****.
+Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Beizeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
 
