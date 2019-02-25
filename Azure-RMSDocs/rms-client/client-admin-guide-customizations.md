@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/14/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
+ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266130"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590001"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -413,7 +413,7 @@ Aufgrund dieser Änderung in der Registrierung werden die folgenden Szenarios un
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Diese Konfiguration ist derzeit nicht mit dem neuen Standardverhalten kompatibel, das PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung schützt. In diesem Szenario können PPDF-Dateien nicht mit Datei-Explorer, PowerShell oder der Überprüfung geöffnet werden. Um dieses Problem zu beheben, verwenden Sie die erweiterte Clienteinstellung, mit der [der ISO-Standard nicht für die PDF-Verschlüsselung verwendet wird](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
@@ -654,11 +654,11 @@ Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 
 - **Fehler**: Nur Fehler.
 
-- **Info**: Minimale Protokollierung, die keine Ereignis-IDs umfasst.
+- **Info**: Minimale Protokollierung, bei der keine Ereignis-IDs einbezogen werden (die Standardeinstellung für den Scanner).
 
-- **Debug**: Vollständige Informationen (die Standardeinstellung).
+- **Debug**: Vollständige Informationen.
 
-- **Trace**: Sehr ausführliche Protokollierung, die Auswirkungen auf die Leistung hat und nur aktiviert werden sollte, wenn dies vom Microsoft-Support gefordert wird. Wenn Sie angewiesen werden, diesen Protokolliergrad festzulegen, denken Sie nach dem Sammeln der relevanten Protokolle daran, einen anderen Wert festzulegen.
+- **Trace**: Ausführliche Protokollierung (die Standardeinstellung für Clients). Für den Scanner bringt diese Einstellung eine erhebliche Beeinträchtigung der Leistung mit sich und sollte für den Scanner nur aktiviert werden, wenn der Microsoft Support dazu auffordert. Wenn Sie angewiesen werden, diesen Protokolliergrad für den Scanner festzulegen, denken Sie nach dem Sammeln der relevanten Protokolle daran, einen anderen Wert festzulegen.
 
 Durch diese erweiterte Clienteinstellung ändern sich weder die Informationen, die für die [zentrale Berichterstellung](../reports-aip.md) an Azure Information Protection gesendet werden, noch die Informationen, die in das lokale [Ereignisprotokoll](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) geschrieben werden.
 
@@ -682,7 +682,7 @@ So erreichen Sie diese Lösung
     
     Hinweis: Wenn die Bezeichnung eine untergeordnete Bezeichnung ist, müssen Sie im Headerwert vor der untergeordneten Bezeichnung auch die übergeordnete Bezeichnung im gleichen Format angeben. Wenn Ihre untergeordnete Bezeichnung z. B. die GUID 27efdf94-80a0-4d02-b88c-b615c12d69a9 aufweist, kann Ihr Wert wie folgt aussehen: `MSIP_Label_ab70158b-bdcc-42a3-8493-2a80736e9cbd_Enabled=True;MSIP_Label_27efdf94-80a0-4d02-b88c-b615c12d69a9_Enabled=True;`
 
-Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Verzögerung beim Erstellen oder Bearbeiten von Regeln für den E-Mail-Verkehr kommt (warten Sie eine Stunde). Ist die Regel in Kraft, geschieht Folgendes, wenn Benutzer Outlook im Web oder einen Client für mobile Geräte mit Unterstützung für Exchange ActiveSync IRM verwenden: 
+Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Verzögerung beim Erstellen oder Bearbeiten von Regeln für den E-Mail-Verkehr kommt (warten Sie eine Stunde). Bei aktivierter Regel treten nun die folgenden Ereignisse ein, wenn Benutzer Outlook im Web verwenden: 
 
 - Benutzer wählen die Exchange-Nachrichtenklassifizierung aus, und senden die E-Mail.
 
@@ -690,7 +690,7 @@ Bevor Sie diese Konfiguration testen, beachten Sie, dass es häufig zu einer Ver
 
 - Wenn interne Empfänger die E-Mail in Outlook anzeigen und der Azure Information Protection-Client installiert ist, sehen sie, dass die Azure Information Protection-Bezeichnung zugewiesen ist. 
 
-Wenn Ihre Azure Information Protection-Bezeichnungen Schutz anwenden, fügen Sie diesen Schutz zur Regelkonfiguration hinzu: Wählen Sie die Option zum Ändern der Nachrichtensicherheit aus, wenden Sie den Rechteschutz an, und wählen Sie dann die RMS-Vorlage oder die Option „Nicht weiterleiten“ aus.
+Wenn Ihre Azure Information Protection-Bezeichnungen Schutz anwenden, fügen Sie diesen Schutz zur Regelkonfiguration hinzu: Wählen Sie die Option zum Ändern der Nachrichtensicherheit aus, wenden Sie den Rechteschutz an, und wählen Sie dann die Schutzvorlage oder die Option „Nicht weiterleiten“ aus.
 
 Sie können Regeln für den E-Mail-Verkehr auch so konfigurieren, dass sie die umgekehrte Zuordnung vornehmen. Wenn eine Azure Information Protection-Bezeichnung erkannt wird, legen Sie eine entsprechende Exchange-Nachrichtenklassifizierung fest:
 

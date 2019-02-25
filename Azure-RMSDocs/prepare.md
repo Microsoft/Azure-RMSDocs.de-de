@@ -4,19 +4,19 @@ description: Vergewissern Sie sich, dass Sie über die erforderlichen Benutzer- 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 02/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be4deaa13311cb414df48fc7edde50dbe42ed744
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: db258b5b9babaf050399bf07baa37a78b36ae21b
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253284"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407741"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -36,7 +36,9 @@ Es gibt verschiedene Verfahren zum Erstellen dieser Konten für Benutzer und Gru
 
 - Sie können die Benutzer und Gruppen einem anderen Verzeichnis erstellen und mit Azure AD synchronisieren.
 
-Wenn Sie Benutzer und Gruppen mit den ersten drei Methoden aus dieser Liste erstellen, werden sie automatisch in Azure AD erstellt und können von Azure Information Protection direkt verwendet werden. Allerdings werden Benutzer und Gruppen in vielen Unternehmensnetzwerke in einem lokalen Verzeichnis erstellt und verwaltet. Diese Konten können von Azure Information Protection nicht direkt verwendet werden, sondern müssen erst mit Azure AD synchronisiert werden.
+Wenn Sie Benutzer und Gruppen mit den ersten drei Methoden aus dieser Liste erstellen, werden sie mit einer Ausnahme automatisch in Azure AD erstellt und können von Azure Information Protection direkt verwendet werden. Allerdings werden Benutzer und Gruppen in vielen Unternehmensnetzwerke in einem lokalen Verzeichnis erstellt und verwaltet. Diese Konten können von Azure Information Protection nicht direkt verwendet werden, sondern müssen erst mit Azure AD synchronisiert werden.
+
+Die im vorherigen Abschnitt erwähnte Ausnahme sind dynamische Verteilerlisten, die für Exchange Online erstellt werden können. Anders als statische Verteilerlisten werden diese Gruppen nicht nach Azure AD repliziert und können daher von Azure Information Protection nicht verwendet werden. 
 
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Verwendung von Benutzern und Gruppen durch Azure Information Protection
 
@@ -96,7 +98,7 @@ Für die Zuweisung von Bezeichnungen:
 
 - Um bereichsbezogene Richtlinien zu konfigurieren, die Gruppenmembern zusätzliche Bezeichnungen zuweisen, können Sie alle Arten von Gruppen in Azure AD verwenden, die über eine E-Mail-Adresse einer überprüften Domäne für den Mandanten des Benutzers verfügen. Eine Gruppe mit einer E-Mail-Adresse wird häufig als E-Mail-aktivierte Gruppe bezeichnet.
 
-    Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine Verteilergruppe (statisch oder dynamisch) und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Typ keine E-Mail-Adresse besitzt.
+    Sie können z. B. eine E-Mail-aktivierte Sicherheitsgruppe, eine statische Verteilergruppe und eine Office 365-Gruppe verwenden. Sie können keine Sicherheitsgruppe (dynamisch oder statisch) verwenden, da dieser Typ keine E-Mail-Adresse besitzt. Ferner können Sie keine dynamische Verteilerliste von Exchange Online verwenden, da diese Gruppe nicht nach Azure AD repliziert wird.
 
 Für die Zuweisung von Nutzungsrechten und Zugriffssteuerungen:
 

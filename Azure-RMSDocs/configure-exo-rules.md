@@ -4,19 +4,19 @@ description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Reg
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265994"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425962"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -34,17 +34,13 @@ Sie können diese Beispiele erweitern und auch ändern. Fügen Sie beispielsweis
 
 Weitere Informationen zur Konfiguration von Regeln für den Nachrichtenfluss zum Verschlüsseln von E-Mail-Nachrichten finden Sie in der Office-Dokumentation unter [Definieren von Nachrichtenflussregeln zum Verschlüsseln von E-Mail-Nachrichten in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8). 
 
-## <a name="where-labels-are-stored-in-emails-and-documents"></a>Wo Bezeichnungen in E-Mails und Dokumenten gespeichert sind
+## <a name="prerequisite-know-your-label-guid"></a>Voraussetzung: Die GUID der Bezeichnung muss bekannt sein
 
-Da eine Azure Information Protection-Bezeichnung in den Metadaten gespeichert ist, können die Nachrichtenflussregeln in Exchange Online diese Informationen für Nachrichten und Dokumentanlagen lesen:
+Da eine Azure Information Protection-Bezeichnung in den Metadaten gespeichert ist, können die Nachrichtenflussregeln in Exchange Online diese Informationen für Nachrichten und Office-Dokumentanlagen lesen. Die E-Mail-Flussregeln unterstützen keine Untersuchung der Metadaten für PDF-Dokumente.
 
-- In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+Bevor Sie Nachrichtenflussregeln konfigurieren, um Nachrichten und Dokumente mit Bezeichnungen zu identifizieren, stellen Sie sicher, dass Sie die GUID der Azure Information Protection-Bezeichnung kennen, die Sie verwenden möchten. 
 
-- Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX) und PowerPoint-Präsentationen (PPT und PPTX) werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
-
-Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung**, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
-
-Bevor Sie Ihre Nachrichtenflussregeln konfigurieren, stellen Sie sicher, dass Sie die GUID der Azure Information Protection-Bezeichnung kennen, die Sie verwenden möchten.
+Weitere Informationen über die von einer Bezeichnung gespeicherten Metadaten und das Verfahren zum Identifizieren von Bezeichnungs-GUIDs finden Sie unter [In E-Mails und Dokumenten gespeicherte Bezeichnungsinformationen](configure-policy.md#label-information-stored-in-emails-and-documents).
 
 ## <a name="example-configurations"></a>Beispielkonfigurationen
 

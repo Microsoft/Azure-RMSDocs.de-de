@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258707"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425945"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -58,16 +58,17 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 - Verwenden Sie ein Konto mit einer der folgenden [Administratorrollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-  - **Information Protection-Administrator**
-
+    - **Information Protection-Administrator**
+    
+    - **Benutzer mit Leseberechtigung für Sicherheitsfunktionen** nur für [Azure Information Protection-Analysen](reports-aip.md)
+    
   - **Sicherheitsadministrator**
-
+    
   - **Globaler Administrator/Unternehmensadministrator**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum einheitlichen Bezeichnungsspeicher migriert wurde, um Bezeichnungen über das Azure-Portal zu verwalten, benötigt Ihr Konto auch Zugriffsberechtigungen für das Office 365 Security & Compliance Center. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
-    
-    - Verwenden Sie den **Benutzer mit Leseberechtigung für Sicherheitsfunktionen** nur für [Azure Information Protection-Analysen](reports-aip.md).
+    > Wenn Ihr Mandant zum einheitlichen Bezeichnungsspeicher migriert wurde, um Azure Information Protection über das Azure-Portal zu verwalten, muss Ihr Konto ein globaler Administrator oder eine der aufgelisteten Rollen zuzüglich Zugriffsberechtigungen für das Office 365 Security & Compliance Center sein. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Der Erste Zugriff auf das Blatt „Azure Information Protection“
 
@@ -146,6 +147,16 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 - [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md)
 
 - [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md)
+
+## <a name="label-information-stored-in-emails-and-documents"></a>In E-Mails und Dokumenten gespeicherte Bezeichnungsinformationen
+
+Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird die Bezeichnung hinter den Kulissen in den Metadaten gespeichert, so dass Anwendungen und Dienste die Bezeichnung lesen können:
+
+- In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+
+- Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX), PowerPoint-Präsentationen (PPT und PPTX) sowie PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
+
+Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung** im Azure Portal, wenn Sie die Azure Information Protection-Richtlinie anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
