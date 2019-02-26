@@ -27,7 +27,7 @@
 ##### [Reiner Schutzmodus](client-protection-only-mode.md)
 ##### [Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben](upgrade-client-app.md)
 ### [Azure Information Protection-Client für einheitliche Bezeichnungen (Vorschau)](unifiedlabelingclient-version-release-history.md)
-### [Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (Vorschau)](install-unifiedlabelingclient-app.md)
+#### [Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (Vorschau)](install-unifiedlabelingclient-app.md)
 ### [Unterstützte PDF-Reader](protected-pdf-readers.md)
 ### [Hinweise zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
 ### [RMS-Schutz mit Windows Server FCI](configure-fci.md)
