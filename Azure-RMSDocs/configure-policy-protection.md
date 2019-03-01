@@ -4,17 +4,17 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 74ec040b0999bfc9c2f3693cc8ceb3e0d438d67c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255205"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017148"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -73,7 +73,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Wenn ein Benutzer keine Berechtigungen zum Entfernen des Rights Management-Schutzes hat und eine mit der Option **Schutz entfernen** konfigurierte Bezeichnung auswählt, wird folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
 
-4. Wenn Sie **Schützen** ausgewählt haben, klicken Sie jetzt auf **Schutz**, um das Blatt **Schutz** zu öffnen:
+4. Wenn Sie **Schützen** ausgewählt haben, wird das Blatt **Schutz** automatisch geöffnet, wenn eine der anderen Optionen ausgewählt wurde. Wenn Sie dieses neue Blatt nicht automatisch geöffnet wird, wählen Sie **Schutz**:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
@@ -95,11 +95,13 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
      Diese Vorlage muss veröffentlicht werden (nicht archiviert) und darf nicht bereits mit einer anderen Bezeichnung verknüpft sein, damit Sie eine vordefinierte Vorlage auswählen können. Wenn Sie diese Option auswählen, können Sie die Schaltfläche **Vorlage bearbeiten** verwenden, um [die Vorlage in eine Bezeichnung umzuwandeln](configure-policy-templates.md#to-convert-templates-to-labels).
     
-     Tipp: Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
+     Wenn Sie es gewohnt sind, benutzerdefinierte Vorlagen zu erstellen und zu bearbeiten, sind die [Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben](migrate-portal.md), möglicherweise nützlich für Sie.
 
-7. Wenn Sie **Festlegen von Berechtigungen** für **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt haben, können Sie durch diese Option die gleichen Einstellungen konfigurieren, die Sie in einer Vorlage konfigurieren können. 
+7. Wenn Sie **Berechtigungen festlegen** für **Azure (Cloudschlüssel)** ausgewählt haben, können Sie über diese Option Benutzer und Nutzungsrechte auswählen. 
     
-    Wählen Sie **Berechtigungen hinzufügen**, und wählen Sie auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen, der die Rechte besitzt, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
+    Wenn Sie keine Benutzer auswählen und in diesem Blatt auf **OK** und dann im Blatt **Bezeichnung** auf **Speichern** klicken, geschieht Folgendes: Die Bezeichnung wird so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail uneingeschränkt öffnen kann. Diese Konfiguration wird gelegentlich als „Nur für mich“ bezeichnet und ist möglicherweise erforderlich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, wählen Sie nicht **Berechtigungen hinzufügen** aus. Nach dem Speichern der Bezeichnung wird Ihnen beim nächsten Öffnen des Blatts **Schutz** für **Benutzer** die Option **IPC_USER_ID_OWNER** und für **Berechtigungen** die Option **Mitbesitzer** angezeigt, um diese Konfiguration widerzuspiegeln.
+    
+    Um die Benutzer anzugeben, die geschützte Dokumente und E-Mails öffnen können sollen, wählen Sie **Berechtigungen hinzufügen**. Wählen Sie dann auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen aus, die die Rechte besitzen sollen, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
     
    - Wählen Sie **Aus der Liste auswählen**, wo Sie dann **Hinzufügen \<Organisationsname> – Alle Mitglieder** auswählen können, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Alle authentifizierten Benutzer hinzufügen** auswählen oder das Verzeichnis durchsuchen.
         
@@ -177,7 +179,9 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) stellen Beispiele für das Konfigurieren von Bezeichnungen, die Schutz anwenden, dar. Die folgenden Beispiele sollten Ihnen ebenfalls beim Konfigurieren von Schutz für verschiedene Szenarios helfen. 
 
-Wählen Sie für jedes der folgenden Beispiele auf dem Blatt \<*Beizeichnungsname*> **Schutz** aus, um das Blatt **Schutz** zu öffnen.
+Wählen Sie für jedes folgende Beispiel auf dem Blatt \<*Bezeichnungsname*> die Option **Schützen**. Wenn das Blatt **Schutz** nicht automatisch geöffnet wird, wählen Sie **Schutz**, um dieses Blatt zu öffnen. Dort können Sie die Konfigurationsoptionen für den Schutz auswählen:
+
+![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Beispiel 1: Bezeichnung für die Anwendung von „Nicht weiterleiten“ zum Senden einer geschützten E-Mail an ein Gmail-Konto
 

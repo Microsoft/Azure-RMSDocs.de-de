@@ -1,0 +1,430 @@
+items:
+- name: Azure Information Protection-Dokumentation
+  href: index.yml
+- name: Übersicht
+  href: /azure/information-protection/what-is-information-protection
+  items:
+  - name: Was ist Azure Information Protection?
+    href: what-is-information-protection.md
+  - name: Vergleich von Azure Information Protection und AD RMS
+    href: compare-on-premise.md
+  - name: Anforderungen
+    href: requirements.md
+    items:
+    - name: Azure Active Directory-Anforderungen
+      href: requirements-azure-ad.md
+    - name: Unterstützung von Clientgeräten für den Schutz von Daten
+      href: requirements-client-devices.md
+    - name: Unterstützung von Anwendungen für den Schutz von Daten
+      href: requirements-applications.md
+    - name: Unterstützung lokaler Server für den Schutz von Daten
+      href: requirements-servers.md
+- name: Schnellstarts
+  href: /azure/information-protection/quickstart-viewpolicy
+  items:
+  - name: Erste Schritte im Azure-Portal
+    href: quickstart-viewpolicy.md
+  - name: Ermitteln vertraulicher Informationen
+    href: quickstart-findsensitiveinfo.md
+  - name: Konfigurieren einer Bezeichnung zum Schützen von E-Mails
+    href: quickstart-label-dnf-protectedemail.md
+  - name: Erstellen einer neuen Bezeichnung für bestimmte Benutzer
+    href: quickstart-label-specificusers.md
+  expanded: true
+- name: Lernprogramme
+  href: infoprotect-quick-start-tutorial.md
+  items:
+  - name: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung
+    href: infoprotect-quick-start-tutorial.md
+  - name: Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren
+    href: infoprotect-settings-tutorial.md
+- name: Konzepte
+  href: overview-policy.md
+  items:
+  - name: Übersicht über die Azure Information Protection-Richtlinie
+    href: overview-policy.md
+  - name: Rights Management-Schutz
+    href: what-is-azure-rms.md
+    items:
+    - name: Wie funktioniert es?
+      href: how-does-it-work.md
+    - name: Unterstützung des Azure Rights Management-Schutzes durch Anwendungen
+      href: applications-support.md
+      items:
+      - name: Office-Anwendungen und -Dienste
+        href: office-apps-services-support.md
+      - name: Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden
+        href: file-server-support.md
+      - name: Sonstige Anwendungen, die die RMS-APIs unterstützen
+        href: api-support.md
+  - name: RMS for individuals und Azure Information Protection
+    href: rms-for-individuals.md
+  - name: Auch bezeichnet als...
+    href: aka.md
+- name: Schrittanleitungen
+  href: how-to-guides.md
+  items:
+  - name: Schrittanleitungen für häufige Szenarios
+    href: how-to-guides.md
+  - name: Planen und Entwerfen
+    href: deployment-roadmap.md
+    items:
+    - name: Roadmap für die Bereitstellung
+      href: deployment-roadmap.md
+    - name: Migration von AD RMS
+      href: migrate-from-ad-rms-to-azure-rms.md
+      items:
+      - name: Vorbereitung
+        href: migrate-from-ad-rms-phase1.md
+      - name: Serverseitige Konfiguration
+        href: migrate-from-ad-rms-phase2.md
+        items:
+        - name: Softwareschlüssel zu Softwareschlüssel
+          href: migrate-softwarekey-to-softwarekey.md
+        - name: HSM-Schlüssel zu HSM-Schlüssel
+          href: migrate-hsmkey-to-hsmkey.md
+        - name: Softwareschlüssel zu HSM-Schlüssel
+          href: migrate-softwarekey-to-hsmkey.md
+      - name: Clientseitige Konfiguration
+        href: migrate-from-ad-rms-phase3.md
+      - name: Unterstützung der Dienstekonfiguration
+        href: migrate-from-ad-rms-phase4.md
+      - name: Aufgaben nach der Migration
+        href: migrate-from-ad-rms-phase5.md
+    - name: Planen und Implementieren des Mandantenschlüssels
+      href: plan-implement-tenant-key.md
+      items:
+      - name: BYOK – Preise und Einschränkungen
+        href: byok-price-restrictions.md
+    - name: Vorbereiten von Benutzern und Gruppen
+      href: prepare.md
+  - name: Bereitstellen und Verwenden des Diensts
+    href: activate-service.md
+    items:
+    - name: Aktivieren des Diensts
+      href: activate-service.md
+      items:
+      - name: Office 365 Admin Center
+        href: activate-office365.md
+      - name: Azure-Portal
+        href: activate-azure.md
+    - name: Konfigurieren von Anwendungen
+      href: configure-applications.md
+      items:
+      - name: Office 365
+        href: configure-office365.md
+      - name: Office-Apps
+        href: configure-office-apps.md
+      - name: Azure Information Protection-Client
+        href: configure-client.md
+    - name: Konfigurieren der Nutzungsrechte
+      href: configure-usage-rights.md
+    - name: Konfigurieren von Administratoren für Ermittlungsdienste oder die Datenwiederherstellung
+      href: configure-super-users.md
+    - name: Konfigurieren der Azure Information Protection-Richtlinie
+      href: configure-policy.md
+      items:
+      - name: Die Standardrichtlinie
+        href: configure-policy-default.md
+      - name: Konfigurieren der Richtlinieneinstellungen
+        href: configure-policy-settings.md
+      - name: Erstellen einer neuen Bezeichnung
+        href: configure-policy-new-label.md
+      - name: Hinzufügen oder Entfernen einer Bezeichnung
+        href: configure-policy-add-remove-label.md
+      - name: Löschen oder Ändern der Position einer Bezeichnung
+        href: configure-policy-delete-reorder.md
+      - name: Ändern einer Bezeichnung
+        href: configure-policy-change-label.md
+      - name: Schutz konfigurieren
+        href: configure-policy-protection.md
+        items:
+        - name: HYOK
+          href: configure-adrms-restrictions.md
+      - name: Konfigurieren von visuellen Kennzeichnungen
+        href: configure-policy-markings.md
+      - name: Konfigurieren von Bedingungen
+        href: configure-policy-classification.md
+      - name: Konfigurieren von bereichsbezogenen Richtlinien
+        href: configure-policy-scope.md
+      - name: Konfigurieren und Verwalten von Vorlagen
+        href: configure-policy-templates.md
+        items:
+        - name: Aktualisieren von Vorlagen für Benutzer
+          href: refresh-templates.md
+        - name: PowerShell-Referenz
+          href: configure-templates-with-powershell.md
+        - name: Migrieren über das klassische Azure-Portal
+          href: migrate-portal.md
+      - name: Konfigurieren von Sprachen
+        href: configure-policy-languages.md
+      - name: Migrieren von Bezeichnungen zu Office 365
+        href: configure-policy-migrate-labels.md
+    - name: Konfigurieren der sicheren Dokumentenzusammenarbeit
+      href: secure-collaboration-documents.md
+    - name: Konfigurieren von Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
+      href: configure-exo-rules.md
+    - name: Bereitstellen der Azure Information Protection-Überprüfung
+      href: deploy-aip-scanner.md
+    - name: Bereitstellen der Azure Information Protection-Überprüfung (VORSCHAU)
+      href: deploy-aip-scanner-preview.md
+    - name: Berichterstellung für Azure Information Protection
+      href: reports-aip.md
+    - name: Bereitstellen des RMS-Verbindungsdiensts
+      href: deploy-rms-connector.md
+      items:
+      - name: Installieren und Konfigurieren des Verbindungsdiensts
+        href: install-configure-rms-connector.md
+      - name: Konfigurieren von Servern
+        href: configure-servers-rms-connector.md
+        items:
+        - name: Registrierungseinstellungen
+          href: rms-connector-registry-settings.md
+      - name: Überwachen des Connectors
+        href: monitor-rms-connector.md
+    - name: Überprüfen des Azure Rights Management-Diensts
+      href: verify.md
+    - name: Unterstützen von Benutzern beim Schützen von Dateien
+      href: help-users.md
+    - name: Protokollieren und Analysieren der Nutzung
+      href: log-analyze-usage.md
+    - name: Vorgänge für Ihren Mandantenschlüssel
+      href: operations-tenant-key.md
+      items:
+      - name: Microsoft-verwaltet
+        href: operations-microsoft-managed-tenant-key.md
+      - name: Vom Kunden verwaltet
+        href: operations-customer-managed-tenant-key.md
+    - name: Verwalten personenbezogener Daten für Azure Information Protection
+      href: manage-personal-data.md
+    - name: Außerbetriebsetzen und Deaktivieren
+      href: decommission-deactivate.md
+    - name: Verwalten mit PowerShell
+      href: administer-powershell.md
+      items:
+      - name: Installieren des PowerShell-Moduls für AADRM
+        href: install-powershell.md
+  - name: Bereitstellen und Verwenden des Clients
+    href: ./rms-client/use-client.md
+    items:
+    - name: Lösungen für die Clientbereitstellung
+      href: ./rms-client/use-client.md
+      items:
+      - name: Azure Information Protection-Client
+        href: ./rms-client/aip-client.md
+        items:
+        - name: Azure Information Protection-Client&#58; Verlauf der Versionsveröffentlichungen
+          href: ./rms-client/client-version-release-history.md
+        - name: Azure Information Protection-Client – Administratorhandbuch
+          href: ./rms-client/client-admin-guide.md
+          items:
+          - name: Installieren des Clients für Benutzer
+            href: ./rms-client/client-admin-guide-install.md
+          - name: Anpassungen
+            href: ./rms-client/client-admin-guide-customizations.md
+          - name: Clientdateien und Nutzungsprotokollierung
+            href: ./rms-client/client-admin-guide-files-and-logging.md
+          - name: Dokumentkontrolle
+            href: ./rms-client/client-admin-guide-document-tracking.md
+          - name: Unterstützte Dateitypen
+            href: ./rms-client/client-admin-guide-file-types.md
+          - name: PowerShell-Befehle
+            href: ./rms-client/client-admin-guide-powershell.md
+        - name: Azure Information Protection-Benutzerhandbuch
+          href: ./rms-client/client-user-guide.md
+          items:
+          - name: Herunterladen und Installieren des Clients
+            href: ./rms-client/install-client-app.md
+          - name: Klassifizieren einer Datei oder E-Mail
+            href: ./rms-client/client-classify.md
+          - name: Klassifizieren und Schützen einer Datei oder E-Mail
+            href: ./rms-client/client-classify-protect.md
+          - name: Verfolgen und Widerrufen von Dokumenten
+            href: ./rms-client/client-track-revoke.md
+          - name: Öffnen von Dateien, die geschützt wurden
+            href: ./rms-client/client-view-use-files.md
+          - name: Entfernen von Bezeichnungen und Schutz
+            href: ./rms-client/client-remove-label-protection.md
+          - name: Reiner Schutzmodus
+            href: ./rms-client/client-protection-only-mode.md
+        - name: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
+          href: ./rms-client/upgrade-client-app.md
+      - name: Azure Information Protection-Client für einheitliche Bezeichnungen (VORSCHAU)
+        href: ./rms-client/unifiedlabelingclient-version-release-history.md
+        items:
+        - name: Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (VORSCHAU)
+          href: ./rms-client/install-unifiedlabelingclient-app.md
+      - name: Unterstützte PDF-Reader
+        href: ./rms-client/protected-pdf-readers.md
+      - name: Anmerkungen zur Bereitstellung des RMS-Clients
+        href: ./rms-client/client-deployment-notes.md
+      - name: RMS-Schutz mit Windows Server FCI
+        href: ./rms-client/configure-fci.md
+        items:
+        - name: PowerShell-Skript
+          href: ./rms-client/fci-script.md
+  - name: Entwickeln und Anpassen von Apps
+    href: ./develop/developers-guide.md
+    items:
+    - name: Entwicklerhandbuch
+      href: ./develop/developers-guide.md
+    - name: Microsoft Information Protection
+      href: https://aka.ms/mipsdkdocs
+    - name: Rights Management SDK 4.2
+      href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
+      items:
+      - name: Übersicht
+        href: ./develop/overview.md
+      - name: Erste Schritte
+        href: ./develop/get-started.md
+        items:
+        - name: Neuheiten
+          href: ./develop/release-notes.md
+        - name: Einrichten der Entwicklerumgebung
+          href: ./develop/setup-Developer-environment.md
+        - name: Android-Setup
+          href: ./develop/android-sdk.md
+        - name: Linux-Setup
+          href: ./develop/linux-setup.md
+        - name: Einrichten von iOS und OS X
+          href: ./develop/ios-sdk.md
+        - name: Windows Phone-Setup
+          href: ./develop/windows-phone-apps.md
+        - name: Windows Store-Setup
+          href: ./develop/winrt-sdk.md
+        - name: Codebeispiele
+          href: ./develop/code-examples.md
+        - name: Codebeispiele für Android
+          href: ./develop/android-code.md
+        - name: Linux-Codebeispiele
+          href: ./develop/linux-c-code-examples.md
+        - name: Codebeispiele für iOS/OS X
+          href: ./develop/ios-os-x-code-examples.md
+        - name: Communityressourcen
+          href: ./develop/community-resources.md
+      - name: Anleitung für Entwickler
+        href: ./develop/core-concepts.md
+        items:
+        - name: 'Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS'
+          href: ./develop/authentication-integration.md
+        - name: 'Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung'
+          href: ./develop/enabling-logging.md
+        - name: 'Gewusst wie: Verwenden integrierter Rechte'
+          href: ./develop/built-in-rights-usage-restriction-reference.md
+        - name: 'Gewusst wie: Verwenden der Dokumentenverfolgung'
+          href: ./develop/how-to-use-document-tracking.md
+      - name: API-Referenz
+        href: ./develop/api-reference-4-2.md
+        items:
+        - name: Android-API-Referenz
+          href: https://msdn.microsoft.com/library/dn758245.aspx
+        - name: Linux-API-Referenz
+          href: ./develop/linux-c-api-reference.md
+        - name: iOS/OS X-API-Referenz
+          href: https://msdn.microsoft.com/library/dn758306.aspx
+        - name: Windows-API-Referenz
+          href: https://msdn.microsoft.com/library/dn891914.aspx
+    - name: Rights Management SDK 2.1
+      href: ./develop/microsoft-information-protection-and-control-client-portal.md
+      items:
+      - name: Übersicht
+        href: ./develop/ad-rms-overview.md
+        items:
+        - name: Client
+          href: ./develop/ad-rms-client.md
+        - name: Server
+          href: ./develop/ad-rms-server.md
+      - name: Erste Schritte
+        href: ./develop/getting-started-with-ad-rms-2-0.md
+        items:
+        - name: Anmerkungen zu dieser Version
+          href: ./develop/release-notes-rtm.md
+        - name: Installieren des SDK
+          href: ./develop/install-the-rms-sdk.md
+        - name: Konfigurieren von Visual Studio
+          href: ./develop/how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md
+        - name: Entwickeln Ihrer Anwendung
+          href: ./develop/developing-your-application.md
+        - name: Testen der Anwendung
+          href: ./develop/how-to-set-up-your-test-environment.md
+        - name: Bereitstellen in der Produktion
+          href: ./develop/deploying-your-application.md
+      - name: Anleitung für Entwickler
+        href: ./develop/Developer-notes.md
+        items:
+        - name: Verwenden der ADAL-Authentifizierung
+          href: ./develop/how-to-use-adal-authentication.md
+          items:
+          - name: Konfigurieren von Azure RMS für die ADAL-Authentifizierung
+            href: ./develop/adal-auth.md
+        - name: Hinzufügen expliziter Besitzerrechte
+          href: ./develop/add-explicit-owner-rights.md
+        - name: Debuggen einer rechtlich geschützten Anwendung
+          href: ./develop/debugging-applications-that-use-ad-rms.md
+        - name: Bereitstellen einer App
+          href: ./develop/how-to-deploy-app.md
+        - name: Aktivieren von Dokumentenverfolgung und -widerruf
+          href: ./develop/tracking-content.md
+        - name: Aktivieren von E-Mail-Benachrichtigungen
+          href: ./develop/how-to-enable-email-notification.md
+        - name: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
+          href: ./develop/how-to-use-file-api-with-aadrm-cloud.md
+        - name: Installieren und Konfigurieren eines RMS-Servers
+          href: ./develop/how-to-install-and-configure-an-rms-server.md
+        - name: Festlegen des API-Sicherheitsmodus
+          href: ./develop/setting-the-api-security-mode-api-mode.md
+        - name: Arbeiten mit Verschlüsselungseinstellungen
+          href: ./develop/working-with-encryption.md
+        - name: Anwendungstypen
+          href: ./develop/application-types.md
+        - name: Datei-API-Konfiguration
+          href: ./develop/file-api-configuration.md
+        - name: Sicherheitsleitfaden
+          href: ./develop/security-guidelines.md
+        - name: Unterstützte Dateiformate
+          href: ./develop/supported-file-formats.md
+        - name: Unterstützte Plattformen
+          href: ./develop/supported-platforms.md
+        - name: Grundlegendes zu Nutzungseinschränkungen
+          href: ./develop/understanding-usage-restrictions.md
+      - name: API-Referenz
+        href: ./develop/api-reference-2-1.md
+        items:
+        - name: Konstanten
+          href: https://msdn.microsoft.com/library/hh535291.aspx
+        - name: Datentypen
+          href: https://msdn.microsoft.com/library/hh535288.aspx
+        - name: Funktionen
+          href: https://msdn.microsoft.com/library/hh535289.aspx
+        - name: Strukturen
+          href: https://msdn.microsoft.com/library/hh535294.aspx
+        - name: Fehlercodes
+          href: https://msdn.microsoft.com/library/hh535248.aspx
+    - name: Nutzungsbedingungen
+- name: Ressourcen
+  href: faqs.md
+  items:
+  - name: Häufig gestellte Fragen
+    href: faqs.md
+    items:
+    - name: Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen
+      href: faqs-infoprotect.md
+    - name: Häufig gestellte Fragen zum Schutz von Daten
+      href: faqs-rms.md
+  - name: Informationen und Support
+    href: information-support.md
+    items:
+    - name: Schnelle Hilfe
+      href: help-bot.md
+  - name: Kompatibilitätsinformationen und ergänzende Informationen
+    href: compliance.md
+  - name: PowerShell-Referenz
+    href: https://docs.microsoft.com/powershell/azure/aip/overview?view=azureipps
+  - name: Terminologie
+    href: terminology.md
+ms.openlocfilehash: 37e1f6c9fe9955518e5f26985a0de232f7b4691e
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017250"
