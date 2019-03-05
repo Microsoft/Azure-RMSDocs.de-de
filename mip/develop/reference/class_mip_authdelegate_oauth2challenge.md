@@ -1,18 +1,18 @@
 ---
 title: Klasse mip::AuthDelegate::OAuth2Challenge
 description: Dokumentiert die mip::authdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 64a485c30dc6fdb8154c85c3afbd548bbc78ce9a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2e4a107a0a967f4d3ff58ebf269bb701f5834fb0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259407"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331817"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>Klasse mip::AuthDelegate::OAuth2Challenge 
 eine Klasse, die alle die erforderlichen aus der aufrufenden Anwendung Informationen um ein oauth2-Token zu generieren.

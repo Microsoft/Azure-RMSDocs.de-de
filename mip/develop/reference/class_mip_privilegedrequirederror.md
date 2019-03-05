@@ -1,18 +1,18 @@
 ---
 title: mip::PrivilegedRequiredError-Klasse
 description: 'Beschreibt die Klasse:: privilegedrequirederror-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 3d4473029011a690ee98dbb77547de77c82b2208
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 778eada67cc244f1f0c81f8246fe33b0aa46140e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330714"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>mip::PrivilegedRequiredError-Klasse 
 Die aktuelle Bezeichnung wurde als privilegierter Vorgang zugewiesen (das Äquivalent zu einem Administratorvorgang), daher kann sie nicht außer Kraft gesetzt werden.

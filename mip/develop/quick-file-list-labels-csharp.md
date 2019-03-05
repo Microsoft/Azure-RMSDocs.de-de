@@ -1,18 +1,18 @@
 ---
 title: Schnellstart – Listet die vertraulichkeitsbezeichnungen in einem Microsoft Information Protection (MIP)-Mandanten, die mit dem MIP SDK C# Wrapper
 description: Einen Schnellstart zeigt Ihnen, wie Sie mit der Microsoft Information Protection SDK C# Wrapper um die Liste der vertraulichkeitsbezeichnungen in Ihrem Mandanten.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
-ms.author: bryanla
-ms.openlocfilehash: f7071952693e947977278b39d28a8ee985d5834e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333329"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)
 
@@ -91,7 +91,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|
-| Ungültiges Zugriffstoken | *... Ist eine Ausnahme aufgetreten ist das Zugriffstoken falsche/abgelaufen? <br> <br>Fehler bei API-Aufruf: Fehler bei der Profile_add_engine_async: [Klasse mip::PolicySyncException] Fehler beim Abrufen der Richtlinie, Fehler bei Anforderung mit http-Statuscode: 401, X-ms-Diagnostics: [2000001; Reason = "OAuth-Token, die mit der Anforderung übermittelte kann nicht analysiert werden."; Error_category = "Invalid_token"], CorrelationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Process 29924) wurde beendet mit Code 0.<br> <br>Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen...* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Navigieren Sie zurück zum [Aktualisieren der Logik zum Abrufen des Tokens](#update-the-token-acquisition-logic-with-a-valid-access-token), stellen Sie das Zugriffstoken wieder her, aktualisieren Sie `AcquireOAuth2Token()` erneut, und führen Sie die Tests und die Erstellung erneut durch. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
+| Ungültiges Zugriffstoken | *Es ist eine Ausnahme aufgetreten... ist das Zugriffstoken falsche/abgelaufen? <br> <br>Fehler bei API-Aufruf: Fehler bei der Profile_add_engine_async: [Klasse mip::PolicySyncException] Fehler beim Abrufen der Richtlinie, Fehler bei Anforderung mit http-Statuscode: 401, X-ms-Diagnostics: [2000001; Reason = "OAuth-Token, die mit der Anforderung übermittelte kann nicht analysiert werden."; Error_category = "Invalid_token"], CorrelationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Process 29924) wurde beendet mit Code 0.<br> <br>Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen...* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Navigieren Sie zurück zum [Aktualisieren der Logik zum Abrufen des Tokens](#update-the-token-acquisition-logic-with-a-valid-access-token), stellen Sie das Zugriffstoken wieder her, aktualisieren Sie `AcquireOAuth2Token()` erneut, und führen Sie die Tests und die Erstellung erneut durch. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
 | Vertraulichkeitsbezeichnungen sind nicht konfiguriert | Nicht zutreffend | Wenn Ihr Projekt erfolgreich erstellt wird, Sie aber keine Ausgabe im Konsolenfenster erhalten, stellen Sie sicher, dass die Vertraulichkeitsbezeichnungen Ihrer Organisation ordnungsgemäß konfiguriert sind. Ausführliche Informationen finden Sie unter „Definieren des Bezeichnungsschemas und der Schutzeinstellungen“ im Artikel zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md).  |
 
 ## <a name="next-steps"></a>Nächste Schritte

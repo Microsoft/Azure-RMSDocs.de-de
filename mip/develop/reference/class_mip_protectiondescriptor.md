@@ -1,18 +1,18 @@
 ---
 title: mip::ProtectionDescriptor-Klasse
 description: Dokumentiert die mip::protectiondescriptor-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d04d1fe3c3d59592084a60b68d50d74ae10291c0
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: bf063cb8b56cfd0c487b62394c9226519e85b1f3
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259625"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330745"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.

@@ -2,18 +2,18 @@
 title: 'Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung für eine Datei mit dem C++ MIP SDK'
 description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem Microsoft Information Protection C++ SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können.
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256684"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332836"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen Sie und Abrufen Sie einer vertraulichkeitsbezeichnung (C++)
 

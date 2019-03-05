@@ -1,18 +1,18 @@
 ---
 title: Klasse mip::NoPolicyError
 description: Dokumentiert die mip::nopolicyerror-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 409c9f379630594be662ae4a6723e74fbc7f10bc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4059905ed18356f373d8264099dde8d7694898d1
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256310"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332751"
 ---
 # <a name="class-mipnopolicyerror"></a>Klasse mip::NoPolicyError 
 Richtlinien für Mandanten ist nicht für klassifizierungsbezeichnungen/konfiguriert.

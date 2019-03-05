@@ -1,18 +1,18 @@
 ---
 title: 'Konzepte: Das Profile-Objekt der File-API'
 description: In diesem Artikel werden die Konzepte des Profile-Objekts der File-API erläutert, das während der Anwendungsinitialisierung erstellt wird.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 74937f5ef157c7807b6519a6490af80d46de6a8f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 19b283017929858299bd1c9af0662b170b4206f0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254510"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333009"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profile-Objekt der File-API
 

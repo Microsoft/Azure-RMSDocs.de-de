@@ -1,18 +1,18 @@
 ---
 title: Klasse mip::ConsentDelegate
 description: Dokumentiert die mip::consentdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6b4ec544e0390f9fd17d39dc146cfd538cfb927c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 69ffbe72ac9d8241115fecd5bbae28052fb93e33
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254865"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333227"
 ---
 # <a name="class-mipconsentdelegate"></a>Klasse mip::ConsentDelegate 
 Delegat für Vorgänge, die eine Zustimmung erfordern

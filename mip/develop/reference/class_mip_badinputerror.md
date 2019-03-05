@@ -1,18 +1,18 @@
 ---
 title: mip::BadInputError-Klasse
 description: 'Beschreibt die Klasse:: badinputerror-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 03c8aed444cb2859f3f1366cdb52bba3b2b17524
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: c25b30282a17703ea6c0aed7f51731d5aa5a8f53
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250758"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329929"
 ---
 # <a name="class-mipbadinputerror"></a>mip::BadInputError-Klasse 
 Der Fehler bei ungültiger Eingabe wird ausgegeben, wenn die Eingabe in eine SDK-API ungültig ist.

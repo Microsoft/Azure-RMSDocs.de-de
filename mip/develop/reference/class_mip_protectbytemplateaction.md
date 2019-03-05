@@ -1,18 +1,18 @@
 ---
 title: mip::ProtectByTemplateAction-Klasse
 description: 'Beschreibt die Klasse:: protectbytemplateaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9c7114bcceceef537675ca04499cdb1710456b82
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 7ce74109d555761dde5710c4628faed3b3a2523e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252366"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333465"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>mip::ProtectByTemplateAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefügt wird.

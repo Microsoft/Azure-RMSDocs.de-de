@@ -1,18 +1,18 @@
 ---
 title: mip::UserRights-Klasse
 description: 'Beschreibt die Klasse:: userrights-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: aadf12606f74d508ba3ebdc1ce0770febd49e142
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2a45f7bc9947984f9189b10bd886a53807b3abdb
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251300"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332668"
 ---
 # <a name="class-mipuserrights"></a>mip::UserRights-Klasse 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rechte.
