@@ -4,19 +4,19 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258061"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756146"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -61,6 +61,8 @@ Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen
     Es wird empfohlen, die Konfiguration der Bezeichnungen im Azure-Portal abzuschließen und die Bezeichnungen anschließend zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann im Security & Compliance Center bearbeitet werden müssen.
 
 Bevor Sie Ihre Bezeichnungen migrieren, vergewissern Sie sich, dass Sie die [Überlegungen und Bezeichnungseinstellungen, die nicht vom Security & Compliance Center unterstützt werden](configure-policy-migrate-labels.md#considerations-for-unified-labels), verstanden haben.
+
+Weitere Informationen finden Sie unter [Welchen Vorschauclient installiere ich zum Testen der neuen Funktion?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Welches Verwaltungsportal kann ich verwenden, nachdem ich meine Bezeichnungen migriert habe?
 

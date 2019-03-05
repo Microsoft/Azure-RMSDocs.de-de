@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
+ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254831"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956252"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release
 
@@ -28,53 +28,71 @@ Sie können die neuste Vorschauversion des Azure Information Protection-Clients 
 
 ### <a name="release-information"></a>Informationen zum Release
 
-In diesem Artikel erfahren Sie, welche Funktionen für die neuste Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen unterstützt werden. 
+In diesem Artikel erfahren Sie, welche Funktionen für die neuste Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen unterstützt werden.
 
-Der Client wird als Add-On für Office installiert. Es gelten die gleichen [Voraussetzungen](../requirements.md) wie für den Azure Information Protection-Client, der die Richtlinie aus Azure herunterlädt.
+Dieser Client installiert ein Office-Add-On für Windows-Computer, eine Erweiterung für den Datei-Explorer und ein PowerShell-Modul. Es gelten die gleichen [Voraussetzungen](../requirements.md) wie für den Azure Information Protection-Client, der Richtlinien aus Azure herunterlädt.
+
+Informationen zu Features und Funktionalität im Azure Information Protection-Client finden Sie unter [Vergleich zwischen den Features der Clients](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="current-preview-version"></a>Aktuelle Vorschauversion
 
-**Veröffentlicht**: 16.10.2018
+**Veröffentlicht**: 25.2.2019
 
 Die Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows unterstützt die folgenden Features: 
 
-- Upgrade vom Azure Information Protection-Client
+- Upgrade vom Azure Information Protection-Client.
 
-- Manuelle Bezeichnung, die die Klassifizierung und den Schutz für Word, Excel, PowerPoint und Outlook anwendet.
+- Manuelle, automatische und empfohlene Klassifizierung: Verwenden Sie die **automatische Bezeichnung** im Office 365 Security & Compliance Center, um automatische und empfohlene Bezeichnungen zu konfigurieren. Weitere Informationen finden Sie unter [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
-- Optische Kennzeichnung (Kopfzeile, Fußzeile und Wasserzeichen)
+- Datei-Explorer, Rechtsklickaktionen zum Klassifizieren und Schützen von Dateien, Entfernen des Schutzes und Anwenden von benutzerdefinierten Berechtigungen.
 
-- Standardbeschriftung 
+- Ein Viewer für geschützten Text und geschützte Bilddateien, geschützte PDF-Dateien und Dateien die generisch geschützt werden.
 
-- Bezeichnungen, die die Option „Nicht weiterleiten“ anwenden
+- PowerShell-Befehle für Folgendes:
+    - [Festlegen oder Entfernen einer Bezeichnung in einem Dokument](/powershell/module/azureinformationprotection/set-aipfilelabel)
+    - [Hinzufügen einer Bezeichnung zu einem Dokument nach Untersuchen des Inhalts](/powershell/module/azureinformationprotection/set-aipfileclassification)
+    - [Lesen von Informationen zu einer auf ein Dokument angewendeten Bezeichnung](/powershell/module/azureinformationprotection/get-aipfilestatus)
+    - [Authentifizieren der Unterstützung unbeaufsichtigter PowerShell-Sitzungen](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Aufforderungen zur Eingabe einer Begründung, wenn Benutzer die Vertraulichkeitsstufe herabsetzen
+- Unterstützung einer zentralen Berichterstellung mithilfe von [Azure Information Protection-Analysen](../reports-aip.md).
 
-- Die Dialogfelder „Hilfe“ und „Feedback“, die Einstellungen zum Zurücksetzen und Exportprotokolle umfassen
+- Folgende Einstellungen für Bezeichnungen und Richtlinien:
+    - Optische Kennzeichnung (Kopfzeile, Fußzeile und Wasserzeichen)
+    - Standardbeschriftung
+    - Bezeichnungen, die „Nicht weiterleiten“ anwenden und nur in Outlook angezeigt werden
+    - Aufforderung zur Angabe einer Begründung, wenn ein Benutzer eine Klassifizierungsstufe senkt oder eine Bezeichnung entfernt
+    - Farben für die Bezeichnungen
 
-- Richtlinienaktualisierung alle 4 Stunden über das Security & Compliance Center über die Office-App
+- Richtlinienaktualisierung über das Security & Compliance Center:
+    - Bei jedem Start einer Office-App und alle vier Stunden
+    - Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen
+    - Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz
 
-Die folgenden Funktionen können in dieser Vorschauversion nicht verwendet werden:
+- Die Dialogfelder „Hilfe“ und „Feedback“, die Einstellungen zum Zurücksetzen und Exportprotokolle umfassen.
 
-- Automatische und empfohlene Klassifizierung
+### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>Features, die in dieser Vorschauversion nicht funktionieren oder nicht verfügbar sind
 
-- Benutzerdefinierte Berechtigungen
+Dies umfasst Folgendes:
 
-- Ein Viewer für geschützten Text und geschützte Bilddateien, PDF-Dateien und Dateien die allgemein geschützt werden
+- Die Überprüfung zum Entdecken, Bezeichnen und Schützen von Dateien in lokalen Datenspeichern ist nicht verfügbar.
 
-- Der Datei-Explorer zum Klassifizieren und Schützen von Dateien (über einen Rechtsklick)
+- Bezeichnungen, die aus dem Azure-Portal migriert und für den HYOK-Schutz konfiguriert wurden, werden nach Veröffentlichung im Client angezeigt, wenden aber keinen Schutz an.
 
-- PowerShell-Befehle zum Klassifizieren und Schützen von Dateien über die Befehlszeile
+- Die Cmdlets aus dem AzureInformationProtection-Modul sind nicht vollständig vorhanden. Dies gilt auch für Cmdlets, die direkt mit einem Schutzdienst verbunden sind. Beispiel: Unprotect-RMSFile zum Aufheben des Schutzes von Dateien per Massenvorgang.
 
-- Der Scanner zum Finden, Bezeichnen und Schützen von Dateien in lokalen Datenspeichern
-
-- Unterstützung für andere Sprachen als Englisch
+Ausführliche Informationen finden Sie in den [Vergleichstabellen](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="instructions"></a>Anweisungen
 
 1. Installieren Sie den Client mithilfe der folgenden Anweisungen: [Leitfaden: Herunterladen und Installieren des Azure Information Protection-Clients (Vorschauversion)](install-unifiedlabelingclient-app.md) 
 
-2. Verwenden Sie den Client in Office-Apps genauso wie den Azure Information Protection-Client. Die einzige Ausnahme besteht darin, dass das Office-Menüband nicht **Schutz**, sondern **Vertraulichkeit** heißt:
+2. Verwenden Sie den Client genauso wie den Azure Information Protection-Client – mit folgenden Ausnahmen für Office-Apps:
+    - Die Schaltfläche auf dem Office-Menüband heißt **Vertraulichkeit**, nicht **Schützen**.
+    - Administratoren können die Information Protection-Leiste nicht standardmäßig anzeigen, aber Benutzer können sie anzeigen, indem sie über die Schaltfläche **Vertraulichkeit** die Option **Leiste anzeigen** auswählen. 
+    - Benutzerdefinierte Berechtigungen sind nicht verfügbar
+    - Aktionen zum Nachverfolgen und Widerrufen sind nicht verfügbar
+    
+    Für Benutzeranweisungen:
     
     - [Klassifizieren einer Datei oder E-Mail](client-classify.md) 
     
@@ -83,6 +101,3 @@ Die folgenden Funktionen können in dieser Vorschauversion nicht verwendet werde
 3. Teilen Sie Ihre Erfahrungen: 
     
     - Sie können über die [Yammer-Seite für Azure Information Protection](https://www.yammer.com/AskIPTeam) Feedback geben oder Fragen zum Client in der Vorschauversion stellen.
-    
-    - Wenn Sie Probleme mit dem Client in der Vorschauversion melden möchten, verwenden Sie die Option **Hilfe und Feedback** über die Schaltfläche **Vertraulichkeit** im Menüband. Exportieren Sie Ihre Protokolle über das Dialogfeld und fügen Sie diese Protokolldateien an die E-Mail an, die über die Option **Problem melden** erstellt wird. 
-

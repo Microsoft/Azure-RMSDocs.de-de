@@ -4,17 +4,17 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
-ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
+ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56654698"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756180"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -48,7 +48,7 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 
 ## <a name="when-visual-markings-are-applied"></a>Wann visuelle Kennzeichnungen angewendet werden
 
-Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden der E-Mail von Outlook angewendet.
+Bei E-Mail-Nachrichten werden die visuellen Kennzeichnungen beim Senden einer E-Mail von Outlook angewendet. Wenn beim Weiterleiten oder Antworten auf diese E-Mail eine Kennzeichnung geändert wird, werden die ursprünglichen visuellen Kennzeichnungen immer beibehalten.
 
 Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 

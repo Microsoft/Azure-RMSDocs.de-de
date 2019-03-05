@@ -4,19 +4,19 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 37aea835e34c0db50d277922edbfd044e43afd71
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256809"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756197"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -42,6 +42,18 @@ Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://t
 > - Integrierte Bezeichnungsfunktion in Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer. Weitere Informationen finden Sie unter [Anwenden von Vertraulichkeitsbezeichnungen auf Dokumente und E-Mails in Office](https://aka.ms/officemipdocs).
 
 Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https://msip.uservoice.com/) für Azure Information Protection über die Anforderungen ab.
+
+## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>Welchen Vorschauclient installiere ich zum Testen der neuen Funktion?
+
+Zurzeit gibt es zwei Vorschauclients für Windows: 
+
+- Der **Azure Information Protection-Client** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Azure-Portal. Dieser Client basiert auf der allgemein verfügbaren Version des Clients.
+
+- Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Office 365 Security & Compliance Center. Dieser Client liegt in der zweiten Vorschauversion vor.
+
+Es wird empfohlen, dass Sie den Azure Information Protection-Client für einheitliche Bezeichnungen testen, wenn der aktuelle Satz an Features und Funktionen Ihre geschäftlichen Anforderungen erfüllt. Wenn dies nicht der Fall ist oder wenn Sie Bezeichnungen im Azure-Portal konfiguriert haben, die noch nicht [zum Store für einheitliche Bezeichnungen migriert wurden](configure-policy-migrate-labels.md), verwenden Sie den Azure Information Protection-Client.
+
+Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>Muss ich ein globaler Administrator sein, um Klassifizierungen und Bezeichnungen zu konfigurieren?
 

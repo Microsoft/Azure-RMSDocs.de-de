@@ -4,19 +4,19 @@ description: Anweisungen für Benutzer zum Installieren der Vorschauversion des 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/17/2018
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250890"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756129"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (Vorschau)
 
@@ -43,18 +43,15 @@ Wenn Sie über Bezeichnungen verfügen, die derzeit über das Azure-Portal für 
 
 2. Führen Sie die heruntergeladene ausführbare Datei **AzInfoProtection_For_Unified_Labeling.exe** aus. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
 
-3. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
-    - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client eine Verbindung mit dem Office 365 Security & Compliance Center herstellt, wird diese Demorichtlinie durch die Richtlinie Ihrer Organisation für Bezeichnungen ersetzt.
+3. Klicken Sie auf der Seite **Azure Information Protection-Client installieren** auf **Ich stimme zu**, wenn Sie die Lizenzbedingungen gelesen haben.
 
-    - Klicken Sie auf **Ich stimme zu**, wenn Sie die Lizenzbedingungen gelesen haben.    
+4. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.
 
-4. Klicken Sie auf **Ja**, wenn eine Aufforderung zum Fortfahren angezeigt wird, und warten Sie bis die Installation abgeschlossen wurde.    
-
-6. Klicken Sie auf **Schließen**. Gehen Sie wie folgt vor, bevor Sie den Azure Information Protection-Client für einheitliche Bezeichnungen verwenden:    
+6. Klicken Sie auf **Schließen**. Gehen Sie wie folgt vor, bevor Sie den Azure Information Protection-Client für einheitliche Bezeichnungen verwenden:
 
     - Wenn Ihr Computer mit Office 2010 ausgeführt wird, starten Sie den Computer neu, und fahren Sie mit dem letzten Schritt im nächsten Abschnitt fort.    
         
-    - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.    
+    - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. Die Installation ist nun abgeschlossen, und Sie können den Client zum Benennen und Schützen Ihrer Dokumente und E-Mails verwenden.
 
 ### <a name="installing-the-azure-information-protection-unified-labeling-client-with-office-2010"></a>Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen mit Office 2010
 
@@ -71,4 +68,3 @@ Die Installation ist nun abgeschlossen, und Sie können den Azure Information Pr
 ## <a name="next-steps"></a>Nächste Schritte
 
 Um weitere Informationen zu dem Speicher für einheitliche Bezeichnungen zu erhalten, die das Security & Compliance-Center von Office 365 jetzt verwendet, lesen Sie folgenden Blogbeitrag: [Bekanntgabe der Verfügbarkeit der Verwaltung einheitlicher Bezeichnungen im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
-
