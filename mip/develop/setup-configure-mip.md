@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331969"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581741"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Microsoft Information Protection (MIP) SDK: Setup und Konfiguration 
 
@@ -219,6 +219,17 @@ Wenn Sie bereits über eine unterzeichnete IPIA verfügen und eine neue *App-ID*
 - Unternehmenskontakte, E-Mail-Adressen und Telefonnummern zur Kommunikation in kritischen Situationen
 
 Können Sie nach dem Senden der e-Mail bis zu 72 Stunden auf eine Bestätigung des Empfangs.
+
+## <a name="ensure-your-app-has-the-required-runtime"></a>Stellen Sie sicher, dass Ihre app die erforderlichen Runtime hat
+
+> [!NOTE]
+> Dieser Schritt ist erforderlich, nur, wenn die Anwendung auf einem Computer ohne Visual Studio bereitstellen, oder wenn die Installation von Visual Studio verfügt nicht über die die Visual C++-Runtime-Komponenten.
+
+Mit dem MIP SDK erstellte Anwendungen müssen die Visual C++ 2015 oder Visual C++ 2017-Laufzeit installiert werden, sofern nicht bereits vorhanden.
+- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable für Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+Dies funktioniert nur, wenn die Anwendung als Version erstellt wurde. Wenn die Anwendung als Debugmodus erstellt wird, klicken Sie dann die Debugversionen der Visual C++ Runtime DLLs müssen in der Anwendung enthalten sein oder auf dem Computer installiert. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 

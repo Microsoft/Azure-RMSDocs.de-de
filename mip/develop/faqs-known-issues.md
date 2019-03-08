@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333548"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581724"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK: Häufig gestellte Fragen und Probleme
 
@@ -20,7 +20,9 @@ Dieser Artikel enthält Antworten auf häufig gestellte Fragen (FAQs) und Anleit
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen 
 
-### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Frage: Wie verarbeitet das SDK Zeichenfolgen, und welchen Zeichenfolgentyp sollte ich in meinem Code verwenden?
+### <a name="sdk-string-handling"></a>Behandlung von SDK-Zeichenfolgen
+
+**Frage**: Wie werden die Zeichenfolgen für das SDK behandelt und welche Art von Zeichenfolge sollte ich in meinem Code verwenden?
 
 Das SDK ist für die plattformübergreifende Verwendung konzipiert und nutzt [UTF-8](https://wikipedia.org/wiki/UTF-8) (8-Bit Unicode Transformation Format) für die Zeichenfolgenverarbeitung. Die genaue Verarbeitung hängt von der verwendeten Plattform ab:
 
@@ -34,14 +36,24 @@ Das SDK ist für die plattformübergreifende Verwendung konzipiert und nutzt [UT
 
 ### <a name="error-file-format-not-supported"></a>Fehler: "File-Format nicht unterstützt"  
 
-| Fehler | Lösung |
-|-|-|
-|*Nicht unterstütztes Dateiformat*| Diese Ausnahme resultiert aus dem Versuch, eine PDF-Datei zu schützen oder zu bezeichnen, die digital signiert wurde oder mit einem Kennwort geschützt ist. Weitere Informationen zum Schützen und Bezeichnen von PDF-Dateien finden Sie unter [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).|
+**Frage**: Warum erhalte ich den folgenden Fehler beim Schützen oder eine PDF-Datei zu bezeichnen?
+
+> Nicht unterstütztes Dateiformat
+
+Diese Ausnahme resultiert aus der Versuch, schützen oder Bezeichnung eine PDF-Datei, die digital signiert wurde oder ein Kennwort geschützt. Weitere Informationen zum Schützen und Bezeichnen von PDF-Dateien finden Sie unter [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Fehler: "Fehler beim Analysieren der abgerufenen Konformitätsrichtlinie"  
 
-Sie haben das MSIP SDK heruntergeladen und die Beispielanwendungen ausgeführt. Sie möchten mithilfe des Dateibeispiels alle Bezeichnungen auflisten, doch Sie erhalten die folgende Fehlermeldung:
+**Frage**: Warum erhalte ich den folgenden Fehler, nach dem das MIP SDK herunterladen und es wird versucht, das Beispiel zu verwenden, um alle Bezeichnungen aufzulisten?
 
-| Fehler | Lösung |
-|-|-|
-|*Ein Fehler ist aufgetreten: Fehler beim Analysieren der Konformitätsrichtlinie abgerufen. Fehler bei der: [Klasse mip::CompliancePolicyParserException] das Tag nicht gefunden: NodeType-Richtlinie: 15, Name: Kein Name gefunden, Wert:, Vorgänger: <SyncFile> <Content>, CorrelationId: [34668a40-Blll-4ef8-b2af-00005aa674z9]*| Das bedeutet, dass Sie Ihre Bezeichnungen nicht von Azure Information Protection zur einheitlichen Bezeichnungsumgebung migriert haben. Unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) erfahren Sie, wie Sie Bezeichnungen migrieren und dann eine Bezeichnungsrichtlinie in Office 365 Security & Compliance Center erstellen. Sobald das abgeschlossen ist, wird das Beispiel erfolgreich ausgeführt.|
+> Ein Fehler ist aufgetreten: Fehler beim Analysieren der Konformitätsrichtlinie abgerufen. Fehler bei der: [Klasse mip::CompliancePolicyParserException] das Tag nicht gefunden: NodeType-Richtlinie: 15, Name: Kein Name gefunden, Wert:, Vorgänger: <SyncFile> <Content>, CorrelationId: [34668a40-Blll-4ef8-b2af-00005aa674z9]
+
+Dies gibt an, dass Sie Ihre Bezeichnungen von Azure Information Protection, das einheitliche Funktionen für Bezeichnung noch nicht migriert. Unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) erfahren Sie, wie Sie Bezeichnungen migrieren und dann eine Bezeichnungsrichtlinie in Office 365 Security & Compliance Center erstellen. 
+
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Fehler: "System.ComponentModel.Win32Exception: LoadLibrary konnte"
+
+**Frage**: Warum erhalte ich die Fehlermeldung bei Verwendung der MIP SDK .NET Wrapper?
+
+> System.ComponentModel.Win32Exception: LoadLibrary konnte für: [sdk_wrapper_dotnet.dll] beim MIP aufrufen. Initialize().
+
+Ihre Anwendung verfügt nicht über die erforderliche Laufzeit, oder nicht als Version erstellt wurde. Finden Sie unter [stellen Sie sicher, Ihre app verfügt über die erforderliche Laufzeit](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) für Weitere Informationen. 
