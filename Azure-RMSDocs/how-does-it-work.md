@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82b76924e74796a06ecc9bf57acb1461cc0e8ce9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256667"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557645"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -44,7 +44,7 @@ Auch wenn Sie die Funktionsweise dieser Technologie nicht in jedem Detail kennen
 
 |Kryptographische Steuerelemente|Verwendung in Azure RMS|
 |-|-|
-|Algorithmus: AES<br /><br />Schlüssellänge: 128 Bit und 256 Bit [[1]](#footnote-1)|Dokumentationsschutz|
+|Algorithmus: AES<br /><br />Schlüssellänge: 128 Bit und 256 Bit [[1]](#footnote-1)|Inhaltsschutz|
 |Algorithmus: RSA<br /><br />Schlüssellänge: 2048 Bit [[2]](#footnote-2)|Schlüsselschutz|
 |SHA-256|Zertifikatsignatur|
 

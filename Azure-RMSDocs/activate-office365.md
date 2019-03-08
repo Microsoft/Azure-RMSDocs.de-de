@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d072b2d9b87a366d6828aa831a2ce200d420c3b3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 3eb45542a3ee6cb712abadae68b1d0572204ae35
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258918"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557679"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Informationen zum Aktivieren von Azure Rights Management über Office 365 Admin Center
 
@@ -34,7 +34,7 @@ Wenn Sie Fragen zu den Abonnementanforderungen haben oder Sie Hilfe bei der Akti
     Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.
     
     > [!TIP]
-    > Hilfe zum Admin Center finden Sie unter [Informationen zu Office 365 Admin Center](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
+    > Hilfe zum Admin Center finden Sie unter [Informationen zu Office 365 Admin Center](/office365/admin/admin-overview/about-the-admin-center).
     
     Wenn Sie über das Administrationscenter zur Seite **Rights Management** navigieren möchten: **Einstellungen** > **Dienste und Add-Ins** > **Microsoft Azure Information Protection** > **Verwalten von Microsoft Azure Information Protection-Einstellungen**
 
