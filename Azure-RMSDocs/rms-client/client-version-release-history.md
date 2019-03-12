@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
-ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
+ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
+ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828667"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57510053"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -49,7 +49,7 @@ Wenn Ihre Clientversion 1 höher als 1.41.51.0 ist, handelt es sich um eine Vors
 > [!TIP]
 > Sind würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center veröffentlicht werden? Siehe [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
 
-**Veröffentlicht**: 15.1.2019
+**Veröffentlicht**: 5.3.2019
 
 Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
@@ -77,6 +77,11 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     - Kennwort für Azure-Veröffentlichungseinstellungen
     - Schlüssel für Azure Storage-Konto (allgemein)
 
+- Neue erweiterte Clienteinstellungen, die Popupmeldungen in Outlook implementieren, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben. [Weitere Informationen](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Neue erweiterte Clienteinstellung, die nur angewendet wird, wenn Sie die Richtlinieneinstellung so konfigurieren, dass keine benutzerdefinierten Berechtigungen angezeigt werden: Wenn es eine Datei gibt, die mit benutzerdefinierten Berechtigungen geschützt wurde, blenden Sie die Option „Benutzerdefinierte Berechtigungen“ im Dateiexplorer ein, sodass Benutzer diese sehen und ändern können (wenn diese die Berechtigungen haben, um Schutzeinstellungen ändern zu können). [Weitere Informationen](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Fixes**:
 
 - Neue optische Kennzeichnungen werden konsistent angewendet, wenn ein Benutzer einem Word-Dokument neue Abschnitte hinzufügt und das Dokument anschließend mit einer neuen Bezeichnung versieht.
@@ -90,6 +95,12 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Vom Azure Information Protection-Client werden Bezeichnungen ordnungsgemäß angezeigt, die von [Clients angewendet wurden, die einheitliche Bezeichnungen unterstützen](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
 - Dokumente werden in Office ordnungsgemäß ohne Wiederherstellungsmeldung geöffnet, nachdem der Schutz durch Datei-Explorer entfernt und mit der rechten Maustaste auf PowerShell oder den Scanner geklickt wurde.
+
+- Wenn Sie die erweiterte Clienteinstellung verwenden, um eine [Standardbezeichnung für Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) festzulegen, können Sie eine übergeordnete Bezeichnung anwenden, die Unterbezeichnungen hat, wenn alle diese Unterbezeichnungen für den Benutzer deaktiviert sind.
+
+- Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Wenden Sie für E-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.** verwenden und die Bezeichnung mit der höchsten Klassifizierung für benutzerdefinierte Berechtigungen konfiguriert ist, war das Ergebnis bisher, dass die Bezeichnung auf die E-Mail angewendet wurde, der Schutz jedoch nicht. Jetzt:
+    - Wenn die benutzerdefinierten Berechtigungen einer Bezeichnung Outlook einschließen (Nicht weiterleiten): Die Bezeichnung und ihr „Nicht weiterleiten“-Schutz werden auf die E-Mail angewendet.
+    - Wenn die benutzerdefinierten Berechtigungen einer Bezeichnung nur für Word, Excel, PowerPoint und den Dateiexplorer gelten: Die Bezeichnung wird nicht angewendet, und für die E-Mail wird kein Schutz angewendet.
 
 **Weitere Änderungen**:
 

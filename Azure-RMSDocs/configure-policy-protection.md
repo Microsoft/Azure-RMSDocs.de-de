@@ -4,17 +4,17 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017148"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332309"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -73,7 +73,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Wenn ein Benutzer keine Berechtigungen zum Entfernen des Rights Management-Schutzes hat und eine mit der Option **Schutz entfernen** konfigurierte Bezeichnung auswählt, wird folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
 
-4. Wenn Sie **Schützen** ausgewählt haben, wird das Blatt **Schutz** automatisch geöffnet, wenn eine der anderen Optionen ausgewählt wurde. Wenn Sie dieses neue Blatt nicht automatisch geöffnet wird, wählen Sie **Schutz**:
+4. Wenn Sie **Schützen** ausgewählt haben, wird das Blatt **Schutz** automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. Wenn Sie dieses neue Blatt nicht automatisch geöffnet wird, wählen Sie **Schutz**:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
@@ -135,7 +135,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
      |Einstellung|Weitere Informationen|Empfohlene Einstellung
      |-----------|--------------------|--------------------|
-     |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente oder E-Mails, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
+     |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Bei E-Mails wird dieses Ablaufdatum aufgrund von Cachemechanismen, die von manchen E-Mail-Clients verwendet werden, nicht immer erzwungen.<br /><br />Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
      |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
     
      Wenn Sie das Konfigurieren der Berechtigungen und Einstellungen abgeschlossen haben, klicken Sie auf **OK**. 
@@ -292,6 +292,20 @@ Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domä
 
 6. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
 
+
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Beispiel 6: Bezeichnung, die den Schutz „Nur für mich“ anwendet
+
+Diese Konfiguration bildet das Gegenstück zur sicheren Kollaboration an Dokumenten: Mit Ausnahme eines [Administrators](configure-super-users.md) kann nur eine Person, die diese Bezeichnung anwendet, die geschützten Inhalte uneingeschränkt öffnen. Diese Konfiguration wird oft als „Nur für mich“-Schutz bezeichnet und eignet sich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann.
+
+Die Bezeichnungskonfiguration wirkt zunächst einfach:
+
+1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+    
+2. Klicken Sie auf **OK**, ohne dabei Benutzer auszuwählen, oder Einstellungen auf diesem Blatt zu konfigurieren.
+    
+    Obwohl Sie Einstellungen für **Inhalt läuft ab am**  und **Offlinezugriff zulassen** konfigurieren können, werden diese Zugriffseinstellungen nicht angewandt, wenn Sie keine Benutzer und deren Berechtigungen angeben. Das liegt daran, dass die Person, die den Schutz anwendet, der [Rights Management-Aussteller](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für den Inhalt ist. Diese Rolle bildet eine Ausnahme für diese Zugriffseinschränkungen.
+
+3. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

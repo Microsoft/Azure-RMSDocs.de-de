@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/27/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
-ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
+ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891093"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379949"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -50,12 +50,17 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |CompareSubLabelsInAttachmentAction|[Aktivieren der Unterstützung der Reihenfolge für untergeordnete Bezeichnungen](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Die Azure Information Protection-Leiste dauerhaft ausblenden](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
+|EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung.](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Ändern des lokalen Protokolliergrads](#change-the-local-logging-level)
+|OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookCollaborationTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
+|OutlookWarnUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Deaktivieren der niedrigen Integritätsebene für den Scanner](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Unterstützung für getrennte Computer](#support-for-disconnected-computers)
@@ -205,6 +210,19 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: **TRUE**, um die Option für benutzerdefinierte Berechtigungen anzuzeigen, **FALSE**, um diese Option auszublenden
 
+## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich derzeit in der Vorschau und erfordert die Vorschauversion des Clients.
+
+Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Option für benutzerdefinierte Berechtigungen für Benutzer verfügbar machen** oder die entsprechende Clienteinstellung im vorherigen Abschnitt konfigurieren, können Benutzer benutzerdefinierte Berechtigungen nicht sehen oder ändern, die für ein geschütztes Dokument bereits festgelegt wurden. 
+
+Wenn Sie diese erweiterte Clienteinstellung erstellen und konfigurieren, können Benutzer Berechtigungen für ein geschütztes Dokument sehen und ändern, wenn sie den Dateiexplorer verwenden, und mit der rechten Maustaste auf die Datei klicken. Die Option **Benutzerdefinierte Berechtigungen** über die Schaltfläche **Schützen** auf dem Office-Menüband bleibt ausgeblendet.
+
+Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
+
+- Legende: **EnableCustomPermissionsForCustomProtectedFiles**
+
+- Wert: **True**
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
@@ -250,6 +268,98 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 - Wert: **True**
 
+## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben
+
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Konfiguration befindet sich in der Vorschauversion und kann sich ändern.
+
+Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurieren, werden Benutzern Popupmeldungen in Outlook angezeigt, die sie vor dem Senden einer E-Mail warnen können, oder sie nach einer Legitimierung fragen, warum sie eine E-Mail versenden, oder sie aus folgenden Gründen davon abhalten, eine E-Mail zu senden:
+
+- **Die E-Mail oder der E-Mail-Anhang hat eine bestimmte Bezeichnung:**
+    - Der Anhang kann einen beliebigen Dateityp haben
+
+- **Die E-Mail oder der E-Mail-Anhang hat keine bestimmte Bezeichnung:**
+    - Der Anhang kann ein Office-Dokument oder ein PDF-Dokument sein
+
+Wenn diese Bedingungen erfüllt sind, und die E-Mail-Adresse des Empfängers nicht in einer Liste zulässiger Domänennamen enthalten ist, die Sie festgelegt haben, wird dem Benutzer eine Popupmeldung mit einer der folgenden Aktionen angezeigt:
+
+- **Warnung:** Der Benutzer kann bestätigen und senden, oder abbrechen.
+
+- **Justify** (Legitimation): Der Benutzer wird zu einer Legitimierung aufgefordert (mit vordefinierten Optionen oder Freiform).  Der Benutzer kann dann die E-Mail senden oder abbrechen. Der Legitimationstext wird in den X-Header der E-Mail geschrieben, sodass dieser von anderen Systemen gelesen werden kann. Zum Beispiel von Diensten, die der Verhinderung von Datenverlust dienen.
+
+- **Blockieren:** Der Benutzer wird davon abgehalten, die E-Mail zu senden, solange die Bedingung besteht. Die Nachricht beinhaltet den Grund dafür, warum die E-Mail blockiert wird, sodass der Benutzer das Problem aufheben kann. So kann er z.B. bestimmte Empfänger entfernen, oder der E-Mail eine Bezeichnung hinzufügen. 
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
+
+Um die Popupmeldungen für bestimmte Bezeichnungen implementieren zu können, benötigen Sie die Bezeichnungs-ID der entsprechenden Bezeichnungen. Der Wert der Bezeichnungs-ID wird auf dem Blatt **Bezeichnung** angezeigt, wenn Sie die Azure Information Protection-Richtlinie im Azure-Portal anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die Bezeichnungs-ID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die ID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
+
+Erstellen Sie mit den folgenden Schlüsseln eine oder mehr der folgenden erweiterten Clienteinstellungen. Geben Sie als Werte ein oder mehrere Bezeichnungen mit deren IDs an, und trennen Sie die einzelnen Werte mit Kommas.
+
+Beispielwert für mehrere Bezeichnungs-IDs als kommagetrennte Zeichenfolge: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+
+
+- Warnmeldungen:
+    
+    - Legende: **OutlookWarnUntrustedCollaborationLabel**
+    
+    - Wert: \<**Label-IDs, kommagetrennt**>
+
+- Legitimationsmeldungen:
+    
+    - Legende: **OutlookJustifyUntrustedCollaborationLabel**
+    
+    - Wert: \<**Label-IDs, kommagetrennt**>
+
+- Blockiermeldungen:
+    
+    - Legende: **OutlookBlockUntrustedCollaborationLabel**
+    
+    - Wert: \<**Label-IDs, kommagetrennt**>
+
+
+### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren von E-Mails oder Anhängen implementiert, die keine Bezeichnung haben:
+
+Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden Werte:
+
+- Warnmeldungen:
+    
+    - Legende: **OutlookUnlabeledCollaborationAction**
+    
+    - Wert: **Warnung**
+
+- Legitimationsmeldungen:
+    
+    - Legende: **OutlookUnlabeledCollaborationAction**
+    
+    - Wert: **Justify** (Legitimation)
+
+- Blockiermeldungen:
+    
+    - Legende: **OutlookUnlabeledCollaborationAction**
+    
+    - Wert: **Blockieren**
+
+- Diese Meldungen deaktivieren:
+    
+    - Legende: **OutlookUnlabeledCollaborationAction**
+    
+    - Wert: **Deaktiviert**
+
+### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Angeben der zulässigen Domänennamen für Empfänger, die von den Popupmeldungen ausgenommen sind
+
+Wenn Sie in einer erweiterten Clienteinstellung einen Domänenname angeben, werden Benutzern keine Popupmeldungen für Empfänger angezeigt, in deren E-Mail-Adresse dieser Domänenname enthalten ist. In diesem Fall werden die E-Mails problemlos gesendet. Wenn Sie mehrere Domänen angeben möchten, fügen Sie sie kommagetrennt als einzelne Zeichenfolge hinzu.
+
+Eine übliche Konfiguration ist es, die Popupmeldungen nur für die Empfänger anzuzeigen, die nicht zu Ihrer Organisation gehören, oder die keine für Ihre Organisation autorisierte Partner sind. In diesem Fall geben Sie alle E-Mail-Domänen an, die von Ihrer Organisation und von Ihren Partnern verwendet werden.
+
+Erstellen Sie den folgenden Schlüssel für eine erweiterte Clienteinstellung. Geben Sie als Werte eine oder mehrere Domänen an, und trennen Sie die einzelnen Werte mit Kommas.
+
+Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com,fabrikam.com,litware.com`
+
+- Legende: **OutlookCollaborationTrustedDomains**
+
+- Wert: **\<** Domänenname, kommagetrennt**>**
+
+Wenn Sie z.B. den Domänenname „contoso.com“ angeben, werden für Benutzer in Outlook keine Popupmeldungen angezeigt, wenn diese E-Mails an john@sales.contoso.com versenden.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
 
@@ -356,6 +466,8 @@ Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Cl
 Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch die Überprüfung geschützt werden sollen, wenn EnablePDFv2Protection auf „False“ festgelegt ist, müssen Sie die [Registrierung bearbeiten](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 Weitere Informationen zu dieser neuen PDF-Verschlüsselung finden Sie im Blogbeitrag [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+
+Eine Liste von PDF-Readern, die den ISO-Standard für PDF-Verschlüsselung unterstützen, und Reader, die ältere Formate unterstützen, finden Sie unter [Unterstützte Reader für PDF-Dokumente für Microsoft Azure Information Protection](protected-pdf-readers.md).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien
 

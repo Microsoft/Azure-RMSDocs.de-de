@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 02cd02d76e52ebe461a2193cf2880bd41d6e2a93
+ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257857"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57206483"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -118,7 +118,7 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 
 - Herunterladen des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Herunterladen einer Bereitstellungsanleitung für Entscheidungsträger: [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
+- Herunterladen eines Leitfadens zu taktischer und strategischer Bereitstellung: [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
 
 - Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 

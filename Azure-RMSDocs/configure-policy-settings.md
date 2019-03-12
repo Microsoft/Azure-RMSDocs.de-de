@@ -4,17 +4,17 @@ description: Konfigurieren Sie die Einstellungen in der Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 91ab0e30c0fac8f3285983f6c3b06886c0782e7d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
+ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266062"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57379881"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -60,7 +60,8 @@ So konfigurieren Sie diese Einstellungen:
         
         Um die Reihenfolge der untergeordneten Bezeichnungen bei der Verwendung dieser Richtlinieneinstellung zu berücksichtigen, müssen Sie [eine erweiterte Clienteinstellung konfigurieren](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Wenn die Anlage mit der höchsten Klassifizierungsbezeichnung für den Schutz mit der Vorschaueinstellung der benutzerdefinierten Berechtigungen konfiguriert ist, wird die E-Mail-Nachricht mit der gleichen Klassifizierung bezeichnet, aber der Schutz wird nicht angewendet.
+        Wenn die Anlage mit der höchsten Klassifizierungsbezeichnung für den Schutz mit der Vorschaueinstellung der benutzerdefinierten Berechtigungen konfiguriert ist: – Bei der allgemein verfügbaren Clientversion: Die E-Mail erhält eine Bezeichnung mit derselben Klassifizierung, der Schutz wird jedoch nicht angewendet.
+            – Bei der Vorschauversion des Clients: Wenn die benutzerdefinierten Berechtigungen der Bezeichnung Outlook einschließen (Nicht weiterleiten), wird diese Bezeichnung und der „Nicht Weiterleiten“-Schutz auf die E-Mail angewendet. Wenn die benutzerdefinierten Berechtigungen der Bezeichnung nur für Word, Excel, PowerPoint und den Dateiexplorer gelten, wird diese Bezeichnung nicht auf die E-Mail angewendet, der Schutz ebenfalls nicht.
     
    - **Information Protection-Leiste in Office-Apps anzeigen**: Wenn diese Einstellung deaktiviert ist, können Benutzer keine Bezeichnungen aus einer Leiste in Word, Excel, PowerPoint und Outlook auswählen. Stattdessen müssen sie Bezeichnungen über die Schaltfläche **Schützen** auf dem Menüband auswählen. Wenn diese Einstellung aktiviert ist, können Benutzer Bezeichnungen entweder über die Leiste oder die Schaltfläche auswählen.
         
