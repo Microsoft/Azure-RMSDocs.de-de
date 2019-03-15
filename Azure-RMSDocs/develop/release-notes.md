@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332071"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829075"
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
@@ -33,7 +33,7 @@ In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version 
 -   [Mai 2015 – Update – Steuerung der Protokollierung hinzugefügt](#may-2015-update---adds-logging-control)
 -   [Februar 2015 – Update – Unterstützung für Windows Store-Anwendung hinzugefügt](#february-2015-update---adds-windows-store-application-support)
 -   [Januar 2015 – Update – Unterstützung für WinPhone-Plattform hinzugefügt](#january-2015-update---adds-winphone-platform-support)
--   [Oktober 2014 – Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [Oktober 2014 – Update – Upgrade auf Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Anmerkungen zu dieser Version](#release-notes)
 -   [Häufig gestellte Fragen](#frequently-asked-questions)
 
@@ -240,4 +240,3 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 **F**: Das Beispiel-App-Framework wurde an Xcode 5 angepasst. Kann ich trotzdem Xcode 4.6 verwenden?
 
 **A**: Das OS X-SDK funktioniert nur mit Xcode 4.6 und höher sowie OS X 10.8 und höher.
-

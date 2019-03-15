@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3782d2cea93b2128530e66d82e366924e92abbbc
-ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
+ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407758"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828487"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -148,7 +148,7 @@ Eine Liste der Dateierweiterungen, die systemintern von Azure Rights Management 
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Wie konfiguriere ich einen Macintosh-Computer für den Schutz und die Nachverfolgung von Dokumenten?
 
-Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://portal.office.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden Sie unter [Herunterladen und Installieren oder Neuinstallieren von Office 365 oder Office 2019 auf einem PC oder Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://admin.microsoft.com sicher, dass Office für Mac installiert ist. Vollständige Anweisungen finden Sie unter [Herunterladen und Installieren oder Neuinstallieren von Office 365 oder Office 2019 auf einem PC oder Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Öffnen Sie Outlook, und erstellen Sie ein Profil mit Ihrem Geschäfts-, Schul- oder Unikonto bei Office 365. Erstellen Sie dann eine neue Nachricht, und führen Sie folgende Schritte durch, um Office für den Schutz von Dokumenten und E-Mails anhand des Azure Rights Management-Diensts zu konfigurieren:
 

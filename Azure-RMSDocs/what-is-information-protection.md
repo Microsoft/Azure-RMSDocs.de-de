@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 02cd02d76e52ebe461a2193cf2880bd41d6e2a93
-ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
+ms.openlocfilehash: 3082d43d44d961303c61796c949ba66adfb7f08b
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57206483"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828463"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -112,7 +112,7 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 
 ## <a name="resources-for-azure-information-protection"></a>Ressourcen für Azure Information Protection
 
-- Kostenlose Testversion: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
+- Kostenlose Testversion: [Enterprise Mobility + Security E5](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - Abonnementoptionen und Preise: [Azure Information Protection – Preise](https://azure.microsoft.com/pricing/details/information-protection)
 
