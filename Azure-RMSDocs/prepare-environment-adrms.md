@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ee88799e9dce56f7ea3f4c24c386d57f1478ff36
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: c8219221fe9b932e0d09901dccf496df5f83ef76
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253131"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828871"
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management, wenn Sie auch über Active Directory-Rechteverwaltungsdienste (AD RMS) verfügen
 
@@ -60,7 +60,7 @@ Verwenden Sie eine der folgenden Vorgehensweisen, um Azure Rights Management zu 
 > [!TIP]
 > Sie können auch das Windows PowerShell-Cmdlet [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) zum Deaktivieren des Azure Rights Management-Diensts verwenden.
 
-#### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>So deaktivieren Sie Rights Management über das Office 365 Admin Center
+#### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>So deaktivieren Sie Rights Management über das Microsoft 365 Admin Center
 
 1. Wechseln Sie zur [Rights Management-Seite](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Office 365-Administratoren.
     

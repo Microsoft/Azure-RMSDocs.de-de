@@ -4,19 +4,19 @@ description: Detaillierte Übersicht über die Funktionsweise von Azure RMS, die
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557645"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734145"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -50,7 +50,13 @@ Auch wenn Sie die Funktionsweise dieser Technologie nicht in jedem Detail kennen
 
 ###### <a name="footnote-1"></a>Fußnote 1 
 
-256 Bit werden vom Azure Information Protection-Client für den generischen und den nativen Schutz verwendet, wenn die Datei die Dateinamenerweiterung .ppdf aufweist oder eine geschützte Text- oder Bilddatei (z.B. eine PTXT- oder PJPG-Datei) ist.
+256 Bits werden vom Azure Information Protection-Client in den folgenden Szenarios verwendet:
+
+- Allgemeiner Schutz (.pfile).
+
+- Nativer Schutz für PDF-Dokumente, wenn das Dokument mit dem ISO-Standard für PDF-Verschlüsselung geschützt wurde, oder das daraus resultierende geschützte Dokument eine .ppdf-Dateinamenserweiterung hat.
+
+- Nativer Schutz für Text- oder Bilddateien (z B. .ptxt oder .pjpg).
 
 ###### <a name="footnote-2"></a>Fußnote 2
 

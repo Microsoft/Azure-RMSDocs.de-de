@@ -4,19 +4,19 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756146"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828486"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -48,7 +48,7 @@ Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Wann ist der richtige Zeitpunkt, um meine Bezeichnungen zu Office 365 zu migrieren?
 
-Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), veröffentlicht und heruntergeladen werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
+Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), veröffentlicht werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
 
 Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen und dann Ihren Produktionsmandanten zu migrieren. Zusätzlich:
 
@@ -68,11 +68,11 @@ Weitere Informationen finden Sie unter [Welchen Vorschauclient installiere ich z
 
 Nachdem Sie Ihre Bezeichnungen im Azure-Portal migriert haben:
 
-- Wenn Sie über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) verfügen, veröffentlichen Sie diese Bezeichnungen über das Office 365 Security & Compliance Center, und konfigurieren Sie darüber auch die Richtlinieneinstellungen für Clients für einheitliche Bezeichnungen. Für zukünftige Bezeichnungsänderungen verwenden Sie dann das Security & Compliance Center. Die Bezeichnungen und Richtlinieneinstellungen werden von Clients für einheitliche Bezeichnungen aus dem Security & Compliance Center heruntergeladen.
+- Wenn Sie über [Clients und Dienste für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) verfügen, erfolgt die Veröffentlichung dieser Bezeichnungen sowie das Konfigurieren derer Richtlinieneinstellungen über das Office 365 Security & Compliance Center. Für zukünftige Bezeichnungsänderungen verwenden Sie dann das Security & Compliance Center. Die Bezeichnungen und Richtlinieneinstellungen werden von Clients für einheitliche Bezeichnungen aus dem Security & Compliance Center heruntergeladen.
 
 - Wenn Sie über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, verwenden Sie zur Bearbeitung Ihrer Bezeichnungen und Richtlinieneinstellungen weiter das Azure-Portal. Azure Information Protection-Clients werden weiterhin die Bezeichnungen und Richtlinieneinstellungen aus Azure herunterladen.
 
-- Wenn Sie sowohl über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) als auch über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, können Sie jedes der beiden Portale verwenden, um Bezeichnungsänderungen vorzunehmen. Damit jedoch Azure Information Protection-Clients die von Ihnen im Security & Compliance Center vorgenommenen Bezeichnungsänderungen übernehmen, müssen Sie wieder das Azure-Portal verwenden: Verwenden Sie die Option **Veröffentlichen** auf dem Blatt **Azure Information Protection - Unified labeling** (Azure Information Protection – einheitliche Bezeichnungen) im Azure-Portal. 
+- Wenn Sie sowohl über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) als auch über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, können Sie jedes der beiden Portale verwenden, um Bezeichnungsänderungen vorzunehmen. Damit jedoch Azure Information Protection-Clients die von Ihnen im Security & Compliance Center vorgenommenen Bezeichnungsänderungen übernehmen, müssen Sie wieder das Azure-Portal verwenden: Verwenden Sie die Option **Veröffentlichen** auf dem Blatt **Azure Information Protection - Unified labeling** (Azure Information Protection – einheitliche Bezeichnungen) im Azure-Portal. 
 
 Verwenden Sie weiterhin das Azure-Portal für die [zentrale Berichterstellung](reports-aip.md) und die [Überprüfung](deploy-aip-scanner-preview.md).
 
@@ -194,7 +194,9 @@ Wenn der Scanner Dateien auf Websites und in Bibliotheken von SharePoint schütz
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Ich habe gehört, dass bald eine neue Version von Azure Information Protection verfügbar sein wird. Wann wird diese veröffentlicht?
 
-Die technische Dokumentation enthält keine Informationen zu bevorstehenden Releases. Lesen Sie den [Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) und die neuesten Updates von [MicrosoftMobility@MSFTMobility](https://twitter.com/MSFTMobility) auf Twitter, um diese Art von Informationen sowie Versionsankündigungen zu erhalten. Wenn Sie sich für ein bestimmtes Office-Release interessieren, lesen Sie auch den [Office 365-Blog](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) und den [Office-Apps-Blog](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+Die technische Dokumentation enthält keine Informationen zu bevorstehenden Releases. Solche Informationen sowie Releaseankündigungen finden Sie im Blog [Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
+
+Wenn Sie sich für ein bestimmtes Office-Release interessieren, lesen Sie auch den [Office 365-Blog](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) und den [Office-Apps-Blog](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>Ist Azure Information Protection für mein Land geeignet?
 
@@ -210,8 +212,6 @@ Lesen Sie hierzu [Kompatibilitätsinformationen und ergänzende Informationen zu
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Wie kann ich ein Problem melden oder Feedback zu Azure Information Protection übermitteln?
 
 Wenden Sie sich an Ihre Standardsupportkanäle oder an den [Microsoft Support](information-support.md#to-contact-microsoft-support), um technischen Support zu erhalten.
-
-Für Feedback wie Vorschläge für Verbesserungen oder neue Features: Klicken Sie in Ihrer Office-Anwendung auf der Registerkarte **Home** in der Gruppe **Schutz** auf **Schützen** und anschließend auf **Hilfe und Feedback**. Klicken Sie im Dialogfeld **Microsoft Azure Information Protection** auf **Send Us Feedback** (Feedback senden). Durch diese Option wird eine E-Mail-Nachricht geöffnet, die an das Information Protection-Team gesendet werden soll.
 
 Wir laden Sie auch dazu ein, sich mit unserem Engineering-Team auf seiner [Yammer-Website zu Azure Information Protection](https://www.yammer.com/askipteam/) in Verbindung zu setzen. 
 

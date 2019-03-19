@@ -4,17 +4,17 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: b7d0bf743d23083e2f9c6ca18044e26cb8c2ae6f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256565"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829041"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -32,7 +32,7 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt.
 
-Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in seinen Office-Apps angezeigt. Die Schaltflächen **Jetzt ändern** und **Schließen** werden jedoch durch **OK** ersetzt.
+Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Die Schaltflächen **Jetzt ändern** und **Schließen** werden jedoch durch **OK** ersetzt. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.

@@ -4,19 +4,19 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: abf4b87198f2997aa7a452d0c34931c55220ee5f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 72e29d19ddbfc3189d498724fc8353829820ab4e
+ms.sourcegitcommit: f4fe64474999954e0c013c3901edbb3048670935
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255069"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725748"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -48,19 +48,25 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 
 - Aktion:
 
-    - Bezeichnung festlegen:  Informations-ID 101
+    - Bezeichnung festlegen: Informations-ID 101
     
-    - Bezeichnung festlegen (niedriger):  Informations-ID 101
+    - Bezeichnung festlegen (niedriger): Informations-ID 101
     
     - Bezeichnung festlegen (höher): Informations-ID 101
     
     - Bezeichnung entfernen: Informations-ID 104
-   
-    - Empfohlener Tipp: Information 105
+    
+    - Empfohlene Bezeichnungs-QuickInfo: Information 105
     
     - Benutzerdefinierten Schutz anwenden: Informations-ID 201
     
     - Benutzerdefinierten Schutz entfernen: Informations-ID 202
+    
+    - Outlook-Warnmeldung: Informations-ID 301
+    
+    - Outlook-Legitimationsmeldung: Informations-ID 302
+    
+    - Outlook-Blockiermeldung: Informations-ID 303
     
     - Anmelden (betriebsbereit): Informations-ID 902
     
@@ -85,6 +91,8 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 - Benutzerausrichtung (falls zutreffend)
 
 - Benutzerdefinierte Berechtigungen (falls zutreffend), die die [Nutzungsrechte über ihren Codierungsnamen](../configure-usage-rights.md#usage-rights-and-descriptions) für die angegebenen Benutzer, Gruppen der Organisationen einschließen.
+
+Die Ereignisse für Outlook zum Warnen, Legitimieren und Blockieren von Nachrichten erfordern die Vorschauversion des Clients und erweiterte Clienteinstellungen. Weitere Informationen finden Sie unter [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
 Informationen zur Verwendungsprotokollierung für den Schutzdienst finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](../log-analyze-usage.md).
 

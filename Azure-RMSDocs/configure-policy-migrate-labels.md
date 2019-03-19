@@ -4,27 +4,27 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/12/2019
+ms.date: 03/14/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ed3c77df8da01a4b87b30875a315eac5c075b438
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254780"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829058"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von mehreren Clients und Diensten verwendet werden können.
+> Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von Clients und Diensten verwendet werden können, die [Microsoft Azure Information Protection-Lösungen](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection) unterstützen.
 
-Migrieren Sie Ihre Bezeichnungen, um Sie im Office 365 Security & Compliance Center zu verwenden. Dort können sie veröffentlicht und dann von [Clients, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), heruntergeladen werden. Der Azure Information Protection-Client lädt die Bezeichnungen mit ihrer Azure Information Protection-Richtlinie aus dem Azure-Portal herunter. 
+Migrieren Sie Ihre Bezeichnungen aus dem Office 365 Security & Compliance Center, damit diese von [Clients, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), als Office 365-Vertraulichkeitsbezeichnungen verwendet werden können. Der Azure Information Protection-Client lädt die Bezeichnungen mit ihrer Azure Information Protection-Richtlinie nach der Migration weiterhin aus dem Azure-Portal herunter. 
 
 Bevor Sie sich die ausführlichen Anweisungen zum Migrieren Ihrer Bezeichnungen durchlesen, sehen Sie nach, ob die folgenden häufig gestellten Fragen hilfreich für Sie sind:
 
@@ -47,7 +47,7 @@ Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Be
 
 Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnungen migrieren:
 
-- Nicht alle Clients unterstützen derzeit einheitliche Bezeichnungen. Stellen Sie sicher, dass Sie über [unterstützte Clients](#clients-that-support-unified-labeling) verfügen. Die Verwaltung erfolgt im Azure-Portal (Clients, die einheitliche Bezeichnungen nicht unterstützen) und im Security & Compliance Center (Clients, die einheitliche Bezeichnungen unterstützen).
+- Nicht alle Clients unterstützen derzeit einheitliche Bezeichnungen. Stellen Sie sicher, dass Sie über [unterstützte Clients](#clients-and-services-that-support-unified-labeling) verfügen. Die Verwaltung erfolgt im Azure-Portal (Clients, die einheitliche Bezeichnungen nicht unterstützen) und im Security & Compliance Center (Clients, die einheitliche Bezeichnungen unterstützen).
 
 - Wenn Sie gerade dabei sind, die gewünschten Bezeichnungen zu definieren und zu konfigurieren, empfehlen wir Ihnen, diesen Vorgang im Azure-Portal abzuschließen und die Bezeichnungen danach zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann im Security & Compliance Center bearbeitet werden müssen.
 
@@ -55,7 +55,7 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
     
     Zur Optimierung der Benutzerfreundlichkeit empfehlen wir, die gleichen Bezeichnungen in den gleichen Bereichen im Security & Compliance Center zu veröffentlichen.
 
-- Nicht alle Einstellungen einer migrierten Bezeichnung werden vom Security & Compliance Center unterstützt. Verwenden Sie die Tabelle in Abschnitt [Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-security--compliance-center), um die entsprechenden Einstellungen zu ermitteln, die vom Security & Compliance Center nicht unterstützt werden.
+- Nicht alle Einstellungen einer migrierten Bezeichnung werden vom Security & Compliance Center unterstützt. Verwenden Sie die Tabelle im Abschnitt [Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen](#label-settings-that-are-not-supported-in-the-security--compliance-center), um die entsprechenden Einstellungen sowie die empfohlene Vorgehensweise zu ermitteln.
 
 - Schutzvorlagen:
     
@@ -79,21 +79,22 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Im Security & Compliance Center nicht unterstützte Bezeichnungseinstellungen
 
-Anhand der folgenden Tabelle können Sie feststellen, welche Konfigurationseinstellungen einer migrierten Bezeichnung von Clients für einheitliche Bezeichnungen nicht oder nur eingeschränkt unterstützt werden. Um Verwirrung zu vermeiden, empfehlen wir Ihnen, die Einstellungen, die keine Auswirkungen auf Clients für einheitliche Bezeichnungen haben, nicht zu konfigurieren.
+Anhand der folgenden Tabelle können Sie feststellen, welche Konfigurationseinstellungen einer migrierten Bezeichnung vom Security & Compliance Center nicht unterstützt werden. Wenn Sie über Bezeichnungen mit diesen Einstellungen verfügen, verwenden Sie nach der Migration den Verwaltungsleitfaden in der letzten Spalte, bevor Sie Ihre Bezeichnungen im Office 365 Security & Compliance Center veröffentlichen.
 
-Azure Information Protection-Clients können diese Bezeichnungseinstellungen problemlos verwenden, weil sie die Bezeichnungen weiterhin aus dem Azure-Portal herunterladen.
+Azure Information Protection-Clients können alle aufgeführten Bezeichnungseinstellungen problemlos verwenden, weil sie die Bezeichnungen weiterhin aus dem Azure-Portal herunterladen.
 
-|Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen|Im Security & Compliance Center von Bearbeitung ausgeschlossen|
+|Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für das Security & Compliance Center|
 |-------------------|---------------------------------------------|-------------------------|
-|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweise: Keine Synchronisierung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
-|Bezeichnungsfarbe: Auswahl aus der Liste oder Angabe mit RGB-Code<br /><br />Hinweise: Keine Unterstützung im Security & Compliance Center |Nicht verfügbar|Nicht verfügbar|
-|Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Ja|
-|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen in Word, Excel und PowerPoint |Nein|Ja|
-|HYOK-Schutz mit benutzerdefinierten Berechtigungen in Outlook für „Nicht weiterleiten“ |Nein|Ja|
-|Entfernen von Schutz |Nein|Ja|
-|Visuelle Kennzeichnung (Kopfzeile, Fußzeile, Wasserzeichen): Benutzerdefinierte Schriftart und benutzerdefinierte Schriftfarbe nach RGB-Code|Nein|Empfohlen beim Verwenden von Variablen<br /><br />– Auf Clients werden Variablen nicht als dynamische Werte, sondern als Text angezeigt|
-|Visuelle Kennzeichnungen pro App|Nein|Empfohlen beim Verwenden von Variablen<br /><br />– Auf Clients werden Variablen nicht als dynamische Werte, sondern als Text angezeigt|
-|Bedingungen und entsprechende Einstellungen <br /><br />Hinweise: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Nein|
+|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweise: Keine Synchronisierung im Security & Compliance Center |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungsfarben im Azure-Portal konfigurieren.|
+|Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
+|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Nein|Keine Konfigurationsoption für benutzerdefinierte Berechtigungen für diese Office-Anwendungen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
+|HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
+|Entfernen von Schutz |Nein|Keine Konfigurationsoption, um Schutz zu entfernen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.<br /><br /> Wenn Sie diese Bezeichnung mit dieser Konfiguration veröffentlichen, wird der Schutz entfernt, wenn dieser zuvor von einer Bezeichnung angewendet wurde. Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt der Schutz bestehen.|
+|Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte im Security & Compliance Center nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der im Security & Compliance Center aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
+|Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
+|Visuelle Kennzeichnungen pro App|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
+|Bedingungen und entsprechende Einstellungen <br /><br />Hinweise: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen
@@ -110,21 +111,36 @@ Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
 
 3. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
 
-Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Kunden, die einheitliche Bezeichnungen unterstützen](#clients-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen im Security & Compliance Center veröffentlichen.
+Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen im Security & Compliance Center veröffentlichen.
 
 > [!IMPORTANT]
 > Wenn Sie die Bezeichnungen außerhalb des Azure-Portals für Azure Information Protection-Clients bearbeiten, kehren Sie zu diesem Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurück, und wählen Sie **Veröffentlichen**.
 
-### <a name="clients-that-support-unified-labeling"></a>Clients, die einheitliche Bezeichnungen unterstützen
+### <a name="clients-and-services-that-support-unified-labeling"></a>Clients und Dienste, die einheitliche Bezeichnungen unterstützen
 
-Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
+Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste einheitliche Bezeichnungen unterstützen, können Sie in den jeweiligen Dokumentationen nachlesen, ob diese Vertraulichkeitsbezeichnungen verwenden können, die im Office 365 Security & Compliance Center veröffentlicht wurden. 
+
+##### <a name="clients-that-currently-support-unified-labeling-include"></a>Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
 - [Azure Information Protection-Client für einheitliche Bezeichnungen](./rms-client/unifiedlabelingclient-version-release-history.md) (Vorschau)
 
 - Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie im Abschnitt **Wo ist das Feature heute verfügbar?** unter [Anwenden von Vertraulichkeits-Beschriftungen auf Ihre Dokumente und E-Mails in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in der Office-Dokumentation.
     
-- Clients von Softwareherstellern und Entwicklern, die das [Microsoft Information Protection SDK](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference) verwenden.
+- Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) verwenden.
 
+##### <a name="services-that-currently-support-unified-labeling-include"></a>Folgende Dienste unterstützen derzeit einheitliche Bezeichnungen:
+
+- Windows Defender Advanced Threat Protection
+
+- Microsoft Cloud App Security
+    
+    Dieser Dienst unterstützt Bezeichnungen sowohl vor der Migration in den einheitlichen Bezeichnungsspeicher, als auch nach der Migration, und verwendet dabei die folgende Logik:
+    
+    - Wenn es im Office 365 Security & Compliance Center dieselben Bezeichnungen gibt wie im Azure-Portal: Einheitliche Bezeichnungen werden aus dem Office 365 Security & Compliance Center abgerufen. Wenn Sie diese Bezeichnungen in Cloud App Security auswählen möchten, muss mindestens eine Bezeichnung für mindestens einen Benutzer veröffentlicht worden sein.
+    
+    - Wenn es im Office 365 Security & Compliance Center nicht dieselben Bezeichnungen gibt wie im Azure-Portal: Einheitliche Bezeichnungen werden vom Office 365 Security & Compliance Center nicht verwendet. Stattdessen werden Bezeichnungen aus dem Azure-Portal abgerufen.
+
+- Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

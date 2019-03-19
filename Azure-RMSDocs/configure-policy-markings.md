@@ -4,17 +4,17 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2ddefdc557d83ff0eae6bbc2b5d7d0e69dfbbca5
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756180"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734109"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -36,7 +36,7 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
 
 - Maximale Zeichenfolgenlänge:
     
-    - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Dieser Grenzwert schließt Zeichen ein, die nicht in Excel angezeigt werden, wie z.B. Formatierungscodes. Wenn Sie in Excel eine lange Zeichenfolge für Kopf- oder Fußzeilen eingeben, kann es sein, dass der Text nach 255 Zeichen oder weniger abgeschnitten wird.
+    - Die maximale Zeichenfolgenlänge, die Sie für Kopf- und Fußzeile eingeben können, beträgt 1024 Zeichen. Excel hat ein Gesamtlimit von 255 Zeichen für Kopf- und Fußzeilen. Dieser Grenzwert schließt Zeichen ein, die nicht in Excel angezeigt werden, wie z.B. Formatierungscodes. Wenn dieses Limit erreicht wurde, wird die eingegebene Zeichenfolge in Excel nicht angezeigt.
     
     - Die maximale Zeichenfolgenlänge für Wasserzeichen beträgt 255 Zeichen.
 

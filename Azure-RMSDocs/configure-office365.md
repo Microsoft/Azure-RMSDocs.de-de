@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8a1057aeab9bf86bba8047f3425b11e7eeae1082
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259183"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828429"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für Clients und Onlinedienste zur Verwendung des Azure Rights Management-Diensts
 
@@ -104,7 +104,7 @@ Nachdem Sie den IRM-Dienst für SharePoint Online aktiviert haben, können sowoh
 #### <a name="configuration-for-users"></a>Konfiguration für Benutzer
 Geben Sie Benutzern diese Anleitung, damit sie in OneDrive for Business Schutz für ihre Geschäftsdateien aktivieren können.
 
-1. Melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an, und wechseln Sie zur [OneDrive-Website](https://portal.office.com/onedrive).
+1. Melden Sie sich bei Office 365 mit Ihrem Geschäfts-, Schul- oder Unikonto an, und wechseln Sie zur [OneDrive-Website](https://admin.microsoft.com/onedrive).
 
 2. Wählen Sie im Navigationsbereich unten **Zurück zum klassischen OneDrive** aus.
 
@@ -502,7 +502,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 
    2. Suche Sie nach `$tenantAdmin`, und ersetzen Sie den Beispielwert durch Ihr eigenes, vollqualifiziertes globales Administratorkonto für Office 365.
 
-      Dieser Wert ist mit dem identisch, mit dem Sie sich beim Office 365-Verwaltungsportal als der globale Administrator anmelden, und hat folgendes Format: Benutzername@*&lt;Mandantendomänenname&gt;*.com
+      Dieser Wert ist mit dem identisch, mit dem Sie sich beim Microsoft 365 Admin Center als globaler Administrator anmelden, und hat folgendes Format: Benutzername@*&lt;Mandantendomänenname&gt;*.com.
 
       Wenn der globale Office 365-Administratorbenutzername für die Mandantendomäne „contoso.com“ beispielsweise „admin“ ist, würden Sie Folgendes angeben: <strong>admin@contoso.com</strong>
 

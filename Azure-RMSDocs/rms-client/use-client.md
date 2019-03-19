@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 5d49a1ad6bed86b6041b66feb3017b716584c5b7
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756214"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829092"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -49,14 +49,14 @@ Welchen Client sollten Sie installieren?
 
 Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuellen Vorschauversionen unterstützt werden, miteinander vergleichen.
 
-|Komponente|Azure Information Protection-Client|Azure Information Protection-<br /> Client für einheitliche Bezeichnungen|
+|Komponente|Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
-|Information Protection-Leiste in Office-Apps<br />mit anpassbarer QuickInfo:| Ja | Ja|
 |Zentrale Berichterstellung (Analysen):| Ja | Ja |
 |Einstellungen zurücksetzen und Protokolle exportieren:| Ja | Ja |
 |Benutzerdefinierte Berechtigungen:| Ja | Nur für Outlook (Nicht weiterleiten) |
 |Kundenspezifische Berechtigungen:| Ja | Nur Datei-Explorer <br /><br /> In Office-Apps können Benutzer alternativ auch **Dateiinfo** > **Dokument schützen** > **Zugriff einschränken** auswählen |
+|Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> – die Bezeichnungsfarbe wird für die angewendete Bezeichnung nicht angezeigt|
 |Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> – Kein Schutz für PDF-Dokumente im PPDF-Format <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
 |Viewer für geschützte Dateien:| Ja | Ja mit Einschränkungen:<br /><br /> – Bei generisch geschützten Dateien (PFILE-Format) können im Gegensatz zum Azure Information Protection-Client Änderungen an der ursprünglich geöffneten Datei nicht gespeichert werden|
 |PowerShell-Befehle:| Ja | Ja mit Einschränkungen:<br /><br />– Enthaltene Cmdlets: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />– Cmdlets, die eine direkte Verbindung zu einem Schutzdienst herstellen, sind nicht enthalten|
@@ -69,6 +69,7 @@ Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuel
 |Überprüfung für lokale Datenspeicher:| Ja | Nein |
 |Nachverfolgen und widerrufen:| Ja | Nein |
 |Reiner Schutzmodus (keine Bezeichnungen):| Ja | Nein |
+|Schaltfläche „Nicht weiterleiten“ in Outlook:| Ja | Nein |
 |Unterstützung für mehrere Sprachen:| Ja | Nein |
 |Unterstützung für AD RMS:| Ja | Nur folgende Aktion wird unterstützt:<br /><br /> – Im Viewer können geschützte Dokumente geöffnet werden|
 
@@ -76,18 +77,51 @@ Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuel
 
 Wenn beide Clients das gleiche Feature unterstützen, ziehen Sie die folgende Tabelle zurate, um Funktionsunterschiede zwischen den aktuellen Vorschauversionen zu ermitteln.
 
-|Funktionalität |Azure Information Protection-Client|Azure Information Protection-<br /> Client für einheitliche Bezeichnungen|
+|Funktionalität |Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
 |Verwalten der Information Protection-Leiste in Office-Apps:|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Schützen** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App ausgeblendet, aber in neu geöffneten Apps weiterhin automatisch angezeigt <br /><br /> Für Administratoren: <br /><br />– Richtlinieneinstellungen zum automatischen Anzeigen oder Ausblenden der Leiste beim ersten Öffnen einer App sowie zum Steuern, ob die Leiste bei neu geöffneten Apps automatisch ausgeblendet wird, nachdem ein Benutzer die Leiste in einer App ausgeblendet hat|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App und in neu geöffneten Apps ausgeblendet <br /><br />Für Administratoren: <br /><br />– Keine Richtlinieneinstellungen zum Verwalten der Leiste|
-|Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Wird nach der Migration der Bezeichnung zu Office 365 beibehalten <br /><br /> Im Security & Compliance Center neu erstellte Bezeichnungen sind standardmäßig schwarz|
+|Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Wird nach der Migration der Bezeichnung zu Office 365 beibehalten <br /><br /> Im Security & Compliance Center neu erstellte Bezeichnungen haben keine Farbe|
 |Richtlinienaktualisierung: | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 24 Stunden | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 4 Stunden|
 |Unterstützte Formate für PDF:| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung (Standardeinstellung) <br /><br /> – PPDF <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br /> <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz|
 |Unterstützte Cmdlets:| Alle für [AzureInformatioProtection](/powershell/module/azureinformationprotection) dokumentierten Cmdlets | Set-AIPFileClassification und Set-AIPFileLabel unterstützen weder den Parameter *Owner* noch SharePoint Server-Bibliotheken <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />Darüber hinaus zeigt der Parameter *LabelingMethod* für Get-AIPFileStatus **Privilegiert**, **Standard** oder **Auto** anstelle von **Manuell** oder **Automatisch** an. Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: Pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: Pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
-|Aktionen zum Entfernen von Bezeichnungen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
+|Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
 |Automatische und empfohlene Klassifizierung: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration im Security & Compliance Center mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+
+#### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Features, die nicht im Azure Information Protection-Client für einheitliche Bezeichnungen enthalten sein werden
+
+Obwohl sich der Azure Information Protection-Client für einheitliche Bezeichnungen noch in der Entwicklungsphase befindet, werden die folgenden Features und Verhaltensunterschiede zum Azure Information Protection-Client in zukünftigen Releases des Azure Information Protection-Clients für einheitliche Bezeichnungen nicht verfügbar sein: 
+
+- Benutzerdefinierte Berechtigungen in Office-Apps: Word, Excel und PowerPoint
+
+- Nachverfolgen und widerrufen von Office-Apps und dem Datei-Explorer
+
+- Titel und QuickInfo der Information Protection-Leiste
+
+- Offlinesupport für Schutzaktionen in PowerShell und im Datei-Explorer
+
+- Reiner Schutzmodus (keine Bezeichnungen)
+
+- Schutz von PDF-Dokumenten im .ppdf-Format
+
+- Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen
+
+- Demorichtlinien
+
+- Begründung für das Entfernen eines Schutzes
+
+- Bestätigungsaufforderung vor dem Löschen einer angewendeten Bezeichnung
+
+- „Problem melden“-Link im Dialogfeld „Hilfe und Feedback“
+
+- Hinzufügen einer Bezeichnung zu einem Office-Dokument mithilfe einer vorhandenen benutzerdefinierten Eigenschaft (die erweiterten Clienteinstellungen „SyncPropertyName“ und „SyncPropertyState“)
+
+- Unabhängige PowerShell-Cmdlets zur Verbindung mit einem Rights Management-Dienst
+
+- Reiner AD RMS-Schutz
+
 
 ##### <a name="parent-labels-and-their-sublabels"></a>Übergeordnete und untergeordnete Bezeichnungen 
 

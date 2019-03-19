@@ -4,19 +4,19 @@ description: Ressourcen für Administratoren, einschließlich Informationen zu n
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/07/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d73037a8aba25e7c15ca531241b90dcc92f6dcc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5ff687b812ac9c7d3253e284baeaca0b1de2e8e3
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258095"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978218"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -53,7 +53,7 @@ Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, ab
 |Abonnement|Anweisungen|
 |----------------|---------------|
 |Azure Information Protection (eigenständig):|1. Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br /><br /> - **Technischer Support - enthalten**: Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
-|Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Office 365-Verwaltungsportal sowie zu Telefonnummern.|
+|Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|
 |Azure Information Protection mit Enterprise Mobility + Security (EMS)|1. Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass die folgenden Optionen aktiviert sind:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br /><br /> - **Technischer Support - enthalten**: Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
 |Azure Information Protection mit Office 365 Enterprise|Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
@@ -61,8 +61,6 @@ Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Konta
 
 
 ### <a name="self-help"></a>Selbsthilfe
-
-Probieren Sie den derzeit als Betaversion verfügbaren [Azure Information Protection-Hilfebot](help-bot.md) aus.
 
 Praktische Übungseinheiten: Siehe [Azure Information Protection Hands On Lab (Azure Information Protection – praktische Übungseinheiten)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
