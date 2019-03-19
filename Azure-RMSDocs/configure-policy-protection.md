@@ -4,17 +4,17 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332309"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978150"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -62,16 +62,24 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     - **Nicht konfiguriert:** Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
         
         Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
+        
+        Wenn eine Bezeichnung mit dieser **Nicht konfiguriert**-Schutzeinstellung angewendet wird:
+        
+         - Wenn der Inhalt zuvor ohne diese Bezeichnung geschützt wurde, bleibt der Schutz erhalten. 
+         
+         - Wenn der Inhalt zuvor mit einer Bezeichnung geschützt wurde, wird der Schutz entfernt, wenn der Benutzer, der die Bezeichnung anwendet, Berechtigungen hat, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das [Nutzungsrecht](configure-usage-rights.md) **Exportieren** oder **Vollzugriff** verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren.
+             
+             Wenn der Benutzer keine Berechtigungen hat, um den Schutz zu entfernen, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. If this problem persists, contact your administrator.** (Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.) 
     
     - **Schützen**: Wählen Sie diese Option aus, um Schutz anzuwenden, und fahren Sie dann mit Schritt 4 fort.
     
     - **Schutz entfernen**: Wählen Sie diese Option aus, um den Schutz zu entfernen, wenn ein Dokument oder eine E-Mail geschützt ist. Fahren Sie dann mit Schritt 11 fort.
         
-        Die bereits konfigurierten Schutzeinstellungen werden in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Protect** (Schützen) ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
+        Wenn der Schutz mit einer Bezeichnungs- oder Schutzvorlage angewendet wurde, werden die Schutzeinstellungen in Form einer archivierten Schutzvorlage beibehalten und werden angezeigt, wenn Sie die Option wieder in **Schützen** ändern. Diese Vorlage sehen Sie nicht im Azure-Portal. Sie können die Vorlage aber über [PowerShell](configure-templates-with-powershell.md) verwalten. Das bedeutet, dass Inhalt weiterhin zugänglich ist, wenn er über diese Bezeichnung und die zuvor angewendeten Schutzeinstellungen verfügt.
         
-        Beachten Sie, dass Benutzer zum Anwenden einer Bezeichnung mit dieser Option die Berechtigungen benötigen, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das **Nutzungsrecht** **Exportieren** oder [Vollzugriff](configure-usage-rights.md) verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren. Die Azure Rights Management-Standardvorlagen umfassen nicht die Nutzungsrechte, die Benutzer zum Aufheben des Schutzes benötigen. 
+        Beachten Sie, dass Benutzer zum erfolgreichen Anwenden einer Bezeichnung mit dieser Option die Berechtigungen benötigen, um den Rights Management-Schutz zu entfernen. Diese Anforderung bedeutet, dass Benutzer über das [Nutzungsrecht](configure-usage-rights.md) **Exportieren** oder **Vollzugriff** verfügen müssen. Alternativ muss der Benutzer der Rights Management-Besitzer sein (wodurch er automatisch Vollzugriff erhält) oder als [Administrator für Azure Rights Management](configure-super-users.md) fungieren. 
         
-        Wenn ein Benutzer keine Berechtigungen zum Entfernen des Rights Management-Schutzes hat und eine mit der Option **Schutz entfernen** konfigurierte Bezeichnung auswählt, wird folgende Meldung angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
+        Wenn der Benutzer, der die Bezeichnung mit dieser Einstellung anwendet, keine Berechtigung zum Entfernen des Rights Management-Schutzes hat, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
 
 4. Wenn Sie **Schützen** ausgewählt haben, wird das Blatt **Schutz** automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. Wenn Sie dieses neue Blatt nicht automatisch geöffnet wird, wählen Sie **Schutz**:
     

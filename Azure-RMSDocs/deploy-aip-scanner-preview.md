@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8477fb6bf726e290b50279c51947939280a9c62a
-ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
+ms.openlocfilehash: 6aa954a1c111ba20dc890fc9b9b5de4662804379
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007068"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828514"
 ---
 # <a name="deploying-the-preview-version-of-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Vorschauversion des Azure Information Protection-Scanners zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -442,7 +442,7 @@ Für die Überprüfung stehen Ihnen zwei alternative Szenarios zur Verfügung, d
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
-Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Wenn Ihnen jedoch die Reaktionsfähigkeit des Überprüfungscomputers wichtiger ist als die Überprüfungsleistung, können Sie eine erweiterte Clienteinstellung verwenden, um die [Anzahl der von der Überprüfung verwendeten Threads zu begrenzen](#limit-the-number-of-threads-used-by-the-scanner).
+Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Wenn Ihnen jedoch die Reaktionsfähigkeit des Überprüfungscomputers wichtiger ist als die Überprüfungsleistung, können Sie eine erweiterte Clienteinstellung verwenden, um die Anzahl der von der Überprüfung verwendeten Threads zu begrenzen.
 
 So maximieren Sie die Überprüfungsleistung:
 
@@ -551,5 +551,3 @@ Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei M
 Möglicherweise stellen Sie sich folgende Fragen: [Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md).
-
-
