@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
-ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
+ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57510053"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57828446"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -92,7 +92,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Untergeordnete Bezeichnungen werden von PowerShell und vom Scanner ordnungsgemäß angewendet, wenn die übergeordnete Bezeichnung für benutzerdefinierte Berechtigungen konfiguriert wurde.
 
-- Vom Azure Information Protection-Client werden Bezeichnungen ordnungsgemäß angezeigt, die von [Clients angewendet wurden, die einheitliche Bezeichnungen unterstützen](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
+- Vom Azure Information Protection-Client werden Bezeichnungen ordnungsgemäß angezeigt, die von [Clients angewendet wurden, die einheitliche Bezeichnungen unterstützen](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 - Dokumente werden in Office ordnungsgemäß ohne Wiederherstellungsmeldung geöffnet, nachdem der Schutz durch Datei-Explorer entfernt und mit der rechten Maustaste auf PowerShell oder den Scanner geklickt wurde.
 
@@ -236,21 +236,6 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Der Link **Feedback senden** im Dialogfeld **Hilfe und Feedback** wurde entfernt. Er wurde temporär ersetzt durch die Option **Problem melden**, mit der standardmäßig eine E-Mail an Microsoft gesendet wurde. Seit Dezember 2018 wird die Option **Problem melden** nicht mehr standardmäßig angezeigt. Sie kann aber mit einer [erweiterten Clienteinstellung](client-admin-guide-customizations.md#add-report-an-issue-for-users), in der Sie eine HTTP-Zeichenfolge für den Link angeben, hinzugefügt werden. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. 
 
-## <a name="version-12950"></a>Version 1.29.5.0 
-
-**Veröffentlicht**: 26.6.2018
-
-Diese Version umfasst die MSIPC-Version 1.0.3403.1224 des RMS-Clients.
-
-**Fixes**:
-
-- Für die Office-Versionen 16.0.9324.1000 und höher (Klick-und-Los) unterstützt die Azure Information Protection-Leiste die neuesten Anzeigeoptionen für Monitore. Bisher konnte es passieren, dass die Leiste außerhalb der Outlook-Anwendung angezeigt wurde.
-
-- Optische Kennzeichnungen, die Sie [pro Office-Anwendungstyp](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) konfigurieren können, ersetzen eine Kopf- und Fußzeile, die zuvor von einer Azure Information Protection-Bezeichnung angewendet wurde.
-
-- Wenn eine Excel-Datei bereits bezeichnet wurde und die Bezeichnung optische Kennzeichnungen anwendet, werden diese optischen Kennzeichnungen jetzt auch auf neue Tabellenblätter angewendet.
-
-- Wenn Sie die erweiterte Clienteinstellung verwenden, um einem [Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft eine Bezeichnung hinzuzufügen](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), setzt die automatische Bezeichnung nicht die manuelle Bezeichnung außer Kraft.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
