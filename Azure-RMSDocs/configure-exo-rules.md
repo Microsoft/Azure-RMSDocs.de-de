@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: 0a09c4c89ffd461cb0c922cb09ee0acd3ed033be
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425962"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57829001"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -50,7 +50,7 @@ Erstellen Sie für die folgenden Beispiele eine neue Nachrichtenflussregel, inde
 
 2. Wählen Sie die **Admin**-Kachel aus.
 
-3. Wählen Sie im Office 365 Admin Center **Admin Center** > **Exchange** aus.
+3. Wählen Sie im Microsoft 365 Admin Center **Admin Center** > **Exchange** aus.
 
 4. Im Exchange Admin Center: **Nachrichtenfluss** > **Regeln** > **+** > **Neue Regel erstellen**. 
 

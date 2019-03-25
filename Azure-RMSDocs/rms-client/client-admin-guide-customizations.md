@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/10/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 20c0fbd26a8884524e747a0ebc912d7a6dfb2f48
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: de1febc25d5fa5518f7ffca5d51895bebd2cd56b
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57898098"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221081"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -484,6 +484,8 @@ Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Cl
 - Legende: **EnablePDFv2Protection**
 
 - Wert: **False**
+
+Sie könnten diese Einstellung zum Beispiel für alle Benutzer benötigen, wenn Sie einen PDF-Reader verwenden, der den ISO-Standard für die PDF-Verschlüsselung nicht unterstützt. Oder Sie müssen sie möglicherweise für einige Benutzer konfigurieren, wenn Sie nach und nach zu einem PDF-Reader wechseln, der das neue Format unterstützt. Ein weiterer möglicher Grund für die Verwendung dieser Einstellung besteht, wenn Sie signierten PDF-Dokumenten Schutz hinzufügen müssen. Signierte PDF-Dokumente können zusätzlich mit dem PPDF-Format geschützt werden, da dieser Schutz als Wrapper für die Datei implementiert wird. 
 
 Damit die Azure Information Protection-Überprüfung die neue Einstellung verwenden, muss der Überprüfungsdienst neu gestartet werden. Darüber hinaus schützt die Überprüfung nicht mehr standardmäßig PDF-Dokumente. Wenn Sie möchten, dass PDF-Dokumente durch die Überprüfung geschützt werden sollen, wenn EnablePDFv2Protection auf „False“ festgelegt ist, müssen Sie die [Registrierung bearbeiten](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 

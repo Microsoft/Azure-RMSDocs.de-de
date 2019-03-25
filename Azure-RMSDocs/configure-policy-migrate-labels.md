@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zum Office
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 03/20/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ed3c77df8da01a4b87b30875a315eac5c075b438
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: e0c73a1d1eb1e5f3e438dd5d9d8f486810b3c869
+ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829058"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306947"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center
 
@@ -61,7 +61,9 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
     
     - Vorlagen, die einen cloudbasierten Schlüssel verwenden und Teil einer Bezeichnungskonfiguration sind, werden ebenfalls mit der Bezeichnung migriert. Andere Schutzvorlagen werden nicht migriert. 
     
-    - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, [konvertieren Sie diese Vorlagen in Bezeichnungen](configure-policy-templates.md#to-convert-templates-to-labels), bevor Sie Ihre Bezeichnungen migrieren. Diese Konfiguration verhindert die Bezeichnungsmigration nicht, wird jedoch im Security & Compliance Center nicht unterstützt.
+    - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch im Security & Compliance Center nicht unterstützt.
+        
+        Tipp: Es kann nützlich sein, für die erneute Konfigurierung dieser Bezeichnungen zwei Browserfenster zu öffnen: In einem Fenster wählen Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung aus, um die Schutzeinstellungen anzuzeigen, und im anderen Fenster konfigurieren Sie die gleichen Einstellungen beim Auswählen von **Berechtigungen festlegen**.
     
     - Nach der Migration einer Bezeichnung mit cloudbasierten Schutzeinstellungen ist der Ergebnisbereich der Schutzvorlage der Bereich, der im Azure-Portal (bzw. unter Verwendung des ADDRM PowerShell-Moduls) und im Security & Compliance Center definiert ist. 
 
@@ -88,13 +90,39 @@ Azure Information Protection-Clients können alle aufgeführten Bezeichnungseins
 |Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweise: Keine Synchronisierung im Security & Compliance Center |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungsfarben im Azure-Portal konfigurieren.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
-|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Nein|Keine Konfigurationsoption für benutzerdefinierte Berechtigungen für diese Office-Anwendungen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
-|HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
+|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Nein|Keine Konfigurationsoption für benutzerdefinierte Berechtigungen für diese Office-Anwendungen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Entfernen von Schutz |Nein|Keine Konfigurationsoption, um Schutz zu entfernen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.<br /><br /> Wenn Sie diese Bezeichnung mit dieser Konfiguration veröffentlichen, wird der Schutz entfernt, wenn dieser zuvor von einer Bezeichnung angewendet wurde. Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt der Schutz bestehen.|
 |Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte im Security & Compliance Center nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der im Security & Compliance Center aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
 |Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
 |Visuelle Kennzeichnungen pro App|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
 |Bedingungen und entsprechende Einstellungen <br /><br />Hinweise: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+
+### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
+
+Verwenden Sie die folgende Tabelle, um herauszufinden, wie sich die gleiche Schutzeinstellung für eine Bezeichnung je nachdem unterschiedlich verhält, ob sie vom Azure Information Protection-Client (allgemein verfügbare Versionen und aktuelle Vorschauversion), der aktuellen Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen oder von Office-Apps mit integrierter Bezeichnung (auch native Office-Bezeichnung genannt) verwendet wird. 
+
+Schutzeinstellungen, die sich gleich verhalten, sind nicht aufgeführt.
+
+|Schutzeinstellung für eine Bezeichnung |Azure Information Protection-Client|Azure Information Protection-Client für einheitliche Bezeichnungen| Office-Apps mit integrierter Bezeichnung
+|-------------------|-----------------------------------|-----------------------------------------------------------|---------------
+|Azure (Cloudschlüssel) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> - Benutzer werden nach benutzerdefinierten Berechtigungen gefragt, die dann als Schutz mit einem cloudbasierten Schlüssel angewendet werden| Wird nicht angezeigt |Wird in Word, Excel, PowerPoint und Outlook angezeigt: <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Benutzer werden nicht nach benutzerdefinierten Berechtigungen gefragt, und es wird kein Schutz angewendet <br /><br /> – Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
+|HYOK (AD RMS) mit Vorlage:| Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– HYOK-Schutz wird auf Dokumente und E-Mails angewendet | Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt  <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |Wird in Word, Excel, PowerPoint und Outlook angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1) |
+|HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – HYOK-Schutz wird auf Dokumente und E-Mails angewendet| Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Word, Excel und PowerPoint angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |
+|HYOK (AD RMS) mit benutzerdefinierten Berechtigungen für Outlook:|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– „Nicht weiterleiten“ mit HYOK-Schutz wird auf E-Mails angewendet|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen|Wird in Outlook angezeigt<br /><br />Wenn diese Bezeichnung angewendet wird, geschieht Folgendes:<br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
+
+###### <a name="footnote-1"></a>Fußnote 1
+
+In Outlook für Mac wird der Schutz mit einer Ausnahme beibehalten: Wenn eine E-Mail mit der Option „Nur verschlüsseln“ geschützt wurde, wird dieser Schutz entfernt.
+
+
+###### <a name="footnote-2"></a>Fußnote 2
+
+Der Schutz wird entfernt, wenn der Benutzer über ein Nutzungsrecht oder eine Nutzungsrolle verfügt, wovon diese Aktion unterstützt wird:
+- Das [Nutzungsrecht](configure-usage-rights.md#usage-rights-and-descriptions) „Exportieren“ oder „Vollzugriff“.
+- Die Rolle [Rights Management-Aussteller oder Rights Management-Besitzer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) oder [Administrator](configure-super-users.md).
+
+Wenn der Benutzer über keine/s dieser Nutzungsrechte oder Nutzungsrollen verfügt, wird die Bezeichnung nicht angewendet, und der ursprüngliche Schutz wird beibehalten.
 
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen

@@ -4,19 +4,19 @@ description: Anleitung zum Installieren, Konfigurieren und Ausführen der Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/29/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 6cd71239fc2b6bd20fe1444568abea7d541e067f
+ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828531"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306964"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -242,7 +242,7 @@ In der Standardeinstellung wird die Überprüfung einmal und nur im Modus für d
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. In der [Onlinehilfe](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) finden Sie weitere Informationen zu den einzelnen Konfigurationseinstellungen. 
+    Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z.B. ob Dateiattribute geändert werden und was in Berichten protokolliert wird. Wenn Ihre Azure Information Protection-Richtlinie darüber hinaus die Einstellung enthält, die eine Begründungsnachricht erfordert, damit die Klassifizierungsstufe gesenkt oder der Schutz entfernt wird, geben Sie die Nachricht mit diesem Cmdlet an. In der [Onlinehilfe](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) finden Sie weitere Informationen zu den einzelnen Konfigurationseinstellungen. 
 
 2. Notieren Sie sich die aktuelle Uhrzeit, und starten Sie die Überprüfung erneut, indem Sie den folgenden Befehl ausführen:
     
@@ -402,6 +402,14 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 - Sie können die Bedingungen in Azure Information Protection ändern
     
     Der erste Überprüfungszyklus, in dem die Überprüfung jede Datei untersuchen muss, benötigt naturgemäß mehr Zeit als die nachfolgenden Überprüfungszyklen, in denen standardmäßig nur neue und geänderte Dateien untersucht werden. Wenn Sie jedoch die Bedingungen in der Azure Information Protection-Richtlinie ändern, werden alle Dateien erneut untersucht, wie im [vorhergehenden Abschnitt](#when-files-are-rescanned) beschrieben.
+
+- Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
+    
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
+    
+    - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
+    
+    - Verwenden Sie Gruppen ohne Erfassung wie `(?:expression)` anstelle von `(expression)`
 
 - Der ausgewählte Protokolliergrad
     

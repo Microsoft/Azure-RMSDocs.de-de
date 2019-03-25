@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829092"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221013"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -71,7 +71,7 @@ Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuel
 |Reiner Schutzmodus (keine Bezeichnungen):| Ja | Nein |
 |Schaltfläche „Nicht weiterleiten“ in Outlook:| Ja | Nein |
 |Unterstützung für mehrere Sprachen:| Ja | Nein |
-|Unterstützung für AD RMS:| Ja | Nur folgende Aktion wird unterstützt:<br /><br /> – Im Viewer können geschützte Dokumente geöffnet werden|
+|Unterstützung für AD RMS:| Ja | Nur folgende Aktion wird unterstützt:<br /><br /> – Der Viewer kann geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)) bereitstellen|
 
 #### <a name="functional-comparison-for-the-clients"></a>Vergleich zwischen den Funktionen der Clients
 
@@ -89,6 +89,8 @@ Wenn beide Clients das gleiche Feature unterstützen, ziehen Sie die folgende Ta
 |Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: Pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: Pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
 |Automatische und empfohlene Klassifizierung: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration im Security & Compliance Center mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+
+Einen ausführlicheren Vergleich der Verhaltensunterschiede für bestimmte Schutzeinstellungen finden Sie unter [Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Features, die nicht im Azure Information Protection-Client für einheitliche Bezeichnungen enthalten sein werden
 
