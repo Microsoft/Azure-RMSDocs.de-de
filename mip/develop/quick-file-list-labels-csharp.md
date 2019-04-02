@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b692e78cbebe9b8657b0479a1d343453f5f07348
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809742"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)
 
@@ -91,7 +91,7 @@ Letztendlich erstellen und testen Sie die Clientanwendung.
 
 | Zusammenfassung | Fehlermeldung | Lösung |
 |---------|---------------|----------|
-| Ungültiges Zugriffstoken | *Es ist eine Ausnahme aufgetreten... ist das Zugriffstoken falsche/abgelaufen? <br> <br>Fehler bei API-Aufruf: Fehler bei der Profile_add_engine_async: [Klasse mip::PolicySyncException] Fehler beim Abrufen der Richtlinie, Fehler bei Anforderung mit http-Statuscode: 401, X-ms-Diagnostics: [2000001; Reason = "OAuth-Token, die mit der Anforderung übermittelte kann nicht analysiert werden."; Error_category = "Invalid_token"], CorrelationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Process 29924) wurde beendet mit Code 0.<br> <br>Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen...* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Navigieren Sie zurück zum [Aktualisieren der Logik zum Abrufen des Tokens](#update-the-token-acquisition-logic-with-a-valid-access-token), stellen Sie das Zugriffstoken wieder her, aktualisieren Sie `AcquireOAuth2Token()` erneut, und führen Sie die Tests und die Erstellung erneut durch. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
+| Ungültiges Zugriffstoken | *Es ist eine Ausnahme aufgetreten... ist das Zugriffstoken falsche/abgelaufen? <br> <br>Fehler bei API-Aufruf: Fehler bei der Profile_add_engine_async: [Klasse mip::PolicySyncException] Fehler beim Abrufen der Richtlinie, Fehler bei Anforderung mit http-Statuscode: 401, X-ms-Diagnostics: [2000001; Reason = "OAuth-Token, die mit der Anforderung übermittelte kann nicht analysiert werden."; Error_category = "Invalid_token"], CorrelationId: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (Process 29924) wurde beendet mit Code 0.<br> <br>Drücken Sie eine beliebige Taste, um dieses Fenster zu schließen...* | Wenn Ihr Projekt erfolgreich erstellt wird und dennoch eine Ausgabe ähnlich der linken angezeigt wird, enthält Ihre `AcquireOAuth2Token()`-Methode wahrscheinlich ein ungültiges oder abgelaufenes Token. Wechseln Sie zurück zur [erstellen und Testen Sie die Anwendung](#build-and-test-the-application) und erneutes Generieren der Access-token-Update `AcquireOAuth2Token()` in diesem Fall und Neuerstellung/neuen Test. Sie können das Token und dessen Ansprüche auch untersuchen und überprüfen, indem Sie die einseitige Webanwendung [jwt.ms](https://jwt.ms/) verwenden. |
 | Vertraulichkeitsbezeichnungen sind nicht konfiguriert | Nicht zutreffend | Wenn Ihr Projekt erfolgreich erstellt wird, Sie aber keine Ausgabe im Konsolenfenster erhalten, stellen Sie sicher, dass die Vertraulichkeitsbezeichnungen Ihrer Organisation ordnungsgemäß konfiguriert sind. Ausführliche Informationen finden Sie unter „Definieren des Bezeichnungsschemas und der Schutzeinstellungen“ im Artikel zur [Einrichtung und Konfiguration des MIP SDKs](setup-configure-mip.md).  |
 
 ## <a name="next-steps"></a>Nächste Schritte

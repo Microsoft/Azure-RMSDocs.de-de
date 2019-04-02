@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bf063cb8b56cfd0c487b62394c9226519e85b1f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809793"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.
@@ -113,7 +113,7 @@ Ruft die Verweiseradresse des Schutzes ab.
 Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
 
   
-**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst verschlüsselt wurde. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function) zugänglich sind
+**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst verschlüsselt wurde. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function) zugänglich sind
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData-Funktion
 Ruft anwendungsspezifische Daten ab, die signiert waren.
