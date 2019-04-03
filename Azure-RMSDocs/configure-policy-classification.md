@@ -4,17 +4,17 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829041"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809759"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -99,19 +99,6 @@ Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Cl
 Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Typen von vertraulichen Informationen, die eine Mindestversion des Clients erfordern
-
-Die folgenden Typen vertraulicher Informationen erfordern die Mindestversion 1.37.19.0 für den Azure Information Protection-Client:
-
-- **EU Mobile Phone Number** (EU-Mobiltelefonnummer)
-- **EU Passport Number** (EU-Reisepassnummer)
-- **EU Driver's License Number** (EU-Führerscheinnummer)
-- **EU National Identification Number** (Nationale EU-Identifikationsnummer)
-- **EU Social Security Number (SSN) or Equivalent ID** (EU-Sozialversicherungsnummer (SSN) oder entsprechende ID)
-- **EU Tax Identification Number (TIN)** (EU-Steueridentifikationsnummer)
-- **Thai Population Identification Code** (Thailändischer Bevölkerungsidentifikationscode)
-- **EU National Identification Number** (Nationale türkische Identifikationsnummer)
-- **Japanese Residence Card Number** (Nummer einer japanischen Aufenthaltskarte)
-
 
 Die folgenden Typen vertraulicher Informationen erfordern die aktuelle Vorschauversion des Azure Information Protection-Clients:
 
