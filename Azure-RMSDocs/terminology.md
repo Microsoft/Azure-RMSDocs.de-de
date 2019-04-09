@@ -4,19 +4,19 @@ description: Sind einige Wörter, Ausdrücke oder Abkürzungen bezüglich Micros
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd820cb189d21d6d4b848547ad4eaafd42d5b96
-ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
+ms.openlocfilehash: bd136d42420f42521e9fe058e73b4d643715d254
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57206500"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809929"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologie zu Azure Information Protection
 
@@ -36,7 +36,7 @@ Azure Information Protection-Client|Die Clientseite von Azure Information Protec
 |Azure Information Protection-Bezeichnung|Ein Element, das immer einen Klassifizierungswert auf Dokumente und E-Mails anwendet und sie auch schützen kann. Wenn eine Bezeichnung angewendet wird, wird die Bezeichnungsinformation in den Metadaten für Anwendungen und Dienste gespeichert, damit diese gelesen und (optional) auf sie reagiert werden kann.|
 |Azure Information Protection-Richtlinie|Vom Administrator definierte Konfiguration für Clients und Dienste, die Azure Information Protection-Bezeichnungen und -Richtlinieneinstellungen verwenden.|
 |Azure Information Protection-Überprüfung|Ein auf Windows Server ausgeführter Dienst, mit dem Sie Dokumente auf lokalen Ordnern, Netzwerkfreigaben sowie SharePoint Server-Websites und -Bibliotheken ermitteln, klassifizieren und schützen können.|
-|Azure Information Protection-Client für einheitliche Bezeichnungen|Derzeit in der Vorschauversion: Der Client für Windows-Computer, der Benutzer, Administratoren und Dienste die Vertraulichkeitsbezeichnungen und Richtlinieneinstellungen aus dem Office 365-Security & Compliance Center verwenden lässt.|
+|Azure Information Protection-Client für einheitliche Bezeichnungen|Derzeit in der Vorschauversion: Der Client für Windows-Computer, der Benutzer, Administratoren und Dienste die Vertraulichkeitsbezeichnungen und Richtlinieneinstellungen aus dem Office 365 Security & Compliance Center, dem Microsoft 365 Security Center, und dem Microsoft 365 Compliance Center. verwenden lässt.|
 |Azure RMS|Siehe *Azure Rights Management*.|
 |Azure Information Protection-Viewer|Eine auf Windows-Computern und mobilen Geräten ausgeführte App zum Anzeigen geschützter Dateien.|
 |Azure Rights Management|Häufig als *Azure RMS* abgekürzt.<br /><br />Ein Azure-Dienst, der von Azure Information Protection verwendet wird und mithilfe von Verschlüsselung und Richtlinien das Schützen von Dokumenten, Dateien und E-Mails unterstützt.  Wird auch als *Azure Rights Management-Dienst*bezeichnet. Es gibt diese früheren Namen:<br /><br />- *Microsoft Azure Active Directory Rights Management*: Häufig abgekürzt zu Windows Azure AD Rights Management-Dienste.<br /><br />- *RMS Online*: Die ursprünglich vorgeschlagene Name, der möglicherweise manchmal in Fehlermeldungen und Protokolldateieinträgen angezeigt wird.|

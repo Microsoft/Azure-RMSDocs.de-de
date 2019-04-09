@@ -4,26 +4,26 @@ description: Anweisungen für Benutzer zum Installieren der Vorschauversion des 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: a48bb16bd2b4a0b15df0086c1eba3c14766ee9a2
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756129"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809895"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Herunterladen und Installieren des Azure Information Protection-Clients für einheitliche Bezeichnungen (Vorschau)
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 
 > [!NOTE]
-> Der Client befindet sich noch in der Vorschauphase. Es können also noch Änderungen vorgenommen werden. Er verwendet einen Speicher für einheitliche Bezeichnungen und lädt Richtlinien für Vertraulichkeitsbezeichnungen aus dem Office 365 Security & Compliance Center herunter. Damit diese Bezeichnungen verwendet werden können, müssen sie zunächst über das Security & Compliance Center veröffentlicht werden. [Weitere Informationen](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
+> Der Client befindet sich noch in der Vorschauphase. Es können also noch Änderungen vorgenommen werden. Er verwendet einen Speicher für einheitliche Bezeichnungen und lädt Richtlinien für Vertraulichkeitsbezeichnungen aus den Admin-Centers herunter: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Damit diese Bezeichnungen verwendet werden können, müssen sie zunächst über eines dieser Admin-Centers veröffentlicht werden. [Weitere Informationen](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
 Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client in der Vorschau zu installieren, damit er Ihren Dokumenten und E-Mails Bezeichnungen zuordnen und diese schützen kann.
 
@@ -35,9 +35,9 @@ Zusätzlich:
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>So laden Sie den Azure Information Protection-Client für einheitliche Bezeichnungen herunter und installieren ihn
 
-Bevor Sie den Azure Information Protection-Client für einheitliche Bezeichnungen installieren, sollten Sie überprüfen, ob Sie im Office 365 Security & Compliance Center über Vertraulichkeitsbezeichnungen verfügen, die für Benutzer veröffentlicht werden. 
+Bevor Sie den Azure Information Protection-Client für einheitliche Bezeichnungen installieren, sollten Sie überprüfen, ob Sie im Office 365 Security & Compliance Center oder dem Microsoft 365 Security Center und Microsoft 365 Compliance Center über Vertraulichkeitsbezeichnungen verfügen, die für Benutzer veröffentlicht werden. 
 
-Wenn Sie über Bezeichnungen verfügen, die derzeit über das Azure-Portal für Azure Information Protection veröffentlicht werden, können Sie diese Bezeichnungen in das Security & Compliance Center [migrieren](../configure-policy-migrate-labels.md).
+Wenn Sie über Bezeichnungen verfügen, die derzeit über das Azure-Portal für Azure Information Protection veröffentlicht werden, können Sie [diese Bezeichnungen in die Admin-Centers migrieren](../configure-policy-migrate-labels.md).
 
 1. Laden Sie den Client in der Vorschauversion über das [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440) herunter.
 
@@ -67,4 +67,4 @@ Die Installation ist nun abgeschlossen, und Sie können den Azure Information Pr
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Um weitere Informationen zu dem Speicher für einheitliche Bezeichnungen zu erhalten, die das Security & Compliance-Center von Office 365 jetzt verwendet, lesen Sie folgenden Blogbeitrag: [Bekanntgabe der Verfügbarkeit der Verwaltung einheitlicher Bezeichnungen im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).
+Um weitere Informationen zu dem Speicher für einheitliche Bezeichnungen zu erhalten, die die Admin-Centers jetzt verwenden, lesen Sie folgenden Blogbeitrag: [Bekanntgabe der Verfügbarkeit der Verwaltung einheitlicher Bezeichnungen im Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492).

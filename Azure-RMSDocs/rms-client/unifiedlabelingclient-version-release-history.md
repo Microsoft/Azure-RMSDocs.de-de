@@ -4,25 +4,25 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/28/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
-ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
+ms.openlocfilehash: 7eb7ffd98651ed35be7ecd8043e49c1d15a65e8e
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56956252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809708"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 > [!NOTE]
-> Der Client befindet sich noch in der Vorschauphase. Es können also noch Änderungen vorgenommen werden. Er verwendet einen Speicher für einheitliche Bezeichnungen und lädt Richtlinien für Bezeichnungen aus dem Office 365 Security & Compliance Center herunter. [Weitere Informationen](/Office365/SecurityCompliance/sensitivity-labels)
+> Der Client befindet sich noch in der Vorschauphase. Es können also noch Änderungen vorgenommen werden. Er verwendet einen Speicher für einheitliche Bezeichnungen und lädt Richtlinien für Bezeichnungen aus den folgenden Admin-Centers herunter: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. [Weitere Informationen](/Office365/SecurityCompliance/sensitivity-labels)
 
 Sie können die neuste Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=57440) herunterladen.
 
@@ -42,7 +42,7 @@ Die Vorschauversion des Azure Information Protection-Clients für einheitliche B
 
 - Upgrade vom Azure Information Protection-Client.
 
-- Manuelle, automatische und empfohlene Klassifizierung: Verwenden Sie die **automatische Bezeichnung** im Office 365 Security & Compliance Center, um automatische und empfohlene Bezeichnungen zu konfigurieren. Weitere Informationen finden Sie unter [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Manuelle, automatische und empfohlene Klassifizierung: Weitere Informationen zur Konfiguration der automatischen und empfohlenen Klassifizierung für diesen Client finden Sie unter [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf den Inhalt](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
 - Datei-Explorer, Rechtsklickaktionen zum Klassifizieren und Schützen von Dateien, Entfernen des Schutzes und Anwenden von benutzerdefinierten Berechtigungen.
 
@@ -63,7 +63,7 @@ Die Vorschauversion des Azure Information Protection-Clients für einheitliche B
     - Aufforderung zur Angabe einer Begründung, wenn ein Benutzer eine Klassifizierungsstufe senkt oder eine Bezeichnung entfernt
     - Farben für die Bezeichnungen
 
-- Richtlinienaktualisierung über das Security & Compliance Center:
+- Aktualisieren der Richtlinie über die Admin Center:
     - Bei jedem Start einer Office-App und alle vier Stunden
     - Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen
     - Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz

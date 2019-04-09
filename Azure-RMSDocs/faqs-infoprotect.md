@@ -4,19 +4,19 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 3bfa333e88df07702aa6e7990c31609985a2b00f
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 34f64cc28762f8eb08089b188fbb40c7358e4807
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828854"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809980"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -49,7 +49,7 @@ Zurzeit gibt es zwei Vorschauclients für Windows:
 
 - Der **Azure Information Protection-Client** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Azure-Portal. Dieser Client basiert auf der allgemein verfügbaren Version des Clients.
 
-- Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Office 365 Security & Compliance Center. Dieser Client liegt in der zweiten Vorschauversion vor.
+- Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus einem der Admin-Centers: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, oder das Microsoft 365 Compliance Center. Dieser Client liegt in der zweiten Vorschauversion vor.
 
 Es wird empfohlen, dass Sie den Azure Information Protection-Client für einheitliche Bezeichnungen testen, wenn der aktuelle Satz an Features und Funktionen Ihre geschäftlichen Anforderungen erfüllt. Wenn dies nicht der Fall ist oder wenn Sie Bezeichnungen im Azure-Portal konfiguriert haben, die noch nicht [zum Store für einheitliche Bezeichnungen migriert wurden](configure-policy-migrate-labels.md), verwenden Sie den Azure Information Protection-Client.
 

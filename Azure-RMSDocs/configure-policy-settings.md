@@ -4,17 +4,17 @@ description: Konfigurieren Sie die Einstellungen in der Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379881"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617821"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -42,7 +42,11 @@ So konfigurieren Sie diese Einstellungen:
         
         Diese Einstellung gilt für Office-Apps und den Scanner. Sie gilt nicht für Datei-Explorer oder PowerShell.
     
-   - **Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**: Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden.
+    - **Senden Sie Überwachungsdaten an Azure Information Protection-Analysen**: Bevor Sie einen Azure Log Analytics-Arbeitsbereich für [Azure Information Protection-Analysen](reports-aip.md) erstellen, zeigen die Werte für diese Einstellung **Aus** und **Nicht konfiguriert** an. Wenn Sie den Arbeitsbereich erstellen, ändern sich die Werte auf **Aus** und **Ein**.
+        
+        Wenn die Einstellung **Ein** ist, senden Endpunkte, die die zentrale Berichterstellung unterstützen, ihre Überwachungsdaten an den Azure Information Protection-Dienst. Weitere Informationen darüber, welche Informationen gesendet und gespeichert werden, finden Sie im Abschnitt [Gesammelte und an Microsoft gesendete Informationen](reports-aip.md#information-collected-and-sent-to-microsoft). Setzen Sie diese Option auf **Aus**, um zu verhindern, dass diese Daten gesendet werden.
+    
+    - **Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**: Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden.
         
        Wenn beim Speichern eines Dokuments oder beim Senden einer E-Mail keine Bezeichnung zugewiesen ist, wird der Benutzer zur Auswahl einer Bezeichnung aufgefordert. Beispiel:
         

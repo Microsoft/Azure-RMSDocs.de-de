@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 02/15/2019
+ms.date: 04/02/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: f848aed3bb8bf6d7982a757c182edd19c9fbff73
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809776"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -60,14 +60,14 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
     
     - **Information Protection-Administrator**
     
-    - **Benutzer mit Leseberechtigung für Sicherheitsfunktionen** nur für [Azure Information Protection-Analysen](reports-aip.md)
+    - **Sicherheitsleseberechtigter** nur für [Azure Information Protection-Analysen](reports-aip.md)
     
   - **Sicherheitsadministrator**
     
   - **Globaler Administrator/Unternehmensadministrator**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum einheitlichen Bezeichnungsspeicher migriert wurde, um Azure Information Protection über das Azure-Portal zu verwalten, muss Ihr Konto ein globaler Administrator oder eine der aufgelisteten Rollen zuzüglich Zugriffsberechtigungen für das Office 365 Security & Compliance Center sein. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Wenn Ihr Mandant zum einheitlichen Bezeichnungsspeicher migriert wurde, um Azure Information Protection über das Azure-Portal zu verwalten, muss Ihr Konto ein globaler Administrator oder eine der aufgelisteten Rollen zuzüglich Zugriffsberechtigungen für das Office 365 Security & Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center sein. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Der Erste Zugriff auf das Blatt „Azure Information Protection“
@@ -146,7 +146,7 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 - [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md)
 
-- [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md)
+- [Migrieren von Azure Information Protection-Bezeichnungen zu Office 365](configure-policy-migrate-labels.md)
 
 ## <a name="label-information-stored-in-emails-and-documents"></a>In E-Mails und Dokumenten gespeicherte Bezeichnungsinformationen
 

@@ -4,19 +4,19 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/13/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 503615fa6d2bb492fcbaec3271a23a606ceb4127
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828486"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809946"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -40,27 +40,27 @@ Weitere Informationen finden Sie unter [Bekanntgabe der Verfügbarkeit von Infor
 
 Ursprünglich hat Office 365 nur über [Aufbewahrungsbezeichnungen](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) verfügt, mit denen Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren können, wenn der Inhalt sich in Office 365-Diensten befindet. Im Gegensatz dazu können Sie mit Bezeichnungen in Azure Information Protection eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden.
 
-Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Aufbewahrungsbezeichnungen im Office 365 Security & Compliance Center verfügbar. Derzeit können Sie in der Vorschauversion Ihre vorhandenen Azure Information Protection-Bezeichnungen in den neuen einheitlichen Bezeichnungsspeicher migrieren, um sie als Vertraulichkeitsbezeichnungen mit Office 365 zu verwenden. 
+Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Aufbewahrungsbezeichnungen in einem der Admin-Centers verfügbar: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, oder das Microsoft 365 Compliance Center. Derzeit können Sie in der Vorschauversion Ihre vorhandenen Azure Information Protection-Bezeichnungen in den neuen einheitlichen Bezeichnungsspeicher migrieren, um sie als Vertraulichkeitsbezeichnungen mit Office 365 zu verwenden. 
 
 Weitere Informationen zum Verwalten einheitlicher Bezeichnungen und deren Unterstützung finden Sie im Blogbeitrag [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
-Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](configure-policy-migrate-labels.md).
+Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zu Office 365](configure-policy-migrate-labels.md).
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Wann ist der richtige Zeitpunkt, um meine Bezeichnungen zu Office 365 zu migrieren?
 
-Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), veröffentlicht werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
+Vertraulichkeitsbezeichnungen in den Admin-Centers (Office 365 Security & Compliance Center, Microsoft 365 Security Center, and Microsoft 365 Compliance Center) sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), veröffentlicht werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
 
 Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen und dann Ihren Produktionsmandanten zu migrieren. Zusätzlich:
 
 - **Wenn Sie Azure Information Protection zum ersten Mal verwenden:** 
     
-    Da Azure Information Protection für eine schnellere Bereitstellung über Standardbezeichnungen verfügt, wird empfohlen, zuerst diese Standardbezeichnungen zu migrieren und sie dann über das Office 365 Security & Compliance Center zu verwalten.
+    Da Azure Information Protection für eine schnellere Bereitstellung über Standardbezeichnungen verfügt, wird empfohlen, zuerst diese Standardbezeichnungen zu migrieren und sie dann über eines der Admin-Centers zu verwalten.
 
 - **Wenn Sie Azure Information Protection zum ersten Mal verwenden, aber bereits damit beschäftigt sind, die Bezeichnungen, die Sie verwenden möchten, zu definieren und zu konfigurieren:**
     
-    Es wird empfohlen, die Konfiguration der Bezeichnungen im Azure-Portal abzuschließen und die Bezeichnungen anschließend zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann im Security & Compliance Center bearbeitet werden müssen.
+    Es wird empfohlen, die Konfiguration der Bezeichnungen im Azure-Portal abzuschließen und die Bezeichnungen anschließend zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann in einem der Admin-Centers bearbeitet werden müssen.
 
-Bevor Sie Ihre Bezeichnungen migrieren, vergewissern Sie sich, dass Sie die [Überlegungen und Bezeichnungseinstellungen, die nicht vom Security & Compliance Center unterstützt werden](configure-policy-migrate-labels.md#considerations-for-unified-labels), verstanden haben.
+Bevor Sie Ihre Bezeichnungen migrieren, vergewissern Sie sich, dass Sie die [Überlegungen und Bezeichnungseinstellungen, die nicht von den Admin-Centers unterstützt werden](configure-policy-migrate-labels.md#considerations-for-unified-labels), verstanden haben.
 
 Weitere Informationen finden Sie unter [Welchen Vorschauclient installiere ich zum Testen der neuen Funktion?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
@@ -68,11 +68,11 @@ Weitere Informationen finden Sie unter [Welchen Vorschauclient installiere ich z
 
 Nachdem Sie Ihre Bezeichnungen im Azure-Portal migriert haben:
 
-- Wenn Sie über [Clients und Dienste für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) verfügen, erfolgt die Veröffentlichung dieser Bezeichnungen sowie das Konfigurieren derer Richtlinieneinstellungen über das Office 365 Security & Compliance Center. Für zukünftige Bezeichnungsänderungen verwenden Sie dann das Security & Compliance Center. Die Bezeichnungen und Richtlinieneinstellungen werden von Clients für einheitliche Bezeichnungen aus dem Security & Compliance Center heruntergeladen.
+- Wenn Sie über [Clients und Dienste für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) verfügen, erfolgt die Veröffentlichung dieser Bezeichnungen sowie das Konfigurieren derer Richtlinieneinstellungen über eines der Admin-Centers (Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center). Für zukünftige Bezeichnungsänderungen verwenden Sie eines dieser Admin-Centers. Die Bezeichnungen und Richtlinieneinstellungen werden von Clients für einheitliche Bezeichnungen aus diesen Admin-Centers heruntergeladen.
 
 - Wenn Sie über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, verwenden Sie zur Bearbeitung Ihrer Bezeichnungen und Richtlinieneinstellungen weiter das Azure-Portal. Azure Information Protection-Clients werden weiterhin die Bezeichnungen und Richtlinieneinstellungen aus Azure herunterladen.
 
-- Wenn Sie sowohl über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) als auch über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, können Sie jedes der beiden Portale verwenden, um Bezeichnungsänderungen vorzunehmen. Damit jedoch Azure Information Protection-Clients die von Ihnen im Security & Compliance Center vorgenommenen Bezeichnungsänderungen übernehmen, müssen Sie wieder das Azure-Portal verwenden: Verwenden Sie die Option **Veröffentlichen** auf dem Blatt **Azure Information Protection - Unified labeling** (Azure Information Protection – einheitliche Bezeichnungen) im Azure-Portal. 
+- Wenn Sie sowohl über [Clients für einheitliche Bezeichnungen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) als auch über [Azure Information Protection-Clients](./rms-client/aip-client.md) verfügen, können Sie die Admin-Centers oder das Azure-Portal verwenden, um Bezeichnungsänderungen vorzunehmen. Damit jedoch Azure Information Protection-Clients die von Ihnen in den Admin-Centers vorgenommenen Bezeichnungsänderungen übernehmen, müssen Sie wieder das Azure-Portal verwenden: Verwenden Sie die Option **Veröffentlichen** auf dem Blatt **Azure Information Protection - Unified labeling** (Azure Information Protection – einheitliche Bezeichnungen) im Azure-Portal. 
 
 Verwenden Sie weiterhin das Azure-Portal für die [zentrale Berichterstellung](reports-aip.md) und die [Überprüfung](deploy-aip-scanner-preview.md).
 
@@ -106,7 +106,7 @@ Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können a
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Benutzer mit Leseberechtigung für Sicherheitsfunktionen:**: Nur für [Azure Information Protection-Analysen](reports-aip.md). Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator anzeigen, wie Ihre Bezeichnungen verwendet werden, den Benutzerzugriff auf gekennzeichnete Dokumente und E-Mails und alle Änderungen ihrer Klassifizierung überwachen sowie Dokumente erkennen, die vertrauliche Informationen enthalten, die geschützt werden müssen. Da dieses Feature Azure Log Analytics verwendet, benötigen Sie außerdem eine unterstützende [RBAC-Rolle](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
+- **Sicherheitsleseberechtigter:**: Nur für [Azure Information Protection-Analysen](reports-aip.md). Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator anzeigen, wie Ihre Bezeichnungen verwendet werden, den Benutzerzugriff auf gekennzeichnete Dokumente und E-Mails und alle Änderungen ihrer Klassifizierung überwachen sowie Dokumente erkennen, die vertrauliche Informationen enthalten, die geschützt werden müssen. Da dieses Feature Azure Log Analytics verwendet, benötigen Sie außerdem eine unterstützende [RBAC-Rolle](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 - **Sicherheitsadministrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator, alle Aspekte von Azure Information Protection im Azure-Portal sowie einige Aspekte anderer Azure-Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann keine der [PowerShell-Cmdlets aus dem AADRM-Modul](administer-powershell.md) ausführen.
     

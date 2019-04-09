@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/19/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
+ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57828446"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809861"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -47,7 +47,7 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 Wenn Ihre Clientversion 1 höher als 1.41.51.0 ist, handelt es sich um eine Vorschauversion für Test- und Evaluierungszwecke.  
 
 > [!TIP]
-> Sind würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center veröffentlicht werden? Siehe [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
+> Sie würden den Azure Information Protection-Client für einheitliche Bezeichnungen gerne bewerten, da Ihre Bezeichnungen vom Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center veröffentlicht werden? Siehe [Azure Information Protection-Client für einheitliche Bezeichnungen: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
 
 **Veröffentlicht**: 5.3.2019
 
@@ -81,6 +81,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Neue erweiterte Clienteinstellung, die nur angewendet wird, wenn Sie die Richtlinieneinstellung so konfigurieren, dass keine benutzerdefinierten Berechtigungen angezeigt werden: Wenn es eine Datei gibt, die mit benutzerdefinierten Berechtigungen geschützt wurde, blenden Sie die Option „Benutzerdefinierte Berechtigungen“ im Dateiexplorer ein, sodass Benutzer diese sehen und ändern können (wenn diese die Berechtigungen haben, um Schutzeinstellungen ändern zu können). [Weitere Informationen](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
+- Neue erweiterte Clienteinstellung für Azure Information Protection -Analysen, um das Senden von Übereinstimmungen zwischen Informationstypen für eine Teilmenge von Benutzern zu verhindern, wenn Sie das Kontrollkästchen im Azure-Portal aktiviert haben, um Übereinstimmungen zwischen Inhalten zu sammeln. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 **Fixes**:
 
