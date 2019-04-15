@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/03/2019
+ms.date: 04/09/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 46ba6b5e1cb9246074b2e5a241f06eef3b0d2501
-ms.sourcegitcommit: cf85764510e9980dfacaaa01bc4da37c4dbf5281
+ms.openlocfilehash: 0cc09e58d49fe9515de0109c726af08e12937dd1
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58887555"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364571"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -36,9 +36,11 @@ Bevor Sie sich die ausführlichen Anweisungen zum Migrieren Ihrer Bezeichnungen 
 
 ### <a name="important-information-about-administrative-roles"></a>Wichtige Informationen zu Administratorrollen
 
-Die [Azure AD-Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Sicherheitsadministrator** und **Information Protection-Administrator** werden von der Plattform für einheitliche Bezeichnungen nicht unterstützt. Wenn diese Administratorrollen in Ihrer Organisation verwendet werden, fügen Sie vor der Migration Ihrer Bezeichnungen die Benutzer, die diese Rollen haben, dem **Complianceadministrator** oder den Rollengruppen für die **Organisationsverwaltung** für das Office 365 Security & Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center hinzu. Alternativ können Sie für diese Benutzer eine neue Rollengruppe erstellen und dieser Gruppe entweder Rollen für die **Aufbewahrungsverwaltung** oder die **Organisationskonfiguration** hinzufügen. Anleitungen finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+Die [Azure AD-Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) mit dem Namen **Information Protection-Administrator** wird von der Plattform für einheitliche Bezeichnungen nicht unterstützt. Wenn diese administrative Rolle in Ihrer Organisation verwendet wird, fügen Sie die Benutzer, die über diese Rolle verfügen, den Azure AD-Rollen **Sicherheitsadministrator** oder **Complianceadministrator** hinzu, bevor Sie die Bezeichnungen migrieren. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
-Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen den Zugriff auf die Admin-Centers gewähren, können sie nach der Migration Ihrer Bezeichnungen nicht mehr auf die Bezeichnungen und Richtlinien im Azure-Portal zugreifen.
+Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
+
+Wenn Sie diesen Benutzern nicht über eine dieser Konfigurationen Zugriff auf die Admin Centers gewähren, sind die Benutzer nach der Migration Ihrer Bezeichnungen nicht mehr in der Lage, Azure Information Protection im Azure-Portal zu konfigurieren.
 
 Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Bezeichnungen weiterhin Bezeichnungen und Richtlinien sowohl im Azure-Portal als auch in den Admin-Centers verwalten.
 
@@ -83,11 +85,13 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
 
 Anhand der folgenden Tabelle können Sie feststellen, welche Konfigurationseinstellungen einer migrierten Bezeichnung vom Office 365 Security & Compliance Center, dem Microsoft 365 Security Center, oder dem Microsoft Compliance Center nicht unterstützt werden. Wenn Sie über Bezeichnungen mit diesen Einstellungen verfügen, verwenden Sie nach der Migration den Verwaltungsleitfaden in der letzten Spalte, bevor Sie Ihre Bezeichnungen in einem der Admin-Centers veröffentlichen.
 
+Wenn Sie nicht sicher sind, wie Ihre Bezeichnungen konfiguriert sind, zeigen Sie die zugehörigen Einstellungen im Azure-Portal an. Eine Anleitung zu diesem Schritt finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
+
 Azure Information Protection-Clients können alle aufgeführten Bezeichnungseinstellungen problemlos verwenden, weil sie die Bezeichnungen weiterhin aus dem Azure-Portal herunterladen.
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
-|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Hinweise: Nicht mit den Admin-Centers synchronisiert |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Anmerkungen: Nicht mit den Admin-Centers synchronisiert |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungsfarben im Azure-Portal konfigurieren.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
 |Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Nein|Keine Konfigurationsoption für benutzerdefinierte Berechtigungen für diese Office-Anwendungen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
@@ -96,11 +100,13 @@ Azure Information Protection-Clients können alle aufgeführten Bezeichnungseins
 |Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
 |Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
 |Visuelle Kennzeichnungen pro App|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
-|Bedingungen und entsprechende Einstellungen <br /><br />Hinweise: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+|Bedingungen und entsprechende Einstellungen <br /><br />Anmerkungen: Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 
-Verwenden Sie die folgende Tabelle, um herauszufinden, wie sich die gleiche Schutzeinstellung für eine Bezeichnung je nachdem unterschiedlich verhält, ob sie vom Azure Information Protection-Client (allgemein verfügbare Versionen und aktuelle Vorschauversion), der aktuellen Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen oder von Office-Apps mit integrierter Bezeichnung (auch native Office-Bezeichnung genannt) verwendet wird. 
+Verwenden Sie die folgende Tabelle, um herauszufinden, wie sich die gleiche Schutzeinstellung für eine Bezeichnung je nachdem unterschiedlich verhält, ob sie vom Azure Information Protection-Client (allgemein verfügbare Versionen und aktuelle Vorschauversion), der aktuellen Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen oder von Office-Apps mit integrierter Bezeichnung (auch native Office-Bezeichnung genannt) verwendet wird.
+
+Wenn Sie nicht sicher sind, wie Ihre Schutzeinstellungen konfiguriert sind, zeigen Sie die zugehörigen Einstellungen auf dem Blatt **Schutz** im Azure-Portal an. Eine Anleitung zu diesem Schritt finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
 Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht aufgeführt, mit den folgenden Ausnahmen:
 - Wenn Sie Office-Apps mit integrierter Bezeichnungsfunktion verwenden, werden Bezeichnungen im Datei-Explorer nicht angezeigt, es sei denn, Sie installieren auch den Azure Information Protection Unified Labeling-Client.
@@ -140,6 +146,8 @@ Sie müssen globaler Administrator sein, um Ihre Bezeichnungen zu migrieren.
 2. Wählen Sie im Menü **Verwalten** die Option **Einheitliche Bezeichnungen (Vorschau)** aus.
 
 3. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
+    
+    Wenn die Option zum Aktivieren nicht verfügbar ist, aktivieren Sie **Status einheitlicher Bezeichnungen**: Wenn **Aktiviert** angezeigt wird, verwendet Ihr Mandant bereits den einheitlichen Bezeichnungsspeicher, sodass keine Bezeichnungen migriert werden müssen.
 
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen in einem der Admin-Centers veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 

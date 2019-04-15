@@ -4,19 +4,19 @@ description: Informationen zu den personenbezogenen Daten, die von Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: aa8b1da968a0821fd889bbed54e6b7698857bcf2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233733"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -194,7 +194,7 @@ Wenn Bezeichnungen und Schutz auf Dokumente und E-Mails angewendet werden, werde
 
 - RMS-Client: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-Zusätzlich protokolliert der Azure Information Protection-Client diese personebezogenen Daten im lokalen Windows-Ereignisprotokoll unter **Anwendungen und Dienstprotokolle** > **Azure Information Protection**.
+Zusätzlich protokolliert der Azure Information Protection-Client diese personenbezogenen Daten im lokalen Windows-Ereignisprotokoll unter **Anwendungen und Dienstprotokolle** > **Azure Information Protection**.
 
 Wenn der Azure Information Protection-Client den Scanner ausführt, werden personenbezogene Daten auf dem Windows Server-Computer, der den Scanner ausführt, unter %localappdata%\Microsoft\MSIP\Scanner\Reports gespeichert.
 
@@ -211,13 +211,15 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
     
 - **Information Protection-Administrator**
 
+- **Complianceadministrator**
+
 - **Sicherheitsadministrator**
 
-- **Globaler Administrator/Unternehmensadministrator**
+- **Globaler Administrator**
 
-Auf personenbezogene Daten, die Sie mithilfe des AADRM-Moduls anzeigen und angeben, kann nur von den Benutzern zugegriffen werden, denen die Rolle **Information Protection-Administrator** oder **Globaler Administrator bzw. Unternehmensadministrator** in Azure Active Directory oder die Rolle „Globaler Administrator“ im Azure Rights Management-Dienst zugewiesen wurde.  
+Auf personenbezogene Daten, die Sie mithilfe des AADRM-Moduls anzeigen und angeben, kann nur von den Benutzern zugegriffen werden, denen die Rolle **Information Protection-Administrator**, **Complianceadministrator** oder **Globaler Administrator** in Azure Active Directory oder die Rolle „Globaler Administrator“ im Azure Rights Management-Dienst zugewiesen wurde.  
 
-## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten
+## <a name="updating-personal-data"></a>Aktualisieren von persönlichen Daten
 
 Sie können E-Mail-Adressen für bereichsbezogene Richtlinien und Schutzeinstellungen in der Azure Information Protection-Richtlinie aktualisieren. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md) und [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md). 
 
@@ -243,7 +245,7 @@ Wenn Sie die E-Mail-Adresse eines delegierten Administrators aktualisieren müss
 
 2. Verwenden Sie [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Add-AadrmRoleBasedAdministrator), um den Benutzer und die neue E-Mail-Adresse hinzuzufügen.
 
-## <a name="deleting-personal-data"></a>Löschen von personenbezogenen Daten
+## <a name="deleting-personal-data"></a>Löschen von persönlichen Daten
 Sie können E-Mail-Adressen für bereichsbezogene Richtlinien und Schutzeinstellungen in der Azure Information Protection-Richtlinie löschen. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md) und [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md). 
 
 Für die Schutzeinstellungen können Sie diese Informationen löschen, indem Sie PowerShell-Cmdlets über das [AADRM-Modul](/powershell/module/aadrm) verwenden.
@@ -271,7 +273,7 @@ Diese Daten werden dauerhaft gelöscht. Sie können nicht wiederhergestellt werd
 
 **Schritt 3: Bestätigung der Löschung** Sie erhalten eine E-Mail von Microsoft Customer Support Services (CSS), in der bestätigt wird, dass die Daten gelöscht wurden. 
 
-## <a name="exporting-personal-data"></a>Exportieren von personenbezogenen Daten
+## <a name="exporting-personal-data"></a>Exportieren von persönlichen Daten
 Wenn Sie die AADRM-PowerShell-Cmdlets verwenden, können personenbezogene Daten gesucht und als PowerShell-Objekt exportiert werden. Das PowerShell-Objekt kann in das JSON-Format konvertiert und mithilfe des `ConvertTo-Json`-Cmdlets gespeichert werden.
 
 ## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Einschränken der Verwendung von personenbezogenen Daten für die Profilerstellung oder für Marketing ohne Zustimmung

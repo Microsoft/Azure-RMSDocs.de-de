@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6f41e49b2a5183c7c264c5be60fc496f78a6e1dd
-ms.sourcegitcommit: b201730193b4e4e3a3254e7a0f673ddd7d6e3c84
+ms.openlocfilehash: 3cd27fc4a060b6c7328495ad46d53768c28ff223
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289467"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -67,6 +67,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |PullPolicy|[Unterstützung für getrennte Computer](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)|
+|RunAuditInformationTypeDiscovery|[Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Hinzufügen einer Bezeichnung zu einem Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -96,7 +97,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
-Darüber hinaus gilt:
+Weiterhin gilt:
 
 - Wenn der Azure Information Protection-Client nach Abschluss dieser Schritte noch mit dem alten Konto angemeldet ist, löschen Sie im Internet Explorer alle Cookies, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -255,7 +256,9 @@ Konfigurieren Sie die folgenden Zeichenfolgen:
 
 - Wert: **True**
 
-Ohne diese Einstellung wird die erste untergeordnete Bezeichnung, die unter der höchsten übergeordneten Bezeichnung gefunden wird, auf die E-Mail angewendet.
+Ohne diese Einstellung wird die erste Bezeichnung, die unter der übergeordneten Bezeichnung mit der höchsten Klassifizierung gefunden wird, auf die E-Mail angewendet. 
+
+Mit dieser Einstellung wird die untergeordnete Bezeichnung, die sich am nächsten zur übergeordneten Bezeichnung mit der höchsten Klassifizierung befindet, auf die E-Mail angewendet. Wenn Sie Bezeichnungen neu anordnen müssen, um die gewünschte Bezeichnung auf dieses Szenario anzuwenden, informieren Sie sich unter [Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection](../configure-policy-delete-reorder.md).
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Aktivieren der empfohlenen Klassifizierung in Outlook
 
@@ -287,7 +290,7 @@ Wenn diese Bedingungen erfüllt sind, und die E-Mail-Adresse des Empfängers nic
 
 - **Justify** (Legitimation): Der Benutzer wird zu einer Legitimierung aufgefordert (mit vordefinierten Optionen oder Freiform).  Der Benutzer kann dann die E-Mail senden oder abbrechen. Der Legitimationstext wird in den X-Header der E-Mail geschrieben, sodass dieser von anderen Systemen gelesen werden kann. Zum Beispiel von Diensten, die der Verhinderung von Datenverlust dienen.
 
-- **Blockieren:** Der Benutzer wird davon abgehalten, die E-Mail zu senden, solange die Bedingung besteht. Die Nachricht beinhaltet den Grund dafür, warum die E-Mail blockiert wird, sodass der Benutzer das Problem aufheben kann. So kann er z.B. bestimmte Empfänger entfernen, oder der E-Mail eine Bezeichnung hinzufügen. 
+- **Blockieren**: Der Benutzer wird davon abgehalten, die E-Mail zu senden, solange die Bedingung besteht. Die Nachricht beinhaltet den Grund dafür, warum die E-Mail blockiert wird, sodass der Benutzer das Problem aufheben kann. So kann er z.B. bestimmte Empfänger entfernen, oder der E-Mail eine Bezeichnung hinzufügen. 
 
 Die daraus resultierende Aktion wird im lokalen Windows-Ereignisprotokoll protokolliert: **Anwendungs- und Dienstprotokolle** > **Azure Information Protection**:
 
@@ -591,7 +594,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c,"Secure Islands label is Confidential",Classification,Confidential|
 
@@ -608,7 +611,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f,"Secure Islands label is Sensitive",Classification,Sensitive|
 
@@ -626,7 +629,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
 
@@ -756,6 +759,28 @@ Es gibt zum Beispiel eine SharePoint-Spalte mit dem Namen **Klassifizierung** un
 Um einem Office-Dokument eine Bezeichnung dieser Klassifizierungswerte zuzuweisen, legen Sie **SyncPropertyName** auf **Classification** und **SyncPropertyState** auf **OneWay** fest. 
 
 Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird diesem eine der folgenden Bezeichnungen zugeordnet: **Öffentlich**, **Allgemein** oder **Streng vertraulich\Alle Mitarbeiter**. Dies geschieht allerdings nur, wenn Bezeichnungen mit diesen Namen in der Azure Information Protection-Richtlinie vorhanden sind. Wenn es keine Bezeichnungen mit diesen Namen gibt, erhält das Dokument keine Bezeichnung.
+
+## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten
+
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen, und erfordert die aktuelle Vorschauversion des Azure Information Protection-Clients.
+
+[Azure Information Protection-Analysen](../reports-aip.md) sind in der Lage, die von Azure Information Protection-Clients gespeicherten Dokumente, die Inhalte mit vertraulichen Informationen enthalten, zu erkennen und zu melden. Standardmäßig werden diese Informationen nicht an Azure Information Protection-Analysen gesendet.
+
+Um dieses Verhalten dahin gehend zu ändern, dass diese Informationen gesendet werden, geben Sie die folgenden Zeichenfolgen ein:
+
+- Schlüssel: **RunAuditInformationTypeDiscovery**
+
+- Wert: **True**
+
+Wenn diese erweiterte Clienteinstellung nicht festgelegt wird, werden weiterhin Überwachungsergebnisse vom Azure Information Protection-Client gesendet. Der Bericht beschränkt sich jedoch auf Informationen über Benutzerzugriffe auf bezeichnete Inhalte.
+
+Beispiel:
+
+- Ohne diese Einstellung können Sie sehen, dass ein Benutzer auf die mit **Vertraulich\Vertrieb** bezeichnete Datei „Finanzen.docx“ zugegriffen hat.
+
+- Und mit dieser Einstellung sehen Sie, dass „Finanzen.docx“ sechs Kreditkartennummern enthält.
+    
+    - Wenn Sie zusätzlich [Inhaltsübereinstimmungen für umfassendere Analysen](../reports-aip.md#content-matches-for-deeper-analysis) aktivieren, sind außerdem die tatsächlichen Kreditkartennummern einsehbar.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
 

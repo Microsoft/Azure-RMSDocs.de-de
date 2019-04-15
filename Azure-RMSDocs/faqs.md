@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 503615fa6d2bb492fcbaec3271a23a606ceb4127
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 17e46002486aaca8d09a5a4767a6f976d9acbb82
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364554"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -50,7 +50,7 @@ Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [
 
 Vertraulichkeitsbezeichnungen in den Admin-Centers (Office 365 Security & Compliance Center, Microsoft 365 Security Center, and Microsoft 365 Compliance Center) sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen Bezeichnungsspeicher migriert werden, können sie mithilfe von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), veröffentlicht werden. Heute unterstützen nicht alle Clients einheitliche Bezeichnungen oder sind allgemein verfügbar.
 
-Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen und dann Ihren Produktionsmandanten zu migrieren. Zusätzlich:
+Es wird empfohlen, zuerst die Vorschaufunktion mit einem Testmandanten zu testen und dann Ihren Produktionsmandanten zu migrieren. Beachten Sie auch Folgendes:
 
 - **Wenn Sie Azure Information Protection zum ersten Mal verwenden:** 
     
@@ -104,9 +104,16 @@ Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können a
 
 - **Information Protection-Administrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator die Konfiguration aller Aspekte von Azure Information Protection, aber nicht das Konfigurieren anderer Dienste. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen. 
     
+    > [!NOTE]
+    > Nachdem Sie [Ihren Mandanten zum Speicher für einheitliche Bezeichnungen migriert haben](configure-policy-migrate-labels.md), wird diese Rolle für das Azure-Portal nicht mehr unterstützt.
+    
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Sicherheitsleseberechtigter:**: Nur für [Azure Information Protection-Analysen](reports-aip.md). Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator anzeigen, wie Ihre Bezeichnungen verwendet werden, den Benutzerzugriff auf gekennzeichnete Dokumente und E-Mails und alle Änderungen ihrer Klassifizierung überwachen sowie Dokumente erkennen, die vertrauliche Informationen enthalten, die geschützt werden müssen. Da dieses Feature Azure Log Analytics verwendet, benötigen Sie außerdem eine unterstützende [RBAC-Rolle](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
+- **Complianceadministrator:** Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator alle Aspekte von Azure Information Protection konfigurieren. Beispielsweise kann er den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen sowie die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen.
+    
+    Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Weitere Informationen zu den Berechtigungen, über die ein Benutzer mit dieser Rolle verfügt, finden Sie im Abschnitt [Verfügbare Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) in der Azure Active Directory-Dokumentation.
+
+- **Sicherheitsleseberechtigter**: Nur für [Azure Information Protection-Analysen](reports-aip.md). Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator anzeigen, wie Ihre Bezeichnungen verwendet werden, den Benutzerzugriff auf gekennzeichnete Dokumente und E-Mails und alle Änderungen ihrer Klassifizierung überwachen sowie Dokumente erkennen, die vertrauliche Informationen enthalten, die geschützt werden müssen. Da dieses Feature Azure Log Analytics verwendet, benötigen Sie außerdem eine unterstützende [RBAC-Rolle](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 
 - **Sicherheitsadministrator**: Diese Azure Active Directory-Administratorrolle erlaubt einem Administrator, alle Aspekte von Azure Information Protection im Azure-Portal sowie einige Aspekte anderer Azure-Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann keine der [PowerShell-Cmdlets aus dem AADRM-Modul](administer-powershell.md) ausführen.
     
@@ -146,7 +153,7 @@ Wenn ein Benutzer ein durch Azure Information Protection geschütztes Dokument �
 
 Weitere Informationen und einige exemplarische Vorgehensweisen finden Sie im folgenden Blogbeitrag: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/) (Bedingte Zugriffsrichtlinien für Azure Information Protection).
 
-Zusätzliche Informationen:
+Weitere Informationen:
 
 - Für Windows-Computer: Die Richtlinien zum bedingten Zugriff für Azure Information Protection werden in der aktuellen Vorschauversion ausgewertet, wenn die [Benutzerumgebung initialisiert wird](./how-does-it-work.md#initializing-the-user-environment) (dieser Vorgang wird auch als Bootstrapping bezeichnet). Danach wird alle 30 Tage eine Prüfung durchgeführt.
 

@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 52b72d7d05b405e0d4972dd4c4c1edfee3d9fe3b
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289501"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -81,7 +81,10 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Neue erweiterte Clienteinstellung, die nur angewendet wird, wenn Sie die Richtlinieneinstellung so konfigurieren, dass keine benutzerdefinierten Berechtigungen angezeigt werden: Wenn es eine Datei gibt, die mit benutzerdefinierten Berechtigungen geschützt wurde, blenden Sie die Option „Benutzerdefinierte Berechtigungen“ im Dateiexplorer ein, sodass Benutzer diese sehen und ändern können (wenn diese die Berechtigungen haben, um Schutzeinstellungen ändern zu können). [Weitere Informationen](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Neue erweiterte Clienteinstellung für Azure Information Protection -Analysen, um das Senden von Übereinstimmungen zwischen Informationstypen für eine Teilmenge von Benutzern zu verhindern, wenn Sie das Kontrollkästchen im Azure-Portal aktiviert haben, um Übereinstimmungen zwischen Inhalten zu sammeln. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+- Zwei neue erweiterte Clienteinstellungen für Azure Information Protection-Analysen zur Unterstützung folgender Szenarien:
+    
+    - Verhindert das Senden von Übereinstimmungen zwischen Informationstypen für eine Teilmenge von Benutzern, wenn Sie das Kontrollkästchen zum Sammeln von Übereinstimmungen zwischen Inhalten im Azure-Portal aktiviert haben. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - Zeigt im Ermittlungsbericht an, ob Dateien vertrauliche Informationen enthalten. [Weitere Informationen](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
 
 **Fixes**:
 

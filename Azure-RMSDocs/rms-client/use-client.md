@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 876838dbd4e9818ca118f632079c98531ce347a1
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 0762edb3e7960c5700ac8a28d7ae1b62455efbe0
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364605"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -49,7 +49,7 @@ Welchen Client sollten Sie installieren?
 
 Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuellen Vorschauversionen unterstützt werden, miteinander vergleichen.
 
-|Komponente|Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
+|Feature|Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
 |Zentrale Berichterstellung (Analysen):| Ja | Ja |
@@ -62,6 +62,7 @@ Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuel
 |Viewer für geschützte Dateien:| Ja | Ja mit Einschränkungen:<br /><br /> – Bei generisch geschützten Dateien (PFILE-Format) können im Gegensatz zum Azure Information Protection-Client Änderungen an der ursprünglich geöffneten Datei nicht gespeichert werden|
 |PowerShell-Befehle:| Ja | Ja mit Einschränkungen:<br /><br />– Enthaltene Cmdlets: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />– Cmdlets, die eine direkte Verbindung zu einem Schutzdienst herstellen, sind nicht enthalten|
 |Offlineunterstützung für Schutzaktionen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen |
+|Unterstützung für nicht verbundene Computer mit manueller Verwaltung von Richtliniendateien:| Ja |Nein |
 |HYOK-Unterstützung:| Ja | Nein<br /><br /> Bezeichnungen, die aus dem Azure-Portal migriert wurden und für den HYOK-Schutz konfiguriert sind, werden vom Azure Information Protection-Client für einheitliche Bezeichnungen angezeigt, wenden aber keinen Schutz an |
 |Nutzungsprotokollierung in der Ereignisanzeige:| Ja | Nein|
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| Ja | Nein |
@@ -78,7 +79,7 @@ Anhand der folgenden Tabelle können Sie die Features, die von den beiden aktuel
 
 Wenn beide Clients das gleiche Feature unterstützen, ziehen Sie die folgende Tabelle zurate, um Funktionsunterschiede zwischen den aktuellen Vorschauversionen zu ermitteln.
 
-|Funktionalität |Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
+|Funktion |Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
@@ -95,17 +96,13 @@ Einen ausführlicheren Vergleich der Verhaltensunterschiede für bestimmte Schut
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Features, die nicht im Azure Information Protection-Client für einheitliche Bezeichnungen enthalten sein werden
 
-Obwohl sich der Azure Information Protection-Client für einheitliche Bezeichnungen noch in der Entwicklungsphase befindet, werden die folgenden Features und Verhaltensunterschiede zum Azure Information Protection-Client in zukünftigen Releases des Azure Information Protection-Clients für einheitliche Bezeichnungen nicht verfügbar sein: 
+Obwohl sich der Azure Information Protection-Client für einheitliche Bezeichnungen noch in der Entwicklungsphase befindet, sind die folgenden Features und Verhaltensunterschiede zum Azure Information Protection-Client für zukünftige Releases des Azure Information Protection-Clients für einheitliche Bezeichnungen nicht vorgesehen: 
 
 - Benutzerdefinierte Berechtigungen in Office-Apps: Word, Excel und PowerPoint
 
 - Nachverfolgen und widerrufen von Office-Apps und dem Datei-Explorer
 
 - Titel und QuickInfo der Information Protection-Leiste
-
-- Dynamische Werte in Kopf- und Fußzeilen mithilfe von Variablen und verschiedenen visuellen Markierungen für Word, Excel, PowerPoint und Outlook.
-
-- Offlinesupport für Schutzaktionen in PowerShell und im Datei-Explorer
 
 - Reiner Schutzmodus (keine Bezeichnungen)
 
@@ -124,8 +121,6 @@ Obwohl sich der Azure Information Protection-Client für einheitliche Bezeichnun
 - Hinzufügen einer Bezeichnung zu einem Office-Dokument mithilfe einer vorhandenen benutzerdefinierten Eigenschaft (die erweiterten Clienteinstellungen „SyncPropertyName“ und „SyncPropertyState“)
 
 - Unabhängige PowerShell-Cmdlets zur Verbindung mit einem Rights Management-Dienst
-
-- Reiner AD RMS-Schutz
 
 
 #### <a name="parent-labels-and-their-sublabels"></a>Übergeordnete und untergeordnete Bezeichnungen 

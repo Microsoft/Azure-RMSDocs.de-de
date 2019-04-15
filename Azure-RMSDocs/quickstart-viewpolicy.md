@@ -1,27 +1,27 @@
 ---
 title: 'Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal – AIP'
-description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information Protection besitzt, beginnen Sie an dieser Stelle, um den Dienst zum Azure-Portal hinzuzufügen, die Aktivierung des Schutzdiensts zu überprüfen und die Richtlinie anzuzeigen.
+description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information Protection besitzt, beginnen Sie an dieser Stelle, um den Dienst zum Azure-Portal hinzuzufügen, die Aktivierung des Schutzdiensts zu überprüfen sowie die Bezeichnungen und Richtlinieneinstellungen anzuzeigen.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/09/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 5981fe8d0cd7e7cd1739036ff78739bd64514322
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: 1d857fc3282b0851e80765fe3f53a2315ed59b5f
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364639"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, überprüfen, ob der Schutzdienst aktiviert ist, und zeigen die Standardrichtlinie Ihrer Organisation an. 
+In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, bestätigen die Aktivierung des Schutzdiensts, erstellen Standardbezeichnungen (falls noch keine Bezeichnungen vorhanden sind) und zeigen Richtlinieneinstellungen für Azure Information Protection an.
 
-Für diese Schnellstartanleitung benötigen Sie 5 Minuten.
+Für diese Schnellstartanleitung benötigen Sie maximal 10 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -52,7 +52,7 @@ Azure Information Protection wird nicht automatisch im Azure-Portal zur Verfügu
 
 ## <a name="confirm-the-protection-service-is-activated"></a>Überprüfen, ob der Schutzdienst aktiviert ist
 
-Der Schutzdienst ist jetzt automatisch für neue Mandanten aktiviert, es empfiehlt sich jedoch, sich zu vergewissern, dass er nicht manuell aktiviert werden muss. 
+Der Schutzdienst ist jetzt automatisch für Neukunden aktiviert. Sie sollten sich jedoch vergewissern, dass er nicht manuell aktiviert werden muss. 
 
 1. Wählen Sie auf dem Blatt **Azure Information Protection** die Optionen **Verwalten** > **Schutzaktivierung** aus.
 
@@ -70,28 +70,70 @@ Der Schutzdienst ist jetzt automatisch für neue Mandanten aktiviert, es empfieh
 
     Wenn die Aktivierung abgeschlossen ist, zeigt die Informationsleiste **Activation finished successfully** (Aktivierung erfolgreich) an.
 
-## <a name="view-your-organizations-default-policy---labels-and-policy-settings"></a>Anzeigen der Standardrichtlinie Ihrer Organisation: Bezeichnungen und Richtlinieneinstellungen
+## <a name="create-labels---if-necessary"></a>Erstellen von Bezeichnungen – falls erforderlich
 
-Wenn Sie erstmals über das Azure-Portal eine Verbindung mit dem Azure Information Protection-Dienst herstellen, wird eine Standardrichtlinie für Ihren Mandanten erstellt. Die Standardrichtlinie enthält Bezeichnungen und Einstellungen, die Sie im vorliegenden Zustand verwenden oder anpassen können.
+Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die automatisch für Ihren Mandanten erstellt wurden. Oder es wurden Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center, Microsoft Security Center oder Microsoft-Compliance Center generiert. Sehen Sie sich dazu das folgende Beispiel an.
 
-1. Klicken Sie auf **Klassifizierungen** > **Richtlinien** > **Global**, um die Azure Information Protection-Standardrichtlinie anzuzeigen, die für Ihren Mandanten erstellt wurde.
+1. Wählen Sie **Klassifizierungen** > **Bezeichnungen** aus:
     
-2. Nehmen Sie sich ein paar Minuten Zeit, um sich mit den angezeigten Bezeichnungen vertraut zu machen:
+    Wenn die Option **Standardbezeichnungen generieren** angezeigt wird, sind noch keine Bezeichnungen verfügbar:
     
-   - Bezeichnungen für die Klassifizierung: **Personal** (Persönlich), **Public** (Öffentlich), **General** (Allgemein), **Confidential** (Vertraulich) und **Highly Confidential** (Streng vertraulich). Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen, die Beispiele für eine Klassifizierung mit Unterkategorien bereitstellen:
+     ![Azure Information Protection – keine Standardbezeichnungen](./media/info-protect-nodefaultlabels.png)
     
-   - In der Standardkonfiguration verfügen einige Bezeichnungen nicht über optische Kennzeichnungen. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Je nach Ihrer Standardrichtlinie ist für einige Bezeichnungen auch ein Schutz festgelegt. Beispiel: 
+    Wenn die Option zum Generieren von Standardbezeichnungen nicht angezeigt wird, verfügen Sie bereits über Bezeichnungen. Wahrscheinlich ähneln diese den Standardbezeichnungen für Azure Information Protection in der folgenden Abbildung:
     
-     ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-labelsv2.png)
-    
-3. Nach den Bezeichnungen werden im Abschnitt **Konfigurieren von Einstellungen, die für Information Protection-Endbenutzer angezeigt und angewendet werden** außerdem einige Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
-    
-    ![Schnellstart-Tutorial für Azure Information Protection Schritt 3 – Standardrichtlinie](./media/info-protect-policy-default-settings-quickstart.png) 
+    ![Azure Information Protection – Standardbezeichnungen](./media/info-protect-defaultlabels.png)
 
-4. Da Sie nur die Bezeichnungen und Einstellungen anzeigen, können Sie alle Blätter schließen, die Sie geöffnet haben.
+2. Wenn Sie bereits über Bezeichnungen verfügen, wechseln Sie zum nächsten Abschnitt, um die Bezeichnungen anzuzeigen. Wenn Sie noch nicht über Bezeichnungen verfügen, wählen Sie die Option **Standardbezeichnungen generieren** aus.
+
+4. Um die Bezeichnungen für alle Benutzer zu veröffentlichen, wählen Sie **Klassifizierungen** > **Richtlinien** > **Global** aus:
+    
+    a. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
+    
+    b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** und anschließend alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
+    
+    c. Wählen Sie auf dem Blatt **Richtlinie: Global** die Option **Speichern** aus.
+
+## <a name="view-your-labels"></a>Anzeigen von Bezeichnungen
+
+Wählen Sie **Klassifizierungen** > **Bezeichnungen** aus, und nehmen Sie sich einige Minuten Zeit, um sich mit den Bezeichnungen auf dem Blatt **Azure Information Protection – Bezeichnungen** vertraut zu machen.
+
+Wenn die Bezeichnungen nicht den Bezeichnungen in der Abbildung des vorangehenden Abschnitts ähneln, verwenden Sie keine Azure Information Protection-Standardbezeichnungen, sondern Bezeichnungen aus dem Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
+
+> [!TIP]
+> So gehen Sie vor, um anstelle von benutzerdefinierten Bezeichnungen Azure Information Protection-Standardbezeichnungen zu verwenden: 
+> - Löschen Sie die benutzerdefinierten Bezeichnungen, damit auf dem Blatt **Bezeichnungen** die Option zum Generieren von Standardbezeichnungen angezeigt wird, wie im [vorangehenden Abschnitt](#create-labels---if-necessary) beschrieben. 
+
+Das Blatt **Azure Information Protection – Bezeichnungen**:
+
+- Die Standardbezeichnungen für die Klassifizierung sind **Persönlich**, **Öffentlich**, **Allgemein**, **Vertraulich** und **Streng vertraulich**. Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen, die Beispiele für eine Klassifizierung mit Unterkategorien bereitstellen.
+
+- Anhand der Spalten **KENNZEICHNUNG** und **SCHUTZ** erkennen Sie, dass für einige Bezeichnungen optische Kennzeichnungen konfiguriert wurden. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Für einige Bezeichnungen kann zusätzlich auch eine Schutzfunktion festgelegt werden. 
+
+Beispiel: 
+
+![Azure Information Protection-Schnellstart – Übersicht über Standardbezeichnungen](./media/info-protect-policy-default-labelsv2.png)
+
+Wenn Sie eine Bezeichnung auswählen, werden auf einem neuen Blatt Details zur Bezeichnungskonfiguration angezeigt.
+
+## <a name="view-your-policy-settings"></a>Anzeigen von Richtlinieneinstellungen
+
+Wenn Sie das erste Mal über das Azure-Portal eine Verbindung mit dem Azure Information Protection-Dienst herstellen, werden automatisch Standardrichtlinieneinstellungen für Sie erstellt, die vom Azure Information Protection-Client verwendet werden. Richtlinieneinstellungen und einsehbare Bezeichnungen werden auf den Client heruntergeladen, der in der Azure Information Protection-Richtlinie angegeben ist.
+
+Wenn Sie den Azure Information Protection-Client für einheitliche Bezeichnungen verwenden, macht dieser Client keinen Gebrauch von diesen Richtlinieneinstellungen. Stattdessen lädt dieser Client Bezeichnungen und Richtlinieneinstellungen aus dem Office 365 Compliance & Security Center, Microsoft 365 Compliance Center oder Microsoft 365 Security Center herunter.
+
+So zeigen Sie die Standardrichtlinieneinstellungen für Azure Information Protection an
+
+1. Klicken Sie auf **Klassifizierungen** > **Richtlinien** > **Global**, um die standardmäßigen Azure Information Protection-Richtlinieneinstellungen anzuzeigen, die für Ihren Mandanten erstellt wurde.
+    
+2. Nach den Bezeichnungen im Abschnitt **Einstellungen konfigurieren, die für Information Protection-Endbenutzer angezeigt und angewendet werden** werden die Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
+    
+    ![Globale Richtlinieneinstellungen für Azure Information Protection](./media/info-protect-policy-default-settingsv3.png)
+
+3. Da Sie nur die Einstellungen anzeigen, können Sie alle Blätter im Portal schließen, die Sie geöffnet haben.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Da Sie nun die Bezeichnungen und Richtlinieneinstellungen im Azure-Portal gesehen haben, können Sie als nächsten Schritt das folgende Tutorial durchführen: [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
+Da Sie nun die Standardbezeichnungen und Richtlinieneinstellungen im Azure-Portal gesehen haben, können Sie als nächsten Schritt das folgende Tutorial durchführen: [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
 
 Anstelle der ausführlichen Anweisungen zum Konfigurieren sämtlicher Aspekte der Azure Information Protection-Richtlinie können Sie [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md) lesen.
