@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6c5979706b9868bd7d0b6b1adad5d96bd5d3e0ce
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7cc1eeeafa4a086631f5d3c376643b5758002679
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329589"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572833"
 ---
 # <a name="class-mippolicyhandler"></a>Die Klasse „mip::PolicyHandler“ 
 Diese Klasse stellt eine Schnittstelle für alle Funktionen des Richtlinienhandler bereit.
@@ -30,7 +30,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  Wird aufgeru
 Ruft die Vertraulichkeitsbezeichnung aus dem vorhandenen Inhalt ab.
 
 Parameter:  
-* **state**: Aktuellen Status des Inhalts 
+* **state**: Aktuellen Status des Inhalts. 
 
 
 
@@ -52,7 +52,7 @@ Parameter:
 Wird aufgerufen, wenn die berechneten Aktionen angewendet wurden und die Daten auf den Datenträger committet wurden
 
 Parameter:  
-* **state:** der aktuelle Ausführungsstatus des Inhalts, nachdem die Aktionen committet wurden 
+* **Status**: den aktuellen Ausführungsstatus des Inhalts, nachdem die Aktionen ein Commit ausgeführt wurde. 
 
 
-: Dieser Aufruf sendet dann ein Überwachungsereignis
+: Dieser Aufruf sendet dann ein Überwachungsereignis.

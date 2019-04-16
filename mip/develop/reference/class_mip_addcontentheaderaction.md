@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e3080e4fcfd8553d04acc1533fc16d8bb1640f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330677"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573444"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader hinzugefügt wird.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung des Headers ab.
 public int GetMargin() const  |  Ruft den Rand des Headers im unteren Bereich ab
 public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-  
+
 ## <a name="members"></a>Member
   
 ### <a name="getuielementname-function"></a>GetUIElementName-Funktion
@@ -67,14 +67,14 @@ Ruft die Ausrichtung des Headers ab.
   
 **Gibt**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
   
-**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand des Headers im unteren Bereich ab
 
   
 **Gibt**: Die Ränder im unteren Bereich des Dokuments (z. B. 10 mm).
-  
+
 ### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 

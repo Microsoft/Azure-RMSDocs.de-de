@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 0e7092f700e614005a11e939523b9712c3c71bd0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 5befc7dfd5b2cf5f8940bc244fae9f013b579b71
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333502"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573142"
 ---
 # <a name="class-mipprotectadhocaction"></a>mip::ProtectAdhocAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Ad-hoc-Schutz hinzugefügt wird.
@@ -21,7 +21,7 @@ Eine Aktionsklasse, die angibt, dass dem Dokument Ad-hoc-Schutz hinzugefügt wir
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-  
+
 ## <a name="members"></a>Member
   
 ### <a name="gettype-function"></a>GetType-Funktion

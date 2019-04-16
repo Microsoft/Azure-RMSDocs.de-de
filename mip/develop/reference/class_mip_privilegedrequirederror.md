@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 778eada67cc244f1f0c81f8246fe33b0aa46140e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 5f91cc121212bb15691477e05322b124025234d6
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330714"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573393"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>mip::PrivilegedRequiredError-Klasse 
 Die aktuelle Bezeichnung wurde als privilegierter Vorgang zugewiesen (das Äquivalent zu einem Administratorvorgang), daher kann sie nicht außer Kraft gesetzt werden.
@@ -64,4 +64,3 @@ Legt die Fehlermeldung fest
 
 Parameter:  
 * **msg**: Fehlermeldung.
-

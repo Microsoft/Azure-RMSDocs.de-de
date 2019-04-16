@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 6f4bb83950a4745739a1663950a52d05c51f7f4d
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809793"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573291"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.
@@ -26,6 +26,7 @@ public std::string GetName() const  |  Ruft den Schutznamen ab.
 public std::string GetDescription() const  |  Ruft eine Beschreibung zum Schutz ab.
 public std::string GetTemplateId() const  |  Ruft ggf. die Schutzvorlagen-ID ab.
 public std::string GetLabelId() const  |  Ruft ggf. die Bezeichnungs-ID ab.
+public std::string GetContentId() const  |  Ruft die Inhalts-ID ab, sofern vorhanden.
 Public Std:: vector\<UserRights\> GetUserRights() const  |  Ruft die Auflistung von Benutzerrechtszuordnungen ab.
 Public Std:: vector\<UserRoles\> GetUserRoles() const  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
 public bool DoesContentExpire() const  |  Überprüft, ob der Inhalt eine Ablaufzeit hat oder nicht.
@@ -73,6 +74,12 @@ Ruft ggf. die Bezeichnungs-ID ab.
   
 **Gibt**: [Bezeichnung](class_mip_label.md) diese Eigenschaft nur in ProtectionDescriptors werden, für die bereits vorhandene aufgefüllt wird ID, geschützte Inhalte. Es handelt sich um ein Feld, das dann vom Server aufgefüllt wird, wenn geschützter Inhalt verarbeitet wird.
   
+### <a name="getcontentid-function"></a>GetContentId-Funktion
+Ruft die Inhalts-ID ab, sofern vorhanden.
+
+  
+**Gibt**: Inhalts-ID
+  
 ### <a name="getuserrights-function"></a>GetUserRights-Funktion
 Ruft die Auflistung von Benutzerrechtszuordnungen ab.
 
@@ -113,7 +120,7 @@ Ruft die Verweiseradresse des Schutzes ab.
 Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.
 
   
-**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst verschlüsselt wurde. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function) zugänglich sind
+**Gibt**: App-Specific Data eine [ProtectionHandler](class_mip_protectionhandler.md) möglicherweise enthalten ein Wörterbuch mit anwendungsspezifischen Daten, die von den Schutzdienst verschlüsselt wurde. Diese verschlüsselten Daten sind unabhängig von den signierten Daten, die über ProtectionDescriptor::GetSignedAppData zugegriffen werden kann.
   
 ### <a name="getsignedappdata-function"></a>GetSignedAppData-Funktion
 Ruft anwendungsspezifische Daten ab, die signiert waren.

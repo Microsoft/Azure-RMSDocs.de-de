@@ -7,22 +7,30 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9433ca2f47496e0d28d46c68b3100b53cd25c3f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: bdf0814e56d64bd16918a6f4d269a057620f92f5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333683"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573121"
 ---
 # <a name="class-mipfileexecutionstate"></a>Klasse mip::FileExecutionState 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche virtuelle Std:: Map\<Std:: String, Std:: shared_ptr\<ClassificationResult\> \> GetClassificationResults (const Std:: shared_ptr\<FileHandler\> &, const std :: Vector\<Std:: shared_ptr\<ClassificationRequest\> \> &) const  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual DataState GetDataState() const  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
+public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
 public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  Geben Sie einen Puffer mit den serialisierten PL zurück
+public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Geben Sie eine Zuordnung der Anwendung spezifischen Überwachung Schlüssel-Wert-Paaren zurück.
   
 ## <a name="members"></a>Member
+  
+### <a name="getdatastate-function"></a>GetDataState-Funktion
+Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
+
+  
+**Gibt**: Status der Inhaltsdaten
   
 ### <a name="getclassificationresults-function"></a>GetClassificationResults-Funktion
 Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
@@ -36,10 +44,16 @@ Parameter:
 
 
   
-**Gibt**: Eine Liste der Klassifizierung Ergebnis.
+**Gibt**: Eine Liste der Klassifizierungsergebnisse.
   
 ### <a name="getserializedprotectioninfo-function"></a>GetSerializedProtectionInfo-Funktion
 Geben Sie einen Puffer mit den serialisierten PL zurück
 
   
 **Gibt**: Ein Puffer mit den serialisierten PL
+  
+### <a name="getauditmetadata-function"></a>GetAuditMetadata-Funktion
+Geben Sie eine Zuordnung der Anwendung spezifischen Überwachung Schlüssel-Wert-Paaren zurück.
+
+  
+**Gibt**: Eine Liste der Anwendung spezifischen Überwachung Metadaten registriert Schlüssel-Wert-Paare Absender: Für den Absender-Empfänger-e-Mail-Id: Stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy dar: E-Mail-Id für den Benutzer, der den Inhalt LastModifiedDate & lt; zuletzt geändert: Datum, an der letzten des Inhalts Änderung

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a48f22af3f699412a2976683695467ee7ed71cdb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331187"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573648"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings-Klasse 
 [Einstellungen](class_mip_policyprofile_settings.md), die während der Erstellung und Lebensdauer von [PolicyProfile](class_mip_policyprofile.md) verwendet werden
@@ -30,6 +30,8 @@ Public Std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ruft den
 Öffentliche void SetLoggerDelegate (const Std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate)  |  Überschreibt die Standardprotokollierung.
 Public Std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 Öffentliche void SetHttpDelegate (const Std:: shared_ptr\<HttpDelegate\>& HttpDelegate)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
+public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Rufen Sie den TaskDispatcher-Delegaten (sofern vorhanden), von der Anwendung bereitgestellt.
+public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Überschreiben Sie die Standardaufgabe asynchroner Verarbeitung mit des Clients zu verteilen.
 public void OptOutTelemetry()  |  Deaktiviert die Sammlung sämtlicher Telemetriedaten.
 public bool IsTelemetryOptedOut() const  |  Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
@@ -113,6 +115,20 @@ Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 
 Parameter:  
 * **httpDelegate**: HTTP-Rückrufschnittstelle, die von der Clientanwendung implementiert
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate-Funktion
+Rufen Sie den TaskDispatcher-Delegaten (sofern vorhanden), von der Anwendung bereitgestellt.
+
+  
+**Gibt**: TaskDispatcher-Delegat, der zum Ausführen von asynchronen Aufgaben verwendet werden soll
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate-Funktion
+Überschreiben Sie die Standardaufgabe asynchroner Verarbeitung mit des Clients zu verteilen.
+
+Parameter:  
+* **taskDispatcherDelegate**: Aufgabe, die Verteilung der Rückrufschnittstelle, die von der Clientanwendung implementiert
 
 
   

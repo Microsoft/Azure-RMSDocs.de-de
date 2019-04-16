@@ -1,21 +1,21 @@
 ---
-title: Klasse mip::NoAuthTokenError
-description: Dokumentiert die mip::noauthtokenerror-Klasse von der Microsoft Information Protection (MIP) SDK.
+title: class mip::AdhocProtectionRequiredError
+description: Dokumentiert die mip::adhocprotectionrequirederror-Klasse von der Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8dca2231931ab33f243b71850757b2c009c492c9
+ms.openlocfilehash: a109c9f235e950e428aa000d34af95a337c6eb4d
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574289"
+ms.locfileid: "59574447"
 ---
-# <a name="class-mipnoauthtokenerror"></a>Klasse mip::NoAuthTokenError 
-Der Benutzer konnte Zugriff auf den Inhalt aufgrund fehlender Authentifizierungstoken nicht abgerufen werden.
+# <a name="class-mipadhocprotectionrequirederror"></a>class mip::AdhocProtectionRequiredError 
+Ad-hoc-Schutz muss zum Abschließen der Aktion auf die Datei festgelegt werden.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

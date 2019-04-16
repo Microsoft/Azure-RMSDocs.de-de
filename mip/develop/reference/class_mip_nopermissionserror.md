@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ea7edbc6e30d3ac529d55ddeaeecc63f140c512f
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ac10820e1fa167888b857043219711a485632c00
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329419"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573699"
 ---
 # <a name="class-mipnopermissionserror"></a>Klasse mip::NoPermissionsError 
 Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.
@@ -30,7 +30,7 @@ public virtual const std::string& GetMessage() const  |  Ruft die Fehlermeldung 
 public virtual void SetMessage(const std::string& msg)  |  Legt die Fehlermeldung fest
   
 ## <a name="members"></a>Member
-  
+
 ### <a name="getreferrer-function"></a>GetReferrer-Funktion
 Ruft den Kontakt bei fehlenden Berechtigungen für das Dokument ab.
 
@@ -40,7 +40,6 @@ Ruft den Kontakt bei fehlenden Berechtigungen für das Dokument ab.
 ### <a name="getowner-function"></a>GetOwner-Funktion
 _Noch nicht dokumentiert._
 
-  
 ### <a name="what-function"></a>Welche Funktion
 Ruft die Fehlermeldung ab
 
@@ -76,4 +75,3 @@ Legt die Fehlermeldung fest
 
 Parameter:  
 * **msg**: Fehlermeldung.
-

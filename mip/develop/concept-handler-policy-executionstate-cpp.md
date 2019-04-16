@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: 54e5249f7624cbc020451752d39ccb9f0b507f3a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: dbe6db5fe54f9d26d072d3f6fcad1f2595d61040
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257687"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574147"
 ---
 # <a name="implement-executionstate"></a>Implementieren von ExecutionState
 
@@ -29,10 +29,10 @@ Die Übergabe von Informationen an das MIP SDK zum Berechnen einer Aktion, die b
 `ExecutionState` macht die folgenden virtuellen Member verfügbar. Jedes stellt einen Kontext für die Richtlinien-Engine bereit, um Informationen darüber zurückzugeben, welche Aktionen von der Anwendung ausgeführt werden sollten. Darüber hinaus können diese Informationen verwendet werden, um Überwachungsinformationen für die Berichterstellungsfunktion von Azure Information Protection Reporting bereitzustellen.
 
 
-| Mitglied                                                                           | Gibt zurück                                                                                                              |
+| Mitglied                                                                           | Rückgabe                                                                                                              |
 |----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `std::string GetNewLabelId()`                                                      | Gibt die Bezeichnungs-ID zurück, die auf das Objekt angewendet werden soll.                                                                    |
-| `mip::ContentState GetContentState()`                                              | Gibt das „mip::ContentState“-Element des Objekts zurück.                                                                         |
+| `mip::DataState GetDataState()`                                              | Gibt die mip::DataState des Objekts zurück.                                                                         |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Gibt ein „std::pair“-Element zurück, das ausdrückt, ob ein Herabstufen gerechtfertigt ist, und das die Begründung enthält.                                 |
 | `std::string GetContentIdentifier()`                                               | Gibt den Inhaltsbezeichner zurück. Sollte ein lesbarer Bezeichner sein, der den Speicherort des Objekts angibt.   |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Gibt das „mip::ActionSource“-Element der Bezeichnung zurück.                                                                          |
@@ -53,7 +53,7 @@ struct ExecutionStateOptions {
     std::string newLabelId;
     std::string contentIdentifier;
     mip::ActionSource actionSource = mip::ActionSource::MANUAL;
-    mip::ContentState contentState = mip::ContentState::REST;
+    mip::DataState dataState = mip::DataState::USE;
     mip::AssignmentMethod assignmentMethod = mip::AssignmentMethod::STANDARD;
     bool isDowngradeJustified = false;
     std::string downgradeJustification;

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332598"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574039"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings-Klasse 
   
@@ -32,7 +32,9 @@ Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustom
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID für die Engine fest.
 public const std::string& GetSessionId() const  |  Gibt die Sitzungs-ID für die Engine zurück.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Legt die Basis-URL des Endpunkts der Schutzcloud fest, durch die die Cloudgrenze festgelegt ist.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ruft „cloudEndpointBaseUrl“ ab.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ruft ab, die Schutz Cloud-Endpunkt-Basis-Url.
+public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Legt fest, die Richtlinie für Cloud-Endpunkt Basis-Url verwendet, um Grenzen der Cloud anzugeben.
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Ruft die Richtlinie für Cloud-Endpunkt-Basis-Url ab.
 public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.
 public const bool IsProtectionOnlyEngine() const  |  Gibt nur den Engine-Indikator für den Schutz zurück – keine Richtlinie/Bezeichnung.
 public bool IsLoadSensitivityTypesEnabled() const  |  Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
@@ -117,10 +119,24 @@ Parameter:
 
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Ruft „cloudEndpointBaseUrl“ ab.
+Ruft ab, die Schutz Cloud-Endpunkt-Basis-Url.
 
   
 **Gibt**: Schutz von Endpunkten zugeordnet Basis-url
+  
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl function
+Legt fest, die Richtlinie für Cloud-Endpunkt Basis-Url verwendet, um Grenzen der Cloud anzugeben.
+
+Parameter:  
+* **policyCloudEndpointBaseUrl**: Endpunkte der Richtlinie zugeordnete Basis-url
+
+
+  
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
+Ruft die Richtlinie für Cloud-Endpunkt-Basis-Url ab.
+
+  
+**Gibt**: Endpunkte der Richtlinie zugeordnete Basis-url
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine-Funktion
 Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.

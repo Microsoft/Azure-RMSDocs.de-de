@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f7b16658135e802776cde37fdef19c82f7c198e6
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 06bc3f52bdecd85412dc0c35df46c7847167aa1b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329810"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573753"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
 Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App beim Überschreiben des [HttpDelegate](class_mip_httpdelegate.md) implementiert wird.
@@ -20,11 +20,18 @@ Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
+public const std::string& GetId() const  |  Ruft die Antwort-ID ab
 public int32_t GetStatusCode() const  |  Ruft den Antwortstatuscode ab.
-public const std::string& GetBody() const  |  Ruft den Text der Anforderung ab.
+Public const Std:: vector\<uint8_t\>& GetBody() const  |  Ruft den Text der Anforderung ab.
 public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
+  
+### <a name="getid-function"></a>GetId-Funktion
+Ruft die Antwort-ID ab
+
+  
+**Gibt**: Antwort-ID der entsprechenden [HttpRequest](class_mip_httprequest.md) wird die gleiche ID hatten
   
 ### <a name="getstatuscode-function"></a>GetStatusCode-Funktion
 Ruft den Antwortstatuscode ab.

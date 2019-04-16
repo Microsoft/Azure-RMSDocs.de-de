@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bc130d2c6056d971635bcf204243f29b13789466
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3ffd4b3e86192786309739add907a724acdaffa5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330831"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574212"
 ---
 # <a name="class-mippolicyenginesettings"></a>mip::PolicyEngine::Settings-Klasse 
 Definiert die einer [PolicyEngine](class_mip_policyengine.md)-Klasse zugeordneten Einstellungen.
@@ -34,6 +34,8 @@ Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustom
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
 public bool IsLoadSensitivityTypesEnabled() const  |  Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Legt optional die Basis-URL für den Cloudendpunkt fest.
+public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
   
 ## <a name="members"></a>Member
   
@@ -156,3 +158,17 @@ Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert is
 
   
 **Gibt**: True, wenn aktiviert, andernfalls False.
+  
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl function
+Legt optional die Basis-URL für den Cloudendpunkt fest.
+
+Parameter:  
+* **cloudEndpointBaseUrl**: die Basis-URL, die von allen Service Requests verwendet wird (z.B. https://dataservice.protection.outlook.com)
+
+
+  
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
+
+  
+**Gibt**: Basis-URL

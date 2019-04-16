@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 34e4395858713219361e4e2ccf8308d89bc5f29d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 96f8cca48f385a21685e93eb5bc57abac571975c
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330490"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573011"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel-Klasse 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
@@ -21,7 +21,7 @@ Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungs
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetCreationTime() const  |  Ruft die Erstellungszeit der Bezeichnung ab
+public std::chrono::time_point\<std::chrono::system_clock\> GetCreationTime() const  |  Ruft die Erstellungszeit der Bezeichnung ab
 public AssignmentMethod GetAssignmentMethod() const  |  Ruft die Zuweisungsmethode der Bezeichnung ab
 public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  Ruft erweiterte Eigenschaften ab.
 public bool IsProtectionAppliedFromLabel() const  |  Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
@@ -33,7 +33,7 @@ Public Std:: shared_ptr\<Bezeichnung\> GetLabel() const  |  Ruft die tatsächlic
 Ruft die Erstellungszeit der Bezeichnung ab
 
   
-**Gibt**: Die Erstellungszeit als GMT-Zeichenfolge.
+**Gibt**: Zeitpunkt der Erstellung.
   
 ### <a name="getassignmentmethod-function"></a>GetAssignmentMethod-Funktion
 Ruft die Zuweisungsmethode der Bezeichnung ab
@@ -41,7 +41,7 @@ Ruft die Zuweisungsmethode der Bezeichnung ab
   
 **Gibt**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**Siehe auch**: [MIP:: assignmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
+**Siehe auch**: [MIP:: assignmentmethod](mip-enums-and-structs.md#assignmentmethod)
   
 ### <a name="getextendedproperties-function"></a>GetExtendedProperties-Funktion
 Ruft erweiterte Eigenschaften ab.

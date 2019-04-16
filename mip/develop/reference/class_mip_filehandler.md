@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 997b3fbfb7dc302f7a47b5cfb281bdaf37c11295
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ee0545346eef2c143946496f56af77b7081b1e06
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332678"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574366"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.
@@ -28,10 +28,10 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Löscht die 
 Öffentliche void SetProtection (const Std:: shared_ptr\<ProtectionDescriptor\>& ProtectionDescriptor)  |  Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
 Öffentliche void SetProtection (const Std:: vector\<uint8_t\>& SerializedPublishingLicense, const Std:: vector\<uint8_t\>& SerializedProtectionInfo)  |  Benutzerdefinierte oder Template-basierten Berechtigungen (gemäß SerializedPublishingLicense und SerializedProtectionInfo) wird in der Datei festgelegt.
 public void RemoveProtection()  |  Entfernt den Schutz von der Datei. Wenn der Datei eine Bezeichnung zugeordnet ist, geht diese verloren.
-public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  der Parameter.
-Öffentliche void CommitAsync (const Std:: shared_ptr\<Stream\>& OutputStream, const Std:: shared_ptr\<"void"\>& Kontext) | Writes the changes to the stream specified by the \|outputStream\ |  der Parameter.
+public void CommitAsync(const std::string& outputFilePath, const std::shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  angegeben.
+Öffentliche void CommitAsync (const Std:: shared_ptr\<Stream\>& OutputStream, const Std:: shared_ptr\<"void"\>& Kontext) | Writes the changes to the stream specified by the \|outputStream\ |  angegeben.
 public void GetDecryptedTemporaryFileAsync(const std::shared_ptr\<void\>& context)  |  Gibt einen Pfad in eine temporäre Datei (die ggf. gelöscht werden) -, das den entschlüsselten Inhalt darstellt.
-public void NotifyCommitSuccessful(const std::string& contentIdentifier)  |  Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
+Öffentliche void NotifyCommitSuccessful (const Std:: String & ActualFilePath)  |  Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
 public std::string GetOutputFileName()  |  Berechnet den Namen und die Erweiterung der Ausgabedatei auf Basis des ursprünglichen Dateinamens und der angefallenen Änderungen.
   
 ## <a name="members"></a>Member
@@ -84,7 +84,7 @@ Gibt einen Pfad in eine temporäre Datei (die ggf. gelöscht werden) -, das den 
 Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
 
 Parameter:  
-* **ContentIdentifier**: Beispiel für eine Datei: 'C:\mip-sdk-for-cpp\files\audit.docx"[' Pfad\Dateiname'] Beispiel für eine e-Mail: "RE: Audit design:user1@contoso.com"[Betreff: Absender] 
+* **actualFilePath**: Der tatsächliche Pfad für die Ausgabedatei 
 
 
 Löst ein Überprüfungsereignis aus

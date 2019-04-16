@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d7d7baee4212ad90739a2c5343e7c09050a16b5e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 75d11fae7d79cadc4dd8909be371cbde2e87f289
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330439"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573614"
 ---
 # <a name="class-mipidentity"></a>MIP:: Identity Klasse 
 Abstraktion für die Identität.
@@ -21,6 +21,7 @@ Abstraktion für die Identität.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Öffentliche Identity()  |  Standard [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers nicht bekannt ist.
+Öffentliche Identität (const Identity & andere)  |  [Identität](class_mip_identity.md) Kopierkonstruktor.
 Öffentliche explizite Identität (const Std:: String & e-Mail-Adresse)  |  [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers bekannt ist.
 public const std::string& GetEmail() const  |  Rufen Sie die e-Mail-Adresse ein.
 public void SetDelegatedEmail(const std::string& delegatedEmail)  |  Legt delegierte e-Mail, eine delegierte e-Mail-Adresse ist die Namen des Benutzers, der die Opertations ausgeführt werden.
@@ -30,6 +31,14 @@ public const std::string& GetDelegatedEmail() const  |  Die delegierte e-Mail-Ad
   
 ### <a name="identity-function"></a>Identity-Funktion
 Standard [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers nicht bekannt ist.
+  
+### <a name="identity-function"></a>Identity-Funktion
+[Identität](class_mip_identity.md) Kopierkonstruktor.
+
+Parameter:  
+* **[Identität](class_mip_identity.md)**: verwendet, um die Kopie zu erstellen.
+
+
   
 ### <a name="identity-function"></a>Identity-Funktion
 [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers bekannt ist.

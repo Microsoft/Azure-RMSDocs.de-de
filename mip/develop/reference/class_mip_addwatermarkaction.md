@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8121763106c9f46022264a7eea3bc16e363e523c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f3a8d50d55dc615a7aa81e8686b356bfc2d41654
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330473"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573937"
 ---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
@@ -27,7 +27,7 @@ public const std::string& GetFontName() const  |  Ruft den Namen der Schriftart 
 public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
 public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
 public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-  
+
 ## <a name="members"></a>Member
   
 ### <a name="getuielementname-function"></a>GetUIElementName-Funktion
@@ -65,7 +65,7 @@ Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
 
   
 **Gibt**: Schriftfarbe als Zeichenfolge (z. B. "#000000").
-  
+
 ### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 006c8ad45da57b0223b35084456e8917411802f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 14afd4688c13f419ab3019e9c268ba7d355121c8
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330235"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574260"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>mip::RemoveContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Fußzeileninhalt aus dem Dokument entfernt wird.
@@ -22,7 +22,7 @@ Eine Aktionsklasse, die angibt, dass der Fußzeileninhalt aus dem Dokument entfe
 --------------------------------|---------------------------------------------
 public const std::vector\<std::string\>& GetUIElementNames()  |  Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
 public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-  
+
 ## <a name="members"></a>Member
   
 ### <a name="getuielementnames-function"></a>GetUIElementNames-Funktion
@@ -30,9 +30,8 @@ Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberfl�
 
   
 **Gibt**: Eine Liste der Namen der Ui-Elemente.
-  
-### <a name="gettype-function"></a>GetType-Funktion
-Ruft den Typ der [Aktion](class_mip_action.md) ab.
 
-  
+### <a name="gettype-function"></a>GetType-Funktion    
+Ruft den Typ der [Aktion](class_mip_action.md) ab.  
+
 **Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.

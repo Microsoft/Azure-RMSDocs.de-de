@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: dd803c734c099e11b46db1b7d446b03b2eaa8a1e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332275"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573529"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung der Fußzeile ab.
 public int GetMargin() const  |  Ruft den Rand der Fußzeile im unteren Bereich ab
 public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-  
+
 ## <a name="members"></a>Member
   
 ### <a name="getuielementname-function"></a>GetUIElementName-Funktion
@@ -67,14 +67,14 @@ Ruft die Ausrichtung der Fußzeile ab.
   
 **Gibt**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
   
-**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand der Fußzeile im unteren Bereich ab
 
   
 **Gibt**: Die Ränder im unteren Bereich des Dokuments (z. B. 10 mm).
-  
+
 ### <a name="gettype-function"></a>GetType-Funktion
 Ruft den Typ der [Aktion](class_mip_action.md) ab.
 
