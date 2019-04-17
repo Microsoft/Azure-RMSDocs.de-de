@@ -35,8 +35,9 @@ items:
   - name: APIs
     href: concept-apis-use-cases.md
   - name: Profil und Engine (C++)
-    href: concept-profile-engine-cpp.md
     items:
+    - name: Konzepte und Profil- und Engine-Objekte
+      href: concept-profile-engine-cpp.md
     - name: Datei-API-Profil (C++)
       href: concept-profile-engine-file-profile-cpp.md
     - name: Datei-API-Engine (C++)
@@ -50,8 +51,9 @@ items:
     - name: Schutz-API-Engine (C++)
       href: concept-profile-engine-protection-engine-cpp.md
   - name: Authentifizierung (C++)
-    href: concept-authentication-cpp.md
     items:
+    - name: Authentifizierungskonzepte
+      href: concept-authentication-cpp.md
     - name: Implementieren eines Authentifizierungsdelegats (C++)
       href: concept-authentication-delegate-cpp.md
     - name: Abrufen eines Zugriffstokens (PowerShell)
@@ -61,13 +63,15 @@ items:
   - name: Handler
     items:
     - name: Datei-API-Handler (C++)
-      href: concept-handler-file-cpp.md
       items:
+      - name: Dateihandlerkonzepte
+        href: concept-handler-file-cpp.md
       - name: Auditing
         href: concept-auditing-file-cpp.md
     - name: Richtlinien-API-Handler (C++)
-      href: concept-handler-policy-cpp.md
       items:
+      - name: Richtlinienhandlerkonzepte
+        href: concept-handler-policy-cpp.md
       - name: Ausführungsstatus
         href: concept-handler-policy-executionstate-cpp.md
       - name: Berechnen von Aktionen
@@ -81,19 +85,21 @@ items:
   - name: Metadaten
     href: concept-mip-metadata.md
   - name: Observer-Klassen für async (C++)
-    href: concept-async-observers.md
     items:
+    - name: Observer-Konzepte
+      href: concept-async-observers.md
     - name: Observer-Klassen der Datei-API (C++)
       href: concept-async-observers-file-cpp.md
     - name: Observer-Klassen der Richtlinien-API (C++)
       href: concept-async-observers-policy-cpp.md
     - name: Observer-Klassen der Schutz-API (C++)
       href: concept-async-observers-protection-cpp.md
-- name: Referenz
+- name: Reference
   items:
   - name: C++-Bibliothek
-    href: reference/mip-sdk-reference.md
     items:
+    - name: Übersicht über die C++-Bibliothek
+      href: reference/mip-sdk-reference.md
     - name: Enumerationen und Strukturen
       href: reference/mip-enums-and-structs.md
     - name: Funktionen
@@ -110,6 +116,8 @@ items:
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AdhocProtectionRequiredError
+        href: reference/class_mip_adhocprotectionrequirederror.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
       - name: AuthDelegate
@@ -156,6 +164,8 @@ items:
         href: reference/class_mip_fileprofile_settings.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
+      - name: HttpOperation
+        href: reference/class_mip_httpoperation.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
@@ -168,7 +178,7 @@ items:
         href: reference/class_mip_justificationrequirederror.md
       - name: JustifyAction
         href: reference/class_mip_justifyaction.md
-      - name: Label
+      - name: Bezeichnung
         href: reference/class_mip_label.md
       - name: LabelingOptions
         href: reference/class_mip_labelingoptions.md
@@ -186,6 +196,8 @@ items:
         href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: OperationCancelledError
+        href: reference/class_mip_operationcancellederror.md
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
@@ -246,6 +258,8 @@ items:
         href: reference/class_mip_servicedisablederror.md
       - name: Stream
         href: reference/class_mip_stream.md
+      - name: TaskDispatcherDelegate
+        href: reference/class_mip_taskdispatcherdelegate.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
@@ -268,9 +282,9 @@ items:
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Neuigkeiten in Version 1.1
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
-ms.openlocfilehash: 68fae7819664fadd7fa470cd8db9f45eb430dc5b
-ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
+ms.openlocfilehash: f71e85308a3bf03dddfaed5c1f1fc8df7aeae3b7
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56825984"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574413"
