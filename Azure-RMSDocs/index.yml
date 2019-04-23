@@ -1,15 +1,9 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: a5679ecddad0f365d5d93e2c0100fa04b2b1a341
-ms.sourcegitcommit: 8c2de5119105cf5d5bc91fcc2202b64e5a779e7c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56081693"
 documentType: LandingData
 title: Azure Information Protection-Dokumentation
 metadata:
   title: Azure Information Protection-Dokumentation
-  description: Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben.
+  description: 'Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben.'
   services: information-protection
   author: msmbaldwin
   manager: barbkess
@@ -21,58 +15,58 @@ metadata:
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
-  description: Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifikation bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Azure Information Protection, egal wo die Daten gespeichert werden oder für wen sie freigegeben werden.
+  description: 'Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifikation bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Azure Information Protection, egal wo die Daten gespeichert werden oder für wen sie freigegeben werden.'
 sections:
-- title: 
-  items:
-  - type: list
-    style: cards
-    className: cardsFTitle
+  - title: null
     items:
-    - title: Weitere Informationen zu Azure Information Protection
-      href: what-is-information-protection.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: what-is-information-protection.md
-    - title: Erste Schritte mit Azure Information Protection
-      href: quickstart-viewpolicy.md
-      image:
-        src: https://docs.microsoft.com/media/common/i_quick-start.svg
-        href: quickstart-viewpolicy.md
-    - title: Lernen Sie Microsoft 365 kennen, eine Gesamtlösung mit Azure Information Protection
-      href: https://docs.microsoft.com/microsoft-365/
-      image:
-        src: /office/media/icons/caret-right-blue.svg
-        href: https://docs.microsoft.com/microsoft-365/
-- title: Schnellstarts in fünf Minuten
-  items:
-  - type: paragraph
-    text: Erfahren Sie in den folgenden Schnellstarts, wie Sie Ihre Daten schützen können.
-  - type: list
-    style: icon48
+      - type: list
+        style: cards
+        className: cardsFTitle
+        items:
+          - title: Weitere Informationen zu Azure Information Protection
+            href: what-is-information-protection.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_learn-about.svg'
+              href: what-is-information-protection.md
+          - title: Erste Schritte mit Azure Information Protection
+            href: quickstart-viewpolicy.md
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
+              href: quickstart-viewpolicy.md
+          - title: 'Lernen Sie Microsoft 365 kennen, eine Gesamtlösung mit Azure Information Protection'
+            href: 'https://docs.microsoft.com/microsoft-365/'
+            image:
+              src: /office/media/icons/caret-right-blue.svg
+              href: 'https://docs.microsoft.com/microsoft-365/'
+  - title: Schnellstarts in fünf Minuten
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_portal.svg
-      text: Azure-Portal
-      href: quickstart-viewpolicy.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_search.svg
-      text: Suchen von vertraulichen Informationen
-      href: quickstart-findsensitiveinfo.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-      text: Konfigurieren einer Bezeichnung
-      href: quickstart-label-dnf-protectedemail.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_categorize.svg
-      text: Erstellen einer neuen Bezeichnung
-      href: quickstart-label-specificusers.md
-- title: Schritt-für-Schritt-Lernprogramme
-  items:
-  - type: paragraph
-    text: Erfahren Sie, wie Sie Richtlinien bearbeiten, neue Bezeichnungen erstellen und Einstellungen konfigurieren können.
-  - type: list
-    style: unordered
+      - type: paragraph
+        text: 'Erfahren Sie in den folgenden Schnellstarts, wie Sie Ihre Daten schützen können.'
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_portal.svg'
+            text: Azure-Portal
+            href: quickstart-viewpolicy.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_search.svg'
+            text: Suchen von vertraulichen Informationen
+            href: quickstart-findsensitiveinfo.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_config-tools.svg'
+            text: Konfigurieren einer Bezeichnung
+            href: quickstart-label-dnf-protectedemail.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_categorize.svg'
+            text: Erstellen einer neuen Bezeichnung
+            href: quickstart-label-specificusers.md
+  - title: Schritt-für-Schritt-Lernprogramme
     items:
-    - html: '<a href="/azure/information-protection/infoprotect-quick-start-tutorial">Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung</a>'
-    - html: '<a href="/azure/information-protection/infoprotect-settings-tutorial">Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren</a>'
+      - type: paragraph
+        text: 'Erfahren Sie, wie Sie Richtlinien bearbeiten, neue Bezeichnungen erstellen und Einstellungen konfigurieren können.'
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="/azure/information-protection/infoprotect-quick-start-tutorial">Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung</a>'
+          - html: '<a href="/azure/information-protection/infoprotect-settings-tutorial">Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren</a>'

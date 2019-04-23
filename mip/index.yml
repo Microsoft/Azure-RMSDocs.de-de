@@ -1,15 +1,9 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 7643f9eb25665d7a1bc1b2897be521cd30c06757
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332717"
 documentType: LandingData
 title: Microsoft Information Protection
 metadata:
   title: Dokumentation zu Microsoft Information Protection
-  description: Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifizierung bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Microsoft Azure Information Protection, und zwar unabhängig davon, wo die Daten gespeichert oder für wen sie freigegeben werden.
+  description: 'Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifizierung bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Microsoft Azure Information Protection, und zwar unabhängig davon, wo die Daten gespeichert oder für wen sie freigegeben werden.'
   author: msmbaldwin
   manager: barbkess
   ms.service: information-protection
@@ -19,9 +13,9 @@ metadata:
   ms.author: mbaldwin
   layout: LandingPage
 abstract:
-  description: Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifizierung bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Microsoft Azure Information Protection, und zwar unabhängig davon, wo die Daten gespeichert oder für wen sie freigegeben werden.
+  description: 'Helfen Sie dabei, E-Mails, Dokumente und sensible Daten zu schützen und zu steuern, die Sie außerhalb Ihres Unternehmens freigeben. Von der einfachen Klassifizierung bis hin zu eingebetteten Bezeichnungen und Berechtigungen – optimieren Sie jederzeit den Datenschutz mit Microsoft Azure Information Protection, und zwar unabhängig davon, wo die Daten gespeichert oder für wen sie freigegeben werden.'
 sections:
-- title: Microsoft Information Protection SDK
-  items:
-  - type: paragraph
-    text: 'Erste Schritte mit dem <a href="develop/">Microsoft Information Protection SDK: Übersicht</a>.'
+  - title: Microsoft Information Protection SDK
+    items:
+      - type: paragraph
+        text: 'Erste Schritte mit dem <a href="develop/">Microsoft Information Protection SDK: Übersicht</a>.'
