@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 8dbb541ace63ec34dd9f93cb6b266907abe37800
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184483"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>mip::ProtectDoNotForwardAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz in Form von Nichtweiterleitung hinzugefügt wird.

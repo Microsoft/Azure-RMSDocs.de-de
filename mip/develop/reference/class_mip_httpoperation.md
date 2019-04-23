@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: e3eaedbf508f116b19521286b686bc955d108efe
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173557"
 ---
 # <a name="class-miphttpoperation"></a>Klasse mip::HttpOperation 
 Schnittstelle, die einem HTTP-Vorgang, durch die Client-app implementiert werden, beim Überschreiben von beschreibt [HttpDelegate](class_mip_httpdelegate.md).

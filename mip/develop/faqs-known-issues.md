@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175467"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK: Häufig gestellte Fragen und Probleme
 

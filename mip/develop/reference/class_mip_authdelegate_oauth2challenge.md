@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173472"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>Klasse mip::AuthDelegate::OAuth2Challenge 
 eine Klasse, die alle die erforderlichen aus der aufrufenden Anwendung Informationen um ein oauth2-Token zu generieren.

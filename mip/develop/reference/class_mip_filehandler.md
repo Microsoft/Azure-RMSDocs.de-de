@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: ee0545346eef2c143946496f56af77b7081b1e06
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184653"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.

@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e815820fa9f3a6de95d5e37e350ed18df8513b21
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175104"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK: Konzepte der Profile- und Engine-Objekte
 
@@ -70,10 +70,10 @@ Eine Engine muss sowohl erstellt als auch geladen werden, um Vorgänge ausführe
 
 Die folgende Tabelle beschreibt die möglichen-Engine-Status, und welche Methoden können diesen Status ändern:
 
-|         | KEINE              | ERSTELLT           | LOADED         |
+|         | NONE              | CREATED           | LOADED         |
 |---------|-------------------|-------------------|----------------|
-| KEINE    |                   |                   | AddEngineAsync |
-| ERSTELLT | DeleteEngineAsync |                   | AddEngineAsync |
+| NONE    |                   |                   | AddEngineAsync |
+| CREATED | DeleteEngineAsync |                   | AddEngineAsync |
 | LOADED  | DeleteEngineAsync | UnloadEngineAsync |                |
 
 ### <a name="engine-id"></a>Engine-ID

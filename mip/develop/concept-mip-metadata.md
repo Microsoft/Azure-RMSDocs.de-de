@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175356"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - Metadaten
 
@@ -34,7 +34,7 @@ Die GUID ist ein eindeutiger Bezeichner für jede Bezeichnung in einer Organisat
 
 Das MIP SDK gilt den folgenden Satz von Metadaten.
 
-| Attribut | Typ oder Wert                 | Beschreibung                                                                                                                                                                                                                                        | obligatorisch |
+| Attribut | Typ oder Wert                 | Beschreibung                                                                                                                                                                                                                                        | Verbindlich |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | **aktiviert**   | "True" oder "false"                 | Dieses Attribut gibt an, ob die Klassifizierung, die von dieser Gruppe von Schlüssel-Wert-Paare dargestellt, die für das Datenelement aktiviert ist. DLP-Produkten überprüfen in der Regel das Vorhandensein dieses Schlüssels auf die klassifizierungsbezeichnung zu identifizieren. | Ja       |
 | **SiteId**    | GUID                          | Azure Active Directory-Mandanten-ID                                                                                                                                                                                                                   | Ja       |

@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175444"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK: Beobachter von Datei-APIs
 
@@ -29,7 +29,7 @@ Im nachfolgenden Beispiel wird das Promise-Future-Muster dargestellt. Dieses wir
 
 Im folgenden Beispiel wurde die Klasse `ProfileObserver` erstellt, die von `mip::FileProfile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
 
-**Beachten Sie**: Die folgenden Beispiele werden nur teilweise implementiert und enthalten keine Außerkraftsetzungen für die `mip::FileEngine` Observer-Objekte beziehen.
+**Hinweis**: Die folgenden Beispiele werden nur teilweise implementiert und enthalten keine Außerkraftsetzungen für die `mip::FileEngine` Observer-Objekte beziehen.
 
 ### <a name="profileobserverh"></a>profile_observer.h
 

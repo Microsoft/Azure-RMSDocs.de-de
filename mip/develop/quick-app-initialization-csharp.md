@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184967"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisieren der Client-Anwendung (C#)
 

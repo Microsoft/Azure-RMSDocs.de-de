@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e3338395a193f6c1cc8f60a6beb93a1d0db15511
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60175475"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Schutz-API
 
@@ -32,7 +32,7 @@ Im folgenden Beispiel wird ein `ProtectionEngine::Settings`-Objekt mit dem Namen
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Beachten Sie**: Wenn diese Methode verwenden, um das Einstellungsobjekt für den Schutz zu erstellen, müssen Sie auch manuell der CloudEndpointBaseUrl festlegen auf https://api.aadrm.com
+**Hinweis**: Wenn diese Methode verwenden, um das Einstellungsobjekt für den Schutz zu erstellen, müssen Sie auch manuell der CloudEndpointBaseUrl festlegen auf https://api.aadrm.com
 
 Als bewährte Methode sollte der erste Parameter (**id**) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer hergestellt werden kann, **oder** es sollte sich um ein `mip::Identity`-Objekt handeln. Gehen Sie wie folgt vor, um die Einstellungen mit `mip::Identity` zu initialisieren:
 
