@@ -12,11 +12,11 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 2d4c03a168f3add9778372a890ea9dd2c7be68bf
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253862"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181580"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -165,11 +165,11 @@ Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren 
 
 Es treten beispielsweise regelmäßig Verzögerungen auf, wenn Dokumente oder E-Mails geschützt sind. Oder es kommt zu Verzögerungen, wenn geschützte Dokumente oder E-Mails geöffnet werden. In diesen Fällen können Sie mithilfe der Leistungsindikatoren die Ursache der Verzögerungen bestimmen: die Verarbeitungszeit im Connector, die Verarbeitungszeit im Azure Rights Management-Dienst oder Netzwerkverzögerungen. 
 
-Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
+Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Zum Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
 
 Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
-## <a name="logging"></a>Logging
+## <a name="logging"></a>Protokollierung
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn der RMS-Verbindungsdienst zum Schützen und Nutzen von Inhalten verwendet wird, enthält das Feld „Benutzer-ID“ in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**. Dieser Name wird automatisch für den RMS-Connector erstellt.
 

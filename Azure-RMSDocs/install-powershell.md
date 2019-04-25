@@ -12,11 +12,11 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 789c3178827e52c27759268b1340b53c3add1c39
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259710"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181717"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>Installieren des PowerShell-Moduls für AADRM
 
@@ -26,13 +26,13 @@ Die folgenden Informationen helfen Ihnen beim Installieren des Windows PowerShel
 
 Mithilfe dieses PowerShell-Moduls können Sie den Azure Rights Management-Dienst über die Befehlszeile verwalten, indem Sie einen Computer verwenden, der über eine Internetverbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Rights Management unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarios erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md).
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 Die folgende Tabelle enthält Installations- und Benutzungsanforderungen an das AADRM-PowerShell-Modul für den Azure Rights Management-Dienst von Azure Information Protection.
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Mindestversion von Windows PowerShell: 3.0|Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Wenn Sie eine neuere Version von Windows PowerShell installieren müssen, finden Sie weitere Informationen dazu unter [Aktualisieren einer vorhandenen Version von Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
-|Mindestversion des Microsoft .NET Frameworks: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist im Lieferumfang neuerer Betriebssysteme enthalten. Deshalb sollten Sie eine manuelle Installation nur dann durchführen müssen, wenn Sie ein Clientbetriebssystem vor Windows 8.0 oder ein Serverbetriebssystem vor Windows Server 2012 verwenden.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist für einige Klassen erforderlich, die vom AADRM-Modul verwendet werden.|
+|Die Mindestversion von Windows PowerShell: 3.0|Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Wenn Sie eine neuere Version von Windows PowerShell installieren müssen, finden Sie weitere Informationen dazu unter [Aktualisieren einer vorhandenen Version von Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
+|Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist in der neuerer Betriebssysteme enthalten, deshalb sollten Sie eine manuelle Installation nur dann, wenn das Clientbetriebssystem vor Windows 8.0 oder Serverbetriebssystem kleiner als Windows Server 2012 müssen.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist für einige Klassen erforderlich, die vom AADRM-Modul verwendet werden.|
 
 Ab Version 2.5.0.0 des AADRM-Moduls ist der Microsoft Online Services-Anmeldeassistent nicht mehr erforderlich.
 
@@ -77,7 +77,7 @@ Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
 Get-Command -Module AADRM
 ```
 
-Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Beispiel:
+Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Zum Beispiel:
 
 ```
 Get-Help Connect-AadrmService -online
@@ -85,7 +85,7 @@ Get-Help Connect-AadrmService -online
 
 Weitere Informationen finden Sie unter:
 
--   Vollständige Liste verfügbarer Cmdlets: [AADRM-Modul](/powershell/aadrm/vlatest/rightsmanagement)
+-   Vollständige Liste der verfügbaren Cmdlets: [AADRM-Modul](/powershell/aadrm/vlatest/rightsmanagement)
 
 -   Liste der Hauptkonfigurationsszenarios, die PowerShell unterstützen: [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
 
