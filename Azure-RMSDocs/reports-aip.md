@@ -3,20 +3,20 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
+ms.date: 04/23/2019
 manager: barbkess
-ms.date: 04/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 735e7253701c3cbed8af7974d27cf241fb515c90
-ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
-ms.translationtype: HT
+ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59289416"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181657"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "59289416"
 > [!NOTE]
 > Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.
 
-Verwenden Sie die Azure Information Protection Analysen für die zentrale Berichterstellung, um die Einführung Ihrer Azure Information Protection-Bezeichnungen einfacher zu verfolgen. Beachten Sie auch Folgendes:
+Verwenden Sie die Azure Information Protection Analysen für die zentrale Berichterstellung, um die Einführung Ihrer Azure Information Protection-Bezeichnungen einfacher zu verfolgen. Zusätzlich:
 
 - Unternehmensweite Überwachung bezeichneter und geschützter Dokumente und E-Mails
 
@@ -67,7 +67,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
 
 - Im Bericht **Datenermittlung**:
 
-    - Welche Dateien sich in überprüften Datenrepositorys, auf Windows 10-Computern oder Computern befinden, auf denen die Vorschauversion des Azure Information Protection-Clients oder [Clients ausgeführt werden, die einheitliche Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Welche Dateien für Ihre überprüften Datenrepositorys, Windows 10-Computern oder Computern mit der Azure Information Protection-Client sind oder [Clients, die Unterstützung für die einheitliche Bezeichnung](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
     
     - Welche Dateien Bezeichnungen aufweisen und geschützt werden sowie den Speicherort der Dateien nach Bezeichnung
     
@@ -130,16 +130,15 @@ Ihr Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthäl
 
 Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
-|Anforderung|Weitere Informationen|
+|Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement für denselben Mandanten haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link zu einer kostenlosen Testversion.|
-|Azure Information Protection-Client (aktuelle allgemein verfügbare Version oder Vorschauversion) oder Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen|Wenn Sie noch keine dieser Versionen des Clients nicht installiert haben, können Sie sie über das Microsoft Download Center herunterladen und installieren:<br /> - [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Azure Information Protection-Client für einheitliche Bezeichnungen](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
-|Für den Bericht **Ermittlung und Risiko**: <br /><br />– Sie müssen mindestens eine Azure Information Protection-Scannerinstanz (aktuelle allgemein verfügbare Version oder Vorschauversion) bereitstellen, um Daten aus lokalen Datenspeichern anzuzeigen <br /><br />– Um Daten von Windows 10-Computern anzuzeigen, müssen diese mindestens Build 1809 haben, Sie müssen Windows Defender Advanced Threat Protection (Windows Defender ATP) verwenden, und es muss das Integrationsfeature Azure Information Protection im Windows Defender Security Center aktiviert sein.|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Informationen zur Konfiguration und Verwendung des Integrationsfeatures von Azure Information Protection aus dem Windows Defender Security Center finden Sie unter [Informationsschutz in der Windows-Übersicht](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
-|Für den Bericht **Empfehlungen**: <br /><br />– Sie müssen die aktuelle Vorschauversion des Azure Information Protection-Scanners verwenden, um ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzuzufügen |Informationen zur Bereitstellung der Vorschauversion des Scanners finden Sie unter [Bereitstellen der Vorschauversion des Azure Information Protection-Scanners zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner-preview.md).|
-
+|Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
+|Der Azure Information Protection-Client oder den Azure Information Protection unified bezeichnungs-client|Wenn Sie bereits mit einem dieser Clients haben, können Sie herunterladen und installieren sie mithilfe der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Stellen Sie sicher, dass die neueste Version unterstützen [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection-Analysen.|
+|Für den Bericht **Ermittlung und Risiko**: <br /><br />– Um Daten aus lokalen Datenspeichern anzeigen, haben Sie mindestens eine Instanz der Azure Information Protection-Überprüfung bereitgestellt. <br /><br />– Um Daten von Windows 10-Computern anzuzeigen, müssen diese mindestens Build 1809 haben, Sie müssen Windows Defender Advanced Threat Protection (Windows Defender ATP) verwenden, und es muss das Integrationsfeature Azure Information Protection im Windows Defender Security Center aktiviert sein.|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Informationen zur Konfiguration und Verwendung des Integrationsfeatures von Azure Information Protection aus dem Windows Defender Security Center finden Sie unter [Informationsschutz in der Windows-Übersicht](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|Für den Bericht **Empfehlungen**: <br /><br />– Um ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzuzufügen, müssen Sie die aktuelle allgemein verfügbare Version der Azure Information Protection-Überprüfung verwenden |Um die Überprüfung bereitstellen zu können, finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen klassifizieren und Schützen von Dateien](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Erforderliche Berechtigungen für Azure Information Protection-Analysen
 
@@ -165,7 +164,7 @@ Details:
     > [!NOTE] 
     > Wenn Ihr Mandant zum Speicher für einheitliche Bezeichnungen migriert wurde, kann die Information Protection-Administratorrolle nicht verwendet werden. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
+2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
     - Um einen Arbeitsbereich oder benutzerdefinierte Abfragen zu erstellen, benötigen Sie eine der folgenden Rollen:
     
@@ -187,6 +186,19 @@ Nachdem Sie Ihren Arbeitsbereich für Azure Information Protection-Analysen erst
 
 Eine typische Rollenzuordnung für viele Organisationen ist jedoch die Azure AD-Rolle des **Sicherheitsleseberechtigten** und die Azure-Rolle des **Leseberechtigten**.
 
+### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funktionen, die eine Mindestversion des Clients erforderlich ist.
+
+Können Sie die Versionsinformationen der Verlauf für die [Azure Information Protection – einheitliche bezeichnungs Client](./rms-client/unifiedlabelingclient-version-release-history.md) und die [Azure Information Protection-Client](./rms-client/client-version-release-history.md) um zu bestätigen, ob Ihre Version des Clients unterstützt die zentralen Berichtsfunktionen. Die minimalen Versionen für die Clients:
+
+Für den Azure Information Protection unified bezeichnungs-Client:
+
+- Unterstützung für die Überwachung und die Endpunkt-Ermittlung: Version 2.0.778
+
+Für den Azure Information Protection-Client:
+
+- Unterstützung für die Überwachung: 1.41.51.0
+- Unterstützung für die endpunktermittlung: Version 1.48.204.0
+
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Konfigurieren eines Log Analytics-Arbeitsbereichs für Berichte
 
 1. Wenn dies noch nicht erfolgt ist, öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal](https://portal.azure.com) mit einem Konto an, das über die [erforderlichen Berechtigungen für die Azure Information Protection-Analyse](#permissions-required-for-azure-information-protection-analytics) verfügt. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
@@ -205,6 +217,9 @@ Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lese
 
 Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 
+> [!NOTE] 
+> Es gibt derzeit ein bekanntes Problem bei der erstmaligen Anzeige von Daten in den Berichten. Wenn dieses Problem bei Ihnen auftritt, stellen Sie in der globalen Richtlinie die [Richtlinieneinstellung](configure-policy-settings.md) von **Überwachungsdaten an Azure Information Protection-Protokollanalysen senden** auf **Aus**, und speichern Sie die Richtlinie. Ändern Sie dann die gleiche Einstellung in **Ein**, und speichern Sie die Richtlinie. Nachdem Clients [ die Änderung heruntergeladen haben](configure-policy.md#making-changes-to-the-policy), kann es bis zu 30 Minuten dauern, bis ihre Überwachungsereignisse in Ihrem Log Analytics-Arbeitsbereich angezeigt werden.
+
 ## <a name="how-to-view-the-reports"></a>Anzeigen von Berichten
 
 Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
@@ -219,7 +234,7 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
     
     Hinweis: Die Ermittlung von Endpunkten wird gerade stufenweise für Mandanten eingeführt. Sobald dieses Feature für Ihren Mandanten zur Verfügung steht, enthält dieser Bericht Daten von den unterstützten Endpunkten.
     
-    Sie können eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) für die Vorschauversion des Azure Information Protection-Clients konfigurieren, um Dateien mit vertraulichen Informationen zu melden.
+    Sie können konfigurieren, eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) für den Azure Information Protection-Client zu Berichtsdateien, die vertraulichen Informationen enthalten.
     
     Tipp: Aus den gesammelten Informationen ist z. B. ersichtlich, welche Benutzer von Orten, die Sie nicht kennen oder die derzeit nicht überprüft werden, auf Dateien mit vertraulichen Informationen zugreifen:
     
@@ -230,8 +245,6 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
     
     Wenn Sie ein Element auswählen, zeigt die Option **Daten anzeigen** die Überwachungsaktivitäten an, die die Empfehlung ausgelöst haben.
 
-> [!NOTE]
-> Es gibt derzeit ein bekanntes Problem beim Anzeigen von Fragezeichen (**?**) in Pfaden und Dateinamen anstelle von Zeichen, bei denen es sich nicht um ASCII-Zeichen handelt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Ändern von Berichten und Erstellen benutzerdefinierter Abfragen
 
@@ -291,6 +304,6 @@ In diesem Beispiel werden herabgestufte Bezeichnungen nur gezählt, wenn der Bez
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nachdem Sie die Informationen in den Berichten überprüft haben, haben Sie die Möglichkeit, Änderungen an Ihrer Azure Information Protection-Richtlinie vorzunehmen. Eine Anleitung dazu finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
+Nach dem Durchlesen der Informationen in den Berichten können bei Verwendung der Azure Information Protection-Client möglicherweise möchten, um Ihre Azure Information Protection-Richtlinie zu ändern. Eine Anleitung dazu finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
 Wenn Sie ein Microsoft 365-Abonnement haben, können Sie die Nutzung von Bezeichnungen auch im Microsoft 365 Compliance Center und im Microsoft 365 Security Center anzeigen. Weitere Informationen finden Sie unter [Anzeigen der Nutzung der Bezeichnung mit Bezeichnungsanalysen](/Office365/SecurityCompliance/label-analytics).

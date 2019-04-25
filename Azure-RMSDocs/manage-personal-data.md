@@ -4,19 +4,19 @@ description: Informationen zu den personenbezogenen Daten, die von Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
-ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
-ms.translationtype: HT
+ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233733"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181898"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -34,7 +34,7 @@ Wenn Sie Azure Information Protection konfigurieren und verwenden, werden E-Mail
 
 - Dokumentnachverfolgungsprotokolle
 
-- Verwendungsprotokolle des Azure Information Protection- und RMS-Clients 
+- Protokolle für die Azure Information Protection-Clients und die RMS-client 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -90,7 +90,7 @@ Führen Sie die Cmdlets [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrms
 
 Führen Sie das Cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) aus, um ein Protokoll der Administratoraktionen für den Azure Rights Management-Dienst abzurufen, wodurch Daten von Azure Information Protection geschützt werden. Dieses Protokoll enthält personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Beispiel:
+Zum Beispiel:
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -99,7 +99,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-azure-rights-management-service"></a>Verwendungsprotokolle des Azure Rights Management-Diensts
 Führen Sie das Cmdlet [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog) aus, um ein Protokoll von Endbenutzeraktionen abzurufen, die den Azure Rights Management-Dienst verwenden. Dieser Dienst schützt Daten für Azure Information Protection. Dieses Protokoll enthält möglicherweise personenbezogene Daten in der Form von E-Mail-Adressen und IP-Adressen. Das Protokoll ist im Klartextformat. Nachdem es heruntergeladen wurde, können die genauen Angaben eines bestimmten Administrators offline gesucht werden.
 
-Beispiel:
+Zum Beispiel:
 ```
 PS C:\Users> Get-AadrmUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -131,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Führen Sie das Cmdlet [Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) aus, um Informationen zu einem bestimmten Benutzer von der Website zur Dokumentnachverfolgung abzurufen. Verwenden Sie das Cmdlet [Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps), um mit dem Dokumentprotokoll in Verbindung stehende Nachverfolgungsinformationen abzurufen.
 
-Beispiel:
+Zum Beispiel:
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -186,15 +186,15 @@ IsHiddenInfo         : False
 
 Sie können nicht nach ObjectID suchen. Sie werden jedoch nicht vom Parameter `-UserEmail` eingeschränkt. Die E-Mail-Adresse, die Sie angeben, muss nicht Teil Ihres Mandanten sein. Wenn die angegebene E-Mail-Adresse an einer Stelle in den Dokumentnachverfolgungsprotokollen gespeichert ist, wird der Dokumentnachverfolgungseintrag in der Cmdlet-Ausgabe zurückgegeben.
 
-### <a name="usage-logs-for-the-azure-information-protection-client-and-rms-client"></a>Verwendungsprotokolle des Azure Information Protection- und RMS-Clients
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Protokolle für die Azure Information Protection-Clients und die RMS-client
 
 Wenn Bezeichnungen und Schutz auf Dokumente und E-Mails angewendet werden, werden E-Mail-Adressen und IP-Adressen möglicherweise in Protokolldateien auf dem Computer des Benutzers an den folgenden Stellen gespeichert:
 
-- Azure Information Protection-Client: %localappdata%\Microsoft\MSIP\Logs
+- Für den Azure Information Protection-unified-bezeichnungs-Client und der Azure Information Protection-Client: %localappdata%\Microsoft\MSIP\Logs
 
 - RMS-Client: %localappdata%\Microsoft\MSIPC\msip\Logs
 
-Zusätzlich protokolliert der Azure Information Protection-Client diese personenbezogenen Daten im lokalen Windows-Ereignisprotokoll unter **Anwendungen und Dienstprotokolle** > **Azure Information Protection**.
+Zusätzlich protokolliert der Azure Information Protection-Client diese personebezogenen Daten im lokalen Windows-Ereignisprotokoll unter **Anwendungen und Dienstprotokolle** > **Azure Information Protection**.
 
 Wenn der Azure Information Protection-Client den Scanner ausführt, werden personenbezogene Daten auf dem Windows Server-Computer, der den Scanner ausführt, unter %localappdata%\Microsoft\MSIP\Scanner\Reports gespeichert.
 
@@ -219,7 +219,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 Auf personenbezogene Daten, die Sie mithilfe des AADRM-Moduls anzeigen und angeben, kann nur von den Benutzern zugegriffen werden, denen die Rolle **Information Protection-Administrator**, **Complianceadministrator** oder **Globaler Administrator** in Azure Active Directory oder die Rolle „Globaler Administrator“ im Azure Rights Management-Dienst zugewiesen wurde.  
 
-## <a name="updating-personal-data"></a>Aktualisieren von persönlichen Daten
+## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten
 
 Sie können E-Mail-Adressen für bereichsbezogene Richtlinien und Schutzeinstellungen in der Azure Information Protection-Richtlinie aktualisieren. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md) und [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md). 
 
@@ -245,7 +245,7 @@ Wenn Sie die E-Mail-Adresse eines delegierten Administrators aktualisieren müss
 
 2. Verwenden Sie [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/Add-AadrmRoleBasedAdministrator), um den Benutzer und die neue E-Mail-Adresse hinzuzufügen.
 
-## <a name="deleting-personal-data"></a>Löschen von persönlichen Daten
+## <a name="deleting-personal-data"></a>Löschen von personenbezogenen Daten
 Sie können E-Mail-Adressen für bereichsbezogene Richtlinien und Schutzeinstellungen in der Azure Information Protection-Richtlinie löschen. Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md) und [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md). 
 
 Für die Schutzeinstellungen können Sie diese Informationen löschen, indem Sie PowerShell-Cmdlets über das [AADRM-Modul](/powershell/module/aadrm) verwenden.
@@ -273,7 +273,7 @@ Diese Daten werden dauerhaft gelöscht. Sie können nicht wiederhergestellt werd
 
 **Schritt 3: Bestätigung der Löschung** Sie erhalten eine E-Mail von Microsoft Customer Support Services (CSS), in der bestätigt wird, dass die Daten gelöscht wurden. 
 
-## <a name="exporting-personal-data"></a>Exportieren von persönlichen Daten
+## <a name="exporting-personal-data"></a>Exportieren von personenbezogenen Daten
 Wenn Sie die AADRM-PowerShell-Cmdlets verwenden, können personenbezogene Daten gesucht und als PowerShell-Objekt exportiert werden. Das PowerShell-Objekt kann in das JSON-Format konvertiert und mithilfe des `ConvertTo-Json`-Cmdlets gespeichert werden.
 
 ## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Einschränken der Verwendung von personenbezogenen Daten für die Profilerstellung oder für Marketing ohne Zustimmung

@@ -4,23 +4,26 @@ description: Anweisungen für Benutzer zum Installieren des Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f97914525e8ff6f48e4566b3108c2ba65fb91deb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 4f2a9f0ba376d445d75eda731157ed1af5f8fee6
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253743"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182499"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Leitfaden: Herunterladen und Installieren des Azure Information Protection-Clients
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 Wenn Ihr Administrator den Azure Information Protection-Client nicht für Sie installiert, können Sie dies selbst übernehmen. Sie müssen ein lokaler Administrator für Ihren PC sein, um diesen Client zu installieren, damit er Ihre Dokumente und E-Mails bezeichnen und schützen kann.
 
@@ -32,13 +35,13 @@ Zusätzlich:
 
 ## <a name="to-download-and-install-the-azure-information-protection-client"></a>So laden Sie den Azure Information Protection-Client herunter und installieren ihn    
 
-1.  Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
+1. Wechseln Sie auf der Microsoft-Website zur Seite [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970).
 
     Diese Seite enthält Links für alle gängigen möglicherweise verwendeten Geräte, sodass Sie bei Bedarf problemlos eine Viewer-Anwendung herunterladen können, um geschützte Dateien zu öffnen. Wenn Sie kein lokaler Administrator für Ihren PC sind, können Sie immer noch die Viewer-App für Windows installieren. Diese Anweisungen installieren allerdings den vollständigen Client, mit dem Sie Dateien mit Bezeichnungen versehen und schützen können. 
 
 2. Suchen Sie den Abschnitt **Azure Information Protection-Client**, und klicken Sie auf das Windows-Symbol. Klicken Sie auf **Herunterladen**, und speichern Sie die Datei **AzInfoProtection.exe**.     
 
-3. Führen Sie die EXE-Datei aus, die heruntergeladen wurde. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
+3. Führen Sie die EXE-Datei aus, die heruntergeladen wurde. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
 
 4. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
     - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.    

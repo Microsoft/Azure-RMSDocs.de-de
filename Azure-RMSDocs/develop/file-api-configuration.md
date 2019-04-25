@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331000"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178232"
 ---
 # <a name="file-api-configuration"></a>Datei-API-Konfiguration
 
@@ -93,18 +93,18 @@ Native Unterstützung kann für einen beliebigen Dateitypen (Erweiterung) hinzug
 -   Dateierweiterungen: DOC, DOT, XLA, XLS, XLT, PPS, PPT, DOCM, DOCX, DOTM, DOTX, XLAM, XLSB, XLSM, XLSX, XLTM, XLTX, XPS, POTM, POTX, PPSX, PPSM, PPTM, PPTX, THMX, VSDX, VSDM, VSSX, VSSM, VSTX, VSTM. 
 -   Protection type = Native (default): „sample.docx“ wird in „sample.docx“ verschlüsselt.
 -   Schutztyp = Pfile: hat für Office-Dateien dieselbe Auswirkung wie der Schutztyp „Nativ“.
--   Off: Deaktiviert die Verschlüsselung.
+-   Aus: Deaktiviert die Verschlüsselung.
 
 **PDF-Dateien**
 
 -   Protection type = Native: „sample.pdf“ wird als „sample.ppdf“ verschlüsselt und benannt.
 -   Protection type = Pfile: „sample.pdf“ wird als „sample.pdf.pfile“ verschlüsselt und benannt.
--   Off: Deaktiviert die Verschlüsselung.
+-   Aus: Deaktiviert die Verschlüsselung.
 
 **Alle anderen Dateiformate**
 
 -   Protection type = Pfile: sample.*zzz* wird als „sample.*zzz*.pfile“ verschlüsselt und benannt, wobei *zzz* die ursprüngliche Dateierweiterung ist.
--   Off: Deaktiviert die Verschlüsselung.
+-   Aus: Deaktiviert die Verschlüsselung.
 
 ### <a name="examples"></a>Beispiele
 

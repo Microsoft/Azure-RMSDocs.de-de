@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332989"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181037"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone-Setup
 
@@ -31,7 +31,7 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 
 Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
@@ -68,7 +68,7 @@ Sehen Sie sich die Informationen im Leitfaden für die [Windows Phone-Entwicklun
 
 Sie können jetzt Ihre eigenen neuen Windows Phone-Apps erstellen.
 
-### <a name="see-also"></a>Weitere Informationen
+### <a name="see-also"></a>Siehe auch
 
 [Erste Schritte](get-started.md)
 

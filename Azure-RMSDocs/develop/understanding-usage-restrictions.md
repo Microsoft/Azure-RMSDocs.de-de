@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 2001f779a788e41acbb9319a0c329dfb4705176a
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332054"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176872"
 ---
 # <a name="understanding-usage-restrictions"></a>Grundlegendes zu Nutzungseinschränkungen
 
@@ -64,7 +64,7 @@ Jedes Benutzerrecht, das in der AD RMS-Rechtespalte aufgeführt wird, hat eine B
 |**IPC_GENERIC_EXPORT** <br><br> Das Recht zum Extrahieren des Inhalts aus einem geschützten Format und das Einfügen in einem anderen durch AD RMS geschützten Format. <br><br> **Allgemeine Erzwingungspunkte**: Speichern unter|Im Dialogfeld **Speichern unter** die Möglichkeit deaktivieren, in anderen Dateiformaten zu speichern.<br><br>**Tipp**: Eine bewährte Methode besteht darin, Ihren Kerncode von **Datei** > **Speichern unter** dahingehend zu aktualisieren, dass ein Fehler auftritt, wenn der Benutzer versucht, diese Datei in einem anderen Format zu speichern und nicht über dieses Recht verfügt. Dies dient als Sicherheitsnetz, falls Sie UX-Mechanismen übersehen, die verwendet werden können, um einen Speichern-unter-Vorgang auszulösen.|
 |**IPC_GENERIC_PRINT** <br><br> Das Recht, Dokumentinhalte zu drucken <br><br> **Allgemeine Erzwingungspunkte**: Drucken|Deaktivieren Sie das Menü **Datei** > **Drucken**.<br><br>Alle Tastenkombination deaktivieren, die zum Auslösen eines Druckvorgangs verwendet werden können (z. B. STRG + P).<br><br>Alle Kontextmenüeinträge deaktivieren, die verwendet werden können, um einen Druck auszulösen.<br><br>**Tipp**: Eine bewährte Methode ist das Aktualisieren des Kerncodes von **Datei** > **Drucken** dahingehend, dass ein Fehler auftritt, wenn der Benutzer nicht über dieses Recht verfügt. Dies dient als Sicherheitsnetz, falls Sie UX-Mechanismen übersehen, die verwendet werden können, um einen Druckvorgang auszulösen.|
 |**IPC_GENERIC_COMMENT** <br><br> Einige Programme unterstützen die Möglichkeit, Kommentare und Anmerkungen dem Dokument hinzuzufügen, ohne Dokumentkerninhalte zu aktualisieren.<br><br>Dieses Recht erteilt den Benutzer Zugriff auf diese Funktion. <br><br> **Allgemeine Erzwingungspunkte**: <br><br> Prüfung > Kommentar einfügen <br><br> Prüfung > Kommentar löschen | Alle Menüelemente deaktivieren, die zum Ändern von Dokumentkommentaren oder -anmerkungen verwendet werden können. **Prüfen** > **Kommentar einfügen** und **Prüfen** > **Kommentar löschen** sind Beispiele. <br><br>Alle Tastenkombination deaktivieren, die Änderungen der Dokumentkommentare auslösen könnten.<br><br>**Hinweis**: Eine standardmäßige Implementierung setzt voraus, dass **IPC_GENERIC_COMMENT** und **IPC_GENERIC_WRITE** neue Kommentare in einer Datei beibehalten. Anwendungen können Unterstützung für den Fall hinzufügen, dass das **IPC_GENERIC_COMMENT**-Recht erteilt wird, das **IPC_GENERIC_WRITE**-Recht aber nicht. In diesem Fall ist es zulässig, das Speichern zu ermöglichen, sofern Dokumentänderungen nur auf Kommentare beschränkt sind.|
-|**IPC_VIEW_RIGHTS** <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: N/V|Durch das System erzwungen. Das System lässt es nicht zu, dass der Entwickler die [**Liste mit Benutzerrechten**](https://msdn.microsoft.com/library/hh535286.aspx) aus einer Lizenz abfragt, sofern dieses Recht nicht erteilt wird.
+|**IPC_VIEW_RIGHTS** <br><br> Keine Beschreibung <br><br> **Allgemeine Erzwingungspunkte**: Nicht zutreffend|Durch das System erzwungen. Das System lässt es nicht zu, dass der Entwickler die [**Liste mit Benutzerrechten**](https://msdn.microsoft.com/library/hh535286.aspx) aus einer Lizenz abfragt, sofern dieses Recht nicht erteilt wird.
 |**IPC_EDIT_RIGHTS** <br><br> Einige Anwendungen ermöglichen Benutzern das Ändern des Satzes aus Benutzern und Rechten für AD RMS-geschützte Inhalte.<br><br>Dieses Recht erteilt den Benutzer Zugriff auf diese Funktion. <br><br> **Allgemeine Erzwingungspunkte**: UI-Steuerelemente für das Bearbeiten von Anwendungsrechten|Benutzerzugriff auf alle Steuerelemente, die verwendet werden können, um die RMS-Richtlinie für ein Dokument zu bearbeiten, deaktivieren.|
 
 

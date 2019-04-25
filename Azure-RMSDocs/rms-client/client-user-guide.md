@@ -4,27 +4,29 @@ description: Der Azure Information Protection-Client für Windows hilft Ihnen da
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/31/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b531103a03991c87bb3f0cb99b4288ca607142ec
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 031e80046fbc02d3f425adbc52202806559eeed0
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256344"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182941"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection-Benutzerhandbuch
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 
-Sie benötigen lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 läuft. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
+Sie benötigen dafür lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 ausgeführt wird. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
 
 
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun?

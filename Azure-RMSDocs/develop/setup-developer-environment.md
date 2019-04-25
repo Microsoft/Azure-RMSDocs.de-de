@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 8fbdc1e130b891d3ce5370a6aed1c14ca5467203
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330575"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176889"
 ---
 # <a name="setup-developer-environment"></a>Einrichten der Entwicklerumgebung
 
 In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.
 
-|Plattform | Beschreibung|
+|Platform | Beschreibung|
 |------|------------|
 |[Android](android-sdk.md)| Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den integrierten Datenschutz in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.|
 |[Linux](linux-setup.md)|Verschiedene Arten von Linux-Betriebssystemen können jetzt das MS RMS SDK 4.2 nutzen, um den integrierten Schutz von Daten in der Anwendung mithilfe von Azure Active Directory Rights Management (AAD RM) zu aktivieren.|

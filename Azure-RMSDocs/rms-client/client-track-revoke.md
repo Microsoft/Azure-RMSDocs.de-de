@@ -4,23 +4,25 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 66c0f915c2a3575d5f9d45e59f5684d9bdfbf7e7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 95a70375f65e461cff2f69d28598d2a72aeaec10
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252502"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773518"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Nachdem Sie Ihre Dokumente mithilfe von Azure Information Protection geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Bei Bedarf können Sie auch den Zugriff auf diese Dokumente widerrufen, wenn Benutzer nicht mehr in der Lage sein sollen, sie zu lesen. Hierfür verwenden Sie die **Website zum Nachverfolgen von Dokumenten**. Auf diese Website können Sie über Windows-Computer, Mac-Computer und sogar Tablets und Smartphones zugreifen.
 
@@ -28,7 +30,7 @@ Wenn Sie auf diese Website zugreifen möchten, melden Sie sich dort an, um Ihre 
 
 Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten ausführen:
 
-- Wenn Sie die Freigabe eines Dokuments stoppen müssen: 
+- Wenn Sie die Freigabe eines Dokuments aufheben müssen: 
     
     - Klicken Sie auf **Zugriff widerrufen**. Beachten Sie den Zeitraum, für den das Dokument weiterhin verfügbar ist. Entscheiden Sie, ob Sie Personen wissen lassen möchten, dass Sie den Zugriff auf das Dokument widerrufen, das Sie zuvor freigegeben haben, indem Sie eine benutzerdefinierte Meldung bereitstellen. Wenn Sie den Zugriff auf ein Dokument widerrufen, wird das freigegebene Dokument nicht gelöscht, aber autorisierte Benutzer können es nicht mehr öffnen:
         
@@ -44,7 +46,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
      
     - Klicken Sie auf **Einstellungen**, und wählen Sie, wie und ob Sie eine E-Mail erhalten möchten, wenn auf das Dokument zugegriffen wird:
         
-        ![Symbol „In CSV-Datei exportieren“ auf der Website zur Dokumentenverfolgung](../media/tracking-site-settings-email.png)
+        ![Konfigurieren von e-Mail-Benachrichtigungen in der Website für dokumentnachverfolgung](../media/tracking-site-settings-email.png)
 
 - Wenn Sie für andere Benutzer freigegebene Dokumente nachverfolgen und widerrufen möchten:
     
@@ -61,11 +63,11 @@ Sie können nur die von Ihnen geschützten Dokumente nachverfolgen und widerrufe
 
 Um ein von Ihnen geschütztes Dokument nachzuverfolgen, müssen Sie es mit Ihrem Windows-Computer bei der Website für die Dokumentnachverfolgung registrieren. Zu diesem Zweck verwenden Sie entweder den Datei-Explorer oder die Office-Apps.
 
-Wenn Sie über die aktuelle Vorschauversion des Azure Information Protection-Clients verfügen und den Parameter *EnableTracking* mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) verwenden, können Sie das geschützte Dokument auch bei PowerShell registrieren.
+Wenn Sie die aktuelle allgemein verfügbare Version des Azure Information Protection-Clients verfügen, Sie können auch registrieren das geschützte Dokument mit PowerShell bei der Verwendung der *EnableTracking* Parameter mit dem [ Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) Cmdlet.
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Verwenden von Office zum Nachverfolgen oder Widerrufen des Dokuments
 
-In den Office-Anwendungen, Word, Excel und PowerPoint: 
+Bei den Office-Anwendungen wie Word, Excel und PowerPoint: 
 
 1. Öffnen Sie das geschützte Dokument, das Sie nachverfolgen oder widerrufen möchten.
 
@@ -98,11 +100,11 @@ Nachdem Sie das geschützte Dokument mithilfe der Office-Apps oder des Datei-Exp
 
 - Besuchen Sie die [Website für die Dokumentverfolgung](https://go.microsoft.com/fwlink/?LinkId=529562) über Ihren Windows-PC, Macintosh-Computer oder Ihr mobiles Gerät.
 
-    **Unterstützte Browser**: Wir empfehlen Internet Explorer in der neuesten Version 10, Sie können aber auch alle der folgenden Browser verwenden, um auf die Website zum Nachverfolgen von Dokumenten zuzugreifen:
+    **Unterstützte Browser**: Es empfiehlt sich, die mindestens Internet Explorer Version 10, aber Sie können eine der folgenden Browser die Website für dokumentnachverfolgung verwenden:
 
     - Internet Explorer: Mindestens Version 10
 
-    - Internet Explorer 9 mit mindestens MS12-037: Kumulatives Sicherheitsupdate für Internet Explorer: 12. Juni 2012
+    - Internet Explorer 9 mit mindestens MS12-037: Kumulatives Sicherheitsupdate für InternetExplorer: 12. Juni 2012
 
     - Mozilla Firefox: Mindestens Version 12
 

@@ -4,21 +4,23 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809759"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179940"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 
@@ -100,7 +102,7 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Typen von vertraulichen Informationen, die eine Mindestversion des Clients erfordern
 
-Die folgenden Typen vertraulicher Informationen erfordern die aktuelle Vorschauversion des Azure Information Protection-Clients:
+Die folgenden Typen für vertrauliche Informationen müssen die [aktuelle allgemein verfügbare Version](./rms-client/client-version-release-history.md#version-1482040) des Azure Information Protection-Clients:
 
 - **Azure Service Bus-Verbindungszeichenfolge**
 - **Azure IoT Verbindungszeichenfolge**
@@ -113,7 +115,9 @@ Die folgenden Typen vertraulicher Informationen erfordern die aktuelle Vorschauv
 - **Kennwort für Azure-Veröffentlichungseinstellungen**
 - **Schlüssel für Azure Storage-Konto (allgemein)**
 
-Darüber hinaus werden die folgenden Typen für vertrauliche Informationen für die aktuelle Vorschauversion des Azure Information Protection-Clients nicht mehr unterstützt und im Azure-Portal nicht mehr angezeigt:
+Weitere Informationen zu diesen Typen für vertrauliche Informationen finden Sie im folgenden Blogbeitrag: [Azure Information Protection unterstützt Sie sicherer sind vom automatischen Ermitteln von Anmeldeinformationen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+
+Darüber hinaus werden die folgenden Typen für vertrauliche Informationen für die aktuelle allgemein verfügbare Version des Azure Information Protection-Client und nicht mehr anzeigen, die im Azure-Portal nicht unterstützt:
 
 - **EU Phone Number** (EU-Telefonnummer)
 - **EU GPS Coordinates** (EU-GPS-Koordinaten)
@@ -123,5 +127,3 @@ Darüber hinaus werden die folgenden Typen für vertrauliche Informationen für 
 Ziehen Sie in Betracht, die [Azure Information Protection-Überprüfung](deploy-aip-scanner.md) bereitzustellen. Dadurch können Ihre automatischen Klassifizierungsregeln genutzt werden, um Dateien aus Netzwerkfreigaben und lokalen Dateispeichern zu suchen, zu klassifizieren und zu schützen.  
 
 Um weitere Informationen zum Konfigurieren Ihrer Azure Information Protection-Richtlinie zu erhalten, klicken Sie auf die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy).
-
-

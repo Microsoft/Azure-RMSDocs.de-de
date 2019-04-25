@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 9874b2d07930b80f8d4ef291f83ae16356a3c191
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330626"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178553"
 ---
 # <a name="configure-visual-studio"></a>Konfigurieren von Visual Studio
 
 Dieser Artikel enthält Informationen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des Rights Management Services SDK 2.1.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 -   [Installieren des SDK](install-the-rms-sdk.md)
 

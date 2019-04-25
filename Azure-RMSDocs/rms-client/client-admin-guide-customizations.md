@@ -4,23 +4,25 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3cd27fc4a060b6c7328495ad46d53768c28ff223
-ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
-ms.translationtype: HT
+ms.openlocfilehash: dae3461c4e5ec8ea4cc61fe26c20f774c97d76c5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59289467"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182065"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
@@ -56,11 +58,14 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Ändern des lokalen Protokolliergrads](#change-the-local-logging-level)
 |LogMatchedContent|[Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern](#disable-sending-information-type-matches-for-a-subset-of-users)|
+|OutlookBlockTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookCollaborationTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Die empfohlene Klassifizierung in Outlook aktivieren](#enable-recommended-classification-in-outlook)|
+|OutlookOverrideUnlabeledCollaborationExtensions|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookWarnTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Deaktivieren der niedrigen Integritätsebene für den Scanner](#disable-the-low-integrity-level-for-the-scanner)|
@@ -97,7 +102,7 @@ So melden Sie sich als ein anderer Benutzer an:
 
 2. Starten Sie alle offenen Office-Anwendungen neu, und melden Sie sich mit einem anderen Benutzerkonto an. Wenn in Ihrer Office-Anwendung keine Eingabeaufforderung für die Anmeldung beim Azure Information Protection-Dienst angezeigt wird, kehren Sie zum Dialogfeld **Microsoft Azure Information Protection** zurück, und klicken Sie im aktualisierten Abschnitt **Clientstatus** auf **Anmelden**.
 
-Weiterhin gilt:
+Darüber hinaus gilt:
 
 - Wenn der Azure Information Protection-Client nach Abschluss dieser Schritte noch mit dem alten Konto angemeldet ist, löschen Sie im Internet Explorer alle Cookies, und wiederholen Sie dann die Schritte 1 und 2.
 
@@ -130,7 +135,7 @@ Wenn Sie die folgende erweiterte Clienteinstellung angeben, wird Benutzern die O
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **ReportAnIssueLink**
+- Schlüssel: **ReportAnIssueLink**
 
 - Wert: **\<HTTP-Zeichenfolge>**
 
@@ -156,7 +161,7 @@ Sie können eine Anmeldeaufforderung für den Azure Information Protection-Diens
     
     1. Geben Sie die folgende Zeichenfolge ein:
     
-        - Legende: **PullPolicy**
+        - Schlüssel: **PullPolicy**
         
         - Wert: **False**
     
@@ -186,7 +191,7 @@ Wenn Sie die Richtlinie aus dem Azure-Portal exportieren, wird eine ZIP-Datei he
     
 2. Benennen Sie die identifizierte Datei zu **Policy.msip** um, und kopieren Sie sie in den Ordner **%LocalAppData%\Microsoft\MSIP** auf Computern, auf denen der Azure Information Protection-Client installiert ist. 
 
-Wenn auf dem nicht verbundenen Computer die Vorschauversion des Azure Information Protection-Scanners ausgeführt wird, müssen Sie zusätzliche Konfigurationsschritte durchführen. Weitere Informationen hierzu finden Sie unter [Einschränkung: Der Überprüfungsserver kann über keine Internetkonnektivität verfügen](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) in den Anweisungen zur Bereitstellung des Scanners.
+Wenn es sich bei Ihrer nicht verbundene Computer die aktuelle GA-Version der Azure Information Protection-Überprüfung ausgeführt wird, stehen zusätzliche Konfigurationsschritte erforderlich, die Sie ausführen müssen. Weitere Informationen hierzu finden Sie unter [Einschränkung: Der Überprüfungsserver kann über keine Internetkonnektivität verfügen](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) in den Anweisungen zur Bereitstellung des Scanners.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ausblenden oder Anzeigen der Schaltfläche „Nicht weiterleiten“ in Outlook
 
@@ -196,7 +201,7 @@ Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterl
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **DisableDNF**
+- Schlüssel: **DisableDNF**
 
 - Wert: **TRUE** zum Ausblenden der Schaltfläche, **FALSE** zum Anzeigen der Schaltfläche
 
@@ -208,13 +213,13 @@ Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröf
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **EnableCustomPermissions**
+- Schlüssel: **EnableCustomPermissions**
 
 - Wert: **TRUE**, um die Option für benutzerdefinierte Berechtigungen anzuzeigen, **FALSE**, um diese Option auszublenden
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich derzeit in der Vorschau und erfordert die Vorschauversion des Clients.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
 
 Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Option für benutzerdefinierte Berechtigungen für Benutzer verfügbar machen** oder die entsprechende Clienteinstellung im vorherigen Abschnitt konfigurieren, können Benutzer benutzerdefinierte Berechtigungen nicht sehen oder ändern, die für ein geschütztes Dokument bereits festgelegt wurden. 
 
@@ -222,7 +227,7 @@ Wenn Sie diese erweiterte Clienteinstellung erstellen und konfigurieren, können
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **EnableCustomPermissionsForCustomProtectedFiles**
+- Schlüssel: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Wert: **True**
 
@@ -238,7 +243,7 @@ Obwohl die Azure Information Protection-Leiste ausgeblendet bleibt, können Benu
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **EnableBarHiding**
+- Schlüssel: **EnableBarHiding**
 
 - Wert: **True**
 
@@ -252,7 +257,7 @@ Verwenden Sie diese Einstellung, wenn Sie über untergeordnete Bezeichnungen ver
 
 Konfigurieren Sie die folgenden Zeichenfolgen:
 
-- Legende: **CompareSubLabelsInAttachmentAction**
+- Schlüssel: **CompareSubLabelsInAttachmentAction**
 
 - Wert: **True**
 
@@ -268,13 +273,13 @@ Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, wer
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **OutlookRecommendationEnabled**
+- Schlüssel: **OutlookRecommendationEnabled**
 
 - Wert: **True**
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben
 
-Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich derzeit in der Vorschau und erfordert die Vorschauversion des Clients.
+Diese Konfiguration verwendet mehrere [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurieren, werden Benutzern Popupmeldungen in Outlook angezeigt, die sie vor dem Senden einer E-Mail warnen können, oder sie nach einer Legitimierung fragen, warum sie eine E-Mail versenden, oder sie aus folgenden Gründen davon abhalten, eine E-Mail zu senden:
 
@@ -303,7 +308,7 @@ Die daraus resultierende Aktion wird im lokalen Windows-Ereignisprotokoll protok
 Beispielereigniseintrag aus einer Legitimationsmeldung:
 
 ```
-Client Version: 1.48.1.0
+Client Version: 1.48.204.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -313,7 +318,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
+Die folgenden Abschnitte enthalten Anweisungen für jedes erweiterte Clienteinstellung, und Sie finden sie in der Aktion selbst mit [Lernprogramm: Konfigurieren von Azure Information Protection, um zu steuern, der Informationen, die mithilfe von Outlook oversharing](../infoprotect-oversharing-tutorial.md).
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 
@@ -326,19 +331,19 @@ Beispielwert für mehrere Bezeichnungs-IDs als kommagetrennte Zeichenfolge: `dcf
 
 - Warnmeldungen:
     
-    - Legende: **OutlookWarnUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookWarnUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
 - Legitimationsmeldungen:
     
-    - Legende: **OutlookJustifyUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookJustifyUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
 - Blockiermeldungen:
     
-    - Legende: **OutlookBlockUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookBlockUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
@@ -349,43 +354,71 @@ Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden 
 
 - Warnmeldungen:
     
-    - Legende: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Warnung**
 
 - Legitimationsmeldungen:
     
-    - Legende: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Justify** (Legitimation)
 
 - Blockiermeldungen:
     
-    - Legende: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Blockieren**
 
 - Diese Meldungen deaktivieren:
     
-    - Legende: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Deaktiviert**
 
+#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Um bestimmte Dateinamenerweiterungen Weitere Erweiterungen für die Warnung zu definieren, begründen oder Popupmeldungen für e-Mail-Anlagen, die eine Bezeichnung aufweisen, nicht blockieren
+
+Standardmäßig wird die Warnung zu rechtfertigen, oder blockieren Popupmeldungen gelten für alle Office-Dokumente und PDF-Dokumente. Sie können diese Liste durch Angabe optimieren, Dateierweiterungen der Warnung anzeigen, begründen oder Blockieren von Nachrichten mit einer zusätzlichen erweiterten Clients-Eigenschaft und eine durch Trennzeichen getrennte Liste der Dateinamenerweiterungen sollten.
+
+Beispiel für einen Wert für mehrere Dateinamenerweiterungen, als eine durch Trennzeichen getrennte Zeichenfolge zu definieren: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+
+In diesem Beispiel ist ein PDF-Dokument noch nicht gekennzeichneten führt nicht in warnen, begründen oder Popupmeldungen blockieren.
+
+
+- Schlüssel: **OutlookOverrideUnlabeledCollaborationExtensions**
+
+- Wert: **\<** Dateinamenerweiterungen zum Anzeigen von Nachrichten, die durch Trennzeichen getrennte**>**
+
+
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Angeben der zulässigen Domänennamen für Empfänger, die von den Popupmeldungen ausgenommen sind
 
-Wenn Sie in einer erweiterten Clienteinstellung einen Domänenname angeben, werden Benutzern keine Popupmeldungen für Empfänger angezeigt, in deren E-Mail-Adresse dieser Domänenname enthalten ist. In diesem Fall werden die E-Mails problemlos gesendet. Wenn Sie mehrere Domänen angeben möchten, fügen Sie sie kommagetrennt als einzelne Zeichenfolge hinzu.
+Wenn Sie in einer zusätzlichen erweiterten Clienteinstellung Domänennamen angeben, werden Benutzer nicht die Popupmeldungen für Empfänger angezeigt mit diesem Domänennamen in ihre e-Mail-Adresse enthalten. In diesem Fall werden die E-Mails problemlos gesendet. Wenn Sie mehrere Domänen angeben möchten, fügen Sie sie kommagetrennt als einzelne Zeichenfolge hinzu.
 
 Eine übliche Konfiguration ist es, die Popupmeldungen nur für die Empfänger anzuzeigen, die nicht zu Ihrer Organisation gehören, oder die keine für Ihre Organisation autorisierte Partner sind. In diesem Fall geben Sie alle E-Mail-Domänen an, die von Ihrer Organisation und von Ihren Partnern verwendet werden.
 
-Erstellen Sie den folgenden Schlüssel für eine erweiterte Clienteinstellung. Geben Sie als Werte eine oder mehrere Domänen an, und trennen Sie die einzelnen Werte mit Kommas.
+Erstellen Sie die folgenden erweiterten Clienteinstellungen, und geben Sie für den Wert einer oder mehreren Domänen, die jeweils durch ein Komma getrennt.
 
 Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com,fabrikam.com,litware.com`
 
-- Legende: **OutlookCollaborationTrustedDomains**
+- Warnmeldungen:
+    
+    - Schlüssel: **OutlookWarnTrustedDomains**
+    
+    - Wert: **\<** Domänenname, kommagetrennt**>**
 
-- Wert: **\<** Domänenname, kommagetrennt**>**
+- Legitimationsmeldungen:
+    
+    - Schlüssel: **OutlookJustifyTrustedDomains**
+    
+    - Wert: **\<** Domänenname, kommagetrennt**>**
 
-Wenn Sie z.B. den Domänenname „contoso.com“ angeben, werden für Benutzer in Outlook keine Popupmeldungen angezeigt, wenn diese E-Mails an john@sales.contoso.com versenden.
+- Blockiermeldungen:
+    
+    - Schlüssel: **OutlookBlockTrustedDomains**
+    
+    - Wert: **\<** Domänenname, kommagetrennt**>**
+
+Geben Sie z. B. um e-Mails an Benutzer mit einer e-Mail-Adresse von "contoso.com" nicht zu blockieren, den erweiterten Client-Einstellung **OutlookBlockTrustedDomains** und **"contoso.com"**. Benutzern werden daher nicht die Popup Warnmeldungen in Outlook angezeigt, beim Senden einer e-Mail um john@sales.contoso.com.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
 
@@ -399,7 +432,7 @@ Damit Outlook nicht die Standardbezeichnung anwendet, geben Sie **None** (Keine)
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **OutlookDefaultLabel**
+- Schlüssel: **OutlookDefaultLabel**
 
 - Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
 
@@ -453,7 +486,7 @@ Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jet
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **PostponeMandatoryBeforeSave**
+- Schlüssel: **PostponeMandatoryBeforeSave**
 
 - Wert: **False**
 
@@ -473,7 +506,7 @@ Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, au
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **RunPolicyInBackground**
+- Schlüssel: **RunPolicyInBackground**
 
 - Wert: **True**
 
@@ -485,7 +518,7 @@ Wenn die aktuelle Version des Azure Information Protection-Clients eine PDF-Date
 
 Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Clients zurückkehrt, bei dem PDF-Dateien mit der .ppdf-Dateinamenerweiterung geschützt werden, verwenden Sie die folgende erweiterte Einstellung, indem Sie diese Zeichenfolge eingeben:
 
-- Legende: **EnablePDFv2Protection**
+- Schlüssel: **EnablePDFv2Protection**
 
 - Wert: **False**
 
@@ -507,7 +540,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -519,11 +552,11 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort, oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -531,7 +564,7 @@ Die Datei behält die PDF-Erweiterung, wird jedoch wie zuvor klassifiziert und m
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Unterstützung von durch Secure Islands geschützten Dateien
 
-Diese Konfigurationsoption ist zurzeit als Vorschau verfügbar und unterliegt Änderungen.
+Diese Konfigurationsoption ist als Vorschauversion verfügbar und kann sich ändern.
 
 Wenn Sie Secure Islands zum Schützen von Dokumenten verwendet haben, verfügen Sie aufgrund dieses Schutzes möglicherweise über geschützte Text- und Bilddateien sowie generisch geschützte Dateien. Zum Beispiel Dateien mit den Erweiterungen PTXT, PJPEG oder PFILE. Wenn Sie die Registrierung wie folgt bearbeiten, können diese Dateien von Azure Information Protection entschlüsselt werden:
 
@@ -594,7 +627,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Value|
+|Name|Wert|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c,"Secure Islands label is Confidential",Classification,Confidential|
 
@@ -611,7 +644,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Value|
+|Name|Wert|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f,"Secure Islands label is Sensitive",Classification,Sensitive|
 
@@ -629,7 +662,7 @@ In diesem Beispiel:
 Erweiterte Clienteinstellung:
 
     
-|Name|Value|
+|Name|Wert|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
 
@@ -646,7 +679,7 @@ Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem
 
 Da der Musterabgleich sich auf die Leistung für Benutzer auswirkt, wird empfohlen, Office-Anwendungstypen (**W**ord, **E**xcel, **P**owerPoint) auf diejenigen einzuschränken, die durchsucht werden müssen:
 
-- Legende: **RemoveExternalContentMarkingInApp**
+- Schlüssel: **RemoveExternalContentMarkingInApp**
 
 - Wert: \<**Office-Anwendungstypen WXP**> 
 
@@ -679,7 +712,7 @@ Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß-
 
 Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
 
-- Legende: **ExternalContentMarkingToRemove**
+- Schlüssel: **ExternalContentMarkingToRemove**
 
 - Value: \<**zu vergleichende Zeichenfolge; als regulärer Ausdruck definiert**> 
 
@@ -717,7 +750,7 @@ Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel
 
 Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
 
-- Legende: **PowerPointShapeNameToRemove**
+- Schlüssel: **PowerPointShapeNameToRemove**
 
 - Wert: \<**Name der PowerPoint-Form**> 
 
@@ -725,7 +758,7 @@ Wenn mehr als eine PowerPoint-Form entfernt werden soll, erstellen Sie so viele 
 
 Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
 
-- Legende: **RemoveExternalContentMarkingInAllSlides**
+- Schlüssel: **RemoveExternalContentMarkingInAllSlides**
 
 - Wert: **True**
 
@@ -762,7 +795,7 @@ Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird 
 
 ## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen, und erfordert die aktuelle Vorschauversion des Azure Information Protection-Clients.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 [Azure Information Protection-Analysen](../reports-aip.md) sind in der Lage, die von Azure Information Protection-Clients gespeicherten Dokumente, die Inhalte mit vertraulichen Informationen enthalten, zu erkennen und zu melden. Standardmäßig werden diese Informationen nicht an Azure Information Protection-Analysen gesendet.
 
@@ -774,7 +807,7 @@ Um dieses Verhalten dahin gehend zu ändern, dass diese Informationen gesendet w
 
 Wenn diese erweiterte Clienteinstellung nicht festgelegt wird, werden weiterhin Überwachungsergebnisse vom Azure Information Protection-Client gesendet. Der Bericht beschränkt sich jedoch auf Informationen über Benutzerzugriffe auf bezeichnete Inhalte.
 
-Beispiel:
+Zum Beispiel:
 
 - Ohne diese Einstellung können Sie sehen, dass ein Benutzer auf die mit **Vertraulich\Vertrieb** bezeichnete Datei „Finanzen.docx“ zugegriffen hat.
 
@@ -784,11 +817,11 @@ Beispiel:
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen, und erfordert die aktuelle Vorschauversion des Azure Information Protection-Clients.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie das Kontrollkästchen für [Azure Information Protection-Analysen](../reports-aip.md) aktivieren, das die Inhaltsübereinstimmungen für Ihre vertraulichen Informationstypen oder Ihre benutzerdefinierten Bedingungen sammelt, werden diese Informationen standardmäßig von allen Benutzern gesendet. Wenn Sie einige Benutzer haben, die diese Daten nicht senden sollten, erstellen Sie die folgende erweiterte Clienteinstellung in einer [bereichsbezogenen Richtlinie](../configure-policy-scope.md) für diese Benutzer: 
 
-- Legende: **LogMatchedContent**
+- Schlüssel: **LogMatchedContent**
 
 - Wert: **Deaktivieren**
 
@@ -803,7 +836,7 @@ Geben Sie als Wert die Anzahl von gleichzeitigen Threads an, die von der Überpr
 
 Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihnen, „2 pro Kern“ anzugeben und die Ergebnisse zu überwachen. Wenn Sie die Überprüfung z.B. auf einem Computer mit vier Kernen ausführen, legen Sie den Wert auf „8“ fest. Erhöhen oder verringern Sie den Wert nach Bedarf – je nachdem, welche Leistung Sie für den Überprüfungscomputer und die Überprüfungshäufigkeit benötigen. 
 
-- Legende: **ScannerConcurrencyLevel**
+- Schlüssel: **ScannerConcurrencyLevel**
 
 - Wert: **\<Anzahl von gleichzeitigen Threads>**
 
@@ -819,7 +852,7 @@ Weitere Informationen zu den Windows-Integritätsebenen finden Sie unter [What i
 
 Wenn Sie diese erweiterte Einstellung so konfigurieren möchten, dass der Scanner mit einer automatisch von Windows zugewiesenen Integritätsebene ausgeführt wird (ein Standardbenutzerkonto wird mit einer mittleren Integritätsebene ausgeführt), geben Sie die folgenden Zeichenfolgen ein:
 
-- Legende: **ProcessUsingLowIntegrity**
+- Schlüssel: **ProcessUsingLowIntegrity**
 
 - Wert: **False**
 
@@ -832,7 +865,7 @@ Der Azure Information Protection-Client schreibt Clientprotokolldateien standard
  
 Zum Ändern des Protokolliergrads für diese Dateien konfigurieren Sie die folgende erweiterte Clienteinstellung:
 
-- Legende: **LogLevel**
+- Schlüssel: **LogLevel**
 
 - Wert: **\<Protokolliergrad>**
 
@@ -860,11 +893,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Exchange-E-Mail-Flussregel: Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Beispiel:
+     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Zum Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

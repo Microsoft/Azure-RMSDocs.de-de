@@ -12,11 +12,11 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: aedeea5e98a1dbee4e73cdf27573da52b623a6c4
-ms.sourcegitcommit: 21e7b96e1a60ff584149b3ff4325c80cb0a3770c
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57568092"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179615"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Konfigurieren von Nutzungsrechten für Azure Rights Management
 
@@ -32,7 +32,7 @@ Verwenden Sie diesen Artikel, um die gewünschten Nutzungsrechte für die verwen
 > Lesen Sie folgenden Artikel, um die Migration leichter durchführen zu können: [Tasks that you used to do with the Azure classic portal (Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben)](migrate-portal.md).
 
 ## <a name="usage-rights-and-descriptions"></a>Nutzungsrechte und Beschreibungen
-In der folgende Tabelle werden die von Rights Management unterstützten Benutzerrechte aufgezählt und beschrieben und wird beschrieben, wie sie genutzt und interpretiert werden. Sie werden nach ihrem **allgemeinen Namen** aufgelistet, also in der Regel das, was Sie als das Nutzungsrecht sehen, das als die benutzerfreundlichere Version des Einzelwortwerts angezeigt oder referenziert wird. Dieser Wert wird im Code verwendet (der Wert **Richtliniencodierung**). 
+In der folgenden Tabelle werden die von Rights Management unterstützten Benutzerrechte aufgelistet, und es wird beschrieben, wie sie genutzt und interpretiert werden. Sie werden nach ihrem **allgemeinen Namen** aufgelistet, also in der Regel das, was Sie als das Nutzungsrecht sehen, das als die benutzerfreundlichere Version des Einzelwortwerts angezeigt oder referenziert wird. Dieser Wert wird im Code verwendet (der Wert **Richtliniencodierung**). 
 
 Die **API-Konstante oder der API-Wert** ist der SDK-Name für einen MSIPC API-Aufruf, der verwendet wird, wenn Sie eine RMS-fähige Anwendung schreiben, die auf ein Nutzungsrecht überprüft oder einer Richtlinie ein Nutzungsrecht hinzufügt.
 
@@ -144,7 +144,7 @@ Der Rights Management-Aussteller verfügt immer über das Nutzungsrecht „Vollz
 
 - Der Rights Management-Aussteller kann ein Dokument auch dann noch öffnen, wenn es gesperrt wurde. 
 
-Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** für diesen Inhalt; dies tritt ein, wenn der Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Es gibt jedoch auch einige Szenarios, in denen ein Administrator oder ein Dienst Inhalt im Namen eines Benutzers schützen kann. Beispiel:
+Standardmäßig ist dieses Konto auch der **Rights Management-Besitzer** für diesen Inhalt; dies tritt ein, wenn der Benutzer, der das Dokument oder die E-Mail erstellt hat, den Schutz initiiert. Es gibt jedoch auch einige Szenarios, in denen ein Administrator oder ein Dienst Inhalt im Namen eines Benutzers schützen kann. Zum Beispiel:
 
 - Ein Administrator schützt mehrere Dateien auf einer Dateifreigabe: Das Administratorkonto in Azure AD schützt die Dokumente für die Benutzer.
 
@@ -180,7 +180,7 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz beträgt für ein
     
     Weitere Informationen und Anleitungen zum Konfigurieren dieser Einstellung mithilfe von PowerShell finden Sie in der Hilfe für jedes Cmdlet.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
 [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)

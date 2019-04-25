@@ -4,19 +4,19 @@ description: Führen Sie diese Schritte aus, um Azure Information Protection fü
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/05/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 69fdfe85bb1376cee25b60bcf1d65b7a8462af3c
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.openlocfilehash: dd88cc456337398e9ac95ffafec8514f93cc6598
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828548"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179826"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -28,8 +28,6 @@ Wenn Sie allerdings nach szenariobasierten Anweisungen suchen, lesen Sie [Schrit
 
 > [!NOTE]
 > Wenn Sie nach einer Roadmap für Produktreleases suchen, lesen Sie den Abschnitt [Informationen zu neuen Releases und Updates](information-support.md#information-about-new-releases-and-updates).
-> 
-> Informationen zu den vereinheitlichten Bezeichnungserfahrungen, die sich zurzeit in der Vorschau befinden und auf der Microsoft Ignite 2018 angekündigt wurden, finden Sie unter [Ankündigung der Verfügbarkeit von Informationsschutzfunktionen zum Schutz Ihrer sensiblen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 ### <a name="identify-your-deployment-roadmap"></a>Identifizieren Ihrer Bereitstellungsroadmap
 
@@ -53,6 +51,7 @@ Wählen Sie dann eine Roadmap für die Bereitstellung aus, die für Ihre Organis
 Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](./rms-for-individuals.md).
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Schritt 2: Vorbereiten Ihres Mandanten für Azure Information Protection
+
 Bevor Sie mit der Verwendung von Azure Information Protection beginnen, stellen Sie sicher, dass Sie über Benutzerkonten und Gruppen in Office 365 oder Azure Active Directory verfügen. Diese Benutzerkonten und Gruppen werden von Azure Information Protection verwendet, um Benutzer aus Ihrer Organisation zu authentifizieren und zu autorisieren. Falls erforderlich, erstellen Sie diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. 
 
 Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
@@ -68,7 +67,11 @@ Wenn Sie nicht bereits über eine Klassifizierungsstrategie verfügen, lesen Sie
 
 Konfigurieren Sie die Standardbezeichnungen von Azure Information Protection, um Änderungen vorzunehmen, die Ihre Klassifizierungsentscheidungen unterstützen. Konfigurieren Sie die Richtlinie für das manuelle Bezeichnen von Benutzern, und verfassen Sie Anleitungen für Benutzer dazu, welche Bezeichnung wann anzuwenden sind. Wenn Ihre Standardrichtlinie mit Bezeichnungen erstellt wurde, die Schutz automatisch anwenden, entfernen Sie die Schutzeinstellungen vorübergehend, oder deaktivieren Sie die Bezeichnung. Weitere Informationen zum Konfigurieren der Azure Information Protection-Richtlinie finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](./configure-policy.md).
 
-Stellen Sie anschließend den Azure Information Protection-Client für Benutzer bereit, und bieten Sie Benutzerschulungen und Anleitungen für die Auswahl der Bezeichnungen an. Weitere Informationen zum Installieren und Unterstützen des Clients finden Sie im [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md).
+Bereitstellen der [Azure Information Protection-Client oder des einheitlichen Azure Information Protection-Bezeichnung-Clients für Benutzer](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) für Benutzer, und geben Sie die Schulung von Benutzern und spezifische Anweisungen Wenn die Bezeichnungen auswählen. Weitere Informationen zum Installieren und unterstützen des Clients finden Sie unter den Admin-Handbüchern:
+
+- [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md)
+
+- [Azure Information Protection – einheitliche bezeichnungs Client – Administratorhandbuch](./rms-client/clientv2-admin-guide.md)
 
 Wenn die Benutzer nach einer Weile mit dem Bezeichnen ihrer Dokumente und E-Mails vertraut sind, können Sie weitere Konfigurationen einführen. Dazu zählt unter anderem Folgendes:
 
@@ -92,7 +95,7 @@ Wenn Benutzer mit dem Bezeichnen von Dokumenten und E-Mails vertraut sind, könn
 
 2. Installieren Sie das PowerShell-Modul für AADRM auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](./install-powershell.md).
 
-3. Wenn Sie zurzeit AD RMS verwenden: Führen Sie eine Migration aus, um die Schlüssel, Vorlagen und URLs in die Cloud zu verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+3. Wenn Sie zurzeit AD RMS verwenden: Führen Sie eine Migration aus, um die Schlüssel, Vorlagen und URLs in die Cloud verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 4. Stellen Sie sicher, dass der Schutzdienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Möglichkeiten von Benutzern zum Anwenden von Schutz zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](./activate-service.md).
 
@@ -100,11 +103,13 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 - Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation den Schutzdienst verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md).
 
-### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Schritt 5: Konfigurieren der Azure Information Protection-Richtlinie sowie von Anwendungen und Diensten für den Schutz von Daten
+### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Schritt 5: Konfigurieren der Azure Information Protection-Richtlinie sowie von Anwendungen und Diensten für den Schutz von Daten
 
-1. Aktualisieren Ihrer Azure Information Protection-Richtlinie für den Schutz von Daten
+1. Aktualisieren Sie Ihre Bezeichnungen aus, um den Schutz anzuwenden
     
-    Ändern Sie Ihre Azure Information Protection-Richtlinie so, dass eine oder mehrere Bezeichnungen den Schutz anwenden. Weitere Informationen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](./configure-policy-protection.md).
+    Für den Azure Information Protection-Client finden Sie unter [Gewusst wie: Konfigurieren einer Bezeichnung für Rights Management-Schutz](./configure-policy-protection.md).
+    
+    Die Azure Information Protection die Bezeichnung Client unified, finden Sie unter [Beschränken des Zugriffs auf Inhalte mithilfe von Verschlüsselung in vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels).
     
     Beachten Sie, dass Benutzer Bezeichnungen für die Anwendung des Rights Management-Schutzes auch dann in Outlook verwenden können, wenn Exchange nicht für Information Rights Management (IRM) konfiguriert ist. Ihre Organisation kann jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn Exchange für IRM oder die [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Diese zusätzliche Konfiguration ist in der folgenden Liste enthalten (2 für Exchange Online und 5 für lokales Exchange). 
 
@@ -131,11 +136,12 @@ Sie sind nun bereit, die Verwendung der von Ihnen konfigurierten Bezeichnungen i
 
 - [Berichterstellung für Azure Information Protection](reports-aip.md): zurzeit in der Vorschau
 
-- [Clientdateien und Nutzungsprotokollierung](./rms-client/client-admin-guide-files-and-logging.md)
+- Clientdateien und verwendungsprotokollierung für den [Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md)
 
 - [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md)
 
-### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 7: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
+### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 7: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
+
 Wenn Sie mit der Verwendung des Schutzdiensts beginnen, kann PowerShell nützlich sein, um administrative Änderungen skriptgestützt oder automatisiert durchzuführen. PowerShell kann ebenfalls für einige der erweiterten Konfigurationen erforderlich sein. 
 
 Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](./administer-powershell.md).
@@ -144,12 +150,14 @@ Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Di
 ## <a name="deployment-roadmap-for-data-protection-only"></a>Roadmap für die Bereitstellung zum ausschließlichen Schutz von Daten
 
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-the-protection-service-from-azure-information-protection"></a>Schritt 1: Bestätigen, dass Sie ein Abonnement besitzen, das den Schutzdienst von Azure Information Protection enthält
+
 Überprüfen Sie anhand der Abonnementinformationen und der Featureliste auf der [Azure Information Protection-Preisseite](https://azure.microsoft.com/pricing/details/information-protection), ob Ihre Organisation über ein Abonnement verfügt, das diese Funktionen und Features umfasst. Weisen Sie anschließend jedem Benutzer in Ihrer Organisation, der Dokumente und E-Mails schützen soll, eine Lizenz aus diesem Abonnement zu.
 
 Hinweis: Weisen Sie keine Benutzerlizenzen manuell aus dem kostenlosen RMS for Individuals-Abonnement zu, und verwenden Sie diese Lizenz nicht zum Verwalten des Azure Rights Management-Diensts für Ihre Organisation. Für diese Lizenzen wird im Microsoft 365 Admin Center **Rights Management Ad-hoc** und beim Ausführen des Azure AD PowerShell-Cmdlets [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) **RIGHTSMANAGEMENT_ADHOC** angezeigt. Weitere Informationen dazu, wie das RMS for Individuals-Abonnement automatisch gewährt und Benutzern zugewiesen wird, finden Sie unter [RMS for Individuals und Azure Information Protection](./rms-for-individuals.md).
 
 
 ### <a name="step-2-prepare-your-tenant-to-use-azure-information-protection"></a>Schritt 2: Vorbereiten Ihres Mandanten für Azure Information Protection
+
 Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung des Schutzdiensts von Azure Information Protection beginnen:
 
 1. Stellen Sie sicher, dass Ihr Office 365-Mandant die Benutzerkonten und -gruppen enthält, die Azure Information Protection zum Authentifizieren und Autorisieren von Benutzern in Ihrer Organisation verwendet. Falls erforderlich, erstellen Sie diese Konten und Gruppen, oder synchronisieren Sie diese über Ihr lokales Verzeichnis. Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md).
@@ -158,7 +166,7 @@ Führen Sie die folgende Vorbereitungsschritte aus, bevor Sie mit der Verwendung
 
 3. Installieren Sie das PowerShell-Modul für AADRM auf mindestens einem Computer, der Zugang zum Internet hat. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](./install-powershell.md).
 
-4. Wenn Sie zurzeit AD RMS verwenden: Führen Sie eine Migration aus, um die Schlüssel, Vorlagen und URLs in die Cloud zu verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+4. Wenn Sie zurzeit AD RMS verwenden: Führen Sie eine Migration aus, um die Schlüssel, Vorlagen und URLs in die Cloud verschieben. Weitere Informationen finden Sie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 5. Stellen Sie sicher, dass der Schutzdienst aktiviert ist, damit Sie mit dem Schützen von Dokumenten und E-Mails beginnen können. Wenn eine Bereitstellung in Phasen erforderlich ist, konfigurieren Sie benutzerbezogene Steuerungsrichtlinien für die Einbindung (Onboarding), um die Möglichkeiten von Benutzern zum Anwenden von Schutz zu beschränken. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](./activate-service.md).
 
@@ -168,7 +176,7 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
 
 - Nutzungsprotokollierung, sodass Sie überwachen können, wie Ihre Organisation den Schutzdienst verwendet. Sie können diesen Schritt jetzt oder später durchführen. Weitere Informationen finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md).
 
-### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>Schritt 3: Installieren des Clients und Konfigurieren von Anwendungen und Diensten für Rights Management
+### <a name="step-3-install-the-azure-information-protection-client-and-configure-applications-and-services-for-rights-management"></a>Schritt 3: Den Azure Information Protection-Client installieren und Konfigurieren von Anwendungen und Dienste für Rights Management
 
 1. Bereitstellen des Azure Information Protection-Clients
     
@@ -193,9 +201,11 @@ Erwägen Sie optional die Konfigurierung folgender Funktionen:
     Wenn Sie über lokale Dienste verfügen, die Sie mit dem Schutzdienst verwenden möchten, installieren und konfigurieren Sie den Rights Management-Connector. Weitere Informationen finden Sie unter [Bereitstellen des Azure Rights Management-Verbindungsdiensts](./deploy-rms-connector.md).
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Schritt 4: Verwenden und Überwachen Ihrer Lösungen zum Schutz von Daten
+
 Sie können jetzt Ihre Daten schützen und die Nutzung des Schutzdiensts durch Ihre Organisation protokollieren. Weitere Informationen zu dieser Bereitstellungsphase finden Sie unter [Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](./help-users.md) und [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](./log-analyze-usage.md).
 
-### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 5: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
+### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Schritt 5: Bedarfsgesteuertes Verwalten des Schutzdiensts für Ihr Mandantenkonto
+
 Wenn Sie mit der Verwendung des Schutzdiensts beginnen, kann PowerShell nützlich sein, um administrative Änderungen skriptgestützt oder automatisiert durchzuführen. PowerShell kann ebenfalls für einige der erweiterten Konfigurationen erforderlich sein. 
 
 Weitere Informationen finden Sie unter [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](./administer-powershell.md).

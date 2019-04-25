@@ -12,11 +12,11 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 947461f31c6c9d8ef8a97d07c78370153169af03
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252439"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182404"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -36,7 +36,7 @@ Um sich für dieses kostenlose Konto zu registrieren, rufen Benutzer die Seite [
 
 Wenn das Konto erstellt wurde, finden Sie auf der letzten Seite Links zum Herunterladen des Azure Information Protection-Clients oder -Viewers, einen Link zum Benutzerhandbuch und einen Link zu einer aktuellen Liste der Anwendungen, die den Rights Management-Schutz nativ unterstützen. 
 
-## <a name="to-sign-up-for-rms-for-individuals"></a>So registrieren Sie sich für RMS for Individuals
+## <a name="to-sign-up-for-rms-for-individuals"></a>So registrieren Sie sich für RMS für Einzelpersonen
 
 1. Rufen Sie auf einem Windows- oder Mac-Computer oder mobilen Gerät die Seite [Microsoft Azure Information Protection](https://aka.ms/rms-signup) auf.
 

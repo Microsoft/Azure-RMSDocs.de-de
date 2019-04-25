@@ -13,11 +13,11 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828487"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182380"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -177,7 +177,7 @@ Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für ei
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Gibt es besondere Tipps und Tricks für eine erfolgreiche Bereitstellung?
 
-Nachdem wir viele Bereitstellungen begleitet und uns mit Kunden, Partnern, Beratern und Supportmitarbeitern unterhalten haben – ist das einer der größten Tipps, die wir aus unserer Erfahrung weitergeben können: **Entwerfen Sie einfache Richtlinien, und stellen Sie sie entsprechend bereit**.
+Nach dem in vielen Bereitstellungen überwachen und das Lauschen auf unsere Kunden, Partner, treten Beratern und Support-Techniker – einer der größten Tipps, denen wir aus übergeben können, auf ein: **Entwerfen Sie einfache Richtlinien, und stellen Sie sie entsprechend bereit**.
 
 Da Azure Information Protection sichere Freigaben mit praktisch jeder Person unterstützt, können Sie bei der Reichweite des Schutzes Ihrer Daten Ehrgeiz entwickeln. Sie sollten bei der Einschränkung von Nutzungsrechten allerdings konservativ vorgehen. Für die meisten Organisationen hat die Vermeidung von Datenlecks durch eine Zugriffsbeschränkung auf organisationsinterne Personen die größte geschäftliche Bedeutung. Natürlich können Sie Rechte, wenn nötig, viel kleinteiliger festlegen – etwa indem Sie Personen am Drucken, Bearbeiten usw. hindern. Diese Vorgehensweise sollte aber nur bei Dokumenten angewendet werden, die eine hohe Sicherheitsstufe erfordern. Weitreichendere Zugriffsbeschränkungen dürfen weiterhin nicht ad hoc, sondern schrittweise eingeführt werden.
 

@@ -11,11 +11,11 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 ms.openlocfilehash: 353365a1619ae9f87b0d92ab4b956c8cf7b1d6cc
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331476"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178436"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Vorgehensweise: Erneuern eines symmetrischen Schlüssels in Azure Information Protection
 
@@ -25,7 +25,7 @@ Wenn Sie in Azure Active Directory (Azure AD) ein Dienstprinzipalobjekt erstelle
 
 In den folgenden Schritten wird das Erneuern eines symmetrischen Schlüssels veranschaulicht. 
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Vorraussetzungen
 
 * Das Azure AD PowerShell-Modul (Azure Active Directory) muss wie in der [Azure AD Powershell Reference (Azure AD PowerShell-Referenz)](https://docs.microsoft.com/powershell/msonline/) beschrieben installiert werden.
 

@@ -1,6 +1,6 @@
 ---
 title: PowerShell für Schutzvorlagen (Azure Information Protection)
-description: Alle Vorgänge, die Sie im Azure-Portal zum Erstellen und Verwalten von Schutzvorlagen ausführen können, lassen sich auch mithilfe von PowerShell über die Befehlszeile starten. Darüber hinaus können Sie Vorlagen exportieren und importieren, sodass Sie Vorlagen zwischen Mandanten kopieren oder Massenbearbeitungen komplexer Eigenschaften in Vorlagen, z. B. von mehrsprachigen Namen und Beschreibungen, ausführen können.
+description: Alle Vorgänge, die Sie im Azure-Portal zum Erstellen und Verwalten von Schutzvorlagen ausführen können, lassen sich auch mithilfe von PowerShell über die Befehlszeile starten. Darüber hinaus können Sie Vorlagen exportieren und importieren, sodass Sie Vorlagen zwischen Mandanten kopieren oder Massenbearbeitungen komplexer Eigenschaften in Vorlagen, z. B. von mehrsprachigen Namen und Beschreibungen, ausführen können.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -12,11 +12,11 @@ ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 3e1915c327daaee35d9f0e8053f944fd1fcdbd7a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254610"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179677"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>PowerShell-Referenz für Schutzvorlagen
 
@@ -50,6 +50,6 @@ Die folgenden Cmdlets unterstützen das Erstellen und Verwalten von Schutzvorlag
 
 
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 

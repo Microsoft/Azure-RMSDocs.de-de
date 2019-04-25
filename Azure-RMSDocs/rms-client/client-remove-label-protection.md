@@ -4,23 +4,25 @@ description: Anweisungen zum Entfernen von Klassifizierungsbezeichnungen und des
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55f6dd9696dab3cf686443c656a29356907a721c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 031bfb196e7f896b49e96d4b94574b43e11a8fe8
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258673"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183241"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Leitfaden: Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien und E-Mails, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>
+> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Wenn der [Azure Information Protection-Client auf Ihrem Computer installiert ist](install-client-app.md), können Sie Klassifizierungsbezeichnungen und den Schutz von Dateien und E-Mails entfernen.
 
@@ -45,7 +47,7 @@ Wenn das Symbol **Delete label** (Bezeichnung löschen) nicht sofort verfügbar 
 
 ![Azure Information Protection-Leiste – Bezeichnung bearbeiten](../media/edit-label.png)
 
-Wenn noch immer kein **Bezeichnung löschen**-Symbol angezeigt wird, wird Ihnen von Ihrem Administrator nicht erlaubt, diese Option zu verwenden.
+Wenn Sie noch immer nicht angezeigt werden die **Bezeichnung löschen** Symbol, erlaubt Ihr Administrator nicht Sie diese Option verwenden, da alle Dokumente und e-Mails Bezeichnungen aufweisen müssen.
 
 > [!NOTE]
 > Wenn diese Information Protection-Leiste in Ihren Office-Apps nicht angezeigt wird:

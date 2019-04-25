@@ -12,11 +12,11 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259430"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182040"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -58,7 +58,7 @@ Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldein
 
 Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. 
 
-Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, das eines der folgenden Zeichen enthält: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
+Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, die keines der folgenden Zeichen enthalten: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 
 Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein. Andernfalls wird folgende Fehlermeldung angezeigt: **Fehler beim Versuch, den Speicherort des Verwaltungsdiensts und der Organisation zu ermitteln. Stellen Sie sicher, dass der Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
@@ -68,7 +68,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
 - **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
 
-- **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungsdiensts für Ihre Organisation gewährt wurden.
+- **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und verwalten die RMS-verbindungsdiensts für Ihre Organisation gewährt wurden.
 
   > [!NOTE]
   > Die Azure Rights Management-Rollen „GlobalAdministrator“ und „ConnectorAdministrator“ werden mithilfe des Azure RMS-Cmdlets [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) Konten zugewiesen.
@@ -95,7 +95,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
   >    ```
   >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
   >    ```
-  >    Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
+  >    Geben Sie zum Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
   > 
   >    Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
@@ -146,7 +146,7 @@ Es ist wichtig, dass Sie das richtige Objekt autorisieren. Für einen Server mus
 
 Weitere Informationen zu den verschiedenen Serverrollen:
 
--   Für Server, die Exchange ausführen: Sie müssen eine Sicherheitsgruppe angeben, und Sie können die Standardgruppe verwenden (**Exchange-Server**), die von Exchange automatisch erstellt und für alle Exchange-Server in der Gesamtstruktur gepflegt wird.
+-   Für Server, auf denen Exchange ausgeführt wird: Sie müssen eine Sicherheitsgruppe angeben, und Sie können die Standardgruppe verwenden (**Exchange-Server**), die von Exchange automatisch erstellt und für alle Exchange-Server in der Gesamtstruktur gepflegt wird.
 
 -   Für Server, die SharePoint ausführen:
 
@@ -179,13 +179,13 @@ Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konf
 
 Verwenden Sie folgende Einstellungen, um den NLB-Cluster zu konfigurieren:
 
--   Ports: 80 (für HTTP) oder 443 (für HTTPS)
+-   Ports: 80 (für HTTP) oder 443 (HTTPS)
 
     Weitere Informationen dazu, ob Sie HTTP oder HTTPS verwenden sollten, finden Sie im nächsten Abschnitt.
 
 -   Affinität: Keine
 
--   Verteilungsmethode: Gleich
+-   Verteilungsmethode: gleich
 
 Dieser Name, den Sie für das System mit Lastenausgleich (für die Server mit dem RMS-Verbindungsdienst) definieren, ist der RMS-Verbindungsdienstname Ihrer Organisation, den Sie später beim Konfigurieren der lokalen Server zur Verwendung von Azure RMS verwenden.
 

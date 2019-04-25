@@ -12,11 +12,11 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 07391252e55f1b75df4d0fb57d167748d6d69853
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255001"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180938"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
@@ -31,7 +31,7 @@ Die meisten Benutzer verwenden in der Regel die Azure Information Protection-App
 >
 > Versuchen Sie außerdem erst, sich in der App anzumelden, wenn Sie dazu aufgefordert werden.
 
-Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilgerät aus auf die Dateien, die die App unterstützt, zugreifen. Beispiel:
+Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilgerät aus auf die Dateien, die die App unterstützt, zugreifen. Zum Beispiel:
 
 - **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus auf Ihrem mobilen Gerät keinen Datenschutz durch Rechteverwaltung unterstützt. 
     
