@@ -12,11 +12,11 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828905"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175813"
 ---
 # <a name="activating-azure-rights-management"></a>Aktivieren von Azure Rights Management
 
@@ -75,13 +75,13 @@ Alternativ können Sie die folgenden PowerShell-Befehle verwenden:
 
 4. Führen Sie zum Aktivieren des Diensts [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) aus.
 
-## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Konfigurieren der Onboardingsteuerungsrichtlinien für eine Bereitstellung in Phasen
 Wenn nicht alle Benutzer sofort die Möglichkeit haben sollen, Dokumente und E-Mails mithilfe von Azure Rights Management zu schützen, können Sie mit dem PowerShell-Befehl [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) benutzerbasierte Onboardingrichtlinien konfigurieren. Sie können diesen Befehl ausführen, bevor oder nachdem Sie den Azure Rights Management-Dienst aktivieren.
 
 > [!IMPORTANT]
 > Damit Sie diesen Befehl verwenden können, benötigen Sie mindestens Version **2.1.0.0** des [ PowerShell-Moduls für Azure Rights Management](https://www.powershellgallery.com/packages/AADRM).
 >
-> Um die installierte Version zu überprüfen, führen Sie Folgendes aus: **(Get-Module aadrm –ListAvailable).Version**
+> Um die Version überprüfen, die Sie installiert haben, führen Sie Folgendes aus: **(Get-Module aadrm –ListAvailable).Version**
 
 Wenn Sie beispielsweise möchten, dass zunächst nur Administratoren der Gruppe "IT-Abteilung" (die die Objekt-ID "fbb99ded-32a0-45f1-b038-38b519009503" hat) in der Lage sein sollen, Inhalte zu Testzwecken zu schützen, verwenden Sie den folgenden Befehl:
 
