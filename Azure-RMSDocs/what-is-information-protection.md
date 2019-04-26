@@ -4,17 +4,17 @@ description: Eine Übersicht über den Azure Information Protection-Dienst.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
-ms.topic: conceptual
+ms.date: 04/17/2019
+ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 3082d43d44d961303c61796c949ba66adfb7f08b
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
+ms.openlocfilehash: 64733ce1007a97f32a12b50d37aa886b774f896e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828463"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181239"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -109,6 +109,11 @@ Weitere Informationen zur Bereitstellung und Verwendung der Überprüfung finden
 
 Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre Bezeichnungen für Dokumente in Box, SharePoint Online und OneDrive for Business anzuwenden. Weitere Informationen finden Sie unter [Automatisches Anwenden von Azure Information Protection-Klassifizierungsbezeichnungen](/cloud-app-security/use-case-information-protection) und [Integration mit Azure Information Protection](/cloud-app-security/azip-integration).
 
+## <a name="latest-labeling-updates-for-microsoft-365"></a>Neueste Updates zu den Bezeichnungen für Microsoft 365
+
+Hier finden Sie die neuesten Informationen dazu, wie Azure Information Protection Sie dabei unterstützt, Ihre vertraulichen Informationen zu ermitteln, zu klassifizieren, zu schützen und zu überwachen – unabhängig davon, wo diese Informationen gespeichert sind:
+
+> [!VIDEO https://www.youtube.com/embed/UI0p9xqMNfI]
 
 ## <a name="resources-for-azure-information-protection"></a>Ressourcen für Azure Information Protection
 
@@ -126,7 +131,7 @@ Verwenden Sie für Ihre Clouddatenspeicher Microsoft Cloud App Security, um Ihre
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-Zusätzliche Ressourcen: [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
+Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
@@ -147,4 +152,4 @@ Eine Zusammenfassung der Ankündigungen dieser Ignite-Konferenz finden Sie im Bl
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). Wenn Sie diesen Dienst für Ihre Organisation bereitstellen möchten, können Sie auch zu den [Schrittanleitungen für häufige Szenarien](how-to-guides.md) übergehen.
+Konfigurieren und testen Sie Azure Information Protection selbst mit den [Schnellstarts](quickstart-viewpolicy.md) und [Tutorials](infoprotect-quick-start-tutorial.md). Wenn Sie schon soweit sind, dass Sie diesen Dienst für Ihre Organisation bereitstellen möchten, wechseln Sie direkt zu den [Schrittanleitungen](how-to-guides.md).

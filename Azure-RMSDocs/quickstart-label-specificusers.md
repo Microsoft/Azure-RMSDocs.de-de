@@ -1,23 +1,25 @@
 ---
-title: 'Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer – AIP'
+title: 'Schnellstart: neue Azure Information Protection-Bezeichnung für bestimmte Benutzer – AIP'
 description: Erstellen und konfigurieren Sie eine neue Bezeichnung, die Dokumente und E-Mails für bestimmte Benutzer mithilfe einer bereichsbezogenen Richtlinie klassifiziert.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: ea1316d89358096ff585137df151d91a4d910300
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 623f57ac5aae6980f8c7e0a9deee4aeca0a268a2
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828378"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183873"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In dieser Schnellstartanleitung erstellen Sie eine neue Bezeichnung, die nur für bestimmte Benutzer sehen und anwenden können, um ihre Dokumente und E-Mails zu klassifizieren und zu schützen.
 
