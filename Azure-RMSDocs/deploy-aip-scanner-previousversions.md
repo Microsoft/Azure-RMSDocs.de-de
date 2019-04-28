@@ -21,7 +21,7 @@ ms.locfileid: "60180170"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Dieser Artikel ist für die Versionen der Azure Information Protection-Überprüfung, die älter als Version sind **1.48.204.0** aber immer noch im Support. Um frühere Versionen auf die aktuelle Version zu aktualisieren, finden Sie unter [ein Upgrade des Azure Information Protection-Scanners](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).

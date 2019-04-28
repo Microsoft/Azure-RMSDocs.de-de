@@ -21,7 +21,7 @@ ms.locfileid: "60179626"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
 > Dieses Feature befindet sich in der Vorschau und migriert Ihren Mandanten zu einer neuen Plattform. Die Migration kann nicht rückgängig gemacht werden. Die neue Plattform unterstützt einheitliche Bezeichnungen. Das bedeutet, dass die Bezeichnungen, die Sie erstellen und verwalten, von Clients und Diensten verwendet werden können, die [Microsoft Azure Information Protection-Lösungen](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection) unterstützen.

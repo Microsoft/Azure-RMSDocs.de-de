@@ -11,7 +11,7 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.openlocfilehash: b4a3e5ec7453331d1fb656874a26e52e0ec573dd
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60179745"
@@ -20,7 +20,7 @@ ms.locfileid: "60179745"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Obwohl die Standardbezeichnungen für Azure Information Protection mehrere Sprachen unterstützen, müssen Sie eine Unterstützung für die Bezeichnungsnamen und -beschreibungen konfigurieren, die Sie angeben. Für diese Konfiguration müssen Sie folgende Aktionen ausführen:
 

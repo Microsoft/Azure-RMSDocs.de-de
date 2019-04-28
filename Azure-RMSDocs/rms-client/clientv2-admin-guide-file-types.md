@@ -11,7 +11,7 @@ ms.service: information-protection
 ms.suite: ems
 ms.openlocfilehash: aca0fe5d3d9624676bc2bb12a772f5b753eb1a0d
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60183754"
@@ -20,7 +20,7 @@ ms.locfileid: "60183754"
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*>
 >
-> *Anleitungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Der einheitliche Bezeichnung Azure Information Protection-Client kann Folgendes auf Dokumente und e-Mails anwenden:
 

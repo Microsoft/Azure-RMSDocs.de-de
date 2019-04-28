@@ -21,7 +21,7 @@ ms.locfileid: "62773700"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Dieser Artikel ist für die aktuelle, allgemein verfügbare Version des Azure Information Protection-Scanners bestimmt.
@@ -142,9 +142,9 @@ Erstellen Sie vor dem Installieren des Scanners bzw. vor dem Upgraden des Scanne
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
     
-2. Suchen Sie die **Scanner** Menüoptionen, und wählen **Profile**.
+2. Suchen Sie die **Scanner**-Menüoptionen, und wählen Sie **Profile** aus.
 
-3. Auf der **Azure Information Protection - Profile** Blatt **hinzufügen**:
+3. Wählen Sie auf dem Blatt **Azure Information Protection – Profile** die Option **Hinzufügen** aus:
     
     ![Hinzufügen eines Profils für den Azure Information Protection-Scanner](./media/scanner-add-profile.png)
 
@@ -204,7 +204,7 @@ Erstellen Sie vor dem Installieren des Scanners bzw. vor dem Upgraden des Scanne
 
 9. Wiederholen Sie die Schritte 7 und 8, wenn Sie ein weiteres Datenrepository hinzufügen möchten.
 
-10. Sie können jetzt schließen die **Hinzufügen eines neues Profils** finden Sie unter Ihrem Profilnamen angezeigt, auf dem Blatt, und Sie die **Azure Information Protection - Profile** Blatt zusammen mit der **Zeitplan** Spalte mit **manuelle** und **ERZWINGEN** Spalte ist leer.
+10. Sie können das Blatt **Neues Profil hinzufügen** jetzt schließen. Daraufhin werden auf dem Blatt **Azure Information Protection – Profile** Ihr Profilname sowie die Spalte **ZEITPLAN** mit der Einstellung **Manuell** und die leere Spalte **ERZWINGEN** angezeigt.
 
 Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben erstellt haben.
 
