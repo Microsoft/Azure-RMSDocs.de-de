@@ -20,7 +20,7 @@ ms.locfileid: "60182142"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Anhand der folgenden Informationen erfahren Sie, was der HYOK-Schutz für Azure Information Protection ist, und wie er sich vom cloudbasierten Standardschutz unterscheidet. Stellen Sie sicher, dass Sie verstehen, wann der HYOK-Schutz, die unterstützten Szenarios, die Einschränkungen und die Voraussetzungen geeignet sind, bevor Sie ihn verwenden. 
 

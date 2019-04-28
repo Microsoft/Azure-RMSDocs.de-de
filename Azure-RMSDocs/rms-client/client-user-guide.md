@@ -22,7 +22,7 @@ ms.locfileid: "60182941"
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 

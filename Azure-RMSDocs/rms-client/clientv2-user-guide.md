@@ -21,7 +21,7 @@ ms.locfileid: "60182669"
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Der einheitliche Azure Information Protection-Bezeichnung-Client für Windows hilft Ihnen, wichtige Dokumente und e-Mails vor Personen, die sie nicht sehen dürfen – auch wenn Ihre e-Mail-Adresse weitergeleitet wird, oder das Dokument an einen anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 
