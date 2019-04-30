@@ -4,21 +4,23 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 1e37b45cb6894ddee9630f53c52018f8a0956357
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57978150"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62772578"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Sie können Ihre sensibelsten Dokumente und E-Mails mithilfe des Rights Management-Diensts schützen. Dieser Dienst verwendet Verschlüsselungs-, Identitäts- und Autorisierungsrichtlinien, um Datenverlust zu verhindern. Der Schutz wird mit einer Bezeichnung angewendet, die so konfiguriert ist, dass der Rights Management-Schutz für Dokumente und E-Mails verwendet wird, und Benutzer können auch auf die Schaltfläche **Nicht weiterleiten** in Outlook klicken.
 
@@ -143,7 +145,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
      |Einstellung|Weitere Informationen|Empfohlene Einstellung
      |-----------|--------------------|--------------------|
-     |**Inhalt läuft ab am**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Bei E-Mails wird dieses Ablaufdatum aufgrund von Cachemechanismen, die von manchen E-Mail-Clients verwendet werden, nicht immer erzwungen.<br /><br />Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
+     |**Ablauf des Dateiinhalts**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Bei E-Mails wird dieses Ablaufdatum aufgrund von Cachemechanismen, die von manchen E-Mail-Clients verwendet werden, nicht immer erzwungen.<br /><br />Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
      |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
     
      Wenn Sie das Konfigurieren der Berechtigungen und Einstellungen abgeschlossen haben, klicken Sie auf **OK**. 
@@ -296,7 +298,7 @@ Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domä
 
 4. Wählen Sie die gewünschten Berechtigungen aus, und klicken Sie auf **OK**.
 
-5. Zurück auf dem Blatt **Schutz** konfigurieren Sie die Einstellungen für **Inhaltsablauf** und **Offlinezugriff zulassen**, falls erforderlich, und klicken Sie dann auf **OK**.
+5. Wechseln Sie zum Blatt **Schutz**, und konfigurieren Sie die Einstellungen für **Ablauf des Dateiinhalts** und **Offlinezugriff zulassen**, falls erforderlich, und klicken Sie dann auf **OK**.
 
 6. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
 
@@ -311,7 +313,7 @@ Die Bezeichnungskonfiguration wirkt zunächst einfach:
     
 2. Klicken Sie auf **OK**, ohne dabei Benutzer auszuwählen, oder Einstellungen auf diesem Blatt zu konfigurieren.
     
-    Obwohl Sie Einstellungen für **Inhalt läuft ab am**  und **Offlinezugriff zulassen** konfigurieren können, werden diese Zugriffseinstellungen nicht angewandt, wenn Sie keine Benutzer und deren Berechtigungen angeben. Das liegt daran, dass die Person, die den Schutz anwendet, der [Rights Management-Aussteller](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für den Inhalt ist. Diese Rolle bildet eine Ausnahme für diese Zugriffseinschränkungen.
+    Obwohl Sie Einstellungen für **Ablauf des Dateiinhalts** und **Offlinezugriff zulassen** konfigurieren können, können diese Zugriffseinstellungen nicht angewendet werden, wenn Sie keine Benutzer und deren Berechtigungen angeben. Das liegt daran, dass die Person, die den Schutz anwendet, der [Rights Management-Aussteller](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für den Inhalt ist. Diese Rolle bildet eine Ausnahme für diese Zugriffseinschränkungen.
 
 3. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
 

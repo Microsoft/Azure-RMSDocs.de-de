@@ -4,20 +4,22 @@ description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1d857fc3282b0851e80765fe3f53a2315ed59b5f
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
+ms.openlocfilehash: e41af7f6bcf8734377404b0dabcdb059d2d91bc1
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364639"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773584"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azure-Portal hinzu, bestätigen die Aktivierung des Schutzdiensts, erstellen Standardbezeichnungen (falls noch keine Bezeichnungen vorhanden sind) und zeigen Richtlinieneinstellungen für Azure Information Protection an.
 
@@ -60,11 +62,11 @@ Der Schutzdienst ist jetzt automatisch für Neukunden aktiviert. Sie sollten sic
     
     - Wenn der Schutz aktiviert ist, wird Ihnen die folgende Bestätigung angezeigt:
         
-        ![Azure Information Protection-Status für Azure RMS](./media/info-protect-azurerms-activated.png)
+        ![Azure Information Protection-Status für Azure RMS (aktiviert)](./media/info-protect-azurerms-activated.png)
         
     - Wenn der Schutz nicht aktiviert ist, werden Ihnen eine entsprechende Statusmeldung und die Option angezeigt, um ihn zu aktivieren:
         
-        ![Azure Information Protection-Status für Azure RMS](./media/info-protect-azurerms-deactivated.png)
+        ![Azure Information Protection-Status für Azure RMS (nicht aktiviert)](./media/info-protect-azurerms-deactivated.png)
 
 3. Wenn der Schutz noch nicht aktiviert ist, klicken Sie auf **Aktivieren**. 
 
@@ -88,7 +90,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
 4. Um die Bezeichnungen für alle Benutzer zu veröffentlichen, wählen Sie **Klassifizierungen** > **Richtlinien** > **Global** aus:
     
-    a. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
+    ein. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
     
     b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** und anschließend alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
     

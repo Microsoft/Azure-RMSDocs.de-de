@@ -4,20 +4,22 @@ description: Ein Einführungstutorial, das Sie schrittweise durch das Konfigurie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d627bd71ec3a669f59161c8c3c7137f8a635ceb6
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617794"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773603"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
@@ -113,7 +115,7 @@ Durch die angezeigte Information Protection-Leiste und die angezeigten verfügba
 
 Statt die Bezeichnung zu ändern, schließen Sie die Information Protection-Leiste, um die Oberfläche mit der Darstellung zu vergleichen, wenn die Leiste nicht angezeigt wird:
 
-![Azure Information Protection-Tutorial: Neues Dokument mit Standardbezeichnung](./media/infoprotect-bar-close.png)
+![Azure Information Protection-Tutorial: Leiste schließen](./media/infoprotect-bar-close.png)
 
 Die Bezeichnung **Allgemein** ist nach wie vor ausgewählt, aber deutlich schlechter auf einen Blick zu erkennen. Zudem ist es schwieriger herauszufinden, wie eine andere Bezeichnung ausgewählt werden kann. Zu diesem Zweck müssen Benutzer auf die Schaltfläche **Schützen** klicken:
 
@@ -132,7 +134,7 @@ Sie können die derzeit ausgewählte Bezeichnung **Allgemein** in eine andere Be
 
 Wenn Sie diese Einstellung nicht geändert hätten, würden in der Information Protection-Leiste folgendes Symbol angezeigt werden:
 
-![Azure Information Protection-Tutorial: Markierte Schaltfläche „Schützen“](./media/infoprotect-deletelabel-icon.png)
+![Azure Information Protection-Tutorial: Leiste schließen](./media/infoprotect-deletelabel-icon.png)
 
 Zusammen mit einer Standardbezeichnung stellt die obligatorische Bezeichnung sicher, dass neue und bearbeitete Dokumente (und E-Mails) eine grundlegende Klassifizierung Ihrer Wahl aufweisen. 
 
@@ -150,9 +152,9 @@ Fügen Sie das Word-Dokument hinzu, das Sie soeben als Anlage der E-Mail-Nachric
 
 Wenn Sie auf **Verwerfen** klicken, wird die neue Bezeichnung nicht angewendet, Sie sehen jedoch, dass die E-Mail immer noch mit der Standardbezeichnung **Allgemein** versehen ist, die Sie konfiguriert haben. Die verfügbaren Bezeichnungen werden nach wie vor als Alternative angezeigt.
 
-Wenn Sie **Jetzt ändern** auswählen, wird die E-Mail in die untergeordnete Bezeichnung **Vertraulich** neubezeichnet. Benutzer können jedoch nach wie vor die Bezeichnung ändern, bevor Sie die E-Mail senden, indem sie auf „Bezeichnung bearbeiten“ klicken:
+Wenn Sie **Jetzt ändern** auswählen, wird die E-Mail in die untergeordnete Bezeichnung **Vertraulich** neubezeichnet. Benutzer können jedoch nach wie vor die Bezeichnung ändern, bevor Sie die E-Mail senden, indem sie auf das Symbol „Bezeichnung bearbeiten“ klicken:
 
-![Azure Information Protection-Tutorial: Aufforderung zum Neubezeichnen der E-Mail entsprechend der bezeichneten Anlage](./media/infoprotect-editlabel-icon.png)
+![Azure Information Protection-Tutorial: Symbol „Bezeichnung bearbeiten“](./media/infoprotect-editlabel-icon.png)
 
 Die Information Protection-Leiste wird dann erneut angezeigt, sodass Benutzer eine alternative Bezeichnung auswählen können.
 

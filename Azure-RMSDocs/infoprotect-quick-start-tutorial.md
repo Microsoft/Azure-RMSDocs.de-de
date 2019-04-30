@@ -1,23 +1,25 @@
 ---
-title: 'Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung – AIP'
+title: 'Tutorial: Bearbeiten der Azure Information Protection-Richtlinie – AIP'
 description: Ein Einführungstutorial, in dem beschrieben wird, wie Sie die Azure Information Protection-Richtlinie für Ihre Organisation bearbeiten können, und das ungefähr 15 Minuten beansprucht.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 7d9792ef45a75bdf3f234eea1ab92eaa475a8ce1
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: 0c7baa65c7f0400d94f1aa800e26a41290bb7b36
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617855"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773568"
 ---
-# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung
+# <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In diesem Tutorial lernen Sie Folgendes:
 > [!div class="checklist"]
@@ -162,7 +164,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 10. Auf dem Blatt **Untergeordnete Bezeichnung** können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** angezeigt wird, mit **1** **VORKOMMEN**:
     
-    ![Azure Information Protection-Tutorial: Konfigurieren der Bedingung für Kreditkarten](./media/step2-see-condition.png)
+    ![Azure Information Protection-Tutorial: Zusammenfassung der Bedingungen für Kreditkarten](./media/step2-see-condition.png)
 
 11. Belassen Sie **Select how this label is applied** (Anwendungsweise dieser Bezeichnung auswählen): den Standardwert **Empfohlen** bei, und ändern Sie nicht den Tipp für die Standardrichtlinie. 
 
