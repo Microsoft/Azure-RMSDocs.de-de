@@ -1,5 +1,5 @@
 ---
-title: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
+title: Benutzerdefinierte Konfigurationen – Azure Information Protection-client
 description: Informationen zum Anpassen des Azure Information Protection-Clients für Windows
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dae3461c4e5ec8ea4cc61fe26c20f774c97d76c5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 5f9ac2414e83ab84690c0fdaea187dad8d7f3b36
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182065"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768366"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 

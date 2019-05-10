@@ -1,27 +1,27 @@
 ---
-title: Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
+title: Azure Information Protection – einheitliche bezeichnungs-Client – Verlauf und Support-Richtlinie für Anwendungsversion
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180884"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982151"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anleitungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Sie können den einheitlichen Azure Information Protection-Bezeichnung-Client aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
@@ -41,9 +41,15 @@ Verwenden Sie die folgende Informationen, um anzuzeigen, was für die allgemein 
 
 Dieser Client installiert ein Office-Add-On für Windows-Computer, eine Erweiterung für den Datei-Explorer und ein PowerShell-Modul. Es gelten die gleichen [Voraussetzungen](../requirements.md) wie für den Azure Information Protection-Client, der Richtlinien aus Azure herunterlädt.
 
-Informationen zu Features und Funktionalität im Azure Information Protection-Client finden Sie unter [Vergleich zwischen den Features der Clients](use-client.md#compare-the-clients).
+Um Features und Funktionen, mit dem Azure Information Protection-Client vergleichen zu können, finden Sie unter [vergleichen Sie die Clients](use-client.md#compare-the-clients).
 
-## <a name="version-20778"></a>Version 2.0.778
+## <a name="version-207790"></a>Version 2.0.779.0
+
+**Veröffentlicht**: 05/01/2019
+
+Diese Version enthält eine einzelne Lösung für die ein Race-Bedingung-Problem zu beheben, in denen in einigen Fällen keine Bezeichnungen in Office-apps oder Datei-Explorer angezeigt.
+
+## <a name="version-207780"></a>Version 2.0.778.0
 
 **Veröffentlicht**: 04/16/2019
 

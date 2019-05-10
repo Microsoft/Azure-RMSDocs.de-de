@@ -4,19 +4,19 @@ description: Anstelle von Microsoft, die Schlüssel des Stammzertifikats für Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: da0d6f8e4e91b5f5e6163855434a39432256b2be
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 26999c8fdd079c7a34d39415d8beba6763a06f68
+ms.sourcegitcommit: e0ce23467744ec6a4da49081461a459bc37c7d78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182099"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443271"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -149,7 +149,7 @@ Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 102
 
 Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
-Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration, und die Vorgänge sind „verschlüsseln“, „entschlüsseln“, „umschließen“, „entpacken“, „signieren“ und „überprüfen“. Sehen Sie die zulässigen Vorgänge eines Schlüssels mit [Get-AzKeyVaultKey](/powershell/module/az.keyvault/get-azkeyvaultkey) und Überprüfen der *"key_ops"* in zurückgegebenen Werte den **Schlüssel** Details. Fügen Sie ggf. die zulässigen Vorgänge mit [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) und *KeyOps* Parameter.
+Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration und die Vorgänge sind zu verschlüsseln, entschlüsseln, "wrapkey", "unwrapkey", Zeichen, und überprüfen. Sie können die zulässigen Vorgänge eines Schlüssels überprüfen, indem Sie mit dem folgenden PowerShell-Befehl: `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`. Fügen Sie ggf. die zulässigen Vorgänge mit [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) und *KeyOps* Parameter.
 
 Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Um den Schlüssel verwenden zu können, müssen Sie Azure Information Protection konfigurieren, indem Sie die Schlüsseltresor-URL angeben.
 

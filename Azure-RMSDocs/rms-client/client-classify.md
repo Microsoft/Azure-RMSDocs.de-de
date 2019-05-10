@@ -1,6 +1,6 @@
 ---
-title: Klassifizieren von mit Azure Information Protection – AIP
-description: Anleitung zum Klassifizieren Ihrer Dokumente und E-Mails
+title: Klassifizieren Sie – Azure Information Protection-client
+description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails, bei der Verwendung des Azure Information Protection-Clients für Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b11a60d9bcc12cb3ad28c3c6f583f99d4664751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ecc7a1e0655c322151ba0c44c51592656303d857
+ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183847"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64914719"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Leitfaden: Klassifizieren einer Datei oder E-Mail mithilfe von Azure Information Protection
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Leitfaden: Klassifizieren einer Datei oder e-Mail mit dem Azure Information Protection-client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren, jedoch nicht schützen. Wenn Sie Ihre Dokumente und E-Mails auch schützen möchten, lesen Sie die [Anleitung zum Klassifizieren und Schützen](client-classify-protect.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.

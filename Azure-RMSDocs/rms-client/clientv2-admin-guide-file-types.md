@@ -1,5 +1,5 @@
 ---
-title: Von der Azure Information Protection unified bezeichnungs-Client unterstützte Dateitypen
+title: 'Unterstützte Dateitypen Sie: Azure Information Protection unified bezeichnungs-client'
 description: Technische Details zu unterstützten Dateitypen, Dateierweiterungen und Schutzebenen für Administratoren, die sind verantwortlich für den einheitlichen Azure Information Protection-Bezeichnung-Client für Windows.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: aca0fe5d3d9624676bc2bb12a772f5b753eb1a0d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183754"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768130"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Von der Azure Information Protection unified bezeichnungs-Client unterstützte Dateitypen
 

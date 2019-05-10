@@ -4,20 +4,20 @@ description: Anweisungen zur Bereitstellung für die Versionen der Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: edc855c5a92e6f1bac8f3f175b84cdeed1afaa88
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 3d394c455d6012e4b617a6109db47363661d8814
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180170"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191887"
 ---
-# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen von früheren Versionen der Azure Information Protection-Überprüfung zum automatischen klassifizieren und Schützen von Dateien
+# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Bereitstellen von früheren Versionen der Azure Information Protection-Überprüfung
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 >
@@ -316,7 +316,7 @@ Um das Standardverhalten der Überprüfung zum Schutz von Dateien zu ändern, be
 
 - Die Überprüfung hat ein eigenes Standardverhalten: Standardmäßig werden nur die Office-Dateiformate und PDF-Dokumente geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
 
-- Wenn Sie das gleiche Standardschutzverhalten wie beim Azure Information Protection-Client wünschen, bei dem alle Dateien automatisch nativen oder generischen Schutz haben, gehen Sie wie folgt vor: Geben Sie den Platzhalter `*` als Registrierungsschlüssel und `Default` als Wertdaten an.
+- Wenn Sie das gleiche Verhalten der Standard-Schutz wie der Azure Information Protection-Client möchten, in denen automatisch alle Dateien mit nativem oder allgemeinem Schutz geschützt sind: Geben Sie die `*` Platzhalter als Registrierungsschlüssel, `Encryption` als Wert (REG_SZ), und `Default` als Wert.
 
 Wenn Sie die Registrierung bearbeiten, erstellen Sie manuell die beiden Schlüssel **MSIPC** und **FileProtection**, falls noch nicht vorhanden, sowie einen Schlüssel für jede Erweiterung.
 

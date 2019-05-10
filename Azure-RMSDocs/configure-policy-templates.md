@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren und Verwalten von Vorlagen für Azure Information Protection – AIP
-description: Konfigurieren und Verwalten von Rights Management-Vorlagen im Azure-Portal.
+description: Konfigurieren und Verwalten von schutzvorlagen, auch bekannt als Rights Management-Vorlagen, aus dem Azure-Portal.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 622f0751e303a97e6e1a7d75573b65021f2249d3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 28b2c670c3204d5e69a963b8d2f5cabc3eeaa872
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179906"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880104"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 

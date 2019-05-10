@@ -4,17 +4,17 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 75ad66eba42869e1eeebed6d3ec29253158eeb8d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182346"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191918"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -64,23 +64,13 @@ Verwenden der **Version** Anzahl angezeigt, um den Client zu identifizieren:
 
 - Eine Version **1**, z. B. **1.48.204.0**, wird vom Azure Information Protection-Client identifiziert.
 
-- Eine Version **2**, z. B. **2.0 684.0**, wird vom Azure Information Protection unified bezeichnungs-Client identifiziert.
+- Eine Version **2**, z. B. **2.0.778.0**, wird vom Azure Information Protection unified bezeichnungs-Client identifiziert.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Wann ist der richtige Zeitpunkt, um meine Bezeichnungen zu Office 365 zu migrieren?
 
-Vertraulichkeitsbezeichnungen in den Admin-Centers (Office 365 Security & Compliance Center, Microsoft 365 Security Center, and Microsoft 365 Compliance Center) sind allgemein verfügbar, aber die Option zum Migrieren Ihrer Azure Information Protection-Bezeichnungen ist noch in der Vorschauphase. Wenn die Bezeichnungen in den einheitlichen bezeichnungs-Speicher migriert werden, sie werden veröffentlicht und können dann von verwendet [Clients und Diensten, die Unterstützung für die einheitliche Bezeichnung](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)...
+Nun, da die Option zum Migrieren von Bezeichnungen im Azure-Portal im allgemeinen Verfügbarkeit ist, es wird empfohlen, damit Sie Ihre Bezeichnungen als vertraulichkeitsbezeichnungen mit verwenden können, aktivieren die Migration [Clients und Diensten, die Unterstützung für die einheitliche Bezeichnung](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) .
 
-- **Wenn Sie Azure Information Protection zum ersten Mal verwenden:**
-    
-    Daher wird empfohlen, Sie migrieren die standardbezeichnungen und verwalten Sie sie über eines der Rechenzentren Administrator (Office 365 Security & Compliance Center, Microsoft 365 SecurityCenter, können die standardbezeichnungen von Azure Information Protection Ihrer Bereitstellung beschleunigen. oder Microsoft 365 Compliance Center).
-
-- **Wenn Sie Azure Information Protection zum ersten Mal verwenden, aber bereits damit beschäftigt sind, die Bezeichnungen, die Sie verwenden möchten, zu definieren und zu konfigurieren:**
-    
-    Es wird empfohlen, die Konfiguration der Bezeichnungen im Azure-Portal abzuschließen und die Bezeichnungen anschließend zu migrieren. Dadurch werden beim Migrationsvorgang doppelte Bezeichnungen vermieden, die dann in einem der Admin-Centers bearbeitet werden müssen.
-
-Bevor Sie Ihre Bezeichnungen migrieren, vergewissern Sie sich, dass Sie die [Überlegungen und Bezeichnungseinstellungen, die nicht von den Admin-Centers unterstützt werden](configure-policy-migrate-labels.md#considerations-for-unified-labels), verstanden haben.
-
-Siehe auch [welchen Client installiere ich für den neuen Testfunktionen?](faqs-infoprotect.md#which-client-do-i-install-for-testing-new-functionality)
+Weitere Informationen und Anweisungen hierzu finden Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-vertraulichkeitsbezeichnungen](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Welches Verwaltungsportal kann ich verwenden, nachdem ich meine Bezeichnungen migriert habe?
 

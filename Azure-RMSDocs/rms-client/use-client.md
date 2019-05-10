@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: ed762332e023843326fc4ec4d89e8fc44ede39be
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: f93432e245e1eafc74857a7571a4e0a4fe5d9318
+ms.sourcegitcommit: 1c2d588beccfcb13824f3d518683304018bce452
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180816"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493285"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -48,7 +48,7 @@ Sie können auch beide Clients in der gleichen Umgebung zur Unterstützung von u
 
 ##### <a name="example-deployment-strategy"></a>Beispiel-Bereitstellungsstrategie:
 
-- Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection unified bezeichnungs-Client bereit, da die meisten Benutzer nicht benötigen, Features oder Funktionen, die nur mit der Azure Information Protection unified bezeichnungs-Client verfügbar sind. 
+- Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection unified bezeichnungs-Client bereit, da die meisten Benutzer nicht benötigen, Features oder Funktionen, die nur mit dem Azure Information Protection-Client verfügbar sind. 
     
     Einkaufserlebnis Bezeichnung ist für diese Benutzer müssen sehr ähnlich, wenn sie auch Geräte, auf denen Mac OS, iOS und Android ausgeführt haben und diese Geräte eine Version von Office verfügt haben, vertraulichkeitsbezeichnungen unterstützt.
 
@@ -102,7 +102,8 @@ Wenn beide Clients dasselbe Feature unterstützen, verwenden Sie in der folgende
 |Unterstützte Cmdlets:| Alle für [AzureInformatioProtection](/powershell/module/azureinformationprotection) dokumentierten Cmdlets | Set-AIPAuthentication nicht interaktive Sitzungen nicht unterstützt werden. <br /><br /> Set-AIPFileClassification und Set-AIPFileLabel unterstützen weder den Parameter *Owner* noch SharePoint Server-Bibliotheken <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />Darüber hinaus zeigt der Parameter *LabelingMethod* für Get-AIPFileStatus **Privilegiert**, **Standard** oder **Auto** anstelle von **Manuell** oder **Automatisch** an. Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: Pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: Pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
-|Automatische und empfohlene Klassifizierung: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+|Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+|Anpassbare richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie das Azure-Portal, um die Standardnachricht für Benutzer ersetzen | Nein <br /><br /> Obwohl die Admin Center eine Option aus, um einen Tipp für die benutzerdefinierte Richtlinie angeben haben, wird diese Option derzeit nicht vom einheitlichen bezeichnungs-Client unterstützt|
 
 Einen ausführlichen Vergleich der Unterschiede im Verhalten für bestimmte Protection-Einstellungen finden Sie unter [vergleichen das Verhalten der schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -126,9 +127,7 @@ Obwohl die einheitliche Bezeichnung Azure Information Protection-Client noch in 
 
 - Begründung für das Entfernen eines Schutzes
 
-- Bestätigungsaufforderung vor dem Löschen einer angewendeten Bezeichnung
-
-- „Problem melden“-Link im Dialogfeld „Hilfe und Feedback“
+- Bestätigungsaufforderung **möchten Sie diese Bezeichnung löschen?** für Benutzer, wenn Sie die richtlinieneinstellung nicht zur Eingabe einer Begründung verwenden
 
 - Hinzufügen einer Bezeichnung zu einem Office-Dokument mithilfe einer vorhandenen benutzerdefinierten Eigenschaft (die erweiterten Clienteinstellungen „SyncPropertyName“ und „SyncPropertyState“)
 

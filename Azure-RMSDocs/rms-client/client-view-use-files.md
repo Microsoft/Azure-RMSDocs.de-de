@@ -1,6 +1,6 @@
 ---
-title: Anzeigen und Verwenden von mit dem AIP-Client geschützten Dokumenten
-description: Anweisungen zum Anzeigen und Verwenden eines geschützten Dokuments, das die Installation des Azure Information Protection-Clients erfordert.
+title: Zeigen Sie geschützter Dateien mit dem Azure Information Protection-Viewer an
+description: Anweisungen zum Anzeigen und Verwenden einer geschützten Datei, die die Azure Information Protection-Viewer installiert sein muss.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d477d8112afd48a61a3f0977f2550fb12dff67a2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8dea94af41cb445f895ee4cbc2c424fc169ae117
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182958"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880217"
 ---
-# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Benutzerhandbuch: Anzeigen und Verwenden der durch Rights Management geschützten Dateien
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Leitfaden: Zeigen Sie geschützter Dateien mit dem Azure Information Protection-Viewer an
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Sie können ein geschütztes Dokument beliebig oft anzeigen, indem Sie es öffnen. Sie können z. B. einfach auf eine Anlage einer E-Mail klicken oder im Datei-Explorer auf eine Datei doppelklicken. Alternativ können Sie auch auf den Link zu einer Datei klicken.
+Sie können eine geschützte Datei häufig anzeigen, indem Sie sie einfach öffnen. Sie können z. B. einfach auf eine Anlage einer E-Mail klicken oder im Datei-Explorer auf eine Datei doppelklicken. Alternativ können Sie auch auf den Link zu einer Datei klicken.
 
 Wenn die Dateien nicht sofort geöffnet werden, kann eventuell der **Azure Informationen Protection-Viewer** Abhilfe leisten. Dieser Viewer kann geschützte Textdateien, geschützte Bilddateien geschützte PDF-Dateien und alle Dateien mit der Erweiterung **PFILE** öffnen.
 

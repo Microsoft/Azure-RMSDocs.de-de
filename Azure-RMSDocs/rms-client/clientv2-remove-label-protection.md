@@ -1,27 +1,27 @@
 ---
-title: Remove-vertraulichkeitsbezeichnungen mithilfe von Azure Information Protection unified bezeichnungs-Client für Windows
-description: Anweisungen zum Entfernen von vertraulichkeitsbezeichnungen und des Schutzes von Dateien, die von Azure Information Protection Bezeichnung erhalten haben.
+title: Entfernen von Bezeichnungen, die mithilfe des Azure Information Protection unified bezeichnungs-Clients
+description: Anweisungen zum Entfernen vertraulichkeitsbezeichnungen und des Schutzes von Dateien und e-Mails mithilfe von Azure Information Protection unified bezeichnungs-Client.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 187c36acddb8a6b2e5b1451500640dfd832a8f3f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a2443a632fadf51aab5bb59b9e96b7b16547807d
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181133"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767723"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Leitfaden: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection gekennzeichnet wurde, haben
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Wenn die einheitliche Azure Information Protection-Client ist [auf Ihrem Computer installierten](install-client-app.md), Sie können die vertraulichkeitsbezeichnungen und den Schutz von Dateien und e-Mails entfernen.
 

@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen in Azure Information Protection – AIP
+title: Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 description: Sie können die Unterstützung für verschiedene Sprachen für die Bezeichnungen und Vorlagen erweitern, die in der Information Protection-Leiste für Benutzer angezeigt werden, indem Sie die Sprachen in der Azure Information Protection-Richtlinie angeben und Ihre Übersetzungen importieren.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: b4a3e5ec7453331d1fb656874a26e52e0ec573dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: c89085c7f001cd26ccd0b722196d9678b674163e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179745"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767945"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 

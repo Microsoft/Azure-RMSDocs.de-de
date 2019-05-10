@@ -1,5 +1,5 @@
 ---
-title: Klassifizieren Sie und schützen Sie, indem Sie mit dem Azure Information Protection-unified-bezeichnungs-Client für Windows
+title: Klassifizieren und schützen – Azure Information Protection – einheitliche bezeichnungs-client
 description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und e-Mails, bei der Verwendung von Azure Information Protection bezeichnungs-Client für Windows Unified.
 author: cabailey
 ms.author: cabailey
@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0404acb6f79100a78d955a94f67ea0a0a7aaf604
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181343"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880117"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Leitfaden: Klassifizieren Sie und schützen Sie einer Datei oder e-Mail mithilfe des Azure Information Protection unified bezeichnungs-Clients für Windows
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Klassifizieren Sie und schützen Sie mit dem Azure Information Protection unified bezeichnungs-client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anleitungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren und schützen. Wenn Sie Ihre Dokumente und E-Mails nur klassifizieren und nicht schützen müssen, lesen Sie die [Anleitung zum Klassifizieren](clientv2-classify.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.

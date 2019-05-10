@@ -1,5 +1,5 @@
 ---
-title: So unterstützen Dateiserver, die FCI verwenden, Azure RMS von AIP
+title: Wie Dateiserver, Windows, mit denen FCI unterstützt Azure RMS – AIP
 description: Verwendung der Windows Server-Dateiklassifizierungsinfrastruktur mit Azure RMS, wenn Sie den RMS-Connector für den automatischen Schutz von Office-Dokumenten bereitstellen.
 author: cabailey
 ms.author: cabailey
@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 81754d9f7ac0ff1351d4298f23da31afcf8ed900
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 474080f712e49baf1fc4952495eee8f3da475666
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767618"
 ---
-# <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>So schützen Dateiserver, die unter Windows Server ausgeführt werden und die Dateiklassifizierungsinfrastruktur verwenden Azure Rights Management
+# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Wie Dateiserver, Windows, die FCI unterstützen Azure Rights Management verwenden.
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 

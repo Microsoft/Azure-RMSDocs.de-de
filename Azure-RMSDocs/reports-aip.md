@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181657"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191944"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -192,11 +192,11 @@ Können Sie die Versionsinformationen der Verlauf für die [Azure Information Pr
 
 Für den Azure Information Protection unified bezeichnungs-Client:
 
-- Unterstützung für die Überwachung und die Endpunkt-Ermittlung: Version 2.0.778
+- Unterstützung für die Überwachung und die Endpunkt-Ermittlung: Version 2.0.778.0
 
 Für den Azure Information Protection-Client:
 
-- Unterstützung für die Überwachung: 1.41.51.0
+- Unterstützung für die Überwachung: Version 1.41.51.0
 - Unterstützung für die endpunktermittlung: Version 1.48.204.0
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Konfigurieren eines Log Analytics-Arbeitsbereichs für Berichte
@@ -232,7 +232,7 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
 
 - **Datenermittlung (Vorschau)**: Verwenden Sie diesen Bericht, um Informationen über bezeichnete Dateien anzuzeigen, die durch die Überprüfung und von unterstützten Endpunkten gefunden wurden.
     
-    Hinweis: Die Ermittlung von Endpunkten wird gerade stufenweise für Mandanten eingeführt. Sobald dieses Feature für Ihren Mandanten zur Verfügung steht, enthält dieser Bericht Daten von den unterstützten Endpunkten.
+    Hinweis: Ermittlung für Endpunkte wird schrittweise für Mandanten eingeführt. Sobald dieses Feature für Ihren Mandanten zur Verfügung steht, enthält dieser Bericht Daten von den unterstützten Endpunkten.
     
     Sie können konfigurieren, eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) für den Azure Information Protection-Client zu Berichtsdateien, die vertraulichen Informationen enthalten.
     
