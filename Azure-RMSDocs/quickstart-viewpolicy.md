@@ -1,19 +1,19 @@
 ---
-title: 'Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal – AIP'
+title: 'Schnellstart: Anzeigen von Azure Information Protection im Azure-Portal – AIP'
 description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information Protection besitzt, beginnen Sie an dieser Stelle, um den Dienst zum Azure-Portal hinzuzufügen, die Aktivierung des Schutzdiensts zu überprüfen sowie die Bezeichnungen und Richtlinieneinstellungen anzuzeigen.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e41af7f6bcf8734377404b0dabcdb059d2d91bc1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767894"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 

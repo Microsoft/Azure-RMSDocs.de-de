@@ -1,5 +1,5 @@
 ---
-title: 'Schnellstart: Suchen nach vertraulichen Informationen mithilfe des Azure Information Protection-Scanners – AIP'
+title: 'Schnellstart: Suchen nach vertraulichen Informationen mit dem Azure Information Protection-Scanner'
 description: Verwenden Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in lokal gespeicherten Dateien zu suchen.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 6d7de0658aa2b14180ef61caddae0aa40e4c7bd0
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 657d85e90ffe4192514101595815f5110564d761
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767795"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 

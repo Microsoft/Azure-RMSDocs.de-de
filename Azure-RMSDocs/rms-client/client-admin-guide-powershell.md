@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2d703eff5d31563c1c34b9937f9a1d2f45e93064
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 9d681f986028f83eb3fe59d9e295db6873828052
+ms.sourcegitcommit: 96a05d1abe20b7c588dccaecea18a73b648179b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183779"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535327"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -486,7 +486,7 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
 
-2. Für den Azure AD-Mandanten, den Sie mit Azure Information Protection verwenden, navigieren Sie zu **Azure Active Directory** > **App-Registrierungen**. 
+2. Für Azure AD-Mandanten, die Sie mit Azure Information Protection verwenden, wechseln Sie zu **Azure Active Directory** > **App-Registrierungen (Legacy)**. 
 
 3. Wählen Sie **Neue Anwendungsregistrierung** aus, um Ihre Web-App-/API-Anwendung zu erstellen. Geben Sie für die Bezeichnung **Erstellen** die folgenden Werte an, und klicken Sie dann auf **Erstellen**:
 

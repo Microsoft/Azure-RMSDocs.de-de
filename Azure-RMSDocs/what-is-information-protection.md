@@ -1,20 +1,20 @@
 ---
 title: Was ist Azure Information Protection? – AIP
-description: Eine Übersicht über den Azure Information Protection-Dienst.
+description: Eine technische Übersicht über den Azure Information Protection-Dienst (AIP), mit dem Organisation Bezeichnungen auf Dokumente und E-Mails anwenden können, um die enthaltenen Daten unabhängig vom Speicherort zu klassifizieren und zu schützen.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 64733ce1007a97f32a12b50d37aa886b774f896e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 768cac711deff33bf796973ede2541250df5f357
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181239"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982176"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -123,13 +123,13 @@ Hier finden Sie die neuesten Informationen dazu, wie Azure Information Protectio
 
 - Herunterladen des Clients: [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Herunterladen eines Leitfadens zu taktischer und strategischer Bereitstellung: [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423)
-
 - Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 
 - Häufig gestellte Fragen: [Häufig gestellte Fragen zu Azure Information Protection](faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
+
+- Neuheiten in der Dokumentation: [Technischer Blog zu Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs)
 
 Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information Protection](information-support.md)
 
