@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 264de1992659b2bd8c7464248704b514ae764274
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768202"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708916"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -164,11 +164,11 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     - **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln:**
 
-        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure Information Protection-Mandantenschlüssel gespeichert werden (das „Bring Your Own Key“- oder BYOK-Szenario). Hier sind zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM an Azure Key Vault und zum Autorisieren des Azure Rights Management-Diensts für die Verwendung dieses Schlüssels erforderlich. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden von den Rights Management-Services nicht unterstützt.
+        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure Information Protection-Mandantenschlüssel gespeichert werden (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen nCipher HSM an Azure Key Vault und Autorisieren des Azure Rights Management-Diensts für diesen Schlüssel verwenden. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden von den Rights Management-Services nicht unterstützt.
 
     - **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln**:
 
-        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dieses Szenario erfordert die meisten Konfigurationsschritte, da Sie zunächst den Softwareschlüssel extrahieren und in ein lokales HSM importieren und dann zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen Thales-HSM in das Azure Key Vault-HSM und zur Autorisierung des Azure Rights Management-Diensts für die Verwendung des Schlüsseltresors, in dem der Schlüssel gespeichert wird, ausführen müssen.
+        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert die meisten Konfigurationsschritte, da Sie müssen zunächst den Softwareschlüssel extrahieren und in ein lokales HSM importieren, und führen Sie zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen nCipher HSM an das Azure Key Vault-HSM und autorisieren den Azure Rights Management-Dienst, um die Verwendung des schlüsseltresors, in dem den Schlüssel gespeichert.
 
 - **Schritt 5: Aktivieren des Azure Rights Management-Diensts**
 

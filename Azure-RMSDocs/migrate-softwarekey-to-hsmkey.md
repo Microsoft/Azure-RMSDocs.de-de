@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9651e1c44f9f6fb59fb8a48fb4435212c827968
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184075"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708933"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -29,7 +29,7 @@ Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Sc
 
 Das Verfahren zum Importieren der AD RMS-Konfiguration in Azure Information Protection, um den von Ihnen verwalteten Azure Information Protection-Mandantenschlüssel (BYOK) in Azure Key Vault zu erhalten, gliedert sich in vier Phasen.
 
-Sie müssen zuerst den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC) aus den AD RMS-Konfigurationsdaten extrahieren und an ein lokales Thales-HSM übertragen, als Nächstes ein Paket mit Ihrem HSM-Schlüssel erstellen und dieses an Azure Key Vault übertragen, dann den Azure Rights Management-Dienst von Azure Information Protection für den Zugriff auf Ihren Schlüsseltresor autorisieren und schließlich die Konfigurationsdaten importieren.
+Sie müssen zuerst den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC) aus den AD RMS-Konfigurationsdaten extrahieren und übertragen des Schlüssels in einer lokalen nCipher HSM, als Nächstes Packen Ihren HSM-Schlüssel an Azure Key Vault übertragen, und Autorisieren des Azure Rights Management-Diensts aus Azure Information Protection zum Zugriff auf Ihre Key Vault-Instanz, und klicken Sie dann die Konfigurationsdaten importieren.
 
 Da Ihr Azure Information Protection-Mandantenschlüssel von Azure Key Vault gespeichert und verwaltet wird, muss dieser Teil der Migration nicht nur in Azure Key Vault, sondern auch in Azure Information Protection verwaltet werden. Wenn Azure Key Vault für Ihre Organisation nicht von Ihnen, sondern von einem anderen Administrator verwaltet wird, müssen Sie sich mit diesem Administrator abstimmen und mit ihm zusammenarbeiten, um diese Prozeduren abzuschließen.
 
@@ -74,7 +74,7 @@ Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltreso
 
     - Wenn Sie beim Ausführen dieses Befehls (unter Verwendung des vollständigen Parameternamens **TpdPassword** oder des kurzen Parameternamens **pwd**) das Kennwort nicht angeben, werden Sie zur Eingabe aufgefordert.
 
-3. Fügen Sie zur gleichen nicht verbundenen Arbeitsstation Ihr Thales-HSM hinzu, und konfigurieren Sie es entsprechend der Thales-Dokumentation. Sie können nun Ihren Schlüssel mithilfe des folgenden Befehls in Ihr angeschlossenes Thales-HSM importieren. Ersetzen Sie dabei „ContosoTPD.pem“ durch Ihren eigenen Dateinamen:
+3. Die gleichen nicht verbundenen Arbeitsstation fügen Sie an und konfigurieren Sie die unterstützende nCipher HSM, gemäß der nCipher Dokumentation. Sie können nun Ihren Schlüssel in Ihrer angefügten nCipher HSM importieren, mit den folgenden Befehl aus, in denen Sie Ihren eigenen Dateinamen "contosotpd.PEM" durch ersetzen müssen:
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltreso
 
     **Pfad zum Schlüssel: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-Diese Ausgabe bestätigt, dass der private Schlüssel zu Ihrem lokalen Thales-HSM-Gerät migriert wurde mit einer verschlüsselten Kopie, die in einem Schlüssel gespeichert ist (in unserem Beispiel „key_simple_contosobyok“). 
+Diese Ausgabe bestätigt, dass der private Schlüssel nun auf Ihrem lokalen nCipher HSM-Gerät mit einer verschlüsselten Kopie migriert wird, die einen Schlüssel (in unserem Beispiel "Key_simple_contosobyok") gespeichert wird. 
 
 Nachdem Ihr SLC-Schlüssel extrahiert und auf Ihr lokales HSM importiert wurde, sind Sie bereit, den HSM-geschützten Schlüssel zu paketieren und an Azure Key Vault zu übertragen.
 

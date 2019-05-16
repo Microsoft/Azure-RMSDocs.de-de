@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd82546ccf0334ea244226c143426ab3e0da93b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c1ae08971442fcc943f8473bbcbf74681c027702
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181547"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708864"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Kunden verwaltet: Lebenszyklusvorgänge des Mandantenschlüssels
 
@@ -61,7 +61,7 @@ Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Da Sie Ihren Mandantenschlüssel verwalten, sind Sie verantwortlich für das Sichern des Schlüssels, den Azure Information Protection verwendet. 
 
-Wenn Sie Ihren Mandantenschlüssel lokal in einem Thales HSM generiert haben: Sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Wenn Sie beispielsweise eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb eines Thales-HSM benötigen, kann Azure Key Vault diese nicht für Sie abrufen, da es lediglich über eine nicht wiederherstellbare Kopie verfügt.
+Wenn Sie Ihren mandantenschlüssel lokal, in ein nCipher HSM generiert: Sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Z. B. Wenn Sie jemals eine Klartextkopie Ihres Schlüssels zur Verwendung außerhalb einer nCipher HSM benötigen, können keine Azure Key Vault, abrufen, da sie nur eine nicht wiederherstellbare Kopie verfügt.
 
 Azure Key Vault besitzt ein [Sicherungs-Cmdlet](/powershell/module/az.keyvault/backup-azkeyvaultkey), das Sie zum Sichern eines Schlüssels verwenden können, indem Sie dieses herunterladen und in einer Datei speichern. Da der heruntergeladene Inhalt verschlüsselt ist, kann dieser nicht außerhalb von Azure Key Vault verwendet werden. 
 
