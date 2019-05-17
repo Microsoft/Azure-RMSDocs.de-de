@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 21148e9293c3be1162028a6cf7e26c30fb52a15f
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175356"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822179"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - Metadaten
 
@@ -39,10 +39,10 @@ Das MIP SDK gilt den folgenden Satz von Metadaten.
 | **aktiviert**   | "True" oder "false"                 | Dieses Attribut gibt an, ob die Klassifizierung, die von dieser Gruppe von Schlüssel-Wert-Paare dargestellt, die für das Datenelement aktiviert ist. DLP-Produkten überprüfen in der Regel das Vorhandensein dieses Schlüssels auf die klassifizierungsbezeichnung zu identifizieren. | Ja       |
 | **SiteId**    | GUID                          | Azure Active Directory-Mandanten-ID                                                                                                                                                                                                                   | Ja       |
 | **ActionId**  | GUID                          | ActionID wird jedes Mal geändert, die eine Bezeichnung festgelegt ist. Überwachungsprotokolle enthalten die alten und neuen ActionID um Verkettung der Kennzeichnung von Aktivität, um das Datenelement zu ermöglichen.                                                                                 | Ja       |
-| **Methode**    | Standard, Privileged oder automatisch        | Legen Sie über MIP:: assignmentmethod                                                                                                                                                                                                                 | Nein        |
+| **Methode**    | Standard oder privilegierten        | Legen Sie über [MIP:: assignmentmethod](reference/mip-enums-and-structs.md#assignmentmethod). Standard bedeutet, dass die Bezeichnung wird standardmäßig automatisch angewendet wird. Privilegierte bedeutet, dass die Bezeichnung manuell ausgewählt wurde.                                                                                                                                                                                                                 | Nein        |
 | **SetDate**   | Erweiterte ISO 8601-Datumsformat | Der Zeitstempel für die Bezeichnung festgelegt wurde.                                                                                                                                                                                                              | Nein        |
 | **Name**      | String                        | Bezeichnung eindeutiger Name innerhalb des Mandanten. Es entsprechen nicht unbedingt, um Namen anzuzeigen.                                                                                                                                                              | Nein      |
-| **ContentBits** | integer | Bitmaske, die die Arten von Inhalten, die markieren, die beschreibt, sollte in eine Datei angewendet werden. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
+| **ContentBits** | integer | Bitmaske, die die Arten von Inhalten, die markieren, die beschreibt, sollte in eine Datei angewendet werden. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
  | Nein |
 
 Wenn in einer Datei angewendet wird, ist das Ergebnis ähnelt der folgenden Tabelle.

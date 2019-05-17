@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3849a676473d05d5440a77288b8e9478270828ef
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180221"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822185"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -159,6 +159,8 @@ Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird di
 - In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
 - Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX), PowerPoint-Präsentationen (PPT und PPTX) sowie PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
+
+Für e-Mails ist die Bezeichnungsinformationen gespeichert, wenn die e-Mail-Adresse gesendet wird. Für Dokumente ist die Bezeichnungsinformationen gespeichert, wenn die Datei gespeichert wird. 
 
 Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung** im Azure Portal, wenn Sie die Azure Information Protection-Richtlinie anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 

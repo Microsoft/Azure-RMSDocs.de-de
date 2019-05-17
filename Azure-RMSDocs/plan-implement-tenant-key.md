@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26999c8fdd079c7a34d39415d8beba6763a06f68
-ms.sourcegitcommit: e0ce23467744ec6a4da49081461a459bc37c7d78
+ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443271"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780902"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -35,7 +35,7 @@ Der Azure Information Protection-Mandantenschlüssel
 |Geschäftliche Anforderung|Empfohlene Mandantenschlüsseltopologie|
 |------------------------|-----------------------------------|
 |Setzen Sie Azure Information Protection schnell und ohne besondere Hardware, zusätzliche Software oder Azure-Abonnement ein.<br /><br />Zum Beispiel: Setzen Sie es in Testumgebungen ein oder wenn in Ihrem Unternehmen keine rechtlichen Bestimmungen für die Schlüsselverwaltung bestehen.|Von Microsoft verwaltet|
-|Konformitätsbestimmungen, zusätzliche Sicherheit und Kontrolle über alle Lebenszyklusvorgänge. <br /><br />Zum Beispiel: Ihr Schlüssel muss durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK|
+|Vorschriften und Kontrolle über alle lebenszyklusvorgänge. <br /><br />Zum Beispiel: Ihr Schlüssel muss durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK|
 
 
 Falls nötig können Sie die Schlüsseltopologie Ihres Mandanten nach der Bereitstellung ändern, indem Sie das Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) verwenden.

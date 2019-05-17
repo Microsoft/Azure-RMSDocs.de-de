@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b5b7e9c79ec533ef72da1b094347556770c50e71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184109"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780873"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -47,6 +47,20 @@ Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie
 
 >[!IMPORTANT]
 > Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.
+
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Konfiguration für Computer, auf denen Office 2010 ausführen
+
+Wenn Clients führen Office 2010 migriert haben, können Benutzer auftreten, Verzögerungen, öffnen Sie geschützten Inhalte nach unserem AD RMS-Server aufgehoben werden. Oder Benutzer möglicherweise Meldungen an, dass sie über keine die Anmeldeinformationen verfügen für die geschützte Inhalte zu öffnen. Um diese Probleme zu beheben, erstellen Sie eine netzwerkumleitung für diese Computer, die den AD RMS-URL-FQDN an die lokale IP-Adresse des Computers (127.0.0.1) umgeleitet. Sie erreichen dies durch Konfigurieren der lokalen Hostdatei auf jedem Computer oder mithilfe von DNS.
+
+Umleitung über die lokale Hosts-Datei:
+
+- Fügen Sie die folgende Zeile in die lokale Hosts-Datei, und Ersetzen Sie dabei `<AD RMS URL FQDN>` mit dem Wert für Ihre AD RMS-Cluster ohne Präfixe oder Webseiten:
+    
+        127.0.0.1 <AD RMS URL FQDN>
+
+Umleitung über DNS:
+    
+- Erstellen Sie einen neuen Host (A)-Eintrag für Ihre AD RMS-URL-FQDN, mit der IP-Adresse 127.0.0.1.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11: Durchführen der Clientmigrationstasks
 

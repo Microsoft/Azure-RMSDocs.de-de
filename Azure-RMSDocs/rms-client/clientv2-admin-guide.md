@@ -4,17 +4,17 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 7caa35896e0dcfd3cd6dc1cf407da87e41e71ef5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183170"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822216"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection – einheitliche bezeichnungs Client – Administratorhandbuch
 
@@ -156,9 +156,11 @@ Nachdem Sie den Azure Information Protection unified bezeichnungs-Client install
 
 Die Azure Information Protection-Team aktualisiert regelmäßig den einheitlichen Azure Information Protection-Bezeichnung-Client für die neuen Funktionen und Fehlerbehebungen. Ankündigungen werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) des Teams veröffentlicht.
 
-Wenn Sie Windows Update verwenden, aktualisiert der einheitliche Bezeichnung Azure Informationen Protection Azure Information Protection-Client automatisch die allgemein verfügbare Version dieses Clients, unabhängig davon, wie der Client installiert wurde. Neue Clientreleases werden wenige Wochen nach der Release im Katalog veröffentlicht.
+Wenn Sie Windows Update verwenden, aktualisiert der einheitliche Bezeichnung Azure Information Protection-Client automatisch die allgemein verfügbare Version dieses Clients, unabhängig davon, wie der Client installiert wurde. Neue Clientreleases werden wenige Wochen nach der Release im Katalog veröffentlicht.
 
 Alternativ können Sie den Client manuell aktualisieren, indem Sie die neue Version aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. Installieren Sie dann die neue Version, um ein Upgrade des Clients auszuführen. Sie müssen diese Methode verwenden, um Preview-Versionen und wenn Sie ein aus dem Azure Information Protection-Client Upgrade zu aktualisieren.
+
+Wenn Sie aus dem Azure Information Protection-Client auf Windows 7 aktualisieren, werden alle Office-Anwendungen während des Clientupgrades automatisch neu gestartet. Diesen automatische Neustart wird nicht für neueren Betriebssystemen, oder wenn Sie ein von einer älteren Version des einheitlichen bezeichnungs-Clients Upgrade.
 
 Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Beispielsweise haben Sie die aktuelle Vorschauversion zu Testzwecken installiert und müssen nun auf die aktuelle allgemein verfügbare Version zurückgreifen.
 
