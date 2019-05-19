@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982151"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837786"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
@@ -25,6 +25,10 @@ ms.locfileid: "64982151"
 
 
 Sie können den einheitlichen Azure Information Protection-Bezeichnung-Client aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+Nach einer kurzen Verzögerung von in der Regel ein paar Wochen, ist die neueste allgemein verfügbare Version auch im Microsoft Update-Katalogs mit dem Produktnamen enthalten **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified Bezeichnung-Client**, und die Klassifizierung der **Updates**. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+
+Weitere Informationen finden Sie unter [aktualisieren und Verwalten von Azure Information Protection unified bezeichnungs Client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
@@ -73,7 +77,7 @@ Diese erste allgemein verfügbare Version des Azure Information Protection unifi
 
 - Folgende Einstellungen für Bezeichnungen und Richtlinien:
     - Optische Kennzeichnung (Kopfzeile, Fußzeile und Wasserzeichen)
-    - Standardbeschriftung
+    - Standard-Bezeichnungen – aktuell eingeschränkt auf Bezeichnungen ohne untergeordnete Bezeichnungen
     - Bezeichnungen, die „Nicht weiterleiten“ anwenden und nur in Outlook angezeigt werden
     - Aufforderung zur Angabe einer Begründung, wenn ein Benutzer eine Klassifizierungsstufe senkt oder eine Bezeichnung entfernt
     - Farben für die Bezeichnungen
