@@ -4,19 +4,19 @@ description: Informationen über Azure Rights Management (Azure RMS) und die Sch
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf15552af49ef62a31605c2148c72806c7b2cad7
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767818"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934922"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -65,7 +65,7 @@ Azure Rights Management unterstützt die folgenden Sicherheits-, Compliance- und
 
 √ Verwendung von Kryptografie gemäß Industriestandard und Unterstützung von FIPS 140-2. Weitere Informationen finden Sie in den Informationen zu [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-√ Unterstützung für Thales Hardwaresicherheitsmodule (HSMs), damit Sie Ihren Mandantenschlüssel in Microsoft Azure-Rechenzentren speichern können. Azure Rights Management verwendet getrennte Security Worlds für seine Rechenzentren in Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien, sodass Ihre Schlüssel nur in Ihrer Region verwendet werden können.
+√ Unterstützung für die unterstützende nCipher nShield-Hardwaresicherheitsmodul (HSM), um Ihren mandantenschlüssel in Microsoft Azure-Daten speichern Rechenzentren. Azure Rights Management verwendet getrennte Security Worlds für seine Rechenzentren in Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien, sodass Ihre Schlüssel nur in Ihrer Region verwendet werden können.
 
 √ Zertifiziert für Folgendes:
 

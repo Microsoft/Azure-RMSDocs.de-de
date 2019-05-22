@@ -4,19 +4,19 @@ description: Anstelle von Microsoft, die Schlüssel des Stammzertifikats für Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/08/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780902"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934973"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -107,12 +107,12 @@ In der folgenden Tabelle finden Sie eine Liste der Voraussetzungen für „Bring
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie ein Azure-Abonnement verfügen, die Sie für BYOK verwenden können, verwenden Sie [Azure PowerShell](/powershell/azure/overview) Cmdlets: <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit dem **als Administrator ausführen** Option, und melden Sie sich als globaler Administrator für Ihren Azure Information Protection-Mandanten mit `Connect-AzAccount` , und klicken Sie dann kopieren Sie die resultierende token-Zeichenfolge in `https://microsoft.com/devicelogin`mithilfe eines Browsers. <br /><br /> Weitere Informationen finden Sie unter [melden Sie sich mit Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis**: Zusätzlich zu den BYOK-Voraussetzungen muss die Thales-Firmware mindestens in der Version 11.62 vorliegen, wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren.|
-|Für die Verwendung eines HSM-geschützten Schlüssels, den Sie lokal erstellen: <br /><br />– Alle Voraussetzungen, die für Key Vault-BYOK aufgeführt sind. |Siehe die [Voraussetzungen für BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis**: Zusätzlich zu den BYOK-Voraussetzungen muss die Thales-Firmware mindestens in der Version 11.62 vorliegen, wenn Sie von AD RMS zu Azure Information Protection mit der Softwareschlüssel-zu-Hardwareschlüssel-Migration migrieren.|
+|Ihr Azure Information Protection-Mandant muss über ein Azure-Abonnement verfügen. Falls Sie noch keins haben, können Sie sich ein [kostenlose Konto](https://azure.microsoft.com/pricing/free-trial/) erstellen. <br /><br /> Sie müssen über den Premiumtarif von Azure Key Vault verfügen, um einen HSM-geschützten Schlüssel verwenden zu können.|Das kostenlose Azure-Abonnement, das Zugriff zum Konfigurieren von Azure Active Directory und benutzerdefinierten Azure Rights Management-Vorlagen bietet (**Zugriff auf Azure Active Directory**), reicht zum Verwenden von Azure Key Vault nicht aus. Um zu bestätigen, dass Sie ein Azure-Abonnement verfügen, die Sie für BYOK verwenden können, verwenden Sie [Azure PowerShell](/powershell/azure/overview) Cmdlets: <br /><br /> 1. Starten Sie eine Azure PowerShell-Sitzung mit dem **als Administrator ausführen** Option, und melden Sie sich als globaler Administrator für Ihren Azure Information Protection-Mandanten mit `Connect-AzAccount` , und klicken Sie dann kopieren Sie die resultierende token-Zeichenfolge in `https://microsoft.com/devicelogin`mithilfe eines Browsers. <br /><br /> Weitere Informationen finden Sie unter [melden Sie sich mit Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Geben Sie Folgendes ein, und vergewissern Sie sich, dass Werte für den Namen und die ID Ihres Abonnements und Ihre Azure Information Protection-Mandanten-ID angezeigt werden und der Status „Aktiviert“ ist: `Get-AzSubscription`<br /><br />Wenn keine Werte angezeigt werden und Sie lediglich an die Eingabeaufforderung zurückverwiesen werden, haben Sie kein Azure-Abonnement, das sich für BYOK eignet. <br /><br />**Hinweis**: Zusätzlich zu den Voraussetzungen für BYOK Wenn Sie von AD RMS zu Azure Information Protection migrieren, indem Softwareschlüssel zu Hardwareschlüssel, müssen Sie eine Mindestversion 11.62 verfügen bei Verwendung von Thales-Firmware für Ihr HSM.|
+|Für die Verwendung eines HSM-geschützten Schlüssels, den Sie lokal erstellen: <br /><br />– Alle Voraussetzungen, die für Key Vault-BYOK aufgeführt sind. |Siehe die [Voraussetzungen für BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) in der Azure Key Vault-Dokumentation. <br /><br /> **Hinweis**: Zusätzlich zu den Voraussetzungen für BYOK Wenn Sie von AD RMS zu Azure Information Protection migrieren, indem Softwareschlüssel zu Hardwareschlüssel, müssen Sie eine Mindestversion 11.62 verfügen bei Verwendung von Thales-Firmware für Ihr HSM.|
 |Wenn der Schlüsseltresor, der Ihren Mandantenschlüssel enthalten soll, Virtual Network-Dienstendpunkte für Azure Key Vault verwendet: <br /><br />– Erlauben Sie vertrauenswürdigen Microsoft-Diensten, diese Firewall zu umgehen.|Weitere Informationen finden Sie im Blog [Virtual Network Service Endpoints for Azure Key Vault (Virtual Network-Dienstendpunkte für Azure Key Vault)](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Das Azure Rights Management-Verwaltungsmodul für Windows PowerShell.|Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](./install-powershell.md). <br /><br />Wenn Sie dieses Windows PowerShell-Modul zuvor installiert haben, überprüfen Sie mit dem folgenden Befehl, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`|
 
-Weitere Informationen zu Thales-HSMs und deren Verwendung mit Azure Key Vault finden Sie auf der [Thales-Website](https://www.thales-esecurity.com/msrms/cloud).
+Weitere Informationen zu unterstützende nCipher nShield-Hardwaresicherheitsmodul (HSM) und wie sie mit Azure Key Vault verwendet werden, finden Sie unter den [nCipher Website](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).
 
 ### <a name="choosing-your-key-vault-location"></a>Auswählen eines Speicherorts für Ihren Schlüsseltresor
 

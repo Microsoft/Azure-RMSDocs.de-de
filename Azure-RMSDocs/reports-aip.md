@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/21/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780881"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934963"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -198,6 +198,18 @@ Für den Azure Information Protection-Client:
 
 - Unterstützung für die Überwachung: Version 1.41.51.0
 - Unterstützung für die endpunktermittlung: Version 1.48.204.0
+
+### <a name="storage-requirements-and-data-retention"></a>Storage-Anforderungen und datenaufbewahrung
+
+Die Menge der Daten erfasst und gespeichert, die in Ihrem Azure Information Protection-Arbeitsbereich wird für jeden Mandanten erheblich variieren, je nach Faktoren wie z. B. wie viele Azure Information Protection-Clients und andere unterstützte Endpunkte haben, egal, ob Sie das Sammeln von Endpunkt-Discovery-Daten, Sie Scanner bereitgestellt haben, und so weiter.
+
+Allerdings können als Ausgangspunkt können Sie die folgenden Schätzungen nützlich sein:
+
+- Für die Überwachungsdaten von Azure Information Protection-Clients nur generiert: 2 GB pro 10.000 aktive Benutzer.
+
+- Für die Überwachungsdaten von Azure Information Protection-Clients, Scanner und Microsoft Defender ATP generiert: 20 GB pro 10.000 aktive Benutzer.
+
+Azure Monitor-Protokolle wurde eine **Nutzung und geschätzte Kosten** feature, mit denen Sie schätzen, und überprüfen Sie die Menge der gespeicherten Daten, und Sie können auch die Beibehaltungsdauer der Daten für Log Analytics-Arbeitsbereich steuern. Weitere Informationen finden Sie unter [Verwalten von Nutzung und Kosten mit Azure-Überwachungsprotokolle](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Konfigurieren eines Log Analytics-Arbeitsbereichs für Berichte
 
