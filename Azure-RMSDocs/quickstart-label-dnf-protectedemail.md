@@ -4,16 +4,16 @@ description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 629f3558d3e8b605136ea6857826763287755a79
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767915"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935000"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 

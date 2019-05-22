@@ -4,16 +4,16 @@ description: Ein Einführungstutorial, in dem beschrieben wird, wie Sie die Azur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 137de38d7fc0d62286000d93b05efa7b4a81d255
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768175"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934808"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -148,7 +148,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Klicken Sie auf **Neue Bedingung hinzufügen**, und wählen Sie anschließend auf dem Blatt **Bedingung** Folgendes aus:
     
-    ein. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
+    a. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
     
     b. For **Choose an industry** (Branche auswählen): Behalten Sie die Standardeinstellung **All** (Alle) bei.
     
@@ -176,7 +176,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finance** (Finanzen) aus, und klicken Sie auf **OK**.
 
-16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Beispiel:
+16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Zum Beispiel:
 
     ![Azure Information Protection-Tutorial: Neue untergeordnete Bezeichnung](./media/info-protect-policy-configuredv2.png)
     

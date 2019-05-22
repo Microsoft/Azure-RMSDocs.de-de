@@ -4,16 +4,16 @@ description: Ein Einführungstutorial zum Konfigurieren und Anzeigen von erweite
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/20/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 38def86f9bbc32edc083f856cf43101890b5a22e
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64562794"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934701"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -126,7 +126,7 @@ Auf Ihrem Clientcomputer sind nun die Konfigurationsergebnisse dieser erweiterte
 
 3. Geben Sie für das Feld **To** (An) Ihre eigene E-Mail-Adresse an, und als Betreff geben Sie **Testing the General label for the Warn message** (Testen der Bezeichnung „Allgemein“ für die Warnmeldung) ein. Senden Sie dann die E-Mail.
 
-4. Aufgrund der erweiterten Clienteinstellung wird die folgende Warnung mit der Aufforderung zur Bestätigung vor dem Senden der E-Mail angezeigt: Beispiel:
+4. Aufgrund der erweiterten Clienteinstellung wird die folgende Warnung mit der Aufforderung zur Bestätigung vor dem Senden der E-Mail angezeigt: Zum Beispiel:
     
     ![Azure Information Protection-Tutorial – Anzeigen der erweiterten Clienteinstellung „OutlookWarnUntrustedCollaborationLabel“ ](./media/see-warnmessage.png)
     
@@ -158,7 +158,7 @@ Auf Ihrem Clientcomputer sehen Sie nun die Ergebnisse dieser neuen erweiterten C
 
 3. Geben Sie für das Feld **To** (An) Ihre eigene E-Mail-Adresse an, und als Betreff geben Sie **Testing the General label for the Justify message** (Testen der Bezeichnung „Allgemein“ für die Legitimationsmeldung) ein. Senden Sie dann die E-Mail.
 
-4. Dieses Mal wird die folgende Meldung angezeigt, in der Sie aufgefordert werden, vor dem Senden der E-Mail eine Begründung anzugeben. Beispiel:
+4. Dieses Mal wird die folgende Meldung angezeigt, in der Sie aufgefordert werden, vor dem Senden der E-Mail eine Begründung anzugeben. Zum Beispiel:
     
     ![Azure Information Protection-Tutorial – Anzeigen der erweiterten Clienteinstellung „OutlookJustifyUntrustedCollaborationLabel“ ](./media/see-justifymessage.png)
     
@@ -190,7 +190,7 @@ Auf Ihrem Clientcomputer sehen Sie nun die Ergebnisse dieser neuen erweiterten C
 
 3. Geben Sie für das Feld **To** (An) Ihre eigene E-Mail-Adresse an, und als Betreff geben Sie **Testing the General label for the Block message** (Testen der Bezeichnung „Allgemein“ für die Blockierungsmeldung) ein. Senden Sie dann die E-Mail.
 
-4. Dieses Mal wird die folgende Meldung angezeigt, die verhindert, dass die E-Mail gesendet wird. Beispiel:
+4. Dieses Mal wird die folgende Meldung angezeigt, die verhindert, dass die E-Mail gesendet wird. Zum Beispiel:
     
     ![Azure Information Protection-Tutorial – Blockieren von E-Mail-Popupmeldung](./media/see-blockmessage.png)
 
@@ -208,7 +208,7 @@ Für alle von Ihnen durchgeführten Tests werden Informationsereignisse erstellt
 
 - Blockiermeldungen: Informations-ID 303
 
-Wenn beispielsweise der erste Test eine Warnung für den Benutzer war, und Sie **Abbrechen** ausgewählt haben, wird **Dismissed** (Verworfen) als **Benutzerantwort** im ersten Ereignis 301 angezeigt. Beispiel:
+Wenn beispielsweise der erste Test eine Warnung für den Benutzer war, und Sie **Abbrechen** ausgewählt haben, wird **Dismissed** (Verworfen) als **Benutzerantwort** im ersten Ereignis 301 angezeigt. Zum Beispiel:
 
 ```
 Client Version: 1.48.204.0
@@ -238,7 +238,7 @@ Action Source:
 User Response: Confirmed
 ```
 
-Das gleiche Muster wird für die Legitimationsmeldung wiederholt, die ein Ereignis 302 aufweist. Das erste Ereignis zeigt **Dismissed** (Verworfen) als **Benutzerantwort** an, und das zweite zeigt die ausgewählte Begründung an. Beispiel:
+Das gleiche Muster wird für die Legitimationsmeldung wiederholt, die ein Ereignis 302 aufweist. Das erste Ereignis zeigt **Dismissed** (Verworfen) als **Benutzerantwort** an, und das zweite zeigt die ausgewählte Begründung an. Zum Beispiel:
 
 ```
 Client Version: 1.48.204.0
@@ -255,7 +255,7 @@ User Response: Confirmed
 
 ```
 
-Oben im Ereignisprotokoll sehen Sie die protokollierte Blockierungsmeldung, die ein Ereignis 303 aufweist. Beispiel:
+Oben im Ereignisprotokoll sehen Sie die protokollierte Blockierungsmeldung, die ein Ereignis 303 aufweist. Zum Beispiel:
 
 ```
 Client Version: 1.48.204.0
@@ -359,7 +359,7 @@ Auf Ihrem Clientcomputer sehen Sie nun die Ergebnisse aufgrund der Änderung des
 
 3. Geben Sie für das Feld **To** (An) Ihre eigene E-Mail-Adresse an, und als Betreff geben Sie **Testing send an email without a label for the Block message** (Testen des Sendens einer E-Mail ohne Bezeichnung für die Blockierungsmeldung) ein. Senden Sie dann die E-Mail.
 
-4. Dieses Mal wird, mit einer Erklärung für den Benutzer, die folgende Meldung angezeigt, durch die die E-Mail nicht gesendet wird. Beispiel:
+4. Dieses Mal wird, mit einer Erklärung für den Benutzer, die folgende Meldung angezeigt, durch die die E-Mail nicht gesendet wird. Zum Beispiel:
     
     ![Azure Information Protection-Tutorial – Anzeigen der erweiterten „OutlookWarnUntrustedCollaborationLabel“-Clienteinstellung mit Blockierwert](./media/see-blockmessage2.png)
 
@@ -399,7 +399,7 @@ Sie erstellen eine neue erweiterte Clienteinstellung namens **OutlookBlockTruste
 
 1. Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** im Azure-Portal das Kontextmenü (**...**) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben) aus. Wählen Sie dann **Erweiterte Einstellungen** aus.
 
-2. Geben Sie auf dem Blatt **Erweiterte Einstellungen** den Namen der erweiterten Einstellung (**OutlookBlockTrustedDomains**) ein, und fügen Sie Ihren Domänennamen aus Ihrer E-Mail-Adresse für den Wert ein. Beispiel:
+2. Geben Sie auf dem Blatt **Erweiterte Einstellungen** den Namen der erweiterten Einstellung (**OutlookBlockTrustedDomains**) ein, und fügen Sie Ihren Domänennamen aus Ihrer E-Mail-Adresse für den Wert ein. Zum Beispiel:
     
     ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookBlockTrustedDomains“-Clienteinstellung](./media/configure-exemptblockdomain.png)
 

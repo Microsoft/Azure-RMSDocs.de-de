@@ -4,16 +4,16 @@ description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767894"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935015"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -25,7 +25,7 @@ In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azur
 
 Für diese Schnellstartanleitung benötigen Sie maximal 10 Minuten.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 
 Voraussetzungen für diesen Schnellstart:
 
@@ -90,7 +90,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
 4. Um die Bezeichnungen für alle Benutzer zu veröffentlichen, wählen Sie **Klassifizierungen** > **Richtlinien** > **Global** aus:
     
-    ein. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
+    a. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
     
     b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** und anschließend alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
     
@@ -112,7 +112,7 @@ Das Blatt **Azure Information Protection – Bezeichnungen**:
 
 - Anhand der Spalten **KENNZEICHNUNG** und **SCHUTZ** erkennen Sie, dass für einige Bezeichnungen optische Kennzeichnungen konfiguriert wurden. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Für einige Bezeichnungen kann zusätzlich auch eine Schutzfunktion festgelegt werden. 
 
-Beispiel: 
+Zum Beispiel: 
 
 ![Azure Information Protection-Schnellstart – Übersicht über Standardbezeichnungen](./media/info-protect-policy-default-labelsv2.png)
 
@@ -130,7 +130,7 @@ So zeigen Sie die Standardrichtlinieneinstellungen für Azure Information Protec
     
 2. Nach den Bezeichnungen im Abschnitt **Einstellungen konfigurieren, die für Information Protection-Endbenutzer angezeigt und angewendet werden** werden die Richtlinieneinstellungen angezeigt. Zum Beispiel ist keine Standardbezeichnung festgelegt, Dokumente und E-Mails müssen keine Bezeichnungen aufweisen, und Benutzer müssen keine Begründung angeben, wenn sie Bezeichnungen ändern:
     
-    ![Globale Richtlinieneinstellungen für Azure Information Protection](./media/info-protect-policy-default-settingsv3.png)
+    ![Globale Richtlinieneinstellungen für Azure Information Protection](./media/defaultsettings-aip.png)
 
 3. Da Sie nur die Einstellungen anzeigen, können Sie alle Blätter im Portal schließen, die Sie geöffnet haben.
 
