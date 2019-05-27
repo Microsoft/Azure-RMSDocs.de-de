@@ -4,17 +4,17 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 4868e0972839bfd1fa13f230a4e3d1d0af8fe768
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c365b71c2047a3556c3ba4da091945454096e048
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179864"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186675"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -141,9 +141,9 @@ Wenn die angegebene Schriftart nicht verfügbar ist, verwendet der Client die Sc
 
 ### <a name="setting-the-font-color"></a>Festlegen der Schriftartfarbe
 
-Sie können aus der Liste der Farben auswählen oder eine benutzerdefinierte Farbe eingeben, indem Sie ein hexadezimales Tripel für die Komponenten Rot, Grün und Blau (RGB) der Farbe eingeben. Beispiel: **#DAA520**. 
+Sie können aus der Liste der Farben auswählen oder eine benutzerdefinierte Farbe eingeben, indem Sie ein hexadezimales Tripel für die Komponenten Rot, Grün und Blau (RGB) der Farbe eingeben. Z. B. **#40e0d0** den hexadezimale RGB-Wert für Türkis ist. 
 
-Wenn Sie einen Verweis für diese Codes benötigen, ist der Artikel zu [Farben nach Namen](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) aus der MSDN-Dokumentation ein hilfreicher Ausgangspunkt. Sie finden diese Codes auch in vielen Anwendungen, in denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
+Wenn Sie einen Verweis für diese Codes benötigen, finden Sie eine hilfreiche Tabelle aus der [ \<Farbe >](https://developer.mozilla.org/docs/Web/CSS/color_value) Seite aus der MSDN-Web-Dokumentation. Sie finden diese Codes auch in vielen Anwendungen, in denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

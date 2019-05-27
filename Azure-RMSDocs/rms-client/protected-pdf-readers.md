@@ -4,19 +4,19 @@ description: Informationen Sie zu den PDF-Dokumente mit der Bezeichnung für Kla
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2018
+ms.date: 05/23/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: 9c4236d2e8a08e99c3208694b665beabb71f9b55
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: f971c261156c12dfec34fac7cd3ab1e7f7acded7
+ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050710"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Unterstützte Reader für PDF-Dokumente für Microsoft Azure Information Protection
 
@@ -42,7 +42,8 @@ Die folgenden PDF-Reader können geschützte PDF-Dateien öffnen, die dem ISO-St
 
 |Betriebssystem|Unterstützte Reader und Link zum Herunterladen|
 |----------------|-----------------------------------|
-|Windows 10 und frühere Versionen<br />über Windows 7 Service Pack 1|Adobe Acrobat-Reader (bevorzugt):<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren Sie Adobe Reader von der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren Sie das [Adobe-Plug-In](https://go.microsoft.com/fwlink/?linkid=2050049)<br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Herunterladen](https://www.foxitsoftware.com/pdf-reader/)|
+|Windows 10 und frühere Versionen<br />über Windows 7 Service Pack 1|Adobe Acrobat-Reader (bevorzugt):<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren Sie die Adobe Reader für Windows von der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren Sie die [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Windows <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
+|MacOS 10.12-10.14-Versionen |Adobe Acrobat Reader:<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren von Adobe Reader für Mac aus der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren Sie die [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Mac <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
 |Android|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325338)|
 

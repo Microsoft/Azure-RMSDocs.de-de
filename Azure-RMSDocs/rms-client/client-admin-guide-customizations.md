@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5f9ac2414e83ab84690c0fdaea187dad8d7f3b36
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768366"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186683"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -380,7 +380,7 @@ Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden 
 
 Standardmäßig wird die Warnung zu rechtfertigen, oder blockieren Popupmeldungen gelten für alle Office-Dokumente und PDF-Dokumente. Sie können diese Liste durch Angabe optimieren, Dateierweiterungen der Warnung anzeigen, begründen oder Blockieren von Nachrichten mit einer zusätzlichen erweiterten Clients-Eigenschaft und eine durch Trennzeichen getrennte Liste der Dateinamenerweiterungen sollten.
 
-Beispiel für einen Wert für mehrere Dateinamenerweiterungen, als eine durch Trennzeichen getrennte Zeichenfolge zu definieren: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Beispiel für einen Wert für mehrere Dateinamenerweiterungen, als eine durch Trennzeichen getrennte Zeichenfolge zu definieren: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In diesem Beispiel ist ein PDF-Dokument noch nicht gekennzeichneten führt nicht in warnen, begründen oder Popupmeldungen blockieren.
 

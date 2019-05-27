@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c54754c5ec016aaaa54874b2be5bd0ac2d112e90
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 46102a1b2b60b58d47d0e436f25b2480f2737a51
+ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183689"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050731"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administratorhandbuch: Installieren des einheitlichen Azure Information Protection-Bezeichnung-Clients für Benutzer
 
@@ -186,7 +186,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
 1. Laden Sie die MSI-Version des Azure Information Protection unified bezeichnungs-Clients (AzInfoProtection_UL) aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
     
-    Wenn eine Vorschauversion verfügbar ist, behalten Sie diese Version nur für Testzwecke. Sie ist nicht für Endbenutzer in einer Produktionsumgebung vorgesehen. 
+    Wenn eine Vorschauversion verfügbar ist, behalten Sie diese Version nur für Testzwecke. Sie ist nicht für Endbenutzer in einer Produktionsumgebung vorgesehen.
 
 2. Bei jedem Computer, auf dem die MSI-Datei ausgeführt wird, müssen Sie sicherstellen, dass folgende Softwareabhängigkeiten vorliegen. Fügen Sie diese beispielsweise in ein Paket mit der MSI-Version des Clients ein oder stellen Sie sie nur auf Computern bereit, die diese Abhängigkeiten erfüllen:
     
