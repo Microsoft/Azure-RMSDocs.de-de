@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65934808"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
@@ -148,7 +148,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Klicken Sie auf **Neue Bedingung hinzufügen**, und wählen Sie anschließend auf dem Blatt **Bedingung** Folgendes aus:
     
-    a. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
+    ein. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
     
     b. For **Choose an industry** (Branche auswählen): Behalten Sie die Standardeinstellung **All** (Alle) bei.
     
@@ -176,7 +176,7 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finance** (Finanzen) aus, und klicken Sie auf **OK**.
 
-16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Zum Beispiel:
+16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Beispiel:
 
     ![Azure Information Protection-Tutorial: Neue untergeordnete Bezeichnung](./media/info-protect-policy-configuredv2.png)
     
@@ -263,7 +263,7 @@ Führen Sie die folgenden Schritte durch, wenn Sie die Änderungen, die Sie in d
 
 2. Setzen Sie die Richtlinieneinstellungen auf die ursprünglichen Werte zurück, die Sie zuvor notiert haben, und klicken Sie dann auf **Speichern**. 
 
-3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Rufen Sie auf dem Blatt **Azure Information Protection: Bezeichnung** das Kontextmenü (**...**) für die Bezeichnung **Finanzen** auf, die Sie erstellt haben.
+3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Rufen Sie auf dem Blatt **Azure Information Protection: Bezeichnung** das Kontextmenü ( **...** ) für die Bezeichnung **Finanzen** auf, die Sie erstellt haben.
 
 4. Klicken Sie auf **Diese Bezeichnung löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 

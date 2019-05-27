@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 2341bfbdc443a15096d178b143e6bd1464b1a53e
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935084"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
@@ -142,7 +142,7 @@ Wenn eine Standardbezeichnung nicht mit der obligatorischen Bezeichnung festgele
 
 ### <a name="recommendations-for-emails-with-attachments"></a>Empfehlungen für E-Mails mit Anlagen
 
-Wählen Sie für das geöffnete Word-Dokument eine Bezeichnung mit einer höheren Klassifizierung als **Allgemein** aus. Beispiel: Eine der untergeordneten Bezeichnungen unter **Vertraulich**, z.B. **Vertraulich – jeder (nicht geschützt)**. Speichern Sie das Dokument lokal, und geben sie einen beliebigen Namen an. 
+Wählen Sie für das geöffnete Word-Dokument eine Bezeichnung mit einer höheren Klassifizierung als **Allgemein** aus. Beispiel: Eine der untergeordneten Bezeichnungen unter **Vertraulich**, z.B. **Vertraulich – jeder (nicht geschützt)** . Speichern Sie das Dokument lokal, und geben sie einen beliebigen Namen an. 
 
 Starten Sie Outlook, und erstellen Sie eine neue E-Mail-Nachricht. Genau wie es bei Word der Fall war, wird die neue E-Mail-Nachricht automatisch mit der Bezeichnung **Allgemein** bezeichnet, und die Information Protection-Leiste wird angezeigt.
 

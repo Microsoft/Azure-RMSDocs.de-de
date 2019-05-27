@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935015"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
@@ -25,7 +25,7 @@ In dieser Schnellstartanleitung fügen Sie Azure Information Protection zum Azur
 
 Für diese Schnellstartanleitung benötigen Sie maximal 10 Minuten.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 Voraussetzungen für diesen Schnellstart:
 
@@ -90,7 +90,7 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
 4. Um die Bezeichnungen für alle Benutzer zu veröffentlichen, wählen Sie **Klassifizierungen** > **Richtlinien** > **Global** aus:
     
-    a. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
+    ein. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
     
     b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** und anschließend alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
     
@@ -112,7 +112,7 @@ Das Blatt **Azure Information Protection – Bezeichnungen**:
 
 - Anhand der Spalten **KENNZEICHNUNG** und **SCHUTZ** erkennen Sie, dass für einige Bezeichnungen optische Kennzeichnungen konfiguriert wurden. Die optischen Kennzeichnungen sind eine Fußzeile, ein Header und ein Wasserzeichen. Für einige Bezeichnungen kann zusätzlich auch eine Schutzfunktion festgelegt werden. 
 
-Zum Beispiel: 
+Beispiel: 
 
 ![Azure Information Protection-Schnellstart – Übersicht über Standardbezeichnungen](./media/info-protect-policy-default-labelsv2.png)
 

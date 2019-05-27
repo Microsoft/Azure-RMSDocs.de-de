@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 15359fac56b4bef68ae9668a31c82a8b742b208f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767848"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
@@ -101,11 +101,11 @@ Um diese Bezeichnung testen zu können, benötigen Sie mindestens zwei Computer,
 
 Führen Sie die folgenden Schritte durch, wenn Sie diese Bezeichnung und die bereichsbezogene Richtlinie nicht beibehalten möchten:
 
-1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** das Kontextmenü (**...**) für die bereichsbezogene Richtlinie aus, die Sie zuvor erstellt haben. Beispiel: **Vertrieb**.
+1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** das Kontextmenü ( **...** ) für die bereichsbezogene Richtlinie aus, die Sie zuvor erstellt haben. Beispiel: **Vertrieb**.
 
 2. Klicken Sie auf **Richtlinie löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 
-3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection – Bezeichnung** das Kontextmenü (**...**) für die Bezeichnung aus, die Sie zuvor erstellt haben.  Beispiel: **Vertrieb – Eingeschränkt**.
+3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection – Bezeichnung** das Kontextmenü ( **...** ) für die Bezeichnung aus, die Sie zuvor erstellt haben.  Beispiel: **Vertrieb – Eingeschränkt**.
 
 4.  Klicken Sie auf **Diese Bezeichnung löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 
