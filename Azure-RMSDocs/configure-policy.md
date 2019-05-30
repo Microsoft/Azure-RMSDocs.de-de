@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 53847787fa79782c2bf8e6ce2b6b032e439d1547
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822185"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269728"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -60,7 +60,7 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 - Verwenden Sie ein Konto mit einer der folgenden [Administratorrollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Information Protection-Administrator**
+    - **Azure Information Protection-administrator**
     
     - **Sicherheitsleseberechtigter** nur für [Azure Information Protection-Analysen](reports-aip.md)
     
@@ -71,7 +71,7 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
   - **Globaler Administrator**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum Speicher für einheitliche Bezeichnungen migriert wurde, wird der Information Protection-Administrator nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Wenn Sie Ihren Mandanten beim einheitlichen bezeichnungs Store migriert wurde, wird der Azure Information Protection-Administrator (früher "Information Protection-Administrator") nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Der Erste Zugriff auf das Blatt „Azure Information Protection“
@@ -93,7 +93,7 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
-1. Vergewissern Sie sich unter Verwendung einer der folgenden Administratorrollen, dass Sie im Azure-Portal angemeldet sind: Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
+1. Vergewissern Sie sich unter Verwendung einer der folgenden Administratorrollen, dass Sie im Azure-Portal angemeldet sind: Azure Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
 
 2. Navigieren Sie wenn nötig zum Blatt **Azure Information Protection**: Klicken Sie z. B. im Hubmenü auf **Alle Dienste**, und geben Sie in das Filterfeld den Begriff **Information Protection** ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
@@ -106,7 +106,7 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 Sie können eine beliebige Anzahl von Bezeichnungen erstellen. Wenn jedoch so viele Bezeichnungen vorhanden sind, dass Benutzer nur schwer die richtige auswählen können, sollten Sie bereichsbezogene Richtlinien erstellen, damit Benutzern nur relevante Bezeichnungen angezeigt werden. Die Höchstgrenze für Bezeichnungen, die Schutz anwenden, beträgt 500.
 
-Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. Wenn Sie Änderungen in einer Richtlinie speichern oder Änderungen an Bezeichnungen vornehmen, die zu Richtlinien hinzugefügt werden, werden diese Änderungen automatisch veröffentlicht. Es gibt keine gesonderte Veröffentlichungsoption.
+Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. Wenn Sie Änderungen in einer Richtlinie speichern, oder nehmen Sie Änderungen an Bezeichnungen, die Richtlinien hinzugefügt werden, werden diese Änderungen automatisch veröffentlicht. Es gibt keine gesonderte Veröffentlichungsoption.
 
 Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt der Client diese Änderungen dann als neueste Azure Information Protection-Richtlinie herunter. Folgende zusätzliche Trigger aktualisieren die Richtlinie im Client ebenfalls:
 

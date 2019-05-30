@@ -4,19 +4,19 @@ description: Informationen zu den personenbezogenen Daten, die von Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181898"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269785"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -209,7 +209,7 @@ Sie können das Protokollieren von Informationen für den Azure Information Prot
 ## <a name="securing-and-controlling-access-to-personal-information"></a>Sichern und Steuern des Zugriffs auf personenbezogene Informationen
 Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, kann nur von Benutzern zugegriffen werden, denen eine der folgenden [Administratorrollen für Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) zugewiesen wurde:
     
-- **Information Protection-Administrator**
+- **Azure Information Protection-administrator**
 
 - **Complianceadministrator**
 
@@ -217,7 +217,7 @@ Auf die personenbezogenen Daten, die Sie im Azure-Portal anzeigen und angeben, k
 
 - **Globaler Administrator**
 
-Auf personenbezogene Daten, die Sie mithilfe des AADRM-Moduls anzeigen und angeben, kann nur von den Benutzern zugegriffen werden, denen die Rolle **Information Protection-Administrator**, **Complianceadministrator** oder **Globaler Administrator** in Azure Active Directory oder die Rolle „Globaler Administrator“ im Azure Rights Management-Dienst zugewiesen wurde.  
+Personenbezogene Daten, die Sie anzeigen und angeben, indem Sie das AADRM-Modul ist nur für Benutzer, die zugewiesen wurden die **Azure Information Protection-Administrator**, **complianceadministrator**, oder  **Globaler Administrator** Rollen in Azure Active Directory oder der globalen Administratorrolle für den Azure Rights Management-Dienst.  
 
 ## <a name="updating-personal-data"></a>Aktualisieren von personenbezogenen Daten
 

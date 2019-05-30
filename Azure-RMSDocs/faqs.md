@@ -4,17 +4,17 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191918"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269815"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -110,7 +110,7 @@ Wenn der Azure Information Protection-Client für Windows installiert ist, aber 
 
 Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können alle administrativen Aufgaben für Azure Information Protection ausführen. Zum Zuweisen von Administratorrechten an andere Benutzer haben Sie folgende Optionen:
 
-- **Information Protection-Administrator**: Diese Azure Active Directory-Administrator-Rolle kann es sich um ein Administrator mit dem Azure Information Protection, aber nicht für andere Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen. Diese Rolle unterstützt jedoch nicht nachverfolgen und Sperren von Dokumenten für Benutzer.
+- **Azure Information Protection-Administrator**: Diese Azure Active Directory-Administrator-Rolle kann es sich um ein Administrator mit dem Azure Information Protection, aber nicht für andere Dienste zu konfigurieren. Ein Administrator mit dieser Rolle kann den Azure Rights Management-Schutzdienst aktivieren und deaktivieren, Schutzeinstellungen und Bezeichnungen konfigurieren und die Azure Information Protection-Richtlinie konfigurieren. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen. Diese Rolle unterstützt jedoch nicht nachverfolgen und Sperren von Dokumenten für Benutzer.
     
     > [!NOTE]
     > Nachdem Sie [Ihren Mandanten zum Speicher für einheitliche Bezeichnungen migriert haben](configure-policy-migrate-labels.md), wird diese Rolle für das Azure-Portal nicht mehr unterstützt.
@@ -151,7 +151,7 @@ Der Azure Rights Management-Dienst generiert und verwaltet XrML-Zertifikate auto
 
 Azure Information Protection kann E-Mails und Dokumente klassifizieren und schützen, egal ob sie lokal oder in der Cloud gespeichert sind. Diese Dokumente können z.B. Word-Dokumente, Excel-Tabellen, PowerPoint-Präsentationen, PDF-Dokumente, textbasierte Dateien und Bilddateien sein. Eine Liste der unterstützten Dokumenttypen finden Sie in der Liste der [unterstützten Dateitypen](./rms-client/client-admin-guide-file-types.md) im Administratorleitfaden.
 
-Azure Information Protection kann strukturierte Daten, wie z.B. Datenbankdateien, Kalendereinträge, PowerBI-Berichte, Yammer-Beiträge, Sway-Inhalte und OneNote-Notizbücher nicht klassifizieren und schützen.
+Azure Information Protection kann nicht klassifizieren und schützen strukturierte Daten wie z. B. Datenbankdateien, Kalendereinträge, Power BI-Berichte, Yammer-Beiträge, Sway-Inhalte und OneNote-Notizbücher.
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Azure Information Protection wird als verfügbare Cloud App für den bedingten Zugriff genannt. Wie funktioniert das?
 

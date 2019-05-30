@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/21/2019
+ms.date: 05/29/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: f35847247db96fdb9396f7bfd1e8ad860e94a88e
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934963"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269844"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -152,7 +152,7 @@ Details:
     
     - Um Ihren Log Analytics-Arbeitsbereich oder benutzerdefinierte Abfragen zu erstellen, benötigen Sie eine der folgenden Rollen:
     
-        - **Information Protection-Administrator**
+        - **Azure Information Protection-administrator**
         - **Sicherheitsadministrator**
         - **Complianceadministrator**
         - **Globaler Administrator**
@@ -162,7 +162,7 @@ Details:
         - **Sicherheitsleseberechtigter**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum Speicher für einheitliche Bezeichnungen migriert wurde, kann die Information Protection-Administratorrolle nicht verwendet werden. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Wenn Sie Ihren Mandanten beim einheitlichen bezeichnungs Store migriert wurde, wird Sie nicht die Azure Information Protection-Rolle "Administrator" verwenden. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
@@ -236,13 +236,13 @@ Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
 
 Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
 
-- **Nutzungsbericht (Vorschau)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.
+- **Nutzungsbericht (Vorschau)** : Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.
 
-- **Aktivitätsprotokolle (Vorschau)**: Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
+- **Aktivitätsprotokolle (Vorschau)** : Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
     
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.
 
-- **Datenermittlung (Vorschau)**: Verwenden Sie diesen Bericht, um Informationen über bezeichnete Dateien anzuzeigen, die durch die Überprüfung und von unterstützten Endpunkten gefunden wurden.
+- **Datenermittlung (Vorschau)** : Verwenden Sie diesen Bericht, um Informationen über bezeichnete Dateien anzuzeigen, die durch die Überprüfung und von unterstützten Endpunkten gefunden wurden.
     
     Sie können konfigurieren, eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) für den Azure Information Protection-Client zu Berichtsdateien, die vertraulichen Informationen enthalten.
     
@@ -271,7 +271,42 @@ Wenn Sie eigene Abfragen erstellen, verwenden Sie benutzerfreundliche Schemaname
 
 In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die Sie für benutzerdefinierte Abfragen mit Azure Information Protection-Analysen verwenden können.
 
-|Spaltenname|Beschreibung| |-----_-----|-----------| |Time|Ereigniszeit: UTC im Format JJJJ-MM-TTTHH:MM:SS| |User|Benutzer: UPN-Format oder DOMÄNE\BENUTZER| |ItemPath|Vollständiger Elementpfad oder E-Mail-Betreff| |ItemName|Dateiname oder E-Mail-Betreff | |Method|Durch die Bezeichnung zugewiesene Methode: Manual, Automatic, Recommended, Default oder Mandatory| |Activity|Überprüfungsaktivität: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection oder NewCustomProtection | |LabelName|Bezeichnungsname (nicht lokalisiert)| |LabelNameBefore |Bezeichnungsname vor der Änderung (nicht lokalisiert) | |ProtectionType|Schutztyp [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />| |ProtectionBefore|Schutztyp vor der Änderung [JSON] | |InformationTypesMatches|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden: Ein leeres Array bedeutet, dass keine Informationstypen gefunden wurden, und NULL bedeutet, dass keine Informationen verfügbar sind.| |MachineName |FQDN, falls verfügbar, andernfalls der Hostname| |DeviceRisk|Geräterisikobewertung von WDATP, falls verfügbar| |Platform|Geräteplattform (Win, OSX, Android, iOS) | |ApplicationName|Anzeigename der Anwendung| |AIPVersion|Version des Azure Information Protection-Clients, der die Überwachungsaktion ausgeführt hat | |TenantId|ID des Azure AD-Mandanten | |AzureApplicationId|ID der bei Azure AD registrierten Anwendung (GUID)| |ProcessName|Prozess, der das MIP-SDK hostet| |LabelId|Bezeichnungs-GUID oder NULL| |IsProtected|Schutz implementiert: Ja/Nein | |ProtectionOwner |Rights Management-Besitzer im UPN-Format| |LabelIdBefore|Bezeichnungs-GUID oder NULL vor der Änderung| |InformationTypesAbove55|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und mindestens Konfidenzniveau 55 aufweisen | |InformationTypesAbove65|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und mindestens Konfidenzniveau 65 aufweisen | |InformationTypesAbove75|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und mindestens Konfidenzniveau 75 aufweisen | |InformationTypesAbove85|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und mindestens Konfidenzniveau 85 aufweisen | |InformationTypesAbove95|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und mindestens Konfidenzniveau 95 aufweisen| |DiscoveredInformationTypes |JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for), die in Daten gefunden wurden und eine Inhaltsübereinstimmung (falls aktiviert) ergaben. Ein leeres Array bedeutet, dass keine Informationstypen gefunden wurden, und NULL bedeutet, dass keine Informationen verfügbar sind. | |ProtectedBefore|Gibt an, ob der Inhalt vor der Änderung geschützt war: Ja/Nein | |ProtectionOwnerBefore|Rights Management-Besitzer vor der Änderung | |UserJustification|Begründung beim Herabstufen oder Entfernen von Bezeichnungen| |LastModifiedBy|Benutzer im UPN-Format, der die Datei zuletzt geändert hat. Nur für Office und SharePoint Online verfügbar| |LastModifiedDate|UTC im Format JJJJ-MM-TTTHH:MM:SS: Nur für Office & SharePoint Online verfügbar |
+|Spaltenname|Beschreibung|
+|-----------|-----------|
+|Uhrzeit|Ereigniszeit: UTC im Format JJJJ-MM-TTThh|
+|Benutzer|Benutzer: Format UPN oder "Domäne\Benutzer"|
+|ItemPath|Vollständiger Pfad oder die e-Mail-Betreff|
+|ItemName|Dateinamen oder e-Mail-Betreff |
+|Methode|Bezeichnung, die Methode zugewiesen werden: Manuell, automatisch, empfohlen, Standard oder obligatorisch|
+|Aktivität|Audit-Aktivität: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, ermitteln, Access, RemoveCustomProtection, ChangeCustomProtection oder NewCustomProtection |
+|LabelName|Bezeichnungsname (nicht lokalisiert)|
+|LabelNameBefore |Bezeichnungsname vor der Änderung (nicht lokalisiert) |
+|ProtectionType|Schutztyp [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
+|ProtectionBefore|Schutztyp vor Änderung [JSON] |
+|InformationTypesMatches|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, in denen ein leeres Array bedeutet, keine Informationstypen gefunden, und null bedeutet, dass dass, keine Informationen verfügbar.|
+|MachineName |Vollqualifizierter Domänenname, sofern verfügbar. andernfalls Hostname|
+|DeviceRisk|Gerät-risikobewertung von WDETP, falls verfügbar|
+|Platform|Die Geräteplattform (Windows, OSX, Android, iOS) |
+|ApplicationName|Anzeigename|
+|AIPVersion|Version des Azure Information Protection-Clients, die die Überwachungsaktion ausgeführt |
+|TenantId|Azure AD-Mandanten-ID |
+|AzureApplicationId|Azure AD registrierte Anwendung-ID (GUID)|
+|ProcessName|Prozess, MIP SDK hostet|
+|LabelId|Bezeichnen Sie die GUID oder "null"|
+|IsProtected|An, ob geschützt: Ja/Nein |
+|ProtectionOwner |Rights Management-Besitzer im UPN-format|
+|LabelIdBefore|Bezeichnen Sie die GUID oder "null" vor der Änderung|
+|InformationTypesAbove55|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, die mit einem Vertrauensgrad 55 oder höher |
+|InformationTypesAbove65|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, die mit einem Vertrauensgrad 65 oder höher |
+|InformationTypesAbove75|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, die mit einem Vertrauensgrad 75 oder höher |
+|InformationTypesAbove85|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, die mit einem Vertrauensgrad 85 oder höher |
+|InformationTypesAbove95|JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in den Daten, die mit einem Vertrauensgrad 95 oder höher|
+|DiscoveredInformationTypes |JSON-Array der [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) finden Sie in Daten und deren übereinstimmende Inhalt (sofern aktiviert) bedeutet keine Informationstypen gefunden, und null, ein leeres Array bedeutet, dass keine Informationen verfügbar. |
+|ProtectedBefore|Gibt an, ob der Inhalt vor der Änderung geschützt wurde: Ja/Nein |
+|ProtectionOwnerBefore|Rights Management-Besitzer vor der Änderung |
+|UserJustification|Begründung bei der Herabstufung oder Bezeichnung entfernen|
+|LastModifiedBy|Der Benutzer im UPN-Format, können Sie die Datei zuletzt geändert hat. Verfügbar für Office und SharePoint Online nur|
+|LastModifiedDate|UTC im Format JJJJ-MM-TTThh: Verfügbar für Office und SharePoint Online nur |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Beispiele für InformationProtectionEvents
