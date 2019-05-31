@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9fcc7f157ef5fa562993b70a4b30db1556921272
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263986"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411778"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -117,9 +117,9 @@ Wenn Ihnen die Sysadmin-Rolle auch nicht vorübergehend zugewiesen werden kann, 
 
 In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie jedoch unterschiedliche Konten verwenden, benötigen beide die db_owner-Rolle für die Konfigurationsdatenbank des Scanners.
 
-- Wenn Sie für den Scanner keinen eigenen Profilnamen angeben, erhält die Konfigurationsdatenbank den Namen **AIPScanner_\<Computername>**. 
+- Wenn Sie für den Scanner keinen eigenen Profilnamen angeben, erhält die Konfigurationsdatenbank den Namen **AIPScanner_\<Computername>** . 
 
-- Wenn Sie einen eigenen Profilnamen angeben, erhält die Konfigurationsdatenbank den Namen **AIPScanner_\<Profilname>**.
+- Wenn Sie einen eigenen Profilnamen angeben, erhält die Konfigurationsdatenbank den Namen **AIPScanner_\<Profilname>** .
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Einschränkung: Die Berechtigung zur **lokalen Anmeldung** kann nicht für das Überprüfungsdienstkonto gewährt werden.
 
@@ -443,7 +443,7 @@ Für die Überprüfung stehen Ihnen zwei alternative Szenarios zur Verfügung, d
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
-Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Wenn Ihnen jedoch die Reaktionsfähigkeit des Überprüfungscomputers wichtiger ist als die Überprüfungsleistung, können Sie eine erweiterte Clienteinstellung verwenden, um die Anzahl der von der Überprüfung verwendeten Threads zu begrenzen.
+Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Ist die Priorität auf die Reaktionsfähigkeit der überprüfende Computer anstatt auf die überprüfungsleistung auswirken, Sie können jedoch eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) beschränken die Anzahl der Threads, die durch die Überprüfung verwendet.
 
 So maximieren Sie die Überprüfungsleistung:
 

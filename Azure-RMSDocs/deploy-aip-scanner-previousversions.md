@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7860e1222b594c704c0673ea31655df4fcc5aecc
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: fab3faaa4d2fd46215021f2c3bfda9e020b06434
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263973"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411769"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Bereitstellen von früheren Versionen der Azure Information Protection-Überprüfung
 
@@ -370,7 +370,7 @@ Für die Überprüfung stehen Ihnen zwei alternative Szenarios zur Verfügung, d
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
-Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Wenn Ihnen jedoch die Reaktionsfähigkeit des Überprüfungscomputers wichtiger ist als die Überprüfungsleistung, können Sie eine erweiterte Clienteinstellung verwenden, um die Anzahl der von der Überprüfung verwendeten Threads zu begrenzen.
+Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Ist die Priorität auf die Reaktionsfähigkeit der überprüfende Computer anstatt auf die überprüfungsleistung auswirken, Sie können jedoch eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) beschränken die Anzahl der Threads, die durch die Überprüfung verwendet.
 
 So maximieren Sie die Überprüfungsleistung:
 
