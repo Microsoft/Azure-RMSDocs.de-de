@@ -4,17 +4,17 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179940"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448028"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60179940"
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 
-Beim Konfigurieren dieser Bedingungen können Sie vordefinierte Muster verwenden, z.B. für **Kreditkartennummern** oder **US-Sozialversicherungsnummern (SSN)**. Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu den Bedingungen finden Sie im Schritt 5 der [folgenden Vorgehensweise](#to-configure-recommended-or-automatic-classification-for-a-label).
+Beim Konfigurieren dieser Bedingungen können Sie vordefinierte Muster verwenden, z.B. für **Kreditkartennummern** oder **US-Sozialversicherungsnummern (SSN)** . Oder Sie können eine benutzerdefinierte Zeichenfolge oder ein benutzerdefiniertes Muster als Bedingung für die automatische Klassifizierung definieren. Diese Bedingungen gelten für den Haupttext in Dokumenten und E-Mails sowie für Kopf- und Fußzeilen. Weitere Informationen zu den Bedingungen finden Sie im Schritt 5 der [folgenden Vorgehensweise](#to-configure-recommended-or-automatic-classification-for-a-label).
 
 Um eine bestmögliche Benutzererfahrung und Geschäftskontinuität zu gewährleisten, wird empfohlen, zunächst nicht die automatische Klassifizierung, sondern die empfohlene Klassifizierung zu verwenden. Bei dieser Konfiguration haben Ihre Benutzer die Möglichkeit, die Klassifizierung und zugeordnete Schutzaktionen zu akzeptieren bzw. diese Empfehlungen zu überschreiben, wenn sie nicht für das jeweilige Dokument oder die jeweilige E-Mail-Nachricht geeignet sind.
 
@@ -34,7 +34,7 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt.
 
-Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Die Schaltflächen **Jetzt ändern** und **Schließen** werden jedoch durch **OK** ersetzt. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
+Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Allerdings die **jetzt ändern** und **verwerfen** Schaltflächen werden durch ersetzt **OK**. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.
@@ -102,7 +102,7 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Typen von vertraulichen Informationen, die eine Mindestversion des Clients erfordern
 
-Die folgenden Typen für vertrauliche Informationen müssen die [aktuelle allgemein verfügbare Version](./rms-client/client-version-release-history.md#version-1482040) des Azure Information Protection-Clients:
+Die folgenden Typen für vertrauliche Informationen erfordert eine Mindestversion von [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) des Azure Information Protection-Clients:
 
 - **Azure Service Bus-Verbindungszeichenfolge**
 - **Azure IoT Verbindungszeichenfolge**
@@ -117,7 +117,7 @@ Die folgenden Typen für vertrauliche Informationen müssen die [aktuelle allgem
 
 Weitere Informationen zu diesen Typen für vertrauliche Informationen finden Sie im folgenden Blogbeitrag: [Azure Information Protection unterstützt Sie sicherer sind vom automatischen Ermitteln von Anmeldeinformationen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-Darüber hinaus werden die folgenden Typen für vertrauliche Informationen für die aktuelle allgemein verfügbare Version des Azure Information Protection-Client und nicht mehr anzeigen, die im Azure-Portal nicht unterstützt:
+Darüber hinaus beginnt mit 1.48.204.0 der Azure Information Protection-Client, die folgenden vertrauliche Informationen, dass die Typen werden nicht unterstützt und nicht mehr in das Azure-Portal angezeigt. Wenn Sie über Bezeichnungen, die diese Typen für vertrauliche Informationen verwenden verfügen, empfehlen wir, dass Sie diese entfernen, da wir können keine richtigen Erkennung für diese Stellen Sie sicher, und alle Verweise auf diese in den scannerberichten ignoriert werden sollen:
 
 - **EU Phone Number** (EU-Telefonnummer)
 - **EU GPS Coordinates** (EU-GPS-Koordinaten)

@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 88aa75bbf61728c43f9104d59a00f0c06842ef0e
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837827"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448048"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -92,7 +92,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 **Fixes**:
 
-- In Pfaden und Dateinamen werden in der Azure Information Protection-Analyse anstelle von Nicht-ASCII-Zeichen keine Fragezeichen (**?**) angezeigt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
+- In Pfaden und Dateinamen werden in der Azure Information Protection-Analyse anstelle von Nicht-ASCII-Zeichen keine Fragezeichen ( **?** ) angezeigt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
 
 - Neue optische Kennzeichnungen werden konsistent angewendet, wenn ein Benutzer einem Word-Dokument neue Abschnitte hinzufügt und das Dokument anschließend mit einer neuen Bezeichnung versieht.
 
@@ -112,7 +112,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 **Weitere Änderungen**:
 
-- Die folgenden Typen vertraulicher Informationen werden für Bezeichnungen nicht mehr unterstützt, die Sie für die empfohlene oder automatische Klassifizierung konfigurieren:
+- Die folgenden Typen für vertrauliche Informationen sind [nicht mehr unterstützt](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) für Bezeichnungen, die Sie konfigurieren, empfohlen oder automatische Klassifizierung:
     - EU Phone Number (EU-Telefonnummer)
     - EU GPS Coordinates (EU-GPS-Koordinaten)
 
