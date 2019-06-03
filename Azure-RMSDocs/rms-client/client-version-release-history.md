@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
-ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
+ms.openlocfilehash: 4d1da800b43ecfc3fcb91881dc5462e4758ffbb7
+ms.sourcegitcommit: aa13e56ae0ff0dea79e83335a6ecaf45e34e9d8c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448048"
+ms.lasthandoff: 06/02/2019
+ms.locfileid: "66458228"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -173,77 +173,6 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Wenn die Überprüfung des Zeitplans auf **Immer** festgelegt ist, entsteht jetzt eine Verzögerung von 30 Sekunden zwischen Überprüfungen.
 
 - Die Überprüfung ändert den Rights Management-Besitzer nicht mehr für Dateien, die er bezeichnet, wenn die Datei bereits geschützt ist.
-
-## <a name="version-137190"></a>Version 1.37.19.0
-
-**Veröffentlicht**: 17.9.2018
-
-Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
-
-**Neue Features**: 
-
-- Unterstützung des ISO-Standards für die PDF-Verschlüsselung durch Konfiguration einer neuen [erweiterten Clientkonfiguration](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption). Wenn diese Option auf **True** gesetzt wird, behalten PDF-Dokumente, die Sie schützen, ihre Erweiterung bei (anstelle einer Änderung in PPDF) und können von PDF-Readern geöffnet werden, die diesen ISO-Standard unterstützen. Derzeit müssen Sie Benutzer anweisen, diese geschützten PDF-Dateien manuell über den Azure Information Protection-Viewer zu öffnen. Damit Benutzern dabei zur Seite zu stehen, wird beim Öffnen dieser geschützten Dateien eine Seite mit Symbolen angezeigt, aus denen Sie ihr Betriebssystem auswählen können.
-
-- Unterstützung neuer Typen vertraulicher Informationen, die beim Klassifizieren von Dokumenten helfen, die personenbezogene Informationen enthalten. [Weitere Informationen](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) 
-
-- Bezeichnungen, die Schutz anwenden, werden jetzt in Office 365-Apps von Office 365 Business oder Microsoft 365 Business angezeigt, wenn dem Benutzer eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
-
-- Unterstützung von Bezeichnungen für das Dokumentformat **Strict Open XML** in Word-, Excel- und PowerPoint- Dateien. Weitere Informationen zu den Open XML-Formaten finden Sie im Office-Blogbeitrag [New file format options in the new Office (Neue Dateiformate in der neuen Version von Office)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/08/13/new-file-format-options-in-the-new-office/). 
-
-- Unterstützung für Dateien, die von Secure Islands geschützt werden, wenn diese Dateien keine PDF- oder Office-Dokumente sind. Zum Beispiel geschützte Text- und Bilddateien oder Dateien mit der Erweiterung PFILE. Diese Unterstützung ermöglicht neue Szenarios, z.B. dass die Azure Information Protection-Überprüfung diese Dateien auf vertrauliche Informationen prüfen kann und diesen automatisch Bezeichnungen für Azure Information Protection hinzufügt. [Weitere Informationen](client-admin-guide-customizations.md#support-for-files-protected-by-secure-islands)
-
-- Neue erweiterte Clienteinstellungen zum Entfernen von Kopf- und Fußzeilen, die von anderen Bezeichnungslösungen auf Dokumente angewendet wurden. [Weitere Informationen](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-
-- Für die Azure Information Protection-Überprüfung:
-
-    - Neues Cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): Muss nach dem Upgrade von der aktuellen allgemein verfügbaren Version (1.29.5.0) oder früher einmalig ausgeführt werden.
-    
-    - Neues Cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): Ruft den aktuellen Status des Diensts für die Überprüfung ab.  
-    
-    - Neues Cmdlet, [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): Weist die Überprüfung an, einen einmaligen Überprüfungszyklus zu starten, wenn der Zeitplan auf „manuell“ festgelegt ist.
-    
-    - PDF-Dokumente sind nun standardmäßig geschützt, wenn Sie den ISO-Standard für die PDF-Verschlüsselung verwenden.
-    
-    - SharePoint Server 2010 wird für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
-    
-- Unterstützung für das neue Blatt **Azure Information Protection – Knoten (Vorschau)** im Azure-Portal, mit dem Sie die Überprüfung von einer zentralen Stelle aus verwalten können. Die Informationen von den bereitgestellten Überprüfungen, die mit Azure verbunden sind, werden alle fünf Minuten aktualisiert. Auf diesem Blatt können Sie eine einmalige Überprüfung starten, alle Dateien erneut überprüfen, den Status einer Überprüfung prüfen und die Überprüfungsgeschwindigkeit anzeigen.
-
-**Fehlerbehebungen**
-
-- Für die Azure Information Protection-Überprüfung:
-    
-    - Bei Dokumenten, die in SharePoint-Bibliotheken geschützt werden, wenn der Parameter *DefaultOwner* nicht für das Datenrepository verwendet wird, wird nun der Wert des SharePoint-Editors anstelle des Autorenwerts als Standardwert verwendet.
-    
-    - Die Überprüfungsberichte enthalten nun „Zuletzt geändert von“ für Office-Dokumente.
-    
-    - Sie können nun beim Bearbeiten der Registrierung alle Dateitypen mit dem Platzhalter `*` schützen, wie im Abschnitt [Bearbeiten der Registrierung für die Überprüfung](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) beschrieben.
-
-- Das Anzeigen von E-Mails mithilfe der Pfeilsymbole „Nächstes Element“ und „Vorheriges Element“ auf der Symbolleiste für den Schnellzugriff zeigt nun die richtige Bezeichnung für die jeweilige E-Mail an.
-
-- Wenn Sie PowerShell, den Datei-Explorer oder die Überprüfung zum Klassifizieren oder Schützen verwenden, werden die Metadaten des Office-Dokuments weder entfernt noch verschlüsselt.
-
-- Benutzerdefinierte Berechtigungen unterstützen nun Empfänger-E-Mail-Adressen, die einen Apostroph enthalten.
-
-- Die Computerumgebung wird erfolgreich gestartet (Bootstrap), wenn diese Aktion durch Öffnen eines geschützten Dokuments gestartet wird, das in SharePoint Online gespeichert ist.
-
-- Wenn Sie den Client für den Rechtsklick auf den Datei-Explorer, PowerShell oder den Scanner verwenden, wird die Bezeichnung für Dateien in WebDav-Positionen blockiert, da es sich hierbei um ein nicht unterstütztes Szenario handelt.
-
-- Das Symbol zum Löschen einer Bezeichnung wird in Client-Apps nicht angezeigt (Word, Excel, PowerPoint und Outlook), wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) der Option **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen) konfigurieren.
-
-**Weitere Änderungen**:
-
-- Bei [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration):
-    
-    - **OneTime**, **Continuous** und **Never** (Einmalig, Fortlaufend und Nie) sind nicht mehr Werte für den Parameter *Schedule*. Stattdessen gibt es nun die Werte **Manual** (Manuell) und **Always** (Immer).
-        
-    - Der Parameter *Type* wurde entfernt, d.h. er wurde auch aus der Ausgabe entfernt, wenn Sie [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration) ausführen. Standardmäßig werden nach dem ersten Überprüfungszyklus nur neue oder geänderte Dateien untersucht. Wenn Sie zuvor für den *Typ*-Parameter **Vollständig** festgelegt haben, um alle Dateien erneut zu überprüfen, führen Sie nun [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) mit dem *Zurücksetzen*-Parameter aus. Die Überprüfung muss auch für einen manuellen Zeitplan konfiguriert sein, was voraussetzt, dass für den *Zeitplan*-Parameter mit [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) die Option **Manuell** festgelegt wird.
-    
-- Die Standardausschlussliste des Clients und der Überprüfung umfasst nun MSG-, RAR- und ZIP-Dateien. Die Überprüfung schließt auch RTF-Dateien aus. [Weitere Informationen](client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
-
-- Die Richtlinienversion wurde in 1.4 geändert. Das Identifizieren der Versionsnummer ist zum [Konfigurieren nicht verbundener Computer](client-admin-guide-customizations.md#support-for-disconnected-computers) erforderlich.
-
-- Der Link **Feedback senden** im Dialogfeld **Hilfe und Feedback** wurde entfernt. Er wurde temporär ersetzt durch die Option **Problem melden**, mit der standardmäßig eine E-Mail an Microsoft gesendet wurde. Seit Dezember 2018 wird die Option **Problem melden** nicht mehr standardmäßig angezeigt. Sie kann aber mit einer [erweiterten Clienteinstellung](client-admin-guide-customizations.md#add-report-an-issue-for-users), in der Sie eine HTTP-Zeichenfolge für den Link angeben, hinzugefügt werden. Beispiele dafür sind eine benutzerdefinierte Webseite, über die Benutzer Probleme melden, oder eine E-Mail-Adresse, die E-Mails an Ihren Helpdesk weiterleitet. 
-
 
 ## <a name="next-steps"></a>Nächste Schritte
 
