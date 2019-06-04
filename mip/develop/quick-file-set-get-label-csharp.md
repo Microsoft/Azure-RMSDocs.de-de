@@ -1,6 +1,6 @@
 ---
-title: 'Schnellstart: Satz an, und erhalten Sie eine sensible Beschriftung auf eine Datei mit den C# MIP SDK'
-description: Einen Schnellstart zeigt Ihnen, wie Sie mit der Microsoft Informationen Protection SDK .NET Wrapper zum Festlegen und Abrufen eine sensible Beschriftung für eine Datei.
+title: 'Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung für eine Datei mit dem MSIP SDK für C#'
+description: In diesem Schnellstart wird veranschaulicht, wie Sie mit dem .NET-Wrapper für das Microsoft Information Protection SDK eine Vertraulichkeitsbezeichnung für eine Datei festlegen und abrufen können.
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -9,28 +9,28 @@ ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60173237"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer vertraulichkeitsbezeichnung (C#)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C#)
 
 In diesem Schnellstart wird gezeigt, wie Sie weitere MIP-Datei-APIs nutzen. Durch Verwendung einer der Vertraulichkeitsbezeichnungen, die Sie im vorherigen Schnellstart aufgelistet haben, verwenden Sie einen Dateihandler zum Festlegen/Abrufen der Bezeichnung für eine Datei. Die Dateihandlerklasse macht verschiedene Vorgänge für das Festlegen/Abrufen von Bezeichnungen oder Schutz für unterstützte Dateitypen verfügbar.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Stellen Sie vor dem Fortfahren sicher, dass die folgenden Voraussetzungen erfüllt sind:
 
-- Vollständige [Schnellstart: Liste der vertraulichkeitsbezeichnungen (C#)](quick-file-list-labels-csharp.md) erste, die eine Starter-Visual Studio-Projektmappe, um die Liste der vertraulichkeitsbezeichnungen einer Organisation erstellt. Dieser Schnellstart „Festlegen und Abrufen einer Vertraulichkeitsbezeichnung“ baut auf den vorherigen auf.
-- Optional: Überprüfen Sie [Datei Handler das MIP SDK](concept-handler-file-cpp.md) Konzepte.
+- Schließen Sie zuerst [Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)](quick-file-list-labels-csharp.md) ab. Darin wird eine Visual Studio-Startprojektmappe zum Auflisten der Vertraulichkeitsbezeichnungen einer Organisation erstellt. Dieser Schnellstart „Festlegen und Abrufen einer Vertraulichkeitsbezeichnung“ baut auf den vorherigen auf.
+- Optional: Lesen Sie sich die Konzepte zu [Dateihandlern im MSIP SDK](concept-handler-file-cpp.md) durch.
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Hinzufügen von Logik zum Festlegen und Abrufen einer Vertraulichkeitsbezeichnung
 
 Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit dem Datei-Engine-Objekt festzulegen oder abzurufen. 
 
-1. Mithilfe von **Projektmappen-Explorer**, öffnen Sie die CS-Datei im Projekt, das die Implementierung der Main() enthält "Methode. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben. 
+1. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CS-Datei im Projekt, die die Implementierung der Main()-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben. 
 
 2. Fügen Sie gegen Ende des `Main()`-Texts, zwischen `Console.ReadKey()` und `}` (wo Sie im vorherigen Schnellstart aufgehört haben) den folgenden Code ein:
 
@@ -82,9 +82,9 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
 
 Erstellen und testen Sie die Clientanwendung. 
 
-1. Verwenden Sie STRG + UMSCHALT + B (**Projektmappe**) zum Erstellen der Clientanwendung. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
+1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
-2. Wenn Ihr Projekt erstellt und ausgeführt wird, auf die Anwendung *möglicherweise* Aufforderung zur Authentifizierung über ADAL jedes Mal die SDK-Aufrufe Ihrer `AcquireToken()` Methode. Wenn zwischengespeicherte Anmeldeinformationen bereits vorhanden, Sie nicht aufgefordert, melden Sie sich, und finden Sie unter der Liste der Bezeichnungen gefolgt von den Informationen auf die angewendete Bezeichnung und -Datei geändert.
+2. Wenn das Projekt erfolgreich erstellt und ausgeführt wird, *kann* die Anwendung Sie jedes Mal zur Authentifizierung über ADAL auffordern, wenn das SDK Ihre `AcquireToken()`-Methode aufruft. Wenn bereits zwischengespeicherte Anmeldeinformationen vorhanden sind, werden Sie nicht nur Anmeldung aufgefordert. Die Liste der Bezeichnungen mit den Informationen zur angewendeten Bezeichnung und der geänderten Datei werden sofort angezeigt.
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
