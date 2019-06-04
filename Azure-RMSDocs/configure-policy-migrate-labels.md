@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a9cc458bb22c4b2c76b7aa80b58434a213ec5af1
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 1f1952a871940fcd24e7e81bf6d4312fdef8d014
+ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269750"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462244"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -164,7 +164,7 @@ Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
-- Die [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md)
+- Die [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieser Client mit dem Azure Information Protection-Client, finden Sie unter [vergleichen Sie die Clients](./rms-client/use-client.md#compare-the-clients).
 
 - Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie im Abschnitt **Wo ist das Feature heute verfügbar?** unter [Anwenden von Vertraulichkeits-Beschriftungen auf Ihre Dokumente und E-Mails in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in der Office-Dokumentation.
     
