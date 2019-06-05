@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 311c03815cc245f3d48a588fe4ec5fc6fb6ab4cd
-ms.sourcegitcommit: 01e3669cc499d860dc7cda0d1430196621b7a0d1
+ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626332"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507133"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -104,6 +104,7 @@ Wenn beide Clients dasselbe Feature unterstützen, verwenden Sie in der folgende
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
 |Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
 |Anpassbare richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie das Azure-Portal, um die Standardnachricht für Benutzer ersetzen | Nein <br /><br /> Obwohl die Admin Center eine Option aus, um einen Tipp für die benutzerdefinierte Richtlinie angeben haben, wird diese Option derzeit nicht vom einheitlichen bezeichnungs-Client unterstützt|
+|Ändern der standardschutzebene von Dateien: | Ja <br /><br />Sie können [registrierungsänderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) überschreiben die Standards von nativem und generischem Schutz | Nein |
 
 Einen ausführlichen Vergleich der Unterschiede im Verhalten für bestimmte Protection-Einstellungen finden Sie unter [vergleichen das Verhalten der schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 

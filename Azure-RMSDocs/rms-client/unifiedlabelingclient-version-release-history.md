@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 1eabf0f8ac9a1374536c10e651617f676996cdb4
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837786"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507138"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
@@ -56,6 +56,8 @@ Diese Version enthält eine einzelne Lösung für die ein Race-Bedingung-Problem
 ## <a name="version-207780"></a>Version 2.0.778.0
 
 **Veröffentlicht**: 04/16/2019
+
+Unterstützt über 11/01/2019
 
 Diese erste allgemein verfügbare Version des Azure Information Protection unified bezeichnungs-Clients für Windows unterstützt die folgenden Features: 
 

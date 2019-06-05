@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1da800b43ecfc3fcb91881dc5462e4758ffbb7
-ms.sourcegitcommit: aa13e56ae0ff0dea79e83335a6ecaf45e34e9d8c
+ms.openlocfilehash: 42b2bfefae33c4f1e725a24420dff4a553f5153f
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/02/2019
-ms.locfileid: "66458228"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507101"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -36,9 +36,28 @@ Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Informa
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
-Jede Version des Azure Information Protection-Clients mit allgemeiner Verfügbarkeit wird bis zu sechs Monate nach dem Release der nächsten Version mit allgemeiner Verfügbarkeit unterstützt. Die Dokumentation enthält keine Informationen über nicht unterstützte Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
+Jede Version des Azure Information Protection-Clients mit allgemeiner Verfügbarkeit wird bis zu sechs Monate nach dem Release der nächsten Version mit allgemeiner Verfügbarkeit unterstützt. Mit Ausnahme von dieser Abschnitt umfasst die Dokumentation keine Informationen zu nicht unterstützten Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
 
 Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereitgestellt werden. Verwenden Sie stattdessen die neuste Vorschauversion, um neue Funktionen oder Problembehebungen kennenzulernen und zu testen, die in der nächsten allgemein verfügbaren Version enthalten sein sollen. Veraltete Vorschauversionen werden nicht mehr unterstützt.
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemeine Verfügbarkeit von Versionen, die nicht mehr unterstützt werden:
+
+|Clientversion|Veröffentlichungsdatum|
+|--------------|--------------------------|
+|1.37.19.0|17.9.2018|
+|1.29.5.0|26.6.2018|
+|1.27.48.0|30.5.2018|
+|1.26.6.0|04/17/2018|
+|1.10.56.0|09/18/2017|
+|1.7.210.0|06/06/2017|
+|1.4.21.0|03/15/2017|
+|1.3.155.2|02/08/2017|
+|1.2.4.0|10/27/2016|
+|1.1.23.0|10/01/2016|
+
+Starten 6/2/2019, der Bezeichnung für Azure Information Protection-Dienst erfordert Verbindungen, die Verwendung von TLS 1.2.
+
+Alle Clientversionen von 1.4.21.0 veröffentlicht 03/15/2017 Unterstützung von TLS 1.2. Clientversionen **1.3.155.2**, **1.2.4.0**, und **1.1.23.0** TLS 1.2 nicht verwenden und die Azure Information Protection-Richtlinie können nicht mehr herunterladen.
 
 ### <a name="release-history"></a>Verlauf der Releases
 
@@ -134,6 +153,8 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 ## <a name="version-141510"></a>Version 1.41.51.0
 
 **Veröffentlicht**: 27.11.2018
+
+Unterstützt über 10/16/2019
 
 Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 

@@ -4,17 +4,17 @@ description: Technische Details zu unterstützten Dateitypen, Dateierweiterungen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 3e161c382357c0f1710ba5ac587bddb8a7ba1e22
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768130"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507165"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Von der Azure Information Protection unified bezeichnungs-Client unterstützte Dateitypen
 
@@ -82,7 +82,7 @@ Der einheitliche Bezeichnung Azure Information Protection-Client unterstützt de
 |Schutz|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
 |Standard für Dateitypen|Dies ist die Standardschutzebene für die folgenden Dateitypen:<br /><br />– Text- und Bilddateien<br /><br />– Microsoft Office-Dateien (Word, Excel, PowerPoint)<br /><br />– Portable Document Format (PDF)<br /><br />Weitere Informationen finden Sie im folgenden Abschnitt, [Unterstützte Dateitypen für Klassifizierung und Schutz](#supported-file-types-for-classification-and-protection).|Dies ist der Standardschutz für alle anderen Dateitypen (z.B. VSDX, RTF usw.), die nicht durch den nativen Schutz unterstützt werden.|
 
-Sie können die standardschutzebene ändern, die der Azure Information Protection unified bezeichnungs-Client anwendet. Sie können die Standardebene von systemeigen zu generisch oder von generisch zu systemeigen ändern und sogar verhindern, dass den Azure Information Protection unified bezeichnungs-Client Schutz anwendet. Weitere Informationen finden Sie im Abschnitt [Ändern der Standardschutzebene von Dateien](#changing-the-default-protection-level-of-files) dieses Artikels.
+Derzeit können nicht Sie die standardschutzebene ändern, die der Azure Information Protection unified bezeichnungs-Client anwendet.
 
 Der Schutz kann automatisch angewendet werden, wenn ein Benutzer eine vertraulichkeitsbezeichnung auswählt, die ein Administrator konfiguriert hat, oder Benutzer können eigene schutzeinstellungen angeben, mit [Berechtigungsebenen](../configure-usage-rights.md#rights-included-in-permissions-levels). 
 
@@ -140,56 +140,6 @@ Für diese Dateitypen bleiben die Dateierweiterungen nach dem Schutz der Dateien
 |----------------------------------|----------------------------------|
 |DOC<br /><br />DOCM<br /><br />DOCX<br /><br />DOT<br /><br />DOTM<br /><br />DOTX<br /><br />POTM<br /><br />POTX<br /><br />PPS<br /><br />PPSM<br /><br />PPSX<br /><br />PPT<br /><br />PPTM<br /><br />PPTX<br /><br />VSDM|VSDX<br /><br />VSSM<br /><br />VSSX<br /><br />VSTM<br /><br />VSTX<br /><br />XLA<br /><br />XLAM<br /><br />XLS<br /><br />XLSB<br /><br />XLT<br /><br />XLSM<br /><br />XLSX<br /><br />XLTM<br /><br />XLTX<br /><br />XPS|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Ändern der Standardschutzebene von Dateien
-Sie können ändern, wie der Azure Information Protection unified bezeichnungs-Client Dateien durch Bearbeiten der Registrierung schützt. Beispielsweise können Sie Dateien erzwingen, die systemeigenen Schutz durch den Azure Information Protection unified bezeichnungs-Client generisch geschützt werden zu unterstützen.
-
-Dafür kann es folgende Gründe geben:
-
-- Um sicherzustellen, dass alle Benutzer die Datei öffnen können, wenn sie keine Anwendung haben, die systemeigenen Schutz unterstützt.
-
-- Um Sicherheitssysteme zu unterstützen, die Maßnahmen für Dateien anhand der Dateinamenerweiterung ergreifen und neu konfiguriert werden können, um die PFILE-Erweiterung zu unterstützen, aber nicht neu konfiguriert werden können, um mehrere Dateinamenerweiterungen für den systemeigenen Schutz zu unterstützen.
-
-Auf ähnliche Weise können Sie erzwingen, die einheitlichen Azure Information Protection-Bezeichnung-Client systemeigenen Schutz auf Dateien, die in der Standardeinstellung generischen Schutz angewendet hätten anwendet. Diese Aktion kann sinnvoll sein, wenn Sie über eine Anwendung verfügen, die RMS-APIs unterstützt. Beispiele hierfür sind eine Branchenanwendung, die von internen Entwicklern geschrieben wurde, oder eine Anwendung, die von einem unabhängigen Softwareanbieter erworben wurde.
-
-Sie können auch erzwingen, den Azure Information Protection unified bezeichnungs Client den Schutz von Dateien blockiert (nicht systemeigene oder generische Schutz angewendet). Diese Aktion kann z.B. erforderlich sein, wenn Sie über eine automatische Anwendung oder einen automatischen Dienst verfügen, die bzw. der eine bestimmte Datei öffnen muss, um ihren Inhalt zu verarbeiten. Wenn Sie den Schutz für einen Dateityp blockieren, können nicht Benutzer den Azure Information Protection unified bezeichnungs-Client verwenden, um eine Datei, die diesem Dateityp zu schützen. Wenn sie es versuchen, wird eine Meldung angezeigt, dass der Administrator den Schutz verhindert hat, und sie müssen ihre Aktion zum Schutz der Datei abbrechen.
-
-Zum Konfigurieren der Azure Information Protection unified bezeichnungs Clients generischen Schutz anwendet, um alle Dateien, die in der Standardeinstellung systemeigenen Schutz aktiviert hätte, stellen Sie die folgenden Registrierungseinträge vor. Beachten Sie, dass Sie den Schlüssel „FileProtection“ manuell erstellen müssen, falls dieser nicht vorhanden ist.
-
-1. Erstellen Sie einen neuen Schlüssel mit dem Namen * für den folgenden Registrierungspfad, der Dateien mit beliebiger Erweiterung anzeigt:
-
-    - Für eine 32-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-    - Für eine 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-2. Erstellen Sie im neu hinzugefügten Schlüssel (zum Beispiel HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) einen neuen Zeichenfolgenwert (REG_SZ) mit dem Namen **Encryption** und dem Datenwert **Pfile**.
-
-    Diese Einstellung führt dazu, dass der Azure Information Protection-Client den generischen Schutz anwendet.
-
-Diese beiden Einstellungen führen in der Azure Information Protection unified bezeichnungs-Client generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn dies Ihr Ziel ist, ist keine weitere Konfiguration erforderlich. Sie können aber auch Ausnahmen für bestimmte Dateitypen definieren, damit diese weiterhin systemeigen geschützt werden. Zu diesem Zweck müssen Sie drei (für Windows 32-Bit) oder 6 (für Windows 64-Bit) zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
-
-1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (sofern zutreffend): Fügen Sie einen neuen Schlüssel mit dem Namen des der Dateinamenerweiterung (ohne vorangestellten Punkt) hinzu.
-
-    Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
-
-2. Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z. B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**) einen neuen DWORD-Wert namens **AllowPFILEEncryption** mit dem Wert **0**.
-
-3. Erstellen Sie im neu hinzugefügten Dateitypschlüssel (z. B. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**) einen neuen Zeichenfolgenwert namens **Encryption** mit dem Wert **Native**.
-
-Durch diese Einstellungen sind alle Dateien generisch geschützt, mit Ausnahme von Dateien mit der Erweiterung DOCX. Diese Dateien werden nativ vom Azure Information Protection unified bezeichnungs-Client geschützt.
-
-Wiederholen Sie die folgenden drei Schritte für andere Dateitypen, die als Ausnahmen definieren, weil sie systemeigenen Schutz unterstützen und Sie möchten nicht durch den Azure Information Protection unified bezeichnungs-Client generisch geschützt werden sollen.
-
-Sie können ähnliche Registrierungseinträge für andere Szenarien durch Ändern des Werts der **Encryption** -Zeichenfolge vornehmen, die die folgenden Werte unterstützt:
-
-- **Pfile**: Allgemeiner Schutz
-
-- **Native**: systemeigener Schutz
-
-- **Off**: Schutz blockieren
-
-Nachdem Sie diese Registrierungsänderungen vorgenommen haben, müssen Sie den Computer nicht neu starten. Wenn Sie jedoch PowerShell-Befehle zum Schützen von Dateien verwenden, müssen Sie eine neue PowerShell-Sitzung starten, damit die Änderungen wirksam werden.
-
-Weitere Informationen zum Bearbeiten der Registrierung, um die Standardschutzebene von Dateien zu ändern, finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](../develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet.
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Von der Klassifizierung und dem Schutz ausgeschlossene Dateitypen
 
