@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42b2bfefae33c4f1e725a24420dff4a553f5153f
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: d5c3be398ea132d21b32e6337f44638d424ff71d
+ms.sourcegitcommit: 12848714f3c8d7a4761c28668e5809bf324c267a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507101"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66692217"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -52,7 +52,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 |1.7.210.0|06/06/2017|
 |1.4.21.0|03/15/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0|10/27/2016|
+|1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
 Starten 6/2/2019, der Bezeichnung für Azure Information Protection-Dienst erfordert Verbindungen, die Verwendung von TLS 1.2.

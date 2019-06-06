@@ -4,19 +4,19 @@ description: Informationen, die Sie beim Konfigurieren Ihrer lokalen Server unte
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/06/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e35aad25d0e065cda255d880b3605056d83c30f7
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180026"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719814"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
@@ -168,10 +168,7 @@ Wenn auf Ihren Exchange-Servern eine frühere Version des Betriebssystems ausgef
 
    -   Nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Verbindungsdienst](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen manuell den Servern hinzuzufügen. 
 
-3. Aktivieren Sie IRM-Funktionalität für Exchange durch [Aktivieren von IRM für interne Nachrichten](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
-
-    > [!NOTE]
-    > Standardmäßig wird nach dem Ausführen von **Set-IRMConfiguration -InternalLicensingEnabled $true** IRM für Outlook Web App und mobile Geräte automatisch aktiviert, zusätzlich zur Aktivierung von IRM für Postfächer. Administratoren können IRM jedoch auf unterschiedlichen Ebenen deaktivieren. Beispielsweise für einen Clientzugriffsserver, das virtuelle Verzeichnis oder die Postfachrichtlinie von Outlook Web App und eine Postfachrichtlinie für mobile Geräte. Wenn Benutzern keine der Azure RMS-Vorlagen in Outlook Web App (nach einem Tag Wartezeit) oder auf mobilen Geräten (wenn sie die Vorlagen im Outlook-Client sehen) angezeigt wird, überprüfen Sie die relevanten Einstellungen, um sicherzustellen, dass IRM nicht deaktiviert ist. Weitere Informationen finden Sie unter [Aktivieren oder Deaktivieren von Information Rights Management auf Clientzugriffsservern](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) in der Exchange-Dokumentation. 
+3. Aktivieren von IRM-Funktionalität für Exchange mit dem Exchange PowerShell-Cmdlet [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) und `InternalLicensingEnabled $true` und `ClientAccessServerEnabled $true`.
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Konfigurieren eines SharePoint-Servers für die Verwendung des Verbindungsdiensts
