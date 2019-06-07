@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: 47a92d57b9408a1ba0a5b2d82240e24783718e60
+ms.sourcegitcommit: 1ec4b926885331cb4bb31bbd5074c874205f49d9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507133"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749976"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -65,7 +65,7 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Komponente|Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
-|Zentrale Berichterstellung (Analysen):| Ja | Ja |
+|Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> – Keine Unterstützung für [inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Einstellungen zurücksetzen und Protokolle exportieren:| Ja | Ja |
 |Benutzerdefinierte Berechtigungen:| Ja | Nur für Outlook (Nicht weiterleiten) |
 |Kundenspezifische Berechtigungen:| Ja | Nur Datei-Explorer <br /><br /> In Office-Apps können Benutzer alternativ auch **Dateiinfo** > **Dokument schützen** > **Zugriff einschränken** auswählen |
