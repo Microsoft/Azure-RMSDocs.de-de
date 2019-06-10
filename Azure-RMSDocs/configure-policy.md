@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 53847787fa79782c2bf8e6ce2b6b032e439d1547
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 5ea4991281905b174b0ae70537d5953d60268dbf
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269728"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815574"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -65,6 +65,8 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
     - **Sicherheitsleseberechtigter** nur für [Azure Information Protection-Analysen](reports-aip.md)
     
   - **Complianceadministrator**
+    
+  - **Complianceadministrator-Daten**
     
   - **Sicherheitsadministrator**
     

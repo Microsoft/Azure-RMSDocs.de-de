@@ -4,17 +4,17 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269815"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815622"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -117,9 +117,9 @@ Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können a
     
     Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
-- **Complianceadministrator:** Diese mit Azure Active Directory-Administratorrolle erlaubt einen Administrator konfigurieren Sie Azure Information Protection, einschließlich aktivieren und deaktivieren Sie den Azure Rights Management-Datenschutzdienst, schutzeinstellungen und Bezeichnungen und konfigurieren Sie die Azure Information Protection-Richtlinie. Zusätzlich kann ein Administrator mit dieser Rolle alle PowerShell-Cmdlets für den [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und aus dem [AADRM-Modul](administer-powershell.md) ausführen. Diese Rolle unterstützt jedoch nicht nachverfolgen und Sperren von Dokumenten für Benutzer.
+- **Complianceadministrator** oder **Daten complianceadministrator**: Diese Azure Active Directory-Administratorrollen können einen Administrator konfigurieren Sie Azure Information Protection, einschließlich aktivieren und deaktivieren Sie den Azure Rights Management-Datenschutzdienst, schutzeinstellungen und Bezeichnungen und konfigurieren Sie die Azure Information Protection-Richtlinie. Darüber hinaus kann ein Administrator mit einer dieser Rollen ausführen alle PowerShell-Cmdlets für die [Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) und von der [AADRM-Modul](administer-powershell.md). Diese Rollen unterstützen jedoch nicht nachverfolgen und Sperren von Dokumenten für Benutzer.
     
-    Informationen darüber, wie Sie einem Benutzer diese Administratorrolle zuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Weitere Informationen zu den Berechtigungen, über die ein Benutzer mit dieser Rolle verfügt, finden Sie im Abschnitt [Verfügbare Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) in der Azure Active Directory-Dokumentation.
+    Um einem Benutzer eine dieser Administratorrollen zuzuweisen, finden Sie unter [Zuweisen eines Benutzers zu Administratorrollen in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Um anzuzeigen, was andere Berechtigungen ein Benutzer sich bei diesen Rollen haben, finden Sie unter den [verfügbaren Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) Abschnitt in der Azure Active Directory-Dokumentation.
 
 - **Sicherheitsleseberechtigter**: Nur für [Azure Information Protection-Analysen](reports-aip.md). Mit dieser Azure Active Directory-Administratorrolle kann ein Administrator anzeigen, wie Ihre Bezeichnungen verwendet werden, den Benutzerzugriff auf gekennzeichnete Dokumente und E-Mails und alle Änderungen ihrer Klassifizierung überwachen sowie Dokumente erkennen, die vertrauliche Informationen enthalten, die geschützt werden müssen. Da dieses Feature Azure Log Analytics verwendet, benötigen Sie außerdem eine unterstützende [RBAC-Rolle](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
 

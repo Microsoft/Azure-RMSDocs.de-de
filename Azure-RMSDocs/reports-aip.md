@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 06/05/2019
+ms.date: 06/08/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 500786b518f5d95c464d4538a3d8bdefd030a3eb
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: 84e3e4231c07f2234baa717d1be2c29386ed44ca
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507179"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815610"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -155,6 +155,7 @@ Details:
         - **Azure Information Protection-administrator**
         - **Sicherheitsadministrator**
         - **Complianceadministrator**
+        - **Complianceadministrator-Daten**
         - **Globaler Administrator**
     
     - Nachdem der Arbeitsbereich erstellt wurde, können Sie dann die folgende Rolle mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:

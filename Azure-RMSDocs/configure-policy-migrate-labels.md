@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 06/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1f1952a871940fcd24e7e81bf6d4312fdef8d014
-ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
+ms.openlocfilehash: 56d23160e685325cc18a2c14b52cf23f950df7a0
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462244"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815536"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -37,7 +37,7 @@ Bevor Sie sich die ausführlichen Anweisungen zum Migrieren Ihrer Bezeichnungen 
 
 ### <a name="important-information-about-administrative-roles"></a>Wichtige Informationen zu Administratorrollen
 
-Die [Azure AD-Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) von **Azure Information Protection-Administrator** (früher **Information Protection-Administrator**) wird nicht unterstützt, durch die einheitliche Kennzeichnung die Plattform. Wenn diese administrative Rolle in Ihrer Organisation verwendet wird, fügen Sie die Benutzer, die über diese Rolle verfügen, den Azure AD-Rollen **Sicherheitsadministrator** oder **Complianceadministrator** hinzu, bevor Sie die Bezeichnungen migrieren. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
+Die [Azure AD-Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) von **Azure Information Protection-Administrator** (früher **Information Protection-Administrator**) wird nicht unterstützt, durch die einheitliche Kennzeichnung die Plattform. Wenn diese administrative Rolle in Ihrer Organisation verwendet wird, bevor Sie Ihre Bezeichnungen migrieren, fügen Sie die Benutzer mit dieser Rolle für die Azure AD-Rollen des **complianceadministrator**, **Daten complianceadministrator**, oder **Sicherheitsadministrator**. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
 Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
 
@@ -136,10 +136,10 @@ Wenn der Benutzer über keine/s dieser Nutzungsrechte oder Nutzungsrollen verfü
 
 Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten- und Azure Information Protection-Bezeichnungen zu migrieren und den neuen Speicher für einheitliche Bezeichnungen zu verwenden.
 
-Sie müssen als Compliance-Administrator, Sicherheitsadministrator oder globaler Administrator, migrieren Sie Ihre Bezeichnungen werden.
+Sie muss ein complianceadministrator, complianceadministrator für Daten, Sicherheitsadministrator oder globaler Administrator Ihre Bezeichnungen migrieren.
 
 > [!NOTE]
-> Wenn Sie die Retention-Bezeichnungen und DLP-Richtlinien für Office 365 verfügen, empfehlen wir, dass Sie die Kompatibilität der Rolle "Administrator" oder "globaler Administrator", migrieren Sie Ihre Bezeichnungen verfügen.
+> Wenn Sie die Retention-Bezeichnungen und DLP-Richtlinien für Office 365 verfügen, empfehlen wir, dass Sie die Kompatibilität der Rolle "Administrator", Kompatibilität Daten der Rolle "Administrator" oder "globaler Administrator", migrieren Sie Ihre Bezeichnungen verfügen.
 > 
 > Administratoren für die Sicherheit haben Zugriff auf die datenaufbewahrung Bezeichnungen oder Daten DLP-Richtlinien, also wenn eines dieser sind und sie haben den gleichen Namen wie Ihre Azure Information Protection-Bezeichnungen, während der Migration nicht bis Sie abgeschlossen, manuell benennen Sie eine nicht die Duplikate. Wenn Sie eine der anderen Rollen verfügen, kann jedoch während der Migration die Azure Information Protection-Bezeichnung, umbenennen, damit die Migration abgeschlossen werden kann.
 
