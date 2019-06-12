@@ -4,19 +4,19 @@ description: Konfigurieren und Verwalten von schutzvorlagen, auch bekannt als Ri
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 28b2c670c3204d5e69a963b8d2f5cabc3eeaa872
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 7088f50534b30b188580f395e02a65e56df16cf1
+ms.sourcegitcommit: b5b825ec7f08dbdcd70c0016ed3a69e7dd887fef
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880104"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840149"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -55,15 +55,15 @@ Sie können auch eigene, benutzerdefinierte Vorlagen erstellen. Sie benötigen w
 
 Wenn Sie Ihr Abonnement erst vor Kurzem erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
 
-- **Vertraulich\Alle Mitarbeiter** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
+- **Vertraulich\Alle Mitarbeiter**
 
-- **Streng vertraulich\Alle Mitarbeiter** erteilt Leseberechtigungen für den geschützten Inhalt.
+- **Streng vertraulich\Alle Mitarbeiter**
 
-Wenn Sie Ihr Abonnement schon vor einiger Zeit erworben haben, werden Ihre Standardvorlagen mit folgenden Namen erstellt:
+Wenn Sie Ihr Abonnement vor längerer Zeit erworben haben, können Ihre Standardvorlagen mit folgenden Namen erstellt:
 
-- **\<Name der Organisation> – Vertraulich** erteilt Lese- und Änderungsberechtigungen für den geschützten Inhalt.
+- **\<Name der Organisation > – vertraulich**
 
-- **\<Name der Organisation> – Nur vertrauliche Ansicht** erteilt Leseberechtigungen für den geschützten Inhalt. 
+- **\<Name der Organisation> – Nur vertrauliche Ansicht** 
 
 Sie können diese Standardvorlagen umbenennen (und neu konfigurieren), wenn Sie das Azure-Portal verwenden.
 
