@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
-ms.reviewer: eymanor
+ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186683"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028716"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -34,7 +34,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 
 2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie **Richtlinien** aus.
 
-3. Auf dem Blatt **Azure Information Protection – Richtlinien** wählen Sie das Kontextmenü (**...**) neben der Richtlinie aus, um die erweiterten Einstellungen einzuschließen. Wählen Sie dann **Erweiterte Einstellungen** aus.
+3. Auf dem Blatt **Azure Information Protection – Richtlinien** wählen Sie das Kontextmenü ( **...** ) neben der Richtlinie aus, um die erweiterten Einstellungen einzuschließen. Wählen Sie dann **Erweiterte Einstellungen** aus.
     
     Sie können erweiterte Einstellungen für die globale Richtlinie sowie für bereichsbezogene Richtlinien konfigurieren.
 
@@ -42,18 +42,20 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 
 5. Stellen Sie sicher, dass Benutzer, für die diese Richtlinie gilt, alle Office-Anwendungen neu starten, die geöffnet waren.
 
-6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü (**...**) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie anschließend auf **Speichern und Schließen**.
+6. Wenn Sie die Einstellung nicht mehr benötigen und zum Standardverhalten zurückkehren möchten: Rufen Sie auf dem Blatt **Erweiterte Einstellungen** das Kontextmenü ( **...** ) neben der Einstellung auf, die Sie nicht mehr benötigen, und wählen Sie dann **Löschen** aus. Klicken Sie anschließend auf **Speichern und Schließen**.
 
 #### <a name="available-advanced-client-settings"></a>Verfügbare erweiterte Clienteinstellungen
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
 |DisableDNF|[Ausblenden der Schaltfläche „Nicht weiterleiten“ in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Aktivieren der Unterstützung der Reihenfolge für untergeordnete Bezeichnungen](#enable-order-support-for-sublabels-on-attachments) 
+|CompareSubLabelsInAttachmentAction|[Aktivieren der Unterstützung der Reihenfolge für untergeordnete Bezeichnungen](#enable-order-support-for-sublabels-on-attachments)
+|ContentExtractionTimeout|[Ändern Sie die Timeouteinstellungen für die Überprüfung](#change-the-timeout-settings-for-the-scanner)
 |EnableBarHiding|[Die Azure Information Protection-Leiste dauerhaft ausblenden](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Schützen Sie keine PDF-Dateien mithilfe des ISO-Standards für die PDF-Verschlüsselung.](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|FileProcessingTimeout|[Ändern Sie die Timeouteinstellungen für die Überprüfung](#change-the-timeout-settings-for-the-scanner)
 |LabelbyCustomProperty|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Ändern des lokalen Protokolliergrads](#change-the-local-logging-level)
@@ -387,7 +389,7 @@ In diesem Beispiel ist ein PDF-Dokument noch nicht gekennzeichneten führt nicht
 
 - Schlüssel: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Wert: **\<** Dateinamenerweiterungen zum Anzeigen von Nachrichten, die durch Trennzeichen getrennte**>**
+- Wert: **\<** Dateinamenerweiterungen zum Anzeigen von Nachrichten, die durch Trennzeichen getrennte **>**
 
 
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Angeben der zulässigen Domänennamen für Empfänger, die von den Popupmeldungen ausgenommen sind
@@ -404,21 +406,21 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
     
     - Schlüssel: **OutlookWarnTrustedDomains**
     
-    - Wert: **\<** Domänenname, kommagetrennt**>**
+    - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Legitimationsmeldungen:
     
     - Schlüssel: **OutlookJustifyTrustedDomains**
     
-    - Wert: **\<** Domänenname, kommagetrennt**>**
+    - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Blockiermeldungen:
     
     - Schlüssel: **OutlookBlockTrustedDomains**
     
-    - Wert: **\<** Domänenname, kommagetrennt**>**
+    - Wert: **\<** Domänenname, kommagetrennt **>**
 
-Geben Sie z. B. um e-Mails an Benutzer mit einer e-Mail-Adresse von "contoso.com" nicht zu blockieren, den erweiterten Client-Einstellung **OutlookBlockTrustedDomains** und **"contoso.com"**. Benutzern werden daher nicht die Popup Warnmeldungen in Outlook angezeigt, beim Senden einer e-Mail um john@sales.contoso.com.
+Geben Sie z. B. um e-Mails an Benutzer mit einer e-Mail-Adresse von "contoso.com" nicht zu blockieren, den erweiterten Client-Einstellung **OutlookBlockTrustedDomains** und **"contoso.com"** . Benutzern werden daher nicht die Popup Warnmeldungen in Outlook angezeigt, beim Senden einer e-Mail um john@sales.contoso.com.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
 
@@ -856,6 +858,41 @@ Wenn Sie diese erweiterte Einstellung so konfigurieren möchten, dass der Scanne
 
 - Wert: **False**
 
+## <a name="change-the-timeout-settings-for-the-scanner"></a>Ändern Sie die Timeouteinstellungen für die Überprüfung
+
+Diese Konfiguration nutzt [erweiterte Clienteinstellungen](#how-to-configure-advanced-client-configuration-settings-in-the-portal) , die Sie im Azure-Portal konfigurieren müssen.
+
+Standardmäßig verfügt der Azure Information Protection-Überprüfung ein Timeout von 00:15:00 (15 Minuten), jede Datei für die Typen für vertrauliche Informationen zu überprüfen oder die Regex-Ausdrücke, die Sie für benutzerdefinierte Bedingungen konfiguriert haben. Wenn das Zeitlimit für diesen Prozess inhaltsextrahierung erreicht wird, sind keine Ergebnisse vor dem Timeout zurückgegeben, und weitere Überprüfung bei der Datei beendet. In diesem Szenario wird die folgende Fehlermeldung in % protokolliert*Localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (ZIP, wenn es mehrere Protokolle gibt): **Fehler bei GetContentParts** mit **der Vorgang wurde abgebrochen** in den Details.
+
+Wenn Sie dieses timeoutproblem aufgrund von großen Dateien auftreten, können Sie dieses Zeitlimit für die vollständigen Inhalte Extrahierung erhöhen:
+
+- Schlüssel: **ContentExtractionTimeout**
+
+- Wert:  **\<Hh:min:sec >**
+
+Der Dateityp kann beeinflussen, wie lange es dauert, um eine Datei zu überprüfen. Beispiel für die Scanzeiten:
+
+- Eine typische 100 MB-Word-Datei: 0,5-5-Minuten
+
+- Eine typische 100 MB-PDF-Datei: 5-20 Minuten
+
+- Eine typische 100 MB-Excel-Datei: 12-30 Minuten
+
+Einige Dateitypen, die sehr groß sein, z. B. Videodateien sind, erwägen Sie, schließt sie aus der Überprüfung durch das Hinzufügen der Erweiterungs auf die **Dateitypen scannen** -Option in das Profil für die Überprüfung.
+
+Darüber hinaus wurde die Azure Information Protection-Überprüfung ein Zeitlimit von 00:30:00 (30 Minuten) für jede Datei, die ihn verarbeitet. Dieser Wert berücksichtigt die Zeit, die sie ergreifen kann, um eine Datei aus einem Repository abrufen und speichern es vorübergehend lokal für Aktionen, die Entschlüsselung, inhaltsextraktion für Überprüfungen, Bezeichnungen und Verschlüsselung enthalten können.
+
+Auch die Azure Information Protection-Überprüfung Dutzende mit Hunderten von Dateien pro Minute und Scannen kann, wenn Sie ein Data-Repository verfügen, die eine hohe Anzahl von sehr großen Dateien, kann die Überprüfung diesen Standardtimeout überschreiten und scheint im Azure-Portal, beenden Sie nach 30 Minuten. In diesem Szenario wird die folgende Fehlermeldung in % protokolliert*Localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (ZIP, wenn es mehrere Protokolle gibt) und die Überprüfung csv-Protokolldatei: **Der Vorgang wurde abgebrochen**.
+
+Ein Scanner mit 4-Core-Prozessoren wird standardmäßig hat 16 Threads für die Überprüfung aus, und die Wahrscheinlichkeit eines 16 große Dateien in einem 30 Minuten Zeit, hängt das Verhältnis von großen Dateien. Wenn die Überprüfung 200 Dateien pro Minute ist und 1 % der Dateien die 30 Minuten Timeout überschreiten, besteht beispielsweise eine Wahrscheinlichkeit von mehr als 85 %, dass die Überprüfung die 30-minütigen Timeout Situation begegnen werden. Diese Timeouts können zu mehr Scanzeiten und höher Speicherverbrauch führen.
+
+In diesem Fall Wenn Sie weitere-Core-Prozessoren der überprüfende Computer hinzufügen können, verringern Sie ggf. das Zeitlimit für eine bessere Überprüfung Raten und geringere arbeitsspeicherauslastung, jedoch mit der Bestätigung, dass einige Dateien ausgeschlossen werden sollen. Sie können auch erhöhen des Timeouts für eine präzisere Überprüfungsergebnissen jedoch mit der Bestätigung, die diese Konfiguration führt wahrscheinlich zu niedrigeren Überprüfung bewertet und höher arbeitsspeichernutzung.
+
+Konfigurieren Sie die folgenden erweiterten Clienteinstellung, um das Zeitlimit für die Verarbeitung der Dateien zu ändern:
+
+- Schlüssel: **FileProcessingTimeout**
+
+- Wert:  **\<Hh:min:sec >**
 
 ## <a name="change-the-local-logging-level"></a>Ändern des lokalen Protokolliergrads
 

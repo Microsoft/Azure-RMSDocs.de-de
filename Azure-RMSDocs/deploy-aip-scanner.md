@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: f86c1622e19b0ab5dc7bf274bd020203043bea0f
-ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
+ms.openlocfilehash: 7b3dad06485e3fe50b643cc9559b599cf780811f
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719849"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028701"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -497,12 +497,13 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Darüber hinaus gilt:
     
-    - Stellen Sie sicher, dass das Dienstkonto, mit dem die Überprüfung ausgeführt wird, nur über die im Abschnitt [Voraussetzungen für die Azure Information Protection-Überprüfung](#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt. Konfigurieren Sie anschließend die Eigenschaft [Erweiterter Client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner), um die niedrige Integritätsebene für die Überprüfung zu deaktivieren.
+    - Vergewissern Sie sich, dass das Dienstkonto, die die Überprüfung ausgeführt wird nur die Rechte finden Sie unter der [Scanner Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) aus, und konfigurieren Sie die [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) mit niedriger Integrität deaktivieren die Ebene für die Überprüfung.
     
     - Die Überprüfung wird schneller ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der eine Standardbezeichnung auf alle Dateien angewendet wird, ohne dass die Dateiinhalte überprüft werden.
     
     - Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.
     
+    - Können Sie den Scanner Timeouts mit verringern [erweiterte Clienteinstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) für eine bessere Überprüfung Raten und geringere arbeitsspeicherauslastung, jedoch mit der Bestätigung, dass einige Dateien übersprungen werden können.
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Auflisten der Cmdlets für die Überprüfung
 
