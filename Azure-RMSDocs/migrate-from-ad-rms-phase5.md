@@ -4,19 +4,19 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149274"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -114,7 +114,9 @@ Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlage
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
-Dieser Schritt wird nach dem Abschluss der Migration empfohlen, wenn Ihre AD RMS-Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat. Das Neuerstellen des Schlüssels führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. 
+Dieser Schritt ist erforderlich, wenn die Migration abgeschlossen ist, wenn Ihre AD RMS-Bereitstellung RMS-Kryptografiemodus 1 verwendet hat, da dieser Modus, ein 1024-Bit-Schlüssel und SHA-1 verwendet. Diese Konfiguration gilt eine unzureichende Maß an Schutz bieten. Microsoft unterstützen nicht, die Verwendung von niedrigeren Schlüssellängen wie z. B. 1024-Bit-RSA-Schlüssel und die zugehörigen Verwendung von Protokollen, die nicht ausreichend Schutzebenen, z. B. SHA-1 zu bieten.
+
+Erstellen neuer Schlüssel führt zu Schutz, die RMS-Kryptografiemodus 2 verwendet, führt das ein 2048-Bit-Schlüssel und SHA-256. 
 
 Auch wenn Ihre AD RMS-Bereitstellung den Kryptografiemodus 2 verwendet hat, wird dieser Schritt empfohlen, da ein neuer Schlüssel dabei hilft, Ihren Mandanten vor potenziellen Sicherheitsverletzungen Ihres AD RMS-Schlüssels zu schützen.
 

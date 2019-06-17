@@ -4,19 +4,19 @@ description: Anstelle von Microsoft, die Schlüssel des Stammzertifikats für Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: d23884de43f63798a86b4ade47cd8683d7444980
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149262"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -49,7 +49,7 @@ Entscheiden Sie, welche Mandantenschlüsseltopologie für Ihre Organisation am b
     
     Dies ist die einfachste Möglichkeit mit dem geringsten Verwaltungsaufwand. In den meisten Fällen müssen Sie noch nicht einmal wissen, dass Sie einen Mandantenschlüssel besitzen. Sie registrieren sich einfach für Azure Information Protection, und der restliche Schlüsselverwaltungsprozess wird von Microsoft erledigt.
 
-- **Von Ihnen verwaltet (BYOK)**: Verwenden Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) zusammen mit Azure Information Protection, um die vollständige Kontrolle über Ihren Mandantenschlüssel zu erlangen. Erstellen Sie den Schlüssel für diese Mandantenschlüsseltopologie entweder in Key Vault direkt oder lokal. Wenn Sie ihn lokal erstellen, übertragen oder importieren Sie ihn anschließend auf bzw. in Key Vault. Konfigurieren Sie dann Azure Information Protection, um den Schlüssel zu verwenden. Verwalten Sie den Schlüssel in Azure Key Vault.
+- **Von Ihnen verwaltet (BYOK)** : Verwenden Sie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) zusammen mit Azure Information Protection, um die vollständige Kontrolle über Ihren Mandantenschlüssel zu erlangen. Erstellen Sie den Schlüssel für diese Mandantenschlüsseltopologie entweder in Key Vault direkt oder lokal. Wenn Sie ihn lokal erstellen, übertragen oder importieren Sie ihn anschließend auf bzw. in Key Vault. Konfigurieren Sie dann Azure Information Protection, um den Schlüssel zu verwenden. Verwalten Sie den Schlüssel in Azure Key Vault.
     
 
 ### <a name="more-information-about-byok"></a>Nähere Informationen zu BYOK
@@ -145,19 +145,21 @@ Anhand der folgenden Tabelle können Sie ermitteln, welche Azure-Region oder -In
 
 Verwenden Sie die Azure Key Vault-Dokumentation, um einen Schlüsseltresor und den Schlüssel zu erstellen, den Sie für Azure Information Protection verwenden möchten. Weitere Informationen finden Sie unter [Get started with Azure Key Vault (Erste Schritte mit Azure Key Vault)](/azure/key-vault/key-vault-get-started).
 
-Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 1024 Bits liegt. Andere Schlüssellängen werden von Azure Information Protection nicht unterstützt.
+Stellen Sie sicher, dass die Schlüssellänge bei 2048 Bits (empfohlen) oder 1024 Bits liegt. Andere Schlüssellängen werden von Azure Information Protection nicht unterstützt. 
+
+Einen 1024-Bit-Schlüssel nicht als Ihren aktiven mandantenschlüssel verwendet werden, da es eine unzureichende Maß an Schutz bieten betrachtet wird. Microsoft unterstützen nicht, die Verwendung von niedrigeren Schlüssellängen wie z. B. 1024-Bit-RSA-Schlüssel und die zugehörigen Verwendung von Protokollen, die nicht ausreichend Schutzebenen, z. B. SHA-1 zu bieten. Wir empfehlen den Umstieg auf eine höhere Schlüssellänge.
 
 Folgen Sie der Anleitung unter [Vorgehensweise: Generieren und Übertragen von HSM-geschützten Schlüsseln für Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys), um einen HSM-geschützten Schlüssel lokal zu erstellen und übertragen Sie ihn auf Ihren Azure Key Vault als einen HSM-geschützten Schlüssel.
 
 Damit Azure Information Protection den Schlüssel verwenden kann, müssen alle Key Vault-Vorgänge für diesen Schlüssel zulässig sein. Dies ist die Standardkonfiguration und die Vorgänge sind zu verschlüsseln, entschlüsseln, "wrapkey", "unwrapkey", Zeichen, und überprüfen. Sie können die zulässigen Vorgänge eines Schlüssels überprüfen, indem Sie mit dem folgenden PowerShell-Befehl: `(Get-AzKeyVaultKey -VaultName <key vault name> -Name <key name>).Attributes.KeyOps`. Fügen Sie ggf. die zulässigen Vorgänge mit [Update-AzKeyVaultKey](/powershell/module/az.keyvault/update-azkeyvaultkey) und *KeyOps* Parameter.
 
-Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Um den Schlüssel verwenden zu können, müssen Sie Azure Information Protection konfigurieren, indem Sie die Schlüsseltresor-URL angeben.
+Jeder Schlüssel, der in Key Vault gespeichert wird, hat eine Schlüssel-ID. Bei der Schlüssel-ID handelt es sich um eine URL, die den Namen des Schlüsseltresor, den Schlüsselcontainer, den Namen des Schlüssels und die Schlüsselversion enthält. Beispiel: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Um den Schlüssel verwenden zu können, müssen Sie Azure Information Protection konfigurieren, indem Sie die Schlüsseltresor-URL angeben.
 
 Bevor Azure Information Protection den Schlüssel verwenden kann, muss der Azure Rights Management-Dienst zum Verwenden des Schlüssels im Schlüsseltresor Ihres Unternehmens autorisiert werden. Hierzu kann der Azure Key Vault-Administrator das Azure-Portal oder Azure PowerShell benutzen:
 
 Konfiguration mithilfe des Azure-Portals:
 
-1. Navigieren Sie zu **Key vaults** > **\<*your key vault name*>** > **Access policies** > **Add new** (Schlüsseltresore)(Ihr Schlüsseltresorname)(Zugriffsrichtlinien)(Neu hinzufügen).
+1. Navigieren Sie zu **Key vaults** >  **\<*your key vault name*>**  > **Access policies** > **Add new** (Schlüsseltresore)(Ihr Schlüsseltresorname)(Zugriffsrichtlinien)(Neu hinzufügen).
 
 2. Wählen Sie von dem Blatt **Add access policy** (Zugriffsrichtlinie hinzufügen) die Option **Azure Information Protection BYOK** aus dem Listenfeld **Configure from template (optional)** (Aus Vorlage konfigurieren (optional)) aus, und klicken Sie auf **OK**.
     
