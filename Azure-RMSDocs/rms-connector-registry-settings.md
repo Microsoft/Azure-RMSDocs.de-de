@@ -4,19 +4,19 @@ description: Informationen zu den Registrierungseinträgen auf Servern, die den 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 14b10c074d80ed5479953ab44b4bec1249749020
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d3cba05e27740ff11a2c8504ace1d1a5037cf3b2
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180867"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156569"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -54,9 +54,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** https://*\<IhreMandantenURL>*/_wmcs/certification
+**Daten:** https:// *\<IhreMandantenURL>* /_wmcs/certification
 
 ---
 
@@ -64,9 +64,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** https://*\<IhreMandantenURL>*/_wmcs/certification
+**Daten:** https:// *\<IhreMandantenURL>* /_wmcs/certification
 
 ---
 
@@ -74,14 +74,14 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*\<IhreMandantenURL>*
+**Wert:** https:// *\<IhreMandantenURL>*
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*
+- http:// *<\ConnectorFQDN>*
 
-- https://*<\ConnectorFQDN>*
+- https:// *<\ConnectorFQDN>*
 
 ---
 
@@ -89,14 +89,14 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*<\IhreMandantenURL>*
+**Wert:** https:// *<\IhreMandantenURL>*
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*
+- http:// *<\ConnectorFQDN>*
 
-- https://*<\ConnectorFQDN>*
+- https:// *<\ConnectorFQDN>*
 
 
 ## <a name="exchange-2010-registry-settings"></a>Exchange 2010-Registrierungseinstellungen
@@ -105,9 +105,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** https://*<\IhreMandantenURL>*/_wmcs/certification
+**Daten:** https:// *<\IhreMandantenURL>* /_wmcs/certification
 
 ---
 
@@ -115,9 +115,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** https://*<\IhreMandantenURL>*/_wmcs/Licensing
+**Daten:** https:// *<\IhreMandantenURL>* /_wmcs/Licensing
 
 ---
 
@@ -125,13 +125,13 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*<\IhreMandantenURL>*
+**Wert:** https:// *<\IhreMandantenURL>*
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*
+- http:// *<\ConnectorFQDN>*
 
-- https://*<\ConnectorFQDN>*
+- https:// *<\ConnectorFQDN>*
 
 ---
 
@@ -139,13 +139,13 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*<\IhreMandantenURL>*
+**Wert:** https:// *<\IhreMandantenURL>*
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem Exchange-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*
+- http:// *<\ConnectorFQDN>*
 
-- https://*<\ConnectorFQDN>*
+- https:// *<\ConnectorFQDN>*
 
 
 ## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Registrierungseinstellungen für SharePoint 2016 oder SharePoint 2013
@@ -154,14 +154,14 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** https://*<\IhreMandantenURL>*/_wmcs/licensing
+**Wert:** https:// *<\IhreMandantenURL>* /_wmcs/licensing
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem SharePoint-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*/_wmcs/licensing
+- http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
-- https://*<\ConnectorFQDN>*/_wmcs/licensing
+- https:// *<\ConnectorFQDN>* /_wmcs/licensing
 
 ---
 
@@ -169,13 +169,13 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem SharePoint-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*/_wmcs/certification
+- http:// *<\ConnectorFQDN>* /_wmcs/certification
 
-- https://*<\ConnectorFQDN>*/_wmcs/certification
+- https:// *<\ConnectorFQDN>* /_wmcs/certification
 
 ---
 
@@ -183,14 +183,14 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
 
 **Daten:** Einer der folgenden Einträge, je nachdem, ob Sie HTTP oder HTTPS von Ihrem SharePoint-Server zum RMS-Connector verwenden:
 
-- http://*<\ConnectorFQDN>*/_wmcs/licensing
+- http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
-- https://*<\ConnectorFQDN>*/_wmcs/licensing
+- https:// *<\ConnectorFQDN>* /_wmcs/licensing
 
 
 
@@ -201,9 +201,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** http://*<\ConnectorFQDN>*/_wmcs/licensing
+**Daten:** http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
 ---
 
@@ -211,9 +211,9 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 **Typ:** Reg_SZ
 
-**Wert:** Standard
+**Wert:** Default
 
-**Daten:** http://*<\ConnectorFQDN>*/_wmcs/certification
+**Daten:** http:// *<\ConnectorFQDN>* /_wmcs/certification
 
 
 Zurück zu [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md)

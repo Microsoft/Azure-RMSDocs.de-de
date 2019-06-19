@@ -4,19 +4,19 @@ description: Informationen zur Unterstützung bei der Installation und Konfigura
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b92dfe6128a8ba361ebf4d0a047bdee2a124df46
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182040"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156487"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -29,8 +29,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
 ## <a name="installing-the-rms-connector"></a>Installieren des RMS-Verbindungsdiensts
 
-1.  Identifizieren Sie die Computer (mindestens zwei), auf denen
-2.  der RMS-Verbindungsdienst ausgeführt werden soll. Sie müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
+1.  Identifizieren Sie die Computer (mindestens zwei), führen Sie den RMS-Verbindungsdienst. Diese Computer müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
 
     > [!NOTE]
     > Sie installieren einen einzelnen RMS-Verbindungsdienst (bestehend aus mehreren Servern zwecks Hochverfügbarkeit) pro Mandant (Office 365-Mandant oder Azure AD-Mandant). Im Gegensatz zu Active Directory RMS müssen Sie nicht in jeder Gesamtstruktur einen RMS-Verbindungsdienst installieren.
@@ -95,7 +94,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
   >    ```
   >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
   >    ```
-  >    Geben Sie zum Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
+  >    Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
   > 
   >    Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
@@ -168,9 +167,9 @@ Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie a
 Wenn nicht schon geschehen, müssen Sie jetzt den Lastenausgleich für die Server konfigurieren, auf denen der RMS-Verbindungsdienst installiert ist, und erwägen, ob HTTPS für die Verbindungen zwischen diesen Servern und den Servern, die Sie gerade autorisiert haben, verwendet werden soll.
 
 ## <a name="configuring-load-balancing-and-high-availability"></a>Konfigurieren von Lastenausgleich und Hochverfügbarkeit
-Nachdem Sie die zweite oder letzte Instanz des RMS-Verbindungsdiensts installiert haben, definieren Sie einen Verbindungsdienst-URL-Servernamen, und konfigurieren Sie ein Lastenausgleichssystem.
+Nachdem Sie den zweite oder letzte Instanz des RMS-Connectors installiert haben, definieren Sie einen Connector-URL-Servernamen, und konfigurieren Sie ein System mit Lastenausgleich.
 
-Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Beispielsweise können Sie in Ihrem DNS-System einen Eintrag für **rmsconnector.contoso.com** erstellen und diesen Eintrag für die Verwendung einer IP-Adresse in Ihrem Lastenausgleichssystem konfigurieren. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
+Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Sie können z. B. einen Eintrag erstellen, in Ihrem DNS-System für **rmsconnector.contoso.com** und diesen Eintrag Verwendung eine IP-Adresse in Ihrem Lastenausgleichssystem konfigurieren. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
 
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Verbindungsdiensts nicht mehr zu ändern, weil Sie sonst von diesen Servern alle IRM-Konfigurationen entfernen und diese dann neu konfigurieren müssen.
