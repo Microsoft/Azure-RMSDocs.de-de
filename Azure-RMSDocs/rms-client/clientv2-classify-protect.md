@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 0ea7ce8fc589b6546210e3cc6ee31b12c83d56de
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880117"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236956"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Klassifizieren Sie und schützen Sie mit dem Azure Information Protection unified bezeichnungs-client
 
@@ -52,7 +52,9 @@ Oder, wenn Sie ausgewählt haben **Leiste anzeigen** aus der **Vertraulichkeit**
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
-Zum Festlegen einer Bezeichnung, z. B. "**vertraulich** \ **alle Mitarbeiter**" Option **vertraulich** und klicken Sie dann **alle Mitarbeiter**. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten. Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection-Leiste angezeigt haben, und die Bezeichnungen nicht, auf der Leiste für die Sie auswählen angezeigt werden, klicken Sie zuerst auf die **Bezeichnung bearbeiten** Symbol neben dem aktuellen Bezeichnungswert.
+Zum Festlegen einer Bezeichnung, z. B. "**vertraulich** \ **alle Mitarbeiter**" Option **vertraulich** und klicken Sie dann **alle Mitarbeiter**. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten.
+
+Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection-Leiste angezeigt haben, und die Bezeichnungen nicht, auf der Leiste für die Sie auswählen angezeigt werden, klicken Sie zuerst auf die **Bezeichnung bearbeiten** Symbol neben dem aktuellen Bezeichnungswert.
 
 Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die folgende Weise angewendet werden:
 

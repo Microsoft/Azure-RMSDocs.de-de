@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1eabf0f8ac9a1374536c10e651617f676996cdb4
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: ea360e880e4b6bf0dc4c2f362a82ffa6d21a6c3b
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507138"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236818"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
@@ -46,6 +46,53 @@ Verwenden Sie die folgende Informationen, um anzuzeigen, was für die allgemein 
 Dieser Client installiert ein Office-Add-On für Windows-Computer, eine Erweiterung für den Datei-Explorer und ein PowerShell-Modul. Es gelten die gleichen [Voraussetzungen](../requirements.md) wie für den Azure Information Protection-Client, der Richtlinien aus Azure herunterlädt.
 
 Um Features und Funktionen, mit dem Azure Information Protection-Client vergleichen zu können, finden Sie unter [vergleichen Sie die Clients](use-client.md#compare-the-clients).
+
+## <a name="versions-later-than-207790"></a>Höhere Versionen als 2.0.779.0
+
+**Veröffentlicht**: 06/20/2019
+
+Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es sich um einen vorschaubuild für Test-und Evaluierungszwecke. 
+
+**Neue Funktionen:**
+
+- Unterstützung für [Erweiterte Einstellungen](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie für Security & Compliance Center mit PowerShell konfigurieren.
+    
+    Diese erweiterte Einstellungen unterstützen die folgenden Anpassungen:
+     - [Information Protection-Leiste in Office-Apps anzeigen](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
+    - [Die empfohlene Klassifizierung in Outlook aktivieren](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
+    - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
+    - [Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
+    - [Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
+    - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
+    - [Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
+    - [Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+    - [Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
+    - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)
+    - [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - [Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [Wenden Sie eine benutzerdefinierte Eigenschaft an, wenn eine Bezeichnung angewendet wird](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
+    - [Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+    - [Geben Sie eine standardmäßige untergeordnete Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
+    - [Geben Sie eine Farbe für die Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
+
+- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und Datei-Explorer konfiguriert sind:
+    - Wenn Sie Bezeichnungen mit dieser Konfiguration über das Azure-Portal haben, werden sie jetzt durch die einheitliche bezeichnungs-Client unterstützt, aber es derzeit keine entsprechende Konfiguration in das Admin Center gibt.
+    - Wenn ein Benutzer eine Bezeichnung mit dieser Konfiguration auswählt, werden sie aufgefordert, Benutzer und die schutzeinstellungen für das Dokument auswählen.
+
+- PowerShell-Änderungen in das Modul "azureinformationprotection":
+    - Neues Cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -New-RMSProtectionLicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen ersetzt
+    - Neue Parameter:
+        -  *CustomPermissions* und *RemoveProtection* – hinzugefügt [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
+        -  *"Onbehalfof"* – hinzugefügt [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), um anstelle von verwendet werden die *Token* -Parameter für nicht interaktive Sitzungen
+        -  *"WhatIf"* und *DiscoveryInfoTypes* – hinzugefügt [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), damit dieses Cmdlet im Suchmodus ausführen kann, ohne das Anwenden von Bezeichnern
+    - Veralteten Cmdlets: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+
+
+**Behoben:**
+
+- Wenn die automatische Kennzeichnung konfiguriert ist, wendet die Bezeichnung beim ersten ein Dokument gespeichert wird.
 
 ## <a name="version-207790"></a>Version 2.0.779.0
 

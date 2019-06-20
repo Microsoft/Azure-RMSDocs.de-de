@@ -4,19 +4,19 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: d39b73a93f6abd434034acc9dca1858c7f57dde4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182652"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236829"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -47,7 +47,7 @@ Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https
 
 Es gibt derzeit zwei Clients für Windows: 
 
-- Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Office 365 Security & Compliance Center. Dieser Client ist nun allgemein verfügbar.
+- Die **Azure Information Protection – einheitliche bezeichnungs Client** downloads, die Bezeichnungen und Einstellungen für eines der folgenden Admin Center: Office 365 Security & Compliance Center, Microsoft 365-Security-Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und hat eine Preview-Version Sie zusätzliche Funktionen für eine spätere Version zu testen.
 
 - Der **Azure Information Protection-Client** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus dem Azure-Portal. Dieser Client basiert auf Vorgängerversionen der allgemeinen Verfügbarkeit des Clients.
 
