@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1dbd1589a9e3aaec39b13f553f6ce3af6107ce02
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
+ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236898"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298275"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -142,7 +142,7 @@ Beispiel-PowerShell-Befehl zum Überprüfen Ihrer Bezeichnung-Richtlinieneinstel
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
-|Farbe|[Geben Sie eine Farbe für die Bezeichnung](##specify-a-color-for-the-label)|
+|Farbe|[Geben Sie eine Farbe für die Bezeichnung](#specify-a-color-for-the-label)|
 |customPropertyByLabel|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |DefaultSubLabelId|[Geben Sie eine standardmäßige untergeordnete Bezeichnung für eine übergeordnete Bezeichnung](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Wenden Sie eine benutzerdefinierte Eigenschaft an, wenn eine Bezeichnung angewendet wird](#apply-a-custom-property-when-a-label-is-applied)|

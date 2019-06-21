@@ -4,17 +4,17 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: fb689468efe091caecd3bfac076bdf85ca6aef58
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934721"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305592"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -95,7 +95,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
    - **Berechtigungen festlegen**: Neue Schutzeinstellungen können in diesem Portal definiert werden.
     
-   - **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**: Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
+   - **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** : Benutzer können angeben, wem welche Berechtigungen erteilt werden. Sie können diese Option dann verfeinern und nur Outlook oder Word, Excel, PowerPoint und den Datei-Explorer auswählen. Diese Option wird nicht unterstützt und funktioniert nicht, wenn eine Bezeichnung für eine [automatische Klassifizierung](configure-policy-classification.md) konfiguriert wurde.
         
        Wenn Sie die Option für Outlook auswählen: Die Bezeichnung wird in Outlook angezeigt, und das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das gleiche wie bei der Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails).
         
@@ -160,7 +160,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Beachten Sie, dass immer alle veröffentlichten Vorlagen angezeigt werden, auch wenn Sie eine bereichsbezogene Richtlinie konfigurieren. Konfigurieren Sie z. B. eine bereichsbezogene Richtlinie für die Gruppe „Marketing“. Die Vorlagen, die Sie auswählen können, sind nicht auf Vorlagen beschränkt, die auf den Bereich „Marketing“ bezogen sind, und es ist möglich, eine abteilungsbezogene Vorlage auszuwählen, die Ihre ausgewählten Benutzer nicht verwenden können. Zur Vereinfachung der Konfiguration und zum Minimieren der Problembehandlung können Sie die Abteilungsvorlage gemäß der Bezeichnung in der bereichsbezogenen Richtlinie benennen. 
 
-9. Wenn Sie **HYOK (AD RMS)** ausgewählt haben, klicken Sie entweder auf **Set AD RMS templates details** (Festlegen von Vorlagendetails für AD RMS) oder auf **Benutzerdefinierte Berechtigungen festlegen (Vorschau)**. Geben Sie dann die Lizenzierungs-URL Ihres AD RMS-Clusters an.
+9. Wenn Sie **HYOK (AD RMS)** ausgewählt haben, klicken Sie entweder auf **Set AD RMS templates details** (Festlegen von Vorlagendetails für AD RMS) oder auf **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** . Geben Sie dann die Lizenzierungs-URL Ihres AD RMS-Clusters an.
     
     Anweisungen zum Angeben einer Vorlagen-GUID oder Ihrer Lizenzierungs-URL finden Sie unter [Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -277,7 +277,7 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
     
     Hinweis: Wählen Sie für E-Mails nicht die Option **Viewer** aus, und wenn Sie **Benutzerdefiniert** auswählen, stellen Sie sicher, dass Sie **Bearbeiten und speichern** einschließen.
     
-    Um dieselben Berechtigungen wie bei der neuen Exchange Online-Option **Nur verschlüsseln** zu haben, wählen Sie **Benutzerdefiniert** aus. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)**.
+    Um dieselben Berechtigungen wie bei der neuen Exchange Online-Option **Nur verschlüsseln** zu haben, wählen Sie **Benutzerdefiniert** aus. Gewähren Sie dann alle Berechtigungen außer **Speichern unter, Exportieren (EXPORT)** und **Vollzugriff (OWNER)** .
 
 5. Wiederholen Sie die Schritte 3 und 4, um zusätzliche Benutzer anzugeben, die über andere Berechtigungen verfügen sollen.
 
