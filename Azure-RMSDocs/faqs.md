@@ -4,17 +4,17 @@ description: Hier finden Sie einige häufig gestellte Fragen zu Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815622"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305777"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -46,7 +46,7 @@ Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Was ist der Unterschied zwischen dem Azure Information Protection-Client und die Azure Information Protection unified bezeichnungs-Client?
 
-Die **Azure Information Protection-Client** ist seit verfügbar, da Azure Information Protection als einen neuen Dienst zum Klassifizieren und Schützen von Dateien und e-Mails erstmals angekündigt wurde. Dieser Client wird Bezeichnungen und Einstellungen von Azure heruntergeladen, und konfigurieren Sie die Azure Information Protection-Richtlinie im Azure-Portal. Weitere Informationen finden Sie unter [Überblick über die Azure Information Protection-Richtlinie](overview-policy.md). 
+Die **Azure Information Protection-Client (klassisch)** ist seit verfügbar, da Azure Information Protection als einen neuen Dienst zum Klassifizieren und Schützen von Dateien und e-Mails erstmals angekündigt wurde. Dieser Client wird Bezeichnungen und Einstellungen von Azure heruntergeladen, und konfigurieren Sie die Azure Information Protection-Richtlinie im Azure-Portal. Weitere Informationen finden Sie unter [Überblick über die Azure Information Protection-Richtlinie](overview-policy.md). 
 
 Die **Azure Information Protection – einheitliche bezeichnungs Client** ist eine neuere Ergänzung, Unterstützung für die die einheitliche Bezeichnung speichern, mehrere Anwendungen und Dienste unterstützen. Dieser Client downloads vertraulichkeitsbezeichnungen Einstellungen und Richtlinien aus den folgenden Admin Center: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Weitere Informationen finden Sie unter [Überblick über die vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
 
@@ -58,11 +58,11 @@ Beide Clients, wenn sie installiert sind, zeigt **Azure Information Protection**
 
 - Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und anschließend **Hilfe und Feedback** aus.
 
-- Aus einer officeanwendung: Von der **schützen** Schaltfläche (Azure Information Protection-Client) oder **Vertraulichkeit** Schaltfläche (Azure Information Protection unified bezeichnungs-Client) auf **Hilfe und Feedback**.
+- Aus einer officeanwendung: Von der **schützen** Schaltfläche (klassische Client) oder **Vertraulichkeit** Schaltfläche (einheitliche bezeichnungs-Client), wählen **Hilfe und Feedback**.
 
 Verwenden der **Version** Anzahl angezeigt, um den Client zu identifizieren:
 
-- Eine Version **1**, z. B. **1.48.204.0**, wird vom Azure Information Protection-Client identifiziert.
+- Eine Version **1**, z. B. **1.48.204.0**, wird vom Azure Information Protection-Client (klassisch) identifiziert.
 
 - Eine Version **2**, z. B. **2.0.778.0**, wird vom Azure Information Protection unified bezeichnungs-Client identifiziert.
 

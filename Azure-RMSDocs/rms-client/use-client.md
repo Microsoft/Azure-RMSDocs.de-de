@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 5bb792bcc396d1aac4fcb7cb0e6558a65988477a
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: c6898480d18ef5dd915faa1b1c6c369e9de877fb
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236860"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305755"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -22,17 +22,16 @@ ms.locfileid: "67236860"
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
 
-- Der Client kann es sich um den Azure Information Protection-Client, der Azure Information Protection unified bezeichnungs-Client oder Rights Management-Client sein. Je nachdem, was dieser Clients Sie verwenden, integriert es Anwendungen, die Sie auf Computern und mobilen Geräten ausführen. 
-
+- Der Client kann es sich um den Azure Information Protection-Client (klassisch), der Azure Information Protection unified bezeichnungs-Client oder Rights Management-Client sein. Je nachdem, was dieser Clients Sie verwenden, integriert es Anwendungen, die Sie auf Computern und mobilen Geräten ausführen. 
 - Der Dienst wird in der Cloud (Azure Information Protection verwendet den Azure Rights Management-Dienst für den Schutz von Daten) oder lokal (Active Directory Rights Management Services, besser bekannt als AD RMS) ausgeführt. 
 
-Der Azure Information Protection-Client und der einheitliche Bezeichnung Azure Information Protection-Client unterstützt die Klassifizierung und Schutz mit Bezeichnungen. Der Azure Information Protection-Client unterstützt auch Schutz ohne Bezeichnung. Beide Clients mit Office-Anwendungen integrieren und müssen separat installiert werden.
+Der Azure Information Protection-Client (klassisch) und der einheitliche Bezeichnung Azure Information Protection-Client unterstützt die Klassifizierung und Schutz mit Bezeichnungen. Die klassische Client unterstützt auch Schutz ohne Bezeichnung. Beide Clients mit Office-Anwendungen integrieren und müssen separat installiert werden.
 
-Der Rights Management (RMS)-Client wird automatisch mit einigen Anwendungen wie Office-Anwendungen, die Azure Information Protection-Client und Azure Information Protection unified bezeichnungs-Client und RMS-fähige Anwendungen von installiert. Softwareanbieter. Er kann jedoch auch [eigenständig installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396) werden, um das [Synchronisieren von Dateien von IRM-geschützten Bibliotheken und OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) zu unterstützen sowie für Entwickler, die den Rights Management-Schutz in branchenspezifische Anwendungen integrieren möchten.
+Der Rights Management (RMS)-Client wird automatisch mit einigen Anwendungen wie Office-Anwendungen, die Azure Information Protection-Client (klassisch) und Azure Information Protection unified bezeichnungs-Client und RMS-fähige Anwendungen installiert werden. von Softwareherstellern. Er kann jedoch auch [eigenständig installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396) werden, um das [Synchronisieren von Dateien von IRM-geschützten Bibliotheken und OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) zu unterstützen sowie für Entwickler, die den Rights Management-Schutz in branchenspezifische Anwendungen integrieren möchten.
 
 ## <a name="choose-which-azure-information-protection-client-to-use"></a>Auswählen des zu verwendenden Azure Information Protection-Clients
 
-Die **Azure Information Protection-Client** Bezeichnungen und Einstellungen im Azure-Portal heruntergeladen. Weitere Informationen zu dieser finden Sie unter den [Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie](client-version-release-history.md).
+Die **Azure Information Protection-Client (klassisch)** Bezeichnungen und Einstellungen im Azure-Portal heruntergeladen. Weitere Informationen zu dieser finden Sie unter den [Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie](client-version-release-history.md).
 
 Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus den Admin-Centers: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Weitere Informationen zu dieser finden Sie unter den [Azure Information Protection – einheitliche bezeichnungs-Client: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
 
@@ -42,31 +41,31 @@ Welchen Client sollten Sie installieren?
     
     Die Vorschauversion des Azure Information Protection unified bezeichnungs-Clients unterstützt, erweiterte Clienteinstellungen und benutzerdefinierte Berechtigungen keine lokale Key (HYOK) oder für die Überprüfung für die lokalen Daten speichert.
 
-- Installieren Sie den Azure Information Protection-Client, wenn Sie eine Version des Clients benötigen im allgemeinen Verfügbarkeit mit erweiterten Features, die noch nicht im aktuellen allgemeiner Verfügbarkeit einheitliche bezeichnungs-Client verfügbar sind. Ihr Nachteil besteht darin, dass die Bezeichnungen auf anderen Clientplattformen verwendet werden können.
+- Installieren Sie den Azure Information Protection-Client (klassisch) Wenn Sie eine Version des Clients benötigen im allgemeinen Verfügbarkeit mit erweiterten Features, die noch nicht im aktuellen allgemeiner Verfügbarkeit einheitliche bezeichnungs-Client verfügbar sind. Ihr Nachteil besteht darin, dass die Bezeichnungen auf anderen Clientplattformen verwendet werden können.
 
-Derzeit verfügen nicht über den Azure Information Protection-Client und der einheitliche Bezeichnung Azure Information Protection-Client Parität für ihre Funktionen. Allerdings mit der aktuellen Vorschau sind diese Lücke wird geschlossen, und Sie erwarten können neue Features, die nur für den Azure Information Protection unified bezeichnungs-Client hinzugefügt werden. Aus diesem Grund wird empfohlen, dass Sie den Azure Information Protection unified bezeichnungs-Client bereitstellen, wenn die aktuellen Features und Funktionalität Ihrer geschäftlichen Anforderungen zu erfüllen. Wenn dies nicht der Fall ist oder wenn Sie Bezeichnungen im Azure-Portal konfiguriert haben, die noch nicht [zum Store für einheitliche Bezeichnungen migriert wurden](../configure-policy-migrate-labels.md), verwenden Sie den Azure Information Protection-Client.
+Derzeit aufweisen nicht die klassische Client und der einheitliche bezeichnungs Client Parität für ihre Funktionen. Allerdings mit der aktuellen Vorschau sind diese Lücke wird geschlossen, und Sie erwarten können neue Features, die nur für den einheitlichen bezeichnungs-Client hinzugefügt werden. Aus diesem Grund wird empfohlen, dass Sie den einheitlichen bezeichnungs-Client bereitstellen, wenn die aktuellen Features und Funktionalität Ihrer geschäftlichen Anforderungen zu erfüllen. Falls nicht, oder wenn Sie Bezeichnungen im Azure-Portal konfiguriert haben, die Sie noch nicht getan haben [beim einheitlichen bezeichnungs Store migriert](../configure-policy-migrate-labels.md), verwenden Sie die klassische Client.
 
 Sie können auch beide Clients in der gleichen Umgebung zur Unterstützung von unterschiedlichen geschäftsanforderungen, installieren, wie im folgenden Beispiel gezeigt. In diesem Szenario wird empfohlen, dass Sie die Bezeichnungen im Azure-Portal migrieren, sodass beide Sätze von Clients über den gleichen Satz von Bezeichnungen zur Vereinfachung der Verwaltung verwenden.
 
 ##### <a name="example-deployment-strategy"></a>Beispiel-Bereitstellungsstrategie:
 
-- Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection unified bezeichnungs-Client bereit, da die meisten Benutzer nicht benötigen, Features oder Funktionen, die nur mit dem Azure Information Protection-Client verfügbar sind. 
+- Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection unified bezeichnungs-Client bereit, da die meisten Benutzer nicht benötigen, Features oder Funktionen, die nur mit dem Azure Information Protection-Client (klassisch) verfügbar sind. 
     
     Einkaufserlebnis Bezeichnung ist für diese Benutzer müssen sehr ähnlich, wenn sie auch Geräte, auf denen Mac OS, iOS und Android ausgeführt haben und diese Geräte eine Version von Office verfügt haben, vertraulichkeitsbezeichnungen unterstützt.
 
-- Nur für sich selbst installieren Sie die Vorschauversion des Azure Information Protection unified bezeichnungs-Clients die neuen Funktionen zu testen, die benutzerdefinierte Berechtigungen und erweiterte Clienteinstellungen.
+- Nur für sich selbst installieren Sie die Vorschauversion des einheitlichen bezeichnungs-Client die neuen Funktionen zu testen, die benutzerdefinierte Berechtigungen und erweiterte Clienteinstellungen.
 
-- Stellen Sie für eine Teilmenge von Benutzern die Azure Information Protection-Client aus, da diese Benutzer, dass Bezeichnungen, die zum Anwenden von aufzunehmen erfordern, Ihre eigenen Key (HYOK)-Schutz oder die Eingabeaufforderung für benutzerdefinierte Berechtigungen.
+- Stellen Sie für eine Teilmenge von Benutzern die klassische Client aus, da diese Benutzer, dass Bezeichnungen, die zum Anwenden von aufzunehmen erfordern, Ihre eigenen Key (HYOK)-Schutz oder die Eingabeaufforderung für benutzerdefinierte Berechtigungen.
     
     Diese Benutzer verfügen über zusätzliche Features und Funktionen, aber eine etwas abweichende Optionen, wenn sie auch über Geräte, auf denen Mac OS, iOS und Android ausgeführt wird, und diese Geräte haben eine Version von Office verfügt, vertraulichkeitsbezeichnungen unterstützt. Beispielsweise sehen sie eine **schützen** Schaltfläche anstelle eines **Vertraulichkeit** -Taste auf das Menüband und die Information Protection-Leiste wird standardmäßig angezeigt werden kann.
 
-- Sie müssen auf lokale Datenspeicher mit Dokumenten, die vertrauliche Informationen überprüft oder klassifiziert und geschützt werden müssen. Sie stellen den Azure Information Protection-Client auf Servern führen Sie die Azure Information Protection-Überprüfung bereit.
+- Sie müssen auf lokale Datenspeicher mit Dokumenten, die vertrauliche Informationen überprüft oder klassifiziert und geschützt werden müssen. Sie haben den klassischen Client auf Servern führen Sie die Azure Information Protection-Überprüfung bereitstellen.
 
 ### <a name="compare-the-clients"></a>Vergleichen Sie die clients
 
 Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von den beiden Azure Information Protection-Clients unterstützt werden.
 
-|Komponente|Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
+|Komponente|Klassische client|einheitliche bezeichnungs-client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
 |Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> - [Inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) erfordern die Preview-Client |
@@ -76,8 +75,8 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> – die Bezeichnungsfarbe wird für die angewendete Bezeichnung nicht angezeigt|
 |Bezeichnungen können optische Kennzeichnungen anwenden (Kopfzeile, Fußzeile, Wasserzeichen):| Ja | Ja mit Einschränkungen:<br /><br /> – Kopf- und Fußzeilen unterstützen keine Variablen für dynamische Werte. <br /><br /> – Das Verwenden unterschiedlicher optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook wird nicht unterstützt.|
 |Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> – Kein Schutz für PDF-Dokumente im PPDF-Format <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
-|Viewer für geschützte Dateien:| Ja | Ja mit Einschränkungen:<br /><br /> – Bei generisch geschützten Dateien (PFILE-Format) können im Gegensatz zum Azure Information Protection-Client Änderungen an der ursprünglich geöffneten Datei nicht gespeichert werden|
-|PowerShell-Befehle:| Ja | Ja mit Einschränkungen:<br /><br />– Enthaltene Cmdlets: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions)(Preview-Client), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [ Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />– Derzeit können Sie Schutz von Dateien des Containers (Zip, RAR, 7Z, Meldung und PST) nicht entfernen|
+|Viewer für geschützte Dateien:| Ja | Ja mit Einschränkungen:<br /><br /> -Bei generisch geschützte Dateien (Erweiterung ".pFile"), im Gegensatz zu den Viewer aus der klassischen Client besteht es keine Möglichkeit, die ursprünglich geöffnete Datei zu speichern.|
+|PowerShell-Befehle:| Ja | Ja mit Einschränkungen:<br /><br />– Enthaltene Cmdlets: [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus), [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) (Preview-Client), [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel), [ Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) <br /><br />– Derzeit können Sie Schutz von Dateien des Containers (Zip, RAR, 7Z, Meldung und PST) nicht entfernen|
 |Offlineunterstützung für Schutzaktionen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen |
 |Unterstützung für nicht verbundene Computer mit manueller Verwaltung von Richtliniendateien:| Ja |Nein |
 |HYOK-Unterstützung:| Ja | Nein<br /><br /> Bezeichnungen, die aus dem Azure-Portal migriert wurden und für den HYOK-Schutz konfiguriert sind, werden vom Azure Information Protection-Client für einheitliche Bezeichnungen angezeigt, wenden aber keinen Schutz an |
@@ -95,7 +94,7 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 
 Wenn beide Clients dasselbe Feature unterstützen, verwenden Sie in der folgende Tabelle, um einige Funktionsunterschiede zwischen den beiden Clients zu identifizieren.
 
-|Funktionalität |Azure Information Protection-Client|Azure Information Protection<br /> Client für einheitliche Bezeichnungen|
+|Funktionalität |Klassische client|einheitliche bezeichnungs-client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
@@ -114,7 +113,7 @@ Einen ausführlichen Vergleich der Unterschiede im Verhalten für bestimmte Prot
 
 #### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Funktionen, die in der Azure Information Protection unified bezeichnungs-Client nicht geplant.
 
-Obwohl die einheitliche Bezeichnung Azure Information Protection-Client noch in Entwicklung ist, werden die folgenden Features und Unterschiede im Verhalten von der Azure Information Protection-Client nicht derzeit geplant in zukünftigen Versionen für Azure verfügbar sind Information Protection – einheitliche bezeichnungs-Client: 
+Obwohl die einheitliche Bezeichnung Azure Information Protection-Client noch in Entwicklung ist, werden die folgenden Features und Unterschiede im Verhalten von der klassischen Client nicht derzeit geplant in zukünftigen Versionen für den einheitlichen bezeichnungs-Client verfügbar sein: 
 
 - Benutzerdefinierte Berechtigungen in Office-Apps: Word, Excel und PowerPoint
 
@@ -141,7 +140,7 @@ Obwohl die einheitliche Bezeichnung Azure Information Protection-Client noch in 
 
 #### <a name="parent-labels-and-their-sublabels"></a>Übergeordnete und untergeordnete Bezeichnungen 
 
-Der Azure Information Protection-Client unterstützt keine Konfigurationen, die eine übergeordnete Bezeichnung mit untergeordneten Bezeichnungen festlegen. Diese Konfigurationen umfassen die Angabe einer Standardbezeichnung sowie einer Bezeichnung für die empfohlene oder automatische Klassifizierung. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, können Sie eine der untergeordneten Bezeichnungen angeben, aber nicht die übergeordnete Bezeichnung.
+Der Azure Information Protection-Client (klassisch) unterstützt keine Konfigurationen, die eine übergeordnete Bezeichnung angeben, die über untergeordnete Bezeichnungen verfügt. Diese Konfigurationen umfassen die Angabe einer Standardbezeichnung sowie einer Bezeichnung für die empfohlene oder automatische Klassifizierung. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, können Sie eine der untergeordneten Bezeichnungen angeben, aber nicht die übergeordnete Bezeichnung.
 
 Aus Paritätsgründen unterstützt der Azure Information Protection-Client für einheitliche Bezeichnungen die Anwendung von übergeordneten Bezeichnungen mit untergeordneten Bezeichnungen ebenfalls nicht, auch wenn Sie diese Bezeichnungen in den Admin-Centers auswählen können. In diesem Szenario wendet der Azure Information Protection-Client für einheitliche Bezeichnungen die übergeordnete Bezeichnung nicht an.
 
@@ -154,4 +153,4 @@ Weitere Informationen zum Bereitstellen und Verwenden dieser Clients finden Sie 
 
 - [Hinweise zur Bereitstellung des RMS-Clients](client-deployment-notes.md)
 
-Der Azure Information Protection-Client kann zwar mit AD RMS verwendet werden, eignet sich aber am besten für die Arbeit mit den zugehörigen Azure-Diensten: Azure Information Protection und zugehöriger Datenschutzdienst, Azure Rights Management. Einen Vergleich der Dienstseite von Azure Information Protection finden Sie unter [Vergleich von Azure Information Protection und AD RMS](../compare-on-premise.md).
+Obwohl der Azure Information Protection-Client (klassisch) mit AD RMS verwendet werden kann, wird dieser Client am besten für die Arbeit mit der Azure-Diensten geeignet; Azure Information Protection und seine Datenschutzdienste, Azure Rights Management. Einen Vergleich der Dienstseite von Azure Information Protection finden Sie unter [Vergleich von Azure Information Protection und AD RMS](../compare-on-premise.md).

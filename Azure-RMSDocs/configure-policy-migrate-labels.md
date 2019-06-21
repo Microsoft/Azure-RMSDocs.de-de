@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 01ae91cb5700b35faecd1dc64d8ea83229574fac
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: b0beddbd21d17cfe35d8efb2b1280f5fd7c17912
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236929"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305750"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -25,7 +25,7 @@ ms.locfileid: "67236929"
 
 Migrieren Sie Ihre Bezeichnungen in Azure Information Protection, damit Sie sie verwenden können, als vertraulichkeitsbezeichnungen von [Clients und Diensten, die Unterstützung für die einheitliche Bezeichnung](#clients-and-services-that-support-unified-labeling).
 
-Klicken Sie nach der Migration verwalten Sie und veröffentlichen Sie diese Bezeichnungen über die Office 365 Security & Compliance Center oder das Microsoft 365-Security-Center und Microsoft 365 Compliance Center. Diese Bezeichnungen können von der Azure Information Protection unified bezeichnungs-Client verwendet werden. Wenn Sie fortfahren, den Azure Information Protection-Client verwenden, wird dieser Client zum Herunterladen von Bezeichnungen mit der Azure Information Protection-Richtlinie aus dem Azure-Portal fortgesetzt.
+Klicken Sie nach der Migration verwalten Sie und veröffentlichen Sie diese Bezeichnungen über die Office 365 Security & Compliance Center oder das Microsoft 365-Security-Center und Microsoft 365 Compliance Center. Diese Bezeichnungen können von der Azure Information Protection unified bezeichnungs-Client verwendet werden. Wenn Sie fortfahren, den Azure Information Protection-Client (klassisch) verwenden, wird dieser Client zum Herunterladen von Bezeichnungen mit der Azure Information Protection-Richtlinie aus dem Azure-Portal fortgesetzt.
 
 Bevor Sie sich die ausführlichen Anweisungen zum Migrieren Ihrer Bezeichnungen durchlesen, sehen Sie nach, ob die folgenden häufig gestellten Fragen hilfreich für Sie sind:
 
@@ -78,7 +78,7 @@ Beachten Sie die folgenden Änderungen und Überlegungen, bevor Sie Bezeichnunge
 
 - Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Sie müssen in den Admin-Centers neue lokalisierte Zeichenfolgen für die migrierten Bezeichnungen definieren.
 
-- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. Wenn Sie jedoch eine migrierte Kennzeichnung in einem der Admin-Centers bearbeiten, müssen Sie im Azure-Portal zum Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurückkehren und **Veröffentlichen** auswählen. Diese zusätzliche Aktion ist erforderlich, damit die Clients von Azure Information Protection die Bezeichnungsänderungen übernehmen können.
+- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. Wenn Sie jedoch eine migrierte Kennzeichnung in einem der Admin-Centers bearbeiten, müssen Sie im Azure-Portal zum Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurückkehren und **Veröffentlichen** auswählen. Diese zusätzliche Aktion ist für die Azure Information Protection-Clients, um die bezeichnungsänderungen zu übernehmen (klassisch) erforderlich.
 
 ### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen
 
@@ -86,7 +86,7 @@ Anhand der folgenden Tabelle können Sie feststellen, welche Konfigurationseinst
 
 Wenn Sie nicht sicher sind, wie Ihre Bezeichnungen konfiguriert sind, zeigen Sie die zugehörigen Einstellungen im Azure-Portal an. Eine Anleitung zu diesem Schritt finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie](configure-policy.md).
 
-Azure Information Protection-Clients können alle aufgeführten Bezeichnungseinstellungen problemlos verwenden, weil sie die Bezeichnungen weiterhin aus dem Azure-Portal herunterladen.
+Azure Information Protection-Clients (klassisch) können alle bezeichnungseinstellungen ohne Probleme aufgeführt werden, weil sie weiterhin die Bezeichnungen im Azure-Portal herunterladen.
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
@@ -103,7 +103,7 @@ Azure Information Protection-Clients können alle aufgeführten Bezeichnungseins
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 
-Verwenden Sie in der folgende Tabelle, um zu identifizieren, wie eine Einstellung für den gleichen Schutz für eine Bezeichnung anders verhält sich je nachdem, ob sie vom Azure Information Protection-Client die einheitliche Bezeichnung Azure Information Protection-Client oder von Office-apps, die verwendet wird Bezeichnung integriert (auch bekannt als "native Office 
+Verwenden Sie in der folgende Tabelle, um zu identifizieren, wie eine Einstellung für den gleichen Schutz für eine Bezeichnung anders verhält sich je nachdem, ob sie vom Azure Information Protection-Client (klassisch), das einheitliche Bezeichnung Azure Information Protection-Client oder von Office-apps verwendet wird Bezeichnung (auch bekannt als "native Office integriert werden deren 
 
 Wenn Sie nicht sicher sind, wie Ihre Schutzeinstellungen konfiguriert sind, zeigen Sie die zugehörigen Einstellungen auf dem Blatt **Schutz** im Azure-Portal an. Eine Anleitung zu diesem Schritt finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -111,7 +111,7 @@ Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht auf
 - Wenn Sie Office-Apps mit integrierter Bezeichnungsfunktion verwenden, werden Bezeichnungen im Datei-Explorer nicht angezeigt, es sei denn, Sie installieren auch den Azure Information Protection Unified Labeling-Client.
 - Wenn Sie Office-Apps mit integrierter Bezeichnungsfunktion verwenden, bleibt dieser Schutz bestehen, wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde [[1]](#footnote-1).
 
-|Schutzeinstellung für eine Bezeichnung |Azure Information Protection-Client|Azure Information Protection-Client für einheitliche Bezeichnungen| Office-Apps mit integrierter Bezeichnungsfunktion
+|Schutzeinstellung für eine Bezeichnung |Azure Information Protection-Client (klassisch) |Azure Information Protection-Client für einheitliche Bezeichnungen| Office-Apps mit integrierter Bezeichnungsfunktion
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
 |Azure (Cloudschlüssel) mit benutzerdefinierten Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer:| Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> - Benutzer werden nach benutzerdefinierten Berechtigungen gefragt, die dann als Schutz mit einem cloudbasierten Schlüssel angewendet werden| Für die allgemein verfügbare Version: Wird nicht angezeigt <br /><br />  Für die Preview-Version: Wird in Word, Excel, PowerPoint und im Datei-Explorer angezeigt <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> - Benutzer werden nach benutzerdefinierten Berechtigungen gefragt, die dann als Schutz mit einem cloudbasierten Schlüssel angewendet werden|Wird in Word, Excel, PowerPoint und Outlook angezeigt: <br /><br /> Wenn die Bezeichnung angewendet wird, geschieht Folgendes:<br /><br /> – Benutzer werden nicht nach benutzerdefinierten Berechtigungen gefragt, und es wird kein Schutz angewendet <br /><br /> – Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1)|
 |HYOK (AD RMS) mit Vorlage:| Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt<br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– HYOK-Schutz wird auf Dokumente und E-Mails angewendet | Wird in Word, Excel, PowerPoint, Outlook und im Datei-Explorer angezeigt  <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen |Wird in Word, Excel, PowerPoint und Outlook angezeigt <br /><br /> Wenn diese Bezeichnung angewendet wird, geschieht Folgendes: <br /><br />– Es wird kein Schutz angewendet, und der Schutz wird entfernt [[2]](#footnote-2), wenn er zuvor von einer Bezeichnung angewendet wurde <br /><br />– Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt dieser Schutz bestehen [[1]](#footnote-1) |
@@ -156,7 +156,7 @@ Sie muss ein complianceadministrator, complianceadministrator für Daten, Sicher
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen in einem der Admin-Centers veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 
 > [!IMPORTANT]
-> Wenn Sie die Bezeichnungen außerhalb des Azure-Portals für Azure Information Protection-Clients bearbeiten, kehren Sie zu diesem Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurück, und wählen Sie **Veröffentlichen**.
+> Wenn Sie die Bezeichnungen außerhalb der Azure-Portal für Azure Information Protection-Clients (klassisch) bearbeiten, zurück zu diesem **Azure Information Protection – einheitliche Bezeichnungen** auf dem Blatt, und wählen Sie **veröffentlichen**.
 
 
 #### <a name="copy-your-policies-and-policy-settings"></a>Kopieren Sie Ihre Richtlinien und Einstellungen
@@ -174,7 +174,7 @@ Vor dem Auswählen der **Richtlinien (Vorschau) kopieren** aus, beachten Sie Fol
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Um die Eigenschaften des erweiterten Clients zu unterstützen, die kopiert werden, müssen Sie die Vorschauversion des Azure Information Protection-Clients verwenden.
+- Um die Eigenschaften des erweiterten Clients zu unterstützen, die kopiert werden, müssen Sie die Vorschauversion des Azure Information Protection unified bezeichnungs-Clients verwenden.
 
 - Im Gegensatz zur Bezeichnung-Migration, in denen nachfolgende Änderungen an Bezeichnungen synchronisiert werden, synchronisieren nicht des Kopiervorgangs für die Richtlinien für alle weiteren Änderungen an Ihrer Richtlinien oder Richtlinieneinstellungen. Wiederholen Sie die Aktion nach dem vornehmen von Änderungen im Azure-Portal kopieren-Richtlinie, und alle vorhandenen Richtlinien und deren Einstellungen überschrieben werden erneut aus. Oder verwenden Sie die Cmdlets "Set-LabelPolicy oder Set-Bezeichnung" mit der *AdvancedSettings* Parameter aus der Office 365 Security & Compliance Center und PowerShell.
 
@@ -186,7 +186,7 @@ Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
-- Die [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieser Client mit dem Azure Information Protection-Client, finden Sie unter [vergleichen Sie die Clients](./rms-client/use-client.md#compare-the-clients).
+- Die [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieser Client mit dem Azure Information Protection-Client (klassisch), finden Sie unter [vergleichen Sie die Clients](./rms-client/use-client.md#compare-the-clients).
 
 - Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie im Abschnitt **Wo ist das Feature heute verfügbar?** unter [Anwenden von Vertraulichkeits-Beschriftungen auf Ihre Dokumente und E-Mails in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in der Office-Dokumentation.
     
