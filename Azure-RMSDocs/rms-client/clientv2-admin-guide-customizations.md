@@ -4,19 +4,19 @@ description: Informationen zum Anpassen von Azure Information Protection unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298275"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343747"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -132,7 +132,7 @@ Label-Richtlinie, die erweiterten Einstellungen werden in umgekehrter Reihenfolg
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)|
-|RunAuditInformationTypeDiscovery|[Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Beispiel-PowerShell-Befehl zum Überprüfen Ihrer Bezeichnung-Richtlinieneinstellungen für eine Bezeichnungsrichtlinie mit dem Namen "Global" aus:
 
@@ -212,13 +212,13 @@ Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jet
 
 Geben Sie für die ausgewählte Bezeichnung-Richtlinie die folgenden Zeichenfolgen:
 
-- Schlüssel: **PostponeMandatoryBeforeSaveProperty**
+- Schlüssel: **PostponeMandatoryBeforeSave**
 
 - Wert: **False**
 
 Beispiel für PowerShell-Befehl, in denen die Bezeichnungsrichtlinie "Global" heißt:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSaveProperty="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen
 
@@ -444,28 +444,6 @@ Wenn diese Bedingungen erfüllt sind, und die e-Mail-Adresse des Empfängers bef
 
 - **Blockieren**: Der Benutzer wird davon abgehalten, die E-Mail zu senden, solange die Bedingung besteht. Die Nachricht beinhaltet den Grund dafür, warum die E-Mail blockiert wird, sodass der Benutzer das Problem aufheben kann. So kann er z.B. bestimmte Empfänger entfernen, oder der E-Mail eine Bezeichnung hinzufügen. 
 
-Die daraus resultierende Aktion wird im lokalen Windows-Ereignisprotokoll protokolliert: **Anwendungs- und Dienstprotokolle** > **Azure Information Protection**:
-
-- Warnmeldungen: Informations-ID 301
-
-- Legitimationsmeldungen: Informations-ID 302
-
-- Blockiermeldungen: Informations-ID 303
-
-Beispielereigniseintrag aus einer Legitimationsmeldung:
-
-```
-Client Version: 2.0.779.0
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Price list.msg
-Item Name: Price list
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-Die folgenden Abschnitte enthalten Anweisungen für jedes erweiterte Clienteinstellung an.
 
 > [!TIP]
 > Obwohl das Lernprogramm für den Azure Information Protection-Client anstelle der einheitlichen bezeichnungs-Client ist, sehen Sie die erweiterten Einstellungen in der Aktion selbst mit [Lernprogramm: Konfigurieren von Azure Information Protection, um zu steuern, der Informationen, die mithilfe von Outlook oversharing](../infoprotect-oversharing-tutorial.md).
@@ -595,19 +573,19 @@ PowerShell-Beispielbefehle,, in denen die Bezeichnungsrichtlinie heißt "Global"
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics
 
 Diese Konfiguration verwendet eine Richtlinie [erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) müssen Sie mithilfe von Office 365 Security & Compliance Center und PowerShell konfigurieren. Sie wird von der Preview-Version des einheitlichen bezeichnungs-Clients nur unterstützt.
 
-[Azure Information Protection-Analytics](../reports-aip.md) ermitteln können, und Melden von Azure Information Protection gespeicherte Dokumenten unified bezeichnungs-Clients, bei der, dass der Inhalt vertrauliche Informationen enthält. Standardmäßig werden diese Informationen nicht an Azure Information Protection-Analysen gesendet.
+[Azure Information Protection-Analytics](../reports-aip.md) ermitteln kann, und melden Sie Dokumente, die von Azure Information Protection-Clients gespeichert wird, wenn es sich bei, dass der Inhalt vertrauliche Informationen enthält. Standardmäßig ist diese Informationen von der Azure Information Protection unified gesendet an Azure Information Protection-Analytics Bezeichnung.
 
-Um dieses Verhalten zu ändern, damit diese Informationen vom einheitlichen bezeichnungs-Client gesendet wird, geben Sie die folgenden Zeichenfolgen für die Richtlinie für die ausgewählte Bezeichnung ein:
+Um dieses Verhalten zu ändern, damit diese Informationen nicht durch die einheitliche bezeichnungs-Client gesendet wird, geben Sie die folgenden Zeichenfolgen für die Richtlinie für die ausgewählte Bezeichnung ein:
 
 - Schlüssel: **RunAuditInformationTypeDiscovery**
 
-- Wert: **True**
+- Wert: **False**
 
-Wenn Sie nicht diesen erweiterten Client festlegen festlegen, auditergebnisse weiterhin vom einheitlichen bezeichnungs-Client gesendet werden die Informationen ist jedoch beschränkt auf die berichterstellung, wenn ein Benutzer mit Bezeichnung Inhalt zugegriffen hat.
+Wenn Sie festlegen, dass diese erweiterte Clienteinstellung, auditergebnisse werden weiterhin vom einheitlichen bezeichnungs-Client gesendet, aber die Informationen sind auf meldet, wenn ein Benutzer zugegriffen hat mit der Bezeichnung Inhalt.
 
 Zum Beispiel:
 
@@ -619,7 +597,7 @@ Zum Beispiel:
 
 Beispiel für PowerShell-Befehl, in denen die Bezeichnungsrichtlinie "Global" heißt:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
 
@@ -629,7 +607,7 @@ Wenn Sie das Kontrollkästchen für [Azure Information Protection-Analysen](../r
 
 - Schlüssel: **LogMatchedContent**
 
-- Wert: **Deaktivieren**
+- Wert: **False**
 
 Beispiel für PowerShell-Befehl, in denen die Bezeichnungsrichtlinie "Global" heißt:
 
@@ -647,7 +625,7 @@ Diese Konfigurationsoption ist die neue vertraulichkeitsbezeichnung wie folgt du
 
 - Bei Office-Dokumenten: Wenn das Dokument in der desktop-app geöffnet wird, wird die neue vertraulichkeitsbezeichnung als festgelegt angezeigt und angewendet wird, wenn das Dokument gespeichert wird.
 
-- In PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) und [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die neue vertraulichkeitsbezeichnung anwenden. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) die neue vertraulichkeitsbezeichnung nicht angezeigt werden, bis es mit einer anderen Methode festgelegt wird.
+- In PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) und [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die neue vertraulichkeitsbezeichnung anwenden.
 
 - Im Datei-Explorer: Klicken Sie im Dialogfeld "Azure Information Protection" wird die neue vertraulichkeitsbezeichnung aber nicht festgelegt.
 

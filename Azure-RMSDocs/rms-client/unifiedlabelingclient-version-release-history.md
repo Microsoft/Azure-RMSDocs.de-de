@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: ea360e880e4b6bf0dc4c2f362a82ffa6d21a6c3b
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: d0122c41123bb47f0facf2bdf96e73ad10f8fe3d
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236818"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343658"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
@@ -69,7 +69,7 @@ Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es 
     - [Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)
     - [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [Wenden Sie eine benutzerdefinierte Eigenschaft an, wenn eine Bezeichnung angewendet wird](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
@@ -93,6 +93,8 @@ Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es 
 **Behoben:**
 
 - Wenn die automatische Kennzeichnung konfiguriert ist, wendet die Bezeichnung beim ersten ein Dokument gespeichert wird.
+
+- Standardmäßig bezeichnungs-unterstützt über untergeordnete Bezeichnungen.
 
 ## <a name="version-207790"></a>Version 2.0.779.0
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 9f50eef590b684be95d410ed470bd0d0ee62a76a
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822216"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343709"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection – einheitliche bezeichnungs Client – Administratorhandbuch
 
@@ -113,15 +113,15 @@ Die **Einstellungen zurücksetzen** meldet den Benutzer, löscht die aktuell her
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 
@@ -145,7 +145,7 @@ Allerdings unterstützt der Azure Information Protection unified bezeichnungs-Cl
 
 Nachdem Sie den Azure Information Protection unified bezeichnungs-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen dazu, wie auf ihre Dokumente und e-Mails bezeichnen und Anleitungen für die Bezeichnungen für bestimmte Szenarien auswählen bieten. Zum Beispiel:
 
-- Online-Benutzeranweisungen: [Azure Information Protection-Benutzerhandbuch](client-user-guide.md)
+- Online-Benutzeranweisungen: [Azure Information Protection – einheitliche bezeichnungs-Benutzerhandbuch](clientv2-user-guide.md)
 
 - Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 

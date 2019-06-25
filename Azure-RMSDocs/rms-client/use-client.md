@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c6898480d18ef5dd915faa1b1c6c369e9de877fb
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: b51ebdb55212e2a29b6a8ce950bd69d578e98ed9
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305755"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343669"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -68,7 +68,7 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Komponente|Klassische client|einheitliche bezeichnungs-client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
-|Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> - [Inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) erfordern die Preview-Client |
+|Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> – Keine Unterstützung für [inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Einstellungen zurücksetzen und Protokolle exportieren:| Ja | Ja |
 |Benutzerdefinierte Berechtigungen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Outlook nur (Do Not Forward): Unterstützt<br /><br />– Für Word, Excel, PowerPoint und Datei-Explorer: Mit der Preview-Client unterstützt werden, wenn Sie die Bezeichnung im Azure-Portal konfigurieren |
 |Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell (Vorschauversion) <br /><br /> In Office-Apps können Benutzer alternativ auch **Dateiinfo** > **Dokument schützen** > **Zugriff einschränken** auswählen |
