@@ -4,19 +4,19 @@ description: Informationen zum Anpassen von Azure Information Protection unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 15dc66f33918e52645e81964eca260f167986f3e
+ms.sourcegitcommit: 027c550fc7634ca28935ed3521e8eae186b03483
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343747"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389022"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -26,16 +26,16 @@ ms.locfileid: "67343747"
 
 Verwenden Sie die folgende Informationen für erweiterte Konfigurationen, die Sie möglicherweise für spezifische Szenarien oder eine Teilmenge von Benutzern bei der Verwaltung des Azure Information Protection unified bezeichnungs-Clients.
 
-Diese Einstellungen sind erforderlich, dass die Bearbeitung der Registrierung oder das Angeben erweiterter Einstellungen mithilfe von Office 365 Security & Compliance Center und PowerShell.
+Diese Einstellungen sind erforderlich, dass die Bearbeitung der Registrierung oder das Angeben erweiterter Einstellungen. Die Verwendung der erweiterten Einstellungen [Office 365 Security & Compliance Center und PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Vorgehensweise: Konfigurieren Sie erweiterte Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center und PowerShell
 
-Bei Verwendung von [Office 365 Security & Compliance Center und PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), können Sie erweiterte Einstellungen, die Unterstützung von Anpassungen für die Bezeichnung Richtlinien und Bezeichnungen konfigurieren. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center und PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für die Bezeichnung Richtlinien und Bezeichnungen zu unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection-Leiste in Office-apps ist eine ***Bezeichnung der Richtlinie, die erweiterte Einstellung***.
 - Die Einstellung aus, um eine bezeichnungsfarbe angeben, wird eine ***Bezeichnung, die erweiterte Einstellung***.
 
-In beiden Fällen geben Sie die *AdvancedSettings* Parameter mit der Identität (Name oder GUID) der Gruppenrichtlinie oder die Beschriftung, und geben Sie Schlüssel-Wert-Paare in einer [Hashtabelle](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), mithilfe der folgenden Syntax:
+In beiden Fällen nach dem [Verbindung mit Office 365 Security & Compliance Center und PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), geben Sie die *AdvancedSettings* Parameter mit der Identität (Name oder GUID) der Gruppenrichtlinie oder die Beschriftung, und geben Sie Schlüssel/Wert-Paare in einem [Hashtabelle](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Verwenden Sie die folgende Syntax:
 
 Für eine Bezeichnung richtlinieneinstellung Einzelwert-als Zeichenfolge:
 
@@ -139,6 +139,9 @@ Beispiel-PowerShell-Befehl zum Überprüfen Ihrer Bezeichnung-Richtlinieneinstel
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Verfügbaren erweiterten Einstellungen für Bezeichnungen
+
+> [!NOTE]
+> Das Cmdlet Set-Bezeichnung so konfigurieren Sie die erweiterten Einstellungen für Bezeichnungen wird schrittweise für Mandanten eingeführt. Wenn Sie dieses Cmdlet aus, wenn Sie mit Office 365 Security & Compliance Center und PowerShell Verbinden nicht haben, versuchen Sie es in wenigen Wochen.
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
