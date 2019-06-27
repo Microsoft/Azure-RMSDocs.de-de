@@ -4,18 +4,18 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: d0122c41123bb47f0facf2bdf96e73ad10f8fe3d
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 6f359c304080918713cee52667a1bedeb7b4ae07
+ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343658"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398748"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
 
@@ -63,7 +63,6 @@ Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es 
     - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
     - [Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
     - [Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
     - [Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
     - [Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
     - [Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
