@@ -4,19 +4,19 @@ description: Informationen zum Anpassen von Azure Information Protection unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/26/2019
+ms.date: 06/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 451a7df93629be3bdfb46004dfa3b4dfd94cced7
-ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
+ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
+ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398763"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67464882"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -139,9 +139,6 @@ Beispiel-PowerShell-Befehl zum Überprüfen Ihrer Bezeichnung-Richtlinieneinstel
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Verfügbaren erweiterten Einstellungen für Bezeichnungen
-
-> [!NOTE]
-> Das Cmdlet Set-Bezeichnung so konfigurieren Sie die erweiterten Einstellungen für Bezeichnungen wird weiterhin für Mandanten eingeführt und ist noch nicht verfügbar in allen Regionen. Wenn Sie dieses Cmdlet aus, wenn Sie mit Office 365 Security & Compliance Center und PowerShell Verbinden nicht haben, versuchen Sie es in wenigen Wochen.
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
