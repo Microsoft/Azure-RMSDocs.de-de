@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 02/23/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dbd7969d5e6d87ec2d8e935f44867d58dfee9751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b2e625ad8c238d592656129cbc1542e4f6f24f97
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178385"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521210"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Exemplarische Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung
 
@@ -83,11 +83,11 @@ Sie müssen eigene Mandanten erstellen, um die Rights Management Services SDK 2.
 -   Installieren Sie das [Azure RMS PowerShell-Modul](https://technet.microsoft.com/library/jj585012.aspx).
 -   Starten Sie PowerShell, und führen Sie die folgenden Befehle aus, um die RMS-Konfiguration des Mandanten abzurufen.
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
-    `Connect-AadrmService` (Geben Sie Ihre Administrator-Anmeldeinformationen ein.)
+    `Connect-AipService` (Geben Sie Ihre Administrator-Anmeldeinformationen ein.)
 
-    `Get-AadrmConfiguration`
+    `Get-AipServiceConfiguration`
 
 
 - Erstellen Sie eine Instanz von [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx), und legen Sie ein paar Mitglieder fest.
@@ -105,7 +105,7 @@ Weitere Informationen finden Sie unter [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https:/
 
 -   Erstellen Sie eine Instanz der [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)-Struktur, die Ihre [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx)-Instanz enthält.
 
-**Hinweis** – Die *connectionInfo*-Mitglieder sind durch URLs aus dem vorherigen Aufruf von `Get-AadrmConfiguration` festgelegt und hier mit diesen Feldnamen angegeben.
+**Hinweis** : Die *connectionInfo*-Elemente werden mit URLs aus dem vorherigen Aufruf von `Get-AipServiceConfiguration` festgelegt und sind hier mit diesen Feldnamen angegeben.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};

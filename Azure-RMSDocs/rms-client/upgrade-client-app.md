@@ -4,19 +4,19 @@ description: Anweisungen für Benutzer, die ein Upgrade von der RMS-Freigabeanwe
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 640d1b1d99a36a9d81fc9f077bebfec1a6a076cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 96cb3f32c7fcb61cc9854c63642c80d098f03c46
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182567"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521628"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Leitfaden: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
 
@@ -45,7 +45,7 @@ Wenn Sie nach einer bestimmten Option suchen, die Sie häufig für die RMS-Freig
 |-----------|--------------------|
 |**Geschütztes Freigeben**|Diese Option ist im Office-Menüband nicht mehr verfügbar. Verwenden Sie anstelle der direkten Freigabe in der Office-Anwendung die Kontextmenüoption des Datei-Explorer, **Klassifizieren und schützen**, um eine Kopie des Dokuments mit benutzerdefinierten Berechtigungen zu schützen. Anschließend geben Sie die Datei mit dem gewünschten E-Mail-Client oder am gewünschten Freigabeort frei. <br /><br /> Sie können auch ein ungeschütztes Office-Dokument an eine zu schützende E-Mail anfügen. Das Dokument wird in diesem Fall automatisch mit denselben Einschränkungen geschützt. Sie können das Dokument jedoch nicht nachverfolgen und widerrufen.
 |**E-Mail an mich, wenn jemand versucht, diese Dokumente zu öffnen**|Verwenden Sie die Website für Dokumentnachverfolgung, um Ihre bevorzugte Einstellung für E-Mail-Benachrichtigungen zu konfigurieren: Suchen Sie das geschützte Dokument, das Sie freigegeben haben > **Einstellungen** > **E-Mail-Benachrichtigungen**
-|**Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**|Diese Option ist nicht mehr verfügbar. Verwenden Sie vom Administrator definierte Schutzeinstellungen, die keinen Offlinezugriff zulassen. Darüber hinaus kann ein Administrator die Gültigkeitsdauer der Nutzungslizenz für Ihren Mandanten verkürzen, indem er das Cmdlet [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime) ausführt.
+|**Zulassen, dass ich den Zugriff auf diese Dokumente sofort widerrufe**|Diese Option ist nicht mehr verfügbar. Verwenden Sie vom Administrator definierte Schutzeinstellungen, die keinen Offlinezugriff zulassen. Darüber hinaus ein Administrator kann reduzieren die Nutzungslizenz-Gültigkeitsdauer für Ihren Mandanten mit [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Verwendung nachverfolgen** in Outlook|Der Zugriff auf die Website zum Nachverfolgen von Dokumenten aus Outlook ist nicht mehr verfügbar. Verwenden Sie stattdessen in Word, PowerPoint, Excel oder dem Datei-Explorer die Option **Nachverfolgen und widerrufen**. Oder wechseln Sie in einem Browser direkt zur [Website zum Nachverfolgen von Dokumenten](https://go.microsoft.com/fwlink/?LinkId=529562).
 
 ## <a name="next-steps"></a>Nächste Schritte

@@ -4,18 +4,18 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 6afeef61671eaaf6fffdb7a0a5bb6ef93b1cf8ce
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236972"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535151"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -94,7 +94,7 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInfo
 
 Für diese Voraussetzung können Sie den Datenschutz mithilfe von Bezeichnungen anwenden oder eine direkte Verbindung mit dem Azure Rights Management-Dienst herstellen, um den Datenschutz anzuwenden.
 
-Wenn Ihr Azure Information Protection-Mandant nicht aktiviert ist, finden Sie entsprechende Anweisungen zum [Aktivieren von Azure Rights Management](../activate-service.md).
+Wenn es sich bei Ihrem Azure Information Protection-Mandanten nicht aktiviert ist, lesen Sie die Anweisungen für [Aktivieren des schutzdiensts von Azure Information Protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Voraussetzung 2: Sie entfernen den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos
 
@@ -119,12 +119,12 @@ Sie können die folgenden PowerShell-Befehle und kommentierte Anweisungen verwen
 So rufen Sie die Werte automatisch ab und führen Set-RMSServerAuthentication aus:
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Connect-AipService
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -139,37 +139,37 @@ In den nächsten Abschnitten wird erklärt, wie Sie diese Werte manuell abrufen 
 
 ##### <a name="to-get-the-bpostenantid"></a>So rufen Sie „BposTenantId“ ab
 
-Führen Sie das Cmdlet „Get-AadrmConfiguration“ aus dem Azure RMS Windows PowerShell-Modul aus:
+Führen Sie das Cmdlet Get-AipServiceConfiguration, aus dem Azure RMS Windows PowerShell-Modul:
 
-1. Wenn dieses Modul noch nicht auf Ihrem Computer installiert ist, lesen Sie [Installieren des AADRM-PowerShell-Moduls](../install-powershell.md).
+1. Wenn Sie dieses Modul nicht bereits auf Ihrem Computer installiert ist, finden Sie unter [AIPService PowerShell-Modul installieren](../install-powershell.md).
 
 2. Starten Sie die Windows PowerShell mit der Option **Als Administrator ausführen**.
 
-3. Stellen Sie die Verbindung mit dem Azure Rights Management-Dienst mithilfe des Cmdlets `Connect-AadrmService` her:
-
-        Connect-AadrmService
-
+3. Stellen Sie die Verbindung mit dem Azure Rights Management-Dienst mithilfe des Cmdlets `Connect-AipService` her:
+    
+        Connect-AipService
+    
     Geben Sie bei entsprechender Aufforderung die Anmeldeinformationen für den Azure Information Protection-Mandantenadministrator ein. In der Regel verwenden Sie ein Konto, das ein globaler Administrator für Azure Active Directory oder Office 365 ist.
-
-4. Führen Sie `Get-AadrmConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
-
-    Beispiel für die Ausgabe von „Get-AadrmConfiguration“:
-
+    
+4. Führen Sie `Get-AipServiceConfiguration` aus, und erstellen Sie eine Kopie des BPOSId-Werts.
+    
+    Ein Beispiel der Ausgabe von Get-AipServiceConfiguration:
+    
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-
+        
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-
+        
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-
+        
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Trennen Sie die Verbindung mit dem Dienst:
-
-        Disconnect-AadrmService
+    
+        Disconnect-AipServiceService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>So rufen Sie „AppPrincipalId“ und den symmetrischen Schlüssel ab
 
@@ -233,9 +233,9 @@ Unser Beispielbefehl würde wie folgt aussehen:
 
 Wie im vorherigen Befehl gezeigt, können Sie die Werte mit einem einzigen Befehl bereitstellen. Dieser würde in einem Skript ohne Benutzereingriff ausgeführt werden. Zu Testzwecken können Sie jedoch einfach „Set-RMSServerAuthentication“ eintippen und die Werte nacheinander eingeben, wenn Sie dazu aufgefordert werden. Wenn der Befehl abgeschlossen ist, arbeitet der Client nun im „Servermodus“, der für die Verwendung ohne Benutzereingriff wie bei Skripts und Windows Server-Dateiklassifizierungsinfrastruktur geeignet ist.
 
-Erwägen Sie, dieses Dienstprinzipalkonto zum Administrator zu machen: Dieses Dienstprinzipalkonto kann als Administrator konfiguriert werden, um sicherzustellen, dass es für andere Benutzer stets den Dateischutz aufheben kann. Wie beim Konfigurieren eines Standardbenutzerkontos als Administrator verwenden Sie dasselbe Azure RMS-Cmdlet, [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), wobei Sie jedoch für den Parameter **-ServicePrincipalId** Ihren AppPrincipalId-Wert angeben.
+Erwägen Sie, dieses Dienstprinzipalkonto zum Administrator zu machen: Dieses Dienstprinzipalkonto kann als Administrator konfiguriert werden, um sicherzustellen, dass es für andere Benutzer stets den Dateischutz aufheben kann. In die gleiche Weise wie Sie ein Standardbenutzerkonto ein, um Sie als Administrator, konfigurieren, verwenden Sie dasselbe Azure RMS-Cmdlet, [hinzufügen-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), aber der **ServicePrincipalId** Parameter mit Ihrem AppPrincipalId-Wert.
 
-Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Administratoren für Azure Rights Management und Ermittlungsdienste oder Datenwiederherstellung](../configure-super-users.md).
+Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Administratoren für Azure Information Protection und Discovery Services oder die datenwiederherstellung](../configure-super-users.md).
 
 > [!NOTE]
 > Wenn Sie Ihr eigenes Konto zum Authentifizieren für den Azure Rights Management-Dienst verwenden möchten, müssen Sie „Set-RMSServerAuthentication“ nicht ausführen, bevor Sie Dateien schützen, den Schutz von Dateien aufheben oder Vorlagen abrufen.
@@ -244,7 +244,7 @@ Weitere Informationen zu Administratoren finden Sie unter [Konfigurieren von Adm
 
 Wenn Sie ein Dienstprinzipalkonto zum Schützen von Dateien und zum Herunterladen von Vorlagen außerhalb der Azure-Region Nordamerika verwenden, müssen Sie die Registrierung bearbeiten: 
 
-1. Führen Sie das Cmdlet „Get-AadrmConfiguration“ erneut aus, und notieren Sie sich die Werte für **CertificationExtranetDistributionPointUrl** und **LicensingExtranetDistributionPointUrl**.
+1. Führen Sie das Cmdlet "Get-AipServiceConfiguration" erneut aus, und notieren Sie sich die Werte für **"certificationextranetdistributionpointurl"** und **LicensingExtranetDistributionPointUrl**.
 
 2. Öffnen Sie auf jedem Computer, auf dem Sie die AzureInformationProtection-Cmdlets ausführen möchten, den Registrierungs-Editor.
 

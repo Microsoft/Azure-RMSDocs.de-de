@@ -4,19 +4,19 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82061c4a146a049d7cecf6da6ab16a2e85c0ddd3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: c1b163a1e149b77e8974635dff39d9a754a962f2
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156761"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521938"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Kunden verwaltet: Lebenszyklusvorgänge des Mandantenschlüssels
 
@@ -46,9 +46,9 @@ Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neu
 
 1. Nur dann, wenn der neue Schlüssel sich in einem anderen Key Vault als der Schlüssel befindet, den Sie bereits für Azure Information Protection verwenden: Autorisieren Sie Azure Information Protection den schlüsseltresor, mithilfe der [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) Cmdlet.
 
-2. Wenn Azure Information Protection den Schlüssel, den Sie verwenden möchten, nicht erkennt, führen Sie das Cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) aus.
+2. Wenn Azure Information Protection über den Schlüssel nicht bereits wissen, Sie verwenden möchten, führen Sie [verwenden-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) Cmdlet.
 
-3. Konfigurieren Sie das Mandantenschlüsselobjekt mit dem Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
+3. Konfigurieren Sie die Mandanten-Objekt, mit der Ausführung [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) Cmdlet.
 
 Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 

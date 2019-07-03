@@ -4,7 +4,7 @@ description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9ed9992f96a923a97f2ec04d8598867321d4505
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269798"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521127"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -89,7 +89,7 @@ Ja, und das Gute ist, dass Benutzer für zwei Exchange-Bereitstellungen E-Mails 
 Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, selbst wenn Sie sich entscheiden, den Azure Rights Management-Dienst nicht mehr zu verwenden. Weitere Informationen finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Kann ich steuern, welche Benutzer Azure RMS verwenden können, um Inhalte zu schützen?
-Ja, der Azure Rights Management-Dienst verfügt für dieses Szenario über Onboarding-Steuerelemente. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboardingsteuerungsrichtlinien für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Artikel [Aktivieren von Azure Rights Management](activate-service.md).
+Ja, der Azure Rights Management-Dienst verfügt für dieses Szenario über Onboarding-Steuerelemente. Weitere Informationen finden Sie unter den [Konfigurieren von onboardingsteuerungsrichtlinien für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Abschnitt der [Aktivieren des schutzdiensts von Azure Information Protection](activate-service.md) Artikel.
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Kann ich verhindern, dass Benutzer geschützte Dokumente für bestimmte Organisationen freigeben?
 Einer der größten Vorteile der Verwendung des Azure Rights Management-Diensts für den Schutz von Daten besteht darin, dass er B2B-Zusammenarbeit unterstützt, ohne dass Sie explizite Vertrauensstellungen für jede Partnerorganisation konfigurieren müssen, denn Azure AD übernimmt die Authentifizierung für Sie.
@@ -116,11 +116,11 @@ Beachten Sie, dass Sie erst ihre benutzerdefinierte Vorlage in eine Bezeichnung 
 
 Stattdessen können Sie mithilfe von PowerShell externe Benutzer für benutzerdefinierte Dokumente (und Bezeichnungen) hinzufügen. Für die Konfiguration müssen Sie ein Rechtedefinitionsobjekt zum Aktualisieren Ihrer Vorlage verwenden:
 
-1. Geben Sie die externen E-Mail-Adressen und deren Rechte in einem Rechtedefinitionsobjekt an, indem Sie das Cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) zum Erstellen einer Variablen nutzen.
+1. Geben Sie die externen e-Mail-Adressen und ihre Rechte in einem rechtedefinitionsobjekt an, mit der [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) Cmdlet, um eine Variable zu erstellen.
 
-2. Fügen Sie diese Variable zu dem RightsDefinition-Parameter mit dem Cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) hinzu.
+2. Übergeben Sie diese Variable an den RightsDefinition-Parameter mit dem [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet.
 
-    Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) für das Cmdlet.
+    Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) für das Cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Welche Art von Gruppen kann ich mit Azure RMS verwenden?
 Für die meisten Szenarios können Sie alle Gruppentypen in Azure AD verwenden, die über eine E-Mail-Adresse verfügen. Diese Faustregel gilt immer dann, wenn Sie Nutzungsrechte zuweisen, es aber einige Ausnahmen beim Verwalten des Azure Rights Management-Diensts gibt. Weitere Informationen finden Sie unter [Azure Information Protection-Anforderungen für Gruppenkonten](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -156,7 +156,7 @@ Stellen Sie zuerst anhand des Softwareinstallationslinks unter https://admin.mic
 
 So schützen Sie eine E-Mail-Nachricht oder ein Dokument: Klicken Sie auf der Registerkarte **Optionen** auf **Berechtigungen**, und wählen Sie eine Option oder Vorlage zum Schutz Ihrer E-Mail oder Ihres Dokuments aus.
 
-So verfolgen Sie ein Dokument, nachdem Sie es geschützt haben: Registrieren Sie auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, das Dokument auf der Website für die Dokumentnachverfolgung. Verwenden Sie hierzu entweder eine Office-Anwendung oder den Datei-Explorer. Weitere Anweisungen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](./rms-client/client-track-revoke.md). Auf Ihrem Mac können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com)) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
+So verfolgen Sie ein Dokument, nachdem Sie es geschützt haben: Registrieren Sie auf einem Windows-Computer, auf dem der Azure Information Protection-Client installiert ist, das Dokument auf der Website für die Dokumentnachverfolgung. Verwenden Sie hierzu entweder eine Office-Anwendung oder den Datei-Explorer. Weitere Anweisungen finden Sie unter [Nachverfolgen und Widerrufen von Dokumenten](./rms-client/client-track-revoke.md). Auf Ihrem Mac können Sie nun über Ihren Webbrowser zur Website für die Dokumentenverfolgung (https://track.azurerms.com) ) navigieren, um dieses Dokument nachzuverfolgen und zu widerrufen.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Wenn ich ein RMS-geschütztes Office-Dokument öffne, wird die dazugehörige temporäre Datei ebenfalls von RMS geschützt?
 Nein. Die dazugehörige temporäre Datei enthält in diesem Szenario keine Daten aus dem Originaldokument, sondern nur das, was der Benutzer eingibt, während die Datei geöffnet ist. Im Gegensatz zur ursprünglichen Datei soll die temporäre Datei offensichtlich nicht freigegeben werden und verbleibt auf dem Gerät, geschützt durch lokale Sicherheitskontrollen wie BitLocker und EFS.
@@ -199,5 +199,5 @@ Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen 
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Welcher Unterschied besteht zwischen dem Schützen einer E-Mail mit der Option „Nicht weiterleiten“ und dem Schützen mit einer Vorlage, die die Berechtigung „Weiterleiten“ nicht gewährt?
 
-Trotz ihres Namens und ihrer Darstellung ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“ noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt [Option „Nicht weiterleiten“ für E-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) in [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md).
+Trotz ihres Namens und ihrer Darstellung ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“ noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie unter den [nicht weiterleiten-Option für e-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) im Abschnitt [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
 

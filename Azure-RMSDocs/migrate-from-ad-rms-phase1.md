@@ -4,19 +4,19 @@ description: Phase 1 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 95eed1f01140c133cd6e5d3301e5eef2ef12f359
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65782054"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520924"
 ---
 # <a name="migration-phase-1---preparation"></a>Migrationsphase 1: Vorbereitung
 
@@ -25,14 +25,11 @@ ms.locfileid: "65782054"
 Verwenden Sie die folgenden Informationen für Phase 1 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren behandeln die Schritte 1 bis 3 von [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und bereiten Ihre Umgebung für die Migration vor, ohne Ihre Benutzer zu beeinflussen.
 
 
-## <a name="step-1-install-the-aadrm-powershell-module-and-identify-your-tenant-url"></a>Schritt 1: Installieren des AADRM-PowerShell-Moduls und Identifizieren Ihrer Mandanten-URL
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Schritt 1: Installieren Sie des AIPService PowerShell-Moduls und identifizieren Sie Ihrer Mandanten-URL
 
-Installieren Sie das AADRM-Modul, damit Sie den Dienst konfigurieren und verwalten können, der den Schutz von Daten für Azure Information Protection bereitstellt.
+Installieren Sie das Modul AIPService, damit können Sie konfigurieren und Verwalten des Diensts, der den Schutz von Daten für Azure Information Protection bereitstellt.
 
-Anweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](./install-powershell.md).
-
-> [!NOTE]
-> Wenn Sie dieses Windows PowerShell-Modul bereits heruntergeladen haben, überprüfen Sie anhand des folgenden Befehls, ob Sie Version **2.9.0.0** oder höher verwenden: `(Get-Module aadrm -ListAvailable).Version`
+Anweisungen hierzu finden Sie unter [AIPService PowerShell-Modul installieren](./install-powershell.md).
 
 Um einige der Migrationsanweisungen abzuschließen, müssen Sie die Azure Rights Management-Dienst-URL für Ihren Mandanten kennen, damit Sie sie ersetzen können, wenn Sie Verweise auf *\<Ihre Mandanten-URL\>* sehen. Die Azure Rights Management-Dienst-URL weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**.
 
@@ -42,11 +39,11 @@ Zum Beispiel: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 1. Stellen Sie eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie die Anmeldeinformationen für den globalen Administrator Ihres Mandanten an, wenn Sie dazu aufgefordert werden:
     
-        Connect-AadrmService
+        Connect-AipService
     
 2. Abrufen der Konfiguration Ihres Mandanten:
     
-        Get-AadrmConfiguration
+        Get-AipServiceConfiguration
     
 3. Kopieren Sie den Wert für die **LicensingIntranetDistributionPointUrl**, und entfernen Sie `/_wmcs\licensing` aus dieser Zeichenfolge. 
     
@@ -54,7 +51,7 @@ Zum Beispiel: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
     Sie können überprüfen, ob Sie den korrekten Wert besitzen, indem Sie den folgenden PowerShell-Befehl ausführen.
     
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 ## <a name="step-2-prepare-for-client-migration"></a>Schritt 2. Vorbereitung für die Clientmigration
 
@@ -66,11 +63,11 @@ Für die meisten Migrationen ist es nicht sehr praktisch, alle Clients auf einma
 
 2. Konfigurieren Sie diese Gruppe für Onboarding-Steuerelemente, um nur Benutzern in dieser Gruppe zu erlauben, Azure Rights Management zu verwenden, um Inhalte zu schützen. Stellen Sie dazu in einer PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-        Connect-Aadrmservice
+        Connect-AipService
 
     Konfigurieren Sie anschließend diese Gruppe für Onboarding-Steuerelemente, und ersetzen Sie Ihre Objekt-ID der Gruppe mit jener in diesem Beispiel. Geben Sie anschließend **Y** zur Bestätigung ein, wenn Sie dazu aufgefordert werden:
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fba99fed-32a0-44e0-b032-37b419009501" -Scope WindowsApp
 
 3. [Laden Sie die folgende Datei herunter](https://go.microsoft.com/fwlink/?LinkId=524619), die Clientmigrationsskripts enthält:
     

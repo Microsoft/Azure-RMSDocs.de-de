@@ -4,19 +4,19 @@ description: Anweisungen, die Teil der Migrationspfads von AD RMS zu Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11391088aa0e2a084198cdb0aa73eeb6be0795d0
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: b4861b7955237df9b9d282330a8bd3752b00d6e6
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780855"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535219"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -64,9 +64,9 @@ Jetzt haben Sie Ihren HSM-Schlüssel in Azure Key Vault für den Azure Rights Ma
 
 Diese Verfahren werden vom Administrator für Azure Information Protection durchgeführt.
 
-1. Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice), um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
+1. Verwenden Sie während einer PowerShell-Sitzung an einer mit dem Internet verbundenen Arbeitsstation das Cmdlet [Connect-AadrmService](/powershell/module/aipservice/connect-aipservice), um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
     
-    Laden Sie dann mit dem Cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) jede exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
+    Laden Sie jede Datei vertrauenswürdigen Veröffentlichungsdomäne (.xml), dann mithilfe der [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) Cmdlet. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
     
     Um dieses Cmdlet auszuführen, benötigen Sie die Kennwörter, die Sie zuvor für die jeweiligen Konfigurationsdatendateien angegeben haben, sowie die URL für den Schlüssel, der im vorherigen Schritt identifiziert wurde.
     
@@ -79,20 +79,20 @@ Diese Verfahren werden vom Administrator für Azure Information Protection durch
     Geben Sie das Kennwort ein, das Sie für den Export der Konfigurationsdatendatei angegeben haben. Führen Sie dann den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten:
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     Im Rahmen dieses Importvorgangs wird der SLC-Schlüssel importiert und automatisch als archiviert festgelegt.
 
-2.  Wenn Sie alle Dateien hochgeladen haben, führen Sie [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um anzugeben, welcher importierte Schlüssel mit dem derzeit aktiven SLC-Schlüssel in Ihrem AD RMS-Cluster übereinstimmt. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
+2.  Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) angeben, welcher importierte Schlüssel mit den derzeit aktiven SLC-Schlüssel in Ihrer AD RMS-Clusters entspricht. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
 
-3.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
+3.  Verwenden der [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet zum Trennen von Azure Rights Management-Dienst:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Verwenden Sie das Azure RMS-Cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys), wenn Sie später bestätigen müssen, welchen Schlüssel Ihr Azure Information Protection-Mandantenschlüssel in Azure Key Vault verwendet.
+Wenn Sie später benötigen, um zu bestätigen, die Ihre Azure Information Protection Schlüssel den mandantenschlüssel in Azure Key Vault verwendet verwendet die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS-Cmdlet.
 
 Sie können jetzt mit [Schritt 5 beginnen: Aktivieren Sie den Azure Rights Management-Dienst](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

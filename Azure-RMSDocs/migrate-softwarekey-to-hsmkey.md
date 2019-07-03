@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 5729c52283f5f7537898efc730b1992be531130d
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708933"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535128"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -122,7 +122,7 @@ Führen Sie die Schritte zum Generieren des Schlüsselpaars nicht aus, da Sie be
 
 Bevor Sie Ihren Schlüssel in Azure Key Vault übertragen, stellen Sie sicher, dass das Dienstprogramm „KeyTransferRemote.exe“ **Ergebnis: ERFOLG** zurückgibt, wenn Sie eine Kopie Ihres Schlüssels mit verringerten Berechtigungen (Schritt 4.1) erstellen und Ihren Schlüssel verschlüsseln (Schritt 4.3).
 
-Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Das sieht ungefähr folgendermaßen aus: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Sie sollten sich diese URL notieren, da der Azure Information Protection-Administrator ihn benötigt, um dem Azure Rights Management-Dienst von Azure Information Protection mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
+Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Das sieht ungefähr folgendermaßen aus: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Sie sollten sich diese URL notieren, da der Azure Information Protection-Administrator ihn benötigt, um dem Azure Rights Management-Dienst von Azure Information Protection mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 
 Verwenden Sie dann die [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) Cmdlet, um den Azure Rights Management-Dienstprinzipal Zugriff auf den schlüsseltresor zu autorisieren. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
 
@@ -136,7 +136,7 @@ Nachdem Sie Ihren HSM-Schlüssel an Azure Key Vault übertragen haben, können S
 
 1. Azure Information Protection-Administrator: Kopieren Sie Ihre neuen Konfigurationsdatendateien (XML), deren SLC-Schlüssel nach Ausführung des TpdUtil-Tools entfernt wird, auf die Arbeitsstation mit Internetverbindung und in die PowerShell-Sitzung.
 
-2. Laden Sie die einzelnen XML-Dateien mithilfe des Cmdlets [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
+2. Jede XML-Datei hochladen, mithilfe der [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) Cmdlet. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
 
     Um dieses Cmdlet auszuführen, benötigen Sie das Kennwort, das Sie zuvor für die Konfigurationsdatendatei angegeben haben, sowie die URL für den Schlüssel, der im vorherigen Schlüssel identifiziert wurde.
 
@@ -149,20 +149,20 @@ Nachdem Sie Ihren HSM-Schlüssel an Azure Key Vault übertragen haben, können S
    Geben Sie das Kennwort ein, das Sie für den Export der Konfigurationsdatendatei angegeben haben. Führen Sie dann den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten:
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
     Im Rahmen dieses Importvorgangs wird der SLC-Schlüssel importiert und automatisch als archiviert festgelegt.
 
-3. Wenn Sie alle Dateien hochgeladen haben, führen Sie [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um anzugeben, welcher importierte Schlüssel mit dem derzeit aktiven SLC-Schlüssel in Ihrem AD RMS-Cluster übereinstimmt.
+3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) angeben, welcher importierte Schlüssel mit den derzeit aktiven SLC-Schlüssel in Ihrer AD RMS-Clusters entspricht.
 
-4. Verwenden Sie das Cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
+4. Verwenden der [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet zum Trennen von Azure Rights Management-Dienst:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Verwenden Sie das Azure RMS-Cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys), wenn Sie später bestätigen müssen, welchen Schlüssel Ihr Azure Information Protection-Mandantenschlüssel in Azure Key Vault verwendet.
+Wenn Sie später benötigen, um zu bestätigen, die Ihre Azure Information Protection Schlüssel den mandantenschlüssel in Azure Key Vault verwendet verwendet die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS-Cmdlet.
 
 
 Sie können jetzt mit [Schritt 5 beginnen: Aktivieren Sie den Azure Rights Management-Dienst](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

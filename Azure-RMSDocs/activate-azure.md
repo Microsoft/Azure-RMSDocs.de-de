@@ -4,26 +4,25 @@ description: Anweisungen für die Aktivierung von Schutz im Azure-Portal, damit 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ce90491200e51be7d270f5f0ef1d81b33dae63e7
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 2c2b0ca3ded29fd408d6597327f2bb15844bdd10
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156368"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520262"
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Aktivieren von Azure Rights Management über das Azure-Portal
+# <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Gewusst wie: Aktivieren Sie den Rights Management-Schutzdienst von Azure-portal
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Verwenden Sie diese Anweisungen, wenn Sie den Azure Rights Management-Dienst (Azure RMS) über das Azure-Portal aktivieren möchten.
+Verwenden Sie diese Anweisungen, wenn Sie den Rights Management-Schutzdienst (Azure RMS) von Azure Information Protection mit Azure-Portal aktivieren möchten.
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
     
@@ -41,5 +40,5 @@ Wenn die Aktivierung abgeschlossen ist, zeigt die Informationsleiste **Activatio
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Lesen Sie weiter unter [Aktivieren von Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Lesen Sie Weiter [Aktivieren des schutzdiensts von Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

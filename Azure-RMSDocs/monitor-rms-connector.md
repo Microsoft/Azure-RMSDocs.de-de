@@ -4,19 +4,19 @@ description: Hier finden Sie Informationen, die Sie beim Überwachen des Connect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 507f8ea8a613715b14fbedd820000765afa48e15
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156793"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521973"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -173,7 +173,7 @@ Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzuge
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn der RMS-Verbindungsdienst zum Schützen und Nutzen von Inhalten verwendet wird, enthält das Feld „Benutzer-ID“ in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**. Dieser Name wird automatisch für den RMS-Connector erstellt.
 
-Weitere Informationen zur Verwendungsprotokollierung finden Sie unter [Protokollieren und Analysieren der Verwendung des Azure Rights Management-Diensts](log-analyze-usage.md).
+Weitere Informationen zur nutzungsprotokollierung finden Sie unter [protokollieren und analysieren die Verwendung der Schutz von Azure Information Protection](log-analyze-usage.md).
 
 Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, können Sie [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) von Windows Sysinternals verwenden. Aktivieren Sie die Ablaufverfolgung für den RMS-Connector, indem Sie die Datei „Web.config“ für die Standardwebsite in IIS ändern:
 

@@ -4,19 +4,19 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149274"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522074"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -96,17 +96,17 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
 1. Stellen Sie in einer PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
 
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Führen Sie den folgenden Befehl aus, und geben Sie **Y** zur Bestätigung ein:
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     
     Beachten Sie, dass dieser Befehl alle Lizenzerzwingungen für den Schutzdienst Azure Rights Management entfernt, sodass alle Computer Dokumente und E-Mails schützen können.
 
 3. Bestätigen Sie, dass Onboarding-Steuerelemente nicht länger festgelegt sind:
 
-        Get-AadrmOnboardingControlPolicy
+        Get-AipServiceOnboardingControlPolicy
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
@@ -126,11 +126,11 @@ Der Übergang von einem Schlüssel zum anderen geschieht nicht sofort, sondern �
 
 So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, und geben Sie die Schlüsselkennung für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den anzugebenden Wert identifizieren, indem Sie das Cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
+- **Wenn Ihr RMS-Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) , und geben Sie den Schlüsselbezeichner für den Schlüssel, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert an, indem Sie Ausführung identifizieren die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Cmdlet. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
     
-        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Ihnen (BYOK) verwaltet wird**: Wiederholen Sie in Azure Key Vault den Schlüsselerstellungsvorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
+- **Wenn Ihr RMS-Mandantenschlüssel von Ihnen (BYOK) verwaltet wird**: Klicken Sie in Azure Key Vault, wiederholen Sie die schlüsselerstellungsvorgang für Ihren Azure Information Protection-Mandanten, und führen Sie die [verwenden-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) Cmdlet erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](./operations-tenant-key.md).
 

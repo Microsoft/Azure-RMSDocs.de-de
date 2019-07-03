@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 03/13/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 62d217f7f48d0120ed630b184131b726c21d8363
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179266"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520754"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
 
@@ -35,24 +35,24 @@ Das Einrichten von Azure für diese App erfordert, dass Sie eine Mandanten-ID, e
 
 ### <a name="azure-ad-tenant-configuration"></a>Azure AD-Mandantenkonfiguration
 
-Befolgen Sie zum Konfigurieren der Azure AD-Umgebung für Azure Information Protection die Anleitung in [Aktivieren von Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Führen Sie zum Konfigurieren der Azure AD-Umgebung für Azure Information Protection die Anleitung im [Aktivieren des schutzdiensts von Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Nachdem der Dienst aktiviert wurde, benötigen Sie PowerShell-Komponenten für die nächsten Schritte. Befolgen Sie die Anweisungen in [Verwalten des Azure Rights Management-Diensts mithilfe von Windows PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell), um dies zu erreichen.
+Nachdem der Dienst aktiviert wurde, benötigen Sie PowerShell-Komponenten für die nächsten Schritte. Führen Sie [Schutz von Azure Information Protection mithilfe von PowerShell verwalten](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) um dies zu erreichen.
 
 ### <a name="getting-your-tenant-id"></a>Abrufen der Mandanten-ID
 
 - Führen Sie PowerShell als Administrator aus.
-- Importieren Sie das RMS-Modul: `Import-Module AADRM`.
-- Stellen Sie eine Verbindung mit dem Dienst mithilfe der zugewiesenen Benutzeranmeldeinformationen her: `Connect-AadrmService –Verbose`
-- Stellen Sie sicher, dass RMS aktiviert ist: `Enable-AADRM`
-- Rufen Sie Ihre Mandanten-ID ab, indem Sie Folgendes ausführen: `Get-AadrmConfiguration`
+- Importieren Sie das RMS-Modul: `Import-Module AIPService`.
+- Stellen Sie eine Verbindung mit dem Dienst mithilfe der zugewiesenen Benutzeranmeldeinformationen her: `Connect-AipService –Verbose`
+- Stellen Sie sicher, dass RMS aktiviert ist: `enable-aipservice`
+- Rufen Sie Ihre Mandanten-ID ab, indem Sie Folgendes ausführen: `Get-AipServiceConfiguration`
 
 >Notieren Sie den BPOSId-Wert (Mandanten-ID). Dieser ist in späteren Schritten erforderlich.
 
 *Beispielausgabe*
 ![Cmdlet-Ausgabe](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- Trennen Sie die Verbindung mit dem Dienst: `Disconnect-AadrmService`
+- Trennen Sie die Verbindung mit dem Dienst: `Disconnect-AipServiceService`
 
 ### <a name="create-a-service-principal"></a>Erstellen eines Dienstprinzipals
 Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
@@ -70,7 +70,7 @@ Führen Sie die folgenden Schritte aus, um einen Dienstprinzipal zu erstellen:
 
 - Fügen Sie Ihre Anwendungsprinzipal-ID, den symmetrischen Schlüssel und die Mandanten-ID zur Datei „App.config“ der Anwendung hinzu.
 
-*Beispieldatei für „App.config“*
+*Beispieldatei für „App.config“* 
 ![Cmdlet-Ausgabe](../media/develop/example-App.config-file.png)
 
 - *ClientID* und *RedirectUri* wurden Ihnen beim Registrieren Ihrer Anwendung in Azure zur Verfügung gestellt. Weitere Informationen zum Registrieren Ihrer Anwendung in Azure und zum Abrufen von *ClientID* und *RedirectUri* finden Sie unter [Konfigurieren von Azure RMS für die ADAL-Authentifizierung](adal-auth.md).
@@ -92,7 +92,7 @@ Im folgenden Diagramm sind der Architektur- und Prozessverlauf für die zu erste
 
 ## <a name="how-the-code-works"></a>Funktionsweise des Codes
 
-Im Beispiel zum Azure IP-Test beginnt die Lösung mit der Datei „Iprotect.cs“. Dies ist ein C#-Konsolenanwendungsprojekt, und wie bei jeder anderen AIP-fähigen Anwendung beginnen Sie mit beim Laden der Datei *„msipc.dll“*, wie in der `main()`-Methode veranschaulicht.
+Im Beispiel zum Azure IP-Test beginnt die Lösung mit der Datei „Iprotect.cs“. Dies ist ein C#-Konsolenanwendungsprojekt, und wie bei jeder anderen AIP-fähigen Anwendung beginnen Sie mit beim Laden der Datei *„msipc.dll“* , wie in der `main()`-Methode veranschaulicht.
 
     //Loads MSIPC.dll
     SafeNativeMethods.IpcInitialize();

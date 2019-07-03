@@ -4,19 +4,19 @@ description: Informationen zu Installation, unterstützten Betriebssystemen, Reg
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 887b4fa06ddac3395892aab8b085fae8a44bebd9
-ms.sourcegitcommit: a8d78554f20fca35a0384569a323e5f73afdc06a
+ms.openlocfilehash: adb30f7f4e9ecb548f8003c7ab7888ee90d0fc43
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66835326"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535088"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Rights Management-Dienst-Client-bereitstellungshinweises
 
@@ -170,12 +170,12 @@ Um die Diensterkennung durchzuführen, prüft der RMS-Client Folgendes:
 
     Zum Beispiel:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<YourTenantURL\>* weist folgendes Format auf: **{GUID}.rms.[Region].aadrm.com**. Sie finden diesen Wert durch Identifizieren des Werts **RightsManagementServiceId**, wenn Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)-Cmdlet für Azure RMS ausführen.
+    *\<Ihremandantenurl\>*  weist das folgende Format: **{GUID}. RMS. [Region].aadrm.com**. Sie finden diesen Wert durch Identifizieren der **RightsManagementServiceId** Wert beim Ausführen der [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Cmdlet.
 
 > [!NOTE]
 > Bei diesem Dienstermittlungsfluss gibt es vier wichtige Ausnahmen:
 > 
-> - Mobile Geräte sind am besten für die Nutzung eines Clouddiensts geeignet, weshalb sie standardmäßig die Dienstermittlung für den Azure Rights Management-Dienst (https://discover.aadrm.com)) verwenden. Um diesen Standard so anzupassen, dass mobile Geräte AD RMS anstelle des Azure Rights Management-Diensts verwenden, geben Sie SRV-Einträge in DNS, und installieren Sie die Erweiterung für mobile Geräte (siehe dazu die Angaben unter [Active Directory Rights Management Services-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)). 
+> - Mobile Geräte sind am besten für die Nutzung eines Clouddiensts geeignet, weshalb sie standardmäßig die Dienstermittlung für den Azure Rights Management-Dienst (https://discover.aadrm.com) ) verwenden. Um diesen Standard so anzupassen, dass mobile Geräte AD RMS anstelle des Azure Rights Management-Diensts verwenden, geben Sie SRV-Einträge in DNS, und installieren Sie die Erweiterung für mobile Geräte (siehe dazu die Angaben unter [Active Directory Rights Management Services-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx)). 
 >
 > - Wenn der Rights Management-Dienst über eine Azure Information Protection-Bezeichnung aufgerufen wird, erfolgt keine Dienstermittlung. Stattdessen wird die URL direkt in der Einstellung der Bezeichnung angegeben, die in der Azure Information Protection-Richtlinie konfiguriert ist. 
 >  

@@ -4,19 +4,19 @@ description: RMS-fähige Anwendungen werden am besten mithilfe der bewährten Me
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175994"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521189"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Best Practices zu Sicherheitsthemen für Information Protection
 
@@ -81,7 +81,7 @@ Wenn Ihre Anwendung die in der SDK-Veröffentlichungslizenz aufgeführten Rechte
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Das System zum Schutz von Informationen fasst Rechte in einigen Gruppierungen zusammen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](../configure-usage-rights.md).
+Die Informationen Protection-System fasst Rechte einigen Gruppierungen zusammen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](../configure-usage-rights.md).
 
 Mit AIP kann ein Benutzer Informationen auf Wunsch verschlüsseln. Die Informationen haben keinen eigenen Schutz. Wenn ein Benutzer das Recht zur Entschlüsselung hat, gestattet die API diese Entschlüsselung. Die Anwendung ist verantwortlich für die Verwaltung bzw. den Schutz dieser Informationen, nachdem sie unverschlüsselt vorliegen. Eine Anwendung ist für die Verwaltung ihrer Umgebung und Schnittstelle verantwortlich, um eine nicht autorisierte Nutzung von Informationen zu verhindern. Beispiel: Deaktivieren der Schaltflächen **Drucken** und **Kopieren**, wenn eine Lizenz nur das Recht zum ANZEIGEN gewährt. Ihre Testsuite sollte überprüfen, ob sich Ihre Anwendung im Hinblick auf alle von ihr erkannten Lizenzrechte ordnungsgemäß verhält.
 

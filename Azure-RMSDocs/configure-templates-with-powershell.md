@@ -4,19 +4,19 @@ description: Alle Vorgänge, die Sie im Azure-Portal zum Erstellen und Verwalten
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/26/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7cf5c2046cd8d84b94379c647d31a8aca70c44fd
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 1e1e033ee900890431ed35faed5cca0171f86e38
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767634"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520989"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>PowerShell-Referenz für Schutzvorlagen
 
@@ -28,25 +28,25 @@ Darüber hinaus haben Sie die Möglichkeit, Schutzvorlagen zu exportieren und zu
 
 Sie können Export- und Importvorgänge auch zum Speichern und Wiederherstellen Ihrer Schutzvorlagen verwenden. Sie sollten Ihre Vorlagen regelmäßig sichern. So können Sie unbeabsichtigte Änderungen an den Schutzeinstellungen ganz einfach rückgängig machen, indem Sie zu einer früheren Version wechseln.
 
-Installationsanweisungen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+Installationsanweisungen finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
 
 Die folgenden Cmdlets unterstützen das Erstellen und Verwalten von Schutzvorlagen:
 
-- [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
+- [Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate)
 
-- [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate)
+- [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
-- [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate)
+- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
 
-- [Get-AadrmTemplateProperty](/powershell/module/aadrm/get-aadrmtemplateproperty)
+- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
-- [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate)
+- [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
 
-- [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition)
+- [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
 
-- [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate)
+- [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
-- [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty)
+- [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
 
 

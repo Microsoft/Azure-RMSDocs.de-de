@@ -4,19 +4,19 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91672443e149a54dea4805bae10d8656129d04f9
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156772"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521919"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft-managed: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -46,9 +46,9 @@ Zum Erstellen eines neuen Schlüssels können Sie einen anderen von Microsoft ve
 
 Sie verfügen über mehr als einen von Microsoft verwalteten Schlüssel, wenn Sie eine Migration von Active Directory Rights Management Services (AD RMS) durchgeführt und die Topologie für von Microsoft verwaltete Schlüssel für Azure Information Protection ausgewählt haben. In diesem Szenario verfügen Sie über mindestens zwei von Microsoft verwaltete Schlüssel für Ihren Mandanten. Sie haben mindestens einen Schlüssel aus AD Rights Management Services importiert. Sie verfügen auch über den Standardschlüssel, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde.
 
-Um einen anderen Schlüssel als Ihren aktiven Mandantenschlüssel für Azure Information Protection auszuwählen, verwenden Sie das Cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus dem AADRM-Modul. Um Hilfe bei der Auswahl Ihres Schlüssels zu erhalten, verwenden Sie das Cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). Sie können den Standardschlüssel identifizieren, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde, indem Sie den folgenden Befehl ausführen:
+Um einen anderen Schlüssel als Ihren aktiven mandantenschlüssel für Azure Information Protection werden auszuwählen, verwenden die [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) Cmdlet aus dem AIPService-Modul. Um die zu verwendende Schlüssel zu identifizieren, verwenden Sie die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Cmdlet. Sie können den Standardschlüssel identifizieren, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde, indem Sie den folgenden Befehl ausführen:
 
-    (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
 Information dazu, wie Sie Ihre Mandantenschlüsseltopologie so ändern, dass diese vom Kunden verwaltet wird (BYOK), finden Sie unter [Implementing BYOK for your Azure Information Protection tenant key (Implementieren von BYOK für Ihren Azure Information Protection-Mandantenschlüssel)](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 

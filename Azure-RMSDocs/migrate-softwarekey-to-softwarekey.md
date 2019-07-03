@@ -4,19 +4,19 @@ description: Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f58430e4208c1a2962e7f475418a88b0676de237
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: f8aef51156bb92d7d37da300ae2fccd51d739de1
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781905"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535113"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
@@ -31,14 +31,14 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>So importieren Sie die Konfigurationsdaten in Azure Information Protection
 
-1. Verwenden Sie auf einer Arbeitsstation mit Internetverbindung das Cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) verwenden, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen.
+1. Auf einer Arbeitsstation mit Internetverbindung verwenden die [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Cmdlet, um mit dem Azure Rights Management-Dienst herzustellen:
 
     ```
-    Connect-AadrmService
+    Connect-AipService
     ```
     Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des Azure Rights Management-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
 
-2. Laden Sie mit dem [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd)-Cmdlet jede exportierte XML-Datei mit einer vertrauenswürdigen Veröffentlichungsdomäne hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. 
+2. Verwenden der [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) -Cmdlet zum Hochladen von einzelnen exportierten Datei vertrauenswürdigen Veröffentlichungsdomäne (.xml). Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. 
     
     Zum Ausführen dieses Cmdlets benötigen Sie die Kennwörter, die Sie zuvor für die einzelnen Konfigurationsdatendatei angegeben haben. 
     
@@ -48,15 +48,15 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
     
     Geben Sie das Kennwort ein, das Sie für den Export der ersten Konfigurationsdatendatei angegeben haben. Führen Sie den folgenden Befehl aus, und bestätigen Sie, dass Sie diese Aktion ausführen möchten („E:\contosokey1.xml“ dient hier als Beispiel für diese Konfigurationsdatei):
     ```
-    Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
+    Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
-3. Wenn Sie alle Dateien hochgeladen haben, führen Sie [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) aus, um den importierten Schlüssel zu identifizieren, der mit dem derzeit aktiven SLC-Schlüssel in AD RMS übereinstimmt. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
+3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) an den importierten Schlüssel zu identifizieren, die mit den derzeit aktiven SLC-Schlüssel in AD RMS übereinstimmt. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
 
-4.  Verwenden Sie das Cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice), um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
+4.  Verwenden der [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet zum Trennen von Azure Rights Management-Dienst:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
 Sie können jetzt mit [Schritt 5 beginnen: Aktivieren Sie den Azure Rights Management-Dienst](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

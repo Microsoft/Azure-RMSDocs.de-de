@@ -4,19 +4,19 @@ description: Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Direc
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708916"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522060"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -128,7 +128,7 @@ Schließen Sie Ihre AD RMS-Partner in Ihre Planungsphase für die Migration ein,
 
 - Der Azure Rights Management-Dienst ist noch nicht aktiviert, jedoch kennen sie die Azure Rights Management-Dienst-URL.
 
-    Sie erhalten diese Informationen, indem sie das Azure Rights Management-Tool installieren, eine Verbindung mit dem Dienst herstellen ([Connect-Aadrmservice](/powershell/aadrm/vlatest/connect-aadrmservice)) und anschließend ihre Mandanteninformationen für den Azure Rights Management-Dienst anzeigen ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    Sie können diese Informationen abrufen, indem Sie installieren den Azure Rights Management-Verwaltungstool, Verbindung mit dem Dienst ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), und anschließend ihre Mandanteninformationen für den Azure Rights Management-Dienst anzeigen ([ Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - Ihnen werden die URLs für ihre AD RMS-Cluster und die Azure Rights Management-Dienst-URL bereitgestellt, damit Sie Ihre migrierten Clients so konfigurieren können, dass sie Anfragen für ihren von AD RMS geschützten Inhalt an den Azure Rights Management-Dienst ihres Mandanten umleiten können. Hinweise zum Konfigurieren von Clientumleitungen finden Sie in Schritt 7.
 
@@ -140,9 +140,9 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 [**PHASE 1: VORBEREITUNG DER MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Schritt 1: Installieren des AADRM-PowerShell-Moduls und Identifizieren Ihrer Mandanten-URL**
+- **Schritt 1: Installieren Sie des AIPService PowerShell-Moduls und identifizieren Sie Ihrer Mandanten-URL**
 
-    Sie müssen eines oder mehrere der PowerShell-Cmdlets aus dem AADRM-Modul für den Migrationsvorgang ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
+    Während der Migration müssen Sie eine oder mehrere der PowerShell-Cmdlets aus dem Modul AIPService ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
 
 - **Schritt 2: Vorbereitung für die Clientmigration**
 
@@ -156,7 +156,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 - **Schritt 4: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection**
 
-    Sie exportieren die Konfigurationsdaten (Schlüssel, Vorlagen, URLs) aus AD RMS in eine XML-Datei und laden dann diese Datei mithilfe des PowerShell-Cmdlets Import-AadrmTpd in den Azure Rights Management-Dienst von Azure Information Protection hoch. Danach ermitteln Sie, welcher importierte SLC-Schlüssel (Server Licensor Certificate) als Mandantenschlüssel für den Azure Rights Management-Dienst verwendet werden soll. Je nach AD RMS-Schlüsselkonfiguration sind möglicherweise weitere Schritte erforderlich:
+    Sie exportieren die Konfigurationsdaten (Schlüssel, Vorlagen, URLs) aus AD RMS in eine XML-Datei, und klicken Sie dann laden, die an den Azure Rights Management-Dienst von Azure Information Protection-Datei mithilfe des Import-AipServiceTpd-PowerShell-Cmdlets. Danach ermitteln Sie, welcher importierte SLC-Schlüssel (Server Licensor Certificate) als Mandantenschlüssel für den Azure Rights Management-Dienst verwendet werden soll. Je nach AD RMS-Schlüsselkonfiguration sind möglicherweise weitere Schritte erforderlich:
 
     - **Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln**:
 

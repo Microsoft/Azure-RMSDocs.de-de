@@ -4,19 +4,19 @@ description: Wenn Sie den Azure Rights Management-Dienst verwenden, werden Vorla
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 44925ad0a2c384978d3f91c1d40a5b6b11d5a2a6
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5939869dd421899a4b929b262e8a18790debaf5c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181496"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535071"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -47,7 +47,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 ### <a name="to-change-the-automatic-schedule"></a>So ändern Sie den automatischen Zeitplan
 
 1.  Verwenden Sie einen Registrierungs-Editor, um einen der folgenden Registrierungswerte zu erstellen und festzulegen:
-
+    
     - Um eine aktualisierungshäufigkeit in Tagen (mindestens 1 Tag) festgelegt:  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequency**, und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
 
         **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
@@ -81,7 +81,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
    > [!TIP]
    > Im Registrierungspfad bezieht sich <*MicrosoftRMS_FQDN*> auf den FQDN Ihres Microsoft RMS-Diensts. Wenn Sie diesen Wert überprüfen möchten:
    > 
-   > Führen Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) -Cmdlet für Azure RMS aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+   > Führen Sie die [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Cmdlet für Azure Information Protection. Wenn Sie das AIPService-PowerShell-Modul bereits installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
    > 
    > Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
    > 
@@ -94,7 +94,6 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 2. Löschen Sie den folgenden Ordner und alle darin enthaltenen Dateien: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Starten Sie Ihre Office-Anwendungen und Instanzen von Datei-Explorer neu.
-
 
 ## <a name="see-also"></a>Siehe auch
 [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md)

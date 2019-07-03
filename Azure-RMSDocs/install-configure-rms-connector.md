@@ -4,19 +4,19 @@ description: Informationen zur Unterstützung bei der Installation und Konfigura
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b92dfe6128a8ba361ebf4d0a047bdee2a124df46
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 2d29d2ba60e8fd57fdb50f7bc9f4e6bee27230a4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156487"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521161"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -63,40 +63,40 @@ Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#
 
 Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
-- **Globaler Administrator für Ihren Azure-Mandanten**: Konto, das als globaler Administrator für Ihren Office 365-oder Azure AD-Mandanten fungiert.
+-   **Globaler Administrator für Ihren Azure-Mandanten**: Konto, das als globaler Administrator für Ihren Office 365-oder Azure AD-Mandanten fungiert.
 
-- **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
+-   **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
 
-- **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und verwalten die RMS-verbindungsdiensts für Ihre Organisation gewährt wurden.
+-   **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und verwalten die RMS-verbindungsdiensts für Ihre Organisation gewährt wurden.
 
-  > [!NOTE]
-  > Die Azure Rights Management-Rollen „GlobalAdministrator“ und „ConnectorAdministrator“ werden mithilfe des Azure RMS-Cmdlets [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) Konten zugewiesen.
-  > 
-  > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
-  > 
-  > 1. Falls noch nicht geschehen, müssen Sie Windows PowerShell für Azure Rights Management herunterladen und installieren. Weitere Informationen finden Sie unter [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
-  > 
-  >    Starten Sie Windows PowerShell mit dem Befehl **Als Administrator ausführen**, und stellen Sie mithilfe des Befehls [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) eine Verbindung mit dem Azure RMS-Dienst her:
-  > 
-  >    ```
-  >    Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
-  >    ```
-  > 2. Führen Sie dann mit nur einem der folgenden Parameter den Befehl [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) aus:
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-  >    ```
-  >    Beispiel: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Rolle "ConnectorAdministrator"**
-  > 
-  >    Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
+    > [!NOTE]
+    > Die globale Administratorrolle für Azure Rights Management und Azure Rights Management-Verbindungsdienst-Administratorrolle auf Konten zugewiesen, mit der [hinzufügen-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) Cmdlet.
+    > 
+    > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
+    >
+    > 1.  Wenn Sie nicht bereits geschehen, herunterladen Sie und installieren Sie das AIPService PowerShell-Modul. Weitere Informationen finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+    >
+    >     Starten Sie Windows PowerShell mit der **als Administrator ausführen** Befehl aus, und Verbinden mit dem Schutzdienst mithilfe der [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Befehl:
+    >
+    >     ```
+    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     ```
+    > 2.  Führen Sie dann die [hinzufügen-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) -Befehl ein und verwenden nur eine der folgenden Parameter:
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
+    >     ```
+    >     Beispiel: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >
+    >     Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
 Während der Installation des RMS-Connectors werden alle Softwarevoraussetzungen überprüft und installiert, Internetinformationsdienste (IIS) wird installiert, falls noch nicht vorhanden, und die Conector-Software wird installiert und konfiguriert. Darüber hinaus wird Azure RMS für die Konfiguration vorbereitet, indem Folgendes erstellt wird:
 

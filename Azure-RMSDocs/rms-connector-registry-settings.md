@@ -4,19 +4,19 @@ description: Informationen zu den Registrierungseinträgen auf Servern, die den 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3cba05e27740ff11a2c8504ace1d1a5037cf3b2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156569"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535054"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -29,7 +29,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *\<IhreMandantenURL>* ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. So finden Sie diesen Wert
 
-    1.  Führen Sie das [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration)-Cmdlet für den Azure Rights Management-Dienst aus. Wenn Sie das Windows PowerShell-Modul für Azure RMS noch nicht installiert haben, lesen Sie [Installieren des AADRM-PowerShell-Moduls](install-powershell.md).
+    1.  Führen Sie die [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Cmdlet für den Azure Rights Management-Dienst. Wenn Sie das Modul AIPService noch nicht installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
@@ -41,7 +41,7 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
         
         Sie können überprüfen, ob Sie den korrekten Wert besitzen, indem Sie den folgenden PowerShell-Befehl ausführen.
         
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 -   *\<ConnectorFQDN>* ist der Name des Lastenausgleichs, den Sie im DNS für den Verbindungsdienst definiert haben. Beispielsweise **rmsconnector.contoso.com**.
 

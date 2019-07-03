@@ -4,19 +4,19 @@ description: Phase 3 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 540d09e79470daf775fa581109ed47b2aaa19038
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781775"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522098"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -52,9 +52,9 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     
     Wenn Sie nur über einen AD RMS-Cluster in dieser Domäne verfügen, können Sie alternativ auch nur den Domänennamen des AD RMS-Clusters angeben. In unserem Beispiel ist dies **contoso.com**. Wenn Sie den Domänennamen in diesem Eintrag angeben, gilt die Umleitung für jeden AD RMS-Cluster in der Domäne.
     
-    Die *\<port>*-Nummer wird ignoriert.
+    Die *\<port>* -Nummer wird ignoriert.
     
-    Ersetzen Sie Ihre eigene [Azure Rights Management-Dienst-URL für Ihren Mandanten](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) durch die *\<URL Ihres Mandanten\>*.
+    Ersetzen Sie Ihre eigene [Azure Rights Management-Dienst-URL für Ihren Mandanten](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) durch die *\<URL Ihres Mandanten\>* .
     
     Wenn Sie die DNS-Serverrolle in Windows Server verwenden, können Sie sich beim Festlegen der SRV-Eintragseigenschaften in der DNS-Manager-Konsole an der folgenden Tabelle orientieren:
     
@@ -63,7 +63,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     |**Domäne**|_tcp.rmscluster.contoso.com|  
     |**Dienst**|_rmsredir|  
     |**Protocol**|_http|  
-    |**Priorität**|0|  
+    |**Priority**|0|  
     |**Gewichtung**|0|  
     |**Portnummer**|80|  
     |**Host, der diesen Dienst anbietet**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
@@ -72,7 +72,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
 
     a. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
-    b. Navigieren Sie zur **Standardwebsite** > **_wmcs** > **licensing** > **licensing.asmx**
+    b. Navigieren Sie zur **Standardwebsite** >  **_wmcs** > **licensing** > **licensing.asmx**
 
     c. Klicken Sie mit der rechten Maustaste auf **licensing.asmx** > **Eigenschaften** > **Bearbeiten**
 

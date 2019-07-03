@@ -4,19 +4,19 @@ description: Phase 2 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dbbea622800561cb0a466f6dda90e9910f1c7db4
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 5d822b36fd7dd38713b8bd3d42aee72838b24195
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781865"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522110"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Migrationsphase 2: serverseitige Konfiguration für AD RMS
 
@@ -106,11 +106,11 @@ Um Schritt 4 auszuführen, wählen Sie die Anweisungen für Ihren Migrationspfad
 
 1. Stellen Sie eine Verbindung mit dem Azure Rights Management-Dienst her, und geben Sie Ihre globalen Administratoranmeldeinformationen an, wenn Sie dazu aufgefordert werden:
     
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Aktivieren des Azure Rights Management-Diensts:
     
-        Enable-Aadrm
+        Enable-AipService
 
 **Was geschieht, wenn Ihr Azure Information Protection-Mandant bereits aktiviert wurde?** Wenn der Azure Rights Management-Dienst bereits für Ihre Organisation aktiviert ist, und Sie benutzerdefinierte Vorlagen erstellt haben, die Sie nach der Migration verwenden möchten, müssen Sie diese Vorlagen exportieren und importieren. Diese Prozedur wird im nächsten Schritt behandelt. 
 
@@ -134,11 +134,11 @@ Die Änderungen an der Vorlage, die Sie für diesen Schritt möglicherweise vorn
 
 Wenn Sie vor der Migration (entweder vor oder nach der Aktivierung des Azure Rights Management-Diensts) benutzerdefinierte Vorlagen erstellt haben, sind diese nach der Migration nicht für Benutzer verfügbar, selbst wenn sie zuvor auf **Veröffentlicht** festgelegt wurden. Sie müssen folgende Schritte ausführen, um Benutzern die Vorlagen zur Verfügung zu stellen: 
 
-1. Ermitteln Sie, um welche Vorlagen es sich handelt, und notieren Sie sich die Vorlagen-ID durch Ausführen von [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
+1. Diese Vorlagen zu identifizieren, und notieren Sie sich die Vorlagen-ID durch Ausführen der [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
 
-2. Exportieren Sie die Vorlagen mithilfe des Azure RMS-PowerShell-Cmdlets [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
+2. Exportieren Sie die Vorlagen mithilfe des Azure RMS PowerShell-Cmdlets [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Importieren Sie die Vorlagen mithilfe des Azure RMS-PowerShell-Cmdlets [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
+3. Importieren Sie die Vorlagen mithilfe des Azure RMS PowerShell-Cmdlets [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
 
 Sie können diese Vorlagen wie jede andere Vorlage veröffentlichen oder archivieren, die Sie nach der Migration erstellen.
 

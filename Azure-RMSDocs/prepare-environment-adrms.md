@@ -4,19 +4,19 @@ description: Leitfaden für Administratoren, wenn Sie Azure Rights Management un
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 572806eefd9207a2d3d6bbcab12ad274c116f49f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 98b8dc8e09ba7ec3bddb83817663819e0af89697
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767654"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520901"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Vorbereiten der Umgebung für Azure Rights Management, wenn Sie über AD RMS verfügen
 
@@ -58,7 +58,7 @@ Ab Ende Februar 2018 ist Azure Rights Management in neuen Abonnements mit Azure 
 Verwenden Sie eine der folgenden Vorgehensweisen, um Azure Rights Management zu deaktivieren.
 
 > [!TIP]
-> Sie können auch das Windows PowerShell-Cmdlet [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) zum Deaktivieren des Azure Rights Management-Diensts verwenden.
+> Sie können auch das Windows PowerShell-Cmdlet [Disable-AipService](/powershell/module/aipservice/disable-aipservice), um den Azure Rights Management-Dienst deaktivieren.
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>So deaktivieren Sie Rights Management über das Microsoft 365 Admin Center
 

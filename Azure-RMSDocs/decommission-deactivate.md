@@ -4,19 +4,19 @@ description: Informationen und Anweisungen für den Fall, dass Sie den cloudbasi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 660fb56839bff1d99d85ab4a08982abd3e289168
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 683434b4094ca694539613279d0fae74bdde7be1
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179731"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520550"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
@@ -35,9 +35,9 @@ Wenn Sie über einen Azure Information Protection-Mandantenschlüssel verfügen,
 
 |Wenn dies auf Sie zutrifft, ...|… gehen Sie wie folgt vor:|
 |----------------------------|--------------|
-|Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei sie jedoch eine lokale Lösung statt Azure Information Protection verwenden sollen →|Verwenden Sie das Cmdlet [Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl), um vorhandene Benutzer zu Ihrer lokalen Bereitstellung zu leiten, wenn diese Benutzer Inhalte verwenden möchten, die nach dieser Änderung geschützt wurden. Benutzer verwenden automatisch die AD RMS-Installation, um die geschützten Inhalt zu nutzen.<br /><br />Leiten Sie Ihre Clients zur lokalen Bereitstellung um, damit Benutzer Inhalt nutzen können, der vor dieser Änderung geschützt wurde, indem sie den Registrierungsschlüssel **LicensingRedirection** für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 verwenden. Anweisungen finden Sie im [Abschnitt zur Dienstermittlung](./rms-client/client-deployment-notes.md) in den Notizen zur RMS-Clientbereitstellung sowie im **LicenseServerRedirection**-Registrierungsschlüssel für Office 2010, so wie in den [Einstellungen für die Office-Registrierung](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
-|Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator kann das PowerShell-Modul in diesem Client verwenden, um eine Massenentschlüsselung von Dateien in Ordnern durchzuführen, die vom Azure Rights Management-Dienst geschützt wurden. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Modul sowohl mit dem Azure Rights Management-Dienst von Azure Information Protection als auch mit AD RMS verwendet werden kann, können Sie Dateien vor dem oder nach dem Deaktivieren des Azure Rights Management-Diensts (oder mit einer Kombination dieser beiden Varianten) entschlüsseln.|
-|Sie können nicht alle Dateien identifizieren, die durch den Azure Rights Management-Dienst von Azure Information Protection geschützt wurden. Oder Sie möchten, dass alle Benutzer geschützte Dateien, die ausgelassen wurden, automatisch lesen können →|Stellen Sie eine Registrierungseinstellung auf allen Clientcomputern bereit, indem Sie den **LicensingRedirection**-Registrierungsschlüssel für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 verwenden, wie im [Abschnitt zur Diensterkennung](./rms-client/client-deployment-notes.md) in den Bereitstellungsanmerkungen für den RMS-Client beschrieben, sowie den **LicenseServerRedirection**-Registrierungsschlüssel für Office 2010 verwenden, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.<br /><br />Stellen Sie außerdem eine weitere Registrierungseinstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **DisableCreation** auf **1** fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
+|Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei sie jedoch eine lokale Lösung statt Azure Information Protection verwenden sollen →|Leiten Sie Ihre Clients zur lokalen Bereitstellung mithilfe der **LicensingRedirection** Registrierungsschlüssel für Office 2016 oder Office 2013. Anweisungen finden Sie in der [Abschnitt zur diensterkennung](./rms-client/client-deployment-notes.md) in den Anmerkungen zur Bereitstellung des RMS-Client. Verwenden Sie für Office 2010 ist die **LicenseServerRedirection** -Registrierungsschlüssel für Office 2010 verwenden, wie in beschrieben [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
+|Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator können Sie dann das PowerShell-Modul von diesem Client massenentschlüsselung der Dateien in Ordnern durchführen, die von Azure Information Protection geschützt wurden. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Moduls mit Azure Information Protection und AD RMS verwendet werden kann, müssen Sie die Möglichkeit, entschlüsseln Sie die Dateien vor oder nach dem Deaktivieren von des schutzdiensts von Azure Information Protection oder eine Kombination aus.|
+|Sie sind nicht in der Lage, alle Dateien ermitteln, die von Azure Information Protection geschützt wurden. Oder Sie möchten, dass alle Benutzer geschützte Dateien, die ausgelassen wurden, automatisch lesen können →|Stellen Sie eine registrierungseinstellung auf allen Clientcomputern bereit, indem Sie mit der **LicensingRedirection** -Registrierungsschlüssel für Office 2016 und Office 2013 verwenden, wie in beschrieben die [Abschnitt zur diensterkennung](./rms-client/client-deployment-notes.md) in der RMS-Client Hinweise zur Bereitstellung. Verwenden Sie für Office 2010 ist die **LicenseServerRedirection** Registrierungsschlüssel unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).<br /><br />Stellen Sie außerdem eine weitere Registrierungseinstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **DisableCreation** auf **1** fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
 |Sie möchten einen kontrollierten, manuellen Wiederherstellungsdienst für Dateien verwenden, die übergangen wurden    →|Gewähren Sie designierten Benutzern in einer Datenwiederherstellungsgruppe [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diese Benutzer, sodass diese den Dateischutz aufheben können, wenn diese Aktion von Standardbenutzern angefordert wird.<br /><br />Stellen Sie auf allen Computern die Registrierungseinstellung bereit, um zu verhindern, dass Benutzer neue Dateien schützen. Legen Sie dazu **DisableCreation** auf **1** fest, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx) beschrieben.|
 
 Weitere Informationen zu den Vorgehensweisen in dieser Tabelle finden Sie in den folgenden Ressourcen:
@@ -46,23 +46,21 @@ Weitere Informationen zu den Vorgehensweisen in dieser Tabelle finden Sie in den
 
 - Anweisungen zum Importieren Ihres Azure Information Protection-Mandantenschlüssels als eine TPD-Datei finden Sie unter [Hinzufügen einer vertrauenswürdigen Veröffentlichungsdomäne](https://technet.microsoft.com/library/cc771460.aspx).
 
-- Informationen zum Installieren des Windows PowerShell-Moduls für Azure Rights Management, um die Migrations-URL festzulegen, finden Sie unter [Installieren der Windows PowerShell für Azure Rights Management](install-powershell.md).
-
 - Informationen zum Verwenden von PowerShell mit dem Azure Information Protection-Client finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md).
 
-Wenn Sie soweit sind, dass Sie den Azure Rights Management-Dienst für Ihre Organisation deaktivieren können, gehen Sie gemäß den folgenden Anweisungen vor.
+Wenn Sie so deaktivieren Sie den Schutzdienst von Azure Information Protection bereit sind, gehen Sie folgendermaßen vor.
 
 ## <a name="deactivating-rights-management"></a>Deaktivieren von Rights Management
-Verwenden Sie eine der folgenden Vorgehensweisen, um Azure Rights Management zu deaktivieren.
+Verwenden Sie eines der folgenden Verfahren, um den Schutzdienst Azure Rights Management zu deaktivieren.
 
 > [!TIP]
-> Sie können auch das Windows PowerShell-Cmdlet [Disable-Aadrm](/powershell/module/aadrm/disable-aadrm) zum Deaktivieren von Rights Management verwenden.
+> Sie können auch das PowerShell-Cmdlet [Disable-AipService](/powershell/module/aipservice/disable-aipservice)zum Deaktivieren von Rights Management.
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>So deaktivieren Sie Rights Management über das Microsoft 365 Admin Center
 
 1. Wechseln Sie zur [Rights Management-Seite](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) für Office 365-Administratoren.
-
-    Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.    
+    
+    Wenn Sie aufgefordert werden, sich anzumelden, verwenden Sie das Konto eines globalen Administrators für Office 365.
 
 2. Klicken Sie auf der Seite **Rights Management** auf **Deaktivieren**.
 
@@ -80,4 +78,4 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
 
 3.  Wählen Sie auf dem Blatt **„Protection activation“ (Schutzaktivierung) von Azure Information Protection** **Deaktivieren** aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
 
-Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt.
+Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt. 

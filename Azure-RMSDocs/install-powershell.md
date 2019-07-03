@@ -1,96 +1,100 @@
 ---
-title: Installieren von PowerShell für AADRM – AIP
-description: Hier finden Sie Anweisungen zum Installieren der Windows PowerShell für den Azure Rights Management-Dienst von Azure Information Protection. Der Name dieses Moduls lautet AADRM.
+title: Installieren Sie das AIPService-PowerShell-Modul für Azure Information Protection
+description: Anweisungen zum Installieren von PowerShell für den Schutzdienst von Azure Information Protection. Der Name dieses Moduls ist AIPService.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0069503146d5847935fa1b86769a9968c2a5e2b1
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: c986b34f3138a3410cb0d675c016206a752ad0c8
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156816"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535021"
 ---
-# <a name="installing-the-aadrm-powershell-module"></a>Installieren des PowerShell-Moduls für AADRM
+# <a name="installing-the-aipservice-powershell-module"></a>Installieren des AIPService PowerShell-Moduls
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Die folgenden Informationen helfen Ihnen beim Installieren des Windows PowerShell-Moduls für den Azure Rights Management-Dienst von Azure Information Protection. Der Name dieses Moduls lautet AADRM.
+Verwenden Sie die folgende Informationen, um Ihnen bei der Installation des Windows PowerShell-Moduls für den Schutzdienst von Azure Information Protection. Der Name dieses Moduls ist AIPService und ersetzt die vorherige Version, die AADRM benannt wurde.
 
-Mithilfe dieses PowerShell-Moduls können Sie den Azure Rights Management-Dienst über die Befehlszeile verwalten, indem Sie einen Computer verwenden, der über eine Internetverbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Rights Management unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarios erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md).
+Sie können dieses PowerShell-Modul verwenden zum Verwalten des schutzdiensts (Azure Rights Management) von der Befehlszeile aus mit einem beliebigen Computer, die über eine Internetverbindung verfügt und, die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Information Protection unterstützt die Skripterstellung für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden Sie unter [Schutz von Azure Information Protection mithilfe von PowerShell verwalten](administer-powershell.md).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
-Die folgende Tabelle enthält Installations- und Benutzungsanforderungen an das AADRM-PowerShell-Modul für den Azure Rights Management-Dienst von Azure Information Protection.
+Diese Tabelle enthält die Voraussetzungen zum Installieren und verwenden das AIPService-PowerShell-Modul für den Schutzdienst von Azure Information Protection.
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Die Mindestversion von Windows PowerShell: 3.0|Sie können die von Ihnen ausgeführte Version von Windows PowerShell überprüfen, indem Sie in einer PowerShell-Sitzung `$PSVersionTable` eingeben. <br /><br /> Wenn Sie eine neuere Version von Windows PowerShell installieren müssen, finden Sie weitere Informationen dazu unter [Aktualisieren einer vorhandenen Version von Windows PowerShell](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
-|Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist in der neuerer Betriebssysteme enthalten, deshalb sollten Sie eine manuelle Installation nur dann, wenn das Clientbetriebssystem vor Windows 8.0 oder Serverbetriebssystem kleiner als Windows Server 2012 müssen.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist für einige Klassen erforderlich, die vom AADRM-Modul verwendet werden.|
+|Mindestversion von Microsoft .NET Framework: 4.5<br /><br />Hinweis: Diese Version von Microsoft .NET Framework ist in der neuerer Betriebssysteme enthalten, deshalb sollten Sie eine manuelle Installation nur dann, wenn das Clientbetriebssystem vor Windows 8.0 oder Serverbetriebssystem kleiner als Windows Server 2012 müssen.|Wenn die Mindestversion von Microsoft .NET Framework noch nicht installiert ist, können Sie [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) herunterladen.<br /><br />Diese Mindestversion von Microsoft .NET Framework ist erforderlich für einige der Klassen, die das Modul AIPService verwendet.|
 
-Ab Version 2.5.0.0 des AADRM-Moduls ist der Microsoft Online Services-Anmeldeassistent nicht mehr erforderlich.
+## <a name="if-you-have-the-aadrm-module-installed"></a>Wenn Sie das AADRM-Modul installiert haben
 
-> [!NOTE]
-> 
-> Wenn Sie eine Version des AADRM-Moduls mit dem Azure Rights Management Verwaltungstool installiert haben, nutzen Sie **Programme und Features**, um **Windows Azure AD Rights Management Administration** zu deinstallieren, bevor Sie die neueste Version des AADRM-Moduls aus dem PowerShell-Katalog installieren.
+Das AIPService-Modul ersetzt das ältere Modul AADRM. Wenn Sie das ältere-Modul installiert haben, deinstallieren Sie sie aus, und klicken Sie dann installieren Sie das AIPService-Modul zu.
+
+Das neuere Modul verfügt über Aliase, um die Cmdlet-Namen im älteren-Modul aus, damit alle vorhandenen Skripts weiterhin funktionsfähig ist. Planen Sie jedoch so aktualisieren Sie diese Verweise, bevor das alte-Modul nicht mehr unterstützt fällt. Unterstützung für das AADRM-Modul wird 15 Juli 2020 beendet.
+
+Wenn Sie das AADRM-Modul mit dem Azure Rights Management-Verwaltungstool installiert haben, verwenden Sie **Programme und Funktionen** Deinstallieren **Verwaltung von Windows Azure AD Rights Management**.
 
 
-## <a name="how-to-install-the-aadrm-module"></a>Installieren des AADRM-Moduls
+## <a name="how-to-install-the-aipservice-module"></a>Gewusst wie: Installieren des Moduls AIPService
 
-Das AADRM-Modul wurde in den [PowerShell-Katalog](/powershell/gallery/readme) verschoben, und ist nicht mehr aus dem Microsoft Download Center verfügbar. 
+Das AIPService-Modul ist, auf die [PowerShell-Katalog](/powershell/gallery/readme) und nicht aus dem Microsoft Download Center verfügbar ist. 
 
-### <a name="to-install-the-aadrm-module-from-the-powershell-gallery"></a>Installieren des AADRM-Moduls über den PowerShell-Katalog
+### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>Zum Installieren des AIPService-Moduls aus dem PowerShell-Katalog
 
 Wenn Sie noch nicht mit dem PowerShell-Katalog vertraut sind, finden Sie unter [Erste Schritte mit dem PowerShell-Katalog](/powershell/gallery/psgallery/psgallery_gettingstarted) weitere Informationen. Folgen Sie den Anweisungen, die zur Erfüllung der Kataloganforderungen erforderlich sind. Hierzu zählt die Installation des PowerShellGet-Moduls und des NuGet-Anbieters.
 
-Details zum AADRM-Modul im PowerShell-Katalog finden Sie auf der [AADRM-Seite](https://www.powershellgallery.com/packages/AADRM).
+Details zum AIPService-Modul im PowerShell-Katalog finden auf die [AIPService Seite](https://www.powershellgallery.com/packages/AIPService).
 
-Um das AADRM-Modul zu installieren, starten Sie eine PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und geben Folgendes ein:
+Um das AIPService-Modul zu installieren, starten Sie eine PowerShell-Sitzung mit dem **als Administrator ausführen** Option, und geben:
 
-    Install-Module -Name AADRM
+    Install-Module -Name AIPService
 
-Wenn Sie vor dem Installieren von einem nicht vertrauenswürdigen Repository gewarnt werden, können Sie Y zum Bestätigen drücken. Alternativ drücken Sie N, und konfigurieren den PowerShell-Katalog als vertrauenswürdiges Repository mithilfe des Befehls `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted`, und führen den Befehl zum Installieren des AADRM-Moduls dann erneut aus.  
+Wenn Sie vor dem Installieren von einem nicht vertrauenswürdigen Repository gewarnt werden, können Sie Y zum Bestätigen drücken. Alternativ drücken Sie N und Konfigurieren der PowerShell-Katalog als vertrauenswürdiges Repository mithilfe des Befehls `Set-PSRepository -Name PSGallery -InstallationPolicy Trusted` und führen Sie den Befehl zum Installieren des Moduls AIPService erneut aus.  
 
-Wenn Sie eine frühere Version des AADRM-Moduls aus dem Katalog installiert haben, aktualisieren Sie es, indem Sie Folgendes eingeben:
+Wenn Sie eine frühere Version des Moduls AIPService aus dem Katalog installiert haben, aktualisieren Sie es auf die neueste Version, indem Sie eingeben:
 
-    Update-Module -Name AADRM
+    Update-Module -Name AIPService
 
 
 ## <a name="next-steps"></a>Nächste Schritte
 Überprüfen Sie in einer Windows PowerShell-Sitzung die Version des installierten Moduls. Diese Überprüfung ist besonders wichtig, wenn Sie ein Upgrade von einer älteren Version durchgeführt haben:
 
 ```
-(Get-Module AADRM –ListAvailable).Version
+(Get-Module AIPService –ListAvailable).Version
 ```
 
-Hinweis: Wenn dieser Befehl nicht erfolgreich ist, führen Sie zunächst **Import-Module AADRM** aus.
+Hinweis: Wenn Sie diesen Befehl ein Fehler auftritt, führen Sie zunächst **Import-Module AIPService**.
 
 Geben Sie Folgendes ein, um die verfügbaren Cmdlets anzuzeigen:
 
 ```
-Get-Command -Module AADRM
+Get-Command -Module AIPService
 ```
 
 Verwenden Sie den Befehl `Get-Help <cmdlet_name>`, um Hilfe zu einem spezifischen Cmdlet anzuzeigen. Verwenden Sie den Parameter **-online**, um die neueste Hilfe auf der Microsoft-Dokumentationswebsite anzuzeigen. Zum Beispiel:
 
 ```
-Get-Help Connect-AadrmService -online
+Get-Help Connect-AipService -online
 ```
 
 Weitere Informationen finden Sie unter:
 
--   Vollständige Liste der verfügbaren Cmdlets: [AADRM-Modul](/powershell/aadrm/vlatest/rightsmanagement)
+-   Vollständige Liste der verfügbaren Cmdlets: [AIPService-Modul](/powershell/module/aipservice/?view=azureipps#aipservice)
 
--   Liste der Hauptkonfigurationsszenarios, die PowerShell unterstützen: [Verwalten von Azure Rights Management unter Verwendung der Windows PowerShell](administer-powershell.md)
+-   Liste der hauptkonfigurationsszenarien, die PowerShell unterstützen: [Verwalten von Schutz von Azure Information Protection mithilfe von PowerShell](administer-powershell.md)
 
-Vor dem Ausführen von Befehlen, die den Azure Rights Management-Dienst konfigurieren, müssen Sie mithilfe des Cmdlets [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) eine Verbindung mit dem Dienst herstellen. Wenn Sie die gewünschten Konfigurationsbefehle ausgeführt haben, trennen Sie als Best Practice den Dienst mithilfe des Cmdlets [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice). Wenn Sie die Verbindung nicht trennen, wird sie nach einiger Zeit der Inaktivität automatisch getrennt. Aufgrund des Verhaltens zum automatischen Trennen der Verbindung kann es vorkommen, dass Sie während einer PowerShell-Sitzung gelegentlich die Verbindung neu herstellen müssen. 
+Bevor Sie Befehle, die den Schutzdienst zu konfigurieren ausführen können, Sie müssen eine Verbindung herstellen mit dem Dienst mithilfe der [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Cmdlet.
+
+Wenn Sie die gewünschten Konfigurationsbefehle ausgeführt, als bewährte Methode abgeschlossen haben, trennen Sie den Dienst mithilfe der [Disconnect-AipService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet. Wenn Sie die Verbindung nicht trennen, wird sie nach einiger Zeit der Inaktivität automatisch getrennt. Aufgrund des Verhaltens zum automatischen Trennen der Verbindung kann es vorkommen, dass Sie während einer PowerShell-Sitzung gelegentlich die Verbindung neu herstellen müssen. 
 
 > [!NOTE]
-> Wenn der Azure Rights Management-Dienst noch nicht aktiviert wurde, können Sie dies nach dem Herstellen der Verbindung mit dem Dienst mithilfe des Cmdlets [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm) nachholen.
+> Wenn Sie noch nicht der Schutzdienst aktiviert ist, hierzu können Sie nach dem Sie mit dem Dienst verbunden haben, mit der [aktivieren-AipService](/powershell/module/aipservice/enable-aipservice) Cmdlet.
 
