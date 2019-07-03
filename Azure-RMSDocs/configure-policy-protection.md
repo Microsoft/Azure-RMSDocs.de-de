@@ -4,17 +4,17 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/22/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305592"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520431"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -41,7 +41,7 @@ Wenn ein Dokument oder eine E-Mail von einem Rights Management-Dienst geschützt
 Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionsweise finden Sie unter [Was ist Azure Rights Management?](what-is-azure-rms.md)
 
 > [!IMPORTANT]
-> Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren von Azure Rights Management](activate-service.md).
+> Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren des Schutzdiensts von Azure Information Protection](activate-service.md).
 
 Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office Online, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
 
@@ -132,7 +132,7 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
      Als bewährte Methode verwenden Sie Gruppen statt Benutzer. Durch diese Strategie bleibt Ihre Konfiguration einfacher, und Sie müssen später wahrscheinlich nicht Ihre Bezeichnungskonfiguration aktualisieren und den Inhalt erneut schützen. Wenn Sie jedoch Änderungen an der Gruppe durchführen, denken Sie daran, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](prepare.md#group-membership-caching-by-azure-information-protection). 
     
-     Wenn Sie den ersten Satz von Benutzern und Gruppen angegeben haben, wählen Sie die Berechtigungen aus, die für diese Benutzer und Gruppen gewährt werden sollen. Weitere Informationen zu den Berechtigungen, die Sie auswählen können, finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Rights Management](configure-usage-rights.md). Anwendungen, die diesen Schutz unterstützen, unterscheiden sich jedoch möglicherweise darin, wie sie diese Berechtigungen implementieren. Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen.
+    Wenn Sie den ersten Satz von Benutzern und Gruppen angegeben haben, wählen Sie die Berechtigungen aus, die für diese Benutzer und Gruppen gewährt werden sollen. Weitere Informationen zu den auswählbaren Berechtigungen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md). Anwendungen, die diesen Schutz unterstützen, unterscheiden sich jedoch möglicherweise darin, wie sie diese Berechtigungen implementieren. Lesen Sie die Dokumentationen der Anwendungen, und führen Sie eigene Tests mit den Anwendungen aus, die von Benutzer verwendet werden, um das Verhalten zu überprüfen, bevor Sie die Vorlage für Benutzer bereitstellen.
     
      Falls erforderlich, können Sie jetzt einen zweiten Satz von Benutzern und Gruppen mit Nutzungsrechten hinzufügen. Wiederholen Sie diesen Prozess, bis Sie alle Benutzer und Gruppen mit den jeweiligen Berechtigungen angegeben haben.
 
