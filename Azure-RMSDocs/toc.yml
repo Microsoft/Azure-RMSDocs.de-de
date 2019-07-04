@@ -12,11 +12,11 @@
           href: requirements.md
         - name: Azure Active Directory-Anforderungen
           href: requirements-azure-ad.md
-        - name: Unterstützung von Clientgeräten für den Schutz von Daten
+        - name: Unterstützung von Clientgeräten für den Schutz
           href: requirements-client-devices.md
-        - name: Unterstützung von Anwendungen für den Schutz von Daten
+        - name: Unterstützung von Anwendungen für den Schutz
           href: requirements-applications.md
-        - name: Unterstützung lokaler Server für den Schutz von Daten
+        - name: Unterstützung lokaler Server für den Schutz
           href: requirements-servers.md
 - name: Schnellstarts
   expanded: true
@@ -101,7 +101,7 @@
           href: prepare.md
     - name: Bereitstellen und Verwenden des Diensts
       items:
-        - name: Aktivieren des Diensts
+        - name: Informationen zum Aktivieren des Schutzes
           items:
             - name: Übersicht
               href: activate-service.md
@@ -209,7 +209,7 @@
           items:
             - name: Übersicht
               href: administer-powershell.md
-            - name: Installieren des PowerShell-Moduls für AADRM
+            - name: Installieren des PowerShell-Moduls für AIPService
               href: install-powershell.md
     - name: Bereitstellen und Verwenden des Clients
       items:
