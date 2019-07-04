@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182329"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545035"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -55,7 +55,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
         
     - **Probleme beim Schützen oder Nutzen von Inhalten**
         
-        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Rights Management](requirements.md).
+        Stellen Sie sicher, dass den Benutzern entsprechende Anweisungen für die verwendeten Anwendungen vorliegen und dass sie Anwendungen und Geräte verwenden, die vom Azure Rights Management-Dienst unterstützt werden. Weitere Informationen zu unterstützten Anwendungen und Geräten finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
         
         Unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md) erfahren Sie, wie Sie prüfen können, ob ein bestimmter Benutzer oder eine bestimmte Gruppe von Azure Active Directory dafür autorisiert werden kann, geschützte Inhalte zu schützen oder zu nutzen.
         
