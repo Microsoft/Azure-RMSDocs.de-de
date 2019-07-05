@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/12/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
-ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
+ms.openlocfilehash: 13bc0ab4df8c07905149cfa6ef8417543415f4d2
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67028716"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563433"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -74,7 +74,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |PullPolicy|[Unterstützung für getrennte Computer](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)|
-|RunAuditInformationTypeDiscovery|[Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Hinzufügen einer Bezeichnung zu einem Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -795,25 +795,25 @@ Um einem Office-Dokument eine Bezeichnung dieser Klassifizierungswerte zuzuweise
 
 Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird diesem eine der folgenden Bezeichnungen zugeordnet: **Öffentlich**, **Allgemein** oder **Streng vertraulich\Alle Mitarbeiter**. Dies geschieht allerdings nur, wenn Bezeichnungen mit diesen Namen in der Azure Information Protection-Richtlinie vorhanden sind. Wenn es keine Bezeichnungen mit diesen Namen gibt, erhält das Dokument keine Bezeichnung.
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Aktivieren von Azure Information Protection-Analysen zur Erkennung vertraulicher Informationen in Dokumenten
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
-[Azure Information Protection-Analysen](../reports-aip.md) sind in der Lage, die von Azure Information Protection-Clients gespeicherten Dokumente, die Inhalte mit vertraulichen Informationen enthalten, zu erkennen und zu melden. Standardmäßig werden diese Informationen nicht an Azure Information Protection-Analysen gesendet.
+[Azure Information Protection-Analytics](../reports-aip.md) ermitteln kann, und melden Sie Dokumente, die von Azure Information Protection-Clients gespeichert wird, wenn es sich bei, dass der Inhalt vertrauliche Informationen enthält. Standardmäßig ist diese Informationen vom Azure Information Protection-Client (klassisch) mit Azure Information Protection-Analytics gesendet.
 
-Um dieses Verhalten dahin gehend zu ändern, dass diese Informationen gesendet werden, geben Sie die folgenden Zeichenfolgen ein:
+Um dieses Verhalten zu ändern, damit diese Informationen nicht durch die klassische Client gesendet wird, geben Sie in der folgenden Zeichenfolgen:
 
 - Schlüssel: **RunAuditInformationTypeDiscovery**
 
-- Wert: **True**
+- Wert: **False**
 
-Wenn diese erweiterte Clienteinstellung nicht festgelegt wird, werden weiterhin Überwachungsergebnisse vom Azure Information Protection-Client gesendet. Der Bericht beschränkt sich jedoch auf Informationen über Benutzerzugriffe auf bezeichnete Inhalte.
+Wenn Sie festlegen, dass diese erweiterte Clienteinstellung, auditergebnisse weiterhin aus dem klassischen Client gesendet werden, aber die Informationen sind auf meldet, wenn ein Benutzer zugegriffen hat mit der Bezeichnung Inhalt.
 
 Zum Beispiel:
 
-- Ohne diese Einstellung können Sie sehen, dass ein Benutzer auf die mit **Vertraulich\Vertrieb** bezeichnete Datei „Finanzen.docx“ zugegriffen hat.
+- Mit dieser Einstellung können Sie sehen, dass es sich bei Financial.docx Zugriffs auf einen Benutzer mit der Bezeichnung **vertraulich \ Sales**.
 
-- Und mit dieser Einstellung sehen Sie, dass „Finanzen.docx“ sechs Kreditkartennummern enthält.
+- Ohne diese Einstellung sehen Sie sich, dass Financial.docx 6 Kreditkartennummern enthält.
     
     - Wenn Sie zusätzlich [Inhaltsübereinstimmungen für umfassendere Analysen](../reports-aip.md#content-matches-for-deeper-analysis) aktivieren, sind außerdem die tatsächlichen Kreditkartennummern einsehbar.
 

@@ -4,19 +4,19 @@ description: Informationen zum Anpassen von Azure Information Protection unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
-ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
+ms.openlocfilehash: aac8b94bbe1eaa46111dee15ac5f69d05ac730ab
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67464882"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563454"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -577,7 +577,7 @@ PowerShell-Beispielbefehle,, in denen die Bezeichnungsrichtlinie heißt "Global"
 
 Diese Konfiguration verwendet eine Richtlinie [erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) müssen Sie mithilfe von Office 365 Security & Compliance Center und PowerShell konfigurieren. Sie wird von der Preview-Version des einheitlichen bezeichnungs-Clients nur unterstützt.
 
-[Azure Information Protection-Analytics](../reports-aip.md) ermitteln kann, und melden Sie Dokumente, die von Azure Information Protection-Clients gespeichert wird, wenn es sich bei, dass der Inhalt vertrauliche Informationen enthält. Standardmäßig ist diese Informationen von der Azure Information Protection unified gesendet an Azure Information Protection-Analytics Bezeichnung.
+[Azure Information Protection-Analytics](../reports-aip.md) ermitteln kann, und melden Sie Dokumente, die von Azure Information Protection-Clients gespeichert wird, wenn es sich bei, dass der Inhalt vertrauliche Informationen enthält. Standardmäßig ist diese Informationen vom Azure Information Protection unified bezeichnungs-Client an Azure Information Protection-Analytics gesendet.
 
 Um dieses Verhalten zu ändern, damit diese Informationen nicht durch die einheitliche bezeichnungs-Client gesendet wird, geben Sie die folgenden Zeichenfolgen für die Richtlinie für die ausgewählte Bezeichnung ein:
 
@@ -589,9 +589,9 @@ Wenn Sie festlegen, dass diese erweiterte Clienteinstellung, auditergebnisse wer
 
 Zum Beispiel:
 
-- Ohne diese Einstellung können Sie sehen, dass ein Benutzer auf die mit **Vertraulich\Vertrieb** bezeichnete Datei „Finanzen.docx“ zugegriffen hat.
+- Mit dieser Einstellung können Sie sehen, dass es sich bei Financial.docx Zugriffs auf einen Benutzer mit der Bezeichnung **vertraulich \ Sales**.
 
-- Und mit dieser Einstellung sehen Sie, dass „Finanzen.docx“ sechs Kreditkartennummern enthält.
+- Ohne diese Einstellung sehen Sie sich, dass Financial.docx 6 Kreditkartennummern enthält.
     
     - Wenn Sie zusätzlich [Inhaltsübereinstimmungen für umfassendere Analysen](../reports-aip.md#content-matches-for-deeper-analysis) aktivieren, sind außerdem die tatsächlichen Kreditkartennummern einsehbar.
 

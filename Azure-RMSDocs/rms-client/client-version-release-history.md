@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d5c3be398ea132d21b32e6337f44638d424ff71d
-ms.sourcegitcommit: 12848714f3c8d7a4761c28668e5809bf324c267a
+ms.openlocfilehash: 569b53a958ae90153133406141be15703ef92901
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66692217"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563385"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -107,7 +107,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Zwei neue erweiterte Client-Einstellungen für die Analyse, für die folgenden Szenarien:
     
     - Verhindert das Senden von Übereinstimmungen zwischen Informationstypen für eine Teilmenge von Benutzern, wenn Sie das Kontrollkästchen zum Sammeln von Übereinstimmungen zwischen Inhalten im Azure-Portal aktiviert haben. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - Für die **Datenermittlung** melden, zeigt an, ob Dateien vertrauliche Informationen enthalten. [Weitere Informationen](client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - Für die **Datenermittlung** melden, zeigt an, ob Dateien vertrauliche Informationen enthalten. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Fixes**:
 

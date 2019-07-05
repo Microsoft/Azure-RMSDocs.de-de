@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/04/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 84e3e4231c07f2234baa717d1be2c29386ed44ca
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: c39e2be3fef7568179f3859f834f92cc761b6259
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815610"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563408"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -246,8 +246,6 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.
 
 - **Datenermittlung (Vorschau)** : Verwenden Sie diesen Bericht, um Informationen über bezeichnete Dateien anzuzeigen, die durch die Überprüfung und von unterstützten Endpunkten gefunden wurden.
-    
-    Sie können konfigurieren, eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) für den Azure Information Protection-Client zu Berichtsdateien, die vertraulichen Informationen enthalten.
     
     Tipp: Aus den gesammelten Informationen ist z. B. ersichtlich, welche Benutzer von Orten, die Sie nicht kennen oder die derzeit nicht überprüft werden, auf Dateien mit vertraulichen Informationen zugreifen:
     
