@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fd66c67d4368e393f5c5b7a59cafbf882548ddce
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
+ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545052"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648183"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -71,7 +71,7 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> – Keine Unterstützung für [inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Einstellungen zurücksetzen und Protokolle exportieren:| Ja | Ja |
 |Benutzerdefinierte Berechtigungen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Outlook nur (Do Not Forward): Unterstützt<br /><br />– Für Word, Excel, PowerPoint und Datei-Explorer: Mit der Preview-Client unterstützt werden, wenn Sie die Bezeichnung im Azure-Portal konfigurieren |
-|Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell (Vorschauversion) <br /><br /> In Office-Apps können Benutzer alternativ auch **Dateiinfo** > **Dokument schützen** > **Zugriff einschränken** auswählen |
+|Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell (Vorschauversion) <br /><br /> In Office-apps als Alternative können Benutzer können auswählen, **Dateiinformationen** > **Dokument schützen** > **Zugriff beschränken** oder Administratoren können konfigurieren, eine Bezeichnung für benutzerdefinierte Berechtigungen|
 |Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> – die Bezeichnungsfarbe wird für die angewendete Bezeichnung nicht angezeigt|
 |Bezeichnungen können optische Kennzeichnungen anwenden (Kopfzeile, Fußzeile, Wasserzeichen):| Ja | Ja mit Einschränkungen:<br /><br /> – Kopf- und Fußzeilen unterstützen keine Variablen für dynamische Werte. <br /><br /> – Das Verwenden unterschiedlicher optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook wird nicht unterstützt.|
 |Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> – Kein Schutz für PDF-Dokumente im PPDF-Format <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
@@ -117,7 +117,7 @@ Obwohl die einheitliche Bezeichnung Azure Information Protection-Client noch in 
 
 - Unterstützung von Office-apps für nicht verbundene Computer mit manuellen Datei richtlinienverwaltung
 
-- Benutzerdefinierte Berechtigungen in Office-Apps: Word, Excel und PowerPoint
+- Benutzerdefinierte Berechtigungen als eine Option, die Benutzer in Office-apps auswählen können: Word, Excel und PowerPoint
 
 - Nachverfolgen und widerrufen von Office-Apps und dem Datei-Explorer
 
