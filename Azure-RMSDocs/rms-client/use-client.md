@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/08/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
-ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
+ms.openlocfilehash: 38ba4c2f028fcf38fd48be093ee73f2d770bac41
+ms.sourcegitcommit: 7442118f77a175e85444831eb88540034bceeab3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648183"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67715230"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -68,6 +68,7 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Komponente|Klassische client|einheitliche bezeichnungs-client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
+|Die sprachunterstützung für Bezeichnungen:| Ja | Ja |
 |Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> – Keine Unterstützung für [inhaltsübereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Einstellungen zurücksetzen und Protokolle exportieren:| Ja | Ja |
 |Benutzerdefinierte Berechtigungen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Outlook nur (Do Not Forward): Unterstützt<br /><br />– Für Word, Excel, PowerPoint und Datei-Explorer: Mit der Preview-Client unterstützt werden, wenn Sie die Bezeichnung im Azure-Portal konfigurieren |
@@ -87,7 +88,6 @@ Verwenden Sie in der folgende Tabelle, um zu vergleichen, welche Funktionen von 
 |Überprüfung für lokale Datenspeicher:| Ja | Nein |
 |Nachverfolgen und widerrufen:| Ja | Nein |
 |Reiner Schutzmodus (keine Bezeichnungen) mithilfe von Vorlagen:| Ja | Nein |
-|Unterstützung für mehrere Sprachen:| Ja | Nein |
 |Unterstützung für AD RMS:| Ja | Nur folgende Aktion wird unterstützt:<br /><br /> – Der Viewer kann geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)) bereitstellen|
 
 #### <a name="detailed-comparisons-for-the-clients"></a>Ein ausführlicher Vergleich für clients
@@ -100,6 +100,7 @@ Wenn beide Clients dasselbe Feature unterstützen, verwenden Sie in der folgende
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
 |Verwalten der Information Protection-Leiste in Office-Apps:|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Schützen** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App ausgeblendet, aber in neu geöffneten Apps weiterhin automatisch angezeigt <br /><br /> Für Administratoren: <br /><br />– Richtlinieneinstellungen zum automatischen Anzeigen oder Ausblenden der Leiste beim ersten Öffnen einer App sowie zum Steuern, ob die Leiste bei neu geöffneten Apps automatisch ausgeblendet wird, nachdem ein Benutzer die Leiste in einer App ausgeblendet hat|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App und in neu geöffneten Apps ausgeblendet <br /><br />Für Administratoren: <br /><br />-PowerShell Einstellung aus, um die Leiste zu verwalten (nur vorschauclient)|
 |Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Nach der Label-Migration zu Office 365 beibehalten werden und mit PowerShell konfigurierbar <br /><br /> Neue Bezeichnungen, die in das Admin Center erstellt haben sich nicht auf eine Farbe, aber Farben können konfiguriert werden, mithilfe von [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Bezeichnungen unterstützen verschiedene Sprachen:| Konfigurieren im Azure-Portal | Konfigurieren Sie mithilfe von Office 365 Security & Compliance PowerShell und die *LocaleSettings* -Parameter für [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) und [Bezeichnung festlegen](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
 |Richtlinienaktualisierung: | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 24 Stunden | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 4 Stunden|
 |Unterstützte Formate für PDF:| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung (Standardeinstellung) <br /><br /> – PPDF <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br /> <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz|
 |Unterstützte Cmdlets:| Alle für [AzureInformatioProtection](/powershell/module/azureinformationprotection) dokumentierten Cmdlets | Set-AIPAuthentication unterstützt nicht interaktive Sitzungen, mit der Preview-client <br /><br /> Get-AIPFileStatus, Set-AIPFileClassification und Set-AIPFileLabel nicht den SharePoint-Pfaden nicht unterstützt. <br /><br /> Set-AIPFileClassification und Set-AIPFileLabel unterstützen nicht die *Besitzer* Parameter <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> Set-AIPFileClassification im Preview-Client unterstützt die *"WhatIf"* an, damit sie im Suchmodus ausgeführt werden kann <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />Darüber hinaus die *LabelingMethod* zeigt Parameter für die Get-AIPFileStatus **privilegierten** oder **Standard** anstelle von **manuelle** oder **Automatische**. Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|

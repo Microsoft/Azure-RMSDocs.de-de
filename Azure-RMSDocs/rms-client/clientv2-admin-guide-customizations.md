@@ -4,19 +4,19 @@ description: Informationen zum Anpassen von Azure Information Protection unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/05/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 560d954119c40ad3fd9dd99b4d9f1ef18fb88515
-ms.sourcegitcommit: 9c9ee62632bbb5d7151131da8b720b7c9bf2a8f1
+ms.openlocfilehash: 5ec1a6ab89fc1d4730254d9d22ee77f9c72ad60e
+ms.sourcegitcommit: 531feafbabd8874fbeac4bd460e9bef60afabcdc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67571865"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691084"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection unified bezeichnungs-client
 
@@ -111,6 +111,8 @@ Label-Richtlinie, die erweiterten Einstellungen werden in umgekehrter Reihenfolg
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Erweiterte Einstellungen für Richtlinien für die Bezeichnung verfügbar
 
+Verwenden der *AdvancedSettings* Parameter mit [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) und [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
 |AttachmentAction|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
@@ -140,6 +142,8 @@ Beispiel-PowerShell-Befehl zum Überprüfen Ihrer Bezeichnung-Richtlinieneinstel
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Verfügbaren erweiterten Einstellungen für Bezeichnungen
+
+Verwenden der *AdvancedSettings* Parameter mit [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) und [Bezeichnung festlegen](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
 |Einstellung|Szenario und Anweisungen|
 |----------------|---------------|
