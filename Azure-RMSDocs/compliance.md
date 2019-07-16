@@ -4,19 +4,19 @@ description: Ergänzende Informationen zu Azure Information Protection, darunter
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92f282a2cf785c82c87d3ffbe8b47317a1ca1956
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 05c2c97bf5a46cb29c64bcd432de2043a5d33ad3
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708846"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229919"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Konformitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
@@ -32,7 +32,7 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 - Alle Verschlüsselungsschlüssel, die von Azure Information Protection verwendet werden, werden mit einem kundenspezifischen Stammschlüssel geschützt, der RSA 2048-Bit verwendet. RSA 1024-Bit wird zur Rückwärtskompatibilität auch unterstützt. [Weitere Informationen](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Kundenspezifische Stammschlüssel werden entweder von Microsoft verwaltet wird oder mit vom Kunden in ein nCipher HSM bereitgestellt "[bring-your own Key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
+- Kundenspezifische Stamm Schlüssel werden entweder von Microsoft verwaltet oder vom Kunden in einem nchiffre-HSM bereitgestellt, indem "[Bring your own Key](plan-implement-tenant-key.md)" (Byok) verwendet wird. Azure Information Protection unterstützt zudem eingeschränkte Funktionen mit einem lokalen Schlüssel durch [Hold Your Own Key (HYOK)](configure-adrms-restrictions.md) für Inhalte, für die erforderlich ist, dass sie nicht mit einem cloudbasierten Schlüssel geschützt werden.
 
 - Azure Information Protection wird weltweit in regionalen Rechenzentren gehostet. Schlüssel und Richtlinien von Azure Information Protection bleiben immer in der Region, in der sie ursprünglich bereitgestellt wurden.
  
@@ -40,9 +40,9 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
 
-- Informationen zum Microsoft Azure Agreement: [Microsoft Azure-Vereinbarung](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Informationen zur Microsoft Azure Vereinbarung: [Microsoft Azure-Vereinbarung](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Microsoft Azure-Datenschutz-Informationen: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Informationen zum Microsoft Azure Datenschutz: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
@@ -50,7 +50,7 @@ Weitere Informationen über spezifische Zertifizierungen für den Azure Rights M
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
-- FIPS 140-Informationen: [FIPS 140-Validierung](https://technet.microsoft.com/library/security/cc750357.aspx)
+- Informationen zu "fps 140": [FIPS 140-Validierung](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 Weitere ausführliche technische Informationen über die Funktionsweise der Schutztechnologie finden Sie unter [Funktionsweise von Azure RMS](./how-does-it-work.md). 
 

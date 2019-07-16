@@ -1,5 +1,5 @@
 ---
-title: Informationen und Support für Azure Information Protection – AIP
+title: Informationen & Unterstützung für Azure Information Protection-aip
 description: Ressourcen für Administratoren, einschließlich Informationen zu neuen Releases, zu Supportoptionen und zur Kontaktaufnahme mit Microsoft, um ein Problem zu melden.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a80ec942197cb9502fcddbe38190d4e874575825
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+search.appverid:
+- MET150
+ms.openlocfilehash: 28057fb2697855afc7028292f19b2a344635a52c
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885505"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -36,17 +38,17 @@ In den folgenden Ressourcen erhalten Sie allgemeine Informationen sowie Informat
 
 ## <a name="information-about-new-releases-and-updates"></a>Informationen zu neuen Releases und Updates
 
-Die offizielle Roadmap für Azure Information Protection ist jetzt für die [Microsoft 365-Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
+Die offizielle Roadmap für Azure Information Protection finden Sie jetzt in der [Microsoft 365 Roadmap](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent).
 
 Das Azure Information Protection-Produktteam veröffentlicht Ankündigungen zu wichtigen neuen Releases im [Enterprise Mobility + Security-Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection). Kleinere Releases werden auf der [Yammer-Website](https://www.yammer.com/AskIPTeam) von Azure Information Protection angekündigt, und unter Umständen finden Sie es auch sinnvoll, sich auf der [UserVoice-Website](https://msip.uservoice.com) über den Status angeforderter Features zu informieren.
 
 Zusätzliche und detailliertere Informationen finden Sie im [technischen Blog zu Azure Information Protection](https://aka.ms/AIPblog) (in englischer Sprache). 
 
-## <a name="whats-new-in-the-documentation"></a>Was ist neu in der Dokumentation
+## <a name="whats-new-in-the-documentation"></a>Neuerungen in der Dokumentation
 
-Azure Information Protection technische Blog hat auch eine Zusammenfassung der [Dokumentation ändert sich jeden Monat](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Diese Änderungen können es sich um neue und aktualisierte Dokumentation für die neue Version, Änderungen zur Unterstützung von-Anweisungen sowie Korrekturen und Überarbeitungen für vorhandene Versionen enthalten.
+Der Azure Information Protection Technical Blog enthält auch eine Zusammenfassung der Änderungen an der [Dokumentation monatlich](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Diese Änderungen können eine neue und aktualisierte Dokumentation für neue Releases, Änderungen an Support Anweisungen sowie Korrekturen und Erläuterungen für vorhandene Releases enthalten.
 
-Diese Dokumentationsupdate-Beiträge heißen: „**Azure Information Protection Documentation Update for \<month year>**“ (Azure Information Protection-Dokumentationsupdates für <Monat Jahr>).
+Diese Dokumentationsupdate-Beiträge heißen: „**Azure Information Protection Documentation Update for \<month year>** “ (Azure Information Protection-Dokumentationsupdates für <Monat Jahr>).
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
@@ -75,7 +77,7 @@ Praktische Übungseinheiten: Siehe [Azure Information Protection Hands On Lab (A
 
 Videos auf Abruf:
 
-- Technikcommunity für aufgezeichnete Webinare für [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
+- In der Tech Community Aufgezeichnete Webinare für [Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/AIP-Webinar-Recordings/m-p/364014).
 
 - Microsoft Ignite 2018-Sessions für [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection):
     

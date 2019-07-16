@@ -4,18 +4,18 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/10/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0e18fe93045dec211f2bb400e32fc067ea9ac7
-ms.sourcegitcommit: 01209692397e73aec5c8f04f0ea8b54292b397d7
+ms.openlocfilehash: d07b862fc95815cad2b100b80c6f024c582263dc
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67816329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141643"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -68,9 +68,33 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
+## <a name="version-153100"></a>Version 1.53.10.0
+
+**Veröffentlicht**: 07/15/2019
+
+Diese Version umfasst die msipc-Version 1.0.3889.0419 des RMS-Clients.
+
+**Neue Funktionen:**
+
+- Neue erweiterte Client Einstellung zum Ausschließen von Outlook-Nachrichten aus der Richtlinien Einstellung **alle Dokumente und e-Mails müssen eine Bezeichnung aufweisen**. [Weitere Informationen](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- Neue erweiterte Client Einstellung zur weiteren Anpassung der Einstellungen, mit denen Popup Meldungen in Outlook implementiert werden, die gesendete e-Mails warnen, rechtfertigen oder blockieren. Mit dieser neuen erweiterten Einstellung können Sie eine andere Aktion für e-Mail-Nachrichten ohne Anlagen festlegen. [Weitere Informationen](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**Fixes**:
+
+- Wenn Sie den Datei-Explorer verwenden, klicken Sie mit der rechten Maustaste auf die Bezeichnung einer Datei, für die der Schutz unabhängig von einer Bezeichnung angewendet wurde. dieser Schutz wird beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
+
+- Wenn Sie die Option "nicht weiterleiten" in einem e-Mail-Thread durch eine Bezeichnung ersetzen, die für benutzerdefinierte Berechtigungen konfiguriert ist und nicht weiterleiten, können die ursprünglichen Empfänger die e-Mail-Nachricht weiterhin öffnen.
+
+- Im folgenden Szenario wird ein Benutzer in der QuickInfo-QuickInfo nicht mehr angezeigt, dass die Bezeichnung automatisch von diesen festgelegt wurde: Ein Benutzer erhält eine geschützte e-Mail mit einem angefügten Dokument, das nicht gekennzeichnet ist, aber automatisch geschützt wird. Wenn der Benutzer aus derselben Organisation wie der Absender das Dokument öffnet, wird die entsprechende Bezeichnung für die Schutzeinstellungen auf das Dokument angewendet.
+
+- Das minimale [Nutzungsrecht](../configure-usage-rights.md#usage-rights-and-descriptions) zum Ausführen des Cmdlets " [Unprotect-rmsfile](/powershell/module/azureinformationprotection/unprotect-rmsfile) " lautet jetzt " **Speichern unter", "Exportieren** (exportieren)" und nicht " **Kopieren** " (extrahieren).
+
 ## <a name="version-1482040"></a>Version 1.48.204.0
 
 **Veröffentlicht**: 04/16/2019
+
+Unterstützt durch 02/15/2020
 
 Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 

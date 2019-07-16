@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: f971c261156c12dfec34fac7cd3ab1e7f7acded7
-ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
+search.appverid:
+- MET150
+ms.openlocfilehash: fe186d53b4e4b95b8cb6dcf7b5751532e0021d2a
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885559"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Unterstützte Reader für PDF-Dokumente für Microsoft Azure Information Protection
 
@@ -42,8 +44,8 @@ Die folgenden PDF-Reader können geschützte PDF-Dateien öffnen, die dem ISO-St
 
 |Betriebssystem|Unterstützte Reader und Link zum Herunterladen|
 |----------------|-----------------------------------|
-|Windows 10 und frühere Versionen<br />über Windows 7 Service Pack 1|Adobe Acrobat-Reader (bevorzugt):<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren Sie die Adobe Reader für Windows von der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren Sie die [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Windows <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
-|MacOS 10.12-10.14-Versionen |Adobe Acrobat Reader:<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren von Adobe Reader für Mac aus der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren Sie die [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Mac <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
+|Windows 10 und frühere Versionen<br />über Windows 7 Service Pack 1|Adobe Acrobat-Reader (bevorzugt):<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren von Adobe Reader für Windows von der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren des [Adobe-Plug-ins](https://go.microsoft.com/fwlink/?linkid=2050049) für Windows <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
+|macOS-Versionen 10,12-10,14 |Adobe Acrobat Reader:<br />-  1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installieren von Adobe Reader für Mac von der [Adobe-Website](https://www.adobe.com/)<br />- 3. Installieren des [Adobe-Plug-ins](https://go.microsoft.com/fwlink/?linkid=2050049) für Mac <br />- 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
 |Android|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325338)|
 
