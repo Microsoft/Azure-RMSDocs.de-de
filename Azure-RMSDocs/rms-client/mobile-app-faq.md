@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen, die Ihnen beim Verwenden der Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7694cf898651eee45e64d2319e1527f07e5fa5de
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 5419488303aa3f1c031c09660dd346cc4dc28b65
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156619"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229827"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android
 
@@ -55,7 +55,7 @@ Wenn Sie jedoch nicht warten möchten, können Sie mithilfe der folgenden Anweis
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Welche Anmeldeinformationen sollte ich bei dieser App verwenden?
 
-Wenn Ihre Organisation lokal bereits AD RMS (mit der Erweiterung für mobile Geräte) oder Azure Rights Management verwendet, melden Sie sich mit Ihren geschäftlichen Anmeldeinformationen an. 
+Wenn Ihre Organisation bereits AD RMS lokal (mit der Erweiterung für mobile Geräte) oder Azure Information Protection verwendet, verwenden Sie Ihre Anmelde Informationen für die Anmeldung. 
 
 Wenn die Datei mit Ihrer privaten E-Mail-Adresse geschützt wurde, melden Sie sich mit den Anmeldeinformationen eines kostenlosen [Microsoft-Kontos](https://signup.live.com) an.
 
@@ -69,7 +69,7 @@ Obwohl dieser Viewer mit diesem Konto geschützte Dateien öffnen kann, können 
 
 Sie können Dateien mit den Erweiterungen „.rpmsg“, „.pdf“, „.ppdf“, „.pjpg“, „.pjpeg“, „.ptiff“, „.ppng“, „.ptxt“, „.pxml“ sowie viele weitere Text- und Bilddateiformate öffnen.
 
-Die vollständige Liste der Dateinamenerweiterungen für Text- und Bilddateien finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) des Administratorhandbuchs.
+Die vollständige Liste der Dateinamenerweiterungen für Text- und Bilddateien finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) des Administratorhandbuchs.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>Wie gebe ich Feedback zu dieser App?
 

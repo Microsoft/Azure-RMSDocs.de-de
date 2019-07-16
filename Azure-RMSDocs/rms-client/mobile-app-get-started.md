@@ -4,19 +4,19 @@ description: Anzeigen von E-Mails oder Dateien mit der Azure Information Protect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2d6df76aa8db58cc244f6d3a9a4192671d3765ef
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 1d9e071f931a09d4342759916e3596548014debf
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156647"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229793"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android
 
@@ -35,11 +35,11 @@ Um die folgenden Anweisungen verwenden zu können, müssen Sie von Ihrem Mobilge
 
 - **Eine RPMSG-Datei**: Dies ist eine durch Rechte geschützte E-Mail-Nachricht, die einer E-Mail als Anhang beigefügt ist, wenn Ihre E-Mail-App von sich aus auf Ihrem mobilen Gerät keinen Datenschutz durch Rechteverwaltung unterstützt. 
     
-    Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der E-Mail-Clients, die von sich aus Rights Management unterstützen, finden Sie in der Spalte E-MAIL der Seite [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](../requirements-applications.md).
+    Verwenden Sie ein anderes Gerät, um sich selbst eine durch Rechte geschützte E-Mail zu senden, auf die Sie von Ihrem mobilen Gerät aus zugreifen können. Verwenden Sie z.B. Outlook von einem Windows-Computer aus. Eine Liste der e-Mail-Clients, von denen Rights Management System eigen unterstützt wird, finden Sie in der Spalte **e-Mail** der ersten Tabelle [unter Anwendungen, die die Azure-Rights Management Datenschutzseite unterstützen](../requirements-applications.md)
 
-- **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine [PDF-Datei zu schützen](client-classify-protect.md). Senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage einer E-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
+- **Eine durch Rechte geschützte PDF-Datei**: Verwenden Sie auf einem Windows-Computer einen Azure Information Protection Client ( [klassischer](client-classify-protect.md) oder [einheitlicher](clientv2-classify-protect.md)Bezeichnungs Client), um eine PDF-Datei zu schützen. senden Sie diese durch Rechte geschützte PDF-Datei dann als Anlage in einer e-Mail an sich selbst. Alternativ können Sie eine PDF-Datei in eine von SharePoint geschützte Bibliothek hochladen und anschließend mithilfe Ihrer E-Mail-Adresse freigeben.
 
-- **Eine PTXT- oder PJPG- oder PPNG-Datei**: Verwenden Sie auf einem Windows-Computer den Azure Information Protection-Client, um eine Text- oder Bilddatei zu schützen. Senden Sie diese geschützte Datei dann als Anlage einer E-Mail an sich selbst. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) im Administratorhandbuch zum Azure Information Protection-Client. 
+- **Eine PTXT- oder PJPG- oder PPNG-Datei**: Verwenden Sie auf einem Windows-Computer einen Azure Information Protection-Client, um eine Text-oder Bilddatei zu schützen, und senden Sie diese geschützte Datei als e-Mail-Anhang. Die vollständige Liste der Dateitypen, die Sie für Tests verwenden können, finden Sie in der ersten Tabelle im Abschnitt [Unterstützte Dateitypen für Klassifizierung und Schutz](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) im Administratorhandbuch zum Azure Information Protection-Client. 
 
 Um diese Dateien in der Azure Information Protection-Viewer-App anzuzeigen, tippen Sie auf den E-Mail-Anhang oder den Link. Wenn Sie aufgefordert werden, eine App zum Öffnen auszuwählen, wählen Sie die **AIP Viewer**-App. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden oder aufgefordert, ein Zertifikat auszuwählen. Nachdem diese Anmeldeinformationen authentifiziert sind, zeigt Ihnen die Azure Information Protection-App die E-Mail oder Datei zum Lesen an.
 

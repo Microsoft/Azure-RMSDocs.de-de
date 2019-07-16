@@ -1,5 +1,5 @@
 ---
-title: Übersicht über Azure Rights Management-Schutz – AIP
+title: Übersicht über Azure Rights Management Protection-aip
 description: Informationen über Azure Rights Management (Azure RMS) und die Schutztechnologie von Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+search.appverid:
+- MET150
+ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885603"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -65,7 +67,7 @@ Azure Rights Management unterstützt die folgenden Sicherheits-, Compliance- und
 
 √ Verwendung von Kryptografie gemäß Industriestandard und Unterstützung von FIPS 140-2. Weitere Informationen finden Sie in den Informationen zu [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-√ Unterstützung für die unterstützende nCipher nShield-Hardwaresicherheitsmodul (HSM), um Ihren mandantenschlüssel in Microsoft Azure-Daten speichern Rechenzentren. Azure Rights Management verwendet getrennte Security Worlds für seine Rechenzentren in Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien, sodass Ihre Schlüssel nur in Ihrer Region verwendet werden können.
+Unterstützung für nCipher nShield Hardware Security Module (HSM) zum Speichern Ihres Mandanten Schlüssels in Microsoft Azure Rechenzentren. Azure Rights Management verwendet getrennte Security Worlds für seine Rechenzentren in Nordamerika, EMEA (Europa, Naher Osten und Afrika) und Asien, sodass Ihre Schlüssel nur in Ihrer Region verwendet werden können.
 
 √ Zertifiziert für Folgendes:
 
