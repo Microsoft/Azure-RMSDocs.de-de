@@ -1,38 +1,38 @@
 ---
-title: Azure Information Protection – einheitliche bezeichnungs-Client – Verlauf und Support-Richtlinie für Anwendungsversion
+title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/27/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1e59e864c86ded6433e5edd89748cd794a3d6410
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: c7e5ea29378b051d2b2c0b04366c433dd1675304
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141529"
 ---
-# <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified - Clientversion Bezeichnung Versionsgeschichte und Supportrichtlinie
+# <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
-Sie können den einheitlichen Azure Information Protection-Bezeichnung-Client aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen.
 
-Nach einer kurzen Verzögerung von in der Regel ein paar Wochen, ist die neueste allgemein verfügbare Version auch im Microsoft Update-Katalogs mit dem Produktnamen enthalten **Microsoft Azure Information Protection**  >  **Microsoft Azure Information Protection Unified Bezeichnung-Client**, und die Klassifizierung der **Updates**. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Informationen enthalten. Schutz einheitlicher**Bezeichnungs Client und die Klassifizierung von **Updates**. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
 
-Weitere Informationen finden Sie unter [aktualisieren und Verwalten von Azure Information Protection unified bezeichnungs Client](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure Information Protection Unified Bezeichnung-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
-Jede Version der allgemein verfügbar (GA) des Azure Information Protection unified bezeichnungs-Clients wird für bis zu sechs Monate nach der Veröffentlichung von der nachfolgenden GA-Version unterstützt. Die Dokumentation enthält keine Informationen über nicht unterstützte Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
+Jede allgemein verfügbare Version des Azure Information Protection Unified Bezeichnung-Clients wird bis zu sechs Monate nach der Veröffentlichung der nachfolgenden GA-Version unterstützt. Die Dokumentation enthält keine Informationen über nicht unterstützte Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
 
 Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereitgestellt werden. Verwenden Sie stattdessen die neuste Vorschauversion, um neue Funktionen oder Problembehebungen kennenzulernen und zu testen, die in der nächsten allgemein verfügbaren Version enthalten sein sollen. Veraltete Vorschauversionen werden nicht mehr unterstützt.
 
@@ -41,23 +41,24 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 ### <a name="release-information"></a>Informationen zum Release
 
-Verwenden Sie die folgende Informationen, um anzuzeigen, was für die allgemein verfügbare Version des Azure Information Protection unified bezeichnungs-Clients unterstützt wird.
+Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection Unified Bezeichnung-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. 
 
-Dieser Client installiert ein Office-Add-On für Windows-Computer, eine Erweiterung für den Datei-Explorer und ein PowerShell-Modul. Es gelten die gleichen [Voraussetzungen](../requirements.md) wie für den Azure Information Protection-Client, der Richtlinien aus Azure herunterlädt.
+> [!NOTE]
+> Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
+>  
+> Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-Um Features und Funktionen, mit dem Azure Information Protection-Client vergleichen zu können, finden Sie unter [vergleichen Sie die Clients](use-client.md#compare-the-clients).
+Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Clients](use-client.md#compare-the-clients).
 
-## <a name="versions-later-than-207790"></a>Höhere Versionen als 2.0.779.0
+## <a name="version-22140"></a>Version 2.2.14.0
 
-**Veröffentlicht**: 06/20/2019
-
-Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es sich um einen vorschaubuild für Test-und Evaluierungszwecke. 
+**Veröffentlicht**: 07/15/2019
 
 **Neue Funktionen:**
 
-- Unterstützung für [Erweiterte Einstellungen](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie für Security & Compliance Center mit PowerShell konfigurieren.
+- Unterstützung für [Erweiterte Einstellungen](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mit PowerShell für die Security & Compliance Center konfigurieren.
     
-    Diese erweiterte Einstellungen unterstützen die folgenden Anpassungen:
+    Diese erweiterten Einstellungen unterstützen die folgenden Anpassungen:
      - [Information Protection-Leiste in Office-Apps anzeigen](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
     - [Die empfohlene Klassifizierung in Outlook aktivieren](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
     - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
@@ -68,46 +69,54 @@ Wenn Sie eine Version 2 des Clients, die nach 2.0.779.0 liegt verfügen, ist es 
     - [Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
     - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)
     - [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Deaktiviert das Senden von ermittelten vertraulichen Informationen in Dokumenten mit Azure Information Protection-analytics](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
+    - [Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
     - [Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
     - [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Wenden Sie eine benutzerdefinierte Eigenschaft an, wenn eine Bezeichnung angewendet wird](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
+    - [Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
     - [Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [Geben Sie eine standardmäßige untergeordnete Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [Geben Sie eine Farbe für die Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
+    - [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
+    - [Farbe für die Bezeichnung angeben](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und Datei-Explorer konfiguriert sind:
-    - Wenn Sie Bezeichnungen mit dieser Konfiguration über das Azure-Portal haben, werden sie jetzt durch die einheitliche bezeichnungs-Client unterstützt, aber es derzeit keine entsprechende Konfiguration in das Admin Center gibt.
-    - Wenn ein Benutzer eine Bezeichnung mit dieser Konfiguration auswählt, werden sie aufgefordert, Benutzer und die schutzeinstellungen für das Dokument auswählen.
+- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind:
+    - Wenn Sie über Bezeichnungen mit dieser Konfiguration aus dem Azure-Portal verfügen, werden Sie jetzt vom Unified Label-Client unterstützt, obwohl derzeit keine äquivalente Konfiguration in den Admin Centers vorhanden ist.
+    - Wenn ein Benutzer eine Bezeichnung mit dieser Konfiguration auswählt, wird er aufgefordert, Benutzer und Schutzeinstellungen für das Dokument auszuwählen.
 
-- PowerShell-Änderungen in das Modul "azureinformationprotection":
-    - Neues Cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -New-RMSProtectionLicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen ersetzt
+- PowerShell-Änderungen im azureinformationprotection-Modul:
+    - Neues Cmdlet: [New-aipcustomberechti-](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) ersetzt New-rmsprotectionlicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen.
     - Neue Parameter:
-        -  *CustomPermissions* und *RemoveProtection* – hinzugefügt [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
-        -  *"Onbehalfof"* – hinzugefügt [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), um anstelle von verwendet werden die *Token* -Parameter für nicht interaktive Sitzungen
-        -  *"WhatIf"* und *DiscoveryInfoTypes* – hinzugefügt [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), damit dieses Cmdlet im Suchmodus ausführen kann, ohne das Anwenden von Bezeichnern
-    - Veralteten Cmdlets: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+        -  " *Custom-Berechtigungen* " und " *removeprotection* ": " [Set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel) " hinzugefügt
+        -  " *Onbehalfof* ": " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)" wurde hinzugefügt und anstelle des *tokenparameters* für nicht interaktive Sitzungen verwendet.
+        -  " *WhatIf* " und " *discoveryinfotypes* ": " [Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)" wurde hinzugefügt, sodass dieses Cmdlet im Ermittlungs Modus ohne Anwenden von Bezeichnungen ausgeführt werden kann.
+    - Veraltete Cmdlets: Clear-rmsauthentication, Get-rmsfilestatus, Get-rmsserver, Get-rmsserverauthentication, Get-RMSTemplate, Protect-rmsfile, Set-rmsserverauthentication, Unprotect-rmsfile
 
 
-**Behoben:**
+**Fixes**
 
-- Wenn die automatische Kennzeichnung konfiguriert ist, wendet die Bezeichnung beim ersten ein Dokument gespeichert wird.
+- Unterstützung für [Inhalts](../reports-aip.md#content-matches-for-deeper-analysis) Übereinstimmungen für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
 
-- Standardmäßig bezeichnungs-unterstützt über untergeordnete Bezeichnungen.
+- Nachdem Sie zu einem alternativen Gebiets Schema in Windows gewechselt haben, können Sie trotzdem eine Bezeichnung mit Schutz auf ein PDF-Dokument anwenden.
+
+- Wenn eine Bezeichnung aus dem Inhalt entfernt wird, wird der Schutz auch nur dann entfernt, wenn er als Teil der Bezeichnung konfiguriert wurde. Wenn der Schutz unabhängig von der Bezeichnung angewendet wurde, wird dieser Schutz beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
+
+- Wenn die automatische Bezeichnung konfiguriert ist, wird die Bezeichnung beim ersten Speichern eines Dokuments angewendet.
+
+- Die Standard Bezeichnung unterstützt untergeordnete Bezeichnungen.
 
 ## <a name="version-207790"></a>Version 2.0.779.0
 
 **Veröffentlicht**: 05/01/2019
 
-Diese Version enthält eine einzelne Lösung für die ein Race-Bedingung-Problem zu beheben, in denen in einigen Fällen keine Bezeichnungen in Office-apps oder Datei-Explorer angezeigt.
+Unterstützt durch 02/15/2020
+
+Diese Version bietet eine einzige Lösung zum Beheben eines racebedingungs Problems, bei dem manchmal keine Bezeichnungen in Office-Apps oder im Datei-Explorer angezeigt werden.
 
 ## <a name="version-207780"></a>Version 2.0.778.0
 
 **Veröffentlicht**: 04/16/2019
 
-Unterstützt über 11/01/2019
+Unterstützt durch 11/01/2019
 
-Diese erste allgemein verfügbare Version des Azure Information Protection unified bezeichnungs-Clients für Windows unterstützt die folgenden Features: 
+Diese erste Version der allgemeinen Verfügbarkeit des Azure Information Protection Unified Bezeichnung-Clients für Windows unterstützt die folgenden Features: 
 
 - Upgrade vom Azure Information Protection-Client.
 
@@ -123,11 +132,11 @@ Diese erste allgemein verfügbare Version des Azure Information Protection unifi
     - [Lesen von Informationen zu einer auf ein Dokument angewendeten Bezeichnung](/powershell/module/azureinformationprotection/get-aipfilestatus)
     - [Authentifizieren der Unterstützung unbeaufsichtigter PowerShell-Sitzungen](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Überwachung von Daten und der Endpunkt-Discovery-Unterstützung für die zentrale Berichterstattung mithilfe [Analytics für Azure Information Protection](../reports-aip.md).
+- Überwachen von Daten und Endpunkt Ermittlungs Unterstützung für Zentrale Berichterstellung mithilfe von [Azure Information Protection Analytics](../reports-aip.md).
 
 - Folgende Einstellungen für Bezeichnungen und Richtlinien:
     - Optische Kennzeichnung (Kopfzeile, Fußzeile und Wasserzeichen)
-    - Standard-Bezeichnungen – aktuell eingeschränkt auf Bezeichnungen ohne untergeordnete Bezeichnungen
+    - Standard Bezeichnung: derzeit beschränkt auf Bezeichnungen ohne untergeordnete Bezeichnungen
     - Bezeichnungen, die „Nicht weiterleiten“ anwenden und nur in Outlook angezeigt werden
     - Aufforderung zur Angabe einer Begründung, wenn ein Benutzer eine Klassifizierungsstufe senkt oder eine Bezeichnung entfernt
     - Farben für die Bezeichnungen
@@ -144,9 +153,9 @@ Diese erste allgemein verfügbare Version des Azure Information Protection unifi
 
 Ausführliche Informationen finden Sie in den [Vergleichstabellen](use-client.md#compare-the-clients).
 
-Weitere Informationen zum Installieren und verwenden dieses Clients: 
+Weitere Informationen zum Installieren und verwenden dieses Clients finden Sie unter: 
 
 - Für Benutzer: [Herunterladen und Installieren des Clients](install-unifiedlabelingclient-app.md)
 
-- Für Administratoren: [Azure Information Protection – einheitliche bezeichnungs Client – Administratorhandbuch](clientv2-admin-guide.md)
+- Für Administratoren: [Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch](clientv2-admin-guide.md)
 

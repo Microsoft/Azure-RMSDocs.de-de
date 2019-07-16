@@ -4,19 +4,19 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545035"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229841"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -43,7 +43,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
     Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installieren von Überprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)
     
-    Stellen Sie bei legitimen Anforderungen für den Vollzugriff auf geschützte Dokumente sicher, dass der Helpdesk über Prozesse verfügt, mit denen dieser Zugriff unter Verwendung des Azure Rights Management-Features [Administrator](configure-super-users.md) angefordert werden kann. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
+    Wenn legitime Anforderungen vorhanden sind, die über uneingeschränkten Zugriff auf geschützte Dokumente verfügen, stellen Sie sicher, dass der Helpdesk über Prozesse verfügt, um diesen Zugriff mithilfe der Azure Information Protection Administrator [Funktion](configure-super-users.md)anzufordern. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
     
     Darüber hinaus finden Sie einige der möglicherweise auftretenden Probleme in den folgenden Kategorien:
     
@@ -103,7 +103,7 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Wählen Sie auf der Registerkarte **OPTIONEN** unter **Berechtigung** eine Option aus. Zum Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Wählen Sie auf der Registerkarte **OPTIONEN** unter **Berechtigung** eine Option aus. Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -115,7 +115,7 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1. Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, wählen Sie **Berechtigungen ändern** und dann eine Option aus der Dropdownliste aus. Zum Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
+2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, wählen Sie **Berechtigungen ändern** und dann eine Option aus der Dropdownliste aus. Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
 
 3. Senden Sie die Nachricht.
 
