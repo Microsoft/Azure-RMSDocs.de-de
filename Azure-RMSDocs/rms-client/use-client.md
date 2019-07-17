@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 75d95df5017c440c06f58c22f59ecad68fc1a4b7
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: ff8f69469cb7c86868db283aca8586c99b437179
+ms.sourcegitcommit: 433787223074973cae4fcfbe9cd85f46c019cd78
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141557"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246852"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -55,7 +55,7 @@ Sie können auch beide Clients in derselben Umgebung installieren, um unterschie
 
 - Für eine Teilmenge der Benutzer stellen Sie den klassischen Client bereit, da diese Benutzer Bezeichnungen benötigen, die den Hyok-Schutz (Hold Your Own Key) anwenden.
     
-    Für diese Benutzer haben Sie eine etwas andere Möglichkeiten, wenn Sie auch über Geräte verfügen, auf denen MacOS, IOS und Android ausgeführt werden, und diese Geräte eine Office-Version haben, die Vertraulichkeits Bezeichnungen unterstützt. Beispielsweise wird im Office-Menüband anstelle einer **Vertraulichkeits** Schaltfläche eine Schaltfläche zum **schützen** angezeigt. Weitere Unterschiede finden Sie in den folgenden Tabellen.
+    Für diese Benutzer haben Sie eine etwas andere Möglichkeiten, wenn Sie auch über Geräte verfügen, auf denen MacOS, IOS und Android ausgeführt werden, und diese Geräte eine Office-Version haben, die Vertraulichkeits Bezeichnungen unterstützt. Beispielsweise wird im Office-Menüband anstelle einer **Vertraulichkeits** Schaltfläche eine Schaltfläche zum **schützen** angezeigt. Unterschiede zwischen dem klassischen Client und dem Unified-Bezeichnungs Client finden Sie in den folgenden Tabellen.
 
 - Sie verfügen über lokale Datenspeicher mit Dokumenten, die auf sensible Informationen überprüft oder klassifiziert und geschützt werden müssen. Sie stellen den klassischen-Client auf Servern bereit, um den Azure Information Protection Scanner auszuführen.
 
