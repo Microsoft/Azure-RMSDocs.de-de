@@ -4,19 +4,19 @@ description: Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Right
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d2bad5f6d4c1ec9a0e7497569781afa9aed47452
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 5f19efeffe982ce36eef84d1947936acb25fd83d
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768109"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229889"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -46,9 +46,9 @@ Informationen über die Tabellenspalten:
 
 |**Gerätebetriebssystem**|Word, Excel, PowerPoint|E-Mail|Weitere Dateitypen|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|Office 365-Apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (Anzeige von geschützten Dokumenten) [[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Webbrowser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Azure Information Protection-Client für Windows: Text, Bilder, pfile<br /><br />SealPath RMS-Plug-In für AutoCAD: .dwg|
-|**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office Online[[2]](#footnote-2)<br /><br />TITUS-Dokumentation<br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für iPad und iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)<br /><br />TITUS-Dokumentation: PFile-Datei|
-|**Android**|GigaTrust App für Android<br /><br />Office Online[[2]](#footnote-2)<br /><br />Office Mobile (Anzeige und Bearbeitung von geschützten Dokumenten) <br /><br />Webbrowser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work <br /><br />GigaTrust App für Android [[5]](#footnote-5)<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für Android [[5]](#footnote-5)<br /><br />Samsung E-Mail (S3 und neuer) [[5]](#footnote-5)<br /><br />TITUS-Klassifizierung für mobile Geräte <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)|
+|**Windows**|Office 365-Apps [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (Anzeige von geschützten Dokumenten) [[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Webbrowser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Azure Information Protection-Client für Windows: Text, Bilder, Pfile<br /><br />SealPath RMS-Plug-In für AutoCAD: .dwg|
+|**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office Online[[2]](#footnote-2)<br /><br />TITUS-Dokumentation<br /><br />Webbrowser [[3]](#footnote-3)|Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für iPad und iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)<br /><br />Titus-Dokumentation: Pfile|
+|**Android**|GigaTrust App für Android<br /><br />Office Online[[2]](#footnote-2)<br /><br />Office Mobile (es sei denn, Sie verwenden Vertraulichkeits Bezeichnungen, sind auf das Anzeigen und bearbeiten geschützter Dokumente beschränkt) <br /><br />Webbrowser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />Azure Information Protection-App (Anzeige von geschützten E-Mails)<br /><br />BlackBerry Work <br /><br />GigaTrust App für Android [[5]](#footnote-5)<br /><br />Citrix-WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook für Android [[5]](#footnote-5)<br /><br />Samsung E-Mail (S3 und neuer) [[5]](#footnote-5)<br /><br />TITUS-Klassifizierung für mobile Geräte <br /><br />Webbrowser [[4]](#footnote-4)|Azure Information Protection-App (Anzeige von geschützten Texten und Abbildungen)|
 |**macOS**|Office 365-Apps<br /><br />Office 2019 für Mac<br /><br />Office 2016 für Mac<br /><br />Office Online[[2]](#footnote-2)<br /><br />Webbrowser [[3]](#footnote-3)|Outlook 2019 für Mac<br /><br /> Outlook 2016 für Mac<br /><br />Webbrowser [[4]](#footnote-4)|RMS-Freigabe-App (Anzeige von geschützten Texten, Abbildungen und generisch geschützten Dateien)|
 |**Windows 10 Mobile**|Office Mobile-Apps (Anzeige von geschützter Dokumentation mit Azure RMS) <br /><br />Webbrowser [[3]](#footnote-3)|Citrix-WorxMail <br /><br />Outlook Mail (Ansicht von geschützten E-Mails) <br /><br />Webbrowser [[4]](#footnote-4)|Nicht unterstützt|
 |**Blackberry 10**|Webbrowser [[3]](#footnote-3)|Blackberry-E-Mail [[5]](#footnote-5) <br /><br />Webbrowser [[4]](#footnote-4)|Nicht unterstützt|
@@ -176,7 +176,7 @@ Folgende Anwendungen werden zurzeit nicht von Azure RMS unterstützt:
 
 Zudem unterliegt der Azure Information Protection-Client folgenden Einschränkungen:
 
-- Für Windows-Computer: Erfordert eine Mindestversion von Windows 7 Service Pack 1
+- Für Windows-Computer: Erfordert eine Mindestversion von Windows 7 Service Pack 1.
 
 ## <a name="rms-enlightened-solutions"></a>RMS-aktivierte Lösungen
 
