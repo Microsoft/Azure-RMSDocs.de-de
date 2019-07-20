@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c7e5ea29378b051d2b2c0b04366c433dd1675304
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: db7dc34da3f8cd2ee92fa0c3a500880ed561dc40
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141529"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340688"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -87,7 +87,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
         -  " *Custom-Berechtigungen* " und " *removeprotection* ": " [Set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel) " hinzugefügt
         -  " *Onbehalfof* ": " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)" wurde hinzugefügt und anstelle des *tokenparameters* für nicht interaktive Sitzungen verwendet.
         -  " *WhatIf* " und " *discoveryinfotypes* ": " [Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)" wurde hinzugefügt, sodass dieses Cmdlet im Ermittlungs Modus ohne Anwenden von Bezeichnungen ausgeführt werden kann.
-    - Veraltete Cmdlets: Clear-rmsauthentication, Get-rmsfilestatus, Get-rmsserver, Get-rmsserverauthentication, Get-RMSTemplate, Protect-rmsfile, Set-rmsserverauthentication, Unprotect-rmsfile
+    - Als veraltet markierte Cmdlets, die eine direkte Verbindung mit einem Schutzdienst herstellen: Clear-rmsauthentication, Get-rmsfilestatus, Get-rmsserver, Get-rmsserverauthentication, Get-RMSTemplate, Protect-rmsfile, Set-rmsserverauthentication, Unprotect-rmsfile
 
 
 **Fixes**

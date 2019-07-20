@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/19/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ea4991281905b174b0ae70537d5953d60268dbf
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815574"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340553"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -60,20 +60,20 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 - Verwenden Sie ein Konto mit einer der folgenden [Administratorrollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Azure Information Protection-administrator**
+    - **Azure Information Protection-Administrator**
     
     - **Sicherheitsleseberechtigter** nur für [Azure Information Protection-Analysen](reports-aip.md)
     
   - **Complianceadministrator**
     
-  - **Complianceadministrator-Daten**
+  - **Kompatibilitäts Daten Administrator**
     
   - **Sicherheitsadministrator**
     
   - **Globaler Administrator**
     
     > [!NOTE] 
-    > Wenn Sie Ihren Mandanten beim einheitlichen bezeichnungs Store migriert wurde, wird der Azure Information Protection-Administrator (früher "Information Protection-Administrator") nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Wenn Ihr Mandant zum Unified-Bezeichnungs Speicher migriert wurde, wird der Azure Information Protection-Administrator (ehemals "Information Protection Administrator") nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Der Erste Zugriff auf das Blatt „Azure Information Protection“
@@ -95,7 +95,7 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
-1. Vergewissern Sie sich unter Verwendung einer der folgenden Administratorrollen, dass Sie im Azure-Portal angemeldet sind: Azure Information Protection-Administrator, Sicherheitsadministrator oder globaler Administrator. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
+1. Vergewissern Sie sich unter Verwendung einer der folgenden Administratorrollen, dass Sie im Azure-Portal angemeldet sind: Azure Information Protection Administrator, Sicherheitsadministrator oder globale Verwaltung. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
 
 2. Navigieren Sie wenn nötig zum Blatt **Azure Information Protection**: Klicken Sie z. B. im Hubmenü auf **Alle Dienste**, und geben Sie in das Filterfeld den Begriff **Information Protection** ein. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
@@ -108,7 +108,7 @@ Wenn Sie das nächste Mal auf das Blatt **Azure Information Protection** zugreif
 
 Sie können eine beliebige Anzahl von Bezeichnungen erstellen. Wenn jedoch so viele Bezeichnungen vorhanden sind, dass Benutzer nur schwer die richtige auswählen können, sollten Sie bereichsbezogene Richtlinien erstellen, damit Benutzern nur relevante Bezeichnungen angezeigt werden. Die Höchstgrenze für Bezeichnungen, die Schutz anwenden, beträgt 500.
 
-Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. Wenn Sie Änderungen in einer Richtlinie speichern, oder nehmen Sie Änderungen an Bezeichnungen, die Richtlinien hinzugefügt werden, werden diese Änderungen automatisch veröffentlicht. Es gibt keine gesonderte Veröffentlichungsoption.
+Wenn Sie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. Wenn Sie Änderungen in einer Richtlinie speichern oder Änderungen an Bezeichnungen vornehmen, die zu Richtlinien hinzugefügt werden, werden diese Änderungen automatisch veröffentlicht. Es gibt keine gesonderte Veröffentlichungsoption.
 
 Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt der Client diese Änderungen dann als neueste Azure Information Protection-Richtlinie herunter. Folgende zusätzliche Trigger aktualisieren die Richtlinie im Client ebenfalls:
 
@@ -162,7 +162,7 @@ Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird di
 
 - Für Word-Dokumente (DOC und DOCX), Excel-Tabellen (XLS und XLSX), PowerPoint-Präsentationen (PPT und PPTX) sowie PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID>_Enabled=True**  
 
-Für e-Mails ist die Bezeichnungsinformationen gespeichert, wenn die e-Mail-Adresse gesendet wird. Für Dokumente ist die Bezeichnungsinformationen gespeichert, wenn die Datei gespeichert wird. 
+Bei e-Mails werden die Bezeichnungs Informationen gespeichert, wenn die e-Mail gesendet wird. Bei Dokumenten werden die Bezeichnungs Informationen gespeichert, wenn die Datei gespeichert wird. 
 
 Suchen Sie nach dem Wert der Bezeichnungs-ID auf dem Blatt **Bezeichnung** im Azure Portal, wenn Sie die Azure Information Protection-Richtlinie anzeigen oder konfigurieren, um die GUID für eine Bezeichnung zu ermitteln. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
