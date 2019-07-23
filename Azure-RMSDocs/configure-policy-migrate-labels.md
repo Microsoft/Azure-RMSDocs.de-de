@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 4608bf407a88a306c1abfdd62fc122b80b6a5419
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: f1340d42c0f09733bf4517b4d573e75e5d88b68e
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340729"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375422"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -164,8 +164,7 @@ Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und
 
 #### <a name="copy-your-policies-and-policy-settings"></a>Kopieren von Richtlinien und Richtlinien Einstellungen
 
-> [!NOTE]
-> Diese Option wird nach und nach in der Vorschau für Mandanten eingeführt und kann geändert werden. Wenn die Option **Richtlinien kopieren (Vorschau)** nicht angezeigt wird, versuchen Sie es in einigen Wochen erneut.
+Diese Option wird nach und nach in der Vorschau für Mandanten eingeführt und kann geändert werden. Wenn die Option **Richtlinien kopieren (Vorschau)** nicht angezeigt wird, versuchen Sie es in einigen Wochen erneut.
 
 Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 

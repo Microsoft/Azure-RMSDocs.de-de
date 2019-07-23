@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fc76b7da1f687ab9876a6831539bf515df59aea1
-ms.sourcegitcommit: 9221a0a9f3862739446b9027931a05023e0d5fc3
+ms.openlocfilehash: 4b70be66db156dc92f57aaf0cc9ba3ce2413dd65
+ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68286997"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387394"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -81,7 +81,7 @@ Die folgenden Geräte unterstützen den Azure Information Protection Unified-Bez
 
 - Windows Server 2008 R2 
 
-Zusätzlich zur Installation des-Clients auf physischen Computern können Sie ihn auch auf virtuellen Computern installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktop Lösung über zusätzliche Konfigurationsfunktionen verfügt, die möglicherweise erforderlich sind, um den Azure Information Protection Unified Bezeichnung-Client oder den Azure Information Protection-Client auszuführen. Beispielsweise müssen Sie für Citrix-Lösungen möglicherweise [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office (Winword. exe, Excel. exe, Outlook. exe, PowerPoint. exe) und die ausführbare Datei für die Azure Information Protection Unified bezeichnen von Client-oder Azure Information Protection Client (MSIP. app. exe, MSIP. Viewer. exe).
+Zusätzlich zur Installation des-Clients auf physischen Computern können Sie ihn auch auf virtuellen Computern installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktop Lösung über zusätzliche Konfigurationsfunktionen verfügt, die möglicherweise erforderlich sind, um den Azure Information Protection Unified Bezeichnung-Client oder den Azure Information Protection-Client auszuführen. Beispielsweise müssen Sie für Citrix-Lösungen möglicherweise [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office (Winword. exe, Excel. exe, Outlook. exe, POWERPNT. exe) und die ausführbare Datei für die Azure Information Protection Unified bezeichnen von Client-oder Azure Information Protection Client (MSIP. app. exe, MSIP. Viewer. exe).
 
 Für die aufgelisteten Serverversionen werden die Azure Information Protection-Clients für Remotedesktopdienste unterstützt. Löschen Sie den Ordner **%AppData%\microsoft\protect** nicht, wenn Sie Benutzerprofile löschen, wenn Sie die Azure Information Protection Clients mit Remotedesktopdienste verwenden.
 
