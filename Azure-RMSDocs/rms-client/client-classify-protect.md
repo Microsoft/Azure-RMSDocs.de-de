@@ -1,24 +1,24 @@
 ---
-title: Klassifizieren Sie und schützen Sie – Azure Information Protection-client
-description: Anweisungen zum Klassifizieren und Schützen Ihrer Dokumente und e-Mails, bei der Verwendung des Azure Information Protection-Clients für Windows.
+title: Klassifizieren von & Protect-Azure Information Protection Client
+description: Anweisungen zum klassifizieren und Schützen Ihrer Dokumente und e-Mails, wenn Sie den Azure Information Protection Client für Windows verwenden.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bdb714a02ca775f5d8409be64499227f1bf15ef1
-ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
+ms.openlocfilehash: c42ef652f2fe2ccd8c668c84ee134aae47b1056f
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914727"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428364"
 ---
-# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Leitfaden: Klassifizieren Sie und schützen Sie mit dem Azure Information Protection-client
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Leitfaden: Klassifizieren und schützen mit dem Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
@@ -39,7 +39,7 @@ Geschützte Dateien können für andere Personen sicher freigegeben werden. Sie 
 
 Bevor Sie Dateien mit Personen außerhalb Ihrer Organisation teilen, wenden Sie sich an den Helpdesk oder Ihren Administrator, um herauszufinden, wie Dateien für externe Benutzer geschützt werden.
 
-Beispielsweise wenn Ihre Organisation regelmäßig für Personen in einer anderen Organisation kommuniziert, Ihren Administrator möglicherweise Bezeichnungen konfiguriert, dass diese Personen lesen können, und Verwenden von geschützten Dokumenten. Wenn dies der Fall ist, wählen Sie diese Bezeichnungen zum Klassifizieren und schützen die Dokumente gemeinsam nutzen.
+Wenn Ihre Organisation z. b. regelmäßig mit Personen in einer anderen Organisation kommuniziert, hat der Administrator möglicherweise Bezeichnungen so konfiguriert, dass diese Personen geschützte Dokumente lesen und verwenden können. Wenn dies der Fall ist, wählen Sie diese Bezeichnungen aus, um die freigegebenen Dokumente zu klassifizieren und zu schützen.
 
 Falls alternativ für externe Benutzer [Business-to-Business-Konten (B2B)](/azure/active-directory/active-directory-b2b-what-is-azure-ad-b2b) erstellt worden sind, können Sie Ihre [Office-App zum Festlegen von Berechtigungen](#set-custom-permissions-for-a-document) oder [Datei-Explorer zum Festlegen benutzerdefinierter Berechtigungen](#using-file-explorer-to-classify-and-protect-files) für ein Dokument verwenden, bevor Sie es teilen. Wenn Sie Ihre eigenen benutzerdefinierten Berechtigungen festlegen und das Dokument bereits für die interne Verwendung geschützt ist, erstellen Sie zunächst eine Kopie der Datei, um die ursprünglichen Berechtigungen beizubehalten. Verwenden Sie dann die Kopie, um die benutzerdefinierten Berechtigungen festzulegen.
 
@@ -106,7 +106,7 @@ Sie können – sofern von Ihrem Administrator erlaubt – eigene Schutzeinstell
         
         Sie können mithilfe des Adressbuchsymbols Benutzer oder Gruppen aus dem Outlook-Adressbuch auswählen.
     
-    - **Ablaufzugriff**: Wählen Sie diese Option nur für zeitempfindliche Dateien aus, sodass die Personen, die Sie angegeben haben Ihre ausgewählte(n) Datei(en) nach einem Datum nicht öffnen können, die Sie festlegen. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
+    - **Ablaufzugriff**: Wählen Sie diese Option nur für Zeit empfindliche Dateien aus, damit die von Ihnen angegebenen Personen nach einem von Ihnen festgelegten Datum nicht die ausgewählten Dateien öffnen können. Sie können weiterhin die ursprüngliche Datei öffnen, aber nach Mitternacht (aktuelle Zeitzone) können die Personen an dem von Ihnen festgelegten Tag die Datei nicht mehr öffnen.
 
 5. Klicken Sie auf **Übernehmen**, und warten Sie auf die Nachricht **Die benutzerdefinierten Berechtigungen wurden angewendet**. Klicken Sie anschließend auf **Schließen**.
 
@@ -169,7 +169,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der unterstützten D
 
 5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 
-Die ausgewählte(n) Datei(en) werden jetzt gemäß Ihrer Auswahl klassifiziert und geschützt. In einigen Fällen (wenn die Dateinamenerweiterung durch Hinzufügen des Schutzes geändert wird) wird die ursprüngliche Datei im Datei-Explorer durch eine neue Datei mit dem Schlosssymbol für Azure Information Protection ersetzt. Zum Beispiel:
+Die ausgewählte(n) Datei(en) werden jetzt gemäß Ihrer Auswahl klassifiziert und geschützt. In einigen Fällen (wenn die Dateinamenerweiterung durch Hinzufügen des Schutzes geändert wird) wird die ursprüngliche Datei im Datei-Explorer durch eine neue Datei mit dem Schlosssymbol für Azure Information Protection ersetzt. Beispiel:
 
 ![Geschützte Datei mit Schlosssymbol für Azure Information Protection](../media/Pfile.png)
 

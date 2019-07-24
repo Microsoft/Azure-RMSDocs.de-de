@@ -4,17 +4,17 @@ description: Sie können die Position der Azure Information Protection-Bezeichnu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 504121e8411132d47ea48635ca9c462ecbccf28c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: cde7e01f70936904f7d3d905c040d806c9f00d45
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180011"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428500"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Löschen oder Ändern der Position einer Bezeichnung für Azure Information Protection
 
@@ -60,11 +60,11 @@ Verwenden Sie die folgenden Anleitungen, um diese Änderungen vorzunehmen.
 
 2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Führen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** mindestens eine der folgenden Aktionen aus: 
 
-    - So löschen Sie eine Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü (**...**) für die zu löschende Bezeichnung auf. Klicken Sie auf **Diese Bezeichnung löschen** und anschließend auf **Ja**, um den Vorgang zu bestätigen. 
+    - So löschen Sie eine Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü ( **...** ) für die zu löschende Bezeichnung auf. Klicken Sie auf **Diese Bezeichnung löschen** und anschließend auf **Ja**, um den Vorgang zu bestätigen. 
 
     - So deaktivieren Sie eine Bezeichnung: Wählen Sie die Bezeichnung aus, die Sie deaktivieren möchten. Wählen Sie auf dem Blatt **Bezeichnung** bei **Aktiviert** den Eintrag **Aus** aus, und klicken Sie anschließend auf **Speichern**.
 
-    - So ändern Sie die Position einer Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü (**...**) für die Bezeichnung auf, deren Position Sie ändern möchten, und klicken Sie auf **Nach oben** oder **Nach unten**, bis sich die Bezeichnung an der gewünschten Position befindet.  
+    - So ändern Sie die Position einer Bezeichnung: Klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü ( **...** ) für die Bezeichnung auf, deren Position Sie ändern möchten, und klicken Sie auf **Nach oben** oder **Nach unten**, bis sich die Bezeichnung an der gewünschten Position befindet.  
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -1,36 +1,36 @@
 ---
-title: Entfernen von Bezeichnungen, die mithilfe des Azure Information Protection unified bezeichnungs-Clients
-description: Anweisungen zum Entfernen vertraulichkeitsbezeichnungen und des Schutzes von Dateien und e-Mails mithilfe von Azure Information Protection unified bezeichnungs-Client.
+title: Entfernen von Bezeichnungen mit dem Azure Information Protection Unified Label-Client
+description: Anweisungen zum Entfernen von Vertraulichkeits Bezeichnungen und des Schutzes von Dateien und e-Mails mithilfe des Azure Information Protection Unified Label-Clients.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: a2443a632fadf51aab5bb59b9e96b7b16547807d
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 1d7d712c43c3fcc13d3dfaebf0b0bcb110f40354
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767723"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428038"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Leitfaden: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection gekennzeichnet wurde, haben
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Leitfaden: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Wenn die einheitliche Azure Information Protection-Client ist [auf Ihrem Computer installierten](install-client-app.md), Sie können die vertraulichkeitsbezeichnungen und den Schutz von Dateien und e-Mails entfernen.
+Wenn die Azure Information Protection Unified Client [auf Ihrem Computer installiert](install-client-app.md)ist, können Sie Vertraulichkeits Bezeichnungen und den Schutz von Dateien und e-Mails entfernen.
 
-Wenn die vertraulichkeitsbezeichnung, die Sie entfernen zum Anwenden von Schutz konfiguriert ist, entfernt diese Aktion auch Schutz aus der Datei. Sie werden möglicherweise zur Dokumentierung aufgefordert, warum Sie die Bezeichnung entfernen.
+Wenn die Vertraulichkeits Bezeichnung, die Sie entfernen, zum Anwenden des Schutzes konfiguriert ist, wird durch diese Aktion auch der Schutz für die Datei entfernt. Sie werden möglicherweise zur Dokumentierung aufgefordert, warum Sie die Bezeichnung entfernen.
 
 > [!IMPORTANT]
 > Sie müssen Besitzer der Datei sein, um den Schutz entfernen zu können, oder Ihnen müssen die Berechtigungen zum Entfernen des Schutzes erteilt worden sein (Rights Management-Berechtigung **Exportieren** oder **Vollzugriff**).
 
-Wenn Sie eine andere Bezeichnung oder einen anderen Satz von Schutzeinstellungen auswählen möchten, müssen Sie die Bezeichnung oder den Schutz entfernen. Wählen Sie stattdessen eine neue Bezeichnung und bei Bedarf können Sie benutzerdefinierte Berechtigungen definieren, indem Sie die Datei-Explorer. 
+Wenn Sie eine andere Bezeichnung oder einen anderen Satz von Schutzeinstellungen auswählen möchten, müssen Sie die Bezeichnung oder den Schutz entfernen. Wählen Sie stattdessen eine neue Bezeichnung aus, und Sie können ggf. benutzerdefinierte Berechtigungen mithilfe des Datei-Explorers definieren. 
 
 Sie können Bezeichnungen und den Schutz von Office-Dokumenten und E-Mails entfernen, wenn Sie sie in Ihren Office-Desktopanwendungen erstellen oder bearbeiten: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
@@ -38,17 +38,17 @@ Sie können Bezeichnungen und den Schutz auch über den **Datei-Explorer** entfe
 
 ## <a name="using-office-apps-to-remove-labels-and-protection-from-documents-and-emails"></a>Verwenden von Office-Apps zum Entfernen von Bezeichnungen und des Schutzes von Dokumenten und E-Mails
 
-Von der **Startseite** Registerkarte die **Vertraulichkeit** Menüband auf die Schaltfläche, und deaktivieren Sie die ausgewählte Bezeichnung.
+Wählen Sie auf der Registerkarte **Startseite** die Vertraulichkeits Schaltfläche im Menüband aus, und löschen Sie die aktuell ausgewählte Bezeichnung.
 
-Oder, wenn Sie ausgewählt haben **Leiste anzeigen** aus der **Vertraulichkeit** Schaltfläche können Sie auswählen, die **Bezeichnung löschen** Symbol in der Azure Information Protection-Leiste:
+Wenn Sie die Option **Leiste anzeigen** von der Vertraulichkeits  Schaltfläche ausgewählt haben, können Sie auf der Azure Information Protection Leiste das Symbol " **Bezeichnung löschen** " auswählen:
 
 ![Azure Information Protection-Leiste – Bezeichnung löschen](../media/v2delete-label.png)
 
-Wenn die **Bezeichnung löschen** Symbol nicht sofort verfügbar ist, wählen Sie zuerst die **Bezeichnung bearbeiten** Symbol:
+Wenn das Symbol " **Bezeichnung löschen** " nicht sofort verfügbar ist, wählen Sie zuerst das Symbol " **Bezeichnung bearbeiten** " aus:
 
 ![Azure Information Protection-Leiste – Bezeichnung bearbeiten](../media/v2edit-label.png)
 
-Wenn Sie noch immer nicht angezeigt werden die **Bezeichnung löschen** Symbol, erlaubt Ihr Administrator nicht Sie diese Option verwenden, da alle Dokumente und e-Mails Bezeichnungen aufweisen müssen.
+Wenn das Symbol " **Bezeichnung löschen** " weiterhin nicht angezeigt wird, ist es Ihnen nicht gestattet, diese Option zu verwenden, da alle Dokumente und e-Mails über eine Bezeichnung verfügen müssen.
 
 ## <a name="using-file-explorer-to-remove-labels-and-protection-from-files"></a>Verwenden des Datei-Explorer zum Entfernen von Bezeichnungen und des Schutzes von Dateien
 
@@ -72,5 +72,5 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 
-Finden Sie unter [Überblick über die vertraulichkeitsbezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
+Siehe [Übersicht über Vertraulichkeits Bezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
 

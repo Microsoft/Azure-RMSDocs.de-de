@@ -1,35 +1,35 @@
 ---
-title: Zeigen Sie geschützter Dateien mit dem Azure Information Protection unified bezeichnungs-Client an
-description: Anweisungen, um eine geschützte Datei anzeigen, die die Azure Information Protection unified bezeichnungs-Viewer installiert sein müssen.
+title: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
+description: Anweisungen zum Anzeigen einer geschützten Datei, die erfordert, dass der Azure Information Protection Unified Bezeichnung Viewer installiert ist.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 6c499d384ec4d116edb18dccf532fbb1290bf284
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880197"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427938"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Zeigen Sie geschützter Dateien mit dem Azure Information Protection unified bezeichnungs-Client an
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Sie können eine geschützte Datei häufig anzeigen, indem Sie sie einfach öffnen. Sie können z. B. einfach auf eine Anlage einer E-Mail klicken oder im Datei-Explorer auf eine Datei doppelklicken. Alternativ können Sie auch auf den Link zu einer Datei klicken.
 
 Wenn die Dateien nicht sofort geöffnet werden, kann eventuell der **Azure Informationen Protection-Viewer** Abhilfe leisten. Dieser Viewer kann geschützte Textdateien, geschützte Bilddateien geschützte PDF-Dateien und alle Dateien mit der Erweiterung **PFILE** öffnen.
 
-Der Viewer wird automatisch als Teil des Azure Information Protection unified bezeichnungs-Clients installiert, oder Sie können es separat installieren. Installieren Sie diesen Client und den Viewer aus der [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) auf der Microsoft-Website. Weitere Informationen zu diesen Client zu installieren, finden Sie unter [herunterladen und installieren Sie den Azure Information Protection unified bezeichnungs-Client](install-unifiedlabelingclient-app.md).
+Der Viewer wird automatisch als Teil des Azure Information Protection Unified Bezeichnung-Clients installiert, oder Sie können ihn separat installieren. Sie können diesen Client und den Viewer auf der Seite " [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) " der Microsoft-Website installieren. Weitere Informationen zum Installieren dieses Clients finden Sie unter [herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Clients](install-unifiedlabelingclient-app.md).
 
 > [!NOTE]
-> Obwohl das Installieren des Clients mehr Funktionalität bietet, sind lokale Administratorberechtigungen erforderlich, und die volle Funktionalität erfordert einen entsprechenden Dienst für Ihre Organisation. Beispiel: Azure Information Protection.
+> Obwohl das Installieren des Clients mehr Funktionalität bietet, sind lokale Administratorberechtigungen erforderlich, und die volle Funktionalität erfordert einen entsprechenden Dienst für Ihre Organisation. Beispielsweise Azure Information Protection.
 > 
 > Installieren Sie den Viewer, wenn Ihnen von einer Person aus einer anderen Organisation ein geschütztes Dokument gesendet wurde oder Sie nicht über lokale Administratorrechte auf Ihrem PC verfügen.
 
@@ -59,12 +59,12 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
     
     Wenn Sie nicht über ein akzeptiertes Konto verfügen, finden Sie weitere Informationen auf dieser Seite im Abschnitt [Aufforderung zur Authentifizierung](#prompts-for-authentication).
 
-3. Eine schreibgeschützte Version der Datei wird geöffnet, der **Azure Information Protection-Viewer** oder in die Anwendung mit der Dateinamenerweiterung.
+3. Eine schreibgeschützte Version der Datei wird im **Azure Information Protection Viewer** oder in der Anwendung geöffnet, die der Dateinamenerweiterung zugeordnet ist.
 
 4. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 
 > [!TIP]
-> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um diese Option aus einer Office-app zuzugreifen, wählen die **Vertraulichkeit** Schaltfläche > **Hilfe und Feedback** > **Einstellungen zurücksetzen**. 
+> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um auf diese Option zuzugreifen, wählen Sie in einer Office-App die Schaltfläche **Sensitivität** aus, > Einstellungen für **Hilfe und Feedback** > **Zurücksetzen**. 
 > 
 > [Weitere Informationen zur Option „Einstellungen zurücksetzen“](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

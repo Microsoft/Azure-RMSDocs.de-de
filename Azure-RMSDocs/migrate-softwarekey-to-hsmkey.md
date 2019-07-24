@@ -4,21 +4,21 @@ description: Anweisungen, die Teil des Migrationspfads von AD RMS zu Azure Infor
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5729c52283f5f7537898efc730b1992be531130d
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: f88bb6adff86d1689aa7d702d33f79a665192792
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535128"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428419"
 ---
-# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
+# <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
@@ -29,7 +29,7 @@ Falls dies nicht Ihr gewünschtes Konfigurationsszenario ist, sollten Sie zu [Sc
 
 Das Verfahren zum Importieren der AD RMS-Konfiguration in Azure Information Protection, um den von Ihnen verwalteten Azure Information Protection-Mandantenschlüssel (BYOK) in Azure Key Vault zu erhalten, gliedert sich in vier Phasen.
 
-Sie müssen zuerst den Schlüssel Ihres lizenzgebenden Serverzertifikats (SLC) aus den AD RMS-Konfigurationsdaten extrahieren und übertragen des Schlüssels in einer lokalen nCipher HSM, als Nächstes Packen Ihren HSM-Schlüssel an Azure Key Vault übertragen, und Autorisieren des Azure Rights Management-Diensts aus Azure Information Protection zum Zugriff auf Ihre Key Vault-Instanz, und klicken Sie dann die Konfigurationsdaten importieren.
+Sie müssen zunächst den Schlüssel des Lizenzgebers des Servers (Server Lizenzgeber Certificate, SLC) aus den AD RMS Konfigurationsdaten extrahieren und den Schlüssel auf ein lokales nchiffre-HSM übertragen, das nächste Mal Verpacken und den HSM-Schlüssel an Azure Key Vault übertragen und dann den Azure Rights Management-Dienst von Azure Information Protection, um auf Ihren Schlüssel Tresor zuzugreifen, und importieren Sie dann die Konfigurationsdaten.
 
 Da Ihr Azure Information Protection-Mandantenschlüssel von Azure Key Vault gespeichert und verwaltet wird, muss dieser Teil der Migration nicht nur in Azure Key Vault, sondern auch in Azure Information Protection verwaltet werden. Wenn Azure Key Vault für Ihre Organisation nicht von Ihnen, sondern von einem anderen Administrator verwaltet wird, müssen Sie sich mit diesem Administrator abstimmen und mit ihm zusammenarbeiten, um diese Prozeduren abzuschließen.
 
@@ -74,7 +74,7 @@ Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltreso
 
     - Wenn Sie beim Ausführen dieses Befehls (unter Verwendung des vollständigen Parameternamens **TpdPassword** oder des kurzen Parameternamens **pwd**) das Kennwort nicht angeben, werden Sie zur Eingabe aufgefordert.
 
-3. Die gleichen nicht verbundenen Arbeitsstation fügen Sie an und konfigurieren Sie die unterstützende nCipher HSM, gemäß der nCipher Dokumentation. Sie können nun Ihren Schlüssel in Ihrer angefügten nCipher HSM importieren, mit den folgenden Befehl aus, in denen Sie Ihren eigenen Dateinamen "contosotpd.PEM" durch ersetzen müssen:
+3. Fügen Sie auf derselben nicht verbundenen Arbeitsstation Ihr nchiffre-HSM gemäß ihrer nchiffre-Dokumentation an, und konfigurieren Sie Sie. Sie können nun Ihren Schlüssel mit dem folgenden Befehl in Ihr angefügtes nchiffre-HSM importieren, wobei Sie Ihren eigenen Dateinamen für "fitosotpd. PEM" ersetzen müssen:
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Stellen Sie zu Beginn sicher, dass Ihre Organisation über einen Schlüsseltreso
 
     **Pfad zum Schlüssel: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-Diese Ausgabe bestätigt, dass der private Schlüssel nun auf Ihrem lokalen nCipher HSM-Gerät mit einer verschlüsselten Kopie migriert wird, die einen Schlüssel (in unserem Beispiel "Key_simple_contosobyok") gespeichert wird. 
+Diese Ausgabe bestätigt, dass der private Schlüssel nun auf das lokale HSM-HSM-Gerät mit einer verschlüsselten Kopie migriert wird, die in einem Schlüssel gespeichert wird (in unserem Beispiel "key_simple_contosobyok"). 
 
 Nachdem Ihr SLC-Schlüssel extrahiert und auf Ihr lokales HSM importiert wurde, sind Sie bereit, den HSM-geschützten Schlüssel zu paketieren und an Azure Key Vault zu übertragen.
 
@@ -124,7 +124,7 @@ Bevor Sie Ihren Schlüssel in Azure Key Vault übertragen, stellen Sie sicher, d
 
 Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Das sieht ungefähr folgendermaßen aus: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Sie sollten sich diese URL notieren, da der Azure Information Protection-Administrator ihn benötigt, um dem Azure Rights Management-Dienst von Azure Information Protection mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 
-Verwenden Sie dann die [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) Cmdlet, um den Azure Rights Management-Dienstprinzipal Zugriff auf den schlüsseltresor zu autorisieren. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
+Verwenden Sie dann das Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) , um den Azure Rights Management-Dienst Prinzipal für den Zugriff auf den Schlüssel Tresor zu autorisieren. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
 
 Wenn beispielsweise der Schlüsseltresor, den Sie für Azure Information Protection erstellt haben, „contosorms-byok-kv“ heißt und die Ressourcengruppe „contosorms-byok-rg“, führen Sie den folgenden Befehl aus:
     
@@ -136,7 +136,7 @@ Nachdem Sie Ihren HSM-Schlüssel an Azure Key Vault übertragen haben, können S
 
 1. Azure Information Protection-Administrator: Kopieren Sie Ihre neuen Konfigurationsdatendateien (XML), deren SLC-Schlüssel nach Ausführung des TpdUtil-Tools entfernt wird, auf die Arbeitsstation mit Internetverbindung und in die PowerShell-Sitzung.
 
-2. Jede XML-Datei hochladen, mithilfe der [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) Cmdlet. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
+2. Laden Sie jede XML-Datei mithilfe des Cmdlets [Import-aipservicetpd](/powershell/module/aipservice/import-aipservicetpd) hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
 
     Um dieses Cmdlet auszuführen, benötigen Sie das Kennwort, das Sie zuvor für die Konfigurationsdatendatei angegeben haben, sowie die URL für den Schlüssel, der im vorherigen Schlüssel identifiziert wurde.
 
@@ -154,15 +154,15 @@ Nachdem Sie Ihren HSM-Schlüssel an Azure Key Vault übertragen haben, können S
 
     Im Rahmen dieses Importvorgangs wird der SLC-Schlüssel importiert und automatisch als archiviert festgelegt.
 
-3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) angeben, welcher importierte Schlüssel mit den derzeit aktiven SLC-Schlüssel in Ihrer AD RMS-Clusters entspricht.
+3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, um anzugeben, welcher importierte Schlüssel mit dem derzeit aktiven SLC-Schlüssel in Ihrem AD RMS Cluster übereinstimmt.
 
-4. Verwenden der [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet zum Trennen von Azure Rights Management-Dienst:
+4. Verwenden Sie das [Disconnect-aipserviceservice-](/powershell/module/aipservice/disconnect-aipservice) Cmdlet, um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
     ```
     Disconnect-AipServiceService
     ```
 
-Wenn Sie später benötigen, um zu bestätigen, die Ihre Azure Information Protection Schlüssel den mandantenschlüssel in Azure Key Vault verwendet verwendet die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS-Cmdlet.
+Wenn Sie später bestätigen müssen, welchen Schlüssel Ihr Azure Information Protection Mandanten Schlüssel in Azure Key Vault verwendet, verwenden Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS.
 
 
 Sie können jetzt mit [Schritt 5 beginnen: Aktivieren Sie den Azure Rights Management-Dienst](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

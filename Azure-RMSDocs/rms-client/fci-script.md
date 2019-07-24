@@ -4,19 +4,19 @@ description: Beispielskript zum Kopieren und Bearbeiten, wie in den Anweisungen 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 52a27004d303ff2912da9ad2cd243312bc4c411f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 0e0cf93d4805132f0de68a2d027d3d1715f02519
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427966"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
@@ -28,7 +28,7 @@ Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [
 
 Dieses Skript verwendet die Mindestversion **1.3.155.2** für das Modul „AzureInformationProtection“. Führen Sie zum Überprüfen der Version den folgenden Befehl aus: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Haftungsausschluss&#42;&#42;: Dieses Beispielskript wird unter keinem Microsoft-standardsupportprogramm oder-Dienst nicht unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.*
+*&#42;&#42;Haftungsausschluss&#42;&#42;: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.*
 
 ```
 <#

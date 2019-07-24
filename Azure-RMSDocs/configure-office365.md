@@ -1,31 +1,31 @@
 ---
-title: Konfiguration für Office 365-Dienste mit Azure RMS – AIP
-description: Informationen und Anweisungen für Administratoren zum Konfigurieren von Office 365-Dienste mit dem Azure Rights Management-Dienst von Azure Information Protection funktionieren.
+title: Konfiguration für Office 365-Dienste zur Verwendung Azure RMS-aip
+description: Informationen und Anweisungen für Administratoren zum Konfigurieren von Office 365-Diensten für die Zusammenarbeit mit dem Azure Rights Management-Dienst von Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1dcf34bf2990426a9ff22660d871b4f60e72bc3f
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: 29d73cc4fb29accaa3bd8c760ccfc6e0a2e5ffad
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520626"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428536"
 ---
-# <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für online-Dienste den Azure Rights Management-Dienst verwenden
+# <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für die Onlinedienste der Verwendung des Azure Rights Management-Dienstanbieter
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die folgenden Abschnitten, um Exchange Online, SharePoint Online und OneDrive for Business zur Verwendung des Azure Rights Management-Diensts von Azure Information Protection zu konfigurieren.
+In den folgenden Abschnitten finden Sie Informationen zum Konfigurieren von Exchange Online, SharePoint Online und onedrive for Business für die Verwendung des Azure-Rights Management Dienstanbieter von Azure Information Protection.
 
-## <a name="exchangeonline-irm-configuration"></a>Exchange Online: IRM-Konfiguration
-Informationen dazu, mit dem Azure Rights Management-Dienst wie Exchange Online funktioniert, finden Sie unter den [Exchange Online und Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) Abschnitt [wie Office-Anwendungen und Dienste unterstützen Azure Rights Management](office-apps-services-support.md).
+## <a name="exchangeonline-irm-configuration"></a>Exchange Online: Unm-Konfiguration
+Informationen zur Funktionsweise von Exchange Online mit dem Azure Rights Management-Dienst finden Sie im Abschnitt [Exchange Online und Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) , in dem erläutert wird, [wie Office-Anwendungen und-Dienste Azure Rights Management unterstützen](office-apps-services-support.md).
 
 Möglicherweise ist Azure Rights Management schon für Exchange Online aktiviert. Sie können dies herausfinden, indem Sie die folgenden Befehle ausführen:
 
@@ -65,13 +65,13 @@ Möglicherweise ist Azure Rights Management schon für Exchange Online aktiviert
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    Zum Beispiel: <strong>Test-IRMConfiguration -Sender adams@contoso.com</strong>
+    Beispiel: <strong>Test-IRMConfiguration -Sender adams@contoso.com</strong>
     
-    Dieser Befehl führt eine Reihe von Überprüfungen aus. Dazu zählen das Überprüfen der Verbindung mit dem Dienst sowie das Abrufen von Konfiguration-URIs, Lizenzen und Vorlagen. In Windows PowerShell-Sitzung sehen Sie die Ergebnisse der einzelnen und am Ende, wenn alles, was diese Überprüfungen erfolgreich war: **GESAMTERGEBNIS: ERFOLG**
+    Dieser Befehl führt eine Reihe von Überprüfungen aus. Dazu zählen das Überprüfen der Verbindung mit dem Dienst sowie das Abrufen von Konfiguration-URIs, Lizenzen und Vorlagen. In der Windows PowerShell-Sitzung werden die Ergebnisse der einzelnen und am Ende angezeigt, wenn die folgenden Überprüfungen durchgeführt werden: **GESAMTERGEBNIS: ERFOLG**
 
 Wenn Azure Rights Management für Exchange Online aktiviert ist, können Sie Features konfigurieren, die den Informationsschutz automatisch anwenden. Hierzu gehören z.B. [E-Mail-Flussregeln](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8), [DLP-Richtlinien (Data Loss Prevention)](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) und [geschützte Voicemail](https://technet.microsoft.com/library/dn198211%28v=exchg.150%29.aspx) (Unified Messaging).
 
-## <a name="sharepointonline-and-onedrive-for-business-irm-configuration"></a>SharePoint Online und OneDrive for Business: IRM-Konfiguration
+## <a name="sharepointonline-and-onedrive-for-business-irm-configuration"></a>SharePoint Online und onedrive for Business: Unm-Konfiguration
 
 Informationen zur Funktionsweise von SharePoint Online IRM mit dem Azure Rights Management-Dienst finden Sie im unter [SharePoint Online und SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) im Abschnitt **Rights Management-Schutz** der Dokumentation.
 
@@ -127,7 +127,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 
 3. Kopieren Sie den Inhalt des folgenden Skripts, und nennen Sie die Datei "Set-IRMOnOneDriveForBusiness.ps1" auf Ihrem Computer.
 
-   *&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-standardsupportprogramm oder-Dienst nicht unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
+   *&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
 
    ```
    # Requires Windows PowerShell version 3
@@ -525,7 +525,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 > [!TIP]
 > Sie können dieses Skript auch verwenden, um IRM für eine SharePoint Online-Bibliothek zu konfigurieren. Für diese Konfiguration möchte Sie vermutlich die zusätzliche Option **Benutzer dürfen keine Dokumente hochladen, die IRM nicht unterstützen** aktivieren, um sicherzustellen, dass die Bibliothek nur geschützte Dokumente enthält.    Fügen Sie hierzu dem Befehl "Set-IrmConfiguration" im Skript den `-IrmReject`-Parameter hinzu.
 >
-> Außerdem müssten Sie so ändern Sie die `$webUrls` Variable (z. B. **Https:\//contoso.sharepoint.com**) und `$listTitle` Variable (z. B. **$Reports**).
+> Außerdem müssen Sie die Variable (z `$webUrls` . b. **https:\//contoso.SharePoint.com**) und `$listTitle` die Variable (z. b. **$Reports**) ändern.
 
 Wenn Sie IRM für OneDrive for Business-Bibliotheken eines Benutzers deaktivieren müssen, finden Sie Informationen im Abschnitt [Skript zum Deaktivieren von IRM für OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 
@@ -534,7 +534,7 @@ Für Schritt 4c weiter oben können Sie das folgende Windows PowerShell-Skript v
 
 Dieses Skript erfordert auch das [SharePoint Online-Clientkomponenten-SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) sowie die [SharePoint Online-Verwaltungsshell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Befolgen Sie dieselben Anweisungen zum Kopieren und Einfügen, speichern Sie die Datei lokal (z. B. "Report-OneDriveForBusinessSiteInfo.ps1"), ändern Sie die Werte `$sharepointAdminCenterUrl` und `$tenantAdmin` wie vorher, und führen Sie dann das Skript aus.
 
-*&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-standardsupportprogramm oder-Dienst nicht unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
+*&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
 
 ```
 # Requires Windows PowerShell version 3
@@ -759,7 +759,7 @@ Verwenden Sie das folgende Beispielskript, wenn Sie IRM für OneDrive for Busine
 
 Dieses Skript erfordert auch das [SharePoint Online-Clientkomponenten-SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038) sowie die [SharePoint Online-Verwaltungsshell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Kopieren Sie den Inhalt, und fügen Sie ihn ein. Speichern Sie die Datei lokal (z. B. „Disable-IRMOnOneDriveForBusiness.ps1“), und ändern Sie die Werte `$sharepointAdminCenterUrl` und `$tenantAdmin`. Geben Sie die OneDrive for Business-URLs manuell an, oder verwenden Sie das Skript aus dem vorherigen Abschnitt, sodass Sie diese importieren können, und führen Sie dann das Skript aus.
 
-*&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-standardsupportprogramm oder-Dienst nicht unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
+*&#42;&#42;Haftungsausschluss&#42;&#42;* : Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.
 
 ```
 # Requires Windows PowerShell version 3

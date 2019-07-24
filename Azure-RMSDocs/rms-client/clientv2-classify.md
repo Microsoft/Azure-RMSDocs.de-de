@@ -1,26 +1,26 @@
 ---
-title: Klassifizieren Sie mithilfe des Azure Information Protection unified bezeichnungs-Clients
-description: Anweisungen, wie Sie Ihre Dokumente und e-Mails klassifizieren, bei der Verwendung von Azure Information Protection bezeichnungs-Client für Windows Unified.
+title: Klassifizieren mithilfe des Azure Information Protection Unified Bezeichnung-Clients
+description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails bei Verwendung des Azure Information Protection Unified-Bezeichnung Client für Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c7ec1c5f6a929d9b6b810b647e6cb6dbe3c42316
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 5faf6151a74eec0f213cf425d45f51cbd9e677d5
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767957"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428091"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Leitfaden: Klassifizieren einer Datei oder e-Mail mithilfe des Azure Information Protection unified bezeichnungs-Clients für Windows
+# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Leitfaden: Klassifizieren einer Datei oder e-Mail mithilfe des Azure Information Protection Unified Bezeichnung-Clients für Windows
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Mithilfe dieser Anleitung können Sie Ihre Dokumente und E-Mails klassifizieren, jedoch nicht schützen. Wenn Sie Ihre Dokumente und E-Mails auch schützen möchten, lesen Sie die [Anleitung zum Klassifizieren und Schützen](clientv2-classify-protect.md). Wenn Sie nicht sicher sind, welche Anleitung Sie verwenden sollen, wenden Sie sich an Ihren Systemadministrator oder den Helpdesk.
@@ -31,33 +31,33 @@ Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren.
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren Ihrer Dokumente und E-Mails
 
-Von der **Startseite** Registerkarte die **Vertraulichkeit** Menüband auf die Schaltfläche, und wählen Sie dann eine der Bezeichnungen, die für Sie konfiguriert wurde. Zum Beispiel:
+Wählen Sie auf der Registerkarte **Startseite** die Vertraulichkeits Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Beispiel:
 
-![Beispiel für die Schaltfläche Empfindlichkeit](../media/sensitivity-not-set-callout.png)
+![Beispiel für sensible Schaltfläche](../media/sensitivity-not-set-callout.png)
 
-Oder, wenn Sie ausgewählt haben **Leiste anzeigen** aus der **Vertraulichkeit** Schaltfläche können Sie eine Bezeichnung aus der Azure Information Protection-Leiste auswählen. Zum Beispiel:
+Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Beispiel:
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
-Wählen Sie zum Festlegen einer Bezeichnung wie "Allgemein" **allgemeine**. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten. 
+Wählen Sie zum Festlegen einer Bezeichnung (z. b. "Allgemein") die Option **Allgemein**aus. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten. 
 
-Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection-Leiste angezeigt haben, und die Bezeichnungen nicht, auf der Leiste für die Sie auswählen angezeigt werden, klicken Sie zuerst auf die **Bezeichnung bearbeiten** Symbol neben dem aktuellen Bezeichnungswert.
+Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection Leiste angezeigt haben und die Bezeichnungen nicht auf der Leiste angezeigt werden, die Sie auswählen können, klicken Sie zuerst auf das Symbol " **Bezeichnung bearbeiten** " neben dem Wert der aktuellen Bezeichnung.
 
 Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die folgende Weise angewendet werden:
 
 - Ihr Administrator konfiguriert eine Standardbezeichnung, die Sie beibehalten oder ändern können.
 
-- Ihr Administrator konfiguriert die Bezeichnungen automatisch festgelegt werden, wenn vertraulicher Informationen erkannt wird.
+- Der Administrator hat Bezeichnungen so konfiguriert, dass Sie automatisch festgelegt werden, wenn sensible Informationen erkannt werden.
 
-- Ihr Administrator konfiguriert empfohlene Bezeichnungen aus, wenn vertraulicher Informationen erkannt wird, und Sie aufgefordert werden, die Empfehlung übernehmen (und die Bezeichnung angewendet wird) oder zurückweisen (empfohlene Bezeichnung wird nicht angewendet).
+- Ihr Administrator hat Empfohlene Bezeichnungen konfiguriert, wenn vertrauliche Informationen erkannt werden, und Sie werden aufgefordert, die Empfehlung zu akzeptieren (und die Bezeichnung wird angewendet), oder Sie ablehnen (die empfohlene Bezeichnung wird nicht angewendet).
 
-### <a name="exceptions-for-the-sensitivity-button"></a>Ausnahmen für die Schaltfläche "Vertraulichkeit"
+### <a name="exceptions-for-the-sensitivity-button"></a>Ausnahmen für die Vertraulichkeits Schaltfläche
 
-##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Werden die Schaltfläche "Vertraulichkeit", in Ihren Office-apps nicht angezeigt?
+##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Wird die Vertraulichkeits Schaltfläche in Ihren Office-Apps nicht angezeigt?
 
-- Sie besitzen möglicherweise nicht den Azure Information Protection unified bezeichnungs-Client [installiert](install-unifiedlabelingclient-app.md).
+- Möglicherweise ist der Azure Information Protection Unified Bezeichnung-Client nicht [installiert](install-unifiedlabelingclient-app.md).
 
-- Wenn Sie nicht angezeigt wird eine **Vertraulichkeit** Menüband auf die Schaltfläche allerdings sehe eine **schützen** stattdessen die Schaltfläche mit den Beschriftungen, Sie haben die Azure Information Protection-Client installiert ist und nicht die Azure Information Protection einheitliche bezeichnungs-Client. [Weitere Informationen](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Wenn auf dem Menüband  keine Vertraulichkeits Schaltfläche angezeigt wird, aber stattdessen die Schaltfläche **schützen** mit Bezeichnungen angezeigt wird, ist der Azure Information Protection-Client installiert und nicht der Azure Information Protection Unified Label-Client. [Weitere Informationen](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Wird die erwartete Bezeichnung nicht angezeigt? 
 
@@ -78,7 +78,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der Dateitypen, die 
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>So klassifizieren Sie eine Datei mithilfe des Datei-Explorers
 
-1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Zum Beispiel:
+1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiel:
     
     ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](../media/right-click-classify-protect-folder.png)
 
@@ -98,11 +98,11 @@ Die Klassifizierung, die Sie angegeben haben, bleibt der Datei zugeordnet, auch 
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen
 
-Weitere Anleitung des Benutzers führen für den einheitlichen Azure Information Protection-Bezeichnung-Client für Windows:
+Weitere Anleitungen finden Sie im Benutzerhandbuch für den Azure Information Protection Unified Bezeichnung-Client für Windows:
 
 - [Was möchten Sie tun?](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren
 
-Finden Sie unter [Überblick über die vertraulichkeitsbezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
+Siehe [Übersicht über Vertraulichkeits Bezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
 

@@ -1,22 +1,22 @@
 ---
-title: Exchange Online e-Mail-Flussregeln für Azure Information Protection-Bezeichnungen
+title: Exchange Online-e-Mail-Fluss Regeln für Azure Information Protection Bezeichnungen
 description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 839f5e9a63f9e180cddcb9ac5cd4afd2b8474d1e
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: f738f990e6a4c2f79e4eede12431c1afe15803cd
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767996"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428561"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
@@ -52,7 +52,7 @@ Erstellen Sie für die folgenden Beispiele eine neue Nachrichtenflussregel, inde
 
 3. Wählen Sie im Microsoft 365 Admin Center **Admin Center** > **Exchange** aus.
 
-4. Im Exchange Admin Center: **Nachrichtenfluss** > **Regeln** > **+** > **Neue Regel erstellen**. 
+4. Im Exchange Admin Center: **Nachrichtenfluss** > **Regeln** >  **+**  > **Neue Regel erstellen**. 
 
 > [!TIP]
 > Wenn Sie bei der Konfiguration Ihrer Regeln Probleme mit der Benutzeroberfläche haben, versuchen Sie es mit einem anderen Browser, z.B. Internet Explorer.
@@ -68,7 +68,7 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
 
 1. Geben Sie unter **Name** einen Namen für die Regel ein, z.B. `Apply Do Not Forward for General emails sent externally`.
  
-2. Für **Diese Regel anwenden, wenn...**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
+2. Für **Diese Regel anwenden, wenn...** : Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
 
 3. Wählen Sie **Weitere Optionen** und dann **Bedingung hinzufügen** aus.
  
@@ -82,7 +82,7 @@ In der Azure Information Protection-Richtlinie wurde diese Bezeichnung als Stand
 
 5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Nicht weiterleiten** aus, und wählen Sie dann **OK** aus.
     
-    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Exchange Online e-Mail-Flussregel, die für eine Azure Information Protection-Bezeichnung - Beispiel 1 konfiguriert](./media/aip-exo-rule-ex1.png)
+    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Exchange Online-e-Mail-Fluss Regel konfiguriert für eine Azure Information Protection Bezeichnung-Beispiel 1](./media/aip-exo-rule-ex1.png)
 
 7. Wählen Sie **Speichern** aus. 
 
@@ -96,13 +96,13 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
 
 1. Geben Sie unter **Name** einen Namen für die Regel ein, z.B. `Apply Encrypt to emails sent externally if protected attachments`.
  
-2. Für **Diese Regel anwenden, wenn...**: Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
+2. Für **Diese Regel anwenden, wenn...** : Wählen Sie **Der Empfänger befindet sich** und **Außerhalb der Organisation** aus, und wählen Sie dann **OK** aus.
 
 3. Wählen Sie **Weitere Optionen** und dann **Bedingung hinzufügen** aus.
  
 4. Für **und**: Wählen Sie **Beliebige Anlage** aus, und wählen Sie dann **verfügt über Eigenschaften, die eines dieser Wörter enthalten** aus:
      
-    a. Wählen Sie **+** > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
+    a. Wählen Sie **+**  > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
   
     b. Geben Sie für **Eigenschaft** `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` ein.
     
@@ -112,7 +112,7 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
 
 5. Für **Folgende Aktion ausführen**: Wählen Sie **Nachrichtensicherheit ändern** > **Office 365-Nachrichtenverschlüsselung und -Rechteschutz anwenden** > **Verschlüsseln** aus, und wählen Sie dann **OK** aus.
     
-    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Exchange Online e-Mail-Flussregel, die für eine Azure Information Protection-Bezeichnung - Beispiel 2 konfiguriert](./media/aip-exo-rule-ex2.png)
+    Ihre Regelkonfiguration sollte nun ungefähr wie folgt aussehen:  ![Exchange Online-e-Mail-Fluss Regel konfiguriert für eine Azure Information Protection Bezeichnung-Beispiel 2](./media/aip-exo-rule-ex2.png)
 
 6. Wählen Sie **Speichern** aus. 
 
