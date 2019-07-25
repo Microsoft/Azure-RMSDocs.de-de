@@ -4,16 +4,16 @@ description: Ein Einführungstutorial zum Konfigurieren und Anzeigen von erweite
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 565a46f599922aeef3636756c47c561264bf010f
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934701"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352822"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -211,7 +211,7 @@ Für alle von Ihnen durchgeführten Tests werden Informationsereignisse erstellt
 Wenn beispielsweise der erste Test eine Warnung für den Benutzer war, und Sie **Abbrechen** ausgewählt haben, wird **Dismissed** (Verworfen) als **Benutzerantwort** im ersten Ereignis 301 angezeigt. Beispiel:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -226,7 +226,7 @@ User Response: Dismissed
 Sie haben allerdings **Bestätigen und senden** ausgewählt, was im nächsten Ereignis 301 wiedergegeben wird, in dem **Confirmed** (Bestätigt) als **Benutzerantwort** angezeigt wird:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -241,7 +241,7 @@ User Response: Confirmed
 Das gleiche Muster wird für die Legitimationsmeldung wiederholt, die ein Ereignis 302 aufweist. Das erste Ereignis zeigt **Dismissed** (Verworfen) als **Benutzerantwort** an, und das zweite zeigt die ausgewählte Begründung an. Beispiel:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -258,7 +258,7 @@ User Response: Confirmed
 Oben im Ereignisprotokoll sehen Sie die protokollierte Blockierungsmeldung, die ein Ereignis 303 aufweist. Beispiel:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -268,6 +268,24 @@ Label After Action: General
 Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
+
+### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Optional: Erstellen einer zusätzlichen erweiterten Clienteinstellung, um diese Meldungen ausnahmsweise für interne Empfänger freizugeben
+
+Sie haben Ihre Warn-, Legitimierungs- und Blockierungsmeldungen mit Ihrer eigenen E-Mail-Adresse als Empfänger getestet. In einer Produktionsumgebung ist es möglicherweise empfehlenswert, diese Meldungen für die von Ihnen angegebenen Bezeichnungen nur anzuzeigen, wenn sich Empfänger außerhalb Ihrer Organisation befinden. Sie können diese Ausnahme für Partner erweitern, mit denen Ihre Organisation regelmäßig zusammenarbeitet.
+
+Um die Funktionsweise in der Praxis zu erleben, erstellen Sie eine zusätzliche erweiterte Clienteinstellung namens **OutlookBlockTrustedDomains** und geben Ihren eigenen Domänennamen aus Ihrer E-Mail-Adresse an. Damit wird verhindert, dass die Blockierungsmeldung für Empfänger angezeigt wird, deren E-Mail-Adresse den gleichen Domänennamen enthält. Für andere Empfänger wird die Meldung weiterhin angezeigt. Auf ähnliche Weise können Sie zusätzliche erweiterte Clienteinstellungen für **OutlookWarnTrustedDomains** und **OutlookJustifyTrustedDomains** erstellen.
+
+1. Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** im Azure-Portal das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben) aus. Wählen Sie dann **Erweiterte Einstellungen** aus.
+
+2. Geben Sie auf dem Blatt **Erweiterte Einstellungen** den Namen der erweiterten Einstellung (**OutlookBlockTrustedDomains**) ein, und fügen Sie Ihren Domänennamen aus Ihrer E-Mail-Adresse für den Wert ein. Beispiel:
+    
+    ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookBlockTrustedDomains“-Clienteinstellung](./media/configure-exemptblockdomain.png)
+
+4. Wählen Sie **Speichern und schließen** aus. Schließen Sie nicht das Blatt **Richtlinien** oder das Azure-Portal.
+
+5. Wiederholen Sie jetzt den oben beschriebenen [Test zum Blockieren von Benutzern für das Senden einer E-Mail mit der Bezeichnung „Allgemein“](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label): Die Blockierungsmeldung wird nicht mehr angezeigt, wenn Sie Ihre eigene E-Mail-Adresse verwenden. Die E-Mail wird ohne Unterbrechung gesendet.
+    
+    Um sich zu vergewissern, dass die Blockierungsmeldung für externe Empfänger weiterhin angezeigt wird, wiederholen Sie den Test ein weiteres Mal, geben aber einen Empfänger von außerhalb Ihrer Organisation an. Dieses Mal wird die Blockierungsmeldung wieder angezeigt, und diese führt die neue Empfängeradresse als nicht vertrauenswürdig auf.
 
 ## <a name="configure-and-test-an-advanced-client-setting-to-warn-prompt-for-justification-or-block-emails-that-dont-have-a-label"></a>Konfigurieren und Testen einer erweiterten Clienteinstellung zum Ausgeben von Warnungen, Auffordern zum Legitimieren oder Blockieren von E-Mails ohne Bezeichnung
 
@@ -380,7 +398,7 @@ Wie zuvor werden die Meldungen und Benutzerantworten in der Ereignisanzeige **An
 Zum Beispiel die Ergebnisse Ihrer Aufforderung zur Legitimation, wenn die E-Mail keine Bezeichnung aufgewiesen hat:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -390,22 +408,6 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
-## <a name="create-an-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Erstellen einer erweiterten Clienteinstellung, um diese Meldungen ausnahmsweise für interne Empfänger freizugeben
-
-Sie haben diese Nachrichten mit Ihrer eigenen E-Mail-Adresse als Empfänger getestet. In einer Produktionsumgebung zeigen Sie diese Nachrichten aber möglicherweise nur an, wenn sich Empfänger außerhalb Ihrer Organisation befinden. Sie können diese Ausnahme für Partner erweitern, mit denen Ihre Organisation regelmäßig zusammenarbeitet.
-
-Sie erstellen eine neue erweiterte Clienteinstellung namens **OutlookBlockTrustedDomains**, und Sie geben Ihren eigenen Domänennamen aus Ihrer E-Mail-Adresse an, um zu veranschaulichen, wie dies funktioniert. Dadurch wird verhindert, dass Blockierungsmeldungen für Empfänger angezeigt werden, in deren E-Mail-Adresse Ihr Domänennamen enthalten ist. Sie können auf ähnliche Weise erweiterte Clienteinstellungen für **OutlookWarnTrustedDomains** und **OutlookJustifyTrustedDomains** erstellen.
-
-1. Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** im Azure-Portal das Kontextmenü ( **...** ) neben **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben) aus. Wählen Sie dann **Erweiterte Einstellungen** aus.
-
-2. Geben Sie auf dem Blatt **Erweiterte Einstellungen** den Namen der erweiterten Einstellung (**OutlookBlockTrustedDomains**) ein, und fügen Sie Ihren Domänennamen aus Ihrer E-Mail-Adresse für den Wert ein. Beispiel:
-    
-    ![Azure Information Protection-Tutorial – Erstellen der erweiterten „OutlookBlockTrustedDomains“-Clienteinstellung](./media/configure-exemptblockdomain.png)
-
-4. Wählen Sie **Speichern und schließen** aus. Schließen Sie nicht das Blatt **Richtlinien** oder das Azure-Portal.
-
-5. Widerholen Sie nun den [vorherigen Test zum Senden einer E-Mail ohne Bezeichnung an Ihre eigene Adresse](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled), und die Blockierungsmeldung wird nicht länger angezeigt. Wenn Sie jedoch einen neuen Empfänger hinzufügen, der nicht Ihrer Organisation angehört, wird die Blockierungsmeldung erneut angezeigt.
 
 ## <a name="clean-up-resources"></a>Bereinigen der Ressourcen
 
@@ -419,6 +421,6 @@ Starten Sie Outlook neu, damit die für dieses Tutorial konfigurierten Einstellu
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-In diesem Tutorial wurde eine E-Mail-Nachricht ohne Anhang an einen einzelnen Empfänger verwendet, um schneller testen zu können. Sie können sowohl die gleiche Methode mit mehreren Empfängern und mehren Bezeichnungen anwenden, als auch die gleiche Logik zum Senden von E-Mail-Anhängen, deren Bezeichnungsstatus für Benutzer oft nicht klar hervorgeht. Die E-Mail-Nachricht selbst weist z. B. die Bezeichnung „Öffentlich“ auf, die angehängte PowerPoint-Präsentation die Bezeichnung „Allgemein“. Weitere Informationen finden Sie im folgenden Abschnitt des Administratorhandbuchs: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+In diesem Tutorial wurde eine E-Mail-Nachricht ohne Anhang an einen einzelnen Empfänger verwendet, um schneller testen zu können. Sie können sowohl die gleiche Methode mit mehreren Empfängern und mehren Bezeichnungen anwenden, als auch die gleiche Logik zum Senden von E-Mail-Anhängen, deren Bezeichnungsstatus für Benutzer oft nicht klar hervorgeht. Die E-Mail-Nachricht selbst weist z. B. die Bezeichnung „Öffentlich“ auf, die angehängte PowerPoint-Präsentation die Bezeichnung „Allgemein“. Weitere Informationen zu den Konfigurationsoptionen finden Sie im folgenden Abschnitt des Administratorhandbuchs: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 Das Administratorhandbuch enthält auch Informationen über erweiterte Clienteinstellungen, die Sie verwenden können, um das Verhalten des Client anzupassen. Eine vollständige Liste der Einstellungen finden Sie unter [Verfügbare erweiterte Clienteinstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
