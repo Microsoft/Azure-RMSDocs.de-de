@@ -4,19 +4,19 @@ description: Um andere Einstellungen und Bezeichnungen für bestimmte Benutzer z
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4c10a0c96a3921f6891d5ae642adcdc82fe91059
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 929032aeb98981e71ff6822ebc8fdccfb68b1ec6
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179781"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446724"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien
 
@@ -24,13 +24,15 @@ ms.locfileid: "60179781"
 >
 > *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie dies für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen verwenden, müssen Sie eine **bereichsbezogene Richtlinie** erstellen, die für diese Benutzer konfiguriert ist.
+Beim die Azure Information Protection-Richtlinie auf Computer heruntergeladen wird, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist, erhalten alle Benutzer die Einstellungen und Bezeichnungen der Standardrichtlinie oder die Änderungen, die Sie für die globale Richtlinie konfiguriert haben. Wenn Sie diese Konfiguration für bestimmte Benutzer ergänzen möchten, indem Sie verschiedene Einstellungen und Bezeichnungen haben, müssen Sie eine Bereichs bezogene **Richtlinie** erstellen, die für diese Benutzer konfiguriert ist.
+
+## <a name="how-scoped-policies-work"></a>Funktionsweise von Bereichs bezogenen Richtlinien
 
 Für Anwendungen, die den Azure Information Protection-Client verwenden erhalten alle Benutzer die globale Richtlinie, die Titel und QuickInfo sowie globale Einstellungen und globale Bezeichnungen der Information Protection-Leiste enthält. Wenn Sie bereichsbezogene Richtlinien für bestimmte Benutzer konfiguriert haben, erhalten diese Benutzer diese zusätzlichen Einstellungen und Bezeichnungen. 
 
 Beachten Sie, dass zusätzlich zu den Office-Desktopanwendungen, die dan Azure Information Protection-Client unterstützen, ebenfalls Bezeichnungen mit PowerShell sowie die Azure Information Protection-Überprüfung unterstützt werden. Das bedeutet, dass Sie bereichsbezogene Richtlinien für Konten, die PowerShell-Befehle ausführen, oder für die Überprüfung konfigurieren können. 
 
-Bereichsbezogene Richtlinien sind wie Bezeichnungen im Azure-Portal angeordnet. Wenn ein Benutzer für mehrere Bereiche konfiguriert ist, wird eine effektive Richtlinie für den Benutzer berechnet, bevor sie heruntergeladen wird. Gemäß der Reihenfolge der Richtlinien wird die letzte Einstellung angewendet. Die Bezeichnungen, die dem Benutzer angezeigt werden, stammen aus der globalen Richtlinie und allen zusätzlichen Bezeichnungen aus bereichsbezogenen Richtlinien, denen der Benutzer angehört.
+Bereichsbezogene Richtlinien sind wie Bezeichnungen im Azure-Portal angeordnet. Wenn ein Benutzer für mehrere Bereiche konfiguriert ist, wird eine effektive Richtlinie für den Benutzer berechnet, bevor sie heruntergeladen wird. Gemäß der Reihenfolge der Richtlinien wird die letzte Richtlinien Einstellung angewendet. Die Bezeichnungen, die dem Benutzer angezeigt werden, stammen aus der globalen Richtlinie und allen zusätzlichen Bezeichnungen aus bereichsbezogenen Richtlinien, denen der Benutzer angehört.
 
 Die Ausnahme ist, wenn ein Dokument oder eine E-Mail mit einer Bezeichnung von einem Benutzer Ihres Mandanten geöffnet wird, der sich nicht im Bezeichnungsbereich befindet. In diesem Fall sieht der Benutzer den Namen des Bezeichnungssets, doch die Bezeichnung selbst kann nicht ausgewählt werden.  
 
@@ -38,7 +40,7 @@ Da eine bereichsbezogene Richtlinie immer die Bezeichnungen und Einstellungen de
 
 Wenn Sie z.B. in der globalen Richtlinie über eine Bezeichnung namens **Vertraulich** verfügen, wird diese Bezeichnung allen Benutzern angezeigt. Sie können sie nicht über eine bereichsbezogenen Richtlinie entfernen oder neu anordnen. Aber Sie sollten eine bereichsbezogene Richtlinie für die Marketingabteilung erstellen, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern **Confidential/Promotions** (Vertraulich/Aktionen) angezeigt wird. Sie erstellen zudem eine weitere bereichsbezogene Richtlinie für die Vertriebsabteilung, die eine neue untergeordnete Bezeichnung zu „Vertraulich“ hinzufügt, sodass diesen Benutzern **Confidential/Partners** (Vertraulich/Partner) angezeigt wird. Jede untergeordnete Bezeichnung kann dann für unterschiedliche Einstellungen konfiguriert werden, und die untergeordnete Bezeichnung wird nur den entsprechenden Benutzern in der Abteilung angezeigt.
 
-So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Protection
+## <a name="configure-a-scoped-policy"></a>Konfigurieren einer Bereichs bezogenen Richtlinie
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
 
@@ -52,11 +54,11 @@ So konfigurieren Sie eine bereichsbezogene Richtlinie für Azure Information Pro
 
 4. Fügen Sie jetzt neue Bezeichnungen hinzu, oder konfigurieren Sie die bereichsbezogenen Richtlinieneinstellungen. Die globale Richtlinie wird immer zuerst angewendet, so können Sie die globale Richtlinie mit neuen Bezeichnungen ergänzen, und Sie können die globalen Einstellungen außer Kraft setzen. Die globale Richtlinie verfügt möglicherweise über keine Standardbezeichnung, und Sie konfigurieren eine andere Standardbezeichnung in verschiedenen bereichsbezogenen Richtlinien für bestimmte Abteilungen.
 
-    Wenn Sie beim Konfigurieren der Bezeichnungen oder Einstellungen Hilfe benötigen, verwenden Sie die Links im Abschnitt [Konfigurieren der Richtlinien Ihrer Organisation](configure-policy.md#configuring-your-organizations-policy).
+    Wenn Sie Hilfe beim Konfigurieren der Bezeichnungen oder Einstellungen benötigen, verwenden Sie die Links im Abschnitt [Konfigurieren der Richtlinie für Ihre Organisation](configure-policy.md#configuring-your-organizations-policy) .
 
 6. Wenn Sie wie beim Bearbeiten der globalen Richtlinie auf einem Azure Information Protection-Blatt Änderungen vorgenommen haben, klicken Sie auf **Save** (Speichern), um die Änderungen zu speichern, oder auf **Discard** (Verwerfen), um die zuletzt gespeicherten Einstellungen wiederherzustellen. 
 
-7. Wenn Sie die Änderungen für diese bereichsbezogene Richtlinie abgeschlossen haben, stellen Sie auf dem ersten Blatt **Azure Information Protection: Richtlinien** sicher, dass diese bereichsbezogene Richtlinie gemäß Ihren Vorstellungen angeordnet ist. Dies ist wichtig, wenn Sie denselben Benutzer für mehrere bereichsbezogene Richtlinien ausgewählt haben. Klicken Sie zum Ändern der Reihenfolge auf das Kontextmenü (**...**), und klicken Sie auf **Nach oben** oder **Nach unten**. 
+7. Wenn Sie die Änderungen für diese bereichsbezogene Richtlinie abgeschlossen haben, stellen Sie auf dem ersten Blatt **Azure Information Protection: Richtlinien** sicher, dass diese bereichsbezogene Richtlinie gemäß Ihren Vorstellungen angeordnet ist. Dies ist wichtig, wenn Sie denselben Benutzer für mehrere bereichsbezogene Richtlinien ausgewählt haben. Klicken Sie zum Ändern der Reihenfolge auf das Kontextmenü ( **...** ), und klicken Sie auf **Nach oben** oder **Nach unten**. 
 
 Beim Start einer unterstützten Office-Anwendung oder Öffnen des Datei-Explorers prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Der Client lädt dann alle Änderungen an der globalen Richtlinie oder bereichsbezogenen Richtlinie herunter, die für diesen Benutzer gelten.
 

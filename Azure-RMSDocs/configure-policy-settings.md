@@ -4,17 +4,17 @@ description: Konfigurieren Sie die Einstellungen in der Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5eac6cd86ea5d413429c02ad37e0a5e186ab6f22
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 5b26c3e963fccede6b4a66814c0ab089abfdfd45
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934674"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446825"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -66,13 +66,13 @@ So konfigurieren Sie diese Einstellungen:
         
         Um die Reihenfolge der untergeordneten Bezeichnungen bei der Verwendung dieser Richtlinieneinstellung zu berücksichtigen, müssen Sie [eine erweiterte Clienteinstellung konfigurieren](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Wenn die Anlage mit die höchste klassifizierungsbezeichnung für den Schutz mit der Einstellung für die Vorschau von benutzerdefinierten Berechtigungen konfiguriert ist:: Wenn der Bezeichnung benutzerdefinierte Berechtigungen umfassen, Outlook (Do Not Forward), wird die Bezeichnung angewendet "und" nicht weiterleiten Schutz wird auf die e-Mail angewendet. Wenn die benutzerdefinierten Berechtigungen der Bezeichnung nur für Word, Excel, PowerPoint und den Dateiexplorer gelten, wird diese Bezeichnung nicht auf die E-Mail angewendet, der Schutz ebenfalls nicht.
+        Wenn die Anlage mit der höchsten Klassifizierungs Bezeichnung für den Schutz mit der Vorschau Einstellung benutzerdefinierter Berechtigungen konfiguriert ist: Wenn die benutzerdefinierten Berechtigungen der Bezeichnung Outlook (nicht weiterleiten) einschließen, wird diese Bezeichnung angewendet und nicht weiterleiten. der Schutz wird auf die e-Mail angewendet. Wenn die benutzerdefinierten Berechtigungen der Bezeichnung nur für Word, Excel, PowerPoint und den Dateiexplorer gelten, wird diese Bezeichnung nicht auf die E-Mail angewendet, der Schutz ebenfalls nicht.
     
    - **Information Protection-Leiste in Office-Apps anzeigen**: Wenn diese Einstellung deaktiviert ist, können Benutzer keine Bezeichnungen aus einer Leiste in Word, Excel, PowerPoint und Outlook auswählen. Stattdessen müssen sie Bezeichnungen über die Schaltfläche **Schützen** auf dem Menüband auswählen. Wenn diese Einstellung aktiviert ist, können Benutzer Bezeichnungen entweder über die Leiste oder die Schaltfläche auswählen.
         
        Wenn diese Einstellung aktiviert ist, kann Sie in Verbindung mit einer erweiterten Clienteinstellung verwendet werden, sodass Benutzer [die Azure Information Protection-Leiste dauerhaft ausblenden können](./rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar), wenn Sie diese nicht anzeigen möchten. Dafür müssen sie die Option **Leiste anzeigen** über die Schaltfläche **Schützen** deaktivieren.
     
-   - **Dem Outlook-Menüband die Schaltfläche „Nicht weiterleiten“ hinzufügen**: Wenn diese Einstellung aktiviert ist, können Benutzer diese Schaltfläche aus der **Schutzgruppe** auf dem Outlook-Menüband zusätzlich zur Auswahl der Option **Nicht weiterleiten** im Outlook-Menü auswählen. Um sicherzustellen, dass Benutzer ihre E-Mails neben der Klassifizierung zusätzlich schützen, fügen Sie diese Schaltfläche nicht hinzu. [Konfigurieren Sie stattdessen eine Bezeichnung für den Schutz](configure-policy-protection.md) sowie eine benutzerdefinierte Berechtigung für Outlook. Wenn Sie diese Schutzeinstellung verwenden, geschieht das gleiche wie beim Klick auf **Nicht weiterleiten**. Wenn jedoch die Funktion in einer Bezeichnung enthalten ist, werden E-Mails ebenso als geschützt klassifiziert.
+   - **Dem Outlook-Menüband die Schaltfläche „Nicht weiterleiten“ hinzufügen**: Wenn diese Einstellung aktiviert ist, können Benutzer diese Schaltfläche aus der **Schutzgruppe** auf dem Outlook-Menüband zusätzlich zur Auswahl der Option **Nicht weiterleiten** im Outlook-Menü auswählen. Um sicherzustellen, dass Benutzer Ihre e-Mails klassifizieren und schützen, empfiehlt es sich, diese Schaltfläche nicht hinzuzufügen, sondern stattdessen [eine Bezeichnung für den Schutz](configure-policy-protection.md) und eine benutzerdefinierte Berechtigung für Outlook zu konfigurieren. Wenn Sie diese Schutzeinstellung verwenden, geschieht das gleiche wie beim Klick auf **Nicht weiterleiten**. Wenn jedoch die Funktion in einer Bezeichnung enthalten ist, werden E-Mails ebenso als geschützt klassifiziert.
     
        Diese Schutzeinstellung kann auch mit einer erweiterten Clienteinstellung als [Clientanpassung](./rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook) konfiguriert werden.
     
@@ -88,7 +88,7 @@ So konfigurieren Sie diese Einstellungen:
     
    - **Geben Sie eine benutzerdefinierte URL für die Webseite „Weitere Informationen“ für den Azure Information Protection-Client an**: Benutzer sehen diesen Link im Dialogfeld **Microsoft Azure Information Protection** im Abschnitt **Hilfe und Feedback**, wenn sie in ihren Office-Clientanwendungen auf der Registerkarte **Startseite** die Option **Schützen** > **Hilfe und Feedback** auswählen. Standardmäßig gelangen Sie über diesen Link zur [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website. Sie können eine HTTP- oder HTTPS-URL (empfohlen) eingeben, wenn dieser Link auf eine andere Webseite verweisen soll. Es wird nicht überprüft, ob die eingegebene benutzerdefinierte URL erreichbar ist oder auf allen Geräten ordnungsgemäß angezeigt wird.
         
-       Sie können z.B. für Ihren Helpdesk eine Seite aus der Microsoft-Dokumentation angeben, die Informationen zur Installation und Verwendung des Clients (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) oder zu Release-Versionen enthält (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). Alternativ können Sie eine eigene Webseite veröffentlichen, die Benutzern Informationen zur Kontaktaufnahme mit Ihrem Helpdesk bereitstellt oder ein Video enthält, das Benutzern zeigt, wie die konfigurierten Bezeichnungen verwendet werden.
+       Sie können z.B. für Ihren Helpdesk eine Seite aus der Microsoft-Dokumentation angeben, die Informationen zur Installation und Verwendung des Clients ( **https://docs.microsoft.com/information-protection/rms-client/info-protect-client** ) oder zu Release-Versionen enthält ( **https://docs.microsoft.com/information-protection/rms-client/client-version-release-history** ). Alternativ können Sie eine eigene Webseite veröffentlichen, die Benutzern Informationen zur Kontaktaufnahme mit Ihrem Helpdesk bereitstellt oder ein Video enthält, das Benutzern zeigt, wie die konfigurierten Bezeichnungen verwendet werden.
 
 4. Klicken Sie auf **Speichern**, um Ihre Änderungen zu speichern und diese für Benutzer verfügbar zu machen.
 

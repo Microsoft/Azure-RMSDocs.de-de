@@ -4,17 +4,17 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/31/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
-ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
+ms.openlocfilehash: 9719bb83da8456637f0c15c24e44d5cf57f035a6
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448028"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446790"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -34,7 +34,7 @@ Nachfolgend sehen Sie eine Beispielaufforderung bei Konfiguration einer Bedingun
 
 In diesem Beispiel kann der Benutzer auf **Jetzt ändern** klicken, um die empfohlene Bezeichnung anzuwenden, oder die Empfehlung ignorieren, indem er **Schließen** wählt. Wenn der Benutzer die Empfehlung verwerfen möchte und die Bedingung bei der nächsten Öffnung des Dokuments weiterhin gilt, wird die empfohlene Bezeichnung erneut angezeigt.
 
-Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Allerdings die **jetzt ändern** und **verwerfen** Schaltflächen werden durch ersetzt **OK**. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
+Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren, wird die Bezeichnung automatisch angewendet, und dem Benutzer wird weiterhin eine Benachrichtigung in Word, Excel und PowerPoint angezeigt. Die Schaltflächen **jetzt ändern** und **verwerfen** werden jedoch durch **OK**ersetzt. In Outlook gibt es keine Benachrichtigung für die automatische Klassifizierung, und die Bezeichnung wird dann angewendet, wenn die E-Mail versendet wird.
 
 > [!IMPORTANT]
 >Konfigurieren Sie Bezeichnungen nicht für die automatische Klassifizierung und eine benutzerdefinierte Berechtigung. Die Option für benutzerdefinierte Berechtigungen ist eine [Schutzeinstellung](configure-policy-protection.md), über die Benutzer angeben können, wem welche Berechtigungen erteilt werden sollen.
@@ -102,7 +102,7 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Typen von vertraulichen Informationen, die eine Mindestversion des Clients erfordern
 
-Die folgenden Typen für vertrauliche Informationen erfordert eine Mindestversion von [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) des Azure Information Protection-Clients:
+Die folgenden sensiblen Informationstypen erfordern mindestens eine Version von [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) des Azure Information Protection Clients:
 
 - **Azure Service Bus-Verbindungszeichenfolge**
 - **Azure IoT Verbindungszeichenfolge**
@@ -115,9 +115,9 @@ Die folgenden Typen für vertrauliche Informationen erfordert eine Mindestversio
 - **Kennwort für Azure-Veröffentlichungseinstellungen**
 - **Schlüssel für Azure Storage-Konto (allgemein)**
 
-Weitere Informationen zu diesen Typen für vertrauliche Informationen finden Sie im folgenden Blogbeitrag: [Azure Information Protection unterstützt Sie sicherer sind vom automatischen Ermitteln von Anmeldeinformationen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+Weitere Informationen zu diesen sensiblen Informationstypen finden Sie im folgenden Blogbeitrag: [Azure Information Protection unterstützt Sie bei der automatischen Ermittlung von Anmelde Informationen.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-Darüber hinaus beginnt mit 1.48.204.0 der Azure Information Protection-Client, die folgenden vertrauliche Informationen, dass die Typen werden nicht unterstützt und nicht mehr in das Azure-Portal angezeigt. Wenn Sie über Bezeichnungen, die diese Typen für vertrauliche Informationen verwenden verfügen, empfehlen wir, dass Sie diese entfernen, da wir können keine richtigen Erkennung für diese Stellen Sie sicher, und alle Verweise auf diese in den scannerberichten ignoriert werden sollen:
+Außerdem werden die folgenden sensiblen Informationstypen ab 1.48.204.0 des Azure Information Protection Clients nicht mehr unterstützt und im Azure-Portal nicht mehr angezeigt. Wenn Sie über Bezeichnungen verfügen, die diese vertraulichen Informationstypen verwenden, empfiehlt es sich, diese zu entfernen, da wir nicht sicherstellen können, dass Sie richtig erkannt werden und dass Verweise darauf in den Überprüfungs Berichten ignoriert werden sollten:
 
 - **EU Phone Number** (EU-Telefonnummer)
 - **EU GPS Coordinates** (EU-GPS-Koordinaten)

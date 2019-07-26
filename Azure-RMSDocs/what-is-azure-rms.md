@@ -4,7 +4,7 @@ description: Informationen über Azure Rights Management (Azure RMS) und die Sch
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
-ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
+ms.openlocfilehash: 467f7d9c9ddcf250f27b8980bd989e638959be66
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885603"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446839"
 ---
 # <a name="what-is-azure-rights-management"></a>Was ist Azure Rights Management?
 
@@ -31,7 +31,7 @@ Dieser cloudbasierte Schutzdienst verwendet Verschlüsselungs-, Identitäts- und
 
 Als Beispiele seien genannt, dass Mitarbeiter ein Dokument per E-Mail an ein Partnerunternehmen senden oder ein Dokument auf einem Cloudlaufwerk speichern. Der dauerhafte Schutz, den Azure RMS bereitstellt, ermöglicht nicht nur das Schützen Ihrer Unternehmensdaten, sondern kann sogar gesetzlich vorgeschrieben sein: zur Einhaltung von Vorgaben, für Anforderungen zu gesetzlichen Ermittlungen oder einfach für bewährte Verfahren der Informationsverwaltung.
 
-Es ist sehr wichtig, dass autorisierte Benutzer und Dienste (wie die Suche und die Indizierung) weiterhin die geschützten Daten lesen und untersuchen können. Diese Funktion ist mit anderen Schutzlösungen, die die Peer-zu-Peer-Verschlüsselung verwenden, nicht leicht zu erreichen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten.
+Aber wichtig ist, dass autorisierte Personen und Dienste (z. b. Suche und Indizierung) weiterhin die geschützten Daten lesen und überprüfen können. Diese Funktion ist mit anderen Schutzlösungen, die die Peer-zu-Peer-Verschlüsselung verwenden, nicht leicht zu erreichen. Diese Fähigkeit wird gelegentlich als „Schlussfolgern über Daten“ (reasoning over data) bezeichnet und ist ein ausschlaggebendes Element dabei, die Kontrolle über die Daten Ihrer Organisation zu behalten.
 
 In der folgenden Abbildung wird verdeutlicht, wie dieser Dienst als Schutzlösung für Office 365 sowie für lokale Server und Dienste verwendet wird. Außerdem ist erkennbar, dass die Schutzlösung von gängigen Endbenutzergeräten unterstützt wird, auf denen Windows, macOS, iOS oder Android ausgeführt wird.
 
@@ -63,7 +63,7 @@ Anhand der folgenden Tabelle können Sie Geschäftsanforderungen oder -probleme 
 > Wenn Sie mit der lokalen Version von Rights Management, Active Directory Rights Management Services (AD RMS), vertraut sind, ist die Vergleichstabelle in [Vergleich zwischen Azure Rights Management und AD RMS](compare-on-premise.md) möglicherweise für Sie interessant.
 
 ## <a name="security-compliance-and-regulatory-requirements"></a>Sicherheits-, Konformitäts- und gesetzliche Anforderungen
-Azure Rights Management unterstützt die folgenden Sicherheits-, Compliance- und gesetzlichen Anforderungen:
+Azure Rights Management unterstützt die folgenden Sicherheits-, Konformitäts-und gesetzlichen Anforderungen:
 
 √ Verwendung von Kryptografie gemäß Industriestandard und Unterstützung von FIPS 140-2. Weitere Informationen finden Sie in den Informationen zu [Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 

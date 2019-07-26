@@ -3,19 +3,19 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c583dfd8fe17a926bc2014a626d289a3d29d627c
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411728"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483103"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -29,7 +29,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -79,7 +79,7 @@ Das Angeben des Namens der Bezeichnungs Richtlinie für den PowerShell- *Identit
 
 - **Name** ist der ursprüngliche Name der Bezeichnung, der in allen Bezeichnungen eindeutig ist. Wenn Sie den Namen der Bezeichnung nach der Erstellung ändern, bleibt dieser Wert unverändert.
 
-- Der **Anzeige Name** ist der Name der Bezeichnung, die Benutzern angezeigt wird, und Sie muss in allen Bezeichnungen nicht eindeutig sein. Beispielsweise sehen Benutzer eine unter  geordnete Bezeichnung für " **vertraulich** " und eine andere untergeordnete  Bezeichnung für die Bezeichnung " **streng vertraulich** ". Diese untergeordneten Bezeichnungen zeigen beide denselben Namen an, weisen jedoch nicht die gleiche Bezeichnung auf und haben andere Einstellungen.
+- Der **Anzeige Name** ist der Name der Bezeichnung, die Benutzern angezeigt wird, und Sie muss in allen Bezeichnungen nicht eindeutig sein. Beispielsweise sehen **Benutzer eine unter** geordnete Bezeichnung für " **vertraulich** " und **eine andere unter** geordnete Bezeichnung für die Bezeichnung " **streng vertraulich** ". Diese untergeordneten Bezeichnungen sehen beide denselben Namen, sind jedoch nicht die gleiche Bezeichnung und haben andere Einstellungen.
 
 Verwenden Sie zum Konfigurieren der erweiterten Einstellungen für die Bezeichnung den Wert " **Name** ". Um z. b. die Bezeichnung in der folgenden Abbildung zu identifizieren, geben `-Identity "All Company"`Sie Folgendes an:
 
@@ -135,7 +135,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |PostponeMandatoryBeforeSave|[Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)|
-|RunAuditInformationTypeDiscovery|[Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|Runauditinformationtypesdiscovery|[Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 PowerShell-Beispiel Befehl zum Überprüfen Ihrer Bezeichnungs Richtlinien Einstellungen für eine Bezeichnungs Richtlinie mit dem Namen "Global":
 
@@ -640,7 +640,7 @@ Mit [Azure Information Protection Analytics](../reports-aip.md) können von Azur
 
 Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom Unified Label-Client gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **Runauditinformationtypesdiscovery**
 
 - Wert: **False**
 
@@ -656,7 +656,7 @@ Beispiel:
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
 
@@ -892,7 +892,7 @@ Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Public" lautet:
 
 In einer Produktionsumgebung müssen sich Benutzer in der Regel nicht als anderer Benutzer anmelden, wenn Sie den Azure Information Protection Unified-Bezeichnungs Client verwenden. Allerdings müssen Sie sich als Administrator während einer Testphase möglicherweise als anderer Benutzer anmelden. 
 
-Mithilfe des Dialogfelds **Microsoft Azure Information Protection** können Sie prüfen, an welchem Konto Sie derzeit angemeldet sind: Öffnen Sie eine Office-Anwendung, und wählen Sie auf der  Registerkarte **Start** die Schaltfläche Vertraulichkeit aus, und wählen Sie dann **Hilfe und Feedback**aus. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
+Mithilfe des Dialogfelds **Microsoft Azure Information Protection** können Sie prüfen, an welchem Konto Sie derzeit angemeldet sind: Öffnen Sie eine Office-Anwendung, und wählen Sie auf der Registerkarte **Start** **die Schaltfläche** Vertraulichkeit aus, und wählen Sie dann **Hilfe und Feedback**aus. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
 
 Überprüfen Sie auf jeden Fall auch den Domänennamen des angezeigten angemeldeten Kontos. Es lässt sich leicht übersehen, dass Sie mit dem richtigen Kontonamen, aber bei der falschen Domäne angemeldet sind. Ein Symptom der Verwendung des falschen Kontos ist, dass die Bezeichnungen nicht heruntergeladen werden können oder dass die von Ihnen erwarteten Bezeichnungen oder das erwartete Verhalten nicht angezeigt werden.
 

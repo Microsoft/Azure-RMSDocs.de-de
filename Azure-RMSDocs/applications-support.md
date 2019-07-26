@@ -1,22 +1,22 @@
 ---
 title: Unterstützung von Azure Rights Management durch Apps von AIP
-description: Erfahren wie die am häufigsten verwendeten Anwendungen (z. B. Office-apps) und -Dienste (z.B. Exchange und SharePoint) können den Azure Rights Management-Dienst von Azure Information Protection verwenden, um Dokumente und e-Mails Ihrer Organisation zu schützen.
+description: Erfahren Sie, wie die am häufigsten verwendeten Anwendungen (z. b. Office-Apps) und Dienste (z. b. Exchange und SharePoint) den Azure Rights Management-Dienst von Azure Information Protection verwenden können, um die Dokumente und e-Mails Ihrer Organisation zu schützen.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
-ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
+ms.openlocfilehash: 4513667ad3a09d4f986282780f4858b0bce670f7
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65087879"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446763"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Unterstützung des Azure Rights Management-Diensts durch Anwendungen
 
@@ -35,7 +35,7 @@ In den Fällen, in denen Benutzer den Schutz selber anwenden müssen, stellen Si
 
 Informationen dazu, wie diese Anwendungen für den Azure Rights Management-Dienst von Azure Information Protection konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
-Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Zum Beispiel: 
+Suchdienste können auf unterschiedliche Weise in Rights Management integriert werden. Beispiel: 
 
 - Exchange Online und Exchange Server verwenden die dienstseitige Indizierung, sodass die geschützten E-Mails eines Benutzers automatisch in ihren Suchergebnissen angezeigt werden. 
 

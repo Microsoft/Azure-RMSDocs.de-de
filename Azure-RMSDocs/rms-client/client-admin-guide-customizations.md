@@ -4,19 +4,19 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: f5a47cf86dfc5f8140cf21a0808eef84919b495d
+ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352882"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483134"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -76,7 +76,7 @@ Einige dieser Einstellungen erfordern die Bearbeitung der Registrierung. Andere 
 |PullPolicy|[Unterstützung für getrennte Computer](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Add "Report an Issue" for users](#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)|
-|RunAuditInformationTypeDiscovery|[Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|Runauditinformationtypesdiscovery|[Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Aktivieren der dauerhaft im Hintergrund ausgeführten Klassifizierung](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Begrenzen der Anzahl der von der Überprüfung verwendeten Threads](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Hinzufügen einer Bezeichnung zu einem Office-Dokument über eine bereits bestehende benutzerdefinierte Eigenschaft](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -271,7 +271,7 @@ Mit dieser Einstellung wird die untergeordnete Bezeichnung, die sich am nächste
 
 ## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung
 
-Diese Konfiguration verwendet eine [Erweiterte Client Einstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) , die Sie im Azure-Portal konfigurieren müssen.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
 Wenn Sie die [Richtlinien Einstellung](../configure-policy-settings.md) aktivieren, **müssen alle Dokumente und e-Mails standardmäßig über eine Bezeichnung verfügen**, sodass für alle gespeicherten Dokumente und gesendeten e-Mails eine Bezeichnung angewendet werden muss. Wenn Sie die folgende erweiterte Einstellung konfigurieren, gilt die Richtlinien Einstellung nur für Office-Dokumente und nicht für Outlook-Nachrichten.
 
@@ -306,7 +306,7 @@ Wenn Sie die folgenden erweiterten Clienteinstellungen erstellen und konfigurier
 - **Die E-Mail oder der E-Mail-Anhang hat keine bestimmte Bezeichnung:**
     - Der Anhang kann ein Office-Dokument oder ein PDF-Dokument sein
 
-Wenn diese Bedingungen erfüllt sind, sieht der Benutzer eine Popup Meldung mit einer der folgenden Aktionen:
+Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit einer der folgenden Aktionen angezeigt:
 
 - **Warnung:** Der Benutzer kann bestätigen und senden, oder abbrechen.
 
@@ -590,7 +590,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiel:
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -851,13 +851,13 @@ Mit [Azure Information Protection Analytics](../reports-aip.md) können von Azur
 
 Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom klassischen Client gesendet werden, geben Sie die folgenden Zeichen folgen ein:
 
-- Key: **RunAuditInformationTypeDiscovery**
+- Key: **Runauditinformationtypesdiscovery**
 
 - Wert: **False**
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, werden die Überwachungsergebnisse weiterhin vom klassischen Client gesendet, die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Beispiel:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -978,11 +978,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Exchange-E-Mail-Flussregel: Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Beispiel:
+     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Zum Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     
