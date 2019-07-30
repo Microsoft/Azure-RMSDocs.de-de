@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/04/2019
+ms.date: 07/28/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 3d3dec9c5f2da8089b277cf9c372800c971af9ea
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.openlocfilehash: 94f7eb89f05ddce29d42689f8af05b0a99e0eedf
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428352"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602758"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -231,9 +231,6 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie sich den Artikel [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace) durch.
 
 Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
-
-> [!NOTE] 
-> Es gibt derzeit ein bekanntes Problem bei der erstmaligen Anzeige von Daten in den Berichten. Wenn dieses Problem bei Ihnen auftritt, stellen Sie in der globalen Richtlinie die [Richtlinieneinstellung](configure-policy-settings.md) von **Überwachungsdaten an Azure Information Protection-Protokollanalysen senden** auf **Aus**, und speichern Sie die Richtlinie. Ändern Sie dann die gleiche Einstellung in **Ein**, und speichern Sie die Richtlinie. Nachdem Clients [ die Änderung heruntergeladen haben](configure-policy.md#making-changes-to-the-policy), kann es bis zu 30 Minuten dauern, bis ihre Überwachungsereignisse in Ihrem Log Analytics-Arbeitsbereich angezeigt werden.
 
 ## <a name="how-to-view-the-reports"></a>Anzeigen von Berichten
 

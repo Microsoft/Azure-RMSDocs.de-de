@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 531cd6fed4974435edcf5fd9d7afb12b09e0a61b
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.openlocfilehash: be9c66a79b5eb9bf03b9a11cedd69926a292cbae
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375464"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602755"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -74,7 +74,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 |Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell <br /><br /> In Office-Apps können Benutzer als Alternative **Datei Info** > **schützen Dokument** > **Einschränken des Zugriffs** auswählen, oder Administratoren können eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren.|
 |Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> – die Bezeichnungsfarbe wird für die angewendete Bezeichnung nicht angezeigt|
 |Bezeichnungen können optische Kennzeichnungen anwenden (Kopfzeile, Fußzeile, Wasserzeichen):| Ja | Ja mit Einschränkungen:<br /><br /> – Kopf- und Fußzeilen unterstützen keine Variablen für dynamische Werte. <br /><br /> – Das Verwenden unterschiedlicher optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook wird nicht unterstützt.|
-|Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> – Kein Schutz für PDF-Dokumente im PPDF-Format <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
+|Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> -PDF-Dokumente können nicht für das ältere ppdf-Format geschützt werden. <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
 |Viewer für geschützte Dateien:| Ja | Ja mit Einschränkungen:<br /><br /> -Bei generisch geschützten Dateien (Pfile) ist es im Gegensatz zum Viewer vom klassischen Client nicht möglich, Änderungen an der ursprünglich geöffneten Datei zu speichern.|
 |PowerShell-Befehle:| Ja | Ja mit Einschränkungen:<br /><br />-Der Schutz von Container Dateien (ZIP,. rar,. 7z,. msg und. PST) kann nicht entfernt werden.|
 |Offlineunterstützung für Schutzaktionen:| Ja | Ja mit Einschränkungen: <br /><br />– Bei Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen |
