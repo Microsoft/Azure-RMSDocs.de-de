@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/28/2019
+ms.date: 07/30/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 94f7eb89f05ddce29d42689f8af05b0a99e0eedf
-ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
+ms.openlocfilehash: e8f11ef9d7864467b365ce81247a08665290556b
+ms.sourcegitcommit: 2f15ef5f4587a6363314e17a1c24658493f4bb73
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68602758"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68658348"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "68602758"
 > [!NOTE]
 > Dieses Feature befindet sich in der Vorschau und unterliegt Änderungen.
 
-Verwenden Sie die Azure Information Protection Analysen für die zentrale Berichterstellung, um die Einführung Ihrer Azure Information Protection-Bezeichnungen einfacher zu verfolgen. Zusätzlich:
+Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichterstellung, damit Sie die Übernahme ihrer Bezeichnungen nachverfolgen können, mit denen die Daten Ihrer Organisation klassifiziert und geschützt werden. Zusätzlich:
 
 - Unternehmensweite Überwachung bezeichneter und geschützter Dokumente und E-Mails
 
@@ -35,7 +35,7 @@ Verwenden Sie die Azure Information Protection Analysen für die zentrale Berich
 
 - Identifizieren Sie Dokumente, die vertrauliche Informationen enthalten und geschützt werden müssen, da Ihre Organisation andernfalls einem Risiko ausgesetzt ist, und verringern Sie dieses Risiko mithilfe der Empfehlungen.
 
-Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und Azure Information Protection Scannern, von Windows-Computern, auf denen [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview)ausgeführt wird, und von [ Clients, die eine einheitliche Bezeichnung unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern und von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), aggregiert.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -61,7 +61,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Bezeichnungsaktionen für einen bestimmten Dateipfad ausgeführt wurden
     
-    - Welche Bezeichnungsaktionen von einer bestimmten Anwendung wie Datei-Explorer und Rechtsklicken oder dem AzureInformationProtection-PowerShell-Modul ausgeführt wurden
+    - Welche Bezeichnungs Aktionen wurden von einer bestimmten Anwendung ausgeführt, z. b. im Datei-Explorer und mit der rechten Maustaste, PowerShell, der Scanner oder Microsoft Cloud App Security
     
     - Drilldown auf gemeldete Dateien, um zusätzliche Informationen in den **Aktivitätsdetails** zu finden
 
@@ -136,9 +136,10 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
-|Der Azure Information Protection Client oder der Azure Information Protection Unified-Beschriftungs Client|Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. <br /><br /> Stellen Sie sicher, dass Sie über die neueste Version verfügen, um [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection Analytics zu unterstützen.|
+|Azure Information Protection Clients|Sowohl der Unified Bezeichnung-Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. <br /><br /> Stellen Sie sicher, dass Sie über die neueste Version verfügen, um [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection Analytics zu unterstützen.|
+|Microsoft Cloud App Security |Um Informationen aus Microsoft Cloud App Security anzuzeigen, konfigurieren Sie [Azure Information Protection-Integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Für den Bericht **Ermittlung und Risiko**: <br /><br />-Zum Anzeigen von Daten aus lokalen Daten speichern haben Sie mindestens eine Instanz des Azure Information Protection Scanners bereitgestellt. <br /><br />-Zum Anzeigen von Daten von Windows 10-Computern müssen Sie ein minimaler Build von 1809 sein. Sie verwenden Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), und Sie haben das Azure Information Protection-Integrations Feature von Microsoft aktiviert. Defender-Security Center|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Informationen zum Konfigurieren und Verwenden des Azure Information Protection-Integrations Features von Microsoft Defender Security Center finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-|Für den Bericht **Empfehlungen**: <br /><br />-Wenn Sie ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzufügen möchten, müssen Sie die neueste Version der allgemeinen Verfügbarkeit des Azure Information Protection Scanners verwenden. |Informationen zum Bereitstellen des Scanners finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).|
+|Für den Bericht **Empfehlungen**: <br /><br />-Wenn Sie ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzufügen möchten, müssen Sie eine Version des Azure Information Protection Scanners verwenden, die im konfiguriert ist Azure-Portal |Informationen zum Bereitstellen des Scanners finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Erforderliche Berechtigungen für Azure Information Protection-Analysen
 
@@ -189,13 +190,13 @@ Eine typische Rollenzuordnung für viele Organisationen ist jedoch die Azure AD-
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funktionen, für die eine Mindestversion des Clients erforderlich ist
 
-Sie können die Versions Verlaufs Informationen für den [Azure Information Protection Unified](./rms-client/unifiedlabelingclient-version-release-history.md) -Bezeichnungs Client und den [Azure Information Protection-Client](./rms-client/client-version-release-history.md) verwenden, um zu bestätigen, ob Ihre Version des Clients alle zentralen Berichterstattungs Features unterstützt. Die Mindestversionen für die Clients:
+Sie können die Versions Verlaufs Informationen für den [Azure Information Protection Unified](./rms-client/unifiedlabelingclient-version-release-history.md) -Bezeichnungs Client und den [Azure Information Protection-Client (klassisch)](./rms-client/client-version-release-history.md) verwenden, um zu bestätigen, ob Ihre Version des Clients die gesamte Zentrale Berichterstellung unterstützt. Aspekte. Die Mindestversionen für die Clients:
 
 Für den Azure Information Protection Unified Bezeichnung-Client:
 
 - Unterstützung für Überwachung und Endpunkt Ermittlung: Version 2.0.778.0
 
-Für den Azure Information Protection-Client:
+Für den Azure Information Protection-Client (klassisch):
 
 - Unterstützung für die Überwachung: Version 1.41.51.0
 - Unterstützung für die Endpunkt Ermittlung: Version 1.48.204.0
