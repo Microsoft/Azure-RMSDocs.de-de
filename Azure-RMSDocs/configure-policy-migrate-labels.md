@@ -4,18 +4,18 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/29/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0119dedbd569732abd6e9749eb0796879823c153
-ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
+ms.openlocfilehash: 161f87363a6e398465a1ee67068e6f36b2f3919f
+ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68602737"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684619"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -49,7 +49,7 @@ Globale Administratoren für Ihren Mandanten können nach der Migration Ihrer Be
 
 ## <a name="before-you-begin"></a>Vorbereitung
 
-Da die Bezeichnungs Migration nicht rückgängig gemacht werden kann, sollten Sie die folgenden Änderungen und Überlegungen beachten:
+Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig. Stellen Sie daher sicher, dass Sie die folgenden Änderungen und Überlegungen beachten:
 
 - Stellen Sie sicher, dass Sie über [Clients verfügen, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling) und ggf. für die Verwaltung sowohl im Azure-Portal (für Clients, die einheitliche Bezeichnungen nicht unterstützen) als auch für die Admin Center (für Clients, die einheitliche Bezeichnungen unterstützen) vorbereitet werden.
 
@@ -70,13 +70,7 @@ Da die Bezeichnungs Migration nicht rückgängig gemacht werden kann, sollten Si
     
     - Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
 
-- Wenn Sie Ihre Bezeichnungen migrieren, zeigen die Migrationsergebnisse an, ob eine Bezeichnung **erstellt**, **aktualisiert** oder zum Vermeiden von Duplikaten **umbenannt** wurde:
-
-    - Wenn Sie eine Bezeichnung erstellen, veröffentlichen Sie sie anschließend in einem der Admin-Centers, um sie Anwendungen und Diensten zur Verfügung zu stellen.
-    
-    - Wenn Sie eine Bezeichnung umbenennen, bearbeiten Sie sie anschließend in einem der Admin-Centers oder im Azure-Portal.
-
-- Das Azure-Portal zeigt nur den Anzeigenamen der jeweiligen Bezeichnung an, den Sie bearbeiten können. Die Admin-Centers zeigen sowohl den Anzeigenamen als auch den Bezeichnungsnamen an. Der Bezeichnungsname ist der ursprüngliche Name, den Sie beim Erstellen der Bezeichnung angeben. Diese Eigenschaft nutzt der Back-End-Dienst zur Identifizierung.
+- Das Azure-Portal zeigt nur den Anzeigenamen der jeweiligen Bezeichnung an, den Sie bearbeiten können. Benutzer sehen diesen Bezeichnungs Namen in ihren apps. Die Admin-Centers zeigen sowohl den Anzeigenamen als auch den Bezeichnungsnamen an. Der Name der Bezeichnung ist der anfängliche Name, den Sie beim Erstellen der Bezeichnung angeben. diese Eigenschaft wird vom Back-End-Dienst zu Identifikationszwecken verwendet. Wenn Sie Ihre Bezeichnungen migrieren, bleibt der Anzeige Name unverändert, und der Bezeichnungs Name wird im Azure-Portal in die Bezeichnungs-ID umbenannt.
 
 - Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
 
@@ -139,11 +133,6 @@ Wenn der Benutzer über keine/s dieser Nutzungsrechte oder Nutzungsrollen verfü
 Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten- und Azure Information Protection-Bezeichnungen zu migrieren und den neuen Speicher für einheitliche Bezeichnungen zu verwenden.
 
 Sie müssen Kompatibilitäts Administrator, Kompatibilitäts Daten Administrator, Sicherheitsadministrator oder globaler Administrator sein, um ihre Bezeichnungen zu migrieren.
-
-> [!NOTE]
-> Wenn Sie über Beibehaltungs Bezeichnungen oder Richtlinien zur Verhinderung von Datenverlust für Office 365 verfügen, empfiehlt es sich, dass Sie über die Rolle "Kompatibilitäts **Administrator** ", die Rolle "Kompatibilitäts **Daten Administrator** " oder die Rolle " **globaler Administrator** " verfügen
-> 
-> Sicherheits Administratoren haben keinen Zugriff auf Aufbewahrungs Bezeichnungen oder Richtlinien zur Verhinderung von Datenverlust. Wenn Sie also eine dieser beiden Bezeichnungen haben und denselben Namen wie Ihre Azure Information Protection Bezeichnungen haben, kann der Migrationsprozess erst ausgeführt werden, wenn Sie einen manuell umbenennen. der Duplikate. Wenn Sie jedoch über eine der anderen Rollen verfügen, kann der Migrationsprozess die Azure Information Protection Bezeichnung für Sie umbenennen, damit die Migration durchgeführt werden kann.
 
 1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
     
