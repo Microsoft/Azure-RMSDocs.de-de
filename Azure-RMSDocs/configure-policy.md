@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Um eine Klassifizierung, Bezeichnungen und den Schutz zu konfigurieren, müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/19/2019
+ms.date: 08/01/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 45b1d7dcefcdf36921b2dcbb34f1da6ead57c231
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340553"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730356"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -58,7 +58,7 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 - Verwenden Sie den folgenden Link: https://portal.azure.com
 
-- Verwenden Sie ein Konto mit einer der folgenden [Administratorrollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+- Verwenden Sie ein Azure AD Konto mit einer der folgenden [Administrator Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
     - **Azure Information Protection-Administrator**
     
@@ -74,7 +74,8 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
     
     > [!NOTE] 
     > Wenn Ihr Mandant zum Unified-Bezeichnungs Speicher migriert wurde, wird der Azure Information Protection-Administrator (ehemals "Information Protection Administrator") nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
-
+    
+    Microsoft-Konten können Azure Information Protection nicht verwalten.
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Der Erste Zugriff auf das Blatt „Azure Information Protection“
 

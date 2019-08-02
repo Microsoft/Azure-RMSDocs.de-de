@@ -4,19 +4,19 @@ description: Einige häufig gestellte Fragen zu Azure Information Protection und
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/25/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 16f459d789715c44f724eacb4c8fc01397d90b3f
-ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
+ms.openlocfilehash: d283821fc61747c2debab1e8e449c7083d7fa439
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501665"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730372"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -134,6 +134,8 @@ Globale Administratoren für einen Office 365- oder Azure AD-Mandanten können a
     Wenn Sie eine dieser administrativen Rollen zuweisen möchten, verwenden Sie das PowerShell-Cmdlet "aipservice", " [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator)".
 
 Einige Dinge sind zu beachten:
+
+- Microsoft-Konten werden für die delegierte Administration von Azure Information Protection nicht unterstützt, auch wenn diese Konten einer der aufgeführten Administrator Rollen zugewiesen sind. 
 
 - Wenn Sie [Onboardingsteuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) konfiguriert haben, wird die Möglichkeit zum Verwalten von Azure Information Protection mit Ausnahme des RMS-Connectors durch diese Konfiguration nicht beeinflusst. Wenn sie Onboarding-Steuerelemente beispielsweise so konfiguriert haben, dass die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt ist, muss das von Ihnen zum Installieren und Konfigurieren des RMS-Connectors verwendete Konto ein Member dieser Gruppe sein. 
 
