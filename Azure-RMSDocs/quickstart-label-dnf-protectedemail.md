@@ -4,16 +4,16 @@ description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: a4521aa502fd178843502a5341a2ee27b07438d3
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65935000"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446901"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
@@ -79,7 +79,7 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die für die Anwendung des Schutzes konfiguriert werden soll. 
 
-3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**. Wählen Sie **Schützen** aus. Das Blatt **Schutz** wird automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. 
+3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**. Wählen Sie **Schützen** aus. Das Blatt **Schutz** wird automatisch geöffnet, wenn zuvor **Nicht konfiguriert** oder **Schutz entfernen** ausgewählt wurde.
     
     Wenn das Blatt **Schutz** nicht automatisch geöffnet wird, wählen Sie **Schutz** aus:
     
