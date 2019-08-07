@@ -13,12 +13,13 @@ ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: de05a0331e347dbfa4c10237433fcf370f088388
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 2a71fcddecbe688f38360c42cf83946f82269013
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175944"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790795"
 ---
 # <a name="how-to-set-the-api-security-mode"></a>Exemplarische Vorgehensweise: Festlegen des API-Sicherheitsmodus
 
@@ -28,7 +29,7 @@ Rufen Sie zum Initialisieren der Anwendung für die Ausführung im *Servermodus*
 
 Weitere Informationen zum *Servermodus* finden Sie unter [Anwendungstypen](application-types.md).
 
-**Wichtig:**   Der Sicherheitsmodus sollte festgelegt werden, bevor andere Funktionen des Rights Management Services SDK 2.1 aufgerufen werden. Nachdem der Sicherheitsmodus festgelegt wurde, kann er für den aktuellen Prozess nicht mehr geändert werden.
+**Wichtig:**    Der Sicherheitsmodus sollte festgelegt werden, bevor andere Funktionen des Rights Management Services SDK 2.1 aufgerufen werden. Nachdem der Sicherheitsmodus festgelegt wurde, kann er für den aktuellen Prozess nicht mehr geändert werden.
 
 ## <a name="related-topics"></a>Verwandte Themen
 

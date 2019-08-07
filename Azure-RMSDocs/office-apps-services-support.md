@@ -4,18 +4,20 @@ description: Verwendung des Azure Rights Management-Diensts über AIP zum Schutz
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
+ms.subservice: azurerms
 ms.suite: ems
-ms.openlocfilehash: fba1cf12c8ffbecbc9293c4b06283929507a39cb
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.custom: admin
+ms.openlocfilehash: 09a9272233a744027810ef65c12e8a3df5cac24b
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343726"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808086"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
@@ -28,7 +30,7 @@ Diese Anwendungen bieten native Unterstützung für Azure Rights Management und 
 
 Benutzer können z.B. ein Word-Dokument so konfigurieren, dass es nur von Personen in Ihrer Organisation geöffnet werden kann. Sie können alternativ steuern, ob ein Excel-Arbeitsblatt bearbeitet werden kann oder schreibgeschützt ist oder nicht gedruckt werden kann. Für Dateien mit zeitlicher Relevanz kann eine Ablaufzeit konfiguriert werden, nach deren Erreichen kein Zugriff auf die Datei mehr möglich ist. Diese Konfiguration kann direkt von Benutzern oder durch Anwenden einer Schutzvorlage vorgenommen werden. Für Outlook können Benutzer außerdem die Option **Nicht weiterleiten** auswählen, um Datenlecks zu verhindern.
 
-Wenn Sie bereit sind, konfigurieren Sie die Office-apps finden Sie unter [Office-apps: Konfiguration für Clients](configure-office-apps.md).
+Wenn Sie bereit sind, Office-Apps zu [konfigurieren, sehen Sie Office-Apps: Konfiguration für Clients](configure-office-apps.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online und Exchange Server
 Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen für Azure Information Protection konfigurieren. Mit dieser Konfiguration kann Exchange die folgenden Lösungen zum Schutz bereitstellen:
@@ -79,13 +81,13 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > 
 > - Die gleichzeitige gemeinsame Bearbeitung eines Dokuments durch mehrere Personen wird nicht unterstützt. Um ein Dokument in einer durch IRM geschützten Bibliothek zu bearbeiten, müssen Sie es zuerst auschecken und herunterladen und können es dann in Ihrer Office-Anwendung bearbeiten. Daher kann nur jeweils eine Person ein Dokument bearbeiten.
 
-Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder OneDrive hochladen, funktioniert für nicht IRM-geschützte Bibliotheken Folgendes mit dieser Datei nicht: gemeinsame Dokumenterstellung, Office Online, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
+Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder OneDrive hochladen, funktioniert für nicht IRM-geschützte Bibliotheken Folgendes mit dieser Datei nicht: Co-Authoring, Office für das Web, Search, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
 
 Wenn Sie den SharePoint IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 
 Obwohl der folgende Beitrag im Office 365-Blog nicht mehr ganz neu ist, finden Sie darin möglicherweise weitere nützliche Informationen: [Neuerungen bei Information Rights Management in SharePoint und SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
-Änderungen, die verfügbar sind, finden Sie unter [Updates für SharePoint-Sicherheit, Verwaltung und Migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
+Weitere Änderungen finden [Sie unter Updates für SharePoint-Sicherheit,-Verwaltung und-Migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 
 Wenn Sie bereit sind, SharePoint für IRM zu konfigurieren:
 

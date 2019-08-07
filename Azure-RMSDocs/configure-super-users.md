@@ -1,6 +1,6 @@
 ---
 title: Konfigurieren von Administratoren für Azure Rights Management – AIP
-description: Verstehen und implementieren Sie die Administratorfunktion des Azure Rights Management-Diensts von Azure Information Protection, sodass autorisierte Personen und Dienste immer lesen und untersuchen können ("fundierte") Ihrer Organisation die geschützten Daten.
+description: Verstehen und implementieren Sie die Administrator Funktion des Azure-Rights Management Diensts von Azure Information Protection, damit autorisierte Personen und Dienste jederzeit die geschützten Daten Ihrer Organisation lesen und überprüfen können.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f65e3cbda824dcd2ddcfad0c239cb7831da2fac5
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 23cb44d9b4101c4e73aeed27142be50c79a70cfb
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520642"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789040"
 ---
-# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Information Protection und Discovery Services oder die datenwiederherstellung
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder die Datenwiederherstellung
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -40,26 +42,26 @@ Ein Administrator verfügt immer über das Rights Management-[Nutzungsrecht](con
 
 In der Standardeinstellung ist die Administratorfunktion nicht aktiviert, und der Rolle sind keine Benutzer zugewiesen. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
 
-Wenn Sie die Administratorfunktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [aktivieren-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), und weisen Sie Benutzer (oder Dienstkonten) mithilfe der [hinzufügen-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) Cmdlet oder dem [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) Cmdlet und fügen Sie dieser Gruppe nach Bedarf Benutzer (oder andere Gruppen). 
+Wenn Sie die Administrator Funktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [enable-aipservicesuperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), und weisen Sie dann Benutzer (oder Dienst Konten) nach Bedarf mithilfe des Cmdlets [Add-aipservicesuperuser](/powershell/module/aipservice/add-aipservicesuperuser) oder der [ Cmdlet "Set-aipservicesuperusergroup](/powershell/module/aipservice/set-aipservicesuperusergroup) ", und fügen Sie der Gruppe nach Bedarf Benutzer (oder andere Gruppen) hinzu. 
 
-Obwohl das Verwenden einer Gruppe für Ihren Administrator einfacher zu verwalten ist, seien Sie sich bewusst, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn Sie einen neuen Benutzer ein Administrator, um Inhalt sofort zu entschlüsseln werden zuweisen möchten, fügen Sie diesen Benutzer mithilfe der hinzufügen-AipServiceSuperUser, anstatt das Hinzufügen des Benutzers zu einer vorhandenen Gruppe, die Sie mithilfe von Set-AipServiceSuperUserGroup konfiguriert haben.
+Obwohl das Verwenden einer Gruppe für Ihren Administrator einfacher zu verwalten ist, seien Sie sich bewusst, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn Sie also einen neuen Benutzer als Administrator zuweisen müssen, um Inhalt sofort zu entschlüsseln, fügen Sie diesen Benutzer mithilfe von Add-aipservicesuperuser hinzu, anstatt ihn zu einer vorhandenen Gruppe hinzuzufügen, die Sie mithilfe von Set-aipservicesuperusergroup konfiguriert haben.
 
 > [!NOTE]
-> Wenn Sie das Windows PowerShell-Modul für Azure Rights Management noch nicht installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+> Wenn Sie das Windows PowerShell-Modul für Azure Rights Management noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des PowerShell-Moduls für aipservice](install-powershell.md).
 
 Es spielt keine Rolle, wann Sie das Administratorfeature aktivieren oder wann Sie Benutzer als Administratoren hinzufügen. Wenn Sie beispielsweise das Feature am Donnerstag aktivieren und einen Benutzer am Freitag hinzufügen, kann dieser Benutzer sofort den Inhalt öffnen, der zu Wochenbeginn geschützt wurde.
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>Bewährte Sicherheitsmethoden für das Administratorfeature
 
-- Einschränken und überwachen Sie die Administratoren, die einen globalen Administrator für Ihren Office 365 oder Azure Information Protection-Mandanten zugeordnet sind, oder, die die Rolle "GlobalAdministrator" zugeordnet sind, mithilfe, der [hinzufügen-AipServiceRoleBasedAdministrator ](/powershell/module/aipservice/add-aipservicerolebasedadministrator) Cmdlet. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (einschließlich der eigenen Person) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
+- Beschränken und überwachen Sie die Administratoren, die als globaler Administrator für Ihre Office 365-oder Azure Information Protection-Mandanten fungieren oder denen mithilfe des Cmdlets [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) die Rolle "Global Administrator" zugewiesen ist. Diese Benutzer können die Administratorfunktion aktivieren und Benutzer (einschließlich der eigenen Person) als Administratoren festlegen und damit potenziell alle Dateien entschlüsseln, die von Ihrer Organisation geschützt werden.
 
-- Um anzuzeigen, welche Benutzer und Dienstkonten einzeln als Administratoren zugeordnet sind, verwenden die [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) Cmdlet. Um festzustellen, ob eine konfiguriert ist, verwenden Sie die [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) -Cmdlet und Ihre Standardbenutzer zu überprüfen, welche Benutzer sind Mitglieder dieser Gruppe. Wie alle administrativen Vorgänge aktivieren oder Deaktivieren der Administratorfunktion hinzufügen oder Entfernen von Administratoren protokolliert und können überwacht werden, mithilfe der [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) Befehl. Ein Beispiel finden Sie im nächsten Abschnitt. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
+- Verwenden Sie das Cmdlet [Get-aipservicesuperuser](/powershell/module/aipservice/get-aipservicesuperuser) , um anzuzeigen, welche Benutzer und Dienst Konten einzeln als Administratoren zugewiesen werden. Um festzustellen, ob eine Administrator Gruppe konfiguriert ist, verwenden Sie das Cmdlet [Get-aipservicesuperusergroup](/powershell/module/aipservice/get-aipservicesuperusergroup) und ihre Standardbenutzer Verwaltungs Tools, um zu überprüfen, welche Benutzer Mitglied dieser Gruppe sind. Wie alle Verwaltungs Aktionen werden auch das Aktivieren oder Deaktivieren der Administrator Funktion sowie das Hinzufügen oder Entfernen von Administratoren protokolliert und können mithilfe des Befehls [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) überwacht werden. Ein Beispiel finden Sie im nächsten Abschnitt. Wenn Administratoren Dateien entschlüsseln, wird dieser Vorgang ebenfalls protokolliert und kann mit der [Verwendungsprotokollierung](log-analyze-usage.md) überwacht werden.
 
-- Wenn Sie die Administratorfunktion für die alltäglichen Dienste nicht benötigen, aktivieren Sie die Funktion nur, wenn Sie ihn benötigen, und deaktivieren es erneut mit der [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) Cmdlet.
+- Wenn Sie die Administrator Funktion für die alltäglichen Dienste nicht benötigen, aktivieren Sie die Funktion nur, wenn Sie Sie benötigen, und deaktivieren Sie Sie mithilfe des Cmdlets " [Deaktivieren-aipservicesuperuserfeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) " erneut.
 
 ### <a name="example-auditing-for-the-super-user-feature"></a>Beispielüberprüfung für das Administratorfeature
 
-Der folgende protokollauszug zeigt einige Beispieleinträge, von der Verwendung der [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) Cmdlet. 
+Der folgende Protokollauszug zeigt einige Beispiel Einträge aus der Verwendung des Cmdlets [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog) . 
 
 In diesem Beispiel bestätigt der Administrator von Contoso Ltd., dass die Administratorfunktion deaktiviert ist, fügt Richard Simone als Administrator hinzu, überprüft, dass Richard der einzige für den Azure Rights Management-Dienst konfigurierte Administrator ist, und aktiviert dann die Administratorfunktion, damit Richard nun einige Dateien entschlüsseln kann, die zuvor von einem Mitarbeiter geschützt wurden, der das Unternehmen mittlerweile verlassen hat.
 
@@ -79,7 +81,7 @@ Wenn Sie die Klassifizierung und den Schutz verwenden, können Sie auch das Cmdl
 Weitere Informationen zu diesen Cmdlets finden Sie unter [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md) im Administratorhandbuch für den Azure Information Protection-Client.
 
 > [!NOTE]
-> Das Modul "azureinformationprotection" unterscheidet sich von und ergänzt die [AIPService-PowerShell-Modul](administer-powershell.md) , die den Azure Rights Management-Dienst für Azure Information Protection verwaltet.
+> Das azureinformationprotection-Modul unterscheidet sich von und ergänzt das [aipservice-PowerShell-Modul](administer-powershell.md) , das den Azure Rights Management-Dienst für Azure Information Protection verwaltet.
 
 ### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>Anleitung für die Verwendung von Unprotect-RMSFile für eDiscovery
 

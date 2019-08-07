@@ -13,12 +13,13 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c2cae0e07903dd27c8cd4332e255cb33910c9f94
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178317"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792218"
 ---
 # <a name="iosos-x-code-examples"></a>Codebeispiele für iOS/OS X
 
@@ -33,7 +34,7 @@ In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vo
 
 Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwendung, die für die Einführung in dieses SDK wichtig sind. Diese veranschaulichen die Verwendung des Microsoft Protected File-Dateiformats (geschützte Datei), benutzerdefinierter geschützter Dateiformate und benutzerdefinierter Benutzeroberflächen-Steuerelemente.
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Szenario: Nutzen einer RMS-geschützten Datei
+### <a name="scenario-consume-an-rms-protected-file"></a>En Nutzen einer RMS-geschützten Datei
 
 
 - **Schritt 1**: Erstellen Sie ein [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekt.
@@ -109,7 +110,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
           }
       }
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Szenario: Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>En Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
 
 In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx)) abgerufen. Dabei wird die erste Vorlage zum Erstellen einer Richtlinie ausgewählt und anschließend die neue geschützte Datei erstellt und in diese geschrieben.
 
@@ -154,7 +155,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
-### <a name="scenario-open-a-custom-protected-file"></a>Szenario: Öffnen einer benutzerdefinierten geschützten Datei
+### <a name="scenario-open-a-custom-protected-file"></a>En Öffnen einer benutzerdefinierten geschützten Datei
 
 
 -   **Schritt 1**: Erstellen Sie ein [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt aus einem *serializedContentPolicy*-Objekt.
@@ -212,7 +213,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>En Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
 
 
 -   **Schritt 1**: Erstellen einer Richtlinienbeschreibung mit einer vom Benutzer angegebenen E-Mail-Adresse.

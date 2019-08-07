@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521919"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790491"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Microsoft-managed: Lebenszyklusvorgänge für Mandantenschlüssel
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +48,7 @@ Zum Erstellen eines neuen Schlüssels können Sie einen anderen von Microsoft ve
 
 Sie verfügen über mehr als einen von Microsoft verwalteten Schlüssel, wenn Sie eine Migration von Active Directory Rights Management Services (AD RMS) durchgeführt und die Topologie für von Microsoft verwaltete Schlüssel für Azure Information Protection ausgewählt haben. In diesem Szenario verfügen Sie über mindestens zwei von Microsoft verwaltete Schlüssel für Ihren Mandanten. Sie haben mindestens einen Schlüssel aus AD Rights Management Services importiert. Sie verfügen auch über den Standardschlüssel, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde.
 
-Um einen anderen Schlüssel als Ihren aktiven mandantenschlüssel für Azure Information Protection werden auszuwählen, verwenden die [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) Cmdlet aus dem AIPService-Modul. Um die zu verwendende Schlüssel zu identifizieren, verwenden Sie die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Cmdlet. Sie können den Standardschlüssel identifizieren, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde, indem Sie den folgenden Befehl ausführen:
+Um einen anderen Schlüssel als aktiven Mandanten Schlüssel für Azure Information Protection auszuwählen, verwenden Sie das Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus dem aipservice-Modul. Verwenden Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) , um Ihnen die Identifizierung des zu verwendenden Schlüssels zu erleichtern. Sie können den Standardschlüssel identifizieren, der automatisch für Ihren Azure Information Protection-Mandanten erstellt wurde, indem Sie den folgenden Befehl ausführen:
 
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
@@ -58,15 +60,15 @@ Microsoft ist für die Sicherung Ihres Mandantenschlüssels verantwortlich, soda
 ## <a name="export-your-tenant-key"></a>Exportieren Ihres Mandantenschlüssels
 Sie können Ihre Azure Information Protection-Konfiguration und den Mandantenschlüssel anhand der Anweisungen mit den folgenden drei Schritten exportieren:
 
-### <a name="step-1-initiate-export"></a>Schritt 1: Initiieren des Exports
+### <a name="step-1-initiate-export"></a>Schritt 1: Export initiieren
 
 - [Wenden Sie sich hierfür an den Microsoft-Support](information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
-### <a name="step-2-wait-for-verification"></a>Schritt 2: Warten auf Überprüfung
+### <a name="step-2-wait-for-verification"></a>Schritt 2: Auf Überprüfung warten
 
 - Microsoft überprüft, ob Ihre Anforderung zum Freigeben Ihres Azure Information Protection-Mandantenschlüssels legitim ist. Der Vorgang kann bis zu drei Wochen dauern.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Schritt 3: Erhalten von schlüsselanweisungen vom Kundendienst
+### <a name="step-3-receive-key-instructions-from-css"></a>Schritt 3: Abrufen von Schlüssel Anweisungen aus CSS
 
 - Microsoft Customer Support Services (CSS) sendet Ihren Ihre Azure Information Protection-Konfiguration und den Mandantenschlüssel verschlüsselt in einer kennwortgeschützten Datei zu. Diese Datei hat die Dateierweiterung **TPD**. Hierzu sendet Ihnen (als der Person, die den Export initiiert hat) der Kundendienst zuerst per E-Mail ein Tool. Sie müssen das Tool wie folgt an einer Eingabeaufforderung ausführen:
 
@@ -80,7 +82,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    Die Ausgabe dieses Befehls sollten zwei Dateien bestehen: Eine enthält das Nur-Text-Kennwort für die kennwortgeschützte TPD-Datei und die andere die kennwortgeschützte TPD-Datei selbst. Die Dateien weisen eine neue GUID auf, z.B.:
+    Die Ausgabe dieses Befehls sollte aus zwei Dateien bestehen: Eine enthält das Nur-Text-Kennwort für die kennwortgeschützte TPD-Datei und die andere die kennwortgeschützte TPD-Datei selbst. Die Dateien weisen eine neue GUID auf, z.B.:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -88,7 +90,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
     Sichern Sie diese Dateien, und speichern Sie sie an einer sicheren Stelle, um zu gewährleisten, dass Sie weiterhin Inhalte entschlüsseln können, die mit diesem Mandantenschlüssel geschützt wurden. Zusätzlich können Sie, wenn Sie zu AD RMS migrieren, diese TPD-Datei (die Datei, die mit **ExportedTDP** beginnt) in Ihren AD RMS-Server importieren.
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>Schritt 4: Laufende: Schützen Sie Ihres mandantenschlüssels
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>Schritt 4: Ende Schützen Ihres Mandanten Schlüssels
 
 Nachdem Sie Ihren Mandantenschlüssel erhalten haben, bewahren Sie ihn sicher auf, weil jede Person, die darauf zugreifen kann, alle Dokumente entschlüsseln kann, die mithilfe dieses Schlüssels geschützt werden.
 

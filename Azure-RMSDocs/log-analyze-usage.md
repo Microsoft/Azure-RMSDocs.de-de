@@ -1,6 +1,6 @@
 ---
-title: Protokollieren Sie und analysieren Sie die Nutzung der Schutz von Azure Information Protection
-description: Informationen und Anweisungen wie verwendungsprotokollierung für den Schutzdienst von Azure Information Protection verwendet.
+title: Protokoll & Analysieren der Schutz Verwendung von Azure Information Protection
+description: Informationen und Anweisungen zur Verwendung der Verwendungs Protokollierung für den Schutzdienst von Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,65 +9,67 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 708e538956b24838fa3dd70e02f5745e89a120c0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: e44f5cee64b975cf3b64f95d0d5d2c8905978f12
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520596"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794029"
 ---
-# <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Protokollieren und analysieren die Verwendung der Schutz von Azure Information Protection
+# <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie diese Informationen, um besser zu verstehen, wie Sie die verwendungsprotokollierung für den Schutzdienst (Azure Rights Management) von Azure Information Protection verwenden können. Dieser Schutzdienst bietet den Schutz von Daten für Ihre Organisation Dokumente und e-Mails und darin jede diesbezügliche Anforderung protokollieren können. Folgende Vorgänge zählen als Anforderungen: Benutzer schützen Dokumente und E-Mails und nutzen die Inhalte; Aktionen, die von Ihren Administratoren für diesen Dienst ausgeführt werden; Aktionen, die von Microsoft-Technikern zur Unterstützung Ihrer Azure Information Protection-Bereitstellung ausgeführt werden. 
+Verwenden Sie diese Informationen, um zu verstehen, wie Sie die Verwendungs Protokollierung für den Schutzdienst (Azure Rights Management) über Azure Information Protection verwenden können. Dieser Schutzdienst stellt den Datenschutz für die Dokumente und e-Mails Ihrer Organisation bereit und kann jede Anforderung an ihn protokollieren. Folgende Vorgänge zählen als Anforderungen: Benutzer schützen Dokumente und E-Mails und nutzen die Inhalte; Aktionen, die von Ihren Administratoren für diesen Dienst ausgeführt werden; Aktionen, die von Microsoft-Technikern zur Unterstützung Ihrer Azure Information Protection-Bereitstellung ausgeführt werden. 
 
-Diese schutzprotokolle können Sie dann die folgenden Geschäftsszenarios unterstützen:
+Anschließend können Sie diese Schutz Verwendungs Protokolle verwenden, um die folgenden Geschäftsszenarien zu unterstützen:
 
 -   **Analyse hinsichtlich geschäftlicher Erkenntnisse**
 
-    Die von den Schutzdienst generierten Protokolle können in ein Repository Ihrer Wahl importiert werden (z. B. eine Datenbank, einem System analytische onlineverarbeitung (OLAP) oder ein zuordnen / reduzieren-System) die Informationen analysieren und Berichte erzeugen. Beispielsweise können Sie feststellen, wer auf Ihre geschützten Daten zugreift. Sie können ermitteln, auf welche geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt it.
+    Die vom Schutzdienst generierten Protokolle können in ein Repository ihrer Wahl importiert werden (z. b. eine Datenbank, ein OLAP-System (Online Analytical Processing) oder ein Map-Reduce-System), um die Informationen zu analysieren und Berichte zu erzeugen. Beispielsweise können Sie feststellen, wer auf Ihre geschützten Daten zugreift. Sie können ermitteln, auf welche geschützten Daten Benutzer zugreifen, von welchen Geräten aus und von wo. Sie können herausfinden, ob Benutzer geschützte Inhalte erfolgreich lesen können. Sie können ferner identifizieren, welche Personen ein wichtiges Dokument gelesen haben, das geschützt it.
 
 -   **Überwachung auf Missbrauch**
 
-    Protokollieren von Informationen über die Verwendung des Schutzes steht Ihnen in nahezu in Echtzeit, damit Sie die Verwendung des schutzdiensts Ihres Unternehmens kontinuierlich überwachen können. 99,9 % der Protokolle sind innerhalb von 15 Minuten nach einer für den Dienst ausgelösten Aktion verfügbar.
+    Protokollierungs Informationen zur Schutz Verwendung stehen Ihnen nahezu in Echtzeit zur Verfügung, sodass Sie die Verwendung des Schutz Dienstanbieter in Ihrem Unternehmen kontinuierlich überwachen können. 99,9 % der Protokolle sind innerhalb von 15 Minuten nach einer für den Dienst ausgelösten Aktion verfügbar.
 
     Beispielsweise können Sie sich benachrichtigen lassen, wenn ein plötzlicher Anstieg der Personen zu verzeichnen ist, die geschützte Daten außerhalb der Standardarbeitszeiten lesen, was darauf hindeuten kann, dass ein böswilliger Benutzer Informationen sammelt, um sie an die Konkurrenz zu verkaufen. Oder wenn derselbe Benutzer innerhalb eines kurzen Zeitraums offensichtlich von zwei verschiedenen IP-Adressen aus auf Daten zugreift, was darauf hindeuten kann, dass ein Benutzerkonto kompromittiert wurde.
 
 -   **Durchführen forensischer Analysen**
 
-    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie diese Protokollierung verwenden, weil Personen, die geschützten Inhalte verwenden immer eine Rights Management-Lizenz, um Dokumente und Bilder, die von Azure Information Protection geschützt werden zu öffnen, selbst wenn diese Dateien, indem verschoben werden abrufen müssen per e-Mail senden oder auf USB-Laufwerke oder andere Speichergeräte kopiert. Dies bedeutet, dass Sie diese Protokolle als maßgebliche Quelle für Informationen zur forensischen Analyse verwenden können, wenn Sie Ihre Daten schützen, mithilfe von Azure Information Protection.
+    Wenn Sie ein Informationsleck haben, werden Sie wahrscheinlich gefragt, wer in der jüngsten Zeit auf bestimmte Dokumente zugegriffen hat, und auf welche Informationen eine verdächtigte Person zuletzt zugegriffen hat. Sie können diese Arten von Fragen beantworten, wenn Sie diese Protokollierung verwenden, weil Personen, die geschützte Inhalte verwenden, immer eine Rights Management Lizenz erhalten müssen, um Dokumente und Bilder zu öffnen, die durch Azure Information Protection geschützt sind, auch wenn diese Dateien verschoben werden. e-Mail oder Kopieren auf USB-Laufwerke oder andere Speichergeräte. Dies bedeutet, dass Sie diese Protokolle als definitive Informationsquelle für die forensische Analyse verwenden können, wenn Sie Ihre Daten mit Azure Information Protection schützen.
 
 Zusätzlich zu dieser Verwendungsprotokollierung stehen folgende Protokollierungsoptionen zur Verfügung:
 
 |Protokollierungsoption|Beschreibung|
 |----------------|---------------|
-|Administratorprotokoll|Protokolliert Verwaltungsaufgaben für den Schutzdienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie in das PowerShell-Cmdlet [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog).|
+|Administratorprotokoll|Protokolliert administrative Aufgaben für den Schutzdienst. Beispiele: der Dienst wird deaktiviert, das Administratorfeature wird aktiviert, Administratorberechtigungen für den Dienst werden an Benutzer delegiert. <br /><br />Weitere Informationen finden Sie im PowerShell-Cmdlet " [Get-aipserviceadminlog](/powershell/module/aipservice/get-aipserviceadminlog)".|
 |Dokumentkontrolle|Ermöglicht Benutzern das Nachverfolgen und Widerrufen von Dokumenten, die sie mit dem Azure Information Protection-Client nachverfolgt haben. Globale Administratoren können diese Dokumente im Auftrag von Benutzern nachverfolgen. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection](./rms-client/client-admin-guide-document-tracking.md).|
 |Clientereignisprotokolle|Benutzeraktivität für den Azure Information Protection-Client, protokolliert im lokalen Windows-Ereignisprotokoll **Anwendungen und Dienste**: **Azure Information Protection**. <br /><br />Weitere Informationen finden Sie unter [Verwendungsprotokollierung für den Azure Information Protection-Client](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |Clientprotokolldateien|Problembehandlungsprotokolle für den Azure Information Protection-Client, die sich unter **%localappdata%\Microsoft\MSIP** befinden. <br /><br />Diese Dateien werden vom Microsoft Support benötigt.|
 
 Darüber hinaus werden Informationen aus den Azure Information Protection-Clientnutzungsprotokollen und der Azure Information Protection-Überprüfung gesammelt und zusammengefasst, um im Azure-Portal Berichte zu erstellen. Weitere Informationen finden Sie unter [Berichterstellung für Azure Information Protection](reports-aip.md).
 
-Verwenden Sie die folgenden Abschnitten Weitere Informationen zur verwendungsprotokollierung für den Schutzdienst. 
+In den folgenden Abschnitten finden Sie weitere Informationen zur Verwendungs Protokollierung für den Schutzdienst. 
 
-## <a name="how-to-enable-logging-for-protection-usage"></a>Gewusst wie: Aktivieren der Protokollierung für die Verwendung von Schutz
-Protection-verwendungsprotokollierung ist standardmäßig für alle Kunden aktiviert. 
+## <a name="how-to-enable-logging-for-protection-usage"></a>Aktivieren der Protokollierung für die Schutz Verwendung
+Die Protokollierung der Schutz Nutzung ist standardmäßig für alle Kunden aktiviert. 
 
 Es fallen keine zusätzlichen Kosten für den Protokollspeicher oder die Protokollierungsfunktionalität an.
 
-## <a name="how-to-access-and-use-your-protection-usage-logs"></a>Zugreifen auf und verwenden Sie Ihre Verwendungsprotokolle Schutz
-Azure Information Protection schreibt Protokolle als eine Serie von Blobs in Azure Storage-Konto, das es automatisch erstellt für Ihren Mandanten. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.
+## <a name="how-to-access-and-use-your-protection-usage-logs"></a>Zugreifen auf und Verwenden von Schutz Verwendungs Protokollen
+Azure Information Protection schreibt Protokolle als eine Serie von BLOB in ein Azure Storage-Konto, das automatisch für Ihren Mandanten erstellt wird. Jedes BLOB enthält mindestens einen Protokolldatensatz im erweiterten W3C-Protokollformat. Die BLOB-Namen sind Zahlen in der Reihenfolge ihrer Erstellung. Im Abschnitt [Interpretieren von Azure Rights Management-Verwendungsprotokollen](#how-to-interpret-your-usage-logs) weiter unten in diesem Dokument finden Sie weitere Informationen zu den Protokollinhalten und deren Erstellung.
 
-Es dauert eine Weile, bis die Protokolle in Ihrem Speicherkonto nach einer Aktion Protection angezeigt. Die meisten Protokolle werden innerhalb von 15 Minuten angezeigt. Es empfiehlt sich, dass Sie die Protokolle in den lokalen Speicher herunterladen, z. B. einen lokalen Ordner, eine Datenbank oder ein Zuordnen/Reduzieren-Repository.
+Es kann eine Weile dauern, bis Protokolle nach einer Schutz Aktion in Ihrem Speicherkonto angezeigt werden. Die meisten Protokolle werden innerhalb von 15 Minuten angezeigt. Es empfiehlt sich, dass Sie die Protokolle in den lokalen Speicher herunterladen, z. B. einen lokalen Ordner, eine Datenbank oder ein Zuordnen/Reduzieren-Repository.
 
-Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das AIPService-PowerShell-Modul für Azure Information Protection. Installationsanweisungen finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+Zum Herunterladen Ihrer Verwendungs Protokolle verwenden Sie das aipservice-PowerShell-Modul für Azure Information Protection. Installationsanweisungen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>So laden Sie Ihre Verwendungsprotokolle mit PowerShell herunter
 
-1.  Starten Sie Windows PowerShell mit der **als Administrator ausführen** aus, und verwenden Sie die [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Cmdlet für die Verbindung zu Azure Information Protection:
+1.  Starten Sie Windows PowerShell mit der Option **als Administrator ausführen** , und verwenden Sie das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) , um eine Verbindung mit Azure Information Protection herzustellen:
 
     ```
     Connect-AipService
@@ -85,7 +87,7 @@ Um die Verwendungsprotokolle herunterzuladen, verwenden Sie das AIPService-Power
     
     * Um Protokolle für einen Datumsbereich (z.B. 1.2.2016 bis 14.2.2016) herunterzuladen, führen Sie den folgenden Befehl aus: `Get-AipServiceUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016` 
 
-Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Befehl Get-AipServiceUserLog ruft dann die Protokolle, für diese UTC Zeitraum.
+Wenn Sie, wie in diesen Beispielen, nur den Tag angeben, wird 00:00:00 als Uhrzeit in Ihrer lokalen Uhrzeit angenommen und dann in UTC umgewandelt. Wenn Sie eine Uhrzeit für den -fromdate- oder -todate-Parameter angeben (z.B. -fordate "01.02.2016 15:00:00"), werden das Datum und die Uhrzeit in UTC umgewandelt. Der Get-aipserviceuserlog-Befehl ruft dann die Protokolle für diese UTC-Zeitspanne ab.
 
 Die kleinste Zeitspanne, die Sie für ein Herunterladen angeben können, ist ein ganzer Tag.
 
@@ -97,13 +99,13 @@ Standardmäßig werden für dieses Cmdlet drei Threads verwendet, um die Protoko
 >
 > Beispielsweise können Sie folgenden Befehl ausführen, um alle Informationen in eine Datei im LOG-Format zu importieren: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-## <a name="how-to-interpret-your-usage-logs"></a>Wie Sie von Verwendungsprotokollen
-Verwenden Sie die folgende Informationen können Sie den Schutz-Verwendungsprotokollen.
+## <a name="how-to-interpret-your-usage-logs"></a>Interpretieren der Verwendungs Protokolle
+Verwenden Sie die folgenden Informationen, um die Schutz Verwendungs Protokolle zu interpretieren.
 
 ### <a name="the-log-sequence"></a>Die Abfolge von Protokollen
-Azure Information Protection schreibt die Protokolle als eine Serie von Blobs.
+Azure Information Protection schreibt die Protokolle als eine Serie von blobvorgängen.
 
-Jeder Eintrag im Protokoll hat einen UTC-Zeitstempel. Da der Protection-Dienst auf mehreren Servern in mehreren Rechenzentren ausgeführt wird, scheinen manchmal die Protokolle auf der richtigen Reihenfolge zu sein, auch wenn sie nach Zeitstempel sortiert sind. Die Abweichung ist jedoch in der Regel gering und liegt im Bereich von einer Minute. In den meisten Fällen ist dies kein Problem, das sich nachteilig bei der Protokollanalyse manifestieren würde.
+Jeder Eintrag im Protokoll hat einen UTC-Zeitstempel. Da der Schutzdienst auf mehreren Servern in mehreren Rechenzentren ausgeführt wird, scheinen die Protokolle möglicherweise nicht in der Reihenfolge zu sein, auch wenn Sie nach Zeitstempel sortiert sind. Die Abweichung ist jedoch in der Regel gering und liegt im Bereich von einer Minute. In den meisten Fällen ist dies kein Problem, das sich nachteilig bei der Protokollanalyse manifestieren würde.
 
 ### <a name="the-blob-format"></a>Das BLOB-Format
 Jedes BLOB ist im erweiterten W3C-Protokollformat. Es beginnt mit den folgenden zwei Zeilen:
@@ -112,7 +114,7 @@ Jedes BLOB ist im erweiterten W3C-Protokollformat. Es beginnt mit den folgenden 
 
 **#Version: 1.1**
 
-Die erste Zeile gibt an, dass sich Protection Protokolle von Azure Information Protection handelt. Die zweite Zeile gibt an, dass der Rest des BLOBs die Spezifikation der Version 1.1 einhält. Wir empfehlen, dass alle Anwendungen, die diese Protokolle analysieren, diese beiden Zeilen überprüfen, bevor sie die Analyse des Rests des BLOBs fortsetzen.
+Die erste Zeile identifiziert, dass es sich hierbei um Schutz Protokolle aus Azure Information Protection handelt. Die zweite Zeile gibt an, dass der Rest des BLOBs die Spezifikation der Version 1.1 einhält. Wir empfehlen, dass alle Anwendungen, die diese Protokolle analysieren, diese beiden Zeilen überprüfen, bevor sie die Analyse des Rests des BLOBs fortsetzen.
 
 In der dritten Zeile wird eine Liste von Feldnamen aufgezählt, die durch Tabstopps voneinander getrennt sind:
 
@@ -153,12 +155,12 @@ Obgleich das Feld „user-id“ normalerweise den Benutzer angibt, von dem die A
     Anforderungen von diesem Connector werden mit dem Dienstprinzipalnamen von **Aadrm_S-1-7-0** protokolliert, der automatisch generiert wird, wenn Sie den RMS-Connector installieren.
 
 #### <a name="typical-request-types"></a>Typische Anforderungstypen
-Es gibt zahlreiche Anforderungstypen für den Schutzdienst, aber der folgenden Tabelle sind einige der am häufigsten verwendeten Anforderungstypen.
+Es gibt viele Anforderungs Typen für den Schutzdienst, aber in der folgenden Tabelle sind einige der am häufigsten verwendeten Anforderungs Typen aufgeführt.
 
 |Anforderungstyp|Beschreibung|
 |----------------|---------------|
-|AcquireLicense|Ein Client von einem Windows-basierten Computer anfordert eine Lizenz für die geschützten Inhalte.|
-|AcquirePreLicense|Ein Client, anfordert für den Benutzer, eine Lizenz für die geschützten Inhalte.|
+|AcquireLicense|Ein Client von einem Windows-basierten Computer fordert eine Lizenz für geschützte Inhalte an.|
+|AcquirePreLicense|Ein Client fordert im Auftrag des Benutzers eine Lizenz für geschützte Inhalte an.|
 |AcquireTemplates|Ein Aufruf wird ausgelöst, um Vorlagen anhand von Vorlagen-IDs abzurufen.|
 |AcquireTemplateInformation|Ein Aufruf wird ausgelöst, um die IDs der Vorlage vom Dienst abzurufen.|
 |AddTemplate|Vom Azure-Portal wird ein Aufruf zum Hinzufügen einer Vorlage ausgelöst.|
@@ -180,7 +182,7 @@ Es gibt zahlreiche Anforderungstypen für den Schutzdienst, aber der folgenden T
 |GetConnectorAuthorizations|Von den RMS-Connectors wird ein Aufruf ausgelöst, um deren Konfiguration aus der Cloud abzurufen.|
 |GetRecipients|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, für ein einzelnes Dokument zur Listenansicht zu navigieren.|
 |GetSingle|Von der Website zur Dokumentnachverfolgung erfolgt ein Aufruf, zur Seite **Einzelnes Dokument** zu navigieren.|
-|GetTenantFunctionalState|Das Azure-Portal überprüft, ob der Protection-Dienst (Azure Rights Management) aktiviert ist.|
+|GetTenantFunctionalState|Der Azure-Portal überprüft, ob der Schutzdienst (Azure Rights Management) aktiviert ist.|
 |GetTemplateById|Vom Azure-Portal wird ein Aufruf ausgelöst, um eine Vorlage mit einer angegebenen Vorlagen-ID abzurufen.|
 |KeyVaultDecryptRequest|Der Client versucht, den RMS-geschützten Inhalt zu entschlüsseln. Gilt nur für einen vom Kunden verwalteten Mandantenschlüssel (BYOK) in Azure Key Vault.|
 |KeyVaultGetKeyInfoRequest|Ein Aufruf erfolgt, um zu überprüfen, ob der angegebene Schlüssel, der in Azure Key Vault als Azure Information Protection-Mandantenschlüssel verwendet werden soll, verfügbar ist und nicht bereits verwendet wird.|
@@ -202,6 +204,6 @@ Es gibt zahlreiche Anforderungstypen für den Schutzdienst, aber der folgenden T
 
 ## <a name="powershell-reference"></a>PowerShell-Referenz
 
-Ist das einzige PowerShell-Cmdlet, die Sie benötigen auf Ihrem Protection-verwendungsprotokollierung [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog). 
+Das einzige PowerShell-Cmdlet, das Sie für den Zugriff auf die Protokollierung der Schutz Verwendung benötigen, ist [Get-aipserviceuserlog](/powershell/module/aipservice/get-aipserviceuserlog). 
 
-Weitere Informationen zur Verwendung von PowerShell für Azure Information Protection finden Sie unter [Schutz von Azure Information Protection mithilfe von PowerShell verwalten](administer-powershell.md).
+Weitere Informationen zur Verwendung von PowerShell für Azure Information Protection finden Sie unter [Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md).

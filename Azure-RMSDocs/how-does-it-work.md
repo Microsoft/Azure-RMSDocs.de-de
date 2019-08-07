@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.custom: admin
+ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149285"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794174"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -38,14 +40,14 @@ Eine ausführliche Beschreibung der Funktionsweise finden Sie im Abschnitt [Exem
 
 Technische Details zu den Algorithmen und Schlüssellängen, die Azure RMS verwendet, finden Sie im nächsten Abschnitt.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Kryptografische Steuerelemente, die von Azure RMS verwendet: Algorithmen und Schlüssellängen
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Von Azure RMS verwendete kryptografische Steuerelemente: Algorithmen und Schlüssellängen
 Auch wenn Sie die Funktionsweise dieser Technologie nicht in jedem Detail kennen, müssen Sie möglicherweise Fragen zu den verwendeten kryptografischen Steuerelementen beantworten. Beispielsweise müssen Sie möglicherweise bestätigen, dass der Sicherheitsschutz dem Branchenstandard entspricht.
 
 
 |Kryptographische Steuerelemente|Verwendung in Azure RMS|
 |-|-|
-|Algorithmus: AES<br /><br />Schlüssellänge: 128 Bit und 256 Bit [[1]](#footnote-1)|Inhaltsschutz|
-|Algorithmus: RSA<br /><br />Schlüssellänge: 2048 Bit [[2]](#footnote-2)|Schlüsselschutz|
+|Projiziert KAK<br /><br />Schlüssellänge: 128 Bit und 256 Bit [[1]](#footnote-1)|Inhaltsschutz|
+|Projiziert RSA<br /><br />Schlüssellänge: 2048 Bit [[2]](#footnote-2)|Schlüsselschutz|
 |SHA-256|Zertifikatsignatur|
 
 ###### <a name="footnote-1"></a>Fußnote 1 
@@ -77,7 +79,7 @@ Dieser Mandantenschlüssel wird in Microsofts Onlinediensten in einer umfassend 
 Lizenzen und Zertifikate, die an ein Windows-Gerät gesendet werden, sind mit dem privaten Geräteschlüssel des Clients geschützt. Dieser Schlüssel wird erstellt, wenn ein Benutzer das erste Mal Azure RMS auf dem Gerät verwendet. Dieser private Schlüssel wird wiederum mit DPAPI auf dem Client geschützt, die diese geheimen Informationen unter Verwendung eines Schlüssels schützt, der aus dem Kennwort des Benutzers abgeleitet wurde. Auf mobilen Geräten werden die Schlüssel nur ein Mal verwendet, also müssen sie, weil sie nicht auf den Clients gespeichert werden, auf dem jeweiligen Gerät nicht geschützt werden. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhaltsschutz, inhaltsaufnahme
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Exemplarische Vorgehensweise zur Funktionsweise von Azure RMS: Erste Verwendung, Inhalts Schutz, Inhalts Nutzung
 Sehen Sie sich zum besseren Verständnis der Funktionsweise von Azure RMS einen typischen Ablauf an, nachdem der [Azure Rights Management-Dienst aktiviert wurde](activate-service.md) und ein Benutzer den Rights Management-Dienst erstmals auf seinem Windows-Computer verwendet (ein Vorgang, der auch als **Initialisierung der Benutzerumgebung** oder Bootstrapping bezeichnet wird), **Inhalte geschützt werden** (ein Dokument oder eine E-Mail) und dann ein Inhalt **genutzt** (geöffnet und verwendet) wird, der durch eine andere Person geschützt wurde.
 
 Nach der Initialisierung der Benutzerumgebung kann der Benutzer Dokumente schützen oder geschützte Dokumente auf diesem Computer nutzen.

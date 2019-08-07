@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f95406f7f6851b6a0082c19c186fda5bc4532fd
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: a6fb98b54c5305206123076b8c9c3b2fad0f9876
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156674"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792867"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS for individuals und Azure Information Protection
 
@@ -61,5 +62,5 @@ Wenn Sie nach Erstellung des Kontos aufgefordert werden, sich anzumelden, um ges
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-RMS for Individuals ist ein Beispiel für die Self-service-Registrierung-Funktion, die von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise dieses Features finden Sie unter [neuerungen von Self-Service-Registrierung für Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in der Dokumentation zu Azure Active Directory.
+RMS for Individuals ist ein Beispiel für die Verwendung des Self-Service-Registrierungs Features, das von Azure Active Directory unterstützt wird. Weitere Informationen zur Funktionsweise dieses Features finden Sie unter [Was ist die Self-Service-Registrierung für Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) in der Azure Active Directory-Dokumentation.
 

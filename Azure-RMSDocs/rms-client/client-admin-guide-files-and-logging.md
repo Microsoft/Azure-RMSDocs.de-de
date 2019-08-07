@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b6391df8ae2e31303f5b369963389abe3005a1bd
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ea0c6787680a86fde0c3a7d2919caac4fcdd811
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521649"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793766"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
@@ -94,9 +96,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 
 - Benutzerdefinierte Berechtigungen (falls zutreffend), die die [Nutzungsrechte über ihren Codierungsnamen](../configure-usage-rights.md#usage-rights-and-descriptions) für die angegebenen Benutzer, Gruppen der Organisationen einschließen.
 
-Warnen, begründen und blockiert die Ereignisse für Outlook Nachrichten müssen Sie den aktuellen Client für die allgemeine Verfügbarkeit und erweiterte Clienteinstellungen. Weitere Informationen finden Sie unter [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+Die Ereignisse für Outlook warnen, begründen und blockieren Nachrichten erfordern den aktuellen allgemeinen Verfügbarkeits Client und erweiterte Client Einstellungen. Weitere Informationen finden Sie unter [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-Weitere Informationen zur verwendungsprotokollierung für den Schutzdienst finden Sie unter [protokollieren und analysieren die Verwendung der Schutz von Azure Information Protection](../log-analyze-usage.md)
+Informationen zur Verwendungs Protokollierung für den Schutzdienst finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Protokolldateien ermittelt haben, die dem Azure Information Protection-Client zugeordnet sind, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:

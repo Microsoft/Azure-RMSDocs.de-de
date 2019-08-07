@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f8aef51156bb92d7d37da300ae2fccd51d739de1
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: 5bbf064cb019b663b62a779bf58322e0b23302e8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535113"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790536"
 ---
-# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
+# <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Schritt 2: Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -31,14 +33,14 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>So importieren Sie die Konfigurationsdaten in Azure Information Protection
 
-1. Auf einer Arbeitsstation mit Internetverbindung verwenden die [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Cmdlet, um mit dem Azure Rights Management-Dienst herzustellen:
+1. Verwenden Sie auf einer Arbeitsstation mit Internet Verbindung das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) , um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen:
 
     ```
     Connect-AipService
     ```
     Wenn Sie dazu aufgefordert werden, geben Sie die Administratoranmeldeinformationen des Azure Rights Management-Mandanten ein (in der Regel verwenden Sie das Konto eines globalen Administrators für Azure Active Directory oder Office 365).
 
-2. Verwenden der [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) -Cmdlet zum Hochladen von einzelnen exportierten Datei vertrauenswürdigen Veröffentlichungsdomäne (.xml). Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. 
+2. Verwenden Sie das [Import-aipservicetpd-](/powershell/module/aipservice/import-aipservicetpd) Cmdlet, um jede exportierte XML-Datei (Trusted Publishing Domain) hochzuladen. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben. 
     
     Zum Ausführen dieses Cmdlets benötigen Sie die Kennwörter, die Sie zuvor für die einzelnen Konfigurationsdatendatei angegeben haben. 
     
@@ -51,9 +53,9 @@ Wenden Sie das folgende Verfahren zum Importieren der AD RMS-Konfiguration in Az
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
-3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) an den importierten Schlüssel zu identifizieren, die mit den derzeit aktiven SLC-Schlüssel in AD RMS übereinstimmt. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
+3. Wenn Sie jede Datei hochgeladen haben, führen Sie [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, um den importierten Schlüssel zu identifizieren, der mit dem derzeit aktiven SLC-Schlüssel in AD RMS übereinstimmt. Dieser Schlüssel wird zum aktiven Mandantenschlüssel für Ihren Azure Rights Management-Dienst.
 
-4.  Verwenden der [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) Cmdlet zum Trennen von Azure Rights Management-Dienst:
+4.  Verwenden Sie das [Disconnect-aipserviceservice-](/powershell/module/aipservice/disconnect-aipservice) Cmdlet, um die Verbindung mit dem Azure Rights Management-Dienst zu trennen:
 
     ```
     Disconnect-AipServiceService

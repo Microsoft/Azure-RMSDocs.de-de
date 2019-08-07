@@ -13,12 +13,13 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 11ebf15c82d8e27399a9df004f98f00b274802f2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 0caabd18ef06af0daaff44e8829b3bd9750a788b
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182431"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791927"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Exemplarische Vorgehensweise: Arbeiten mit Verschlüsselungseinstellungen
 
@@ -62,7 +63,7 @@ Keine Änderung im Code erforderlich, *AES 256* CBC4K ist der Standard.
                                     &amp;pLicenseHandle);
 
 
-## <a name="protect-files-with-aes-128-cbc4k"></a>Schützen von Dateien mit AES-128 CBC4K 
+## <a name="protect-files-with-aes-128-cbc4k"></a>Schützen von Dateien mit AES-128 CBC4K
 
     C++
 

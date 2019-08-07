@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
+ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ef451597e32915cdc14e859f275e0d8d20326f4
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: admin
+ms.openlocfilehash: 03b589bf0f16ed8a70f15dea1130fbd8baf85036
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428297"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793666"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -185,9 +187,9 @@ Wiederholen Sie diese drei Schritte für andere Dateitypen, die Sie als Ausnahme
 
 Sie können ähnliche Registrierungseinträge für andere Szenarien durch Ändern des Werts der **Encryption** -Zeichenfolge vornehmen, die die folgenden Werte unterstützt:
 
-- **Pfile**: generischer Schutz
+- **Pfile**: Generischer Schutz
 
-- **Native**: nativer Schutz
+- **Native**: Nativer Schutz
 
 - **Off**: Schutz blockieren
 

@@ -1,5 +1,5 @@
 ---
-title: Wie Dateiserver, Windows, mit denen FCI unterstützt Azure RMS – AIP
+title: Verwendung von Azure RMS-AIP durch Windows-Dateiserver, die FCI unterstützen
 description: Verwendung der Windows Server-Dateiklassifizierungsinfrastruktur mit Azure RMS, wenn Sie den RMS-Connector für den automatischen Schutz von Office-Dokumenten bereitstellen.
 author: cabailey
 ms.author: cabailey
@@ -9,21 +9,23 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 301ee894bfeeb89ffb81b5e22fb7201a1f393178
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: 4644970758cc193cb210b0e216940e6b71c36fc2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156504"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791845"
 ---
-# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Wie Dateiserver, Windows, die FCI unterstützen Azure Rights Management verwenden.
+# <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Wie Windows-Dateiserver, die FCI verwenden, Azure Rights Management unterstützen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Wenn Sie Windows Server für die Verwendung der Dateiklassifizierungsinfrastruktur konfigurieren, kann dieses „Ressourcen-Manager für Dateiserver“-Feature lokale Dateien untersuchen und bestimmen, ob sie sensible Daten enthalten. Dateien, die diese Kriterien erfüllen, werden mit Klassifizierungseigenschaften gekennzeichnet, die ein Administrator definiert. Die Dateiklassifizierungsinfrastruktur kann dann automatisch entsprechend der Klassifizierung Aktionen vornehmen. Eine dieser Aktionen umfasst die Anwendung von Informationsschutz mithilfe von Azure Rights Management und die Bereitstellung von Rights Management-Connectors (auch bekannt als der RMS-Verbindungsdienst). Office-Dateien werden von Azure RMS dann automatisch geschützt.
+Wenn Sie Windows Server für die Verwendung der Dateiklassifizierungsinfrastruktur konfigurieren, kann dieses „Ressourcen-Manager für Dateiserver“-Feature lokale Dateien untersuchen und bestimmen, ob sie sensible Daten enthalten. Dateien, die diese Kriterien erfüllen, werden mit Klassifizierungseigenschaften gekennzeichnet, die ein Administrator definiert. Die Dateiklassifizierungsinfrastruktur kann dann automatisch entsprechend der Klassifizierung Aktionen vornehmen. Eine dieser Aktionen umfasst das Anwenden von Informationsschutz mithilfe von Azure Rights Management und die Bereitstellung des Rights Management-Connector (auch als RMS-Connector bezeichnet). Office-Dateien werden von Azure RMS dann automatisch geschützt.
 
 Zum Schützen aller Dateitypen verwenden Sie nicht den RMS-Verbindungsdienst, sondern führen stattdessen ein Windows PowerShell-Skript aus, das Cmdlets aus dem [Azure Information Protection-Modul](./rms-client/client-admin-guide-powershell.md) verwendet.
 
