@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d353eac9dd13b90f02a296a40f8aa1b6e3269d52
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.custom: admin
+ms.openlocfilehash: 4162e3df46377a4de859d1bb2dce1363d7146d08
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298302"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793592"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -67,7 +69,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Sollten Sie den Azure Information Protection-Client bereitstellen?
 
-Den Azure Information Protection-Client bereitstellen, wenn Sie nicht verwenden [vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) aber stattdessen mithilfe von Azure Information Protection-Bezeichnungen, die Sie von Azure, und jede herunterladen Folgendes gilt:
+Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden gelten
 
 - Sie möchten Dokumente und E-Mails durch Auswählen von Bezeichnungen innerhalb Ihrer Office-Anwendungen (Word, Excel, PowerPoint, Outlook) klassifizieren (und optional schützen).
 
@@ -101,7 +103,7 @@ In den folgenden Abschnitten finden Sie Informationen zur Unterstützung bei der
 
 Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und Feedback**, um das Dialogfeld **Microsoft Azure Information Protection** zu öffnen:
 
-- Aus einer officeanwendung: Wählen Sie auf der Registerkarte **Home** in der Gruppe **Schutz** die Optionen **Schützen** und anschließend **Hilfe und Feedback** aus.
+- Aus einer Office-Anwendung: Wählen Sie auf der Registerkarte **Home** in der Gruppe **Schutz** die Optionen **Schützen** und anschließend **Hilfe und Feedback** aus.
 
 - Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und anschließend **Hilfe und Feedback** aus. 
 
@@ -141,7 +143,7 @@ Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die d
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local settings\software\microsoft\msipc    
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 
@@ -167,7 +169,7 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiel:
 
 - Online-Benutzeranweisungen: [Azure Information Protection-Benutzerhandbuch](client-user-guide.md)
 
@@ -187,14 +189,14 @@ Im Artikel [Verlauf der Releases und Supportrichtlinie](client-version-release-h
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Upgrade der Azure Information Protection-Überprüfung
 
-Gehen Sie folgendermaßen vor, die Überprüfung von einer allgemein verfügbaren Version älter als 1.48.204.0 auf die aktuelle Version der Überprüfung zu aktualisieren.
+Verwenden Sie die folgenden Anweisungen, um die Überprüfung von einer allgemein verfügbaren Version, die älter als 1.48.204.0 ist, auf die aktuelle Version der Überprüfung zu aktualisieren.
 
-#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>Die Überprüfung auf die aktuelle Version aktualisieren.
+#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>So führen Sie ein Upgrade des Scanners auf die aktuelle Version durch
 
 > [!IMPORTANT]
-> Installieren Sie für einen nahtlosen Upgradepfad, nicht die der Azure Information Protection-Client auf dem Computer mit der Überprüfung als ersten Schritt die Überprüfung zu aktualisieren. Verwenden Sie stattdessen die folgenden Upgradeanweisungen.
+> Wenn Sie einen Smooth-Upgradepfad verwenden möchten, installieren Sie den Azure Information Protection-Client nicht auf dem Computer, auf dem die Überprüfung ausgeführt wird, als ersten Schritt zum Aktualisieren des Scanners. Verwenden Sie stattdessen die folgenden Upgradeanweisungen.
 
-Ab Version 1.48.204.0, des Upgrades von früheren Versionen automatisch Änderungen Ruft die Überprüfung der Konfigurationseinstellungen im Azure-Portal ab. Ferner wird das Schema für die Konfigurationsdatenbank des Scanners aktualisiert, und diese Datenbank wird über AzInfoProtection umbenannt:
+Ab Version 1.48.204.0 ändert der Upgradeprozess von vorherigen Versionen automatisch den Scanner, sodass er seine Konfigurationseinstellungen vom Azure-Portal abruft. Ferner wird das Schema für die Konfigurationsdatenbank des Scanners aktualisiert, und diese Datenbank wird über AzInfoProtection umbenannt:
 
 - Wenn Sie keinen eigenen Profilnamen angeben, wird die Konfigurationsdatenbank in **AIPScanner_\<Computername>** umbenannt. 
 
@@ -202,13 +204,13 @@ Ab Version 1.48.204.0, des Upgrades von früheren Versionen automatisch Änderun
 
 Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden jedoch die folgenden Schritte empfohlen:
 
-1. Verwenden Sie das Azure-Portal, um ein neues Scannerprofil zu erstellen, das die Einstellungen für den Scanner und die Datenrepositorys mit allen erforderlichen Einstellungen enthält. Hilfe bei diesem Schritt finden Sie in der [Konfigurieren der Überprüfung im Azure-Portal](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) Abschnitt in den bereitstellungsanweisungen Scanner.
+1. Verwenden Sie das Azure-Portal, um ein neues Scannerprofil zu erstellen, das die Einstellungen für den Scanner und die Datenrepositorys mit allen erforderlichen Einstellungen enthält. Hilfe zu diesem Schritt finden Sie im Abschnitt [configure the Scanner in the Azure-Portal in](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) den Anweisungen zur Überprüfung der Bereitstellung.
     
     Diesen Schritt müssen Sie auch dann ausführen, wenn der Computer, auf dem der Scanner ausgeführt wird, nicht mit dem Internet verbunden ist. Verwenden Sie anschließend im Azure-Portal die Option **Exportieren**, um das Scannerprofil in eine Datei zu exportieren.
 
 2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
-3. Aktualisieren Sie den Azure Information Protection-Client durch die Installation von der aktuellen Version der allgemeinen Verfügbarkeit (GA) aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Aktualisieren Sie den Azure Information Protection Client, indem Sie die aktuelle allgemein verfügbare Version aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)installieren.
 
 4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
 
@@ -216,7 +218,7 @@ Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden 
 
 6. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
 
-Sie können nun den Rest der Anweisungen im [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md), wenn den Schritt, um die Überprüfung installieren. Da die Überprüfung bereits installiert ist, besteht kein Grund, sie erneut zu installieren.
+Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md)verwenden, sodass Sie den Schritt zum Installieren des Scanners weglassen. Da der Scanner bereits installiert ist, gibt es keinen Grund, ihn erneut zu installieren.
 
 ##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Upgraden in einer anderen Reihenfolge als der der empfohlenen Schritte
 
@@ -227,19 +229,19 @@ Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen S
 > [!TIP]
 > Verwenden Sie das Blatt **Azure Information Protection – Knoten** im Azure-Portal, um Scanner mit dieser fehlerhaften Konfiguration zu erkennen.
 >  
-> Für den Scanner, die eine Internetverbindung verfügen, sie ihren Computernamen mit der Versionsnummer der allgemeinen Verfügbarkeit des Azure Information Protection-Clients, aber kein Profilname angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
+> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
 
 Wenn Sie beim Ausführen des Befehls „Update-AIPScanner“ keinen Profilnamen angegeben haben, wird automatisch der Computername zum Erstellen des Profilnamens für den Scanner verwendet.
 
 #### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Verschieben der Konfigurationsdatenbank des Scanners in eine andere SQL Server-Instanz
 
-In der aktuellen GA-Version ist es ein bekanntes Problem, wenn Sie versuchen, die die Konfigurationsdatenbank für die Überprüfung auf eine neue SQL Server-Instanz verschieben, nach dem Ausführen des Upgrade-Befehls.
+In der aktuellen GA-Version gibt es ein bekanntes Problem, wenn Sie versuchen, die scannerkonfigurationsdatenbank nach dem Ausführen des upgradebefehls in eine neue SQL Server Instanz zu verschieben.
 
-Wenn Sie wissen, dass die Scanner-Konfigurationsdatenbank für die GA-Version verschoben werden sollen, führen Sie folgende Schritte aus:
+Wenn Sie wissen, dass Sie die Überprüfungs Konfigurations Datenbank für die GA-Version verschieben möchten, gehen Sie wie folgt vor:
 
 1. Deinstallieren Sie den Scanner mit dem Befehl [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
 
-2. Wenn Sie noch auf die aktuelle GA-Version des Azure Information Protection-Clients nicht aktualisiert haben, wird aktualisieren Sie den Client jetzt.
+2. Wenn Sie noch kein Upgrade auf die aktuelle allgemein verfügbare Version des Azure Information Protection Clients durchgeführt haben, führen Sie jetzt ein Upgrade des Clients aus.
 
 3. Installieren Sie den Scanner mithilfe des Befehls [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), und geben Sie dabei die neue SQL Server-Instanz und den Profilnamen an.
 

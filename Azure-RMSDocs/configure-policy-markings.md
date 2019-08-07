@@ -9,12 +9,14 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 6aea5948c9ad6358425f057a7459c3f851a74f49
-ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: f600ec661f82b8738653cc340d8d803f21e80c8a
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68446690"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794140"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -96,7 +98,7 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 
 - `${User.PrincipalName}` für den Besitzer des Dokuments oder der E-Mail, gemäß der E-Mail-Adresse des angemeldeten Azure Information Protection-Clients (UPN). Beispiel: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Zum Beispiel: 16.08.2016 13:30 Uhr
+- `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx-Klassifizierung: Allgemein**.
 

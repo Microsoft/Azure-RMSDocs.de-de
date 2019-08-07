@@ -13,12 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 745a340586157b6bb429345c96ee9556f60a93da
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.custom: dev
+ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263887"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791342"
 ---
 # <a name="android-code-examples"></a>Codebeispiele für Android
 
@@ -37,7 +38,7 @@ Diese Codebeispiele stammen aus einer größeren Beispielanwendung, die wichtige
 
 Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für Android-Betriebssysteme verfügbar. Weitere Informationen finden Sie unter [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Szenario: Nutzen einer RMS-geschützten Datei
+### <a name="scenario-consume-an-rms-protected-file"></a>En Nutzen einer RMS-geschützten Datei
 
 - **Schritt 1**: Erstellen Sie ein [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)-Objekt.
 
@@ -202,7 +203,7 @@ Die Beispielanwendung *MSIPCSampleApp* ist zur Verwendung mit diesem SDK für An
     ```
 
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Szenario: Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>En Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
 
 In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erste Vorlage zum Erstellen einer Richtlinie ausgewählt, und dann wird die neue geschützte Datei erstellt und in sie geschrieben.
 
@@ -358,7 +359,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>Szenario: Öffnen einer benutzerdefinierten geschützten Datei
+### <a name="scenario-open-a-custom-protected-file"></a>En Öffnen einer benutzerdefinierten geschützten Datei
 
 - **Schritt 1**: Erstellen eines [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx)-Objekts aus einem *serializedContentPolicy*-Objekt.
 
@@ -526,7 +527,7 @@ In diesem Szenario wird zunächst eine Liste von Vorlagen abgerufen und die erst
     ```
     
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mithilfe einer benutzerdefinierten Richtlinie
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>En Erstellen einer benutzerdefinierten geschützten Datei mithilfe einer benutzerdefinierten Richtlinie
 
 - **Schritt 1**: Erstellen einer Richtlinienbeschreibung mit einer vom Benutzer angegebenen E-Mail-Adresse.
 

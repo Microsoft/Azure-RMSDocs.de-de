@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2d29d2ba60e8fd57fdb50f7bc9f4e6bee27230a4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521161"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794041"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -29,7 +31,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
 ## <a name="installing-the-rms-connector"></a>Installieren des RMS-Verbindungsdiensts
 
-1.  Identifizieren Sie die Computer (mindestens zwei), führen Sie den RMS-Verbindungsdienst. Diese Computer müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
+1.  Identifizieren Sie die Computer (mindestens zwei), um den RMS-Connector auszuführen. Diese Computer müssen die in den Voraussetzungen aufgeführte Mindestspezifikation erfüllen.
 
     > [!NOTE]
     > Sie installieren einen einzelnen RMS-Verbindungsdienst (bestehend aus mehreren Servern zwecks Hochverfügbarkeit) pro Mandant (Office 365-Mandant oder Azure AD-Mandant). Im Gegensatz zu Active Directory RMS müssen Sie nicht in jeder Gesamtstruktur einen RMS-Verbindungsdienst installieren.
@@ -57,7 +59,7 @@ Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldein
 
 Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. 
 
-Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, die keines der folgenden Zeichen enthalten: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
+Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, das eines der folgenden Zeichen enthält: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 
 Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein. Andernfalls wird folgende Fehlermeldung angezeigt: **Fehler beim Versuch, den Speicherort des Verwaltungsdiensts und der Organisation zu ermitteln. Stellen Sie sicher, dass der Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
@@ -67,21 +69,21 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
 -   **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
 
--   **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und verwalten die RMS-verbindungsdiensts für Ihre Organisation gewährt wurden.
+-   **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungs-Connector für Ihre Organisation erteilt wurden.
 
     > [!NOTE]
-    > Die globale Administratorrolle für Azure Rights Management und Azure Rights Management-Verbindungsdienst-Administratorrolle auf Konten zugewiesen, mit der [hinzufügen-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) Cmdlet.
+    > Die Rolle "globaler Azure Rights Management-Administrator" und "Azure Rights Management Connector-Administrator" werden Konten mithilfe des Cmdlets " [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) " zugewiesen.
     > 
     > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
     >
-    > 1.  Wenn Sie nicht bereits geschehen, herunterladen Sie und installieren Sie das AIPService PowerShell-Modul. Weitere Informationen finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+    > 1.  Wenn Sie dies noch nicht getan haben, laden Sie das PowerShell-Modul aipservice herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).
     >
-    >     Starten Sie Windows PowerShell mit der **als Administrator ausführen** Befehl aus, und Verbinden mit dem Schutzdienst mithilfe der [Connect-AipService](/powershell/module/aipservice/connect-aipservice) Befehl:
+    >     Starten Sie Windows PowerShell mit dem Befehl **als Administrator ausführen** , und stellen Sie mithilfe des Befehls [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) eine Verbindung mit dem Schutzdienst her:
     >
     >     ```
     >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
-    > 2.  Führen Sie dann die [hinzufügen-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) -Befehl ein und verwenden nur eine der folgenden Parameter:
+    > 2.  Führen Sie dann den Befehl [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) aus, und verwenden Sie dabei nur einen der folgenden Parameter:
     >
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
@@ -94,7 +96,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Beispiel: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >     Beispiel: **Add-aipservicerolebasedadministrator-EmailAddress melisa@contoso.com -Role "Connector Administrator"**
     >
     >     Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
@@ -145,7 +147,7 @@ Es ist wichtig, dass Sie das richtige Objekt autorisieren. Für einen Server mus
 
 Weitere Informationen zu den verschiedenen Serverrollen:
 
--   Für Server, auf denen Exchange ausgeführt wird: Sie müssen eine Sicherheitsgruppe angeben, und Sie können die Standardgruppe verwenden (**Exchange-Server**), die von Exchange automatisch erstellt und für alle Exchange-Server in der Gesamtstruktur gepflegt wird.
+-   Für Server, die Exchange ausführen: Sie müssen eine Sicherheitsgruppe angeben, und Sie können die Standardgruppe verwenden (**Exchange-Server**), die von Exchange automatisch erstellt und für alle Exchange-Server in der Gesamtstruktur gepflegt wird.
 
 -   Für Server, die SharePoint ausführen:
 
@@ -167,9 +169,9 @@ Wenn Sie mit dem Hinzufügen von Servern zu der Liste fertig sind, klicken Sie a
 Wenn nicht schon geschehen, müssen Sie jetzt den Lastenausgleich für die Server konfigurieren, auf denen der RMS-Verbindungsdienst installiert ist, und erwägen, ob HTTPS für die Verbindungen zwischen diesen Servern und den Servern, die Sie gerade autorisiert haben, verwendet werden soll.
 
 ## <a name="configuring-load-balancing-and-high-availability"></a>Konfigurieren von Lastenausgleich und Hochverfügbarkeit
-Nachdem Sie den zweite oder letzte Instanz des RMS-Connectors installiert haben, definieren Sie einen Connector-URL-Servernamen, und konfigurieren Sie ein System mit Lastenausgleich.
+Nachdem Sie die zweite oder letzte Instanz des RMS-Verbindungs dienstanschlusses installiert haben, definieren Sie einen Connector-URL-Servernamen, und konfigurieren Sie ein Lasten Ausgleichssystem.
 
-Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Sie können z. B. einen Eintrag erstellen, in Ihrem DNS-System für **rmsconnector.contoso.com** und diesen Eintrag Verwendung eine IP-Adresse in Ihrem Lastenausgleichssystem konfigurieren. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
+Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Beispielsweise können Sie einen Eintrag in Ihrem DNS-System für **rmsconnector.contoso.com** erstellen und diesen Eintrag so konfigurieren, dass eine IP-Adresse in Ihrem Lasten Ausgleichssystem verwendet wird. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
 
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Verbindungsdiensts nicht mehr zu ändern, weil Sie sonst von diesen Servern alle IRM-Konfigurationen entfernen und diese dann neu konfigurieren müssen.
@@ -178,13 +180,13 @@ Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konf
 
 Verwenden Sie folgende Einstellungen, um den NLB-Cluster zu konfigurieren:
 
--   Ports: 80 (für HTTP) oder 443 (HTTPS)
+-   Landungen 80 (für http) oder 443 (für HTTPS)
 
     Weitere Informationen dazu, ob Sie HTTP oder HTTPS verwenden sollten, finden Sie im nächsten Abschnitt.
 
--   Affinität: Keine
+-   Affinitäts Keine
 
--   Verteilungsmethode: gleich
+-   Verteilungsmethode: Gleich
 
 Dieser Name, den Sie für das System mit Lastenausgleich (für die Server mit dem RMS-Verbindungsdienst) definieren, ist der RMS-Verbindungsdienstname Ihrer Organisation, den Sie später beim Konfigurieren der lokalen Server zur Verwendung von Azure RMS verwenden.
 

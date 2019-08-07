@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 608419325f3a38f607577ee0fd1cdcdeee40d212
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520924"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790609"
 ---
 # <a name="migration-phase-1---preparation"></a>Migrationsphase 1: Vorbereitung
 
@@ -25,11 +27,11 @@ ms.locfileid: "67520924"
 Verwenden Sie die folgenden Informationen für Phase 1 der Migration von AD RMS zu Azure Information Protection. Diese Verfahren behandeln die Schritte 1 bis 3 von [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und bereiten Ihre Umgebung für die Migration vor, ohne Ihre Benutzer zu beeinflussen.
 
 
-## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Schritt 1: Installieren Sie des AIPService PowerShell-Moduls und identifizieren Sie Ihrer Mandanten-URL
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Schritt 1: Installieren des aipservice-PowerShell-Moduls und identifizieren ihrer Mandanten-URL
 
-Installieren Sie das Modul AIPService, damit können Sie konfigurieren und Verwalten des Diensts, der den Schutz von Daten für Azure Information Protection bereitstellt.
+Installieren Sie das aipservice-Modul, damit Sie den Dienst konfigurieren und verwalten können, der den Datenschutz für Azure Information Protection bereitstellt.
 
-Anweisungen hierzu finden Sie unter [AIPService PowerShell-Modul installieren](./install-powershell.md).
+Anweisungen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](./install-powershell.md).
 
 Um einige der Migrationsanweisungen abzuschließen, müssen Sie die Azure Rights Management-Dienst-URL für Ihren Mandanten kennen, damit Sie sie ersetzen können, wenn Sie Verweise auf *\<Ihre Mandanten-URL\>* sehen. Die Azure Rights Management-Dienst-URL weist das folgende Format auf: **{GUID}.rms.[Region].aadrm.com**.
 

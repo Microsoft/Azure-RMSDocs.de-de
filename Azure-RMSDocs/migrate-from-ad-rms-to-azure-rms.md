@@ -1,6 +1,6 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection
-description: Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Directory Rights Management Services) zu Azure Information Protection. Nach der Migration haben Benutzer weiterhin Zugriff auf Dokumente und e-Mails, die Ihre Organisation mithilfe von AD RMS geschützt.
+description: Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Directory Rights Management Services) zu Azure Information Protection. Nach der Migration haben Benutzer weiterhin Zugriff auf Dokumente und e-Mail-Nachrichten, die Ihre Organisation mithilfe von AD RMS geschützt hat.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61cd0d2ea761cf3f0ca1a8cbd9e1ab1d248b63ef
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.custom: admin
+ms.openlocfilehash: 88a6409afae1be74a9f43dc18eaa2a48863b0c1c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545007"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790718"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -74,7 +76,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 
     Siehe [Anforderungen für Azure Information Protection](./requirements.md).
 
-    Beachten Sie, dass wenn Sie über Computer, die Office 2010 ausführen verfügen, müssen Sie installieren die [Azure Information Protection-Client oder des einheitlichen Azure Information Protection-Bezeichnung-Clients für Benutzer](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client), da diese Clients die Möglichkeit bieten, Authentifizieren von Benutzern in Cloud Services. Informationen zu höheren Versionen von Office diese Clients sind für die Klassifizierung und Bezeichnung erforderlich, und der Azure Information Protection-Client ist optional wird jedoch empfohlen, wenn Sie nur Daten schützen möchten. Weitere Informationen finden Sie in der Admin-Handbüchern für die [Azure Information Protection-Client](./rms-client/client-admin-guide.md) und [Azure Information Protection – einheitliche bezeichnungs Client](./rms-client/clientv2-admin-guide.md).
+    Beachten Sie Folgendes: Wenn Sie über Computer verfügen, auf denen Office 2010 ausgeführt wird, müssen Sie den [Azure Information Protection Client oder den Azure Information Protection Unified-Bezeichnungs Client für Benutzer](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)installieren, da diese Clients die Möglichkeit bieten, Benutzer für die Cloud zu authentifizieren. Betreuung. Für spätere Versionen von Office sind diese Clients für die Klassifizierung und Bezeichnung erforderlich, und der Azure Information Protection Client ist optional, wird jedoch empfohlen, wenn Sie nur Daten schützen möchten. Weitere Informationen finden Sie in den Administrator Handbüchern für den [Azure Information Protection Client](./rms-client/client-admin-guide.md) und den [Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide.md).
 
     Sie benötigen zwar ein Azure Information Protection-Abonnement, bevor Sie von AD RMS aus migrieren können, aber wir empfehlen, den Rights Management-Dienst für Ihren Mandanten nicht vor dem Start der Migration zu aktivieren. Sie führen diesen Aktivierungsschritt während der Migration aus, nachdem Sie die Schlüssel und Vorlagen aus AD RMS exportiert und in Ihren Azure Information Protection-Mandanten importiert haben. Wenn der Rights Management-Dienst bereits aktiviert wurde, können Sie dennoch von AD RMS migrieren, aber es sind einige zusätzliche Schritte notwendig.
 
@@ -112,7 +114,7 @@ So bestätigen Sie den AD RMS-Kryptografiemodus:
 
 ### <a name="migration-limitations"></a>Einschränkungen bei der Migration
 
-- Wenn Sie Softwareanwendungen und Clients verwenden, die nicht vom Rights Management-Dienst von Azure Information Protection unterstützt werden, können diese die Inhalte, die durch Azure Rights Management geschützt sind, weder schützen noch nutzen. Sehen Sie sich die unterstützten Anwendungen und Clients Abschnitten [Anforderungen für Azure Information Protection](./requirements.md).
+- Wenn Sie Softwareanwendungen und Clients verwenden, die nicht vom Rights Management-Dienst von Azure Information Protection unterstützt werden, können diese die Inhalte, die durch Azure Rights Management geschützt sind, weder schützen noch nutzen. Überprüfen Sie die Abschnitte unterstützte Anwendungen und Clients unter [Anforderungen für Azure Information Protection](./requirements.md).
 
 - Wenn Ihre AD RMS-Bereitstellung so konfiguriert ist, um mit externen Partnern zusammenzuarbeiten (z.B. mithilfe von vertrauenswürdigen Benutzerdomänen oder in einem Verbund), müssen diese ebenfalls zu Azure Information Protection migrieren – entweder zur gleichen Zeit wie Sie oder so bald wie möglich danach. Damit der Zugriff auf Inhalte, die Ihre Organisation zuvor mit Azure Information Protection geschützt hat, weiterhin möglich ist, müssen Ihre Partner ähnliche Änderungen an der Clientkonfiguration wie Sie vornehmen (in diesem Dokument erläutert).
     
@@ -128,7 +130,7 @@ Schließen Sie Ihre AD RMS-Partner in Ihre Planungsphase für die Migration ein,
 
 - Der Azure Rights Management-Dienst ist noch nicht aktiviert, jedoch kennen sie die Azure Rights Management-Dienst-URL.
 
-    Sie können diese Informationen abrufen, indem Sie installieren den Azure Rights Management-Verwaltungstool, Verbindung mit dem Dienst ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)), und anschließend ihre Mandanteninformationen für den Azure Rights Management-Dienst anzeigen ([ Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
+    Sie erhalten diese Informationen, indem Sie das Azure Rights Management-Tool installieren, eine Verbindung mit dem Dienst herstellen ([Connect-aipservice](/powershell/module/aipservice/connect-aipservice)) und anschließend Ihre Mandanten Informationen für den Azure Rights Management-Dienst anzeigen ([Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) ). ).
 
 - Ihnen werden die URLs für ihre AD RMS-Cluster und die Azure Rights Management-Dienst-URL bereitgestellt, damit Sie Ihre migrierten Clients so konfigurieren können, dass sie Anfragen für ihren von AD RMS geschützten Inhalt an den Azure Rights Management-Dienst ihres Mandanten umleiten können. Hinweise zum Konfigurieren von Clientumleitungen finden Sie in Schritt 7.
 
@@ -140,9 +142,9 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 [**PHASE 1: VORBEREITUNG DER MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Schritt 1: Installieren Sie des AIPService PowerShell-Moduls und identifizieren Sie Ihrer Mandanten-URL**
+- **Schritt 1: Installieren des aipservice-PowerShell-Moduls und identifizieren ihrer Mandanten-URL**
 
-    Während der Migration müssen Sie eine oder mehrere der PowerShell-Cmdlets aus dem Modul AIPService ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
+    Der Migrationsprozess erfordert, dass Sie mindestens ein PowerShell-Cmdlet aus dem aipservice-Modul ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
 
 - **Schritt 2: Vorbereitung für die Clientmigration**
 
@@ -156,7 +158,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 - **Schritt 4: Exportieren der Konfigurationsdaten aus AD RMS und Importieren dieser Daten in Azure Information Protection**
 
-    Sie exportieren die Konfigurationsdaten (Schlüssel, Vorlagen, URLs) aus AD RMS in eine XML-Datei, und klicken Sie dann laden, die an den Azure Rights Management-Dienst von Azure Information Protection-Datei mithilfe des Import-AipServiceTpd-PowerShell-Cmdlets. Danach ermitteln Sie, welcher importierte SLC-Schlüssel (Server Licensor Certificate) als Mandantenschlüssel für den Azure Rights Management-Dienst verwendet werden soll. Je nach AD RMS-Schlüsselkonfiguration sind möglicherweise weitere Schritte erforderlich:
+    Sie exportieren die Konfigurationsdaten (Schlüssel, Vorlagen, URLs) aus AD RMS in eine XML-Datei und laden dann diese Datei mithilfe des PowerShell-Cmdlets Import-aipservicetpd aus Azure Information Protection in den Azure Rights Management-Dienst hoch. Danach ermitteln Sie, welcher importierte SLC-Schlüssel (Server Licensor Certificate) als Mandantenschlüssel für den Azure Rights Management-Dienst verwendet werden soll. Je nach AD RMS-Schlüsselkonfiguration sind möglicherweise weitere Schritte erforderlich:
 
     - **Migration softwaregeschützter Schlüssel zu softwaregeschützten Schlüsseln**:
 
@@ -164,11 +166,11 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     - **Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln:**
 
-        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure Information Protection-Mandantenschlüssel gespeichert werden (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen nCipher HSM an Azure Key Vault und Autorisieren des Azure Rights Management-Diensts für diesen Schlüssel verwenden. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden von den Rights Management-Services nicht unterstützt.
+        Schlüssel, die von einem HSM für AD RMS in einem vom Kunden verwalteten Azure Information Protection-Mandantenschlüssel gespeichert werden (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen nchiffre-HSM in Azure Key Vault und Autorisieren des Azure Rights Management-Dienstanbieter, diesen Schlüssel zu verwenden. Ihre vorhandenen HSM-geschützten Schlüssel müssen modulgeschützt sein. OCS-geschützte Schlüssel werden von den Rights Management-Services nicht unterstützt.
 
     - **Migration softwaregeschützter Schlüssel zu HSM-geschützten Schlüsseln**:
 
-        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert die meisten Konfigurationsschritte, da Sie müssen zunächst den Softwareschlüssel extrahieren und in ein lokales HSM importieren, und führen Sie zusätzliche Schritte zum Übertragen des Schlüssels aus Ihrem lokalen nCipher HSM an das Azure Key Vault-HSM und autorisieren den Azure Rights Management-Dienst, um die Verwendung des schlüsseltresors, in dem den Schlüssel gespeichert.
+        Zentral verwaltete, kennwortbasierte Schlüssel in AD RMS zu einem kundenverwalteten Azure Information Protection-Mandantenschlüssel (das „Bring Your Own Key“- oder BYOK-Szenario). Dies erfordert die meisten Konfigurationsschritte, da Sie zunächst den Software Schlüssel extrahieren und in ein lokales HSM importieren und dann die zusätzlichen Schritte ausführen müssen, um den Schlüssel aus Ihrem lokalen nchiffre HSM in ein Azure Key Vault HSM zu übertragen und die Azure-Rechte zu autorisieren. Verwaltungsdienst zur Verwendung des Schlüssel Tresors, in dem der Schlüssel gespeichert wird.
 
 - **Schritt 5: Aktivieren des Azure Rights Management-Diensts**
 

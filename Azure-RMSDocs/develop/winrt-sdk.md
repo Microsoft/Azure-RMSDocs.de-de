@@ -13,12 +13,13 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 57020ff3af69e2711adcc717951b61e48281645a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182618"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790724"
 ---
 # <a name="windows-store-setup"></a>Windows Store-Setup
 
@@ -53,7 +54,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 -   Öffnen Sie Visual Studio.
 -   Klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.
--   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#**, und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
+-   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#** , und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/winrtsetup-newproj.png)
 

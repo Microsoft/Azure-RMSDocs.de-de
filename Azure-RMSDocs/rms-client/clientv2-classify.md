@@ -8,13 +8,15 @@ ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 5faf6151a74eec0f213cf425d45f51cbd9e677d5
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: user
+ms.openlocfilehash: 2b14872399fc2b9409748a3a149cb8b74b5db016
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428091"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790011"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Leitfaden: Klassifizieren einer Datei oder e-Mail mithilfe des Azure Information Protection Unified Bezeichnung-Clients für Windows
 
@@ -31,11 +33,11 @@ Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren.
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren Ihrer Dokumente und E-Mails
 
-Wählen Sie auf der Registerkarte **Startseite** die Vertraulichkeits Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Beispiel:
+Wählen Sie auf der Registerkarte **Startseite** die Vertraulichkeits Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Zum Beispiel:
 
 ![Beispiel für sensible Schaltfläche](../media/sensitivity-not-set-callout.png)
 
-Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Beispiel:
+Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Zum Beispiel:
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
@@ -57,7 +59,7 @@ Neben der manuellen Auswahl von Bezeichnungen können Bezeichnungen auch auf die
 
 - Möglicherweise ist der Azure Information Protection Unified Bezeichnung-Client nicht [installiert](install-unifiedlabelingclient-app.md).
 
-- Wenn auf dem Menüband  keine Vertraulichkeits Schaltfläche angezeigt wird, aber stattdessen die Schaltfläche **schützen** mit Bezeichnungen angezeigt wird, ist der Azure Information Protection-Client installiert und nicht der Azure Information Protection Unified Label-Client. [Weitere Informationen](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Wenn auf dem Menüband keine Vertraulichkeits Schaltfläche angezeigt wird, aber stattdessen die Schaltfläche **schützen** mit Bezeichnungen angezeigt wird, ist der Azure Information Protection-Client installiert und nicht der Azure Information Protection Unified Label-Client. [Weitere Informationen](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Wird die erwartete Bezeichnung nicht angezeigt? 
 
@@ -78,7 +80,7 @@ Das Administratorhandbuch enthält eine vollständige Liste der Dateitypen, die 
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>So klassifizieren Sie eine Datei mithilfe des Datei-Explorers
 
-1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiel:
+1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Zum Beispiel:
     
     ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](../media/right-click-classify-protect-folder.png)
 

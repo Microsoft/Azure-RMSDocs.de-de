@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
+ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb76aece7012d521542973c94181f43f7b0d15f3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ba83809a8f077ed23afaa337c62d63c78c0cfbc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521762"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790120"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -28,30 +30,30 @@ Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Verwalten der Website für die Dokumentnachverfolgung mithilfe von PowerShell
 
-In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie die Website für die Dokumentnachverfolgung mithilfe von PowerShell verwalten können. Installationsanweisungen zum PowerShell-Modul finden Sie unter [AIPService PowerShell-Modul installieren](../install-powershell.md).
+In den folgenden Abschnitten finden Sie Informationen dazu, wie Sie die Website für die Dokumentnachverfolgung mithilfe von PowerShell verwalten können. Installationsanweisungen für das PowerShell-Modul finden Sie unter [Installieren des aipservice-PowerShell-Moduls](../install-powershell.md).
 
 Weitere Informationen zu den einzelnen Cmdlets finden Sie unter den angegebenen Links.
 
 ### <a name="privacy-controls-for-your-document-tracking-site"></a>Datenschutzkontrollen für Ihre Website für die Dokumentnachverfolgung
 
-Wenn Anzeigen aller dokumentkontrollinformationen in Ihrer Organisation aufgrund von datenschutzanforderungen nicht zulässig ist, können Sie die dokumentenverfolgung deaktivieren, mit der [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) Cmdlet. 
+Wenn die Anzeige aller Informationen zur Dokument Nachverfolgung in Ihrer Organisation aufgrund von Datenschutzanforderungen nicht zulässig ist, können Sie die dokumentenverfolgung mithilfe des Cmdlets " [Deaktivieren-aipservicedocumenttrackingfeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) " deaktivieren. 
 
-Dieses Cmdlet deaktiviert den Zugriff auf die Website für die Dokumentnachverfolgung, damit keine Benutzer in Ihrer Organisation die von ihnen geschützten Dokumente nachverfolgen oder den Zugriff auf diese widerrufen können. Sie können jederzeit die dokumentnachverfolgung mithilfe der [aktivieren-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), und Sie können überprüfen, ob die dokumentenverfolgung ist derzeit aktiviert oder deaktiviert wird, mithilfe von [ Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
+Dieses Cmdlet deaktiviert den Zugriff auf die Website für die Dokumentnachverfolgung, damit keine Benutzer in Ihrer Organisation die von ihnen geschützten Dokumente nachverfolgen oder den Zugriff auf diese widerrufen können. Sie können die Dokument Nachverfolgung jederzeit mithilfe von [enable-aipservicedocumenttrackingfeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)wieder aktivieren und mithilfe von [Get-aipservicedocumenttrackingfeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)überprüfen, ob die Dokument Nachverfolgung derzeit aktiviert oder deaktiviert ist. 
 
 Wenn die Website für die Dokumentnachverfolgung aktiviert ist, werden standardmäßig Informationen angezeigt, wie z.B. E-Mail-Adressen der Personen, die auf geschützte Dokumente zugegriffen haben, wann diese Benutzer versucht haben, darauf zuzugreifen, sowie deren Standort. Diese Art von Informationen kann hilfreich sein, um festzulegen, wie die freigegebenen Dokumente verwendet und ob sie widerrufen werden sollen, wenn verdächtige Aktivitäten festgestellt werden. Aus Datenschutzgründen müssen diese Benutzerinformationen allerdings u.U. für einige oder alle Benutzer deaktiviert werden. 
 
-Wenn Sie Benutzer, die nicht von anderen Benutzern nachverfolgung dieser Aktivität haben sollten haben, hinzufügen zu einer Gruppe, die in Azure AD gespeichert ist, und legen Sie diese Gruppe mit der [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) Cmdlet. Wenn Sie dieses Cmdlet ausführen, dürfen Sie nur eine einzelne Gruppe angeben. Allerdings kann die Gruppe verschachtelte Gruppen enthalten. 
+Wenn Sie über Benutzer verfügen, für die diese Aktivität von anderen Benutzern nicht nachverfolgt werden soll, fügen Sie Sie einer in Azure AD gespeicherten Gruppe hinzu, und geben Sie diese Gruppe mit dem Cmdlet [Set-aipservicedonottrackusergroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) an. Wenn Sie dieses Cmdlet ausführen, dürfen Sie nur eine einzelne Gruppe angeben. Allerdings kann die Gruppe verschachtelte Gruppen enthalten. 
 
 Für diese Gruppenmitglieder wird anderen Benutzern keine Aktivität auf der Website für die Dokumentnachverfolgung angezeigt, wenn die Aktivität zu Dokumenten gehört, die für sie freigegeben wurden. Darüber hinaus werden keine E-Mail-Benachrichtigungen an den Benutzer gesendet, der das Dokument freigegeben hat.
 
-Wenn Sie diese Konfiguration verwenden, können alle Benutzer weiterhin die Website für die Dokumentnachverfolgung verwenden und den Zugriff auf die von ihnen geschützten Dokumente widerrufen. Sie werden jedoch keine Aktivitäten von Benutzern einsehen, die Sie mithilfe des Cmdlets Set-AipServiceDoNotTrackUserGroup angegeben haben.
+Wenn Sie diese Konfiguration verwenden, können alle Benutzer weiterhin die Website für die Dokumentnachverfolgung verwenden und den Zugriff auf die von ihnen geschützten Dokumente widerrufen. Es werden jedoch keine Aktivitäten für die Benutzer angezeigt, die Sie mit dem Cmdlet "Set-aipservicedonottrackusergroup" angegeben haben.
 
-Diese Einstellung gilt nur für Endbenutzer. Administratoren für Azure Information Protection können die Aktivitäten aller Benutzer immer nachverfolgen, selbst wenn diese Benutzer angegeben werden, mithilfe von Set-AipServiceDoNotTrackUserGroup. Weitere Informationen dazu, wie Administratoren Dokumente für Benutzer nachverfolgen können, finden Sie im Abschnitt [Nachverfolgen und Sperren von Dokumenten für Benutzer](#tracking-and-revoking-documents-for-users).
+Diese Einstellung gilt nur für Endbenutzer. Administratoren für Azure Information Protection können die Aktivitäten aller Benutzer immer nachverfolgen, auch wenn diese Benutzer mithilfe von "Set-aipservicedonottrackusergroup" angegeben werden. Weitere Informationen dazu, wie Administratoren Dokumente für Benutzer nachverfolgen können, finden Sie im Abschnitt [Nachverfolgen und Sperren von Dokumenten für Benutzer](#tracking-and-revoking-documents-for-users).
 
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>Protokollieren von Informationen aus der Website für die Dokumentnachverfolgung
 
-Sie können die folgenden Cmdlets verwenden, zum Protokollieren von Informationen aus der Website für dokumentnachverfolgung herunterladen:
+Sie können die folgenden Cmdlets verwenden, um Protokollierungs Informationen von der Website für die Dokument Nachverfolgung herunterzuladen:
 
 - [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
@@ -116,7 +118,7 @@ Für die Dokumentnachverfolgung kommen zwei Felder in den Verwendungsprotokollda
 
 Einige der Anforderungstypen protokollieren die Verwendungsweise der Website zur Dokumentnachverfolgung vonseiten der Benutzer und Administratoren. **RevokeAccess** ist beispielsweise der verwendete Anforderungstyp, wenn ein Benutzer oder Administrator im Auftrag eines Benutzers ein Dokument auf der Website zur Dokumentnachverfolgung gesperrt hat. Verwenden Sie diesen Anforderungstyp in Kombination mit dem AdminAction-Feld, um zu ermitteln, ob ein Benutzer sein eigenes Dokument gesperrt hat (AdminAction ist leer) oder ob der Administrator dies im Namen eines Benutzers getan hat (AdminAction ist TRUE).
 
-Weitere Informationen zur nutzungsprotokollierung finden Sie unter [protokollieren und analysieren die Verwendung der Schutz von Azure Information Protection](../log-analyze-usage.md)
+Weitere Informationen zur Verwendungs Protokollierung finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie die Website für die Dokumentenverfolgung für den Azure Information Protection-Client konfiguriert haben, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:

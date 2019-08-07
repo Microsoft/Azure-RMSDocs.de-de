@@ -4,20 +4,20 @@ description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
+ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: c141b70bf775787620761dd93c78a6c4dded7faf
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521127"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808074"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
@@ -89,7 +89,7 @@ Ja, und das Gute ist, dass Benutzer für zwei Exchange-Bereitstellungen E-Mails 
 Nein, Sie behalten immer die Kontrolle über Ihre Daten und können weiterhin darauf zugreifen, selbst wenn Sie sich entscheiden, den Azure Rights Management-Dienst nicht mehr zu verwenden. Weitere Informationen finden Sie unter [Außerbetriebsetzen und Deaktivieren von Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>Kann ich steuern, welche Benutzer Azure RMS verwenden können, um Inhalte zu schützen?
-Ja, der Azure Rights Management-Dienst verfügt für dieses Szenario über Onboarding-Steuerelemente. Weitere Informationen finden Sie unter den [Konfigurieren von onboardingsteuerungsrichtlinien für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Abschnitt der [Aktivieren des schutzdiensts von Azure Information Protection](activate-service.md) Artikel.
+Ja, der Azure Rights Management-Dienst verfügt für dieses Szenario über Onboarding-Steuerelemente. Weitere Informationen finden Sie im Abschnitt [Konfigurieren von Onboarding-Steuerelementen für eine stufenweise Bereitstellung](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) im Artikel [Aktivieren des Schutz dienstanweises in Azure Information Protection](activate-service.md) .
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>Kann ich verhindern, dass Benutzer geschützte Dokumente für bestimmte Organisationen freigeben?
 Einer der größten Vorteile der Verwendung des Azure Rights Management-Diensts für den Schutz von Daten besteht darin, dass er B2B-Zusammenarbeit unterstützt, ohne dass Sie explizite Vertrauensstellungen für jede Partnerorganisation konfigurieren müssen, denn Azure AD übernimmt die Authentifizierung für Sie.
@@ -116,9 +116,9 @@ Beachten Sie, dass Sie erst ihre benutzerdefinierte Vorlage in eine Bezeichnung 
 
 Stattdessen können Sie mithilfe von PowerShell externe Benutzer für benutzerdefinierte Dokumente (und Bezeichnungen) hinzufügen. Für die Konfiguration müssen Sie ein Rechtedefinitionsobjekt zum Aktualisieren Ihrer Vorlage verwenden:
 
-1. Geben Sie die externen e-Mail-Adressen und ihre Rechte in einem rechtedefinitionsobjekt an, mit der [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) Cmdlet, um eine Variable zu erstellen.
+1. Geben Sie die externen e-Mail-Adressen und ihre Rechte in einem Rechte Definitions Objekt an, indem Sie das Cmdlet [New-aipservicerighundefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) verwenden, um eine Variable zu erstellen.
 
-2. Übergeben Sie diese Variable an den RightsDefinition-Parameter mit dem [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet.
+2. Stellen Sie diese Variable mit dem Cmdlet " [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty) " für den rightiondefinition-Parameter bereit.
 
     Wenn Sie Benutzer zu einer vorhanden Vorlage hinzufügen, müssen Sie die Rechtedefinitionsobjekte zusätzlich zu den neuen Benutzern auch für die in der Vorlage vorhanden Benutzer definieren. Bei diesem Szenario hilft Ihnen möglicherweise **Beispiel 3: Hinzufügen von neuen Benutzern und Rechten zu einer benutzerdefinierten Vorlage** im Abschnitt [Beispiele](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) für das Cmdlet.
 
@@ -173,7 +173,7 @@ Als SharePoint-Websiteadministrator aktivieren und konfigurieren Sie IRM für ei
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Gibt es besondere Tipps und Tricks für eine erfolgreiche Bereitstellung?
 
-Nach dem in vielen Bereitstellungen überwachen und das Lauschen auf unsere Kunden, Partner, treten Beratern und Support-Techniker – einer der größten Tipps, denen wir aus übergeben können, auf ein: **Entwerfen Sie einfache Richtlinien, und stellen Sie sie entsprechend bereit**.
+Nachdem Sie viele bereit Stellungen überwacht und unseren Kunden, Partnern, Beratern und Support Technikern zugehört haben – einer der größten Tipps, die wir aus der Umgebung leiten können: **Entwerfen Sie einfache Richtlinien, und stellen Sie sie entsprechend bereit**.
 
 Da Azure Information Protection sichere Freigaben mit praktisch jeder Person unterstützt, können Sie bei der Reichweite des Schutzes Ihrer Daten Ehrgeiz entwickeln. Sie sollten bei der Einschränkung von Nutzungsrechten allerdings konservativ vorgehen. Für die meisten Organisationen hat die Vermeidung von Datenlecks durch eine Zugriffsbeschränkung auf organisationsinterne Personen die größte geschäftliche Bedeutung. Natürlich können Sie Rechte, wenn nötig, viel kleinteiliger festlegen – etwa indem Sie Personen am Drucken, Bearbeiten usw. hindern. Diese Vorgehensweise sollte aber nur bei Dokumenten angewendet werden, die eine hohe Sicherheitsstufe erfordern. Weitreichendere Zugriffsbeschränkungen dürfen weiterhin nicht ad hoc, sondern schrittweise eingeführt werden.
 
@@ -191,13 +191,13 @@ Der Benutzer, der das Dokument geschützt hat, der [Rights Management-Aussteller
 Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandanten beträgt 30 Tage. Diese Einstellung kann nicht von einer restriktiveren Einstellung in einer Bezeichnung oder Vorlage überschrieben werden. Weitere Informationen zur Nutzungslizenz und deren Konfiguration finden Sie in der Dokumentation [Rights Management-Nutzungslizenz](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Kann Rights Management Bildschirmaufnahmen verhindern?
-Rights Management kann durch Verweigerung des [Nutzungsrechts](configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. iOS- und Mac-Geräte erlauben Apps jedoch das Verhindern von Bildschirmaufnahmen nicht. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browsernutzung schließt Outlook im Web und Office Online ein.
+Rights Management kann durch Verweigerung des [Nutzungsrechts](configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. iOS- und Mac-Geräte erlauben Apps jedoch das Verhindern von Bildschirmaufnahmen nicht. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browser Verwendung umfasst Outlook im Web und Office für das Web.
 
-Das Verhindern von Bildschirmaufnahmen kann dabei helfen, versehentliche oder fahrlässige Offenlegung von vertraulichen oder sensiblen Informationen zu vermeiden. Aber es gibt viele Möglichkeiten, die ein Benutzer Daten freigeben können, die auf einem Bildschirm angezeigt wird, und einen Screenshot nur eine Methode ist. Beispielsweise kann ein Benutzer, der die angezeigten Informationen vorsätzlich weitergeben möchte, sie mit der Kamera seines Handys abfotografieren, sie abtippen oder einfach mündlich einer anderen Person mitteilen.
+Das Verhindern von Bildschirmaufnahmen kann dabei helfen, versehentliche oder fahrlässige Offenlegung von vertraulichen oder sensiblen Informationen zu vermeiden. Es gibt jedoch viele Möglichkeiten, wie ein Benutzerdaten freigeben kann, die auf einem Bildschirm angezeigt werden, und ein Screenshot ist nur eine Methode. Beispielsweise kann ein Benutzer, der die angezeigten Informationen vorsätzlich weitergeben möchte, sie mit der Kamera seines Handys abfotografieren, sie abtippen oder einfach mündlich einer anderen Person mitteilen.
 
 Wie diese Beispiele zeigen, kann Technologie selbst dann, wenn alle Plattformen und jegliche Software die Rights Management-APIs unterstützen würden, um Bildschirmaufnahmen zu blockieren, nicht allein Benutzer davon abhalten, Daten offenzulegen, für die dies nicht passieren sollte. Rights Management kann helfen, Ihre wichtigen Daten mithilfe von Autorisierungen und Nutzungsrichtlinien zu schützen, aber Sie sollten diese Lösung für die Rechteverwaltung im Unternehmen durch andere Kontrollmaßnahmen ergänzen. Arbeiten Sie z. B. mit physischen Sicherheitskontrollen, prüfen und überwachen Sie die Mitarbeiter, die zum Zugriff auf Unternehmens- oder Organisationsdaten autorisiert sind, und investieren Sie in Benutzerschulungen, damit die Benutzer verstehen, welche Daten nicht weitergegeben oder geteilt werden dürfen.
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Welcher Unterschied besteht zwischen dem Schützen einer E-Mail mit der Option „Nicht weiterleiten“ und dem Schützen mit einer Vorlage, die die Berechtigung „Weiterleiten“ nicht gewährt?
 
-Trotz ihres Namens und ihrer Darstellung ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“ noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie unter den [nicht weiterleiten-Option für e-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) im Abschnitt [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
+Trotz ihres Namens und ihrer Darstellung ist die Option **Nicht weiterleiten** weder das Gegenteil der Berechtigung „Weiterleiten“ noch eine Vorlage. Es handelt sich vielmehr um eine Reihe von Berechtigungen, die neben dem Beschränken des Weiterleitens von E-Mail-Nachrichten das Kopieren, Drucken und Speichern von Anhängen beschränkt. Die Berechtigungen werden über die ausgewählten Empfänger dynamisch auf Benutzer angewendet, und nicht statisch durch den Administrator zugewiesen. Weitere Informationen finden Sie im Abschnitt "nicht [weiterleiten" für e-Mails](configure-usage-rights.md#do-not-forward-option-for-emails) unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
 

@@ -8,14 +8,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 60debc8e04691dcb977da7d9a8c29bba7ae659ce
-ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
+ms.custom: admin
+ms.openlocfilehash: 3607fc65a1c1c2dc80768b777d98473fd1c6c88c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684658"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790182"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -79,7 +81,7 @@ Das Angeben des Namens der Bezeichnungs Richtlinie für den PowerShell- *Identit
 
 - **Name** ist der ursprüngliche Name der Bezeichnung, der in allen Bezeichnungen eindeutig ist. Wenn Sie den Namen der Bezeichnung nach der Erstellung ändern, bleibt dieser Wert unverändert. Bei Bezeichnungen, die von Azure Information Protection migriert wurden, wird möglicherweise die Bezeichnungs-ID der Bezeichnung aus der Azure-Portal angezeigt.
 
-- Der **Anzeige Name** ist der Name der Bezeichnung, die Benutzern angezeigt wird, und Sie muss in allen Bezeichnungen nicht eindeutig sein. Beispielsweise sehen **Benutzer eine unter** geordnete Bezeichnung für " **vertraulich** " und **eine andere unter** geordnete Bezeichnung für die Bezeichnung " **streng vertraulich** ". Diese untergeordneten Bezeichnungen sehen beide denselben Namen, sind jedoch nicht die gleiche Bezeichnung und haben andere Einstellungen.
+- Der **Anzeige Name** ist der Name der Bezeichnung, die Benutzern angezeigt wird, und Sie muss in allen Bezeichnungen nicht eindeutig sein. Beispielsweise sehen Benutzer eine unter geordnete Bezeichnung für " **vertraulich** " und eine andere untergeordnete Bezeichnung für die Bezeichnung " **streng vertraulich** ". Diese untergeordneten Bezeichnungen sehen beide denselben Namen, sind jedoch nicht die gleiche Bezeichnung und haben andere Einstellungen.
 
 Verwenden Sie zum Konfigurieren der erweiterten Einstellungen für die Bezeichnung den Wert " **Name** ". Um z. b. die Bezeichnung in der folgenden Abbildung zu identifizieren, geben `-Identity "All Company"`Sie Folgendes an:
 
@@ -780,7 +782,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)Bezeichnungs Lösung zu migrieren, z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -892,7 +894,7 @@ Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Public" lautet:
 
 In einer Produktionsumgebung müssen sich Benutzer in der Regel nicht als anderer Benutzer anmelden, wenn Sie den Azure Information Protection Unified-Bezeichnungs Client verwenden. Allerdings müssen Sie sich als Administrator während einer Testphase möglicherweise als anderer Benutzer anmelden. 
 
-Mithilfe des Dialogfelds **Microsoft Azure Information Protection** können Sie prüfen, an welchem Konto Sie derzeit angemeldet sind: Öffnen Sie eine Office-Anwendung, und wählen Sie auf der Registerkarte **Start** **die Schaltfläche** Vertraulichkeit aus, und wählen Sie dann **Hilfe und Feedback**aus. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
+Mithilfe des Dialogfelds **Microsoft Azure Information Protection** können Sie prüfen, an welchem Konto Sie derzeit angemeldet sind: Öffnen Sie eine Office-Anwendung, und wählen Sie auf der Registerkarte **Start** die Schaltfläche Vertraulichkeit aus, und wählen Sie dann **Hilfe und Feedback**aus. Ihr Kontoname wird im Abschnitt **Clientstatus** angezeigt.
 
 Überprüfen Sie auf jeden Fall auch den Domänennamen des angezeigten angemeldeten Kontos. Es lässt sich leicht übersehen, dass Sie mit dem richtigen Kontonamen, aber bei der falschen Domäne angemeldet sind. Ein Symptom der Verwendung des falschen Kontos ist, dass die Bezeichnungen nicht heruntergeladen werden können oder dass die von Ihnen erwarteten Bezeichnungen oder das erwartete Verhalten nicht angezeigt werden.
 

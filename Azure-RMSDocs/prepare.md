@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 9c57385119f8bad8ce6c98c0d3c9bb6cee4c3118
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521905"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793824"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -215,5 +216,5 @@ Wenn Sie sich vergewissert haben, dass Ihre Benutzer und Gruppen mit Azure Infor
 
 - Wenn Ihr Abonnement vor Februar 2018 erworben wurde: Sie müssen den Dienst selbst aktivieren. 
 
-Weitere Informationen, einschließlich der Aktivierungsstatus wird überprüft, finden Sie unter [Aktivieren des schutzdiensts von Azure Information Protection](./activate-service.md).
+Weitere Informationen, einschließlich der Überprüfung des Aktivierungs Status, finden Sie unter [Aktivieren des Schutz Dienstanbieter von Azure Information Protection](./activate-service.md).
 

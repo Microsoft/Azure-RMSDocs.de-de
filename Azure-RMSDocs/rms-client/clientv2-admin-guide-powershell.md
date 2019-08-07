@@ -8,13 +8,15 @@ ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 495a88ee3296fc8d3e075abbd992298b7bae55ea
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.custom: admin
+ms.openlocfilehash: ee514720cf13e819f3d64e77635ae96a26e4d0ed
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141618"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793207"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -179,12 +181,12 @@ Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufge
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Zum Beispiel:
+2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Beispiel:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen `Get-Help <cmdlet name> -online`, geben Sie ein. Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen `Get-Help <cmdlet name> -online`, geben Sie ein. Zum Beispiel: 
 
     Get-Help Set-AIPFileLabel -online
 
