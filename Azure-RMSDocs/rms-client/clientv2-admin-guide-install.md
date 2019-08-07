@@ -1,6 +1,6 @@
 ---
-title: Installieren des einheitlichen Azure Information Protection-Bezeichnung-Clients für Benutzer
-description: Anweisungen und Informationen für Administratoren zum Bereitstellen von Azure Information Protection unified bezeichnungs-Client für Windows in Unternehmensnetzwerken.
+title: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
+description: Anweisungen und Informationen für Administratoren zum Bereitstellen des Azure Information Protection Unified Bezeichnung-Clients für Windows in Unternehmensnetzwerken.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -8,29 +8,31 @@ ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 27399c5955ed66d7c9e5e9d8870b01d52dba6e1d
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: ce175ae67c443cf14f6b265c314c490b7661f638
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521023"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793273"
 ---
-# <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administratorhandbuch: Installieren des einheitlichen Azure Information Protection-Bezeichnung-Clients für Benutzer
+# <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection – einheitliche bezeichnungs-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Überprüfen Sie, dass Computer die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen, vor der Installation des Azure Information Protection unified bezeichnungs-Clients auf Ihr Unternehmensnetzwerk: [Anforderungen für Azure Information Protection](../requirements.md). 
+Überprüfen Sie vor der Installation des Azure Information Protection Unified Bezeichnung-Clients in Ihrem Unternehmensnetzwerk, ob die Computer über die erforderlichen Betriebssystemversionen und Anwendungen für Azure Information Protection verfügen: [Anforderungen für Azure Information Protection](../requirements.md). 
 
-Klicken Sie dann überprüfen Sie die zusätzlichen Voraussetzungen, die für den einheitlichen Bezeichnung Azure Information Protection-Client möglicherweise benötigt werden, wie im nächsten Abschnitt beschrieben. Das Installationsprogramm überprüft nicht alle Voraussetzungen.
+Überprüfen Sie dann die zusätzlichen Voraussetzungen, die möglicherweise für den Azure Information Protection Unified Bezeichnung-Client erforderlich sind, wie im nächsten Abschnitt beschrieben. Das Installationsprogramm überprüft nicht alle Voraussetzungen.
 
-## <a name="additional-prerequisites-for-the-azure-information-protection-unified-labeling-client"></a>Zusätzliche Voraussetzungen für die einheitliche Bezeichnung Azure Information Protection-client
+## <a name="additional-prerequisites-for-the-azure-information-protection-unified-labeling-client"></a>Zusätzliche Voraussetzungen für den Azure Information Protection Unified-Bezeichnungs Client
 
 - Microsoft .NET Framework 4.6.2
     
-    Die vollständige Installation des Azure Information Protection unified bezeichnungs-Clients in der Standardeinstellung erfordert eine Mindestversion von Microsoft .NET Framework 4.6.2 und wenn dies fehlt, versucht der Setup-Assistenten aus des ausführbaren Installationsprogramms zum Herunterladen und installieren Sie diesen erforderliche Komponente. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden. Sie können diese Voraussetzung mit einem [benutzerdefinierten Installationsparameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter) umgehen, wenn Sie den Setup-Assistenten verwenden. Diese Vorgehensweise wird jedoch nicht empfohlen.
+    Die vollständige Installation des Azure Information Protection Unified Bezeichnung-Clients erfordert standardmäßig eine Mindestversion von Microsoft .NET Framework 4.6.2 und wenn dies fehlt, versucht der Setup-Assistent des ausführbaren Installationsprogramms, dieses herunterzuladen und zu installieren. setzung. Wenn diese Voraussetzung im Rahmen der Clientinstallation installiert wird, muss der Computer neu gestartet werden. Sie können diese Voraussetzung mit einem [benutzerdefinierten Installationsparameter](#more-information-about-the-downgradedotnetrequirement-installation-parameter) umgehen, wenn Sie den Setup-Assistenten verwenden. Diese Vorgehensweise wird jedoch nicht empfohlen.
     
     Diese Voraussetzung ist nicht automatisch installiert, wenn Sie den Client im Hintergrund über das ausführbare Installationsprogramm, Windows Update oder Windows Installer installieren. Für diese Szenarios müssen Sie diese Voraussetzung ggf. separat installieren, andernfalls schlägt die Installation fehl. Sie können Microsoft .NET Framework 4.6.2 (Offlineinstaller) aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53344) herunterladen.
 
@@ -49,7 +51,7 @@ Klicken Sie dann überprüfen Sie die zusätzlichen Voraussetzungen, die für de
 
 - Microsoft Online Services-Anmeldeassistent 7.250.4303.0
     
-    Computer, auf denen Office 2010 ausgeführt wird, benötigen Microsoft Online Services-Anmeldeassistent Version 7.250.4303.0. Diese Version ist in der Clientinstallation enthalten. Wenn Sie eine höhere Version des Anmelde-Assistenten haben, deinstallieren Sie es, bevor Sie den Azure Information Protection unified bezeichnungs-Client installieren. Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmeldeassistenten über **Systemsteuerung** > **Programme und Funktionen** > **Programm deinstallieren oder ändern**.
+    Computer, auf denen Office 2010 ausgeführt wird, benötigen Microsoft Online Services-Anmeldeassistent Version 7.250.4303.0. Diese Version ist in der Clientinstallation enthalten. Wenn Sie über eine spätere Version des Anmelde-Assistenten verfügen, deinstallieren Sie diese, bevor Sie den Azure Information Protection Unified Bezeichnung-Client installieren. Überprüfen Sie beispielsweise die Version, und deinstallieren Sie den Anmeldeassistenten über **Systemsteuerung** > **Programme und Funktionen** > **Programm deinstallieren oder ändern**.
 
 - 4482887 KB
     
@@ -65,7 +67,7 @@ Klicken Sie dann überprüfen Sie die zusätzlichen Voraussetzungen, die für de
     
     Installieren Sie bei Computern mit Windows 7 Service Pack 1 **vc_redist.x86.exe** von der folgenden Downloadseite: [Visual C++ Redistributable für Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
     
-    Die Clientinstallation wird diese Voraussetzung nicht überprüft, aber es ist erforderlich, für den einheitlichen Azure Information Protection-Bezeichnung-Client zum Klassifizieren und Schützen von PDF-Dateien.
+    Die Client Installation prüft diese Voraussetzung nicht, Sie ist jedoch für den Azure Information Protection Unified-Bezeichnungs Client erforderlich, um PDF-Dateien zu klassifizieren und zu schützen.
 
 - Konfigurieren der Gruppenrichtlinie, um die Deaktivierung des Azure Information Protection-Add-In zu verhindern
     
@@ -84,10 +86,10 @@ Klicken Sie dann überprüfen Sie die zusätzlichen Voraussetzungen, die für de
         Für PowerPoint: `MSIP.PowerPointAddin`
 
 > [!IMPORTANT]
-> Installation des Azure Information Protection unified bezeichnungs-Clients sind lokale Administratorrechte erforderlich.
+> Für die Installation des Azure Information Protection Unified Bezeichnung-Clients sind lokale Administrator Berechtigungen erforderlich.
 
 
-## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Optionen zum Installieren von Azure Information Protection unified bezeichnungs-Clients für Benutzer
+## <a name="options-to-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Optionen zum Installieren des Azure Information Protection Unified Bezeichnung-Clients für Benutzer
 
 Es gibt zwei Optionen zum Installieren des Clients für Benutzer:
 
@@ -95,17 +97,17 @@ Es gibt zwei Optionen zum Installieren des Clients für Benutzer:
 
 **Windows Installer-Version (MSI) des Clients bereitstellen**: Wird nur für Installationen im Hintergrund unterstützt, die einen zentralen Bereitstellungsmechanismus verwenden, z. B. Gruppenrichtlinien, Configuration Manager und Microsoft Intune. Diese Methode ist für Windows 10-PCs erforderlich, die von Intune und der Verwaltung mobiler Geräte (MDM) verwaltet werden, da bei diesen Computern keine ausführbaren Dateien für die Installation unterstützt werden. Wenn Sie dennoch diese Installationsmethode verwenden, müssen Sie die abhängige Software, die das Installationsprogramm für jeden Computer für die ausführbare Datei ausführen würde, manuell überprüfen und installieren oder deinstallieren. [Anweisungen](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer)
 
-Nach der Azure Information Protection unified bezeichnungs-Client installiert ist, können Sie dieser Client durch Wiederholen der Installationsmethode für das ausgewählte update oder Windows Update zum Verwenden des Clients automatisch aktualisiert. Weitere Informationen zum Upgrade finden Sie im Abschnitt [Upgraden und Verwalten des Azure Information Protection-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
+Nachdem der Azure Information Protection Unified Bezeichnung-Client installiert wurde, können Sie diesen Client aktualisieren, indem Sie die ausgewählte Installationsmethode wiederholen, oder Windows Update verwenden, um den Client automatisch zu aktualisieren. Weitere Informationen zum Upgrade finden Sie im Abschnitt [Upgraden und Verwalten des Azure Information Protection-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
-### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer"></a>Zum Installieren von Azure Information Protection unified bezeichnungs-Client mithilfe des ausführbaren Installationsprogramms
+### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer"></a>So installieren Sie den Azure Information Protection Unified Bezeichnung-Client mithilfe des ausführbaren Installationsprogramms
 
 Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Sie nicht den Microsoft Update-Katalog verwenden oder die MSI-Datei über eine zentrale Bereitstellungsmethode wie Intune bereitstellen.
 
-1. Laden Sie die ausführbare Version des Azure Information Protection unified bezeichnungs-Clients (Dateinamen des AzInfoProtection_UL) aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Laden Sie die ausführbare Version des Azure Information Protection Unified Bezeichnung Client (Dateiname von AzInfoProtection_UL) aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter. 
     
     Wenn eine Vorschauversion verfügbar ist, behalten Sie diese Version nur für Testzwecke. Sie ist nicht für Endbenutzer in einer Produktionsumgebung vorgesehen. 
 
-2. Für eine Standardinstallation einfach die ausführbare Datei ausführen, z. B. **AzInfoProtection_UL.exe**. Führen Sie die ausführbare Datei mit dem Parameter **/help** aus, um zuvor die Installationsoptionen anzuzeigen: `AzInfoProtection_UL.exe /help`
+2. Für eine Standardinstallation führen Sie einfach die ausführbare Datei aus, z. b. **AzInfoProtection_UL. exe**. Führen Sie die ausführbare Datei mit dem Parameter **/help** aus, um zuvor die Installationsoptionen anzuzeigen: `AzInfoProtection_UL.exe /help`
 
     Beispiel zum automatischen Installieren des Clients: `AzInfoProtection_UL.exe /quiet`
     
@@ -123,7 +125,7 @@ Befolgen Sie die nachstehenden Anweisungen zum Installieren des Clients, wenn Si
 
     - Starten Sie den Computer neu, wenn darauf Office 2010 ausgeführt wird. 
         
-        Wenn der Client nicht mit dem Parameter "ServiceLocation" installiert wurde, wenn Sie zuerst eine der Office-Anwendungen öffnen, die den einheitlichen Azure Information Protection-Client (z. B. Word) verwenden, müssen Sie alle aufforderungen, aktualisieren Sie die Registrierung für dieses bestätigen. erstmalige Verwendung. [Dienstermittlung](client-deployment-notes.md#rms-service-discovery) wird verwendet, um die Registrierungsschlüssel aufzufüllen. 
+        Wenn der Client nicht mit dem serviceloationsparameter installiert wurde, müssen Sie beim ersten Öffnen einer der Office-Anwendungen, die den Azure Information Protection Unified Client (z. b. Word) verwenden, alle Eingabe Aufforderungen bestätigen, um die Registrierung für diesen zu aktualisieren. erstmalige Verwendung. [Dienstermittlung](client-deployment-notes.md#rms-service-discovery) wird verwendet, um die Registrierungsschlüssel aufzufüllen. 
     
     - Für andere Versionen von Office starten Sie alle Office-Anwendungen und alle Instanzen des Datei-Explorers neu. 
         
@@ -151,9 +153,9 @@ Verwenden Sie das folgende Verfahren, um den Wert zu identifizieren, den Sie fü
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>So identifizieren Sie die Wert, der für den ServiceLocation-Parameter angegeben wird
 
-1. Für die erste Ausführung in einer PowerShell-Sitzung [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) , und geben Sie Ihre Administratoranmeldeinformationen für die Verbindung mit dem Azure Rights Management-Dienst. Führen Sie dann [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
+1. Führen Sie in einer PowerShell-Sitzung zuerst [Connect-aipservice](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) aus, und geben Sie Ihre Administrator Anmelde Informationen an, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen Führen [Sie dann Get-aipserviceconfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)aus. 
  
-    Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](../install-powershell.md).
+    Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des PowerShell-Moduls für aipservice](../install-powershell.md).
 
 2. Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
@@ -168,23 +170,23 @@ Beispiel zum automatischen Installieren des Clients für Office 2010 und Azure R
 
 #### <a name="more-information-about-the-downgradedotnetrequirement-installation-parameter"></a>Weitere Informationen zum DowngradeDotNetRequirement-Installationsparameter
 
-Unterstützung automatischer Updates mithilfe von Windows Update, und klicken Sie für die zuverlässige Integration in Office-Anwendungen, verwendet der Azure Information Protection unified bezeichnungs-Client Microsoft .NET Framework, Version 4.6.2. Eine interaktive Installation prüft standardmäßig mithilfe ausführbarer Überprüfungen, ob diese Version vorhanden ist, und versucht, sie zu installieren, falls sie nicht vorhanden ist. Die Installation erfordert einen Neustart des Computers.
+Zur Unterstützung automatischer Upgrades mithilfe von Windows Update und zur zuverlässigen Integration in Office-Anwendungen verwendet der Azure Information Protection Unified-Bezeichnungs Client Microsoft .NET Framework-Version 4.6.2. Eine interaktive Installation prüft standardmäßig mithilfe ausführbarer Überprüfungen, ob diese Version vorhanden ist, und versucht, sie zu installieren, falls sie nicht vorhanden ist. Die Installation erfordert einen Neustart des Computers.
 
 Wenn die Installation dieser höheren Version von Microsoft .NET Framework nicht praktikabel ist, können Sie den Client mit dem auf „True“ festgelegten Parameter **DowngradeDotNetRequirement** installieren. Dadurch wird dieses Erfordernis umgangen, wenn Microsoft .NET Framework, Version 4.5.1, installiert ist.
 
 Beispiel: `AzInfoProtection_UL.exe DowngradeDotNetRequirement=True`
 
-Es wird empfohlen, dass Sie diesen Parameter verwenden, mit Vorsicht und mit dem wissen, dass gemeldete Probleme mit Office-Anwendungen, die hängt, wenn der einheitliche Bezeichnung Azure Information Protection-Client mit dieser älteren Version von Microsoft .NET verwendet wird Framework. Wenn Sie Probleme mit nicht mehr reagierenden Anwendungen bemerken, aktualisieren Sie auf die empfohlene Version, bevor Sie andere Problembehandlungslösungen versuchen. 
+Es wird empfohlen, diesen Parameter mit Vorsicht zu verwenden, und mit dem wissen, dass es gemeldete Probleme mit Office-Anwendungen gibt, die hängen, wenn der Azure Information Protection Unified Bezeichnung-Client mit dieser älteren Version von verwendet wird Microsoft .net Framework. Wenn Sie Probleme mit nicht mehr reagierenden Anwendungen bemerken, aktualisieren Sie auf die empfohlene Version, bevor Sie andere Problembehandlungslösungen versuchen. 
 
-Beachten Sie außerdem, dass wenn Sie Windows Update des Azure Information Protection unified bezeichnungs-Clients zu verwenden, müssen Sie einen anderen Mechanismus für die softwarebereitstellung so aktualisieren den Client auf höhere Versionen haben.
+Beachten Sie auch Folgendes: Wenn Sie Windows Update verwenden, um den Azure Information Protection Unified-Bezeichnungs Client zu aktualisieren, benötigen Sie einen anderen Mechanismus für die Software Bereitstellung, um den Client auf spätere Versionen zu aktualisieren.
 
-### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>Zum Installieren von Azure Information Protection unified bezeichnungs-Client mithilfe des MSI-Installers
+### <a name="to-install-the-azure-information-protection-unified-labeling-client-by-using-the-msi-installer"></a>So installieren Sie den Azure Information Protection Unified Bezeichnung-Client mit dem MSI-Installationsprogramm
 
-Verwenden Sie bei zentralen Bereitstellungen folgende Informationen, die spezifisch für die MSI-Installationsversion des Azure Information Protection unified bezeichnungs-Clients ist. 
+Verwenden Sie für die zentrale Bereitstellung die folgenden Informationen, die für die MSI-Installationsversion des Azure Information Protection Unified Bezeichnung-Clients spezifisch sind. 
 
 Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berücksichtigen Sie neben diesen Anweisungen auch die Informationen unter [Hinzufügen von Apps mit Microsoft Intune](/intune/deploy-use/add-apps).
 
-1. Laden Sie die MSI-Version des Azure Information Protection unified bezeichnungs-Clients (AzInfoProtection_UL) aus der [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+1. Laden Sie die MSI-Version des Azure Information Protection Unified-Bezeichnungs Client (AzInfoProtection_UL) aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter. 
     
     Wenn eine Vorschauversion verfügbar ist, behalten Sie diese Version nur für Testzwecke. Sie ist nicht für Endbenutzer in einer Produktionsumgebung vorgesehen.
 
@@ -199,14 +201,14 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|
     |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|„Installieren“ zu klicken.|
     |Office 2010|Windows 7 und Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB 3125574 nicht installiert ist|
-    |Nicht verfügbar|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|„Installieren“ zu klicken.|
-    |Nicht verfügbar|Windows 7|KB2627273 <br /><br /> Im Dateinamen enthaltene Versionsnummer: v4|Deinstallieren|
+    |Nicht verfügbar|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|„Installieren“ zu klicken.|
+    |Nicht verfügbar|Windows 7|KB2627273 <br /><br /> Im Dateinamen enthaltene Versionsnummer: v4|Deinstallieren|
 
 3. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection_UL.msi /quiet`. Allerdings müssen möglicherweise weitere Installationsparameter angegeben werden, die in den [Anweisungen zum ausführbaren Installationsprogramm](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer) dokumentiert sind.  
 
 
 ## <a name="next-steps"></a>Nächste Schritte
-Nun, da Sie den Azure Information Protection unified bezeichnungs-Client installiert haben, finden Sie in der folgenden zusätzlichen Informationen, Sie zur Unterstützung dieses Clients müssen eventuell:
+Nachdem Sie den Azure Information Protection Unified Bezeichnung-Client installiert haben, finden Sie hier weitere Informationen, die Sie möglicherweise zur Unterstützung dieses Clients benötigen:
 
 - [Clientdateien und Nutzungsprotokollierung](clientv2-admin-guide-files-and-logging.md)
 

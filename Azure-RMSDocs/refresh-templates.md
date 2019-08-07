@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5939869dd421899a4b929b262e8a18790debaf5c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: fde0bd0b2a51a8cdef1848d2ffb6b69ff412fa78
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535071"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790253"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -29,7 +31,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |Exchange Online<br /><br />Gilt für Transportregeln und Outlook Web App |Automatische Aktualisierung innerhalb einer Stunde. Weitere Schritte sind nicht erforderlich.<br /><br />Gilt bei Verwendung der [Office 365-Nachrichtenverschlüsselung mit neuen Funktionen](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Wenn Sie bereits Exchange Online für die Verwendung des Azure Rights Management-Diensts konfiguriert haben, indem Sie eine vertrauenswürdige Veröffentlichungsdomäne (TPD) importieren haben, verwenden Sie dieselben Anweisungen, um die neuen Funktionen in Exchange Online zu aktivieren.|
 |Azure Information Protection-Client|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Wenn der Microsoft Azure Information Protection-Überprüfungsdienst gestartet wird und die lokale Richtlinie älter als eine Stunde ist. Zusätzlich sucht der Überprüfungsdienst einmal pro Stunde nach Veränderungen und verwendet diese Änderungen beim nächsten Überprüfungszyklus.<br /><br /> – Alle 24 Stunden.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client aktualisiert.|
 |Azure Information Protection-Client für einheitliche Bezeichnungen|Automatische Aktualisierung alle 4 Stunden, pro Office-App.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client für einheitliche Bezeichnung aktualisiert.|
-|Office 365-Apps, Office 2019, Office 2016 und Office 2013|Automatische Aktualisierung nach einem Zeitplan:<br /><br />- Für diese neueren Versionen von Office: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Um vor dem Zeitplan eine Aktualisierung zu erzwingen, lesen Sie den folgenden Abschnitt: [Office 365-Apps, Office 2019, Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 365-Apps, Office 2019, Office 2016 und Office 2013|Automatische Aktualisierung nach einem Zeitplan:<br /><br />- Für diese neueren Versionen von Office: Das Standard Aktualisierungs Intervall ist alle 7 Tage.<br /><br />Um vor dem Zeitplan eine Aktualisierung zu erzwingen, lesen Sie den folgenden Abschnitt: [Office 365-Apps, Office 2019, Office 2016, Office 2013 und die RMS-Freigabeanwendung für Windows: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten.|
 |Lokales Exchange mit dem Rights Management-Connector<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
 |Office 2019 für Mac und Office 2016 für Mac|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich.|
@@ -38,7 +40,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 
 Beim Herunterladen von Vorlagen (beim ersten Mal oder bei Aktualisierungen mit Änderungen) durch Clientanwendungen müssen Sie voraussichtlich etwa bis zu 15 Minuten warten, bis der Download abgeschlossen ist und die neuen bzw. aktualisierten Vorlagen voll funktionsfähig sind. Die tatsächliche Zeit hängt von Faktoren wie der Größe und Komplexität der Vorlagenkonfiguration und der Netzwerkkonnektivität ab. 
 
-## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 365-Apps, Office 2019, Office 2016 und Office 2013: Gewusst wie: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
+## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 365-Apps, Office 2019, Office 2016 und Office 2013: Erzwingen der Aktualisierung einer geänderten, benutzerdefinierten Vorlage
 Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Office 2019, Office 2016 oder Office 2013 ausgeführt wird, können Sie den automatischen Zeitplan ändern, sodass geänderte Vorlagen auf Computern häufiger als gemäß dem Standardwert aktualisiert werden. Sie können auch eine sofortige Aktualisierung erzwingen, indem Sie die in einem Registrierungswert vorhandenen Daten löschen.
 
 > [!WARNING]
@@ -48,7 +50,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 
 1.  Verwenden Sie einen Registrierungs-Editor, um einen der folgenden Registrierungswerte zu erstellen und festzulegen:
     
-    - Um eine aktualisierungshäufigkeit in Tagen (mindestens 1 Tag) festgelegt:  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequency**, und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
+    - So legen Sie eine Aktualisierungshäufigkeit in Tagen fest (mindestens 1 Tag):  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequency**, und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Tagen angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
 
         **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -56,7 +58,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
 
         **Wert:** TemplateUpdateFrequency
 
-    - So legen eine aktualisierungshäufigkeit in Sekunden (mindestens 1 Sekunde):  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequencyInSeconds**, und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Sekunden angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
+    - So legen Sie eine Aktualisierungshäufigkeit in Sekunden fest (mindestens 1 Sekunde):  Erstellen Sie einen neuen Registrierungswert namens **TemplateUpdateFrequencyInSeconds**, und definieren Sie einen ganzzahligen Wert für die Daten, der die Häufigkeit für das Herunterladen von Änderungen an einer heruntergeladenen Vorlage in Sekunden angibt. Verwenden Sie die folgenden Informationen, um den Registrierungspfad zu finden, um diesen neuen Registrierungswert zu erstellen.
 
         **Registrierungspfad:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -81,7 +83,7 @@ Durch Bearbeiten der Registrierung auf Computern, auf denen Office 365-Apps, Off
    > [!TIP]
    > Im Registrierungspfad bezieht sich <*MicrosoftRMS_FQDN*> auf den FQDN Ihres Microsoft RMS-Diensts. Wenn Sie diesen Wert überprüfen möchten:
    > 
-   > Führen Sie die [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Cmdlet für Azure Information Protection. Wenn Sie das AIPService-PowerShell-Modul bereits installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+   > Führen Sie das Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) für Azure Information Protection aus. Wenn Sie das PowerShell-Modul für aipservice noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des PowerShell-Moduls für aipservice](install-powershell.md).
    > 
    > Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
    > 

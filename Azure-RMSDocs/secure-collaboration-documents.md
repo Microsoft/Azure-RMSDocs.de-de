@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
+ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf6ff8129c7737b782b9ccd004089b99475a9311
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521619"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789691"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -24,7 +26,7 @@ ms.locfileid: "67521619"
 
 Mit Azure Information Protection können Sie Ihre Dokumente schützen, ohne Einbußen bei der Zusammenarbeit für autorisierte Benutzer hinnehmen zu müssen. Die meisten Dokumente, die ein Benutzer erstellt und dann für andere zur Ansicht und Bearbeitung freigibt, sind Office-Dokumente aus Word, Excel und PowerPoint. Diese Dokumente unterstützen nativen Schutz. Das bedeutet, dass zusätzlich zur Autorisierung und Verschlüsselung auch eingeschränkte Berechtigungen für eine präzisere Kontrolle unterstützt werden. 
 
-Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen wie „anzeigen“, „bearbeiten“ und „drucken“. Nutzungsrechte lassen sich beim Schützen eines Dokuments individuell definieren. Alternativ können Sie eine Gruppe von Nutzungsrechten definieren, sogenannte Berechtigungsebenen. Berechtigungsebenen erleichtern die Auswahl von Nutzungsrechten, die in der Regel zusammen verwendet werden, z.B. „Prüfer“ und „Mitautor“. Weitere Informationen zu den Nutzungsrechten und Berechtigungsstufen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
+Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen wie „anzeigen“, „bearbeiten“ und „drucken“. Nutzungsrechte lassen sich beim Schützen eines Dokuments individuell definieren. Alternativ können Sie eine Gruppe von Nutzungsrechten definieren, sogenannte Berechtigungsebenen. Berechtigungsebenen erleichtern die Auswahl von Nutzungsrechten, die in der Regel zusammen verwendet werden, z.B. „Prüfer“ und „Mitautor“. Weitere Informationen zu Nutzungsrechten und Berechtigungsstufen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](configure-usage-rights.md).
 
 Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Benutzer sie gedacht sind:
 
@@ -55,9 +57,9 @@ Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es kei
     
    - Für alle Benutzer in der ersten externen Organisation: Wählen Sie **Geben Sie Details ein** aus, und geben Sie im Mandanten der Organisation den Namen einer Domäne ein. Beispiel: fabrikam.com.
     
-   - Für die Gruppe in der zweiten externe Organisation: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
+   - Für die Gruppe in der zweiten externe Organisation: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispielsweise sales@contoso.com.
     
-   - Für den Benutzer, die nicht über ein Azure AD-Konto verfügt: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. 
+   - Für den Benutzer, die nicht über ein Azure AD-Konto verfügt: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse des Benutzers ein. Beispielsweise bengi.turan@gmail.com. 
 
 4. Gewähren derselben Berechtigungen für alle diese Benutzer: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen.
     
@@ -93,7 +95,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiel:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

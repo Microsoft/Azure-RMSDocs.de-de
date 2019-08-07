@@ -1,6 +1,6 @@
 ---
-title: Bereitstellen der Azure Information Protection-Überprüfung – AIP
-description: Anweisungen zum Installieren, konfigurieren und führen Sie die aktuelle Version der Azure Information Protection-Überprüfung um zu ermitteln, klassifizieren und Schützen von Dateien in Datenspeichern.
+title: Bereitstellen der Azure Information Protection Scanner-aip
+description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktuellen Version des Azure Information Protection Scanners zum ermitteln, klassifizieren und schützen von Dateien in Daten speichern.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -8,14 +8,16 @@ ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 908c1105de93551a0fd7c2cf8a63ac2dc75ed7c8
-ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
+ms.custom: admin
+ms.openlocfilehash: 900b4817006370d319f31883b47f8a2cd46b6080
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648196"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789066"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -26,9 +28,9 @@ ms.locfileid: "67648196"
 > [!NOTE]
 > Dieser Artikel ist für die aktuelle, allgemein verfügbare Version des Azure Information Protection-Scanners bestimmt.
 > 
-> Um einen Allgemein verfügbaren Version des Scanners aktualisieren, die älter sind als 1.48.204.0 ist, finden Sie unter [ein Upgrade des Azure Information Protection-Scanners](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner). Klicken Sie dann können die Anweisungen auf dieser Seite Sie den Schritt, um die Überprüfung installieren auslassen.
+> Informationen zum Upgrade von einer allgemein verfügbaren Version des Scanners, der älter ist als 1.48.204.0, finden Sie unter [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner). Anschließend können Sie die Anweisungen auf dieser Seite verwenden und den Schritt zum Installieren der Überprüfung weglassen.
 > 
-> Wenn Sie nicht zum upgrade von einer früheren Version bereit sind, finden Sie unter [bereitstellen älterer Versionen der Azure Information Protection-Überprüfung zum automatischen klassifizieren und Schützen von Dateien](deploy-aip-scanner-previousversions.md).
+> Wenn Sie nicht bereit sind, ein Upgrade von einer früheren Version durchzuführen, finden Sie weitere Informationen unter Bereitstellen [vorheriger Versionen des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner-previousversions.md).
 
 
 In diesem Artikel erfahren Sie mehr über die Azure Information Protection-Überprüfung und deren erfolgreiche Installation, Konfiguration und Ausführung.
@@ -39,7 +41,7 @@ Diese Überprüfung wird als Dienst unter Windows Server ausgeführt und bietet 
 
 - UNC-Pfade zu Netzwerkfreigaben mit dem Server Message Block (SMB)-Protokoll.
 
-- Standorte und -Bibliotheken für SharePoint Server 2019 über SharePoint Server 2013. SharePoint 2010 wird außerdem für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
+- Websites und Bibliotheken für SharePoint Server 2019 über SharePoint Server 2013. SharePoint 2010 wird außerdem für Kunden unterstützt, die über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
 
 Verwenden Sie zum Überprüfen und Bezeichnen von Dateien auf Cloudrepositorys [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) anstelle des Scanners.
 
@@ -63,14 +65,14 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />– 8 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|WindowsServer 2019, WindowsServer 2016 oder Windows Server 2012 R2. <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br />Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations). Andernfalls stellen Sie sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
-|Dienstkonto zum Ausführen der Überprüfung|Über das Ausführen des Überprüfungsdiensts auf dem Windows-Servercomputer hinaus wird dieses Windows-Konto auch bei Azure AD authentifiziert und lädt die Azure Information Protection-Richtlinie herunter. Dieses Konto muss ein Active Directory-Konto sein und mit Azure AD synchronisiert werden. Wenn Sie dieses Konto aufgrund Ihrer Organisationsrichtlinien nicht synchronisieren können, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Für dieses Dienstkonto gelten die folgenden Anforderungen:<br /><br />- **Lokale Anmeldung** für die Zuweisung von Benutzerrechten. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. Wenn die Gewährung dieser Berechtigung selbst für einen kurzen Zeitraum aufgrund Ihrer Organisationsrichtlinien nicht möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Anmeldung als Dienst** für die Zuweisung von Benutzerrechten. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für die Datenrepositorys: Für Datenrepositorys, die in lokalem SharePoint, gewähren Sie immer die **bearbeiten** Berechtigung Wenn **hinzufügen und Anpassen von Seiten** ausgewählt ist, für den Standort, oder erteilen der **Entwurf** die Berechtigung. Gewähren Sie für andere Datenrepositorys **lesen** und **schreiben** Berechtigungen für die Dateien überprüft, und dann Anwenden von Klassifizierung und Schutz auf die Dateien, die die Bedingungen in den Azure-Informationen zu erfüllen Schutzrichtlinie. Um die Überprüfung im Suchmodus nur für diese anderen Datenrepositorys auszuführen **lesen** genügt.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung stets Zugriff auf geschützte Dateien hat, muss dieses Konto im Azure Rights Management-Dienst ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). Wenn Sie darüber hinaus [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) für eine stufenweise Bereitstellung implementiert haben, stellen Sie sicher, dass dieses Konto in den von Ihnen konfigurierten Onboarding-Steuerelementen enthalten ist.|
+|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />– 8 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|Windows Server 2019, Windows Server 2016 oder Windows Server 2012 R2. <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br />Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations). Andernfalls stellen Sie sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
+|Dienstkonto zum Ausführen der Überprüfung|Über das Ausführen des Überprüfungsdiensts auf dem Windows-Servercomputer hinaus wird dieses Windows-Konto auch bei Azure AD authentifiziert und lädt die Azure Information Protection-Richtlinie herunter. Dieses Konto muss ein Active Directory-Konto sein und mit Azure AD synchronisiert werden. Wenn Sie dieses Konto aufgrund Ihrer Organisationsrichtlinien nicht synchronisieren können, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Für dieses Dienstkonto gelten die folgenden Anforderungen:<br /><br />- **Lokale Anmeldung** für die Zuweisung von Benutzerrechten. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. Wenn die Gewährung dieser Berechtigung selbst für einen kurzen Zeitraum aufgrund Ihrer Organisationsrichtlinien nicht möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Anmeldung als Dienst** für die Zuweisung von Benutzerrechten. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für die Datenrepositorys: Erteilen Sie für Data Repositories auf lokalem SharePoint immer die Berechtigung **Bearbeiten** , wenn für die Website die Seite **Hinzufügen und anpassen** ausgewählt ist, oder erteilen Sie die **Entwurfs** Berechtigung. Erteilen Sie für andere datenpositorys Lese-und **Schreib** Berechtigungen für das Scannen der Dateien, und wenden **Sie** dann die Klassifizierung und den Schutz auf die Dateien an, die die Bedingungen in der Azure Information Protection Richtlinie erfüllen. Die **Lese** Berechtigung ist ausreichend, um die Überprüfung nur für diese anderen Datendepots im Ermittlungs Modus auszuführen.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung stets Zugriff auf geschützte Dateien hat, muss dieses Konto im Azure Rights Management-Dienst ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). Wenn Sie darüber hinaus [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) für eine stufenweise Bereitstellung implementiert haben, stellen Sie sicher, dass dieses Konto in den von Ihnen konfigurierten Onboarding-Steuerelementen enthalten ist.|
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz<br /><br />– Sysadmin-Rolle zum Installieren der Überprüfung|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Vom Azure Information Protection-Scanner werden beim Angeben eines benutzerdefinierten Profilnamens für den Scanner mehrere Konfigurationsdatenbanken auf einer SQL Server-Instanz unterstützt.<br /><br />Wenn Sie den Scanner installieren und Ihr Konto über die Sysadmin-Rolle verfügt, wird während des Installationsprozesses automatisch die Konfigurationsdatenbank des Scanners erstellt und dem Dienstkonto, das den Scanner ausführt, die erforderliche Db_owner-Rolle gewährt. Wenn die Sysadmin-Rolle nicht gewährt wird oder aufgrund der Richtlinien Ihrer Organisation die manuelle Erstellung und Konfiguration von Datenbanken erforderlich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Die Größe der Konfigurationsdatenbank variiert je nach Bereitstellung. Allerdings empfehlen wir, 500 MB je 1.000.000 zu überprüfende Dateien zuzuordnen. |
 |Der Azure Information Protection-Client (klassisch) ist auf dem Windows Server-Computer installiert.|Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Eine Anleitung zum Installieren des Clients finden Sie im [Administratorhandbuch](./rms-client/client-admin-guide.md). Wenn Sie die Überprüfung bereits installiert haben und nun auf eine neuere Version aktualisieren müssen, finden Sie weitere Informationen hierzu unter [Aktualisieren der Azure Information Protection-Überprüfung](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Informationen zum Konfigurieren einer Bezeichnung für Bedingungen und zum Anwenden von Schutz:<br /> - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)<br /> - [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md) <br /><br />Tipp: Sie können die Anweisungen im [Tutorial](infoprotect-quick-start-tutorial.md) verwenden, um den Scanner mit einer Bezeichnung zu testen, mit der in einem vorbereiteten Word-Dokument nach Kreditkartennummern gesucht wird. Sie müssen jedoch die Bezeichnungskonfiguration ändern, sodass die Option **Wählen Sie aus, wie diese Bezeichnung angewendet wird** auf **Automatisch** und nicht auf **als Empfehlung** festgelegt wird. Entfernen Sie anschließend die Bezeichnung vom Dokument (sofern angewendet), und kopieren Sie die Datei in ein Datenrepository für den Scanner. Bei einem schnellen Test kann dies ein lokaler Ordner auf dem Computer mit dem Scanner sein.<br /><br /> Zwar können Sie die Überprüfung auch dann ausführen, wenn Sie über keine konfigurierten Bezeichnungen verfügen, die die automatische Klassifizierung anwenden, dieses Szenario wird in der vorliegenden Anleitung jedoch nicht behandelt. [Weitere Informationen](#using-the-scanner-with-alternative-configurations)|
-|Für SharePoint-Websites und -Bibliotheken, die überprüft werden sollen:<br /><br />- SharePoint 2019<br /><br />– SharePoint 2016<br /><br />– SharePoint 2013<br /><br />– SharePoint 2010|Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.<br /><br />Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Manage large lists and libraries in SharePoint (Verwalten von großen Listen und Bibliotheken in SharePoint)](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
+|Für SharePoint-Websites und -Bibliotheken, die überprüft werden sollen:<br /><br />-SharePoint 2019<br /><br />– SharePoint 2016<br /><br />– SharePoint 2013<br /><br />– SharePoint 2010|Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.<br /><br />Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Manage large lists and libraries in SharePoint (Verwalten von großen Listen und Bibliotheken in SharePoint)](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |Für zu scannende Office-Dokumente:<br /><br />-97-2003-Dateiformate und die offene Office-XML-Formate für Word, Excel und PowerPoint|Weitere Informationen zu den Dateitypen, die vom Scanner für diese Dateiformate unterstützt werden, finden Sie unter [Vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md).|
-|Für lange Pfade:<br /><br />– höchstens 260 Zeichen, es sei denn, der Scanner ist unter Windows 2016 installiert und der Computer ist für die Unterstützung von langen Pfaden konfiguriert|Windows 10 und Windows Server 2016 unterstützen Pfade, die mehr als 260 Zeichen umfassen, mit der folgenden [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Lokale Computerrichtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** > **alle Einstellungen**  >  **Ermöglichen Win32 lange Pfade**<br /><br /> Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
+|Für lange Pfade:<br /><br />– höchstens 260 Zeichen, es sei denn, der Scanner ist unter Windows 2016 installiert und der Computer ist für die Unterstützung von langen Pfaden konfiguriert|Windows 10 und Windows Server 2016 unterstützen Pfade, die mehr als 260 Zeichen umfassen, mit der folgenden [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Lokale Computer Richtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** **alle Einstellungen**Aktivieren von**Win32 Long-Pfaden**  >  > <br /><br /> Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 Wenn Sie nicht alle Anforderungen in der Tabelle erfüllen können, da sie aufgrund der Richtlinien Ihrer Organisation nicht zulässig sind, finden Sie im nächsten Abschnitt Alternativen.
 
@@ -167,7 +169,7 @@ Erstellen Sie vor dem Installieren des Scanners bzw. vor dem Upgraden des Scanne
 
 6. Nachdem Sie das Profil erstellt und gespeichert haben, können Sie zur Option **Repositorys konfigurieren** zurückkehren, um die Datenspeicher anzugeben, die überprüft werden sollen. Sie können lokale Ordner, UNC-Pfade und SharePoint Server-URLs für lokale SharePoint-Standorte und -Bibliotheken angeben. 
     
-    2019 für SharePoint-Server, SharePoint Server 2016 und SharePoint Server 2013 werden für SharePoint unterstützt. Ferner wird SharePoint Server 2010 unterstützt, wenn Sie über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
+    SharePoint Server 2019, SharePoint Server 2016 und SharePoint Server 2013 werden für SharePoint unterstützt. Ferner wird SharePoint Server 2010 unterstützt, wenn Sie über [erweiterten Support für diese Version von SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) verfügen.
     
     Zum Hinzufügen des ersten Datenspeichers wählen Sie auf dem Blatt **Neues Profil hinzufügen** die Option **Repositorys konfigurieren** aus, um das Blatt **Repositorys** zu öffnen:
     
@@ -298,7 +300,7 @@ Wenn Sie für das automatische Bezeichnen der Dateien, die die Überprüfung suc
 
 Wenn Sie diese Anweisungen befolgen, wird der Scanner einmal und nur im Modus für die Berichterstellung ausgeführt. Wenn Sie diese Einstellungen ändern möchten, bearbeiten Sie das Scannerprofil:
 
-1. Auf der **Azure Information Protection - Profile** Blatt wählen Sie das Profil Scanner, um sie zu bearbeiten.
+1. Wählen Sie auf dem Blatt **Azure Information Protection profile** das Überprüfungs Profil aus, um es zu bearbeiten.
 
 2. Ändern Sie auf dem Blatt „\<**Profilname**>“ die folgenden beiden Einstellungen, und klicken Sie dann auf **Speichern**:
     
@@ -380,7 +382,7 @@ Um das Standardverhalten der Überprüfung zum Schutz von Dateien zu ändern, be
 
 - Die Überprüfung hat ein eigenes Standardverhalten: Standardmäßig werden nur die Office-Dateiformate und PDF-Dokumente geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
 
-- Wenn Sie das gleiche Verhalten der Standard-Schutz wie der Azure Information Protection-Client möchten, in denen automatisch alle Dateien mit nativem oder allgemeinem Schutz geschützt sind: Geben Sie die `*` Platzhalter als Registrierungsschlüssel, `Encryption` als Wert (REG_SZ), und `Default` als Wert.
+- Wenn Sie das gleiche Standardschutz Verhalten wie für den Azure Information Protection-Client wünschen, wobei alle Dateien automatisch durch systemeigenen oder generischen Schutz geschützt werden: Geben Sie `*` den Platzhalter als Registrierungsschlüssel `Encryption` , als Wert (REG_SZ) und `Default` als Wertdaten an.
 
 Wenn Sie die Registrierung bearbeiten, erstellen Sie manuell die beiden Schlüssel **MSIPC** und **FileProtection**, falls noch nicht vorhanden, sowie einen Schlüssel für jede Erweiterung.
 
@@ -443,7 +445,7 @@ Für die Überprüfung stehen Ihnen zwei alternative Szenarios zur Verfügung, d
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
-Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Ist die Priorität auf die Reaktionsfähigkeit der überprüfende Computer anstatt auf die überprüfungsleistung auswirken, Sie können jedoch eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) beschränken die Anzahl der Threads, die durch die Überprüfung verwendet.
+Nutzen Sie den folgenden Leitfaden, um die Leistung der Überprüfung zu optimieren. Wenn Sie jedoch die Reaktionsfähigkeit des Überprüfungs Computers anstelle der Überprüfungs Leistung haben, können Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) verwenden, um die Anzahl der Threads einzuschränken, die von der Überprüfung verwendet werden.
 
 So maximieren Sie die Überprüfungsleistung:
 
@@ -489,7 +491,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Dateien selbst:
     
-    - Mit Ausnahme von Excel-Dateien werden die Office-Dateien schneller überprüfen als PDF-Dateien.
+    - Mit Ausnahme von Excel-Dateien werden Office-Dateien schneller gescannt als PDF-Dateien.
     
     - Ungeschützte Dateien sind schneller zu überprüfen als geschützte Dateien.
     
@@ -497,13 +499,13 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Darüber hinaus gilt:
     
-    - Vergewissern Sie sich, dass das Dienstkonto, die die Überprüfung ausgeführt wird nur die Rechte finden Sie unter der [Scanner Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) aus, und konfigurieren Sie die [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) mit niedriger Integrität deaktivieren die Ebene für die Überprüfung.
+    - Vergewissern Sie sich, dass das Dienst Konto, unter dem die Überprüfung ausgeführt wird, nur über die im Abschnitt Überprüfungs [Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) beschriebenen Rechte verfügt, und konfigurieren Sie dann die Einstellung erweiterter [Client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) , um die Ebene mit niedriger Integrität für den Scanner zu deaktivieren
     
     - Die Überprüfung wird schneller ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der eine Standardbezeichnung auf alle Dateien angewendet wird, ohne dass die Dateiinhalte überprüft werden.
     
     - Die Überprüfung wird langsamer ausgeführt, wenn Sie die [alternative Konfiguration](#using-the-scanner-with-alternative-configurations) verwenden, bei der alle benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen identifiziert werden.
     
-    - Können Sie den Scanner Timeouts mit verringern [erweiterte Clienteinstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) für eine bessere Überprüfung Raten und geringere arbeitsspeicherauslastung, jedoch mit der Bestätigung, dass einige Dateien übersprungen werden können.
+    - Sie können die Überprüfungs Timeouts mit [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) verringern, um die Scan Raten zu verbessern und den Speicherverbrauch zu verringern, aber mit der Bestätigung, dass einige Dateien übersprungen werden.
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Auflisten der Cmdlets für die Überprüfung
 
@@ -511,13 +513,13 @@ Da der Scanner jetzt über das Azure-Portal konfiguriert wird, sind Cmdlets von 
 
 Zu den verbleibenden Cmdlets gehören diejenigen, mit denen der Scanner installiert und upgegradet werden kann und die Konfigurationsdatenbank und das Profil des Scanners sowie der Grad der lokalen Berichterstellung geändert und Konfigurationseinstellungen für einen nicht verbundenen Computer importiert werden können. 
 
-Die vollständige Liste von Cmdlets, die die aktuelle Version des Scanners unterstützt: 
+Die vollständige Liste der Cmdlets, die von der aktuellen Version des Scanners unterstützt werden: 
 
 - [Get-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Get-AIPScannerConfiguration)
 
 - [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
 
-- [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
+- [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration)
 
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 

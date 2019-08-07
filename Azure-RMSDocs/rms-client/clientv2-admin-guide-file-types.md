@@ -8,13 +8,15 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: a0da6a6390089c7d399ec4c2140feead3c015aa5
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.custom: admin
+ms.openlocfilehash: ef2b68b531b39a83f88ee9f8f37a64955950f00d
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141631"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789936"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen
 

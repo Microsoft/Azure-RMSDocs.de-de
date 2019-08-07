@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
+ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3266448b019b1cd9d9aadf4a4297877bd31d6aaa
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: e922ba01dfb358868a85be5631a962d3d7fd1ad1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521525"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793294"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -56,7 +58,7 @@ Voraussetzungen für diese Anweisungen:
     
 - Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     
-- Dieses Szenario unterstützt keine abteilungsvorlagen, daher müssen Sie entweder eine Vorlage, die nicht konfiguriert ist für einen Bereich, oder verwenden Sie die [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet und die *EnableInLegacyApps*Parameter.
+- Dieses Szenario unterstützt keine Abteilungs Vorlagen, sodass Sie entweder eine Vorlage verwenden müssen, die nicht für einen Bereich konfiguriert ist, oder Sie verwenden das Cmdlet " [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty) " und den Parameter " *enableinlegacyapps* ".
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Anweisungen zum Konfigurieren der Ressourcen-Manager für Dateiserver-FCI für den Azure Rights Management-Schutz
 Folgen Sie diesen Anweisungen, um mithilfe eines PowerShell-Skripts als benutzerdefinierte Aufgabe alle Dateien in einem Ordner zu schützen. Führen Sie diese Verfahren in folgender Reihenfolge aus:
@@ -146,7 +148,7 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
         -   **Name**: Geben Sie **Für RMS klassifizieren** ein.
 
-        -   **Aktiviert**: Behalten Sie den Standardwert, d. h., dass dieses Kontrollkästchen aktiviert ist.
+        -   **Aktiviert**: Behalten Sie die Standardeinstellung bei, d. h., dieses Kontrollkästchen ist ausgewählt.
 
         -   **Beschreibung**: Geben Sie **Alle Dateien im Ordner &lt;Ordnername&gt; für Rights Management klassifizieren** ein.
 
@@ -176,7 +178,7 @@ Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausfüh
 
     -   **Fortlaufende Klassifizierung für neue Dateien zulassen**: Aktivieren Sie dieses Kontrollkästchen, damit neue Dateien klassifiziert werden.
 
-    -   Optional: Stellen Sie alle anderen Änderungen, die Sie z. B. das Konfigurieren von Optionen für Berichte und Benachrichtigungen können.
+    -   Optional: Nehmen Sie andere Änderungen vor, z. b. das Konfigurieren von Optionen für Berichte und Benachrichtigungen.
 
 Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie eine Verwaltungsaufgabe zum Anwenden des RMS-Schutzes auf die Dateien konfigurieren.
 
@@ -194,7 +196,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
-        -   **Bereich**: Wählen Sie Ihren Ordner. Beispiel: **C:\FileShare**.
+        -   **Bereich**: Wählen Sie den ausgewählten Ordner aus. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 

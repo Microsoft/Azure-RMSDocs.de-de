@@ -1,6 +1,6 @@
 ---
-title: Gewusst-wie-Anleitungen für häufige Szenarien für Azure Information Protection
-description: Identifizieren Sie die Anwendungsfälle, die Daten klassifizieren und Schützen Ihrer Organisation mithilfe von Azure Information Protection.
+title: Anleitungen für Azure Information Protection gängige Szenarien
+description: Identifizieren Sie Anwendungsfälle, in denen die Daten Ihrer Organisation mithilfe Azure Information Protection klassifiziert und geschützt werden.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -10,12 +10,13 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d69462640857e4e19583a9583fae65adc7df7281
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: 1a7662b0262e2c46e3b88861a967287070a5a1ed
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156443"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794083"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird
 
@@ -29,7 +30,7 @@ Die erfolgreichsten Bereitstellungen sind diejenigen, bei denen spezielle Anwend
 
 ## <a name="common-scenarios"></a>Häufige Szenarien
 
-|Szenario: Ziel ...|Anweisungen|
+|En Ziel ...|Anweisungen|
 |----------------|---------------|
 |Nach vertraulichen Informationen suchen, die meine Organisation lokal speichert|[Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien](quickstart-findsensitiveinfo.md)|
 |Es Benutzern einfacher machen, E-Mails, die vertrauliche Informationen enthalten, zu schützen|[Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten](quickstart-label-dnf-protectedemail.md)|
@@ -42,7 +43,7 @@ Die erfolgreichsten Bereitstellungen sind diejenigen, bei denen spezielle Anwend
 
 ## <a name="additional-deployment-instructions"></a>Zusätzliche Anweisungen zur Bereitstellung
 
-Unsere [technisches Blog zu Azure Information Protection](https://aka.ms/AIPblog) enthält weitere Anleitungen aus der Praxis.
+Unser [Azure Information Protection Technical Blog](https://aka.ms/AIPblog) enthält zusätzliche Anleitungen aus den Gräben.
 
 Zum Beispiel eine Methodik mit bewährten Methoden für Entscheidungsträger und IT-Implementierer:
 
@@ -50,13 +51,13 @@ Zum Beispiel eine Methodik mit bewährten Methoden für Entscheidungsträger und
 
 Schrittweise Anleitungen:
 
-- [Erstellen Sie detailliertere Berichte mit Daten von Microsoft Information Protection und Azure AD-Anmeldung](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
+- [Erstellen Sie umfangreichere Berichte mit Microsoft Information Protection und Azure AD Anmeldedaten](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 
-- [Nutzen Sie Microsoft Cloud App Security Anwenden von Azure Information Protection-Bezeichnungen in der cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
+- [Nutzen Sie Microsoft Cloud App Security, um Azure Information Protection Bezeichnungen in der Cloud anzuwenden.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
 
-- [Wie "Cloud Exit" Vorbereiten der Azure Information Protection planen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
+- [Vorbereiten eines Azure Information Protection "Cloud Exit"-Plans](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
 
-- [Mandantenübergreifende Bezeichnung-Visualisierung](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
+- [Mandanten übergreifende Bezeichnungs Visualisierung](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
 
 - [Mithilfe von Azure Information Protection zum Schutz des PDF-Datei und Adobe Acrobat Reader, um sie anzuzeigen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
 

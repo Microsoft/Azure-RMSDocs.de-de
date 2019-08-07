@@ -13,12 +13,13 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ec7e59cec6afe2eb4012c17bb520daa03feebd81
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: ef2e1755c6a86984227b09c95020a26a976a2c52
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180536"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791663"
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Konfigurieren Ihrer App für die ADAL-Authentifizierung
 
@@ -95,7 +96,7 @@ Nach der Registrierung für Microsoft Azure:
 
 ![Klicken des Häkchens](../media/choosecheck01.png)
 
-- Nun können Sie Ihrer Anwendung für Azure RMS eine Abhängigkeit hinzufügen. Wählen Sie zum Hinzufügen der Abhängigkeit den neuen Eintrag **Microsoft Rights Management Services** unter **Berechtigungen für andere Anwendungen** aus, und aktivieren Sie das Kontrollkästchen **Create and access protected content for users** (Geschützten Inhalt für Benutzer erstellen und darauf zugreifen) in der Dropdownliste bei **Delegierte Berechtigungen:**.
+- Nun können Sie Ihrer Anwendung für Azure RMS eine Abhängigkeit hinzufügen. Wählen Sie zum Hinzufügen der Abhängigkeit den neuen Eintrag **Microsoft Rights Management Services** unter **Berechtigungen für andere Anwendungen** aus, und aktivieren Sie das Kontrollkästchen **Create and access protected content for users** (Geschützten Inhalt für Benutzer erstellen und darauf zugreifen) in der Dropdownliste bei **Delegierte Berechtigungen:** .
 
 ![Einrichten von Berechtigungen](../media/AddDependency.png)
 

@@ -13,12 +13,13 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e3bce5ec86f8c655ca6f37a108f007d50387c2d2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179469"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792667"
 ---
 # <a name="android-setup"></a>Android-Setup
 
@@ -26,7 +27,7 @@ Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den i
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
--   [Voraussetzungen](#prerequisites)
+-   [Erforderliche Komponenten](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)

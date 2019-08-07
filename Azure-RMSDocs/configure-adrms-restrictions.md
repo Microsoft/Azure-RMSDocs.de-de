@@ -9,12 +9,14 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 6ba22afad4ef9e1e8fc5da98efdff965dd6b3dfa
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.subservice: hyok
+ms.custom: admin
+ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182142"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789572"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -183,11 +185,11 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 
-Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)**-Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
+Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)** -Schutz konfigurieren, müssen Sie die Lizenzierungs-URL Ihres AD RMS-Clusters angeben. Zusätzlich müssen Sie entweder eine Vorlage angeben, die Sie für die Berechtigungen konfiguriert haben, die Benutzern erteilt werden, oder Sie lassen die Benutzer die Berechtigungen und Benutzer definieren. 
 
 Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die Konsole von Active Directory Rights Management Services suchen:
 
-- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Suchen der Lizenzierungs-URL: Klicken Sie auf den Namen des Clusters. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
     

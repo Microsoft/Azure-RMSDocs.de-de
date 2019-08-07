@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521973"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793901"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -173,7 +175,7 @@ Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzuge
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn der RMS-Verbindungsdienst zum Schützen und Nutzen von Inhalten verwendet wird, enthält das Feld „Benutzer-ID“ in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**. Dieser Name wird automatisch für den RMS-Connector erstellt.
 
-Weitere Informationen zur nutzungsprotokollierung finden Sie unter [protokollieren und analysieren die Verwendung der Schutz von Azure Information Protection](log-analyze-usage.md).
+Weitere Informationen zur Verwendungs Protokollierung finden Sie unter [protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection](log-analyze-usage.md).
 
 Wenn zu Diagnosezwecken eine detailliertere Protokollierung erforderlich ist, können Sie [Debugview](https://go.microsoft.com/fwlink/?LinkID=309277) von Windows Sysinternals verwenden. Aktivieren Sie die Ablaufverfolgung für den RMS-Connector, indem Sie die Datei „Web.config“ für die Standardwebsite in IIS ändern:
 

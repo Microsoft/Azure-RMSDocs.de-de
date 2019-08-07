@@ -11,18 +11,19 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f738f990e6a4c2f79e4eede12431c1afe15803cd
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: admin
+ms.openlocfilehash: 18a0d65d2ec2feeca7901bdfa4c843f2a359956a
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428561"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789302"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Zum Beispiel:
+Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Beispiel:
 
 - Die Standardbezeichnung **Allgemein** bietet keinen Schutz. Für E-Mails mit dieser Bezeichnung, die extern versendet werden, wenden Sie die zusätzliche Schutzaktion „Nicht weiterleiten“ an.
 

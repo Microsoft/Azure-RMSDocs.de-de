@@ -4,19 +4,20 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.custom: admin
+ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305704"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808047"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -30,7 +31,7 @@ Absolvieren Sie unser [Tutorial: Bearbeiten der Azure Information Protection-Ric
 
 Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind. Die aktuelle Version hat einige Einschränkungen, einschließlich der Folgenden:
 
-- Keine Bezeichnungsoption in Office-Web-Apps (Office Online)
+- Keine Bezeichnungs Möglichkeit in den Office-Web-Apps (Office für das Web).
 
 - Keine Klassifizierungs- und Bezeichnungsintegration mit Exchange Online oder SharePoint Online.
 
@@ -43,15 +44,15 @@ Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://t
 
 Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https://msip.uservoice.com/) für Azure Information Protection über die Anforderungen ab.
 
-## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Der Client werden für neue Testfunktionen installiert?
+## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Welchen Client installiere ich zum Testen neuer Funktionen?
 
-Es gibt derzeit zwei Clients für Windows: 
+Derzeit gibt es zwei Clients für Windows: 
 
-- Die **Azure Information Protection – einheitliche bezeichnungs Client** downloads, die Bezeichnungen und Einstellungen für eines der folgenden Admin Center: Office 365 Security & Compliance Center, Microsoft 365-Security-Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und hat eine Preview-Version Sie zusätzliche Funktionen für eine spätere Version zu testen.
+- Der **Azure Information Protection Unified** Label-Client, der Bezeichnungen und Richtlinien Einstellungen von einem der folgenden Admin Center herunterlädt: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und verfügt über eine Vorschauversion, in der Sie zusätzliche Funktionen für eine zukünftige Version testen können.
 
-- Die **Azure Information Protection-Client (klassisch)** , die Bezeichnungen und Einstellungen im Azure-Portal heruntergeladen. Dieser Client basiert auf Vorgängerversionen der allgemeinen Verfügbarkeit des Clients.
+- Der **Azure Information Protection-Client (klassisch)** , der Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunterlädt. Dieser Client baut auf früheren Versionen der allgemeinen Verfügbarkeit des Clients auf.
 
-Es wird empfohlen, dass Sie mit dem einheitlichen bezeichnungs-Client testen, wenn die aktuellen Features und Funktionalität Ihrer geschäftlichen Anforderungen zu erfüllen. Falls nicht, oder wenn Sie Bezeichnungen im Azure-Portal konfiguriert haben, die Sie noch nicht getan haben [beim einheitlichen bezeichnungs Store migriert](configure-policy-migrate-labels.md), verwenden Sie die klassische Client.
+Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten](configure-policy-migrate-labels.md)Bezeichnungs Speicher migriert haben, verwenden Sie den klassischen Client.
 
 Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 

@@ -4,18 +4,20 @@ description: Migrieren Sie Azure Information Protection-Bezeichnungen zu Office 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 161f87363a6e398465a1ee67068e6f36b2f3919f
-ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
+ms.custom: admin
+ms.openlocfilehash: 4a00d85ea5669a5a81a7380796888edff939e310
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684619"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791748"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen zu Office 365-Vertraulichkeitsbezeichnungen
 
@@ -176,6 +178,8 @@ Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste
 - Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
+
+Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie im folgenden Blogbeitrag: Grundlegendes zur [vereinheitlichten Bezeichnung Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
 
 Weitere Informationen zu Ihren migrierten Bezeichnungen, die nun in einem der Admin-Centers konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeitsbezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
 

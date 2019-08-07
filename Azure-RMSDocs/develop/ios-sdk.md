@@ -13,12 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 392bfa5e76bd0e07212fd47042b514a243a652dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178719"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791439"
 ---
 # <a name="ios-and-os-x-setup"></a>iOS- und OS X-Setup
 
@@ -26,10 +27,10 @@ iOS- und OS X-Anwendungen können das Microsoft Rights Management SDK 4.2 verwen
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
-**Hinweis:**   Diese SDK bietet keine Unterstützung für iPod Touch.
+**Hinweis:**    Diese SDK bietet keine Unterstützung für iPod Touch.
 
 
--   [Voraussetzungen](#prerequisites)
+-   [Erforderliche Komponenten](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
@@ -73,7 +74,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
     ![Legen Sie einen Speicherort fest](../media/ios-add-dependencies-01a.png)
 
--   Aktivieren Sie das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
+-   Aktivieren Sie das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)** .
 
     Auf diese Weise bleibt der Verweis auf den SDK-Installationsordner erhalten, anstatt eine Kopie zu erstellen.
 
@@ -83,7 +84,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
     ![Hinzufügen einer Ressourcengruppe](../media/iOS-add-resource-bundle-02a.png)
 
--   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)**.
+-   Aktivieren Sie wie beim Kopieren des Frameworks das Optionsfeld **Create groups for any added folders**, und deaktivieren Sie das Kontrollkästchen **Copy items into destination group's folder (if needed)** .
 -   Das SDK basiert auf anderen Frameworks, z. B.: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** und **Security**. Um diese Frameworks hinzuzufügen, wechseln Sie zum Abschnitt **Linked Frameworks and Libraries** des Zielbereichs **Zusammenfassung**. Erweitern Sie diesen Abschnitt, um die Frameworks hinzuzufügen.
 
     Die Frameworks **UIKit** und **Foundation** sind erforderlich und in der Regel standardmäßig vorhanden.

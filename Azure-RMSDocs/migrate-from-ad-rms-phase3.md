@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: eb9cfbe808e20f3b65a2d964e4f776f02b4b5ce8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522098"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793953"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -62,7 +64,7 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     |-----------|-----------|  
     |**Domäne**|_tcp.rmscluster.contoso.com|  
     |**Dienst**|_rmsredir|  
-    |**Protocol**|_http|  
+    |**Spezifische**|_http|  
     |**Priority**|0|  
     |**Gewichtung**|0|  
     |**Portnummer**|80|  

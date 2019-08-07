@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 064cf6db8551caa12bb06540fd598f70f02e6c0d
-ms.sourcegitcommit: bdaf9809fcf78602ec7675c04f97ad5d3cc47b44
+ms.custom: admin
+ms.openlocfilehash: ced4865d5a0549e5ae9883f239966bd30fef8ffe
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66748351"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793972"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
@@ -60,9 +62,9 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
 ### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Deaktivieren von IRM auf Exchange Servern und Entfernen der AD RMS-Konfiguration
 
 > [!IMPORTANT]
-> Wenn Sie noch keine IRM auf einem der Exchange-Server konfiguriert haben, führen Sie einfach die Schritte 2 und 6.
+> Wenn Sie für einen Ihrer Exchange-Server noch nicht "IRiM" konfiguriert haben, führen Sie nur die Schritte 2 und 6 aus.
 > 
-> Führen Sie alle diese Schritte aus, wenn alle lizenzierungs-URLs Ihrer AD RMS-Cluster nicht, in angezeigt werden der *LicensingLocation* Parameter beim Ausführen von [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+> Führen Sie diese Schritte aus, wenn alle Lizenzierungs-URLs für alle Ihre AD RMS Cluster nicht im *licensingloation* -Parameter angezeigt werden, wenn Sie [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)ausführen.
 
 1. Suchen Sie auf jedem Exchange Server den folgenden Ordner, und löschen Sie alle Einträge in diesem Ordner: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
@@ -75,7 +77,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
         $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
     
-    Wenn Sie jetzt ausführen [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), sollte alle Ihre Lizenzierung, URLs und Ihre Azure Rights Management-Dienst-URL angezeigt, die für AD RMS-Cluster die *LicensingLocation* Parameter.
+    Wenn Sie " [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps)" ausführen, sehen Sie nun alle Ihre URL für die AD RMS-Cluster Lizenzierung und die URL Ihres Azure Rights Management-Dienstanbieter für den Parameter " *licensingloation* ".
 
 3.  Deaktivieren Sie nun die IRM-Funktionen für Nachrichten, die an interne Empfänger gesendet werden:
 

@@ -13,12 +13,13 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181037"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792090"
 ---
 # <a name="windows-phone-setup"></a>Windows Phone-Setup
 
@@ -27,7 +28,7 @@ Windows Phone-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
--   [Voraussetzungen](#prerequisites)
+-   [Erforderliche Komponenten](#prerequisites)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 

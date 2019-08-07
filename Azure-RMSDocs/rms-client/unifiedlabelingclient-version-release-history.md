@@ -4,18 +4,20 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f60d75655e24e7888ae45111d2b3538a8a12c288
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.custom: admin
+ms.openlocfilehash: 565b9d061bf148d0b1e6e2ef2ea45eb93c6cb6ec
+ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411693"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820706"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -50,9 +52,21 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Clients](use-client.md#compare-the-clients).
 
+## <a name="version-22190"></a>Version 2.2.19.0
+
+**Veröffentlicht**: 08/06/2019
+
+**Fixes**
+
+- Der Client kann seine Richtlinie herunterladen und die aktuellen Vertraulichkeits Bezeichnungen anzeigen. Diese Korrektur ist nach dem Upgrade von einer früheren Version erforderlich, und Sie haben keine benutzerdefinierten Informationstypen in Ihrem Beschriftungs Center konfiguriert.
+
+- Allgemeine Verbesserungen der Leistung und Stabilität.
+
 ## <a name="version-22140"></a>Version 2.2.14.0
 
 **Veröffentlicht**: 07/15/2019
+
+Unterstützt durch 04/06/2020
 
 **Neue Funktionen:**
 

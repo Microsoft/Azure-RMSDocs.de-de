@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 637ed02bab2adedd4a224f67e3cf50bfbdf95dbe
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 32805aca55871b502671dec0eec47970d1148a8a
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520932"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793649"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Administratorhandbuch: Installieren des Azure Information Protection-Clients für Benutzer
 
@@ -154,13 +156,13 @@ Verwenden Sie das folgende Verfahren, um den Wert zu identifizieren, den Sie fü
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>So identifizieren Sie die Wert, der für den ServiceLocation-Parameter angegeben wird
 
-1. Für die erste Ausführung in einer PowerShell-Sitzung [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) , und geben Sie Ihre Administratoranmeldeinformationen für die Verbindung mit dem Azure Rights Management-Dienst. Führen Sie dann [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
+1. Führen Sie in einer PowerShell-Sitzung zuerst [Connect-aipservice](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) aus, und geben Sie Ihre Administrator Anmelde Informationen an, um eine Verbindung mit dem Azure Rights Management-Dienst herzustellen Führen [Sie dann Get-aipserviceconfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration)aus. 
  
-    Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](../install-powershell.md).
+    Wenn Sie das PowerShell-Modul für den Azure Rights Management-Dienst noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des PowerShell-Moduls für aipservice](../install-powershell.md).
 
 2. Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
-    Zum Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. Entfernen Sie im Wert den Text **/_wmcs/licensing** aus der Zeichenfolge. Beispiel: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -203,8 +205,8 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
     |Office 2010|Windows 8.1 und Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB2843630 oder KB2919355 nicht installiert sind.|
     |Office 2010|Windows 8 und Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|„Installieren“ zu klicken.|
     |Office 2010|Windows 7 und Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Im Dateinamen enthaltene Versionsnummer: v3|Installieren Sie diese, wenn KB 3125574 nicht installiert ist|
-    |Nicht verfügbar|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|„Installieren“ zu klicken.|
-    |Nicht verfügbar|Windows 7|KB2627273 <br /><br /> Im Dateinamen enthaltene Versionsnummer: v4|Deinstallieren|
+    |Nicht verfügbar|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|„Installieren“ zu klicken.|
+    |Nicht verfügbar|Windows 7|KB2627273 <br /><br /> Im Dateinamen enthaltene Versionsnummer: v4|Deinstallieren|
 
 3. Führen Sie die MSI-Datei bei einer Standardinstallation mit **/quiet** aus, z.B. `AzInfoProtection.msi /quiet`. Allerdings müssen möglicherweise weitere Installationsparameter angegeben werden, die in den [Anweisungen zum ausführbaren Installationsprogramm](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) dokumentiert sind.  
 
@@ -213,7 +215,7 @@ Wenn Sie Intune als Bereitstellungsmethode für Ihre Software verwenden, berück
 
 Das im Azure Information Protection-Client enthaltene PowerShell-Modul verfügt über Cmdlets für das Installieren und Konfigurieren der Überprüfung. Um jedoch die Überprüfung verwenden zu können, müssen Sie die Vollversion des Clients installieren. Das PowerShell-Modul alleine reicht nicht aus.
 
-Um den Client für die Überprüfung zu installieren, befolgen Sie die Anleitungen in den vorangehenden Abschnitten. Sie können konfigurieren, und klicken Sie dann die Überprüfung installieren. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md).
+Um den Client für die Überprüfung zu installieren, befolgen Sie die Anleitungen in den vorangehenden Abschnitten. Anschließend können Sie den Scanner konfigurieren und dann installieren. Eine Anleitung hierzu finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](../deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie den Azure Information Protection-Client installiert haben, helfen Ihnen die folgenden zusätzlichen Informationen möglicherweise bei der Unterstützung dieses Clients:

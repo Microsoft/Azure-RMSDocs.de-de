@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522074"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793921"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -48,19 +50,19 @@ Nachdem Sie die Bereitstellung Ihrer AD RMS-Server aufgehoben haben, können Sie
 >[!IMPORTANT]
 > Am Ende dieser Migration können Ihre AD RMS-Cluster nicht mit Azure Information Protection und der HYOK-Option (Hold Your Own Key) verwendet werden. Wenn Sie sich dazu entscheiden, HYOK für die Azure Information Protection-Bezeichnung aufgrund der nun festliegenden Umleitungen zu verwenden, muss der AD RMS-Cluster, den Sie verwenden, über unterschiedliche Lizenzierungs-URLs für die in den Clustern verfügen, die Sie migriert haben.
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Konfiguration für Computer, auf denen Office 2010 ausführen
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Zusätzliche Konfiguration für Computer, auf denen Office 2010 ausgeführt wird
 
-Wenn Clients führen Office 2010 migriert haben, können Benutzer auftreten, Verzögerungen, öffnen Sie geschützten Inhalte nach unserem AD RMS-Server aufgehoben werden. Oder Benutzer möglicherweise Meldungen an, dass sie über keine die Anmeldeinformationen verfügen für die geschützte Inhalte zu öffnen. Um diese Probleme zu beheben, erstellen Sie eine netzwerkumleitung für diese Computer, die den AD RMS-URL-FQDN an die lokale IP-Adresse des Computers (127.0.0.1) umgeleitet. Sie erreichen dies durch Konfigurieren der lokalen Hostdatei auf jedem Computer oder mithilfe von DNS.
+Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzögerungen beim Öffnen geschützter Inhalte kommen, wenn die Bereitstellung der AD RMS Server aufgehoben wird. Oder Benutzer sehen möglicherweise Nachrichten, dass Sie nicht über Anmelde Informationen zum Öffnen geschützter Inhalte verfügen. Um diese Probleme zu beheben, erstellen Sie eine Netzwerk Umleitung für diese Computer, die den AD RMS URL-FQDN an die lokale IP-Adresse des Computers (127.0.0.1) umleitet. Hierzu können Sie die lokale Hosts-Datei auf jedem Computer oder mithilfe von DNS konfigurieren.
 
-Umleitung über die lokale Hosts-Datei:
+Umleitung über lokale Hostdatei:
 
-- Fügen Sie die folgende Zeile in die lokale Hosts-Datei, und Ersetzen Sie dabei `<AD RMS URL FQDN>` mit dem Wert für Ihre AD RMS-Cluster ohne Präfixe oder Webseiten:
+- Fügen Sie die folgende Zeile in die Datei "local Hosts `<AD RMS URL FQDN>` " ein, und ersetzen Sie dabei durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
     
         127.0.0.1 <AD RMS URL FQDN>
 
 Umleitung über DNS:
     
-- Erstellen Sie einen neuen Host (A)-Eintrag für Ihre AD RMS-URL-FQDN, mit der IP-Adresse 127.0.0.1.
+- Erstellen Sie einen neuen Host (a)-Datensatz für den AD RMS URL-voll qualifizierten Namen, der die IP-Adresse 127.0.0.1 aufweist.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11: Durchführen der Clientmigrationstasks
 
@@ -114,9 +116,9 @@ Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlage
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
-Dieser Schritt ist erforderlich, wenn die Migration abgeschlossen ist, wenn Ihre AD RMS-Bereitstellung RMS-Kryptografiemodus 1 verwendet hat, da dieser Modus, ein 1024-Bit-Schlüssel und SHA-1 verwendet. Diese Konfiguration gilt eine unzureichende Maß an Schutz bieten. Microsoft unterstützen nicht, die Verwendung von niedrigeren Schlüssellängen wie z. B. 1024-Bit-RSA-Schlüssel und die zugehörigen Verwendung von Protokollen, die nicht ausreichend Schutzebenen, z. B. SHA-1 zu bieten.
+Dieser Schritt ist nach Abschluss der Migration erforderlich, wenn Ihre AD RMS Bereitstellung den RMS-Kryptografiemodus 1 verwendet hat, da dieser Modus einen 1024-Bit-Schlüssel und SHA-1 verwendet. Diese Konfiguration wird als unzureichender Schutzgrad angesehen. Microsoft unterstützt nicht die Verwendung niedrigerer Schlüssellängen wie z. b. 1024-Bit-RSA-Schlüssel und die damit verbundene Verwendung von Protokollen, die unzureichende Schutz Ebenen bieten, z. b. SHA-1.
 
-Erstellen neuer Schlüssel führt zu Schutz, die RMS-Kryptografiemodus 2 verwendet, führt das ein 2048-Bit-Schlüssel und SHA-256. 
+Die erneute Schlüssel Erstellung führt zu Schutz, der den RMS-Kryptografiemodus 2 verwendet. Dies führt zu einem 2048-Bit-Schlüssel und SHA-256. 
 
 Auch wenn Ihre AD RMS-Bereitstellung den Kryptografiemodus 2 verwendet hat, wird dieser Schritt empfohlen, da ein neuer Schlüssel dabei hilft, Ihren Mandanten vor potenziellen Sicherheitsverletzungen Ihres AD RMS-Schlüssels zu schützen.
 
@@ -126,11 +128,11 @@ Der Übergang von einem Schlüssel zum anderen geschieht nicht sofort, sondern �
 
 So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) , und geben Sie den Schlüsselbezeichner für den Schlüssel, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert an, indem Sie Ausführung identifizieren die [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Cmdlet. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
+- **Wenn Ihr RMS-Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Ihnen (BYOK) verwaltet wird**: Klicken Sie in Azure Key Vault, wiederholen Sie die schlüsselerstellungsvorgang für Ihren Azure Information Protection-Mandanten, und führen Sie die [verwenden-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) Cmdlet erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
+- **Wenn Ihr RMS-Mandantenschlüssel von Ihnen (BYOK) verwaltet wird**: Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](./operations-tenant-key.md).
 

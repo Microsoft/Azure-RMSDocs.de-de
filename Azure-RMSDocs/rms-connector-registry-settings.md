@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: f24931cbc3a3f91928a6d7190b5e028e6b474202
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535054"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789586"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Registrierungseinstellung für den Rights Management-Verbindungsdienst
 
@@ -29,11 +31,11 @@ Anleitungen für den Fall, dass Sie diese Einstellungen verwenden:
 
 -   *\<IhreMandantenURL>* ist Ihre Azure Rights Management-Dienst-URL für Ihren Azure Rights Management-Mandanten. So finden Sie diesen Wert
 
-    1.  Führen Sie die [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) Cmdlet für den Azure Rights Management-Dienst. Wenn Sie das Modul AIPService noch nicht installiert haben, finden Sie unter [AIPService PowerShell-Modul installieren](install-powershell.md).
+    1.  Führen Sie das Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) für den Azure Rights Management-Dienst aus. Wenn Sie das aipservice-Modul noch nicht installiert haben, finden Sie weitere Informationen unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).
 
     2.  Identifizieren Sie in der Ausgabe den **LicensingIntranetDistributionPointUrl** -Wert.
 
-        Zum Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Beispiel: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  Entfernen Sie im Wert den Text **/_wmcs/licensing** aus der Zeichenfolge. Die Zeichenfolge, die übrig bleibt, ist Ihre Azure Rights Management-Dienst-URL In unserem Beispiel wäre die Azure Rights Management-Dienst-URL der folgende Wert:
 

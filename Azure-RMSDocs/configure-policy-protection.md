@@ -4,17 +4,19 @@ description: Beim Konfigurieren einer Bezeichnung zur Verwendung von Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: b29b56664bad205a6c23d092aca7b233ebe9d3d0
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520431"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807914"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -43,7 +45,7 @@ Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionswei
 > [!IMPORTANT]
 > Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren des Schutzdiensts von Azure Information Protection](activate-service.md).
 
-Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office Online, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
+Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office für das Web, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
 
 Exchange muss für Azure Information Protection nicht konfiguriert werden, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn für Azure Information Protection Exchange konfiguriert wird. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, derartige E-Mails können nicht für die Suche indiziert werden, und Sie können für Exchange Online DLP nicht den Rights Management-Schutz konfigurieren. In den folgenden Artikeln erhalten Sie Informationen, mit denen Sie sicherstellen können, dass Exchange diese zusätzlichen Szenarios unterstützt:
 
