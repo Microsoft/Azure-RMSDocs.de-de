@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/30/2019
+ms.date: 08/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f783daea65e29ba33d2395208994e9f6b92d7b2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793787"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862740"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -118,7 +118,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann unabhängig von Azure Information Protection von Benutzern eingesehen werden, die über Zugriffsrechte für diesen Arbeitsbereich verfügen. Details hierzu finden Sie im Abschnitt [Erforderliche Berechtigungen für Azure Information Protection-Analysen](#permissions-required-for-azure-information-protection-analytics). Informationen zum Verwalten des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten des Zugriffs auf den Log Analytics-Arbeitsbereich mit Azure-Berechtigungen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions).
 
-Um zu verhindern, dass Azure Information Protection-Clients diese Daten senden, stellen Sie die [Richtlinieneinstellung](configure-policy-settings.md) von **Überwachungsdaten an Azure Information Protection-Protokollanalyse senden** auf **Aus**:
+Um zu verhindern, dass Azure Information Protection Clients diese Daten senden (klassisch), legen Sie die [Richtlinien Einstellung](configure-policy-settings.md) Überwachungs **Daten senden auf Azure Information Protection Log Analytics** auf **aus**fest:
 
 - Die meisten Benutzer können diese Daten senden, und eine Teilmenge von Benutzern kann keine Überwachungsdaten senden: 
     - Stellen Sie **Überwachungsdaten an Azure Information Protection-Protokollanalyse senden** in einer bereichsbezogenen Richtlinie für die Teilmenge an Benutzern auf **Aus**. Diese Konfiguration ist typisch für Produktionsszenarien.
@@ -128,7 +128,11 @@ Um zu verhindern, dass Azure Information Protection-Clients diese Daten senden, 
 
 #### <a name="content-matches-for-deeper-analysis"></a>Inhaltsübereinstimmungen für umfassendere Analysen 
 
-Ihr Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Sammeln und Speichern der Daten, die durch die vertraulichen Datentypen oder Ihre individuellen Bedingungen identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, deaktivieren Sie das Kontrollkästchen. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden und eine Teilmenge von Benutzern sie nicht senden kann, aktivieren Sie das Kontrollkästchen und konfigurieren Sie eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer bereichsbezogenen Richtlinie für die Teilmenge von Benutzern.
+Ihr Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Sammeln und Speichern der Daten, die durch die vertraulichen Datentypen oder Ihre individuellen Bedingungen identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, aktivieren Sie das Kontrollkästchen **tiefer gehende Analysen in Ihre sensiblen Daten aktivieren**. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden, und eine Teilmenge der Benutzer Sie nicht senden kann, aktivieren Sie das Kontrollkästchen und dann Folgendes:
+
+- Für den klassischen Client: Konfigurieren Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer.
+
+- Für den Unified-Bezeichnungs Client: Konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bezeichnungs Richtlinie für die Teilmenge der Benutzer.
 
 Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
 
@@ -138,7 +142,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
-|Azure Information Protection Clients|Sowohl der Unified Bezeichnung-Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. <br /><br /> Stellen Sie sicher, dass Sie über die neueste Version verfügen, um [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection Analytics zu unterstützen.|
+|Azure Information Protection Clients|Sowohl der Unified-Bezeichnungs Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. <br /><br /> Stellen Sie sicher, dass Sie über die neueste Version verfügen, um [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection Analytics zu unterstützen.|
 |Microsoft Cloud App Security |Um Informationen aus Microsoft Cloud App Security anzuzeigen, konfigurieren Sie [Azure Information Protection-Integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Für den Bericht **Ermittlung und Risiko**: <br /><br />-Zum Anzeigen von Daten aus lokalen Daten speichern haben Sie mindestens eine Instanz des Azure Information Protection Scanners bereitgestellt. <br /><br />-Zum Anzeigen von Daten von Windows 10-Computern müssen Sie ein minimaler Build von 1809 sein. Sie verwenden Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), und Sie haben das Azure Information Protection-Integrations Feature von Microsoft aktiviert. Defender-Security Center|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Informationen zum Konfigurieren und Verwenden des Azure Information Protection-Integrations Features von Microsoft Defender Security Center finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Für den Bericht **Empfehlungen**: <br /><br />-Wenn Sie ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzufügen möchten, müssen Sie eine Version des Azure Information Protection Scanners verwenden, die im konfiguriert ist Azure-Portal |Informationen zum Bereitstellen des Scanners finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).|
@@ -192,16 +196,16 @@ Eine typische Rollenzuordnung für viele Organisationen ist jedoch die Azure AD-
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funktionen, für die eine Mindestversion des Clients erforderlich ist
 
-Sie können die Versions Verlaufs Informationen für den [Azure Information Protection Unified](./rms-client/unifiedlabelingclient-version-release-history.md) -Bezeichnungs Client und den [Azure Information Protection-Client (klassisch)](./rms-client/client-version-release-history.md) verwenden, um zu bestätigen, ob Ihre Version des Clients die gesamte Zentrale Berichterstellung unterstützt. Aspekte. Die Mindestversionen für die Clients:
+Die Azure Information Protection Clients unterstützen die grundlegende Überwachung (Bezeichnungs Verwendung) und Endpunkt Ermittlung (Identifizierung von sensiblen Informationstypen).
 
-Für den Azure Information Protection Unified Bezeichnung-Client:
+Azure Information Protection-Client für einheitliche Bezeichnungen:
 
-- Unterstützung für Überwachung und Endpunkt Ermittlung: Version 2.0.778.0
+- Unterstützung für die grundlegende Überwachung und Endpunkt Ermittlung: Mindestversion von 2.0.778.0
 
-Für den Azure Information Protection-Client (klassisch):
+Azure Information Protection-Client (klassisch):
 
-- Unterstützung für die Überwachung: Version 1.41.51.0
-- Unterstützung für die Endpunkt Ermittlung: Version 1.48.204.0
+- Unterstützung für die grundlegende Überwachung: Mindestversion von 1.41.51.0
+- Unterstützung für die Endpunkt Ermittlung: Mindestversion von 1.48.204.0
 
 ### <a name="storage-requirements-and-data-retention"></a>Speicheranforderungen und Daten Aufbewahrung
 

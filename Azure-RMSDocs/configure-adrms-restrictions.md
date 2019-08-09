@@ -4,19 +4,19 @@ description: Übersicht über den HYOK-Schutz (AD RMS) mit Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789572"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862707"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
@@ -87,7 +87,7 @@ In der folgenden Tabelle werden die unterstützten Szenarios für den Schutz von
 |Android|Office Mobile <br /><br />Outlook|Schutz: Nein<br /><br />Verbrauch: Nein|
 |Android|Azure Information Protection-Viewer|Schutz: Nicht verfügbar<br /><br />Verbrauch: Ja|
 |Web|Outlook im Web|Schutz: Nein<br /><br />Verbrauch: Nein|
-|Web|Office Online<br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Nein|
+|Web|Office für das Web<br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Nein|
 |Universell|Universelle Office-Apps<br /><br />Word, Excel, PowerPoint|Schutz: Nein<br /><br />Verbrauch: Nein|
 
 
@@ -189,7 +189,7 @@ Wenn Sie eine Bezeichnung für den **HYOK (AD RMS)** -Schutz konfigurieren, müs
 
 Sie können die Vorlagen-GUID und die Werte für die Lizenzierungs-URL über die Konsole von Active Directory Rights Management Services suchen:
 
-- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Suchen einer Vorlagen-GUID: Erweitern Sie den Cluster, und klicken Sie auf **Vorlagen für Benutzerrechterichtlinien**. Sie können aus der Information **Verteilte Vorlagen für Benutzerrechterichtlinien** dann die GUID der Vorlage kopieren, die Sie verwenden möchten. Zum Beispiel: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Suchen der Lizenzierungs-URL: Klicken Sie auf den Namen des Clusters. Kopieren Sie aus der Information **Clusterdetails** den Wert **Lizenzierung** minus der Zeichenfolge **/_wmcs/licensing**. Beispiel: https://rmscluster.contoso.com 
     
