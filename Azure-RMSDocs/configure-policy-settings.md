@@ -4,19 +4,19 @@ description: Konfigurieren Sie die Einstellungen in der Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 24eb4e6fcea22bc4b367e8bb37ce2e99080dc528
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e119c13a37732aad5aab04a0975e4a437aa78a0b
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792515"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948622"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
 
@@ -48,7 +48,7 @@ So konfigurieren Sie diese Einstellungen:
     
     - **Senden Sie Überwachungsdaten an Azure Information Protection-Analysen**: Bevor Sie einen Azure Log Analytics-Arbeitsbereich für [Azure Information Protection-Analysen](reports-aip.md) erstellen, zeigen die Werte für diese Einstellung **Aus** und **Nicht konfiguriert** an. Wenn Sie den Arbeitsbereich erstellen, ändern sich die Werte auf **Aus** und **Ein**.
         
-        Wenn die Einstellung **Ein** ist, senden Endpunkte, die die zentrale Berichterstellung unterstützen, ihre Überwachungsdaten an den Azure Information Protection-Dienst. Weitere Informationen darüber, welche Informationen gesendet und gespeichert werden, finden Sie im Abschnitt [Gesammelte und an Microsoft gesendete Informationen](reports-aip.md#information-collected-and-sent-to-microsoft). Setzen Sie diese Option auf **Aus**, um zu verhindern, dass diese Daten gesendet werden.
+        Wenn die Einstellung **auf on**festgelegt ist, senden Clients, die Central Reporting unterstützen, Daten an den Azure Information Protection-Dienst. Diese Informationen umfassen, welche Bezeichnungen angewendet werden und wann ein Benutzer eine Bezeichnung mit einer niedrigeren Klassifizierung auswählt oder eine Bezeichnung entfernt. Weitere Informationen zu den gesendeten und gespeicherten Informationen finden Sie im Abschnitt [Informationen zu den gesammelten und an Microsoft gesendeten](reports-aip.md#information-collected-and-sent-to-microsoft) Informationen in der Dokumentation zu Central Reporting. Legen Sie diese Richtlinien Einstellung auf **Off** fest, um zu verhindern, dass diese Daten gesendet werden.
     
     - **Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**: Bei Festlegung dieser Option auf **On** (Ein) muss auf alle gespeicherten Dokumente und gesendeten E-Mails eine Bezeichnung angewendet werden. Die Bezeichnung kann manuell von einem Benutzer, automatisch als Ergebnis einer erfüllten [Bedingung](configure-policy-classification.md) oder standardmäßig (durch Festlegung der Option **Select the default label** [Standardbezeichnung auswählen]) zugewiesen werden.
         

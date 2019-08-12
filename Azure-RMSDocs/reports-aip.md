@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 08/08/2019
+ms.date: 08/11/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862740"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948641"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -126,11 +126,13 @@ Um zu verhindern, dass Azure Information Protection Clients diese Daten senden (
 - So kann nur eine Teilmenge an Benutzern Überwachungsdaten senden: 
     - Stellen Sie **Überwachungsdaten an Azure Information Protection-Protokollanalyse senden** in einer globalen Richtlinie auf **Aus**  und in einer bereichsbezogenen Richtlinie für die Teilmenge an Benutzern auf **Ein**. Diese Konfiguration ist typisch für Testszenarien.
 
+Um zu verhindern, dass Azure Information Protection Unified Clients diese Daten senden, konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)für die Bezeichnung "Bezeichnung".
+
 #### <a name="content-matches-for-deeper-analysis"></a>Inhaltsübereinstimmungen für umfassendere Analysen 
 
 Ihr Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Sammeln und Speichern der Daten, die durch die vertraulichen Datentypen oder Ihre individuellen Bedingungen identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, aktivieren Sie das Kontrollkästchen **tiefer gehende Analysen in Ihre sensiblen Daten aktivieren**. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden, und eine Teilmenge der Benutzer Sie nicht senden kann, aktivieren Sie das Kontrollkästchen und dann Folgendes:
 
-- Für den klassischen Client: Konfigurieren Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer.
+- Für den klassischen Client und Scanner: Konfigurieren Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer.
 
 - Für den Unified-Bezeichnungs Client: Konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bezeichnungs Richtlinie für die Teilmenge der Benutzer.
 

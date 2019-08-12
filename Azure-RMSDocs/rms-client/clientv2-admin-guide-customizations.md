@@ -3,7 +3,7 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3607fc65a1c1c2dc80768b777d98473fd1c6c88c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8957bd019beb3af99ca1794118f42aaa2994d9f6
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790182"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948666"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -31,7 +31,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -119,6 +119,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |Attachmentaction|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |Attachmentaktiontip|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |Disablemandatoryinoutlook|[Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling)
+|EnableAudit|[Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
 |EnableCustomPermissions|[Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -633,12 +634,28 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
+## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Der Azure Information Protection Unified Bezeichnung-Client unterstützt die Zentrale Berichterstellung und sendet seine Überwachungsdaten standardmäßig an [Azure Information Protection Analytics](../reports-aip.md). Weitere Informationen zu den gesendeten und gespeicherten Informationen finden Sie im Abschnitt [Informationen zu den gesammelten und an Microsoft gesendeten](../reports-aip.md#information-collected-and-sent-to-microsoft) Informationen aus der Dokumentation zu Central Reporting.
+
+Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom Unified Label-Client gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
+
+- Key: **EnableAudit**
+
+- Wert: **False**
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
+
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Mit [Azure Information Protection Analytics](../reports-aip.md) können von Azure Information Protection Clients gespeicherte Dokumente ermittelt und berichtet werden, wenn dieser Inhalt vertrauliche Informationen enthält. Standardmäßig werden diese Informationen vom Azure Information Protection Unified-Bezeichnungs Client an Azure Information Protection Analytics gesendet.
+[Azure Information Protection Analytics](../reports-aip.md) können von Azure Information Protection Clients gespeicherte Dokumente melden, wenn dieser Inhalt vertrauliche Informationen enthält. Das Bereitstellen der Einstellung " [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced" ist nicht auf " **false**" festgelegt. Standardmäßig werden diese Informationen vom Azure Information Protection Unified-Bezeichnungs Client an Azure Information Protection Analytics gesendet.
 
 Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom Unified Label-Client gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
@@ -648,7 +665,7 @@ Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom Unified La
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, werden die Überwachungsergebnisse weiterhin vom Unified Label-Client gesendet. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Zum Beispiel:
+Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -782,7 +799,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Beispiel:
+Zum Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)Bezeichnungs Lösung zu migrieren, z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
