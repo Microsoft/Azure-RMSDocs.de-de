@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bb9dbea01c501ef7fa8e0639ae9416c4f0f4045e
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 1bf26b600c5ea1ad4d1065b503ea25685fad0a0e
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862721"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978731"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie
 
@@ -120,20 +120,21 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     - Kennwort für Azure-Veröffentlichungseinstellungen
     - Schlüssel für Azure Storage-Konto (allgemein)
 
+- Unterstützung der Endpunkt Ermittlung für [Azure Information Protection Analytics](../reports-aip.md), um vertrauliche Informationen zu melden, die beim ersten Speichern eines Office-Dokuments (mithilfe von Desktop-Apps für Word, Excel und PowerPoint) gefunden wurden:
+    - Um diese Informationen zu ermitteln, müssen die Dokumente nicht beschriftet werden.
+    - Vertrauliche Informationen werden durch vordefinierte und benutzerdefinierte Informationstypen identifiziert.
+    - Wenn Sie nicht möchten, dass die Typen der sensiblen Informationen an Azure Information Protection Analytics gesendet werden, können Sie die Endpunkt Ermittlung mit einer [erweiterten Client Einstellung](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)deaktivieren.
+
 - Neue erweiterte Clienteinstellungen, die Popupmeldungen in Outlook implementieren, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben. [Weitere Informationen](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
     
     Beachten Sie Folgendes: Wenn Sie die Eigenschaft "Erweiterter Client" von "outlookcollaborationtreuddomains" für die Vorschauversion konfiguriert haben, wird diese Einstellung nun durch drei neue Einstellungen ersetzt, sodass Domänen pro Aktion ausgenommen werden können: "Outlookwarntreuhänddomains", "outlookjustifytreuhänddomains" und "outlookblocktreuhänddomains".
 
 - Wenn Sie Dateien mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. [Weitere Informationen](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
 
+- Eine neue erweiterte Client Einstellung für [Azure Information Protection Analytics](../reports-aip.md), um das Senden von Informationstypen Übereinstimmungen für eine Teilmenge von Benutzern zu verhindern, wenn Sie das Kontrollkästchen im Azure-Portal aktiviert haben, das eine tiefere Analyse Ihrer sensiblen Daten ermöglicht. Diese Einstellung gilt für den Client und den Scanner. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+
 - Neue erweiterte Clienteinstellung, die nur angewendet wird, wenn Sie die Richtlinieneinstellung so konfigurieren, dass keine benutzerdefinierten Berechtigungen angezeigt werden: Wenn es eine Datei gibt, die mit benutzerdefinierten Berechtigungen geschützt wurde, blenden Sie die Option „Benutzerdefinierte Berechtigungen“ im Dateiexplorer ein, sodass Benutzer diese sehen und ändern können (wenn diese die Berechtigungen haben, um Schutzeinstellungen ändern zu können). [Weitere Informationen](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
-- Endpunkt Ermittlung für [Azure Information Protection Analytics](../reports-aip.md).
-    
-- Zwei neue erweiterte Client Einstellungen für Analytics für die folgenden Szenarien:
-    
-    - Verhindert das Senden von Übereinstimmungen zwischen Informationstypen für eine Teilmenge von Benutzern, wenn Sie das Kontrollkästchen zum Sammeln von Übereinstimmungen zwischen Inhalten im Azure-Portal aktiviert haben. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-    - Zeigen Sie für den **Daten** Ermittlungsbericht an, ob die Dateien vertrauliche Informationen enthalten. [Weitere Informationen](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
 
 **Fixes**:
 
@@ -190,7 +191,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
     
     Wenn Sie möchten, dass der Client zum Schutz von PDF-Dateien mit der .ppdf-Erweiterung zurückkehrt, verwenden Sie die gleiche [erweiterte Clienteinstellung](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), aber geben Sie **False** an.
 
-- Überwachen der Daten Unterstützung für [Central Reporting](../reports-aip.md) mithilfe von Azure Information Protection Analytics, angekündigt auf der Microsoft Ignite 2018.
+- Überwachen der Daten Unterstützung für die [zentrale Bericht](../reports-aip.md) Erstellung mithilfe von Azure Information Protection Analytics. Diese Informationen umfassen die Verwendung der Bezeichnung, mit der Sie überwachen können, wie ihre Bezeichnungen verwendet werden, und den Benutzer Zugriff auf Dokumente und e-Mails.
 
 - Excel unterstützt jetzt auch [optische Kennzeichnungen](../configure-policy-markings.md) in unterschiedlichen Farben.
 

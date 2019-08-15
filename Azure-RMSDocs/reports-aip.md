@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 08/11/2019
+ms.date: 08/13/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
-ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
+ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68948641"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978666"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -130,7 +130,7 @@ Um zu verhindern, dass Azure Information Protection Unified Clients diese Daten 
 
 #### <a name="content-matches-for-deeper-analysis"></a>Inhaltsübereinstimmungen für umfassendere Analysen 
 
-Ihr Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Sammeln und Speichern der Daten, die durch die vertraulichen Datentypen oder Ihre individuellen Bedingungen identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, aktivieren Sie das Kontrollkästchen **tiefer gehende Analysen in Ihre sensiblen Daten aktivieren**. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden, und eine Teilmenge der Benutzer Sie nicht senden kann, aktivieren Sie das Kontrollkästchen und dann Folgendes:
+Der Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Erfassen und Speichern von Daten, die als sensible Informationstypen (vordefinierte oder benutzerdefinierte Bedingungen) identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, aktivieren Sie das Kontrollkästchen **tiefer gehende Analysen in Ihre sensiblen Daten aktivieren**. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden, und eine Teilmenge der Benutzer Sie nicht senden kann, aktivieren Sie das Kontrollkästchen und dann Folgendes:
 
 - Für den klassischen Client und Scanner: Konfigurieren Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer.
 
@@ -144,7 +144,7 @@ Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte ers
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
 |Ein Azure-Abonnement, das Log Analytics umfasst und sich auf denselben Mandanten wie Azure Information Protection bezieht|Siehe Seite [Azure Monitor – Preise](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Wenn Sie kein Azure-Abonnement haben oder Azure Log Analytics derzeit nicht verwenden, finden Sie auf der Preisseite einen Link für eine kostenlose Testversion.|
-|Azure Information Protection Clients|Sowohl der Unified-Bezeichnungs Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. <br /><br /> Stellen Sie sicher, dass Sie über die neueste Version verfügen, um [alle Features](#features-that-require-a-minimum-version-of-the-client) für Azure Information Protection Analytics zu unterstützen.|
+|Azure Information Protection Clients|Sowohl der Unified-Bezeichnungs Client als auch der klassische Client werden unterstützt. <br /><br />Wenn Sie noch nicht über einen dieser Clients verfügen, können Sie diese aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.|
 |Microsoft Cloud App Security |Um Informationen aus Microsoft Cloud App Security anzuzeigen, konfigurieren Sie [Azure Information Protection-Integration](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Für den Bericht **Ermittlung und Risiko**: <br /><br />-Zum Anzeigen von Daten aus lokalen Daten speichern haben Sie mindestens eine Instanz des Azure Information Protection Scanners bereitgestellt. <br /><br />-Zum Anzeigen von Daten von Windows 10-Computern müssen Sie ein minimaler Build von 1809 sein. Sie verwenden Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP), und Sie haben das Azure Information Protection-Integrations Feature von Microsoft aktiviert. Defender-Security Center|Eine Installationsanleitung für die Überprüfung finden Sie unter [Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md). <br /><br />Informationen zum Konfigurieren und Verwenden des Azure Information Protection-Integrations Features von Microsoft Defender Security Center finden Sie unter [Übersicht über den Datenschutz in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Für den Bericht **Empfehlungen**: <br /><br />-Wenn Sie ein neues Datenrepository aus dem Azure-Portal als empfohlene Aktion hinzufügen möchten, müssen Sie eine Version des Azure Information Protection Scanners verwenden, die im konfiguriert ist Azure-Portal |Informationen zum Bereitstellen des Scanners finden Sie unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner.md).|
@@ -196,19 +196,6 @@ Nachdem Sie Ihren Arbeitsbereich für Azure Information Protection-Analysen erst
 
 Eine typische Rollenzuordnung für viele Organisationen ist jedoch die Azure AD-Rolle des **Sicherheitsleseberechtigten** und die Azure-Rolle des **Leseberechtigten**.
 
-### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funktionen, für die eine Mindestversion des Clients erforderlich ist
-
-Die Azure Information Protection Clients unterstützen die grundlegende Überwachung (Bezeichnungs Verwendung) und Endpunkt Ermittlung (Identifizierung von sensiblen Informationstypen).
-
-Azure Information Protection-Client für einheitliche Bezeichnungen:
-
-- Unterstützung für die grundlegende Überwachung und Endpunkt Ermittlung: Mindestversion von 2.0.778.0
-
-Azure Information Protection-Client (klassisch):
-
-- Unterstützung für die grundlegende Überwachung: Mindestversion von 1.41.51.0
-- Unterstützung für die Endpunkt Ermittlung: Mindestversion von 1.48.204.0
-
 ### <a name="storage-requirements-and-data-retention"></a>Speicheranforderungen und Daten Aufbewahrung
 
 Die Menge der Daten, die in Ihrem Azure Information Protection Arbeitsbereich erfasst und gespeichert werden, variiert für jeden Mandanten erheblich. Dies hängt von Faktoren ab, wie z. b. wie viele Azure Information Protection Clients und andere unterstützte Endpunkte vorhanden sind, egal ob Sammeln von Endpunkt Ermittlungs Daten, bereitgestellte Scanner und so weiter.
@@ -219,7 +206,7 @@ Als Ausgangspunkt kann es jedoch hilfreich sein, die folgenden Schätzwerte zu f
 
 - Für Überwachungsdaten, die von Azure Information Protection Clients, Scanner und Microsoft Defender ATP generiert werden: 20 GB pro 10.000 aktiven Benutzern pro Monat.
 
-Wenn Sie eine obligatorische Bezeichnung verwenden oder eine Standard Bezeichnung in der globalen Richtlinie konfiguriert haben, sind ihre Tarife wahrscheinlich deutlich höher.
+Wenn Sie eine obligatorische Bezeichnung verwenden oder für die meisten Benutzer eine Standard Bezeichnung konfiguriert haben, sind ihre Tarife wahrscheinlich deutlich höher.
 
 Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte Kosten** ", mit deren Hilfe Sie die Menge der gespeicherten Daten schätzen und überprüfen können. Außerdem können Sie die Daten Beibehaltungs Dauer für den Log Analytics Arbeitsbereich steuern. Weitere Informationen finden Sie unter [Verwalten von Nutzung und Kosten mit Azure Monitor Protokollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 

@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen zu Azure Information Protection und
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/01/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f93b8e8deeb6a1329262cd08f0bb905d53507812
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 67e9e53ddcd8e5604493955a0b3a9c2fe289cb3c
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794166"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994477"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -41,11 +41,11 @@ Weitere Informationen finden Sie unter [Bekanntgabe der Verfügbarkeit von Infor
 
 Ursprünglich hat Office 365 nur über [Aufbewahrungsbezeichnungen](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) verfügt, mit denen Sie Dokumente und E-Mails für die Überwachung und die Aufbewahrung klassifizieren können, wenn der Inhalt sich in Office 365-Diensten befindet. Im Gegensatz dazu können Sie mit Bezeichnungen in Azure Information Protection eine konsistente Klassifizierung und Schutzrichtlinie für lokale oder in der Cloud befindliche Dokumente und E-Mails anwenden.
 
-Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Aufbewahrungsbezeichnungen in einem der Admin-Centers verfügbar: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, oder das Microsoft 365 Compliance Center. Sie können Ihre vorhandenen Azure Information Protection Bezeichnungen zum neuen Unified Label-Speicher migrieren, der als Vertraulichkeits Bezeichnungen mit Office 365 verwendet werden soll. 
+Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option zum Erstellen und Konfigurieren von [Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zusätzlich zu den Aufbewahrungsbezeichnungen in einem der Admin-Centers verfügbar: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, oder das Microsoft 365 Compliance Center. Sie können Ihre vorhandenen Azure Information Protection Bezeichnungen zum neuen Unified Label-Speicher migrieren, der als Vertraulichkeits Bezeichnungen mit Office-Apps verwendet werden soll. 
 
 Weitere Informationen zum Verwalten einheitlicher Bezeichnungen und deren Unterstützung finden Sie im Blogbeitrag [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
-Weitere Information zum Migrieren vorhandener Bezeichnungen erwarten Sie unter [Migrieren von Azure Information Protection-Bezeichnungen zu Office 365](configure-policy-migrate-labels.md).
+Weitere Informationen zum Migrieren vorhandener Bezeichnungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Worin besteht der Unterschied zwischen dem Azure Information Protection Client und dem Azure Information Protection Unified-Bezeichnungs Client?
 
@@ -69,11 +69,11 @@ Verwenden Sie die angezeigte **Versions** Nummer, um den Client zu identifiziere
 
 - Eine Version **2**, z. b. **2.2.14.0**, identifiziert den Azure Information Protection Unified-Bezeichnungs Client.
 
-## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Wann ist der richtige Zeitpunkt, um meine Bezeichnungen zu Office 365 zu migrieren?
+## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Wann ist der richtige Zeitpunkt für die Migration meiner Bezeichnungen?
 
 Nun, da die Option zum Migrieren von Bezeichnungen in der Azure-Portal allgemein verfügbar ist, empfiehlt es sich, die Migration zu aktivieren, sodass Sie Ihre Bezeichnungen als Vertraulichkeits Bezeichnungen mit [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
-Weitere Informationen und Anweisungen finden Sie unter [How to Migration Azure Information Protection Labels to Office 365 Sensitivitäts Labels](configure-policy-migrate-labels.md).
+Weitere Informationen und Anweisungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Welches Verwaltungsportal kann ich verwenden, nachdem ich meine Bezeichnungen migriert habe?
 

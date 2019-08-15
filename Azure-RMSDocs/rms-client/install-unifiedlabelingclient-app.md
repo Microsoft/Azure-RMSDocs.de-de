@@ -4,19 +4,19 @@ description: Anweisungen für Benutzer zum Installieren des Azure Information Pr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 548080426cadfb14bd8d03f0550aa06258f80e81
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3c92a57864d81a20577ced49ad6346b03617d6a6
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789886"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994404"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
@@ -34,7 +34,7 @@ Zusätzlich:
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>So laden Sie den Azure Information Protection-Client für einheitliche Bezeichnungen herunter und installieren ihn
 
-Vergewissern Sie sich vor der Installation des Azure Information Protection Unified Label-Clients, dass der Administrator oder der Helpdesk die Vertraulichkeits Bezeichnungen von Office 365 verwendet.
+Vergewissern Sie sich vor der Installation des Azure Information Protection Unified Label-Clients, dass der Administrator oder das Helpdesk die [Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden.
 
 1. Laden Sie **AzInfoProtection_UL. exe** aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunter.
 
