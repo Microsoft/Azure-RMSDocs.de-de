@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 41fa947d70633a3c3c9cddb996fb86ce6b45a23d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ce8e2b9969ba6cbc3b5a58eac6d66fdd5db4f5b7
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793642"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546054"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -126,7 +126,7 @@ So rufen Sie die Werte automatisch ab und führen Set-RMSServerAuthentication au
 $ServicePrincipalName="<new service principal name>"
 Connect-AipService
 $bposTenantID=(Get-AipServiceConfiguration).BPOSId
-Disconnect-AipServiceService
+Disconnect-AipService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -171,7 +171,7 @@ Führen Sie das Cmdlet Get-aipserviceconfiguration aus dem Azure RMS Windows Pow
 
 5. Trennen Sie die Verbindung mit dem Dienst:
     
-        Disconnect-AipServiceService
+        Disconnect-AipService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>So rufen Sie „AppPrincipalId“ und den symmetrischen Schlüssel ab
 
@@ -313,7 +313,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
+Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -353,7 +353,7 @@ Beachten Sie: Wenn die Rights Management-Vorlagen geändert werden, müssen Sie 
 Lesen Sie diesen Abschnitt, bevor Sie damit beginnen, Dateien mithilfe der PowerShell-Befehle zu schützen bzw. deren Schutz aufzuheben, wenn in Ihrer Organisation nur Active Directory Rights Management Services verwendet werden.
 
 
-### <a name="prerequisites"></a>Vorraussetzungen
+### <a name="prerequisites"></a>Erforderliche Komponenten
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ muss das für den Schutz bzw. die Aufhebung des Schutzes verwendete Konto über die Berechtigungen zum Lesen und Ausführen verfügen, um auf „ServerCertification.asmx“ zugreifen zu können:
 
@@ -429,7 +429,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiel:
+Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 

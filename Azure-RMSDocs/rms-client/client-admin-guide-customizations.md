@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a43bdbf2e4ec14b60ac37164273529c764cffa98
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978800"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546070"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
@@ -666,11 +666,11 @@ Der Wert der Bezeichnungs-ID wird auf dem Blatt **Bezeichnung** angezeigt, wenn 
 
 Geben Sie einen Namen für die Migrationsregel an. Verwenden Sie einen aussagekräftigen Namen, der angibt, wie Bezeichnungen aus Ihrer vorherigen Bezeichnungslösung zu einer Azure Information Protection-Bezeichnung zugeordnet werden sollen. Der Name wird in den Scannerberichten und in der Ereignisanzeige angezeigt. Beachten Sie, dass durch diese Einstellung keine ursprüngliche Bezeichnung aus dem Dokument bzw. keine optische Kennzeichnung im Dokument entfernt wird, die von der ursprünglichen Bezeichnung möglicherweise angewendet wurde. Weitere Informationen zum Entfernen von Kopf- und Fußzeilen finden Sie im nächsten Abschnitt unter [Remove headers and footers from other labeling solutions (Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen)](#remove-headers-and-footers-from-other-labeling-solutions).
 
-### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: 1:1-Zuordnung des gleichen Bezeichnungsnamens
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: 1:1-Zuordnung des gleichen Bezeichnungsnamens
 
 Anforderung: Dokumente mit der Secure Islands-Bezeichnung „Confidential“ sollten in Azure Information Protection die Bezeichnung „Vertraulich“ erhalten.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Vertraulich**. Sie hat die Bezeichnungs-ID **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -687,7 +687,7 @@ Erweiterte Clienteinstellung:
 
 Anforderung: Dokumente mit der Secure Islands-Bezeichnung „Sensitive“ sollten in Azure Information Protection die Bezeichnung „Streng vertraulich“ erhalten.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Streng vertraulich** und hat die Bezeichnungs-ID **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -705,7 +705,7 @@ Erweiterte Clienteinstellung:
 
 Anforderung: Sie verfügen über zwei Secure Islands-Bezeichnungen, die das Wort „Internal“ enthalten, und Sie möchten Dokumente, die eine dieser beiden Secure Islands-Bezeichnungen enthalten, in Azure Information Protection als „Allgemein“ bezeichnen.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Allgemein** und hat die Bezeichnungs-ID **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -849,17 +849,17 @@ Wenn ein Benutzer nun eines dieser Office-Dokumente öffnet und speichert, wird 
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen.
 
-Wenn der Azure Information Protection-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn der Client nicht so konfiguriert ist, dass er keine Überwachungsinformationen sendet, werden alle gefundenen sensiblen Informationstypen (vordefiniert oder Benutzer definiert) an [Azure Information Protection Analytics](../reports-aip.md)gesendet.
+Wenn der Azure Information Protection-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn der Client nicht so konfiguriert ist, dass er keine Überwachungsinformationen sendet, werden alle gefundenen sensiblen Informationstypen (vordefiniert oder Benutzer definiert) an [Azure Information Protection Analytics](../reports-aip.md)gesendet. 
 
-Um dieses Verhalten zu ändern, sodass vertrauliche Informationstypen, die vom klassischen Client gefunden werden, nicht an Azure Information Protection Analytics-Daten gesendet werden, geben Sie die folgenden Zeichen folgen ein:
+Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet, ist die [Richtlinien Einstellung](../configure-policy-settings.md) von Überwachungs **Daten an Azure Information Protection Log Analytics senden**. Wenn diese Richtlinien Einstellung **auf on** festgelegt ist, weil Sie Überwachungsinformationen senden möchten, die Bezeichnungs Aktionen enthalten, aber keine vertraulichen Informationstypen senden möchten, die vom Client gefunden werden, geben Sie die folgenden Zeichen folgen ein:
 
 - Key: **Runauditinformationtypesdiscovery**
 
 - Wert: **False**
 
-Wenn Sie diese erweiterte Client Einstellung festlegen, können die Überwachungsergebnisse dennoch vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
+Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Beispiel:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -980,7 +980,7 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Exchange-E-Mail-Flussregel: Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Zum Beispiel:
+     Für den Nachrichtenheader finden Sie die anzugebenden Informationen, indem Sie die Internetheader einer E-Mail untersuchen, die Sie mithilfe Ihrer Azure Information Protection-Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach den Header **msip_labels** und die darauf folgende Zeichenfolge, bis zu und einschließlich dem Semikolon. Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
