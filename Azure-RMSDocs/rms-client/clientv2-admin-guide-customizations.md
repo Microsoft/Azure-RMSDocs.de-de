@@ -3,7 +3,7 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab409f5f293708db121df0c600cb9e7b5b970a18
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
+ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978738"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584608"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -59,7 +59,7 @@ Verwenden Sie die gleiche Syntax, und geben Sie einen NULL-Zeichen folgen Wert a
 
 #### <a name="examples-for-setting-advanced-settings"></a>Beispiele für das Festlegen von erweiterten Einstellungen
 
-Beispiel 1: Legen Sie für einen einzelnen Zeichen folgen Wert eine erweiterte Einstellung für die Bezeichnungs Richtlinie fest:
+Beispiel 1: Legen Sie für einen einzelnen Zeichen folgen Wert eine erweiterte Einstellung für die Bezeichnungs Richtlinie fest:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
@@ -665,7 +665,7 @@ Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom 
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Beispiel:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -715,11 +715,11 @@ Geben Sie einen Namen für die Migrationsregel an. Verwenden Sie einen beschreib
 
 Beachten Sie, dass durch diese Einstellung keine ursprüngliche Bezeichnung aus dem Dokument bzw. keine optische Kennzeichnung im Dokument entfernt wird, die von der ursprünglichen Bezeichnung möglicherweise angewendet wurde. Informationen zum Entfernen von Kopf-und Fußzeilen finden Sie im vorherigen Abschnitt [Entfernen von Kopf-und Fußzeilen aus anderen Beschriftungslösungen](#remove-headers-and-footers-from-other-labeling-solutions).
 
-#### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: 1:1-Zuordnung des gleichen Bezeichnungsnamens
+#### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Beispiel 1: 1:1-Zuordnung des gleichen Bezeichnungsnamens
 
 Anforderung: Dokumente mit der Secure Islands-Bezeichnung „Confidential“ sollten in Azure Information Protection die Bezeichnung „Vertraulich“ erhalten.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Secure Islands-Bezeichnung lautet **Vertraulich** und ist in der benutzerdefinierten Eigenschaft **Classification** (Klassifizierung) gespeichert.
 
@@ -737,7 +737,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnung "vertraulich" heißt:
 
 Anforderung: Dokumente mit der Secure Islands-Bezeichnung „Sensitive“ sollten in Azure Information Protection die Bezeichnung „Streng vertraulich“ erhalten.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Secure Islands-Bezeichnung lautet **Sensitive** (Sensibel) und ist in der benutzerdefinierten Eigenschaft **Classification** (Klassifizierung) gespeichert.
 
@@ -755,7 +755,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnung "streng vertraulich" lautet
 
 Anforderung: Sie verfügen über zwei sichere Inseln-Bezeichnungen, die das Wort "Internal" enthalten, und Sie möchten, dass Dokumente, die eine dieser sicheren Inseln bezeichnen, vom Azure Information Protection Unified Label-Client als "Allgemein" neu berechnet werden.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Secure Islands-Bezeichnungen enthalten den Begriff **Internal** (intern) und sind in der benutzerdefinierten Eigenschaft namens **Classification** (Klassifizierung) gespeichert.
 
@@ -773,7 +773,7 @@ Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Allgemein" laut
 
 Wenn Sie mehrere Regeln für dieselbe Bezeichnung benötigen, definieren Sie mehrere Zeichen folgen Werte für denselben Schlüssel. 
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Secure Islands-Bezeichnungen mit dem Namen "Confidential" und "Secret" werden in der benutzerdefinierten Eigenschaft * *-Klassifizierung gespeichert, und der Azure Information Protection Unified Label-Client soll die Vertraulichkeits Bezeichnung "vertraulich" anwenden:
 
@@ -799,7 +799,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)Bezeichnungs Lösung zu migrieren, z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -821,11 +821,11 @@ Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, 
 
 `[custom property name],[custom property value]`
 
-#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Beispiel 1: Fügen Sie eine einzelne benutzerdefinierte Eigenschaft für eine Bezeichnung hinzu.
+#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Beispiel 1: Fügen Sie eine einzelne benutzerdefinierte Eigenschaft für eine Bezeichnung hinzu.
 
 Anforderung: Dokumente, die vom Azure Information Protection Unified Label-Client als "vertraulich" bezeichnet werden, sollten über die zusätzliche benutzerdefinierte Eigenschaft "Klassifizierung" mit dem Wert "Secret" verfügen.
 
-In diesem Beispiel:
+Für dieses Beispiel gilt Folgendes:
 
 - Die Vertraulichkeits Bezeichnung heißt **vertraulich** und erstellt eine benutzerdefinierte Eigenschaft mit dem Namen **Classification** mit dem Wert **Secret**.
 
@@ -887,7 +887,7 @@ Wenn Sie einer Bezeichnung eine untergeordnete Bezeichnung hinzufügen, können 
 
 Beispiel für einen PowerShell-Befehl, bei dem die übergeordnete Bezeichnung "Confidential" heißt und die untergeordnete Bezeichnung "All Employees" eine GUID von 8faka7b8-8d20-48a3-8ea2-0F 96310a848e:
 
-    Set-Label -Identity "Confidential" -AdvancedSettings @{defaultsublabels="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
 ## <a name="specify-a-color-for-the-label"></a>Farbe für die Bezeichnung angeben
 
