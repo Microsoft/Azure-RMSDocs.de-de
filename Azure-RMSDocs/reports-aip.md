@@ -3,8 +3,8 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 08/13/2019
-manager: barbkess
+ms.date: 08/19/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978666"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630069"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -37,7 +37,9 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 
 - Identifizieren Sie Dokumente, die vertrauliche Informationen enthalten und geschützt werden müssen, da Ihre Organisation andernfalls einem Risiko ausgesetzt ist, und verringern Sie dieses Risiko mithilfe der Empfehlungen.
 
-Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern und von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), aggregiert.
+- Identifizieren Sie, ob interne oder externe Benutzer auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
+
+Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern, von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -65,6 +67,8 @@ Sie können beispielsweise die folgenden Informationen abrufen:
     
     - Welche Bezeichnungs Aktionen wurden von einer bestimmten Anwendung ausgeführt, z. b. im Datei-Explorer und mit der rechten Maustaste, PowerShell, der Scanner oder Microsoft Cloud App Security
     
+    - Auf welche geschützten Dokumente von Benutzern erfolgreich zugegriffen wurde oder ob Ihnen der Zugriff verweigert wurde, auch wenn diese Benutzer nicht den Azure Information Protection-Client installiert haben oder sich außerhalb Ihrer Organisation befinden.
+
     - Drilldown auf gemeldete Dateien, um zusätzliche Informationen in den **Aktivitätsdetails** zu finden
 
 - Im Bericht **Datenermittlung**:
@@ -138,7 +142,7 @@ Der Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthäl
 
 Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
 |Anforderungen|Weitere Informationen|
@@ -174,7 +178,7 @@ Details:
     > [!NOTE] 
     > Wenn Ihr Mandant zum vereinheitlichten Speicher der vereinheitlichten Bezeichnung migriert wurde, können Sie die Azure Information Protection Administrator-Rolle nicht verwenden. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
+2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
     - Um einen Arbeitsbereich oder benutzerdefinierte Abfragen zu erstellen, benötigen Sie eine der folgenden Rollen:
     
@@ -198,7 +202,7 @@ Eine typische Rollenzuordnung für viele Organisationen ist jedoch die Azure AD-
 
 ### <a name="storage-requirements-and-data-retention"></a>Speicheranforderungen und Daten Aufbewahrung
 
-Die Menge der Daten, die in Ihrem Azure Information Protection Arbeitsbereich erfasst und gespeichert werden, variiert für jeden Mandanten erheblich. Dies hängt von Faktoren ab, wie z. b. wie viele Azure Information Protection Clients und andere unterstützte Endpunkte vorhanden sind, egal ob Sammeln von Endpunkt Ermittlungs Daten, bereitgestellte Scanner und so weiter.
+Die Menge der Daten, die in Ihrem Azure Information Protection Arbeitsbereich erfasst und gespeichert werden, variiert für jeden Mandanten erheblich. Dies hängt von Faktoren ab, wie z. b. wie viele Azure Information Protection Clients und andere unterstützte Endpunkte vorhanden sind, egal ob Sammeln von Endpunkt Ermittlungs Daten, Sie haben Scanner bereitgestellt, die Anzahl der geschützten Dokumente, auf die zugegriffen wird usw.
 
 Als Ausgangspunkt kann es jedoch hilfreich sein, die folgenden Schätzwerte zu finden:
 
@@ -234,7 +238,7 @@ Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashbo
 
 - **Nutzungsbericht (Vorschau)** : Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.
 
-- **Aktivitätsprotokolle (Vorschau)** : Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden.
+- **Aktivitätsprotokolle (Vorschau)** : Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden. Außerdem können Sie für geschützte Dokumente für Benutzer sowohl innerhalb als auch außerhalb Ihrer Organisation Zugriffsversuche (erfolgreich oder verweigert) erkennen, auch wenn Sie den Azure Information Protection-Client nicht installiert haben.
     
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.
 
@@ -267,6 +271,8 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 
 |Spaltenname|Beschreibung|
 |-----------|-----------|
+|Zugriff|Ein geschütztes Dokument wurde erfolgreich geöffnet, anhand des Datei namens identifiziert, wenn es nachverfolgt wird, oder mit ID, wenn es nicht nachverfolgt wird.|
+|AccessDenied|Einem geschützten Dokument wurde der Zugriff verweigert, der durch den Dateinamen identifiziert wird, wenn er nachverfolgt wird, oder die ID, wenn keine Nachverfolgung|
 |Uhrzeit|Ereignis Zeit: UTC im Format yyyy-mm-ddThh: mm: SS|
 |Benutzer|Benutzer: UPN oder Domäne \ Benutzer formatieren|
 |ItemPath|Vollständiger Element Pfad oder e-Mail-Betreff|
@@ -307,7 +313,7 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 
 Anhand der folgenden Beispiele erfahren Sie, wie Sie das benutzerfreundliche Schema zur Erstellung benutzerdefinierter Abfragen verwenden können.
 
-##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Beispiel 1: Es werden alle Benutzer zurückgegeben, die in den letzten 31 Tagen Überwachungsdaten gesendet haben. 
+##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Beispiel 1: Es werden alle Benutzer zurückgegeben, die in den letzten 31 Tagen Überwachungsdaten gesendet haben. 
 
 ```
 InformationProtectionEvents 

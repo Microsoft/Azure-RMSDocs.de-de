@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ac767525efeaf97d1d3b39f3b25191e7926412b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
+ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808118"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69650878"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -130,11 +130,13 @@ Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Inform
 
 - Beenden Sie nicht die TLS-Client-zu-Dienst-Verbindung (z.B. zur Durchführung von Überprüfungen auf Paketebene) zur URL **aadrm.com**. Wenn Sie dies tun, wird die Anheftung von Zertifikaten unterbrochen, die RMS-Clients mit von Microsoft verwalteten Zertifizierungsstellen verwenden, um deren Kommunikation mit dem Azure Rights Management-Dienst zu sichern.
     
-    - Tipp: Aufgrund der Darstellungsweise von sicheren Verbindungen in der Adressleiste von Chrome können Sie diesen Browser verwenden, um schnell zu überprüfen, ob Ihre Clientverbindung beendet wird, bevor diese den Azure Rights Management-Dienst erreicht. Geben Sie folgende URL in die Adressleiste des Browsers ein: `https://admin.na.aadrm.com/admin/admin.svc` 
+    Mithilfe der folgenden PowerShell-Befehle können Sie feststellen, ob Ihre Client Verbindung beendet wurde, bevor Sie den Azure Rights Management-Dienst erreicht:
+   
+        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+        $request.GetResponse()
+        $request.ServicePoint.Certificate.Issuer
     
-        Beachten Sie die im Browserfenster angezeigten Inhalte nicht. Klicken Sie stattdessen auf das Schloss in der Adressleiste, um die Websiteinformationen anzuzeigen. In den Websiteinformationen wird Ihnen die ausstellende Zertifizierungsstelle angezeigt. Wenn das Zertifikat nicht von einer Microsoft-Zertifizierungsstelle ausgestellt wird, ist es wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wurde und in Ihrer Firewall neu konfiguriert werden muss. In der folgenden Abbildung wird ein Beispiel für eine ausstellende Zertifizierungsstelle von Microsoft dargestellt. Wenn Sie feststellen, dass das Zertifikat von einer internen Zertifizierungsstelle ausgestellt wurde, ist diese Konfiguration nicht mit Azure Information Protection kompatibel.
-        
-        ![Überprüfen des ausgestellten Zertifikats für Azure Information Protection-Verbindungen](./media/certificate-checking.png)
+    Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungs `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`Stelle aus ist, beispielsweise:. Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
 
 ### <a name="on-premises-servers"></a>Lokale Server
 

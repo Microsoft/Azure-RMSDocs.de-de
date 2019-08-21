@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen zu Azure Information Protection und
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 67e9e53ddcd8e5604493955a0b3a9c2fe289cb3c
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: ff746d3636df73568db009a4e026e37cab962963
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994477"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630048"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -46,6 +46,16 @@ Wie auf der Microsoft Ignite 2018 in Orlando angekündigt, ist nun eine Option z
 Weitere Informationen zum Verwalten einheitlicher Bezeichnungen und deren Unterstützung finden Sie im Blogbeitrag [Bekanntgabe der Verfügbarkeit von Information Protection-Funktionen zum Schutz von vertraulichen Daten](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
 Weitere Informationen zum Migrieren vorhandener Bezeichnungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen](configure-policy-migrate-labels.md).
+
+## <a name="how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform"></a>Wie kann ich feststellen, ob mein Mandant auf der Unified-Bezeichnung-Plattform ist?
+
+Wenn sich Ihr Mandant auf der Unified Label-Plattform befindet, können Vertraulichkeits Bezeichnungen von [Clients und Diensten verwendet werden, die eine einheitliche Bezeichnung unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Wenn Sie Ihr Abonnement für Azure Information Protection im Juni 2019 oder höher erhalten haben, befindet sich Ihr Mandant automatisch auf der Unified-Bezeichnung-Plattform, und es ist keine weitere Aktion erforderlich. Ihr Mandant kann sich auch auf dieser Plattform befinden, da [die Azure Information Protection Bezeichnungen migriert](configure-policy-migrate-labels.md)wurden.
+
+Um den Status zu überprüfen, wechseln Sie in der Azure-Portal zu **Azure Information Protection** > **Unified-Bezeichnung** **Verwalten** > , und zeigen Sie den Status der **vereinheitlichten Bezeichnung**an:
+
+- Wenn Sie **aktiviert**sehen, befindet sich Ihr Mandant auf der Unified-Beschriftungs Plattform.
+
+- Wenn Sie **nicht aktiviert**sehen, befindet sich Ihr Mandant nicht auf der Unified-Beschriftungs Plattform. Migrations Anweisungen finden Sie unter [Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen](configure-policy-migrate-labels.md).
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Worin besteht der Unterschied zwischen dem Azure Information Protection Client und dem Azure Information Protection Unified-Bezeichnungs Client?
 
