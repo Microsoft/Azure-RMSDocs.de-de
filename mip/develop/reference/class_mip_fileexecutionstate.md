@@ -1,59 +1,51 @@
 ---
-title: Klasse mip::FileExecutionState
-description: Dokumentiert die mip::fileexecutionstate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: fileexecutionstate-Klasse'
+description: 'Dokumentiert die MIP:: fileexecutionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: bdf0814e56d64bd16918a6f4d269a057620f92f5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 24750ea7c719545889cb833aa4c685fdcd1e9e3d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184670"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885734"
 ---
-# <a name="class-mipfileexecutionstate"></a>Klasse mip::FileExecutionState 
+# <a name="class-mipfileexecutionstate"></a>MIP:: fileexecutionstate-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual DataState GetDataState() const  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
-public virtual std::shared_ptr\<ClassificationResults\> GetClassificationResults(const std::shared_ptr\<FileHandler\> &, const std::vector\<std::shared_ptr\<ClassificationRequest\>\> &) const  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
-public virtual std::vector\<uint8_t\> GetSerializedProtectionInfo() const  |  Geben Sie einen Puffer mit den serialisierten PL zurück
-public virtual std::map\<std::string, std::string\> GetAuditMetadata() const  |  Geben Sie eine Zuordnung der Anwendung spezifischen Überwachung Schlüssel-Wert-Paaren zurück.
+public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
+public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konst Std:: shared_ptr\<fileHandler\> &, Konstanten Std:: Vector\<Std:: shared_ptr\<Classificationrequest\> \> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
 ## <a name="members"></a>Member
   
-### <a name="getdatastate-function"></a>GetDataState-Funktion
+### <a name="getdatastate-function"></a>Getdatastate-Funktion
 Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
 
   
-**Gibt**: Status der Inhaltsdaten
+**Gibt Folgendes zurück**: Zustand der Inhaltsdaten
   
-### <a name="getclassificationresults-function"></a>GetClassificationResults-Funktion
+### <a name="getclassificationresults-function"></a>Getclassificationresults-Funktion
 Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
 
 Parameter:  
-* **FileHandler**:-das Dateihandle der Datei verwendet 
+* **fileHandler**: der Datei Handler der verwendeten Datei. 
 
 
-* **ClassificationIds**: eine Liste der IDs-Klassifizierung. 
+* **classificationids**: eine Liste der Klassifizierungs-IDs. 
 
 
-
-  
-**Gibt**: Eine Liste der Klassifizierungsergebnisse.
-  
-### <a name="getserializedprotectioninfo-function"></a>GetSerializedProtectionInfo-Funktion
-Geben Sie einen Puffer mit den serialisierten PL zurück
 
   
-**Gibt**: Ein Puffer mit den serialisierten PL
+**Gibt Folgendes zurück**: Eine Liste der Klassifizierungs Ergebnisse.
   
-### <a name="getauditmetadata-function"></a>GetAuditMetadata-Funktion
-Geben Sie eine Zuordnung der Anwendung spezifischen Überwachung Schlüssel-Wert-Paaren zurück.
+### <a name="getauditmetadata-function"></a>Getauditmetadata-Funktion
+Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
 
   
-**Gibt**: Eine Liste der Anwendung spezifischen Überwachung Metadaten registriert Schlüssel-Wert-Paare Absender: Für den Absender-Empfänger-e-Mail-Id: Stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy dar: E-Mail-Id für den Benutzer, der den Inhalt LastModifiedDate & lt; zuletzt geändert: Datum, an der letzten des Inhalts Änderung
+**Gibt Folgendes zurück**: Eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: E-Mail-ID für die Absender Empfänger: Stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy dar: E-Mail-ID für den Benutzer, der den Inhalt LastModifiedDate zuletzt geändert hat: Datum, an dem der Inhalt zuletzt geändert wurde

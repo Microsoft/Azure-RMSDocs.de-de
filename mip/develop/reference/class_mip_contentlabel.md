@@ -1,18 +1,17 @@
 ---
 title: mip::ContentLabel-Klasse
-description: 'Dokumentiert die MIP:: contentlabel-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: contentlabel-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 96f8cca48f385a21685e93eb5bc57abac571975c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 27f8adba3e65647a3804256e0b429e1457003085
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184772"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884398"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel-Klasse 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
@@ -21,44 +20,44 @@ Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungs
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public std::chrono::time_point\<std::chrono::system_clock\> GetCreationTime() const  |  Ruft die Erstellungszeit der Bezeichnung ab
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getkreationtime () Konstanten  |  Ruft die Erstellungszeit der Bezeichnung ab
 public AssignmentMethod GetAssignmentMethod() const  |  Ruft die Zuweisungsmethode der Bezeichnung ab
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  |  Ruft erweiterte Eigenschaften ab.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
 public bool IsProtectionAppliedFromLabel() const  |  Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
-Public Std:: shared_ptr\<Bezeichnung\> GetLabel() const  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
+Public Std:: shared_ptr\<Label\> GetLabel () Konstanten  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
   
 ## <a name="members"></a>Member
   
-### <a name="getcreationtime-function"></a>GetCreationTime-Funktion
+### <a name="getcreationtime-function"></a>Getkreationtime-Funktion
 Ruft die Erstellungszeit der Bezeichnung ab
 
   
-**Gibt**: Zeitpunkt der Erstellung.
+**Gibt Folgendes zurück**: Erstellungszeit.
   
-### <a name="getassignmentmethod-function"></a>GetAssignmentMethod-Funktion
+### <a name="getassignmentmethod-function"></a>Getaccessmentmethod-Funktion
 Ruft die Zuweisungsmethode der Bezeichnung ab
 
   
-**Gibt**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
+**Gibt Folgendes zurück**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
-**Siehe auch**: [MIP:: assignmentmethod](mip-enums-and-structs.md#assignmentmethod)
+**Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
-### <a name="getextendedproperties-function"></a>GetExtendedProperties-Funktion
+### <a name="getextendedproperties-function"></a>Getextendecodproperties-Funktion
 Ruft erweiterte Eigenschaften ab.
 
   
-**Gibt**: Erweiterte Eigenschaften.
+**Gibt Folgendes zurück**: Erweiterte Eigenschaften.
   
-### <a name="isprotectionappliedfromlabel-function"></a>IsProtectionAppliedFromLabel function
+### <a name="isprotectionappliedfromlabel-function"></a>Isprotectionappliedfromlabel-Funktion
 Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
 
   
-**Gibt**: True, wenn es des Schutzes von Vorlagen und es, indem Sie diese Bezeichnung enthalten ist, andernfalls "false war".
+**Gibt Folgendes zurück**: "True", wenn Vorlagen Schutz vorhanden ist, andernfalls "false".
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
 Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
 
   
-**Gibt**: Das Label-Objekt, das auf den Inhalt angewendet. 
+**Gibt Folgendes zurück**: Das Bezeichnungs Objekt, das auf den Inhalt angewendet wird. 
   
 **Weitere Informationen finden Sie unter:** [mip::Label](class_mip_label.md)

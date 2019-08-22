@@ -1,60 +1,66 @@
 ---
-title: Klasse mip::AuthDelegate::OAuth2Challenge
-description: Dokumentiert die mip::authdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: authdelegat:: OAuth2Challenge-Klasse'
+description: 'Dokumentiert die MIP:: authdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 836704d51d1afa55bc296681c863ee10a072ea79
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173472"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885910"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>Klasse mip::AuthDelegate::OAuth2Challenge 
-eine Klasse, die alle die erforderlichen aus der aufrufenden Anwendung Informationen um ein oauth2-Token zu generieren.
+# <a name="class-mipauthdelegateoauth2challenge"></a>MIP:: authdelegat:: OAuth2Challenge-Klasse 
+eine Klasse, die alle Informationen enthält, die von der aufrufenden Anwendung benötigt werden, um ein oauth2-Token zu generieren.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Öffentliche OAuth2Challenge (const Std:: String & Autorität, const Std:: String & Ressource, const Std:: String und Scope)  |  Erstellt ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) Objekt.
-Public const Std:: String & GetAuthority() const  |  Rufen Sie die Autorität für die Zeichenfolge ein.
-Public const Std:: String & GetResource() const  |  Rufen Sie die Ressourcenzeichenfolge.
-Public const Std:: String & GetScope() const  |  Rufen Sie die Bereichszeichenfolge.
+Public OAuth2Challenge (Konstante Std:: String & Authority, Konstanten Std:: String & Resource, Konstanten Std:: String & Scope, Konstante Std:: String & Claims)  |  Erstellen Sie ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) -Objekt.
+Public Konstanten Std:: String & getauthority () Konstanten  |  Die Autoritäts Zeichenfolge erhalten.
+Public Konstanten Std:: String & getResource () Konstanten  |  Die Ressourcen Zeichenfolge erhalten.
+Public Konstanten Std:: String & GetScope () Konstanten  |  Die Bereichs Zeichenfolge erhalten.
+Public Konstanten Std:: String & getclaims () Konstanten  |  Die Anspruchs Zeichenfolge erhalten.
   
 ## <a name="members"></a>Member
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge-Funktion
-Erstellt ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) Objekt.
+Erstellen Sie ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) -Objekt.
 
 Parameter:  
-* **Autorität für die**: die Autorität für die das Token für generiert werden muss. 
+* **Authority**: die Autorität, für die das Token generiert werden muss. 
 
 
-* **Ressource**: die Ressource, die das Token auf festgelegt ist. 
+* **Ressource**: die Ressource, auf die das Token festgelegt ist. 
 
 
-* **Bereich**: der Bereich das Token auf festgelegt ist.
+* **Bereich**: der Gültigkeitsbereich, auf den das Token festgelegt ist.
 
 
   
-### <a name="getauthority-function"></a>GetAuthority-Funktion
-Rufen Sie die Autorität für die Zeichenfolge ein.
+### <a name="getauthority-function"></a>Getauthority-Funktion
+Die Autoritäts Zeichenfolge erhalten.
 
   
-**Gibt**: Die Autorität für die Zeichenfolge.
+**Gibt Folgendes zurück**: Die Autoritäts Zeichenfolge.
   
 ### <a name="getresource-function"></a>GetResource-Funktion
-Rufen Sie die Ressourcenzeichenfolge.
+Die Ressourcen Zeichenfolge erhalten.
 
   
-**Gibt**: Die Ressourcenzeichenfolge.
+**Gibt Folgendes zurück**: Die Ressourcen Zeichenfolge.
   
 ### <a name="getscope-function"></a>GetScope-Funktion
-Rufen Sie die Bereichszeichenfolge.
+Die Bereichs Zeichenfolge erhalten.
 
   
-**Gibt**: Die Scope-Zeichenfolge.
+**Gibt Folgendes zurück**: Die Bereichs Zeichenfolge.
+  
+### <a name="getclaims-function"></a>Getclaims-Funktion
+Die Anspruchs Zeichenfolge erhalten.
+
+  
+**Gibt Folgendes zurück**: Die Anspruchs Zeichenfolge.

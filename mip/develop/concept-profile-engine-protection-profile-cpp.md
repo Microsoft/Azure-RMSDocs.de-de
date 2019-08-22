@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: c8e2785f68ea76c34384dccb079260b6c3ed45cb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: fc25c35c1aea9690c0ec696a41c2f7346b4d6b8a
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175084"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886003"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Schutz-API
 
@@ -24,36 +24,50 @@ Da die Objekte `ProtectionProfileObserverImpl` und `AuthDelegateImpl` bereits de
 
 ### <a name="protectionprofilesettings-parameters"></a>ProtectionProfile::Settings-Parameter
 
-- `std::string path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
-- `bool useInMemoryStorage`: Definiert, und zwar unabhängig davon, ob alle Status im Speicher statt auf dem Datenträger gespeichert werden soll.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein freigegebener Zeiger Klasse `mip::AuthDelegate`.
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Ein freigegebener Zeiger auf die `ProtectionProfile::Observer` Implementierung.
-- `mip::ApplicationInfo applicationInfo`: Ein Objekt. Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
+- `std::shared_ptr<MipContext>`: Das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
+- `mip::CacheStorageType`: Definiert, wie der Zustand gespeichert wird: Im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger gespeichert und verschlüsselt.
+- `std::shared_ptr<mip::AuthDelegate>`: Ein frei gegebener Zeiger der `mip::AuthDelegate`-Klasse.
+- `std::shared_ptr<mip::ConsentDelegate>`: Ein frei gegebener Zeiger der [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md)-Klasse.
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Ein frei gegebener Zeiger auf die `Observer` Profil Implementierung ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)in [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 
 #### <a name="store-state-in-memory-only"></a>Speichern der Status im Arbeitsspeicher (ausschließlich)
 
 ```cpp
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
 ProtectionProfile::Settings profileSettings(
-    "",                                     //path to store settings
-    true,                                   //useInMemoryStorage
-    authDelegateImpl,                       //auth delegate object
-    std::make_shared<ConsentDelegateImpl>(),//new consent delegate
-    std::make_shared<ProtectionProfileObserverImpl>(), //new protection profile observer
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" }); //ApplicationInfo object
+    mipContext,                                        // mipContext object
+    mip::CacheStorageType::InMemory,                   // use in memory storage
+    authDelegateImpl,                                  // auth delegate object
+    std::make_shared<ConsentDelegateImpl>(),           // new consent delegate
+    std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile observer
 ```
 
 #### <a name="readwrite-profile-settings-from-storage-path-on-disk"></a>Einstellungen für das Profil mit Lese-/Schreibzugriff aus dem Speicherpfad auf dem Datenträger
 
 ```cpp
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
 ProtectionProfile::Settings profileSettings(
-    "./mip_app_data",                       //path to store settings
-    false,                                  //useInMemoryStorage
-    authDelegateImpl,                       //auth delegate object
-    std::make_shared<ConsentDelegateImpl>(),//new consent delegate
-    std::make_shared<ProtectionProfileObserverImpl>(), //new protection profile
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" }); //ApplicationInfo object
+    mipContext,                                         // mipContext object
+    mip::CacheStorageType::OnDisk,                      // use on disk storage
+    authDelegateImpl,                                   // auth delegate object
+    std::make_shared<ConsentDelegateImpl>(),            // new consent delegate
+    std::make_shared<ProtectionProfileObserverImpl>()); // new protection profile
 ```
 
 Verwenden Sie als nächstes das Promise-Future-Muster, um das `ProtectionProfile` zu laden.
@@ -81,14 +95,23 @@ int main()
     const string userName = "MyTestUser@contoso.com";
     const string password = "P@ssw0rd!";
     const string clientId = "MyClientId";
-    auto authDelegateImpl = make_shared<sample::auth::AuthDelegateImpl>(userName, password, clientId);
 
-    ProtectionProfile::Settings profileSettings("",
-        false,
-        authDelegateImpl,
-        std::make_shared<ConsentDelegateImpl>(),
-        std::make_shared<ProfileObserver>(),
-        mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" });
+    mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+    auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
+    auto mipContext = mip::MipContext::Create(appInfo,
+                        "mip_app_data",
+                        mip::LogLevel::Trace,
+                        nullptr /*loggerDelegateOverride*/,
+                        nullptr /*telemetryOverride*/);
+
+    ProtectionProfile::Settings profileSettings(
+        mipContext,                                    // mipContext object
+        mip::CacheStorageType::OnDisk,                 // use on disk storage
+        authDelegateImpl,                              // auth delegate object
+        std::make_shared<ConsentDelegateImpl>(),       // new consent delegate
+        std::make_shared<ProfileObserver>());          // new protection profile observer
 
     auto profilePromise = std::make_shared<promise<shared_ptr<ProtectionProfile>>>();
     auto profileFuture = profilePromise->get_future();

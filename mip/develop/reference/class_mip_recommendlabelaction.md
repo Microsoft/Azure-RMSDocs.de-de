@@ -1,18 +1,17 @@
 ---
 title: mip::RecommendLabelAction-Klasse
-description: Dokumentiert die mip::recommendlabelaction-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: recommendlabelaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: eeab9022b257ff327e2c83b1d8860662355180e5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: dd3d2d0ecf7b549105e1a6373a998e77d4e77de8
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173235"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883215"
 ---
 # <a name="class-miprecommendlabelaction"></a>mip::RecommendLabelAction-Klasse 
 Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag für eine Bezeichnung. Die Unterdrückung dieses Aufrufs, nachdem ein Benutzer die empfohlene Bezeichnung ignoriert hat, sollte durch die unterstützten Aktionen im Ausführungsstatus erfolgen.
@@ -20,25 +19,19 @@ Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  |  Ruft die vorgeschlagene Bezeichnungs-ID ab.
-public const std::vector\<std::string\>& GetClassificationIds() const  |  Erhalten Sie die Klassifizierung-IDs, die abgeglichen und verursacht diese Bezeichnung angezeigt werden.
-public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
+Public Konstanten Std:: shared_ptr\<-Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die vorgeschlagene Bezeichnung.
+Public Konstanten Std:: Vector\<Std:: String\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
+  
 ## <a name="members"></a>Member
   
-### <a name="getlabelid-function"></a>GetLabelId-Funktion
-Ruft die vorgeschlagene Bezeichnungs-ID ab.
+### <a name="getlabel-function"></a>GetLabel-Funktion
+Holen Sie sich die vorgeschlagene Bezeichnung.
 
   
-**Gibt**: Die bezeichnungs-ID
+**Gibt Folgendes zurück**: Die Bezeichnung.
   
-### <a name="getclassificationids-function"></a>GetClassificationIds-Funktion
-Erhalten Sie die Klassifizierung-IDs, die abgeglichen und verursacht diese Bezeichnung angezeigt werden.
+### <a name="getclassificationids-function"></a>Getclassificationids-Funktion
+Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
 
   
-**Gibt**: Const Std:: Vector < Std:: String > und eine Liste der Klassifizierung-IDs, die Ursache dieser Bezeichnung, die angezeigt werden.
-
-### <a name="gettype-function"></a>GetType-Funktion    
-Ruft den Typ der [Aktion](class_mip_action.md) ab.  
-
-**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt Folgendes zurück**: Konstante Std:: Vector < Std:: String > & eine Liste der Klassifizierungs-IDs, die dazu geführt haben, dass diese Bezeichnung angezeigt wird.

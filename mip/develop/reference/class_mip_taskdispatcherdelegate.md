@@ -1,79 +1,78 @@
 ---
-title: Klasse mip::TaskDispatcherDelegate
-description: Dokumentiert die mip::taskdispatcherdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: taskdispatcherdelegat-Klasse'
+description: 'Dokumentiert die MIP:: taskdispatcherdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 568a6df614370769556cd3634070e199beb4da5b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 0455f446cddd7db1c05f0f7e7b76b33496810cf1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184279"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883026"
 ---
-# <a name="class-miptaskdispatcherdelegate"></a>Klasse mip::TaskDispatcherDelegate 
-Eine Klasse, die die Schnittstelle an den Verteiler des MIP SDK Aufgabe definiert.
+# <a name="class-miptaskdispatcherdelegate"></a>MIP:: taskdispatcherdelegat-Klasse 
+Eine Klasse, die die Schnittstelle zum MIP SDK-Aufgaben Verteiler definiert.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Führen Sie eine Aufgabe in einem Hintergrundthread.
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delay)  |  Führen Sie eine Aufgabe in einem Hintergrundthread mit der angegebenen Verzögerung.
-public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Führen Sie sofort eine Aufgabe auf einem unabhängigen Thread an.
-public Bool CancelTask (const Std:: String & "TaskID")  |  Abbrechen einer Hintergrundaufgabe an.
-Öffentliche void CancelAllTasks()  |  Kündigen Sie alle Hintergrundaufgaben.
+public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Ausführen einer Aufgabe in einem Hintergrund Thread.
+öffentliches void dispatchtask (Konstante Std:: String & taskId, Std:: Function\<void ()\> Task, int64_t Delay)  |  Führt eine Aufgabe in einem Hintergrund Thread mit der angegebenen Verzögerung aus.
+public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
+public bool canceltask (Konstante Std:: String & taskId)  |  Abbrechen einer Hintergrundaufgabe
+öffentliches void cancelalltasks ()  |  Alle Hintergrundaufgaben abbrechen.
   
 ## <a name="members"></a>Member
   
-### <a name="dispatchtask-function"></a>DispatchTask-Funktion
-Führen Sie eine Aufgabe in einem Hintergrundthread.
+### <a name="dispatchtask-function"></a>Dispatchtask-Funktion
+Ausführen einer Aufgabe in einem Hintergrund Thread.
 
 Parameter:  
-* **taskId**: Die ID zur eindeutigen Identifizierung eine Aufgabe 
+* **taskId**: ID zur eindeutigen Identifizierung einer Aufgabe 
 
 
-* **task**: Funktion, die ausgeführt werden
+* **Aufgabe**: Auszuführende Funktion
 
 
   
-### <a name="dispatchtask-function"></a>DispatchTask-Funktion
-Führen Sie eine Aufgabe in einem Hintergrundthread mit der angegebenen Verzögerung.
+### <a name="dispatchtask-function"></a>Dispatchtask-Funktion
+Führt eine Aufgabe in einem Hintergrund Thread mit der angegebenen Verzögerung aus.
 
 Parameter:  
-* **taskId**: Die ID zur eindeutigen Identifizierung eine Aufgabe 
+* **taskId**: ID zur eindeutigen Identifizierung einer Aufgabe 
 
 
-* **task**: Funktion, die ausgeführt werden 
+* **Aufgabe**: Auszuführende Funktion 
 
 
-* **delay**: Verzögerung (in Sekunden) vor dem Ausführen der Aufgabe
+* **Verzögerung**: Verzögerung (in Sekunden) vor dem Ausführen der Aufgabe
 
 
   
-### <a name="executetaskonindependentthread-function"></a>ExecuteTaskOnIndependentThread-Funktion
-Führen Sie sofort eine Aufgabe auf einem unabhängigen Thread an.
+### <a name="executetaskonindependentthread-function"></a>Executetaskonindependentthread-Funktion
+Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
 
 Parameter:  
-* **taskId**: Die ID zur eindeutigen Identifizierung eine Aufgabe 
+* **taskId**: ID zur eindeutigen Identifizierung einer Aufgabe 
 
 
-* **task**: Funktion, die ausgeführt werden
+* **Aufgabe**: Auszuführende Funktion
 
 
   
-### <a name="canceltask-function"></a>CancelTask-Funktion
-Abbrechen einer Hintergrundaufgabe an.
+### <a name="canceltask-function"></a>Canceltask-Funktion
+Abbrechen einer Hintergrundaufgabe
 
 Parameter:  
-* **taskId**: Die ID einer Aufgabe abbrechen
+* **taskId**: ID des abzubrechenden Tasks
 
 
 
   
-**Gibt**: True, wenn der Task wurde erfolgreich abgebrochen, andernfalls "false"
+**Gibt Folgendes zurück**: True, wenn die Aufgabe erfolgreich abgebrochen wurde, andernfalls false.
   
-### <a name="cancelalltasks-function"></a>CancelAllTasks-Funktion
-Kündigen Sie alle Hintergrundaufgaben.
+### <a name="cancelalltasks-function"></a>Cancelalltasks-Funktion
+Alle Hintergrundaufgaben abbrechen.

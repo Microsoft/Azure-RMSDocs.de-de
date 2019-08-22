@@ -1,18 +1,17 @@
 ---
 title: mip::UserRoles-Klasse
-description: 'Beschreibt die Klasse:: UserRoles-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: userrollen-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7e9e750f5b327dbad5e9b46fa1eca2a3291abdd3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: c674882145e5c47233224f470d3b038bca9a40b7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173236"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882806"
 ---
 # <a name="class-mipuserroles"></a>mip::UserRoles-Klasse 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rollen.
@@ -20,31 +19,31 @@ Eine Gruppe von Benutzern und die ihnen zugeordneten Rollen.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Öffentliche UserRoles (const Std:: vector\<Std:: String\>& Benutzer, const Std:: vector\<Std:: String\>& Rollen)  |  [UserRoles](class_mip_userroles.md)-Konstruktor
-public const std::vector\<std::string\>& Users() const  |  Ruft Benutzer ab, denen Rollen zugeordnet sind
-Public const Std:: vector\<Std:: String\>& Roles() const  |  Ruft die Rollen ab, die einer Gruppe von Benutzern zugeordnet sind
+öffentliche Benutzer Rollen (Konstante Std::\<Vector Std:: String\>& users, Konstanten Std:: Vector\<Std:: String\>& Rollen)  |  [UserRoles](class_mip_userroles.md)-Konstruktor
+Public Konstanten Std:: Vector\<Std:: String\>& users () Konstanten  |  Ruft Benutzer ab, denen Rollen zugeordnet sind
+Public Konstanten Std:: Vector\<Std:: String\>& Rollen () konstant  |  Ruft die Rollen ab, die einer Gruppe von Benutzern zugeordnet sind
   
 ## <a name="members"></a>Member
   
-### <a name="userroles-function"></a>UserRoles-Funktion
+### <a name="userroles-function"></a>Userrollen-Funktion
 [UserRoles](class_mip_userroles.md)-Konstruktor
 
 Parameter:  
-* **Benutzer**: Gruppe von Benutzern, die gemeinsam die gleichen Rollen 
+* **Benutzer**: Gruppe von Benutzern, die die gleichen Rollen gemeinsam verwenden 
 
 
-* **Rollen**: Rollen, die von einer Gruppe von Benutzern gemeinsam verwendet werden
+* **Rollen**: Rollen, die von einer Benutzergruppe gemeinsam genutzt werden
 
 
   
-### <a name="users-function"></a>Benutzer-Funktion
+### <a name="users-function"></a>Benutzerfunktion
 Ruft Benutzer ab, denen Rollen zugeordnet sind
 
   
-**Gibt**: Benutzer, denen Rollen zugeordnet sind
+**Gibt Folgendes zurück**: Benutzer, denen Rollen zugeordnet sind
   
-### <a name="roles-function"></a>Rollen-Funktion
+### <a name="roles-function"></a>Rollen Funktion
 Ruft die Rollen ab, die einer Gruppe von Benutzern zugeordnet sind
 
   
-**Gibt**: Eine Gruppe von Benutzern zugeordnete Rollen
+**Gibt Folgendes zurück**: Rollen, die einer Gruppe von Benutzern zugeordnet sind

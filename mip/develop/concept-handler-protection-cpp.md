@@ -5,26 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175342"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886148"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK – ProtectionHandler-Konzepte
 
-Die Schutz-API des Microsoft Information Protection SDKs (MSIP SDK) macht `mip::ProtectionHandler` die Funktionen zum Verschlüsseln und Entschlüsseln geschützter Streams und Puffer verfügbar, führt Zugriffsprüfungen aus, ruft die Veröffentlichungslizenz und Attribute aus geschützten Informationen ab. 
+Die Schutz-API des Microsoft Information Protection SDKs (MSIP SDK) macht `mip::ProtectionHandler` die Funktionen zum Verschlüsseln und Entschlüsseln geschützter Streams und Puffer verfügbar, führt Zugriffsprüfungen aus, ruft die Veröffentlichungslizenz und Attribute aus geschützten Informationen ab.
 
 ## <a name="requirements"></a>Anforderungen
 
 Folgende Voraussetzungen gelten für das Erstellen eines `ProtectionHandler`-Elements für eine bestimmte Datei:
 
-- Ein `ProtectionProfile`-Element.
-- Ein `ProtectionEngine`-Element, dass `ProtectionProfile` hinzugefügt wurde
-- Eine Klasse, die `mip::ProtectionHandler::Observer` erbt, ähnlich dem [hier]() beschriebenen Muster
+- Ein `mip::MipContext`-Element.
+- Ein `mip::ProtectionProfile`-Element.
+- Ein `mip::ProtectionEngine`-Element, dass `ProtectionProfile` hinzugefügt wurde.
+- Eine Klasse, die erbt `mip::ProtectionHandler::Observer`.
 - Ein `mip::ProtectionDescriptor`-Element oder eine Veröffentlichungslizenz
 
 ## <a name="create-a-protection-handler"></a>Erstellen eines ProtectionHandler-Elements

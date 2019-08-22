@@ -1,18 +1,17 @@
 ---
 title: mip::LoggerDelegate-Klasse
-description: Dokumentiert die mip::loggerdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: loggerdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 511c8dabc8ff31c70c8343a80d423b76c43fa946
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: effba9bc41907c477cea7e3cf6a8688187538068
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184619"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883907"
 ---
 # <a name="class-miploggerdelegate"></a>mip::LoggerDelegate-Klasse 
 Eine Klasse, die die Schnittstelle zur MIP SDK-Protokollierung definiert
@@ -27,7 +26,7 @@ public void WriteToLog(const LogLevel level, const std::string& message, const s
   
 ## <a name="members"></a>Member
   
-### <a name="init-function"></a>"Init"-Funktion
+### <a name="init-function"></a>Init-Funktion
 Initialisiert die Protokollierung.
 
 Parameter:  
@@ -38,16 +37,16 @@ Parameter:
 
 
   
-### <a name="getloglevel-function"></a>GetLogLevel-Funktion
+### <a name="getloglevel-function"></a>Getloglevel-Funktion
 Ruft den niedrigsten Protokolliergrad ab, der ein Protokollierungsereignis auslösen würde.
 
   
-**Gibt**: Die niedrigste Protokollebene, die ein Ereignis für die nachrichtenprotokollierung auslösen würde.
+**Gibt Folgendes zurück**: Die niedrigste Protokollebene, die ein Protokollierungs Ereignis auslöst.
   
 ### <a name="flush-function"></a>Flush-Funktion
 Leert die Protokolldaten.
   
-### <a name="writetolog-function"></a>WriteToLog-Funktion
+### <a name="writetolog-function"></a>Funktion "Beschreib tetolog"
 Schreibt eine Protokollanweisung in eine Protokolldatei.
 
 Parameter:  

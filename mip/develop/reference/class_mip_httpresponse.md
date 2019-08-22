@@ -1,18 +1,17 @@
 ---
 title: class mip::HttpResponse
-description: Dokumentiert die mip::httpresponse-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: HttpResponse-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 06bc3f52bdecd85412dc0c35df46c7847167aa1b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 4d7711f755f4ffde923eb7d913abdb5bd2a905db
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173982"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884128"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
 Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App beim Überschreiben des [HttpDelegate](class_mip_httpdelegate.md) implementiert wird.
@@ -20,33 +19,33 @@ Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Ruft die Antwort-ID ab
+public const std::string& GetId() const  |  Ruft die Antwort-ID ab.
 public int32_t GetStatusCode() const  |  Ruft den Antwortstatuscode ab.
-Public const Std:: vector\<uint8_t\>& GetBody() const  |  Ruft den Text der Anforderung ab.
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Ruft Anforderungsheader ab.
+Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
+Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () Konstanten  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
-Ruft die Antwort-ID ab
+Ruft die Antwort-ID ab.
 
   
-**Gibt**: Antwort-ID der entsprechenden [HttpRequest](class_mip_httprequest.md) wird die gleiche ID hatten
+**Gibt Folgendes zurück**: Antwort-ID die entsprechende HttpRequest weist die gleiche ID auf.
   
-### <a name="getstatuscode-function"></a>GetStatusCode-Funktion
+### <a name="getstatuscode-function"></a>GetStatus Code-Funktion
 Ruft den Antwortstatuscode ab.
 
   
-**Gibt**: Statuscode
+**Gibt Folgendes zurück**: Statuscode
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Ruft den Text der Anforderung ab.
 
   
-**Gibt**: Anforderungstext
+**Gibt Folgendes zurück**: Anforderungstext
   
-### <a name="getheaders-function"></a>GetHeaders-Funktion
+### <a name="getheaders-function"></a>Gezeige Aders-Funktion
 Ruft Anforderungsheader ab.
 
   
-**Gibt**: Anforderungsheader
+**Gibt Folgendes zurück**: Anforderungs Header

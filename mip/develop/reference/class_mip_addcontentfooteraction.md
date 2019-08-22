@@ -1,18 +1,17 @@
 ---
 title: mip::AddContentFooterAction-Klasse
-description: 'Beschreibt die Klasse:: addcontentfooteraction-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: addcontentfooteraction-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 48b558c423c8cefa37333b1c5133dda31d70433d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173497"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884594"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.
@@ -27,56 +26,49 @@ public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem der Fußzeile
 public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der der Fußzeileninhalt angezeigt werden soll.
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung der Fußzeile ab.
 public int GetMargin() const  |  Ruft den Rand der Fußzeile im unteren Bereich ab
-public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
+  
 ## <a name="members"></a>Member
   
-### <a name="getuielementname-function"></a>GetUIElementName-Funktion
+### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine API, mit der das Element des Fußzeileninhalts markiert wird.
 
   
-**Gibt**: Der Name, der für das UI-Element verwendet werden soll, der der Fußzeileninhalt enthält. Wenn der Fußzeileninhalt entfernt werden muss, wird der gleiche Name in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) zurückgegeben.
+**Gibt Folgendes zurück**: Der Name, der für das UI-Element verwendet werden soll, das den Content Footer enthält. Wenn der Fußzeileninhalt entfernt werden muss, wird der gleiche Name in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) zurückgegeben.
   
-### <a name="gettext-function"></a>GetText-Funktion
+### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Fußzeileninhalt enthalten sein soll.
 
   
-**Gibt**: Inhalt des Fußzeilentexts
+**Gibt Folgendes zurück**: Textfootertext.
   
-### <a name="getfontname-function"></a>GetFontName-Funktion
+### <a name="getfontname-function"></a>Getfontname-Funktion
 Ruft den Namen der Schriftart ab, in der der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt**: Schriftartname. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
+**Gibt Folgendes zurück**: Der Schriftart Name. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
 Ruft den Schriftgrad ab, in dem der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt**: Der Schriftgrad als ganze Zahl.
+**Gibt Folgendes zurück**: Schrift Grad als ganze Zahl.
   
-### <a name="getfontcolor-function"></a>GetFontColor-Funktion
+### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
 Ruft die Schriftfarbe ab, in der der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt**: Schriftfarbe als Zeichenfolge (z. B. "#000000").
+**Gibt Folgendes zurück**: Schriftfarbe als Zeichenfolge (z. b. "#000000").
   
 ### <a name="getalignment-function"></a>GetAlignment-Funktion
 Ruft die Ausrichtung der Fußzeile ab.
 
   
-**Gibt**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
+**Gibt Folgendes zurück**: Der contentmarkalignment-Enumerator: LINKS | RECHTS | TAGESSTÄTTE. 
   
-**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand der Fußzeile im unteren Bereich ab
 
   
-**Gibt**: Die Ränder im unteren Bereich des Dokuments (z. B. 10 mm).
-
-### <a name="gettype-function"></a>GetType-Funktion
-Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
-  
-**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt Folgendes zurück**: Die Ränder vom Ende des Dokuments (z. b. 10 mm).

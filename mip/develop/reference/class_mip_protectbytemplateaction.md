@@ -1,18 +1,17 @@
 ---
 title: mip::ProtectByTemplateAction-Klasse
-description: 'Beschreibt die Klasse:: protectbytemplateaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: Dokumentiert die MIP::p rotectbytemplateaction-Klasse des MIP-SDKs (Microsoft Information Protection).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 18bdf3caa5eba2f335376d81f525fe93da4d0352
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: dffd1698e61f55d5c4d65fee9f0d9489939356d6
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173247"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885128"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>mip::ProtectByTemplateAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefügt wird.
@@ -21,19 +20,11 @@ Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefü
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
-public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
+  
 ## <a name="members"></a>Member
   
-### <a name="gettemplateid-function"></a>GetTemplateId-Funktion
+### <a name="gettemplateid-function"></a>Gettemplateid-Funktion
 Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
 
   
-**Gibt**: Die Schutz-Vorlagen-ID.
-
-
-### <a name="gettype-function"></a>GetType-Funktion
-Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
-  
-**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt Folgendes zurück**: Die ID der Schutz Vorlage.

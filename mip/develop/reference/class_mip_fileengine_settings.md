@@ -1,43 +1,46 @@
 ---
 title: mip::FileEngine::Settings-Klasse
-description: 'Beschreibt die Klasse:: fileengine-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: fileengine-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 00ad6058b146f428a65a0697b722e6d3adb5c07d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184704"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884299"
 ---
 # <a name="class-mipfileenginesettings"></a>mip::FileEngine::Settings-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  Der [FileEngine::Settings](class_mip_fileengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale, bool loadSensitivityTypes)  |  Der [FileProfile::Settings](class_mip_fileprofile_settings.md)-Konstruktor für die Erstellung einer neuen Engine
+öffentliche Einstellungen (Konstante Std:: String & EngineID, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  Der [FileEngine::Settings](class_mip_fileengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
+öffentliche Einstellungen (Konstante Identität & Identität, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  Der [FileProfile::Settings](class_mip_fileprofile_settings.md)-Konstruktor für die Erstellung einer neuen Engine
 public const std::string& GetEngineId() const  |  Gibt die Engine-ID zurück.
 public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
-public const Identity& GetIdentity() const  |  Gibt die Engine [Identität](class_mip_identity.md).
+public const Identity& GetIdentity() const  |  Gibt die Engine- [Identität](class_mip_identity.md)zurück.
 public void SetIdentity(const Identity& identity)  |  Legt die Engine-Identität fest.
 public const std::string& GetClientData() const  |  Gibt die Engine-Clientdaten zurück.
 public const std::string& GetLocale() const  |  Gibt das Engine-Gebietsschema zurück.
-Öffentliche void SetCustomSettings (const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
-Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
+öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& Wert)  |  Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  |  Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID für die Engine fest.
 public const std::string& GetSessionId() const  |  Gibt die Sitzungs-ID für die Engine zurück.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Legt die Basis-URL des Endpunkts der Schutzcloud fest, durch die die Cloudgrenze festgelegt ist.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ruft ab, die Schutz Cloud-Endpunkt-Basis-Url.
-public void SetPolicyCloudEndpointBaseUrl(const std::string& policyCloudEndpointBaseUrl)  |  Legt fest, die Richtlinie für Cloud-Endpunkt Basis-Url verwendet, um Grenzen der Cloud anzugeben.
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Ruft die Richtlinie für Cloud-Endpunkt-Basis-Url ab.
-public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ruft die Basis-URL des Protection Cloud-Endpunkts ab
+öffentliches void setpolicycloudendpointbaseurl (Konstanten Std:: String & policycloudendpointbaseurl)  |  Legt die Basis-URL der richtliniencloud fest, die zum Angeben der cloudgrenze verwendet wird
+Public Konstanten Std:: String & getpolicycloudendpointbaseurl () Konstanten  |  Ruft die Basis-URL der richtliniencloud ab.
+öffentliches void setschutzonlyengine (boolescher Schutz)  |  Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.
 public const bool IsProtectionOnlyEngine() const  |  Gibt nur den Engine-Indikator für den Schutz zurück – keine Richtlinie/Bezeichnung.
-public bool IsLoadSensitivityTypesEnabled() const  |  Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
+public bool isloadsensitivitytypesaktivierte () Konstante  |  Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
+öffentliches void-enablepfile (boolescher Wert)  |  Legt das Flag fest, das angibt, ob pfiles erzeugt.
+Public Konstanten bool ispfileaktivierte ()  |  Rufen Sie das Flag ab, das angibt, ob pfiles erzeugt.
+öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
+Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
   
 ## <a name="members"></a>Member
   
@@ -45,7 +48,7 @@ public bool IsLoadSensitivityTypesEnabled() const  |  Abrufen der das Flag gibt 
 Der [FileEngine::Settings](class_mip_fileengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
 
 Parameter:  
-* **engineId**: Legen Sie sie an, auf die eindeutige Engine-ID generiert, von addengineasync erzeugt wurde. 
+* **engineId**: Legen Sie Sie auf die eindeutige Engine-ID fest, die von addengineasync generiert wurde. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -54,7 +57,7 @@ Parameter:
 * **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt. 
 
 
-* **loadSensitivityTypes**: Optionale Kennzeichen, das angibt, wenn das Skriptmodul geladen ist sollte auch benutzerdefinierte Empfindlichkeit Typen laden, wenn "true" OnPolicyChange Beobachter für das Profil für Updates für benutzerdefinierte Empfindlichkeit-Typen sowie der Änderungen aufgerufen werden soll. Wenn "false" ListSensitivityTypes aufrufen, gibt immer eine leere Liste zurück.
+* **loadSensitivityTypes**: Optionales Flag, das anzeigt, wann die Engine geladen wird, sollte auch benutzerdefinierte Empfindlichkeits Typen laden, wenn true onpolicychange Observer im Profil für Aktualisierungen von benutzerdefinierten Empfindlichkeits Typen sowie Richtlinien Änderungen aufgerufen wird. Wenn der Befehl "false listsensitivitytypes" aufruft, wird immer eine leere Liste zurückgegeben.
 
 
   
@@ -62,7 +65,7 @@ Parameter:
 Der [FileProfile::Settings](class_mip_fileprofile_settings.md)-Konstruktor für die Erstellung einer neuen Engine
 
 Parameter:  
-* **identity**: [Identität](class_mip_identity.md) Informationen des Benutzers, das neue Modul zugeordnet. 
+* **Identität**: [Identitäts](class_mip_identity.md) Informationen des Benutzers, der der neuen Engine zugeordnet ist. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -71,14 +74,14 @@ Parameter:
 * **locale**: Von der Engine lokalisierbare Ausgaben werden in diesem Gebietsschema bereitgestellt. 
 
 
-* **loadSensitivityTypes**: Optionale Kennzeichen, das angibt, wenn das Skriptmodul geladen ist sollte auch benutzerdefinierte Empfindlichkeit Typen laden, wenn "true" OnPolicyChange Beobachter für das Profil für Updates für benutzerdefinierte Empfindlichkeit-Typen sowie der Änderungen aufgerufen werden soll. Wenn "false" ListSensitivityTypes aufrufen, gibt immer eine leere Liste zurück.
+* **loadSensitivityTypes**: Optionales Flag, das anzeigt, wann die Engine geladen wird, sollte auch benutzerdefinierte Empfindlichkeits Typen laden, wenn true onpolicychange Observer im Profil für Aktualisierungen von benutzerdefinierten Empfindlichkeits Typen sowie Richtlinien Änderungen aufgerufen wird. Wenn der Befehl "false listsensitivitytypes" aufruft, wird immer eine leere Liste zurückgegeben.
 
 
   
-### <a name="getengineid-function"></a>GetEngineId-Funktion
+### <a name="getengineid-function"></a>Getengineid-Funktion
 Gibt die Engine-ID zurück.
   
-### <a name="setengineid-function"></a>SetEngineId-Funktion
+### <a name="setengineid-function"></a>Funktion "stengineid"
 Legt die Engine-ID fest.
 
 Parameter:  
@@ -86,66 +89,90 @@ Parameter:
 
 
   
-### <a name="getidentity-function"></a>"Getidentity"-Funktion
-Gibt die Engine [Identität](class_mip_identity.md).
+### <a name="getidentity-function"></a>GetIdentity-Funktion
+Gibt die Engine- [Identität](class_mip_identity.md)zurück.
   
-### <a name="setidentity-function"></a>SetIdentity-Funktion
+### <a name="setidentity-function"></a>Die Funktion "Funktion"
 Legt die Engine-Identität fest.
   
-### <a name="getclientdata-function"></a>GetClientData-Funktion
+### <a name="getclientdata-function"></a>Getclientdata-Funktion
 Gibt die Engine-Clientdaten zurück.
   
 ### <a name="getlocale-function"></a>GetLocale-Funktion
 Gibt das Engine-Gebietsschema zurück.
   
-### <a name="setcustomsettings-function"></a>SetCustomSettings-Funktion
+### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
 Legt eine Liste von Name/Wert-Paaren fest, die für Tests und Versuche genutzt werden.
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
+### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
 Ruft eine Liste von Name/Wert-Paaren ab, die für Tests und Versuche genutzt werden.
   
-### <a name="setsessionid-function"></a>SetSessionId-Funktion
+### <a name="setsessionid-function"></a>Funktion "-essionid"
 Legt die Sitzungs-ID für die Engine fest.
   
-### <a name="getsessionid-function"></a>GetSessionId-Funktion
+### <a name="getsessionid-function"></a>Geungessionid-Funktion
 Gibt die Sitzungs-ID für die Engine zurück.
   
-### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl function
+### <a name="setprotectioncloudendpointbaseurl-function"></a>Setschutzcloudendpointbaseurl-Funktion
 Legt die Basis-URL des Endpunkts der Schutzcloud fest, durch die die Cloudgrenze festgelegt ist.
 
 Parameter:  
-* **protectionCloudEndpointBaseUrl**: Schutz von Endpunkten zugeordnet Basis-url
+* **protectionCloudEndpointBaseUrl**: Basis-URL, die Schutz Endpunkten zugeordnet ist
 
 
   
-### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Ruft ab, die Schutz Cloud-Endpunkt-Basis-Url.
+### <a name="getprotectioncloudendpointbaseurl-function"></a>Getschutzcloudendpointbaseurl-Funktion
+Ruft die Basis-URL des Protection Cloud-Endpunkts ab
 
   
-**Gibt**: Schutz von Endpunkten zugeordnet Basis-url
+**Gibt Folgendes zurück**: Basis-URL, die Schutz Endpunkten zugeordnet ist
   
-### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl function
-Legt fest, die Richtlinie für Cloud-Endpunkt Basis-Url verwendet, um Grenzen der Cloud anzugeben.
+### <a name="setpolicycloudendpointbaseurl-function"></a>Setpolicycloudendpointbaseurl-Funktion
+Legt die Basis-URL der richtliniencloud fest, die zum Angeben der cloudgrenze verwendet wird
 
 Parameter:  
-* **policyCloudEndpointBaseUrl**: Endpunkte der Richtlinie zugeordnete Basis-url
+* **policyCloudEndpointBaseUrl**: Basis-URL, die Richtlinien Endpunkten zugeordnet ist
 
 
   
-### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl function
-Ruft die Richtlinie für Cloud-Endpunkt-Basis-Url ab.
+### <a name="getpolicycloudendpointbaseurl-function"></a>Getpolicycloudendpointbaseurl-Funktion
+Ruft die Basis-URL der richtliniencloud ab.
 
   
-**Gibt**: Endpunkte der Richtlinie zugeordnete Basis-url
+**Gibt Folgendes zurück**: Basis-URL, die Richtlinien Endpunkten zugeordnet ist
   
-### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine-Funktion
+### <a name="setprotectiononlyengine-function"></a>Setschutzonlyengine-Funktion
 Legt nur den Engine-Indikator für den Schutz fest – keine Richtlinie/Bezeichnung.
   
-### <a name="isprotectiononlyengine-function"></a>IsProtectionOnlyEngine function
+### <a name="isprotectiononlyengine-function"></a>Isprotectiononlyengine-Funktion
 Gibt nur den Engine-Indikator für den Schutz zurück – keine Richtlinie/Bezeichnung.
   
-### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled-Funktion
-Abrufen der das Flag gibt an, ob Load vertraulichkeitsbezeichnungen aktiviert ist.
+### <a name="isloadsensitivitytypesenabled-function"></a>Isloadsensitivitytypesaktivierte Funktion
+Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
 
   
-**Gibt**: True, wenn aktiviert, andernfalls False.
+**Gibt Folgendes zurück**: True, wenn aktiviert, andernfalls false.
+  
+### <a name="enablepfile-function"></a>Enablepfile-Funktion
+Legt das Flag fest, das angibt, ob pfiles erzeugt.
+  
+### <a name="ispfileenabled-function"></a>Ispfileaktivierte-Funktion
+Rufen Sie das Flag ab, das angibt, ob pfiles erzeugt.
+
+  
+**Gibt Folgendes zurück**: True, wenn aktiviert, andernfalls false.
+  
+### <a name="setdelegateduseremail-function"></a>Setdelegateduseremail-Funktion
+Legt den Delegierten Benutzer fest.
+
+Parameter:  
+* **delegateduseremail**: die Delegierungs-e-Mail.
+
+
+Ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.
+  
+### <a name="getdelegateduseremail-function"></a>Getdelegateduseremail-Funktion
+Ruft den Delegierten Benutzer ab.
+
+  
+**Gibt Folgendes zurück**: Delegierter Benutzer ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.

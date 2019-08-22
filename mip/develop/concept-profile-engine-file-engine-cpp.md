@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fcdcb5c11646fd7d32284b6df31cda33abbfde4a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175512"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886101"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Engine-Objekt der File-API
 
 Die `mip::FileEngine` in der File-API des MIP SDK stellt eine Schnittstelle für alle Vorgänge bereit, die im Auftrag einer bestimmten Identität ausgeführt werden. Für jeden Benutzer, der sich bei der Anwendung anmeldet, wird eine Engine hinzugefügt, und alle Vorgänge, die die Engine ausführt, werden im Kontext dieser Identität ausgeführt.
 
-Die `FileEngine` hat zwei primäre Aufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer aus, und erstellen Datei-Ereignishandler, um die Dateivorgänge im Auftrag des Benutzers ausführen. 
+`FileEngine` Besteht aus zwei Hauptaufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer und Erstellen von Datei Handlern zum Ausführen von Datei Vorgängen im Auftrag des Benutzers. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für das geladene Modul ab.
+- `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
 - `CreateFileHandler()`: Erstellt eine `mip::FileHandler` für eine bestimmte Datei oder einen Stream.
 
 ## <a name="add-a-file-engine"></a>Hinzufügen einer Dateiengine
@@ -32,10 +32,24 @@ Wie unter [Profile- und Engine-Objekte](concept-profile-engine-cpp.md) beschrieb
 
 Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
-Im folgenden Beispiel wird ein `FileEngine::Settings`-Objekt mit dem Namen *engineSettings* erstellt. 
+Hier erstellen wir ein `FileEngine::Settings` -Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers.
 
 ```cpp
-FileEngine::Settings engineSettings("UniqueID", "");
+FileEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Außerdem ist die Angabe einer benutzerdefinierten Engine-ID gültig:
+
+```cpp
+FileEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 Als bewährte Methode sollte der erste Parameter (`id`) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer hergestellt werden kann. Eine Angabe wie etwa die E-Mail-Adresse, der UPN oder eine AAD-Objekt-GUID würde sicherstellen, dass die ID sowohl eindeutig ist als auch aus dem lokalen Zustand geladen werden kann, ohne den Dienst aufzurufen.
@@ -72,7 +86,7 @@ Unter Verwendung der hinzugefügten Engine ist es jetzt möglich, sämtliche Ver
 
 `ListSensitivityLabels()` ruft die Liste mit Bezeichnungen und Attributen dieser Bezeichnungen für einen bestimmten Benutzer aus dem Dienst ab. Das Ergebnis wird in einem Vektor von `std::shared_ptr<mip::Label>` gespeichert.
 
-Weitere Informationen zu `mip::Label` finden Sie [hier]().
+Weitere Informationen zu `mip::Label` finden Sie [hier](reference/class_mip_label.md).
 
 ### <a name="listsensitivitylabels"></a>ListSensitivityLabels()
 
@@ -108,4 +122,3 @@ Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben w
 ## <a name="next-steps"></a>Nächste Schritte
 
 Da das Profil nun geladen und die Engine hinzugefügt wurde und wir über Bezeichnungen verfügen, können wir einen Handler hinzufügen, um mit dem Lesen, Schreiben oder Entfernen von Bezeichnungen aus Dateien zu beginnen. Siehe [Dateihandler im MIP SDK](concept-handler-file-cpp.md).
-

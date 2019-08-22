@@ -1,18 +1,17 @@
 ---
 title: mip::AddContentHeaderAction-Klasse
-description: 'Beschreibt die Klasse:: addcontentheaderaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: addcontenderaderaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: e9de81595ead9a629c3266962a08f1b13fdb9675
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184857"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885939"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>mip::AddContentHeaderAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader hinzugefügt wird.
@@ -27,56 +26,49 @@ public int GetFontSize() const  |  Ruft den Schriftgrad ab, in dem der Inhaltshe
 public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in der der Inhaltsheader angezeigt wird.
 public ContentMarkAlignment GetAlignment() const  |  Ruft die Ausrichtung des Headers ab.
 public int GetMargin() const  |  Ruft den Rand des Headers im unteren Bereich ab
-public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
+  
 ## <a name="members"></a>Member
   
-### <a name="getuielementname-function"></a>GetUIElementName-Funktion
+### <a name="getuielementname-function"></a>Getuielementname-Funktion
 Eine API, mit der das Inhaltsheaderelement markiert wird
 
   
-**Gibt**: Der Name, der für das UI-Element verwendet werden soll, der der Inhaltsheader enthält. Wenn der Inhaltsheader entfernt werden muss, wird derselbe Name in [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) zurückgegeben.
+**Gibt Folgendes zurück**: Der Name, der für das UI-Element verwendet werden soll, das den Content-Header enthält. Wenn der Inhaltsheader entfernt werden muss, wird derselbe Name in [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) zurückgegeben.
   
-### <a name="gettext-function"></a>GetText-Funktion
+### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Inhaltsheader enthalten sein soll.
 
   
-**Gibt**: Text des inhaltsheaders.
+**Gibt Folgendes zurück**: Text Header Text.
   
-### <a name="getfontname-function"></a>GetFontName-Funktion
+### <a name="getfontname-function"></a>Getfontname-Funktion
 Ruft den Namen der Schriftart ab, in der der Inhaltsheader angezeigt wird.
 
   
-**Gibt**: Schriftartname. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
+**Gibt Folgendes zurück**: Der Schriftart Name. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
 Ruft den Schriftgrad ab, in dem der Inhaltsheader angezeigt wird.
 
   
-**Gibt**: Der Schriftgrad als ganze Zahl.
+**Gibt Folgendes zurück**: Schrift Grad als ganze Zahl.
   
-### <a name="getfontcolor-function"></a>GetFontColor-Funktion
+### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
 Ruft die Schriftfarbe ab, in der der Inhaltsheader angezeigt wird.
 
   
-**Gibt**: Schriftfarbe als Zeichenfolge (z. B. #000000 ").
+**Gibt Folgendes zurück**: Schriftfarbe als Zeichenfolge (z. b. #000000 ").
   
 ### <a name="getalignment-function"></a>GetAlignment-Funktion
 Ruft die Ausrichtung des Headers ab.
 
   
-**Gibt**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
+**Gibt Folgendes zurück**: Der contentmarkalignment-Enumerator: LINKS | RECHTS | TAGESSTÄTTE. 
   
-**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand des Headers im unteren Bereich ab
 
   
-**Gibt**: Die Ränder im unteren Bereich des Dokuments (z. B. 10 mm).
-
-### <a name="gettype-function"></a>GetType-Funktion
-Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
-  
-**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt Folgendes zurück**: Die Ränder vom Ende des Dokuments (z. b. 10 mm).

@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f4d96da36eb41025df5d280c62a3831cd5afa9a1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175291"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886235"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK: Authentifizierungskonzepte
 
@@ -24,15 +24,15 @@ Die Authentifizierung im MIP SDK erfolgt durch Erweiterung der `mip::AuthDelegat
 
 `mip::AuthDelegate::AcquireOAuth2Token` nimmt die folgenden Parameter an und gibt einen booleschen Wert zurück, der angibt, ob der Tokenabruf erfolgreich war:
 
-- `mip::Identity`: Die Identität des Benutzers oder der Dienst authentifiziert zu werden, sofern bekannt.
-- `mip::AuthDelegate::OAuth2Challenge`: Akzeptiert zwei Parameter: **Autorität** und **Ressource**. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten.
-- `mip::AuthDelegate::OAuth2Token`: Das token Ergebnis wird in dieses Objekt geschrieben. Es wird durch das SDK genutzt, wenn die Engine geladen wird. Außerhalb unserer Authentifizierungsimplementierung sollte das Abrufen oder Festlegen dieses Werts nirgendwo erforderlich sein.
+- `mip::Identity`: Die Identität des Benutzers oder Dienstes, der authentifiziert werden soll, sofern bekannt.
+- `mip::AuthDelegate::OAuth2Challenge`: Akzeptiert vier Parameter, **Autorität**, **Ressource**, **Ansprüche**und **Bereiche**. **Authority** ist der Dienst, für den das Token generiert wird. **Resource** ist der Dienst, auf den wir zugreifen möchten. Das SDK verarbeitet beim Aufruf die Übergabe dieser Parameter an den Delegaten. **Ansprüche** sind die Bezeichnungs spezifischen Ansprüche, die für den Schutzdienst erforderlich sind. **Bereiche** sind die Azure AD Berechtigungs Bereiche, die für den Zugriff auf die Ressource erforderlich sind. 
+- `mip::AuthDelegate::OAuth2Token`: Das tokenergebnis wird in dieses Objekt geschrieben. Es wird durch das SDK genutzt, wenn die Engine geladen wird. Außerhalb unserer Authentifizierungsimplementierung sollte das Abrufen oder Festlegen dieses Werts nirgendwo erforderlich sein.
 
-**Wichtig:** Rufen Sie Anwendungen nicht `AcquireOAuth2Token` direkt. Das SDK ruft diese Funktion bei Bedarf auf.
+**Wichtig:** Anwendungen werden nicht `AcquireOAuth2Token` direkt aufgerufen. Das SDK ruft diese Funktion bei Bedarf auf.
 
-## <a name="consent"></a>Zustimmung
+## <a name="consent"></a>Einverstanden
 
-Azure AD verlangt, dass einer Anwendung Zustimmung erteilt wird, bevor ihr die Erlaubnis zum Zugriff auf gesicherte Ressourcen/APIs unter der Identität eines Kontos erteilt wird. Zustimmung wird als dauerhafte Bestätigung der Berechtigung im Mandanten des Kontos für das jeweilige Konto ( Benutzerzustimmung) oder für alle Konten ( Administratorzustimmung) aufgezeichnet. Zustimmung tritt in verschiedenen Szenarien basierend auf der API auf, auf die zugegriffen wird, den Berechtigungen, nach denen die Anwendung sucht, und dem Konto, das für die Anmeldung verwendet wird: 
+Azure AD verlangt, dass einer Anwendung Zustimmung erteilt wird, bevor ihr die Erlaubnis zum Zugriff auf gesicherte Ressourcen/APIs unter der Identität eines Kontos erteilt wird. Die Zustimmung wird als dauerhafte Bestätigung der Berechtigung im Mandanten des Kontos, für das jeweilige Konto (Benutzer Zustimmung) oder für alle Konten (Administrator Zustimmung) aufgezeichnet. Zustimmung tritt in verschiedenen Szenarien basierend auf der API auf, auf die zugegriffen wird, den Berechtigungen, nach denen die Anwendung sucht, und dem Konto, das für die Anmeldung verwendet wird: 
 
 - Konten aus dem *gleichen Mandanten*, in dem Ihre Anwendung registriert ist, wenn Sie oder ein Administrator nicht explizit dem Zugriff über das Feature „Berechtigungen erteilen“ vorab zugestimmt haben.
 - Konten aus einer *anderen Mandanten*, wenn Ihre Anwendung als mehrinstanzenfähig registriert ist und der Mandantenadministrator nicht für alle Benutzer vorab zugestimmt hat.
@@ -49,15 +49,15 @@ Wenn ein Benutzer einen Vorgang ausführt, der Zustimmung erfordert, ruft das SD
 
 ### <a name="consent-options"></a>Zustimmungsoptionen
 
-- **AcceptAlways**: Stimmen Sie zu, und speichern Sie die Entscheidung.
-- **Akzeptieren Sie**: Nach Zustimmung.
+- **Akzeptalways**: Akzeptieren und merken Sie sich die Entscheidung.
+- **Akzeptieren**: Einmalige Zustimmung.
 - **Ablehnen**: Nicht zustimmen.
 
 Wenn das SDK die Zustimmung des Benutzers mit dieser Methode anfordert, sollte die Clientanwendung dem Benutzer die URL anzeigen. Clientanwendungen sollten eine Möglichkeit bieten, die Zustimmung des Benutzers einzuholen und die entsprechende Zustimmungsenumeration zurückzugeben, die der Entscheidung des Benutzers entspricht.
 
 ### <a name="sample-implementation"></a>Beispielimplementierung
 
-#### <a name="consentdelegateimplh"></a>consent_delegate_impl.h
+#### <a name="consent_delegate_implh"></a>consent_delegate_impl.h
 
 ```cpp
 class ConsentDelegateImpl final : public mip::ConsentDelegate {
@@ -69,9 +69,9 @@ public:
 };
 ```
 
-#### <a name="consentdelegateimplcpp"></a>consent_delegate_impl.cpp
+#### <a name="consent_delegate_implcpp"></a>consent_delegate_impl.cpp
 
-Wenn das SDK Zustimmung erfordert, wird die `GetUserConsent`-Methode *vom SDK* aufgerufen und die URL als Parameter übergeben. Im folgenden Beispiel wird der Benutzer benachrichtigt, dass das SDK eine Verbindung mit dieser bereitgestellten URL herstellt. Anschließend wird `Consent::AcceptAlways` zurückgegeben. Dies ist kein gutes Beispiel, da dem Benutzer keine echte Wahl ermöglicht wurde.
+Wenn das SDK Zustimmung erfordert, wird die `GetUserConsent`-Methode *vom SDK* aufgerufen und die URL als Parameter übergeben. Im folgenden Beispiel wird der Benutzer benachrichtigt, dass das SDK eine Verbindung mit der bereitgestellten URL herstellt und dem Benutzer eine Option in der Befehlszeile bereitstellt. Basierend auf der Auswahl des Benutzers akzeptiert oder lehnt der Benutzer die Zustimmung ab, und er wird an das SDK übergeben. Wenn der Benutzer seine Zustimmung ablehnt, löst die Anwendung eine Ausnahme aus, und es wird kein Rückruf für den Schutzdienst durchgeführt. 
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
@@ -101,6 +101,16 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
   }  
 }
 ```
+
+Zu Test-und Entwicklungszwecken kann ein `ConsentDelegate` einfaches implementiert werden, das wie folgt aussieht:
+
+```cpp
+Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
+  return Consent::AcceptAlways;
+}
+```
+
+Im Produktionscode ist es jedoch möglicherweise erforderlich, dass der Benutzer je nach Regions-oder Geschäftsanforderungen und-Vorschriften mit einer Wahl zur Zustimmung angezeigt wird. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 

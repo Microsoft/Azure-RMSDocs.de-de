@@ -1,18 +1,17 @@
 ---
 title: mip::UserRights-Klasse
-description: 'Beschreibt die Klasse:: userrights-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: Userrights-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 148b1b1a9f70cc87c3297c69e1e9ffa67af34cf4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: c26c7d1aa31cf8fb2ea562582a2ebaad8417615d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184245"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884972"
 ---
 # <a name="class-mipuserrights"></a>mip::UserRights-Klasse 
 Eine Gruppe von Benutzern und die ihnen zugeordneten Rechte.
@@ -20,31 +19,31 @@ Eine Gruppe von Benutzern und die ihnen zugeordneten Rechte.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Öffentliche UserRights (const Std:: vector\<Std:: String\>& Benutzer, const Std:: vector\<Std:: String\>& Rights)  |  [UserRights](class_mip_userrights.md)-Konstruktor
-public const std::vector\<std::string\>& Users() const  |  Ruft Benutzer ab, denen Berechtigungen zugeordnet sind
-Public const Std:: vector\<Std:: String\>& Rights() const  |  Ruft die Berechtigungen ab, die einer Gruppe von Benutzern zugeordnet sind
+Public User Rights (Konst Std:: Vector\<Std:: String\>& users, Konstanten Std:: Vector\<Std:: String\>& Rights)  |  [UserRights](class_mip_userrights.md)-Konstruktor
+Public Konstanten Std:: Vector\<Std:: String\>& users () Konstanten  |  Ruft Benutzer ab, denen Berechtigungen zugeordnet sind
+Public Konstanten Std:: Vector\<Std:: String\>& Rights () Konstanten  |  Ruft die Berechtigungen ab, die einer Gruppe von Benutzern zugeordnet sind
   
 ## <a name="members"></a>Member
   
-### <a name="userrights-function"></a>UserRights-Funktion
+### <a name="userrights-function"></a>Userrights-Funktion
 [UserRights](class_mip_userrights.md)-Konstruktor
 
 Parameter:  
-* **Benutzer**: Gruppe von Benutzern, die die gleichen Berechtigungen verfügen 
+* **Benutzer**: Gruppe von Benutzern, die die gleichen Rechte haben 
 
 
-* **Rechte**: Rechte, die von einer Gruppe von Benutzern gemeinsam verwendet werden
+* **Rechte**: Rechte, die von einer Benutzergruppe gemeinsam genutzt werden
 
 
   
-### <a name="users-function"></a>Benutzer-Funktion
+### <a name="users-function"></a>Benutzerfunktion
 Ruft Benutzer ab, denen Berechtigungen zugeordnet sind
 
   
-**Gibt**: Benutzer, denen Berechtigungen zugeordnet sind
+**Gibt Folgendes zurück**: Benutzer, denen Berechtigungen zugeordnet sind
   
-### <a name="rights-function"></a>Rechte-Funktion
+### <a name="rights-function"></a>Rights-Funktion
 Ruft die Berechtigungen ab, die einer Gruppe von Benutzern zugeordnet sind
 
   
-**Gibt**: Die Berechtigungen, die einer Gruppe von Benutzern zugeordnet sind
+**Gibt Folgendes zurück**: Die Berechtigungen, die einer Gruppe von Benutzern zugeordnet sind

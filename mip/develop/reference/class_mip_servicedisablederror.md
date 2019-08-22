@@ -1,87 +1,40 @@
 ---
-title: Klasse mip::ServiceDisabledError
-description: Dokumentiert die mip::servicedisablederror-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: servicedisablederror-Klasse'
+description: 'Dokumentiert die MIP:: servicedisablederror-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1373d9ecc03f69267af631216a04d358e8be7af3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 6496b2b8967571454c205b84b01a6e4b74456c17
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173370"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882917"
 ---
-# <a name="class-mipservicedisablederror"></a>Klasse mip::ServiceDisabledError 
-Der Benutzer konnte Zugriff auf den Inhalt, da ein Dienst, der deaktiviert werden nicht abgerufen werden.
+# <a name="class-mipservicedisablederror"></a>MIP:: servicedisablederror-Klasse 
+Der Benutzer konnte aufgrund eines deaktivierten diensdienstanbieter keinen Zugriff auf den Inhalt erhalten.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public Extent GetExtent() const  |  Ruft den Umfang für den der Dienst deaktiviert ist.
-Extent-Enumeration  |  Beschreibt das Ausmaß, die für das der Dienst deaktiviert ist.
-public char const* what() const  |  Ruft die Fehlermeldung ab
-Public Std:: shared_ptr\<Fehler\> Clone() const  |  Klont den Fehler
-public virtual ErrorType GetErrorType() const  |  Ruft den Fehlertyp ab
-public virtual const std::string& GetErrorName() const  |  Ruft den Fehlernamen ab
-public virtual const std::string& GetMessage() const  |  Ruft die Fehlermeldung ab
-public virtual void SetMessage(const std::string& msg)  |  Legt die Fehlermeldung fest
+Public Block GetExtent () konstant  |  Ruft den Umfang ab, für den der Dienst deaktiviert ist.
+Aufzählungs Block  |  Beschreibt den Umfang, für den der Dienst deaktiviert ist.
   
 ## <a name="members"></a>Member
   
 ### <a name="getextent-function"></a>GetExtent-Funktion
-Ruft den Umfang für den der Dienst deaktiviert ist.
+Ruft den Umfang ab, für den der Dienst deaktiviert ist.
 
   
-**Gibt**: Umfang, die für die der Dienst deaktiviert ist
+**Gibt Folgendes zurück**: Der Umfang, für den der Dienst deaktiviert ist.
   
-### <a name="extent-enum"></a>Extent-Enumeration
-
-Beschreibt das Ausmaß, die für das der Dienst deaktiviert ist.
-
+### <a name="extent-enum"></a>Block-Aufzählung
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Benutzer            | Dienst ist für den Benutzer deaktiviert.
-Gerät            | Dienst ist für das Gerät deaktiviert.
-Platform            | Für die Plattform ist der Dienst deaktiviert.
-Mandant            | Dienst ist für den Mandanten deaktiviert.
-
-
-
-### <a name="what-function"></a>Welche Funktion
-Ruft die Fehlermeldung ab
-
-  
-**Gibt**: Die Fehlermeldung
-  
-### <a name="clone-function"></a>Clone-Funktion
-Klont den Fehler
-
-  
-**Gibt**: Ein Klon des Fehlers.
-  
-### <a name="geterrortype-function"></a>GetErrorType-Funktion
-Ruft den Fehlertyp ab
-
-  
-**Gibt**: Der Fehlertyp.
-  
-### <a name="geterrorname-function"></a>GetErrorName-Funktion
-Ruft den Fehlernamen ab
-
-  
-**Gibt**: Der fehlername
-  
-### <a name="getmessage-function"></a>GetMessage-Funktion
-Ruft die Fehlermeldung ab
-
-  
-**Gibt**: Die Fehlermeldung.
-  
-### <a name="setmessage-function"></a>SetMessage-Funktion
-Legt die Fehlermeldung fest
-
-Parameter:  
-* **msg**: Fehlermeldung.
+Benutzer            | Der Dienst ist für den Benutzer deaktiviert.
+Gerät            | Der Dienst ist für das Gerät deaktiviert.
+Platform            | Der Dienst ist für die Plattform deaktiviert.
+Mandant            | Der Dienst ist für den Mandanten deaktiviert.
+Beschreibt den Umfang, für den der Dienst deaktiviert ist.

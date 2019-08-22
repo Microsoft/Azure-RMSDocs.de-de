@@ -1,37 +1,36 @@
 ---
-title: class mip::SensitivityTypesRulePackage
-description: Dokumentiert die mip::sensitivitytypesrulepackage-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: sensitivitytypesrulepackage-Klasse'
+description: 'Dokumentiert die MIP:: sensitivitytypesrulepackage-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 46d59f7ee3cd099c5526fdc565ff5e84a81f6f4e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 4a18ebd134dc0c46fd7221aaf09bcc5429de1101
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185027"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883106"
 ---
-# <a name="class-mipsensitivitytypesrulepackage"></a>class mip::SensitivityTypesRulePackage 
+# <a name="class-mipsensitivitytypesrulepackage"></a>MIP:: sensitivitytypesrulepackage-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetRulePackageId() const  |  Die Regel-Paket-ID abrufen
-Public const Std:: String & GetRulePackage() const  |  Rufen Sie das Regelpaket an.
+Public Konstanten Std:: String & getrulepackageid () Konstanten  |  ID des Regel Pakets erhalten.
+Public Konstanten Std:: String & getrulepackage () Konstanten  |  Holen Sie sich das Regelpaket.
   
 ## <a name="members"></a>Member
   
-### <a name="getrulepackageid-function"></a>GetRulePackageId-Funktion
-Die Regel-Paket-ID abrufen
+### <a name="getrulepackageid-function"></a>Getrulepackageid-Funktion
+ID des Regel Pakets erhalten.
 
   
-**Gibt**: Die Regel-Paket-Id
+**Gibt Folgendes zurück**: Die Regelpaket-ID
   
-### <a name="getrulepackage-function"></a>GetRulePackage-Funktion
-Rufen Sie das Regelpaket an.
+### <a name="getrulepackage-function"></a>Getrulepackage-Funktion
+Holen Sie sich das Regelpaket.
 
   
-**Gibt**: Die Regelpaket
+**Gibt Folgendes zurück**: Das Regelpaket

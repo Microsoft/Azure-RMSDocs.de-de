@@ -1,18 +1,17 @@
 ---
 title: mip::LabelingOptions-Klasse
-description: 'Beschreibt die Klasse:: labelingoptions-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: labelingoptions-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 36251330bbca45d69630302c304f5190e25db320
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: f70c2b004f9649f17bccab92a65ea73ab31a3390
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174033"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883974"
 ---
 # <a name="class-miplabelingoptions"></a>mip::LabelingOptions-Klasse 
 Schnittstelle für die Konfiguration von Bezeichnungsoptionen für die Methoden „SetLabel“ und „DeleteLabel“
@@ -20,44 +19,39 @@ Schnittstelle für die Konfiguration von Bezeichnungsoptionen für die Methoden 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _Noch nicht dokumentiert._
+Public labelingoptions (Methode ' zuder Methode ')  | _Noch nicht dokumentiert._
 public AssignmentMethod GetAssignmentMethod() const  | _Noch nicht dokumentiert._
-public ActionSource GetActionSource() const  | _Noch nicht dokumentiert._
 public bool IsDowngradeJustified() const  | _Noch nicht dokumentiert._
 public const std::string& GetJustificationMessage() const  | _Noch nicht dokumentiert._
-public const std::vector\<std::pair\<std::string, std::string\>\>& GetExtendedProperties() const  | _Noch nicht dokumentiert._
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  | _Noch nicht dokumentiert._
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Noch nicht dokumentiert._
-Öffentliche void SetExtendedProperties (const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& "ExtendedProperties")  | _Noch nicht dokumentiert._
+öffentliches void-abtextendedproperties (Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& ExtendedProperties)  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
-### <a name="labelingoptions-function"></a>Labelingoptions ausgegeben wurde-Funktion
+### <a name="labelingoptions-function"></a>Labelingoptions-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="getassignmentmethod-function"></a>GetAssignmentMethod-Funktion
+### <a name="getassignmentmethod-function"></a>Getaccessmentmethod-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="getactionsource-function"></a>GetActionSource-Funktion
+### <a name="isdowngradejustified-function"></a>Isdowngradebug-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="isdowngradejustified-function"></a>IsDowngradeJustified-Funktion
+### <a name="getjustificationmessage-function"></a>Getrecht cationmessage-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="getjustificationmessage-function"></a>GetJustificationMessage-Funktion
+### <a name="getextendedproperties-function"></a>Getextendecodproperties-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="getextendedproperties-function"></a>GetExtendedProperties-Funktion
+### <a name="setdowngradejustification-function"></a>Setdowngradebug-Funktion
 _Noch nicht dokumentiert._
 
   
-### <a name="setdowngradejustification-function"></a>SetDowngradeJustification-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="setextendedproperties-function"></a>SetExtendedProperties-Funktion
+### <a name="setextendedproperties-function"></a>Abtextendebug Properties-Funktion
 _Noch nicht dokumentiert._

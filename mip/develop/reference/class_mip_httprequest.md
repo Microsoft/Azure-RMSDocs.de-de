@@ -1,18 +1,17 @@
 ---
 title: class mip::HttpRequest
-description: Dokumentiert die mip::httprequest-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: HttpRequest-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 28584ffa19c2ceb00f4ab3839f945adf737bdb3b
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173506"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885577"
 ---
 # <a name="class-miphttprequest"></a>class mip::HttpRequest 
 Schnittstelle, die eine einfache HTTP-Anforderung beschreibt.
@@ -20,40 +19,40 @@ Schnittstelle, die eine einfache HTTP-Anforderung beschreibt.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Ruft request-ID
+public const std::string& GetId() const  |  Ruft die Anforderungs-ID ab.
 public HttpRequestType GetRequestType() const  |  Ruft den Anforderungstyp ab.
 public const std::string& GetUrl() const  |  Ruft die Anforderungs-URL ab.
-Public const Std:: vector\<uint8_t\>& GetBody() const  |  Ruft den Text der Anforderung ab.
-public const std::map\<std::string, std::string, CaseInsensitiveComparator\>& GetHeaders() const  |  Ruft Anforderungsheader ab.
+Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
+Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () Konstanten  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
-Ruft request-ID
+Ruft die Anforderungs-ID ab.
 
   
-**Gibt**: Anforderungs-ID der entsprechenden [HttpResponse](class_mip_httpresponse.md) wird dieselbe ID haben
+**Gibt Folgendes zurück**: Anforderungs-ID die entsprechende HttpResponse hat dieselbe ID.
   
-### <a name="getrequesttype-function"></a>GetRequestType-Funktion
+### <a name="getrequesttype-function"></a>Getrequesttype-Funktion
 Ruft den Anforderungstyp ab.
 
   
-**Gibt**: Anforderungstyp
+**Gibt Folgendes zurück**: Anforderungstyp
   
-### <a name="geturl-function"></a>GetUrl-Funktion
+### <a name="geturl-function"></a>GetURL-Funktion
 Ruft die Anforderungs-URL ab.
 
   
-**Gibt**: Anforderungs-url
+**Gibt Folgendes zurück**: Anforderungs-URL
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Ruft den Text der Anforderung ab.
 
   
-**Gibt**: Anforderungstext
+**Gibt Folgendes zurück**: Anforderungstext
   
-### <a name="getheaders-function"></a>GetHeaders-Funktion
+### <a name="getheaders-function"></a>Gezeige Aders-Funktion
 Ruft Anforderungsheader ab.
 
   
-**Gibt**: Anforderungsheader
+**Gibt Folgendes zurück**: Anforderungs Header

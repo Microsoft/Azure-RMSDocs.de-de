@@ -7,46 +7,47 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: ced8339fa93ec349644a1f9e386489bb02c8eff0
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 80d13de3778648c2e0230ac37c559b0ca1f62a07
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173416"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882799"
 ---
 # <a name="functions"></a>Funktionen
 
 ## <a name="summary"></a>Zusammenfassung 
 
-### <a name="namespace-mip"></a>Namespace mip
-| Funktionen von Namespace-Gültigkeitsbereich   | Beschreibungen                                |
+### <a name="namespace-mip"></a>Namespace MIP
+| Funktionen nach Namespace-Gültigkeitsbereich   | Beschreibungen                                |
 |--------------------------------|---------------------------------------------|
-Public Std:: String GetAssignmentMethodString (AssignmentMethod-Methode)       |  AssignmentMethod-Enumeration, der eine zeichenfolgenbeschreibung konvertiert.
-public static std::string GetActionSourceString(ActionSource actionSource)       |  Ruft den Namen der Aktion-Quelle.
-public static std::string GetDataStateString(mip::DataState state)       |  Ruft den Namen des Inhaltszustands.
+Public Std:: String getaccessmentmethodstring (zuder Methode Method)       |  Konvertiert die zuder zuder zuder zuder Methode in eine Zeichen folgen Beschreibung
+public static Std:: String getaktionsourcestring (Aktions Quelle Aktions Quelle)       |  Der Name der Aktions Quelle wird angezeigt.
+public static Std:: String getdatastatestring (MIP::D atastate-Status)       |  Den Namen des Inhalts Zustands erhalten.
 public const std::string& GetCustomSettingPolicyDataName()       |  Name der Einstellung, mit der explizit Richtliniendaten angegeben wird.
 public const std::string& GetCustomSettingExportPolicyFileName()       |  Name der Einstellung, mit der explizit der Dateipfad angegeben wird, in den SCC-Richtliniendaten exportiert werden sollen.
-public const std::string& GetCustomSettingSensitivityTypesDataName()       |  Der Name der Einstellung, um die Vertraulichkeit von Daten explizit angeben.
+Public Konstanten Std:: String & getcustomsettingsensitivitytypesdataname ()       |  Der Name der Einstellung, um die Vertraulichkeits Daten explizit anzugeben.
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name der Einstellung, mit der explizit der Pfad für Richtliniendatendateien angegeben wird.
-public const std::string& GetCustomSettingSensitivityTypesDataFile()       |  Der Name der Einstellung, um die Vertraulichkeit Datendateipfad für Typen explizit angeben.
-public const std::string& GetCustomSettingExternalLabelsEnabled()       |  Der Name der Einstellung, mit dem "externe Bezeichnungen"-Feature aktivieren kann.
-Öffentliche MIP_API "void" __CDECL ReleaseAllResources()       |  Gibt alle Ressourcen (Threads, usw.) vor dem Herunterfahren.
-Öffentliche MIP_API Std:: shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const Std:: shared_ptr\<std::istream\>& StdIStream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::istream.
-Öffentliche MIP_API Std:: shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const Std:: shared_ptr\<std::ostream\>& StdOStream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::ostream.
-Öffentliche MIP_API Std:: shared_ptr\<mip::Stream\> CreateStreamFromStdStream (const Std:: shared_ptr\<std::iostream\>& StdIOStream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::iostream.
-Öffentliche MIP_API Std:: shared_ptr\<mip::Stream\> CreateStreamFromBuffer (Puffer uint8_t *, const int64_t Größe)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem Puffer.
+Public Konstanten Std:: String & getcustomsettingsensitivitytypesdatafile ()       |  Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit anzugeben.
+Public Konstanten Std:: String & getcustomsettinglabelcustompropertiessyncenabled ()       |  Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
+Public Konstanten Std:: map\<flightingfeature, bool\>& getdefaultfeaturesettings ()       |  Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
+Public MIP_API void __CDECL ReleaseAllResources ()       |  Gibt alle Ressourcen (Threads usw.) vor dem Herunterfahren frei.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "kreatestreamfromstdstream" (konstant Std::\<shared_ptr Std:: IStream\>& stdistream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::istream.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "kreatestreamfromstdstream" (konstant Std::\<shared_ptr Std:: ostream\>& stdostream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::ostream.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "kreatestreamfromstdstream" (Konstante Std::\<shared_ptr Std:: iostream\>& stdiostream)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem std::iostream.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "kreatestreamfrombuffer" (uint8_t * Puffer, Konstante int64_t Größe)       |  Erstellt einen [Stream](class_mip_stream.md) aus einem Puffer.
+Public MIP_API Std:: Vector\<uint8_t\> Read FromStream (Konstante Std:: shared_ptr\<MIP:: Stream\>& Stream)       |  Liest alle Bytes des Streams.
 
-
-### <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
+### <a name="namespace-mipauditmetadatakeys"></a>Namespace MIP:: auditmetadatakeys
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: String Sender()       |  Überwachen Sie die Metadatenschlüssel in eine Zeichenfolgendarstellung.
-Public Std:: String Recipients()       | _Noch nicht dokumentiert._
-Public Std:: String LastModifiedBy()       | _Noch nicht dokumentiert._
-public std::string LastModifiedDate()       | _Noch nicht dokumentiert._
+Public Std:: String Sender ()       |  Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
+Public Std:: String-Empfänger ()       | _Noch nicht dokumentiert._
+Public Std:: String LastModifiedBy ()       | _Noch nicht dokumentiert._
+Public Std:: String LastModifiedDate ()       | _Noch nicht dokumentiert._
 
 
-### <a name="namespace-miprights"></a>Namespace mip::rights
+### <a name="namespace-miprights"></a>Namespace MIP:: Rights
 
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
@@ -61,11 +62,11 @@ public std::string Comment()       |  Ruft den Zeichenfolgenbezeichner für die 
 public std::string Reply()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply“ (Antworten) ab.
 public std::string ReplyAll()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply all“ (Allen antworten) ab.
 public std::string Forward()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „forward“ (Weiterleiten) ab.
-Public Std:: vector\<Std:: String\> EmailRights()       |  Ruft eine Liste der Berechtigungen ab, die für E-Mails gelten.
-Public Std:: vector\<Std:: String\> EditableDocumentRights()       |  Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
-Public Std:: vector\<Std:: String\> CommonRights()       |  Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
+Public Std:: Vector\<Std:: String\> emailrights ()       |  Ruft eine Liste der Berechtigungen ab, die für E-Mails gelten.
+Public Std:: Vector\<Std:: String\> editabledocumentrights ()       |  Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
+Public Std:: Vector\<Std:: String\> commonrights ()       |  Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
 
-### <a name="namespace-miproles"></a>Namespace mip::roles
+### <a name="namespace-miproles"></a>Namespace MIP:: Rollen
 
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
@@ -74,135 +75,135 @@ public std::string Reviewer()       |  Ruft den Zeichenfolgenbezeichner für die
 public std::string Author()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „author“ (Autor) ab.
 public std::string CoOwner()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „co-owner“ (Mitbesitzer) ab.
 
-## <a name="namespace-mip"></a>Namespace mip
+## <a name="namespace-mip"></a>Namespace MIP
 
-### <a name="getassignmentmethodstring-function"></a>GetAssignmentMethodString-Funktion
-AssignmentMethod-Enumeration, der eine zeichenfolgenbeschreibung konvertiert.
-
-Parameter:  
-* **Methode**: einer Zuweisungsmethode. 
-
-
-
-  
-**Gibt**: Eine zeichenfolgenbeschreibung der Zuweisungsmethode.
-  
-### <a name="getactionsourcestring-function"></a>GetActionSourceString-Funktion
-Ruft den Namen der Aktion-Quelle.
+### <a name="getassignmentmethodstring-function"></a>Getbelegmentmethodstring-Funktion
+Konvertiert die zuder zuder zuder zuder Methode in eine Zeichen folgen Beschreibung
 
 Parameter:  
-* **actionSource**: Die aktionsquelle. 
+* **method**: eine Zuweisungs Methode. 
 
 
 
   
-**Gibt**: Eine Zeichenfolgendarstellung der aktionsquelle.
+**Gibt Folgendes zurück**: Eine Zeichen folgen Beschreibung der Zuweisungs Methode.
   
-### <a name="getdatastatestring-function"></a>GetDataStateString-Funktion
-Ruft den Namen des Inhaltszustands.
+### <a name="getactionsourcestring-function"></a>Getaktionsourcestring-Funktion
+Der Name der Aktions Quelle wird angezeigt.
 
 Parameter:  
-* **actionSource**: Der Status des Inhalts, die bei bearbeitet werden. 
+* **actionSource**: Die Aktions Quelle. 
 
 
 
   
-**Gibt**: Eine Zeichenfolgendarstellung des Inhalts Status.
+**Gibt Folgendes zurück**: Eine Zeichen folgen Darstellung der Aktions Quelle.
   
-### <a name="getcustomsettingpolicydataname-function"></a>GetCustomSettingPolicyDataName function
+### <a name="getdatastatestring-function"></a>Getdatastatestring-Funktion
+Den Namen des Inhalts Zustands erhalten.
+
+Parameter:  
+* **actionSource**: Der Zustand des Inhalts, an dem gearbeitet wird. 
+
+
+
+  
+**Gibt Folgendes zurück**: Eine Zeichen folgen Darstellung des Inhalts Zustands.
+  
+### <a name="getcustomsettingpolicydataname-function"></a>Getcustomsettingpolicydataname-Funktion
 Name der Einstellung, mit der explizit Richtliniendaten angegeben wird.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
-### <a name="getcustomsettingexportpolicyfilename-function"></a>GetCustomSettingExportPolicyFileName-Funktion
+### <a name="getcustomsettingexportpolicyfilename-function"></a>Getcustomsettingexportpolicyfilename-Funktion
 Name der Einstellung, mit der explizit der Dateipfad angegeben wird, in den SCC-Richtliniendaten exportiert werden sollen.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
-### <a name="getcustomsettingsensitivitytypesdataname-function"></a>GetCustomSettingSensitivityTypesDataName function
-Der Name der Einstellung, um die Vertraulichkeit von Daten explizit angeben.
+### <a name="getcustomsettingsensitivitytypesdataname-function"></a>Getcustomsettingsensitivitytypesdataname-Funktion
+Der Name der Einstellung, um die Vertraulichkeits Daten explizit anzugeben.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
-### <a name="getcustomsettingpolicydatafile-function"></a>GetCustomSettingPolicyDataFile-Funktion
+### <a name="getcustomsettingpolicydatafile-function"></a>Getcustomsettingpolicydatafile-Funktion
 Name der Einstellung, mit der explizit der Pfad für Richtliniendatendateien angegeben wird.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
-### <a name="getcustomsettingsensitivitytypesdatafile-function"></a>GetCustomSettingSensitivityTypesDataFile-Funktion
-Der Name der Einstellung, um die Vertraulichkeit Datendateipfad für Typen explizit angeben.
+### <a name="getcustomsettingsensitivitytypesdatafile-function"></a>Getcustomsettingsensitivitytypesdatafile-Funktion
+Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit anzugeben.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
-### <a name="getcustomsettingexternallabelsenabled-function"></a>GetCustomSettingExternalLabelsEnabled-Funktion
-Der Name der Einstellung, mit dem "externe Bezeichnungen"-Feature aktivieren kann.
+### <a name="getcustomsettingexternallabelsenabled-function"></a>Getcustomsettingexternallabelsenabled-Funktion
+Der Name der Einstellung, mit der die Funktion "externe Bezeichnungen" aktiviert werden kann.
 
   
-**Gibt**: Der Schlüssel für benutzerdefinierte Einstellungen.
+**Gibt Folgendes zurück**: Der Schlüssel für die benutzerdefinierte Einstellungen.
   
 ### <a name="releaseallresources-function"></a>ReleaseAllResources-Funktion
-Gibt alle Ressourcen (Threads, usw.) vor dem Herunterfahren.
-Diese Funktion muss genau einmal vor der prozessbeendigung aufgerufen werden. Es ermöglicht MIP Aufhebung der Initialisierung der selbst in einen Moment Zeit, in dem ihre abhängigen Bibliotheken werden noch geladen werden garantiert und Thread zu verknüpfen ist weiterhin möglich. Anwendungen müssen vor dem Aufruf dieser Funktion Verweise auf sämtliche MIP-Objekte freigeben (z.B. Profile, Engines und Handler).
-Wenn diese Funktion nicht aufgerufen wird, werden MIP auf natürliche Weise als Teil der standardmäßigen Vorgang zur Beendigung entfernt. Auf manchen Plattformen ist dies Deadlock führen kann (z. B. Threads können nicht verknüpft werden, auf win32 als Reaktion auf die Beendigung verarbeiten) oder abstürzt (z. B. die DLL entladen-Reihenfolge für verzögert geladene Bibliotheken auf win32 nicht vom kontrolliert MIP, damit ihre abhängigen Bibliotheken möglicherweise haben mit der Zeit, wenn Code für das Herunterfahren MIP ausgeführt wird, ungültige lesen Fehler führt, entladen wurden).
+Gibt alle Ressourcen (Threads usw.) vor dem Herunterfahren frei.
+Diese Funktion muss vor der Beendigung des Prozesses genau einmal aufgerufen werden. Es bietet MIP die Möglichkeit, sich selbst zu initialisieren, wenn die abhängigen Bibliotheken weiterhin geladen sind und der Thread Beitritt weiterhin möglich ist. Anwendungen müssen vor dem Aufruf dieser Funktion Verweise auf sämtliche MIP-Objekte freigeben (z.B. Profile, Engines und Handler).
+Wenn diese Funktion nicht aufgerufen wird, wird MIP im Rahmen der Standardprozess Löschung natürlich entladen. Auf einigen Plattformen führt dies möglicherweise zu Deadlocks (z. b., wenn Threads nicht in Win32 als Antwort auf das Verarbeiten von Prozessen zusammengeführt werden können) oder Abstürze (z. b. wird die dll-Entlade Reihenfolge für verzögert geladene Bibliotheken in Win32 nicht durch MIP gesteuert, sodass die abhängigen Bibliotheken möglicherweise wurden von dem Zeitpunkt der Ausführung von MIP-Shutdown-Code entladen, was zu ungültigen Lesefehlern führt.
   
-### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream-Funktion
+### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
 Erstellt einen [Stream](class_mip_stream.md) aus einem std::istream.
 
 Parameter:  
-* **stdIStream**: Sichern von std::istream
+* **stdIStream**: Unterstützen von Std:: IStream
 
 
 
   
-**Gibt**: [Stream](class_mip_stream.md) umschließen einer std::istream
+**Gibt Folgendes zurück**: [Stream](class_mip_stream.md) Wrapping eines Std:: IStream
   
-### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream-Funktion
+### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
 Erstellt einen [Stream](class_mip_stream.md) aus einem std::ostream.
 
 Parameter:  
-* **stdOStream**: Sichern von std::ostream
+* **stdOStream**: Unterstützen von Std:: ostream
 
 
 
   
-**Gibt**: [Stream](class_mip_stream.md) umschließen einer std::ostream
+**Gibt Folgendes zurück**: [Stream](class_mip_stream.md) Wrapping von "Std:: ostream"
   
-### <a name="createstreamfromstdstream-function"></a>CreateStreamFromStdStream-Funktion
+### <a name="createstreamfromstdstream-function"></a>Funktion "deestreamfromstdstream"
 Erstellt einen [Stream](class_mip_stream.md) aus einem std::iostream.
 
 Parameter:  
-* **stdIOStream**: Sichern von std::iostream
+* **stdIOStream**: Unterstützen von Std:: iostream
 
 
 
   
-**Gibt**: [Stream](class_mip_stream.md) umschließen einer std::iostream
+**Gibt Folgendes zurück**: [Stream](class_mip_stream.md) Wrapping von "Std:: iostream"
   
-### <a name="createstreamfrombuffer-function"></a>CreateStreamFromBuffer-Funktion
+### <a name="createstreamfrombuffer-function"></a>Funktion "kreatestreamfrombuffer"
 Erstellt einen [Stream](class_mip_stream.md) aus einem Puffer.
 
 Parameter:  
-* **buffer**: Zeiger auf einen Puffer
+* **Puffer**: Zeiger auf einen Puffer
 
 
 
   
-**Gibt**: Größe der Größe des Puffers
+**Gibt Folgendes zurück**: Größe des Puffers
   
 
 
 
-## <a name="namespace-mipauditmetadatakeys"></a>Namespace mip::auditmetadatakeys
+## <a name="namespace-mipauditmetadatakeys"></a>Namespace MIP:: auditmetadatakeys
 
 ### <a name="sender-function"></a>Sender-Funktion
-Überwachen Sie die Metadatenschlüssel in eine Zeichenfolgendarstellung.
+Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
   
-### <a name="recipients-function"></a>Empfänger-Funktion
+### <a name="recipients-function"></a>Empfänger Funktion
 _Noch nicht dokumentiert._
 
   
@@ -210,7 +211,7 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
-### <a name="lastmodifieddate-function"></a>LastModifiedDate & lt; Funktion
+### <a name="lastmodifieddate-function"></a>LastModifiedDate-Funktion
 _Noch nicht dokumentiert._
 
 
@@ -218,115 +219,115 @@ _Noch nicht dokumentiert._
 
 
 
-## <a name="namespace-miprights"></a>Namespace mip::rights
+## <a name="namespace-miprights"></a>Namespace MIP:: Rights
 
-### <a name="owner-function"></a>Besitzer-Funktion
+### <a name="owner-function"></a>Owner-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „owner“ (Besitzer) ab.
 
   
-**Gibt**: Die Zeichenfolgen Sie-ID für "Owner" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für "Owner" Right
   
-### <a name="view-function"></a>Ansichtsfunktion
+### <a name="view-function"></a>View-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „view“ (Anzeigen) ab.
 
   
-**Gibt**: Bezeichner für die 'Ansicht' Zeichenfolge von rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für "View" Right
   
-### <a name="auditedextract-function"></a>AuditedExtract-Funktion
+### <a name="auditedextract-function"></a>Auditedextract-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „audited extract“ (überwachtes Extrahieren) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "überwacht extrahieren" nach rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für "überwachter Extract"-Recht
   
-### <a name="edit-function"></a>Funktion bearbeiten
+### <a name="edit-function"></a>Funktion Bearbeiten
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „edit“ (Bearbeiten) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "Bearbeiten" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für das Recht "Bearbeiten"
   
 ### <a name="export-function"></a>Export-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „export“ (Exportieren) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "Export" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für "Export" nach rechts
   
 ### <a name="extract-function"></a>Extract-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „extract“ (Extrahieren) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für die Rechte "extrahieren"
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für ' Extract ' rechts
   
 ### <a name="print-function"></a>Print-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „print“ (Drucken) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "print" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für ' Drucken ' rechts
   
-### <a name="comment-function"></a>Kommentar-Funktion
+### <a name="comment-function"></a>Comment-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „comment“ (Kommentieren) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "Kommentar" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für ' Comment ' rechts
   
-### <a name="reply-function"></a>Antwort-Funktion
+### <a name="reply-function"></a>Reply-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply“ (Antworten) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "Antworten" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für ' Reply ' Right
   
 ### <a name="replyall-function"></a>ReplyAll-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „reply all“ (Allen antworten) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "allen Antworten" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für "allen Antworten" rechts
   
 ### <a name="forward-function"></a>Forward-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „forward“ (Weiterleiten) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "forward" rechts
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für Forward-right
   
-### <a name="emailrights-function"></a>EmailRights-Funktion
+### <a name="emailrights-function"></a>Emailrights-Funktion
 Ruft eine Liste der Berechtigungen ab, die für E-Mails gelten.
 
   
-**Gibt**: Eine Liste der Rechte, die auf die e-Mails angewendet werden soll.
+**Gibt Folgendes zurück**: Eine Liste der Rechte, die für e-Mails gelten
   
-### <a name="editabledocumentrights-function"></a>EditableDocumentRights-Funktion
+### <a name="editabledocumentrights-function"></a>Editabledocumentrights-Funktion
 Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
 
   
-**Gibt**: Eine Liste der Rechte, die auf Dokumente angewendet werden soll.
+**Gibt Folgendes zurück**: Eine Liste der Rechte, die auf Dokumente angewendet werden.
   
-### <a name="commonrights-function"></a>CommonRights-Funktion
+### <a name="commonrights-function"></a>Commonrights-Funktion
 Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
 
   
-**Gibt**: Eine Liste der Rechte, die in allen Szenarien angewendet werden soll.
+**Gibt Folgendes zurück**: Eine Liste der Rechte, die in allen Szenarien gelten
 
 
-## <a name="namespace-miproles"></a>Namespace mip::roles
+## <a name="namespace-miproles"></a>Namespace MIP:: Rollen
 
 ### <a name="viewer-function"></a>Viewer-Funktion
 Ruft den Zeichenfolgenbezeichner für die Rolle „viewer“ (Anzeigen) ab.
 
   
-**Gibt**: Zeichenfolgenbezeichner für "Viewer" Rolle einen Viewer kann den Inhalt nur anzeigen. Sie können die Inhalte nicht bearbeiten, kopieren oder drucken.
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für die Rolle "Viewer". ein Viewer kann den Inhalt nur anzeigen. Sie können die Inhalte nicht bearbeiten, kopieren oder drucken.
   
-### <a name="reviewer-function"></a>Prüfer-Funktion
+### <a name="reviewer-function"></a>Reviewer-Funktion
 Ruft den Zeichenfolgenbezeichner für die Rolle „reviewer“ (Prüfer) ab.
 
   
-**Gibt**: Zeichenfolgen Sie-ID für "Prüfer"-Rolle ein Reviewer kann anzeigen und bearbeiten Sie den Inhalt. Ein Prüfer kann die Inhalte nicht kopieren oder drucken.
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für die Reviewer-Rolle, den der Reviewer anzeigen und bearbeiten kann. Ein Prüfer kann die Inhalte nicht kopieren oder drucken.
   
 ### <a name="author-function"></a>Author-Funktion
 Ruft den Zeichenfolgenbezeichner für die Rolle „author“ (Autor) ab.
 
   
-**Gibt**: Zeichenfolgenbezeichner für 'Author'-Rolle ein Autor anzeigen, bearbeiten, kopieren und Drucken des Inhalts.
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für die Rolle "Autor", den ein Autor zum Anzeigen, bearbeiten, kopieren und Drucken des Inhalts hat.
   
-### <a name="coowner-function"></a>CoOwner-Funktion
+### <a name="coowner-function"></a>Coowner-Funktion
 Ruft den Zeichenfolgenbezeichner für die Rolle „co-owner“ (Mitbesitzer) ab.
 
   
-**Gibt**: Zeichenfolgenbezeichner für "CO-Owner" Rolle Mitbesitzer verfügt über alle Berechtigungen
+**Gibt Folgendes zurück**: Zeichen folgen Bezeichner für die Rolle "Mitbesitzer" ein Mitbesitzer verfügt über alle Berechtigungen

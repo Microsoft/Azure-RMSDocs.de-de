@@ -1,5 +1,5 @@
 ---
-title: Microsoft Information Protection (MIP) SDK-Version Versionsgeschichte und Supportrichtlinie
+title: Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
 description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clientanwendungen eines Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
@@ -8,80 +8,89 @@ ms.collection: M365-security-compliance
 ms.date: 01/08/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 9f02d682164dac8ee28ed023dd7b21b53937f4bb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c2a5d89bf318d9e685d00033ba3ad53915659cdb
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184217"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882665"
 ---
-# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Microsoft Information Protection (MIP) SDK-Version Versionsgeschichte und Supportrichtlinie
+# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
 
-## <a name="servicing"></a>Wartung 
+## <a name="servicing"></a>Deten 
 
-Jede Version zur allgemeinen Verfügbarkeit (GA) ist für sechs Monate nach der nächste Allgemein verfügbaren Version Release wird unterstützt. Die Dokumentation kann nicht mit Informationen über nicht unterstütze Versionen enthalten. Fehlerbehebungen und neue Funktionen gelten nur für die neuste allgemein verfügbare Version.
+Jede allgemein verfügbare Version (General Availability, GA) wird sechs Monate lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
 
-Vorschauversionen sollten nicht in der Produktion bereitgestellt werden. Verwenden Sie stattdessen die neueste Vorschauversion zum Testen der neuen Funktionalität oder Fixes, die in der nächsten Allgemein verfügbaren Version an. Nur die aktuelle Preview-Version wird unterstützt.
+Vorschau Versionen sollten nicht in der Produktionsumgebung bereitgestellt werden. Verwenden Sie stattdessen die neueste Vorschauversion, um neue Funktionen oder Korrekturen zu testen, die in der nächsten GA-Version verfügbar sind. Nur die aktuelle Vorschauversion wird unterstützt.
 
 ## <a name="release-history"></a>Verlauf der Releases
 
-Verwenden Sie die folgende Informationen, um anzuzeigen, welche neuerungen oder Änderungen in Bezug auf eine unterstützte Version bietet. Die neueste Version ist zuerst aufgeführt. 
+Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstützte Version neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. 
 
 > [!NOTE]
-> Kleinere Korrekturen sind nicht aufgelistet werden, wenn Sie ein Problem mit dem SDK auftreten, sollten Sie überprüfen, ob das Problem behoben ist mit der neuesten GA-Version. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
+> Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem SDK haben, sollten Sie überprüfen, ob es mit der neuesten Version der allgemeinen Verfügbarkeit behoben ist. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion.
 >  
-> Technischen Support finden Sie auf die [Microsoft Information Protection von Stack Overflow-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
+> Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
-## <a name="version-110"></a>Version 1.1.0
+
+## <a name="version-130"></a>Version 1.3.0
 
 **Veröffentlichungsdatum**: TBD
 
-Diese Version bietet Unterstützung für die folgenden Plattformen:
+## <a name="version-120"></a>Version 1.2.0
+
+**Veröffentlichungsdatum**: 15. April 2019
+
+## <a name="version-110"></a>Version 1.1.0
+
+**Veröffentlichungsdatum**: 15. Januar 2019
+
+Mit dieser Version wird die Unterstützung für die folgenden Plattformen eingeführt:
 
   - .NET
-  - iOS SDK (API-Richtlinie)
-  - Android-SDK (Policy-API und die Datenschutz-API)
+  - IOS SDK (Richtlinien-API)
+  - Android SDK (Richtlinien-API und Schutz-API)
 
 **Neue Funktionen:**
 
-- AD RMS-Unterstützung
-- Datenschutz-API-Vorgänge sind wahre asynchrone (auf Win32) ermöglicht gleichzeitige Vorgänge für nicht blockierende verschlüsseln/entschlüsseln
-  - Anwendungsrückruffunktionen (AuthDelegate, HTTPDelegate usw.) können nun aufgerufen werden, auf *alle* Hintergrundthread
-- Benutzerdefinierte Eigenschaften festlegen, indem IT-Administratoren können jetzt über Mip::Label::GetCustomSettings gelesen werden
-- Serialisierte Veröffentlichungslizenz kann jetzt direkt aus einer Datei ohne HTTP-Vorgänge über Mip::FileHandler::GetSerializedPublishingLicense abgerufen werden
-- Anwendungen werden benachrichtigt, ob ein HTTP-Vorgang erforderlich ist, um die Erstellung von einem:: fileengine-Klasse /:: policyengine-Klasse über Mip::FileProfile::Observer::OnAddPolicyEngineStarting abzuschließen / Mip::PolicyProfile::Observer::OnAddEngineStarting
-- Gibt an, ob geschützter Inhalte ein Ablaufdatum oder nicht verfügt erkannt wurde vereinfacht, mit der Einfachheit halber Methode mip::ProtectionDescriptor::DoesContentExpire
-- Klassifizierung:
-  - Vertraulichkeit-Typen (Regex-Ausdrücke für # des, Passport # usw.) aus SCC-Dienst abgerufen werden können
-    - Feature aktivieren, indem Sie die Einstellung Mip::FileEngine::Settings / Mip::PolicyEngine::Settings kennzeichnen
-    - Lesen Sie die Typen über Mip::FileEngine::ListSensitivityTypes / Mip::PolicyEngine::ListSensitivityTypes
-  - Klassifizierungsergebnisse externe Document Scanner Hilfsprogrammen können MIP zum Steuern der empfohlene/erforderlichen Bezeichnungen, die basierend auf den Inhalt des Dokuments eingelesen werden
-    - Übergeben von Ergebnissen an MIP über Mip::FileExecutionState::GetClassificationResults / Mip::ExecutionState::GetClassificationResults
-    - MIP::ApplyLabelAction und mip::RecommendLabelAction können von Mip::PolicyEngine::ComputeActions zurückgegeben werden Wenn Klassifizierungsergebnisse übereinstimmt, der eine Regel, der angibt, erforderlich/empfohlen, Bezeichnungen
+- ADRMS-Unterstützung
+- Schutz-API-Vorgänge sind tatsächlich asynchron (auf Win32) und ermöglichen gleichzeitige, nicht blockierende Verschlüsselungs-/Entschlüsselungs Vorgänge.
+  - Anwendungs Rückrufe (authdelegat, httpdelegat usw.) können jetzt in *jedem* Hintergrund Thread aufgerufen werden.
+- Von IT-Administratoren festgelegte benutzerdefinierte Bezeichnungs Eigenschaften können jetzt über MIP:: Label:: getcustomsettings gelesen werden.
+- Die serialisierte Veröffentlichungs Lizenz kann jetzt direkt aus einer Datei ohne http-Vorgänge über MIP:: fileHandler:: getserializedpublishinglicense abgerufen werden.
+- Anwendungen werden benachrichtigt, ob ein HTTP-Vorgang erforderlich ist, um die Erstellung eines MIP:: fileengine/MIP::P olicyengine über MIP:: fileprofile:: Observer:: onaddpolicyenginestarting/MIP::P olicyprofile:: Observer:: onaddenginestarting abzuschließen.
+- Die Erkennung, ob geschützte Inhalte ein Ablaufdatum aufweisen oder nicht, wurde mit der Hilfsmethode "MIP::P rotectiondescriptor::D oescontentexpire" vereinfacht.
+- Ordnung
+  - Empfindlichkeits Typen (Regex-Ausdrücke für CC-, Passport # s usw.) können vom SCC-Dienst abgerufen werden.
+    - Aktivieren Sie das Feature, indem Sie MIP:: fileengine:: Settings/MIP::P olicyengine:: Settings-Flag festlegen.
+    - Lese Typen über MIP:: fileengine:: listsensitivitytypes/MIP::P olicyengine:: listsensitivitytypes
+  - Klassifizierungs Ergebnisse aus externen Dokumentenscanner können per MIP an MIP weitergeleitet werden, um empfohlene/erforderliche Bezeichnungen basierend auf Dokument Inhalten zu steuern.
+    - Ergebnisse an MIP über MIP:: fileexecutionstate:: getclassificationresults/MIP:: executionstate:: getclassificationresults übergeben
+    - MIP:: applylabelaction und MIP:: RecommendLabelAction können von MIP::P olicyengine:: computeactions zurückgegeben werden, wenn Klassifizierungs Ergebnisse einer Richtlinien Regel entsprechen, die erforderliche/Empfohlene Bezeichnungen anzeigt.
 
 - Neue Anforderungen:
-  - Erzwungene Auffüllung der ID/Name und Version Felder mip::ApplicationInfo beim Erstellen von:: fileprofile-Klasse, mip::PolicyProfile und:: protectionprofile-Klasse
-  - Anwendungen müssen neue mip::FileExecutionState-Schnittstelle implementieren, wenn mip::FileHandlers erstellen
+  - Erzwungene Auffüllung von ID/Name-/Versionsfeldern MIP:: ApplicationInfo beim Erstellen von MIP:: fileprofile, MIP::P olicyprofile und MIP::P rotectionprofile
+  - Anwendungen müssen beim Erstellen von MIP:: filehandlers die neue MIP:: fileexecutionstate-Schnittstelle implementieren.
   
 - Aktualisierte Ausnahmen:
-  - wird ausgelöst, wenn der Anwendung AuthDelegate MIP::NoAuthTokenError gibt ein leeres Tokens (aufgrund von Abbruch) zurück.
+  - MIP:: noauthtokenerror wird ausgelöst, wenn der authdelegat der Anwendung ein leeres Token zurückgibt (aufgrund eines Abbruchs).
     - Gilt für die Erstellung von:
-      - mip::FileEngine
-      - mip::FileHandler
+      - MIP:: fileengine
+      - MIP:: fileHandler
       - mip::PolicyEngine
-      - mip::ProtectionHandler
-  - MIP::NoPolicyError ausgelöst, wenn der Mandant nicht für Bezeichnungen konfiguriert ist
+      - MIP::P rotectionhandler
+  - MIP:: nopolicyerror wird ausgelöst, wenn der Mandant nicht für Bezeichnungen konfiguriert ist.
     - Gilt für die Erstellung von:
-      - mip::FileEngine
+      - MIP:: fileengine
       - mip::PolicyEngine
-  - MIP::ServiceDisabledError ausgelöst, wenn der RMS-Dienst für einen bestimmten Benutzer/Gerät/Plattform/Mandanten deaktiviert ist
+  - MIP:: servicedisablederror wird ausgelöst, wenn der RMS-Dienst für einen bestimmten Benutzer/Gerät/Plattform/Mandanten deaktiviert ist.
     - Gilt für die Erstellung von:
-      - mip::FileHandler
-      - mip::ProtectionHandler
-  - wird ausgelöst, wenn ein Benutzer nicht über Rechte verfügt, um ein Dokument oder den Inhalt zu entschlüsseln MIP::NoPermissionsError ist abgelaufen.
+      - MIP:: fileHandler
+      - MIP::P rotectionhandler
+  - MIP:: nopermissionserror wird ausgelöst, wenn ein Benutzer nicht über die Berechtigung zum Entschlüsseln eines Dokuments verfügt oder der Inhalt abgelaufen ist.
     - Gilt für die Erstellung von:
-      - mip::FileHandler
-      - mip::ProtectionHandler
+      - MIP:: fileHandler
+      - MIP::P rotectionhandler
 
 **Fixes**:
 
@@ -89,5 +98,5 @@ TBD
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Finden Sie unter [MIP SDK häufig gestellte Fragen und Probleme](faqs-known-issues.md) Informationen zu unterstützten Plattformen und vieles mehr.
-- Finden Sie unter [MIP SDK-Setup und Konfiguration](setup-configure-mip.md) Informationen zum Einstieg in das MIP SDK.
+- Weitere Informationen zu unterstützten Plattformen und mehr finden Sie unter [FAQs und Probleme im MIP SDK](faqs-known-issues.md) .
+- Informationen zu den ersten Schritten mit dem MIP SDK finden Sie unter [MIP SDK-Setup und Konfiguration](setup-configure-mip.md) .

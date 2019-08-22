@@ -1,18 +1,17 @@
 ---
 title: class mip::HttpDelegate
-description: Dokumentiert die mip::httpdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: httpdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 6dedd5e52b0599a58acabd85f7bd076169b3758e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d2b01c53b44d6884f47cf48c431ee7359f64b9c4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174050"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885583"
 ---
 # <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
@@ -20,10 +19,10 @@ Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<HttpOperation\> senden (const Std:: shared_ptr\<HttpRequest\>& Anforderung, const Std:: shared_ptr\<"void"\>& Kontext)  |  Sendet die HTTP-Anforderung.
-Public Std:: shared_ptr\<HttpOperation\> SendAsync (const Std:: shared_ptr\<HttpRequest\>& Anforderung, const Std:: shared_ptr\<"void"\>& Kontext, const std:: Funktion\<"void" (Std:: shared_ptr\<HttpOperation\>)\>& Listenwerts)  |  Senden Sie HTTP-Anforderung asynchron.
-Öffentliche void CancelOperation (const Std:: String & Anforderungs-ID)  |  Abbrechen eines bestimmten HTTP-Vorgangs an.
-Öffentliche void CancelAllOperations()  |  Brechen Sie laufende HTTP-Anforderungen.
+Public Std:: shared_ptr\<httpoperation\> Send (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
+Public Std:: shared_ptr\<httpoperation\> SendAsync (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context, Konstanten Std:: Function\<void (Std:: shared_ptr\<httpoperation\>)\>& callbackfn)  |  HTTP-Anforderung asynchron senden.
+öffentliches void CancelOperation (Konstante Std:: String & RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
+öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   
 ## <a name="members"></a>Member
   
@@ -31,24 +30,24 @@ Public Std:: shared_ptr\<HttpOperation\> SendAsync (const Std:: shared_ptr\<Http
 Sendet die HTTP-Anforderung.
 
 Parameter:  
-* **request**: HTTP-Anforderung 
+* **Anforderung**: HTTP-Anforderung 
 
 
-* **context**: Der gleiche-nicht transparent-Clientkontext, der an die API übergeben wurde, die diese HTTP-Anforderung geführt haben
+* **Kontext**: Der gleiche nicht transparente Client Kontext, der an die API übermittelt wurde, die zu dieser HTTP-Anforderung geführt hat.
 
 
 
   
-**Gibt**: HTTP-Vorgang-container
+**Gibt Folgendes zurück**: HTTP-Vorgangs Container
   
 ### <a name="sendasync-function"></a>SendAsync-Funktion
-Senden Sie HTTP-Anforderung asynchron.
+HTTP-Anforderung asynchron senden.
 
 Parameter:  
-* **request**: HTTP-Anforderung 
+* **Anforderung**: HTTP-Anforderung 
 
 
-* **context**: Der gleiche-nicht transparent-Clientkontext, der an die API übergeben wurde, die diese HTTP-Anforderung geführt haben 
+* **Kontext**: Der gleiche nicht transparente Client Kontext, der an die API übermittelt wurde, die zu dieser HTTP-Anforderung geführt hat. 
 
 
 * **callbackFn**: Funktion, die nach Abschluss ausgeführt wird
@@ -56,15 +55,15 @@ Parameter:
 
 
   
-**Gibt**: HTTP-Vorgang-container
+**Gibt Folgendes zurück**: HTTP-Vorgangs Container
   
 ### <a name="canceloperation-function"></a>CancelOperation-Funktion
-Abbrechen eines bestimmten HTTP-Vorgangs an.
+Abbrechen eines bestimmten http-Vorgangs.
 
 Parameter:  
-* **requestId**: ID der Anforderung zum Abbrechen
+* **requestId**: ID der abzubrechenden Anforderung
 
 
   
-### <a name="cancelalloperations-function"></a>CancelAllOperations-Funktion
-Brechen Sie laufende HTTP-Anforderungen.
+### <a name="cancelalloperations-function"></a>Cancelalloperations-Funktion
+Abbrechen fortlaufender HTTP-Anforderungen.

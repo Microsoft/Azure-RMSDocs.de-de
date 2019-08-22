@@ -1,18 +1,17 @@
 ---
 title: mip::Label-Klasse
-description: 'Dokumentiert die MIP:: Label-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: Label-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e4f8246cbc0f6f1f897de4710e155e0099b71244
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 3d746c1f271d75c160ca721ebe6f0fef0f15bd5e
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184636"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884052"
 ---
 # <a name="class-miplabel"></a>mip::Label-Klasse 
 Eine Abstraktion für eine einzelne Microsoft Information Protection-Bezeichnung
@@ -27,9 +26,10 @@ public const std::string& GetColor() const  |  Ruft die Farbe ab, in der die Bez
 public int GetSensitivity() const  |  Ruft die Vertraulichkeit der Bezeichnung ab.
 public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
 public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
-public std::weak_ptr\<Label\> GetParent() const  |  Ruft die übergeordnete Bezeichnung ab
-Public const Std:: vector\<Std:: shared_ptr\<Bezeichnung\>\>& GetChildren() const  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
-Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Rufen Sie die benutzerdefinierten Einstellungen einer Bezeichnung.
+Public Std:: weak_ptr\<Label\> GetParent () Konstanten  |  Ruft die übergeordnete Bezeichnung ab
+Public Konstanten Std::\<Vector Std:: shared_ptr\<Label\>\>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
+public ActionSource GetActionSource() const  |  Ruft die Aktions Quelle der Bezeichnung ab.
   
 ## <a name="members"></a>Member
   
@@ -37,59 +37,65 @@ Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustom
 Ruft die Bezeichnungs-ID ab
 
   
-**Gibt**: Die bezeichnungs-ID
+**Gibt Folgendes zurück**: Die Bezeichnungs-ID.
   
 ### <a name="getname-function"></a>GetName-Funktion
 Ruft den Bezeichnungsnamen ab
 
   
-**Gibt**: Der Bezeichnungsname.
+**Gibt Folgendes zurück**: Der Name der Bezeichnung.
   
 ### <a name="getdescription-function"></a>GetDescription-Funktion
 Ruft die Beschreibung der Bezeichnung ab
 
   
-**Gibt**: Die Beschreibung der Bezeichnung.
+**Gibt Folgendes zurück**: Die Beschreibung der Bezeichnung.
   
 ### <a name="getcolor-function"></a>GetColor-Funktion
 Ruft die Farbe ab, in der die Bezeichnung angezeigt werden soll
 
   
-**Gibt**: Der Farbwert des Zeichenfolgenformats. „#RRGGBB“, wobei jedes RR, GG, BB ein Hexadezimalwert von 0 bis f ist
+**Gibt Folgendes zurück**: Farbwert das Zeichen folgen Format. „#RRGGBB“, wobei jedes RR, GG, BB ein Hexadezimalwert von 0 bis f ist
   
-### <a name="getsensitivity-function"></a>GetSensitivity-Funktion
+### <a name="getsensitivity-function"></a>Getsensitivität-Funktion
 Ruft die Vertraulichkeit der Bezeichnung ab.
 
   
-**Gibt**: Ein numerischer Wert. Ein höherer Wert steht für eine höhere Vertraulichkeit.
+**Gibt Folgendes zurück**: Ein numerischer Wert. Ein höherer Wert steht für eine höhere Vertraulichkeit.
   
-### <a name="gettooltip-function"></a>GetTooltip-Funktion
+### <a name="gettooltip-function"></a>GetToolTip-Funktion
 Ruft die QuickInfo-Beschreibung für die Bezeichnung ab
 
   
-**Gibt**: Eine QuickInfo-Zeichenfolge.
+**Gibt Folgendes zurück**: Eine QuickInfo-Zeichenfolge.
   
 ### <a name="isactive-function"></a>IsActive-Funktion
 Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
 Es können nur aktive Bezeichnungen angewendet werden. Inaktive Bezeichnungen können nicht angewendet werden und werden nur zu Anzeigezwecken verwendet. 
 
   
-**Gibt**: True, wenn die Bezeichnung aktiv ist; andernfalls "false".
+**Gibt Folgendes zurück**: True, wenn die Bezeichnung aktiv ist, andernfalls false.
   
 ### <a name="getparent-function"></a>GetParent-Funktion
 Ruft die übergeordnete Bezeichnung ab
 
   
-**Gibt**: Ein schwacher Zeiger auf das übergeordnete Element zu bezeichnen, wenn vorhanden; andernfalls wird einen leeren Zeiger zurückgegeben.
+**Gibt Folgendes zurück**: Ein schwacher Zeiger auf die übergeordnete Bezeichnung, wenn vorhanden ist, andernfalls ein leerer Zeiger.
   
 ### <a name="getchildren-function"></a>GetChildren-Funktion
 Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
 
   
-**Gibt**: Ein Vektor der freigegebenen Zeiger für Bezeichnungen.
+**Gibt Folgendes zurück**: Ein Vektor von freigegebenen Zeigern auf Bezeichnungen.
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
-Rufen Sie die benutzerdefinierten Einstellungen einer Bezeichnung.
+### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
+Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
 
   
-**Gibt**: Ein Vektor von Schlüssel-Wert-Paaren, die benutzerdefinierte Einstellungen darstellt.
+**Gibt Folgendes zurück**: Ein Vektor von Schlüssel-Wert-Paaren, die benutzerdefinierte Einstellungen darstellen.
+  
+### <a name="getactionsource-function"></a>Getaktionsource-Funktion
+Ruft die Aktions Quelle der Bezeichnung ab.
+
+  
+**Gibt Folgendes zurück**: [Aktions](class_mip_action.md) Quelle

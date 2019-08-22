@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: f9bb02dd4508b5e09761b3684a2a4e6d92224b6a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 9b3b32464cae35560c74a05b28506ca60dc963d2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175337"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886053"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Richtlinien-API
 
@@ -22,36 +22,53 @@ Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokale
 
 ## <a name="load-a-profile"></a>Laden eines Profils
 
-Da die Objekte `ProfileObserver` und `AuthDelegateImpl` bereits definiert sind, können sie nun zum Instanziieren von `mip::PolicyProfile` verwendet werden. Damit das `mip::PolicyProfile`-Objekt erstellt werden kann, werden die [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md)-Parameter benötigt.
+Nachdem Sie `ProfileObserver` `mip::PolicyProfile`, und `AuthDelegateImpl` definiert haben, verwenden wir diese, um zu instanziieren. `MipContext` Zum Erstellen `mip::PolicyProfile` des- [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) Objekts `mip::MipContext`sind und erforderlich.
 
 ### <a name="profilesettings-parameters"></a>Profile::Settings-Parameter
 
-- `std::string path`: Pfad der Datei unter die Protokollierung, Telemetrie und andere persistente Zustand gespeichert ist.
-- `bool useInMemoryStorage`: Definiert, und zwar unabhängig davon, ob alle Status im Speicher statt auf dem Datenträger gespeichert werden soll.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Ein freigegebener Zeiger-Klasse `mip::AuthDelegate` 
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Ein freigegebener Zeiger auf die `PolicyProfile::Observer` Implementierung.
-- `mip::ApplicationInfo applicationInfo`: Ein Objekt. Wird verwendet, um Informationen zur Anwendung bereitzustellen, die das SDK nutzt
+Der `PolicyProfile::Settings` Konstruktor akzeptiert vier Parameter, die unten aufgeführt sind:
+
+- `const std::shared_ptr<MipContext>`: Das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
+- `mip::CacheStorageType`: Definiert, wie der Zustand gespeichert wird: Im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger gespeichert und verschlüsselt. Weitere Informationen finden Sie in den [Konzepten des Cache Speichers](concept-cache-storage.md).
+- `std::shared_ptr<mip::AuthDelegate>`: Ein frei gegebener Zeiger der `mip::AuthDelegate`-Klasse.
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Ein frei gegebener Zeiger auf die `Observer` Profil Implementierung ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)in [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 
 #### <a name="store-state-in-memory-only"></a>Speichern der Status im Arbeitsspeicher (ausschließlich)
 
 ```cpp
-Profile::Settings profileSettings("",
-    true,
-    authDelegateImpl,
-    std::make_shared<ProfileObserver>(),
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" });
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
+PolicyProfile::Settings profileSettings(
+    mipContext,                                   // mipContext object
+    mip::CacheStorageType::InMemory,              // use in memory storage
+    authDelegateImpl,                             // auth delegate object
+    std::make_shared<PolicyProfileObserverImpl>()); // new protection profile observer
 ```
 
 #### <a name="readwrite-profile-settings-from-storage-path-on-disk"></a>Einstellungen für das Profil mit Lese-/Schreibzugriff aus dem Speicherpfad auf dem Datenträger
 
 ```cpp
-Profile::Settings profileSettings("./mip_app_data",
-    false,
-    authDelegateImpl,
-    std::make_shared<ProfileObserver>(),
-    mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" });
+mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
+
+mMipContext = mip::MipContext::Create(appInfo,
+                "mip_app_data",
+                mip::LogLevel::Trace,
+                nullptr /*loggerDelegateOverride*/,
+                nullptr /*telemetryOverride*/);
+
+PolicyProfile::Settings profileSettings(
+    mipContext,                                    // mipContext object
+    mip::CacheStorageType::OnDisk,                 // use on disk storage
+    authDelegateImpl,                              // auth delegate object
+    std::make_shared<PolicyProfileObserverImpl>());  // new protection profile observer
 ```
 
 Verwenden Sie als nächstes das Promise-Future-Muster, um das `Profile` zu laden.
@@ -67,7 +84,7 @@ Wenn ein Profil erfolgreich geladen wird (`ProfileObserver::OnLoadSuccess`), wir
 Beim *context* handelt es sich auf einen Zeiger auf das `std::promise`-Objekt, das Sie erstellt haben, um den asynchronen Vorgang zu verarbeiten. Die Funktion legt schlichtweg den Wert des Promise an das Profile-Objekt fest, das für den ersten Parameter übergeben wurde. Wenn die Hauptfunktion `Future.get()` verwendet, kann das Ergebnis in einem neuen Objekt im aufrufenden Thread gespeichert werden.
 
 ```cpp
-//get the future value and store in profile. 
+//get the future value and store in profile.
 auto profile = profileFuture.get();
 ```
 
@@ -81,11 +98,24 @@ int main()
     const string userName = "MyTestUser@consoto.com";
     const string password = "P@ssw0rd!";
     const string clientId = "MyClientId";
-    auto authDelegateImpl = make_shared<sample::auth::AuthDelegateImpl>(userName, password, clientId);
 
-    Profile::Settings profileSettings("", false, authDelegateImpl, std::make_shared<ProfileObserver>(), mip::ApplicationInfo{ "MyClientId", "MyAppFriendlyName" });
+    mip::ApplicationInfo appInfo {clientId, "APP NAME", "1.2.3" };
 
-    auto profilePromise = std::make_shared<promise<shared_ptr<Profile>>>();
+    auto authDelegateImpl = std::make_shared<sample::auth::AuthDelegateImpl>(appInfo, userName, password);
+
+    auto mipContext = mip::MipContext::Create(appInfo,
+                        "mip_app_data",
+                        mip::LogLevel::Trace,
+                        nullptr /*loggerDelegateOverride*/,
+                        nullptr /*telemetryOverride*/);
+
+    PolicyProfile::Settings profileSettings(
+        mipContext,                                    // mipContext object
+        mip::CacheStorageType::OnDisk,                 // use on disk storage
+        authDelegateImpl,                              // auth delegate object
+        std::make_shared<PolicyProfileObserverImpl>());  // new protection profile observer
+
+    auto profilePromise = std::make_shared<promise<shared_ptr<PolicyProfile>>>();
     auto profileFuture = profilePromise->get_future();
     Profile::LoadAsync(profileSettings, profilePromise);
     auto profile = profileFuture.get();

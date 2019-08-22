@@ -1,18 +1,17 @@
 ---
 title: mip::PolicyProfile::Settings-Klasse
-description: Dokumentiert die mip::policyprofile-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: b4992f5af27cb6e3a2ca1b906e7983ec037ab186
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173438"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883711"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings-Klasse 
 [Einstellungen](class_mip_policyprofile_settings.md), die während der Erstellung und Lebensdauer von [PolicyProfile](class_mip_policyprofile.md) verwendet werden
@@ -20,22 +19,27 @@ ms.locfileid: "60173438"
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Einstellungen für die öffentliche (const Std:: String & Pfad, "bool" UseInMemoryStorage, const Std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const Std:: shared_ptr\<PolicyProfile::Observer\>& Observer, const ApplicationInfo & ApplicationInfo)  |  Eine Schnittstelle für die Konfiguration des Profils
+öffentliche Einstellungen (Konstante Std:: String & Path, cachestoragetype cachestoragetype, Konst\<Std:: shared_ptr\>authdelegat & authdelegat, Konstanten Std:: shared_ptr\<policyprofile:: Observer\> & Observer, Konstante ApplicationInfo & ApplicationInfo)  |  Eine Schnittstelle für die Konfiguration des Profils
+öffentliche Einstellungen (Konstante Std::\<shared_ptr mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std\>:: shared_ptr\<authdelegat & authdelegat, Konstanten Std:: shared_ptr\< Policyprofile:: Observer\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
 public const std::string& GetPath() const  |  Ruft den Pfad zum gespeicherten Status ab.
-public bool GetUseInMemoryStorage() const  |  Ruft das Flag „Arbeitsspeicher verwenden“ ab.
-Public const Std:: shared_ptr\<AuthDelegate\>& GetAuthDelegate() const  |  Ruft den Authentifizierungsdelegaten ab.
-Public const Std:: shared_ptr\<PolicyProfile::Observer\>& GetObserver() const  |  Ruft den Ereignisbeobachter ab.
-public const ApplicationInfo GetApplicationInfo() const  |  Ruft die Anwendungsinformationen ab.
-Public Std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
-Öffentliche void SetLoggerDelegate (const Std:: shared_ptr\<LoggerDelegate\>& LoggerDelegate)  |  Überschreibt die Standardprotokollierung.
-Public Std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-Öffentliche void SetHttpDelegate (const Std:: shared_ptr\<HttpDelegate\>& HttpDelegate)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
-public std::shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Rufen Sie den TaskDispatcher-Delegaten (sofern vorhanden), von der Anwendung bereitgestellt.
-public void SetTaskDispatcherDelegate(const std::shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Überschreiben Sie die Standardaufgabe asynchroner Verarbeitung mit des Clients zu verteilen.
+Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
+Public Konstanten Std:: shared_ptr\<\>authdelegat & getauthdelegat () Konstanten  |  Ruft den Authentifizierungsdelegaten ab.
+Public konstant Std:: shared_ptr\<policyprofile:: Observer\>& getobserver () Konstanten  |  Ruft den Ereignisbeobachter ab.
+public const ApplicationInfo& GetApplicationInfo() const  |  Ruft die Anwendungsinformationen ab.
+Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
+Public Std:: shared_ptr\<\> loggerdelegat getloggerdelegat () Konstanten  |  Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
+öffentliches void setloggerdelegat (konstant Std:: shared_ptr\<\>loggerdelegat & loggerdelegat)  |  Überschreibt die Standardprotokollierung.
+Public Std:: shared_ptr\<\> httpdelegat gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
+öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<\>httpdelegat & httpdelegat)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
+Public Std:: shared_ptr\<\> taskdispatcherdelegat gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
+öffentliches void settaskdispatcherdelegat (Konstanten Std:: shared_ptr\<\>taskdispatcherdelegat & taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 public void OptOutTelemetry()  |  Deaktiviert die Sammlung sämtlicher Telemetriedaten.
 public bool IsTelemetryOptedOut() const  |  Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
 public LogLevel GetMinimumLogLevel() const  |  Ruft das Mindestprotokolliergrad-Objekt ab.
+public void SetSessionId(const std::string& sessionId)  | _Noch nicht dokumentiert._
+public const std::string& GetSessionId() const  | _Noch nicht dokumentiert._
+public ~Settings()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
@@ -43,19 +47,37 @@ public LogLevel GetMinimumLogLevel() const  |  Ruft das Mindestprotokolliergrad-
 Eine Schnittstelle für die Konfiguration des Profils
 
 Parameter:  
-* **path**: Der Pfad zu einem Verzeichnis, in dem das SDK den Profilstatus speichert. 
+* **Pfad**: Der Pfad zu einem Verzeichnis, in dem das SDK den Profil Status speichert. 
 
 
-* **useInMemoryStorage**: Store Sie alle zwischengespeicherten Zustand im Arbeitsspeicher und nicht auf dem Datenträger. 
+* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
 
 
-* **authDelegate**: Der authentifizierungsdelegat, der vom SDK zum Abrufen von Authentifizierungstoken verwendet wird. 
+* authdelegat: Der Authentifizierungs Delegat, der vom SDK zum Abrufen von Authentifizierungs Token verwendet wird. 
 
 
-* **observer**: Eine Klasse implementiert die [PolicyProfile::Observer](class_mip_policyprofile_observer.md) Schnittstelle. Kann „nullptr“ lauten. 
+* **Beobachter**: Eine Klasse, die die [policyprofile:: Observer](class_mip_policyprofile_observer.md) -Schnittstelle implementiert. Kann „nullptr“ lauten. 
 
 
-* **applicationInfo**: Der Anwendungsbezeichner für den Dienstzugriff verwendet.
+* **applicationInfo**: Die Anwendungs-IDs, die für den Dienst Zugriff verwendet werden.
+
+
+> Veraltet Dieser Konstruktor wird in Kürze als veraltet markiert, sodass er einen MIP:: mipcontext-Parameter erfordert.
+  
+### <a name="settings-function"></a>Settings-Funktion
+Eine Schnittstelle für die Konfiguration des Profils
+
+Parameter:  
+* **mipcontext**: Globale Kontext Einstellungen 
+
+
+* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
+
+
+* authdelegat: Der Authentifizierungs Delegat, der vom SDK zum Abrufen von Authentifizierungs Token verwendet wird. 
+
+
+* **Beobachter**: Eine Klasse, die die [policyprofile:: Observer](class_mip_policyprofile_observer.md) -Schnittstelle implementiert. Kann „nullptr“ lauten.
 
 
   
@@ -63,97 +85,119 @@ Parameter:
 Ruft den Pfad zum gespeicherten Status ab.
 
   
-**Gibt**: Der Pfad zum gespeicherten Status.
+**Gibt Folgendes zurück**: Pfad zum gespeicherten Zustand.
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage-Funktion
-Ruft das Flag „Arbeitsspeicher verwenden“ ab.
+### <a name="getcachestoragetype-function"></a>Getcachestoragetype-Funktion
+Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
 
   
-**Gibt**: True, wenn die Verwendung in den Speicher andernfalls "false" festgelegt ist.
+**Gibt Folgendes zurück**: Verwendeter Speichertyp
   
-### <a name="getauthdelegate-function"></a>GetAuthDelegate-Funktion
+### <a name="getauthdelegate-function"></a>Getauthdelegatfunktion
 Ruft den Authentifizierungsdelegaten ab.
 
   
-**Gibt**: Der Authentifizierungsdelegat.
+**Gibt Folgendes zurück**: Der Authentifizierungs Delegat.
   
-### <a name="getobserver-function"></a>GetObserver-Funktion
+### <a name="getobserver-function"></a>Getobserver-Funktion
 Ruft den Ereignisbeobachter ab.
 
   
-**Gibt**: Der ereignisbeobachter.
+**Gibt Folgendes zurück**: Der Ereignis Beobachter.
   
-### <a name="getapplicationinfo-function"></a>GetApplicationInfo-Funktion
+### <a name="getapplicationinfo-function"></a>Getapplicationinfo-Funktion
 Ruft die Anwendungsinformationen ab.
 
   
-**Gibt**: Die Anwendungsinformationen.
+**Gibt Folgendes zurück**: Die Anwendungsinformationen.
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="getloggerdelegate-function"></a>GetLoggerDelegate-Funktion
+### <a name="getmipcontext-function"></a>Getmipcontext-Funktion
+MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
+
+  
+**Gibt Folgendes zurück**: MIP-Kontext
+  
+### <a name="getloggerdelegate-function"></a>Getloggerdelegatfunktion
 Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
 
   
-**Gibt**: Protokollierung
+**Gibt Folgendes zurück**: Protokollierung
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="setloggerdelegate-function"></a>SetLoggerDelegate-Funktion
+### <a name="setloggerdelegate-function"></a>Setloggerdelegatfunktion
 Überschreibt die Standardprotokollierung.
 
 Parameter:  
-* **loggerDelegate**: Protokollieren die Rückrufschnittstelle implementiert, die von Clientanwendungen
+* **loggerDelegate**: Von Client Anwendungen implementierte Protokollierungs Rückruf Schnittstelle
 
 
-Diese Methode sollte durch Clientanwendungen aufgerufen werden, die ihre eigene Implementierung für die Protokollierung verwenden.
+Diese Methode sollte durch Clientanwendungen aufgerufen werden, die ihre eigene Implementierung für die Protokollierung verwenden. 
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="gethttpdelegate-function"></a>GetHttpDelegate-Funktion
+### <a name="gethttpdelegate-function"></a>Gethttpdelegatfunktion
 Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 
   
-**Gibt**: HTTP-Delegat, der für HTTP-Vorgänge verwendet werden
+**Gibt Folgendes zurück**: Für http-Vorgänge zu verwendende http-Delegat
   
-### <a name="sethttpdelegate-function"></a>SetHttpDelegate-Funktion
+### <a name="sethttpdelegate-function"></a>Setup-Delegatfunktion
 Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
 
 Parameter:  
-* **httpDelegate**: HTTP-Rückrufschnittstelle, die von der Clientanwendung implementiert
+* **httpdelegat**: Von der Client Anwendung implementierte HTTP-Rückruf Schnittstelle
 
 
   
-### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate-Funktion
-Rufen Sie den TaskDispatcher-Delegaten (sofern vorhanden), von der Anwendung bereitgestellt.
+### <a name="gettaskdispatcherdelegate-function"></a>Gettaskdispatcherdelegatfunktion
+Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
 
   
-**Gibt**: TaskDispatcher-Delegat, der zum Ausführen von asynchronen Aufgaben verwendet werden soll
+**Gibt Folgendes zurück**: Taskdispatcher-Delegat, der zum Ausführen von asynchronen Aufgaben verwendet werden soll.
   
-### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate-Funktion
-Überschreiben Sie die Standardaufgabe asynchroner Verarbeitung mit des Clients zu verteilen.
+### <a name="settaskdispatcherdelegate-function"></a>Settaskdispatcherdelegatfunktion
+Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 
 Parameter:  
-* **taskDispatcherDelegate**: Aufgabe, die Verteilung der Rückrufschnittstelle, die von der Clientanwendung implementiert
+* **taskDispatcherDelegate**: Von der Client Anwendung implementierte Rückruf Schnittstelle für die Task Verteilung
 
 
   
-### <a name="optouttelemetry-function"></a>OptOutTelemetry-Funktion
+### <a name="optouttelemetry-function"></a>Optouttelemetry-Funktion
 Deaktiviert die Sammlung sämtlicher Telemetriedaten.
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut function
+### <a name="istelemetryoptedout-function"></a>Istelemetryoptedout-Funktion
 Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
 
   
-**Gibt**: True, wenn das Sammeln von Telemetriedaten deaktiviert werden soll else "false"
+**Gibt Folgendes zurück**: True, wenn die telemetrieerfassung deaktiviert werden soll, andernfalls false.
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel-Funktion
+### <a name="setminimumloglevel-function"></a>Setminimumloglevel-Funktion
 Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
 
 Parameter:  
-* **logLevel**: Mindestprotokolliergrad, der ein Protokollierereignis auslöst. 
+* **logLevel**: Mindestprotokolliergrad, der ein Protokollierereignis auslöst.
 
 
-
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
-**Gibt**: True
-  
-### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel-Funktion
+### <a name="getminimumloglevel-function"></a>Getminimumloglevel-Funktion
 Ruft das Mindestprotokolliergrad-Objekt ab.
 
   
-**Gibt**: Mindestprotokolliergrad, die ein Ereignis für die nachrichtenprotokollierung ausgelöst wird.
+**Gibt Folgendes zurück**: Mindestprotokolliergrad, der ein Protokollierungs Ereignis auslöst.
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
+  
+### <a name="setsessionid-function"></a>Funktion "-essionid"
+_Noch nicht dokumentiert._
+
+  
+### <a name="getsessionid-function"></a>Geungessionid-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="settings-function"></a>~ Settings-Funktion
+_Noch nicht dokumentiert._

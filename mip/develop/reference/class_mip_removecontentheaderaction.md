@@ -1,18 +1,17 @@
 ---
 title: mip::RemoveContentHeaderAction-Klasse
-description: 'Beschreibt die Klasse:: removecontentheaderaction-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: removecontenderaderaction-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3cc2fbdcfeae4e168e342a3c7af0edc971039db4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 8702db31c1d6c98e3031c00629cb4630f1df8e80
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173388"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883199"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader aus dem Dokument entfernt wird.
@@ -20,18 +19,12 @@ Eine Aktionsklasse, die angibt, dass der Inhaltsheader aus dem Dokument entfernt
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::vector\<std::string\>& GetUIElementNames()  |  Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
-public ActionType GetType() const  |  Ruft den Typ der [Aktion](class_mip_action.md) ab.
-
+Public Konstanten Std:: Vector\<Std:: String\>& getuielementnames ()  |  Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
+  
 ## <a name="members"></a>Member
   
-### <a name="getuielementnames-function"></a>GetUIElementNames-Funktion
+### <a name="getuielementnames-function"></a>Getuielementnames-Funktion
 Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
 
   
-**Gibt**: Eine Liste der Namen der Ui-Elemente.
-
-### <a name="gettype-function"></a>GetType-Funktion    
-Ruft den Typ der [Aktion](class_mip_action.md) ab.  
-
-**Gibt**: ActionType Der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+**Gibt Folgendes zurück**: Eine Liste der Namen der Benutzeroberflächen Elemente.

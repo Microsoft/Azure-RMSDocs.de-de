@@ -1,18 +1,17 @@
 ---
 title: mip::ProtectionEngine::Settings-Klasse
-description: Dokumentiert die mip::protectionengine-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Dokumentiert die MIP::p rotectionengine-Klasse des MIP-SDK (Microsoft Information Protection).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 841eddc32e5e6928469dc11aba581defae09bc09
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d770f5a613ecf90d6d6d6406b3b017a2f1162993
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184500"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883437"
 ---
 # <a name="class-mipprotectionenginesettings"></a>mip::ProtectionEngine::Settings-Klasse 
 [Einstellungen](class_mip_protectionengine_settings.md), die während der Erstellung und Lebensdauer von [ProtectionEngine](class_mip_protectionengine.md) verwendet werden
@@ -24,13 +23,13 @@ public Settings(const Identity& identity, const std::string& clientData, const s
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  [ProtectionEngine::Settings](class_mip_protectionengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
 public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
 public void SetEngineId(const std::string& engineId)  |  Legt die Engine-ID fest.
-public const Identity& GetIdentity() const  |  Ruft den Benutzer ab [Identität](class_mip_identity.md) die Engine zugeordnet.
-public void SetIdentity(const Identity& identity)  |  Den Benutzer legt [Identität](class_mip_identity.md) die Engine zugeordnet.
+public const Identity& GetIdentity() const  |  Ruft die der Engine zugeordnete Benutzer [Identität](class_mip_identity.md) ab.
+public void SetIdentity(const Identity& identity)  |  Legt die der Engine zugeordnete Benutzer [Identität](class_mip_identity.md) fest.
 public const std::string& GetClientData() const  |  Ruft vom Client festgelegte benutzerdefinierte Daten ab.
 public void SetClientData(const std::string& clientData)  |  Legt vom Client festgelegte benutzerdefinierte Daten fest.
 public const std::string& GetLocale() const  |  Ruft das Gebietsschema ab, in dem die Engine-Daten geschrieben werden.
-Öffentliche void SetCustomSettings (const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& Wert)  |  Legt Name-Wert-Paare fest, die für Tests und Versuche genutzt werden.
-Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Ruft Name-Wert-Paare ab, die für Tests und Versuche genutzt werden.
+öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& Wert)  |  Legt Name-Wert-Paare fest, die für Tests und Versuche genutzt werden.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  |  Ruft Name-Wert-Paare ab, die für Tests und Versuche genutzt werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID der Engine fest, die für die Korrelation von Protokollierung/Telemetrie verwendet wird.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID der Engine ab.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Legt optional die Basis-URL für den Cloudendpunkt fest.
@@ -42,13 +41,13 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basi
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md)-Konstruktor für die Erstellung einer neuen Engine
 
 Parameter:  
-* **identity**: [Identität](class_mip_identity.md) , die zugeordnet wird [ProtectionEngine](class_mip_protectionengine.md)
+* **Identität**: [Identität](class_mip_identity.md) , die Schutz- [Engine](class_mip_protectionengine.md) zugeordnet wird
 
 
 * **clientData**: anpassbare Clientdaten, die beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden können 
 
 
-* **locale**: Engine-Ausgabe wird in diesem Gebietsschema bereitgestellt werden.
+* Gebiets Schema: Die Engine-Ausgabe wird in diesem Gebiets Schema bereitgestellt.
 
 
   
@@ -56,23 +55,23 @@ Parameter:
 [ProtectionEngine::Settings](class_mip_protectionengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
 
 Parameter:  
-* **engineId**: Eindeutiger Bezeichner des Datenbankmoduls, die geladen werden 
+* **engineId**: Eindeutiger Bezeichner der Engine, die geladen wird 
 
 
 * **clientData**: anpassbare Clientdaten, die beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden können 
 
 
-* **locale**: Engine-Ausgabe wird in diesem Gebietsschema bereitgestellt werden.
+* Gebiets Schema: Die Engine-Ausgabe wird in diesem Gebiets Schema bereitgestellt.
 
 
   
-### <a name="getengineid-function"></a>GetEngineId-Funktion
+### <a name="getengineid-function"></a>Getengineid-Funktion
 Ruft die Engine-ID ab.
 
   
-**Gibt**: Engine-ID
+**Gibt Folgendes zurück**: Engine-ID
   
-### <a name="setengineid-function"></a>SetEngineId-Funktion
+### <a name="setengineid-function"></a>Funktion "stengineid"
 Legt die Engine-ID fest.
 
 Parameter:  
@@ -80,27 +79,27 @@ Parameter:
 
 
   
-### <a name="getidentity-function"></a>"Getidentity"-Funktion
-Ruft den Benutzer ab [Identität](class_mip_identity.md) die Engine zugeordnet.
+### <a name="getidentity-function"></a>GetIdentity-Funktion
+Ruft die der Engine zugeordnete Benutzer [Identität](class_mip_identity.md) ab.
 
   
-**Gibt**: Benutzer [Identität](class_mip_identity.md) verknüpft ist, mit der Engine
+**Gibt Folgendes zurück**: Der Engine zugeordnete Benutzer [Identität](class_mip_identity.md)
   
-### <a name="setidentity-function"></a>SetIdentity-Funktion
-Den Benutzer legt [Identität](class_mip_identity.md) die Engine zugeordnet.
+### <a name="setidentity-function"></a>Die Funktion "Funktion"
+Legt die der Engine zugeordnete Benutzer [Identität](class_mip_identity.md) fest.
 
 Parameter:  
-* **identity**: Benutzer [Identität](class_mip_identity.md) verknüpft ist, mit der Engine
+* **Identität**: Der Engine zugeordnete Benutzer [Identität](class_mip_identity.md)
 
 
   
-### <a name="getclientdata-function"></a>GetClientData-Funktion
+### <a name="getclientdata-function"></a>Getclientdata-Funktion
 Ruft vom Client festgelegte benutzerdefinierte Daten ab.
 
   
-**Gibt**: Benutzerdefinierte Daten, die vom Client angegebene
+**Gibt Folgendes zurück**: Vom Client angegebene benutzerdefinierte Daten
   
-### <a name="setclientdata-function"></a>SetClientData-Funktion
+### <a name="setclientdata-function"></a>Setclientdata-Funktion
 Legt vom Client festgelegte benutzerdefinierte Daten fest.
 
 Parameter:  
@@ -112,47 +111,47 @@ Parameter:
 Ruft das Gebietsschema ab, in dem die Engine-Daten geschrieben werden.
 
   
-**Gibt**: Gebietsschema in die Engine die Daten geschrieben werden
+**Gibt Folgendes zurück**: Das Gebiets Schema, in dem Engine-Daten geschrieben werden.
   
-### <a name="setcustomsettings-function"></a>SetCustomSettings-Funktion
+### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
 Legt Name-Wert-Paare fest, die für Tests und Versuche genutzt werden.
 
 Parameter:  
-* **customSettings**: Name/Wert-Paaren, die für Tests und Versuche verwendet werden.
+* **CustomSettings**: Name/Wert-Paare, die für Tests und Experimente verwendet werden
 
 
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
+### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
 Ruft Name-Wert-Paare ab, die für Tests und Versuche genutzt werden.
 
   
-**Gibt**: Name/Wert-Paaren, die für Tests und Versuche verwendet werden.
+**Gibt Folgendes zurück**: Name/Wert-Paare, die für Tests und Experimente verwendet werden
   
-### <a name="setsessionid-function"></a>SetSessionId-Funktion
+### <a name="setsessionid-function"></a>Funktion "-essionid"
 Legt die Sitzungs-ID der Engine fest, die für die Korrelation von Protokollierung/Telemetrie verwendet wird.
 
 Parameter:  
-* **sessionId**: Engine-Sitzungs-ID, für die Korrelation der Protokollierung bzw. der Telemetrie
+* **sessionId**: Engine-Sitzungs-ID, die für die Korrelation von Protokollierung/Telemetrie verwendet wird
 
 
   
-### <a name="getsessionid-function"></a>GetSessionId-Funktion
+### <a name="getsessionid-function"></a>Geungessionid-Funktion
 Ruft die Sitzungs-ID der Engine ab.
 
   
-**Gibt**: Engine-Sitzungs-ID
+**Gibt Folgendes zurück**: Engine-Sitzungs-ID
   
-### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl function
+### <a name="setcloudendpointbaseurl-function"></a>Setcloudendpointbaseurl-Funktion
 Legt optional die Basis-URL für den Cloudendpunkt fest.
 
 Parameter:  
-* **cloudEndpointBaseUrl**: die Basis-URL, die von allen Service Requests verwendet wird (z.B. https://api.aadrm.com)
+* **cloudEndpointBaseUrl**: die Basis-URL, die von allen Service Requests verwendet wird (z.B. https://api.aadrm.com )
 
 
 Wenn keine Basis-URL angegeben ist, wird diese über die DNS-Suche der Domäne der Engine-Identität bestimmt.
   
-### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+### <a name="getcloudendpointbaseurl-function"></a>Getcloudendpointbaseurl-Funktion
 Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
 
   
-**Gibt**: Basis-URL
+**Gibt Folgendes zurück**: Basis-URL

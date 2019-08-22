@@ -1,18 +1,17 @@
 ---
 title: mip::PolicyProfile-Klasse
-description: Dokumentiert die mip::policyprofile-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 45af1f4d072a1d8a690aa8f459950ae500df3db8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 13d24afe87bc04f7a92dde8daf88c1ada38cedc2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173336"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883749"
 ---
 # <a name="class-mippolicyprofile"></a>mip::PolicyProfile-Klasse 
 Die [PolicyProfile](class_mip_policyprofile.md)-Klasse ist die Stammklasse zum Verwenden von Microsoft Information Protection-Vorgängen. Eine gewöhnliche Anwendung benötigt nur eine [PolicyProfile](class_mip_policyprofile.md)-Klasse, kann bei Bedarf aber mehrere erstellen.
@@ -21,10 +20,10 @@ Die [PolicyProfile](class_mip_policyprofile.md)-Klasse ist die Stammklasse zum V
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
-public void ListEnginesAsync(const std::shared_ptr\<void\>& context)  |  Startet den Vorgang zum Auflisten von Engines
-public void UnloadEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
-Öffentliche void AddEngineAsync (const PolicyEngine::Settings "und" Einstellungen "," const Std:: shared_ptr\<"void"\>& Kontext)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
-public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+öffentliches void listenginesasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+öffentliches void unloadengineasync (Konstante Std:: String & ID, Konst Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
+öffentliches void addengineasync (Konstante policyengine:: Settings & Settings, Konst Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
+öffentliches void deleteengineasync (Konstante Std:: String & ID, Konst Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
   
 ## <a name="members"></a>Member
   
@@ -32,9 +31,9 @@ public void DeleteEngineAsync(const std::string& id, const std::shared_ptr\<void
 Ruft die auf dem Profil festgelegten Einstellungen ab.
 
   
-**Gibt**: Auf dem Profil festgelegten Einstellungen auf.
+**Gibt Folgendes zurück**: Einstellungen, die für das Profil festgelegt sind.
   
-### <a name="listenginesasync-function"></a>ListEnginesAsync-Funktion
+### <a name="listenginesasync-function"></a>Listenginesasync-Funktion
 Startet den Vorgang zum Auflisten von Engines
 
 Parameter:  
@@ -43,7 +42,7 @@ Parameter:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
   
-### <a name="unloadengineasync-function"></a>UnloadEngineAsync-Funktion
+### <a name="unloadengineasync-function"></a>Unloadengineasync-Funktion
 Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 
 Parameter:  
@@ -55,7 +54,7 @@ Parameter:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
   
-### <a name="addengineasync-function"></a>AddEngineAsync-Funktion
+### <a name="addengineasync-function"></a>Addengineasync-Funktion
 Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
 
 Parameter:  
@@ -67,7 +66,7 @@ Parameter:
 
 [PolicyProfile::Observer](class_mip_policyprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
   
-### <a name="deleteengineasync-function"></a>DeleteEngineAsync-Funktion
+### <a name="deleteengineasync-function"></a>Deleteengineasync-Funktion
 Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 
 Parameter:  

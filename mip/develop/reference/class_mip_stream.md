@@ -1,18 +1,17 @@
 ---
 title: mip::Stream-Klasse
-description: 'MIP:: Stream-Klasse von der Microsoft Information Protection (MIP) SDK-Dokumente.'
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: Stream-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1987aea2e90a3ded3a55f509e3d49a689d361c62
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: a5473adfa45a4784eaf20553acfc517dcf39f7e1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185112"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883008"
 ---
 # <a name="class-mipstream"></a>mip::Stream-Klasse 
 Eine Klasse, die die Schnittstelle zwischen dem MIP SDK und dem streambasierten Inhalt definiert.
@@ -44,7 +43,7 @@ Parameter:
 
 
   
-**Gibt**: Die Anzahl der gelesenen Bytes.
+**Gibt Folgendes zurück**: Anzahl der gelesenen Bytes.
   
 ### <a name="write-function"></a>Write-Funktion
 Wird aus einem Puffer in den Stream geschrieben.
@@ -58,13 +57,13 @@ Parameter:
 
 
   
-**Gibt**: Die Anzahl der geschriebenen Bytes.
+**Gibt Folgendes zurück**: Anzahl der geschriebenen Bytes.
   
 ### <a name="flush-function"></a>Flush-Funktion
 Leert den Stream.
 
   
-**Gibt**: True, wenn erfolgreich, andernfalls False.
+**Gibt Folgendes zurück**: True, wenn erfolgreich, andernfalls false.
   
 ### <a name="seek-function"></a>Seek-Funktion
 Sucht die aktuelle Position im Stream.
@@ -74,29 +73,29 @@ Parameter:
 
 
   
-### <a name="canread-function"></a>"CanRead"-Funktion
+### <a name="canread-function"></a>CanRead-Funktion
 Eine Überprüfung, ob aus dem Datenstrom gelesen werden kann.
 
   
-**Gibt**: True, wenn lesbar, andernfalls False.
+**Gibt Folgendes zurück**: True, wenn lesbar, sonst false.
   
 ### <a name="canwrite-function"></a>CanWrite-Funktion
 Eine Überprüfung, ob in den Datenstrom geschrieben werden kann.
 
   
-**Gibt**: True, wenn beschreibbar, andernfalls False.
+**Gibt Folgendes zurück**: True, wenn beschreibbar ist, andernfalls false.
   
 ### <a name="position-function"></a>Position-Funktion
 Ruft die aktuelle Position im Stream ab.
 
   
-**Gibt**: Die Position im Stream.
+**Gibt Folgendes zurück**: Die Position innerhalb des Streams.
   
 ### <a name="size-function"></a>Size-Funktion
 Ruft den Umfang des Inhalts im Stream ab.
 
   
-**Gibt**: Die Größe des Streams.
+**Gibt Folgendes zurück**: Die Streamgröße.
   
 ### <a name="size-function"></a>Size-Funktion
 Legt die Größe des Streams fest.

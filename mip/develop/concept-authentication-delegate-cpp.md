@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 20e82e52a293b7723513fbd0990a3d5e66ea568a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e3436acdd6a2900f4a21bb50b283d12065cd659b
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175529"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886247"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Microsoft Azure Information Protection SDK: Implementieren eines Authentifizierungsdelegaten (C++)
 
@@ -22,7 +22,7 @@ Das MIP SDK implementiert einen Authentifizierungsdelegaten zum Verarbeiten von 
 
 Damit die Basisklasse `mip::AuthDelegate`erweitert werden kann, wird eine neue Klasse mit dem Namen `sample::auth::AuthDelegateImpl` erstellt. Diese Klasse implementiert die Funktion `AcquireOAuth2Token` und richtet den Konstruktor ein, der zu den Authentifizierungsparametern hinzugefügt werden soll.
 
-### <a name="authdelegateimplh"></a>auth_delegate_impl.h
+### <a name="auth_delegate_implh"></a>auth_delegate_impl.h
 
 In diesem Beispiel akzeptiert der Standardkonstruktor nur den Benutzernamen, das Kennwort und die [Anwendungs-ID](/azure/active-directory/develop/developer-glossary#application-id-client-id). Diese Elemente werden in den privaten Variablen `mUserName`, `mPassword` und `mClientId` gespeichert.
 
@@ -39,26 +39,29 @@ class AuthDelegateImpl final : public mip::AuthDelegate { //extend mip::AuthDele
 public:
   AuthDelegateImpl() = delete;
 
-  //constructor accepts username, password, and clientId, all plain strings.
-  AuthDelegateImpl(
-    const std::string& userName,
-    const std::string& password,
-    const std::string& clientId
-  );
+//constructor accepts username, password, and mip::ApplicationInfo.
+  AuthDelegateImpl::AuthDelegateImpl(
+    const mip::ApplicationInfo& applicationInfo,
+    std::string& username,
+    const std::string& password)
+    : mApplicationInfo(applicationInfo),
+      mUserName(username),
+      mPassword(password) {
+  }
 
   bool AcquireOAuth2Token(const mip::Identity& identity, const OAuth2Challenge& challenge, OAuth2Token& token) override;
 
-private:
-  std::string mUserName;
-  std::string mPassword;
-  std::string mClientId;
+  private:
+    std::string mUserName;
+    std::string mPassword;
+    std::string mClientId;
+    mip::ApplicationInfo mApplicationInfo;
 };
-
 }
 }
 ```
 
-### <a name="authdelegateimplcpp"></a>auth_delegate_impl.cpp
+### <a name="auth_delegate_implcpp"></a>auth_delegate_impl.cpp
 
 Im `AcquireOAuth2Token` wird der Aufruf des OAuth2-Anbieters durchgeführt. Im nachfolgenden Beispiel wird `AcquireToken()` zweimal aufgerufen. In der Praxis würde nur ein Aufruf ausgeführt werden. Diese Implementierungen werden in den [Nächsten Schritten](#next-steps) erläutert.
 
@@ -78,9 +81,9 @@ AuthDelegateImpl::AuthDelegateImpl(
     const string& userName,
     const string& password,
     const string& clientId)
-    : mUserName(userName),
-    mPassword(password),
-    mClientId(clientId) {
+    : mApplicationInfo(applicationInfo),
+    mUserName(userName),
+    mPassword(password) {
 }
 
 //Here we could simply add our token acquisition code to AcquireOAuth2Token
@@ -97,7 +100,7 @@ bool AuthDelegateImpl::AcquireOAuth2Token(
       string accessToken = sample::auth::AcquireToken();
 
       //Practical example for calling external OAuth2 library with provided authentication details.
-      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mClientId, challenge.GetAuthority(), challenge.GetResource());  
+      string accessToken = sample::auth::AcquireToken(mUserName, mPassword, mApplicationInfo.applicationId, challenge.GetAuthority(), challenge.GetResource());
 
       //set the passed in OAuth2Token value to the access token acquired by our provider
       token.SetAccessToken(accessToken);

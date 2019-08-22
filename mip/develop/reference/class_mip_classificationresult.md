@@ -1,18 +1,17 @@
 ---
 title: mip::ClassificationResult-Klasse
-description: Dokumentiert die mip::classificationresult-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Dokumentiert die MIP:: classificationresult-Klasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 6a048dd7902e8148e4f32f8cc9e62d63110b2b4a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 83856362e0d0a347f660cb60a64a82e24062c247
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174220"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885859"
 ---
 # <a name="class-mipclassificationresult"></a>mip::ClassificationResult-Klasse 
 Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus enthält
@@ -23,7 +22,7 @@ Klasse, die das Ergebnis eines Klassifizierungsaufrufs im Ausführungsstatus ent
 public std::string GetId() const  |  Ruft die ID der Klassifizierungsrichtlinie ab.
 public int GetCount() const  |  Ruft die Anzahl der Instanzen ab.
 public int GetConfidenceLevel() const  |  Ruft die Zuverlässigkeit des Ergebnisses ab.
-public std::string GetSensitiveInformationDetections() const  |  Die Erkennung von vertraulichen Informationen zu erhalten.
+Public Std:: String getsensitiveinformationerkenctions () Konstanten  |  Die Erkennungen für sensible Informationen erhalten.
   
 ## <a name="members"></a>Member
   
@@ -31,19 +30,19 @@ public std::string GetSensitiveInformationDetections() const  |  Die Erkennung v
 Ruft die ID der Klassifizierungsrichtlinie ab.
 
   
-**Gibt**: Die ID der Richtlinie Klassifizierung.
+**Gibt Folgendes zurück**: ID der Klassifizierungs Richtlinie.
   
 ### <a name="getcount-function"></a>GetCount-Funktion
 Ruft die Anzahl der Instanzen ab.
 
   
-**Gibt**: Die Anzahl der Instanzen.
+**Gibt Folgendes zurück**: Die Anzahl der Instanzen.
   
-### <a name="getconfidencelevel-function"></a>GetConfidenceLevel-Funktion
+### <a name="getconfidencelevel-function"></a>Getconficelevel-Funktion
 Ruft die Zuverlässigkeit des Ergebnisses ab.
   
-### <a name="getsensitiveinformationdetections-function"></a>GetSensitiveInformationDetections-Funktion
-Die Erkennung von vertraulichen Informationen zu erhalten.
+### <a name="getsensitiveinformationdetections-function"></a>Getsensitiveingeformationdetections-Funktion
+Die Erkennungen für sensible Informationen erhalten.
 
   
-**Gibt**: Alle vertraulichen Informationen Erkennungen JSON-Zeichenfolge.
+**Gibt Folgendes zurück**: JSON-Zeichenfolge aller Erkennungen sensibler Informationen.

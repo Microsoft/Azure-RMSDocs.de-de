@@ -1,18 +1,17 @@
 ---
 title: mip::PolicyEngine-Klasse
-description: 'Beschreibt die Klasse:: policyengine-Klasse von der Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+description: Dokumentiert die MIP::p olicyengine-Klasse des MIP-SDK (Microsoft Information Protection).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 7ef57d0864ff4899476dc22639942afdbfe6bffe
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173646"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885254"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine-Klasse 
 Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
@@ -21,18 +20,19 @@ Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
-public const std::vector\<std::shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
-public const std::vector\<std::shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  sind die Vertraulichkeit-Typen, die die Richtlinien-Engine zugeordnet.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<Label\>\>& listsensitivitylabels ()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
+Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
 public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
-Public Std:: shared_ptr\<Bezeichnung\> GetDefaultSensitivityLabel()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
-public std::shared_ptr\<PolicyHandler\> CreatePolicyHandler(bool isAuditDiscoveryEnabled)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
+Public Std:: shared_ptr\<-\> Bezeichnung getdefaultsensitivitylabel ()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
+Public Std:: shared_ptr\<Label\> getlabelbyid (Konstanten Std:: String & ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
+Public Std:: shared_ptr\<policyhandler\> kreatepolicyhandler (bool isauditdiscoveryaktivierte)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
-public const std::string& GetPolicyDataXml() const  |  Ruft ab die Richtliniendaten XML werden die Einstellungen, Bezeichnungen und Regeln, die dieser Richtlinie unterliegen.
-Public const Std:: vector\<Std:: Pair\<Std:: String, Std:: String\>\>& GetCustomSettings() const  |  Ruft eine Liste der benutzerdefinierten Einstellungen ab.
-Public const Std:: String & GetPolicyId() const  |  Ruft die ID der Richtlinie ab.
-public Bool HasClassificationRules() const  |  Ruft ab, die Richtlinie Regeln automatisch oder empfohlen wird.
-public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTime() const  |  Ruft den Zeitpunkt, wenn die Richtlinie zuletzt abgerufen wurde.
+Public Konstanten Std:: String & getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
+Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
+Public Konstanten Std:: String & getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
+public bool hasclassificationrules () konstant  |  Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () Konstanten  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
   
 ## <a name="members"></a>Member
   
@@ -40,94 +40,97 @@ public std::chrono::time_point\<std::chrono::system_clock\> GetLastPolicyFetchTi
 Ruft die [Einstellungen](class_mip_policyengine_settings.md) der Richtlinien-Engine ab.
 
   
-**Gibt**: Einstellungen für Gruppenrichtlinien-Engine. 
+**Gibt Folgendes zurück**: Richtlinien-Engine-Einstellungen. 
   
 **Weitere Informationen finden Sie unter:** [mip::PolicyEngine::Settings](class_mip_policyengine_settings.md)
   
-### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels-Funktion
+### <a name="listsensitivitylabels-function"></a>Listsensitivitylabels-Funktion
 Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
 
   
-**Gibt**: Eine Liste der vertraulichkeitsbezeichnungen.
+**Gibt Folgendes zurück**: Eine Liste der Vertraulichkeits Bezeichnungen.
   
-### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes-Funktion
-sind die Vertraulichkeit-Typen, die die Richtlinien-Engine zugeordnet.
+### <a name="listsensitivitytypes-function"></a>Listsensitivitytypes-Funktion
+Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 
   
-**Gibt**: Eine Liste der vertraulichkeitsbezeichnungen. leer, wenn LoadSensitivityTypesEnabled wurde "false")
+**Gibt Folgendes zurück**: Eine Liste der Vertraulichkeits Bezeichnungen. leer, wenn loadsensitivitytypesaktivierte false war (
   
-**Siehe auch**: [PolicyEngine::Settings](class_mip_policyengine_settings.md)).
+**Siehe auch**: [Policyengine:: Settings](class_mip_policyengine_settings.md)).
   
-### <a name="getmoreinfourl-function"></a>GetMoreInfoUrl-Funktion
+### <a name="getmoreinfourl-function"></a>Getmoreingefourl-Funktion
 Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
 
   
-**Gibt**: Eine Url im Zeichenfolgenformat.
+**Gibt Folgendes zurück**: Eine URL im Zeichen folgen Format.
   
-### <a name="islabelingrequired-function"></a>IsLabelingRequired-Funktion
+### <a name="islabelingrequired-function"></a>Islabelingrequired-Funktion
 Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
 
   
-**Gibt**: True, wenn die Bezeichnung ist obligatorisch, andernfalls "false".
+**Gibt Folgendes zurück**: True, wenn die Bezeichnung obligatorisch ist, andernfalls false.
   
-### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel-Funktion
+### <a name="getdefaultsensitivitylabel-function"></a>Getdefaultsensitivitylabel-Funktion
 Ruft die Standardvertraulichkeitsbezeichnung ab.
 
   
-**Gibt**: Vertraulichkeitsbezeichnung standardmäßig, wenn vorhanden, "nullptr", wenn es gibt keine standardbezeichnung festgelegt.
+**Gibt Folgendes zurück**: Standardmäßige Vertraulichkeits Bezeichnung, falls vorhanden, nullptr, wenn keine Standard Bezeichnung festgelegt ist.
   
-### <a name="createpolicyhandler-function"></a>CreatePolicyHandler-Funktion
+### <a name="getlabelbyid-function"></a>Getlabelbyid-Funktion
+Ruft die Bezeichnung entsprechend der angegebenen ID ab.
+  
+### <a name="createpolicyhandler-function"></a>Funktion "kreatepolicyhandler"
 Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
 
 Parameter:  
-* **Ein**: "bool", der darstellt, ob der Audit-Ermittlung aktiviert ist oder nicht.
+* **A**: Boolescher Wert, der angibt, ob die Überwachungs Ermittlung aktiviert ist.
 
 
 
   
-**Gibt**: Richtlinie-Handler.
-Anwendung muss das Richtlinienobjekt für den Handler für die Lebensdauer des Dokuments beibehalten werden sollen.
+**Gibt Folgendes zurück**: Richtlinien Handler.
+Die Anwendung muss das richtlinienhandlerobjekt für die Lebensdauer des Dokuments beibehalten.
   
-### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent-Funktion
+### <a name="sendapplicationauditevent-function"></a>Sendapplicationauditevent-Funktion
 Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
 
 Parameter:  
-* **Ebene**: der dem aktuellen Protokolliergrad: Info/Fehler/Warnung. 
+* **Ebene**: der Protokollebene: Info/Fehler/Warnung. 
 
 
-* **EventType**: eine Beschreibung der den Typ des Ereignisses. 
+* **eventType**: eine Beschreibung des Ereignis Typs. 
 
 
-* **EventData**: die dem Ereignis zugeordneten Daten.
+* **EventData**: die Daten, die dem Ereignis zugeordnet sind.
 
 
   
-### <a name="getpolicydataxml-function"></a>GetPolicyDataXml-Funktion
-Ruft ab die Richtliniendaten XML werden die Einstellungen, Bezeichnungen und Regeln, die dieser Richtlinie unterliegen.
+### <a name="getpolicydataxml-function"></a>Getpolicydataxml-Funktion
+Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
 
   
-**Gibt**: Richtliniendaten XML.
+**Gibt Folgendes zurück**: Richtlinien Daten-XML.
   
-### <a name="getcustomsettings-function"></a>GetCustomSettings-Funktion
-Ruft eine Liste der benutzerdefinierten Einstellungen ab.
+### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
+Ruft eine Liste benutzerdefinierter Einstellungen ab.
 
   
-**Gibt**: Ein Vektor von benutzerdefinierten Einstellungen.
+**Gibt Folgendes zurück**: Ein Vektor von benutzerdefinierten Einstellungen.
   
-### <a name="getpolicyid-function"></a>GetPolicyId-Funktion
-Ruft die ID der Richtlinie ab.
+### <a name="getpolicyfileid-function"></a>Getpolicyfleid-Funktion
+Ruft die ID der Richtlinien Datei ab.
 
   
-**Gibt**: Eine Zeichenfolge, die Richtlinien-ID darstellt.
+**Gibt Folgendes zurück**: Eine Zeichenfolge, die die Richtlinien Datei-ID darstellt.
   
-### <a name="hasclassificationrules-function"></a>HasClassificationRules-Funktion
-Ruft ab, die Richtlinie Regeln automatisch oder empfohlen wird.
+### <a name="hasclassificationrules-function"></a>Hasclassificationrules-Funktion
+Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
 
   
-**Gibt**: Ein boolescher Wert, der darüber informiert, wenn es automatische oder Recommandation in der Richtlinie Regeln
+**Gibt Folgendes zurück**: Ein boolescher Wert, der mitteilt, ob in der Richtlinie automatische oder Empfehlungs Regeln vorhanden sind.
   
-### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime-Funktion
-Ruft den Zeitpunkt, wenn die Richtlinie zuletzt abgerufen wurde.
+### <a name="getlastpolicyfetchtime-function"></a>Getlastpolicyfetchtime-Funktion
+Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
 
   
-**Gibt**: Die Zeit, wenn die Richtlinie zuletzt abgerufen wurde
+**Gibt Folgendes zurück**: Der Zeitpunkt, zu dem die Richtlinie zuletzt abgerufen wurde.

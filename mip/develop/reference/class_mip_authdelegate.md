@@ -1,38 +1,56 @@
 ---
-title: Klasse mip::AuthDelegate
-description: Dokumentiert die mip::authdelegate-Klasse von der Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'MIP:: authdelegat-Klasse'
+description: 'Dokumentiert die MIP:: authdelegatklasse des Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: bcc38bf4b55ca99cf926138279223a4140f7bbf4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: b865a26b9cfd96cf4beafa2eb712917405f1dd5c
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184840"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884506"
 ---
-# <a name="class-mipauthdelegate"></a>Klasse mip::AuthDelegate 
-Delegat für die Authentifizierung bezogene Vorgänge.
+# <a name="class-mipauthdelegate"></a>MIP:: authdelegat-Klasse 
+Delegat für Vorgänge im Zusammenhang mit der Authentifizierung.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public Bool AcquireOAuth2Token (const MIP:: Identity, Identität, const OAuth2Challenge & Herausforderung OAuth2Token & token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungstoken für die Richtlinien-Engine, mit der angegebenen Identität und die angegebene Abfrage erforderlich ist. Der Client sollte zurückgegeben werden, ob Abrufen des Authentifizierungstokens erfolgreich war. Wenn erfolgreich, sollte das angegebene token Objekt initialisiert werden.
+public virtual bool AcquireOAuth2Token (Konstante MIP:: Identity & Identity, Reas OAuth2Challenge & Challenge, OAuth2Token & Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
+public virtual bool AcquireOAuth2Token (Konst MIP:: Identity & Identity, konstant OAuth2Challenge & Challenge, Konstanten Std:: shared_ptr\<void\>& context, OAuth2Token & Token)  |  Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
   
 ## <a name="members"></a>Member
   
 ### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token-Funktion
-Diese Methode wird aufgerufen, wenn ein Authentifizierungstoken für die Richtlinien-Engine, mit der angegebenen Identität und die angegebene Abfrage erforderlich ist. Der Client sollte zurückgegeben werden, ob Abrufen des Authentifizierungstokens erfolgreich war. Wenn erfolgreich, sollte das angegebene token Objekt initialisiert werden.
+Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
 
 Parameter:  
-* **identity**: 
+* **Identität**: 
 
 
-* **challenge**: 
+* **Herausforderung**: 
 
 
-* **token**:
+* **Token**: 
+
+
+> Veraltet Diese Methode wird in Kürze als veraltet markiert, da Sie den Kontext Parameter akzeptiert. Wenn die neue Version implementiert wurde, muss diese Version nicht implementiert werden.
+  
+### <a name="acquireoauth2token-function"></a>AcquireOAuth2Token-Funktion
+Diese Methode wird aufgerufen, wenn ein Authentifizierungs Token für die Richtlinien-Engine mit der angegebenen Identität und der angegebenen Abfrage erforderlich ist. Der Client sollte zurückgeben, ob das Abrufen des Tokens erfolgreich war. Bei erfolgreicher Ausführung sollte das angegebene Tokenobjekt initialisiert werden.
+
+Parameter:  
+* **Identität**: Benutzer, für den ein Token angefordert wird 
+
+
+* **Herausforderung**: OAuth2 Challenge 
+
+
+* **Kontext**: Nicht transparenter Kontext, der von der Host Anwendung an die MIP-API übermittelt wurde. 
+
+
+* **Token**: [output] Base64-codiertes OAuth2-Token
 

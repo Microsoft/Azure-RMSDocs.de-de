@@ -6,20 +6,20 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176923"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884746"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Überwachung mit der Datei-API im MIP SDK
 
-Über das Administrationsportal von Azure Information Protection können Sie auf Administratorberichte zugreifen. Diese Berichte bieten einen Überblick über die Bezeichnungen, die Benutzer manuell oder automatisch in allen Anwendungen und Diensten anwenden, in denen das MIP SDK integriert ist. Entwicklungspartner, die das SDK nutzen, können diese Funktionalität ganz einfach aktivieren, um Informationen aus ihren Anwendungen in Kundenberichten anzuzeigen.
+Über das Administrationsportal von Azure Information Protection können Sie auf Administratorberichte zugreifen. Diese Berichte bieten Aufschluss darüber, welche Bezeichnungen Benutzer, manuell oder automatisch, über alle Anwendungen oder Dienste, die das MIP SDK integriert haben, anwenden. Entwicklungspartner, die das SDK verwenden, können diese Funktion aktivieren, um Informationen aus Ihren Anwendungen in Kunden berichten zu erhalten.
 
-## <a name="event-types"></a>Ereignistypen
+## <a name="event-types"></a>Ereignis Typen
 
 Es gibt drei Typen von Ereignissen, die über das SDK an die Azure Informationen Protection-Analyse übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
 
@@ -63,8 +63,8 @@ auto label = handler->GetLabel();
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -79,8 +79,8 @@ if(commitFuture.get()) {
 
 ## <a name="audit-dashboard"></a>Überwachungsdashboard
 
-An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Die Azure Information Protection-Analyse befindet sich in der öffentlichen Vorschau und die Features bzw. Funktionen können sich ändern.
+An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. 
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Informationen zu den Überwachungsmöglichkeiten in Azure Information Protection finden Sie im [Blog zur Vorschauankündigung in der Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+Ausführliche Informationen zur Überwachungsfunktion in Azure Information Protection finden Sie im [Vorschau Ankündigungs Blog in der Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
