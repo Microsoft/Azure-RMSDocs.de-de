@@ -294,7 +294,17 @@
                     - name: Üblicherweise mit der RMS-Freigabeanwendung ausgeführte Aufgaben
                       href: ./rms-client/upgrade-client-app.md
         - name: Unterstützte PDF-Reader
-          href: ./rms-client/protected-pdf-readers.md
+          items:
+            - name: Übersicht
+              href: ./rms-client/protected-pdf-readers.md
+            - name: Windows
+              href: ./rms-client/protected-pdf-readers-windows.md
+            - name: MacOS
+              href: ./rms-client/protected-pdf-readers-mac.md
+            - name: iOS
+              href: ./rms-client/protected-pdf-readers-ios.md
+            - name: Android
+              href: ./rms-client/protected-pdf-readers-android.md
         - name: Anmerkungen zur Bereitstellung des RMS-Clients
           href: ./rms-client/client-deployment-notes.md
         - name: RMS-Schutz mit Windows Server FCI
