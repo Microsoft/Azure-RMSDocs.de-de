@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
-ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
+ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894465"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999218"
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
@@ -30,7 +30,9 @@ Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases 
 - Die Datei-API wurde aktualisiert, um beim Entschlüsseln von Inhalten das Export Recht und nicht das Extract-Recht zu überprüfen.
 - Installationsprogramm Korrektur, um sicherzustellen, dass die neue PDF v2-Schutzvorrichtung bei der Aktualisierung installiert wird.
 - Telemetrieänderungen. Diese Änderung erforderte ein Update des Installationspakets, mit dem die C-Laufzeitbibliotheken installiert werden.
-- Dienst-Back-End-Authentifizierung Änderungen, aktualisieren Sie diese SDK-Version, um die Unterbrechung zu minimieren
+- Die Dienst-Back-End-Authentifizierung ändert sich, # # # # # #please Update auf diese SDK-Version, um Unterbrechungen zu minimieren, wenn Sie die Authentifizierung mit symmetrischem Schlüssel für Ihre
+- Unterstützung für VC 15,9
+
 
 ## <a name="october-2017---update"></a>Oktober 2017: Update
 

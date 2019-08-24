@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/14/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 798784eb744416edf977f58ae95d5203bc9ead6b
-ms.sourcegitcommit: fc467e30b67ac218491fccea2d501350d3a656fb
+ms.openlocfilehash: 4c69838cbde0fa7408780d0a07c0a2990f26da6c
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024016"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999233"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -99,7 +99,7 @@ Folgen Sie den Anweisungen für [nicht verbundene Computer](./rms-client/client-
 
 1. Konfigurieren Sie den Scanner im Azure-Portal, indem Sie ein Scannerprofil erstellen. Unterstützung zu diesem Schritt finden Sie im Abschnitt [Konfigurieren des Scanners im Azure-Portal](#configure-the-scanner-in-the-azure-portal).
 
-2. Exportieren Sie Ihr Scannerprofil über das Blatt **Azure Information Protection - Profiles (Preview)** (Azure Information Protection – Profile (Vorschau)) mithilfe der Option **Exportieren**.
+2. Exportieren Sie das Scanner-Profil über das Blatt " **Azure Information Protection profile** " mithilfe der Option " **exportieren** ".
 
 3. Führen Sie schließlich das Cmdlet [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) in einer PowerShell-Sitzung aus, und geben Sie die Datei an, in der die exportierten Einstellungen enthalten sind.
 
@@ -479,7 +479,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiel:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
