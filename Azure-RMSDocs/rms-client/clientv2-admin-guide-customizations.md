@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
-ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
+ms.openlocfilehash: f60c1bdc8dabd586e96c758afe1f93f46d6afb16
+ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584608"
+ms.lasthandoff: 08/25/2019
+ms.locfileid: "70017658"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -31,7 +31,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -773,11 +773,9 @@ Beispiel für einen PowerShell-Befehl, bei dem Ihre Bezeichnung "Allgemein" laut
 
 Wenn Sie mehrere Regeln für dieselbe Bezeichnung benötigen, definieren Sie mehrere Zeichen folgen Werte für denselben Schlüssel. 
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel werden die Secure Islands-Bezeichnungen mit dem Namen "Confidential" und "Secret" in der benutzerdefinierten Eigenschaft " **Classification**" gespeichert, und Sie möchten, dass der Azure Information Protection Unified Label-Client die Vertraulichkeits Bezeichnung " Vertraulich ":
 
-- Die Secure Islands-Bezeichnungen mit dem Namen "Confidential" und "Secret" werden in der benutzerdefinierten Eigenschaft * *-Klassifizierung gespeichert, und der Azure Information Protection Unified Label-Client soll die Vertraulichkeits Bezeichnung "vertraulich" anwenden:
-
-    Set-Label-Identity Confidential-advancedsettings @ {labelbycustomproperties = ConvertTo-JSON ("Migrieren einer vertraulichen Bezeichnung, Klassifizierung, vertraulich", "Geheimnis Bezeichnung migrieren, Klassifizierung, Geheimnis")}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Erweitern Sie Ihre Regeln für die Bezeichnung der Migration auf e-Mails.
 
