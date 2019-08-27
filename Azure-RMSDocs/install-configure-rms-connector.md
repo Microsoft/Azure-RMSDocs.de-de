@@ -4,7 +4,7 @@ description: Informationen zur Unterstützung bei der Installation und Konfigura
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
+ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794041"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027429"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -57,7 +57,7 @@ Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Ve
 ## <a name="entering-credentials"></a>Eingeben von Anmeldeinformationen
 Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie <strong>admin@contoso.com</strong> eingeben und dann das Kennwort für dieses Konto angeben.
 
-Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. 
+Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. Wenn Sie Azure AD bedingten Zugriff verwenden, sollten Sie außerdem die [Legacy Authentifizierung](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) für dieses Konto nicht blockieren.
 
 Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, das eines der folgenden Zeichen enthält: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 

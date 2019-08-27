@@ -4,7 +4,7 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 00e99f55130f25fa9368a7fdcd1f8c2795250c89
+ms.sourcegitcommit: dc655736e531260c7718a8808f4f1016391d2d7d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790491"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70020487"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Von Microsoft verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -62,7 +62,7 @@ Sie können Ihre Azure Information Protection-Konfiguration und den Mandantensch
 
 ### <a name="step-1-initiate-export"></a>Schritt 1: Export initiieren
 
-- [Wenden Sie sich hierfür an den Microsoft-Support](information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie der Administrator Ihres Azure Information Protection-Mandanten sind. Beachten Sie, dass die Bestätigung für diesen Prozess mehrere Tage dauert. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
+- [Wenden Sie sich hierfür an den Microsoft-Support](information-support.md#to-contact-microsoft-support), und öffnen Sie eine **Azure Information Protection-Supportanfrage zur Anforderung eines Azure Information Protection-Schlüsselexports**. Sie müssen nachweisen, dass Sie ein globaler Administrator für Ihren Mandanten sind, und wissen, dass dieser Vorgang einige Tage dauert, um zu bestätigen. Dabei fallen Standardsupportgebühren an. Das Exportieren Ihres Mandantenschlüssels ist keine kostenfreie Supportleistung.
 
 ### <a name="step-2-wait-for-verification"></a>Schritt 2: Auf Überprüfung warten
 
@@ -99,7 +99,7 @@ Wenn der Grund für das Exportieren Ihres Mandantenschlüssels darin liegt, dass
 ## <a name="respond-to-a-breach"></a>Reaktion auf eine Sicherheitsverletzung
 Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der Schlüsseltechnologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen auftreten.
 
-Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Incident auf Ihre Ressourcen auswirkt, wird Ihr Azure Information Protection-Mandantenadministrator von Microsoft unter der E-Mail-Adresse benachrichtigt, die Sie beim Abschluss des Abonnements angegeben haben.
+Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Assets auswirkt, werden die globalen Administratoren von Microsoft per e-Mail benachrichtigt.
 
 Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorgehensweise auf Ihrer und auf Microsofts Seite vom Umfang der Sicherheitsverletzung ab. Microsoft führt diesen Prozess gemeinsam mit Ihnen durch. In der folgenden Tabelle finden Sie einige typische Situationen und die wahrscheinliche Reaktion darauf, obgleich die exakte Reaktion immer von allen Informationen abhängt, die im Rahmen der Untersuchung gewonnen werden.
 
