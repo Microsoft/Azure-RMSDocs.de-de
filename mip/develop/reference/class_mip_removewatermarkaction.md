@@ -1,17 +1,17 @@
 ---
 title: mip::RemoveWatermarkAction-Klasse
 description: 'Dokumentiert die MIP:: removewatermarkaction-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 9d67dc7839183e148cb2792482e1fc186858ce7e
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: c456c48e4f41500422c0350dbffca7492abca451
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883150"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057126"
 ---
 # <a name="class-mipremovewatermarkaction"></a>mip::RemoveWatermarkAction-Klasse 
 Eine Aktionsklasse, die angibt, dass das Wasserzeichen aus dem Dokument entfernt wird.

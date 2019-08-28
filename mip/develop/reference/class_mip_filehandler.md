@@ -1,17 +1,17 @@
 ---
 title: mip::FileHandler-Klasse
 description: 'Dokumentiert die MIP:: fileHandler-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a75187820cea8b806a65eebea937ed091f0c62e0
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 93e4ed2210632a051bc9e1aaa06069d246860041
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884325"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055016"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.
@@ -25,6 +25,7 @@ Public Std:: shared_ptr\<schutzhandler\> getprotection ()  |  Startet das Abrufe
 public void inspectasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Erstellen Sie ein Datei Inspektor-Objekt, das zum Abrufen von Dateiinhalten aus kompatiblen Dateiformaten verwendet wird.
 öffentliches void setlabel (Konstante Std:: shared_ptr\<Label\>& Bezeichnung, Konstanten labelingoptions & labelingoptions, Konstante Schutzeinstellungen & Schutzeinstellungen)  |  Legt die Vertraulichkeitsbezeichnung für die Datei fest.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Löscht die Vertraulichkeitsbezeichnung aus der Datei.
+statischer bool IsProtected (Konstante Std:: String & filePath, Konstanten Std:: shared_ptr<MipContext>& mipcontext) | Überprüft, ob eine Datei geschützt ist oder nicht.
 öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzdescriptor\>& schutzdescriptor, Konstanten Schutzeinstellungen & Schutzeinstellungen)  |  Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
 public void RemoveProtection()  |  Entfernt den Schutz von der Datei. Wenn der Datei eine Bezeichnung zugeordnet ist, geht diese verloren.
 öffentliches void commitasync (Konstante Std:: String & outputfilepath, Konst Std:: shared_ptr\<void\>& context) | Writes the changes to the file specified by the \|outputFilePath\ |  angegeben.
@@ -62,6 +63,10 @@ Legt die Vertraulichkeitsbezeichnung für die Datei fest.
 Löscht die Vertraulichkeitsbezeichnung aus der Datei.
 Änderungen werden erst in die Datei geschrieben, wenn CommitAsync aufgerufen wird. Die Methoden „Privileged“ und „Auto“ ermöglichen es der API, bestehende Bezeichnungen außer Kraft zu setzen. Löst [JustificationRequiredError](class_mip_justificationrequirederror.md) aus, wenn das Festlegen einer Bezeichnung eine Legitimierung (über den labelingOptions-Parameter) erfordert.
   
+
+### <a name="isprotected-function"></a>IsProtected-Funktion
+Überprüft, ob eine Datei geschützt ist oder nicht.
+
 ### <a name="setprotection-function"></a>Setprotection-Funktion
 Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
 Änderungen werden erst in die Datei geschrieben, wenn CommitAsync aufgerufen wird.

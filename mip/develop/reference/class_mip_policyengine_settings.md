@@ -1,17 +1,17 @@
 ---
 title: mip::PolicyEngine::Settings-Klasse
 description: Dokumentiert die MIP::p olicyengine-Klasse des MIP-SDK (Microsoft Information Protection).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: d4eef1af6e738e7fbd2c33e961dcbffca8781924
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: db96d00d268158b072d2052a5e98f39bf0efa425
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885281"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054324"
 ---
 # <a name="class-mippolicyenginesettings"></a>mip::PolicyEngine::Settings-Klasse 
 Definiert die einer [PolicyEngine](class_mip_policyengine.md)-Klasse zugeordneten Einstellungen.

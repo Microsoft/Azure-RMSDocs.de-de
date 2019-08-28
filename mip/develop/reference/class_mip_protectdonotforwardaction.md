@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectDoNotForwardAction-Klasse
 description: Dokumentiert die MIP::p rotectdonotforwardaction-Klasse des MIP-SDKs (Microsoft Information Protection).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 7d50e5a4a82340c5bf45ab9dd2ebcae0d3595340
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 609f6ef3f3b3442cfcc598e40cb6be62f512519f
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883569"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057684"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>mip::ProtectDoNotForwardAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz in Form von Nichtweiterleitung hinzugefügt wird.

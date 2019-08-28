@@ -1,17 +1,17 @@
 ---
 title: mip::JustifyAction-Klasse
 description: 'Dokumentiert die MIP:: justifyaction-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a48ace1f6e1e51ca98112acc731300e7835ae9c5
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: fdf8f0dcdaceb5cf06898dcb9b5fbec96c7e55fe
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884075"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055983"
 ---
 # <a name="class-mipjustifyaction"></a>mip::JustifyAction-Klasse 
 Diese [Aktion](class_mip_action.md) fordert eine Legitimation zum Herabstufen einer Bezeichnung und zum Einstellen der Antwort im Ausführungsstatus an.

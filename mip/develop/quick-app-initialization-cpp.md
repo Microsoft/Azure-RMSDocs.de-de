@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60185078"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884808"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++)
 
@@ -137,7 +137,7 @@ Nun erstellen Sie eine Implementierung für einen Authentifizierungsdelegaten, i
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-          
+
           AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
             : mAppId(appId) {};
@@ -146,6 +146,7 @@ Nun erstellen Sie eine Implementierung für einen Authentifizierungsdelegaten, i
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
             const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
             OAuth2Token& token) override;     // Token handed back to MIP SDK
+
      private:
           std::string mAppId;
           std::string mToken;
@@ -194,7 +195,8 @@ Nun erstellen Sie eine Implementierung für einen Authentifizierungsdelegaten, i
           // True = successful token acquisition; False = failure
           return true;
      }
-     ``` 
+     ```
+
 3. Verwenden Sie optional F6 (**Projektmappe erstellen**), um eine Testkompilierung/-verknüpfung Ihrer Lösung auszuführen und vor dem Fortfahren sicherzustellen, dass sie erfolgreich erstellt wird.
 
 ## <a name="implement-a-consent-delegate"></a>Implementieren eines Zustimmungsdelegats
@@ -232,6 +234,7 @@ Nun erstellen Sie eine Implementierung für einen Zustimmungsdelegaten, indem Si
           return Consent::AcceptAlways;
      }
      ``` 
+     
 3. Verwenden Sie optional F6 (**Projektmappe erstellen**), um eine Testkompilierung/-verknüpfung Ihrer Lösung auszuführen und vor dem Fortfahren sicherzustellen, dass sie erfolgreich erstellt wird.
 
 ## <a name="construct-a-file-profile-and-engine"></a>Erstellen eines Profils und einer Engine für die Datei
@@ -243,6 +246,8 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
 2. Entfernen Sie die generierte Implementierung von `main()`. Entfernen Sie **keine** Präprozessordirektiven, die während der Projekterstellung von Visual Studio generiert wurden (#pragma, #include). Hängen Sie folgenden Code hinter Präprozessordirektiven an:
 
    ```cpp
+   #include "mip/mip_init.h"
+   #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
    #include "profile_observer.h"
@@ -253,7 +258,7 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
    using std::shared_ptr;
    using std::string;
    using std::cout;
-   using mip::ApplicationInfo; 
+   using mip::ApplicationInfo;
    using mip::FileProfile;
    using mip::FileEngine;
 
@@ -263,18 +268,25 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
      ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
                  "<application-name>",
                  "<application-version>"};
-     auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
+
+     auto mipContext = mip::MipContext::Create(appInfo,
+                         "file_sample",
+                         mip::LogLevel::Trace,
+                         nullptr /*loggerDelegateOverride*/,
+                         nullptr /*telemetryOverride*/);
+
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
-       true,                                      // true = use in-memory state storage (vs disk)
-       authDelegateImpl,                            
-       consentDelegateImpl,                     
-       profileObserver,                         
-       appInfo);                                    
+     FileProfile::Settings profileSettings(
+       mipContext,
+       mip::CacheStorageType::OnDisk,
+       authDelegateImpl,
+       consentDelegateImpl,
+       profileObserver);
 
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
@@ -296,7 +308,7 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state      
+       "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -306,7 +318,7 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();             
+       engine = engineFuture.get();
      }
      catch (const std::exception& e)
      {
@@ -315,6 +327,13 @@ Wie bereits erwähnt sind für SDK-Clients, die MSIP-APIs verwenden, Profilobjek
        system("pause");
        return 1;
      }
+
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   // handler = nullptr; // This will be used in later quick starts.
+   engine = nullptr;
+   profile = nullptr;   
+   mipContext = nullptr;
 
    return 0;
    }

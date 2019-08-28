@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee514720cf13e819f3d64e77635ae96a26e4d0ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793207"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056437"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -26,7 +26,7 @@ ms.locfileid: "68793207"
 
 Wenn Sie den Azure Information Protection Unified Bezeichnung-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**installiert, das über Cmdlets für die Bezeichnung verfügt. Zum Beispiel:
+Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**installiert, das über Cmdlets für die Bezeichnung verfügt. Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielsyntax|
 |----------------|---------------|
@@ -74,7 +74,7 @@ Sie können die Bezeichnungs-Cmdlets nicht interaktiv ausführen, indem Sie das 
 Wenn Sie die Cmdlets für die Bezeichnung ausführen, werden die Befehle in Ihrem eigenen Benutzerkontext in einer interaktiven PowerShell-Sitzung ausgeführt. Um sie unbeaufsichtigt auszuführen, erstellen Sie für diesen Zweck ein neues Azure AD-Benutzerkonto. Führen Sie dann im Kontext dieses Benutzers das Cmdlet „Set-AIPAuthentication“ zum Festlegen und Speichern von Anmeldeinformationen mithilfe eines Azure AD-Zugriffstokens aus. Dieses Benutzerkonto wird dann authentifiziert und für den Schutzdienst vom Azure Information Protection gestartet. Das Konto lädt die Azure Information Protection-Richtlinie und alle von den Bezeichnungen verwendeten Schutz Vorlagen herunter.
 
 > [!NOTE]
-> Wenn Sie [bereichsbezogene Richtlinien](../configure-policy-scope.md) verwenden, denken Sie bitte daran, dass Sie dieses Konto möglicherweise zu Ihren bereichsbezogenen Richtlinien hinzufügen müssen.
+> Beachten Sie bei der Verwendung von Bezeichnungs Richtlinien für verschiedene Benutzer, dass Sie dieses Konto möglicherweise einer bestimmten Bezeichnungs Richtlinie hinzufügen müssen.
 
 Bei der ersten Ausführung dieses Cmdlets werden Sie aufgefordert, sich bei Azure Information Protection anzumelden. Geben Sie den Benutzerkonto Namen und das Kennwort an, die Sie für das unbeaufsichtigte Konto erstellt haben. Danach kann dieses Konto die Bezeichnungs-Cmdlets nicht interaktiv ausführen, bis das Authentifizierungs Token in Azure AD abläuft. 
 
@@ -181,12 +181,12 @@ Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufge
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Beispiel:
+2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Zum Beispiel:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen `Get-Help <cmdlet name> -online`, geben Sie ein. Zum Beispiel: 
+Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen `Get-Help <cmdlet name> -online`, geben Sie ein. Beispiel: 
 
     Get-Help Set-AIPFileLabel -online
 

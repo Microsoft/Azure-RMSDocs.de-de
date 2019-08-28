@@ -1,17 +1,17 @@
 ---
 title: MIP::P rotectionhandler::P ublishingsettings
 description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 83489b41811cdaaf46b7336b21eeccb8289eb9f1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: ec5c7860c7804e30ee3ab8ae9df29f8ab9a5a112
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893122"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057616"
 ---
 # <a name="class-mipprotectionhandlerpublishingsettings"></a>MIP::P rotectionhandler::P ublishingsettings 
 Einstellungen zum Erstellen eines Schutz [Handlers](class_mip_protectionhandler.md) zum Schutz neuer Inhalte.

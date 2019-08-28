@@ -1,17 +1,17 @@
 ---
 title: mip::RemoveContentFooterAction-Klasse
 description: 'Dokumentiert die MIP:: removecontentfooteraction-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: c9928d15e4575673b055bea94d8d94ff27fe5bf4
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: a48d90736e554a89df0bbc94e187dff5c96b3a09
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885033"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057315"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>mip::RemoveContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Fußzeileninhalt aus dem Dokument entfernt wird.

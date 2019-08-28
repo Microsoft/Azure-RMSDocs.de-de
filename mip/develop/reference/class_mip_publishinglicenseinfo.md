@@ -1,17 +1,17 @@
 ---
 title: MIP::P ublishinglicenseingefo-Klasse
 description: Dokumentiert die MIP::p ublishinglicenseingefo-Klasse des MIP-SDKs (Microsoft Information Protection).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 027aba219be53b6f3182110c0fb068c2050d71cc
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: e11374b639fdfea73326e036f81cded74eb3a4c0
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893088"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057322"
 ---
 # <a name="class-mippublishinglicenseinfo"></a>MIP::P ublishinglicenseingefo-Klasse 
 Enthält die Details einer Veröffentlichungslizenz, die zum Erstellen eines Schutzhandlers verwendet wird.
