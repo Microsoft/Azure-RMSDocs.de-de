@@ -33,6 +33,10 @@
   items:
     - name: APIs
       href: concept-apis-use-cases.md
+    - name: MipContext-Objektkonzepte
+      href: concept-mipcontext.md
+    - name: Cachespeicher
+      href: concept-cache-storage.md
     - name: Profil und Engine (C++)
       items:
         - name: Konzepte und Profil- und Engine-Objekte
