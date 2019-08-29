@@ -6,14 +6,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: d671aeed3e05882ba8d41c6d7069cd4e548ecec2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184897"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884722"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Schnellstart: Festlegen und Abrufen einer Vertraulichkeitsbezeichnung (C++)
 
@@ -132,8 +132,8 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    {
         string labelId = "<label-id>";
         cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-        handler->SetLabel(labelId, labelingOptions);
+        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
    }
    catch (const std::exception& e)
    {
@@ -205,7 +205,18 @@ Fügen Sie Logik hinzu, um eine Vertraulichkeitsbezeichnung für eine Datei mit 
    system("pause");
    ```
 
-4. Ersetzen Sie die Platzhalterwerte in dem Quellcode, den Sie gerade eingefügt haben, folgendermaßen mithilfe von Zeichenfolgenkonstanten:
+4. Suchen Sie am Ende von `main()` den Block zum Herunterfahren der Anwendung, den Sie in der ersten Schnellstartanleitung erstellt haben, und heben Sie die Auskommentierung der Zeile für den Handler auf:
+
+   ```cpp
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   profile = nullptr;
+   engine = nullptr;
+   handler = nullptr;
+   mipContext = nullptr;
+   ```
+
+5. Ersetzen Sie die Platzhalterwerte in dem Quellcode folgendermaßen durch Zeichenfolgenkonstanten:
 
    | Platzhalter | Wert |
    |:----------- |:----- |

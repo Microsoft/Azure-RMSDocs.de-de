@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 3a26352f7b8e23e2de55eb21846e20feca7096ff
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60175608"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885989"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Schnellstart: Auflisten von Vertraulichkeitsbezeichnungen (C#)
 
@@ -33,7 +33,7 @@ Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organi
 
 2. Öffnen Sie mithilfe des **Projektmappen-Explorers** die CS-Datei im Projekt, die die Implementierung der `Main()`-Methode enthält. Standardmäßig weist sie den gleichen Namen wie das Projekt auf, in dem sie enthalten ist. Diesen Namen haben Sie bei Projekterstellung angegeben. 
 
-3. Fügen Sie den folgenden Code gegen Ende des `Main()`-Texts zwischen der schließenden Klammer `}` der `Main()`-Funktion (wo Sie im vorherigen Schnellstart aufgehört haben) ein:
+3. Fügen Sie am Ende von `Main()` oberhalb des Abschnitts zum Herunterfahren der Anwendung der `Main()`-Funktion (wo Sie in der vorherigen Schnellstartanleitung aufgehört haben) den folgenden Code ein:
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -49,11 +49,11 @@ Im Folgenden fügen Sie der Liste von Vertraulichkeitsbezeichnungen Ihrer Organi
           }
       }
   }
-  ``` 
+  ```
 
 ## <a name="build-and-test-the-application"></a>Erstellen und Testen der Anwendung
 
-Letztendlich erstellen und testen Sie die Clientanwendung. 
+Letztendlich erstellen und testen Sie die Clientanwendung.
 
 1. Drücken Sie STRG+UMSCHALT+B (**Projektmappe erstellen**), um Ihre Clientanwendung zu erstellen. Wenn keine Buildfehler auftreten, verwenden Sie F5 (**Debuggen starten**) zum Ausführen der Anwendung.
 
