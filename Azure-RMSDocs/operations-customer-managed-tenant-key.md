@@ -4,7 +4,7 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1b3dc6b5a557339a33abfb5cf8b54d995b1da21
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f8eb311e42f17398a0564d6caf4b02618609d9d5
+ms.sourcegitcommit: dc7603461ce9300635bcb389c18e2e708a8229df
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793871"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121799"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge des Mandantenschlüssels
 
@@ -73,7 +73,7 @@ Wenn Sie BYOK verwenden, können Sie Ihren Mandantenschlüssel nicht aus Azure K
 ## <a name="respond-to-a-breach"></a>Reaktion auf eine Sicherheitsverletzung
 Kein Sicherheitssystem, egal wie stark es ist, kommt vollständig ohne einen Prozess für Reaktion auf eine Sicherheitsverletzung aus. Ihr Mandantenschlüssel könnte kompromittiert oder gestohlen werden. Auch wenn er gut geschützt ist, können Sicherheitslücken in der Schlüsseltechnologie der aktuellen Generation oder bei aktuellen Schlüssellängen und Algorithmen auftreten.
 
-Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Objekte auswirkt, benachrichtigt Microsoft Ihren Mandantenadministrator von Azure Information Protection per E-Mail über die Adresse, die Sie beim Abschluss des Abonnements angegeben haben.
+Microsoft hat ein dediziertes Team, um auf Sicherheitsvorfälle bei eigenen Produkten und Diensten zu reagieren. Sobald ein glaubhafter Bericht über einen Vorfall vorliegt, kümmert sich dieses Team um die Untersuchung des Umfangs, der Ursache und um Abhilfen. Wenn sich dieser Vorfall auf Ihre Assets auswirkt, benachrichtigt Microsoft den globalen Administrator Ihres Mandanten per e-Mail.
 
 Wenn bei Ihnen eine Sicherheitsverletzung aufgetreten ist, hängt die beste Vorgehensweise auf Ihrer und auf Microsofts Seite vom Umfang der Sicherheitsverletzung ab. Microsoft führt diesen Prozess gemeinsam mit Ihnen durch. In der folgenden Tabelle finden Sie einige typische Situationen und die wahrscheinliche Reaktion darauf, obgleich die exakte Reaktion immer von allen Informationen abhängt, die im Rahmen der Untersuchung gewonnen werden.
 
