@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c855701b1fc8de2e3f9f458b2cd760a3abdd4b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb9f7319227ea95afce1251c2ccae979dd5c8468
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793225"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159197"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -93,11 +93,16 @@ Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und F
 
 #### <a name="help-and-feedback-section"></a>Abschnitt **Hilfe und Feedback**
 
-Standardmäßig wird der **Link "Weitere Informationen** " auf der [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) -Website angezeigt. Sie können einen eigenen URL-Link konfigurieren, der auf eine benutzerdefinierte Hilfeseite als eine der Richtlinien Einstellungen in Ihrem Beschriftungs Verwaltungs Portal wechselt: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
+Standardmäßig wird der **Link "Weitere Informationen** " auf der [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) -Website angezeigt. Sie können einen eigenen URL-Link konfigurieren, der zu einer benutzerdefinierten Hilfeseite als eine der Richtlinien Einstellungen in der Bezeichnung Management Center wechselt: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
+
+Der Link " **Problem melden** " wird nur angezeigt, wenn Sie eine [Erweiterte Einstellung](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)angeben. Wenn Sie diese Einstellung konfigurieren, müssen Sie einen HTTP-Link angeben, z. B. die E-Mail-Adresse Ihres Helpdesks. 
 
 Die **Export Protokolle** sammelt und fügt automatisch Protokolldateien für den Azure Information Protection Unified-Bezeichnungs Client ein, wenn Sie aufgefordert wurden, diese an Microsoft-Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
 
 Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die derzeit heruntergeladenen Vertraulichkeits Bezeichnungen und Bezeichnungs Richtlinien werden gelöscht, und die Benutzereinstellungen für den Azure Rights Management-Dienst werden zurückgesetzt.
+
+> [!NOTE]
+> Wenn Sie technische Probleme mit dem-Client haben, finden Sie weitere Informationen [unter Support Optionen und](../information-support.md#support-options-and-community-resources)Communityressourcen.
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>Weitere Informationen zur Option „Einstellungen“ zurücksetzen
 
@@ -147,7 +152,7 @@ Der Azure Information Protection Unified Label-Client unterstützt derzeit jedoc
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
 
 - Online-Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch)](clientv2-user-guide.md)
 
