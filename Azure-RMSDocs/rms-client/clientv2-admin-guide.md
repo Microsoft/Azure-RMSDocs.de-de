@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e8f2029122ba489aff6a0cf50e2d961ea28ed50e
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
+ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180661"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209264"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -148,7 +148,7 @@ Der Azure Information Protection Unified Bezeichnung-Client unterstützt die gle
 
 Für diese Sprachen werden Menü Optionen, Dialogfelder und Meldungen aus dem Azure Information Protection Unified-Beschriftungs Client in der Sprache des Benutzers angezeigt. Es gibt ein einzelnes Installationsprogramm, das die Sprache erkennt, sodass keine zusätzliche Konfiguration erforderlich ist, um den Azure Information Protection Unified-Bezeichnungs Client für verschiedene Sprachen zu installieren. 
 
-Der Azure Information Protection Unified Label-Client unterstützt derzeit jedoch keine anderen Sprachen für die Bezeichnungen. Außerdem werden visuelle Kennzeichnungen nicht übersetzt und unterstützen nicht mehr als eine Sprache.
+Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht automatisch übersetzt, wenn Sie Bezeichnungen in der Beschriftungs zentrale konfigurieren. Damit Benutzer Bezeichnungen in Ihrer bevorzugten Sprache anzeigen können, stellen Sie Ihre eigenen Übersetzungen bereit, und konfigurieren Sie Sie für die Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und des *localesettings* -Parameters für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)". Optische Kennzeichnungen werden nicht übersetzt und unterstützen nicht mehr als eine Sprache.
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
