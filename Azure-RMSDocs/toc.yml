@@ -163,7 +163,7 @@
                   href: migrate-portal.md
             - name: Konfigurieren von Sprachen
               href: configure-policy-languages.md
-            - name: Migrieren von Bezeichnungen zu Office 365
+            - name: Aktivieren von einheitlichen Bezeichnungen
               href: configure-policy-migrate-labels.md
         - name: Konfigurieren der sicheren Dokumentenzusammenarbeit
           href: secure-collaboration-documents.md
