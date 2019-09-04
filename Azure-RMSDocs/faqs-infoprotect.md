@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
+ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808047"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215689"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -29,7 +29,7 @@ Haben Sie Fragen zu Azure Information Protection, die sich speziell auf Klassifi
 
 Absolvieren Sie unser [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md), um diese in nur wenigen Minuten selbst in Aktion zu sehen.
 
-Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind. Die aktuelle Version hat einige Einschränkungen, einschließlich der Folgenden:
+Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) (Informationen in englischer Sprache zu Enterprise Mobility und Security) und auf unserer [Yammer-Seite](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all), um zu erfahren, wann zusätzliche Klassifizierungsfeatures und -funktionen verfügbar sind. Es gibt einige Einschränkungen in Bezug auf die aktuellen Releases, die Folgendes umfassen:
 
 - Keine Bezeichnungs Möglichkeit in den Office-Web-Apps (Office für das Web).
 
@@ -39,8 +39,8 @@ Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://t
 > **Jetzt in der Vorschau:**
 > - Zentralisierte Berichterstellung für die Klassifizierung und Bezeichnung. Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
 >
->**Kürzlich veröffentlicht**:
-> - Integrierte Bezeichnungsfunktion in Office-Apps für mobile Geräte (iOS und Android) und Mac-Computer. Weitere Informationen finden Sie unter [Anwenden von Vertraulichkeitsbezeichnungen auf Dokumente und E-Mails in Office](https://aka.ms/officemipdocs).
+>**Vertraulichkeits Bezeichnungen für Office**:
+> - Die neuesten Informationen darüber, welche Office-Apps Vertraulichkeits Bezeichnungen unterstützen, finden Sie unter "wo ist das Feature heute verfügbar?". im Abschnitt [Anwenden von Vertraulichkeits Bezeichnungen auf Ihre Dokumente und e-Mails innerhalb von Office](https://aka.ms/officemipdocs).
 
 Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https://msip.uservoice.com/) für Azure Information Protection über die Anforderungen ab.
 
@@ -48,11 +48,11 @@ Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https
 
 Derzeit gibt es zwei Clients für Windows: 
 
-- Der **Azure Information Protection Unified** Label-Client, der Bezeichnungen und Richtlinien Einstellungen von einem der folgenden Admin Center herunterlädt: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und verfügt über eine Vorschauversion, in der Sie zusätzliche Funktionen für eine zukünftige Version testen können.
+- Der **Azure Information Protection Unified** Label-Client, der Bezeichnungen und Richtlinien Einstellungen von einem der folgenden Admin Center herunterlädt: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. Dieser Client ist nun allgemein verfügbar und verfügt möglicherweise über eine Vorschauversion, um zusätzliche Funktionen für eine zukünftige Version zu testen.
 
 - Der **Azure Information Protection-Client (klassisch)** , der Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunterlädt. Dieser Client baut auf früheren Versionen der allgemeinen Verfügbarkeit des Clients auf.
 
-Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten](configure-policy-migrate-labels.md)Bezeichnungs Speicher migriert haben, verwenden Sie den klassischen Client.
+Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client.
 
 Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
@@ -82,7 +82,7 @@ Beispiele für die Verwendung dieser Metadaten mit Exchange Online-Nachrichtenfl
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>Kann ich eine Dokumentvorlage erstellen, die automatisch die Klassifizierung umfasst?
 
-Ja. Sie können eine Bezeichnung konfigurieren, um [eine Kopf- oder Fußzeile anzuwenden, die den Namen der Bezeichnung enthält](configure-policy-markings.md). Aber wenn dies nicht Ihren Anforderungen entspricht, können Sie eine Dokumentvorlage mit der gewünschte Formatierung erstellen und die Klassifizierung als Feldcode hinzufügen. 
+Ja. Sie können eine Bezeichnung konfigurieren, um [eine Kopf- oder Fußzeile anzuwenden, die den Namen der Bezeichnung enthält](configure-policy-markings.md). Wenn dies jedoch nicht Ihren Anforderungen entspricht, können Sie nur für den Azure Information Protection Client (klassisch) eine Dokument Vorlage mit der gewünschten Formatierung erstellen und die Klassifizierung als Feldcode hinzufügen. 
 
 Beispielsweise könnten Sie eine Tabelle in der Kopfzeile des Dokuments einrichten, die die Klassifizierung angezeigt. Verwenden Sie alternativ eine bestimmte Formulierung für eine Einführung, die auf die Klassifizierung des Dokuments verweist.
 

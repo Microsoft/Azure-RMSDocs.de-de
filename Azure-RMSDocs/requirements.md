@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
-ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
+ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69650878"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214106"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -112,7 +112,7 @@ Die Azure Information Protection Clients können Dokumente und e-Mails mit den O
 
 - Office Professional Plus 2010 mit Service Pack 2
 
-Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Deshalb werden Bezeichnungen, die Schutz anwenden, nicht in der Leiste für Azure Information Protection oder über die Schaltfläche **Schützen** des Office-Menübands angezeigt. 
+Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Folglich werden Bezeichnungen, die Schutz anwenden, nicht für Benutzer auf der Azure Information Protection Leiste oder über die Schaltfläche **schützen** (klassischer Client) oder **Vertraulichkeits** Schaltfläche (einheitlicher Bezeichnungs Client) im Office-Menüband angezeigt. 
 
 Die Azure Information Protection-Clients unterstützen nicht mehrere Office-Versionen auf demselben Computer. Diese Clients unterstützen außerdem nicht das Wechseln von Benutzerkonten in Office.
 

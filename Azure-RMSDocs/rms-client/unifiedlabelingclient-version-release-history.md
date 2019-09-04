@@ -4,20 +4,20 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/06/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b38a46f02812e93f936d5e62276d34c10bdbb19d
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180626"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214098"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -43,7 +43,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 ### <a name="release-information"></a>Informationen zum Release
 
-Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection Unified Bezeichnung-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. 
+Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterstützte Version des Azure Information Protection Unified Bezeichnung-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
 
 > [!NOTE]
 > Kleinere Korrekturen sind nicht aufgelistet. Wenn Sie also ein Problem mit dem Unified-Bezeichnungs Client haben, sollten Sie überprüfen, ob es mit der neuesten GA-Version behoben wurde. Wenn das Problem weiterhin besteht, überprüfen Sie die aktuelle Vorschauversion (falls verfügbar).
@@ -52,9 +52,21 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Clients](use-client.md#compare-the-clients).
 
+## <a name="version-22210"></a>Version 2.2.21.0
+
+**Veröffentlicht**: 09/03/2019
+
+**Fixes**
+
+- Wenn Sie die erweiterte Einstellung [outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) verwenden, um eine andere Standard Bezeichnung für Outlook festzulegen, und die angegebene Bezeichnung keine Unterbezeichnungen für die Bezeichnungs Richtlinie hat, wird die Bezeichnung ordnungsgemäß angewendet.
+
+- Wenn der Azure Information Protection-Client in einer Office-App verwendet wird, wird ein Benutzer mit einem Active Directory Konto, das nicht für Single Sign-On konfiguriert ist, aufgefordert, sich für Azure Information Protection zu authentifizieren. Nach der erfolgreichen Authentifizierung wird der Client Status ordnungsgemäß in Online geändert, wodurch Bezeichnungs Funktionen aktiviert werden.
+
 ## <a name="version-22190"></a>Version 2.2.19.0
 
 **Veröffentlicht**: 08/06/2019
+
+Unterstützt durch 03/03/2020
 
 **Fixes**
 
@@ -66,7 +78,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 **Veröffentlicht**: 07/15/2019
 
-Unterstützt durch 04/06/2020
+Unterstützt durch 02/06/2020
 
 **Neue Funktionen:**
 
@@ -107,7 +119,7 @@ Unterstützt durch 04/06/2020
 
 **Fixes**
 
-- Unterstützung für [Inhalts](../reports-aip.md#content-matches-for-deeper-analysis) Übereinstimmungen für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
+- Unterstützung für [Inhalts Übereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
 
 - Nachdem Sie zu einem alternativen Gebiets Schema in Windows gewechselt haben, können Sie trotzdem eine Bezeichnung mit Schutz auf ein PDF-Dokument anwenden.
 
