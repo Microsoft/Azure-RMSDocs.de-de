@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/01/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
-ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
+ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209264"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800804"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -26,7 +26,7 @@ ms.locfileid: "70209264"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified-Bezeichnungs Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzer Leitfaden](clientv2-user-guide.md). 
 
-Zum Beispiel:
+Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -69,11 +69,9 @@ Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn S
 
 - Sie möchten Skripts ausführen, die Dokumente mithilfe von PowerShell-Befehlen klassifizieren (und optional schützen).
 
-- Sie möchten einen Dienst testen, der sich derzeit in der Vorschau Phase befindet, mit der lokal gespeicherte Dateien ermittelt, klassifiziert (und optional geschützt) werden.
-
 - Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
-Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue Vertraulichkeits Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
+Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue **Vertraulichkeits** Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
 
 ![Azure Information Protection-Leiste mit Standardrichtlinie](../media/v2word2016-calloutsv2.png)
 
@@ -102,7 +100,7 @@ Die **Export Protokolle** sammelt und fügt automatisch Protokolldateien für de
 Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die derzeit heruntergeladenen Vertraulichkeits Bezeichnungen und Bezeichnungs Richtlinien werden gelöscht, und die Benutzereinstellungen für den Azure Rights Management-Dienst werden zurückgesetzt.
 
 > [!NOTE]
-> Wenn Sie technische Probleme mit dem-Client haben, finden Sie weitere Informationen [unter Support Optionen und](../information-support.md#support-options-and-community-resources)Communityressourcen.
+> Wenn Sie technische Probleme mit dem-Client haben, finden Sie weitere Informationen [unter Support Optionen und Communityressourcen](../information-support.md#support-options-and-community-resources).
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>Weitere Informationen zur Option „Einstellungen“ zurücksetzen
 
@@ -114,7 +112,7 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - %LocalAppData%\microsoft\msip\mip\\ *\<APP\>* \mip
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
@@ -152,7 +150,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
 
 - Online-Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch)](clientv2-user-guide.md)
 

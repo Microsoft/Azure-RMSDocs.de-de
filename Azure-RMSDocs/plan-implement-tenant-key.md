@@ -4,7 +4,7 @@ description: Anstatt Microsoft den Stamm Schlüssel für Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48bd5775c1c3858ec2dac0412e4a02e7d2a2bd48
-ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
+ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820717"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800832"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Planen und Implementieren Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -37,7 +37,7 @@ Der Azure Information Protection-Mandantenschlüssel
 |Geschäftliche Anforderung|Empfohlene Mandantenschlüsseltopologie|
 |------------------------|-----------------------------------|
 |Setzen Sie Azure Information Protection schnell und ohne besondere Hardware, zusätzliche Software oder Azure-Abonnement ein.<br /><br />Zum Beispiel: Setzen Sie es in Testumgebungen ein oder wenn in Ihrem Unternehmen keine rechtlichen Bestimmungen für die Schlüsselverwaltung bestehen.|Von Microsoft verwaltet|
-|Konformitäts Bestimmungen und Kontrolle über alle Lebenszyklus Vorgänge. <br /><br />Zum Beispiel: Ihr Schlüssel muss durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK|
+|Konformitäts Bestimmungen und Kontrolle über alle Lebenszyklus Vorgänge. <br /><br />Beispiel: Ihr Schlüssel muss durch ein Hardwaresicherheitsmodul (HSM) geschützt sein.|BYOK|
 
 
 Falls erforderlich, können Sie Ihre Mandanten Schlüssel Topologie nach der Bereitstellung mithilfe des Cmdlets " [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) " ändern.
@@ -87,6 +87,8 @@ Bei dieser Option geschieht Folgendes:
 
 Auch wenn dies optional ist, möchten Sie wahrscheinlich auch die beinahe in Echtzeit erstellten Nutzungsprotokolle von Azure Information Protection verwenden, um genau verfolgen zu können, wie und wann Ihr Mandantenschlüssel verwendet wird.
 
+Wenn Sie Byok für Ihren Azure Information Protection Mandanten Schlüssel verwenden, können Sie Ihre vertrauenswürdige Veröffentlichungs Domäne (Trusted Publishing Domain, TPD) nicht exportieren. Die TPD wird benötigt, wenn Sie sich entscheiden, Azure Information Protection nicht mehr zu verwenden, aber weiterhin in der Lage sein müssen, Inhalte zu entschlüsseln, die durch Azure Information Protection geschützt wurden. Wenn Sie sich für dieses Szenario vorbereiten möchten, indem Sie eine geeignete TPD im Voraus erstellen, lesen Sie die folgenden Anweisungen, [wie Sie einen Azure Information Protection "Cloud Exit"-Plan vorbereiten](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631).
+
 ### <a name="when-you-have-decided-your-tenant-key-topology"></a>Vorgehensweise, nachdem Sie sich für eine Mandantenschlüsseltopologie entschlossen haben
 
 Gehen Sie wie folgt vor, wenn Sie sich dafür entschieden haben, dass ihr Mandantenschlüssel von Microsoft verwaltet werden soll: 
@@ -126,7 +128,7 @@ Treffen Sie Ihre Entscheidung vorrangig anhand von Konformitätsgründen. Die Mi
 
 - Da alle kryptografischen Aufrufe zum Schutz mit Ihrem Azure Information Protection-Mandantenschlüssel verkettet sind, möchten Sie sicherlich die Netzwerklatenz minimieren, die durch diese Aufrufe hervorgerufen wird. Erstellen Sie dafür Ihren Schlüsseltresor in derselben Azure-Region oder -Instanz wie Ihren Azure Information Protection-Mandanten.
 
-Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Beispiel:
+Um den Speicherort Ihres Azure Information Protection Mandanten zu identifizieren, verwenden Sie das PowerShell-Cmdlet [Get-aipserviceconfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) , und identifizieren Sie die Region aus den URLs. Zum Beispiel:
 
     LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
@@ -182,7 +184,7 @@ Sie können Azure Information Protection jetzt so konfigurieren, dass dieser Sch
 
     Connect-AipService
 
-Führen Sie dann das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Beispiel:
+Führen Sie dann das [Cmdlet use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey)aus, und geben Sie dabei die Schlüssel-URL an. Zum Beispiel:
 
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 

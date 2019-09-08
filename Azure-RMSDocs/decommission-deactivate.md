@@ -4,7 +4,7 @@ description: Informationen und Anweisungen für den Fall, dass Sie den cloudbasi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c5e1234d1cba034f1e8ed21488a5b87dada4dcb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792691"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800823"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
@@ -28,12 +28,14 @@ Sie steuern immer, ob Ihre Organisation Inhalt mithilfe des Azure Rights Managem
 
 Wenn Sie keinen weiteren Zugriff auf zuvor geschützte Inhalte mehr benötigen, deaktivieren Sie den Dienst, und lassen Sie Ihr Abonnement für Azure Information Protection ablaufen. Dies ist zum Beispiel angebracht, nachdem Sie das Testen von Azure Information Protection abgeschlossen haben, und bevor Sie es in einer Produktionsumgebung bereitstellen.
 
-Wenn Sie Azure Information Protection jedoch in der Produktion bereitgestellt haben und Dokumente sowie E-Mails geschützt haben, stellen Sie sicher, dass Sie über eine Kopie Ihres Azure Information Protection-Mandantenschlüssels verfügen, bevor Sie den Azure Rights Management-Dienst deaktivieren. Stellen Sie sicher, dass Sie eine Kopie Ihres Schlüssels besitzen, bevor Ihr Abonnement abläuft, um sicherzustellen, dass Sie den Zugriff auf Inhalt beibehalten, der durch Azure Rights Management geschützt wurde, nachdem der Dienst deaktiviert wird. Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihren eigenen Schlüssel in einem HSM erstellen und verwalten, verfügen Sie bereits über Ihren Azure Information Protection-Mandantenschlüssel. Wenn der Schlüssel jedoch von Microsoft verwaltet wurde (Standardlösung), lesen Sie die Anweisungen zum Exportieren Ihres Mandantenschlüssels im Artikel [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](operations-tenant-key.md).
+Wenn Sie jedoch Azure Information Protection in Produktions-und geschützten Dokumenten und e-Mails bereitgestellt haben, stellen Sie sicher, dass Sie über eine Kopie Ihres Azure Information Protection Mandanten Schlüssels und eine geeignete vertrauenswürdige Veröffentlichungs Domäne (TPD) verfügen, bevor Sie Azure deaktivieren. Rights Management-Dienst. Stellen Sie sicher, dass Sie über eine Kopie Ihres Schlüssels und der TPD verfügen, bevor Ihr Abonnement abläuft, um sicherzustellen, dass Sie den Zugriff auf Inhalte, die von Azure Rights Management geschützt wurden, nach dem Deaktivieren des Dienstanbieter erhalten. 
+
+Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihren eigenen Schlüssel in einem HSM erstellen und verwalten, verfügen Sie bereits über Ihren Azure Information Protection-Mandantenschlüssel. Außerdem verfügen Sie über eine passende TPD, wenn Sie die Anweisungen befolgt haben, die sich [auf einen zukünftigen cloudausgang vorbereiten](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631). Wenn Ihr Mandanten Schlüssel jedoch von Microsoft verwaltet wurde (Standardeinstellung), lesen Sie die Anweisungen zum Exportieren Ihres Mandanten Schlüssels im Artikel [Vorgänge für Ihren Azure Information Protection Mandanten Schlüssel](operations-tenant-key.md) .
 
 > [!TIP]
 > Selbst nachdem Ihr Abonnement abgelaufen ist, steht Ihnen Ihr Azure Information Protection-Mandant zur Nutzung der Inhalte für einen erweiterten Zeitraum zur Verfügung. Sie können den Mandantenschlüssel dann jedoch nicht mehr exportieren.
 
-Wenn Sie über einen Azure Information Protection-Mandantenschlüssel verfügen, können Sie Rights Management lokal bereitstellen (AD RMS) und Ihren Mandantenschlüssel als vertrauenswürdige Veröffentlichungsdomäne (Trusted Publishing Domain, TPD) importieren. Ihnen stehen dann die folgenden Optionen für die Außerbetriebsetzung Ihrer Azure Information Protection-Bereitstellung zur Verfügung:
+Wenn Sie über Ihren Azure Information Protection Mandanten Schlüssel und die TPD verfügen, können Sie Rights Management lokal bereitstellen (AD RMS) und ihren Mandanten Schlüssel als eine vertrauenswürdige Veröffentlichungs Domäne (Trusted Publishing Domain, TPD) importieren. Ihnen stehen dann die folgenden Optionen für die Außerbetriebsetzung Ihrer Azure Information Protection-Bereitstellung zur Verfügung:
 
 |Wenn dies auf Sie zutrifft, ...|… gehen Sie wie folgt vor:|
 |----------------------------|--------------|
