@@ -1,45 +1,44 @@
 ---
-title: Klasse mip::HttpOperation
-description: Dokumentiert die mip::httpoperation-Klasse von der Microsoft Information Protection (MIP) SDK.
+title: 'MIP:: httpoperation-Klasse'
+description: 'Dokumentiert die MIP:: httpoperation-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e3eaedbf508f116b19521286b686bc955d108efe
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 08/27/2019
+ms.openlocfilehash: d0f72a60233b05eab2c9e4b9e9cec2bf8bcda495
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173557"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056031"
 ---
-# <a name="class-miphttpoperation"></a>Klasse mip::HttpOperation 
-Schnittstelle, die einem HTTP-Vorgang, durch die Client-app implementiert werden, beim Überschreiben von beschreibt [HttpDelegate](class_mip_httpdelegate.md).
+# <a name="class-miphttpoperation"></a>MIP:: httpoperation-Klasse 
+Schnittstelle, die einen einzelnen http-Vorgang beschreibt, der von der Client-App beim Überschreiben von [httpdelegaten](class_mip_httpdelegate.md)
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Ruft die Vorgangs-ID.
-Public Std:: shared_ptr\<HttpResponse\> von GetResponse() ab  |  Antwort zu erhalten, sofern vorhanden.
-public Bool IsCancelled()  |  Ruft den Status der Abbruch des Vorgangs.
+public const std::string& GetId() const  |  Ruft die Vorgangs-ID ab.
+Public Std:: shared_ptr\<HttpResponse\> GetResponse ()  |  Get-Antwort, falls vorhanden.
+public bool isabgeb Rochen ()  |  Gibt den Abbruch Status des Vorgangs an.
   
 ## <a name="members"></a>Member
   
 ### <a name="getid-function"></a>GetId-Funktion
-Ruft die Vorgangs-ID.
+Ruft die Vorgangs-ID ab.
 
   
-**Gibt**: Vorgangs-ID der entsprechenden [HttpRequest](class_mip_httprequest.md) und [HttpResponse](class_mip_httpresponse.md) wird dieselbe ID haben
+**Gibt Folgendes zurück**: Vorgangs-ID die entsprechenden HttpRequest-und HttpResponse-Befehle verfügen über die gleiche ID.
   
 ### <a name="getresponse-function"></a>GetResponse-Funktion
-Antwort zu erhalten, sofern vorhanden.
+Get-Antwort, falls vorhanden.
 
   
-**Gibt**: Antwort
+**Gibt Folgendes zurück**: Antwort
   
-### <a name="iscancelled-function"></a>IsCancelled-Funktion
-Ruft den Status der Abbruch des Vorgangs.
+### <a name="iscancelled-function"></a>Isabgeb Rochen-Funktion
+Gibt den Abbruch Status des Vorgangs an.
 
   
-**Gibt**: Abbruch-status
+**Gibt Folgendes zurück**: Abbruch Status
