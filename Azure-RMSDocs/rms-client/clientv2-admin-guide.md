@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
+ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800804"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808686"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -26,7 +26,7 @@ ms.locfileid: "70800804"
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified-Bezeichnungs Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzer Leitfaden](clientv2-user-guide.md). 
 
-Beispiel:
+Zum Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -106,13 +106,15 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
 
 - Sie müssen kein lokaler Administrator sein, um diese Option zu verwenden, und diese Aktion wird nicht in der Ereignisanzeige protokolliert. 
 
-- Sofern die Dateien nicht gesperrt sind, löscht diese Aktion alle Dateien in den folgenden Speicherorten. Zu diesen Dateien gehören Client Zertifikate, Schutz Vorlagen, Vertraulichkeits Bezeichnungen und Richtlinien aus Ihrem Beschriftungs Verwaltungs Portal und die zwischengespeicherten Benutzer Anmelde Informationen. Die Clientprotokolldateien werden nicht gelöscht.
+- Sofern die Dateien nicht gesperrt sind, löscht diese Aktion alle Dateien in den folgenden Speicherorten. Diese Dateien umfassen Client Zertifikate, Schutz Vorlagen, Vertraulichkeits Bezeichnungen und Richtlinien aus Ihrem Bezeichnungs Verwaltungs Center und die zwischengespeicherten Benutzer Anmelde Informationen. Die Clientprotokolldateien werden nicht gelöscht.
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\microsoft\msip\mip\\ *\<APP\>* \mip
+    - %LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip
+    
+    - %LocalAppData%\microsoft\msip\appdetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
@@ -150,7 +152,7 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
 
 - Online-Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch)](clientv2-user-guide.md)
 
