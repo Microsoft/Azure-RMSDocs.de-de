@@ -14,23 +14,32 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
-ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
+ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
+ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69999218"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892566"
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
 Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases des RMS SDK 2.1.
+
+## <a name="september-2019---update"></a>September 2019-Update 
+
+- Korrigiert eines Deadlocks, der auftreten kann, wenn versucht wird, die Initialisierungs Methoden zur gleichen Zeit wie andere RMS-Client Methoden aufzurufen.
+- Es wurde ein Problem behoben, das bestimmt, ob Kenn Wort geschützte Office-Dateien RMS-geschützt sind
+-   Aktualisieren Sie die Lizenzierungs Überprüfung für spezielle Zweck Lizenzen.
+- Updates für die PDF-Schutzvorrichtung.
+- Andere Fehlerbehebungen.
+- Aktualisieren Sie, um statisch mit den C-Laufzeitbibliotheken zu verknüpfen.
 
 ## <a name="april-2019---update"></a>April 2019-Update
 - Fehlerbehebungen in der Datei-API.
 - Die Datei-API wurde aktualisiert, um beim Entschlüsseln von Inhalten das Export Recht und nicht das Extract-Recht zu überprüfen.
 - Installationsprogramm Korrektur, um sicherzustellen, dass die neue PDF v2-Schutzvorrichtung bei der Aktualisierung installiert wird.
 - Telemetrieänderungen. Diese Änderung erforderte ein Update des Installationspakets, mit dem die C-Laufzeitbibliotheken installiert werden.
-- Die Dienst-Back-End-Authentifizierung ändert sich, # # # # # #please Update auf diese SDK-Version, um Unterbrechungen zu minimieren, wenn Sie die Authentifizierung mit symmetrischem Schlüssel für Ihre
+- Die Dienst-Back-End-Authentifizierung ändert sich, **Bitte aktualisieren Sie diese SDK-Version, um die Unterbrechung zu minimieren, wenn Sie die Authentifizierung mit symmetrischem Schlüssel**
 - Unterstützung für VC 15,9
 
 
