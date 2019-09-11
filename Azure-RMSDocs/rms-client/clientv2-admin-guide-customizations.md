@@ -3,7 +3,7 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6ce27b6750aad0e7477e3cf20559e3133fe25f78
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 13401d61990298a039bc1d74284d45177564efd8
+ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180710"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872380"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -655,7 +655,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn der Azure Information Protection Unified Bezeichnung-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Das Bereitstellen der Einstellung " [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced" ist nicht auf " **false**" festgelegt, und alle gefundenen sensiblen Informationstypen (vordefiniert oder Benutzer definiert) werden dann an Azure Information Protection Analytics gesendet.
+Wenn der Azure Information Protection Unified Bezeichnung-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn die Einstellung " [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced" nicht auf " **false**" festgelegt ist, werden alle gefundenen vordefinierten Typen von sensiblen Informationen an Azure Information Protection Analytics-Datenträger gesendet.
 
 Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom Unified Label-Client gefunden werden, nicht an Azure Information Protection Analytics gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 

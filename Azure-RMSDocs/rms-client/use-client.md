@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: cfe7d97bf7140b8f48f3f32b1d1f7a88de5ca933
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e3499c7a5d659217bd10055648bc0c00b5c3a5c8
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789509"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888111"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -67,12 +67,12 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 |Feature|Klassischer Client|Einheitlicher Bezeichnungs Client|
 |-------|-----------------------------------|----------------------------------------------------|
 |Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
-|Zentrale Berichterstellung (Analysen):| Ja | Ja |
+|Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> -Benutzerdefinierte sensible Informationstypen werden nicht angezeigt. |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| Ja | Ja |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| Ja | Ja |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| Ja | Ja  |
 |Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| Ja <br /><br /> Wird als [Erweiterte Client Einstellungen unterstützt, die Sie im Azure-Portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Ja <br /><br /> Unterstützt als [Erweiterte Einstellungen, die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
-|Benutzerdefinierte Berechtigungen:| Ja | Ja <br /><br />Für Word, Excel, PowerPoint und den Datei-Explorer: Konfigurieren Sie die Bezeichnung im Azure-Portal |
+|Benutzerdefinierte Berechtigungen:| Ja | Ja |
 |Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell <br /><br /> In Office-Apps können Benutzer als Alternative **Datei Info** > **schützen Dokument** > **Einschränken des Zugriffs** auswählen, oder Administratoren können eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren.|
 |Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> – die Bezeichnungsfarbe wird für die angewendete Bezeichnung nicht angezeigt|
 |Bezeichnungen können optische Kennzeichnungen anwenden (Kopfzeile, Fußzeile, Wasserzeichen):| Ja | Ja mit Einschränkungen:<br /><br /> – Kopf- und Fußzeilen unterstützen keine Variablen für dynamische Werte. <br /><br /> – Das Verwenden unterschiedlicher optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook wird nicht unterstützt.|

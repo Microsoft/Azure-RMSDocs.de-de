@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214098"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888131"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -105,7 +105,6 @@ Unterstützt durch 02/06/2020
     - [Farbe für die Bezeichnung angeben](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
 - Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind:
-    - Wenn Sie über Bezeichnungen mit dieser Konfiguration aus dem Azure-Portal verfügen, werden Sie jetzt vom Unified Label-Client unterstützt, obwohl derzeit keine äquivalente Konfiguration in den Admin Centers vorhanden ist.
     - Wenn ein Benutzer eine Bezeichnung mit dieser Konfiguration auswählt, wird er aufgefordert, Benutzer und Schutzeinstellungen für das Dokument auszuwählen.
 
 - PowerShell-Änderungen im azureinformationprotection-Modul:
@@ -119,7 +118,7 @@ Unterstützt durch 02/06/2020
 
 **Fixes**
 
-- Unterstützung für [Inhalts Übereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
+- Unterstützung für [Inhalts](../reports-aip.md#content-matches-for-deeper-analysis) Übereinstimmungen für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
 
 - Nachdem Sie zu einem alternativen Gebiets Schema in Windows gewechselt haben, können Sie trotzdem eine Bezeichnung mit Schutz auf ein PDF-Dokument anwenden.
 

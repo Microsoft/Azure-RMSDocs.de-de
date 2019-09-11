@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/13/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6661dbd4e19599f12ff585a427e09c1f2ac5352c
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: 1cdeb5fec9ea57decf319b9d65104a5a334a0585
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994448"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888075"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -91,7 +91,7 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 |Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
 |Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
-|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen über keine Konfigurationsoption für benutzerdefinierte Berechtigungen für diese Office-Apps. Diese Einstellung wird jedoch unterstützt, wenn Sie eine Bezeichnung mit dieser Konfiguration migrieren, oder Sie konfigurieren die Bezeichnung nach der Migration mithilfe der Azure-Portal. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Entfernen von Schutz |Nein|Keine Konfigurationsoption, um Schutz zu entfernen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.<br /><br /> Wenn Sie bei dieser Konfiguration eine Bezeichnung veröffentlichen, wird der Schutz entfernt, wenn er zuvor durch eine Bezeichnung angewendet wurde. Wenn der Schutz zuvor unabhängig von einer Bezeichnung angewendet wurde, bleibt der Schutz bestehen.|
 |Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|

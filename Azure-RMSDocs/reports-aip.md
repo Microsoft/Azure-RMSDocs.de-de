@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
-ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
+ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
+ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630069"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872350"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -40,6 +40,9 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 - Identifizieren Sie, ob interne oder externe Benutzer auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
 
 Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern, von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
+
+> [!NOTE]
+> Derzeit umfasst Azure Information Protection Analytics keine benutzerdefinierten Informationstypen für Clients und Dienste, die eine einheitliche Bezeichnung unterstützen.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -114,7 +117,9 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Für E-Mails: Den Betreff und den Absender von E-Mails mit Bezeichnung 
 
-- Die Typen vertraulicher Informationen ([vordefiniert](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) und benutzerdefiniert), die im Inhalt erkannt wurden.
+- Die [vordefinierten sensiblen Informationstypen](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) , die im Inhalt erkannt wurden.
+    
+    Wenn Sie Azure Information Protection Bezeichnungen mit benutzerdefinierten Bedingungen verwenden, werden die Namen der benutzerdefinierten Informationstypen ebenfalls gesendet. Benutzerdefinierte Typen von sensiblen Informationen, die Sie im Office 365-Security & Compliance Center, in der Microsoft 365 Security Center oder im Microsoft 365 Compliance Center erstellen, werden nicht gesendet.
 
 - Die Azure Information Protection-Clientversion.
 
@@ -122,13 +127,13 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 Diese Informationen werden in einem Azure Log Analytics-Arbeitsbereich gespeichert, der Ihrer Organisation gehört, und kann unabhängig von Azure Information Protection von Benutzern eingesehen werden, die über Zugriffsrechte für diesen Arbeitsbereich verfügen. Details hierzu finden Sie im Abschnitt [Erforderliche Berechtigungen für Azure Information Protection-Analysen](#permissions-required-for-azure-information-protection-analytics). Informationen zum Verwalten des Zugriffs auf Ihren Arbeitsbereich finden Sie in der Azure-Dokumentation im Abschnitt [Verwalten des Zugriffs auf den Log Analytics-Arbeitsbereich mit Azure-Berechtigungen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions).
 
-Um zu verhindern, dass Azure Information Protection Clients diese Daten senden (klassisch), legen Sie die [Richtlinien Einstellung](configure-policy-settings.md) Überwachungs **Daten senden auf Azure Information Protection Log Analytics** auf **aus**fest:
+Um zu verhindern, dass Azure Information Protection von Clients (klassisch) diese Daten senden, legen Sie die [Richtlinien Einstellung](configure-policy-settings.md) Überwachungs **Daten senden auf Azure Information Protection Analytics** auf **aus**fest:
 
 - Die meisten Benutzer können diese Daten senden, und eine Teilmenge von Benutzern kann keine Überwachungsdaten senden: 
-    - Stellen Sie **Überwachungsdaten an Azure Information Protection-Protokollanalyse senden** in einer bereichsbezogenen Richtlinie für die Teilmenge an Benutzern auf **Aus**. Diese Konfiguration ist typisch für Produktionsszenarien.
+    - Legen Sie in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer das Senden von Überwachungs **Daten an Azure Information Protection Analytics** auf **Off** fest. Diese Konfiguration ist typisch für Produktionsszenarien.
 
 - So kann nur eine Teilmenge an Benutzern Überwachungsdaten senden: 
-    - Stellen Sie **Überwachungsdaten an Azure Information Protection-Protokollanalyse senden** in einer globalen Richtlinie auf **Aus**  und in einer bereichsbezogenen Richtlinie für die Teilmenge an Benutzern auf **Ein**. Diese Konfiguration ist typisch für Testszenarien.
+    - Legen Sie in der globalen Richt **Linie und in** einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer das Senden von Überwachungs **Daten an Azure Information Protection Analytics** auf **Off** fest. Diese Konfiguration ist typisch für Testszenarien.
 
 Um zu verhindern, dass Azure Information Protection Unified Clients diese Daten senden, konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)für die Bezeichnung "Bezeichnung".
 
@@ -230,7 +235,13 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie sich den Artikel [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace) durch.
 
-Wenn der Arbeitsbereich konfiguriert wurde, können Sie die Berichte anzeigen.
+Wenn Sie den Arbeitsbereich konfiguriert haben, gehen Sie wie folgt vor, wenn Sie die Vertraulichkeits Bezeichnungen in einem der folgenden Verwaltungszentren veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center Microsoft 365 Compliance Center:
+
+- Wechseln Sie im Azure-Portal zu **Azure Information Protection** > **vereinheitlichte Bezeichnung** **Verwalten** > , und wählen Sie **veröffentlichen**aus.
+    
+    Wählen Sie diese **Veröffentlichungs** Option jedes Mal aus, wenn Sie eine Bezeichnungs Änderung (erstellen, ändern, löschen) in Ihrem Beschriftungs Center vornehmen. 
+
+Sie sind jetzt bereit, die Berichte anzuzeigen.
 
 ## <a name="how-to-view-the-reports"></a>Anzeigen von Berichten
 
