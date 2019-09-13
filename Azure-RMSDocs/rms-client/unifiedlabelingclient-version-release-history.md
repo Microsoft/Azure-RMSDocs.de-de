@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
-ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
+ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
+ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936952"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -104,8 +104,7 @@ Unterstützt durch 02/06/2020
     - [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Farbe für die Bezeichnung angeben](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind:
-    - Wenn ein Benutzer eine Bezeichnung mit dieser Konfiguration auswählt, wird er aufgefordert, Benutzer und Schutzeinstellungen für das Dokument auszuwählen.
+- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Weitere Informationen finden Sie im Abschnitt [erlauben Sie Benutzern das Zuweisen von Berechtigungen](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) in der Office-Dokumentation.
 
 - PowerShell-Änderungen im azureinformationprotection-Modul:
     - Neues Cmdlet: [New-aipcustomberechti-](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) ersetzt New-rmsprotectionlicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen.
