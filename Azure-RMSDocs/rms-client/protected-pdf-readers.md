@@ -4,7 +4,7 @@ description: Installieren eines Readers für PDF-Dokumente, die für Klassifizie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/31/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,31 +14,28 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 04325119b44c5bfaad025e96251bc6b032285cb6
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 390eb0bd48b4b9ca6f36957a2ac63ed6903a83fc
+ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974784"
 ---
-# <a name="install-a-pdf-reader-that-supports-microsoft-information-protection"></a>Installieren Sie einen PDF-Reader, der Microsoft unterstützt Information Protection
+# <a name="pdf-readers-that-support-microsoft-information-protection"></a>PDF-Leser, die Microsoft Information Protection unterstützen
 
 Wenn Sie ein PDF-Dokument öffnen müssen, das von Microsoft Information Protection geschützt ist, verwenden Sie die folgenden Links und Informationen.
 
-## <a name="choose-your-pdf-reader"></a>Auswählen des PDF-Readers
+## <a name="install-pdf-readers-for-your-device"></a>Installieren von PDF-Lesern für Ihr Gerät
 
-Die folgenden PDF-Reader können geschützte PDF-Dokumente öffnen, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
+Wählen Sie das Gerät aus, das Sie zum Installieren eines PDF-Readers verwenden, der geschützte PDF-Dokumente öffnen kann. Alle diese Leser können geschützte Dokumente öffnen, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
 
-|Betriebssystem|Unterstützte Reader und Link zum Herunterladen|
-|----------------|-----------------------------------|
-|Windows 10 und frühere Versionen<br />über Windows 7 Service Pack 1|Adobe Acrobat-Reader (bevorzugt):<br /> 1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br /> 2. Installieren von Adobe Reader für Windows von der [Adobe-Website](https://www.adobe.com/)<br /> 3. Installieren des [Adobe-Plug-ins](https://go.microsoft.com/fwlink/?linkid=2050049) für Windows <br /> 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
-|MacOS-Versionen 10,12-10,14 |Adobe Acrobat Reader:<br /> 1. Lesen Sie die [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/legal/terms.html) <br /> 2. Installieren von Adobe Reader für Mac von der [Adobe-Website](https://www.adobe.com/)<br /> 3. Installieren des [Adobe-Plug-ins](https://go.microsoft.com/fwlink/?linkid=2050049) für Mac <br /> 4. Wenn Sie dazu aufgefordert werden, fordern Sie Ihren Administrator auf, das [Plug-In zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
-|Android|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325340)|
-|iOS|Azure Information Protection-App: [Herunterladen](https://go.microsoft.com/fwlink/?LinkId=325338)|
+- **Computer**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
+
+- **Mobile Geräte**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>Unterstützung für vorherige Formate
 
-Die PDF-Reader in der nächsten Tabelle unterstützen geschützte PDF-Dokumente, die eine ppdf-Dateinamenerweiterung und ältere Formate mit der Dateinamenerweiterung ". pdf" aufweisen.
+Die PDF-Reader in der folgenden Tabelle unterstützen geschützte PDF-Dokumente, die eine ppdf-Dateinamenerweiterung und ältere Formate mit der Dateinamenerweiterung ". pdf" aufweisen. 
 
 Derzeit verwenden SharePoint Online und SharePoint (lokal) ein älteres Ordnerformat für PDF-Dokumente in IRM-geschützten Bibliotheken.
 
@@ -62,6 +59,8 @@ Diese native Integration bringt folgende Vorteile mit sich:
 - Die Unterstützung für den ISO-Standard für die PDF-Verschlüsselung.
     
     Wenn diese Funktion nicht [von einem Administrator deaktiviert](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)wurde, ist dieses geschützte PDF-Dateiformat standardmäßig für den Azure Information Protection Client (klassisch) aktiviert und wird immer vom Azure Information Protection Unified-Bezeichnungs Client verwendet.
+
+Sie können das Adobe-Plug-in mit [Windows](protected-pdf-readers-windows.md) und [MacOS](protected-pdf-readers-mac.md)verwenden.
 
 Weitere Informationen finden Sie in den folgenden Blogbeiträgen: 
 

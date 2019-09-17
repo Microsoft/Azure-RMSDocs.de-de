@@ -1,69 +1,52 @@
 ---
-title: 'MIP:: Identity Klasse'
-description: 'Dokumentiert die MIP:: Identity-Klasse von der Microsoft Information Protection (MIP) SDK.'
+title: 'MIP:: Identity-Klasse'
+description: 'Dokumentiert die MIP:: Identity-Klasse des Microsoft Information Protection (MIP) SDK.'
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 75d11fae7d79cadc4dd8909be371cbde2e87f289
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.date: 08/27/2019
+ms.openlocfilehash: 8bb4e30398e6f12214605df6f5ad194334d3eeff
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173540"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054778"
 ---
-# <a name="class-mipidentity"></a>MIP:: Identity Klasse 
-Abstraktion für die Identität.
+# <a name="class-mipidentity"></a>MIP:: Identity-Klasse 
+Abstraktion für Identity.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Öffentliche Identity()  |  Standard [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers nicht bekannt ist.
-Öffentliche Identität (const Identity & andere)  |  [Identität](class_mip_identity.md) Kopierkonstruktor.
-Öffentliche explizite Identität (const Std:: String & e-Mail-Adresse)  |  [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers bekannt ist.
-public const std::string& GetEmail() const  |  Rufen Sie die e-Mail-Adresse ein.
-public void SetDelegatedEmail(const std::string& delegatedEmail)  |  Legt delegierte e-Mail, eine delegierte e-Mail-Adresse ist die Namen des Benutzers, der die Opertations ausgeführt werden.
-public const std::string& GetDelegatedEmail() const  |  Die delegierte e-Mail-Adresse zu erhalten, die eine delegierte e-Mail-Adresse wird den Namen des Benutzers, der die Opertations ausgeführt werden.
+öffentliche Identität ()  |  Standardmäßiger [identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
+öffentliche Identität (Konstante Identität & andere)  |  Kopierkonstruktor von [Identity](class_mip_identity.md)
+öffentliche explizite Identität (konstant Std:: String & e-Mail)  |  [Identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
+Public Konstanten Std:: String & GetEmail () konstant  |  Senden Sie die e-Mail.
   
 ## <a name="members"></a>Member
   
 ### <a name="identity-function"></a>Identity-Funktion
-Standard [Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers nicht bekannt ist.
+Standardmäßiger [identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
   
 ### <a name="identity-function"></a>Identity-Funktion
-[Identität](class_mip_identity.md) Kopierkonstruktor.
+Kopierkonstruktor von [Identity](class_mip_identity.md)
 
 Parameter:  
-* **[Identität](class_mip_identity.md)**: verwendet, um die Kopie zu erstellen.
+* **[Identität](class_mip_identity.md)** : wird zum Erstellen der Kopie verwendet.
 
 
   
 ### <a name="identity-function"></a>Identity-Funktion
-[Identität](class_mip_identity.md) Konstruktor verwendet, wenn eine e-Mail-Adresse des Benutzers bekannt ist.
+[Identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
 
 Parameter:  
-* **e-Mail-Adresse**: Benutzer-e-Mail-Adresse.
+* **e-Mail**: e-Mail-Adresse des Benutzers.
 
 
   
 ### <a name="getemail-function"></a>GetEmail-Funktion
-Rufen Sie die e-Mail-Adresse ein.
+Senden Sie die e-Mail.
 
   
-**Gibt**: Die e-Mail-Adresse.
-  
-### <a name="setdelegatedemail-function"></a>SetDelegatedEmail-Funktion
-Legt delegierte e-Mail, eine delegierte e-Mail-Adresse ist die Namen des Benutzers, der die Opertations ausgeführt werden.
-
-Parameter:  
-* **DelegatedEmail**: die Delegierung e-Mail-Adresse.
-
-
-  
-### <a name="getdelegatedemail-function"></a>GetDelegatedEmail-Funktion
-Die delegierte e-Mail-Adresse zu erhalten, die eine delegierte e-Mail-Adresse wird den Namen des Benutzers, der die Opertations ausgeführt werden.
-
-  
-**Gibt**: Die delegierte e-Mail-Adresse.
+**Gibt Folgendes zurück**: Die e-Mail.
