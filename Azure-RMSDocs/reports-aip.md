@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/05/2019
+ms.date: 09/17/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872350"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060187"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -42,7 +42,7 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern, von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
 
 > [!NOTE]
-> Derzeit umfasst Azure Information Protection Analytics keine benutzerdefinierten Informationstypen für Clients und Dienste, die eine einheitliche Bezeichnung unterstützen.
+> Mit Ausnahme der Vorschauversion des Unified-Bezeichnungs Clients enthält Azure Information Protection Analytics derzeit keine benutzerdefinierten Informationstypen für Clients und Dienste, die eine einheitliche Bezeichnung unterstützen.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -119,7 +119,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Die [vordefinierten sensiblen Informationstypen](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) , die im Inhalt erkannt wurden.
     
-    Wenn Sie Azure Information Protection Bezeichnungen mit benutzerdefinierten Bedingungen verwenden, werden die Namen der benutzerdefinierten Informationstypen ebenfalls gesendet. Benutzerdefinierte Typen von sensiblen Informationen, die Sie im Office 365-Security & Compliance Center, in der Microsoft 365 Security Center oder im Microsoft 365 Compliance Center erstellen, werden nicht gesendet.
+    Wenn Sie Azure Information Protection Bezeichnungen mit benutzerdefinierten Bedingungen verwenden, werden die Namen der benutzerdefinierten Informationstypen ebenfalls gesendet. Mit Ausnahme der Vorschauversion des Unified-Beschriftungs Clients werden benutzerdefinierte vertrauliche Informationstypen, die Sie in Ihrem Beschriftungs Center erstellen, nicht gesendet.
 
 - Die Azure Information Protection-Clientversion.
 
@@ -147,7 +147,7 @@ Der Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthäl
 
 Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Vorraussetzungen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
 |Anforderungen|Weitere Informationen|
@@ -183,7 +183,7 @@ Details:
     > [!NOTE] 
     > Wenn Ihr Mandant zum vereinheitlichten Speicher der vereinheitlichten Bezeichnung migriert wurde, können Sie die Azure Information Protection Administrator-Rolle nicht verwenden. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
+2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
     - Um einen Arbeitsbereich oder benutzerdefinierte Abfragen zu erstellen, benötigen Sie eine der folgenden Rollen:
     

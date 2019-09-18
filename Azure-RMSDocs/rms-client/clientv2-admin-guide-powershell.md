@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren zum Verwalten de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056437"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060049"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -33,7 +33,7 @@ Die Cmdlets werden mit dem PowerShell-Modul **azureinformationprotection**instal
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Für einen freigegebenen Ordner werden alle Dateien mit einer bestimmten Bezeichnung ermittelt.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Überprüfen Sie bei einem freigegebenen Ordner die Dateiinhalte, und versehen Sie Dateien ohne Bezeichnung automatisch gemäß den von Ihnen festgelegten Bedingungen mit Bezeichnungen.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Für einen freigegebenen Ordner wird eine bestimmte Bezeichnung auf alle Dateien ohne Bezeichnung angewendet.|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Sie können Dateien interaktiv mit einem anderen Benutzerkonto versehen.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Bezeichnen Sie Dateien nicht interaktiv, z.B. durch Verwenden eines Skripts, das nach einem Zeitplan ausgeführt wird.|
 
 > [!TIP]
 > Um Cmdlets mit Pfadlängen zu verwenden, die mehr als 260 Zeichen umfassen, können Sie die folgende [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) verwenden, die ab Windows 10, Version 1607 verfügbar ist:<br /> **Lokale Computer Richtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** **alle Einstellungen**Aktivieren von**Win32 Long-Pfaden**  >  >  
@@ -59,7 +59,7 @@ Zusätzlich zu den Voraussetzungen für die Installation des Moduls "azureinform
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Voraussetzung 1: Der Azure Rights Management-Dienst muss aktiviert sein
 
-Wenn Ihr Azure Information Protection Mandanten nicht zum Anwenden von Schutz aktiviert ist, lesen Sie die Anweisungen zum [Aktivieren von Azure Rights Management](../activate-service.md).
+Wenn Ihr Azure Information Protection Mandanten nicht aktiviert ist, lesen Sie die Anweisungen unter [[Aktivieren des Schutz Dienstanbieter von Azure Information Protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Voraussetzung 2: Sie entfernen den Schutz von Dateien für andere mithilfe Ihres eigenen Kontos
 
@@ -84,11 +84,14 @@ Wenn das Token in Azure AD abläuft, führen Sie das Cmdlet erneut aus, um ein n
 
 Wenn Sie dieses Cmdlet ohne Parameter ausführen, erhält das Konto ein Zugriffstoken, das 90 Tage oder bis zum Ablauf des Kennworts gültig ist.  
 
-Um zu steuern, wann das Zugriffstoken abläuft, führen Sie dieses Cmdlet mit Parametern aus. Mit dieser Konfiguration können Sie das Zugriffs Token in Azure AD für ein Jahr, zwei Jahre oder so konfigurieren, dass es nie abläuft. Sie benötigen zwei in Azure Active Directory registrierte Anwendungen: eine **Web-App-/API**-Anwendung und eine **native Anwendung**. Die Parameter für "Set-aipauthentication" verwenden Werte aus diesen Anwendungen.
+Um zu steuern, wann das Zugriffstoken abläuft, führen Sie dieses Cmdlet mit Parametern aus. Mit dieser Konfiguration können Sie das Zugriffs Token in Azure AD für ein Jahr, zwei Jahre oder so konfigurieren, dass es nie abläuft. Die Parameter für "Set-aipauthentication" verwenden Werte aus einem App-Registrierungsprozess in Azure AD.
 
 Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlets im Kontext des Dienst Kontos ausführen, das Sie erstellt haben.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>So erstellen und konfigurieren Sie die Azure AD-Anwendungen für „Set-AIPAuthentication“
+
+> [!NOTE]
+> Wenn Sie die aktuelle Vorschauversion des Unified-Bezeichnungs Clients verwenden, verwenden Sie dieses Verfahren nicht. lesen Sie stattdessen den Abschnitt so [Erstellen und konfigurieren Sie die Azure AD Anwendungen für den "Set-aipauthentication-Preview"-Client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
 
 1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
 
@@ -177,13 +180,87 @@ Führen Sie diesen Befehl im Kontext des Kontos aus, das die Dokumente ohne Benu
 
 Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufgefordert. Dadurch wird das Zugriffstoken für Ihr Konto erstellt und sicher unter „%localappdata%\Microsoft\MSIP“ gespeichert. Nach dieser ersten Anmeldung können Sie Dateien auf dem Computer ohne Benutzereingriff bezeichnen und schützen. Wenn Sie jedoch ein Dienst Konto verwenden, um Dateien zu bezeichnen und zu schützen, und sich dieses Dienst Konto nicht interaktiv anmelden kann, verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication":
 
-1. Erstellen Sie eine Variable zum Speichern der Anmelde Informationen eines Active Directory Kontos, dem die Benutzerrechte Zuweisung zur interaktiven Anmeldung erteilt wird. Zum Beispiel:
+1. Erstellen Sie eine Variable zum Speichern der Anmelde Informationen eines Active Directory Kontos, dem die Benutzerrechte Zuweisung zur interaktiven Anmeldung erteilt wird. Beispiel:
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
 2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Zum Beispiel:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
+
+
+#### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client"></a>So erstellen und konfigurieren Sie die Azure AD Anwendungen für den "Set-aipauthentication-Preview"-Client
+
+Verwenden Sie das folgende Verfahren als Alternative Anweisungen nur, wenn Sie die Vorschauversion des Unified-Beschriftungs Clients installiert haben. 
+
+Für diese Version des Clients müssen Sie für die Parameter " *AppID* " und " *appsecret* " für "Set-aipauthentication" eine neue APP-Registrierung erstellen. Wenn Sie ein Upgrade von einer früheren Version des Clients durchgeführt und eine APP-Registrierung für die vorherigen *webappid* -und *nativeappid* -Parameter erstellt haben, funktionieren Sie nicht mit dieser Version des Clients.
+
+1. Melden Sie sich in einem neuen Browserfenster beim [Azure-Portal](https://portal.azure.com/) an.
+
+2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory** > **Manage** > **App-Registrierungen**. 
+
+3. Wählen Sie **+ neue Registrierung**aus. Geben Sie auf dem Blatt **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
+
+   - **Name**:`AIPv2OnBehalfOf`
+        
+        Wenn Sie möchten, können Sie auch einen anderen Namen angeben. Der Name muss pro Mandant eindeutig sein.
+    
+    - **Unterstützte Konto Typen**: **Nur Konten in diesem Organisations Verzeichnis**
+    
+    - **Umleitungs-URI (optional)** : **Web** und`https://localhost`
+
+4. Kopieren Sie auf dem Blatt **AIPv2OnBehalfOf** den Wert für die **Anwendungs-ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel `77c3c1c3-abf9-404e-8b2b-4652836c8c66`aus:. Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+
+5. Wählen Sie auf dem Blatt **AIPv2OnBehalfOf** im Menü **Verwalten** die Option **Zertifikate & Geheimnissen**aus.
+
+6. Wählen Sie auf dem Blatt **AIPv2OnBehalfOf-Zertifikate & Geheimnissen** im Abschnitt geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus.
+
+7. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
+    
+    - **Beschreibung**:`Azure Information Protection unified labeling client`
+    - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
+
+8. Kopieren Sie auf dem Blatt **AIPv2OnBehalfOf-Zertifikate & geheimen** Schlüssel im Abschnitt **Client Geheimnisse** die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`Beispiel aus:. Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+    
+    Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
+
+9. Wählen Sie im Menü **Verwalten** die Option **API-Berechtigungen**aus.
+
+10. Wählen Sie auf dem Blatt **AIPv2OnBehalfOf-API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+
+11. Wählen Sie auf dem Blatt **API-Berechtigungen anfordern** die Option **Azure Rights Management Services** aus, und wenn Sie zur Eingabe des Berechtigungs Typs aufgefordert werden, den Ihre Anwendung benötigt, wählen Sie **Anwendungs Berechtigungen**aus.
+
+12. Erweitern **Sie für SELECT-Berechtigungen**den Eintrag **Inhalt** , und wählen Sie Folgendes aus:
+    
+    -  **Content. delegatedwriter** (immer erforderlich)
+    -  **Content. Writer** (immer erforderlich)
+    -  **Content. Superuser** (erforderlich, wenn das Administrator [Feature](../configure-super-users.md) erforderlich ist) 
+    
+    Die Administrator Funktion ermöglicht es dem Konto, Inhalte immer zu entschlüsseln. Zum erneuten schützen von Dateien und zum Überprüfen von Dateien, die von anderen geschützt wurden.
+
+13. Wählen Sie **Berechtigungen hinzufügen**aus.
+
+14. Wählen Sie auf dem Blatt **AIPv2OnBehalfOf-API-Berechtigungen** die Option **Administrator Zustimmung \<für *ihren Mandanten Namen* > erteilen aus** , und wählen Sie für die Bestätigungsaufforderung **Ja** aus.
+
+Nachdem Sie die Registrierung dieser APP mit einem geheimen Schlüssel abgeschlossen haben, können Sie " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit den Parametern " *AppID*" und " *appsecret*" ausführen. Außerdem benötigen Sie Ihre Mandanten-ID. 
+
+> [!TIP]
+>Sie können Ihre Mandanten-ID schnell mithilfe Azure-Portal kopieren: **Azure Active Directory** >  > Verzeichnis-ID für die Verwaltung von Eigenschaften. > 
+
+Aus unserem Beispiel mit der Mandanten-ID 9c11c87a-ac8b-46A3-8d5c-f 4d0b72ee29a:
+
+`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+
+Wenn Sie diesen Befehl zum ersten Mal ausführen, werden Sie zur Anmeldung aufgefordert. Dadurch wird das Zugriffstoken für Ihr Konto erstellt und sicher unter „%localappdata%\Microsoft\MSIP“ gespeichert. Nach dieser ersten Anmeldung können Sie Dateien auf dem Computer ohne Benutzereingriff bezeichnen und schützen. Wenn Sie jedoch ein Dienst Konto verwenden, um Dateien zu bezeichnen und zu schützen, und sich dieses Dienst Konto nicht interaktiv anmelden kann, verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication":
+
+1. Erstellen Sie eine Variable zum Speichern der Anmelde Informationen eines Active Directory Kontos, dem die Benutzerrechte Zuweisung zur interaktiven Anmeldung erteilt wird. Zum Beispiel:
+    
+        $pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. Führen Sie das Cmdlet "Set-aipauthentication" mit dem Parameter " *onbehalfof" aus* , und geben Sie als Wert die soeben erstellte Variable an. Zum Beispiel:
+    
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 Wenn Sie in einer PowerShell-Sitzung eine Hilfe zu Cmdlets benötigen `Get-Help <cmdlet name> -online`, geben Sie ein. Beispiel: 

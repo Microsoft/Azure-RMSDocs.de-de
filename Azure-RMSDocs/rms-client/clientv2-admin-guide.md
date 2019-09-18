@@ -4,19 +4,19 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/07/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
-ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
+ms.openlocfilehash: eb73cba39d65a4e2c925f73afe7fa3e46ab204cd
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808686"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060064"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -50,11 +50,13 @@ Der Azure Information Protection Unified Bezeichnung-Client umfasst Folgendes:
 
 - Ein Viewer zum Anzeigen geschützter Dateien, wenn diese von einer systemeigenen Anwendung nicht geöffnet werden können.
 
-- Ein PowerShell-Modul zum Anwenden und Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien. 
+- Ein PowerShell-Modul zum Ermitteln sensibler Informationen in Dateien und zum Anwenden oder Entfernen von Klassifizierungs Bezeichnungen und des Schutzes von Dateien. 
+    
+    Die Vorschauversion des Clients enthält Cmdlets zum Installieren und Konfigurieren des [Azure Information Protection Scanner](../deploy-aip-scanner.md) , der als Dienst unter Windows Server ausgeführt wird. Mit diesem Dienst können Sie Dateien in Daten speichern wie Netzwerkfreigaben und SharePoint-Server Bibliotheken ermitteln, klassifizieren und schützen.
 
-- Der Rights Management-Client, der mit dem Azure Rights Management (Azure RMS)-Dienst kommuniziert, um Dateien zu verschlüsseln und zu schützen.
+- Der Rights Management-Client, der mit dem Schutzdienst (Azure Rights Management) kommuniziert, um Dateien zu verschlüsseln und zu schützen.
 
-Mit Ausnahme des Viewers kann der Azure Information Protection Unified Bezeichnung-Client nicht mit Anwendungen und Diensten verwendet werden, die direkt mit dem Azure Rights Management-Dienst oder Active Directory Rights Management Services kommunizieren.
+Mit Ausnahme des Viewers kann der Azure Information Protection Unified-Bezeichnungs Client nicht mit Anwendungen und Diensten verwendet werden, die direkt mit dem Schutzdienst oder Active Directory Rights Management Services kommunizieren.
 
 Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren möchten, lesen Sie unter [Migrieren von AD RMS zu Azure Information Protection](../migrate-from-ad-rms-to-azure-rms.md) nach.
 
@@ -69,9 +71,11 @@ Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn S
 
 - Sie möchten Skripts ausführen, die Dokumente mithilfe von PowerShell-Befehlen klassifizieren (und optional schützen).
 
+- Sie möchten einen Dienst testen, der sich derzeit in der Vorschau Phase befindet, mit der lokal gespeicherte Dateien ermittelt, klassifiziert (und optional geschützt) werden.
+
 - Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
-Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue **Vertraulichkeits** Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
+Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue Vertraulichkeits Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
 
 ![Azure Information Protection-Leiste mit Standardrichtlinie](../media/v2word2016-calloutsv2.png)
 
@@ -95,7 +99,7 @@ Standardmäßig wird der **Link "Weitere Informationen** " auf der [Azure Inform
 
 Der Link " **Problem melden** " wird nur angezeigt, wenn Sie eine [Erweiterte Einstellung](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)angeben. Wenn Sie diese Einstellung konfigurieren, müssen Sie einen HTTP-Link angeben, z. B. die E-Mail-Adresse Ihres Helpdesks. 
 
-Die **Export Protokolle** sammelt und fügt automatisch Protokolldateien für den Azure Information Protection Unified-Bezeichnungs Client ein, wenn Sie aufgefordert wurden, diese an Microsoft-Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden.
+Die **Export Protokolle** sammelt und fügt automatisch Protokolldateien für den Azure Information Protection Unified-Bezeichnungs Client ein, wenn Sie aufgefordert wurden, diese an Microsoft-Support zu senden. Diese Option kann auch von Endbenutzern verwendet werden, um diese Dateien an Ihren Helpdesk zu senden. Alternativ dazu können Sie das PowerShell-Cmdlet [Export-aiplogs](/powershell/module/azureinformationprotection/export-aiplogs) verwenden (erfordert den Vorschau Client).
 
 Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die derzeit heruntergeladenen Vertraulichkeits Bezeichnungen und Bezeichnungs Richtlinien werden gelöscht, und die Benutzereinstellungen für den Azure Rights Management-Dienst werden zurückgesetzt.
 
@@ -118,7 +122,7 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- Die folgenden Registrierungsschlüssel und -einstellungen werden gelöscht. Wenn die Einstellungen für einen dieser Registrierungsschlüssel benutzerdefinierte Werte aufweisen, müssen diese nach dem Zurücksetzen des Clients erneut konfiguriert werden. 
+- Die folgenden Registrierungsschlüssel und -einstellungen werden gelöscht. Wenn die Einstellungen für einen dieser Registrierungsschlüssel benutzerdefinierte Werte aufweisen, müssen diese nach dem Zurücksetzen des Clients erneut konfiguriert werden.
     
     In der Regel werden diese Einstellungen für Unternehmensnetzwerke unter Verwendung einer Gruppenrichtlinie konfiguriert. In diesem Fall werden sie automatisch erneut angewendet, wenn die Gruppenrichtlinie auf dem Computer aktualisiert wird. Es sind jedoch möglicherweise einige Einstellungen vorhanden, die einmal mit einem Skript oder manuell konfiguriert werden. In diesem Fall müssen Sie weitere Schritte durchlaufen, um diese Einstellungen erneut zu konfigurieren. Ein Beispiel: Computer können ein Skript einmal ausführen, um Einstellungen für die Umleitung zu Azure Information Protection zu konfigurieren, weil Sie von AD RMS migrieren und noch einen Dienstverbindungspunkt in Ihrem Netzwerk haben. Nach der Zurücksetzung des Clients muss der Computer dieses Skript erneut ausführen.
     
@@ -158,6 +162,14 @@ Nachdem Sie den Azure Information Protection Unified Label-Client installiert ha
 
 - Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
 
+## <a name="installing-the-azure-information-protection-scanner"></a>Installieren des Azure Information Protection Scanners
+
+Die aktuelle Version der Überprüfung für den Unified-Bezeichnungs Client befindet sich zu Testzwecken in der Vorschau Phase. Installieren Sie während dieser Vorschauversion die aktuelle Vorschauversion des Unified-Bezeichnungs Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+Wenn Sie den Scanner zum ersten Mal auf einem Computer installieren, müssen Sie diesen Client herunterladen und installieren, und befolgen Sie dann die Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md).
+
+Wenn Sie die Überprüfung vom Azure Information Protection-Client (klassisch) aktualisieren, finden Sie weitere Informationen im Abschnitt [Aktualisieren des Azure Information Protection Scanners](#upgrading-the-azure-information-protection-scanner) .
+
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Aktualisieren und warten des Azure Information Protection Unified-Bezeichnungs Clients
 
 > [!NOTE]
@@ -174,6 +186,66 @@ Wenn Sie ein Upgrade vom Azure Information Protection-Client (klassisch) unter W
 Bei einem manuellen Upgrade deinstallieren Sie die vorherige Version nur, wenn Sie die Installationsmethode ändern. Beispielsweise wechseln Sie von der ausführbaren Version (.exe) des Clients zur Windows Installer-Version (.msi) des Clients. Oder, wenn Sie eine frühere Version des Clients installieren müssen. Beispielsweise haben Sie die aktuelle Vorschauversion zu Testzwecken installiert und müssen nun auf die aktuelle allgemein verfügbare Version zurückgreifen.
 
 Verwenden Sie den [Versions releaseverlauf und die Unterstützungs Richtlinie](unifiedlabelingclient-version-release-history.md) , um die Unterstützungs Richtlinie für den Azure Information Protection Unified-Bezeichnungs Client, die derzeit unterstützten Versionen und die Neuerungen und Änderungen für die unterstützten Releases zu verstehen. 
+
+### <a name="upgrading-the-azure-information-protection-scanner"></a>Upgrade der Azure Information Protection-Überprüfung
+
+Wenn Sie derzeit den Azure Information Protection Scanner vom Azure Information Protection-Client (klassisch) verwenden, können Sie ein Upgrade durchführen, um vertrauliche Informationstypen und Vertraulichkeits Bezeichnungen zu verwenden, die aus der Sicherheits & von Office 365 veröffentlicht werden. Compliance Center (oder das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center).
+
+#### <a name="to-upgrade-the-scanner-to-the-preview-version"></a>So führen Sie ein Upgrade des Scanners auf die Vorschauversion durch
+
+Das Upgraden des Scanners hängt von der Version des Azure Information Protection Clients (klassisch) ab, den Sie zurzeit ausführen:
+
+- [Upgrade von Version 1.48.204.0 und höheren Versionen](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
+
+- [Upgrade von früheren Versionen als 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
+
+Beachten Sie, dass diese Vorschauversion der Überprüfung für den Unified Client im Gegensatz zum Scanner vom Azure Information Protection Client (klassisch) nicht die Ausführung auf einem getrennten Computer unterstützt.
+
+Beim Upgrade wird eine neue Datenbank mit dem Namen **\<AIPScannerUL_ profile_name >** erstellt, und die vorherige Scanner-Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Upgrade von der Azure Information Protection Client (klassisch) Version 1.48.204.0 und höheren Versionen dieses Clients
+
+1. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
+
+2. Führen Sie ein Upgrade auf den Azure Information Protection Unified Bezeichnung-Client durch, indem Sie die Vorschauversion des unifield-bezeichnerclients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
+
+3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`.
+    
+    In diesem Schritt wird eine neue Datenbank mit dem **Namen\<AIPScannerUL_ profile_name erstellt >**
+
+4. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
+
+Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md)verwenden, sodass Sie den Schritt zum Installieren des Scanners weglassen. Da der Scanner bereits installiert ist, gibt es keinen Grund, ihn erneut zu installieren.
+
+##### <a name="upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040"></a>Upgrade von den Azure Information Protection-Client Versionen (klassisch) vor 1.48.204.0
+
+> [!IMPORTANT]
+> Installieren Sie bei einem Smooth-Upgradepfad nicht den Azure Information Protection Unified-Bezeichnungs Client auf dem Computer, auf dem die Überprüfung ausgeführt wird, als ersten Schritt zum Aktualisieren der Überprüfung. Verwenden Sie stattdessen die folgenden Upgradeanweisungen.
+
+Ab Version 1.48.204.0 werden die Konfigurationseinstellungen des Scanners mithilfe eines Konfigurations Profils aus dem Azure-Portal abgerufen. Das Upgrade des Scanners umfasst das anweisen der Überprüfung, diese Online Konfiguration zu verwenden, und für den Unified-Bezeichnungs Client wird die Offline Konfiguration für den Scanner nicht unterstützt.
+
+1. Verwenden Sie das Azure-Portal, um ein neues Scannerprofil zu erstellen, das die Einstellungen für den Scanner und die Datenrepositorys mit allen erforderlichen Einstellungen enthält. Hilfe zu diesem Schritt finden Sie im Abschnitt [configure the Scanner in the Azure-Portal in](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) den Anweisungen zur Überprüfung der Bereitstellung.
+
+2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
+
+3. Führen Sie ein Upgrade auf den Azure Information Protection Unified-Bezeichnungs Client durch, indem Sie die Vorschauversion des Unified Bezeichnung-Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
+
+4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
+
+5. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
+
+Sie können jetzt die restlichen Anweisungen unter Bereitstellen [des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](../deploy-aip-scanner.md)verwenden, sodass Sie den Schritt zum Installieren des Scanners weglassen. Da der Scanner bereits installiert ist, gibt es keinen Grund, ihn erneut zu installieren.
+
+###### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Upgraden in einer anderen Reihenfolge als der der empfohlenen Schritte
+
+Wenn Sie ein Upgrade von einer früheren Version als 1.48.204.0 ausführen und die Überprüfung nicht im Azure-Portal konfigurieren, bevor Sie den Befehl Update-aipscanner ausführen, haben Sie keinen Profilnamen, der angibt, dass die Überprüfungs Konfigurationseinstellungen für das Upgrade identifiziert. ESS. 
+
+Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen Sie genau den Profilnamen angeben, den Sie beim Ausführen des Befehls „Update-AIPScanner“ verwendet haben. Der Scanner wird nur mit Ihren Einstellungen konfiguriert, wenn die Namen identisch sind. 
+
+> [!TIP]
+> Verwenden Sie das Blatt **Azure Information Protection – Knoten** im Azure-Portal, um Scanner mit dieser fehlerhaften Konfiguration zu erkennen.
+>  
+> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
 
 ## <a name="uninstalling-the-azure-information-protection-unified-labeling-client"></a>Deinstallieren des Azure Information Protection Unified Bezeichnung-Client
 

@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
-ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
+ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936952"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070651"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -51,6 +51,46 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Clients](use-client.md#compare-the-clients).
+
+## <a name="versions-later-than-22210"></a>Spätere Versionen als 2.2.21.0
+
+Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist, ist es ein Vorschau Build zu Test-und Bewertungszwecken.
+
+**Veröffentlicht**: 09/17/2019
+
+**Neue Funktionen:**
+
+- Unterstützung für [die über](../deploy-aip-scanner.md)Prüfung, um lokale Datenspeicher Dokumente zu überprüfen und zu bezeichnen. Mit dieser Version des Scanners:
+    
+    - Wenn Sie die Scanner für die Verwendung desselben Scanner-Profils konfigurieren, können mehrere Scanner dieselbe SQL Server Datenbank gemeinsam nutzen. Diese Konfiguration erleichtert die Verwaltung mehrerer Scanner und führt zu schnelleren Scanzeiten. Wenn Sie diese Konfiguration verwenden, warten Sie immer, bis die Installation eines Scanners abgeschlossen ist, bevor Sie einen weiteren Scanner mit dem gleichen Profil installieren.
+    
+    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren und die Überprüfungs Datenbank den **Namen\<AIPScannerUL_ profile_name >** hat. Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
+    
+    - Sie können in allen Dokumenten eine Standard Bezeichnung festlegen, auch wenn Dokumente bereits mit der Bezeichnung versehen sind. Legen Sie in den Überprüfungs Profil-oder Repository-Einstellungen die Option **Dateien** neu bezeichnen auf ein fest **, und aktivieren** Sie das Kontrollkästchen neue **Bezeichnung Standard Bezeichnung erzwingen** .
+    
+    - Sie können vorhandene Bezeichnungen aus allen Dokumenten entfernen, und dieser Vorgang umfasst das Entfernen des Schutzes, wenn dieser zuvor durch eine Bezeichnung angewendet wurde. Der Schutz, der unabhängig von einer Bezeichnung angewendet wird, wird beibehalten. Diese Scannerkonfiguration wird in den Einstellungen für das Scanner-Profil oder im Repository mit den folgenden Einstellungen erreicht:
+        - **Dateien basierend auf dem Inhalt bezeichnen**: **Deaktiviert**
+        - **Standardbezeichnung**: **Keine**
+        - **Dateien neu bezeichnen**: Aktivieren Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt.
+    
+    - Wie bei der Überprüfung des klassischen Clients schützt die Überprüfung Office-Dateien und PDF-Dateien. Derzeit können Sie keine anderen Dateitypen so konfigurieren, dass Sie von dieser Version des Scanners geschützt werden.
+    
+    Sie können Scanner über den Azure Information Protection-Client (klassisch) aktualisieren. Nach dem Upgrade, mit dem eine neue Datenbank erstellt wird, werden bei der ersten Ausführung des Scanners alle Dateien neu erstellt. Anweisungen finden Sie unter [Aktualisieren des Azure Information Protection Scanners](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) im Administrator Handbuch.
+
+- Das PowerShell-Cmdlet [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) verfügt über neue Parameter für, wenn Sie [Dateien nicht interaktiv bezeichnen](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)möchten, und eine [neue Prozedur zum Registrieren einer APP in Azure AD](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Beispiele für Szenarien sind der Scanner und automatisierte PowerShell-Skripts zum bezeichnen von Dokumenten.
+
+- Übereinstimmende benutzerdefinierte vertrauliche Informationstypen werden an [Azure Information Protection Analytics](../reports-aip.md)gesendet.
+
+- Die angewendete Bezeichnung zeigt die konfigurierte Farbe für die Bezeichnung an, wenn eine [Farbe konfiguriert](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)wurde.
+
+- Beim Hinzufügen oder Ändern von Schutzeinstellungen zu einer Bezeichnung wird die Bezeichnung vom Client erneut mit den neuesten Schutzeinstellungen angewendet, wenn das Dokument das nächste Mal gespeichert wird. Auf ähnliche Weise wendet der Scanner die Bezeichnung erneut mit diesen aktuellen Schutzeinstellungen an, wenn das Dokument im Erzwingungs Modus das nächste Mal gescannt wird.
+
+- Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Diese Datei kann dann an Microsoft-Support gesendet werden, wenn Sie zum Untersuchen eines gemeldeten Problems aufgefordert werden, Protokolldateien zu senden.
+
+**Fixes**
+
+- Sie können mit dem Datei-Explorer erfolgreich Änderungen an einer geschützten Datei vornehmen und mit der rechten Maustaste klicken, nachdem ein Kennwort für die Datei entfernt wurde.
+
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 
