@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8c1649fe32c88d0a97b002a5e6ca73047412737f
-ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
+ms.openlocfilehash: aea5eab301555b928427cd51d553302ff4468bcd
+ms.sourcegitcommit: 853a7ccd7e3f4ac65b6bf9732e336f375932e897
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907262"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094509"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -51,7 +51,7 @@ Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
 
    - Führen Sie nicht die Schritte zum **Generieren Ihres Mandantenschlüssels** aus, da Sie bereits über das Äquivalent aus Ihrer AD RMS-Bereitstellung verfügen. Identifizieren Sie stattdessen die Schlüssel, die von Ihrem AD RMS Server aus der nchiffre Installation verwendet werden, und bereiten Sie diese Schlüssel für die Übertragung vor, und übertragen Sie Sie dann an Azure Key Vault. 
         
-        Verschlüsselte Schlüsseldateien für die nchiffre werden **Key_ <*keyappname*> _ <*KeyIdentifier* >**  lokal auf dem Server benannt. Beispielsweise `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
+        Verschlüsselte Schlüsseldateien für die nchiffre werden **Key_ <<em>keyappname</em>> _ <<em>KeyIdentifier</em> >**  lokal auf dem Server benannt. Beispielsweise `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
         
         Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Das sieht ungefähr folgendermaßen aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Notieren Sie sich diese URL, da der Azure Information Protection-Administrator sie benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 

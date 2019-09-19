@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/17/2019
+ms.date: 09/18/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
+ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060187"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71101323"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -37,7 +37,7 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 
 - Identifizieren Sie Dokumente, die vertrauliche Informationen enthalten und geschützt werden müssen, da Ihre Organisation andernfalls einem Risiko ausgesetzt ist, und verringern Sie dieses Risiko mithilfe der Empfehlungen.
 
-- Identifizieren Sie, ob interne oder externe Benutzer auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
+- Identifizieren Sie, ob interne oder externe Benutzer von Windows-Computern auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
 
 Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern, von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
 
@@ -147,7 +147,7 @@ Der Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthäl
 
 Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Erforderliche Komponenten
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
 |Anforderungen|Weitere Informationen|
@@ -181,7 +181,7 @@ Details:
         - **Sicherheitsleseberechtigter**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum vereinheitlichten Speicher der vereinheitlichten Bezeichnung migriert wurde, können Sie die Azure Information Protection Administrator-Rolle nicht verwenden. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Die Azure Information Protection Administrator-Rolle kann nicht verwendet werden, wenn sich Ihr Mandant auf der [Unified-Beschriftungs Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet.
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
