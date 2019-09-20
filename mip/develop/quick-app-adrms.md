@@ -7,14 +7,14 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 457b55e6c6dbe86a7b689b6d26a8deb3aa659e8a
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 49abf94c735b1ba14771adb9c2fe5dc126722b48
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69892544"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070568"
 ---
-# <a name="quickstart-active-directory-rights-management-server-adfs-protection"></a>Schnellstart: Schutz des Active Directory-Rechteverwaltungsservers (AD FS)
+# <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Schnellstart: Schutz des Active Directory-Rechteverwaltungsservers (AD RMS)
 
 Diese Schnellstartanleitung zeigt, wie Sie die Unterstützung für den Active Directory-Rechteverwaltungsserver (AD RMS) mit dem MIP SDK implementieren.
 
