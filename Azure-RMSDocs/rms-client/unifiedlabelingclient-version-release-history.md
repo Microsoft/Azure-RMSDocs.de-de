@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.openlocfilehash: 8934e23594ba51248e691ce2e52d69308cb320e5
+ms.sourcegitcommit: d5f046e34de0ad79b64d3f412999145b7d097e75
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070651"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127543"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -75,7 +75,13 @@ Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist
     
     - Wie bei der Überprüfung des klassischen Clients schützt die Überprüfung Office-Dateien und PDF-Dateien. Derzeit können Sie keine anderen Dateitypen so konfigurieren, dass Sie von dieser Version des Scanners geschützt werden.
     
+    - Bekanntes Problem: Neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
+        - Für neue Bezeichnungen: Fügen Sie im Azure-Portal [die Bezeichnung](../configure-policy-add-remove-label.md) , die Sie verwenden möchten, der globalen Richtlinie oder einer Bereichs bezogenen Richtlinie hinzu.
+        - Für umbenannte Bezeichnungen: Wechseln Sie in der Azure-Portal zu **Azure Information Protection** > **Unified-Bezeichnung** **Verwalten** > , und wählen Sie **veröffentlichen**aus.
+    
     Sie können Scanner über den Azure Information Protection-Client (klassisch) aktualisieren. Nach dem Upgrade, mit dem eine neue Datenbank erstellt wird, werden bei der ersten Ausführung des Scanners alle Dateien neu erstellt. Anweisungen finden Sie unter [Aktualisieren des Azure Information Protection Scanners](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) im Administrator Handbuch.
+    
+    Weitere Informationen finden Sie in der Blogbeitrag-Ankündigung: [Die einheitliche Bezeichnung AIP Scanner (Vorschau) sorgt für horizontales hochskalieren.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - Das PowerShell-Cmdlet [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) verfügt über neue Parameter für, wenn Sie [Dateien nicht interaktiv bezeichnen](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)möchten, und eine [neue Prozedur zum Registrieren einer APP in Azure AD](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Beispiele für Szenarien sind der Scanner und automatisierte PowerShell-Skripts zum bezeichnen von Dokumenten.
 
