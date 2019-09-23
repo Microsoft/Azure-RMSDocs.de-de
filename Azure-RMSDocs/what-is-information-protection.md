@@ -37,7 +37,7 @@ Nachdem Ihr Inhalt klassifiziert (und optional geschützt) wurde, können Sie na
 
 Sie verwenden Azure Information Protection-Bezeichnungen, um die Klassifizierung auf Dokumente und E-Mails anzuwenden. Damit ist die Klassifizierung identifizierbar – unabhängig davon, wo die Daten gespeichert sind oder für wen sie freigegeben wurden. Die Bezeichnungen können optische Kennzeichnungen wie Kopfzeilen, Fußzeilen oder Wasserzeichen enthalten. Metadaten werden Datei- und E-Mail-Header als Klartext hinzugefügt. Dieser Klartext stellt sicher, dass andere Dienste (z.B. Lösungen zur Verhinderung von Datenverlusten) die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können. 
 
-Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat die Fußzeile „Vertraulichkeit: Allgemein“ der E-Mail-Nachricht hinzugefügt. Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
+Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat die Fußzeile „Vertraulichkeit: Allgemein“ der E-Mail-Nachricht hinzugefügt. Diese Fußzeile richtet sich an alle Empfänger und ist für allgemeine Geschäftsdaten gedacht, die nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
 
 ![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](./media/example-email-footerv2.png)
 
@@ -47,7 +47,7 @@ Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiz
 
 Die Schutztechnologie verwendet *Azure Rights Management* (oft als Azure RMS abgekürzt). Diese Technologie ist in andere Microsoft-Clouddienste und -Anwendungen integriert, wie z.B. Office 365 und Azure Active Directory. Er kann auch mit Ihren eigenen Branchenanwendungen und Informationsschutzlösungen von Softwareherstellern verwendet werden. Dabei kann es sich sowohl um lokale als auch um Cloudanwendungen und -lösungen handeln.
 
-Diese Schutztechnologie verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Wie bei Bezeichnern, die angewendet werden, bleibt der mithilfe von Rights Management angewendete Schutz unabhängig vom Ort an die Dateien und E-Mails gebunden – sowohl innerhalb oder als auch außerhalb Ihrer Organisation bzw. der Netzwerke, Dateiserver und Anwendungen. Dank dieser Lösung für den Schutz von Informationen behalten Sie stets die Kontrolle über Ihre Daten, auch wenn sie für andere Personen freigegeben werden.
+Diese Schutztechnologie verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Ähnlich wie angewendete Bezeichnungen bleibt der mithilfe von Rights Management angewendete Schutz unabhängig vom Speicherort an die Dateien und E-Mails gebunden. Dies gilt gleichermaßen innerhalb wie außerhalb Ihrer Organisationen, Netzwerke, Dateiserver und Anwendungen. Dank dieser Lösung für den Schutz von Informationen behalten Sie stets die Kontrolle über Ihre Daten, auch wenn sie für andere Personen freigegeben werden.
 
 Beispielsweise können Sie ein Berichtsdokument oder eine Tabelle mit Verkaufsprognosen so konfigurieren, dass nur Personen in Ihrer Organisation darauf zugreifen können, oder Sie können steuern, ob das Dokument bearbeitet werden kann oder als schreibgeschützt gilt oder ob es gedruckt werden darf. Sie können E-Mails ganz ähnlich konfigurieren und noch zusätzlich verhindern, dass sie weitergeleitet werden, bzw. die Verwendung der Option „Allen antworten“ unterbinden. 
 
@@ -89,7 +89,7 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 ### <a name="additional-integration-for-email"></a>Zusätzliche Integration für E-Mails
 
-Wenn Sie Azure Information Protection mit Exchange Online verwenden, erhalten Sie einen weiteren Vorteil: Die Fähigkeit, geschützte E-Mails an beliebige Benutzer senden zu können, mit der Gewissheit, dass sie sie auf jedem Gerät lesen können.
+Wenn Sie Azure Information Protection mit Exchange Online verwenden, erhalten Sie einen weiteren Vorteil: die Fähigkeit, geschützte E-Mails an beliebige Benutzer senden zu können, verbunden mit der Gewissheit, dass sie sie auf jedem Gerät lesen können.
 
 Dies ist beispielsweise nützlich, wenn Benutzer vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden. Dies ist auch hilfreich, wenn vertrauliche Informationen an Benutzer gesendet werden müssen, die kein Office 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
@@ -99,7 +99,7 @@ Ein Gmail-Benutzer sieht z.B. den folgenden Inhalt in einer E-Mail-Nachricht:
 
 ![Option für Gmail-Empfänger in OME und AIP](./media/ome-message.png)
 
-Geschützte E-Mails, die an einen Benutzer in derselben Organisation gerichtet sind, werden über den gewohnten Workflow zum Senden von E-Mails gesendet. Beispielsweise können sie die Schaltfläche **Nicht weiterleiten** auswählen, die der Azure Information Protection-Client dem Outlook-Menüband hinzufügen kann. Die Funktion „Nicht weiterleiten“ kann auch in eine für Benutzer auswählbare Bezeichnung integriert werden, sodass die E-Mail klassifiziert und geschützt wird. Beispiel:
+Für den Versender der E-Mail unterscheidet sich der Workflow nicht vom Versenden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation. Beispielsweise können sie die Schaltfläche **Nicht weiterleiten** auswählen, die der Azure Information Protection-Client dem Outlook-Menüband hinzufügen kann. Die Funktion „Nicht weiterleiten“ kann auch in eine für Benutzer auswählbare Bezeichnung integriert werden, sodass die E-Mail klassifiziert und geschützt wird. Beispiel:
 
 ![Auswählen einer Bezeichnung, für die die Option „Nicht weiterleiten“ konfiguriert ist](./media/recipients-only-label2.png)
 
