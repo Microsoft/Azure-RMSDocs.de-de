@@ -95,7 +95,7 @@
           items:
             - name: Übersicht
               href: plan-implement-tenant-key.md
-            - name: BYOK – Preise und Einschränkungen
+            - name: BYOK-Details
               href: byok-price-restrictions.md
         - name: Vorbereiten von Benutzern und Gruppen
           href: prepare.md
