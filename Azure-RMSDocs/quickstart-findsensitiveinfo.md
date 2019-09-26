@@ -4,28 +4,29 @@ description: Verwenden Sie den Azure Information Protection-Scanner, um nach ver
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 5b8ca224dff45fcb589a888ef1fa0728ccebe368
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 4c8a22670a7e76a8e949b8cbdc0fcfb947282a7d
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060198"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227801"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In dieser Schnellstartanleitung installieren und konfigurieren Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden. Beispiel: Ein lokaler Ordner, eine Netzwerkfreigabe oder SharePoint Server.
 
-Hinweis: Für diese Schnellstartanleitung wird die aktuelle, allgemein verfügbare Version des Scanners verwendet, bei der die Konfiguration über das Azure-Portal erfolgt, nicht wie in vorherigen Versionen über PowerShell-Cmdlets.
+> [!NOTE]
+> Sie können diese Schnellstartanleitung mit der aktuellen allgemein verfügbaren Version des Azure Information Protection-Clients (klassisch) oder der aktuellen Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen verwenden.
+>  
+> Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 
 Für diese Konfiguration benötigen Sie maximal 10 Minuten.
 
@@ -37,9 +38,11 @@ Voraussetzungen für diesen Schnellstart:
     
     Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Computer installiert. 
+2. Einer der folgenden Azure Information Protection-Clients ist auf Ihrem Computer installiert:
     
-    Um den Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    - Der klassische Client: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    
+    - Der Client für einheitliche Bezeichnungen: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection_UL_Preview.exe** herunter.
     
 3. SQL Server Express ist ebenfalls auf Ihrem Computer installiert.
     
@@ -55,7 +58,7 @@ Führen Sie als ersten Test, um zu bestätigen, dass der Scanner ausgeführt wir
 
 1. Erstellen Sie auf Ihrem Computer einen lokalen Ordner. Beispiel: **TestScanner** auf Ihrem lokalen C-Laufwerk.
 
-2. Erstellen und speichern Sie ein Word-Dokument in diesem Ordner, das den Text **4242-4242-4242-4242** enthält (eine bekannte Kreditkartennummer für Testzwecke).
+2. Erstellen und speichern Sie ein Word-Dokument in diesem Ordner, das den Text **Credit card: 4242-4242-4242-4242** enthält.
 
 ## <a name="configure-a-profile-for-the-scanner"></a>Konfigurieren eines Profils für den Scanner
 
@@ -65,7 +68,7 @@ Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil daf
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
     
-2. Suchen Sie die **Scanner**-Menüoptionen, und wählen Sie **Profile** aus.
+2. Suchen Sie auf dem linken Blatt nach den **Scanneroptionen**, und wählen Sie **Profile** aus.
 
 3. Wählen Sie auf dem Blatt **Azure Information Protection – Profile** die Option **Hinzufügen** aus:
     
@@ -125,7 +128,7 @@ Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben ers
     
     Warten Sie, bis die Werte für die Spalten **LETZTE ÜBERPRÜFUNGSERGEBNISSE** und **LETZTE ÜBERPRÜFUNG (ENDZEIT)** angezeigt werden.
     
-    - Überprüfen Sie alternativ dazu das lokale Windows-Ereignisprotokoll **Anwendungen und Dienste** – **Azure Information Protection**. Bestätigen Sie die ID **911** des Informationsereignisses für den Prozess **MSIP.Scanner**. Der Ereignisprotokolleintrag enthält darüber hinaus eine Zusammenfassung der Ergebnisse der Überprüfung.
+    Überprüfen Sie alternativ dazu das lokale Windows-Ereignisprotokoll **Anwendungen und Dienste** – **Azure Information Protection**. Bestätigen Sie die ID **911** des Informationsereignisses für den Prozess **MSIP.Scanner**. Der Ereignisprotokolleintrag enthält darüber hinaus eine Zusammenfassung der Ergebnisse der Überprüfung.
 
 ## <a name="see-detailed-results"></a>Anzeigen detaillierter Ergebnisse
 
@@ -135,8 +138,7 @@ In Excel zeigen die ersten beiden Spalten Ihr Datenspeicherrepository und den Da
 
 ## <a name="scan-your-own-data"></a>Überprüfen eigener Daten
 
-1. Bearbeiten Sie Ihr Scannerprofil, und fügen Sie ein neues Datenrepository hinzu, geben Sie jedoch diesmal Ihren eigenen lokalen Datenspeicher an, der auf vertrauliche Informationen geprüft werden soll. 
-    
+1. Bearbeiten Sie Ihr Scannerprofil, und fügen Sie ein neues Datenrepository hinzu, geben Sie jedoch diesmal Ihren eigenen lokalen Datenspeicher an, der auf vertrauliche Informationen geprüft werden soll.     
     Sie können einen lokalen Ordner, eine Netzwerkfreigabe (UNC-Pfad) oder eine SharePoint Server-URL für eine SharePoint-Website oder -Bibliothek angeben. 
     
     - Beispiel für einen lokalen Ordner:
@@ -171,7 +173,9 @@ Starten Sie den Computer neu.
 
 Mit diesem Befehl werden die folgenden Elemente nicht entfernt, weshalb Sie sie manuell entfernen müssen, wenn Sie sie nach Abschluss dieser Schnellstartanleitung nicht mehr benötigen:
 
-- Die SQL Server-Datenbank mit dem Namen **AIPScanner_\<Profil>**, die während der Installation des Azure Information Protection-Scanners mit dem Cmdlet „Install-AIPScanner“ erstellt wurde 
+- Die SQL Server-Datenbank, die bei der Installation des Azure Information Protection-Scanners mit dem Cmdlet „Install-AIPScanner“ erstellt wurde:
+    - Für den klassischen Client: **AIPScanner_\<profile>**
+    - Für den Client für einheitliche Bezeichnungen: **AIPScannerUL_\<profile_name>**
 
 - Die Scannerberichte unter „%*localappdata*%\Microsoft\MSIP\Scanner\Reports“
 
@@ -182,8 +186,12 @@ Mit diesem Befehl werden die folgenden Elemente nicht entfernt, weshalb Sie sie 
 
 In dieser Schnellstartanleitung wird die Mindestkonfiguration beschrieben, sodass Sie schnell sehen können, wie mit der Überprüfung in lokalen Datenspeichern nach vertraulichen Informationen gesucht werden kann. Informationen zum Installieren des Scanners in einer Produktionsumgebung finden Sie unter [Bereitstellen des Azure Information Protection-Scanners zum automatischen Klassifizieren und Schützen von Dateien](deploy-aip-scanner.md).
 
-Wenn Sie die Dateien klassifizieren und schützen möchten, die vertrauliche Informationen enthalten, müssen Sie Azure Information Protection-Bezeichnungen für die automatische Klassifizierung und den automatischen Schutz konfigurieren:
+Wenn Sie die Dateien klassifizieren und schützen möchten, die vertrauliche Informationen enthalten, müssen Sie Bezeichnungen für die automatische Klassifizierung und den automatischen Schutz konfigurieren:
 
-- [Gewusst wie: Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
+- Für den klassischen Client:
+    - [Gewusst wie: Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)
+    - [How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)
 
-- [How to configure a label for Rights Management protection (Konfigurieren einer Bezeichnung für Rights Management-Schutz)](configure-policy-protection.md)
+- Für den Client für einheitliche Bezeichnungen:
+    - [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf Inhalte](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
+    - [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)

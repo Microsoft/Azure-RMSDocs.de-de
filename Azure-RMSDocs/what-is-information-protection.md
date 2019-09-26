@@ -4,7 +4,7 @@ description: Eine technische Übersicht über den Azure Information Protection-D
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 09/24/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e89fcb967ea72bd61bf7c8ca73d72ccb08fdef47
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0588efa277c75199afc2d357a8152257c120376c
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792923"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227823"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -33,11 +33,11 @@ Die folgende Abbildung zeigt ein Beispiel für Azure Information Protection in A
 
 Nachdem Ihr Inhalt klassifiziert (und optional geschützt) wurde, können Sie nachverfolgen und steuern, wie er verwendet wird. Sie können die Datenflüsse analysieren, um Einblicke in Ihr Geschäft zu erhalten, riskante Verhalten zu erkennen und Korrekturmaßnahmen zu ergreifen, den Zugriff auf Dokumente zu verfolgen, Datenverluste oder Missbrauch zu verhindern usw.
 
-## <a name="how-labels-apply-classification"></a>So wenden Bezeichnungen Klassifizierungen an
+## <a name="how-labels-apply-classification"></a>Wie Bezeichnungen Klassifizierungen anwenden
 
-Sie verwenden Azure Information Protection-Bezeichnungen, um die Klassifizierung auf Dokumente und E-Mails anzuwenden. Damit ist die Klassifizierung identifizierbar – unabhängig davon, wo die Daten gespeichert sind oder für wen sie freigegeben wurden. Die Bezeichnungen können optische Kennzeichnungen wie Kopfzeilen, Fußzeilen oder Wasserzeichen enthalten. Metadaten werden Datei- und E-Mail-Headern als Klartext hinzugefügt. Dieser Klartext stellt sicher, dass andere Dienste (z.B. Lösungen zur Verhinderung von Datenverlusten) die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können. 
+Sie verwenden Azure Information Protection-Bezeichnungen, um die Klassifizierung auf Dokumente und E-Mails anzuwenden. Damit ist die Klassifizierung identifizierbar – unabhängig davon, wo die Daten gespeichert sind oder für wen sie freigegeben wurden. Die Bezeichnungen können optische Kennzeichnungen wie Kopfzeilen, Fußzeilen oder Wasserzeichen enthalten. Metadaten werden Datei- und E-Mail-Header als Klartext hinzugefügt. Dieser Klartext stellt sicher, dass andere Dienste (z.B. Lösungen zur Verhinderung von Datenverlusten) die Klassifizierung identifizieren und entsprechende Maßnahmen ergreifen können. 
 
-Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat die Fußzeile „Vertraulichkeit: Allgemein“ der E-Mail-Nachricht hinzugefügt. Diese Fußzeile richtet sich an alle Empfänger und ist für allgemeine Geschäftsdaten gedacht, die nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
+Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiziert. Die Bezeichnung hat die Fußzeile „Vertraulichkeit: Allgemein“ der E-Mail-Nachricht hinzugefügt. Dieser Fußzeile ist ein visueller Indikator für alle Empfänger, das allgemeine Unternehmensdaten nicht an Empfänger außerhalb der Organisation gesendet werden dürfen. Die Bezeichnung wird in die E-Mail-Header eingebettet, sodass E-Mail-Dienste diesen Wert überprüfen können, um z.B. einen Überwachungseintrag zu erstellen oder zu verhindern, dass sie an Empfänger außerhalb der Organisation gesendet werden.
 
 ![E-Mail-Beispielfußzeile und -header mit der Azure Information Protection-Klassifizierung](./media/example-email-footerv2.png)
 
@@ -45,9 +45,9 @@ Die folgende E-Mail-Nachricht wurde beispielsweise als „Allgemein“ klassifiz
 
 ## <a name="how-data-is-protected"></a>So werden die Daten geschützt
 
-Die Schutztechnologie verwendet *Azure Rights Management* (oft als Azure RMS abgekürzt). Diese Technologie ist in andere Microsoft-Clouddienste und -Anwendungen integriert, wie z.B. Office 365 und Azure Active Directory. Sie kann auch mit Ihren eigenen Branchenanwendungen oder Informationsschutzlösungen von Softwareherstellern verwendet werden. Dabei kann es sich sowohl um lokale als auch um Cloudanwendungen und -lösungen handeln.
+Die Schutztechnologie verwendet *Azure Rights Management* (oft als Azure RMS abgekürzt). Diese Technologie ist in andere Microsoft-Clouddienste und -Anwendungen integriert, wie z.B. Office 365 und Azure Active Directory. Er kann auch mit Ihren eigenen Branchenanwendungen und Informationsschutzlösungen von Softwareherstellern verwendet werden. Dabei kann es sich sowohl um lokale als auch um Cloudanwendungen und -lösungen handeln.
 
-Diese Schutztechnologie verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Ähnlich wie angewendete Bezeichnungen bleibt der mithilfe von Rights Management angewendete Schutz unabhängig vom Speicherort an die Dateien und E-Mails gebunden. Dies gilt gleichermaßen innerhalb wie außerhalb Ihrer Organisationen, Netzwerke, Dateiserver und Anwendungen. Dank dieser Lösung für den Schutz von Informationen behalten Sie stets die Kontrolle über Ihre Daten, auch wenn sie für andere Personen freigegeben werden.
+Diese Schutztechnologie verwendet Verschlüsselung, Identitäten und Autorisierungsrichtlinien. Wie bei Bezeichnern, die angewendet werden, bleibt der mithilfe von Rights Management angewendete Schutz unabhängig vom Ort an die Dateien und E-Mails gebunden – sowohl innerhalb oder als auch außerhalb Ihrer Organisation bzw. der Netzwerke, Dateiserver und Anwendungen. Dank dieser Lösung für den Schutz von Informationen behalten Sie stets die Kontrolle über Ihre Daten, auch wenn sie für andere Personen freigegeben werden.
 
 Beispielsweise können Sie ein Berichtsdokument oder eine Tabelle mit Verkaufsprognosen so konfigurieren, dass nur Personen in Ihrer Organisation darauf zugreifen können, oder Sie können steuern, ob das Dokument bearbeitet werden kann oder als schreibgeschützt gilt oder ob es gedruckt werden darf. Sie können E-Mails ganz ähnlich konfigurieren und noch zusätzlich verhindern, dass sie weitergeleitet werden, bzw. die Verwendung der Option „Allen antworten“ unterbinden. 
 
@@ -65,9 +65,9 @@ Im Exchange Admin Center können Sie z.B. Exchange Online-E-Mail-Flussregeln fü
 
 Weitere Informationen zum Azure Rights Management-Schutz finden Sie unter [Was ist Azure Rights Management?](what-is-azure-rms.md)
 
-## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>Integration in Endbenutzer-Workflows für Dokumente und E-Mails
+## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>Integration in Endbenutzerworkflows für Dokumente und E-Mails
 
-Azure Information Protection kann in vorhandene Endbenutzer-Workflows integriert werden, wenn der Azure Information Protection-Client installiert ist. Dieser Client installiert die Information Protection-Leiste für Office-Anwendungen, die in der ersten Abbildung zu sehen war, auf der die Leiste in Word angezeigt wird. Dieselbe Information Protection-Leiste wird in Excel, PowerPoint und Outlook hinzugefügt. Beispiel:
+Azure Information Protection kann in vorhandene Endbenutzer-Workflows integriert werden, wenn der Azure Information Protection-Client installiert ist. Dieser Client installiert die Information Protection-Leiste für Office-Anwendungen, die in der ersten Abbildung zu sehen war, auf der die Leiste in Word angezeigt wird. Dieselbe Leiste wird in Information Protection, Excel, PowerPoint und Outlook hinzugefügt. Beispiel:
 
 ![Beispiel für die Azure Information Protection-Leiste in Excel](./media/excelproplus-infoprotect-bar.png)
 
@@ -75,11 +75,11 @@ Azure Information Protection kann in vorhandene Endbenutzer-Workflows integriert
 
 Diese Information Protection-Leiste erleichtert es dem Endbenutzer, Bezeichnungen für die richtige Klassifizierung auszuwählen. Bei Bedarf können Bezeichnungen auch automatisch angewendet werden, um Unwägbarkeiten für Benutzer zu entfernen, und damit sie mit den Richtlinien Ihrer Organisation übereinstimmen.
 
-Benutzer können mit der rechten Maustaste auf Dateien oder einen Ordner im Windows-Explorer klicken, um zusätzliche Dateitypen zu klassifizieren und zu schützen sowie mehrere Dateien gleichzeitig zu unterstützen:
+Benutzer können mit der rechten Maustaste auf Dateien oder einen Ordner im Windows-Datei-Explorer klicken, um zusätzliche Dateitypen zu klassifizieren und zu schützen sowie mehrere Dateien gleichzeitig zu unterstützen:
 
 ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](./media/right-click-classify-protect-folder.png)
 
-Wenn ein Benutzer die Menüoption **Klassifizieren und schützen** im Datei-Explorer auswählt, dann kann er eine Bezeichnung auf ähnliche Weise wie über die Information Protection-Leiste in seinen Office-Desktopanwendungen auswählen. Er kann bei Bedarf auch eigene benutzerdefinierte Berechtigungen festlegen.
+Wenn ein Benutzer die Menüoption **Klassifizieren und schützen** im Datei-Explorer auswählt, dann kann er eine Bezeichnung auf ähnliche Weise wie über die Information Protection-Leiste in seinen Office-Desktopanwendungen auswählen. Sie können bei Bedarf auch ihre eigenen benutzerdefinierten Berechtigungen festlegen.
 
 Hauptbenutzer (und Administratoren) finden die Verwendung von PowerShell-Befehlen zum Verwalten und Festlegen von Klassifizierung und Schutz für mehrere Dateien möglicherweise effizienter. Die für diese Aktionen erforderlichen PowerShell-Befehle sind automatisch mit dem Client verfügbar, obwohl Sie das PowerShell-Modul auch separat installieren können.
 
@@ -89,7 +89,7 @@ Nachdem ein Dokument geschützt wurde, können die Benutzer und Administratoren 
 
 ### <a name="additional-integration-for-email"></a>Zusätzliche Integration für E-Mails
 
-Wenn Sie Azure Information Protection mit Exchange Online verwenden, erhalten Sie einen weiteren Vorteil: die Fähigkeit, geschützte E-Mails an beliebige Benutzer senden zu können, verbunden mit der Gewissheit, dass sie sie auf jedem Gerät lesen können.
+Wenn Sie Azure Information Protection mit Exchange Online verwenden, erhalten Sie einen weiteren Vorteil: Die Fähigkeit, geschützte E-Mails an beliebige Benutzer senden zu können, mit der Gewissheit, dass sie sie auf jedem Gerät lesen können.
 
 Dies ist beispielsweise nützlich, wenn Benutzer vertrauliche Informationen an persönliche E-Mail-Adressen senden müssen, die ein **Gmail**-, **Hotmail**- oder **Microsoft**-Konto verwenden. Dies ist auch hilfreich, wenn vertrauliche Informationen an Benutzer gesendet werden müssen, die kein Office 365- oder Azure AD-Konto besitzen. Diese E-Mails sollten im ruhenden Zustand und bei der Übertragung verschlüsselt und nur von den ursprünglichen Empfängern gelesen werden.
 
@@ -99,7 +99,7 @@ Ein Gmail-Benutzer sieht z.B. den folgenden Inhalt in einer E-Mail-Nachricht:
 
 ![Option für Gmail-Empfänger in OME und AIP](./media/ome-message.png)
 
-Für den Versender der E-Mail unterscheidet sich der Workflow nicht vom Versenden einer geschützten E-Mail an einen Benutzer in der eigenen Organisation. Beispielsweise können sie die Schaltfläche **Nicht weiterleiten** auswählen, die der Azure Information Protection-Client dem Outlook-Menüband hinzufügen kann. Die Funktion „Nicht weiterleiten“ kann auch in eine für Benutzer auswählbare Bezeichnung integriert werden, sodass die E-Mail klassifiziert und geschützt wird. Beispiel:
+Geschützte E-Mails, die an einen Benutzer in derselben Organisation gerichtet sind, werden über den gewohnten Workflow zum Senden von E-Mails gesendet. Beispielsweise können sie die Schaltfläche **Nicht weiterleiten** auswählen, die der Azure Information Protection-Client dem Outlook-Menüband hinzufügen kann. Die Funktion „Nicht weiterleiten“ kann auch in eine für Benutzer auswählbare Bezeichnung integriert werden, sodass die E-Mail klassifiziert und geschützt wird. Beispiel:
 
 ![Auswählen einer Bezeichnung, für die die Option „Nicht weiterleiten“ konfiguriert ist](./media/recipients-only-label2.png)
 
@@ -147,15 +147,15 @@ Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information P
 
 Bei der Microsoft Ignite 2018-Konferenz in Orlando gab es viele Präsentationen zum Thema [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Alle Präsentationen wurden aufgezeichnet, wenn Sie also nicht teilnehmen konnten, können Sie sich die Präsentationen immer noch ansehen. Hier sind die besten fünf empfohlenen Präsentationen:
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle (Verwenden von Microsoft Information Protection (MIP) zum Schutz Ihrer sensiblen Daten überall und über den gesamten Lebenszyklus hinweg)](https://myignite.techcommunity.microsoft.com/sessions/64297) – sehen Sie sich das [Video auf YouTube](https://youtu.be/gmHVF-1cLXA) an.
+- [BRK2006: Verwenden von Microsoft Information Protection (MIP) zum Schutz Ihrer sensiblen Daten überall und über den gesamten Lebenszyklus hinweg](https://myignite.techcommunity.microsoft.com/sessions/64297)
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services (Wie die Funktionen von Microsoft Information Protection zusammenarbeiten, um sensible Informationen über Geräte, Apps und Dienste hinweg zu schützen)](https://myignite.techcommunity.microsoft.com/sessions/64299) – sehen Sie sich das [Video auf YouTube](https://youtu.be/kL9Y7NGTyQQ) an.
+- [BRK3002: Wie die Funktionen von Microsoft Information Protection zusammenarbeiten, um sensible Informationen über Geräte, Apps und Dienste hinweg zu schützen](https://myignite.techcommunity.microsoft.com/sessions/64299)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions (Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen)](https://myignite.techcommunity.microsoft.com/sessions/64283) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=JsCyIVyQJmE) an.
+- [BRK3009: Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen](https://myignite.techcommunity.microsoft.com/sessions/64283)
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption (Schützen und Steuern von sensiblen E-Mails mit der Nachrichtenverschlüsselung von Office 365)](https://myignite.techcommunity.microsoft.com/sessions/64327) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=Ld4b4pFua0g) an.
+- [BRK3397: Schützen und Steuern von sensiblen E-Mails mit der Nachrichtenverschlüsselung von Office 365](https://myignite.techcommunity.microsoft.com/sessions/64327)
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection (Datenermittlung, Verwendungsberichte und Analysen für alle Ihre Daten mit Microsoft Information Protection)](https://myignite.techcommunity.microsoft.com/sessions/64301) – sehen Sie sich das [Video auf YouTube](https://www.youtube.com/watch?v=nzDIXd0XaeA) an.
+- [THR2003: Datenermittlung, Verwendungsberichte und Analysen für alle Daten mit Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301)
 
 Eine Zusammenfassung der Ankündigungen dieser Ignite-Konferenz finden Sie im Blogbeitrag [Announcing availability of information protection capabilities to help protect your sensitive data (Ankündigung der Verfügbarkeit von Information Protection-Funktionen zum Schutz Ihrer sensiblen Daten)](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 
