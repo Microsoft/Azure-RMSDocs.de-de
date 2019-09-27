@@ -3,7 +3,7 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 004f37973d045bcf1a2809a226c150f5bc749681
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: c3abc12674e0a59f78d473d709a4708affff5dcf
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060078"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322406"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -124,7 +124,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](##display-the-information-protection-bar-in-office-apps)|
-|LogMatchedContent|[Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern](#disable-sending-information-type-matches-for-a-subset-of-users)|
+|LogMatchedContent|[Übereinstimmungen des Sende Informations Typs](#send-information-type-matches)|
 |OutlookBlockTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Festlegen einer anderen Standardbezeichnung für Outlook](#set-a-different-default-label-for-outlook)|
@@ -169,7 +169,7 @@ Standardmäßig müssen Benutzer die Option **Leiste anzeigen** auf der Vertraul
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **HideBarByDefault**
+- Schlüssel: **HideBarByDefault**
 
 - Wert: **False**
 
@@ -185,7 +185,7 @@ Wenn Sie die Bezeichnungs Richtlinien Einstellung für **alle Dokumente aktivier
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **Disablemandatoryinoutlook**
+- Schlüssel: **Disablemandatoryinoutlook**
 
 - Wert: **True**
 
@@ -201,7 +201,7 @@ Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, wer
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **OutlookRecommendationEnabled**
+- Schlüssel: **OutlookRecommendationEnabled**
 
 - Wert: **True**
 
@@ -217,7 +217,7 @@ Wenn Sie diese Einstellung konfigurieren, wendet Outlook nicht die Standard Beze
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **OutlookDefaultLabel**
+- Schlüssel: **OutlookDefaultLabel**
 
 - Wert: \<Bezeichnungs- **GUID**> oder **None**
 
@@ -236,7 +236,7 @@ Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jet
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **PostponeMandatoryBeforeSave**
+- Schlüssel: **PostponeMandatoryBeforeSave**
 
 - Wert: **False**
 
@@ -258,7 +258,7 @@ Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich,
 
 Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **RemoveExternalContentMarkingInApp**
+- Schlüssel: **RemoveExternalContentMarkingInApp**
 
 - Wert: \<**Office-Anwendungstypen WXP**> 
 
@@ -297,7 +297,7 @@ Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder T
 
 Geben Sie für dieselbe Bezeichnungs Richtlinie die folgenden Zeichen folgen an:
 
-- Key: **ExternalContentMarkingToRemove**
+- Schlüssel: **ExternalContentMarkingToRemove**
 
 - Value: \<**zu vergleichende Zeichenfolge; als regulärer Ausdruck definiert**> 
 
@@ -315,7 +315,7 @@ Wenn der Text in einer Kopf- oder Fußzeile mehr als eine Zeile umfasst, erstell
 
 Um diese mehrzeilige Fußzeile zu entfernen, erstellen Sie die folgenden zwei Einträge für die gleiche Bezeichnungs Richtlinie:
 
-- Key: **ExternalContentMarkingToRemove**
+- Schlüssel: **ExternalContentMarkingToRemove**
 
 - Schlüsselwert 1: **\*Vertraulich***
 
@@ -342,7 +342,7 @@ Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel
 
 Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
 
-- Key: **PowerPointShapeNameToRemove**
+- Schlüssel: **PowerPointShapeNameToRemove**
 
 - Wert: \<**Name der PowerPoint-Form**> 
 
@@ -354,7 +354,7 @@ Wenn Sie mehr als eine PowerPoint-Form entfernen möchten, geben Sie so viele We
 
 Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
 
-- Key: **RemoveExternalContentMarkingInAllSlides**
+- Schlüssel: **RemoveExternalContentMarkingInAllSlides**
 
 - Wert: **True**
 
@@ -371,7 +371,7 @@ Standardmäßig wird Benutzern eine Option mit dem Namen **schützen mit benutze
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **EnableCustomPermissions**
+- Schlüssel: **EnableCustomPermissions**
 
 - Wert: **False**
 
@@ -389,7 +389,7 @@ Es gibt jedoch eine andere erweiterte Client Einstellung, die Sie angeben könne
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+- Schlüssel: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Wert: **True**
 
@@ -437,7 +437,7 @@ Wenn Sie die folgende erweiterte Clienteinstellung angeben, wird Benutzern die O
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **ReportAnIssueLink**
+- Schlüssel: **ReportAnIssueLink**
 
 - Wert: **\<HTTP-Zeichenfolge>**
 
@@ -483,19 +483,19 @@ Beispiel Wert für mehrere Bezeichnungs-GUIDs als durch Trennzeichen getrennte Z
 
 - Warnmeldungen:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookWarnUntrustedCollaborationLabel**
     
     - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookJustifyUntrustedCollaborationLabel**
     
     - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
 
 - Blockiermeldungen:
     
-    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookBlockUntrustedCollaborationLabel**
     
     - Wert: \< **Bezeichnungs-GUIDs, durch Trennzeichen getrennt**>
 
@@ -520,19 +520,19 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
 
 - Warnmeldungen:
     
-    - Key: **OutlookWarnTrustedDomains**
+    - Schlüssel: **OutlookWarnTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookJustifyTrustedDomains**
+    - Schlüssel: **OutlookJustifyTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Blockiermeldungen:
     
-    - Key: **OutlookBlockTrustedDomains**
+    - Schlüssel: **OutlookBlockTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
@@ -550,25 +550,25 @@ Erstellen Sie für dieselbe Bezeichnungs Richtlinie die folgende erweiterte Clie
 
 - Warnmeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Warnung**
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Justify** (Legitimation)
 
 - Blockiermeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Blockieren**
 
 - Diese Meldungen deaktivieren:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Deaktiviert**
 
@@ -589,7 +589,7 @@ In diesem Beispiel führt ein PDF-Dokument ohne Bezeichnung nicht zu Warn-, rech
 Geben Sie für dieselbe Bezeichnungs Richtlinie die folgenden Zeichen folgen ein: 
 
 
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+- Schlüssel: **OutlookOverrideUnlabeledCollaborationExtensions**
 
 - Wert: **\<** Dateinamen Erweiterungen zum Anzeigen von Nachrichten, durch Kommas getrennt **>**
 
@@ -606,25 +606,25 @@ Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden 
 
 - Warnmeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Warnung**
 
 - Legitimationsmeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Justify** (Legitimation)
 
 - Blockiermeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Blockieren**
 
 - Diese Meldungen deaktivieren:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Deaktiviert**
 
@@ -642,7 +642,7 @@ Der Azure Information Protection Unified Bezeichnung-Client unterstützt die Zen
 
 Um dieses Verhalten so zu ändern, dass diese Informationen nicht vom Unified Label-Client gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **EnableAudit**
+- Schlüssel: **EnableAudit**
 
 - Wert: **False**
 
@@ -659,13 +659,13 @@ Wenn der Azure Information Protection Unified Bezeichnung-Client in Office-Apps 
 
 Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom Unified Label-Client gefunden werden, nicht an Azure Information Protection Analytics gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **Runauditinformationtypesdiscovery**
+- Schlüssel: **Runauditinformationtypesdiscovery**
 
 - Wert: **False**
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Beispiel:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -677,19 +677,19 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
-## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Deaktivieren der Übereinstimmungen des Sendeinformationstyps für eine Teilmenge von Benutzern
+## <a name="send-information-type-matches"></a>Übereinstimmungen des Sende Informations Typs
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn Sie das Kontrollkästchen für [Azure Information Protection Analytics](../reports-aip.md) aktivieren, das eine tiefere Analyse Ihrer sensiblen Daten ermöglicht, sammelt die Inhalts Übereinstimmungen für Ihre sensiblen Informationstypen oder Ihre benutzerdefinierten Bedingungen standardmäßig die folgenden Informationen: wird von allen Benutzern gesendet, einschließlich Dienst Konten, die den Azure Information Protection Scanner ausführen. Wenn Sie einige Benutzer haben, die diese Daten nicht senden dürfen, erstellen Sie die folgende erweiterte Client Einstellung in einer Bezeichnungs Richtlinie für diese Benutzer: 
+Standardmäßig sendet der Unified-Bezeichnungs Client keine Inhalts Übereinstimmungen für sensible Informationstypen an [Azure Information Protection Analytics](../reports-aip.md). Um diese zusätzlichen Informationen beim Senden von sensiblen Informationstypen zu senden, erstellen Sie die folgende erweiterte Client Einstellung in einer Bezeichnungs Richtlinie: 
 
-- Key: **LogMatchedContent**
+- Schlüssel: **LogMatchedContent**
 
-- Wert: **False**
+- Wert: **True**
 
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="Disable"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen migrieren
 
@@ -783,7 +783,7 @@ Sie können die erweiterten Einstellungen von labelbycustomproperties mit Outloo
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
-- Key: **EnableLabelByMailHeader**
+- Schlüssel: **EnableLabelByMailHeader**
 
 - Wert: **True**
 
@@ -853,13 +853,13 @@ Verwenden Sie diese Einstellungen nur, wenn Sie über eine funktionierende [S/MI
 
 Um eine erweiterte Einstellung für eine digitale S/MIME-Signatur zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnung ein:
 
-- Key: **SMimeSign**
+- Schlüssel: **SMimeSign**
 
 - Wert: **True**
 
 Um eine erweiterte Einstellung für die S/MIME-Verschlüsselung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnung ein:
 
-- Key: **SMimeEncrypt**
+- Schlüssel: **SMimeEncrypt**
 
 - Wert: **True**
 
@@ -879,7 +879,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Wenn Sie einer Bezeichnung eine untergeordnete Bezeichnung hinzufügen, können Benutzer die übergeordnete Bezeichnung nicht mehr auf ein Dokument oder eine e-Mail anwenden. Standardmäßig wählen Benutzer die übergeordnete Bezeichnung aus, um die anzuwendenden untergeordneten Bezeichnungen anzuzeigen, und wählen dann eine dieser untergeordneten Bezeichnungen aus. Wenn Sie diese erweiterte Einstellung konfigurieren und Benutzer die übergeordnete Bezeichnung auswählen, wird automatisch eine untergeordnete Bezeichnung ausgewählt und darauf angewendet: 
 
-- Key: **DefaultSubLabelId**
+- Schlüssel: **DefaultSubLabelId**
 
 - Wert: \<GUID für untergeordnete Bezeichnung >
 

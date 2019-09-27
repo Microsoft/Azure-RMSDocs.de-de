@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection-Clients
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 784b51f91a19069c33f5a6dd5a6a655c95e59c0c
-ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
+ms.openlocfilehash: df20bd6b72c6cba0e1410f35ebc397c8c6d2fad3
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923318"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314345"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -141,7 +141,7 @@ Wenn Sie die folgende erweiterte Clienteinstellung angeben, wird Benutzern die O
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **ReportAnIssueLink**
+- Schlüssel: **ReportAnIssueLink**
 
 - Wert: **\<HTTP-Zeichenfolge>**
 
@@ -167,7 +167,7 @@ Sie können eine Anmeldeaufforderung für den Azure Information Protection-Diens
     
     1. Geben Sie die folgende Zeichenfolge ein:
     
-        - Key: **PullPolicy**
+        - Schlüssel: **PullPolicy**
         
         - Wert: **False**
     
@@ -207,7 +207,7 @@ Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterl
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **DisableDNF**
+- Schlüssel: **DisableDNF**
 
 - Wert: **TRUE** zum Ausblenden der Schaltfläche, **FALSE** zum Anzeigen der Schaltfläche
 
@@ -219,7 +219,7 @@ Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröf
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **EnableCustomPermissions**
+- Schlüssel: **EnableCustomPermissions**
 
 - Wert: **TRUE**, um die Option für benutzerdefinierte Berechtigungen anzuzeigen, **FALSE**, um diese Option auszublenden
 
@@ -233,7 +233,7 @@ Wenn Sie diese erweiterte Clienteinstellung erstellen und konfigurieren, können
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+- Schlüssel: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Wert: **True**
 
@@ -249,7 +249,7 @@ Obwohl die Azure Information Protection-Leiste ausgeblendet bleibt, können Benu
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **EnableBarHiding**
+- Schlüssel: **EnableBarHiding**
 
 - Wert: **True**
 
@@ -263,7 +263,7 @@ Verwenden Sie diese Einstellung, wenn Sie über untergeordnete Bezeichnungen ver
 
 Konfigurieren Sie die folgenden Zeichenfolgen:
 
-- Key: **CompareSubLabelsInAttachmentAction**
+- Schlüssel: **CompareSubLabelsInAttachmentAction**
 
 - Wert: **True**
 
@@ -279,7 +279,7 @@ Wenn Sie die [Richtlinien Einstellung](../configure-policy-settings.md) aktivier
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **Disablemandatoryinoutlook**
+- Schlüssel: **Disablemandatoryinoutlook**
 
 - Wert: **True**
 
@@ -291,7 +291,7 @@ Wenn Sie eine Bezeichnung für die empfohlene Klassifizierung konfigurieren, wer
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **OutlookRecommendationEnabled**
+- Schlüssel: **OutlookRecommendationEnabled**
 
 - Wert: **True**
 
@@ -352,19 +352,19 @@ Beispielwert für mehrere Bezeichnungs-IDs als kommagetrennte Zeichenfolge: `dcf
 
 - Warnmeldungen:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookWarnUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookJustifyUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
 - Blockiermeldungen:
     
-    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    - Schlüssel: **OutlookBlockUntrustedCollaborationLabel**
     
     - Wert: \<**Label-IDs, kommagetrennt**>
 
@@ -380,19 +380,19 @@ Beispielwert für mehrere Domänen als kommagetrennte Zeichenfolge: `contoso.com
 
 - Warnmeldungen:
     
-    - Key: **OutlookWarnTrustedDomains**
+    - Schlüssel: **OutlookWarnTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookJustifyTrustedDomains**
+    - Schlüssel: **OutlookJustifyTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
 - Blockiermeldungen:
     
-    - Key: **OutlookBlockTrustedDomains**
+    - Schlüssel: **OutlookBlockTrustedDomains**
     
     - Wert: **\<** Domänenname, kommagetrennt **>**
 
@@ -404,25 +404,25 @@ Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden 
 
 - Warnmeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Warnung**
 
 - Legitimationsmeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Justify** (Legitimation)
 
 - Blockiermeldungen:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Blockieren**
 
 - Diese Meldungen deaktivieren:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Schlüssel: **OutlookUnlabeledCollaborationAction**
     
     - Wert: **Deaktiviert**
 
@@ -435,7 +435,7 @@ Beispiel Wert für mehrere Dateinamen Erweiterungen, die als durch Trennzeichen 
 In diesem Beispiel führt ein PDF-Dokument ohne Bezeichnung nicht zu Warn-, rechtfertigen oder Blockierungs Nachrichten.
 
 
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+- Schlüssel: **OutlookOverrideUnlabeledCollaborationExtensions**
 
 - Wert: **\<** Dateinamen Erweiterungen zum Anzeigen von Nachrichten, durch Kommas getrennt **>**
 
@@ -447,25 +447,25 @@ Erstellen Sie die folgende erweiterte Clienteinstellung mit einem der folgenden 
 
 - Warnmeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Warnung**
 
 - Legitimationsmeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Justify** (Legitimation)
 
 - Blockiermeldungen:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Blockieren**
 
 - Diese Meldungen deaktivieren:
     
-    - Key: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
+    - Schlüssel: **Outlookunlabeledcollaborationaktionoverridemailbodybehavior**
     
     - Wert: **Deaktiviert**
 
@@ -484,7 +484,7 @@ Damit Outlook nicht die Standardbezeichnung anwendet, geben Sie **None** (Keine)
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **OutlookDefaultLabel**
+- Schlüssel: **OutlookDefaultLabel**
 
 - Wert: \<**Bezeichnungs-ID**> oder **None** (Keine)
 
@@ -538,7 +538,7 @@ Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jet
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **PostponeMandatoryBeforeSave**
+- Schlüssel: **PostponeMandatoryBeforeSave**
 
 - Wert: **False**
 
@@ -558,7 +558,7 @@ Diese Bedingungsregeln werden nicht in Echtzeit, während der Benutzer tippt, au
 
 Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **RunPolicyInBackground**
+- Schlüssel: **RunPolicyInBackground**
 
 - Wert: **True**
 
@@ -570,7 +570,7 @@ Wenn die aktuelle Version des Azure Information Protection-Clients eine PDF-Date
 
 Wenn Sie möchten, dass der Client zu dem Verhalten in älteren Versionen des Clients zurückkehrt, bei dem PDF-Dateien mit der .ppdf-Dateinamenerweiterung geschützt werden, verwenden Sie die folgende erweiterte Einstellung, indem Sie diese Zeichenfolge eingeben:
 
-- Key: **EnablePDFv2Protection**
+- Schlüssel: **EnablePDFv2Protection**
 
 - Wert: **False**
 
@@ -608,7 +608,7 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiel:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -731,7 +731,7 @@ Diese Konfiguration wird für Outlook nicht unterstützt. Beachten Sie außerdem
 
 Da der Musterabgleich die Leistung für Benutzer beeinflusst, empfiehlt es sich, die Office-Anwendungs Typen (**W**Ord, E**X**cel, **P**owerpoint) nur auf die zu durchsuchenden Personen einzuschränken:
 
-- Key: **RemoveExternalContentMarkingInApp**
+- Schlüssel: **RemoveExternalContentMarkingInApp**
 
 - Wert: \<**Office-Anwendungstypen WXP**> 
 
@@ -764,7 +764,7 @@ Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß-
 
 Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
 
-- Key: **ExternalContentMarkingToRemove**
+- Schlüssel: **ExternalContentMarkingToRemove**
 
 - Value: \<**zu vergleichende Zeichenfolge; als regulärer Ausdruck definiert**> 
 
@@ -802,7 +802,7 @@ Verwenden Sie den Namen der Form, um einen Zeichenfolgenwert für den Schlüssel
 
 Beispiel: Der Name der Form ist **fc**. Geben Sie den Wert `fc` an, um die Form mit diesem Namen zu entfernen.
 
-- Key: **PowerPointShapeNameToRemove**
+- Schlüssel: **PowerPointShapeNameToRemove**
 
 - Wert: \<**Name der PowerPoint-Form**> 
 
@@ -810,7 +810,7 @@ Wenn mehr als eine PowerPoint-Form entfernt werden soll, erstellen Sie so viele 
 
 Standardmäßig werden nur die Masterfolien auf Kopf- oder Fußzeilen überprüft. Wenn Sie diese Suche auf alle Folien ausweiten möchten (dieser Prozess ist jedoch wesentlich ressourcenintensiver), verwenden Sie eine zusätzliche erweiterte Clienteinstellung namens **RemoveExternalContentMarkingInAllSlides**:
 
-- Key: **RemoveExternalContentMarkingInAllSlides**
+- Schlüssel: **RemoveExternalContentMarkingInAllSlides**
 
 - Wert: **True**
 
@@ -853,7 +853,7 @@ Wenn der Azure Information Protection-Client in Office-Apps verwendet wird, such
 
 Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet, ist die [Richtlinien Einstellung](../configure-policy-settings.md) von Überwachungs **Daten an Azure Information Protection Log Analytics senden**. Wenn diese Richtlinien Einstellung **auf on** festgelegt ist, weil Sie Überwachungsinformationen senden möchten, die Bezeichnungs Aktionen enthalten, aber keine vertraulichen Informationstypen senden möchten, die vom Client gefunden werden, geben Sie die folgenden Zeichen folgen ein:
 
-- Key: **Runauditinformationtypesdiscovery**
+- Schlüssel: **Runauditinformationtypesdiscovery**
 
 - Wert: **False**
 
@@ -873,7 +873,7 @@ Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-config
 
 Wenn Sie das Kontrollkästchen für [Azure Information Protection Analytics](../reports-aip.md) aktivieren, das eine tiefere Analyse Ihrer sensiblen Daten ermöglicht, sammelt die Inhalts Übereinstimmungen für Ihre sensiblen Informationstypen oder Ihre benutzerdefinierten Bedingungen standardmäßig die folgenden Informationen: wird von allen Benutzern gesendet, einschließlich Dienst Konten, die den Azure Information Protection Scanner ausführen. Wenn Sie einige Benutzer haben, die diese Daten nicht senden sollten, erstellen Sie die folgende erweiterte Clienteinstellung in einer [bereichsbezogenen Richtlinie](../configure-policy-scope.md) für diese Benutzer: 
 
-- Key: **LogMatchedContent**
+- Schlüssel: **LogMatchedContent**
 
 - Wert: **Ier**
 
@@ -888,7 +888,7 @@ Geben Sie als Wert die Anzahl von gleichzeitigen Threads an, die von der Überpr
 
 Wenn Sie den Wert zu Testzwecken zum ersten Mal konfigurieren, empfehlen wir Ihnen, „2 pro Kern“ anzugeben und die Ergebnisse zu überwachen. Wenn Sie die Überprüfung z.B. auf einem Computer mit vier Kernen ausführen, legen Sie den Wert auf „8“ fest. Erhöhen oder verringern Sie den Wert nach Bedarf – je nachdem, welche Leistung Sie für den Überprüfungscomputer und die Überprüfungshäufigkeit benötigen. 
 
-- Key: **ScannerConcurrencyLevel**
+- Schlüssel: **ScannerConcurrencyLevel**
 
 - Wert: **\<Anzahl von gleichzeitigen Threads>**
 
@@ -904,7 +904,7 @@ Weitere Informationen zu den Windows-Integritätsebenen finden Sie unter [What i
 
 Wenn Sie diese erweiterte Einstellung so konfigurieren möchten, dass der Scanner mit einer automatisch von Windows zugewiesenen Integritätsebene ausgeführt wird (ein Standardbenutzerkonto wird mit einer mittleren Integritätsebene ausgeführt), geben Sie die folgenden Zeichenfolgen ein:
 
-- Key: **ProcessUsingLowIntegrity**
+- Schlüssel: **ProcessUsingLowIntegrity**
 
 - Wert: **False**
 
@@ -916,7 +916,7 @@ Standardmäßig hat der Azure Information Protection Scanner einen Timeout Zeitr
 
 Wenn dieses Timeout Problem aufgrund von großen Dateien auftritt, können Sie diesen Timeout Zeitraum für die vollständige Inhalts Extraktion erhöhen:
 
-- Key: **ContentExtractionTimeout**
+- Schlüssel: **ContentExtractionTimeout**
 
 - Wert:  **\<hh: min: Sek. >**
 
@@ -940,7 +940,7 @@ Wenn Sie dem Überprüfungs Computer keine weiteren Kern Prozessoren hinzufügen
 
 Um den Timeout Zeitraum für die Dateiverarbeitung zu ändern, konfigurieren Sie die folgende erweiterte Client Einstellung:
 
-- Key: **FileProcessingTimeout**
+- Schlüssel: **FileProcessingTimeout**
 
 - Wert:  **\<hh: min: Sek. >**
 
@@ -952,7 +952,7 @@ Der Azure Information Protection-Client schreibt Clientprotokolldateien standard
  
 Zum Ändern des Protokolliergrads für diese Dateien konfigurieren Sie die folgende erweiterte Clienteinstellung:
 
-- Key: **LogLevel**
+- Schlüssel: **LogLevel**
 
 - Wert: **\<Protokolliergrad>**
 
@@ -984,7 +984,7 @@ So erreichen Sie diese Lösung
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

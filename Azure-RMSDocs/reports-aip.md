@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/18/2019
+ms.date: 09/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
-ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
+ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71101323"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322380"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -137,15 +137,17 @@ Um zu verhindern, dass Azure Information Protection von Clients (klassisch) dies
 
 Um zu verhindern, dass Azure Information Protection Unified Clients diese Daten senden, konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)für die Bezeichnung "Bezeichnung".
 
-#### <a name="content-matches-for-deeper-analysis"></a>Inhaltsübereinstimmungen für umfassendere Analysen 
+#### <a name="content-matches-for-deeper-analysis"></a>Inhaltsübereinstimmungen für umfassendere Analysen
 
-Der Azure Log Analytics-Arbeitsbereich für Azure Information Protection enthält ein Kontrollkästchen zum Erfassen und Speichern von Daten, die als sensible Informationstypen (vordefinierte oder benutzerdefinierte Bedingungen) identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Wenn Sie diese zusätzlichen Daten nicht senden möchten, aktivieren Sie das Kontrollkästchen **tiefer gehende Analysen in Ihre sensiblen Daten aktivieren**. Wenn Sie möchten, dass die meisten Benutzer diese zusätzlichen Daten senden, und eine Teilmenge der Benutzer Sie nicht senden kann, aktivieren Sie das Kontrollkästchen und dann Folgendes:
+Mit Azure Information Protection können Sie die eigentlichen Daten erfassen und speichern, die als sensible Informationstypen (vordefiniert oder Benutzer definiert) identifiziert werden. Dies kann z. B. gefundene Kreditkartennummern sowie Sozialversicherungsnummern, Kennwortnummern und Kontonummern betreffen. Die Inhalts Übereinstimmungen werden angezeigt, wenn Sie einen Eintrag aus den **Aktivitäts Protokollen**auswählen und die **Aktivitäts Details**anzeigen. 
 
-- Für den klassischen Client und Scanner: Konfigurieren Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer.
+Standardmäßig werden von Azure Information Protection Clients keine Inhalts Übereinstimmungen gesendet. So ändern Sie dieses Verhalten, damit Inhalts Übereinstimmungen gesendet werden:
 
-- Für den Unified-Bezeichnungs Client: Konfigurieren Sie eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bezeichnungs Richtlinie für die Teilmenge der Benutzer.
+- Wählen Sie für den klassischen Client ein Kontrollkästchen als Teil der [Konfiguration](#configure-a-log-analytics-workspace-for-the-reports) für Azure Information Protection Analytics aus. Das Kontrollkästchen heißt **tiefere Analysen in Ihre sensiblen Daten**.
+    
+    Wenn Sie möchten, dass die meisten Benutzer, die diesen Client verwenden, Inhalts Übereinstimmungen senden, aber eine Teilmenge der Benutzer keine Inhalts Übereinstimmungen senden kann, aktivieren Sie das Kontrollkästchen, und konfigurieren Sie dann eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer
 
-Nachdem Sie die Inhaltsübereinstimmungen gesammelt haben, werden sie in den Berichten angezeigt, wenn Sie für die Dateien aus den Aktivitätsprotokollen einen Drilldown ausführen, um **Aktivitätsdetails** anzuzeigen. Diese Informationen können auch mit Abfragen eingesehen und abgerufen werden.
+- Konfigurieren Sie für den Unified Label-Client eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in einer Bezeichnungs Richtlinie.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
@@ -232,10 +234,14 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
     - Erstellen eines neuen Log Analytics-Arbeitsbereichs: Wählen Sie **Neuen Arbeitsbereich erstellen** aus, und geben Sie auf dem Blatt **Log Analytics-Arbeitsbereich** die erforderlichen Informationen ein.
     
     - Verwenden eines vorhandenen Log Analytics-Arbeitsbereichs: Wählen Sie den Arbeitsbereich aus der Liste aus.
+    
+    Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie sich den Artikel [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace) durch.
 
-Wenn Sie Hilfe beim Erstellen des Log Analytics-Arbeitsbereichs benötigen, lesen Sie sich den Artikel [Erstellen eines Log Analytics-Arbeitsbereichs im Azure-Portal](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace) durch.
+4. Wenn Sie über Azure Information Protection Clients (klassisch) verfügen, aktivieren Sie das Kontrollkästchen **tiefere Analysen in Ihre sensiblen Daten aktivieren** , wenn Sie die eigentlichen Daten speichern möchten, die als sensible Informationen identifiziert werden. Weitere Informationen zu dieser Einstellung finden Sie im Abschnitt [Inhalts Übereinstimmungen für eine tiefere Analyse](#content-matches-for-deeper-analysis) auf dieser Seite.
 
-Wenn Sie den Arbeitsbereich konfiguriert haben, gehen Sie wie folgt vor, wenn Sie die Vertraulichkeits Bezeichnungen in einem der folgenden Verwaltungszentren veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center Microsoft 365 Compliance Center:
+5. Wählen Sie **OK**.
+
+Nachdem der Arbeitsbereich konfiguriert wurde, gehen Sie wie folgt vor, wenn Sie die Vertraulichkeits Bezeichnungen in einem der folgenden Verwaltungszentren veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center Microsoft 365 Compliance Center:
 
 - Wechseln Sie im Azure-Portal zu **Azure Information Protection** > **vereinheitlichte Bezeichnung** **Verwalten** > , und wählen Sie **veröffentlichen**aus.
     

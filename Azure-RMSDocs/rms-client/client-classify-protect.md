@@ -4,7 +4,7 @@ description: Anweisungen zum klassifizieren und Schützen Ihrer Dokumente und e-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 780e89703c9af6607cf6639c162b552535797cc9
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 2dadb22a5746073269faffe2b91978e7393cc253
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808161"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314182"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Leitfaden: Klassifizieren und schützen mit dem Azure Information Protection-Client
 
