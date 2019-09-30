@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 63220621a6c3bbf7ad84ba4c76c38353b56c256d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 15050d18e1aab19ec80b2be47fdefd16e8f60ba6
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313996"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674155"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -36,7 +36,7 @@ Der Rights Management (RMS)-Client wird automatisch mit einigen Anwendungen inst
 
 Der **Azure Information Protection-Client (klassisch)** lädt Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunter. Weitere Informationen zu diesem Client finden Sie unter [Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie](client-version-release-history.md).
 
-Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus den Admin-Centers: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Weitere Informationen zu diesem Client finden Sie im [Azure Information Protection Unified Bezeichnung-Client: Informationen zum Release](unifiedlabelingclient-version-release-history.md).
+Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus den Admin-Centers: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Weitere Informationen zu diesem Client finden Sie im [Azure Information Protection Unified Bezeichnung-Client: Informationen zum Release](unifiedlabelingclient-version-release-history.md). 
 
 Welchen Client sollten Sie installieren?
 
@@ -148,8 +148,9 @@ Der Azure Information Protection-Client (klassisch) unterstützt keine Konfigura
 
 Aus Paritätsgründen unterstützt der Azure Information Protection-Client für einheitliche Bezeichnungen die Anwendung von übergeordneten Bezeichnungen mit untergeordneten Bezeichnungen ebenfalls nicht, auch wenn Sie diese Bezeichnungen in den Admin-Centers auswählen können. In diesem Szenario wendet der Azure Information Protection-Client für einheitliche Bezeichnungen die übergeordnete Bezeichnung nicht an.
 
-## <a name="see-also"></a>Siehe auch
-Weitere Informationen zum Bereitstellen und Verwenden dieser Clients finden Sie in der folgenden Dokumentation:
+## <a name="next-steps"></a>Nächste Schritte
+
+Verwenden Sie die folgende Dokumentation, um die Clients zu installieren und zu konfigurieren:
 
 - [Azure Information Protection-Client](AIP-client.md)
 

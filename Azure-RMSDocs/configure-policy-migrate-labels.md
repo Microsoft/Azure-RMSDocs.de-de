@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6fa8adbc3e9c5cc31c7b752ec0e94eb1346bb7d0
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: 3c75773948fd86ca6b39651c5a9d5d904c68a3cf
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301119"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71673918"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -25,9 +25,12 @@ ms.locfileid: "71301119"
 >
 > *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Migrieren Sie Ihre Bezeichnungen in Azure Information Protection, damit Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
+Migrieren Sie Azure Information Protection Bezeichnungen zur vereinheitlichten Bezeichnung, sodass Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
 
-Diese Bezeichnungen können dann vom Azure Information Protection Unified Label-Client verwendet werden. Wenn Sie weiterhin den Azure Information Protection Client (klassisch) verwenden, werden die Bezeichnungen von diesem Client weiterhin mit der Azure Information Protection Richtlinie aus dem Azure-Portal heruntergeladen.
+> [!NOTE]
+> Wenn Ihr Azure Information Protection-Abonnement recht neu ist, müssen Sie möglicherweise keine Bezeichnungen migrieren, da sich Ihr Mandant bereits auf der Unified Label-Plattform befindet. Weitere Informationen finden Sie unter [wie kann ich feststellen, ob mein Mandant auf der Unified-Beschriftungs Plattform ist?](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
+
+Nachdem Sie Ihre Bezeichnungen migriert haben, wird kein Unterschied mit dem Azure Information Protection-Client (klassisch) angezeigt, da dieser Client weiterhin die Bezeichnungen mit der Azure Information Protection Richtlinie aus dem Azure-Portal herunterlädt. Sie können die Bezeichnungen nun jedoch mit dem Azure Information Protection Unified Label-Client und anderen Clients und Diensten verwenden, die Vertraulichkeits Bezeichnungen verwenden.
 
 Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie möglicherweise die folgenden häufig gestellten Fragen:
 
@@ -132,7 +135,7 @@ Wenn der Benutzer über keine/s dieser Nutzungsrechte oder Nutzungsrollen verfü
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Migrieren von Azure Information Protection-Bezeichnungen
 
-Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten- und Azure Information Protection-Bezeichnungen zu migrieren und den neuen Speicher für einheitliche Bezeichnungen zu verwenden.
+Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten-und Azure Information Protection Bezeichnungen zu migrieren, um den Unified Label-Speicher zu verwenden
 
 Sie müssen Kompatibilitäts Administrator, Kompatibilitäts Daten Administrator, Sicherheitsadministrator oder globaler Administrator sein, um ihre Bezeichnungen zu migrieren.
 
