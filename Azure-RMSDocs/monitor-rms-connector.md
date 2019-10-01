@@ -4,7 +4,7 @@ description: Hier finden Sie Informationen, die Sie beim Überwachen des Connect
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793901"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689503"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 

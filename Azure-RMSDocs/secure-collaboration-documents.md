@@ -4,7 +4,7 @@ description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 743b9dc75a5cd39832ef02e0dc0730fc23fd14b9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ae95c9d4ffc7bae7004ad6e79a958c0c8836a22f
+ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789691"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71679018"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -57,9 +57,9 @@ Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es kei
     
    - Für alle Benutzer in der ersten externen Organisation: Wählen Sie **Geben Sie Details ein** aus, und geben Sie im Mandanten der Organisation den Namen einer Domäne ein. Beispiel: fabrikam.com.
     
-   - Für die Gruppe in der zweiten externe Organisation: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispielsweise sales@contoso.com.
+   - Für die Gruppe in der zweiten externe Organisation: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
     
-   - Für den Benutzer, die nicht über ein Azure AD-Konto verfügt: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse des Benutzers ein. Beispielsweise bengi.turan@gmail.com. 
+   - Für den Benutzer, die nicht über ein Azure AD-Konto verfügt: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. 
 
 4. Gewähren derselben Berechtigungen für alle diese Benutzer: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen.
     
@@ -95,7 +95,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiel:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

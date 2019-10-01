@@ -4,7 +4,7 @@ description: Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Direc
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 88a6409afae1be74a9f43dc18eaa2a48863b0c1c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: bb514d89a438059b626f74edcb51a40b19415126
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790718"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684392"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -142,7 +142,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
 [**PHASE 1: VORBEREITUNG DER MIGRATION**](migrate-from-ad-rms-phase1.md)
 
-- **Schritt 1: Installieren des aipservice-PowerShell-Moduls und identifizieren ihrer Mandanten-URL**
+- **Schritt 1: Installieren Sie das PowerShell-Modul aipservice, und identifizieren Sie Ihre Mandanten-URL @ no__t-0
 
     Der Migrationsprozess erfordert, dass Sie mindestens ein PowerShell-Cmdlet aus dem aipservice-Modul ausführen. Sie müssen die Azure Rights Management-Dienst-URL Ihres Mandanten kennen, um viele der Migrationsschritte abschließen zu können. Sie können diesen Wert mithilfe von PowerShell identifizieren.
 

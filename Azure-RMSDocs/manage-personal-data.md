@@ -4,7 +4,7 @@ description: Informationen zu den personenbezogenen Daten, die von Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fa37a5b1263eae5fe7f9739b9c8621334aae6a35
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788434"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689229"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Verwalten personenbezogener Daten für Azure Information Protection
 
@@ -232,7 +232,7 @@ Sie können keine E-Mail-Adressen für Administratoren und delegierte Administra
 
 ### <a name="protection-templates"></a>Schutzvorlagen
 
-Führen Sie das [Set-aipservicetemplateproperty-](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet aus, um die Schutz Vorlage zu aktualisieren. Da sich die persönlichen Daten innerhalb der `RightsDefinitions` -Eigenschaft befinden, müssen Sie auch das Cmdlet [New-aipservicerightdefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) verwenden, um ein Rechte Definitions Objekt mit den aktualisierten Informationen zu erstellen, und das Rechte Definitions Objekt mit dem Cmdlet`Set-AipServiceTemplateProperty` -Cmdlet.
+Führen Sie das [Set-aipservicetemplateproperty-](/powershell/module/aipservice/set-aipservicetemplateproperty) Cmdlet aus, um die Schutz Vorlage zu aktualisieren. Da sich die personenbezogenen Daten in der `RightsDefinitions`-Eigenschaft befinden, müssen Sie auch das Cmdlet [New-aipservicerighundefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) verwenden, um ein Rechte Definitions Objekt mit den aktualisierten Informationen zu erstellen, und das Rechte Definitions Objekt mit der `Set-AipServiceTemplateProperty` verwenden. Cmdlet.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Administratoren und Delegierte Administratoren für den Schutzdienst
 

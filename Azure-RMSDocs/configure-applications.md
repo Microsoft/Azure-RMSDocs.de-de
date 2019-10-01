@@ -4,7 +4,7 @@ description: Hier finden Sie Anleitung für Administratoren zum Konfigurieren vo
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48c31144fad67eb436eec13e999fc3c4333d684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789668"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684233"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
@@ -34,7 +34,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
--   [Office 365: Konfiguration für Onlinedienste](configure-office365.md)
+-   [Office 365: Konfiguration für Onlinedienste @ no__t-0
 
     -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
 

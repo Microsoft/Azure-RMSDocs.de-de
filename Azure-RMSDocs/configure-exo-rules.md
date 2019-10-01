@@ -4,7 +4,7 @@ description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Reg
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 18a0d65d2ec2feeca7901bdfa4c843f2a359956a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 5eb5b435b520dca5cb4eed7095533be5a5984360
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789302"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684215"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Beispiel:
+Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Zum Beispiel:
 
 - Die Standardbezeichnung **Allgemein** bietet keinen Schutz. Für E-Mails mit dieser Bezeichnung, die extern versendet werden, wenden Sie die zusätzliche Schutzaktion „Nicht weiterleiten“ an.
 
@@ -61,7 +61,7 @@ Erstellen Sie für die folgenden Beispiele eine neue Nachrichtenflussregel, inde
 In den Beispielen gibt es eine einzige Bedingung, die den Schutz anwendet, wenn eine E-Mail außerhalb des Unternehmens versendet wird. Weitere Informationen zu anderen Bedingungen, die Sie auswählen können, finden Sie unter [Mail flow rule conditions and exceptions (predicates) in Exchange Online (Bedingungen und Ausnahmen (Prädikate) zu Nachrichtenflussregeln in Exchange Online)](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
-### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Beispiel 1: Regel, die die Option „Nicht weiterleiten“ auf E-Mails mit der Bezeichnung **Allgemein** anwendet, wenn diese an Empfänger außerhalb der Organisation versendet werden
+### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Beispiel 1: Regel, die die Option „Nicht weiterleiten“ auf E-Mails mit der Bezeichnung **Allgemein** anwendet, wenn diese an Empfänger außerhalb der Organisation versendet werden
 
 In diesem Beispiel weist die Bezeichnung **Allgemein** die GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8 auf. Ersetzen Sie Ihre eigene Bezeichnungs- oder Unterbezeichnungs-GUID, die Sie mit dieser Regel verwenden möchten. 
 

@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6be761f99415f3f8e2bfa9de6f27a924316de448
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793921"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684485"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -56,7 +56,7 @@ Wenn migrierte Clients Office 2010 ausführen, kann es bei Benutzern zu Verzöge
 
 Umleitung über lokale Hostdatei:
 
-- Fügen Sie die folgende Zeile in die Datei "local Hosts `<AD RMS URL FQDN>` " ein, und ersetzen Sie dabei durch den Wert für Ihren AD RMS-Cluster ohne Präfixe oder Webseiten:
+- Fügen Sie die folgende Zeile in der Datei local Hosts hinzu, und ersetzen Sie `<AD RMS URL FQDN>` durch den Wert für Ihren AD RMS Cluster, ohne Präfixe oder Webseiten:
     
         127.0.0.1 <AD RMS URL FQDN>
 

@@ -4,7 +4,7 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 484f311927033d5279404fb706ac380fe9202b09
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 669764881af477e19ffcf9d63266fe19e1f26f92
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788384"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683573"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 

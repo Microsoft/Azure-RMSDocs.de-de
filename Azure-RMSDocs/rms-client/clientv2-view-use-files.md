@@ -4,19 +4,19 @@ description: Anweisungen zum Anzeigen einer geschützten Datei, die erfordert, d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 461a7da493120ebc536e6c600cc3cfc2cc32260f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6186c4ec5cfa52b1022a8dab416a24efd822aae2
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793063"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690059"
 ---
 # <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
 

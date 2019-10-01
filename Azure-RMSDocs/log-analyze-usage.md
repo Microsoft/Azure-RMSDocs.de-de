@@ -4,7 +4,7 @@ description: Informationen und Anweisungen zur Verwendung der Verwendungs Protok
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e44f5cee64b975cf3b64f95d0d5d2c8905978f12
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0052d3474c728518d3acdd9af3ef2d9aae1a2d0a
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794029"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684359"
 ---
 # <a name="logging-and-analyzing-the-protection-usage-from-azure-information-protection"></a>Protokollieren und Analysieren der Schutz Verwendung von Azure Information Protection
 

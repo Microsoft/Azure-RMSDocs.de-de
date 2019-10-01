@@ -4,7 +4,7 @@ description: Informationen und Anweisungen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32461a7d3edb53003ea12a7dc26e8b78966e1a4f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6bde980df23bdfa11bd137966ab48221bdbe6512
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789241"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684207"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Office-Apps: Konfiguration für Clients zur Verwendung des Azure Rights Management-Diensts
 
@@ -46,5 +46,5 @@ Benutzer mit Office für Mac müssen zunächst Ihre Anmelde Informationen überp
 ## <a name="office2010"></a>Office 2010
 Damit Client Computer den Azure Rights Management-Dienst mit Office 2010 verwenden können, müssen Sie über den Azure Information Protection-Client (klassisch) verfügen. Es ist keine weitere Konfiguration erforderlich, als dass sich Benutzer mit ihren Office 365-Anmeldeinformationen anmelden müssen, damit sie dann Dateien schützen sowie von anderen geschützte Dateien verwenden können.
 
-Weitere Informationen zum Azure Information Protection-Client (klassisch) finden [Sie unter Azure Information Protection Client: Installation und Konfiguration für Clients](configure-client.md).
+Weitere Informationen zum Azure Information Protection-Client (klassisch) finden Sie unter [azure Information Protection-Client: Installation und Konfiguration für Clients](configure-client.md).
 

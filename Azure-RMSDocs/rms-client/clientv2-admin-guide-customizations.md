@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3abc12674e0a59f78d473d709a4708affff5dcf
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: 86e914bf96e596a01243d2c4a74236f28c6ac9b5
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322406"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690141"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -472,7 +472,7 @@ Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit e
 Wenn sich die Popup Meldungen für eine bestimmte Bezeichnung befinden, können Sie Ausnahmen für Empfänger nach Domänen Name konfigurieren.
 
 > [!TIP]
-> Obwohl das Lernprogramm für den Azure Information Protection-Client anstelle des Unified-Bezeichnungs Clients vorgesehen ist, können Sie diese erweiterten Einstellungen in Aktion [für sich selbst mit Tutorial anzeigen: Konfigurieren Sie Azure Information Protection, um das Überschreiben von Informationen](../infoprotect-oversharing-tutorial.md)mithilfe von Outlook zu steuern.
+> Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 

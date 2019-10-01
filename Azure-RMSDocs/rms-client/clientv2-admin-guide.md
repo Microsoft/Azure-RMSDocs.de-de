@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5353fa25af08c8ef9c979d232945c7f203a0de07
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313955"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690101"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -116,7 +116,7 @@ Mit den **Einstellungen zum Zurücksetzen** wird der Benutzer abgemeldet, die de
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip
+    - %LocalAppData%\microsoft\msip\mip @ no__t-0 *\<processname @ no__t-3*\mip
     
     - %LocalAppData%\microsoft\msip\appdetails
     
@@ -201,17 +201,17 @@ Das Upgraden des Scanners hängt von der Version des Azure Information Protectio
 
 Beachten Sie, dass diese Vorschauversion der Überprüfung für den Unified Client im Gegensatz zum Scanner vom Azure Information Protection Client (klassisch) nicht die Ausführung auf einem getrennten Computer unterstützt.
 
-Beim Upgrade wird eine neue Datenbank mit dem Namen **\<AIPScannerUL_ profile_name >** erstellt, und die vorherige Scanner-Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
+Beim Upgrade wird eine neue Datenbank mit dem Namen **AIPScannerUL_ @ no__t-1profile_name >** erstellt, und die vorherige Überprüfungs Datenbank wird für den Fall beibehalten, dass Sie für die vorherige Version benötigt wird. Wenn Sie sicher sind, dass Sie die vorherige Scanner-Datenbank nicht benötigen, können Sie Sie löschen. Da beim Upgrade eine neue Datenbank erstellt wird, werden bei der erstmaligen Ausführung der Überprüfung alle Dateien neu erstellt.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Upgrade von der Azure Information Protection Client (klassisch) Version 1.48.204.0 und höheren Versionen dieses Clients
 
 1. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
-2. Führen Sie ein Upgrade auf den Azure Information Protection Unified Bezeichnung-Client durch, indem Sie die Vorschauversion des unifield-bezeichnerclients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
+2. Führen Sie ein Upgrade auf den Azure Information Protection Unified-Bezeichnungs Client durch, indem Sie die Vorschauversion des Unified Bezeichnung-Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren.
 
 3. Führen Sie in einer PowerShell-Sitzung den Befehl Update-aipscanner mit dem Profil Ihres Scanners aus. Beispiel: `Update-AIPScanner –Profile Europe`.
     
-    In diesem Schritt wird eine neue Datenbank mit dem **Namen\<AIPScannerUL_ profile_name erstellt >**
+    In diesem Schritt wird eine neue Datenbank mit dem Namen **AIPScannerUL_ @ no__t-1profile_name erstellt >**
 
 4. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
 

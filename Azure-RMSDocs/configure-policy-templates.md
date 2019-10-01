@@ -4,7 +4,7 @@ description: Konfigurieren und Verwalten von Schutz Vorlagen (auch als Rights Ma
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a6e4c8be3ee6ab061fea56825ea538b2404c7554
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b92df89ca1c0bacc7ad47f4b03c97d868b8fa396
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788955"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683873"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -63,7 +63,7 @@ Wenn Sie Ihr Abonnement erst vor Kurzem erworben haben, werden Ihre Standardvorl
 
 Wenn Sie Ihr Abonnement vor einiger Zeit erworben haben, werden Ihre Standardvorlagen möglicherweise mit den folgenden Namen erstellt:
 
-- **\<Organisationsname > vertraulich**
+- **\<organization Name >-Confidential**
 
 - **\<Name der Organisation> – Nur vertrauliche Ansicht** 
 

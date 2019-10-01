@@ -4,7 +4,7 @@ description: Detaillierte Übersicht über die Funktionsweise von Azure RMS, die
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794174"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689599"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funktionsweise von Azure RMS Hinter den Kulissen
 
@@ -100,7 +100,7 @@ Wenn das Konto des Benutzers einen Verbund mit Azure Active Directory aufweist, 
 
 **Das geschieht in Schritt 2**: Nachdem der Benutzer authentifiziert wurde, wird die Verbindung automatisch an den Azure Information Protection-Mandanten der Organisation umgeleitet, der Zertifikate ausstellt, mit denen sich der Benutzer beim Azure Rights Management-Dienst authentifiziert, um geschützte Inhalte zu nutzen und Inhalte offline zu schützen.
 
-Eines dieser Zertifikate ist das Rechtekontozertifikat (Rights Account Certificate, RAC). Dieses Zertifikat authentifiziert den Benutzer für Azure Active Directory und ist 31 Tage lang gültig. Das Zertifikat wird automatisch vom RMS-Client erneuert, vorausgesetzt das Benutzerkonto befindet sich noch in Azure Active Directory und das Konto ist aktiviert. Dieses Zertifikat kann nicht von einem Administrator konfiguriert werden. 
+Eines dieser Zertifikate ist das Rechtekontozertifikat (Rights Account Certificate, RAC). Dieses Zertifikat authentifiziert den Benutzer bei Azure Active Directory und ist 31 Tage gültig. Das Zertifikat wird automatisch vom RMS-Client erneuert, vorausgesetzt das Benutzerkonto befindet sich noch in Azure Active Directory und das Konto ist aktiviert. Dieses Zertifikat kann nicht von einem Administrator konfiguriert werden. 
 
 Eine Kopie dieses Zertifikats wird in Azure gespeichert. Falls der Benutzer also ein anderes Gerät verwendet, werden die Zertifikate mithilfe derselben Schlüssel erstellt.
 
@@ -121,7 +121,7 @@ Der RMS-Client verwendet dann den Schlüssel der Organisation, der abgerufen wur
 
 ![RMS-Dokumentenschutz – Schritt 3, die Richtlinie wird im Dokument eingebettet](./media/AzRMS_documentprotection3.png)
 
-**Das geschieht in Schritt 3**: Schließlich bettet der RMS-Client die Richtlinie in eine Datei mit dem Text des zuvor verschlüsselten Dokuments ein. Zusammen ergibt dies ein geschütztes Dokument.
+**Das geschieht in Schritt 3**: Schließlich bettet der RMS-Client die Richtlinie in eine Datei mit dem Text des zuvor verschlüsselten Dokuments ein, die zusammen ein geschütztes Dokument umfasst.
 
 Dieses Dokument kann an einem beliebigen Ort gespeichert oder mithilfe einer beliebigen Methode freigegeben werden. Die Richtlinie verbleibt immer im verschlüsselten Dokument.
 
