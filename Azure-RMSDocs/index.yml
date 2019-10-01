@@ -12,12 +12,12 @@ metadata:
   ms.author: cabailey
   manager: rkarlin
   ms.date: 09/17/2019
-  ms.openlocfilehash: 326f521f2f160b6425db15e22084e02fbecd4f55
-  ms.sourcegitcommit: 569446a78a217288198bd499c03bd634f3a92f7e
+  ms.openlocfilehash: 15c2a7d7fdc458ab522554dd3420ada811791723
+  ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71342554"
+  ms.lasthandoff: 09/30/2019
+  ms.locfileid: "71679165"
 landingContent:
 - title: Informationen zu Azure Information Protection
   linkLists:
@@ -25,35 +25,47 @@ landingContent:
     links:
     - text: Was ist Azure Information Protection?
       url: what-is-information-protection.md
-    - text: Übersicht über Vertraulichkeitsbezeichnungen
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
+    - text: Häufig gestellte Fragen
+      url: faqs.md
 - title: Erste Schritte
   linkLists:
-  - linkListType: deploy
+  - linkListType: overview
     links:
     - text: Anforderungen
       url: requirements.md
-    - text: Automatisches Anwenden einer Vertraulichkeitsbezeichnung
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
-    - text: Beschränken des Zugriffs auf Inhalte
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
-    - text: Installieren und Konfigurieren des Clients für einheitliche Bezeichnungen
-      url: ./rms-client/clientv2-admin-guide.md
-- title: Bring Your Own Key (BYOK)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Planen und Implementieren eines Mandantenschlüssels
-      url: plan-implement-tenant-key.md
-- title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
-  linkLists:
   - linkListType: quickstart
     links:
-    - text: Suchen nach vertraulichen Informationen (Vorschau)
+    - text: Erste Schritte im Azure-Portal
+      url: quickstart-viewpolicy.md
+    - text: Suchen nach vertraulichen Informationen
       url: quickstart-findsensitiveinfo.md
+  - linkListType: deploy
+    links:
+    - text: Roadmap für die Bereitstellung
+      url: deployment-roadmap.md
+- title: Anpassen des Clients
+  linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Bereitstellen des Scanners (Vorschau)
+    - text: 'Klassischer Client: Erweiterte Einstellungen'
+      url: ./rms-client/client-admin-guide-customizations.md
+    - text: 'Client für einheitliche Bezeichnungen: Erweiterte Einstellungen'
+      url: ./rms-client/clientv2-admin-guide-customizations.md
+- title: Aktivieren von einheitlichen Bezeichnungen
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Vergleichen der Clients
+      url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+  - linkListType: how-to-guide
+    links:
+    - text: Migrieren von Azure Information Protection-Bezeichnungen
+      url: configure-policy-migrate-labels.md
+- title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bereitstellen des Scanners
       url: deploy-aip-scanner.md
 - title: Überwachen der Nutzung von Bezeichnungen und Ermitteln vertraulicher Informationen
   linkLists:

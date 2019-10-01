@@ -25,17 +25,17 @@
       href: quickstart-viewpolicy.md
     - name: Ermitteln vertraulicher Informationen
       href: quickstart-findsensitiveinfo.md
-    - name: Konfigurieren einer Bezeichnung zum Schützen von E-Mails
+    - name: Konfigurieren einer Bezeichnung zum Schützen von E-Mails – klassischer Client
       href: quickstart-label-dnf-protectedemail.md
-    - name: Erstellen einer neuen Bezeichnung für bestimmte Benutzer
+    - name: Erstellen einer neuen Bezeichnung für bestimmte Benutzer – klassischer Client
       href: quickstart-label-specificusers.md
 - name: Lernprogramme
   items:
-    - name: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung
+    - name: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung – klassischer Client
       href: infoprotect-quick-start-tutorial.md
-    - name: 'Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren'
+    - name: 'Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren – klassischer Client'
       href: infoprotect-settings-tutorial.md
-    - name: Konfigurieren von Clienteinstellungen zur Vermeidung übermäßiger Freigaben
+    - name: Konfigurieren von Clienteinstellungen zur Vermeidung übermäßiger Freigaben – klassischer Client
       href: infoprotect-oversharing-tutorial.md
 - name: Konzepte
   items:
@@ -65,7 +65,7 @@
   items:
     - name: Schrittanleitungen für häufige Szenarios
       href: how-to-guides.md
-    - name: Planen und Entwerfen
+    - name: Planen und Vorbereitung für den Dienst
       items:
         - name: Roadmap für die Bereitstellung
           href: deployment-roadmap.md
@@ -99,7 +99,7 @@
               href: byok-price-restrictions.md
         - name: Vorbereiten von Benutzern und Gruppen
           href: prepare.md
-    - name: Bereitstellen und Verwenden des Diensts
+    - name: Konfigurieren und Verwenden des Diensts
       items:
         - name: Informationen zum Aktivieren des Schutzes
           items:
@@ -251,7 +251,7 @@
                       href: ./rms-client/clientv2-view-use-files.md
                     - name: Entfernen von Bezeichnungen und Schutz
                       href: ./rms-client/clientv2-remove-label-protection.md
-            - name: Azure Information Protection-Client
+            - name: Azure Information Protection-Client (klassisch)
               items:
                 - name: Übersicht
                   href: ./rms-client/aip-client.md
