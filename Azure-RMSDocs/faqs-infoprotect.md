@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
-ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
+ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215689"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835393"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -40,7 +40,7 @@ Achten Sie auf Ankündigungen im [Enterprise Mobility + Security Blog](https://t
 > - Zentralisierte Berichterstellung für die Klassifizierung und Bezeichnung. Weitere Informationen finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
 >
 >**Vertraulichkeits Bezeichnungen für Office**:
-> - Die neuesten Informationen darüber, welche Office-Apps Vertraulichkeits Bezeichnungen unterstützen, finden Sie unter "wo ist das Feature heute verfügbar?". im Abschnitt [Anwenden von Vertraulichkeits Bezeichnungen auf Ihre Dokumente und e-Mails innerhalb von Office](https://aka.ms/officemipdocs).
+> - Die neuesten Informationen darüber, welche Office-Apps Vertraulichkeits Bezeichnungen unterstützen, finden Sie in der Office-Dokumentation [unter welche Sensitivität-Funktionen werden in Office heute unterstützt?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
 
 Fragen Sie neue Funktionen an, und stimmen Sie auf der [UserVoice-Website](https://msip.uservoice.com/) für Azure Information Protection über die Anforderungen ab.
 
@@ -52,7 +52,7 @@ Derzeit gibt es zwei Clients für Windows:
 
 - Der **Azure Information Protection-Client (klassisch)** , der Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunterlädt. Dieser Client baut auf früheren Versionen der allgemeinen Verfügbarkeit des Clients auf.
 
-Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client.
+Wir empfehlen Ihnen, mit dem Unified-Bezeichnungs Client zu testen, wenn der aktuelle Funktionsumfang und die Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten](configure-policy-migrate-labels.md)Bezeichnungs Speicher migriert haben, verwenden Sie den klassischen Client.
 
 Weitere Informationen sowie eine Tabelle zum Vergleich der Features und Funktionen finden Sie unter [Auswählen des zu verwendenden Azure Information Protection-Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 

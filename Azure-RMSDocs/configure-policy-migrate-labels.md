@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c75773948fd86ca6b39651c5a9d5d904c68a3cf
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: ec565422044329948c624f8b6207d431c71dc0ac
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673918"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835383"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -162,7 +162,7 @@ Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste
 
 - Der [Azure Information Protection Unified-Bezeichnungs Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieses Clients mit dem Azure Information Protection-Client (klassisch) finden Sie unter [vergleichen der Clients](./rms-client/use-client.md#compare-the-clients).
 
-- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie im Abschnitt **Wo ist das Feature heute verfügbar?** unter [Anwenden von Vertraulichkeits-Beschriftungen auf Ihre Dokumente und E-Mails in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) in der Office-Dokumentation.
+- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie in der Office-Dokumentation [unter welche Sensitivität-Funktionen werden in Office heute unterstützt?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
     
 - Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) verwenden.
 
