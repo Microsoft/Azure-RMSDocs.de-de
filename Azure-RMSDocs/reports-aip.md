@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/27/2019
+ms.date: 10/03/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322380"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923692"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -147,7 +147,7 @@ Standardmäßig werden von Azure Information Protection Clients keine Inhalts Ü
     
     Wenn Sie möchten, dass die meisten Benutzer, die diesen Client verwenden, Inhalts Übereinstimmungen senden, aber eine Teilmenge der Benutzer keine Inhalts Übereinstimmungen senden kann, aktivieren Sie das Kontrollkästchen, und konfigurieren Sie dann eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in einer Bereichs bezogenen Richtlinie für die Teilmenge der Benutzer
 
-- Konfigurieren Sie für den Unified Label-Client eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in einer Bezeichnungs Richtlinie.
+- Konfigurieren Sie für den Unified Label-Client eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in einer Bezeichnungs Richtlinie.
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.

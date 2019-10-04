@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314317"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923662"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -119,9 +119,13 @@ Die Azure Information Protection Clients können Dokumente und e-Mails mit den O
 
 Andere Office-Suiten können keine Dokumente und E-Mails mithilfe eines Rights Management-Diensts schützen. Für diese Editionen wird Azure Information Protection nur für die Klassifizierung unterstützt. Folglich werden Bezeichnungen, die Schutz anwenden, nicht für Benutzer auf der Azure Information Protection Leiste oder über die Schaltfläche **schützen** (klassischer Client) oder **Vertraulichkeits** Schaltfläche (einheitlicher Bezeichnungs Client) im Office-Menüband angezeigt. 
 
-Die Azure Information Protection-Clients unterstützen nicht mehrere Office-Versionen auf demselben Computer. Diese Clients unterstützen außerdem nicht das Wechseln von Benutzerkonten in Office.
-
 Informationen dazu, welche Office-Editionen den Datenschutzdienst unterstützen, finden Sie unter [Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten](requirements-applications.md).
+
+### <a name="office-features-and-capabilities-not-supported"></a>Office-Features und-Funktionen werden nicht unterstützt
+
+- Die Azure Information Protection Clients (klassischer Client und einheitlicher Bezeichnungs Client) unterstützen nicht mehrere Office-Versionen auf demselben Computer oder wechseln Benutzerkonten in Office.
+
+- Das Feature für die Office-e- [Mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) -Zusammenführung wird von keiner Azure Information Protection Funktion unterstützt
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewalls und Netzwerkinfrastruktur
 
