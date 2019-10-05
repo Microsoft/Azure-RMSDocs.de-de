@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923692"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966873"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -178,12 +178,13 @@ Details:
         - **Kompatibilitäts Daten Administrator**
         - **Globaler Administrator**
     
-    - Nachdem der Arbeitsbereich erstellt wurde, können Sie dann die folgende Rolle mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
+    - Nachdem der Arbeitsbereich erstellt wurde, können Sie die folgenden Rollen mit weniger Berechtigungen verwenden, um die gesammelten Daten anzuzeigen:
     
         - **Sicherheitsleseberechtigter**
+        - **Globaler Reader**
     
     > [!NOTE] 
-    > Die Azure Information Protection Administrator-Rolle kann nicht verwendet werden, wenn sich Ihr Mandant auf der [Unified-Beschriftungs Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet.
+    > Sie können die Azure Information Protection-Administrator Rolle oder die globale readerrolle nicht verwenden, wenn sich Ihr Mandant auf der [Unified-Beschriftungs Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet.
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
@@ -243,7 +244,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
 
 Nachdem der Arbeitsbereich konfiguriert wurde, gehen Sie wie folgt vor, wenn Sie die Vertraulichkeits Bezeichnungen in einem der folgenden Verwaltungszentren veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center Microsoft 365 Compliance Center:
 
-- Wechseln Sie im Azure-Portal zu **Azure Information Protection** > **vereinheitlichte Bezeichnung** **Verwalten** > , und wählen Sie **veröffentlichen**aus.
+- Wechseln Sie im Azure-Portal zu **Azure Information Protection** > **Manage** > **Unified Bezeichnung**, und wählen Sie **veröffentlichen**aus.
     
     Wählen Sie diese **Veröffentlichungs** Option jedes Mal aus, wenn Sie eine Bezeichnungs Änderung (erstellen, ändern, löschen) in Ihrem Beschriftungs Center vornehmen. 
 

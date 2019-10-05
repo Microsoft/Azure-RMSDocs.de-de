@@ -3,7 +3,7 @@ title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection-Client (klassisch) müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/28/2019
+ms.date: 10/04/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2a23660b43f0186c78953695eccbc4b531dbca9a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 858b745987edd73f12bfda903050e84ca97eaacb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673823"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966783"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -69,18 +69,20 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
     
     - **Azure Information Protection-Administrator**
     
-    - **Sicherheitsleseberechtigter** nur für [Azure Information Protection-Analysen](reports-aip.md)
-    
   - **Complianceadministrator**
     
   - **Kompatibilitäts Daten Administrator**
     
   - **Sicherheitsadministrator**
     
+    **Sicherheits Leser** - [Azure Information Protection Analytics](reports-aip.md)
+    
+    **Globaler Reader** - [Azure Information Protection Analytics](reports-aip.md)
+    
   - **Globaler Administrator**
     
     > [!NOTE] 
-    > Wenn Ihr Mandant zum Unified-Bezeichnungs Speicher migriert wurde, wird der Azure Information Protection-Administrator (ehemals "Information Protection Administrator") nicht mehr unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Wenn sich Ihr Mandant auf der Unified-Bezeichnung-Plattform befindet, werden die Azure Information Protection-Administrator Rolle (ehemals "Information Protection Administrator") und die globale readerrolle für das Azure-Portal nicht unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft-Konten können Azure Information Protection nicht verwalten.
 
