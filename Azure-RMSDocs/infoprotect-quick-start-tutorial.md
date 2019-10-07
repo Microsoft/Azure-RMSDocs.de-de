@@ -4,18 +4,18 @@ description: Ein Einführungstutorial, in dem beschrieben wird, wie Sie die Azur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44504efc4640bf3d07398b14da7539cbda20e45d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788588"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712608"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -42,15 +42,15 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das Azure Information Protection-Plan 2 enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
-
-    Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md)
-
-3. Der Azure Information Protection-Client ist auf Ihrem Computer installiert. 
+2. Das Blatt „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, der Schutzdienst ist aktiviert, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
-    Um den Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
-4. Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
+3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
+    
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Office-Dokumentation](/microsoft-365/compliance/sensitivity-labels).
+
+4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
     - Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
     
@@ -90,9 +90,9 @@ Los geht’s!
     
     Diese Richtlinieneinstellungen benötigen Sie später in diesem Tutorial, wenn Sie diese testen werden.
 
-4. Legen Sie **Standardbezeichnung auswählen** auf **Allgemein** fest. 
-
-    Wenn Sie nicht über diese Bezeichnung verfügen, da Sie eine ältere Version der Richtlinie verwenden, wählen Sie **Internal** (Intern) als entsprechende Bezeichnung.
+4. Wählen Sie unter **Standardbezeichnung auswählen** eine der Bezeichnungen aus, z. B. **Allgemein**. 
+    
+    Die Bezeichnung **Allgemein** ist eine der Standardbezeichnungen, die Azure Information Protection für Sie erstellen kann. Dieser Schritt wird im Abschnitt [Erstellen und Veröffentlichen von Bezeichnungen](quickstart-viewpolicy.md#create-and-publish-labels) der Schnellstartanleitung zum Hinzufügen von Azure Information Protection zum Azure-Portal behandelt.
 
 5. Falls noch nicht geschehen, legen Sie die Option **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierung festlegen, eine Kennzeichnung oder den Schutz entfernen möchten** auf **Ein** fest.
 

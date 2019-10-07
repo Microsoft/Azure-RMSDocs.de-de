@@ -4,18 +4,18 @@ description: Konfigurieren Sie eine Bezeichnung, die eine E-Mail für einen Benu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffc5aa43b44eedad30dbfdb501152e55f87fb510
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793837"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674169"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
@@ -23,7 +23,7 @@ ms.locfileid: "68793837"
 >
 > *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In dieser Schnellstartanleitung konfigurieren Sie eine vorhandene Bezeichnung zum automatischen Anwenden der Schutzeinstellung „Nicht weiterleiten“.
+In dieser Schnellstartanleitung konfigurieren Sie eine vorhandene Azure Information Protection-Bezeichnung zum automatischen Anwenden der Schutzeinstellung „Nicht weiterleiten“.
 
 Die aktuelle Azure Information Protection-Richtlinie enthält bereits zwei Bezeichnungen, die diese Konfiguration aufweisen:
 
@@ -51,9 +51,11 @@ Voraussetzungen für diesen Schnellstart:
     
     Sie können eine der Standardbezeichnungen verwenden oder eine Bezeichnung, die Sie erstellt haben. Wenn Sie Hilfe beim Erstellen einer neuen Bezeichnung benötigen, lesen Sie [Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer](quickstart-label-specificusers.md).
 
-4. So testen Sie die neue Bezeichnung: Der Azure Information Protection-Client muss auf Computern für Benutzer installiert werden. 
+4. So testen Sie die neue Bezeichnung: Der Azure Information Protection-Client (klassisch) muss auf einem Windows-Computer installiert sein. 
     
-    Um die Bezeichnung selbst zu testen, können Sie den Client installieren, indem Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und **AzInfoProtection.exe** herunterladen.
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen.
+    
+    Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der Office-Dokumentation. Beispielsweise hier: [Übersicht über Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 5. So testen Sie die neue Bezeichnung: Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
     

@@ -4,7 +4,7 @@ description: Eine technische Übersicht über den Azure Information Protection-D
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 09/30/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0588efa277c75199afc2d357a8152257c120376c
-ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
+ms.openlocfilehash: b71bc14817aadd1c67452fecc228a339dfebcb42
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227823"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689900"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -145,17 +145,17 @@ Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information P
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Bei der Microsoft Ignite 2018-Konferenz in Orlando gab es viele Präsentationen zum Thema [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Alle Präsentationen wurden aufgezeichnet, wenn Sie also nicht teilnehmen konnten, können Sie sich die Präsentationen immer noch ansehen. Hier sind die besten fünf empfohlenen Präsentationen:
+Bei der Microsoft Ignite 2018-Konferenz in Orlando gab es viele Sitzungen zum Thema Azure Information Protection. Alle Sitzungen wurden aufgezeichnet – Sie können sich diese also auch ansehen, wenn Sie nicht an der Konferenz teilnehmen konnten. Hier sind die besten fünf empfohlenen Präsentationen:
 
-- [BRK2006: Verwenden von Microsoft Information Protection (MIP) zum Schutz Ihrer sensiblen Daten überall und über den gesamten Lebenszyklus hinweg](https://myignite.techcommunity.microsoft.com/sessions/64297)
+- [BRK2006: Verwenden von Microsoft Information Protection (MIP) zum Schutz Ihrer sensiblen Daten überall und über den gesamten Lebenszyklus hinweg](https://youtu.be/gmHVF-1cLXA)
  
-- [BRK3002: Wie die Funktionen von Microsoft Information Protection zusammenarbeiten, um sensible Informationen über Geräte, Apps und Dienste hinweg zu schützen](https://myignite.techcommunity.microsoft.com/sessions/64299)
+- [BRK3002: Wie die Funktionen von Microsoft Information Protection zusammenarbeiten, um sensible Informationen über Geräte, Apps und Dienste hinweg zu schützen](https://youtu.be/kL9Y7NGTyQQ)
 
-- [BRK3009: Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen](https://myignite.techcommunity.microsoft.com/sessions/64283)
+- [BRK3009: Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen](https://www.youtube.com/watch?v=JsCyIVyQJmE)
 
-- [BRK3397: Schützen und Steuern von sensiblen E-Mails mit der Nachrichtenverschlüsselung von Office 365](https://myignite.techcommunity.microsoft.com/sessions/64327)
+- [BRK3397: Schützen und Steuern von sensiblen E-Mails mit der Nachrichtenverschlüsselung von Office 365](https://www.youtube.com/watch?v=Ld4b4pFua0g)
 
-- [THR2003: Datenermittlung, Verwendungsberichte und Analysen für alle Daten mit Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301)
+- [THR2003: Datenermittlung, Verwendungsberichte und Analysen für alle Daten mit Microsoft Information Protection](https://www.youtube.com/watch?v=nzDIXd0XaeA)
 
 Eine Zusammenfassung der Ankündigungen dieser Ignite-Konferenz finden Sie im Blogbeitrag [Announcing availability of information protection capabilities to help protect your sensitive data (Ankündigung der Verfügbarkeit von Information Protection-Funktionen zum Schutz Ihrer sensiblen Daten)](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
 

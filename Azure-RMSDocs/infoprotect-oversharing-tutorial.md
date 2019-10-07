@@ -4,18 +4,18 @@ description: Ein Einführungstutorial zum Konfigurieren und Anzeigen von erweite
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2fdb9e719ffcafb6923528fef6c63bb8eefb3cdc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794126"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712594"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -43,15 +43,20 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das diesen Plan enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und verfügen über mindestens eine Bezeichnung.
+2. Das Blatt „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
-    Obwohl in diesem Tutorial die Standardbezeichnung **Allgemein** verwendet wird, können Sie diese, falls gewünscht, durch eine andere Bezeichnung ersetzen. Wenn Sie zum Hinzufügen des Azure Information Protection-Blatts Hilfe benötigen oder Sie noch über keine Bezeichnungen verfügen, lesen Sie den Artikel [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
+    Obwohl in diesem Tutorial die Standardbezeichnung **Allgemein** verwendet wird, können Sie diese, falls gewünscht, durch eine andere Bezeichnung ersetzen. Wenn Sie zum Hinzufügen des Azure Information Protection-Blatts Hilfe benötigen oder noch keine Bezeichnungen in der globalen Richtlinie veröffentlicht haben, lesen Sie den Artikel [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
 3. Einen Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie sich bei Outlook anmelden können. Sie werden Outlook während dieses Tutorials mehrere Male schließen und öffnen müssen.
 
-4. Der Azure Information Protection-Client ist auf Ihrem Computer installiert.
+4. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert.
     
-    Um den Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
+    
+    Wenn Sie den Client für einheitliche Bezeichnungen anstelle des klassischen Clients verwenden, sehen Sie sich die folgenden Anweisungen an, die erläutern, wie Sie die erweiterten PowerShell-Einstellungen für die entsprechenden Konfigurationen in diesem Tutorial verwenden:
+    
+    - Anweisungen im Administratorleitfaden: [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - Video: [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) (Konfiguration von Azure Information Protection-Popupmeldungen in Outlook)
 
 Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 

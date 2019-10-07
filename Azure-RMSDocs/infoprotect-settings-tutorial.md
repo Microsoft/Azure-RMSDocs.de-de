@@ -4,18 +4,18 @@ description: Ein Einführungstutorial, das Sie schrittweise durch das Konfigurie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f2aa0d6b7068488212697f6f2f2e9b1d19c9d131
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794055"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712581"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -28,7 +28,7 @@ In diesem Tutorial lernen Sie Folgendes:
 > * Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren
 > * Testen Ihrer Einstellungen
 
-Statt sich darauf zu verlassen, dass Benutzer ihre Dokumente und E-Mails manuell bezeichnen, können Sie mithilfe von Richtlinieneinstellungen Folgendes erreichen:
+Statt sich darauf zu verlassen, dass Benutzer ihre Dokumente und E-Mails manuell bezeichnen, können Sie mithilfe von Azure Information Protection-Richtlinieneinstellungen Folgendes erreichen:
 
 - Sicherstellen, dass ein grundlegendes Maß an Klassifizierung für neue und bearbeitete Inhalte eingehalten wird
 
@@ -44,15 +44,17 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das diesen Plan enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
-
-    Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md)
-
-3. Der Azure Information Protection-Client ist auf Ihrem Computer installiert. 
+2. Das Blatt „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
-    Um den Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
+    Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
-4. Ein Computer unter Windows (mindestens Windows 7 mit Service Pack 1), auf dem Sie bei Office-Apps aus einer der folgenden Kategorien angemeldet sind:
+3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
+    
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
+    
+    Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie Informationen zu Richtlinieneinstellungen für Vertraulichkeitsbezeichnungen in der Office-Dokumentation. Beispielsweise hier: [Übersicht über Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
+
+4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
     - Mindestversion 1805 von Office-Apps, Build 9330.2078 von Office 365 Business oder Microsoft 365 Business, wenn Ihnen eine Azure Rights Management-Lizenz (in Office 365 auch „Azure Information Protection“ genannt) zugewiesen wurde.
     
@@ -92,7 +94,7 @@ Im Azure-Portal wird die globale Richtlinie bearbeitet, um Richtlinieneinstellun
 
     |Einstellung|Wert|Informationen|
     |-------|-----|-----|
-    |**Standardbezeichnung auswählen**|**Allgemein**|Wenn Sie nicht über eine Bezeichnung namens **Allgemein** verfügen, wählen Sie eine andere Bezeichnung aus der Dropdownliste aus. Bei nicht gekennzeichneten Dokumenten und E-Mails wird diese Bezeichnung automatisch als Basisklassifizierung angewendet. Allerdings können Benutzer Ihre ausgewählte Bezeichnung ändern.|
+    |**Standardbezeichnung auswählen**|**Allgemein**|Die Bezeichnung **Allgemein** ist eine der Standardbezeichnungen, die Azure Information Protection für Sie erstellen kann. Dieser Schritt wird in der Schnellstartanleitung [Erstellen und Veröffentlichen von Bezeichnungen](quickstart-viewpolicy.md#create-and-publish-labels) behandelt. Wenn Sie nicht über eine Bezeichnung namens **Allgemein** verfügen, wählen Sie eine andere Bezeichnung aus der Dropdownliste aus. Bei nicht gekennzeichneten Dokumenten und E-Mails wird diese Bezeichnung automatisch als Basisklassifizierung angewendet. Allerdings können Benutzer Ihre ausgewählte Bezeichnung ändern.|
     |**Alle Dokumente und E-Mails müssen eine Bezeichnung aufweisen**|**Ein**|Diese Einstellung wird häufig als obligatorische Bezeichnung bezeichnet, da sie verhindert, dass Benutzer Dokumente speichern oder E-Mails senden, die nicht bezeichnet sind. Zusammen mit der Standardbezeichnung weisen Dokumente und E-Mails entweder die Standardbezeichnung auf, die Sie festlegen, oder eine von Ihnen gewählte Bezeichnung.
     |**Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht**|**Empfohlen**|Diese Einstellung fordert Benutzer auf, eine höhere Klassifizierungsbezeichnung für ihre E-Mails auszuwählen, wenn sie Dokumente anhängen, die eine höhere Klassifizierung aufweisen als Ihre ausgewählte Standardbezeichnung.
     |**Information Protection-Leiste in Office-Apps anzeigen**|**Ein**|Die Anzeige der Information Protection-Leiste macht es Benutzern einfacher, die Standardbezeichnung anzuzeigen und zu ändern.
