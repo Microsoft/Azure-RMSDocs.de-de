@@ -4,19 +4,19 @@ description: Mit Bedingungen für eine Bezeichnung können Sie einem Dokument od
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ce645af880b90c12bed284c0b57d597cfd540fd7
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: e8379d001fdfeccbdeace6572d32b9dc88ef088c
+ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673939"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314283"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "71673939"
 > *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Diese Anweisungen gelten für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
+> Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 > 
 > Informationen zum Konfigurieren der automatischen und empfohlenen Klassifizierung für den Unified-Bezeichnungs Client finden Sie in der Office-Dokumentation. Wenden Sie z. b. [eine Vertraulichkeits Bezeichnung automatisch auf Inhalt an](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
@@ -50,15 +50,15 @@ Wenn Sie die automatische und nicht die empfohlene Klassifizierung konfigurieren
 
 ## <a name="how-automatic-or-recommended-labels-are-applied"></a>Anwendung von automatischen oder empfohlenen Bezeichnungen
 
-- Die automatische Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint sowie beim Senden von E-Mails in Outlook. 
+- Die automatische Klassifizierung gilt für Word, Excel und PowerPoint, wenn Sie Dokumente speichern und beim Senden von e-Mails auf Outlook anwenden. 
     
     Sie können die automatische Klassifizierung nicht für Dokumente und E-Mails verwenden, die zuvor bereits manuell oder automatisch mit einer höheren Klassifizierung benannt wurden. 
 
-- Die empfohlene Klassifizierung gilt beim Speichern von Dokumenten in Word, Excel und PowerPoint. Sie können die empfohlene Klassifizierung für Outlook erst verwenden, wenn Sie eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) konfiguriert haben, die derzeit in der Vorschauversion verfügbar ist.
+- Die empfohlene Klassifizierung gilt für Word, Excel und PowerPoint beim Speichern von Dokumenten. Sie können die empfohlene Klassifizierung für Outlook erst verwenden, wenn Sie eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) konfiguriert haben, die derzeit in der Vorschauversion verfügbar ist.
     
     Sie können die empfohlene Klassifizierung nicht für Dokumente verwenden, die bereits eine höhere Klassifizierung aufweisen. 
 
-Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Client Dokumente regelmäßig auf die von Ihnen angegebenen Bedingungsregeln überprüft. Für diese Konfiguration ist eine [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) erforderlich, die derzeit als Vorschau verfügbar ist.
+Sie können dieses Verhalten ändern, sodass der Azure Information Protection-Client Dokumente regelmäßig auf die von Ihnen angegebenen Bedingungsregeln überprüft. Dies ist beispielsweise dann sinnvoll, wenn Sie [Auto Save](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) mit Office-Apps verwenden, die automatisch in SharePoint Online, onedrive oder onedrive for Business gespeichert werden. Zur Unterstützung dieses Szenarios können Sie eine [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) konfigurieren, die sich derzeit in der Vorschau Phase befindet. Die-Einstellung schaltet die Klassifizierung so um, dass Sie fortlaufend im Hintergrund ausgeführt wird.
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>So werden mehrere Bedingungen ausgewertet, wenn sie für mehrere Bezeichnungen gelten
 
