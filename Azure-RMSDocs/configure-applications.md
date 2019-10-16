@@ -34,7 +34,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
--   [Office 365: Konfiguration für Onlinedienste @ no__t-0
+-   [Office 365: Konfiguration für Onlinedienste](configure-office365.md)
 
     -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
 
