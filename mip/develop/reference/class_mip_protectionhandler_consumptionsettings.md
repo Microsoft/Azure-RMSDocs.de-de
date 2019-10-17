@@ -23,7 +23,7 @@ Public consumptionsettings (Konstanten Std:: Vector\<uint8_t\>& serializedpublis
 Public consumptionsettings (Konst Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public Std:: shared_ptr\<publishinglicenseinfo\> getpublishinglicenseinfo () konstant  |  Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.
 public bool getisofflineonly () const  |  Ruft ab, ob bei der Erstellung von [ProtectionHandler](class_mip_protectionhandler.md) HTTP-Onlinevorgänge zulässig sind
-öffentliches void "* tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die [schutzhandlererstellung](class_mip_protectionhandler.md) http-Online Vorgänge zulässt.
+öffentliches void "tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die [schutzhandlererstellung](class_mip_protectionhandler.md) http-Online Vorgänge zulässt.
 öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
 Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
   
