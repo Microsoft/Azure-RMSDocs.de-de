@@ -12,18 +12,18 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a6758982b52189215e94889c96a8a75e894df7b8
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 2416ba8102c659696dae4e7b564e6f47adff459b
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684451"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447976"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Leitfaden: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Benutzerhandbuch: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Wenn die Azure Information Protection Unified Client [auf Ihrem Computer installiert](install-client-app.md)ist, können Sie Vertraulichkeits Bezeichnungen und den Schutz von Dateien und e-Mails entfernen.
 
@@ -40,9 +40,9 @@ Sie können Bezeichnungen und den Schutz auch über den **Datei-Explorer** entfe
 
 ## <a name="using-office-apps-to-remove-labels-and-protection-from-documents-and-emails"></a>Verwenden von Office-Apps zum Entfernen von Bezeichnungen und des Schutzes von Dokumenten und E-Mails
 
-Wählen Sie auf der Registerkarte **Startseite** die Vertraulichkeits Schaltfläche im Menüband aus, und löschen Sie die aktuell ausgewählte Bezeichnung.
+Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und löschen Sie die aktuell ausgewählte Bezeichnung.
 
-Wenn Sie die Option **Leiste anzeigen** von der Vertraulichkeits Schaltfläche ausgewählt haben, können Sie auf der Azure Information Protection Leiste das Symbol " **Bezeichnung löschen** " auswählen:
+Wenn Sie die Option **Leiste anzeigen** von der **Vertraulichkeits** Schaltfläche ausgewählt haben, können Sie auf der Azure Information Protection Leiste das Symbol " **Bezeichnung löschen** " auswählen:
 
 ![Azure Information Protection-Leiste – Bezeichnung löschen](../media/v2delete-label.png)
 
@@ -58,11 +58,11 @@ Wenn Sie den Datei-Explorer verwenden, können Sie die Bezeichnungen und den Sch
 
 1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**.
 
-2. So entfernen Sie eine Bezeichnung: Klicken Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf **Bezeichnung löschen**. Wenn die Bezeichnung für die Anwendung von Schutz konfiguriert wurde, wird dieser Schutz automatisch entfernt.
+2. So entfernen Sie eine Bezeichnung: Klicken Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf **Delete label** (Bezeichnung löschen). Wenn die Bezeichnung für die Anwendung von Schutz konfiguriert wurde, wird dieser Schutz automatisch entfernt.
 
 3. So entfernen Sie den benutzerdefinierten Schutz einer einzelnen Datei: Deaktivieren Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Option **Protect with custom permissions** (Mit benutzerdefinierten Berechtigungen schützen). 
 
-4. So entfernen Sie den benutzerdefinierten Schutz von mehreren Dateien: Klicken Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf die Option **Remove custom permissions** (Benutzerdefinierte Berechtigungen entfernen).
+4. So entfernen Sie den benutzerdefinierten Schutz für mehrere Dateien: Klicken Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** auf die Option **Remove custom permissions** (Benutzerdefinierte Berechtigungen entfernen).
 
 5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 
@@ -74,5 +74,5 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 
-Siehe [Übersicht über Vertraulichkeits Bezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
+Siehe [Übersicht über Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 

@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6eb9c8755e1b5fb1007c4be23932ea1da1c51fbb
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683740"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446992"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder die Datenwiederherstellung
 
@@ -87,7 +87,7 @@ Weitere Informationen zu diesen Cmdlets finden Sie unter [Verwenden von PowerShe
 
 Obwohl Sie das Cmdlet Unprotect-RMSFile zum Entschlüsseln geschützter Inhalte in PST-Dateien verwenden können, sollten Sie dieses Cmdlet strategisch als Teil des eDiscovery-Prozesses verwenden. Die Ausführung von Unprotect-RMSFile für große Dateien auf einem Computer ist ressourcenintensiv (Arbeitsspeicher und Speicherplatz auf dem Datenträger), und die maximal unterstützte Dateigröße für dieses Cmdlet beträgt 5 GB.
 
-Im Idealfall verwenden Sie [Office 365 eDiscovery](/office365/securitycompliance/ediscovery), um geschützte E-Mails und geschützte Anlagen in E-Mails zu suchen und zu extrahieren. Die Administratorfähigkeit ist automatisch in Exchange Online integriert, sodass eDiscovery im Office 365 Security & Compliance Center oder das Microsoft 365 Compliance Center vor dem Export nach verschlüsselten Elementen suchen oder verschlüsselte E-Mails beim Export entschlüsseln kann.
+Im Idealfall verwenden Sie [Office 365 eDiscovery](https://docs.microsoft.com/microsoft-365/compliance/ediscovery), um geschützte E-Mails und geschützte Anlagen in E-Mails zu suchen und zu extrahieren. Die Administratorfähigkeit ist automatisch in Exchange Online integriert, sodass eDiscovery im Office 365 Security & Compliance Center oder das Microsoft 365 Compliance Center vor dem Export nach verschlüsselten Elementen suchen oder verschlüsselte E-Mails beim Export entschlüsseln kann.
 
 Wenn Sie Office 365 eDiscovery nicht verwenden können, verfügen Sie möglicherweise über eine andere eDiscovery-Lösung, die in den Azure Rights Management-Dienst integriert werden kann, um ähnlich über Daten zu urteilen. Wenn Ihre eDiscovery-Lösung geschützte Inhalte nicht automatisch lesen und entschlüsseln kann, können Sie diese Lösung auch weiterhin in einem mehrstufigen Prozess verwenden, mit dem Sie Unprotect-RMSFile effizienter ausführen können:
 
@@ -99,5 +99,5 @@ Wenn Sie Office 365 eDiscovery nicht verwenden können, verfügen Sie möglicher
 
 4. Führen Sie Unprotect-RMSFile für diese zweite PST-Datei zum Entschlüsseln der Inhalte dieser deutlich kleineren Datei aus. Importieren Sie aus der Ausgabe die nun entschlüsselte PST-Datei in Ihr Erkennungstool.
 
-Ausführlichere Informationen und Anleitungen zur Durchführung von eDiscovery über Postfächer und PST-Dateien hinweg finden Sie im folgenden Blogbeitrag: [Azure Information Protection und eDiscovery-Prozesse](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
+Ausführlichere Informationen und Anleitungen zur Durchführung von eDiscovery für Postfächer und PST-Dateien finden Sie im folgenden Blogbeitrag zu [Azure Information Protection und eDiscovery-Prozesse](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216).
 

@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 15050d18e1aab19ec80b2be47fdefd16e8f60ba6
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 0bdbceef280310223483df80fda2cc5c09cd4f26
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674155"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447893"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -34,9 +34,9 @@ Der Rights Management (RMS)-Client wird automatisch mit einigen Anwendungen inst
 
 ## <a name="choose-which-azure-information-protection-client-to-use"></a>Auswählen des zu verwendenden Azure Information Protection-Clients
 
-Der **Azure Information Protection-Client (klassisch)** lädt Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunter. Weitere Informationen zu diesem Client finden Sie unter [Azure Information Protection-Client: Versionsveröffentlichungsverlauf und Supportrichtlinie](client-version-release-history.md).
+Der **Azure Information Protection-Client (klassisch)** lädt Bezeichnungen und Richtlinien Einstellungen aus dem Azure-Portal herunter. Weitere Informationen zu diesem Client finden Sie im [Azure Information Protection Client: Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie](client-version-release-history.md).
 
-Der **Azure Information Protection-Client für einheitliche Bezeichnungen** dient zum Herunterladen von Bezeichnungen und Richtlinieneinstellungen aus den Admin-Centers: Das Office 365 Security & Compliance Center, das Microsoft 365 Security Center, und das Microsoft 365 Compliance Center. Weitere Informationen zu diesem Client finden Sie im [Azure Information Protection Unified Bezeichnung-Client: Informationen zum Release](unifiedlabelingclient-version-release-history.md). 
+Der **Azure Information Protection Unified** Label-Client lädt Bezeichnungen und Richtlinien Einstellungen aus den Admin Centers herunter: Office 365 Security & Compliance Center, Microsoft 365 Security Center und Microsoft 365 Compliance Center. Weitere Informationen zu diesem Client finden Sie unter [Azure Information Protection Unified Bezeichnung Client: Versions Freigabe Informationen](unifiedlabelingclient-version-release-history.md). 
 
 Welchen Client sollten Sie installieren?
 
@@ -44,7 +44,7 @@ Welchen Client sollten Sie installieren?
 
 - Installieren Sie den Azure Information Protection Client (klassisch), wenn Sie eine Version des Clients benötigen, die über Features verfügt, die noch nicht mit dem Unified-Bezeichnungs Client verfügbar sind. Der Kompromiss besteht darin, dass die Bezeichnungen nicht auf anderen Client Plattformen und in der Verwaltung mithilfe eines anderen Verwaltungs Portals verwendet werden können.
 
-Die neueste Version der Unified-Bezeichnung mit allgemeiner Verfügbarkeit sorgt für eine enge Parität der Features mit dem klassischen Client. Wenn diese Lücke geschlossen wird, können Sie davon ausgehen, dass neue Features nur dem Unified-Beschriftungs Client hinzugefügt werden. Aus diesem Grund wird empfohlen, den Unified-Bezeichnungs Client bereitzustellen, wenn der aktuelle Funktionsumfang und seine Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten](../configure-policy-migrate-labels.md)Bezeichnungs Speicher migriert haben, verwenden Sie den klassischen Client.
+Die neueste Version der Unified-Bezeichnung mit allgemeiner Verfügbarkeit sorgt für eine enge Parität der Features mit dem klassischen Client. Wenn diese Lücke geschlossen wird, können Sie davon ausgehen, dass neue Features nur dem Unified-Beschriftungs Client hinzugefügt werden. Aus diesem Grund wird empfohlen, den Unified-Bezeichnungs Client bereitzustellen, wenn der aktuelle Funktionsumfang und seine Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](../configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client.
 
 Sie können auch beide Clients in derselben Umgebung installieren, um unterschiedliche Geschäftsanforderungen zu unterstützen, wie im folgenden Beispiel gezeigt. Für dieses Szenario empfiehlt es sich, die Bezeichnungen in der Azure-Portal zu migrieren, sodass beide Gruppen von Clients für die einfache Verwaltung denselben Satz von Bezeichnungen gemeinsam verwenden.
 
@@ -58,7 +58,7 @@ Sie können auch beide Clients in derselben Umgebung installieren, um unterschie
 
 - Für eine Teilmenge der Benutzer stellen Sie den klassischen Client bereit, da diese Benutzer Bezeichnungen benötigen, die den Hyok-Schutz (Hold Your Own Key) anwenden.
     
-    Diese Benutzer haben bei der Verwendung dieses Clients eine etwas andere Bezeichnung. Beispielsweise wird eine Schaltfläche **schützen** anstelle einer Vertraulichkeits Schaltfläche in Office-Apps angezeigt. Als Administrator müssen Sie Ihre Bezeichnungen für Hyok-Einstellungen und Richtlinien Einstellungen in einem anderen Verwaltungs Center mit den Bezeichnungen und Einstellungen für die anderen Client Plattformen verwalten.
+    Diese Benutzer haben bei der Verwendung dieses Clients eine etwas andere Bezeichnung. Beispielsweise wird eine Schaltfläche **schützen** anstelle einer **Vertraulichkeits** Schaltfläche in Office-Apps angezeigt. Als Administrator müssen Sie Ihre Bezeichnungen für Hyok-Einstellungen und Richtlinien Einstellungen in einem anderen Verwaltungs Center mit den Bezeichnungen und Einstellungen für die anderen Client Plattformen verwalten.
 
 - Sie verfügen über lokale Datenspeicher mit Dokumenten, die auf sensible Informationen überprüft oder klassifiziert und geschützt werden müssen. Zur Verwendung in der Produktion stellen Sie den klassischen-Client auf Servern bereit, um den Azure Information Protection Scanner auszuführen.
 
@@ -66,9 +66,9 @@ Sie können auch beide Clients in derselben Umgebung installieren, um unterschie
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den beiden Azure Information Protection Clients unterstützt werden.
 
-|Feature|Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|
 |-------|-----------------------------------|----------------------------------------------------|
-|Bezeichnungsaktionen: Manuell, empfohlen, automatisch| Ja | Ja |
+|Bezeichnungs Aktionen: manuell, empfohlen, automatisch| Ja | Ja |
 |Zentrale Berichterstellung (Analysen):| Ja | Ja mit Einschränkungen:<br /><br /> -Benutzerdefinierte sensible Informationstypen werden mit der Vorschauversion unterstützt. |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| Ja | Ja |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| Ja | Ja |
@@ -76,7 +76,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 |Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| Ja <br /><br /> Wird als [Erweiterte Client Einstellungen unterstützt, die Sie im Azure-Portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Ja <br /><br /> Unterstützt als [Erweiterte Einstellungen, die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
 |Benutzerdefinierte Berechtigungen:| Ja | Ja |
 |Überprüfung für lokale Datenspeicher:| Ja | Ja (Vorschauversion) |
-|Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell <br /><br /> In Office-Apps können Benutzer als Alternative **Datei Info** > **schützen Dokument** > **Einschränken des Zugriffs** auswählen, oder Administratoren können eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren.|
+|Kundenspezifische Berechtigungen:| Ja | Datei-Explorer und PowerShell <br /><br /> In Office-Apps können Benutzer als Alternative **Dateiinformationen**auswählen,  > **Dokument schützen** > **Zugriff einschränken** oder Administratoren eine Bezeichnung für benutzerdefinierte Berechtigungen konfigurieren können.|
 |Information Protection-Leiste in Office-Apps:| Ja | Ja mit Einschränkungen:<br /><br /> – kein Titel oder anpassbare QuickInfo<br /><br /> -Die Bezeichnungs Farbe für die angewendete Bezeichnung wird nur angezeigt, wenn Sie die Vorschauversion|
 |Bezeichnungen können optische Kennzeichnungen anwenden (Kopfzeile, Fußzeile, Wasserzeichen):| Ja | Ja mit Einschränkungen:<br /><br /> – Kopf- und Fußzeilen unterstützen keine Variablen für dynamische Werte. <br /><br /> – Das Verwenden unterschiedlicher optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook wird nicht unterstützt.|
 |Datei-Explorer, Rechtsklickaktionen:| Ja | Ja mit Einschränkungen:<br /><br /> -PDF-Dokumente können nicht für das ältere ppdf-Format geschützt werden. <br /><br />  – Keine Unterstützung für den reinen Schutzmodus|
@@ -94,7 +94,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 
 Wenn beide Clients dieselbe Funktion unterstützen, verwenden Sie die folgende Tabelle, um einige funktionale Unterschiede zwischen den beiden Clients zu ermitteln.
 
-|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktion |Klassischer Client|Einheitlicher Bezeichnungs Client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
@@ -105,9 +105,9 @@ Wenn beide Clients dieselbe Funktion unterstützen, verwenden Sie die folgende T
 |Unterstützte Formate für PDF:| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung (Standardeinstellung) <br /><br /> – PPDF <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br /> <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz|
 |Generisch geschützte Dateien (Pfile-Dateien), die mit dem Viewer geöffnet wurden:| Die Datei wird in der ursprünglichen app geöffnet, in der Sie angezeigt, geändert und ohne Schutz gespeichert werden kann. | Die Datei wird in der ursprünglichen app geöffnet, in der Sie angezeigt und geändert, jedoch nicht gespeichert werden kann.|
 |Unterstützte Cmdlets:| Cmdlets für Bezeichnungen und Cmdlets für den reinen Schutz | Cmdlets für die Bezeichnung:<br /><br />"Set-aipfileclassification", "Set-aipfilelabel" und "Get-aipfilestatus" unterstützen keine SharePoint-Pfade, es sei denn, Sie verwenden die Vorschauversion. <br /><br /> "Set-aipfileclassification" und "Set-aipfilelabel" unterstützen den *Owner* -Parameter nicht. <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> "Set-aipfileclassification" unterstützt den Parameter " *WhatIf* ", damit er im Ermittlungs Modus ausgeführt werden kann. <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />Außerdem zeigt der Parameter " *labelingmethod* " für "Get-aipfilestatus" den Wert " **privilegiert** " oder " **Standard** " anstelle von **manuell** oder **automatisch**an Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
-|Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: Pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: Pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
+|Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
-|Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+|Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
 |Anpassbarer richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie die Azure-Portal, um die Standardmeldung an Benutzer zu ersetzen. | Nein <br /><br /> Obwohl die Admin Center über eine Option zum Bereitstellen eines angepassten Richtlinien Tipps verfügen, wird diese Option vom Unified-Bezeichnungs Client derzeit nicht unterstützt.|
 |Ändern Sie die Standardschutz Ebene von Dateien: | Ja <br /><br />Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Nein |
 

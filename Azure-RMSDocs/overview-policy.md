@@ -12,23 +12,23 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77e58423230ea0d5613db7979c81dca97b4ff61a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 8f7d05ec4696a8b3aa2e1daadc839187eabd9d1e
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674111"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447711"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Übersicht über die Azure Information Protection-Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 > 
-> Informationen zu Vertraulichkeits Bezeichnungen finden Sie in der Office-Dokumentation. Beispiel: [Übersicht über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
+> Informationen zu Vertraulichkeits Bezeichnungen finden Sie in der Office-Dokumentation. Beispielsweise hier: [Übersicht über Vertraulichkeitsbezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Eine Azure Information Protection-Richtlinie enthält die folgenden Elemente, die Sie konfigurieren können:
     

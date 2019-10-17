@@ -11,22 +11,22 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690101"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447609"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection Unified-Bezeichnungs Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen benötigen, als im [Azure Information Protection Unified Bezeichnung-Client Benutzer Leitfaden](clientv2-user-guide.md). 
 
-Zum Beispiel:
+Beispiele:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -63,7 +63,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>Sollten Sie den Azure Information Protection Unified-Bezeichnungs Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn Sie [die Vertraulichkeits Bezeichnungen in Office 365 Security & Compliance Center](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)verwenden und eine der folgenden Punkte zutrifft:
+Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn Sie [die Vertraulichkeits Bezeichnungen in Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)verwenden und eine der folgenden Punkte zutrifft:
 
 - Sie möchten Dokumente und e-Mail-Nachrichten klassifizieren (und optional schützen), indem Sie in Ihren Office-Apps (Word, Excel, PowerPoint, Outlook) auf Windows-Computern Bezeichnungen auswählen.
 
@@ -75,7 +75,7 @@ Stellen Sie den Azure Information Protection Unified Label-Client bereit, wenn S
 
 - Sie möchten geschützte Dokumente anzeigen, wenn eine systemeigene Anwendung zum Anzeigen der Datei nicht installiert ist oder diese Dokumente nicht öffnen kann.
 
-Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue Vertraulichkeits Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
+Beispiel für das Office-Add-in für den Azure Information Protection Unified-Bezeichnungs Client, das die neue **Vertraulichkeits** Schaltfläche auf dem Menüband und die optionale Azure Information Protection Leiste anzeigt:
 
 ![Azure Information Protection-Leiste mit Standardrichtlinie](../media/v2word2016-calloutsv2.png)
 
@@ -91,11 +91,11 @@ Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und F
 
 - Aus einer Office-Anwendung: Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Sensitivität** die Option **Sensitivität**aus, und wählen Sie dann **Hilfe und Feedback**aus.
 
-- Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und anschließend **Hilfe und Feedback** aus. 
+- Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und dann **Hilfe und Feedback** aus. 
 
 #### <a name="help-and-feedback-section"></a>Abschnitt **Hilfe und Feedback**
 
-Standardmäßig wird der **Link "Weitere Informationen** " auf der [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) -Website angezeigt. Sie können einen eigenen URL-Link konfigurieren, der zu einer benutzerdefinierten Hilfeseite als eine der Richtlinien Einstellungen in der Bezeichnung Management Center wechselt: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
+Standardmäßig wird der **Link "Weitere Informationen** " auf der [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) -Website angezeigt. Sie können einen eigenen URL-Link konfigurieren, der auf eine benutzerdefinierte Hilfeseite als eine der Richtlinien Einstellungen in der Bezeichnung Management Center fest geht: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 
 Der Link " **Problem melden** " wird nur angezeigt, wenn Sie eine [Erweiterte Einstellung](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)angeben. Wenn Sie diese Einstellung konfigurieren, müssen Sie einen HTTP-Link angeben, z. B. die E-Mail-Adresse Ihres Helpdesks. 
 
@@ -156,11 +156,11 @@ Bezeichnungs Namen und Beschreibungen, die Sie angeben, werden jedoch nicht auto
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection Unified Label-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zum bezeichnen der Dokumente und e-Mails sowie Anleitungen für die Auswahl der Bezeichnungen für bestimmte Szenarien erteilen. Beispiele:
 
-- Online-Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch)](clientv2-user-guide.md)
+- Online Benutzeranweisungen: [Azure Information Protection Unified-Bezeichnung-Benutzerhandbuch](clientv2-user-guide.md)
 
-- Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
+- Download des anpassbaren Benutzerhandbuchs: [Azure Information Protection End User Adoption Guide (Benutzerhandbuch für die Einführung in Azure Information Protection)](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Installieren des Azure Information Protection Scanners
 
@@ -251,7 +251,7 @@ Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen S
 
 Verwenden Sie eine der folgenden Optionen zur Deinstallation des Clients:
 
-- Verwenden der Systemsteuerung, um ein Programm zu deinstallieren: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**.
+- Deinstallieren Sie ein Programm über die Systemsteuerung: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**
 
 - Führen Sie die ausführbare Datei (z **. b. AzInfoProtection_UL. exe**) erneut aus, und klicken Sie auf der Seite **Setup ändern** auf **deinstallieren**. 
 

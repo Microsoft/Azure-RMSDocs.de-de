@@ -12,18 +12,18 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3da9f1b675a92566a3df7d067116d869133645a
-ms.sourcegitcommit: 7f0ca724b746cc0ed9db88dfe1afb50ebbcdbd08
+ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71939077"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447913"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen.
@@ -66,19 +66,19 @@ Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist
     - Sie können in allen Dokumenten eine Standard Bezeichnung festlegen, auch wenn Dokumente bereits mit der Bezeichnung versehen sind. Legen Sie in den Überprüfungs Profil-oder Repository-Einstellungen die Option **Dateien** neu bezeichnen auf ein fest **, und aktivieren** Sie das Kontrollkästchen neue **Bezeichnung Standard Bezeichnung erzwingen** .
     
     - Sie können vorhandene Bezeichnungen aus allen Dokumenten entfernen, und dieser Vorgang umfasst das Entfernen des Schutzes, wenn dieser zuvor durch eine Bezeichnung angewendet wurde. Der Schutz, der unabhängig von einer Bezeichnung angewendet wird, wird beibehalten. Diese Scannerkonfiguration wird in den Einstellungen für das Scanner-Profil oder im Repository mit den folgenden Einstellungen erreicht:
-        - **Dateien basierend auf dem Inhalt bezeichnen**: **Deaktiviert**
-        - **Standardbezeichnung**: **Keine**
-        - **Dateien neu bezeichnen**: Aktivieren Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt.
+        - Bezeichnungs **Dateien basierend auf dem Inhalt**: **Off**
+        - **Standard Bezeichnung**: **keine**
+        - **Dateien**neu bezeichnen: **aktivieren** Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt haben.
     
     - Wie bei der Überprüfung des klassischen Clients schützt die Überprüfung Office-Dateien und PDF-Dateien. Derzeit können Sie keine anderen Dateitypen so konfigurieren, dass Sie von dieser Version des Scanners geschützt werden.
     
-    - Bekanntes Problem: Neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
+    - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
         - Für neue Bezeichnungen: Fügen Sie im Azure-Portal [die Bezeichnung](../configure-policy-add-remove-label.md) , die Sie verwenden möchten, der globalen Richtlinie oder einer Bereichs bezogenen Richtlinie hinzu.
-        - Für umbenannte Bezeichnungen: Wechseln Sie in der Azure-Portal zu **Azure Information Protection** > **Unified-Bezeichnung** **Verwalten** > , und wählen Sie **veröffentlichen**aus.
+        - Umbenannte Bezeichnungen: Wechseln Sie in der Azure-Portal zu **Azure Information Protection** > **Manage** > **Unified**Label, und wählen Sie **veröffentlichen**aus.
     
     Sie können Scanner über den Azure Information Protection-Client (klassisch) aktualisieren. Nach dem Upgrade, mit dem eine neue Datenbank erstellt wird, werden bei der ersten Ausführung des Scanners alle Dateien neu erstellt. Anweisungen finden Sie unter [Aktualisieren des Azure Information Protection Scanners](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) im Administrator Handbuch.
     
-    Weitere Informationen finden Sie in der Blogbeitrag-Ankündigung: [Die einheitliche Bezeichnung AIP Scanner (Vorschau) sorgt für horizontales hochskalieren.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
+    Weitere Informationen finden Sie im Blogbeitrag Ankündigung: [Unified-Bezeichnung AIP Scanner Preview sorgt für horizontales hochskalieren und mehr.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - Das PowerShell-Cmdlet [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) verfügt über neue Parameter für, wenn Sie [Dateien nicht interaktiv bezeichnen](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)möchten, und eine [neue Prozedur zum Registrieren einer APP in Azure AD](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Beispiele für Szenarien sind der Scanner und automatisierte PowerShell-Skripts zum bezeichnen von Dokumenten.
 
@@ -147,10 +147,10 @@ Unterstützt durch 02/06/2020
     - [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
     - [Farbe für die Bezeichnung angeben](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
-- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Weitere Informationen finden Sie im Abschnitt [erlauben Sie Benutzern das Zuweisen von Berechtigungen](/Office365/SecurityCompliance/encryption-sensitivity-labels#let-users-assign-permissions) in der Office-Dokumentation.
+- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Weitere Informationen finden Sie im Abschnitt [erlauben Sie Benutzern das Zuweisen von Berechtigungen](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) in der Office-Dokumentation.
 
 - PowerShell-Änderungen im azureinformationprotection-Modul:
-    - Neues Cmdlet: [New-aipcustomberechti-](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) ersetzt New-rmsprotectionlicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen.
+    - Neues Cmdlet: [New-aipcustomberechti-](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) ersetzt New-rmsprotectionlicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen
     - Neue Parameter:
         -  " *Custom-Berechtigungen* " und " *removeprotection* ": " [Set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel) " hinzugefügt
         -  " *Onbehalfof* ": " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)" wurde hinzugefügt und anstelle des *tokenparameters* für nicht interaktive Sitzungen verwendet.
@@ -160,7 +160,7 @@ Unterstützt durch 02/06/2020
 
 **Fixes**
 
-- Unterstützung für [Inhalts](../reports-aip.md#content-matches-for-deeper-analysis) Übereinstimmungen für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
+- Unterstützung für [Inhalts Übereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
 
 - Nachdem Sie zu einem alternativen Gebiets Schema in Windows gewechselt haben, können Sie trotzdem eine Bezeichnung mit Schutz auf ein PDF-Dokument anwenden.
 
@@ -188,7 +188,7 @@ Diese erste Version der allgemeinen Verfügbarkeit des Azure Information Protect
 
 - Upgrade vom Azure Information Protection-Client.
 
-- Manuelle, automatische und empfohlene Klassifizierung: Weitere Informationen zur Konfiguration der automatischen und empfohlenen Klassifizierung für diesen Client finden Sie unter [Automatisches Anwenden einer Vertraulichkeitsbezeichnung auf den Inhalt](/Office365/SecurityCompliance/apply-sensitivity-label-automatically).
+- Manuelle, automatische und empfohlene Bezeichnung: Weitere Informationen zum Konfigurieren der automatischen und empfohlenen Bezeichnung für diesen Client finden Sie unter [Anwenden einer Vertraulichkeits Bezeichnung auf den Inhalt automatisch](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 - Datei-Explorer, Rechtsklickaktionen zum Klassifizieren und Schützen von Dateien, Entfernen des Schutzes und Anwenden von benutzerdefinierten Berechtigungen.
 
@@ -225,5 +225,5 @@ Weitere Informationen zum Installieren und verwenden dieses Clients finden Sie u
 
 - Für Benutzer: [Herunterladen und Installieren des Clients](install-unifiedlabelingclient-app.md)
 
-- Für Administratoren: [Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch](clientv2-admin-guide.md)
+- Für Administratoren: [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](clientv2-admin-guide.md)
 

@@ -12,18 +12,18 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8be698e4cfbca2ec1cd7d990098d288762400196
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.openlocfilehash: d117c68f9adb1d133cb16d7a44fad3cdaaafd973
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71966811"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447094"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Migrieren Sie Azure Information Protection Bezeichnungen zur vereinheitlichten Bezeichnung, sodass Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
 
@@ -44,7 +44,7 @@ Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie m�
 
 Wenn Sie Administrator Rollen für die delegierte Administration in Ihrer Organisation verwenden, müssen Sie möglicherweise einige Änderungen an der Unified-Bezeichnung-Plattform vornehmen:
 
-Die [Azure AD Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) und des **globalen Readers** werden von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn eine dieser Administrator Rollen in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators**oder der Sicherheit hinzu.  **Administrator**. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
+Die [Azure AD Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) und des **globalen Readers** werden von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn eine dieser Administrator Rollen in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators**oder der Sicherheit hinzu.  **Administrator**. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
 Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
 
@@ -71,7 +71,7 @@ Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig.
     
     - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch in den Admin-Centers nicht unterstützt.
         
-        Tipp: Es kann nützlich sein, für die erneute Konfigurierung dieser Bezeichnungen zwei Browserfenster zu öffnen: In einem Fenster wählen Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung aus, um die Schutzeinstellungen anzuzeigen, und im anderen Fenster konfigurieren Sie die gleichen Einstellungen beim Auswählen von **Berechtigungen festlegen**.
+        Tipp: um Sie bei der Neukonfiguration dieser Bezeichnungen zu unterstützen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie Wählen Sie **Berechtigungen festlegen**aus.
     
     - Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
 
@@ -121,7 +121,7 @@ Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht auf
 
 ###### <a name="footnote-1"></a>Fußnote 1
 
-In Outlook für Mac wird der Schutz mit einer Ausnahme beibehalten: Wenn eine E-Mail mit der Option „Nur verschlüsseln“ geschützt wurde, wird dieser Schutz entfernt.
+In Outlook für Mac wird der Schutz mit einer Ausnahme beibehalten: Wenn eine e-Mail mit der Option "nur verschlüsseln" geschützt wurde, wird dieser Schutz entfernt.
 
 
 ###### <a name="footnote-2"></a>Fußnote 2
@@ -147,16 +147,16 @@ Sie müssen Kompatibilitäts Administrator, Kompatibilitäts Daten Administrator
 
 3. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
     
-    Wenn die Option zum Aktivieren nicht verfügbar ist, aktivieren Sie **Status einheitlicher Bezeichnungen**: Wenn **Aktiviert** angezeigt wird, verwendet Ihr Mandant bereits den einheitlichen Bezeichnungsspeicher, sodass keine Bezeichnungen migriert werden müssen.
+    Wenn die Option zum Aktivieren nicht verfügbar ist, überprüfen Sie den **Status der vereinheitlichten Bezeichnung**: Wenn Sie **aktiviert**sehen, wird für Ihren Mandanten bereits der vereinheitlichte Bezeichnungs Speicher verwendet, und es ist nicht erforderlich, ihre Bezeichnungen zu migrieren.
 
-Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Zunächst müssen Sie jedoch diese Bezeichnungen in einem der Admin-Centers veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
+Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Allerdings müssen Sie diese Bezeichnungen zuerst in einem der Admin Center veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 
 > [!IMPORTANT]
 > Wenn Sie die Bezeichnungen außerhalb des Azure-Portal bearbeiten, kehren Sie für Azure Information Protection Clients (klassisch) zu diesem **Azure Information Protection vereinheitlichten** Blatt "Bezeichnung" zurück, und wählen Sie " **veröffentlichen**" aus.
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Clients und Dienste, die einheitliche Bezeichnungen unterstützen
 
-Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste einheitliche Bezeichnungen unterstützen, können Sie in den jeweiligen Dokumentationen nachlesen, ob diese Vertraulichkeitsbezeichnungen verwenden können, die in einem der Admin-Centers veröffentlicht wurden. Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center. 
+Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheitliche Bezeichnung unterstützen, lesen Sie die Dokumentation, um zu überprüfen, ob Sie Vertraulichkeits Bezeichnungen verwenden können, die von einem der Admin Center veröffentlicht werden: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center. 
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>Folgende Clients unterstützen derzeit einheitliche Bezeichnungen:
 
@@ -174,16 +174,16 @@ Wenn Sie herausfinden möchten, ob die von Ihnen verwendeten Clients und Dienste
     
     Dieser Dienst unterstützt Bezeichnungen sowohl vor der Migration in den einheitlichen Bezeichnungsspeicher, als auch nach der Migration, und verwendet dabei die folgende Logik:
     
-    - Wenn die Admin-Centers die gleichen Bezeichnungen wie die im Azure-Portal haben: Einheitliche Bezeichnungen werden über die Admin-Centers abgerufen. Wenn Sie diese Bezeichnungen in Cloud App Security auswählen möchten, muss mindestens eine Bezeichnung für mindestens einen Benutzer veröffentlicht worden sein.
+    - Wenn die Admin Center dieselben Bezeichnungen wie die des Azure-Portal haben: einheitliche Bezeichnungen werden aus den Admin Centers abgerufen. Wenn Sie diese Bezeichnungen in Cloud App Security auswählen möchten, muss mindestens eine Bezeichnung für mindestens einen Benutzer veröffentlicht worden sein.
     
-    - Wenn die Admin-Centers nicht die gleichen Bezeichnungen wie die im Azure-Portal haben: Einheitliche Bezeichnungen werden von den Admin-Centers nicht verwendet. Stattdessen werden Bezeichnungen aus dem Azure-Portal abgerufen.
+    - Wenn die Admin Center nicht die gleichen Bezeichnungen wie die im Azure-Portal haben: einheitliche Bezeichnungen werden nicht in den Admin Centers verwendet, sondern Bezeichnungen werden aus der Azure-Portal abgerufen.
 
 - Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview) verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie im folgenden Blogbeitrag: Grundlegendes zur [vereinheitlichten Bezeichnung Migration](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
+Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie im folgenden Blogbeitrag: Grundlegendes zur [Migration vereinheitlichter](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)Bezeichnungen.
 
-Weitere Informationen zu Ihren migrierten Bezeichnungen, die nun in einem der Admin-Centers konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeitsbezeichnungen](/Office365/SecurityCompliance/sensitivity-labels).
+Weitere Informationen zu Ihren migrierten Bezeichnungen, die nun in einem der Admin-Centers konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 Wenn Sie dies nicht bereits getan haben, installieren Sie den Azure Information Protection Unified-Bezeichnungs Client. Versionsinformationen, ein Administrator Handbuch und ein Benutzerhandbuch finden Sie unter [Azure Information Protection Unified Bezeichnung Client for Windows](./rms-client/aip-clientv2.md).

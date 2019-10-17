@@ -12,25 +12,25 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 51b39652a5f3ec8cd81f28c1a5ee485992a10375
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 1250960a27deed4121bf0fd090250de30e56632b
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314334"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447719"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>So unterstützen Office-Anwendungen und -Dienste Azure Rights Management 
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Endbenutzer-Office-Anwendungen und Office-Dienste können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden. Diese Office-Anwendungen sind Word, Excel, PowerPoint und Outlook. Die Officedienste sind Exchange und SharePoint. Die Office-Konfigurationen, die den Azure Rights Management-Dienst unterstützen, verwenden oft den Begriff **Information Rights Management (IRM)** .
+Endbenutzer-Office-Anwendungen und Office-Dienste können den Azure Rights Management-Dienst aus Azure Information Protection zum Schutz der Daten Ihrer Organisation verwenden. Diese Office-Anwendungen sind Word, Excel, PowerPoint und Outlook. Die Officedienste sind Exchange und SharePoint. Die Office-Konfigurationen, die den Azure Rights Management-Dienst unterstützen, verwenden oft den Begriff **Information Rights Management (IRM)**.
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Office-Anwendungen: Word, Excel, PowerPoint, Outlook
 Diese Anwendungen bieten native Unterstützung für Azure Rights Management und ermöglichen Benutzern das Anwenden von Schutz auf ein gespeichertes Dokument oder auf eine zu sendende E-Mail. Benutzer können [Vorlagen](configure-policy-templates.md) zum Anwenden des Schutzes anwenden. Alternativ können Benutzer für Word, Excel und PowerPoint individuell anpassbare benutzerdefinierte Einstellungen für Zugriff, Rechte und Nutzungseinschränkungen festlegen.
 
 Benutzer können z.B. ein Word-Dokument so konfigurieren, dass es nur von Personen in Ihrer Organisation geöffnet werden kann. Sie können alternativ steuern, ob ein Excel-Arbeitsblatt bearbeitet werden kann oder schreibgeschützt ist oder nicht gedruckt werden kann. Für Dateien mit zeitlicher Relevanz kann eine Ablaufzeit konfiguriert werden, nach deren Erreichen kein Zugriff auf die Datei mehr möglich ist. Diese Konfiguration kann direkt von Benutzern oder durch Anwenden einer Schutzvorlage vorgenommen werden. Für Outlook können Benutzer außerdem die Option **Nicht weiterleiten** auswählen, um Datenlecks zu verhindern.
 
-Wenn Sie bereit sind, Office-Apps zu [konfigurieren, sehen Sie Office-Apps: Konfiguration für Clients](configure-office-apps.md).
+Wenn Sie bereit sind, Office-Apps zu konfigurieren, sehen Sie [Office-Apps: Konfiguration für Clients](configure-office-apps.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online und Exchange Server
 Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen für Azure Information Protection konfigurieren. Mit dieser Konfiguration kann Exchange die folgenden Lösungen zum Schutz bereitstellen:
@@ -43,9 +43,9 @@ Wenn Sie Exchange Online oder Exchange Server verwenden, können Sie Optionen f�
 
 -   **Nachrichtenflussregeln**, die von einem Administrator konfiguriert werden, um automatisch Schutzvorlagen auf E-Mail-Nachrichten und Optionen anzuwenden. Diese Regeln basieren auf Eigenschaften wie Sender, Empfänger, Betreff der Nachricht und Inhalt. Diese Regeln ähneln dem Konzept der Schutzregeln, verbieten Benutzern jedoch, den Schutz zu entfernen, da der Schutz vom Exchange-Dienst und nicht vom Client festgelegt wird. Da der Schutz vom Dienst festgelegt wird, ist es nicht wichtig, welches Gerät oder Betriebssystem die Benutzer besitzen. Weitere Informationen finden Sie unter [Nachrichtenflussregeln (Transportregeln) in Exchange Online](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) und [Erstellen einer Transportschutzregel](https://technet.microsoft.com/library/dd302432.aspx).
 
--   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)** , die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Eine der Aktion, die Sie angeben können, ist das Anwenden von Verschlüsselung als Schutz, indem Sie eine der folgenden Schutzvorlagen oder Optionen angeben. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter [Verhinderung von Datenverlust](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) in der Exchange Online-Dokumentation.
+-   **DLP-Richtlinien (Data Loss Prevention, Verhinderung von Datenverlust)**, die Bedingungssätze enthalten, um E-Mails zu filtern und Maßnahmen zur Verhinderung von Datenverlusten bei vertraulichen oder sensiblen Inhalten zu ergreifen. Eine der Aktion, die Sie angeben können, ist das Anwenden von Verschlüsselung als Schutz, indem Sie eine der folgenden Schutzvorlagen oder Optionen angeben. Richtlinientipps können verwendet werden, wenn sensible Daten erkannt werden, um Benutzer darauf aufmerksam zu machen, dass sie eventuell Schutz anwenden sollten. Weitere Informationen finden Sie unter [Verhinderung von Datenverlust](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) in der Exchange Online-Dokumentation.
 
--   **Office 365-Nachrichtenverschlüsselung**, die das Versenden von geschützten E-Mail-Nachrichten und Office-Dokumenten als Anlagen an jede beliebige E-Mail-Adresse auf jedem beliebigen Gerät unterstützt. Eine Webanwendung unterstützt soziale Netzwerke als Identitätsanbieter oder eine beliebige Einmalkennung für Benutzerkonten, für die Azure AD nicht verwendet wird. Weitere Informationen finden Sie unter [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen, auf Azure Information Protection basierenden Funktionen der Office 365-Nachrichtenverschlüsselung)](/office365/securitycompliance/set-up-new-message-encryption-capabilities) in der Office 365-Dokumentation. Unter [Office 365-Nachrichtenverschlüsselung](https://docs.microsoft.com/office365/securitycompliance/ome) finden Sie weitere Informationen in Verbindung mit dieser Konfiguration.
+-   **Office 365-Nachrichtenverschlüsselung**, die das Versenden von geschützten E-Mail-Nachrichten und Office-Dokumenten als Anlagen an jede beliebige E-Mail-Adresse auf jedem beliebigen Gerät unterstützt. Eine Webanwendung unterstützt soziale Netzwerke als Identitätsanbieter oder eine beliebige Einmalkennung für Benutzerkonten, für die Azure AD nicht verwendet wird. Weitere Informationen finden Sie unter [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen, auf Azure Information Protection basierenden Funktionen der Office 365-Nachrichtenverschlüsselung)](/microsoft-365/compliance/set-up-new-message-encryption-capabilities) in der Office 365-Dokumentation. Unter [Office 365-Nachrichtenverschlüsselung](https://docs.microsoft.com/microsoft-365/compliance/ome) finden Sie weitere Informationen in Verbindung mit dieser Konfiguration.
 
 Wenn Sie Exchange lokal verwenden, können Sie IRM-Funktionen mit dem Azure Rights Management-Dienst verwenden, indem Sie den Azure Rights Management-Connector bereitstellen. Dieser Connector fungiert als Relay zwischen den lokalen Servern und dem Azure Rights Management-Dienst.
 
@@ -81,11 +81,11 @@ Wenn Sie SharePoint Server benutzen, können Sie diesen IRM-Schutz durch Bereits
 > 
 > - Die gleichzeitige gemeinsame Bearbeitung eines Dokuments durch mehrere Personen wird nicht unterstützt. Um ein Dokument in einer durch IRM geschützten Bibliothek zu bearbeiten, müssen Sie es zuerst auschecken und herunterladen und können es dann in Ihrer Office-Anwendung bearbeiten. Daher kann nur jeweils eine Person ein Dokument bearbeiten.
 
-Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder OneDrive hochladen, funktioniert für nicht IRM-geschützte Bibliotheken Folgendes mit dieser Datei nicht: gemeinsame Dokumenterstellung, Office für das Web, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
+Wenn Sie eine Datei schützen, die Sie dann in SharePoint oder onedrive hochladen, können Sie bei Bibliotheken, die nicht durch ein unm geschützt sind, nicht mit dieser Datei arbeiten: Zusammenstellung, Office für das Web, Suche, Dokument Vorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (DLP). ).
 
 Wenn Sie den SharePoint IRM-Schutz verwenden, wendet der Azure Rights Management-Dienst Nutzungseinschränkungen und Datenverschlüsselung nicht beim ursprünglichen Erstellen der Dokumente in SharePoint oder beim Hochladen in die Bibliothek an, sondern erst beim Herunterladen der Dokumente aus SharePoint. Informationen zum Schutz der Dokumente vor dem Herunterladen finden Sie in der SharePoint-Dokumentation unter [Datenverschlüsselung in OneDrive for Business und SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) .
 
-Obwohl der folgende Beitrag im Office 365-Blog nicht mehr ganz neu ist, finden Sie darin möglicherweise weitere nützliche Informationen: [Neuerungen bei Information Rights Management in SharePoint und SharePoint Online](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Obwohl der folgende Beitrag im Office 365-Blog nicht mehr ganz neu ist, finden Sie darin möglicherweise weitere nützliche Informationen: [What’s New with Information Rights Management in SharePoint and SharePoint Online (Neuerungen bei Information Rights Management in SharePoint und SharePoint Online)](https://www.microsoft.com/en-us/microsoft-365/blog/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/).
 
 Weitere Änderungen finden [Sie unter Updates für SharePoint-Sicherheit,-Verwaltung und-Migration](https://techcommunity.microsoft.com/t5/Microsoft-SharePoint-Blog/Updates-to-SharePoint-security-administration-and-migration/ba-p/549585).
 

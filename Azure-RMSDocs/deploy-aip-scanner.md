@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b6874bfc2e3431779891262e33e542058d4f2cf4
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: 3a59984f3829ed3305d2e6f6dbd3e121bfff6ba3
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301173"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447380"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -28,7 +28,7 @@ ms.locfileid: "71301173"
 > 
 > Wenn Sie den Scanner bereits installiert haben und ein Upgrade durchführen möchten, verwenden Sie die folgenden Upgradeanweisungen, und befolgen Sie dann die Anweisungen auf dieser Seite, und lassen Sie den Schritt zum Installieren der Überprüfung aus:
 > - Für den klassischen Client: [Aktualisieren der Azure Information Protection Scanner](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
-> - Für den Unified-Bezeichnungs Client: [Aktualisieren der Azure Information Protection Scanner](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - Für den Unified-Bezeichnungs Client: [Upgrade der Azure Information Protection Scanner](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
 > 
 > Wenn Sie über eine Version des Scanners verfügen, die älter als 1.48.204.0 ist und Sie nicht zur Aktualisierung bereit sind, finden Sie weitere Informationen unter Bereitstellen [vorheriger Versionen des Azure Information Protection Scanners zum automatischen klassifizieren und schützen von Dateien](deploy-aip-scanner-previousversions.md).
 
@@ -53,9 +53,9 @@ Wenn Sie Bezeichnungen konfiguriert haben, die die automatische Klassifizierung 
 
 Die Überprüfung kann jede Datei überprüfen, die von Windows indiziert werden kann. Dazu verwendet sie IFilters, die auf dem Computer installiert sind. Um zu bestimmen, ob die Dateien Bezeichnungen benötigen, verwendet die Überprüfung die vertraulichen Informationstypen und die Mustererkennung von Office 365 zur Verhinderung von Datenverlust (Data Loss Prevention, DLP) oder Regex-Muster von Office 365. Da bei der Überprüfung der Azure Information Protection Client (der klassische Client oder der Unified-Bezeichnungs Client) verwendet wird, kann der Scanner dieselben Dateitypen klassifizieren und schützen:
 
-- Der klassische Client: [Vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md)
+- Klassischer Client: [vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md)
 
-- Der Unified-Bezeichnungs Client: [Vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md)
+- Einheitlicher Bezeichnungs Client: [vom Azure Information Protection Unified-Bezeichnungs Client unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md)
 
 Sie können die Überprüfung im Suchmodus ausführen. In diesem Modus überprüfen Sie anhand der Berichte, was geschähe, wenn die Dateien bezeichnet würden. Alternativ können Sie die Bezeichnungen mit der Überprüfung automatisch anwenden. Sie können die Überprüfung auch zum Ermitteln von Dateien mit vertraulichen Informationstypen ausführen, ohne Bezeichnungen für Bedingungen zu konfigurieren, die die automatische Klassifizierung anwenden.
 
@@ -69,14 +69,14 @@ Stellen Sie vor der Installation der Azure Information Protection-Überprüfung 
 
 |Anforderungen|Weitere Informationen|
 |---------------|--------------------|
-|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />– 8 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|Windows Server 2019, Windows Server 2016 oder Windows Server 2012 R2. <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br /> Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations). Andernfalls stellen Sie sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. Protection.Outlook.com (nur Überprüfung des Unified-Bezeichnungs Clients)|
-|Dienstkonto zum Ausführen der Überprüfung|Über das Ausführen des Überprüfungsdiensts auf dem Windows-Servercomputer hinaus wird dieses Windows-Konto auch bei Azure AD authentifiziert und lädt die Azure Information Protection-Richtlinie herunter. Dieses Konto muss ein Active Directory-Konto sein und mit Azure AD synchronisiert werden. Wenn Sie dieses Konto aufgrund Ihrer Organisationsrichtlinien nicht synchronisieren können, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Für dieses Dienstkonto gelten die folgenden Anforderungen:<br /><br />- **Lokale Anmeldung** für die Zuweisung von Benutzerrechten. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. Wenn die Gewährung dieser Berechtigung selbst für einen kurzen Zeitraum aufgrund Ihrer Organisationsrichtlinien nicht möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Anmeldung als Dienst** für die Zuweisung von Benutzerrechten. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für die Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung stets Zugriff auf geschützte Dateien hat, muss dieses Konto im Azure Rights Management-Dienst ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). Wenn Sie darüber hinaus [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) für eine stufenweise Bereitstellung implementiert haben, stellen Sie sicher, dass dieses Konto in den von Ihnen konfigurierten Onboarding-Steuerelementen enthalten ist.|
+|Windows Server-Computer zum Ausführen des Überprüfungsdiensts:<br /><br />- Prozessoren mit 4 Kernen<br /><br />– 8 GB RAM<br /><br />- 10 GB freier Speicherplatz (Durchschnitt) für temporäre Dateien|Windows Server 2019, Windows Server 2016 oder Windows Server 2012 R2. <br /><br />Hinweis: Sie können zu Test- oder Auswertungszwecken ein Windows-Clientbetriebssystem in einer Testumgebung verwenden, das [vom Azure Information Protection-Client unterstützt](requirements.md#client-devices) wird.<br /><br />Dieser Computer kann ein physischer oder ein virtueller Computer mit einer schnellen und zuverlässigen Netzwerkverbindung zu den Datenspeichern sein, die überprüft werden sollen.<br /><br /> Die Überprüfung erfordert ausreichend Speicherplatz, um für jede Datei, die überprüft wird, temporäre Dateien zu erstellen, d.h. vier Dateien pro Kern. Der empfohlene Speicherplatz von 10 GB ermöglicht Prozessoren mit 4 Kernen, 16 Dateien mit einer Dateigröße von jeweils 625 MB zu überprüfen. <br /><br /> Wenn aufgrund Ihrer Organisationsrichtlinien keine Internetkonnektivität möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations). Andernfalls stellen Sie sicher, dass dieser Computer über eine Internetverbindung verfügt, die die folgenden URLs über HTTPS (Port 443) zulässt:<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*.Protection.Outlook.com (Scanner nur vom Unified-Bezeichnungs Client)|
+|Dienstkonto zum Ausführen der Überprüfung|Über das Ausführen des Überprüfungsdiensts auf dem Windows-Servercomputer hinaus wird dieses Windows-Konto auch bei Azure AD authentifiziert und lädt die Azure Information Protection-Richtlinie herunter. Dieses Konto muss ein Active Directory-Konto sein und mit Azure AD synchronisiert werden. Wenn Sie dieses Konto aufgrund Ihrer Organisationsrichtlinien nicht synchronisieren können, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Für dieses Dienstkonto gelten die folgenden Anforderungen:<br /><br />- **Lokale Anmeldung** für die Zuweisung von Benutzerrechten. Diese Berechtigung ist für die Installation und Konfiguration der Überprüfung erforderlich, aber nicht für den Vorgang selbst. Sie müssen dem Dienstkonto diese Berechtigung gewähren und können sie wieder entfernen, nachdem Sie überprüft haben, dass die Überprüfung Dateien suchen, klassifizieren und schützen kann. Wenn die Gewährung dieser Berechtigung selbst für einen kurzen Zeitraum aufgrund Ihrer Organisationsrichtlinien nicht möglich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />- **Anmeldung als Dienst** für die Zuweisung von Benutzerrechten. Diese Berechtigung wird dem Dienstkonto während der Installation automatisch gewährt und ist für die Installation, Konfiguration und den Betrieb der Überprüfung erforderlich. <br /><br />– Berechtigungen für Datenrepositorys: Sie müssen **Lese-** und **Schreibberechtigungen** für das Überprüfen, Klassifizieren und Schützen der Dateien erteilen, damit die Dateien die Bedingungen in der Azure Information Protection-Richtlinie erfüllen. Um die Überprüfung nur im Suchmodus auszuführen, genügt eine **Leseberechtigung**.<br /><br />– Für Bezeichnungen, die Schutz erneut anwenden oder ihn entfernen: Um sicherzustellen, dass die Überprüfung immer Zugriff auf geschützte Dateien hat, muss dieses Konto in Azure Rights Management ein [Administrator](configure-super-users.md) sein. Stellen Sie außerdem sicher, dass die Administratorfunktion aktiviert ist. Weitere Informationen zu den Kontoanforderungen zum Anwenden von Schutz finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). Wenn Sie darüber hinaus [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) für eine stufenweise Bereitstellung implementiert haben, stellen Sie sicher, dass dieses Konto in den von Ihnen konfigurierten Onboarding-Steuerelementen enthalten ist.|
 |SQL-Server, auf dem die Konfiguration der Überprüfung gespeichert wird:<br /><br />- Lokale oder Remoteinstanz<br /><br />– Sysadmin-Rolle zum Installieren der Überprüfung|SQL Server 2012 ist die mindestens erforderliche Version für die folgenden Editionen:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Vom Azure Information Protection-Scanner werden beim Angeben eines benutzerdefinierten Profilnamens für den Scanner mehrere Konfigurationsdatenbanken auf einer SQL Server-Instanz unterstützt. Wenn Sie die Vorschauversion der Überprüfung des Unified-Bezeichnungs Clients verwenden, können mehrere Scanner dieselbe Konfigurations Datenbank gemeinsam verwenden.<br /><br />Wenn Sie den Scanner installieren und Ihr Konto über die Sysadmin-Rolle verfügt, wird während des Installationsprozesses automatisch die Konfigurationsdatenbank des Scanners erstellt und dem Dienstkonto, das den Scanner ausführt, die erforderliche Db_owner-Rolle gewährt. Wenn die Sysadmin-Rolle nicht gewährt wird oder aufgrund der Richtlinien Ihrer Organisation die manuelle Erstellung und Konfiguration von Datenbanken erforderlich ist, finden Sie weitere Informationen in Abschnitt [Bereitstellen der Überprüfung mit alternative Konfigurationen](#deploying-the-scanner-with-alternative-configurations).<br /><br />Die Größe der Konfigurationsdatenbank variiert je nach Bereitstellung. Allerdings empfehlen wir, 500 MB je 1.000.000 zu überprüfende Dateien zuzuordnen. |
-|Eine der folgenden Azure Information Protection Clients ist auf dem Windows Server-Computer installiert. <br /><br /> -Klassischer Client <br /><br /> -Unified-Bezeichnungs Client ([nur Vorschauversion](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Installations-und Upgradeanweisungen: <br /> - [Klassischer Client](./rms-client/client-admin-guide.md)<br /> - [Einheitlicher Bezeichnungs Client](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
-|Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Anweisungen für den klassischen Client zum Konfigurieren einer Bezeichnung für Bedingungen und zum Anwenden des Schutzes:<br /> - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)<br /> - [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md) <br /><br />Tipp: Sie können die Anweisungen im [Tutorial](infoprotect-quick-start-tutorial.md) verwenden, um den Scanner mit einer Bezeichnung zu testen, mit der in einem vorbereiteten Word-Dokument nach Kreditkartennummern gesucht wird. Sie müssen jedoch die Bezeichnungskonfiguration ändern, sodass die Option **Wählen Sie aus, wie diese Bezeichnung angewendet wird** auf **Automatisch** und nicht auf **als Empfehlung** festgelegt wird. Entfernen Sie anschließend die Bezeichnung vom Dokument (sofern angewendet), und kopieren Sie die Datei in ein Datenrepository für den Scanner. Bei einem schnellen Test kann dies ein lokaler Ordner auf dem Computer mit dem Scanner sein.<br /><br /> Anweisungen für den Unified Label-Client zum Konfigurieren einer Bezeichnung für die automatische Kennzeichnung und zum Anwenden des Schutzes:<br /> - [Vertraulichkeits Bezeichnung automatisch auf Inhalt anwenden](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)<br /> - [Einschränken des Zugriffs auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)<br /><br /> Zwar können Sie die Überprüfung auch dann ausführen, wenn Sie über keine konfigurierten Bezeichnungen verfügen, die die automatische Klassifizierung anwenden, dieses Szenario wird in der vorliegenden Anleitung jedoch nicht behandelt. [Weitere Informationen](#using-the-scanner-with-alternative-configurations)|
-|Für das Scannen von SharePoint-Dokument Bibliotheken und-Ordnern:<br /><br />-SharePoint 2019<br /><br />– SharePoint 2016<br /><br />– SharePoint 2013<br /><br />– SharePoint 2010|Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.<br /><br />Wenn Sie die [Versions](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein. <br /><br />Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Manage large lists and libraries in SharePoint (Verwalten von großen Listen und Bibliotheken in SharePoint)](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
-|Für zu scannende Office-Dokumente:<br /><br />-97-2003-Dateiformate und die offene Office-XML-Formate für Word, Excel und PowerPoint|Weitere Informationen zu den Dateitypen, die von der Überprüfung für diese Dateiformate unterstützt werden, finden Sie in den folgenden Informationen: <br />-Klassischer Client: [Vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md)<br />-Unified-Bezeichnungs Client: [Vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md)|
-|Für lange Pfade:<br /><br />– höchstens 260 Zeichen, es sei denn, der Scanner ist unter Windows 2016 installiert und der Computer ist für die Unterstützung von langen Pfaden konfiguriert|Windows 10 und Windows Server 2016 unterstützen Pfade, die mehr als 260 Zeichen umfassen, mit der folgenden [Gruppenrichtlinieneinstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Lokale Computer Richtlinie** > **Computerkonfiguration** > **Administrative Vorlagen** **alle Einstellungen**Aktivieren von**Win32 Long-Pfaden**  >  > <br /><br /> Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
+|Eine der folgenden Azure Information Protection Clients ist auf dem Windows Server-Computer installiert. <br /><br /> -Klassischer Client <br /><br /> -Unified-Bezeichnungs Client ([nur Vorschauversion](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |Sie müssen den kompletten Client für die Überprüfung installieren. Installieren Sie den Client nicht nur mit dem PowerShell-Modul.<br /><br />Installations-und Upgradeanweisungen: <br /> klassischer - -[Client](./rms-client/client-admin-guide.md)<br /> - [Unified](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) -Bezeichnungs Client |
+|Konfigurierte Bezeichnungen, die automatische Klassifizierung und optional Schutz anwenden|Anweisungen für den klassischen Client zum Konfigurieren einer Bezeichnung für Bedingungen und zum Anwenden des Schutzes:<br /> - [Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection](configure-policy-classification.md)<br /> - [Konfigurieren einer Bezeichnung für Rights Management-Schutz](configure-policy-protection.md) <br /><br />Tipp: Sie können die Anweisungen aus dem [Tutorial](infoprotect-quick-start-tutorial.md) zum Testen des Scanners mit einer Bezeichnung verwenden, die in einem vorbereiteten Word-Dokument nach Kreditkartennummern sucht. Sie müssen jedoch die Bezeichnungskonfiguration ändern, sodass die Option **Wählen Sie aus, wie diese Bezeichnung angewendet wird** auf **Automatisch** und nicht auf **als Empfehlung** festgelegt wird. Entfernen Sie anschließend die Bezeichnung vom Dokument (sofern angewendet), und kopieren Sie die Datei in ein Datenrepository für den Scanner. Bei einem schnellen Test kann dies ein lokaler Ordner auf dem Computer mit dem Scanner sein.<br /><br /> Anweisungen für den Unified Label-Client zum Konfigurieren einer Bezeichnung für die automatische Kennzeichnung und zum Anwenden des Schutzes:<br /> - [eine Vertraulichkeits Bezeichnung automatisch auf Inhalt anwenden](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)<br /> - [beschränken Sie den Zugriff auf Inhalte mithilfe der Verschlüsselung in Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels) .<br /><br /> Zwar können Sie die Überprüfung auch dann ausführen, wenn Sie über keine konfigurierten Bezeichnungen verfügen, die die automatische Klassifizierung anwenden, dieses Szenario wird in der vorliegenden Anleitung jedoch nicht behandelt. [Weitere Informationen](#using-the-scanner-with-alternative-configurations)|
+|Für das Scannen von SharePoint-Dokument Bibliotheken und-Ordnern:<br /><br />-SharePoint 2019<br /><br />– SharePoint 2016<br /><br />– SharePoint 2013<br /><br />– SharePoint 2010|Andere Versionen von SharePoint werden für die Überprüfung nicht unterstützt.<br /><br />Wenn Sie die [Versions](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning)Verwaltung verwenden, wird die zuletzt veröffentlichte Version vom Scanner überprüft und beschriftet. Wenn die Überprüfung eine Datei und eine [Genehmigung von Inhalten](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) erfordert, muss die bezeichnete Datei als verfügbar für Benutzer verfügbar sein. <br /><br />Überprüfen Sie für große SharePoint-Farmen, ob Sie den Schwellwert der Listenansicht (standardmäßig 5.000) erhöhen müssen, damit der Scanner auf alle Dateien zugreifen kann. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server) .|
+|Für zu scannende Office-Dokumente:<br /><br />-97-2003-Dateiformate und die offene Office-XML-Formate für Word, Excel und PowerPoint|Weitere Informationen zu den Dateitypen, die von der Überprüfung für diese Dateiformate unterstützt werden, finden Sie in den folgenden Informationen: <br />-Klassischer Client: [vom Azure Information Protection-Client unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md)<br />-Unified-Bezeichnungs Client: [vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md)|
+|Für lange Pfade:<br /><br />– höchstens 260 Zeichen, es sei denn, der Scanner ist unter Windows 2016 installiert und der Computer ist für die Unterstützung von langen Pfaden konfiguriert|Windows 10 und Windows Server 2016 unterstützen Pfadlängen von mehr als 260 Zeichen mit der folgenden [Gruppenrichtlinien Einstellung](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **Richtlinie für lokale Computer** > **Computer Konfiguration** > **Administrative Vorlagen**@no_ _T-6**alle Einstellungen** >  für**Win32 Long-Pfade aktivieren**<br /><br /> Weitere Informationen zur Unterstützung von langen Dateipfaden finden Sie im Abschnitt [Maximum Path Length Limitation (Einschränkung der Pfadlänge)](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) in der Entwicklerdokumentation für Windows 10.
 
 Wenn Sie nicht alle Anforderungen in der Tabelle erfüllen können, da sie aufgrund der Richtlinien Ihrer Organisation nicht zulässig sind, finden Sie im nächsten Abschnitt Alternativen.
 
@@ -99,7 +99,7 @@ Bei der Überprüfung können diese Einschränkungen zwar berücksichtigt werden
 
 #### <a name="restriction-the-scanner-server-cannot-have-internet-connectivity"></a>Einschränkung: Der Überprüfungsserver kann über keine Internetkonnektivität verfügen.
 
-Nur vom klassischen Client unterstützt: Folgen Sie den Anweisungen für [nicht verbundene Computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Führen Sie anschließend Folgendes aus:
+Nur vom klassischen Client unterstützt: Befolgen Sie die Anweisungen für einen [getrennten Computer](./rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). Führen Sie dann folgende Schritte aus:
 
 1. Konfigurieren Sie den Scanner im Azure-Portal, indem Sie ein Scannerprofil erstellen. Unterstützung zu diesem Schritt finden Sie im Abschnitt [Konfigurieren des Scanners im Azure-Portal](#configure-the-scanner-in-the-azure-portal).
 
@@ -123,9 +123,9 @@ Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen 
 
 In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie jedoch unterschiedliche Konten verwenden, benötigen beide die db_owner-Rolle für die Konfigurationsdatenbank des Scanners.
 
-- Wenn Sie keinen eigenen Profilnamen für den Scanner angeben (nur klassischer Client), wird die Konfigurations Datenbank mit dem Namen **AIPScanner_\<computer_name >** . 
+- Wenn Sie keinen eigenen Profilnamen für den Scanner angeben (nur klassischer Client), wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ @ no__t-1computer_name >** . 
 
-- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank mit dem Namen **\<AIPScanner_ profile_name >** (klassischer Client) oder **\<AIPScannerUL_ profile_name >** (einheitlicher Bezeichnungs Client) benannt.
+- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank mit dem Namen **AIPScanner_ @ no__t-1profile_name >** (klassischer Client) oder **AIPScannerUL_ @ no__t-3profile_name >** (einheitlicher Bezeichnungs Client) benannt.
 
 Um einen Benutzer zu erstellen und db_owner-Rechte für diese Datenbank zu erteilen, bitten Sie den sysadmin, das folgende SQL-Skript zweimal auszuführen. Beim ersten Mal für das Dienst Konto, mit dem die Überprüfung ausgeführt wird, und das zweite Mal zum Installieren und Verwalten des Scanners. Vor dem Ausführen des Skripts:
 1. Ersetzen Sie Domäne *\ Benutzer* durch den Domänen Namen und den Benutzerkonto Namen des Dienst Kontos bzw. des Benutzerkontos.
@@ -136,7 +136,7 @@ SQL-Skript:
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
-Darüber hinaus gilt:
+Weiterhin gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.
 - Das Dienst Konto, unter dem der Scanner ausgeführt wird, muss über Vollzugriff auf die folgenden Registrierungsschlüssel verfügen:
@@ -147,13 +147,13 @@ Darüber hinaus gilt:
 Wenn nach dem Konfigurieren dieser Berechtigungen ein Fehler angezeigt wird, wenn Sie den Scanner installieren, kann der Fehler ignoriert werden, und Sie können den Überprüfungs Dienst manuell starten.
 
 
-#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Einschränkung: Die Berechtigung zur **lokalen Anmeldung** kann nicht für das Überprüfungsdienstkonto gewährt werden.
+#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Einschränkung: Die Berechtigung zur **lokalen Anmeldung** kann nicht für das Dienstkonto gewährt werden.
 
 Wenn Ihre Organisations Richtlinien das Recht " **Lokal anmelden** " für Dienst Konten nicht zulassen, aber das Recht " **Anmelden als Batch Auftrag** " zulassen, verwenden Sie die folgenden Anweisungen:
 
-- Für den klassischen Client: Weitere Informationen finden Sie im Administrator Handbuch dieses Clients [unter angeben und Verwenden des Token-Parameters für "Set-aipauthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) ".
+- Für den klassischen Client: Weitere Informationen finden Sie unter [angeben und Verwenden des Token-Parameters für "Set-aipauthentication" im](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) Administrator Handbuch dieses Clients.
 
-- Für den Unified-Bezeichnungs Client: Verwenden Sie den Parameter " *onbehalfof* " mit "Set-aipauthentication", wie am Ende der [Bezeichnung "nicht interaktiv" für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch dieses Clients beschrieben.
+- Für den Unified Label-Client: Verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication", wie am Ende der Beschreibung von Dateien, die [nicht interaktiv für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch dieses Clients beschrieben werden.
 
 #### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Einschränkung: Das Überprüfungsdienstkonto kann nicht mit Azure Active Directory synchronisiert werden, der Server verfügt jedoch über Internetkonnektivität.
 
@@ -162,8 +162,8 @@ Sie können ein Konto haben, um den Überprüfungsdienst auszuführen, und ein a
 - Für das Überprüfungsdienstkonto können Sie ein lokales Windows-Konto oder ein Active Directory-Konto verwenden.
 
 - Verwenden Sie für das Azure Active Directory-Konto die folgenden Anweisungen:
-    - Für den klassischen Client: Weitere Informationen finden Sie im Administrator Handbuch dieses Clients [unter angeben und Verwenden des Token-Parameters für "Set-aipauthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) ".
-    - Für den Unified-Bezeichnungs Client: Verwenden Sie den Parameter " *onbehalfof* " mit "Set-aipauthentication", wie am Ende der [Bezeichnung "nicht interaktiv" für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch dieses Clients beschrieben.
+    - Für den klassischen Client: Weitere Informationen finden Sie unter [angeben und Verwenden des Token-Parameters für "Set-aipauthentication" im](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) Administrator Handbuch dieses Clients.
+    - Für den Unified Label-Client: Verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication", wie am Ende der Beschreibung von Dateien, die [nicht interaktiv für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch dieses Clients beschrieben werden.
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Konfigurieren des Scanners im Azure-Portal
 
@@ -186,20 +186,20 @@ Bevor Sie die Überprüfung installieren oder von einer älteren Version der Üb
 5. Konfigurieren Sie bei dieser ersten Konfiguration die folgenden Einstellungen, und wählen Sie anschließend **Speichern** aus, schließen Sie das Blatt jedoch nicht:
     
     Für den Abschnitt " **Profileinstellungen** ":
-    - **Zeitplan**: Behalten Sie die Standardeinstellung **Manuell** bei.
-    - **Zu ermittelnde Infotypen**: Ändern Sie diese Einstellung in **Nur Richtlinie**.
-    - **Repositorys konfigurieren**: Konfigurieren Sie diese Einstellung noch nicht, da das Profil zunächst gespeichert werden muss.
+    - **Zeitplan**: behalten Sie den Standardwert **manuell** bei.
+    - **Zu ermittelnde Informationstypen**: **nur in Richtlinie** ändern
+    - **Repository konfigurieren**: Konfigurieren Sie zu diesem Zeitpunkt nicht, weil das Profil zuerst gespeichert werden muss.
     
     Für den Abschnitt **Richtlinien** Erzwingung:
-    - **Erzwingen**: Wählen Sie **Aus** aus.
-    - **Dateien basierend auf dem Inhalt bezeichnen**: Behalten Sie die Standardeinstellung **Ein** bei.
-    - **Standardbezeichnung**: Behalten Sie die Standardeinstellung **Richtlinienstandard** bei.
-    - **Dateien neu bezeichnen**: Behalten Sie die Standardeinstellung **Aus** bei.
+    - **Erzwingen**: SELECT **Off**
+    - Bezeichnungs **Dateien basierend auf dem Inhalt**: behalten Sie die Standardeinstellung **bei** .
+    - **Standard Bezeichnung**: Standardwert der Standard **Richtlinie für Richtlinie** beibehalten
+    - **Dateien**neu bezeichnen: Standardwert " **aus** " beibehalten
     
     Im Abschnitt **Konfigurieren von Datei Einstellungen** :
-    - **Preserve "Date modified", "Last modified" and "Modified by"** („Änderungsdatum“, „Zuletzt geändert“ und „Geändert von“ beibehalten): Behalten Sie die Standardeinstellung **Ein** bei.
-    - **Zu scannende Dateitypen**: Behalten Sie die Standarddateitypen für **Ausschließen** bei.
-    - **Standardbesitzer**: Behalten Sie die Standardeinstellung **Scannerkonto** bei.
+    - **"Datum geändert", "zuletzt geändert" und "geändert von**" beibehalten: behalten Sie die Standardeinstellung **bei** .
+    - **Zu überprüfende Dateitypen**: Standard Dateitypen für **Ausschluss** beibehalten
+    - **Standard Besitzer**: behalten Sie die Standardeinstellung **Scanner-Konto** bei.
 
 6. Nachdem Sie das Profil erstellt und gespeichert haben, können Sie zur Option **Repositorys konfigurieren** zurückkehren, um die Datenspeicher anzugeben, die überprüft werden sollen. Sie können lokale Ordner, UNC-Pfade und SharePoint-Server-URLs für lokale SharePoint-Dokument Bibliotheken und-Ordner angeben. 
     
@@ -280,9 +280,9 @@ Mithilfe des Azure AD-Tokens kann das Überprüfungsdienstkonto bei Azure Inform
     
     Befolgen Sie die Anweisungen in den Administrator Handbüchern für die relevanten Clients, um diese Anwendungen zu erstellen:
     
-    - Für den klassischen Client: [Gewusst wie: nicht interaktiv bezeichnen von Dateien für Azure Information Protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Für den klassischen Client: [wie werden Dateien nicht interaktiv für Azure Information Protection beschriftet](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
     
-    - Für den Unified-Bezeichnungs Client: [Gewusst wie: nicht interaktiv bezeichnen von Dateien für Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Für den Unified Label-Client: Gewusst [wie: nicht interaktiv Bezeichnungs Dateien für Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
         > [!NOTE]
         > Stellen Sie sicher, dass Sie die [zweite Reihe von Anweisungen](./rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client) befolgen, die für den Vorschau Client neu sind.
 
@@ -304,9 +304,9 @@ Mithilfe des Azure AD-Tokens kann das Überprüfungsdienstkonto bei Azure Inform
     
     Wenn Ihrem Überprüfungsdienstkonto für die Installation kein Recht zur **lokalen Anmeldung** erteilt werden kann:
     
-    -  Für den klassischen Client: Weitere Informationen finden Sie im Administrator Handbuch dieses Clients [unter angeben und Verwenden des Token-Parameters für "Set-aipauthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) ".
+    -  Für den klassischen Client: Weitere Informationen finden Sie unter [angeben und Verwenden des Token-Parameters für "Set-aipauthentication" im](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) Administrator Handbuch dieses Clients.
     
-    -  Für den Unified-Bezeichnungs Client: Verwenden Sie den Parameter " *onbehalfof* " mit "Set-aipauthentication", wie am Ende der [Bezeichnung "nicht interaktiv" für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch dieses Clients beschrieben.
+    -  Für den Unified Label-Client: Verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication", wie am Ende der Vorgehens [Weise zum nicht interaktiven bezeichnen von Dateien für Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) des Administrator Handbuchs dieses Clients beschrieben.
 
 Der Scanner verfügt jetzt über ein Token zum Authentifizieren bei Azure AD, das ein Jahr, zwei Jahre oder nie abläuft, gemäß ihrer Konfiguration der **Web-App/API** (klassischer Client) oder des geheimen Client Schlüssels (einheitlicher Bezeichnungs Client) in Azure AD. Wenn das Token abgelaufen ist, müssen Sie die Schritte 1 und 2 wiederholen.
 
@@ -356,8 +356,8 @@ Wenn Sie diese Anweisungen befolgen, wird der Scanner einmal und nur im Modus f�
 
 2. Ändern Sie auf dem Blatt „\<**Profilname**>“ die folgenden beiden Einstellungen, und klicken Sie dann auf **Speichern**:
     
-   - Im Abschnitt " **Profileinstellungen** ": Ändern des **Zeitplans** in **Always**
-   - Aus dem Abschnitt zur **Richtlinien** Erzwingung: Änderung **erzwingen** in **ein**
+   - Im Abschnitt " **Profileinstellungen** ": Ändern des **Zeitplans** in " **immer** "
+   - Aus dem Abschnitt zur **Richtlinien** Erzwingung: Ändern von **erzwingen** **in ein**
     
      Es gibt andere Konfigurationseinstellungen, die Sie ggf. ändern sollten, z. B. ob Dateiattribute geändert werden und Dateien vom Scanner neu bezeichnet werden können. Weitere Informationen zu den einzelnen Konfigurationseinstellungen finden Sie in der Popuphilfe mit Informationen.
 
@@ -379,7 +379,7 @@ Da der Zeitplan als fortlaufend konfiguriert wurde, startet der Scanner automati
 
 Der Scanner führt die folgenden Prozesse zur Überprüfung von Dateien aus.
 
-### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. Bestimmen, ob Dateien überprüft oder von der Überprüfung ausgeschlossen werden sollen 
+### <a name="1-determine-whether-files-are-included-or-excluded-for-scanning"></a>1. bestimmen Sie, ob Dateien für die Überprüfung eingeschlossen oder ausgeschlossen werden. 
 Der Scanner überspringt automatisch Dateien, die von der Klassifizierung und dem Schutz ausgeschlossen sind, z. b. ausführbare Dateien und Systemdateien. Weitere Informationen finden Sie in den folgenden Administrator Handbüchern:
 
 - Für den klassischen Client: [Dateitypen, die von der Klassifizierung und dem Schutz ausgeschlossen sind](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
@@ -390,14 +390,14 @@ Sie können dieses Verhalten ändern, indem Sie eine Liste mit Dateitypen defini
 
 ![Konfigurieren der zu überprüfenden Dateitypen für den Azure Information Protection-Scanner](./media/scanner-file-types.png)
 
-### <a name="2-inspect-and-label-files"></a>2. Überprüfen und Bezeichnen von Dateien
+### <a name="2-inspect-and-label-files"></a>2. überprüfen und bezeichnen von Dateien
 
 Anschließend verwendet der Scanner Filter, um unterstützte Dateitypen zu überprüfen. Diese Filter werden auch vom Betriebssystem für Windows Search und die Indizierung verwendet. Wenn keine anderen Konfigurationen vorhanden sind, wird Windows-IFilter verwendet, um Dateitypen zu überprüfen, die nicht für Word-, Excel-, PowerPoint- und PDF-Dokumente sowie Textdateien verwendet werden.
 
 Eine vollständige Liste der standardmäßig unterstützten Dateitypen sowie weitere Informationen zum Konfigurieren von vorhandenen Filtern, die ZIP-Dateien und TIFF-Dateien enthalten, finden Sie in den folgenden Administrator Handbüchern:
 
-- Für den klassischen Client: [Für die Überprüfung Unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
-- Für den Unified-Bezeichnungs Client: [Für die Überprüfung Unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
+- Für den klassischen Client: [für die Überprüfung Unterstützte Dateitypen](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
+- Für den Unified-Bezeichnungs Client: [für die Überprüfung Unterstützte Dateitypen](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
 
 Nach der Überprüfung können diese Dateitypen mithilfe der Bedingungen bezeichnet werden, die Sie für Ihre Bezeichnungen angegeben haben. Wenn Sie den Suchmodus verwenden, ist für diese Dateien stattdessen festgelegt, dass sie die Bedingungen enthalten, die Sie für Ihre Bezeichnungen angegeben haben, oder dass sämtliche bekannten Typen von vertraulichen Informationen enthalten sind. 
 
@@ -416,13 +416,13 @@ Beispielsweise kann der Scanner, nachdem er TXT-Dateien überprüft hat, keine B
 > 
 > - Möglicherweise müssen Sie die Anzahl der dynamischen Ports für das Betriebssystem erhöhen, das die Dateien hostet. Ein Grund dafür, warum der Scanner die Anzahl an zulässigen Netzwerkverbindungen überschreitet und daher angehalten wird, ist die Serverhärtung für SharePoint.
 >     
->     Prüfen Sie in der „%*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog“-Datei (wenn mehrere Protokolle vorhanden sind, werden diese gemeinsam in einer ZIP-Datei gespeichert), ob die folgende Fehlermeldung für den Scanner protokolliert wurde, um festzustellen, ob dies der Grund für die Beendigung des Scanner ist: **Unable to connect to the remote server ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted IP:port.** (Die Verbindung mit dem Remoteserver kann nicht hergestellt werden. ---> System.Net.Sockets.SocketException: Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden IP:port)
+>     Wenn Sie überprüfen möchten, ob dies die Ursache für die Beendigung der Überprüfung ist, überprüfen Sie, ob die folgende Fehlermeldung für den Scanner in%*LocalAppData*% \ microsoft\msip\protokolle\msipscanner.iplog protokolliert wird (ZIP-Dateien, wenn mehrere Protokolle vorhanden sind): **keine Verbindung mit der Remote Server---> System .net. Sockets. SocketException: nur eine Verwendung der einzelnen Socketadressen (Protokoll/Netzwerkadresse/Port) ist normalerweise als IP: Port zulässig** .
 >    
 >     Weitere Informationen zum Abrufen des aktuellen Portbereichs und zu dessen Vergrößerung finden Sie unter [Settings that can be Modified to Improve Network Performance (Einstellungen, die zur Verbesserung der Netzwerkleistung geändert werden können)](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
 > 
-> - Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert der Listenansicht (standardmäßig 5.000) erhöhen. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Manage large lists and libraries in SharePoint (Verwalten von großen Listen und Bibliotheken in SharePoint)](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
+> - Für große SharePoint-Farmen müssen Sie möglicherweise den Schwellenwert der Listenansicht (standardmäßig 5.000) erhöhen. Weitere Informationen finden Sie in der folgenden SharePoint-Dokumentation: [Verwalten von großen Listen und Bibliotheken in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
-### <a name="3-label-files-that-cant-be-inspected"></a>3. Bezeichnen von Dateien, die nicht überprüft werden können
+### <a name="3-label-files-that-cant-be-inspected"></a>3. Bezeichnungs Dateien, die nicht überprüft werden können
 Bei Dateitypen, die nicht überprüft werden können, wendet der Scanner die Standardbezeichnung in der Azure Information Protection-Richtlinie oder die von Ihnen für die Überprüfung konfigurierte Standardbezeichnung an.
 
 Wie im vorherigen Schritt kann der Scanner die Dateien jedoch unter den folgenden Bedingungen nicht bezeichnen:
@@ -439,9 +439,9 @@ Dieser Abschnitt gilt nur für die Überprüfung des klassischen Clients.
 
 Um das Standardverhalten der Überprüfung zum Schutz von Dateien zu ändern, bei denen es sich weder um Office- noch um PDF-Dateien handelt, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen, sowie den Typ des Schutzes (nativ oder generisch) festlegen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
 
-- Die Überprüfung hat ein eigenes Standardverhalten: Standardmäßig werden nur die Office-Dateiformate und PDF-Dokumente geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
+- Der Scanner verfügt über ein eigenes Standardverhalten: nur Office-Dateiformate und PDF-Dokumente werden standardmäßig geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
 
-- Wenn Sie das gleiche Standardschutz Verhalten wie für den Azure Information Protection-Client wünschen, wobei alle Dateien automatisch durch systemeigenen oder generischen Schutz geschützt werden: Geben Sie `*` den Platzhalter als Registrierungsschlüssel `Encryption` , als Wert (REG_SZ) und `Default` als Wertdaten an.
+- Wenn Sie das gleiche Standardschutz Verhalten wie der Azure Information Protection-Client wünschen, bei dem alle Dateien automatisch durch systemeigenen oder generischen Schutz geschützt werden: Geben Sie den Platzhalter `*` als Registrierungsschlüssel an, `Encryption` als Wert (REG_SZ), und @no__ t-2 als Wertdaten.
 
 Wenn Sie die Registrierung bearbeiten, erstellen Sie manuell die beiden Schlüssel **MSIPC** und **FileProtection**, falls noch nicht vorhanden, sowie einen Schlüssel für jede Erweiterung.
 
@@ -468,16 +468,16 @@ Außerdem werden alle Dateien überprüft, wenn die Überprüfung des klassische
 
 Die Überprüfung aktualisiert die Richtlinie gemäß den folgenden Triggern:
 
-- Überprüfung des klassischen Clients: Stündlich und wenn der Dienst gestartet wird und die Richtlinie älter als eine Stunde ist. 
+- Scanner vom klassischen Client: stündlich und wenn der Dienst gestartet wird und die Richtlinie älter als eine Stunde ist. 
 
-- Überprüfung des Unified-Bezeichnungs Clients: Alle vier Stunden und beim Start des Dienstanbieter. 
+- Scanner vom Unified-Bezeichnungs Client: alle vier Stunden und beim Start des Dienstanbieter. 
 
 > [!TIP]
 > Wenn Sie die Richtlinie früher als das Standardintervall aktualisieren müssen, z. b. während eines Testzeitraums: 
 >
-> - Überprüfung des klassischen Clients: Löschen Sie die Richtlinien Datei **Policy. MSIP** manuell aus **%LocalAppData%\microsoft\msip\policy.MSIP**.
+> - Scanner vom klassischen Client: Löschen Sie die Richtlinien Datei **Policy. MSIP** manuell aus **%LocalAppData%\microsoft\msip\policy.MSIP**.
 >
-> - Überprüfung des Unified-Bezeichnungs Clients: Löschen Sie den Inhalt manuell aus **%LocalAppData%\microsoft\msip\mip\\<*ProcessName*> \mip**.
+> - Scanner vom Unified-Bezeichnungs Client: Löschen Sie den Inhalt manuell aus **%LocalAppData%\microsoft\msip\mip @ no__t-1 @ no__t-2*ProcessName*> \mip**.
 >
 Starten Sie anschließend den Azure Information-Überprüfungsdienst neu. Wenn Sie Schutzeinstellungen für ihre Bezeichnungen geändert haben, warten Sie auch 15 Minuten ab dem Zeitpunkt, an dem Sie die Schutzeinstellungen gespeichert haben, bevor Sie den Dienst neu starten.
 
@@ -510,21 +510,21 @@ Der Azure Information Protection Scanner unterstützt drei alternative Szenarios
     Dies gilt nur für die Überprüfung des Unified Label-Clients. diese Konfiguration ermöglicht es Ihnen, vorhandene Bezeichnungen zu entfernen. Dies umfasst auch den Schutz, wenn dieser mit dieser Bezeichnung angewendet wurde. Der Schutz, der unabhängig von einer Bezeichnung angewendet wurde, wird beibehalten. Verwenden Sie diese Konfiguration, wenn Sie alle Bezeichnungen aus Dateien in einem Repository entfernen müssen.
     
     Konfigurieren Sie die folgenden Einstellungen:
-    - **Dateien basierend auf dem Inhalt bezeichnen**: **Deaktiviert**
-    - **Standardbezeichnung**: **Keine**
-    - **Dateien neu bezeichnen**: Aktivieren Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt.
+    - Bezeichnungs **Dateien basierend auf dem Inhalt**: **Off**
+    - **Standard Bezeichnung**: **keine**
+    - **Dateien**neu bezeichnen: **aktivieren** Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt haben.
 
 - Identifizieren aller benutzerdefinierten Bedingungen und bekannten vertraulichen Informationstypen:
     
     Legen Sie für diese Konfiguration die Option **Zu ermittelnde Infotypen** auf **Alle** fest.
     
-    Für die Überprüfung des klassischen Clients: Bei der Überprüfung werden alle benutzerdefinierten Bedingungen verwendet, die Sie für Bezeichnungen in der Azure Information Protection-Richtlinie angegeben haben, sowie die Liste der Informationstypen, die zum Angeben von Bezeichnungen in der Azure Information Protection-Richtlinie verfügbar sind. 
+    Für die Überprüfung des klassischen Clients: der Scanner verwendet alle benutzerdefinierten Bedingungen, die Sie in der Azure Information Protection Richtlinie für Bezeichnungen angegeben haben, sowie die Liste der Informationstypen, die zur Angabe für Bezeichnungen in den Azure-Informationen verfügbar sind. Schutzrichtlinie. 
     
-    Für die Überprüfung des Unified-Bezeichnungs Clients: Der Scanner verwendet alle benutzerdefinierten sensiblen Informationstypen, die Sie angegeben haben, und die Liste der integrierten sensiblen Informationstypen, die in Ihrem Bezeichnungs Verwaltungs Center ausgewählt werden können.
+    Für die Überprüfung des Unified-Bezeichnungs Clients: der Scanner verwendet alle benutzerdefinierten sensiblen Informationstypen, die Sie angegeben haben, und die Liste der integrierten sensiblen Informationstypen, die in Ihrem Bezeichnungs Verwaltungs Center ausgewählt werden können.
     
     Mit dieser Einstellung können Sie nach vertraulichen Informationen suchen, von denen Sie möglicherweise nicht einmal wissen, dass Sie sie haben. Das geht jedoch auf Kosten der Scangeschwindigkeit des Scanners.
     
-    Der folgende Schnellstart für die Überprüfung verwendet diese Konfiguration: [Schnellstart: Bestimmen vertraulicher Informationen](quickstart-findsensitiveinfo.md).
+    In der folgenden Schnellstartanleitung für die Überprüfung wird diese Konfiguration verwendet: [Schnellstart: finden Sie heraus, welche sensiblen Informationen Sie besitzen](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Optimieren der Überprüfungsleistung
 
@@ -562,7 +562,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiele:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
@@ -580,7 +580,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
     
     - Das Überprüfen großer Dateien beansprucht naturgemäß mehr Zeit als das Überprüfen kleiner Dateien.
 
-- Darüber hinaus gilt:
+- Weiterhin gilt:
     
     - Vergewissern Sie sich, dass das Dienst Konto, unter dem die Überprüfung ausgeführt wird, nur über die im Abschnitt Überprüfungs [Voraussetzungen](#prerequisites-for-the-azure-information-protection-scanner) dokumentierten Rechte verfügt, und konfigurieren Sie dann die Einstellung erweiterter [Client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) , um die Ebene mit niedriger Integrität für den Scanner zu deaktivieren (nur klassischer Client)
     
@@ -645,12 +645,12 @@ Wenn der Scanner so konfiguriert wurde, dass er manuell und nicht kontinuierlich
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung).
+Interessiert es Sie, wie das Core Services Engineering and Operations-Team bei Microsoft diese Überprüfung implementiert hat?  Lesen Sie die technische Fallstudie [Automatisieren des Datenschutzes mit der Azure Information Protection-Überprüfung](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner).
 
-Möglicherweise stellen Sie sich folgende Fragen: [Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
+Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
 
 Sie können Dateien auch mit PowerShell interaktiv klassifizieren und von Ihrem Desktopcomputer aus schützen. Weitere Informationen zu diesem und anderen Szenarien, in denen PowerShell verwendet wird, finden Sie in den folgenden Abschnitten der Administrator Handbücher:
 
 - Für den klassischen Client: [Verwenden von PowerShell mit dem Azure Information Protection-Client](./rms-client/client-admin-guide-powershell.md)
 
-- Für den Unified-Bezeichnungs Client: [Verwenden von PowerShell mit dem Azure Information Protection Unified Bezeichnung-Client](./rms-client/clientv2-admin-guide-powershell.md)
+- Für den Unified-Bezeichnungs Client: [Verwenden von PowerShell mit dem Azure Information Protection Unified-Beschriftungs Client](./rms-client/clientv2-admin-guide-powershell.md)

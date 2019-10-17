@@ -13,22 +13,22 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac8377f4eb4a3d4b5678c9d0a976866aadeead8
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314132"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447655"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
-Zum Beispiel:
+Beispiele:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -69,7 +69,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Sollten Sie den Azure Information Protection-Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden gelten
+Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden gelten
 
 - Sie möchten Dokumente und E-Mails durch Auswählen von Bezeichnungen innerhalb Ihrer Office-Anwendungen (Word, Excel, PowerPoint, Outlook) klassifizieren (und optional schützen).
 
@@ -103,9 +103,9 @@ In den folgenden Abschnitten finden Sie Informationen zur Unterstützung bei der
 
 Nachdem Sie den Client installiert haben, verwenden Sie die Option **Hilfe und Feedback**, um das Dialogfeld **Microsoft Azure Information Protection** zu öffnen:
 
-- Aus einer Office-Anwendung: Wählen Sie auf der Registerkarte **Home** in der Gruppe **Schutz** die Optionen **Schützen** und anschließend **Hilfe und Feedback** aus.
+- In einer Office-Anwendung: Wählen Sie auf der Registerkarte **Start** in der Gruppe **Schutz** die Optionen **Schützen** und anschließend **Hilfe und Feedback** aus.
 
-- Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und anschließend **Hilfe und Feedback** aus. 
+- Im Datei-Explorer: Klicken Sie mit der rechten Maustaste auf eine oder mehrere Dateien oder einen Ordner, wählen Sie **Klassifizieren und schützen** und dann **Hilfe und Feedback** aus. 
 
 #### <a name="help-and-feedback-section"></a>Abschnitt **Hilfe und Feedback**
 
@@ -158,7 +158,7 @@ Wenn Sie sich als ein anderer Benutzer anmelden müssen als den angezeigten Benu
 
 Der Wert **Last connection** (Letzte Verbindung) gibt an, wann der Client sich zuletzt mit dem Azure Information Protection-Dienst Ihrer Organisation verbunden hat. Sie können diese Informationen mit der Datums- und Zeitangabe **Die Information Protection-Richtlinie wurde am...installiert** verwenden, um zu bestätigen, wann die Azure Information Protection-Richtlinie zuletzt installiert oder aktualisiert wurde. Wenn der Client eine Verbindung mit dem Dienst herstellt, lädt er automatisch die letzte Richtlinie herunter, sofern diese von der aktuellen Richtlinie abweicht. Die Richtlinie wird außerdem alle 24 Stunden heruntergeladen. Wenn Sie nach dem angezeigten Zeitpunkt Änderungen vorgenommen haben, schließen Sie die Office-Anwendung, und öffnen Sie sie erneut.
 
-Wenn die Meldung **Dieser Client ist nicht für Office Professional Plus lizenziert** angezeigt wird: Der Azure Information Protection-Client hat festgestellt, dass die installierte Office-Edition das Anwenden des Rights Management-Schutzes nicht unterstützt. In diesem Fall werden Bezeichnungen, die diesen Schutz anwenden, auf der Azure Information Protection-Leiste nicht angezeigt.
+Wenn die Meldung **Dieser Client ist nicht für Office Professional Plus lizenziert** angezeigt wird, hat der Azure Information Protection-Client festgestellt, dass die installierte Office-Edition das Anwenden des Rights Management-Schutzes nicht unterstützt. In diesem Fall werden Bezeichnungen, die diesen Schutz anwenden, auf der Azure Information Protection-Leiste nicht angezeigt.
 
 Verwenden Sie die Informationen unter **Version**, um zu bestätigen, welche Version des Clients installiert ist. Klicken Sie auf den Link **Neuigkeiten**, um den [Versionsveröffentlichungsverlauf](client-version-release-history.md) des Clients zu lesen und zu überprüfen, ob es sich um die neueste Version handelt und die entsprechenden Fixes und neuen Features installiert sind.
 
@@ -172,11 +172,11 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiele:
 
-- Online-Benutzeranweisungen: [Azure Information Protection-Benutzerhandbuch](client-user-guide.md)
+- Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 
-- Herunterladen eines anpassbaren Leitfadens: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Endbenutzerhandbuch für die Einführung in Azure Information Protection)
+- Download des anpassbaren Benutzerhandbuchs: [Azure Information Protection End User Adoption Guide (Benutzerhandbuch für die Einführung in Azure Information Protection)](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Upgraden und Verwalten des Azure Information Protection-Clients
 
@@ -217,7 +217,7 @@ Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden 
 
 4. Führen Sie den Befehl „Update-AIPScanner“ in einer PowerShell-Sitzung mit dem Profilnamen aus, den Sie in Schritt 1 angegeben haben. Beispiel: `Update-AIPScanner –Profile Europe`
 
-5. Nur für den Fall, dass der Scanner auf einem nicht verbundenen Computer ausgeführt wird: Führen Sie nun das Cmdlet [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) aus, und geben Sie die Datei an, in der die exportierten Einstellungen enthalten sind.
+5. Nur wenn die Überprüfung auf einem nicht verbundenen Computer ausgeführt wird: führen Sie nun [Import-aipscannerconfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) aus, und geben Sie die Datei an, die die exportierten Einstellungen enthält.
 
 6. Starten Sie den Azure Information Protection-Scannerdienst **Azure Information Protection-Scanner** neu.
 
@@ -248,13 +248,13 @@ Wenn Sie wissen, dass Sie die Überprüfungs Konfigurations Datenbank für die G
 
 3. Installieren Sie den Scanner mithilfe des Befehls [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), und geben Sie dabei die neue SQL Server-Instanz und den Profilnamen an.
 
-4. Optional: Wenn Sie nicht möchten, dass der Scanner alle Dateien erneut überprüft, exportieren Sie die Tabelle „ScannerFiles“, und importieren Sie sie in die neue Datenbank.
+4. Optional: Wenn Sie nicht möchten, dass der Scanner alle Dateien erneut scannt, exportieren Sie die Tabelle scannerfiles, und importieren Sie Sie in die neue Datenbank.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Deinstallieren des Azure Information Protection-Clients
 
 Verwenden Sie eine der folgenden Optionen zur Deinstallation des Clients:
 
-- Verwenden der Systemsteuerung, um ein Programm zu deinstallieren: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**.
+- Deinstallieren Sie ein Programm über die Systemsteuerung: Klicken Sie auf **Microsoft Azure Information Protection** > **Deinstallieren**
 
 - Führen Sie die ausführbare Datei (z. B. **AzInfoProtection.exe**) erneut aus, und klicken Sie auf der Seite **Setup ändern** auf **Deinstallieren**. 
 
