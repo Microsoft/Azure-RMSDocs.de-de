@@ -14,16 +14,22 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
-ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
+ms.openlocfilehash: ab71c7156fa55e09ca22bdaf61c4bcfcd590fb16
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892566"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690134"
 ---
 # <a name="release-notes"></a>Anmerkungen zu dieser Version
 
 Dieser Artikel enthält wichtige Informationen zu diesem und früheren Releases des RMS SDK 2.1.
+
+## <a name="october-2019---update"></a>Oktober 2019-Update
+
+- Unter bestimmten Umständen kann die Verwendung der symmetrischen Schlüssel Authentifizierung den Benutzer nicht mit Azure RMS authentifizieren, was den Schutz und den Schutz von Inhalten verhindert.
+- Der RMS-Client stürzt möglicherweise ab, um zu überprüfen, ob einige PDF-Dokumente, die zuvor geschützt und ungeschützt waren, zurzeit geschützt sind.
+- Die Verwendung der DNS-Umleitung für AD RMS Server, die auf besonderen Ports konfiguriert wurden, funktioniert nicht ordnungsgemäß.
 
 ## <a name="september-2019---update"></a>September 2019-Update 
 
@@ -156,19 +162,19 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
       - Alle Dateien außer System- und Office-Dateien können mit dem geschützten RMS-Dateiformat (PFILE) geschützt werden.
 
-    Die Datei-API wird über die folgenden vier neuen Funktionen implementiert: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) und [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
+    Die Datei-API wird über die vier folgenden neuen Funktionen implementiert: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) und [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
     Die Datei-API erfordert, dass der Rights Management Service Client 2.1 auf dem Clientcomputer installiert ist und dass der Computer mit einem RMS-Server verbunden ist. Weitere Informationen zu RMS-Server, RMS-Client und deren Funktionalität finden Sie im TechNet unter [Dokumentation zu RMS für IT-Spezialisten](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
--   **Problem:** Wenn Sie eine Lizenz von Grund auf neu erstellen, müssen Sie Eigentumsrechte explizit gewähren.
+-   **Problem**: Wenn Sie eine Lizenz von Grund auf neu erstellen, müssen Sie Eigentumsrechte explizit gewähren.
 
     **Lösung**: Die Anwendung muss dem Lizenzinhaber explizit **Besitzerrechte** hinzufügen, wenn eine von Grund auf neue Lizenz mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt wird. Weitere Informationen finden Sie unter [Hinzufügen expliziter Besitzerrechte](add-explicit-owner-rights.md).
 
--   **Problem:** Wenn eine Anwendung [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) oder [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) zweimal für das gleiche Fenster über deren Handle aufruft, gibt das RMS SDK 2.1 in **HRESULT** einen Fehler zurück.
+-   **Problem**: Wenn eine Anwendung [ipcprotectwindow](https://msdn.microsoft.com/library/hh535268.aspx) oder [ipcunprotectwindow](https://msdn.microsoft.com/library/hh535272.aspx) zweimal für das gleiche Fenster mithilfe Ihres Handles aufruft, gibt RMS SDK 2,1 einen Fehler in **HRESULT**zurück.
 
-    **Lösung**: Spezielle Anweisungen hierzu finden Sie unter [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) und [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) im Abschnitt „Hinweise“.
+    **Lösung**: Spezielle Anweisungen hierzu finden Sie in [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) und [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) im Abschnitt „Hinweise“.
 
--   **Problem:** Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen befolgen.
+-   **Problem**: Bei der Entwicklung für mehrere Architekturen müssen Sie diese Anweisungen verwenden.
 
     **Lösung**: Wenn Sie „Ipcsecproc\*isv.dll“ für eine andere Architektur verwenden möchten (Sie haben beispielsweise das 64-Bit-SDK auf einem 64-Bit-Computer installiert, möchten die Bereitstellung aber jetzt auf einem 32-Bit-Computer durchführen, auf dem „Ipcsecproc\*isv.dll“ erforderlich ist), müssen Sie das 32-Bit-SDK auf einem anderen Computer installieren und die Dateien „Ipcsecproc\*isv.dll“ vom Ordner „%PROGRAMFILES%\\Microsoft Information Protection And Control“ (dem Standardordner bzw. von dem Speicherort, den Sie für die Installation des SDK angegeben haben) dorthin kopieren.
 
@@ -176,7 +182,7 @@ Die Datei-API-Komponente des SDK wurde erweitert und bietet folgende Funktionen:
 
 **F**: Welches Standardverhalten gilt für die Sprache bei Funktionen, die einen LCID-Parameter akzeptieren?
 
-**A**: Verwenden Sie 0 (null) für das Standardgebietsschema. In diesem Fall sucht der AD RMS-Client 2.1 in der folgenden Reihenfolge nach Namen und Beschreibungen und ruft die erste verfügbare Sprache auf:
+**A**: Verwenden Sie 0 für das Standardgebietsschema. In diesem Fall sucht der AD RMS-Client 2.1 in der folgenden Reihenfolge nach Namen und Beschreibungen und ruft die erste verfügbare Sprache auf:
 
     1 - User preferred LCID.
     2 - System locale LCID.
