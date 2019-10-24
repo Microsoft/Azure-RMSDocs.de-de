@@ -4,7 +4,7 @@ description: Eine technische Übersicht über den Azure Information Protection-D
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/18/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b71bc14817aadd1c67452fecc228a339dfebcb42
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 0659abcb6211bc05a6db435db759eed8f6c44cea
+ms.sourcegitcommit: 2f092b395e31ce64df8b9148433032be5702217e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689900"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589608"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -145,20 +145,19 @@ Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information P
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Bei der Microsoft Ignite 2018-Konferenz in Orlando gab es viele Sitzungen zum Thema Azure Information Protection. Alle Sitzungen wurden aufgezeichnet – Sie können sich diese also auch ansehen, wenn Sie nicht an der Konferenz teilnehmen konnten. Hier sind die besten fünf empfohlenen Präsentationen:
+Die Microsoft Ignite 2019 in Orlando startet bald! Dort erhalten Sie viele nützliche Informationen zu Azure Information Protection und den neuesten Updates und Verbesserungen. Wir hoffen, Sie dort begrüßen zu dürfen. Falls Sie jedoch nicht teilnehmen können, können Sie sich später eine Aufzeichnung der Sitzungen ansehen.
 
-- [BRK2006: Verwenden von Microsoft Information Protection (MIP) zum Schutz Ihrer sensiblen Daten überall und über den gesamten Lebenszyklus hinweg](https://youtu.be/gmHVF-1cLXA)
+Im Folgenden finden Sie die fünf Sitzungen, die wir Ihnen empfehlen. Links werden hinzugefügt, sobald die Aufzeichnungen verfügbar sind:
+
+- BRK2119: „Secure your sensitive data!“ (Sichern Sie Ihre vertraulichen Daten!) Grundlegendes zu den neuesten Funktionen von Microsoft Information Protection
  
-- [BRK3002: Wie die Funktionen von Microsoft Information Protection zusammenarbeiten, um sensible Informationen über Geräte, Apps und Dienste hinweg zu schützen](https://youtu.be/kL9Y7NGTyQQ)
+- BRK3100: „What does your sensitive data landscape look like?“ (Wie sieht die Landschaft Ihrer vertraulichen Daten aus?) Best Practices für Datenermittlung, Klassifizierung, Analyse und Berichterstellung
 
-- [BRK3009: Beschleunigen der Bereitstellung und der Einführung von Microsoft Information Protection-Lösungen](https://www.youtube.com/watch?v=JsCyIVyQJmE)
+- BRK3103: „Protecting sensitive files and data can be hard.“ (Der Schutz vertraulicher Dateien und Daten kann schwierig sein.) Auswahl der richtigen Datenschutzoptionen mit dem richtigen Verhältnis zwischen Sicherheit und Mitarbeiterproduktivität
 
-- [BRK3397: Schützen und Steuern von sensiblen E-Mails mit der Nachrichtenverschlüsselung von Office 365](https://www.youtube.com/watch?v=Ld4b4pFua0g)
+- BRK2120: „Got Azure Information Protection?“ (Haben Sie Azure Information Protection schon?) Sicherer Umgang mit einheitlichen Bezeichnungen, Richtlinienkonfiguration, Clients und Analysen
 
-- [THR2003: Datenermittlung, Verwendungsberichte und Analysen für alle Daten mit Microsoft Information Protection](https://www.youtube.com/watch?v=nzDIXd0XaeA)
-
-Eine Zusammenfassung der Ankündigungen dieser Ignite-Konferenz finden Sie im Blogbeitrag [Announcing availability of information protection capabilities to help protect your sensitive data (Ankündigung der Verfügbarkeit von Information Protection-Funktionen zum Schutz Ihrer sensiblen Daten)](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967).
-
+- BRK2121: Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK. (Nutzen Sie mit dem Microsoft Information Protection SDK leistungsstarke Vertraulichkeitsbezeichnungen und Schutzfunktionen für Ihre eigenen Apps und ISV-Lösungen.)
 
 ## <a name="next-steps"></a>Nächste Schritte
 
