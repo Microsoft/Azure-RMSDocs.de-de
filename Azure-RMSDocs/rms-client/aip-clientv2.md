@@ -4,7 +4,7 @@ description: Informationsressourcen für den Azure Information Protection Unifie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d357f5ddbaa4387e16ac476588d1651fe583b374
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: ddfcabc7237c66d95bc9f6dab15dc5326a92d6be
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447877"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805254"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection Unified Bezeichnung-Client für Windows
 
@@ -29,7 +29,7 @@ ms.locfileid: "72447877"
 Der Azure Information Protection Unified Label-Client für Windows ist ein herunterladbarer Client für Organisationen, die [Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) zum klassifizieren und schützen von Dokumenten und e-Mails verwenden. Dieser Client verfügt für Organisationen, die über keine eigene Infrastruktur für den Informationsschutz verfügen, aber Inhalte nutzen möchten, die von anderen Organisationen geschützt wurden, die einen Rights Management-Dienst von Microsoft verwenden, über einen Viewer.
 
 > [!NOTE]
-> Dieser Client wird auch nur als einheitlicher Bezeichnungs Client bezeichnet und ersetzt den Azure Information Protection Client (klassisch). Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Azure Information Protection Clients](use-client.md#choose-which-azure-information-protection-client-to-use)Weitere Informationen.
+> Dieser Client wird auch nur als einheitlicher Bezeichnungs Client bezeichnet und ersetzt den Azure Information Protection Client (klassisch). Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Kunden für Windows-Computer](use-client.md#choose-which-labeling-client-to-use-for-windows-computers)Weitere Informationen.
 
 Verwenden Sie die folgenden Ressourcen für den Unified-Bezeichnungs Client:
 

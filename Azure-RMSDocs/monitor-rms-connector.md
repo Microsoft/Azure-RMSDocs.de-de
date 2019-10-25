@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71689503"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
@@ -133,7 +133,7 @@ Informationen zum Konfigurieren des RMS-Connectors für HTTPS-Verbindungen finde
 
 Warnung **2003**
 
-**Die Liste der Autorisierungen ist leer. Der Dienst kann nicht verwendet werden, bis die Liste der für den Connector autorisierten Benutzer und Gruppen aufgefüllt wird.**
+**Die Liste der Autorisierungen ist leer. Der Dienst kann erst verwendet werden, wenn die Liste der autorisierten Benutzer und Gruppen für den Connector aufgefüllt ist.**
 
 Dieses Ereignis wird protokolliert, wenn der RMS-Connector über keine Liste der autorisierten Konten verfügt, und lokale Server daher keine Verbindung zu ihm herstellen können. Der RMS-Connector lädt die Liste alle 15 Minuten von Azure RMS herunter. 
 
@@ -167,11 +167,11 @@ Bei der Installation des RMS-Connectors werden automatisch Leistungsindikatoren 
 
 Es treten beispielsweise regelmäßig Verzögerungen auf, wenn Dokumente oder E-Mails geschützt sind. Oder es kommt zu Verzögerungen, wenn geschützte Dokumente oder E-Mails geöffnet werden. In diesen Fällen können Sie mithilfe der Leistungsindikatoren die Ursache der Verzögerungen bestimmen: die Verarbeitungszeit im Connector, die Verarbeitungszeit im Azure Rights Management-Dienst oder Netzwerkverzögerungen. 
 
-Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Zum Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
+Um die Ursache der Verzögerung zu ermitteln, überprüfen Sie Leistungsindikatoren mit Durchschnittswerten für **Connector-Verarbeitungszeit**, **Dienstantwortzeit** und **Connector-Antwortzeit**. Beispiel: **Lizenzierung erfolgreich. Batchanforderung – Durchschnittliche Connector-Antwortzeit**.
 
 Wenn Sie vor Kurzem neue Serverkonten für die Verwendung des Connectors hinzugefügt haben, sollten Sie anhand des Leistungsindikators **Verstrichene Zeit seit der letzten Aktualisierung der Autorisierungsrichtlinie** überprüfen, ob der Connector die Liste seit der Aktualisierung heruntergeladen hat, oder ob Sie noch warten müssen (bis zu 15 Minuten).
 
-## <a name="logging"></a>Protokollierung
+## <a name="logging"></a>Logging
 
 Mithilfe der Verwendungsprotokollierung können Sie ermitteln, wann E-Mails und Dokumente geschützt und verwendet werden. Wenn der RMS-Verbindungsdienst zum Schützen und Nutzen von Inhalten verwendet wird, enthält das Feld „Benutzer-ID“ in den Protokollen den Dienstprinzipalnamen **Aadrm_S-1-7-0**. Dieser Name wird automatisch für den RMS-Connector erstellt.
 

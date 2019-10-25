@@ -3,7 +3,7 @@ title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-B
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447828"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805689"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -123,6 +123,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |EnableCustomPermissions|[Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |Enablelabelbymailheader|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|Enablelabelbysharepointproperties|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](##display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |Outlookblocktreuhänddomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -472,7 +473,7 @@ Wenn diese Bedingungen erfüllt sind, wird dem Benutzer eine Popup Meldung mit e
 Wenn sich die Popup Meldungen für eine bestimmte Bezeichnung befinden, können Sie Ausnahmen für Empfänger nach Domänen Name konfigurieren.
 
 > [!TIP]
-> Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+> Eine exemplarische Vorgehensweise zum Konfigurieren dieser Einstellungen finden Sie im Video [Azure Information Protection Outlook-Popup Konfiguration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>So werden die Popupmeldungen zum Warnen, zur Legitimation oder zum Blockieren für bestimme Bezeichnungen implementiert:
 
@@ -655,7 +656,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Wenn der Azure Information Protection Unified Bezeichnung-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn die Einstellung " [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced" nicht auf " **false**" festgelegt ist, werden alle vordefinierten und benutzerdefinierten (nur Vorschau Client) sensiblen Informationstypen, die gefunden werden, an [Azure Information Protection Analytics](../reports-aip.md)gesendet.
+Wenn der Azure Information Protection Unified Bezeichnung-Client in Office-Apps verwendet wird, sucht er nach vertraulichen Informationen in Dokumenten, wenn diese zum ersten Mal gespeichert werden. Wenn die Einstellung " [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) Advanced" nicht auf " **false**" festgelegt ist, werden alle gefundenen vordefinierten und benutzerdefinierten Typen von vertraulichen Informationen an [Azure Information Protection Analytics](../reports-aip.md)gesendet.
 
 Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom Unified Label-Client gefunden werden, nicht gesendet werden, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
 
@@ -793,6 +794,22 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
+### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Erweitern der Regeln für die Bezeichnung der Migration auf SharePoint-Eigenschaften
+
+Sie können die erweiterten labelbycustomproperties-Einstellungen mit SharePoint-Eigenschaften verwenden, die Sie möglicherweise als Spalten für Benutzer verfügbar machen.
+
+Diese Einstellung wird unterstützt, wenn Sie Word, Excel und PowerPoint verwenden.
+
+Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeichen folgen für die ausgewählte Bezeichnungs Richtlinie ein:
+
+- Schlüssel: **enablelabelbysharepointproperties**
+
+- Wert: **TRUE**
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird
 
 Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
@@ -889,6 +906,7 @@ Beispiel für einen PowerShell-Befehl, bei dem die übergeordnete Bezeichnung "C
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+
 ## <a name="specify-a-color-for-the-label"></a>Farbe für die Bezeichnung angeben
 
 Diese Konfiguration verwendet [Erweiterte Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) für die Bezeichnung, die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
@@ -931,6 +949,43 @@ Weiterhin gilt:
 
 - Sie können die Option **Einstellungen zurücksetzen** unter **Hilfe und Feedback** verwenden, um sich anzumelden und die derzeit heruntergeladenen Bezeichnungen und Richtlinien Einstellungen aus dem Office 365-Security & Compliance Center, dem Microsoft 365 Security Center oder dem Microsoft 365 Kompatibilitäts Center.
 
+
+## <a name="support-for-disconnected-computers"></a>Unterstützung für getrennte Computer
+
+> [!IMPORTANT]
+> Getrennte Computer werden nur für die folgenden Bezeichnungs Szenarien unterstützt: Datei-Explorer, PowerShell und Scanner. Zum bezeichnen von Dokumenten in Ihren Office-Apps müssen Sie über eine Internet Verbindung verfügen.
+
+Standardmäßig versucht der Azure Information Protection Unified Label-Client automatisch, eine Verbindung mit dem Internet herzustellen, um die Bezeichnungen und die Beschriftungs Richtlinien Einstellungen aus Ihrem Bezeichnungs Verwaltungs Center herunterzuladen: Office 365 Security & Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center. Wenn Sie über Computer verfügen, die für einen bestimmten Zeitraum keine Verbindung mit dem Internet herstellen können, können Sie Dateien exportieren und kopieren, die die Richtlinie für den Unified-Bezeichnungs Client manuell verwalten.
+
+Anweisungen:
+
+1. Wählen Sie ein Benutzerkonto in Azure AD aus, das Sie zum Herunterladen von Bezeichnungen und Richtlinien Einstellungen verwenden, die Sie auf dem nicht verbundenen Computer verwenden möchten, oder erstellen Sie ein Benutzerkonto.
+
+2. Deaktivieren Sie als zusätzliche Bezeichnungs Richtlinien Einstellung für dieses Konto das Senden von Überwachungs [Daten an Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) mithilfe der erweiterten Einstellung **EnableAudit** .
+    
+    Dieser Schritt wird empfohlen, denn wenn der getrennte Computer über regelmäßige Internet Konnektivität verfügt, sendet er Protokollierungs Informationen an Azure Information Protection Analytics, der den Benutzernamen aus Schritt 1 enthält. Das Benutzerkonto kann sich von dem lokalen Konto unterscheiden, das Sie auf dem getrennten Computer verwenden.
+
+3. Laden Sie auf einem Computer mit Internet Konnektivität, auf dem der Unified Label-Client installiert ist und der mit dem Benutzerkonto aus Schritt 1 angemeldet ist, die Bezeichnungen und Richtlinien Einstellungen herunter.
+
+4. Exportieren Sie die Protokolldateien auf diesem Computer.
+    
+    Führen Sie beispielsweise das Cmdlet [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) aus, oder verwenden Sie im Dialogfeld [Hilfe und Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) des Clients die Option **Protokolle exportieren** . 
+    
+    Die Protokolldateien werden als einzelne komprimierte Datei exportiert.
+
+5.  Öffnen Sie die komprimierte Datei, und kopieren Sie aus dem Ordner MSIP alle Dateien mit der Dateinamenerweiterung XML.
+
+6. Fügen Sie diese Dateien in den Ordner **%LocalAppData%\microsoft\msip** auf dem getrennten Computer ein.
+
+7. Wenn Ihr ausgewähltes Benutzerkonto in der Regel eine Verbindung mit dem Internet herstellt, aktivieren Sie das Senden von Überwachungsdaten erneut, indem Sie den **EnableAudit** -Wert auf " **true**" festlegen.
+
+8. Führen Sie das Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit dem *delegateduser* -Parameter aus, um den getrennten Computer zu schützen, Dateien erneut zu schützen, den Schutz von Dateien zu entfernen oder geschützte Dateien zu überprüfen. das Benutzerkonto aus Schritt 1 zum Festlegen des Benutzer Kontexts. Beispiele:
+    
+        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
+
+Wenn ein Benutzer auf diesem Computer die Option **Einstellungen zurücksetzen** unter [Hilfe und Feedback](clientv2-admin-guide.md#help-and-feedback-section)auswählt, löscht diese Aktion die Richtlinien Dateien und rendert den Client als nicht funktionsfähig, bis Sie die Dateien manuell ersetzen oder der Client eine Verbindung mit dem Internet herstellt. lädt die Dateien herunter.
+
+Wenn der nicht verbundene Computer den Azure Information Protection Scanner ausführen soll, müssen Sie zusätzliche Konfigurationsschritte ausführen. Weitere Informationen finden Sie unter [Einschränkung: der Scanner-Server kann keine Internet Konnektivität](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) aus den Überprüfungs Anweisungen für die Überprüfung haben.
 
 ## <a name="change-the-local-logging-level"></a>Ändern des lokalen Protokolliergrads
 

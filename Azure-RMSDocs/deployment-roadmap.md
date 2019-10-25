@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7af3b59138eecbcac40ac09003ab365454e5630
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: d304664bb3573bc1a90989f11927264450d01c0d
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447217"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805568"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Roadmap für die Bereitstellung von Azure Information Protection
 
@@ -65,7 +65,7 @@ Weitere Informationen finden Sie unter [Vorbereiten von Benutzern und Gruppen f�
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Schritt 3: Konfigurieren und Bereitstellen von Klassifizierungen und Bezeichnungen
 
-Legen Sie vor dem Konfigurieren von Bezeichnungen und Richtlinien Einstellungen fest, welche Azure Information Protection Client Sie verwenden möchten: der klassische Client oder der Unified Label-Client. Möglicherweise benötigen Sie aber auch beide Clients. Diese Client Entscheidung wird jetzt benötigt, sodass Sie wissen, welches Verwaltungs Portal zum Konfigurieren von Bezeichnungen und Richtlinien Einstellungen verwendet werden soll. Weitere Informationen und Hilfe bei dieser Entscheidung finden Sie unter Auswählen des [zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Legen Sie vor dem Konfigurieren von Bezeichnungen und Richtlinien Einstellungen fest, welche Azure Information Protection Client Sie verwenden möchten: der klassische Client oder der Unified Label-Client. Möglicherweise benötigen Sie aber auch beide Clients. Diese Client Entscheidung wird jetzt benötigt, sodass Sie wissen, welches Verwaltungs Portal zum Konfigurieren von Bezeichnungen und Richtlinien Einstellungen verwendet werden soll. Weitere Informationen und Hilfe bei dieser Entscheidung finden Sie unter Auswählen des [zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 > [!TIP]
 > **Optional, aber empfohlen**: Verwenden Sie den [Schnellstart für Scanner](quickstart-findsensitiveinfo.md) , um zu ermitteln, welche sensiblen Informationen Sie in Ihren lokalen Daten speichern haben. Die Informationen, die der Scanner findet, können Ihnen bei Ihrer Klassifizierungstaxonomie helfen und wertvolle Informationen darüber liefern, welche Bezeichnungen Sie benötigen und welche Dateien geschützt werden müssen.
@@ -78,7 +78,7 @@ Konfigurieren Sie Ihre Bezeichnungen neu, um Änderungen vorzunehmen, die Sie zu
 
 - Azure Information Protection Bezeichnungen für den klassischen Client: [Konfigurieren Azure Information Protection Richtlinie](./configure-policy.md)
 
-- Vertraulichkeits Bezeichnungen für den Unified Label-Client: [Übersicht über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+- Vertraulichkeits Bezeichnungen für den Unified Label-Client: [Übersicht über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Stellen Sie dann den Azure Information Protection Client (klassisch) oder den Azure Information Protection Unified-Beschriftungs Client für Benutzer bereit. Bereitstellen von Benutzer Schulungen und spezifischen Anweisungen, wann die Bezeichnungen ausgewählt werden sollen. Weitere Informationen zum Installieren und unterstützen von Clients finden Sie in den Administrator Handbüchern:
 

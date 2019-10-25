@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 00ce2f31b5215a954c64135e9d41d39b1eeb1d72
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 4a94787ad611ca52206629362a7ac1bf9df9f174
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447752"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805543"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -63,7 +63,7 @@ Der **Azure Information Protection Client (klassisch)** ist verfügbar, seit Azu
 
 Der **Azure Information Protection Unified Bezeichnung-Client** ist eine neuere Ergänzung, um den einheitlichen Bezeichnungs Speicher zu unterstützen, der von mehreren Anwendungen und Diensten unterstützt wird. Dieser Client lädt Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen von den folgenden admin Centers herunter: Office 365 Security & Compliance Center, Microsoft 365 Security Center und Microsoft 365 Compliance Center. Weitere Informationen finden Sie unter [Übersicht über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
-Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use)Weitere Informationen.
+Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)Weitere Informationen.
 
 ### <a name="identify-which-client-you-have-installed"></a>Identifizieren des installierten Clients
 

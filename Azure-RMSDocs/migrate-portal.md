@@ -13,10 +13,10 @@ ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71966848"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
@@ -27,7 +27,7 @@ Sind Sie mit der Verwaltung des Azure Rights Management-Diensts über das klassi
 
 Das klassische Azure-Portal wurde am **08. Januar 2018** abgeschaltet. Danach können Sie über das klassische Portal nicht mehr den Azure Rights Management-Dienst und benutzerdefinierte Vorlagen verwalten. Wenn Sie versuchen, auf das klassische Portal zuzugreifen, wird ein Link zum neuen Azure-Portal angezeigt.
 
-Weitere Informationen zur Abschaltung des klassischen Portals finden Sie in der Ankündigung zum Blogbeitrag: [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal (Auf dem Weg in die Zukunft der Azure AD-Administratorbenutzeroberfläche: Abschalten des klassischen Azure-Portals)](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Informationen zur kurzfristigen Verschiebung des ursprünglichen Verkaufs-/Ausmusterungsdatums finden Sie unter [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/) (Update zur Abschaltung des klassischen Azure AD-Portals und Migration der Richtlinien für den bedingten Zugriff).
+Weitere Informationen zur Abschaltung des klassischen Azure-Portals finden Sie in der Ankündigung im Blogbeitrag [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal (Auf dem Weg in die Zukunft der Azure AD-Administratorbenutzeroberfläche: Abschalten des klassischen Azure-Portals)](https://cloudblogs.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/). Informationen zur kurzfristigen Verschiebung des ursprünglichen Verkaufs-/Ausmusterungsdatums finden Sie unter [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/) (Update zur Abschaltung des klassischen Azure AD-Portals und Migration der Richtlinien für den bedingten Zugriff).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Ausführen Ihrer bekannten Administratoraufgaben
 
@@ -35,9 +35,9 @@ Verwenden Sie die folgenden Informationen, um schnell zum neuen Portal überzuge
 
 |Klassisches Azure-Portal|So führen Sie die Aufgabe im Azure-Portal aus
 |-----------|--------------------|
-|Erstmaliges Zugreifen auf die Konfigurationseinstellungen|1. [Melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Führen Sie die Anweisungen für [Der Erste Zugriff auf das Blatt „Azure Information Protection“](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) durch.
+|Erstmaliges Zugreifen auf die Konfigurationseinstellungen|1. [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Befolgen Sie die Anweisungen [, um zum ersten Mal auf das Blatt "Azure Information Protection" zuzugreifen](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time).
 |Erstellen einer neuen Vorlage|Erstellen Sie eine Bezeichnung, die Schutz anwendet, und verwenden Sie **Set permissions** (Berechtigungen festlegen), um die Berechtigungen, das Ablaufdatum und den Offlinezugriff zu definieren. <br /><br />Im Hintergrund wird durch diese Konfiguration eine neue benutzerdefinierte Vorlage erstellt, auf die dann über Dienste und Anwendungen zugegriffen werden kann, die in Rights Management-Vorlagen integriert werden.<br /><br />Weitere Informationen finden Sie unter [So erstellen Sie eine neue Vorlage](configure-policy-templates.md#to-create-a-new-template).
-|Bearbeiten der Vorlageneigenschaften: <br /><br />– Vorlagenname und -beschreibung<br /><br />– Einstellungen zu Nutzungsrechten, zum Ablauf von Inhalten und zum Offlinezugriff|Wenn nicht bereits geschehen, [konvertieren Sie die Vorlage in eine Bezeichnung](configure-policy-templates.md#to-convert-templates-to-labels), und gehen Sie dann wie folgt vor:<br /><br />1. Ändern Sie den Namen und die Beschreibung der Bezeichnung<br /><br />2. Ändern Sie die Projekteinstellungen der Bezeichnung, um die Einstellungen für Berechtigungen, das Ablaufdatum und den Offlinezugriff zu aktualisieren.<br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
+|Bearbeiten der Vorlageneigenschaften: <br /><br />– Vorlagenname und -beschreibung<br /><br />– Einstellungen zu Nutzungsrechten, zum Ablauf von Inhalten und zum Offlinezugriff|Wenn nicht bereits geschehen, [konvertieren Sie die Vorlage in eine Bezeichnung](configure-policy-templates.md#to-convert-templates-to-labels), und gehen Sie dann wie folgt vor:<br /><br />1. ändern Sie den Namen und die Beschreibung der Bezeichnung.<br /><br />2. ändern Sie die Schutzeinstellungen für die Bezeichnung, um die Einstellungen für Berechtigungen, Ablauf und Offline Zugriff zu aktualisieren.<br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Archivieren einer Vorlage|Legen Sie den Status der Bezeichnung auf **Deaktiviert** fest.
 |Erstellen einer bereichsbezogenen Vorlage|Erstellen Sie eine bereichsbezogene Richtlinie, und erstellen Sie in diesem Bereich eine Bezeichnung, die Schutz anwendet. <br /><br />Weitere Informationen finden Sie unter [Konfigurieren der Azure Information Protection-Richtlinie für bestimmte Benutzer mithilfe bereichsbezogener Richtlinien](configure-policy-scope.md).
 |Kopieren einer Vorlage|Sie können eine Vorlage im Azure-Portal nicht kopieren. Wenn Sie möchten, dass zwei Vorlagen über die gleichen Schutzeinstellungen verfügen, müssen Sie die Berechtigungen für jede Bezeichnung festlegen. <br /><br />Weitere Informationen finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
@@ -57,10 +57,10 @@ Neue Funktionen im Azure-Portal:
 
 - Sie können Vorlagen in Bezeichnungen konvertieren, sodass Sie ein einzelnes Objekt verwalten, anstatt eine Vorlage und eine Bezeichnung unabhängig zu verwalten. Anweisungen finden Sie unter [Konvertieren von Vorlagen in Bezeichnungen](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Unterstützung für andere Administratorrollen: Während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection mit vielen anderen administrativen Rollen zu verwalten, die die Konformität einschließen.  **Administrator** -und **Konformitäts Daten Administrator**. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
+- Unterstützung für andere Administrator Rollen: während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection mit vielen anderen Administrator Rollen zu verwalten. Dazu gehören Kompatibilitäts **Administrator** und Kompatibilitäts **Daten Administrator**. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
 
 Die PowerShell-Cmdlets zum Erstellen und Verwalten von Vorlagen und zum Aktivieren oder Deaktivieren des Diensts werden weiterhin ohne Änderungen unterstützt.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 Ausführlichere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md).
 

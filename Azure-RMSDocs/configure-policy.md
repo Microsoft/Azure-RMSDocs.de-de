@@ -14,10 +14,10 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "72447039"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
@@ -170,7 +170,7 @@ Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird di
 
 - In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** . 
 
-- Für Word-Dokumente (. doc und. docx), Excel-Kalkulations Tabellen (XLS und XLSX), PowerPoint-Präsentationen (. ppt und. pptx) und PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_ @ no__t-1guid > _Enabled = true**  
+- Für Word-Dokumente (. doc und. docx), Excel-Kalkulations Tabellen (. xls und. xlsx), PowerPoint-Präsentationen (. ppt und. pptx) und PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID > _Enabled = true**  
 
 Bei e-Mails werden die Bezeichnungs Informationen gespeichert, wenn die e-Mail gesendet wird. Bei Dokumenten werden die Bezeichnungs Informationen gespeichert, wenn die Datei gespeichert wird. 
 

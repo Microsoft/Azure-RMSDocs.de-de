@@ -12,17 +12,17 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 044eafa1893c34745d49cc05b0ec029d88ecc318
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684109"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen. 
@@ -59,9 +59,9 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 
 - In einer Office-App werden die visuellen Kennzeichnungen aus einer Bezeichnung angewendet, wenn die Bezeichnung angewendet wird. Visuelle Kennzeichnungen werden ebenfalls angewendet, wenn ein bezeichnetes Dokument geöffnet und erstmals gespeichert wird.  
 
-- Wenn ein Dokument mithilfe von Datei-Explorer, PowerShell oder dem Azure Information Protection-Scanner beschriftet wird: Optische Kennzeichnungen werden nicht sofort angewendet, vielmehr werden sie vom Azure Information Protection-Client angewendet, wenn das Dokument in einer Office-App geöffnet und zum ersten Mal gespeichert wird.
+- Wenn ein Dokument über den Datei-Explorer, über PowerShell oder über die Azure Information Protection-Überprüfung bezeichnet wird, werden optische Kennzeichnungen nicht sofort übernommen. Sie werden vom Azure Information Protection-Client angewendet, wenn das Dokument in einer Office-App geöffnet und erstmals gespeichert wird.
     
-    Die Ausnahme besteht in der Verwendung von [AutoSpeichern](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) in Office-Apps für Dateien, die in SharePoint Online, OneDrive oder OneDrive for Business gespeichert sind: Wenn AutoSpeichern aktiviert ist, werden visuelle Markierungen erst angewendet, wenn Sie die [erweiterte Clienteinstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) zum Aktivieren der Klassifizierung für die ständige Ausführung im Hintergrund konfigurieren. 
+    Eine Ausnahme stellt die Verwendung von [Autosave](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) mit Office-Apps für Dateien dar, die in SharePoint Online, onedrive oder onedrive for Business gespeichert sind: wenn Autosave auf ON festgelegt ist, werden visuelle Kennzeichnungen nicht angewendet, es sei denn, Sie konfigurieren die [Erweiterte Client Einstellung](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) auf Aktivieren Sie die Klassifizierung so, dass Sie fortlaufend im Hintergrund ausgeführt wird. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>So konfigurieren Sie visuelle Kennzeichnungen für eine Bezeichnung
 
@@ -71,7 +71,7 @@ Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine B
     
     Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection – Bezeichnungen** die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie hinzufügen oder ändern möchten.
+2. Navigieren Sie über die Menüoption **Klassifizierungen** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection - Bezeichnungen), und wählen Sie dort die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie ändern möchten.
 
 3. Konfigurieren Sie auf dem Blatt **Bezeichnung** im Abschnitt **Optische Kennzeichnung festlegen (z. B. Kopf- oder Fußzeile)** die Einstellungen für die gewünschten optischen Kennzeichnungen, und klicken Sie dann auf **Speichern**:
     
@@ -88,9 +88,9 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 
-- `${Item.Label}` für die ausgewählte Bezeichnung. Zum Beispiel: Allgemein
+- `${Item.Label}` für die ausgewählte Bezeichnung. Beispiel: Allgemein
 
-- `${Item.Name}` für den Dateinamen oder E-Mail-Betreff. Zum Beispiel: JulySales.docx
+- `${Item.Name}` für den Dateinamen oder E-Mail-Betreff. Beispiel: JulySales.docx
 
 - `${Item.Location}` für den Pfad und den Dateinamen bei Dokumenten und für den Betreff bei E-Mails. Beispiel: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -98,9 +98,9 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 
 - `${User.PrincipalName}` für den Besitzer des Dokuments oder der E-Mail, gemäß der E-Mail-Adresse des angemeldeten Azure Information Protection-Clients (UPN). Beispiel: rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Zum Beispiel: 16.08.2016 13:30 Uhr
+- `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
-Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx-Klassifizierung: Allgemein**.
+Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
 
 >[!TIP]
 > Außerdem verwenden Sie einen [Feldcode zum Einfügen des Bezeichnungsnamens](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in ein Dokument oder eine Vorlage.
@@ -145,7 +145,7 @@ Wenn die angegebene Schriftart nicht verfügbar ist, verwendet der Client die Sc
 
 Sie können aus der Liste der Farben auswählen oder eine benutzerdefinierte Farbe eingeben, indem Sie ein hexadezimales Tripel für die Komponenten Rot, Grün und Blau (RGB) der Farbe eingeben. Beispielsweise ist **#40e0d0** der RGB-Hexadezimalwert für türkis. 
 
-Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie eine hilfreiche Tabelle auf der [ \<Seite Color >](https://developer.mozilla.org/docs/Web/CSS/color_value) aus den MSDN-Webdocs. Sie finden diese Codes auch in vielen Anwendungen, in denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
+Wenn Sie einen Verweis auf diese Codes benötigen, finden Sie in der MSDN-Webdokumentation eine hilfreiche Tabelle auf der Seite [\<color >](https://developer.mozilla.org/docs/Web/CSS/color_value) . Außerdem finden Sie diese Codes in vielen Anwendungen, mit denen Sie Bilder bearbeiten können. Beispielsweise können Sie bei Microsoft Paint eine benutzerdefinierte Farbe aus einer Palette auswählen, wobei die RGB-Werte automatisch angezeigt werden, die Sie dann kopieren können.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

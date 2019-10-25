@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447913"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805264"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -47,21 +47,19 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Clients](use-client.md#compare-the-clients).
+Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md##compare-the-labeling-clients-for-windows-computers).
 
-## <a name="versions-later-than-22210"></a>Spätere Versionen als 2.2.21.0
+## <a name="version-25330"></a>Version 2.5.33.0
 
-Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist, ist es ein Vorschau Build zu Test-und Bewertungszwecken.
-
-**Veröffentlicht**: 09/17/2019
+**Veröffentlicht**: 10/23/2019
 
 **Neue Funktionen:**
 
-- Unterstützung für [die über](../deploy-aip-scanner.md)Prüfung, um lokale Datenspeicher Dokumente zu überprüfen und zu bezeichnen. Mit dieser Version des Scanners:
+- Vorschauversion des [Scanners](../deploy-aip-scanner.md), um lokale Datenspeicher zu überprüfen und zu bezeichnen. Mit dieser Version des Scanners:
     
     - Wenn Sie die Scanner für die Verwendung desselben Scanner-Profils konfigurieren, können mehrere Scanner dieselbe SQL Server Datenbank gemeinsam nutzen. Diese Konfiguration erleichtert die Verwaltung mehrerer Scanner und führt zu schnelleren Scanzeiten. Wenn Sie diese Konfiguration verwenden, warten Sie immer, bis die Installation eines Scanners abgeschlossen ist, bevor Sie einen weiteren Scanner mit dem gleichen Profil installieren.
     
-    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren und die Überprüfungs Datenbank den Namen **AIPScannerUL_ @ no__t-1profile_name >** hat. Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
+    - Sie müssen ein Profil angeben, wenn Sie den Scanner installieren, und die Scannerdatenbank hat den Namen **AIPScannerUL_\<profile_name >** . Der Parameter " *profile* " ist auch für "Set-aipscanner" obligatorisch.
     
     - Sie können in allen Dokumenten eine Standard Bezeichnung festlegen, auch wenn Dokumente bereits mit der Bezeichnung versehen sind. Legen Sie in den Überprüfungs Profil-oder Repository-Einstellungen die Option **Dateien** neu bezeichnen auf ein fest **, und aktivieren** Sie das Kontrollkästchen neue **Bezeichnung Standard Bezeichnung erzwingen** .
     
@@ -80,7 +78,11 @@ Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist
     
     Weitere Informationen finden Sie im Blogbeitrag Ankündigung: [Unified-Bezeichnung AIP Scanner Preview sorgt für horizontales hochskalieren und mehr.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
-- Das PowerShell-Cmdlet [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) verfügt über neue Parameter für, wenn Sie [Dateien nicht interaktiv bezeichnen](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)möchten, und eine [neue Prozedur zum Registrieren einer APP in Azure AD](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Beispiele für Szenarien sind der Scanner und automatisierte PowerShell-Skripts zum bezeichnen von Dokumenten.
+- Das PowerShell-Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " verfügt über neue Parameter ("*AppID*", " *appsecret*", " *tenantid*", " *delegateduser*" und " *onbehalfof*"), wenn Sie Dateien nicht interaktiv bezeichnen möchten, und auch ein neues Verfahren zum Registrieren einer APP in Azure AD. Beispiele für Szenarien sind der Scanner und automatisierte PowerShell-Skripts zum bezeichnen von Dokumenten. Anweisungen finden Sie unter Vorgehens [Weise beim nicht interaktiven bezeichnen von Dateien](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) im Administrator Handbuch.
+    
+    Beachten Sie, dass *delegateduser* ein neuer Parameter seit der letzten Vorschauversion des Unified-Bezeichnungs Clients ist und dass die API-Berechtigungen für die registrierte App folglich geändert wurden.
+
+- Neue PowerShell-Bezeichnung für erweiterte Einstellungen, um [die Regeln für die Bezeichnung Migration auf SharePoint-Eigenschaften auszuweiten](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
 - Übereinstimmende benutzerdefinierte vertrauliche Informationstypen werden an [Azure Information Protection Analytics](../reports-aip.md)gesendet.
 
@@ -88,16 +90,29 @@ Wenn Sie über eine Version 2 des Clients verfügen, der höher als 2.2.21.0 ist
 
 - Beim Hinzufügen oder Ändern von Schutzeinstellungen zu einer Bezeichnung wird die Bezeichnung vom Client erneut mit den neuesten Schutzeinstellungen angewendet, wenn das Dokument das nächste Mal gespeichert wird. Auf ähnliche Weise wendet der Scanner die Bezeichnung erneut mit diesen aktuellen Schutzeinstellungen an, wenn das Dokument im Erzwingungs Modus das nächste Mal gescannt wird.
 
+- [Unterstützung für nicht verbundene Computer](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) durch Exportieren von Dateien von einem Client und manuelles Kopieren der Computer auf den getrennten Computer. Beachten Sie, dass diese Konfiguration für die Bezeichnung mit dem Datei-Explorer, PowerShell und dem Scanner unterstützt wird. Diese Konfiguration wird für die Bezeichnung mit Office-Apps nicht unterstützt.
+
 - Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Diese Datei kann dann an Microsoft-Support gesendet werden, wenn Sie zum Untersuchen eines gemeldeten Problems aufgefordert werden, Protokolldateien zu senden.
 
 **Fixes**
 
 - Sie können mit dem Datei-Explorer erfolgreich Änderungen an einer geschützten Datei vornehmen und mit der rechten Maustaste klicken, nachdem ein Kennwort für die Datei entfernt wurde.
 
+- Sie können nativ geschützte Dateien im Viewer öffnen, ohne dass das [Nutzungsrecht](../configure-usage-rights.md#usage-rights-and-descriptions)"Speichern unter", "exportieren (exportieren)" erforderlich ist.
+
+- Bezeichnungen und Richtlinien Einstellungen werden erwartungsgemäß aktualisiert, ohne dass " [Clear-aipauthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)" ausgeführt werden muss, oder Sie müssen den Ordner "%LocalAppData%\microsoft\msip\mip" manuell löschen.
+
+**Weitere Änderungen**
+
+- Wenn Sie [Einstellungen zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) , werden die\>Ordner%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName. exe* anstelle von%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip gelöscht. Pfalz.
+
+- " [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus) " enthält jetzt die Inhalts-ID für ein geschütztes Dokument.
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 
-**Veröffentlicht**: 09/03/2019
+**Veröffentlicht**: 09/03/2020
+
+Unterstützt durch 04/23/2020
 
 **Fixes**
 
@@ -219,7 +234,7 @@ Diese erste Version der allgemeinen Verfügbarkeit des Azure Information Protect
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ausführliche Informationen finden Sie in den [Vergleichstabellen](use-client.md#compare-the-clients).
+Ausführliche Informationen finden Sie in den [Vergleichstabellen](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 Weitere Informationen zum Installieren und verwenden dieses Clients finden Sie unter: 
 

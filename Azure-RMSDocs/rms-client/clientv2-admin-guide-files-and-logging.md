@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f568c3bf2a2e6cd9b94b0a7a8bd9a49b35c4958
-ms.sourcegitcommit: ef57eb7896cf0aeb592f5e8ab37452f1e95aa20d
+ms.openlocfilehash: 8e2b6d0b3e0436800cd73959107bd544dae348b0
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542358"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805604"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Administrator Handbuch: Azure Information Protection vereinheitlichte Bezeichnung für Client Dateien und Client Verwendungs Protokollierung
 
@@ -34,9 +34,14 @@ Clientdateien:
 
 - Für 32-Bit-Betriebssysteme: **\Programme\Microsoft Azure Information Protection**
 
-Client Protokolldateien:
+Client Protokolldateien und aktuell installierte Richtlinien Dateien:
 
-- Für 64-Bit-und 32-Bit-Betriebssysteme: **%LocalAppData%\microsoft\msip\logs**
+- Für 64-Bit- und 32-Bit-Betriebssysteme: **%localappdata%\Microsoft\MSIP**
+
+
+## <a name="usage-logging-for-the-azure-information-protection-unified-labeling-client"></a>Verwendungs Protokollierung für den Azure Information Protection Unified-Bezeichnungs Client
+
+Der Unified-Bezeichnungs Client protokolliert keine Benutzeraktivität im lokalen Windows-Ereignisprotokoll. Verwenden Sie stattdessen das [zentrale Berichterstattungs](../reports-aip.md) Feature von Azure Information Protection. 
 
 
 ## <a name="next-steps"></a>Nächste Schritte

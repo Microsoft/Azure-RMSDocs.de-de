@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684557"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
@@ -60,19 +60,19 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     
     Wenn Sie die DNS-Serverrolle in Windows Server verwenden, können Sie sich beim Festlegen der SRV-Eintragseigenschaften in der DNS-Manager-Konsole an der folgenden Tabelle orientieren:
     
-    |Feld|Wert|  
+    |Feld|Value|  
     |-----------|-----------|  
     |**Domäne**|_tcp.rmscluster.contoso.com|  
     |**Dienst**|_rmsredir|  
     |**Spezifische**|_http|  
-    |**Priority**|0|  
+    |**Priorität**|0|  
     |**Gewichtung**|0|  
-    |**Portnummer**|80|  
+    |**Port Nummer**|80|  
     |**Host, der diesen Dienst anbietet**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Legen Sie auf dem AD RMS-Veröffentlichungsendpunkt für Benutzer, die Office 365-Apps oder Office 2016 (oder höher) ausführen, eine Ablehnungsberechtigung fest:
 
-    a. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
+    ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
     b. Navigieren Sie zur **Standardwebsite** >  **_wmcs** > **licensing** > **licensing.asmx**
 
@@ -107,7 +107,7 @@ Das Konfigurationsskript für den Client (Migrate-Client.cmd) konfiguriert die E
 
 - Verwenden Sie ein Anmeldeskript, wenn der Benutzer über lokale Administratorrechte verfügt.
 
-Das Konfigurationsskript für den Benutzer (Migrate-User.cmd) konfiguriert die Einstellungen auf Benutzerebene und bereinigt den Lizenzspeicher des Clients. Das bedeutet, dass dieses Skript im Kontext des tatsächlichen Benutzers ausgeführt werden muss. Zum Beispiel:
+Das Konfigurationsskript für den Benutzer (Migrate-User.cmd) konfiguriert die Einstellungen auf Benutzerebene und bereinigt den Lizenzspeicher des Clients. Das bedeutet, dass dieses Skript im Kontext des tatsächlichen Benutzers ausgeführt werden muss. Beispiele:
 
 - Verwenden Sie ein Anmeldeskript.
 
@@ -129,7 +129,7 @@ Wenn Sie nicht alle Ihre Windows-Clients gleichzeitig migrieren können, führen
 
 1. Kehren Sie zu den Migrationsskripts **Migrate-Client.cmd** und **Migrate-User.cmd** zurück, die Sie zuvor beim Herunterladen dieser Skripts in der [Vorbereitungsphase](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration) extrahiert haben.
 
-2. Befolgen Sie die Anweisungen in **Migrate-Client.cmd**, um das Skript so zu bearbeiten, dass es die Azure Rights Management-Dienst-URL Ihres Mandanten sowie die Servernamen Ihrer Extranet- und Intranetlizenzierungs-URLs des AD RMS-Clusters enthält. Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen der Skriptversionen wird empfohlen, das heutige Datum in folgendem Format zu verwenden: YYYYMMDD
+2. Befolgen Sie die Anweisungen in **Migrate-Client.cmd**, um das Skript so zu bearbeiten, dass es die Azure Rights Management-Dienst-URL Ihres Mandanten sowie die Servernamen Ihrer Extranet- und Intranetlizenzierungs-URLs des AD RMS-Clusters enthält. Erhöhen Sie dann wie zuvor erläutert die Version des Skripts. Zum Nachverfolgen der Skriptversionen wird empfohlen, das heutige Datum in folgendem Format zu verwenden: YYYYMMDD.
     
    > [!IMPORTANT]
    > Achten Sie auch hier wieder darauf, keine zusätzlichen Leerzeichen vor oder nach Ihren Adressen einzufügen.
