@@ -4,7 +4,7 @@ description: Haben Sie Fragen, die sich speziell auf Klassifizierungen und Bezei
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de86d9f6f21ac9dd7839793d02b97b394930f1a
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 649aca255019ea5992e7901c2275ca0fe3c61cba
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805514"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916276"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Häufig gestellte Fragen zu Klassifizierungen und Bezeichnungen in Azure Information Protection
 
@@ -107,12 +107,14 @@ So fügen Sie diesen Feldcode Ihrem Dokument hinzu:
 
 Die aktuelle Klassifizierung der Bezeichnung wird im Dokument angezeigt, und dieser Wert wird automatisch aktualisiert, wenn Sie das Dokument öffnen oder die Vorlage verwenden. Wenn sich also die Bezeichnung ändert, wird die Klassifizierung, die für diesen Feldcode angezeigt wird, automatisch im Dokument aktualisiert.
 
-## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Azure Information Protection-Klassifizierung für E-Mails von der Exchange-Nachrichtenklassifizierung?
+## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>Wie unterscheidet sich die Klassifizierung für e-Mails mit Azure Information Protection von der Exchange-Nachrichtenklassifizierung?
 
-Die Exchange-Nachrichtenklassifizierung ist ein älteres Feature, das unabhängig von einer Azure Information Protection-Klassifizierung implementiert wird, und mit dem E-Mails klassifiziert werden können. 
+Die Exchange-Nachrichtenklassifizierung ist ein älteres Feature, mit dem e-Mails klassifiziert werden können, und es wird unabhängig von Azure Information Protection Bezeichnungen oder Vertraulichkeits Bezeichnungen implementiert, die die Klassifizierung anwenden.
 
-Sie können jedoch beide Lösungen integrieren, damit die Azure Information Protection-Klassifizierung und entsprechende Bezeichnungsmarkierungen automatisch hinzugefügt werden, wenn Benutzer eine E-Mail mithilfe von Outlook im Web und einiger mobiler E-Mail-Anwendungen klassifizieren. 
+Sie können dieses ältere Feature jedoch in Bezeichnungen integrieren, sodass Benutzer, die eine e-Mail mithilfe von Outlook im Web klassifizieren und einige Mobile Mail-Anwendungen verwenden, automatisch die Bezeichnung Klassifizierung und entsprechende Bezeichnungs Markierungen hinzufügen.
 
 Auf dieselbe Weise können Sie Ihre Bezeichnungen mit Outlook im Web und diesen mobilen E-Mail-Anwendungen verwenden.
 
-Die Konfigurationsschritte finden Sie unter [Integrieren der Exchange-Nachrichtenklassifizierung mit Azure Information Protection für eine Lösung zur Bezeichnung von Mobilgeräten](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
+Beachten Sie, dass dies nicht erforderlich ist, wenn Sie Outlook im Web mit Exchange Online verwenden, da diese Kombination eine integrierte Bezeichnung unterstützt, wenn Sie Vertraulichkeits Bezeichnungen aus Office 365 Security & Compliance Center Microsoft 365 Security Center veröffentlichen. oder Microsoft Compliance Center.
+
+Wenn Sie die integrierte Bezeichnung nicht mit Outlook im Web verwenden können, finden Sie weitere Informationen in den Konfigurationsschritten für diese Problem Umgehung: [integrieren der Exchange-Nachrichtenklassifizierung mit Azure Information Protection für eine Lösung zur Bezeichnung für mobile Geräte](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
