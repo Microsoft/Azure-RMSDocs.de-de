@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 10/14/2019
+ms.date: 10/24/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b7884de10999518d0c6cf9806b546181277a113
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447840"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890298"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -39,10 +39,7 @@ Verwenden Sie Azure Information Protection Analytics für die Zentrale Berichter
 
 - Identifizieren Sie, ob interne oder externe Benutzer von Windows-Computern auf geschützte Dokumente zugreifen und ob der Zugriff gewährt oder verweigert wurde.
 
-Die Daten, die Sie sehen, werden von ihren Azure Information Protection Clients und-Scannern, von [Clients und Diensten, die vereinheitlichte Bezeichnungen unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
-
-> [!NOTE]
-> Mit Ausnahme der Vorschauversion des Unified-Bezeichnungs Clients enthält Azure Information Protection Analytics derzeit keine benutzerdefinierten Informationstypen für Clients und Dienste, die eine einheitliche Bezeichnung unterstützen.
+Die Daten, die Sie sehen, werden von ihren Azure Information Protection-Clients und-Scannern, von Microsoft Cloud App Security, von Windows 10-Computern mit Microsoft Defender Advanced Threat Protection und von [Schutz Verwendungs Protokollen](log-analyze-usage.md)aggregiert.
 
 Sie können beispielsweise die folgenden Informationen abrufen:
 
@@ -76,7 +73,7 @@ Sie können beispielsweise die folgenden Informationen abrufen:
 
 - Im Bericht **Datenermittlung**:
 
-    - Welche Dateien befinden sich auf den überprüften Daten Depots, Windows 10-Computern oder Computern, auf denen die Azure Information Protection Client oder Clients ausgeführt werden, die die [einheitliche Bezeichnung unterstützen](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Welche Dateien befinden sich auf den überprüften Daten Depots, Windows 10-Computern oder Computern, auf denen die Azure Information Protection Clients ausgeführt werden
     
     - Welche Dateien Bezeichnungen aufweisen und geschützt werden sowie den Speicherort der Dateien nach Bezeichnung
     
@@ -117,9 +114,7 @@ Um diese Berichte zu erstellen, senden die Endpunkte die folgenden Informationen
 
 - Für e-Mails: der e-Mail-Betreff und der e-Mail-Absender für e-Mails mit der Bezeichnung. 
 
-- Die [vordefinierten sensiblen Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) , die im Inhalt erkannt wurden.
-    
-    Wenn Sie Azure Information Protection Bezeichnungen mit benutzerdefinierten Bedingungen verwenden, werden die Namen der benutzerdefinierten Informationstypen ebenfalls gesendet. Mit Ausnahme der Vorschauversion des Unified-Beschriftungs Clients werden benutzerdefinierte vertrauliche Informationstypen, die Sie in Ihrem Beschriftungs Center erstellen, nicht gesendet.
+- Die Typen vertraulicher Informationen ([vordefiniert](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) und benutzerdefiniert), die im Inhalt erkannt wurden.
 
 - Die Azure Information Protection-Clientversion.
 
@@ -254,20 +249,20 @@ Sie sind jetzt bereit, die Berichte anzuzeigen.
 
 Suchen Sie auf dem Azure Information Protection-Blatt die Menüoptionen **Dashboards**, und wählen Sie eine der folgenden Optionen aus:
 
-- **Nutzungsbericht (Vorschauversion)**: Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.
+- **Nutzungsbericht (Vorschauversion)** : Dieser Bericht informiert Sie darüber, wie Ihre Bezeichnungen verwendet werden.
 
-- **Aktivitätsprotokolle (Vorschau)**: Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden. Außerdem können Sie für geschützte Dokumente für Benutzer sowohl innerhalb als auch außerhalb Ihrer Organisation Zugriffsversuche (erfolgreich oder verweigert) erkennen, auch wenn Sie den Azure Information Protection-Client nicht installiert haben.
+- **Aktivitätsprotokolle (Vorschau)** : Mithilfe dieses Berichts finden Sie Bezeichnungsaktionen von Benutzern sowie auf Geräten und Dateipfaden. Außerdem können Sie für geschützte Dokumente für Benutzer sowohl innerhalb als auch außerhalb Ihrer Organisation Zugriffsversuche (erfolgreich oder verweigert) erkennen, auch wenn Sie den Azure Information Protection-Client nicht installiert haben.
     
     Dieser Bericht enthält eine Option **Spalten**, mit der Sie mehr Aktivitätsinformationen als in der Standardanzeige anzeigen können. Wenn Sie **Aktivitätsdetails** auswählen, werden weitere Details zu einer Datei angezeigt.
 
-- **Daten Ermittlung (Vorschau)**: Verwenden Sie diesen Bericht, um Informationen zu den von den Scannern gefundenen Dateien und unterstützten Endpunkten anzuzeigen.
+- **Daten Ermittlung (Vorschau)** : Verwenden Sie diesen Bericht, um Informationen zu den von den Scannern gefundenen Dateien und unterstützten Endpunkten anzuzeigen.
     
     Tipp: aus den gesammelten Informationen können Benutzer auf Dateien zugreifen, die vertrauliche Informationen von einem Speicherort enthalten, von dem Sie nicht wissen, was Sie gerade nicht kennen oder überprüfen:
     
     - Wenn die Zugriffe vor Ort stattfinden, können Sie die Orte der Azure Information Protection-Überprüfung als zusätzliche Datenrepositorys hinzufügen.
     - Wenn die Zugriffe über die Cloud stattfinden, können Sie die Orte über Microsoft Cloud App Security verwalten. 
     
-- **Empfehlungen (Vorschau)**: Verwenden Sie diesen Bericht zum Identifizieren von Dateien, die vertrauliche Informationen enthalten, und mindern Sie das Risiko, indem Sie die Empfehlungen befolgen.
+- **Empfehlungen (Vorschau)** : Verwenden Sie diesen Bericht zum Identifizieren von Dateien, die vertrauliche Informationen enthalten, und mindern Sie das Risiko, indem Sie die Empfehlungen befolgen.
     
     Wenn Sie ein Element auswählen, zeigt die Option **Daten anzeigen** die Überwachungsaktivitäten an, die die Empfehlung ausgelöst haben.
 
@@ -289,8 +284,6 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 
 |Spaltenname|Description|
 |-----------|-----------|
-|Zugriff|Ein geschütztes Dokument wurde erfolgreich geöffnet, anhand des Datei namens identifiziert, wenn es nachverfolgt wird, oder mit ID, wenn es nicht nachverfolgt wird.|
-|AccessDenied|Einem geschützten Dokument wurde der Zugriff verweigert, der durch den Dateinamen identifiziert wird, wenn er nachverfolgt wird, oder die ID, wenn keine Nachverfolgung|
 |Zeit|Ereignis Zeit: UTC im Format yyyy-mm-ddThh: mm: SS|
 |Benutzer|Benutzer: UPN oder Domäne \ Benutzer formatieren|
 |ItemPath|Vollständiger Element Pfad oder e-Mail-Betreff|
