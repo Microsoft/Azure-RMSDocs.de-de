@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b83fcc4a7f5d8a586e6e2f8c4b51ef93d0cb257
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 05ccffd1370a73bf5f5286f40be0510316e3f883
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805745"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984964"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -411,9 +411,9 @@ Der Scanner kann die Dateien jedoch unter den folgenden Bedingungen nicht bezeic
 
 - Wenn die Bezeichnung zwar Klassifizierung und Schutz anwendet, aber der Scanner den Dateityp nicht schützt
     
-    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Bei der Überprüfung des klassischen Clients können andere Dateitypen geschützt werden, wenn Sie [die Registrierung bearbeiten](#editing-the-registry-for-the-scanner) , wie im folgenden Abschnitt beschrieben.
+    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Andere Dateitypen können geschützt werden, wenn Sie wie im folgenden Abschnitt beschrieben [ändern, welche Dateitypen geschützt werden](#change-which-file-types-to-protect) .
 
-Beispielsweise kann der Scanner, nachdem er TXT-Dateien überprüft hat, keine Bezeichnungen anwenden, die nur für die Klassifizierung und nicht für den Schutz konfiguriert sind, weil der TXT-Dateityp dies nicht unterstützt. Wenn die Bezeichnung für Klassifizierung und Schutz konfiguriert ist und die Registrierung für den TXT-Dateityp bearbeitet wird, kann der Scanner die Datei bezeichnen. 
+Beispielsweise kann der Scanner, nachdem er TXT-Dateien überprüft hat, keine Bezeichnungen anwenden, die nur für die Klassifizierung und nicht für den Schutz konfiguriert sind, weil der TXT-Dateityp dies nicht unterstützt. Wenn die Bezeichnung für Klassifizierung und Schutz konfiguriert ist und die Dateinamenerweiterung. txt für den zu schützenden Scanner enthalten ist, kann die Überprüfung die Datei bezeichnen. 
 
 > [!TIP]
 > Wenn während dieses Vorgangs der Scanner stoppt und die Überprüfung einer großen Anzahl von Dateien in einem Repository nicht abgeschlossen wird:
@@ -435,13 +435,19 @@ Wie im vorherigen Schritt kann der Scanner die Dateien jedoch unter den folgende
 
 - Wenn die Bezeichnung zwar Klassifizierung und Schutz anwendet, aber der Scanner den Dateityp nicht schützt
     
-    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Bei der Überprüfung des klassischen Clients können andere Dateitypen geschützt werden, wenn Sie [die Registrierung bearbeiten](#editing-the-registry-for-the-scanner) , wie im folgenden beschrieben.
+    Standardmäßig unterstützt der Scanner nur Office-Dateitypen und PDF-Dateien, wenn diese gemäß dem ISO-Standard für die PDF-Verschlüsselung geschützt werden. Andere Dateitypen können geschützt werden, wenn Sie wie im folgenden beschrieben ändern, welche Dateitypen geschützt werden.
 
-### <a name="editing-the-registry-for-the-scanner"></a>Bearbeiten der Registrierung für die Überprüfung
+## <a name="change-which-file-types-to-protect"></a>Ändern der zu schützenden Dateitypen
+
+Standardmäßig schützt der Scanner nur Office-Dateitypen und PDF-Dateien. Sie können dieses Verhalten ändern, sodass z. b. die Überprüfung alle Dateitypen schützt, bei denen es sich um das gleiche Schutzverhalten wie der Client handelt. Oder der Scanner schützt zusätzlich zu den Office-Dateitypen und PDF-Dateien zusätzliche Dateitypen, die Sie angeben. 
+
+Konfigurations Anweisungen finden Sie in den folgenden Abschnitten.
+
+### <a name="scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected"></a>Überprüfung des klassischen Clients: Verwenden Sie die Registrierung, um die geschützten Dateitypen zu ändern.
 
 Dieser Abschnitt gilt nur für die Überprüfung des klassischen Clients.
 
-Um das Standardverhalten der Überprüfung zum Schutz von Dateien zu ändern, bei denen es sich weder um Office- noch um PDF-Dateien handelt, müssen Sie die Registrierung manuell bearbeiten und die zusätzlichen Dateitypen angeben, die geschützt werden sollen, sowie den Typ des Schutzes (nativ oder generisch) festlegen. Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
+Wenn Sie das Standard Scanner Verhalten zum Schutz von Dateitypen außer Office-Dateien und-PDF-Dateien ändern möchten, müssen Sie die Registrierung bearbeiten und die zusätzlichen Dateitypen angeben, die Sie schützen möchten, sowie den Typ des Schutzes (System eigen oder generisch). Weitere Informationen hierzu finden Sie in der Anleitung für Entwickler unter [Datei-API-Konfiguration](develop/file-api-configuration.md). Allgemeiner Schutz wird in dieser Dokumentation für Entwickler als „PFile“ bezeichnet. Folgendes gilt außerdem speziell für den Scanner:
 
 - Der Scanner verfügt über ein eigenes Standardverhalten: nur Office-Dateiformate und PDF-Dokumente werden standardmäßig geschützt. Wenn die Registrierung nicht geändert wird, werden andere Dateitypen nicht vom Scanner bezeichnet oder geschützt.
 
@@ -456,6 +462,25 @@ Damit der Scanner beispielsweise neben Office- und PDF-Dateien auch TIFF-Bilder 
 Eine Liste mit Text-und Bild Dateitypen, die auf ähnliche Weise systemeigenen Schutz unterstützen, aber in der Registrierung angegeben werden müssen, finden Sie [unter Unterstützte Dateitypen für Klassifizierung und Schutz](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
 Geben Sie für Dateien, die den nativen Schutz nicht unterstützten, die Erweiterung als einen neuen Schlüssel und **PFILE** für den generischen Schutz an. Die Erweiterung für die geschützte Datei lautet dann „.pfile“.
+
+### <a name="scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected"></a>Überprüfung des Unified-Bezeichnungs Clients: Verwenden Sie PowerShell, um die geschützten Dateitypen zu ändern.
+
+Dieser Abschnitt gilt nur für die Überprüfung des Unified-Beschriftungs Clients.
+
+Geben Sie für eine Bezeichnungs Richtlinie, die für das Benutzerkonto gilt, das Bezeichnungen für den Scanner herunterlädt, eine PowerShell-erweiterte Einstellung mit dem Namen **pfilesupportedextensions**an. 
+
+> [!NOTE]
+> Bei einem Scanner, der Zugriff auf das Internet hat, ist dieses Benutzerkonto das Konto, das Sie für den Parameter " *delegateduser* " mit dem Befehl "Set-aipauthentication" angeben.
+
+Beispiel 1: PowerShell-Befehl für die Überprüfung, um alle Dateitypen zu schützen, deren Bezeichnung "Scanner" lautet:
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Beispiel 2: PowerShell-Befehl für die Überprüfung, um XML-Dateien und TIFF-Dateien zu schützen, zusätzlich zu Office-Dateien und PDF-Dateien, bei denen die Bezeichnung "Scanner" lautet:
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
+
+Ausführliche Anweisungen finden Sie im Administrator Handbuch unter [Ändern der zu schützenden Dateitypen](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) .
 
 
 ## <a name="when-files-are-rescanned"></a>Wann Dateien überprüft werden
