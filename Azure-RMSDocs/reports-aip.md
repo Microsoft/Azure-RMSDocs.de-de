@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 10/24/2019
+ms.date: 10/29/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 8f8022ba40b04c7a579cdf4caf7f9a8d60c19014
+ms.sourcegitcommit: e90658d1a43e883f8abef9a8c242a920cd484cbc
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057686"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -294,7 +294,6 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 |Labelnamebefore |Name der Bezeichnung vor der Änderung (nicht lokalisiert) |
 |ProtectionType|Schutztyp [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |Schutz vor|Schutztyp vor Änderung [JSON] |
-|Informationtypesmatches|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten gefunden, bei denen ein leeres Array keine Informationstypen gefunden hat, und NULL bedeutet, dass keine Informationen verfügbar sind|
 |MachineName |Vollständig verfügbarer voll qualifizierter Name Andernfalls Hostname|
 |Devicerisk|Geräte Risikobewertung aus wdatp, wenn verfügbar|
 |Plattform|Geräteplattform (Win, OSX, Android, IOS) |
