@@ -11,13 +11,13 @@ metadata:
   author: cabailey
   ms.author: cabailey
   manager: rkarlin
-  ms.date: 09/17/2019
-  ms.openlocfilehash: d742e972ab50a297641de26723f05b4129806ca0
-  ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+  ms.date: 11/01/2019
+  ms.openlocfilehash: 433565965e0f3cdf8dfd94ed11769b547c75a01c
+  ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
   ms.translationtype: HT
   ms.contentlocale: de-DE
-  ms.lasthandoff: 10/23/2019
-  ms.locfileid: "72805490"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73428740"
 landingContent:
 - title: Informationen zu Azure Information Protection
   linkLists:
@@ -45,6 +45,22 @@ landingContent:
       url: deployment-roadmap.md
     - text: Häufige Szenarien
       url: how-to-guides.md
+- title: Immer auf dem Laufenden bleiben
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Aktualisierungen der Dokumentation für Oktober
+      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog
+    - text: Details zu Version 2.5.33.0 – Client für einheitliche Bezeichnungen
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: Die Top 5 der empfohlenen Ignite-Sessions
+      url: what-is-information-protection.md#microsoft-ignite
+- title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Bereitstellen des Scanners
+      url: deploy-aip-scanner.md
 - title: Anpassen des Clients
   linkLists:
   - linkListType: how-to-guide
@@ -53,28 +69,6 @@ landingContent:
       url: ./rms-client/client-admin-guide-customizations.md
     - text: 'Client für einheitliche Bezeichnungen: Erweiterte Einstellungen'
       url: ./rms-client/clientv2-admin-guide-customizations.md
-- title: Aktivieren von einheitlichen Bezeichnungen
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Vergleichen der Clients
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
-  - linkListType: how-to-guide
-    links:
-    - text: Migrieren von Azure Information Protection-Bezeichnungen
-      url: configure-policy-migrate-labels.md
-- title: Klassifizieren und Schützen von Daten in lokalen Datenspeichern
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Bereitstellen des Scanners
-      url: deploy-aip-scanner.md
-- title: Überwachen der Nutzung von Bezeichnungen und Ermitteln vertraulicher Informationen
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Zentrale Berichterstellung (Vorschau)
-      url: reports-aip.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -91,3 +85,19 @@ landingContent:
     links:
     - text: API-Referenz zu C++
       url: /information-protection/develop/mip-sdk-reference
+- title: Aktivieren von einheitlichen Bezeichnungen
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Auswählen des Clients für Bezeichnungen
+      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+  - linkListType: how-to-guide
+    links:
+    - text: Migrieren von Azure Information Protection-Bezeichnungen
+      url: configure-policy-migrate-labels.md
+- title: Überwachen der Nutzung von Bezeichnungen und Ermitteln vertraulicher Informationen
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Zentrale Berichterstellung (Vorschau)
+      url: reports-aip.md
