@@ -4,29 +4,29 @@ description: Installieren Sie einen Reader unter Windows für PDF-Dokumente, die
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: c600b706a1081d0693ecc50fc60adc9b94f23ab7
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 4f51ccb9bf11f6d692978cb24cf5b9bad186c690
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978353"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445112"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installieren eines PDF-Readers für Windows
 
-[![Windows-Symbol](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+[Symbol "![Windows"](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
 Wenn Sie auf Ihrem Windows-Computer ein geschütztes PDF-Dokument öffnen müssen, installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
 
 **Unterstützte Versionen**: Windows 10 und frühere Versionen über Windows 7 Service Pack 1
 
-Anweisungen 
+Anweisungen: 
 
 1. Lesen Sie die [allgemeinen Nutzungsbedingungen für Adobe](https://www.adobe.com/legal/terms.html).
 
@@ -40,7 +40,7 @@ Alternative Leser, die geschützte PDF-Dokumente öffnen, die dem ISO-Standard f
 
 - Azure Information Protection-Viewer: [Herunterladen](https://go.microsoft.com/fwlink/?linkid=838993)
 
-- Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)
+- Foxit Reader [Herunterladen](https://www.foxitsoftware.com/pdf-reader/)
 
 
 Wenn das Dokument nicht geöffnet wird, liegt dies möglicherweise daran, dass es mit einem älteren Format geschützt wurde. Probieren Sie in diesem Fall einen der als [unterstützt für vorherige Formate](protected-pdf-readers.md#support-for-previous-formats)aufgeführten Leser aus.

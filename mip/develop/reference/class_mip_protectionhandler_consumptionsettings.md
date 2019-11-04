@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
 ms.openlocfilehash: d99b7c3468cc98ad655e41bdd2aaa771a287aca2
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "70057566"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP::P rotectionhandler:: consumptionsettings-Klasse 
@@ -19,7 +19,7 @@ Einstellungen zum Erstellen eines Schutz [Handlers](class_mip_protectionhandler.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public consumptionsettings (Konstanten Std:: Vector\<uint8_t\>& serializedpublishinglicense)  | Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+Public consumptionsettings (Konstante Std:: Vector\<uint8_t\>& serializedpublishinglicense)  | Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public consumptionsettings (Konst Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public Std:: shared_ptr\<publishinglicenseinfo\> getpublishinglicenseinfo () konstant  |  Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.
 public bool getisofflineonly () const  |  Ruft ab, ob bei der Erstellung von [ProtectionHandler](class_mip_protectionhandler.md) HTTP-Onlinevorgänge zulässig sind
@@ -33,7 +33,7 @@ Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft de
 Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 
 Parameter:  
-* **serializedPublishingLicense**: Serialisierte Veröffentlichungs Lizenz aus geschütztem Inhalt
+* **serializedpublishinglicense**: Serialisierte Veröffentlichungs Lizenz aus geschütztem Inhalt
 
 
   

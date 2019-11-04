@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37f50c51588b908b558c60e9387e918f26393f07
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805684"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446017"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -191,6 +191,8 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Die [Richtlinieneinstellung](../configure-policy-settings.md) **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** gilt für den Scanner nicht mehr. Die Überprüfung führt diese Aktionen aus, wenn Sie die Einstellung neu bezeichnen **von** **Dateien** im Überprüfungs Profil auf ein festlegen, und aktivieren Sie dann das Kontrollkästchen Herabstufung der **Bezeichnung zulassen** .
 
 ## <a name="next-steps"></a>Nächste Schritte
+
+Nicht sicher, ob dies der richtige Client für die Installation ist?  Weitere Informationen finden [Sie unter Auswählen des zu verwendenden Kunden für Windows-Computer](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Weitere Informationen zum Installieren und Verwenden des Clients: 
 

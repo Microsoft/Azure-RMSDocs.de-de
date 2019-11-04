@@ -4,7 +4,7 @@ description: Installieren eines Readers für PDF-Dokumente, die für Klassifizie
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: user
 search.appverid:
 - MET150
-ms.openlocfilehash: 390eb0bd48b4b9ca6f36957a2ac63ed6903a83fc
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 23d9f5cf45b579542ecb9c297270bc426c2a914b
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69974784"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444872"
 ---
 # <a name="pdf-readers-that-support-microsoft-information-protection"></a>PDF-Leser, die Microsoft Information Protection unterstützen
 
@@ -31,7 +31,7 @@ Wählen Sie das Gerät aus, das Sie zum Installieren eines PDF-Readers verwenden
 
 - **Computer**: [Windows](protected-pdf-readers-windows.md) | [MacOS](protected-pdf-readers-mac.md)
 
-- **Mobile Geräte**: [Android](protected-pdf-readers-android.md) | [iOS](protected-pdf-readers-ios.md)
+- **Mobile Geräte**: [Android](protected-pdf-readers-android.md) | [IOS](protected-pdf-readers-ios.md)
 
 ### <a name="support-for-previous-formats"></a>Unterstützung für vorherige Formate
 

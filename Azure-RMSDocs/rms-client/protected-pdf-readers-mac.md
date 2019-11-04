@@ -4,19 +4,19 @@ description: Installieren eines Readers auf Macintosh-Computern für PDF-Dokumen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8cee36d0d92da2d67b5472fc740dad8e9b53605e
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: 9701b11720d9683f4d2af1d9bbbd2cfb63944dd3
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978302"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445031"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installieren eines PDF-Readers für MacOS
 
@@ -26,7 +26,7 @@ Wenn Sie ein geschütztes PDF-Dokument auf dem Macintosh-Computer öffnen müsse
 
 **Unterstützte Versionen**: 10,12-10,14
 
-Anweisungen
+Anweisungen:
 
 1. Lesen Sie die [allgemeinen Nutzungsbedingungen für Adobe](https://www.adobe.com/legal/terms.html).
 

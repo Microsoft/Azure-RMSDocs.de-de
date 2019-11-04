@@ -4,19 +4,19 @@ description: Installieren Sie einen Reader unter Android für PDF-Dokumente, die
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f0570a0f4ff938e13df2882a09aa683bba93e6d0
-ms.sourcegitcommit: 84190253d8682032912b36e291f17105d7f9d7f8
+ms.openlocfilehash: d5b1e618979b1a6d1ebe5f85876efe7e6855ed3b
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978285"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445002"
 ---
 # <a name="install-a-pdf-reader-for-android"></a>Installieren eines PDF-Readers für Android
 

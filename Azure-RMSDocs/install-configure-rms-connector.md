@@ -4,7 +4,7 @@ description: Informationen zur Unterstützung bei der Installation und Konfigura
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/26/2019
+ms.date: 10/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
-ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
+ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70027429"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444947"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -40,7 +40,7 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
     Laden Sie zum Installieren des RMS-Verbindungsdiensts die Datei „RMSConnectorSetup.exe“ herunter.
 
-    Zusätzlich:
+    Beachten Sie auch Folgendes:
 
     -   Wenn Sie den Verbindungsdienst später von einem 32-Bit-Computer aus konfigurieren möchten, laden Sie auch „RMSConnectorAdminToolSetup_x86.exe“ herunter.
 
@@ -59,17 +59,17 @@ Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldein
 
 Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. Wenn Sie Azure AD bedingten Zugriff verwenden, sollten Sie außerdem die [Legacy Authentifizierung](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) für dieses Konto nicht blockieren.
 
-Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Sie können kein Kennwort verwenden, das eines der folgenden Zeichen enthält: Kaufmännisches Und ( **&** ), Winkelklammer links (  **[** ), Winkelklammer rechts ( **]** ), doppeltes gerades Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
+Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 
-Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein. Andernfalls wird folgende Fehlermeldung angezeigt: **Fehler beim Versuch, den Speicherort des Verwaltungsdiensts und der Organisation zu ermitteln. Stellen Sie sicher, dass der Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
+Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein. Andernfalls wird die folgende Fehlermeldung angezeigt: Fehler **beim Versuch, den Speicherort des Verwaltungs Dienstanbieter und der Organisation zu ermitteln. Stellen Sie sicher, dass Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
 Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
 
--   **Globaler Administrator für Ihren Azure-Mandanten**: Konto, das als globaler Administrator für Ihren Office 365-oder Azure AD-Mandanten fungiert.
+-   **Globaler Administrator für Ihren Mandanten**: ein Konto, das ein globaler Administrator für Ihren Office 365- oder Azure AD-Mandanten ist.
 
--   **Globaler Azure Rights Management-Administrator**: Konto in Azure Active Directory, dem die Azure RMS-Rolle „Globaler Administrator“ zugewiesen wurde.
+-   **Globaler Azure Rights Management-Administrator**: ein Konto in Azure Active Directory, dem die Azure RMS-Rolle „GlobalAdministrator“zugewiesen wurde.
 
--   **Administrator des Azure Rights Management-Connectors**: Ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Verbindungs-Connector für Ihre Organisation erteilt wurden.
+-   **Azure Rights Management-Connectoradministrator**: ein Konto in Azure Active Directory, dem Rechte zum Installieren und Verwalten des RMS-Connectors für Ihre Organisation gewährt wurden.
 
     > [!NOTE]
     > Die Rolle "globaler Azure Rights Management-Administrator" und "Azure Rights Management Connector-Administrator" werden Konten mithilfe des Cmdlets " [Add-aipservicerolebasedadministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) " zugewiesen.
@@ -96,7 +96,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Beispiel: **Add-aipservicerolebasedadministrator-EmailAddress melisa@contoso.com -Role "Connector Administrator"**
+    >     Geben Sie beispielsweise Folgendes ein: **Add-aipservicerolebasedadministrator-EmailAddress melisa@contoso.com-Role "Connector Administrator"** .
     >
     >     Obwohl diese Befehle die Rolle „ConnectorAdministrator“ verwenden, könnten Sie hier ebenfalls die Rolle „GlobalAdministrator“ verwenden.
 
@@ -176,15 +176,15 @@ Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namesp
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Verbindungsdiensts nicht mehr zu ändern, weil Sie sonst von diesen Servern alle IRM-Konfigurationen entfernen und diese dann neu konfigurieren müssen.
 
-Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konfigurieren Sie den Lastenausgleich für diese Adresse, die Datenverkehr an die Verbindungsdienstserver leitet. Sie können jedes IP-basierte Lastenausgleichsmodul verwenden, das das NLB-Feature (Network Load Balancing) von Windows Server enthält. Weitere Informationen finden Sie im [Bereitstellungshandbuch für den Lastenausgleich](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Nachdem der Name in DNS erstellt und für eine IP-Adresse konfiguriert ist, konfigurieren Sie den Lastenausgleich für diese Adresse, die Datenverkehr an die Verbindungsdienstserver leitet. Sie können jedes IP-basierte Lastenausgleichsmodul verwenden, das das NLB-Feature (Network Load Balancing) von Windows Server enthält. Weitere Informationen finden Sie unter [Bereitstellungshandbuch für den Lastenausgleich](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Verwenden Sie folgende Einstellungen, um den NLB-Cluster zu konfigurieren:
 
--   Landungen 80 (für http) oder 443 (für HTTPS)
+-   Ports: 80 (für HTTP) oder 443 (für HTTPS)
 
     Weitere Informationen dazu, ob Sie HTTP oder HTTPS verwenden sollten, finden Sie im nächsten Abschnitt.
 
--   Affinitäts Keine
+-   Affinität: Keine
 
 -   Verteilungsmethode: Gleich
 
@@ -227,7 +227,7 @@ Sie können das Verwaltungstool des RMS-Verbindungsdiensts auf einem Computer au
 
 -   Ein physischer oder virtueller Computer, auf dem Windows Server 2012 oder Windows Server 2012 R2 (alle Editionen), Windows Server 2008 R2 oder Windows Server 2008 R2 Service Pack 1 (alle Editionen), Windows 8.1, Windows 8 oder Windows 7 ausgeführt wird.
 
--   Mindestens 1 GB RAM.
+-   Mindestens 1 GB RAM.
 
 -   Mindestens 64 GB Datenträgerspeicherplatz.
 

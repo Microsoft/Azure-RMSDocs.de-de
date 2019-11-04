@@ -4,7 +4,7 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/28/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f8eb311e42f17398a0564d6caf4b02618609d9d5
-ms.sourcegitcommit: dc7603461ce9300635bcb389c18e2e708a8229df
+ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121799"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445048"
 ---
-# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge des Mandantenschlüssels
+# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +46,7 @@ Beispiele für Fälle, in denen Sie möglicherweise einen neuen Schlüssel für 
 
 Zur Nutzung eines anderen verwalteten Schlüssels können Sie entweder einen neuen Schlüssel in Azure Key Vault erstellen oder einen anderen, bereits in Azure Key Vault vorhandenen Schlüssel verwenden. Führen Sie anschließend dieselben Schritte aus wie beim Implementieren von BYOK für Azure Information Protection. 
 
-1. Nur dann, wenn der neue Schlüssel sich in einem anderen Key Vault als der Schlüssel befindet, den Sie bereits für Azure Information Protection verwenden: Autorisieren Sie Azure Information Protection die Verwendung des Schlüssel Tresors mithilfe des Cmdlets [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) .
+1. Nur, wenn sich der neue Schlüssel in einem anderen Schlüssel Tresor befindet, den Sie bereits für Azure Information Protection verwenden: autorisieren Sie Azure Information Protection, den Schlüssel Tresor zu verwenden, indem Sie das Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) verwenden.
 
 2. Wenn Azure Information Protection den Schlüssel, den Sie verwenden möchten, nicht bereits kennen, führen Sie das Cmdlet [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) aus.
 
@@ -63,7 +63,7 @@ Weitere Informationen zu den jeweiligen Schritten erhalten Sie wie Folgt:
 ## <a name="backup-and-recover-your-tenant-key"></a>Sicherung und Wiederherstellung Ihres Mandantenschlüssels
 Da Sie Ihren Mandantenschlüssel verwalten, sind Sie verantwortlich für das Sichern des Schlüssels, den Azure Information Protection verwendet. 
 
-Wenn Sie Ihren Mandanten Schlüssel lokal generiert haben, in einem nchiffre-HSM: Sichern Sie einfach die Tokenschlüsseldatei, die World-Datei und die Administrator Cards, um den Mandantenschlüssel zu sichern. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Wenn Sie z. b. jemals eine nur-Text-Kopie Ihres Schlüssels zur Verwendung außerhalb eines nchiffre-HSM benötigen, kann Azure Key Vault ihn nicht für Sie abrufen, da er nur über eine nicht wiederherstellbare Kopie verfügt.
+Wenn Sie Ihren Mandanten Schlüssel lokal generiert haben, in einem nchiffre-HSM: um den Schlüssel zu sichern, sichern Sie die tokenschlüsseldatei, die World-Datei und die Administrator Karten. Wenn Sie Ihren Schlüssel in Azure Key Vault übertragen, speichert der Dienst die Tokenschlüsseldatei, um vor Fehlern der Dienstknoten zu schützen. Diese Datei ist an den Sicherheitsbereich für die bestimmte Azure-Region oder -Instanz gebunden. Sie sollten diese Tokenschlüsseldatei aber nicht als vollwertige Sicherung ansehen. Wenn Sie z. b. jemals eine nur-Text-Kopie Ihres Schlüssels zur Verwendung außerhalb eines nchiffre-HSM benötigen, kann Azure Key Vault ihn nicht für Sie abrufen, da er nur über eine nicht wiederherstellbare Kopie verfügt.
 
 Azure Key Vault besitzt ein [Sicherungs-Cmdlet](/powershell/module/az.keyvault/backup-azkeyvaultkey), das Sie zum Sichern eines Schlüssels verwenden können, indem Sie dieses herunterladen und in einer Datei speichern. Da der heruntergeladene Inhalt verschlüsselt ist, kann dieser nicht außerhalb von Azure Key Vault verwendet werden. 
 

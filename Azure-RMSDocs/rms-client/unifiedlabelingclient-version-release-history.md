@@ -3,8 +3,8 @@ title: Azure Information Protection vereinheitlichte Bezeichnung für den Client
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+manager: rkarlin
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f0ed559646acb36931a55ed2cd321bae91395fc
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984838"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446037"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -37,6 +37,15 @@ Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure In
 Jede allgemein verfügbare Version des Azure Information Protection Unified Bezeichnung-Clients wird bis zu sechs Monate nach der Veröffentlichung der nachfolgenden GA-Version unterstützt. Die Dokumentation enthält keine Informationen über nicht unterstützte Versionen des Clients. Problembehebungen und neue Funktionen gelten immer ausschließlich für die neuste allgemein verfügbare Version.
 
 Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereitgestellt werden. Verwenden Sie stattdessen die neuste Vorschauversion, um neue Funktionen oder Problembehebungen kennenzulernen und zu testen, die in der nächsten allgemein verfügbaren Version enthalten sein sollen. Veraltete Vorschauversionen werden nicht mehr unterstützt.
+
+##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemein verfügbare Versionen, die nicht mehr unterstützt werden:
+
+|Client Version|Datum der Veröffentlichung|
+|--------------|-------------|
+|2.0.778.0|04/16/2019|
+
+Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
+
 
 ### <a name="release-information"></a>Informationen zum Release
 
@@ -69,6 +78,8 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
         - **Dateien**neu bezeichnen: **aktivieren** Sie das Kontrollkästchen **Standard Bezeichnung erzwingen** ausgewählt haben.
     
     - Wie bei der Überprüfung des klassischen Clients schützt der Scanner standardmäßig Office-Dateien und PDF-Dateien. Sie können andere Dateitypen schützen, wenn Sie eine [Erweiterte PowerShell-Einstellung](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect)verwenden.
+    
+    - Ereignis-IDs für die Start-und Beendigungs Zyklen der Scanner werden nicht in das Windows-Ereignisprotokoll geschrieben. Verwenden Sie stattdessen die Azure-Portal für diese Informationen.
     
     - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
         - Für neue Bezeichnungen: Fügen Sie im Azure-Portal [die Bezeichnung](../configure-policy-add-remove-label.md) , die Sie verwenden möchten, der globalen Richtlinie oder einer Bereichs bezogenen Richtlinie hinzu.
@@ -195,48 +206,9 @@ Unterstützt durch 02/15/2020
 
 Diese Version bietet eine einzige Lösung zum Beheben eines racebedingungs Problems, bei dem manchmal keine Bezeichnungen in Office-Apps oder im Datei-Explorer angezeigt werden.
 
-## <a name="version-207780"></a>Version 2.0.778.0
-
-**Veröffentlicht**: 04/16/2019
-
-Unterstützt durch 11/01/2019
-
-Diese erste Version der allgemeinen Verfügbarkeit des Azure Information Protection Unified Bezeichnung-Clients für Windows unterstützt die folgenden Features: 
-
-- Upgrade vom Azure Information Protection-Client.
-
-- Manuelle, automatische und empfohlene Bezeichnung: Weitere Informationen zum Konfigurieren der automatischen und empfohlenen Bezeichnung für diesen Client finden Sie unter [Anwenden einer Vertraulichkeits Bezeichnung auf den Inhalt automatisch](/microsoft-365/compliance/apply-sensitivity-label-automatically).
-
-- Datei-Explorer, Rechtsklickaktionen zum Klassifizieren und Schützen von Dateien, Entfernen des Schutzes und Anwenden von benutzerdefinierten Berechtigungen.
-
-- Ein Viewer für geschützten Text und geschützte Bilddateien, geschützte PDF-Dateien und Dateien die generisch geschützt werden.
-
-- PowerShell-Befehle für Folgendes:
-    - [Festlegen oder Entfernen einer Bezeichnung in einem Dokument](/powershell/module/azureinformationprotection/set-aipfilelabel)
-    - [Hinzufügen einer Bezeichnung zu einem Dokument nach Untersuchen des Inhalts](/powershell/module/azureinformationprotection/set-aipfileclassification)
-    - [Lesen von Informationen zu einer auf ein Dokument angewendeten Bezeichnung](/powershell/module/azureinformationprotection/get-aipfilestatus)
-    - [Authentifizieren der Unterstützung unbeaufsichtigter PowerShell-Sitzungen](/powershell/module/azureinformationprotection/set-aipauthentication)
-
-- Überwachen von Daten und Endpunkt Ermittlungs Unterstützung für Zentrale Berichterstellung mithilfe von [Azure Information Protection Analytics](../reports-aip.md).
-
-- Folgende Einstellungen für Bezeichnungen und Richtlinien:
-    - Optische Kennzeichnung (Kopfzeile, Fußzeile und Wasserzeichen)
-    - Standard Bezeichnung: derzeit beschränkt auf Bezeichnungen ohne untergeordnete Bezeichnungen
-    - Bezeichnungen, die „Nicht weiterleiten“ anwenden und nur in Outlook angezeigt werden
-    - Aufforderung zur Angabe einer Begründung, wenn ein Benutzer eine Klassifizierungsstufe senkt oder eine Bezeichnung entfernt
-    - Farben für die Bezeichnungen
-
-- Aktualisieren der Richtlinie über die Admin Center:
-    - Bei jedem Start einer Office-App und alle vier Stunden
-    - Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen
-    - Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz
-
-- Die Dialogfelder „Hilfe“ und „Feedback“, die Einstellungen zum Zurücksetzen und Exportprotokolle umfassen.
-
-
 ## <a name="next-steps"></a>Nächste Schritte
 
-Ausführliche Informationen finden Sie in den [Vergleichstabellen](use-client.md#compare-the-labeling-clients-for-windows-computers).
+Nicht sicher, ob dies der richtige Client für die Installation ist?  Weitere Informationen finden [Sie unter Auswählen des zu verwendenden Kunden für Windows-Computer](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Weitere Informationen zum Installieren und verwenden dieses Clients finden Sie unter: 
 
