@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1388445ad9a5e7facded18dcd3f19be265bc4035
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805648"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561247"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
 
@@ -101,7 +101,7 @@ Für das Delegierte Benutzerkonto:
 
 2. Navigieren Sie für den Azure AD Mandanten, den Sie mit Azure Information Protection verwenden, zu **Azure Active Directory** > **Verwalten** Sie > **App-Registrierungen**. 
 
-3. Wählen Sie **+ neue Registrierung**aus. Geben Sie auf dem Blatt **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
+3. Wählen Sie **+ neue Registrierung**aus. Geben Sie im Bereich **Anwendung registrieren** die folgenden Werte an, und klicken Sie dann auf **registrieren**:
 
    - **Name**: `AIP-DelegatedUser`
         
@@ -111,26 +111,26 @@ Für das Delegierte Benutzerkonto:
     
     - **Umleitungs-URI (optional)** : **Web** und `https://localhost`
 
-4. Kopieren Sie auf dem Blatt **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
+4. Kopieren Sie im Bereich **AIP-delegateduser** den Wert für die **Anwendungs-ID (Client)** . Der Wert sieht in etwa wie im folgenden Beispiel aus: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Dieser Wert wird für den *AppID* -Parameter verwendet, wenn Sie das Cmdlet "Set-aipauthentication" ausführen. Fügen Sie den Wert ein, und speichern Sie ihn später.
 
 5. Wählen Sie in der Rand Leiste die Option **Verwalten** > **Zertifikate & Geheimnissen**aus.
 
-6. Wählen Sie auf dem Blatt **AIP-delegateduser-Zertifikate & Geheimnisse** im Abschnitt geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus.
+6. Wählen Sie im Bereich **AIP-delegateduser-Zertifikate &** geheimen Schlüssel im Bereich geheime **Client** Schlüssel die Option **+ neuer geheimer Client**Schlüssel aus.
 
 7. Geben Sie unter **geheimen Client Schlüssel hinzufügen**Folgendes an, und wählen Sie dann **Hinzufügen**aus:
     
     - **Beschreibung**: `Azure Information Protection unified labeling client`
     - **Läuft**ab: Geben Sie die gewünschte Dauer an (1 Jahr, 2 Jahre oder läuft nie ab).
 
-8. Kopieren Sie auf dem Blatt **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
+8. Kopieren Sie im Bereich **AIP-delegateduser--Zertifikate & geheimen** Schlüssel im Abschnitt geheime **Client** Schlüssel die Zeichenfolge für den **Wert**. Diese Zeichenfolge sieht in etwa wie im folgenden Beispiel aus: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Um sicherzustellen, dass Sie alle Zeichen kopieren, wählen Sie das Symbol aus, das **in die Zwischenablage kopiert**wird. 
     
     Es ist wichtig, dass diese Zeichenfolge gespeichert wird, da sie nicht erneut angezeigt wird und nicht abgerufen werden kann. Speichern Sie wie bei allen vertraulichen Informationen, die Sie verwenden, den gespeicherten Wert sicher, und beschränken Sie den Zugriff darauf.
 
 9. Wählen Sie in der Rand Leiste die Option **Verwalten** > **API-Berechtigungen**aus.
 
-10. Wählen Sie auf dem Blatt **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
+10. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung hinzufügen**aus.
 
-11. Vergewissern Sie sich auf dem Blatt **API-Berechtigungen anfordern** , dass Sie sich auf der Registerkarte **Microsoft-APIs** befinden, und wählen Sie **Azure Rights Management Services**aus. Wenn Sie aufgefordert werden, den für Ihre Anwendung erforderlichen Berechtigungs Typen einzugeben, wählen Sie **Anwendungs Berechtigungen**aus.
+11. Stellen Sie sicher, dass Sie auf der Registerkarte " **API-Berechtigungen** " auf der Registerkarte " **Microsoft-APIs** " die Option **Azure Rights Management Services**auswählen. Wenn Sie aufgefordert werden, den für Ihre Anwendung erforderlichen Berechtigungs Typen einzugeben, wählen Sie **Anwendungs Berechtigungen**aus.
 
 12. Erweitern **Sie für SELECT-Berechtigungen**den Eintrag **Inhalt** , und wählen Sie Folgendes aus:
     
@@ -139,11 +139,11 @@ Für das Delegierte Benutzerkonto:
 
 13. Wählen Sie **Berechtigungen hinzufügen**aus.
 
-14. Wählen Sie auf dem Blatt **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung erneut hinzufügen** aus.
+14. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung erneut hinzufügen** aus.
 
-15. Wählen Sie auf dem Blatt " **AIP-Berechtigungen anfordern** " die APIs aus, die von **meiner Organisation verwendet**werden, und suchen Sie nach **Microsoft Information Protection Sync**
+15. Wählen Sie im Bereich " **AIP-Berechtigungen anfordern** " die APIs aus, die **Meine Organisation verwendet**, und suchen Sie nach **Microsoft Information Protection Sync Service**.
 
-16. Wählen Sie auf dem Blatt **API-Berechtigungen anfordern** die Option **Anwendungs Berechtigungen**aus.
+16. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **Anwendungs Berechtigungen**aus.
 
 17. Erweitern **Sie für SELECT-Berechtigungen**den Eintrag **unifedpolicy** , und wählen Sie Folgendes aus:
     
@@ -151,7 +151,7 @@ Für das Delegierte Benutzerkonto:
 
 18. Wählen Sie **Berechtigungen hinzufügen**aus.
 
-19. Wählen Sie auf dem Blatt **AIP-delegateduser-API-Berechtigungen** die Option **Administrator Zustimmung für \<*Ihres Mandanten namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
+19. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **Administrator Zustimmung für \<*Ihres Mandanten namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
     
     Die API-Berechtigungen sollten wie folgt aussehen:
     

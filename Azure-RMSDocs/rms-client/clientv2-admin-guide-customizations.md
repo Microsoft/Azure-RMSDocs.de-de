@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9c0ccde192774f90c95afd70ce1acb766d6a66f1
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: cf22d75de5371daf02948fb1d42352d06249fb29
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445171"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561234"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -988,7 +988,7 @@ Weiterhin gilt:
 ## <a name="support-for-disconnected-computers"></a>Unterstützung für getrennte Computer
 
 > [!IMPORTANT]
-> Getrennte Computer werden nur für die folgenden Bezeichnungs Szenarien unterstützt: Datei-Explorer, PowerShell und Scanner. Zum bezeichnen von Dokumenten in Ihren Office-Apps müssen Sie über eine Internet Verbindung verfügen.
+> Getrennte Computer werden nur für die folgenden Bezeichnungs Szenarien unterstützt: Datei-Explorer, PowerShell und Scanner. Zum bezeichnen von Dokumenten in Ihren Office-Apps müssen Sie über eine Internetverbindung verfügen.
 
 Standardmäßig versucht der Azure Information Protection Unified Label-Client automatisch, eine Verbindung mit dem Internet herzustellen, um die Bezeichnungen und die Beschriftungs Richtlinien Einstellungen aus Ihrem Bezeichnungs Verwaltungs Center herunterzuladen: Office 365 Security & Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center. Wenn Sie über Computer verfügen, die für einen bestimmten Zeitraum keine Verbindung mit dem Internet herstellen können, können Sie Dateien exportieren und kopieren, die die Richtlinie für den Unified-Bezeichnungs Client manuell verwalten.
 

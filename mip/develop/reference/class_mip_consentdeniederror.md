@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7a1cf929a1cdb2ad1237526cf60cd20612353c91
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a949fc5d86c11b37c87b119281f5c8e6efc58f1a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056188"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559341"
 ---
 # <a name="class-mipconsentdeniederror"></a>class mip::ConsentDeniedError 
-Ein Vorgang, der die Einwilligung vom Benutzer erfordert, wurde nicht genehmigt.
+Einem Vorgang, der die Einwilligung vom Benutzer erfordert, wurde keine Einwilligung erteilt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

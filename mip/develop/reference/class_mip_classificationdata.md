@@ -5,26 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8ad0f1a2623adc36fa2ffdcf531d0e9e810d954e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 273b095ca0d6dc97ce440c4645bc2d07e6e760d4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056279"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559414"
 ---
 # <a name="class-mipclassificationdata"></a>MIP:: classificationdata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: String & getclassificationid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getrulepackageid () Konstanten  | _Noch nicht dokumentiert._
-public int getmaxcount () konstant  | _Noch nicht dokumentiert._
-public int getmincount () konstant  | _Noch nicht dokumentiert._
-public int getminconfidence () konstant  | _Noch nicht dokumentiert._
-public int getmaxconfidence () konstant  | _Noch nicht dokumentiert._
-public virtual ~ classificationdata ()  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getclassificationid () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std:: String & getrulepackageid () Konstanten  | Noch nicht dokumentiert.
+public int getmaxcount () konstant  | Noch nicht dokumentiert.
+public int getmincount () konstant  | Noch nicht dokumentiert.
+public int getminconfidence () konstant  | Noch nicht dokumentiert.
+public int getmaxconfidence () konstant  | Noch nicht dokumentiert.
+public virtual ~ classificationdata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

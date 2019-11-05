@@ -5,31 +5,31 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: db96d00d268158b072d2052a5e98f39bf0efa425
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054324"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560979"
 ---
 # <a name="class-mippolicyenginesettings"></a>mip::PolicyEngine::Settings-Klasse 
-Definiert die einer [PolicyEngine](class_mip_policyengine.md)-Klasse zugeordneten Einstellungen.
+Definiert die einem policyengine zugeordneten Einstellungen.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: String & EngineID, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
-öffentliche Einstellungen (Konstante Identität & Identität, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  [PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Erstellen einer neuen Engine
+öffentliche Einstellungen (Konstante Std:: String & EngineID, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  Policyengine:: Settings-Konstruktor zum Laden eines vorhandenen Moduls.
+öffentliche Einstellungen (Konstante Identität & Identität, Konst Std:: String & clientData, Konstante Std:: String & locale, bool loadsensitivitytypes)  |  Policyengine:: Settings-Konstruktor zum Erstellen einer neuen Engine.
 public const std::string& GetEngineId() const  |  Ruft die Engine-ID ab.
 public void SetEngineId(const std::string& id)  |  Legt die Engine-ID fest.
-public const Identity& GetIdentity() const  |  Das [Identity](class_mip_identity.md) -Objekt.
-public void SetIdentity(const Identity& identity)  |  Legen Sie das [Identity](class_mip_identity.md) -Objekt fest.
+public const Identity& GetIdentity() const  |  Ruft das Identity-Objekt ab.
+public void SetIdentity(const Identity& identity)  |  Legt das Identity-Objekt fest.
 public const std::string& GetClientData() const  |  Ruft die in den Einstellungen festgelegten Clientdaten ab.
 public void SetClientData(const std::string& clientData)  |  Legt die Zeichenfolge der Clientdaten fest.
 public const std::string& GetLocale() const  |  Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
 öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
+Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
 public bool isloadsensitivitytypesaktivierte () Konstante  |  Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
@@ -37,14 +37,16 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
 öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
 Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
+öffentliches void setlabelfilter (Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  |  Legt den Bezeichnungs Filter fest.
+Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () konstant.  |  Ruft den Bezeichnungs Filter ab.
   
 ## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
-[PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Laden einer vorhandenen Engine
+Policyengine:: Settings-Konstruktor zum Laden eines vorhandenen Moduls.
 
 Parameter:  
-* **engineId**: Legen Sie Sie auf die eindeutige Engine-ID fest, die von addengineasync oder einem selbst generierten generiert wurde. Verwenden Sie beim Laden einer vorhandenen Engine die ID, andernfalls wird eine neue Engine erstellt. 
+* **engineId**: Legen Sie diese auf die eindeutige, von AddEngineAsync erstellte oder auf eine selbst erstellte Engine-ID fest. Verwenden Sie beim Laden einer vorhandenen Engine die ID, andernfalls wird eine neue Engine erstellt. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -58,10 +60,10 @@ Parameter:
 
   
 ### <a name="settings-function"></a>Settings-Funktion
-[PolicyEngine::Settings](class_mip_policyengine_settings.md)-Konstruktor zum Erstellen einer neuen Engine
+Policyengine:: Settings-Konstruktor zum Erstellen einer neuen Engine.
 
 Parameter:  
-* **Identität**: [Identitäts](class_mip_identity.md) Informationen des Benutzers, der der neuen Engine zugeordnet ist. 
+* **identity**: Informationen zur Identität des Benutzers, der der neuen Engine zugeordnet ist. 
 
 
 * **clientData**: Anpassbare Clientdaten können beim Entladen mit der Engine gespeichert und aus einer geladenen Engine abgerufen werden. 
@@ -78,7 +80,7 @@ Parameter:
 Ruft die Engine-ID ab.
 
   
-**Gibt Folgendes zurück**: Eine eindeutige Zeichenfolge, die die Engine identifiziert.
+**Rückgabe**: Eindeutige Zeichenfolge, die die Engine identifiziert.
   
 ### <a name="setengineid-function"></a>Funktion "stengineid"
 Legt die Engine-ID fest.
@@ -89,28 +91,28 @@ Parameter:
 
   
 ### <a name="getidentity-function"></a>GetIdentity-Funktion
-Das [Identity](class_mip_identity.md) -Objekt.
+Ruft das Identity-Objekt ab.
 
   
-**Gibt Folgendes zurück**: Ein Verweis auf die Identität im Einstellungs Objekt. 
+**Rückgabe**: Verweis auf die Identität im Einstellungsobjekt. 
   
-**Siehe auch**: [MIP:: Identity](class_mip_identity.md)
+**Weitere Informationen finden Sie unter:** mip::Identity
   
 ### <a name="setidentity-function"></a>Die Funktion "Funktion"
-Legen Sie das [Identity](class_mip_identity.md) -Objekt fest.
+Legt das Identity-Objekt fest.
 
 Parameter:  
 * **identity**: Die eindeutige Identität eines Benutzers. 
 
 
   
-**Siehe auch**: [MIP:: Identity](class_mip_identity.md)
+**Weitere Informationen finden Sie unter:** mip::Identity
   
 ### <a name="getclientdata-function"></a>Getclientdata-Funktion
 Ruft die in den Einstellungen festgelegten Clientdaten ab.
 
   
-**Gibt Folgendes zurück**: Eine vom Client angegebene Zeichenfolge.
+**Rückgabe**: Vom Client angegebene Datenzeichenfolge.
   
 ### <a name="setclientdata-function"></a>Setclientdata-Funktion
 Legt die Zeichenfolge der Clientdaten fest.
@@ -124,13 +126,13 @@ Parameter:
 Gibt die in den Einstellungen festgelegte Gebietseinstellung zurück.
 
   
-**Gibt Folgendes zurück**: Das Gebiets Schema.
+**Rückgabe**: Das Gebietsschema.
   
 ### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
 Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
 
 Parameter:  
-* **CustomSettings**: Liste von Name-Wert-Paaren.
+* **customSettings**: Liste von Name-Wert-Paaren.
 
 
   
@@ -138,7 +140,7 @@ Parameter:
 Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
 
   
-**Gibt Folgendes zurück**: Liste von Name-Wert-Paaren.
+**Rückgabe**: Liste von Name-Wert-Paaren
   
 ### <a name="setsessionid-function"></a>Funktion "-essionid"
 Legt die Sitzungs-ID fest und wird für clientdefinierte Telemetrie verwendet.
@@ -152,13 +154,13 @@ Parameter:
 Ruft die Sitzungs-ID ab, ein eindeutiger Bezeichner.
 
   
-**Gibt Folgendes zurück**: Die Sitzungs-ID.
+**Rückgabe**: die Sitzungs-ID.
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>Isloadsensitivitytypesaktivierte Funktion
 Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert sind.
 
   
-**Gibt Folgendes zurück**: True, wenn aktiviert, andernfalls false.
+**Gibt Folgendes zurück**: true, wenn aktiviert, andernfalls false.
   
 ### <a name="setcloudendpointbaseurl-function"></a>Setcloudendpointbaseurl-Funktion
 Legt optional die Basis-URL für den Cloudendpunkt fest.
@@ -172,7 +174,7 @@ Parameter:
 Ruft ggf. die Basis-URL für die Cloud ab, die von allen Service Requests verwendet wird.
 
   
-**Gibt Folgendes zurück**: Basis-URL
+**Rückgabe:** Basis-URL
   
 ### <a name="setdelegateduseremail-function"></a>Setdelegateduseremail-Funktion
 Legt den Delegierten Benutzer fest.
@@ -187,4 +189,20 @@ Ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/d
 Ruft den Delegierten Benutzer ab.
 
   
-**Gibt Folgendes zurück**: Delegierter Benutzer ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.
+**Returns**: Delegierter Benutzer ein Delegierter Benutzer wird angegeben, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert.
+  
+### <a name="setlabelfilter-function"></a>Setlabelfilter-Funktion
+Legt den Bezeichnungs Filter fest.
+
+Parameter:  
+* **labelfilter**: der Bezeichnungs Filter.
+
+
+Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+  
+### <a name="getlabelfilter-function"></a>Getlabelfilter-Funktion
+Ruft den Bezeichnungs Filter ab.
+
+  
+**Gibt Folgendes zurück**: der Bezeichnungs Filter.
+Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.

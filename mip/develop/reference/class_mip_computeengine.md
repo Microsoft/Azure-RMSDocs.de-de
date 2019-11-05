@@ -5,35 +5,37 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 24f22f28bf8082d0a0347526f5bc87453c9ba4e2
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: 18cf28b380e5636b8948f133bceabd61b504d8fb
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070519"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558971"
 ---
 # <a name="class-mipcomputeengine"></a>MIP:: computeengine-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std::\<Vector Std:: shared_ptr\<Label\>\>& listsensitivitylabels ()  | _Noch nicht dokumentiert._
-Public Std:: shared_ptr\<contentlabel\> getsensitivitylabel (computeenginecontext & context, Konstanten DocumentState & State)  | _Noch nicht dokumentiert._
-Public Std:: Vector\<Std:: shared_ptr\<Action\> \> computeactions (computeenginecontext & context, SST DocumentState & DocumentState, Konstanten applicationaction State & Action State)  | _Noch nicht dokumentiert._
-öffentliches void notifycommittedactions (computeenginecontext & Kontext, Konst DocumentState & DocumentState, Konstanten applicationaktionstate & aktionstate)  | _Noch nicht dokumentiert._
-public virtual ~ computeengine ()  | _Noch nicht dokumentiert._
-public static MIP_UPE_CORE_API Std:: shared_ptr&lt;computeengine&gt; MIP:: computeengine:: Create  | _Noch nicht dokumentiert._
-public static MIP_UPE_CORE_API Std:: shared_ptr&lt;computeenginecontext&gt; MIP:: computeengine:: anatecontext  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: shared_ptr\<Label\>\>& listsensitivitylabels ()  | Noch nicht dokumentiert.
+Public Std:: shared_ptr\<contentlabel\> getsensitivitylabel (computeenginecontext & context, Konstanten DocumentState & State)  | Noch nicht dokumentiert.
+Public Std:: Vector\<Std:: shared_ptr\<Action\>\> computeactions (computeenginecontext & Kontext, Konstante DocumentState & DocumentState, Konstanten applicationaction State & Action State)  | Noch nicht dokumentiert.
+öffentliches void notifycommittedactions (computeenginecontext & Kontext, Konst DocumentState & DocumentState, Konstanten applicationaktionstate & aktionstate)  | Noch nicht dokumentiert.
+public virtual ~ computeengine ()  | Noch nicht dokumentiert.
+public static MIP_UPE_CORE_API Std:: shared_ptr&lt;computeengine&gt; MIP:: computeengine:: Create  | Noch nicht dokumentiert.
+public static MIP_UPE_CORE_API Std:: shared_ptr&lt;computeenginecontext&gt; MIP:: computeengine:: kreatecontext  | Noch nicht dokumentiert.
 
 ## <a name="members"></a>Member
   
 ### <a name="listsensitivitylabels-function"></a>Listsensitivitylabels-Funktion
 _Noch nicht dokumentiert._
 
+  
 ### <a name="getsensitivitylabel-function"></a>Getsensitivitylabel-Funktion
 _Noch nicht dokumentiert._
 
+  
 ### <a name="computeactions-function"></a>Computeactions-Funktion
 _Noch nicht dokumentiert._
 

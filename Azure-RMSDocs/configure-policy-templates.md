@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b92df89ca1c0bacc7ad47f4b03c97d868b8fa396
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 1ccceb464871f524fdad2793d9d36e4a50d84c6c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71683873"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559501"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Konfigurieren und Verwalten von Vorlagen für Azure Information Protection
 
@@ -30,11 +30,11 @@ Schutzvorlagen, auch als Rights Management-Vorlagen bekannt, sind eine Reihe von
 
 **Bei einem Abonnement, das Klassifizierung, Bezeichnung und Schutz umfasst (Azure Information Protection P1 oder P2):**
 
-- Vorlagen, die nicht in Ihren Bezeichnungen für Ihren Mandanten enthalten sind, werden im Abschnitt **Schutzvorlagen** nach den Bezeichnungen auf dem Blatt **Azure Information Protection: Bezeichnungen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
+- Vorlagen, die nicht in ihre Bezeichnungen für Ihren Mandanten integriert sind, werden im Bereich " **Schutz Vorlagen** " angezeigt, nachdem ihre Bezeichnungen im Bereich " **Azure Information Protection-Bezeichnungen** " angezeigt wurden. Um zu diesem Bereich zu navigieren, wählen Sie die Menüoption **Klassifizierungen** > **Bezeichnungen** aus. Sie können diese Vorlagen in Bezeichnungen konvertieren, oder Sie können eine Verknüpfung zu diesen herstellen, wenn Sie den Schutz ihrer Bezeichnungen konfigurieren. 
 
 **Bei einem Abonnement, das nur Schutz umfasst (ein Office 365-Abonnement mit dem Azure Rights Management-Dienst):**
 
-- Vorlagen für Ihren Mandanten werden auf dem Blatt **Azure Information Protection: Bezeichnungen** im Abschnitt **Schutzvorlagen** angezeigt. Klicken Sie auf die Menüoption **Klassifizierungen** > **Bezeichnungen**, um zu diesem Blatt zu navigieren. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
+- Vorlagen für Ihren Mandanten werden im Bereich " **Schutz Vorlagen** " im Bereich " **Azure Information Protection-Bezeichnungen** " angezeigt. Um zu diesem Bereich zu navigieren, wählen Sie die Menüoption **Klassifizierungen** > **Bezeichnungen** aus. Es werden keine Bezeichnungen angezeigt. Darüber hinaus sehen Sie Konfigurationseinstellungen, die für die Klassifizierung und die Bezeichnung spezifisch sind. Aber diese Einstellungen haben entweder keinen Einfluss auf Ihre Vorlagen oder können nicht konfiguriert werden. 
 
 >[!NOTE]
 >In einigen Anwendungen und Diensten wird möglicherweise die Option [Nicht weiterleiten](configure-usage-rights.md#do-not-forward-option-for-emails) und [Nur verschlüsseln](configure-usage-rights.md#encrypt-only-option-for-emails) (oder **Verschlüsseln**) als Vorlage angezeigt. Dabei handelt es sich nicht um Vorlagen, die Sie bearbeiten oder löschen können, sondern vielmehr um Optionen, die standardmäßig mit dem Exchange-Dienst geliefert werden.
@@ -70,11 +70,11 @@ Wenn Sie Ihr Abonnement vor einiger Zeit erworben haben, werden Ihre Standardvor
 Sie können diese Standardvorlagen umbenennen (und neu konfigurieren), wenn Sie das Azure-Portal verwenden.
 
 >[!NOTE]
->Wenn Sie Ihre Standardvorlagen auf dem Blatt **Azure Information Protection: Bezeichnungen** nicht sehen können, werden diese zu Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden. Sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Schutzeinstellungen für einen Cloud-Schlüssel enthält. Sie können jederzeit überprüfen, welche Vorlagen Ihr Mandant hat, indem Sie " [Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate) " aus dem [PowerShell-Modul von aipservice](administer-powershell.md)ausführen.
+>Wenn Ihre Standardvorlagen im Bereich " **Azure Information Protection-Bezeichnungen** " nicht angezeigt werden, werden Sie in Bezeichnungen konvertiert oder mit einer Bezeichnung verknüpft. Diese sind noch immer als Vorlage vorhanden. Sie werden im Azure-Portal jedoch als Teil einer Konfiguration der Bezeichnung angezeigt, die Schutzeinstellungen für einen Cloud-Schlüssel enthält. Sie können jederzeit überprüfen, welche Vorlagen Ihr Mandant hat, indem Sie " [Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate) " aus dem [PowerShell-Modul von aipservice](administer-powershell.md)ausführen.
 >
 >Sie können Vorlagen manuell konvertieren und diese bei Bedarf umbenennen, so wie unter [Konvertieren von Vorlagen in Bezeichnungen](#to-convert-templates-to-labels) beschrieben. Wenn Ihre Azure Information Protection-Standardrichtlinie kürzlich erstellt und der Azure Rights Management-Dienst für Ihren Mandanten zu diesem Zeitpunkt aktiviert wurde, werden sie automatisch konvertiert.
 
-Vorlagen, die archiviert werden, werden auf dem Blatt **Azure Information Protection: Bezeichnungen** als nicht verfügbar angezeigt. Diese Vorlagen können nicht für Bezeichnungen ausgewählt werden, aber sie können zu Bezeichnungen konvertiert werden.
+Vorlagen, die archiviert werden, werden im Bereich **Azure Information Protection-Bezeichnungen** als nicht verfügbar angezeigt. Diese Vorlagen können nicht für Bezeichnungen ausgewählt werden, aber sie können zu Bezeichnungen konvertiert werden.
 
 ## <a name="considerations-for-templates-in-the-azure-portal"></a>Überlegungen zu Vorlagen im Azure-Portal
 
@@ -84,7 +84,7 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
     
     - **Makros zulassen** (allgemeiner Name) wird automatisch hinzugefügt. Dieses Nutzungsrecht ist für die Azure Information Protection-Leiste in Office-Apps erforderlich.
 
-- Für die Einstellungen **Veröffentlicht** und **Archiviert** werden auf dem Blatt **Bezeichnung** die Optionen **Aktiviert**: **Ein** bzw. **Aktiviert**: **Aus** angezeigt. Legen Sie Vorlagen, die beibehalten werden sollen, die aber nicht für Benutzer oder Dienste sichtbar sein sollen, auf **Aktiviert**: **Aus** fest.
+- **Veröffentlichte** und **Archivierte** Einstellungen werden als **aktiviert**angezeigt: **on** und **aktiviert**: **Off** im Bereich **Bezeichnung** . Legen Sie Vorlagen, die beibehalten werden sollen, die aber nicht für Benutzer oder Dienste sichtbar sein sollen, auf **Aktiviert**: **Aus** fest.
 
 - Sie können eine Vorlage im Azure-Portal weder kopieren noch löschen. Wenn die Vorlage zu einer Bezeichnung konvertiert wird, können Sie die Bezeichnung so konfigurieren, dass sie die Vorlage nicht mehr verwendet. Dies erreichen Sie, indem Sie für die Option **Berechtigungen für Dokumente und E-Mails mit Bezeichnung festlegen** **Nicht konfiguriert** auswählen. Alternativ können Sie die Bezeichnung löschen. In beiden Szenarios wird die Vorlage jedoch nicht gelöscht und bleibt aktiviert.
     
@@ -96,24 +96,24 @@ Bevor Sie diese Vorlagen bearbeiten oder zu Bezeichnungen konvertieren, stellen 
 
 - Wenn Sie eine Vorlage zu einer Bezeichnung konvertieren oder mit einer verknüpfen, kann sie nicht länger von anderen Bezeichnungen verwendet werden. Darüber hinaus wird diese Vorlage nicht mehr im Abschnitt **Protection Templates** (Schutzvorlagen) angezeigt. 
 
-- Sie erstellen keine neue Vorlage über den Abschnitt **Protection Templates** (Schutzvorlagen). Sie erstellen stattdessen eine Bezeichnung, die die Einstellung **Schützen** aufweist, und konfigurieren die Nutzungsrechte und -einstellungen auf dem Blatt **Schutz**. Vollständige Anweisungen finden Sie unter [Erstellen einer neuen Vorlage](#to-create-a-new-template).
+- Sie erstellen keine neue Vorlage über den Abschnitt **Protection Templates** (Schutzvorlagen). Erstellen Sie stattdessen eine Bezeichnung, die die Einstellung **schützen** aufweist, und konfigurieren Sie die Nutzungsrechte und-Einstellungen im Bereich **Schutz** . Vollständige Anweisungen finden Sie unter [Erstellen einer neuen Vorlage](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Konfigurieren von Vorlagen in der Azure Information Protection-Richtlinie
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection: Bezeichnungen**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection-Bezeichnungen** .
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Erweitern Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** den Eintrag **Schutzvorlagen**, und suchen Sie anschließend nach der zu konfigurierenden Vorlage.
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen** : Erweitern Sie im Bereich " **Azure Information Protection-Bezeichnungen** " die Option **Schutz Vorlagen**, und suchen Sie dann die Vorlage, die Sie konfigurieren möchten.
     
-3. Wählen Sie die Vorlage aus. Auf dem Blatt **Bezeichnung** können Sie ggf. den Vorlagennamen und die Beschreibung ändern, indem Sie bei Bedarf den **Anzeigename für Bezeichnung** und die **Beschreibung** bearbeiten. Wählen Sie dann **Schutz** mit dem Wert **Azure (cloud key)** (Azure (Cloud-Schlüssel)) aus, um das Blatt **Schutz** zu öffnen.
+3. Wählen Sie die Vorlage aus. im Bereich **Bezeichnung** können Sie ggf. den Vorlagen Namen und die Beschreibung ändern, indem Sie den **anzeigen Amen** und die **Beschreibung**der Bezeichnung bearbeiten. Wählen Sie dann **Schutz** mit dem Wert **Azure (cloudschlüssel)** aus, um den **Schutz** Bereich zu öffnen.
 
-4. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren der Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
+4. Im Bereich **Schutz** können Sie die Berechtigungen, den Inhalts Ablauf und die Offline Zugriffs Einstellungen ändern. Weitere Informationen zum Konfigurieren der Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
     
-    Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
+    Klicken Sie auf **OK** , um Ihre Änderungen beizubehalten, und klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
     
 > [!NOTE]
-> Sie können eine Vorlage auch bearbeiten, indem Sie die Schaltfläche **Vorlage bearbeiten** auf dem Blatt **Schutz** verwenden, wenn Sie eine Bezeichnung so konfiguriert haben, dass eine vordefinierte Vorlage verwendet wird. Vorausgesetzt, dass keine andere Bezeichnung die ausgewählte Vorlage verwendet, konvertiert diese Schaltfläche die Vorlage in eine Bezeichnung, und Sie gelangen zu Schritt 5. Weitere Informationen darüber, was beim Konvertieren von Vorlagen zu Bezeichnungen geschieht, finden Sie im nächsten Abschnitt.
+> Sie können eine Vorlage auch bearbeiten, indem Sie die Schaltfläche **Vorlage bearbeiten** im Bereich **Schutz** verwenden, wenn Sie eine Bezeichnung für die Verwendung einer vordefinierten Vorlage konfiguriert haben. Vorausgesetzt, dass keine andere Bezeichnung die ausgewählte Vorlage verwendet, konvertiert diese Schaltfläche die Vorlage in eine Bezeichnung, und Sie gelangen zu Schritt 5. Weitere Informationen darüber, was beim Konvertieren von Vorlagen zu Bezeichnungen geschieht, finden Sie im nächsten Abschnitt.
 
 ## <a name="to-convert-templates-to-labels"></a>Konvertieren von Vorlagen in Bezeichnungen
 
@@ -141,23 +141,23 @@ Bei der Konvertierung einer Vorlage in eine Bezeichnung:
 
 Wenn Sie eine neue Bezeichnung mit der Schutzeinstellung **Azure (Cloud-Schlüssel)** erstellen, wird hierdurch im Hintergrund eine neue benutzerdefinierte Vorlage erstellt. Auf diese kann dann über Dienste und Anwendungen, die mit Rights Management-Vorlagen integriert werden, zugegriffen werden.
 
-1. Über die Menüoption **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** den Eintrag **Neue Bezeichnung hinzufügen** aus.
+1. Über die Menüoption **Klassifizierungen** > **Bezeichnungen** : Wählen Sie im Bereich " **Azure Information Protection-Bezeichnungen** " die Option **neue Bezeichnung hinzufügen**aus.
 
-2. Behalten Sie auf dem Blatt **Bezeichnung** für **Aktiviert** die Standardeinstellung **Ein** bei. Geben Sie dann einen Bezeichnungsnamen und eine Bezeichnungsbeschreibung für die Vorlage ein.
+2. Behalten Sie im Bereich **Bezeichnung** die Standardeinstellung **aktiviert** **: ein**, und geben Sie dann einen Bezeichnungs Namen und eine Beschreibung für den Vorlagen Namen und die Beschreibung ein.
 
 3. Wählen Sie unter **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Optionen **Schützen** und dann **Schutz** aus:
     
      ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
-4. Auf dem Blatt **Schutz** können Sie die Berechtigungen, den Inhaltsablauf und die Offlinezugriffseinstellungen ändern. Weitere Informationen zum Konfigurieren dieser Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
+4. Im Bereich **Schutz** können Sie die Berechtigungen, den Inhalts Ablauf und die Offline Zugriffs Einstellungen ändern. Weitere Informationen zum Konfigurieren dieser Schutzeinstellungen finden Sie unter [Konfigurieren einer Bezeichnung für den Rights Management-Schutz](configure-policy-protection.md).
     
-    Klicken Sie auf **OK**, um Ihre Änderungen beizubehalten, und klicken Sie dann auf dem Blatt **Bezeichnung** auf **Speichern**.
+    Klicken Sie auf **OK** , um Ihre Änderungen beizubehalten, und klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
     
-    Auf dem Blatt **Azure Information Protection: Bezeichnungen** können Sie jetzt Ihre neue Bezeichnung sehen, die mit der Spalte **Schutz** angezeigt wird. Dies bedeutet, dass sie Schutzeinstellungen enthält. Diese Schutzeinstellungen werden Anwendungen und Diensten, die den Azure Rights Management-Dienst unterstützen, als Vorlagen angezeigt.
+    Im Bereich **Azure Information Protection-Bezeichnungen** sehen Sie nun, dass Ihre neue Bezeichnung mit der Spalte " **Schutz** " angezeigt wird, um anzugeben, dass Sie Schutzeinstellungen enthält. Diese Schutzeinstellungen werden Anwendungen und Diensten, die den Azure Rights Management-Dienst unterstützen, als Vorlagen angezeigt.
     
     Obwohl die Bezeichnung aktiviert ist, wird die Vorlage standardmäßig archiviert. Damit Anwendungen und Dienste die Vorlage zum Schützen von Dokumenten und E-Mails verwenden können, führen Sie den letzten Schritt zum Veröffentlichen der Vorlage aus.
 
-5. Wählen Sie in der Menüoption **Klassifizierungen** > **Richtlinien** die Richtlinie aus, die die neuen Schutzeinstellungen enthalten soll. Wählen Sie dann **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die Ihre Schutzeinstellungen enthält, und klicken Sie nacheinander auf **OK** und auf **Speichern**.
+5. Wählen Sie in der Menüoption **Klassifizierungen** > **Richtlinien** die Richtlinie aus, die die neuen Schutzeinstellungen enthalten soll. Wählen Sie dann **Bezeichnungen hinzufügen oder entfernen** aus. Wählen Sie im Bereich **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die neu erstellte Bezeichnung aus, die die Schutzeinstellungen enthält, wählen Sie **OK**aus, und klicken Sie dann auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

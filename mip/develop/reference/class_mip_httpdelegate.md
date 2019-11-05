@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f5f5bc13f3c01e40b0034d4fae1bd698da8426c5
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054881"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560202"
 ---
 # <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
 Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
@@ -19,8 +19,8 @@ Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<httpoperation\> Send (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context)  |  Sendet die HTTP-Anforderung.
-Public Std:: shared_ptr\<httpoperation\> SendAsync (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konst Std:: shared_ptr\<void\>& context, Konstanten Std:: Function\<void (Std:: shared_ptr\<httpoperation\>)\>& callbackfn)  |  HTTP-Anforderung asynchron senden.
+Public Std:: shared_ptr\<httpoperation\> Send (Konstanten Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Sendet die HTTP-Anforderung.
+Public Std:: shared_ptr\<httpoperation\> SendAsync (konstant Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context, Konstante Std:: function\<void (Std) :: shared_ptr\<httpoperation\>)  |  HTTP-Anforderung asynchron senden.
 öffentliches void CancelOperation (Konstante Std:: String & RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
 öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   
@@ -30,38 +30,38 @@ Public Std:: shared_ptr\<httpoperation\> SendAsync (Konstante Std:: shared_ptr\<
 Sendet die HTTP-Anforderung.
 
 Parameter:  
-* **Anforderung**: HTTP-Anforderung 
+* **request**: Die HTTP-Anforderung. 
 
 
-* **Kontext**: Der gleiche nicht transparente Client Kontext, der an die API übermittelt wurde, die zu dieser HTTP-Anforderung geführt hat.
+* **context**: Der gleiche nicht transparente Clientkontext, der an die API übergeben wurde und zu dieser HTTP-Anforderung geführt habt.
 
 
 
   
-**Gibt Folgendes zurück**: HTTP-Vorgangs Container
+**Gibt Folgendes zurück**: http-Vorgangs Container
   
 ### <a name="sendasync-function"></a>SendAsync-Funktion
 HTTP-Anforderung asynchron senden.
 
 Parameter:  
-* **Anforderung**: HTTP-Anforderung 
+* **request**: Die HTTP-Anforderung. 
 
 
-* **Kontext**: Der gleiche nicht transparente Client Kontext, der an die API übermittelt wurde, die zu dieser HTTP-Anforderung geführt hat. 
+* **context**: Der gleiche nicht transparente Clientkontext, der an die API übergeben wurde und zu dieser HTTP-Anforderung geführt habt. 
 
 
-* **callbackFn**: Funktion, die nach Abschluss ausgeführt wird
+* **callbackfn**: Funktion, die nach Abschluss der Ausführung ausgeführt wird
 
 
 
   
-**Gibt Folgendes zurück**: HTTP-Vorgangs Container
+**Gibt Folgendes zurück**: http-Vorgangs Container
   
 ### <a name="canceloperation-function"></a>CancelOperation-Funktion
 Abbrechen eines bestimmten http-Vorgangs.
 
 Parameter:  
-* **requestId**: ID der abzubrechenden Anforderung
+* **RequestId**: ID der abzubrechenden Anforderung
 
 
   

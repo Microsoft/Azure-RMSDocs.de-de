@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8985b5646849338213855017da042538a27c935b
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057637"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560762"
 ---
 # <a name="class-mipprotectionengineobserver"></a>mip::ProtectionEngine::Observer-Klasse 
-Schnittstelle, die Benachrichtigungen im Zusammenhang mit [ProtectionEngine](class_mip_protectionengine.md) empfängt
-Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
+Eine Schnittstelle, die mit der Schutz-Engine verbundene Benachrichtigungen empfängt.
+Diese Schnittstelle muss von Anwendungen mit dem Schutz-SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void ongettemplatessuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& templateids, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
-public virtual void ongettemplatesfailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
-public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& Rights, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
-public virtual void OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
+public virtual void ongettemplatessuccess (Konstante Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& templateids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
+public virtual void ongettemplatesfailure (konstant Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
+public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& Rechte, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
+öffentliches virtuelles void-OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
   
 ## <a name="members"></a>Member
   
@@ -31,46 +31,46 @@ public virtual void OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr &
 Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
 
 Parameter:  
-* **templateids**: Ein Verweis auf die Liste der abgerufenen Vorlagen. 
+* **templateIds**: Verweis auf die Liste der abzurufenden Vorlagen 
 
 
-* **Kontext**: Der Kontext, der an "Schutz Modul [:: gettemplatesasync](class_mip_protectionengine.md#gettemplatesasync-function) " übergeben wurde.
+* **Kontext**: derselbe Kontext, der an "Schutz Modul:: gettemplatesasync" übergeben wurde.
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder „std::function“) an [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) übergeben. Derselbe Kontext wird dann an [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) oder [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function) weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: gettemplatesasync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: ongettemplatessuccess oder schutzengine:: O weitergeleitet. bServer:: ongettemplatesfailure
   
 ### <a name="ongettemplatesfailure-function"></a>Ongettemplatesfailure-Funktion
 Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
 
 Parameter:  
-* **Fehler**: [Fehler](class_mip_error.md) beim Abrufen von Vorlagen. 
+* **Fehler**: Fehler beim Abrufen von Vorlagen. 
 
 
-* **Kontext**: Der Kontext, der an "Schutz Modul [:: gettemplatesasync](class_mip_protectionengine.md#gettemplatesasync-function) " übergeben wurde.
+* **Kontext**: derselbe Kontext, der an "Schutz Modul:: gettemplatesasync" übergeben wurde.
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z.B. „std::promise“ oder „std::function“) an [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) übergeben. Derselbe Kontext wird dann an [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) oder [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function) weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: gettemplatesasync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: ongettemplatessuccess oder schutzengine:: O weitergeleitet. bServer:: ongettemplatesfailure
   
 ### <a name="ongetrightsforlabelidsuccess-function"></a>OnGetRightsForLabelIdSuccess-Funktion
 Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
 
 Parameter:  
-* **Rechte**: Ein Verweis auf die Liste der abgerufenen Rechte. 
+* **rights**: eine Referenz zu der Liste mit abgerufenen Rechten 
 
 
-* **Kontext**: Derselbe Kontext, der an "Schutz Modul:: GetRightsForLabelIdAsync" übermittelt wurde.
+* **Kontext**: derselbe Kontext, der an die Schutz-Engine:: GetRightsForLabelIdAsync
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben. derselbe Kontext wird unverändert an Schutz Module [:: Observer:: OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) oder schutzengine [:: Observer:: OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function) weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: OnGetRightsForLabelIdSuccess oder weitergeleitet. Schutz-Engine:: Observer:: OnGetRightsForLabelIdFailure
   
 ### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure-Funktion
 Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
 
 Parameter:  
-* **Fehler**: [Fehler](class_mip_error.md) beim Abrufen der Rechte. 
+* **Fehler**: Fehler beim Abrufen der Rechte. 
 
 
-* **Kontext**: Derselbe Kontext, der an "Schutz Modul:: GetRightsForLabelIdAsync" übermittelt wurde.
+* **Kontext**: derselbe Kontext, der an die Schutz-Engine:: GetRightsForLabelIdAsync
 
 
-Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben, und derselbe Kontext wird unverändert an Schutz Modul [:: Observer:: OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) weitergeleitet. oder Schutz- [Engine:: Observer:: OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: OnGetRightsForLabelIdSuccess oder weitergeleitet. Schutz-Engine:: Observer:: OnGetRightsForLabelIdFailure

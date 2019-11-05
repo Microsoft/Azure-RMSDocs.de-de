@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 4b6d9e43e23eb4fa629124dcd1cdf3bce3ee7165
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 53e1e7028f73cb341f2ed88e04ac46d66908a0d1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055954"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558658"
 ---
 # <a name="class-miplabelnotfounderror"></a>MIP:: labelnotfounderror-Klasse 
-[Bezeichnung](class_mip_label.md) Die ID wurde nicht erkannt.
+Die Bezeichnungs-ID wurde nicht erkannt.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

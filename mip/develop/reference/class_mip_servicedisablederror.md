@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 2fb7968ee2443d208ef3370308056eee4832e385
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 766d3747c2dbe6a9fdecc6cb6e21eb3d4000d3ec
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057023"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558206"
 ---
 # <a name="class-mipservicedisablederror"></a>MIP:: servicedisablederror-Klasse 
 Der Benutzer konnte aufgrund eines deaktivierten diensdienstanbieter keinen Zugriff auf den Inhalt erhalten.
@@ -28,13 +28,13 @@ Aufzählungs Block  |  Beschreibt den Umfang, für den der Dienst deaktiviert is
 Ruft den Umfang ab, für den der Dienst deaktiviert ist.
 
   
-**Gibt Folgendes zurück**: Der Umfang, für den der Dienst deaktiviert ist.
+**Gibt**den Wert zurück, für den der Dienst deaktiviert ist.
   
 ### <a name="extent-enum"></a>Block-Aufzählung
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Benutzer            | Der Dienst ist für den Benutzer deaktiviert.
 Gerät            | Der Dienst ist für das Gerät deaktiviert.
-Platform            | Der Dienst ist für die Plattform deaktiviert.
+Plattform            | Der Dienst ist für die Plattform deaktiviert.
 Mandant            | Der Dienst ist für den Mandanten deaktiviert.
 Beschreibt den Umfang, für den der Dienst deaktiviert ist.

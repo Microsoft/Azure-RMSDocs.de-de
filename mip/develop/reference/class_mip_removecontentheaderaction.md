@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: bec17f75afcb08053898766e22952c5e3014f929
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5d9f054c692909f394113c46ec8e533e385ee83d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057272"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559985"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>mip::RemoveContentHeaderAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Inhaltsheader aus dem Dokument entfernt wird.
@@ -27,4 +27,4 @@ Public Konstanten Std:: Vector\<Std:: String\>& getuielementnames ()  |  Ruft ei
 Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
 
   
-**Gibt Folgendes zurück**: Eine Liste der Namen der Benutzeroberflächen Elemente.
+**Rückgabe**: Eine Liste mit Namen der Benutzeroberflächenelemente.

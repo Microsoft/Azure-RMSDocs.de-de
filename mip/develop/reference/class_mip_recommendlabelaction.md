@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a36158153216a0e8fe2324580256cb61ec708dbc
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 629e6410657fcb799e3f71c0ccb3752b82437428
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057352"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560026"
 ---
 # <a name="class-miprecommendlabelaction"></a>mip::RecommendLabelAction-Klasse 
 Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag für eine Bezeichnung. Die Unterdrückung dieses Aufrufs, nachdem ein Benutzer die empfohlene Bezeichnung ignoriert hat, sollte durch die unterstützten Aktionen im Ausführungsstatus erfolgen.
@@ -19,7 +19,7 @@ Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: shared_ptr\<-Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die vorgeschlagene Bezeichnung.
+öffentliche Konstante Std:: shared_ptr\<Bezeichnung\>& GetLabel () Konstanten  |  Holen Sie sich die vorgeschlagene Bezeichnung.
 Public Konstanten Std:: Vector\<Std:: String\>& getclassificationids () Konstanten  |  Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.
   
 ## <a name="members"></a>Member
@@ -28,7 +28,7 @@ Public Konstanten Std:: Vector\<Std:: String\>& getclassificationids () Konstant
 Holen Sie sich die vorgeschlagene Bezeichnung.
 
   
-**Gibt Folgendes zurück**: Die Bezeichnung.
+**Gibt Folgendes zurück**: die Bezeichnung.
   
 ### <a name="getclassificationids-function"></a>Getclassificationids-Funktion
 Die Klassifizierungs-IDs, die abgeglichen wurden, werden angezeigt, und diese Bezeichnung wird angezeigt.

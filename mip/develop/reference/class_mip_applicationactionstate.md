@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a75ade6fcbb87e24b778b4368eb65080e767c130
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055514"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559449"
 ---
 # <a name="class-mipapplicationactionstate"></a>MIP:: applicationaktionstate-Klasse 
   
@@ -19,10 +19,10 @@ ms.locfileid: "70055514"
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 öffentliches labelstate getnewlabelstate () Konstanten  |  Ruft den neuen Bezeichnungs Zustand ab.
-Public Std:: shared_ptr\<Label\> getnewlabel () Konstanten  |  Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
+Public Std:: shared_ptr\<Bezeichnung\> getnewlabel () Konstanten  |  Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
 Public Std::p Air\<bool, Std:: String\> isdowngradebug () Konstanten  |  Bei der Implementierung sollte übergeben werden, ob eine vorhandene Bezeichnung herabgestuft wurde.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
-public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> getnewlabelextendedproperties () Konstanten  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
+public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getnewlabelextendedproperties () konstant.  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
 public bool IsRecommendationEnabled () konstant  |  Gibt einen booleschen Wert zurück, der die empfohlene Aktion zurückgibt. Standardmäßig sollte true lauten, sofern der Benutzer nicht else angibt.
   
@@ -32,7 +32,7 @@ public bool IsRecommendationEnabled () konstant  |  Gibt einen booleschen Wert z
 Ruft den neuen Bezeichnungs Zustand ab.
 
   
-**Gibt Folgendes zurück**: Der neue Bezeichnungs Zustand. 
+**Gibt Folgendes zurück**: den neuen Bezeichnungs Zustand. 
   
 **Siehe auch**: MIP:: labelstate
   
@@ -40,21 +40,21 @@ Ruft den neuen Bezeichnungs Zustand ab.
 Ruft die ID der Vertraulichkeitsbezeichnung ab, die auf das Dokument angewendet werden sollte.
 
   
-**Gibt Folgendes zurück**: Die ID der Vertraulichkeits Bezeichnung, die auf den Inhalt angewendet werden soll, wenn vorhanden ist, wird die Bezeichnung entfernt.
+**Rückgabe**: Die ID der Vertraulichkeitsbezeichnung, die ggf. auf den Inhalt angewendet werden soll. Wenn kein Inhalt vorhanden ist, kann die Bezeichnung entfernt werden.
   
 ### <a name="isdowngradejustified-function"></a>Isdowngradebug-Funktion
 Bei der Implementierung sollte übergeben werden, ob eine vorhandene Bezeichnung herabgestuft wurde.
 
   
-**Gibt Folgendes zurück**: True, wenn die Herabstufung rechtzeitig mit der Begründung messageelse false ist. 
+**Rückgabe:** TRUE, wenn das Herabstufen berechtigt ist und eine Nachricht mit einer Begründung bereitgestellt wird; andernfalls FALSE 
   
-**Weitere Informationen finden Sie unter:** [mip::JustifyAction](class_mip_justifyaction.md)
+**Siehe auch**: MIP:: justifyaction
   
 ### <a name="getnewlabelassignmentmethod-function"></a>Getnewlabelaccessmentmethod-Funktion
 Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
 
   
-**Gibt Folgendes zurück**: Die Zuweisungs Methode Standard, privilegiert, Auto. 
+**Rückgabe**: Zuweisungsmethode STANDARD, PRIVILEGED, AUTO. 
   
 **Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
@@ -62,18 +62,18 @@ Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
 Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
 
   
-**Gibt Folgendes zurück**: Die erweiterten Eigenschaften, die auf den Inhalt angewendet werden.
+**Rückgabe:** die erweiterten Eigenschaften, die auf den Inhalt angewendet werden sollen
   
 ### <a name="getsupportedactions-function"></a>Getsupportedactions-Funktion
 Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
 
   
-**Gibt Folgendes zurück**: Eine maskierte Enumeration, die alle unterstützten Aktions Typen beschreibt.
+**Rückgabe**: eine maskierte Enumeration, die alle unterstützten Aktionstypen beschreibt
 ActionType::Justify muss unterstützt werden. Wenn eine Erklärung für die Änderung einer Richtlinie oder einer Bezeichnung verlangt wird, wird stets eine Aktion zur Erklärung zurückgegeben.
   
 ### <a name="isrecommendationenabled-function"></a>IsRecommendationEnabled-Funktion
 Gibt einen booleschen Wert zurück, der die empfohlene Aktion zurückgibt. Standardmäßig sollte true lauten, sofern der Benutzer nicht else angibt.
 
   
-**Gibt Folgendes zurück**: Ein boolescher Wert, der die empfohlene Aktion gekennzeichnet, wird zurückgegeben.
+**Returns**: ein boolescher Wert, der die empfohlene Aktion Kennzeichen, wird zurückgegeben.
 "Aktionstyp:: RecommendLabel" muss aktiviert sein, damit dieses Feld eine Auswirkung hat.

@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 2e96fb769a1b917715daa872736c6d2b81e2626e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8205d207a48d90832b5961b14d37c7a7226293a2
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055432"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559014"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>MIP:: authdelegat:: OAuth2Challenge-Klasse 
 eine Klasse, die alle Informationen enthält, die von der aufrufenden Anwendung benötigt werden, um ein oauth2-Token zu generieren.
@@ -19,7 +19,7 @@ eine Klasse, die alle Informationen enthält, die von der aufrufenden Anwendung 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public OAuth2Challenge (Konstante Std:: String & Authority, Konstanten Std:: String & Resource, Konstanten Std:: String & Scope, Konstante Std:: String & Claims)  |  Erstellen Sie ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) -Objekt.
+Public OAuth2Challenge (Konstante Std:: String & Authority, Konstanten Std:: String & Resource, Konstanten Std:: String & Scope, Konstante Std:: String & Claims)  |  Erstellen Sie ein neues OAuth2Challenge-Objekt.
 Public Konstanten Std:: String & getauthority () Konstanten  |  Die Autoritäts Zeichenfolge erhalten.
 Public Konstanten Std:: String & getResource () Konstanten  |  Die Ressourcen Zeichenfolge erhalten.
 Public Konstanten Std:: String & GetScope () Konstanten  |  Die Bereichs Zeichenfolge erhalten.
@@ -28,7 +28,7 @@ Public Konstanten Std:: String & getclaims () Konstanten  |  Die Anspruchs Zeich
 ## <a name="members"></a>Member
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge-Funktion
-Erstellen Sie ein neues [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) -Objekt.
+Erstellen Sie ein neues OAuth2Challenge-Objekt.
 
 Parameter:  
 * **Authority**: die Autorität, für die das Token generiert werden muss. 
@@ -45,22 +45,22 @@ Parameter:
 Die Autoritäts Zeichenfolge erhalten.
 
   
-**Gibt Folgendes zurück**: Die Autoritäts Zeichenfolge.
+**Gibt zurück**: die Autoritäts Zeichenfolge.
   
 ### <a name="getresource-function"></a>GetResource-Funktion
 Die Ressourcen Zeichenfolge erhalten.
 
   
-**Gibt Folgendes zurück**: Die Ressourcen Zeichenfolge.
+**Gibt Folgendes zurück**: die Ressourcen Zeichenfolge.
   
 ### <a name="getscope-function"></a>GetScope-Funktion
 Die Bereichs Zeichenfolge erhalten.
 
   
-**Gibt Folgendes zurück**: Die Bereichs Zeichenfolge.
+**Gibt Folgendes zurück**: die Bereichs Zeichenfolge.
   
 ### <a name="getclaims-function"></a>Getclaims-Funktion
 Die Anspruchs Zeichenfolge erhalten.
 
   
-**Gibt Folgendes zurück**: Die Anspruchs Zeichenfolge.
+**Gibt Folgendes zurück**: die Anspruchs Zeichenfolge.

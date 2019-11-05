@@ -5,39 +5,40 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f5d54ef2a274b0167d407c19cd5fbb0ca97349fb
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055926"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558700"
 ---
 # <a name="class-miplabelgroupdata"></a>MIP:: labelgroupdata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std:: unique_ptr\<labelgroupdata\>\>& getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
-public int getor der () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetColor () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetName () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetDescription () Konstanten  | _Noch nicht dokumentiert._
-public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getinvariantname () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetToolTip () Konstanten  | _Noch nicht dokumentiert._
-public bool isaktivierte () Konstante  | _Noch nicht dokumentiert._
-public bool isdowngraderecht cationrequired () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getdefaultlabelid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getmoreinfourl () Konstanten  | _Noch nicht dokumentiert._
-public bool ismandatory () konstant  | _Noch nicht dokumentiert._
-public bool hasdonotforwardaction () konstant  | _Noch nicht dokumentiert._
-public bool isauditenabled () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std:: String\>& getlabelbycustomproperties () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std:: String\>& getcustompropertiesbylabel () Konstanten  | _Noch nicht dokumentiert._
-public virtual ~ labelgroupdata ()  | _Noch nicht dokumentiert._
+public const std::string& GetLabelId() const  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<labelgroupdata\>\>& getlabelgroupdata () Konstanten  | Noch nicht dokumentiert.
+public int getor der () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetColor () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetName () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetDescription () Konstanten  | Noch nicht dokumentiert.
+public const std::string& GetTemplateId() const  | Noch nicht dokumentiert.
+Public Konstanten Std:: String & getinvariantname () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetToolTip () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getautotooltip () Konstanten  | Noch nicht dokumentiert.
+public bool isaktivierte () Konstante  | Noch nicht dokumentiert.
+public bool isdowngraderecht cationrequired () konstant  | Noch nicht dokumentiert.
+Public Konstanten Std:: String & getdefaultlabelid () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getmoreinfourl () Konstanten  | Noch nicht dokumentiert.
+public bool ismandatory () konstant  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<schutzaktionstyp\>& getschutzaktiontypes () Konstanten  | Noch nicht dokumentiert.
+public bool isauditenabled () konstant  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: String\>& getlabelbycustomproperties () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: String\>& getcustompropertiesbylabel () Konstanten  | Noch nicht dokumentiert.
+public virtual ~ labelgroupdata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   
@@ -77,6 +78,10 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
+### <a name="getautotooltip-function"></a>Getautotooltip-Funktion
+_Noch nicht dokumentiert._
+
+  
 ### <a name="isenabled-function"></a>Isaktivierte Funktion
 _Noch nicht dokumentiert._
 
@@ -97,7 +102,7 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
-### <a name="hasdonotforwardaction-function"></a>Hasdonotforwardaction-Funktion
+### <a name="getprotectionactiontypes-function"></a>Getschutzaktiontypes-Funktion
 _Noch nicht dokumentiert._
 
   

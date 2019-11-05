@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 88ac473dd20db6499ab818adf47ddc5cb788e960
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: bef08b98e09f9c6802ac9e39de293e9ec25bd380
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055867"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558633"
 ---
 # <a name="class-mipmsgattachmentdata"></a>MIP:: msgattachmentdata-Klasse 
   
@@ -19,7 +19,7 @@ ms.locfileid: "70055867"
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Konstanten Std:: Vector\<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
-Public Std:: shared_ptr\<Stream\> GetStream () konstant  |  Anlage als binären Stream erhalten.
+Public Std:: shared_ptr\<Stream\> GetStream () Konstanten  |  Anlage als binären Stream erhalten.
 public const std::string& GetName() const  |  Der Name der Anlage wird als Zeichenfolge angezeigt.
 Public Konstanten Std:: String & getlongname () Konstanten  |  Langen Namen der Anlage als Zeichenfolge erhalten.
 public const std::string& GetPath() const  |  Der Name des Pfads wird als Zeichenfolge angezeigt. Wenn der Pfad nicht leer ist, wird auf Anhang verwiesen.

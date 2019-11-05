@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dbac2ee9908b5c84fcdf37a5718c4c78d5c53d36
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1964e9212088966d421e7b946ca2148b8f56e19
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054724"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560132"
 ---
 # <a name="class-mipjustificationrequirederror"></a>mip::JustificationRequiredError-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual Std:: shared_ptr\<Error\> Clone () konstant  |  Klont den Fehler
+public virtual Std:: shared_ptr\<Error\> Clone ()-Konstanten  |  Klont den Fehler
   
 ## <a name="members"></a>Member
   
@@ -26,4 +26,4 @@ public virtual Std:: shared_ptr\<Error\> Clone () konstant  |  Klont den Fehler
 Klont den Fehler
 
   
-**Gibt Folgendes zurück**: Ein Klon des Fehlers.
+**Rückgabe**: Klon des Fehlers.

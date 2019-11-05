@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a9dc9b68dbe2a4ca1a670f608f2ae3e0010affe6
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 83452da929250dac907dd53868733c77eb26b877
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056373"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560393"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.
@@ -33,42 +33,42 @@ public int GetMargin() const  |  Ruft den Rand der Fußzeile im unteren Bereich 
 Eine API, mit der das Element des Fußzeileninhalts markiert wird.
 
   
-**Gibt Folgendes zurück**: Der Name, der für das UI-Element verwendet werden soll, das den Content Footer enthält. Wenn der Fußzeileninhalt entfernt werden muss, wird der gleiche Name in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) zurückgegeben.
+**Rückgabe**: Name, der für das UI-Element verwendet werden sollte, das den Fußzeileninhalt enthält. Der gleiche Name wird in removecontentfooteraction zurückgegeben, wenn die Inhalts Fußzeile entfernt werden muss.
   
 ### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Fußzeileninhalt enthalten sein soll.
 
   
-**Gibt Folgendes zurück**: Textfootertext.
+**Rückgabe**: Inhalt des Fußzeilentexts.
   
 ### <a name="getfontname-function"></a>Getfontname-Funktion
 Ruft den Namen der Schriftart ab, in der der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt Folgendes zurück**: Der Schriftart Name. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
+**Rückgabe**: Schriftartname Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
 Ruft den Schriftgrad ab, in dem der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt Folgendes zurück**: Schrift Grad als ganze Zahl.
+**Rückgabe**: Schriftgrad als ganze Zahl.
   
 ### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
 Ruft die Schriftfarbe ab, in der der Fußzeileninhalt angezeigt werden soll.
 
   
-**Gibt Folgendes zurück**: Schriftfarbe als Zeichenfolge (z. b. "#000000").
+**Rückgabe**: Schriftfarbe als Zeichenfolge (z.B. „#000000“).
   
 ### <a name="getalignment-function"></a>GetAlignment-Funktion
 Ruft die Ausrichtung der Fußzeile ab.
 
   
-**Gibt Folgendes zurück**: Der contentmarkalignment-Enumerator: LINKS | RECHTS | TAGESSTÄTTE. 
+**Rückgabe**: Der ContentMarkAlignment-Enumerator: LEFT|RIGHT|CENTER. 
   
-**Siehe auch**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Siehe auch**: [contentmarkalignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
 ### <a name="getmargin-function"></a>GetMargin-Funktion
 Ruft den Rand der Fußzeile im unteren Bereich ab
 
   
-**Gibt Folgendes zurück**: Die Ränder vom Ende des Dokuments (z. b. 10 mm).
+**Rückgabe**: Die Ränder im unteren Bereich des Dokuments (z.B. 10 mm).

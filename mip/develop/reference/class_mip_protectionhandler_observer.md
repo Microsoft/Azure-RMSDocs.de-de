@@ -5,46 +5,46 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a02e84a7be2071340a0ffef6310788823b768de3
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8b48d6e5aacacb6f678fc7d5aea2aee531da88fa
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057554"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560087"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>mip::ProtectionHandler::Observer-Klasse 
-Schnittstelle, die Benachrichtigungen im Zusammenhang mit [ProtectionHandler](class_mip_protectionhandler.md) empfängt
-Diese Schnittstelle muss von Anwendungen mit dem Protection SDK implementiert werden.
+Eine Schnittstelle, die Benachrichtigungen zum Schutz Handler empfängt.
+Diese Schnittstelle muss von Anwendungen mit dem Schutz-SDK implementiert werden.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void onkreateschutzhandlersuccess (Konstante Std::\<shared_ptr schutzhandler\>& schutzhandler, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn [ProtectionHandler](class_mip_protectionhandler.md) erfolgreich erstellt wurde.
-public virtual void onkreateschutzhandlerfailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& context)  |  Wird aufgerufen, wenn die Erstellung von [ProtectionHandler](class_mip_protectionhandler.md) nicht erfolgreich war.
+public virtual void onkreateschutzhandlersuccess (Konstante Std:: shared_ptr\<schutzhandler\>& schutzhandler, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der Schutz Handler erfolgreich erstellt wurde.
+public virtual void onkreateschutzhandlerfailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die schützerstellung fehlgeschlagen ist.
   
 ## <a name="members"></a>Member
   
 ### <a name="oncreateprotectionhandlersuccess-function"></a>Onkreateschutzhandlersuccess-Funktion
-Wird aufgerufen, wenn [ProtectionHandler](class_mip_protectionhandler.md) erfolgreich erstellt wurde.
+Wird aufgerufen, wenn der Schutz Handler erfolgreich erstellt wurde.
 
 Parameter:  
-* **protectionHandler**: Der neu erstellte Schutz [Handler](class_mip_protectionhandler.md) .
+* Schutz **Handler**: der neu erstellte Schutz Handler
 
 
-* **Kontext**: Der gleiche Kontext, der an die Schutz- [Engine:: deateschutzhandlerfromdescriptor Async](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) oder schutzengine [:: kreateschutzhandlerfrompublishinglicencasync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function) übergeben wurde.
+* **context**: derselbe Kontext, der an "Schutz Modul:: deateschutzhandlerfromdescriptor Async" oder "schutzengine:: deateschutzhandlerfrompublishinglicencasync" übergeben wurde.
 
 
-Eine Anwendung kann einen beliebigen Typ des Kontexts (z.B. „std::promise“ oder „std::function“) an [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) oder [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function) übergeben, und der gleiche Kontext wird unverändert an „ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess“ oder „ProtectionEngine::Observer::OnCreateProtectionHandlerFailure“ weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: function) an "schutzengine:: deateschutzhandlerfromdescriptorasync" oder "schutzengine:: kreateschutzhandlerfrompublishinglicenseasync" und denselben Kontext übergeben. wird unverändert an Schutz-Engine:: Observer:: onkreateschutzhandlersuccess oder schutzengine:: Observer:: onkreateschutzhandlerfailure weitergeleitet.
   
 ### <a name="oncreateprotectionhandlerfailure-function"></a>Onkreateschutzhandlerfailure-Funktion
-Wird aufgerufen, wenn die Erstellung von [ProtectionHandler](class_mip_protectionhandler.md) nicht erfolgreich war.
+Wird aufgerufen, wenn die schützerstellung fehlgeschlagen ist.
 
 Parameter:  
-* **Fehler**: Fehler, der während der Erstellung aufgetreten ist 
+* **Fehler**: Beim Erstellen aufgetretener Fehler. 
 
 
-* **Kontext**: Der gleiche Kontext, der an die Schutz- [Engine:: deateschutzhandlerfromdescriptor Async](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) oder schutzengine [:: kreateschutzhandlerfrompublishinglicencasync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function) übergeben wurde.
+* **context**: derselbe Kontext, der an "Schutz Modul:: deateschutzhandlerfromdescriptor Async" oder "schutzengine:: deateschutzhandlerfrompublishinglicencasync" übergeben wurde.
 
 
-Eine Anwendung kann einen beliebigen Typ des Kontexts (z.B. „std::promise“ oder „std::function“) an [ProtectionEngine::CreateProtectionHandlerFromDescriptorAsync](class_mip_protectionengine.md#createprotectionhandlerfromdescriptorasync-function) oder [ProtectionEngine::CreateProtectionHandlerFromPublishingLicenseAsync](class_mip_protectionengine.md#createprotectionhandlerfrompublishinglicenseasync-function) übergeben, und der gleiche Kontext wird unverändert an „ProtectionEngine::Observer::OnCreateProtectionHandlerSuccess“ oder „ProtectionEngine::Observer::OnCreateProtectionHandlerFailure“ weitergeleitet.
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: function) an "schutzengine:: deateschutzhandlerfromdescriptorasync" oder "schutzengine:: kreateschutzhandlerfrompublishinglicenseasync" und denselben Kontext übergeben. wird unverändert an Schutz-Engine:: Observer:: onkreateschutzhandlersuccess oder schutzengine:: Observer:: onkreateschutzhandlerfailure weitergeleitet.
