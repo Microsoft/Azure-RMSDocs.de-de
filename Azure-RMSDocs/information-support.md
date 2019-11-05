@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d15e7d022e0a872cb59fbca9344e4cdcdf0552c8
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: ee402ae5c713fda68e731d15a132a217576a4705
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689163"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559668"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informationen zu und Unterstützung von Azure Information Protection
 
@@ -50,7 +50,7 @@ Zusätzliche und detailliertere Informationen finden Sie im [technischen Blog zu
 
 Der Azure Information Protection Technical Blog enthält auch eine Zusammenfassung der Änderungen an der [Dokumentation monatlich](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Diese Änderungen können eine neue und aktualisierte Dokumentation für neue Releases, Änderungen an Support Anweisungen sowie Korrekturen und Erläuterungen für vorhandene Releases enthalten.
 
-Diese Dokumentationsupdate-Beiträge heißen: „**Azure Information Protection Documentation Update for \<month year>** “ (Azure Information Protection-Dokumentationsupdates für <Monat Jahr>).
+Diese Beiträge zur Aktualisierung der Dokumentation heißen „**Azure Information Protection-Dokumentationsupdates für \<Monat Jahr>** “.
 
 ## <a name="support-options-and-community-resources"></a>Supportoptionen und Communityressourcen
 In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembehandlungsoptionen sowie Communityressourcen.
@@ -59,15 +59,15 @@ In den folgenden Abschnitten finden Sie Informationen zu Support- und Problembeh
 
 Wenn Sie Premier Support haben, besuchen Sie den [Microsoft-diensthub](https://serviceshub.microsoft.com/support/contactsupport) , um Vorfälle zu übermitteln, Lösungen zu durchsuchen und Hilfe zu erhalten.
 
-Möglicherweise sind Sie berechtigt, **FastTrack** zu verwenden: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
+Möglicherweise sind Sie für **FastTrack** berechtigt: Sie können das FastTrack Center-Leistungsangebot nutzen, wenn Sie mindestens 150 Lizenzen für Azure Information Protection in einem berechtigten Tarif erwerben. Das FastTrack Center-Leistungsangebot ermöglicht Ihnen die Zusammenarbeit mit Microsoft-Spezialisten beim Analysieren, Korrigieren, Aktivieren und Migrieren berechtigter Dienste. Weitere Informationen finden Sie unter [FastTrack Center-Leistungsangebot für Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
 Verwenden Sie für andere Kunden die Supportkanäle in der folgenden Tabelle, abhängig von Ihrem Abonnement für Azure Information Protection.
 
 |Abonnement|Anweisungen|
 |----------------|---------------|
-|Azure Information Protection (eigenständig):|1. Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br /><br /> - **Technischer Support - enthalten**: Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
+|Azure Information Protection (eigenständig):|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischer Support: inbegriffen**: Dies wird angezeigt, wenn Sie über kein Azure-Abonnement verfügen.|
 |Azure Information Protection und Office 365-Abonnement<br /><br />Azure Rights Management mit Office 365-Abonnement|Unter [Kontaktieren des Supports für Business-Produkte – Administratorhilfe](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) finden Sie Informationen zur Kontaktaufnahme mit dem Support über das Microsoft 365-Verwaltungsportal sowie Telefonnummern.|
-|Azure Information Protection mit Enterprise Mobility + Security (EMS)|1. Wählen Sie **Neue Supportanfrage** unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) im Azure-Portal aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie auf dem Blatt **Grundlagen** die Option **Technisch** für den **Fehlertyp** und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Diese Option wird angezeigt, wenn Sie ein kostenpflichtiges Abonnement oder eine Testversion von Azure haben.<br /><br /> - **Technischer Support - enthalten**: Diese Option wird angezeigt, wenn Sie kein Abonnement für Azure haben.|
+|Azure Information Protection mit Enterprise Mobility + Security (EMS)|1. Wählen Sie im Azure-Portal unter [Hilfe und Support](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) die Option **neue Supportanfrage** aus.<br /><br />2. Wenn Sie dazu aufgefordert werden, wählen Sie im Bereich **Basics (Grundlagen** ) die Option **Technical** ( **Problemtyp** ) und **Information Protection** für den Dienst aus. <br /><br />3. Stellen Sie außerdem sicher, dass eine der folgenden Optionen ausgewählt ist:<br /><br />- **Abonnement mit technischem Support**: Sie finden diese Option, wenn Sie über ein kostenpflichtiges Abonnement oder Testabonnement für Azure verfügen.<br /><br /> - **Technischer Support: inbegriffen**: Dies wird angezeigt, wenn Sie über kein Azure-Abonnement verfügen.|
 |Azure Information Protection mit Office 365 Enterprise|Verwenden Sie die [Office 365-Supportkanäle](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Kontakt. 
@@ -75,7 +75,7 @@ Informationen zu weiteren Supportoptionen erhalten Sie von Ihrem Microsoft-Konta
 
 ### <a name="self-help"></a>Selbsthilfe
 
-Praktische Übungseinheiten: Siehe [Azure Information Protection Hands On Lab (Azure Information Protection – praktische Übungseinheiten)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
+Praktische Übungseinheiten: siehe [Azure Information Protection praktischen](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433) Übungseinheiten
 
 Videos auf Abruf:
 
@@ -85,19 +85,19 @@ Videos auf Abruf:
 
 Problembehandlung:
 
-- Wenn Sie Fragen zur Funktionsweise bestimmter Elemente haben: Überprüfen Sie, ob Ihre Frage bereits als [häufig gestellte Frage](faqs.md)beantwortet wurde.
+- Wenn Sie eine Frage haben, wie etwas funktioniert: Überprüfen Sie, ob Ihre Frage bereits als [häufig gestellte Frage](faqs.md)beantwortet wurde.
 
-- Wenn Sie eine Frage zu einer Supportaussage für Azure Information Protection haben: Unter den [Anforderungen](requirements.md) finden Sie regelmäßig aktualisierte Informationen.
+- Wenn Sie eine Frage zu einer Supportanweisung für Azure Information Protection haben, lesen Sie die regelmäßig aktualisierten Informationen zu den [Anforderungen](requirements.md).
 
-- Informationen dazu, wie Sie Ihre Endbenutzer, Ihren Helpdesk und Ihre Administratoren unterstützen, die Dienste und Anwendungen konfigurieren, welche den Schutzdienst von Azure Information Protection verwenden, finden Sie hier: [Unterstützen von Benutzern beim Schützen von Dateien](help-users.md)
+- Informationen dazu, wie Sie Ihre Endbenutzer, Ihren Helpdesk und Ihre Administratoren unterstützen, die Dienste und Anwendungen konfigurieren, die den Schutzdienst von Azure Information Protection verwenden, finden Sie unter [Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst](help-users.md).
 
-- Wenn Sie den Rights Management-Connector für Ihre lokalen Server bereitgestellt haben: Lesen Sie die Informationen zur [Überwachung](monitor-rms-connector.md), die Einzelheiten zu Ereignisprotokolleinträgen, Leistungsindikatoren und der Protokollierung enthalten.
+- Wenn Sie den Rights Management-Connector für Ihre lokalen Server bereitgestellt haben: Lesen Sie die Informationen zum [Überwachen](monitor-rms-connector.md) mit Einzelheiten zu Ereignisprotokolleinträgen, Leistungsindikatoren und Protokollierung.
 
 - Für den Azure Information Protection-Client:
     
-    - Einheitlicher Bezeichnungs Client: Weitere Informationen finden Sie im Abschnitt [Installations Überprüfungen und Problem](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) Behandlung des Administrator Handbuchs dieses Clients, und vergewissern Sie sich, dass Sie eine [unterstützte Version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)verwenden. Wenn eine Vorschauversion verfügbar ist, können Sie versuchen, zu sehen, ob das Problem behoben ist – nicht alle Korrekturen werden im Versionsverlauf aufgelistet.
+    - Einheitlicher Bezeichnungs Client: Lesen Sie den Abschnitt [Installations Prüfungen und Problem](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) Behandlung des Administrator Handbuchs dieses Clients, und vergewissern Sie sich, dass Sie eine [unterstützte Version](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines)verwenden. Wenn eine Vorschauversion verfügbar ist, können Sie versuchen, zu sehen, ob das Problem behoben ist – nicht alle Korrekturen werden im Versionsverlauf aufgelistet.
     
-    - Klassischer Client: Weitere Informationen finden Sie im Abschnitt [Installations Überprüfungen und Problem](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) Behandlung des Administrator Handbuchs dieses Clients, und vergewissern Sie sich, dass Sie eine [unterstützte Version](./rms-client/client-version-release-history.md#servicing-information-and-timelines)verwenden. Wenn eine Vorschauversion verfügbar ist, können Sie versuchen, zu sehen, ob das Problem behoben ist – nicht alle Korrekturen werden im Versionsverlauf aufgelistet.
+    - Klassischer Client: Lesen Sie den Abschnitt [Installations Prüfungen und Problem](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) Behandlung des Administrator Handbuchs dieses Clients, und vergewissern Sie sich, dass Sie eine [unterstützte Version](./rms-client/client-version-release-history.md#servicing-information-and-timelines)verwenden. Wenn eine Vorschauversion verfügbar ist, können Sie versuchen, zu sehen, ob das Problem behoben ist – nicht alle Korrekturen werden im Versionsverlauf aufgelistet.
 
 ### <a name="community-resources"></a>Communityressourcen
 

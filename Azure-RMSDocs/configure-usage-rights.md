@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8df8af6462a1e574186f096c919b070d4c7b6812
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444925"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559739"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
 
@@ -132,7 +132,13 @@ Alternativ können Sie diese Vererbung des Schutzes von Dokumenten ändern, inde
 
 Wenn der ursprüngliche Schutz eines angefügten Dokuments beibehalten werden soll, finden Sie weitere Informationen unter [Sicheres Zusammenarbeiten an Dokumenten mithilfe von Azure Information Protection](secure-collaboration-documents.md).
 
-Hinweis: Wenn Verweise auf **decryptattachmentfromportal**angezeigt werden, ist dieser Parameter für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)nun veraltet. Sollten Sie den Parameter nicht zuvor festgelegt haben, ist er daher nicht verfügbar. 
+Hinweis: Wenn Verweise auf **decryptattachmentfromportal**angezeigt werden, ist dieser Parameter für [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)nun veraltet. Sollten Sie den Parameter nicht zuvor festgelegt haben, ist er daher nicht verfügbar.
+
+## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Automatisches Verschlüsseln von PDF-Dokumenten mit Exchange Online
+
+Wenn Exchange Online die neuen Funktionen für die Nachrichten Verschlüsselung von Office 365 verwendet, können Sie ungeschützte PDF-Dokumente automatisch verschlüsseln, wenn Sie an eine verschlüsselte e-Mail angefügt werden. Das Dokument erbt dieselben Berechtigungen wie die der e-Mail-Nachricht. Um diese Konfiguration zu aktivieren, legen Sie **enablepdfencryption $true** mit [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps)fest.
+
+Empfänger, die noch nicht über einen installierten Reader verfügen, der den ISO-Standard für die PDF-Verschlüsselung unterstützt, können einen der in [PDF-Lesern aufgeführten Leser installieren, die Microsoft Information Protection unterstützen](./rms-client/protected-pdf-readers.md). Alternativ können Empfänger das geschützte PDF-Dokument im OMS-Portal lesen.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Rights Management-Aussteller und Rights Management-Besitzer
 
@@ -168,7 +174,7 @@ Wenn ein Benutzer ein Dokument oder eine E-Mail öffnet, die von Azure Rights Ma
 
 Ein Benutzer muss zum Öffnen des Inhalts zusätzlich zu einer gültigen Nutzungslizenz über ein Rechtekontozertifikat (RAC) verfügen. Dieses Zertifikat wird erteilt, wenn die [Benutzerumgebung](how-does-it-work.md#initializing-the-user-environment) initialisiert wird, und es wird anschließend alle 31 Tage erneuert.
 
-Für die Dauer der Nutzungslizenz wird der Benutzer für den Inhalt nicht erneut authentifiziert oder autorisiert. Dadurch kann der Benutzer das geschützte Dokument oder die geschützte E-Mail weiterhin ohne Internetverbindung öffnen. Wenn die Gültigkeitsdauer der Nutzungslizenz abläuft, muss der Benutzer beim nächsten Zugriff auf das geschützte Dokument oder die geschützte E-Mail erneut authentifiziert und autorisiert werden. 
+Für die Dauer der Nutzungslizenz wird der Benutzer für den Inhalt nicht erneut authentifiziert oder autorisiert. Dadurch kann der Benutzer das geschützte Dokument oder die e-Mail weiterhin ohne Internetverbindung öffnen. Wenn die Gültigkeitsdauer der Nutzungslizenz abläuft, muss der Benutzer beim nächsten Zugriff auf das geschützte Dokument oder die geschützte E-Mail erneut authentifiziert und autorisiert werden. 
 
 Wenn Dokumente und E-Mail-Nachrichten durch eine Bezeichnung oder eine Vorlage geschützt sind, die die Schutzeinstellungen definieren, können Sie diese Einstellungen in Ihrer Bezeichnung oder Vorlage ändern, ohne den Inhalt erneut schützen zu müssen. Wenn der Benutzer bereits auf den Inhalt zugegriffen hat, werden die Änderungen wirksam, nachdem dessen Nutzungslizenz abgelaufen ist. Wenn der Benutzer jedoch benutzerdefinierte Berechtigungen anwendet (auch als Ad-hoc-Richtlinie für Rechte bekannt) und diese Berechtigungen geändert werden müssen, nachdem das Dokument oder die E-Mail geschützt wurden, muss der Inhalt erneut mit den neuen Berechtigungen geschützt werden. Benutzerdefinierte Berechtigungen für E-Mail-Nachrichten werden über die Option „Nicht weiterleiten“ implementiert.
 

@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f66b03fc8950b9e6c7356b857b3a1a942a1cdd85
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057139"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560574"
 ---
 # <a name="class-miprulepackagedata"></a>MIP:: rulepackagedata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public konstant policyruledata * getruledata () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getlabelretemplateid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::p Air\<Std:: String, bool\>& getLabel-donotforward () Konstanten  | _Noch nicht dokumentiert._
-public virtual ~ rulepackagedata ()  | _Noch nicht dokumentiert._
+Public konstant policyruledata * getruledata () konstant  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getlabelretemplateid () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std::p Air\<Std:: String, schutzaktionstyp\>& getlabeltoprotectiontype () Konstanten  | Noch nicht dokumentiert.
+public virtual ~ rulepackagedata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   
@@ -33,7 +33,7 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
-### <a name="getlabeltodonotforward-function"></a>GetLabel-donotforward-Funktion
+### <a name="getlabeltoprotectiontype-function"></a>Getlabeltoprotectiontype-Funktion
 _Noch nicht dokumentiert._
 
   

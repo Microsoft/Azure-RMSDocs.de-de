@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: ddbd2fdab7f6096f7cfbc1ec671096767be5bb42
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 67548522a3516871ceb06fdf604a55ad355ae18a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055475"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559426"
 ---
 # <a name="class-mipargumentdata"></a>MIP:: argumentdata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: String & GetValue () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & GetKey () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: Vector\<Std:: String\>& GetValues () Konstanten  | _Noch nicht dokumentiert._
-public virtual ~ argumentdata ()  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & GetValue () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std:: String & GetKey () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: String\>& GetValues () Konstanten  | Noch nicht dokumentiert.
+public virtual ~ argumentdata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

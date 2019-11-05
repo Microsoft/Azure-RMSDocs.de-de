@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 44c70000bff3d59c6b1215708b4315da97f3866e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: ccc97d9a8c7fcd9dd9e3ec0eea35f2bb4af8a6b0
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054177"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559239"
 ---
 # <a name="class-mipnopolicyerror"></a>MIP:: nopolicyerror-Klasse 
 Die Mandanten Richtlinie ist nicht für Klassifizierung/Bezeichnungen konfiguriert.

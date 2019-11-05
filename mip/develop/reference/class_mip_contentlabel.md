@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8c3849f2614e8209c355dac3a49d44d64a622b15
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055183"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558912"
 ---
 # <a name="class-mipcontentlabel"></a>mip::ContentLabel-Klasse 
 Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
@@ -22,9 +22,9 @@ Sie enthält auch die Eigenschaften für eine bestimmte angewendete Bezeichnungs
 --------------------------------|---------------------------------------------
 Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getkreationtime () Konstanten  |  Ruft die Erstellungszeit der Bezeichnung ab
 public AssignmentMethod GetAssignmentMethod() const  |  Ruft die Zuweisungsmethode der Bezeichnung ab
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
+Public Konstante Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  |  Ruft erweiterte Eigenschaften ab.
 public bool IsProtectionAppliedFromLabel() const  |  Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
-Public Std:: shared_ptr\<Label\> GetLabel () Konstanten  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
+Public Std:: shared_ptr\<Bezeichnung\> GetLabel () Konstanten  |  Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
   
 ## <a name="members"></a>Member
   
@@ -38,7 +38,7 @@ Ruft die Erstellungszeit der Bezeichnung ab
 Ruft die Zuweisungsmethode der Bezeichnung ab
 
   
-**Gibt Folgendes zurück**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
+**Rückgabe**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
   
 **Siehe auch**: [MIP:: accessmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
@@ -46,18 +46,18 @@ Ruft die Zuweisungsmethode der Bezeichnung ab
 Ruft erweiterte Eigenschaften ab.
 
   
-**Gibt Folgendes zurück**: Erweiterte Eigenschaften.
+**Rückgabe**: Erweiterte Eigenschaften.
   
 ### <a name="isprotectionappliedfromlabel-function"></a>Isprotectionappliedfromlabel-Funktion
 Ruft ab, ob Schutz von der Bezeichnung angewendet wurde.
 
   
-**Gibt Folgendes zurück**: "True", wenn Vorlagen Schutz vorhanden ist, andernfalls "false".
+**Rückgabe**: TRUE, wenn Vorlagenschutz vorhanden ist und von dieser Bezeichnung bereitgestellt wird, andernfalls FALSE.
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
 Ruft die tatsächliche Objektbezeichnung ab, die auf den Inhalt angewendet wird
 
   
-**Gibt Folgendes zurück**: Das Bezeichnungs Objekt, das auf den Inhalt angewendet wird. 
+**Rückgabe**: die Objektbezeichnung, die auf den Inhalt angewendet wird. 
   
-**Weitere Informationen finden Sie unter:** [mip::Label](class_mip_label.md)
+**Siehe auch**: MIP:: Label

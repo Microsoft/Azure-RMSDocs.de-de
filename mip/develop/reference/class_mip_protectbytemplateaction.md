@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d7fd12bbec2d9604bab9a1ee204e704bebe32c20
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f03c06df069406f9a97bf7b321a14ab79cab16a4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057760"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560807"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>mip::ProtectByTemplateAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz nach Vorlage hinzugefügt wird.
@@ -27,4 +27,4 @@ public const std::string& GetTemplateId() const  |  Ruft die Schutzvorlagen-ID a
 Ruft die Schutzvorlagen-ID ab, die mit der Aktion verknüpft ist.
 
   
-**Gibt Folgendes zurück**: Die ID der Schutz Vorlage.
+**Rückgabe**: Die Schutzvorlagen-ID.

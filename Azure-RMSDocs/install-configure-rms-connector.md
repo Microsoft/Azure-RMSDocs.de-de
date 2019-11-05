@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444947"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559690"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -171,7 +171,7 @@ Wenn nicht schon geschehen, müssen Sie jetzt den Lastenausgleich für die Serve
 ## <a name="configuring-load-balancing-and-high-availability"></a>Konfigurieren von Lastenausgleich und Hochverfügbarkeit
 Nachdem Sie die zweite oder letzte Instanz des RMS-Verbindungs dienstanschlusses installiert haben, definieren Sie einen Connector-URL-Servernamen, und konfigurieren Sie ein Lasten Ausgleichssystem.
 
-Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Beispielsweise können Sie einen Eintrag in Ihrem DNS-System für **rmsconnector.contoso.com** erstellen und diesen Eintrag so konfigurieren, dass eine IP-Adresse in Ihrem Lasten Ausgleichssystem verwendet wird. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange- und SharePoint-Server mit dem Verbindungsdienst nicht über das Internet kommunizieren, muss dieser Name im Internet nicht aufgelöst werden können.
+Der Verbindungsdienst-URL-Servername kann ein beliebiger Name unter einem Namespace sein, den Sie kontrollieren. Beispielsweise können Sie einen Eintrag in Ihrem DNS-System für **rmsconnector.contoso.com** erstellen und diesen Eintrag so konfigurieren, dass eine IP-Adresse in Ihrem Lasten Ausgleichssystem verwendet wird. Es gibt keine speziellen Anforderungen an diesen Namen, und er muss nicht auf den Verbindungsdienstservern selber konfiguriert werden. Wenn Ihre Exchange-und SharePoint-Server nicht über das Internet mit dem Connector kommunizieren, muss dieser Name im Internet nicht aufgelöst werden.
 
 > [!IMPORTANT]
 > Wir empfehlen Ihnen, diesen Namen nach der Konfiguration von Exchange- oder SharePoint-Servern für die Verwendung des Verbindungsdiensts nicht mehr zu ändern, weil Sie sonst von diesen Servern alle IRM-Konfigurationen entfernen und diese dann neu konfigurieren müssen.
@@ -208,7 +208,7 @@ Wenn Sie die HTTPS-Option verwenden, stellen Sie sicher, dass alle Server, auf d
 > - Informationen zum Konfigurieren von IIS für die Verwendung des Zertifikats finden Sie unter [Eine Bindung zu einer Website (IIS 7) hinzufügen](https://technet.microsoft.com/library/cc731692.aspx) in der [Webserver (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) -Dokumentationsbibliothek in TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Konfigurieren des RMS-Verbindungsdiensts für einen Webproxyserver
-Wenn Ihre Verbindungsdienstserver in einem Netzwerk installiert sind, das keine direkte Internetverbindung besitzt und eine manuelle Konfiguration eines Webproxyservers für ausgehenden Internetzugriff erfordert, müssen Sie die Registrierung auf diesen Servern für den RMS-Verbindungsdienst konfigurieren.
+Wenn die Connector-Server in einem Netzwerk installiert sind, das keine direkte Internetverbindung besitzt und eine manuelle Konfiguration eines Webproxyservers für ausgehenden Internet Zugriff erfordert, müssen Sie die Registrierung auf diesen Servern für den RMS-Verbindungs Dienst konfigurieren.
 
 #### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>So konfigurieren Sie den RMS-Verbindungsdienst für die Verwendung eines Webproxyservers
 
@@ -233,7 +233,7 @@ Sie können das Verwaltungstool des RMS-Verbindungsdiensts auf einem Computer au
 
 -   Mindestens eine Netzwerkschnittstelle.
 
--   Zugriff auf das Internet durch eine Firewall (oder einen Webproxy).
+-   Zugriff auf das Internet über eine Firewall (oder einen Webproxy).
 
 Führen Sie zum Installieren des Administrationstool des RMS-Verbindungsdiensts folgende Dateien aus:
 

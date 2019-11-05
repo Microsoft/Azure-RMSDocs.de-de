@@ -5,18 +5,18 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: fdf8f0dcdaceb5cf06898dcb9b5fbec96c7e55fe
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 60b215289426da20a61737bc18d98c6ddcd127cb
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055983"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558713"
 ---
 # <a name="class-mipjustifyaction"></a>mip::JustifyAction-Klasse 
-Diese [Aktion](class_mip_action.md) fordert eine Legitimation zum Herabstufen einer Bezeichnung und zum Einstellen der Antwort im Ausführungsstatus an.
+Die Aktion zum begründen erfordert die Bereitstellung einer Begründung für eine Bezeichnungs Herabstufung und das Festlegen der Antwort im Ausführungs Status.
   
-**Weitere Informationen finden Sie unter:** [mip::ExecutionState::IsDowngradeJustified](class_mip_executionstate.md#isdowngradejustified-function)
+**Siehe auch**: MIP:: executionstate:: isdowngradebug
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                

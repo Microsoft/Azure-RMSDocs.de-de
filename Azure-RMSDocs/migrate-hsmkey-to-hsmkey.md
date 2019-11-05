@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7bb76420eeca9afb8cc8897ffb73c42864283b5e
-ms.sourcegitcommit: 0412b9ff13cf17478d157c13a5d95b3c0caa84cb
+ms.openlocfilehash: d7594886d6dc3715d29e15a1a1133142f244ad1d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72382074"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559891"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Schritt 2: Migration HSM-geschützter Schlüssel zu HSM-geschützten Schlüsseln
 
@@ -51,11 +51,11 @@ Diese Verfahren werden vom Administrator für Azure Key Vault durchgeführt.
 
    - Führen Sie nicht die Schritte zum **Generieren Ihres Mandantenschlüssels** aus, da Sie bereits über das Äquivalent aus Ihrer AD RMS-Bereitstellung verfügen. Identifizieren Sie stattdessen die Schlüssel, die von Ihrem AD RMS Server aus der nchiffre Installation verwendet werden, und bereiten Sie diese Schlüssel für die Übertragung vor, und übertragen Sie Sie dann an Azure Key Vault. 
         
-        Verschlüsselte Schlüsseldateien für die nchiffre heißen **Key_ <<em>keyappname</em>> _ <<em>KeyIdentifier</em>>** lokal auf dem Server. Beispiel: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
+        Verschlüsselte Schlüsseldateien für die nchiffre heißen **Key_ <<em>keyappname</em>> _ <<em>KeyIdentifier</em>**  lokal auf dem Server>. Beispiel: `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Sie benötigen den **mscapi** -Wert als keyappname und ihren eigenen Wert für den Schlüssel Bezeichner, wenn Sie den Befehl keytransferremote ausführen, um eine Kopie des Schlüssels mit reduzierten Berechtigungen zu erstellen.
         
         Wenn der Schlüssel in Azure Key Vault hochgeladen wird, werden Ihnen die Schlüsseleigenschaften, einschließlich der Schlüssel-ID, angezeigt. Das sieht ungefähr folgendermaßen aus: https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Notieren Sie sich diese URL, da der Azure Information Protection-Administrator sie benötigt, um dem Azure Rights Management-Dienst mitzuteilen, dass dieser Schlüssel als Mandantenschlüssel verwendet werden soll.
 
-2. Verwenden Sie auf der Arbeitsstation mit Internet Verbindung in einer PowerShell-Sitzung das Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) zum Autorisieren des Azure Rights Management-Dienst Prinzipals für den Zugriff auf den Schlüssel Tresor, in dem der Azure Information Protection Mandanten Schlüssel gespeichert wird. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
+2. Verwenden Sie auf der Arbeitsstation mit Internetverbindung in einer PowerShell-Sitzung das Cmdlet [Set-azkeyvaultaccesspolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) zum Autorisieren des Azure Rights Management-Dienst Prinzipals für den Zugriff auf den Schlüssel Tresor, in dem der Azure Information Protection Mandanten Schlüssel gespeichert wird. Die erforderlichen Berechtigungen sind „decrypt“, „encrypt“, „unwrapkey“, „wrapkey“, „verify“ und „sign“.
     
     Wenn beispielsweise der Schlüsseltresor, den Sie für Azure Information Protection erstellt haben, „contoso-byok-ky“ heißt und die Ressourcengruppe „contoso-byok-rg“, führen Sie den folgenden Befehl aus:
     
@@ -68,7 +68,7 @@ Jetzt haben Sie Ihren HSM-Schlüssel in Azure Key Vault für den Azure Rights Ma
 
 Diese Verfahren werden vom Administrator für Azure Information Protection durchgeführt.
 
-1. Stellen Sie auf der Arbeitsstation mit Internet Verbindung und in der PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, indem Sie das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) verwenden.
+1. Stellen Sie auf der Arbeitsstation mit Internetverbindung und in der PowerShell-Sitzung eine Verbindung mit dem Azure Rights Management-Dienst her, indem Sie das Cmdlet [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) verwenden.
     
     Anschließend laden Sie jede vertrauenswürdige Veröffentlichungs Domänen Datei (. Xml) mithilfe des Cmdlets [Import-aipservicetpd](/powershell/module/aipservice/import-aipservicetpd) hoch. Sie müssen beispielsweise mindestens eine weitere Datei importieren, wenn Sie Ihren AD RMS-Cluster auf den Kryptografiemodus 2 aktualisiert haben.
     

@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 609f6ef3f3b3442cfcc598e40cb6be62f512519f
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a95844e26bb9e1ae7ec12a01b196820a13c0a943
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057684"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558567"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>mip::ProtectDoNotForwardAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Schutz in Form von Nichtweiterleitung hinzugefügt wird.

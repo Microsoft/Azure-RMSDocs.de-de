@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 044eafa1893c34745d49cc05b0ec029d88ecc318
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 982bc822b43d98f1019dd9f6bae53ace74068a4c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684109"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559724"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -67,13 +67,13 @@ Für Dokumente werden die visuellen Kennzeichnungen wie folgt angewendet:
 
 Verwenden Sie die folgenden Anweisungen, um visuelle Kennzeichnungen für eine Bezeichnung zu konfigurieren.
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** . 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Navigieren Sie über die Menüoption **Klassifizierungen** > **Bezeichnungen** zum Blatt **Azure Information Protection - Labels** (Azure Information Protection - Bezeichnungen), und wählen Sie dort die Bezeichnung mit den optischen Kennzeichnungen aus, die Sie ändern möchten.
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen** : Wählen Sie im Bereich **Azure Information Protection-Bezeichnungen** die Bezeichnung aus, die die visuellen Markierungen enthält, die Sie hinzufügen oder ändern möchten.
 
-3. Konfigurieren Sie auf dem Blatt **Bezeichnung** im Abschnitt **Optische Kennzeichnung festlegen (z. B. Kopf- oder Fußzeile)** die Einstellungen für die gewünschten optischen Kennzeichnungen, und klicken Sie dann auf **Speichern**:
+3. Konfigurieren Sie im Bereich **Bezeichnung** im Bereich **visuelle Kennzeichnung festlegen (z. b. Kopf-oder Fußzeile)** die Einstellungen für die gewünschten visuellen Markierungen, und klicken Sie dann auf **Speichern**:
     
     - So konfigurieren Sie eine Kopfzeile: Wählen Sie für **Documents with this label have a header** (Dokumente mit dieser Bezeichnung weisen eine Kopfzeile auf) die Option **On** (Ein), wenn eine Kopfzeile enthalten sein soll, und **Off** (Aus), wenn die Dokumente nicht über eine Kopfzeile verfügen sollen. Geben Sie bei Auswahl von **On** (Ein) den Text, die Größe, die [Schriftart](#setting-the-font-name), die [Farbe](#setting-the-font-color) und die Ausrichtung der Kopfzeile an.
     

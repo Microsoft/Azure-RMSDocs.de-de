@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbaf43066001469b7a5a3676c158a6a885dd72fc
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: 2a84f151200012f3faf6176c1be771226868441d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679057"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73555331"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Aktivieren des Rights Management Protection Service über die Azure-Portal
 
@@ -26,13 +26,13 @@ ms.locfileid: "71679057"
 
 Verwenden Sie diese Anweisungen, wenn Sie den Rights Management Protection Service (Azure RMS) mithilfe der Azure-Portal aus Azure Information Protection aktivieren möchten.
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
     
-    Wenn Sie zuvor noch nie auf das Blatt „Azure Information Protection“ zugegriffen haben, sehen Sie sich die einmaligen [zusätzlichen Schritte](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) an, um dieses Blatt dem Portal hinzuzufügen.
+    Wenn Sie noch nicht auf den Azure Information Protection Bereich zugegriffen haben, lesen Sie die einmaligen [zusätzlichen Schritte](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) zum Hinzufügen dieses Bereichs zum Portal.
     
-    Zum Öffnen des Information Protection-Blatts benötigen Sie entweder einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan, der Rights Management umfasst](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie über eines dieser Abonnements verfügen, jedoch eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, [wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
+    Um den Bereich Azure Information Protection zu öffnen, müssen Sie entweder über einen [Azure Information Protection Premium-Plan](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) oder einen [Office 365-Plan verfügen, der Rights Management enthält](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Wenn Sie über eines dieser Abonnements verfügen, jedoch eine Meldung angezeigt wird, dass kein gültiges Abonnement gefunden werden kann, [wenden Sie sich an den Microsoft-Support](information-support.md#to-contact-microsoft-support), oder nutzen Sie die üblichen Supportkanäle.
 
 2. Navigieren Sie zu den Menüoptionen **Verwalten**, und klicken Sie auf **Protection activation** (Schutzaktivierung). 
     

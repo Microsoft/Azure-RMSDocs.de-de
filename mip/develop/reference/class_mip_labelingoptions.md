@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: febebe2f8d578fb53120fac4ddb18acacd70a053
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 0a6ffd159115283b461c1f7455d4aafeb4c36623
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054604"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561067"
 ---
 # <a name="class-miplabelingoptions"></a>mip::LabelingOptions-Klasse 
 Schnittstelle für die Konfiguration von Bezeichnungsoptionen für die Methoden „SetLabel“ und „DeleteLabel“
@@ -19,13 +19,13 @@ Schnittstelle für die Konfiguration von Bezeichnungsoptionen für die Methoden 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public labelingoptions (Methode ' zuder Methode ')  | _Noch nicht dokumentiert._
-public AssignmentMethod GetAssignmentMethod() const  | _Noch nicht dokumentiert._
-public bool IsDowngradeJustified() const  | _Noch nicht dokumentiert._
-public const std::string& GetJustificationMessage() const  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  | _Noch nicht dokumentiert._
-public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Noch nicht dokumentiert._
-öffentliches void-abtextendedproperties (Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& ExtendedProperties)  | _Noch nicht dokumentiert._
+Public labelingoptions (Methode ' zuder Methode ')  | Noch nicht dokumentiert.
+public AssignmentMethod GetAssignmentMethod() const  | Noch nicht dokumentiert.
+public bool IsDowngradeJustified() const  | Noch nicht dokumentiert.
+public const std::string& GetJustificationMessage() const  | Noch nicht dokumentiert.
+Public Konstante Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getextendecodproperties () Konstanten  | Noch nicht dokumentiert.
+public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | Noch nicht dokumentiert.
+öffentliches void-Element "* textendedproperties" (Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& ExtendedProperties)  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

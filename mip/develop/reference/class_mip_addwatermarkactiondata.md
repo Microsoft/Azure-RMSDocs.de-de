@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a82a0e27eb2a3f9e292c7862778b01f23390ee35
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8ced12000bace295be4571158ae0f05364c5aec7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055491"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559482"
 ---
 # <a name="class-mipaddwatermarkactiondata"></a>MIP:: addwatermarkaktiondata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Noch nicht dokumentiert._
-public const std::string& GetFontName() const  | _Noch nicht dokumentiert._
-public const std::string& GetFontColor() const  | _Noch nicht dokumentiert._
-public int GetFontSize() const  | _Noch nicht dokumentiert._
-öffentliches watermarklayout getwatermarklayout () konstant  | _Noch nicht dokumentiert._
-public virtual ~ addwatermarkaktiondata ()  | _Noch nicht dokumentiert._
+public const std::string& GetText() const  | Noch nicht dokumentiert.
+public const std::string& GetFontName() const  | Noch nicht dokumentiert.
+public const std::string& GetFontColor() const  | Noch nicht dokumentiert.
+public int GetFontSize() const  | Noch nicht dokumentiert.
+öffentliches watermarklayout getwatermarklayout () konstant  | Noch nicht dokumentiert.
+public virtual ~ addwatermarkaktiondata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

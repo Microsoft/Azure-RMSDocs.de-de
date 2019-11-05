@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 694cb45a91136279aa6e997735e0b041a50b3744
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056155"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559315"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>MIP:: contentmarkingaktiondata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Noch nicht dokumentiert._
-public const std::string& GetFontName() const  | _Noch nicht dokumentiert._
-public const std::string& GetFontColor() const  | _Noch nicht dokumentiert._
-Public contentmarkalignment getcontentmarkalignment () konstant  | _Noch nicht dokumentiert._
-public int GetFontSize() const  | _Noch nicht dokumentiert._
-public int GetMargin() const  | _Noch nicht dokumentiert._
-Public contentmarkplacement getcontentmarkplacement () konstant  | _Noch nicht dokumentiert._
-public virtual ~ contentmarkingaktiondata ()  | _Noch nicht dokumentiert._
+public const std::string& GetText() const  | Noch nicht dokumentiert.
+public const std::string& GetFontName() const  | Noch nicht dokumentiert.
+public const std::string& GetFontColor() const  | Noch nicht dokumentiert.
+Public contentmarkalignment getcontentmarkalignment () konstant  | Noch nicht dokumentiert.
+public int GetFontSize() const  | Noch nicht dokumentiert.
+public int GetMargin() const  | Noch nicht dokumentiert.
+Public contentmarkplacement getcontentmarkplacement () konstant  | Noch nicht dokumentiert.
+public virtual ~ contentmarkingaktiondata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

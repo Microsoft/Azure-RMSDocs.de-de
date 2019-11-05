@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1061b548e0996f27fdf3bcdea8bfc523e3a19af5
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 44e4adaacfd23ae4bc2feb78405b69ca89a10bbf
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444986"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559644"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installieren des PowerShell-Moduls für AIPService
 
@@ -25,7 +25,7 @@ ms.locfileid: "73444986"
 
 Verwenden Sie die folgenden Informationen, um das Windows PowerShell-Modul für den Schutzdienst von Azure Information Protection zu installieren. Der Name dieses Moduls ist aipservice und ersetzt die vorherige Version mit dem Namen aadrm.
 
-Sie können dieses PowerShell-Modul verwenden, um den Schutzdienst (Azure Rights Management) über die Befehlszeile zu verwalten, indem Sie einen beliebigen Windows-Computer verwenden, der über eine Internet Verbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Information Protection unterstützt Skripts für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden [Sie unter Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md).
+Sie können dieses PowerShell-Modul verwenden, um den Schutzdienst (Azure Rights Management) über die Befehlszeile zu verwalten, indem Sie einen beliebigen Windows-Computer verwenden, der über eine Internetverbindung verfügt und die im nächsten Abschnitt aufgeführten Voraussetzungen erfüllt. Windows PowerShell für Azure Information Protection unterstützt Skripts für die Automatisierung oder kann für erweiterte Konfigurationsszenarien erforderlich sein. Weitere Informationen zu den Verwaltungsaufgaben und Konfigurationen, die das Modul unterstützt, finden [Sie unter Verwalten des Schutzes von Azure Information Protection mithilfe von PowerShell](administer-powershell.md).
 
 ## <a name="prerequisites"></a>Voraussetzungen
 In dieser Tabelle sind die Voraussetzungen für die Installation und Verwendung des aipservice-PowerShell-Moduls für den Schutzdienst von Azure Information Protection aufgeführt.

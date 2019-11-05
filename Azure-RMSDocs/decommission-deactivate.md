@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 4af20afcbf89ce25bc758299e42e794b3ee6b908
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800823"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559699"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Außerbetriebsetzen und Deaktivieren des Schutzes für Azure Information Protection
 
@@ -37,7 +37,7 @@ Wenn Sie die BYOK-Lösung (Bring Your Own Key) verwendet haben, bei der Sie Ihre
 
 Wenn Sie über Ihren Azure Information Protection Mandanten Schlüssel und die TPD verfügen, können Sie Rights Management lokal bereitstellen (AD RMS) und ihren Mandanten Schlüssel als eine vertrauenswürdige Veröffentlichungs Domäne (Trusted Publishing Domain, TPD) importieren. Ihnen stehen dann die folgenden Optionen für die Außerbetriebsetzung Ihrer Azure Information Protection-Bereitstellung zur Verfügung:
 
-|Wenn dies auf Sie zutrifft, ...|… gehen Sie wie folgt vor:|
+|Wenn dies auf Sie zutrifft, ...|… Vorgehensweise|
 |----------------------------|--------------|
 |Sie möchten, dass alle Benutzer weiterhin Rights Management verwenden, wobei sie jedoch eine lokale Lösung statt Azure Information Protection verwenden sollen →|Leiten Sie Ihre Clients mit dem Registrierungsschlüssel **licensingredirection** für Office 2016 oder Office 2013 an die lokale Bereitstellung um. Anweisungen hierzu finden Sie im [Abschnitt Dienst](./rms-client/client-deployment-notes.md) Ermittlung der Hinweise zur Bereitstellung des RMS-Clients. Verwenden Sie für Office 2010 den Registrierungsschlüssel **licenseserverredirect** für Office 2010, wie unter [Office Registry Settings](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx)beschrieben.|
 |Sie möchten die Rights Management-Technologie überhaupt nicht mehr verwenden    →|Gewähren Sie einem designierten Administrator [Administratorberechtigungen](configure-super-users.md), und installieren Sie den [Azure Information Protection-Client](./rms-client/client-admin-guide-install.md) für diesen Benutzer.<br /><br />Dieser Administrator kann dann das PowerShell-Modul dieses Clients verwenden, um Dateien in Ordnern, die durch Azure Information Protection geschützt wurden, Massen entschlüsselt. Dateien werden auf die ungeschützte Einstellung zurückgesetzt und können deshalb ohne Rights Management-Technologie wie Azure Information Protection oder AD RMS gelesen werden. Da dieses PowerShell-Modul sowohl mit Azure Information Protection als auch mit AD RMS verwendet werden kann, haben Sie die Möglichkeit, Dateien vor oder nach dem Deaktivieren des Schutz Dienstanbieter von Azure Information Protection oder einer Kombination zu entschlüsseln.|
@@ -74,12 +74,12 @@ Es sollte jetzt die Meldung **Rights Management ist nicht aktiviert** sowie die 
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>So deaktivieren Sie Rights Management über das Azure-Portal
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
 
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Wählen Sie auf dem ersten **Azure Information Protection**-Blatt **Protection activation** (Schutzaktivierung) aus. 
+2. Wählen Sie im Bereich erste **Azure Information Protection** die Option **Schutz Aktivierung**aus. 
 
-3.  Wählen Sie auf dem Blatt **„Protection activation“ (Schutzaktivierung) von Azure Information Protection** **Deaktivieren** aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
+3.  Wählen Sie im Bereich **Azure Information Protection-Schutz Aktivierung** die Option **Deaktivieren**aus. Klicken Sie zum Bestätigen Ihrer Auswahl auf **Ja**.
 
 Die Informationsleiste zeigt daraufhin **Deactivation finished successfully** (Deaktivierung erfolgreich ausgeführt) an, und **Deaktivieren** wird nun durch **Aktivieren** ersetzt. 

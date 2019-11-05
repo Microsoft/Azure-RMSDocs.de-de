@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 0a27f5e854a78aa4886abdd2145fd40b399f99fd
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5c0354b69912e437f87dc9b9b614338091a5b163
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057452"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560671"
 ---
 # <a name="class-mipprotectionsettings"></a>MIP::P rotectionsettings-Klasse 
 Schnittstelle zum Konfigurieren von Schutz Optionen für die setlabel-Methode.
@@ -19,11 +19,18 @@ Schnittstelle zum Konfigurieren von Schutz Optionen für die setlabel-Methode.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Schutzeinstellungen ()  | _Noch nicht dokumentiert._
-öffentliches void setdelegateduseremail (konstant Std:: String delegateduseremail)  | _Noch nicht dokumentiert._
-Public Std:: String getdelegateduseremail () konstant  | _Noch nicht dokumentiert._
+Public schutzsettings () = Standard  | Noch nicht dokumentiert.
+Public Protection Settings (Konstante Std:: String & delegateduseremail, pfileextensionbehavior pfileextensionbehavior)  | Noch nicht dokumentiert.
+öffentliches void setdelegateduseremail (konstant Std:: String delegateduseremail)  | Noch nicht dokumentiert.
+Public Std:: String getdelegateduseremail () konstant  | Noch nicht dokumentiert.
+öffentliches void setpfileextensionbehavior (pfileextensionbehavior pfileextensionbehavior)  | Noch nicht dokumentiert.
+öffentliches pfileextensionbehavior getpfileextensionbehavior ()-Konstante  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
+  
+### <a name="protectionsettings-function"></a>Schutzsettings-Funktion
+_Noch nicht dokumentiert._
+
   
 ### <a name="protectionsettings-function"></a>Schutzsettings-Funktion
 _Noch nicht dokumentiert._
@@ -34,4 +41,12 @@ _Noch nicht dokumentiert._
 
   
 ### <a name="getdelegateduseremail-function"></a>Getdelegateduseremail-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="setpfileextensionbehavior-function"></a>Setpfileextensionbehavior-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getpfileextensionbehavior-function"></a>Getpfileextensionbehavior-Funktion
 _Noch nicht dokumentiert._

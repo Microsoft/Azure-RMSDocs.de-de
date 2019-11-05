@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 0ec70d2cc26e3314378742a9875b14f5420fbb4e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71689503"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559195"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Überwachen des Azure Rights Management-Connectors
 
@@ -40,14 +40,14 @@ Dazu zählen beispielsweise Informationsereignisse wie die folgenden:
 
 Wenn der Connector nicht für die Verwendung von HTTPS konfiguriert wurde, wird mit der Warnungs-ID 2002 angezeigt, dass ein Client eine nicht sichere Verbindung (HTTP) verwendet.
 
-Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen kann, wird wahrscheinlich der Fehler 3001 angezeigt. Dieser Verbindungsfehler kann beispielsweise aufgrund eines DNS-Problems oder bei einer Unterbrechung des Internetzugriffs auf mindestens einem Server auftreten, auf dem der RMS-Connector ausgeführt wird. 
+Wenn der Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen kann, wird wahrscheinlich der Fehler 3001 angezeigt. Dieser Verbindungsfehler kann beispielsweise aufgrund eines DNS-Problems oder eines fehlenden Internet Zugriffs für einen oder mehrere Server, auf denen der RMS-Connector ausgeführt wird, verursacht werden. 
 
 > [!TIP]
 > Wenn Server mit dem RMS-Connector keine Verbindung mit dem Azure Rights Management-Dienst herstellen können, sind häufig Webproxykonfigurationen die Ursache.
 
 Lesen Sie wie bei allen Ereignisprotokolleinträgen die Meldung, um weitere Einzelheiten zu erfahren.
 
-Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Ein anderer Administrator kann beispielsweise die Konfiguration des Webproxyservers so ändern, dass Server mit dem RMS-Connector nicht mehr auf das Internet zugreifen können (Fehler 3001). Oder ein Administrator entfernt ein Computerkonto aus einer Gruppe, die Sie für die Verwendung des Connectors berechtigt haben (Warnung 2001).
+Zusätzlich zum Überprüfen des Ereignisprotokolls bei der anfänglichen Bereitstellung des Connectors sollten Sie die Protokolle regelmäßig auf Warnungen und Fehler überprüfen. Der Connector funktioniert anfänglich wie erwartet, später können abhängige Konfigurationen jedoch von anderen Administratoren geändert werden. Beispielsweise ändert ein anderer Administrator die Konfiguration des Webproxyservers so, dass RMS-Verbindungs Server nicht mehr auf das Internet zugreifen können (Fehler 3001) oder ein Computer Konto aus einer Gruppe entfernt wird, die Sie als autorisiert zur Verwendung des Connectors angegeben haben (Warnung 2001). .
 
 ### <a name="event-log-ids-and-descriptions"></a>Ereignisprotokoll-IDs und Beschreibungen
 

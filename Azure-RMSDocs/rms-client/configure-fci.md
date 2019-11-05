@@ -13,18 +13,18 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3781b2de94a8b619f2dadce977f1284c9b26e31
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 18b8e1525fa396c6b3e6e0e040e0f0d8b21144ae
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689978"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561163"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dieser Artikel enthält Anweisungen und ein Skript zur Verwendung mit dem Azure Information Protection-Client und PowerShell zum Konfigurieren des Ressourcen-Managers für Dateiserver und der Dateiklassifizierungsinfrastruktur (FCI).
 
@@ -54,7 +54,7 @@ Voraussetzungen für diese Anweisungen:
     
   - Wenn Sie die Standardstufe des Schutzes (systemeigen oder generisch) für bestimmte Dateinamenserweiterungen ändern möchten, haben Sie die Registrierung bearbeitet, wie in der Anleitung [Ändern der Standardschutzebene von Dateien](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) beschrieben wird.
     
-  - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, sollten diese für einen Proxyserver benötigt werden. Beispiel: `netsh winhttp import proxy source=ie`
+  - Sie verfügen über eine Internetverbindung, und Sie haben Ihre Computereinstellungen konfiguriert, wenn diese für einen Proxy Server erforderlich sind. Beispiel: `netsh winhttp import proxy source=ie`
     
 - Sie haben Ihre lokalen Active Directory-Benutzerkonten, einschließlich ihrer E-Mail-Adressen, mit Azure Active Directory oder Office 365 synchronisiert. Dies ist für alle Benutzer erforderlich, die möglicherweise auf Dateien zugreifen müssen, nachdem diese mit FCI und dem Azure Rights Management-Dienst geschützt wurden. Wenn Sie diesen Schritt nicht ausführen (z.B. in einer Testumgebung), kann der Benutzerzugriff auf diese Dateien möglicherweise blockiert werden. Weitere Informationen zu den Anforderungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](../prepare.md).
     
@@ -130,13 +130,13 @@ Sie können jetzt mit der Konfiguration des Ressourcen-Managers für Dateiserver
 
 -   Erstellen Sie im Ressourcen-Manager für Dateiserver in der Klassifizierungsverwaltung eine neue lokale Eigenschaft:
 
-    -   **Name**: Geben Sie **RMS** ein.
+    -   **Name**: Geben Sie **RMS**
 
-    -   **Beschreibung**:   Geben Sie **Rights Management-Schutz** ein.
+    -   **Beschreibung**:   Geben Sie **Rights Management-Schutz**
 
-    -   **Eigenschaftstyp**: Klicken Sie auf **Ja/Nein**.
+    -   **Eigenschaftstyp**: Wählen Sie **Ja/Nein**
 
-    -   **Wert**: Klicken Sie auf **Ja**.
+    -   **Wert**: Wählen Sie **Ja**
 
 Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verwendet.
 
@@ -146,25 +146,25 @@ Wir können nun eine Klassifizierungsregel erstellen, die diese Eigenschaft verw
 
     -   Auf der Registerkarte **Allgemein** :
 
-        -   **Name**: Geben Sie **Für RMS klassifizieren** ein.
+        -   **Name**: Geben Sie **Für RMS klassifizieren**
 
-        -   **Aktiviert**: Behalten Sie die Standardeinstellung bei, d. h., dieses Kontrollkästchen ist ausgewählt.
+        -   **Enabled**: Behalten Sie die Standardeinstellung bei (das Kontrollkästchen ist aktiviert).
 
         -   **Beschreibung**: Geben Sie **Alle Dateien im Ordner &lt;Ordnername&gt; für Rights Management klassifizieren** ein.
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Alle Dateien im Ordner C:\FileShare für Rights Management klassifizieren**
 
-        -   **Bereich**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
+        -   **Umfang**: Fügen Sie den ausgewählten Ordner hinzu. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
     -   Auf der Registerkarte **Klassifizierung** :
 
-    -   **Klassifizierungsmethode**: Klicken Sie auf **Ordnerklassifizierung**.
+    -   **Klassifizierungsmethode**: Wählen Sie **Ordnerklassifizierung**
 
-    -   **Eigenschaft**sname: Klicken Sie auf **RMS**.
+    -   Name der**Eigenschaft** : Wählen Sie **RMS**aus.
 
-    -   Eigenschaft**swert**: Klicken Sie auf **Ja**.
+    -   **Wert**der Eigenschaft: Wählen Sie **Ja**aus.
 
 Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausführen können, sollten Sie diese Regel nach einem Zeitplan ausführen, damit neue Dateien mit der RMS-Eigenschaft klassifiziert werden.
 
@@ -178,7 +178,7 @@ Obwohl Sie die Klassifizierungsregeln manuell für den laufenden Betrieb ausfüh
 
     -   **Fortlaufende Klassifizierung für neue Dateien zulassen**: Aktivieren Sie dieses Kontrollkästchen, damit neue Dateien klassifiziert werden.
 
-    -   Optional: Nehmen Sie andere Änderungen vor, z. b. das Konfigurieren von Optionen für Berichte und Benachrichtigungen.
+    -   Optional: Nehmen Sie ggf. andere Änderungen vor, z. B. das Konfigurieren von Optionen für Berichte und Benachrichtigungen.
 
 Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie eine Verwaltungsaufgabe zum Anwenden des RMS-Schutzes auf die Dateien konfigurieren.
 
@@ -188,23 +188,23 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
     -   Auf der Registerkarte **Allgemein** :
 
-        -   **Name der Aufgabe**: Geben Sie **Schützen von Dateien mit RMS** ein.
+        -   **Aufgabenname**: Geben Sie **Schützen von Dateien mit RMS**
 
         -   Vergewissern Sie sich, dass das Kontrollkästchen **Aktivieren** aktiviert ist.
 
-        -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript ein.**
+        -   **Beschreibung**: Geben Sie **Schützen von Dateien in &lt;Ordnername&gt; mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript** ein.
 
             Ersetzen Sie *&lt;Ordnername&gt;* durch Ihren ausgewählten Ordnernamen. Beispiel: **Schützen von Dateien in C:\FileShare mit Rights Management und einer Vorlage mit einem Windows PowerShell-Skript**
 
-        -   **Bereich**: Wählen Sie den ausgewählten Ordner aus. Beispiel: **C:\FileShare**.
+        -   **Umfang**: Wählen Sie Ihren Ordner aus. Beispiel: **C:\FileShare**.
 
             Aktivieren Sie keine Kontrollkästchen.
 
     -   Auf der Registerkarte **Aktion** :
 
-        -   **Typ**: Klicken Sie auf **Benutzerdefiniert**.
+        -   **Typ**: Wählen Sie **Benutzerdefiniert**
 
-        -   **Ausführbare Datei**: Legen Sie Folgendes fest:
+        -   **Ausführbare Datei**: Geben Sie Folgendes an:
 
             ```
             C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
@@ -229,15 +229,15 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
             > 
             > Für Dateien, die keinen Domänenbenutzer als Besitzer aufweisen, können Sie diese Dateien selbst als Domänenbenutzer kopieren und speichern, sodass Sie zum Besitzer nur dieser Dateien werden. Alternativ können Sie, wenn Sie über Berechtigungen verfügen, manuell den Besitzer ändern.  Oder alternativ können Sie eine bestimmte E-Mail-Adresse (z.B. Ihre eigene oder eine Gruppenadresse für die IT-Abteilung) anstelle der [Quelldateibesitzer-E-Mail]-Variablen angeben, was bedeutet, dass alle Dateien, die Sie mit diesem Skript schützen, diese E-Mail-Adresse zum Definieren des neuen Besitzers verwenden.
 
-    -   **Führen Sie den Befehl wie folgt aus**: Klicken Sie auf **Lokales System**.
+    -   **Führen Sie den Befehl wie folgt aus**: Wählen Sie **Lokales System**
 
     -   Auf der Registerkarte **Bedingung** :
 
-        -   **Eigenschaft**: Klicken Sie auf **RMS**.
+        -   **Eigenschaft**: Wählen Sie **RMS**
 
-        -   **Operator**: Klicken Sie auf **Gleich**.
+        -   **Operator**: Wählen Sie **Gleich**
 
-        -   **Wert**: Klicken Sie auf **Ja**.
+        -   **Wert**: Wählen Sie **Ja**
 
     -   Auf der Registerkarte **Zeitplan** :
 
@@ -304,5 +304,5 @@ Jetzt müssen Sie nur eine neue Dateiverwaltungsaufgabe erstellen, die das gleic
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Möglicherweise stellen Sie sich folgende Fragen: [Was ist der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
+Sie fragen sich womöglich, [was der Unterschied zwischen der Windows Server-Dateiklassifizierungsinfrastruktur und der Azure Information Protection-Überprüfung ist](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
 

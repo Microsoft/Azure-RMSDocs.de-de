@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b4affd55c743e2dda7dc3077ae527b002b5b442
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 01e000bfa52a92f0e9d7b58327d84d24bd17410d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689410"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559903"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -53,7 +53,7 @@ Es gibt drei Szenarien für die Verwendung von Benutzern und Gruppen mit Azure I
 
 - Nutzungsrechte bestimmen, ob ein Benutzer ein Dokument oder eine E-Mail öffnen kann, und wie er das Dokument oder die E-Mail verwenden darf. Sie bestimmen beispielsweise, ob er das Dokument oder die E-Mail nur lesen oder lesen und drucken oder lesen und bearbeiten darf. 
 
-- Zugriffssteuerungen umfassen ein Ablaufdatum und geben an, ob für den Zugriff eine Verbindung mit dem Internet erforderlich ist. 
+- Zugriffs Steuerungen umfassen ein Ablaufdatum und geben an, ob für den Zugriff eine Internetverbindung erforderlich ist. 
 
 **Zum Konfigurieren des Azure Rights Management-Diensts**, um bestimmte Szenarien zu unterstützen. Daher werden diese Gruppen nur von Administratoren ausgewählt. Beispiele umfassen die Konfiguration folgender Elemente:
 
@@ -150,7 +150,7 @@ Ihre erste Überprüfung besteht jetzt darin, sicherzustellen, dass die Benutzer
 
 Wenn die Spalte **ProxyAddresses** nicht aufgefüllt wurde, wird der Wert von **UserPrincipalName** verwendet, um den Benutzer für den Azure Rights Management-Dienst zu autorisieren.
 
-Beispiel:
+Beispiele:
 
 
 |  Anzeigename   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -214,7 +214,7 @@ Wenn Sie sich vergewissert haben, dass Ihre Benutzer und Gruppen mit Azure Infor
 
 - Ab Februar 2018: Wenn Ihr Abonnement Azure Rights Management oder Azure Information Protection einschließt und in oder nach diesem Monat erworben wurde, wird der Dienst automatisch aktiviert. 
 
-- Wenn Ihr Abonnement vor Februar 2018 erworben wurde: Sie müssen den Dienst selbst aktivieren. 
+- Wenn das Abonnement vor Februar 2018 erworben wurde, müssen Sie den Dienst selbst aktivieren. 
 
 Weitere Informationen, einschließlich der Überprüfung des Aktivierungs Status, finden Sie unter [Aktivieren des Schutz Dienstanbieter von Azure Information Protection](./activate-service.md).
 

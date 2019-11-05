@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 92cf2bc3840e3cb38210c42c1e1b2d43db1e8bd4
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: bfe55f09caaa20687750b055e10828f8cc6df2bd
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054826"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560174"
 ---
 # <a name="class-miphttprequest"></a>class mip::HttpRequest 
 Schnittstelle, die eine einfache HTTP-Anforderung beschreibt.
@@ -23,7 +23,7 @@ public const std::string& GetId() const  |  Ruft die Anforderungs-ID ab.
 public HttpRequestType GetRequestType() const  |  Ruft den Anforderungstyp ab.
 public const std::string& GetUrl() const  |  Ruft die Anforderungs-URL ab.
 Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
-Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () Konstanten  |  Ruft Anforderungsheader ab.
+Public Konstanten Std:: Map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () konstant.  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
   
@@ -37,22 +37,22 @@ Ruft die Anforderungs-ID ab.
 Ruft den Anforderungstyp ab.
 
   
-**Gibt Folgendes zurück**: Anforderungstyp
+**Rückgabe**: Der Anforderungstyp.
   
 ### <a name="geturl-function"></a>GetURL-Funktion
 Ruft die Anforderungs-URL ab.
 
   
-**Gibt Folgendes zurück**: Anforderungs-URL
+**Rückgabe**: Die Anforderungs-URL.
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Ruft den Text der Anforderung ab.
 
   
-**Gibt Folgendes zurück**: Anforderungstext
+**Rückgabe**: Der Anforderungstext.
   
 ### <a name="getheaders-function"></a>Gezeige Aders-Funktion
 Ruft Anforderungsheader ab.
 
   
-**Gibt Folgendes zurück**: Anforderungs Header
+**Rückgabe**: Anforderungsheader.

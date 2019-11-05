@@ -5,27 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 9706844d0558c6c4f31ac5b9490ac77cb1a57824
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 45a3c37acf9137f7e8f3567ce8b1d44c637d2402
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057725"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560793"
 ---
 # <a name="class-mipprotectionactiondata"></a>MIP::P rotectionaktiondata 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public schutzaktionstyp getschutztype () Konstanten  | _Noch nicht dokumentiert._
-public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
-public virtual ~ schutzaktiondata ()  | _Noch nicht dokumentiert._
-öffentlicher Aktions DataType GetType () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
-Public Std:: String getargumentvalue (Konstanten Std:: String & Key) konstant  | _Noch nicht dokumentiert._
-public const std::string& GetName() const  | _Noch nicht dokumentiert._
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\> \> GetArguments () Konstanten  | _Noch nicht dokumentiert._
+Public schutzaktionstyp getschutztype () Konstanten  | Noch nicht dokumentiert.
+public const std::string& GetTemplateId() const  | Noch nicht dokumentiert.
+public virtual ~ schutzaktiondata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   
@@ -38,24 +33,4 @@ _Noch nicht dokumentiert._
 
   
 ### <a name="protectionactiondata-function"></a>~ Schutzaktiondata-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="gettype-function"></a>GetType-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getproperties-function"></a>GetProperties-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getargumentvalue-function"></a>Getargumentvalue-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getname-function"></a>GetName-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getarguments-function"></a>GetArguments-Funktion
 _Noch nicht dokumentiert._

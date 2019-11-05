@@ -5,173 +5,106 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f5c9d9fcd72f65b029c0a1af582b0f0cd498186e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057486"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560077"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings-Klasse 
-[Einstellungen](class_mip_protectionprofile_settings.md), die während der Erstellung und Lebensdauer von [ProtectionProfile](class_mip_protectionprofile.md) verwendet werden.
+Einstellungen, die von Protection Profile während der Erstellung und während der gesamten Lebensdauer verwendet werden.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: String & Path, cachestoragetype cachestoragetype, Konst\<Std:: shared_ptr\>authdelegat & authdelegat, Konst Std\>::\<shared_ptr genehmidelegat & genehmigendelegat, Konstante Std::\<shared_ptr Schutzprofile::\>Observer & Observer, Konstanten ApplicationInfo & ApplicationInfo)  |  Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
-öffentliche Einstellungen (Konstante Std::\<shared_ptr mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std\>:: shared_ptr\<authdelegat & authdelegat, Konstanten Std:: shared_ptr\< Genehmigedelegat\>& genehmifdelegaten, Konstante Std\<:: shared_ptr Schutzprofile\>:: Observer & Observer)  |  Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
-öffentliche Einstellungen (Konstante Std:: String & Path, cachestoragetype cachestoragetype, Konst\<Std:: shared_ptr\>authdelegat & authdelegat, Konst Std\>::\<shared_ptr genehmidelegat & genehmigendelegat, Konstante ApplicationInfo & ApplicationInfo)  |  Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der für synchrone Vorgänge verwendet wird
-öffentliche Einstellungen (Konstante Std::\<shared_ptr mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std\>:: shared_ptr\<authdelegat & authdelegat, Konstanten Std:: shared_ptr\< Genehmifdelegat\>& genehmifdelegaten)  |  Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der für synchrone Vorgänge verwendet wird
-public const std::string& GetPath() const  |  Ruft den Pfad ab, in dem Protokollierung, Telemetrie und weitere Begleitmaterialien zum Schutz gespeichert sind.
+öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konst Std:: shared_ptr\<genehmigende Delegat\>& zugenehmifdelegaten, Konstante Std:: shared_ptr\<Schutzprofile:: Observer\>& Observer)  |  Schutzprofile:: Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
+öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konst Std:: shared_ptr\<genehmigende Delegat\>& genehmifdelegaten)  |  Schutzprofile:: Settings-Konstruktor, der für synchrone Vorgänge verwendet wird.
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
-Public Std:: shared_ptr\<\> authdelegat getauthdelegat () Konstanten  |  Ruft den Authentifizierungsdelegaten ab, der für die Beschaffung von Authentifizierungstoken verwendet wird.
-Public Std:: shared_ptr\<\> genehmidelegat getgenehmidelegat () konstant  |  Ruft den Zustimmungsdelegaten ab, der für die Verbindung mit Diensten verwendet wird.
-Public Std:: shared_ptr\<Schutzprofile:: Observer\> getobserver () konstant  |  Ruft den Beobachter ab, der Benachrichtigungen zu Ereignissen empfängt, die in Verbindung mit [ProtectionProfile](class_mip_protectionprofile.md) stehen.
-public const ApplicationInfo& GetApplicationInfo() const  |  Ruft Informationen zu der Anwendung ab, die das Protection SDK nutzt.
+Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Ruft den Authentifizierungsdelegaten ab, der für die Beschaffung von Authentifizierungstoken verwendet wird.
+Public Std:: shared_ptr\<genehmidelegat\> getgenehmidelegat () Konstanten  |  Ruft den Zustimmungsdelegaten ab, der für die Verbindung mit Diensten verwendet wird.
+Public Std:: shared_ptr\<Schutzprofile:: Observer\> getobserver () konstant  |  Ruft den Observer ab, der Benachrichtigungen über Ereignisse empfängt, die sich auf das Schutzprofil beziehen.
 Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
-public void OptOutTelemetry()  |  Deaktiviert die Sammlung sämtlicher Telemetriedaten.
-public bool IsTelemetryOptedOut() const  |  Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
-Public Std:: shared_ptr\<\> loggerdelegat getloggerdelegat () Konstanten  |  Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
-öffentliches void setloggerdelegat (konstant Std:: shared_ptr\<\>loggerdelegat & loggerdelegat)  |  Überschreibt die Standardprotokollierung.
-Public Std:: shared_ptr\<\> httpdelegat gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<\>httpdelegat & httpdelegat)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
-Public Std:: shared_ptr\<\> taskdispatcherdelegat gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
-öffentliches void settaskdispatcherdelegat (Konstanten Std:: shared_ptr\<\>taskdispatcherdelegat & taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
-public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest
+Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
+öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
+Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
+öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr\<taskdispatcherdelegat\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
+public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab
-public void SetMinimumLogLevel(LogLevel logLevel)  |  Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
-public LogLevel GetMinimumLogLevel() const  |  Ruft das Mindestprotokolliergrad-Objekt ab.
 öffentliches void setcancachelicenses (bool-abfrageelicenses)  |  Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 public bool abgebrochen () konstant  |  Ruft ab, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
+öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
+Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
   
 ## <a name="members"></a>Member
   
 ### <a name="settings-function"></a>Settings-Funktion
-Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
+Schutzprofile:: Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
 
 Parameter:  
-* **Pfad**: Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden 
+* **mipcontext**: globale Kontext Einstellungen 
 
 
-* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
+* **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **authdelegat**: Rückruf Objekt, das für die Authentifizierung verwendet werden soll, implementiert von der Client Anwendung 
+* **authDelegate**: von der Clientanwendung implementiertes Rückrufobjekt zur Authentifizierung 
 
 
-* genehmifdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
-* **Beobachter**: [Beobachter](class_mip_protectionprofile_observer.md) Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit [Schutzprofile](class_mip_protectionprofile.md) empfängt
+* **Observer**: Observer-Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit Schutzprofile empfängt
 
 
-* **applicationInfo**: Informationen über die Anwendung, die das Schutz-SDK nutzt
-
-
-> Veraltet Dieser Konstruktor wird in Kürze als veraltet markiert, sodass er einen MIP:: mipcontext-Parameter erfordert.
-  
-### <a name="settings-function"></a>Settings-Funktion
-Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
-
-Parameter:  
-* **mipcontext**: Globale Kontext Einstellungen 
-
-
-* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
-
-
-* **authdelegat**: Rückruf Objekt, das für die Authentifizierung verwendet werden soll, implementiert von der Client Anwendung 
-
-
-* genehmifdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
-
-
-* **Beobachter**: [Beobachter](class_mip_protectionprofile_observer.md) Instanz, die Benachrichtigungen über Ereignisse im Zusammenhang mit [Schutzprofile](class_mip_protectionprofile.md) empfängt
-
-
-* **applicationInfo**: Informationen über die Anwendung, die das Schutz-SDK nutzt
+* **applicationInfo**: Informationen zur Anwendung, die das Protection SDK nutzt.
 
 
   
 ### <a name="settings-function"></a>Settings-Funktion
-Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der für synchrone Vorgänge verwendet wird
+Schutzprofile:: Settings-Konstruktor, der für synchrone Vorgänge verwendet wird.
 
 Parameter:  
-* **Pfad**: Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden 
+* **mipcontext**: globale Kontext Einstellungen 
 
 
-* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
+* **cachestoragetype**: speichert jeden zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger. 
 
 
-* **authdelegat**: Rückruf Objekt, das für die Authentifizierung verwendet werden soll, implementiert von der Client Anwendung 
+* **authDelegate**: von der Clientanwendung implementiertes Rückrufobjekt zur Authentifizierung 
 
 
-* genehmifdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
+* genehmigungsdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
 
 
-* **applicationInfo**: Informationen zur Anwendung, die das SDK für den Schutz nutzt
+* **applicationInfo**: Informationen zur Anwendung, die das Protection SDK nutzt
 
 
-Dieser Konstruktor wird in Kürze als veraltet markiert, sodass er einen MIP:: mipcontext-Parameter erfordert.
-  
-### <a name="settings-function"></a>Settings-Funktion
-Der [ProtectionProfile::Settings](class_mip_protectionprofile_settings.md)-Konstruktor, der für synchrone Vorgänge verwendet wird
-
-Parameter:  
-* **mipcontext**: Globale Kontext Einstellungen 
-
-
-* **cachestoragetype**: Zwischengespeicherten Status im Arbeitsspeicher oder auf dem Datenträger speichern 
-
-
-* **authdelegat**: Rückruf Objekt, das für die Authentifizierung verwendet werden soll, implementiert von der Client Anwendung 
-
-
-* genehmifdelegat: Delegat zum Abrufen der Benutzer Berechtigung für den Zugriff auf externe Ressourcen 
-
-
-* **applicationInfo**: Informationen zur Anwendung, die das SDK für den Schutz nutzt
-
-
-  
-### <a name="getpath-function"></a>GetPath-Funktion
-Ruft den Pfad ab, in dem Protokollierung, Telemetrie und weitere Begleitmaterialien zum Schutz gespeichert sind.
-
-  
-**Gibt Folgendes zurück**: Der Pfad, in dem Protokollierung, Telemetrie und weitere Begleitmaterialien zum Schutz gespeichert sind
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
   
 ### <a name="getcachestoragetype-function"></a>Getcachestoragetype-Funktion
 Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
 
   
-**Gibt Folgendes zurück**: Verwendeter Speichertyp
+**Returns**: verwendeter Speichertyp
   
 ### <a name="getauthdelegate-function"></a>Getauthdelegatfunktion
 Ruft den Authentifizierungsdelegaten ab, der für die Beschaffung von Authentifizierungstoken verwendet wird.
 
   
-**Gibt Folgendes zurück**: Authentifizierungs Delegat zum Abrufen von Authentifizierungs Token
+**Rückgabe**: Authentifizierungsdelegat, der für die Beschaffung von Authentifizierungstoken verwendet wird
   
 ### <a name="getconsentdelegate-function"></a>Geteinvernehmdelegatfunktion
 Ruft den Zustimmungsdelegaten ab, der für die Verbindung mit Diensten verwendet wird.
 
   
-**Gibt Folgendes zurück**: Zum Herstellen einer Verbindung mit Diensten verwendeter Zustimmungs Delegat
+**Rückgabe**: Zustimmungsdelegat, der für die Verbindung mit Diensten verwendet wird
   
 ### <a name="getobserver-function"></a>Getobserver-Funktion
-Ruft den Beobachter ab, der Benachrichtigungen zu Ereignissen empfängt, die in Verbindung mit [ProtectionProfile](class_mip_protectionprofile.md) stehen.
+Ruft den Observer ab, der Benachrichtigungen über Ereignisse empfängt, die sich auf das Schutzprofil beziehen.
 
   
-**Gibt Folgendes zurück**: [Beobachter](class_mip_protectionprofile_observer.md) , der Benachrichtigungen über Ereignisse im Zusammenhang mit [Schutzprofile](class_mip_protectionprofile.md) empfängt
-  
-### <a name="getapplicationinfo-function"></a>Getapplicationinfo-Funktion
-Ruft Informationen zu der Anwendung ab, die das Protection SDK nutzt.
-
-  
-**Gibt Folgendes zurück**: Informationen über die Anwendung, die das Schutz-SDK nutzt
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
+**Gibt Folgendes zurück**: Observer, das Benachrichtigungen über Ereignisse im Zusammenhang mit Schutzprofile empfängt.
   
 ### <a name="getmipcontext-function"></a>Getmipcontext-Funktion
 MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
@@ -179,45 +112,17 @@ MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
   
 **Gibt Folgendes zurück**: MIP-Kontext
   
-### <a name="optouttelemetry-function"></a>Optouttelemetry-Funktion
-Deaktiviert die Sammlung sämtlicher Telemetriedaten.
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
-  
-### <a name="istelemetryoptedout-function"></a>Istelemetryoptedout-Funktion
-Ruft ab, ob die Sammlung von Telemetriedaten deaktiviert werden soll oder nicht.
-
-  
-**Gibt Folgendes zurück**: Wenn das Sammeln von Telemetriedaten deaktiviert werden soll oder nicht.
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
-  
-### <a name="getloggerdelegate-function"></a>Getloggerdelegatfunktion
-Ruft den von der Anwendung bereitgestellten Protokollierungsdelegaten ab (falls vorhanden).
-
-  
-**Gibt Folgendes zurück**: Protokollierung
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
-  
-### <a name="setloggerdelegate-function"></a>Setloggerdelegatfunktion
-Überschreibt die Standardprotokollierung.
-
-Parameter:  
-* **loggerDelegate**: Von Client Anwendungen implementierte Protokollierungs Rückruf Schnittstelle
-
-
-Diese Methode sollte durch Clientanwendungen aufgerufen werden, die ihre eigene Implementierung für die Protokollierung verwenden. 
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
-  
 ### <a name="gethttpdelegate-function"></a>Gethttpdelegatfunktion
 Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 
   
-**Gibt Folgendes zurück**: Für http-Vorgänge zu verwendende http-Delegat
+**Rückgabe**: Der HTTP-Delegat, der für HTTP-Vorgänge verwendet werden soll
   
 ### <a name="sethttpdelegate-function"></a>Setup-Delegatfunktion
-Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
+Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
 
 Parameter:  
-* **httpdelegat**: Von der Client Anwendung implementierte HTTP-Rückruf Schnittstelle
+* **httpDelegate**: HTTP-Rückrufschnittstelle, die von Clientanwendungen implementiert wird.
 
 
   
@@ -225,21 +130,22 @@ Parameter:
 Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
 
   
-**Gibt Folgendes zurück**: Taskdispatcher-Delegat, der zum Ausführen von asynchronen Aufgaben verwendet werden soll.
+**Gibt Folgendes zurück**: taskdispatcher-Delegat, der zum Ausführen von asynchronen Aufgaben verwendet wird.
   
 ### <a name="settaskdispatcherdelegate-function"></a>Settaskdispatcherdelegatfunktion
 Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 
 Parameter:  
-* **taskDispatcherDelegate**: Von der Client Anwendung implementierte Rückruf Schnittstelle für die Task Verteilung
+* **taskdispatcherdelegat**: Aufgaben Verteiler-Rückruf Schnittstelle von Client Anwendung implementiert
 
 
+Tasks können auf Profil Objekte verweisen, die ihre Zerstörung verhindern, weil taskdispatcher-Warteschlangen nicht freigegeben werden sollten.
   
 ### <a name="setsessionid-function"></a>Funktion "-essionid"
-Legt die Sitzungs-ID fest
+Legt die Sitzungs-ID fest.
 
 Parameter:  
-* **sessionId**: Die Sitzungs-ID, die zum Korrelieren von Protokollen/Telemetrie verwendet wird.
+* **sessionId**: die Sitzungs-ID, die zum Korrelieren von Protokollen bzw. Telemetriedaten verwendet wird
 
 
   
@@ -247,29 +153,13 @@ Parameter:
 Ruft die Sitzungs-ID ab
 
   
-**Gibt Folgendes zurück**: Die Sitzungs-ID, die zum Korrelieren von Protokollen/Telemetrie verwendet wird.
-  
-### <a name="setminimumloglevel-function"></a>Setminimumloglevel-Funktion
-Legt den Mindestprotokolliergrad fest, der ein Protokollierereignis auslöst.
-
-Parameter:  
-* **logLevel**: Mindestprotokolliergrad, der ein Protokollierereignis auslöst.
-
-
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
-  
-### <a name="getminimumloglevel-function"></a>Getminimumloglevel-Funktion
-Ruft das Mindestprotokolliergrad-Objekt ab.
-
-  
-**Gibt Folgendes zurück**: Mindestprotokolliergrad, der ein Protokollierungs Ereignis auslöst.
-> Veraltet Diese Methode wird in Kürze als veraltet markiert, um allgemeine Kontext Daten durch MIP:: mipcontext zu erhalten/festzulegen.
+**Rückgabe**: die Sitzungs-ID, die zum Korrelieren von Protokollen bzw. Telemetriedaten verwendet wird
   
 ### <a name="setcancachelicenses-function"></a>Setcancachelicenses-Funktion
 Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 
 Parameter:  
-* **Abbrechen**: Gibt an, ob die Engine beim Öffnen von geschütztem Inhalt eine Lizenz zwischenspeichern soll.
+* **Abbrechen**: gibt an, ob die Engine beim Öffnen von geschütztem Inhalt eine Lizenz zwischenspeichern soll.
 
 
 Wenn der Wert true ist, wird die zugehörige Lizenz lokal durch das Öffnen geschützter Inhalte zwischengespeichert Wenn der Wert false ist, wird durch das Öffnen geschützter Inhalte immer der http-Vorgang zum Abrufen der Lizenz vom RMS-Dienst durchgeführt.
@@ -278,4 +168,18 @@ Wenn der Wert true ist, wird die zugehörige Lizenz lokal durch das Öffnen gesc
 Ruft ab, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 
   
-**Gibt Folgendes zurück**: Lizenz zwischen Speicherungs Konfiguration
+**Gibt Folgendes zurück**: Lizenz Cache Konfiguration
+  
+### <a name="setcustomsettings-function"></a>Setcustomsettings-Funktion
+Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.
+
+Parameter:  
+* **customSettings**: Liste von Name-Wert-Paaren.
+
+
+  
+### <a name="getcustomsettings-function"></a>Getcustomsettings-Funktion
+Ruft die benutzerdefinierten Einstellungen ab, die für Gating und Tests von Features verwendet werden.
+
+  
+**Rückgabe**: Liste von Name-Wert-Paaren

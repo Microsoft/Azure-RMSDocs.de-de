@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8fc121385a294ae32da9d6707618990a1920b815
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 2094f6d2d0a243f73f9c19f08dcc68877ca5d16a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055618"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560849"
 ---
 # <a name="class-mippolicyruledata"></a>MIP::P olicyruledata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetName() const  | _Noch nicht dokumentiert._
-public const std::string& GetId() const  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std:: unique_ptr\<aktiondata\>\>& getaktionsdata () konstant  | _Noch nicht dokumentiert._
-public bool iscompatibleversion () konstant  | _Noch nicht dokumentiert._
-Public Konstanten Std:: map\<Std:: String, Std:: String\>& getattributedata () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std::\<Vector Std:: map\<Std:: String, Std:: String\>\>& getruletags () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten conditiondata * getconditiondata () konstant  | _Noch nicht dokumentiert._
-public virtual ~ policyruledata ()  | _Noch nicht dokumentiert._
+public const std::string& GetName() const  | Noch nicht dokumentiert.
+public const std::string& GetId() const  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<aktiondata\>\>& getaktionsdata () Konstanten  | Noch nicht dokumentiert.
+public bool iscompatibleversion () konstant  | Noch nicht dokumentiert.
+Public Konstanten Std:: Map\<Std:: String, Std:: String\>& getattributedata () Konstanten  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: Map\<Std:: String, Std:: String\>\>& getruletags () konstant.  | Noch nicht dokumentiert.
+Public Konstanten conditiondata * getconditiondata () konstant  | Noch nicht dokumentiert.
+public virtual ~ policyruledata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

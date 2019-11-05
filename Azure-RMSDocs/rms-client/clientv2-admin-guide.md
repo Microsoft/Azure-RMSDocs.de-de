@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c7458e1e936b464e8f4666911c3f23fb96dd3fe
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 2d26e7d80a37fd5ae8b52539a09fcbb9c924a13d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805293"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561204"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch
 
@@ -257,9 +257,9 @@ Wenn Sie ein Upgrade von einer früheren Version als 1.48.204.0 ausführen und d
 Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen Sie genau den Profilnamen angeben, den Sie beim Ausführen des Befehls „Update-AIPScanner“ verwendet haben. Der Scanner wird nur mit Ihren Einstellungen konfiguriert, wenn die Namen identisch sind. 
 
 > [!TIP]
-> Verwenden Sie das Blatt **Azure Information Protection – Knoten** im Azure-Portal, um Scanner mit dieser fehlerhaften Konfiguration zu erkennen.
+> Um Scanner zu identifizieren, die diese Fehlkonfiguration aufweisen, verwenden Sie den Bereich **Azure Information Protection-Knoten** in der Azure-Portal.
 >  
-> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
+> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur Scanner mit der Versionsnummer 1.41.51.0 sollten in diesem Bereich keinen Profilnamen anzeigen. 
 
 ## <a name="uninstalling-the-azure-information-protection-unified-labeling-client"></a>Deinstallieren des Azure Information Protection Unified Bezeichnung-Client
 

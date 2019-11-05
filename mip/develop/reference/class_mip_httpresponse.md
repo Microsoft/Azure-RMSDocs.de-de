@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 3fe574665d6a51c03135cf863fcec9d2106e549d
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 876de8047abc4e2f13ee8e103cdfa1648738aa84
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056020"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558744"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
-Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App beim Überschreiben des [HttpDelegate](class_mip_httpdelegate.md) implementiert wird.
+Schnittstelle, die eine einzelne HTTP-Antwort beschreibt, die von der Client-App beim Überschreiben von httpdelegaten
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
@@ -22,7 +22,7 @@ Schnittstelle, die eine einfache HTTP-Antwort beschreibt und von der Client-App 
 public const std::string& GetId() const  |  Ruft die Antwort-ID ab.
 public int32_t GetStatusCode() const  |  Ruft den Antwortstatuscode ab.
 Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
-Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () Konstanten  |  Ruft Anforderungsheader ab.
+Public Konstanten Std:: Map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () konstant.  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member
   
@@ -30,22 +30,22 @@ Public Konstanten Std:: map\<Std:: String, Std:: String, caseinsensitivecomparat
 Ruft die Antwort-ID ab.
 
   
-**Gibt Folgendes zurück**: Antwort-ID die entsprechende HttpRequest weist die gleiche ID auf.
+**Returns**: Antwort-ID die entsprechende HttpRequest weist dieselbe ID auf.
   
 ### <a name="getstatuscode-function"></a>GetStatus Code-Funktion
 Ruft den Antwortstatuscode ab.
 
   
-**Gibt Folgendes zurück**: Statuscode
+**Rückgabe**: Der Statuscode.
   
 ### <a name="getbody-function"></a>GetBody-Funktion
 Ruft den Text der Anforderung ab.
 
   
-**Gibt Folgendes zurück**: Anforderungstext
+**Rückgabe**: Der Anforderungstext.
   
 ### <a name="getheaders-function"></a>Gezeige Aders-Funktion
 Ruft Anforderungsheader ab.
 
   
-**Gibt Folgendes zurück**: Anforderungs Header
+**Rückgabe**: Anforderungsheader.

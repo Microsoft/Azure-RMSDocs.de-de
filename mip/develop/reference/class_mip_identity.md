@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8bb4e30398e6f12214605df6f5ad194334d3eeff
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 633a0ac8536f7bbd285eee67934f27d65b399bf4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054778"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560161"
 ---
 # <a name="class-mipidentity"></a>MIP:: Identity-Klasse 
 Abstraktion für Identity.
@@ -19,26 +19,26 @@ Abstraktion für Identity.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Identität ()  |  Standardmäßiger [identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
-öffentliche Identität (Konstante Identität & andere)  |  Kopierkonstruktor von [Identity](class_mip_identity.md)
-öffentliche explizite Identität (konstant Std:: String & e-Mail)  |  [Identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
+öffentliche Identität ()  |  Standardmäßiger identitätskonstruktor, der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
+öffentliche Identität (Konstante Identität & andere)  |  Der identitätskopierkonstruktor.
+öffentliche explizite Identität (konstant Std:: String & e-Mail)  |  Identitätskonstruktor, der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
 Public Konstanten Std:: String & GetEmail () konstant  |  Senden Sie die e-Mail.
   
 ## <a name="members"></a>Member
   
 ### <a name="identity-function"></a>Identity-Funktion
-Standardmäßiger [identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
+Standardmäßiger identitätskonstruktor, der verwendet wird, wenn eine Benutzer-e-Mail-Adresse
   
 ### <a name="identity-function"></a>Identity-Funktion
-Kopierkonstruktor von [Identity](class_mip_identity.md)
+Der identitätskopierkonstruktor.
 
 Parameter:  
-* **[Identität](class_mip_identity.md)** : wird zum Erstellen der Kopie verwendet.
+* **Identität**: wird zum Erstellen der Kopie verwendet.
 
 
   
 ### <a name="identity-function"></a>Identity-Funktion
-[Identitätskonstruktor](class_mip_identity.md) , der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
+Identitätskonstruktor, der verwendet wird, wenn eine e-Mail-Adresse des Benutzers
 
 Parameter:  
 * **e-Mail**: e-Mail-Adresse des Benutzers.
@@ -49,4 +49,4 @@ Parameter:
 Senden Sie die e-Mail.
 
   
-**Gibt Folgendes zurück**: Die e-Mail.
+**Gibt Folgendes zurück**: die e-Mail.

@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 93c73f632410bf6b1c6898746d1fcbd2c4f67e72
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056254"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560346"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>MIP:: authdelegat:: OAuth2Token-Klasse 
 Eine Klasse, die festlegt, wie das MIP SDK erwartet, dass das oauth2-Token zurück an das SDK zurückgegeben wird.
@@ -19,21 +19,21 @@ Eine Klasse, die festlegt, wie das MIP SDK erwartet, dass das oauth2-Token zurü
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliches OAuth2Token ()  |  Erstellen Sie ein neues [OAuth2Token](class_mip_authdelegate_oauth2token.md) -Objekt.
-Public OAuth2Token (Konstante Std:: String & accesstoken)  |  Erstellen Sie ein neues [OAuth2Token](class_mip_authdelegate_oauth2token.md) -Objekt aus einem accesstoken.
+öffentliches OAuth2Token ()  |  Erstellen Sie ein neues OAuth2Token-Objekt.
+Public OAuth2Token (Konstante Std:: String & accesstoken)  |  Erstellen Sie ein neues OAuth2Token-Objekt aus einem accesstoken.
 Public Konstanten Std:: String & getaccesstoken () konstant  |  Abrufen der zugriffstokenzeichenfolge.
 öffentliches void setaccesstoken (Konstante Std:: String & accesstoken)  |  Legen Sie die Zugriffs Token-Zeichenfolge fest.
   
 ## <a name="members"></a>Member
   
 ### <a name="oauth2token-function"></a>OAuth2Token-Funktion
-Erstellen Sie ein neues [OAuth2Token](class_mip_authdelegate_oauth2token.md) -Objekt.
+Erstellen Sie ein neues OAuth2Token-Objekt.
   
 ### <a name="oauth2token-function"></a>OAuth2Token-Funktion
-Erstellen Sie ein neues [OAuth2Token](class_mip_authdelegate_oauth2token.md) -Objekt aus einem accesstoken.
+Erstellen Sie ein neues OAuth2Token-Objekt aus einem accesstoken.
 
 Parameter:  
-* **accessToken**: Das tatsächliche Zugriffs Token, das an das SDK übermittelt wird.
+* **accesstoken**: das tatsächliche Zugriffs Token, das an das SDK übermittelt wird.
 
 
   
@@ -41,7 +41,7 @@ Parameter:
 Abrufen der zugriffstokenzeichenfolge.
 
   
-**Gibt Folgendes zurück**: Die Zugriffs Token-Zeichenfolge.
+**Returns**: die zugriffstokenzeichenfolge.
   
 ### <a name="setaccesstoken-function"></a>Setaccesstoken-Funktion
 Legen Sie die Zugriffs Token-Zeichenfolge fest.

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cc54db36ac6e3a4962f6eb8a522293c009a6cd22
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 8cf449b26ced29b57a51dc6657105805bafbd9fe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684141"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559257"
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Ändern oder Anpassen einer vorhandenen Bezeichnung für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Sie können die Bezeichnungen, die Benutzern in der Information Protection-Leiste oder über die Schaltfläche **Schützen** im Office-Menüband angezeigt werden, ändern oder verfeinern, indem Sie diese im Azure-Portal konfigurieren.
 
@@ -30,19 +30,19 @@ Beispielsweise können Sie den Namen einer Bezeichnung oder einer untergeordnete
 
 Verwenden Sie die folgenden Anweisungen, um eine Bezeichnung zu ändern:
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** . 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten.
+2. Über die Menüoption **Klassifizierungen** > **Bezeichnungen** : Wählen Sie im Bereich **Azure Information Protection-Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten.
 
-    Eine Ausnahme ist gegeben, wenn Sie eine Bezeichnung neu sortieren möchten: Anstatt die Bezeichnung auszuwählen, klicken Sie mit der rechten Maustaste auf die Bezeichnung, oder rufen Sie das Kontextmenü der Bezeichnung auf. Klicken Sie dann entweder auf die Option **Move up** (Nach oben) oder auf die Option **Move down** (Nach unten).
+    Eine Ausnahme besteht darin, wenn Sie eine Bezeichnung neu anordnen möchten: Statt die Bezeichnung auszuwählen, müssen Sie in diesem Fall mit der rechten Maustaste auf die Bezeichnung klicken oder das Kontextmenü der Bezeichnung aufrufen. Klicken Sie dann entweder auf die Option **Move up** (Nach oben) oder auf die Option **Move down** (Nach unten).
 
-3. Wenn Sie Ihre Änderungen auf einem neuen Blatt übernehmen möchten, klicken Sie auf dem jeweiligen Blatt auf **Speichern**.
+3. Wenn Sie Änderungen in einem neuen Bereich vornehmen, klicken Sie in diesem Bereich auf **Speichern** , wenn Sie die Änderungen beibehalten möchten.
     
     Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderungen automatisch für Benutzer und Dienste verfügbar. Es gibt keine gesonderte Veröffentlichungsoption mehr.
 
-4. Wenn Sie den Anzeigenamen der Bezeichnung oder Beschreibung geändert und diese für weitere Sprachen konfiguriert haben: Exportieren Sie Ihre Azure Information Protection-Richtlinie erneut, stellen Sie neue Übersetzungen bereit, und importieren Sie die Änderungen. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md).
+4. Gehen Sie wie folgt vor, wenn Sie den Anzeigenamen für Bezeichnung oder die Beschreibung geändert und für weitere Sprachen konfiguriert haben: Exportieren Sie Ihre Azure Information Protection-Richtlinie erneut, stellen Sie neue Übersetzungen bereit, und importieren Sie die Änderungen. Weitere Informationen finden Sie unter [Informationen zum Konfigurieren von Bezeichnungen für verschiedene Sprachen](configure-policy-languages.md).
 
 > [!TIP]
 >Informationen zum Wiederherstellen der Standardwerte einer Standardbezeichnung finden Sie unter [Die Azure Information Protection-Standardrichtlinie](configure-policy-default.md).

@@ -5,16 +5,16 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d0f72a60233b05eab2c9e4b9e9cec2bf8bcda495
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 6f0c3cc726d72d89a8682907ebc350270db5daee
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056031"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558787"
 ---
 # <a name="class-miphttpoperation"></a>MIP:: httpoperation-Klasse 
-Schnittstelle, die einen einzelnen http-Vorgang beschreibt, der von der Client-App beim Überschreiben von [httpdelegaten](class_mip_httpdelegate.md)
+Schnittstelle, die einen einzelnen http-Vorgang beschreibt, der von der Client-App beim Überschreiben von httpdelegaten
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
@@ -29,7 +29,7 @@ public bool isabgeb Rochen ()  |  Gibt den Abbruch Status des Vorgangs an.
 Ruft die Vorgangs-ID ab.
 
   
-**Gibt Folgendes zurück**: Vorgangs-ID die entsprechenden HttpRequest-und HttpResponse-Befehle verfügen über die gleiche ID.
+**Gibt Folgendes zurück**: Vorgangs-ID: die entsprechende HttpRequest und HttpResponse haben dieselbe ID.
   
 ### <a name="getresponse-function"></a>GetResponse-Funktion
 Get-Antwort, falls vorhanden.
@@ -41,4 +41,4 @@ Get-Antwort, falls vorhanden.
 Gibt den Abbruch Status des Vorgangs an.
 
   
-**Gibt Folgendes zurück**: Abbruch Status
+**Returns**: Abbruch Status

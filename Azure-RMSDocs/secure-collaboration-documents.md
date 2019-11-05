@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ae95c9d4ffc7bae7004ad6e79a958c0c8836a22f
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679018"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561113"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -30,9 +30,9 @@ Diese Berechtigungen heißten „Nutzungsrechte“ und umfassen Berechtigungen w
 
 Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Benutzer sie gedacht sind:
 
-- **Für Benutzer in Ihrer Organisation oder in einer anderen Organisation, die Azure Active Directory verwendet**: Sie können Azure AD-Benutzerkonten, Azure AD-Gruppen oder alle Benutzer in dieser Organisation angeben. 
+- **Für Benutzer in Ihrer oder einer anderen Organisation, die Azure Active Directory verwendet:** Sie können Azure AD-Benutzerkonten, Azure AD-Gruppen oder alle Benutzer in der Organisation angeben. 
 
-- **Für Benutzer, die nicht über ein Azure Active Directory-Konto verfügen**: Geben Sie eine E-Mail-Adresse an, die mit einem Microsoft-Konto verwendet wird. Dieses Konto kann bereits vorhanden sein. Alternativ können es Benutzer dann erstellen, wenn sie das geschützte Dokument öffnen. 
+- **Für Benutzer ohne Azure Active Directory-Konto:** Geben Sie eine E-Mail-Adresse an, die mit einem Microsoft-Konto verwendet werden wird. Dieses Konto kann bereits vorhanden sein. Alternativ können es Benutzer dann erstellen, wenn sie das geschützte Dokument öffnen. 
     
     Um Dokumente mit einem Microsoft-Konto zu öffnen, müssen Benutzer Office 365- Apps (Klick-und-Los) verwenden. In anderen Office-Editionen und -Versionen wird das Öffnen von mit Office geschützten Dokumenten mit einem Microsoft-Konto noch nicht unterstützt.
 
@@ -45,33 +45,33 @@ Als Administrator können Sie eine Azure Information Protection-Bezeichnung konf
 
 In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können.
 
-Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel dafür, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie unter [Beispiel 5: Bezeichnung, die Inhalt verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
+Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Vergewissern Sie sich im Bereich **Schutz** , dass **Azure (cloudschlüssel)** ausgewählt ist.
     
 2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Gehen Sie auf dem Blatt **Berechtigungen hinzufügen** wie folgt vor: 
+3. Im Bereich **Berechtigungen hinzufügen** : 
     
-   - Für Ihre interne Gruppe: Wählen Sie **Verzeichnis durchsuchen** aus, um die Gruppe auszuwählen, für die die E-Mail-Funktion aktiviert sein muss.
+   - Für die interne Gruppe: Klicken Sie auf **Browse directory** (Verzeichnis durchsuchen), um die Gruppe auszuwählen, für die die E-Mail-Funktion aktiviert sein muss.
     
-   - Für alle Benutzer in der ersten externen Organisation: Wählen Sie **Geben Sie Details ein** aus, und geben Sie im Mandanten der Organisation den Namen einer Domäne ein. Beispiel: fabrikam.com.
+   - Für alle Benutzer in der ersten externen Organisation: Klicken Sie auf **Geben Sie Details ein**, und geben Sie im Mandanten der Organisation den Namen einer Domain ein. Beispiel: fabrikam.com.
     
-   - Für die Gruppe in der zweiten externe Organisation: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.
+   - Für die Gruppe in der zweiten externen Organisation: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse der Gruppe im Mandanten der Organisation ein. Beispiel: sales@contoso.com.
     
-   - Für den Benutzer, die nicht über ein Azure AD-Konto verfügt: Geben Sie auf der Registerkarte **Geben Sie Details ein** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.comHyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen. 
+   - Für den Benutzer ohne Azure AD-Konto: Geben Sie auf der Registerkarte **Details eingeben** die E-Mail-Adresse des Benutzers ein. Beispiel: bengi.turan@gmail.com. 
 
-4. Gewähren derselben Berechtigungen für alle diese Benutzer: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus, um die Berechtigungen, die Sie erteilen möchten, auszuwählen.
+4. Wenn Sie allen Benutzern dieselben Berechtigungen erteilen möchten: Wählen Sie für **Berechtigungen aus Voreinstellung auswählen** die Berechtigung **Mitbesitzer**, **Mitautor**, **Prüfer** oder **Benutzerdefiniert** aus.
     
     Die konfigurierten Berechtigungen können beispielsweise wie folgt aussehen:
         
     ![Konfigurieren von Berechtigungen für eine sichere Zusammenarbeit](./media/collaboration-permissions.png)
 
-5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**.
+5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **OK** .
 
-6. Klicken Sie auf auf dem Blatt **Schutz** auf **OK**.
+6. Klicken Sie im Bereich **Schutz** auf **OK**.
 
-7. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus. 
+7. Wählen Sie im Bereich **Bezeichnung** die Option **Speichern**aus. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Anwenden der Bezeichnung, die die sichere Zusammenarbeit unterstützt
 
@@ -95,7 +95,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiele:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

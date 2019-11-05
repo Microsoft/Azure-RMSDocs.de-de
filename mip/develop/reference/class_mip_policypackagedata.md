@@ -5,21 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 23b6758df7ffd9bb9ac393463798bc696c3894a5
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5c65cbaaed77cfee3b06eadb9b72de634d26bbdf
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054425"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560939"
 ---
 # <a name="class-mippolicypackagedata"></a>MIP::P olicypackagedata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std::\<Vector Std:: unique_ptr\<rulepackagedata\>\>& getrules () Konstanten  | _Noch nicht dokumentiert._
-public virtual ~ policypackagedata ()  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<rulepackagedata\>\>& getrules () Konstanten  | Noch nicht dokumentiert.
+public virtual ~ policypackagedata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   

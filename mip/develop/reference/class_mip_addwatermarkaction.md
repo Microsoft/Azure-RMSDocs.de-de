@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 2b6a50385e5d891b8893949a8761e7f38f591f17
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: e3f5675404ed87ba1d06ad3b42cb57524e94980d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056335"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560381"
 ---
 # <a name="class-mipaddwatermarkaction"></a>mip::AddWatermarkAction-Klasse 
 Eine Aktionsklasse, die angibt, dass ein Wasserzeichen hinzugefügt wird.
@@ -32,34 +32,34 @@ public const std::string& GetFontColor() const  |  Ruft die Schriftfarbe ab, in 
 Eine zum Markieren des Wasserzeichenelements genutzte API.
 
   
-**Gibt Folgendes zurück**: Der Name, der für das UI-Element verwendet werden soll, das das Wasserzeichen enthält. Der gleiche Name wird in RemoveWatermarkingAction zurückgegeben, falls das Wasserzeichen entfernt werden muss.
+**Rückgabe**: Name, der für das UI-Element verwendet werden soll, welches das Wasserzeichen enthält. Der gleiche Name wird in RemoveWatermarkingAction zurückgegeben, falls das Wasserzeichen entfernt werden muss.
   
 ### <a name="getlayout-function"></a>GetLayout-Funktion
 Eine zum Abrufen des Wasserzeichenlayouts genutzte API.
 
   
-**Gibt Folgendes zurück**: WatermarkLayout Das Wasserzeichenlayout in der Form einer Enumeration HORIZONTAL|DIAGONAL. ,
+**Rückgabe**: WatermarkLayout Das Wasserzeichenlayout in der Form einer Enumeration HORIZONTAL|DIAGONAL. ,
   
 ### <a name="gettext-function"></a>Gettext-Funktion
 Ruft den Text ab, der im Wasserzeichen enthalten sein soll.
 
   
-**Gibt Folgendes zurück**: Text Header Text.
+**Rückgabe**: Text des Inhaltsheaders.
   
 ### <a name="getfontname-function"></a>Getfontname-Funktion
 Ruft den Namen der Schriftart ab, in der das Wasserzeichen angezeigt wird.
 
   
-**Gibt Folgendes zurück**: Der Schriftart Name. Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
+**Rückgabe**: Schriftartname Standardwert ist Calibri, wenn keiner von der Richtlinie festgelegt ist.
   
 ### <a name="getfontsize-function"></a>GetFontSize-Funktion
 Ruft den Schriftgrad ab, in dem das Wasserzeichen angezeigt wird.
 
   
-**Gibt Folgendes zurück**: Schrift Grad als ganze Zahl.
+**Rückgabe**: Schriftgrad als ganze Zahl.
   
 ### <a name="getfontcolor-function"></a>Getfontcolor-Funktion
 Ruft die Schriftfarbe ab, in der das Wasserzeichen angezeigt wird.
 
   
-**Gibt Folgendes zurück**: Schriftfarbe als Zeichenfolge (z. b. "#000000").
+**Rückgabe**: Schriftfarbe als Zeichenfolge (z.B. „#000000“).

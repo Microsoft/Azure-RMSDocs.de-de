@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447655"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561280"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -209,7 +209,7 @@ Der Scanner kann zwar in einer anderen Reihenfolge upgegradet werden, es werden 
 
 1. Verwenden Sie das Azure-Portal, um ein neues Scannerprofil zu erstellen, das die Einstellungen für den Scanner und die Datenrepositorys mit allen erforderlichen Einstellungen enthält. Hilfe zu diesem Schritt finden Sie im Abschnitt [configure the Scanner in the Azure-Portal in](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) den Anweisungen zur Überprüfung der Bereitstellung.
     
-    Diesen Schritt müssen Sie auch dann ausführen, wenn der Computer, auf dem der Scanner ausgeführt wird, nicht mit dem Internet verbunden ist. Verwenden Sie anschließend im Azure-Portal die Option **Exportieren**, um das Scannerprofil in eine Datei zu exportieren.
+    Wenn der Computer, auf dem die Überprüfung ausgeführt wird, vom Internet getrennt ist, müssen Sie diesen Schritt dennoch ausführen. Verwenden Sie anschließend im Azure-Portal die Option **Exportieren**, um das Scannerprofil in eine Datei zu exportieren.
 
 2. Beenden Sie auf dem Computer mit dem Scanner den Scannerdienst **Azure Information Protection-Scanner**.
 
@@ -230,9 +230,9 @@ Wenn Sie den Scanner nicht vor dem Ausführen des Befehls „Update-AIPScanner�
 Wenn Sie in diesem Szenario den Scanner im Azure-Portal konfigurieren, müssen Sie genau den Profilnamen angeben, den Sie beim Ausführen des Befehls „Update-AIPScanner“ verwendet haben. Der Scanner wird nur mit Ihren Einstellungen konfiguriert, wenn die Namen identisch sind. 
 
 > [!TIP]
-> Verwenden Sie das Blatt **Azure Information Protection – Knoten** im Azure-Portal, um Scanner mit dieser fehlerhaften Konfiguration zu erkennen.
+> Um Scanner zu identifizieren, die diese Fehlkonfiguration aufweisen, verwenden Sie den Bereich **Azure Information Protection-Knoten** in der Azure-Portal.
 >  
-> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur für Scanner mit der Versionsnummer 1.41.51.0 sollte auf diesem Blatt kein Profilname angezeigt werden. 
+> Für Scanner, die über Internet Konnektivität verfügen, wird der Computername mit der GA-Versionsnummer des Azure Information Protection Clients, aber ohne Profilnamen angezeigt. Nur Scanner mit der Versionsnummer 1.41.51.0 sollten in diesem Bereich keinen Profilnamen anzeigen. 
 
 Wenn Sie beim Ausführen des Befehls „Update-AIPScanner“ keinen Profilnamen angegeben haben, wird automatisch der Computername zum Erstellen des Profilnamens für den Scanner verwendet.
 

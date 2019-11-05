@@ -5,23 +5,21 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 366c5dcf98216f10f2c2553e61b82a225e41a3c4
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 702e56461f61374956f95a01799a8bc81ae32557
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056798"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560497"
 ---
 # <a name="class-mipsyncfilesensitivitydata"></a>MIP:: syncfilesensitivitydata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std::\<Vector Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& getsensitivitytypesrulepackages () Konstanten  | _Noch nicht dokumentiert._
-public virtual ~ syncfilesensitivitydata ()  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & getfleid () Konstanten  | _Noch nicht dokumentiert._
-Public Konstanten Std:: String & gettenantid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& getsensitivitytypesrulepackages () konstant.  | Noch nicht dokumentiert.
+public virtual ~ syncfilesensitivitydata ()  | Noch nicht dokumentiert.
   
 ## <a name="members"></a>Member
   
@@ -30,12 +28,4 @@ _Noch nicht dokumentiert._
 
   
 ### <a name="syncfilesensitivitydata-function"></a>~ Syncfilesensitivitydata-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getfileid-function"></a>Getfleid-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="gettenantid-function"></a>Gettenantid-Funktion
 _Noch nicht dokumentiert._

@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 551aaa12a4a567b955b7d5e005e205c4029aa382
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: abe085b36bd940dd69c2cc5f0f7a564fd6707548
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984902"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561129"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -52,7 +52,7 @@ Da der Unified-Bezeichnungs Client und der klassische Client eine separate Insta
 
 Welchen Client sollten Sie verwenden?
 
-- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens eine Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in.  Ihre Office-Apps, für die der einheitliche Bezeichnungs Client oder der klassische Client erforderlich ist. Diese Features enthalten derzeit die automatische und empfohlene Bezeichnung, und die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients.
+- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens eine Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in.  Ihre Office-Apps, für die der einheitliche Bezeichnungs Client oder der klassische Client erforderlich ist. Diese Features enthalten die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients.
 
 - Verwenden Sie den **Azure Information Protection Unified** Label-Client auf Windows-Computern für Bezeichnungen und Richtlinien Einstellungen, die auch von MacOS, IOS und Android verwendet werden können. Sie möchten Dateien unabhängig von Office 365-apps bezeichnen, und Sie benötigen keine Features, die werden nur vom klassischen Client unterstützt. Diese Features umfassen derzeit den Schutz von Inhalten mit einem lokalen Schlüssel (Hyok) und eine allgemein verfügbare Version des Scanners für lokale Datenspeicher.
 
@@ -77,9 +77,6 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
     Diese Benutzer haben bei der Verwendung dieses Clients eine etwas andere Bezeichnung. Beispielsweise wird eine Schaltfläche **schützen** anstelle einer **Vertraulichkeits** Schaltfläche in Office-Apps angezeigt. Als Administrator müssen Sie Ihre Bezeichnungen für Hyok-Einstellungen und Richtlinien Einstellungen in einem anderen Verwaltungs Center mit den Bezeichnungen und Einstellungen für die anderen Client Plattformen verwalten.
 
 - Sie verfügen über lokale Datenspeicher mit Dokumenten, die auf sensible Informationen überprüft oder klassifiziert und geschützt werden müssen. Zur Verwendung in der Produktion stellen Sie den klassischen-Client auf Servern bereit, um den Azure Information Protection Scanner auszuführen.
-
-
-
 
 ## <a name="compare-the-labeling-clients-for-windows-computers"></a>Vergleichen der Beschriftungs Clients für Windows-Computer
 

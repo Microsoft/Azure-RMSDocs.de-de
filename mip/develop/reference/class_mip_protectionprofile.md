@@ -5,79 +5,78 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dcd50c403f20486e479fc00016ed6c0ef8885efa
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: a6c78e7311f3af3920df19d7a3a6ca92bb09e819
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070500"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560055"
 ---
 # <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile-Klasse 
-[ProtectionProfile](class_mip_protectionprofile.md) ist die Stammklasse für Schutzvorgänge.
-Bevor Schutzvorgänge durchgeführt werden können, muss eine Anwendung ein [ProtectionProfile](class_mip_protectionprofile.md) erstellen.
+Schutzprofile ist die Stamm Klasse für die Durchführung von Schutz Vorgängen.
+Eine Anwendung muss ein Schutzprofil erstellen, bevor Sie Schutz Vorgänge ausführen können.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const Settings& GetSettings() const  |  Ruft während der Initialisierung und der Lebensdauer die von [ProtectionProfile](class_mip_protectionprofile.md) verwendeten Einstellungen ab.
+public const Settings& GetSettings() const  |  Ruft Einstellungen ab, die von Schutzprofile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
 öffentliches void listenginesasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Listet Engines auf
-öffentliches void addengineasync (Konstante Schutz-Engine:: Settings & Settings, Konst Std:: shared_ptr\<void\>& context)  |  Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
-Public Std:: shared_ptr\<schutzengine\> addengine (konstant Protection Engine:: Settings & Settings)  |  Fügt eine neue Schutz-Engine zum Profil hinzu
-öffentliches void deleteengineasync (Konstante Std:: String & EngineID, Konst Std:: shared_ptr\<void\>& context)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
+öffentliches void addengineasync (Konstante Schutz-Engine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr\<schutzengine\> addengine (Konstante Schutz-Engine:: Settings & Settings)  |  Fügt eine neue Schutz-Engine zum Profil hinzu
+öffentliches void deleteengineasync (Konstanten Std:: String & EngineID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löscht die Schutz-Engine mit der angegebenen ID Alle Daten für die angegebene Engine werden gelöscht.
 public static MIP_API void __CDECL MIP::P rotectionprofile:: LoadAsync | Von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendete Einstellungen
 public static MIP_API Std:: shared_ptr&lt;Schutzprofile&gt; __CDECL MIP::P rotectionprofile:: Load | Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
 public static konstant MIP_API char * __CDECL MIP::P rotectionprofile:: GetVersion | Ruft die Bibliotheksversion ab.
 public static MIP_API Std:: shared_ptr&lt;publishinglicenseingefo&gt; __CDECL MIP::P rotectionprofile:: getpublishinglicenseingefo | Erstellt einen Halter für Details einer Veröffentlichungs Lizenz und kann zum Erstellen eines Schutz Handlers verwendet werden. 
 
-
 ## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
-Ruft während der Initialisierung und der Lebensdauer die von [ProtectionProfile](class_mip_protectionprofile.md) verwendeten Einstellungen ab.
+Ruft Einstellungen ab, die von Schutzprofile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
 
   
-**Gibt Folgendes zurück**: [Einstellungen](class_mip_protectionprofile_settings.md), die während der Initialisierung und Lebensdauer von [ProtectionProfile](class_mip_protectionprofile.md) verwendet werden
+**Gibt Folgendes zurück**: Einstellungen, die von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendet werden
   
 ### <a name="listenginesasync-function"></a>Listenginesasync-Funktion
 Startet den Vorgang zum Auflisten von Engines
 
 Parameter:  
-* **Kontext**: Client Kontext, der an Beobachter zurückgegeben wird
+* **context**: Clientkontext, der verdeckt an die Beobachter zurückgegeben wird.
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
+Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="listengines-function"></a>Listengines-Funktion
 Listet Engines auf
 
   
-**Gibt Folgendes zurück**: Zwischengespeicherte Engine-IDs
+**Rückgabe:** zwischengespeicherte Engine-IDs
   
 ### <a name="addengineasync-function"></a>Addengineasync-Funktion
 Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
 
 Parameter:  
-* **settings**: das [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md)-Objekt, das die Einstellungen der Engine angibt 
+* **Einstellungen**: das MIP::P rotectionengine:: Settings-Objekt, das die Einstellungen der Engine angibt. 
 
 
-* **Kontext**: Client Kontext, der an Beobachter zurückgegeben wird
+* **context**: Clientkontext, der verdeckt an die Beobachter zurückgegeben wird.
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
+Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="addengine-function"></a>Addengine-Funktion
 Fügt eine neue Schutz-Engine zum Profil hinzu
 
 Parameter:  
-* **settings**: das [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md)-Objekt, das die Einstellungen der Engine angibt
+* **Einstellungen**: das MIP::P rotectionengine:: Settings-Objekt, das die Einstellungen der Engine angibt.
 
 
 
   
-**Gibt Folgendes zurück**: Neu erstellte Schutz- [Engine](class_mip_protectionengine.md)
+**Gibt Folgendes zurück**: neu erstellte Schutz-Engine
   
 ### <a name="deleteengineasync-function"></a>Deleteengineasync-Funktion
 Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
@@ -86,10 +85,10 @@ Parameter:
 * **id**: die eindeutige Engine-ID 
 
 
-* **Kontext**: Client Kontext, der an Beobachter zurückgegeben wird
+* **context**: Clientkontext, der verdeckt an die Beobachter zurückgegeben wird.
 
 
-[ProtectionProfile::Observer](class_mip_protectionprofile_observer.md) wird bei Erfolg oder Fehler aufgerufen.
+Schutzprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
   
 ### <a name="deleteengine-function"></a>Deleteengine-Funktion
 Löscht die Schutz-Engine mit der angegebenen ID Alle Daten für die angegebene Engine werden gelöscht.
@@ -104,7 +103,7 @@ Von Protection Profile während der Initialisierung und während der gesamten Le
 
 Parameter:
 * **Einstellungen**: Einstellungen, die von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
-* **Kontext**: Derselbe Kontext wird an Schutz profile:: Observer:: onloadsuccess oder schützprofile:: Observer:: onloadfailure unverändert weitergeleitet.
+* **Kontext**: dieser Kontext wird an Schutz profile:: Observer:: onloadsuccess oder Schutzprofile:: Observer:: onloadfailure unverändert weitergeleitet.
 
 ### <a name="load-function"></a>Load-Funktion
 Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
@@ -114,7 +113,7 @@ Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
 Parameter:
 * **Einstellungen**: Einstellungen, die von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
 
-**Gibt Folgendes zurück**: Neu erstelltes Profil.
+**Gibt Folgendes zurück**: neu erstelltes Profil.
 
 ### <a name="getversion-function"></a>GetVersion-Funktion
 Ruft die Bibliotheksversion ab. 
@@ -125,6 +124,6 @@ Ruft die Bibliotheksversion ab.
 Erstellt einen Halter für Details einer Veröffentlichungs Lizenz und kann zum Erstellen eines Schutz Handlers verwendet werden. 
 
 Parameter:
-* **serializedPublishingLicense**: Die serialisierte Veröffentlichungs Lizenz.
+* **serializedpublishinglicense**: die serialisierte Veröffentlichungs Lizenz.
 
-**Gibt Folgendes zurück**: Ein Inhaber für Details einer Veröffentlichungs Lizenz. 
+**Gibt Folgendes zurück**: ein Inhaber für Details einer Veröffentlichungs Lizenz. 

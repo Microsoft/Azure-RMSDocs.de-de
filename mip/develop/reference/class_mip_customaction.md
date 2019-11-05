@@ -5,22 +5,22 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7e78d11cc85af5550a4d6ab235b3754d72b2c012
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 450ae0e455f74c6cb9b1f6b0b6d8aded9b30b2bd
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055164"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558910"
 ---
 # <a name="class-mipcustomaction"></a>mip::CustomAction-Klasse 
-[CustomAction](class_mip_customaction.md) ist eine generische Aktionsklasse, die die untergeordneten Eigenschaften der Aktion als Eigenschaftensammlung erfasst. Der Aufrufer muss sich über die Bedeutung der Aktion im Klaren sein.
+CustomAction ist eine generische Aktionsklasse, die alle untergeordneten Eigenschaften der Aktion als Eigenschaften Sammlung erfasst. Der Aufrufer muss sich über die Bedeutung der Aktion im Klaren sein.
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Ruft den Aktionsnamen ab.
-Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& GetProperties () Konstanten  |  Ruft die Schlüssel-Wert-Paar-Liste der Eigenschaften ab
+Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& GetProperties () Konstanten  |  Ruft die Schlüssel-Wert-Paar-Liste der Eigenschaften ab
   
 ## <a name="members"></a>Member
   
@@ -28,10 +28,10 @@ Public Konstanten Std::\<Vector Std::p Air\<Std:: String, Std:: String\>\>& GetP
 Ruft den Aktionsnamen ab.
 
   
-**Gibt Folgendes zurück**: Ein Aktionsname, falls vorhanden, eine leere Zeichenfolge.
+**Rückgabe**: Ein Aktionsname, falls vorhanden, andernfalls eine leere Zeichenfolge.
   
 ### <a name="getproperties-function"></a>GetProperties-Funktion
 Ruft die Schlüssel-Wert-Paar-Liste der Eigenschaften ab
 
   
-**Gibt Folgendes zurück**: Eine Liste von Schlüssel-Wert-Paaren.
+**Rückgabe**: Eine Schlüssel-Wert-Paar-Liste.

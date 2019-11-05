@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: de6d00cbd624ff21175b5020cd3b872269f9c926
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 7d6d35d5a1c560468845d0b04ae27e32dc40b671
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684113"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559284"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Hinzufügen oder Entfernen einer Bezeichnung zu oder aus einer Azure Information Protection-Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Nachdem Sie eine Azure Information Protection-Bezeichnung erstellt haben, können Sie diese zu einer Richtlinie hinzufügen und sie auf diese Weise für Benutzer zur Verfügung stellen. Wenn die Bezeichnung für alle Benutzer vorgesehen ist, fügen Sie sie zur globalen Richtlinie hinzu. Wenn die Bezeichnung für eine Gruppe von Benutzern vorgesehen ist, fügen Sie sie zu einer bereichsbezogenen Richtlinie hinzu. Eine Bezeichnung kann nur zu einer Richtlinie hinzugefügt werden. 
 
@@ -36,17 +36,17 @@ Wenn Sie eine bereichsbezogene Richtlinie erstellen müssen, sodass die Bezeichn
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>So fügen Sie eine Bezeichnung zu einer Richtlinie hinzu oder entfernen sie daraus
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection** - **Richtlinien** den Eintrag **Global** aus, wenn die hinzuzufügende oder zu entfernende Bezeichnung für alle Benutzer gilt.
+2. Über die Menüoption **Klassifizierungen** > **Richtlinien** : Wählen Sie im Bereich **Azure Information Protection** - **Richtlinien** die Option **Global** aus, wenn die Bezeichnung, die hinzugefügt oder entfernt werden soll, für alle Benutzer gilt.
 
     Wenn die hinzuzufügende oder zu entfernende Bezeichnung für eine Gruppe von Benutzern gilt, wählen Sie stattdessen Ihre bereichsbezogene Richtlinie aus.
 
-3. Wählen Sie auf dem Blatt **Richtlinie** den Eintrag **Bezeichnungen hinzufügen oder entfernen** aus.
+3. Wählen Sie im Bereich **Richtlinie** die Option **Bezeichnungen hinzufügen oder entfernen**aus.
 
-4. Auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** können Sie sämtliche Ihrer Bezeichnungen sehen. Die zugehörigen Kontrollkästchen sind aktiviert, wenn die Bezeichnungen bereits in einer Richtlinie enthalten sind. In der Spalte **Richtlinie** wird der entsprechende Richtlinienname angezeigt.
+4. Im Bereich **Richtlinie: Bezeichnungen hinzufügen oder entfernen** werden alle Bezeichnungen mit aktivierten Kontrollkästchen angezeigt, wenn Sie sich bereits in einer Richtlinie befinden, und der entsprechende Richtlinien Name in der Spalte **Richtlinie** .
      
     Untergeordnete Bezeichnungen werden eingezogen dargestellt. In einer bereichsbezogenen Richtlinie werden von der globalen Richtlinie geerbte Bezeichnungen als nicht verfügbar angezeigt.
     

@@ -11,21 +11,21 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e1f5b3c05ae7e8c0717ef4d0227eacda8eeade3e
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 8968dd5f8aa113ff87870b48e15892ec5b367f76
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673904"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559578"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Diese Anweisungen gelten für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
+> Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 > 
 > Wenn Sie nach Informationen suchen, um verschiedene Sprachen für Vertraulichkeits Bezeichnungen zu konfigurieren, verwenden Sie Office 365 Security & Compliance PowerShell und den *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
 
@@ -49,13 +49,13 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
-2. Über die Menüoption **Verwalten** > **Sprachen**: Klicken Sie auf dem Blatt**Azure Information Protection - Languages** (Azure Information Protection: Sprachen) auf **Neue Sprache für Übersetzung hinzufügen**. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
+2. Über die Menüoption " > **Sprachen** **Verwalten** ": Wählen Sie im Bereich " **Azure Information Protection-Sprachen** " die Option **neue Sprache für Übersetzung hinzufügen**aus. Wählen Sie die Sprachen aus, die Sie hinzufügen möchten, und klicken Sie dann auf **OK**. Sie können entweder den Namen der Sprache in das Suchfeld eingeben oder durch die Liste der verfügbaren Sprachen scrollen.
 
-3. Ihre ausgewählten Sprachen werden nun auf dem Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) angezeigt:
+3. Die ausgewählten Sprachen werden nun im Bereich **Azure Information Protection-Sprachen** angezeigt:
     
     - Wählen Sie zum Hinzufügen einer anderen Sprache **Neue Sprache für die Übersetzung hinzufügen** aus, und wiederholen Sie die vorherigen Schritte. 
         
@@ -74,9 +74,9 @@ Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Offi
 
 7. Wenn Sie alle XML-Dateien bearbeitet haben, erstellen Sie einen neuen ZIP-komprimierten Ordner, der diese Dateien enthält. Der komprimierte Ordner kann mit einem beliebigen Namen versehen werden, muss jedoch die Erweiterung ZIP aufweisen.
     
-    Tipp: Sie müssen nicht warten, bis Sie jede Sprachdatei, die Sie heruntergeladen haben, bearbeitet haben. Stattdessen können Sie verschiedene Sprachen schrittweise ausrollen, indem Sie in die.zip-Datei eine Teilmenge der gesamten heruntergeladenen Dateien aufnehmen. Wiederholen Sie dann die Schritte 7 und 8, wenn Sie die Übersetzungen für weitere Sprachen abgeschlossen haben.
+    Tipp: Sie müssen nicht warten, bis Sie jede Sprachdatei bearbeitet haben, die Sie heruntergeladen haben. Stattdessen können Sie verschiedene Sprachen schrittweise ausrollen, indem Sie in die.zip-Datei eine Teilmenge der gesamten heruntergeladenen Dateien aufnehmen. Wiederholen Sie dann die Schritte 7 und 8, wenn Sie die Übersetzungen für weitere Sprachen abgeschlossen haben.
 
-8. Kehren Sie zum Blatt **Azure Information Protection - Languages** (Azure Information Protection: Sprachen) zurück, und klicken Sie auf **Importieren**. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
+8. Kehren Sie zum Bereich **Azure Information Protection-Sprachen** zurück, und wählen Sie **importieren**aus. Hinweis: Wenn diese Option nicht verfügbar ist, deaktivieren Sie zuerst das Kontrollkästchen **SPRACHENNAME** oder die Kontrollkästchen der einzeln ausgewählten Sprachen.
     
     Nachdem der Import abgeschlossen wurde, werden die lokalisierten Namen und Beschreibungen im Bereich „Benutzer“ heruntergeladen.
 

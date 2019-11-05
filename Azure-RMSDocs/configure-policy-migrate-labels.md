@@ -3,8 +3,8 @@ title: Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlic
 description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen für Clients und Dienste, die Microsoft Information Protection Framework unterstützen.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 10/29/2019
+manager: rkarlin
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0ca0c5ef490ffabf50d8d6f7e5c0845f614dcff3
-ms.sourcegitcommit: fddfc96390fa40a0365e3be1293618a2c3d8a6fe
+ms.openlocfilehash: b07c2e6ffe7e9eae6b1a9130890c33d033264474
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142823"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559573"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -79,7 +79,7 @@ Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig.
 
 - Lokalisierte Zeichenfolgen für die Bezeichnungen werden nicht migriert. Definieren Sie neue lokalisierte Zeichen folgen für die migrierten Bezeichnungen mithilfe von Office 365 Security & Compliance PowerShell und dem *localesettings* -Parameter für " [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)".
 
-- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. Wenn Sie jedoch eine migrierte Kennzeichnung in einem der Admin-Centers bearbeiten, müssen Sie im Azure-Portal zum Blatt **Azure Information Protection – Einheitliche Bezeichnung** zurückkehren und **Veröffentlichen** auswählen. Diese zusätzliche Aktion ist erforderlich, damit die Azure Information Protection-Clients (klassisch) die Bezeichnungs Änderungen übernehmen können.
+- Wenn Sie nach der Migration eine migrierte Bezeichnung im Azure-Portal bearbeiten, wird die entsprechende Änderung automatisch in den Admin-Centers angezeigt. Wenn Sie jedoch eine migrierte Bezeichnung in einem der Admin Center bearbeiten, müssen Sie zum Bereich Azure-Portal, **Azure Information Protection-vereinheitlichte Bezeichnung** zurückkehren und **veröffentlichen**auswählen. Diese zusätzliche Aktion ist erforderlich, damit die Azure Information Protection-Clients (klassisch) die Bezeichnungs Änderungen übernehmen können.
 
 ### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>In den Admin-Centers nicht unterstützte Bezeichnungseinstellungen
 
@@ -107,7 +107,7 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 
 Verwenden Sie die folgende Tabelle, um zu ermitteln, wie sich die gleiche Schutz Einstellung für eine Bezeichnung anders verhält, je nachdem, ob Sie vom Azure Information Protection Client (klassisch), vom Azure Information Protection Unified Label-Client oder von Office-Apps verwendet wird. , bei denen die Bezeichnung bereits integriert ist (auch bekannt als "Native Büro Bezeichnung"). Die Unterschiede im Bezeichnungs Verhalten können Ihre Entscheidung ändern, ob die Bezeichnungen veröffentlicht werden sollen, insbesondere wenn Sie über eine Kombination von Clients in Ihrer Organisation verfügen.
 
-Wenn Sie nicht sicher sind, wie Ihre Schutzeinstellungen konfiguriert sind, zeigen Sie die zugehörigen Einstellungen auf dem Blatt **Schutz** im Azure-Portal an. Eine Anleitung zu diesem Schritt finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
+Wenn Sie nicht sicher sind, wie Ihre Schutzeinstellungen konfiguriert sind, können Sie die Einstellungen im Bereich **Schutz** im Azure-Portal anzeigen. Eine Anleitung zu diesem Schritt finden Sie unter [So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
 Schutzeinstellungen, die sich genauso verhalten, werden in der Tabelle nicht aufgeführt, mit den folgenden Ausnahmen:
 - Wenn Sie Office-Apps mit integrierter Bezeichnungsfunktion verwenden, werden Bezeichnungen im Datei-Explorer nicht angezeigt, es sei denn, Sie installieren auch den Azure Information Protection Unified Labeling-Client.
@@ -140,20 +140,20 @@ Verwenden Sie die folgenden Anweisungen, um Ihre Mandanten-und Azure Information
 
 Sie müssen Kompatibilitäts Administrator, Kompatibilitäts Daten Administrator, Sicherheitsadministrator oder globaler Administrator sein, um ihre Bezeichnungen zu migrieren.
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
 2. Wählen Sie in der Menüoption **Verwalten** die Option **vereinheitlichte Bezeichnung**aus.
 
-3. Wählen Sie auf dem Blatt **Azure Information Protection – Einheitliche Bezeichnungen** **Aktivieren** aus, und befolgen Sie die Onlineanweisungen.
+3. Wählen Sie im Bereich **Azure Information Protection vereinheitlichte Bezeichnung** die Option **aktivieren** aus, und befolgen Sie die Online Anweisungen.
     
     Wenn die Option zum Aktivieren nicht verfügbar ist, überprüfen Sie den **Status der vereinheitlichten Bezeichnung**: Wenn Sie **aktiviert**sehen, wird für Ihren Mandanten bereits der vereinheitlichte Bezeichnungs Speicher verwendet, und es ist nicht erforderlich, ihre Bezeichnungen zu migrieren.
 
 Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und Diensten, die einheitliche Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling), verwendet werden. Allerdings müssen Sie diese Bezeichnungen zuerst in einem der Admin Center veröffentlichen: Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center.
 
 > [!IMPORTANT]
-> Wenn Sie die Bezeichnungen außerhalb des Azure-Portal bearbeiten, kehren Sie für Azure Information Protection Clients (klassisch) zu diesem **Azure Information Protection vereinheitlichten** Blatt "Bezeichnung" zurück, und wählen Sie " **veröffentlichen**" aus.
+> Wenn Sie die Bezeichnungen außerhalb des Azure-Portal bearbeiten, kehren Sie für Azure Information Protection Clients (klassisch) zu diesem **Azure Information Protection vereinheitlichten Beschriftungs** Bereich zurück, und wählen Sie **veröffentlichen**aus.
 
 ### <a name="copy-policies"></a>Richtlinien kopieren
 
@@ -162,7 +162,7 @@ Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und
 
 Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center.
 
-Beachten Sie Folgendes, bevor Sie auf dem Blatt " **Azure Information Protection-Unified-Bezeichnung** " die Option **Richtlinien kopieren (Vorschau)** auswählen:
+Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)** im Bereich **Azure Information Protection vereinheitlichte Bezeichnung** auswählen:
 
 - Richtlinien und Einstellungen können nicht selektiv zum Kopieren ausgewählt werden. Alle Richtlinien (die **globale** Richtlinie und alle Bereichs bezogenen Richtlinien) werden kopiert, und alle Einstellungen, die als Bezeichnungs Richtlinien Einstellungen unterstützt werden, werden kopiert. Wenn Sie bereits über eine Bezeichnungs Richtlinie mit demselben Namen verfügen, wird Sie mit den Richtlinien Einstellungen in der Azure-Portal überschrieben.
 
@@ -189,6 +189,14 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 - Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) verwenden.
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>Folgende Dienste unterstützen derzeit einheitliche Bezeichnungen:
+
+- [Power BI (in der Vorschau)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
+
+- Office Online (in der Vorschau) und Outlook im Web
+
+- SharePoint Online, onedrive for Business, Microsoft Teams und Office 365-Gruppen (in der Vorschau)
+    
+    Weitere Informationen finden Sie unter [Verwenden von Vertraulichkeits Bezeichnungen mit Microsoft Teams, Office 365-Gruppen und SharePoint-Websites (öffentliche Vorschau)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-teams-groups-sites) und [Aktivieren von Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive (Public Preview)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 - Microsoft Defender Advanced Threat Protection
 

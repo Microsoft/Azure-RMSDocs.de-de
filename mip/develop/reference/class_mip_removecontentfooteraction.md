@@ -5,13 +5,13 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a48d90736e554a89df0bbc94e187dff5c96b3a09
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 60202b42e05e47784df20a7c1193182595cf0766
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057315"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560581"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>mip::RemoveContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass der Fußzeileninhalt aus dem Dokument entfernt wird.
@@ -27,4 +27,4 @@ Public Konstanten Std:: Vector\<Std:: String\>& getuielementnames ()  |  Ruft ei
 Ruft eine Liste mit Namen ab, die zur Suche nach zu entfernenden Benutzeroberflächenelementen verwendet werden sollte
 
   
-**Gibt Folgendes zurück**: Eine Liste der Namen der Benutzeroberflächen Elemente.
+**Rückgabe**: Eine Liste mit Namen der Benutzeroberflächenelemente.
