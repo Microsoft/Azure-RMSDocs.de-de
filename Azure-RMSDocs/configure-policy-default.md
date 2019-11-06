@@ -114,7 +114,7 @@ Einige Einstellungen wurden nach dem 31. Juli 2017 hinzugefügt.
 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|
-|Select the default label (Standardbezeichnung auswählen)|Keine|
+|Select the default label (Standardbezeichnung auswählen)|None|
 |Überwachungsdaten an die Azure Information Protection-Analyse senden|Deaktiviert|
 |All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Deaktiviert|
 |Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten.|Deaktiviert|
@@ -162,7 +162,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Deaktiviert|
-|Select the default label (Standardbezeichnung auswählen)|Keine|
+|Select the default label (Standardbezeichnung auswählen)|None|
 |Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten.|Deaktiviert|
 |Wenden Sie für E-Mail-Nachrichten mit Anlagen eine Bezeichnung an, die der höchsten Einstufung dieser Anlagen entspricht|Deaktiviert|
 |Geben Sie eine benutzerdefinierte URL für die „Weitere Infos“-Webseite des Azure Information Protection-Clients an|Leer|
@@ -200,7 +200,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 |Einstellung|Wert|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Deaktiviert|
-|Select the default label (Standardbezeichnung auswählen)|Keine|
+|Select the default label (Standardbezeichnung auswählen)|None|
 |Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung verwenden, eine Bezeichnung entfernen oder den Schutz entfernen möchten.|Deaktiviert|
 |Geben Sie eine benutzerdefinierte URL für die „Weitere Infos“-Webseite des Azure Information Protection-Clients an|Leer|
 
