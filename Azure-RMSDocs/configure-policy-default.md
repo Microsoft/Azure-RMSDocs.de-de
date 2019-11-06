@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ea2c89c2ddbebc7a3efe6248a6073ceb82a8f21f
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 892d19f9318a01f527b4dc5df686300321497f29
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447089"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559615"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
@@ -37,7 +37,7 @@ Sie können auf die folgenden Werte verweisen, um die Azure Information Protecti
 > [!IMPORTANT]
 > Ab dem 2019 werden die Standard Bezeichnungen nicht automatisch für neue Kunden erstellt. Diese Mandanten werden automatisch für die Plattform für einheitliche Bezeichnungen bereitgestellt, sodass Bezeichnungen nach der Konfiguration im Azure-Portal nicht extra migriert werden müssen.
 > 
-> Wenn für diese Mandanten noch keine Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center erstellt wurden, können Sie Standardbezeichnungen auf Grundlage der aktuellen Standardrichtlinie für Azure Information Protection erstellen. Zu diesem Zweck wählen Sie auf dem Blatt **Bezeichnungen** die Option **Standardbezeichnungen generieren** aus und fügen die Bezeichnungen der globalen Richtlinie hinzu. Ausführliche Hinweise finden Sie unter [Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal](quickstart-viewpolicy.md).
+> Wenn für diese Mandanten noch keine Vertraulichkeitsbezeichnungen im Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center erstellt wurden, können Sie Standardbezeichnungen auf Grundlage der aktuellen Standardrichtlinie für Azure Information Protection erstellen. Wählen Sie hierzu im Bereich **Bezeichnungen** die Option **Standard Bezeichnungen generieren** aus, und fügen Sie die Bezeichnungen der globalen Richtlinie hinzu. Ausführliche Hinweise finden Sie unter [Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal](quickstart-viewpolicy.md).
 
 
 ## <a name="current-default-policy"></a>Aktuelle Standardrichtlinie
@@ -73,10 +73,10 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
-|Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Persönlich|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Öffentlich|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Allgemein|Geschäftsdaten, die nicht zur öffentlichen Nutzung vorgesehen sind. Sie können jedoch nach Bedarf für externe Partner freigegeben werden. Beispiele sind u.a. ein unternehmensinternes Telefonverzeichnis, Organigramme, interne Standards und die meiste interne Kommunikation.|**Aktiviert**: Ein <br /><br />**Farbe**: Blau <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Confidential (Vertraulich)|Sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.|**Aktiviert**: Ein <br /><br />**Farbe**: Orange<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Streng vertraulich|Sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -84,7 +84,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[1]](#footnote-1)|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -102,17 +102,17 @@ Die Berechtigungen für den Schutz stimmen mit denen in der [Standardvorlage](co
 
 ### <a name="information-protection-bar"></a>Information Protection-Leiste
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Titel|Vertraulichkeit|
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
 Einige Einstellungen wurden nach dem 31. Juli 2017 hinzugefügt.
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
 |Select the default label (Standardbezeichnung auswählen)|Keine|
 |Überwachungsdaten an die Azure Information Protection-Analyse senden|Deaktiviert|
@@ -131,10 +131,10 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
-|Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Persönlich|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Öffentlich|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Allgemein|Geschäftsdaten, die nicht zur öffentlichen Nutzung vorgesehen sind. Sie können jedoch nach Bedarf für externe Partner freigegeben werden. Beispiele sind u.a. ein unternehmensinternes Telefonverzeichnis, Organigramme, interne Standards und die meiste interne Kommunikation.|**Aktiviert**: Ein <br /><br />**Farbe**: Blau <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Confidential (Vertraulich)|Sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.|**Aktiviert**: Ein <br /><br />**Farbe**: Orange<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Streng vertraulich|Sehr sensible Geschäftsdaten, die dem Unternehmen schaden, wenn sie an Unbefugte weitergegeben werden. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -142,7 +142,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -151,15 +151,15 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="information-protection-bar"></a>Information Protection-Leiste
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Titel|Vertraulichkeit|
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Deaktiviert|
 |Select the default label (Standardbezeichnung auswählen)|Keine|
@@ -171,33 +171,33 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
-|Personal (Persönlich)|Nur zur privaten Verwendung. This data will not be monitored by the organization. Personal information must not include any business-related data (Persönliche Informationen dürfen keine geschäftlichen Daten enthalten).|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
-|Public (Öffentlich)|Diese internen Informationen können von beliebigen Benutzern innerhalb oder außerhalb des Unternehmens verwendet werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
-|Internal (Intern)|Diese Informationen umfassen ein breites Spektrum interner Geschäftsdaten, die von allen Mitarbeitern verwendet und die für autorisierte Kunden und Geschäftspartner freigegeben werden können. Beispiele für interne Informationen sind Unternehmensrichtlinien und der Großteil der internen Kommunikation.|**Aktiviert**: Ein <br /><br />**Farbe**: Blau <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail): <br /><br />Vertraulichkeit: Intern<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Persönlich|Nur zur privaten Verwendung. This data will not be monitored by the organization. Personal information must not include any business-related data (Persönliche Informationen dürfen keine geschäftlichen Daten enthalten).|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Öffentlich|Diese internen Informationen können von beliebigen Benutzern innerhalb oder außerhalb des Unternehmens verwendet werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
+|Intern|Diese Informationen umfassen ein breites Spektrum interner Geschäftsdaten, die von allen Mitarbeitern verwendet und die für autorisierte Kunden und Geschäftspartner freigegeben werden können. Beispiele für interne Informationen sind Unternehmensrichtlinien und der Großteil der internen Kommunikation.|**Aktiviert**: Ein <br /><br />**Farbe**: Blau <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail): <br /><br />Vertraulichkeit: Intern<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Confidential (Vertraulich)|This data includes sensitive business information. (Diese Daten umfassen sensible Geschäftsinformationen.) Exposing this data to unauthorized users may cause damage to the organization. Examples for Confidential information are employee information, individual customer projects or contracts, and sales account data. (Beispiele für vertrauliche Informationen sind Mitarbeiterdaten, individuelle Kundenprojekte oder -verträge sowie Daten zu Verkaufskonten.)|**Aktiviert**: Ein <br /><br />**Farbe**: Orange<br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail):<br /><br /> Vertraulichkeit: Vertraulich<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Geheim|This data includes highly sensitive information for the business that must be protected. (Diese Daten umfassen äußerst sensible Informationen des Unternehmens, die geschützt werden müssen.) Exposing Secret data to unauthorized users may cause serious damage to the organization. Examples for Secret information are personal identification information, customer records, source code, and pre-announced financial reports. (Beispiele für geheime Informationen sind PINs, Kundendatensätze, Quellcode und unveröffentlichte Finanzberichte.)|**Aktiviert**: Ein <br /><br />**Farbe**: Rot<br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail):<br /><br /> Vertraulichkeit: Geheim<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Secret > All Company (Geheim > Gesamtes Unternehmen)|This data includes sensitive business information - permitted for all company employees. (Diese Daten umfassen sensible Geschäftsinformationen, die für alle Mitarbeiter des Unternehmens zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Secret \ My Group (Geheim > Meine Gruppe)|This data includes sensitive business information - permitted for employee groups only (Diese Daten umfassen sensible Geschäftsinformationen, die nur für bestimmte Mitarbeitergruppen zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 
 ### <a name="information-protection-bar"></a>Information Protection-Leiste
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Titel|Vertraulichkeit|
 |QuickInfo|Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business. (Für die Vertraulichkeit von Informationen sind vier Einstellungen verfügbar („Öffentlich“, „Intern“, „Vertraulich“ und „Geheim“). Anhand dieser Einstellungen erkennt der Benutzer, mit welchem Risiko die Offenlegung der Informationen gegenüber nicht autorisierten Benutzern innerhalb oder außerhalb des Unternehmens einhergeht.)|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
-|Einstellung|Value|
+|Einstellung|Wert|
 |-------------------------------|---------------------------|
 |All documents and emails must have a label (applied automatically or by users) (Alle Dokumente und E-Mails müssen über eine Bezeichnung verfügen (automatisch oder von Benutzern angewendet).)|Deaktiviert|
 |Select the default label (Standardbezeichnung auswählen)|Keine|
