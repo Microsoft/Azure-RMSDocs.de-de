@@ -4,7 +4,7 @@ description: Stellen Sie fest, welche Anwendungen über RMS-APIs den Azure Right
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/01/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,21 +13,21 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60d3f5d011f44f44ef77923615ab637b9b2e4311
-ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
+ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
+ms.sourcegitcommit: 6da7d4fcad330ce1eff4eb3f8694a05566ee8450
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73428697"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73710240"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Anwendungen mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-In der folgenden Tabelle sind die Anwendungen und Lösungen aufgeführt, die den Azure Rights Management-Dienst (Azure RMS) nativ unterstützen, der Datenschutz für Azure Information Protection bietet.
+Verwenden Sie die folgenden Informationen, um die Anwendungen und Lösungen zu identifizieren, die die systemeigene Unterstützung für den Azure-Rights Management Dienst (Azure RMS) bieten, der den Datenschutz für Azure Information Protection bereitstellt.
 
-Die Rights Management-Unterstützung ist in diesen Anwendungen und Lösungen eng integriert, d.h., Nutzungseinschränkungen werden mithilfe der Rights Management-APIs unterstützt. Diese Anwendungen und Lösungen werden auch als „RMS-aktiviert“ bezeichnet.
+Für diese Anwendungen und Lösungen ist Rights Management-Unterstützung eng integriert, indem die Rights Management-APIs zur Unterstützung von [Nutzungseinschränkungen](configure-usage-rights.md)verwendet werden. Diese Anwendungen und Lösungen werden auch als „RMS-aktiviert“ bezeichnet.
 
 Wenn nicht anders angegeben, gelten die unterstützten Funktionen für Azure RMS und AD RMS. Außerdem ist für die AD RMS-Unterstützung unter iOS, Android, macOS und Windows Phone 8.1 die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)) erforderlich.
 
@@ -139,9 +139,13 @@ Weitere Informationen zur Verwendung der App finden Sie unter [Häufig gestellte
 
 Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md)
+- Azure Information Protection Client Administrator Handbücher:
+    - [Einheitlicher Bezeichnungs Client](./rms-client/clientv2-admin-guide.md)
+    - [Klassischer Client](./rms-client/client-admin-guide.md)
 
-- [Azure Information Protection-Client – Benutzerhandbuch](./rms-client/client-user-guide.md)
+- Azure Information Protection Benutzerhandbücher für den Client:
+    - [Einheitlicher Bezeichnungs Client](./rms-client/clientv2-user-guide.md)
+    - [Klassischer Client](./rms-client/client-user-guide.md)
 
 - [Häufig gestellte Fragen zur Azure Information Protection-App für iOS und Android](./rms-client/mobile-app-faq.md)
 
@@ -182,30 +186,12 @@ Zudem unterliegt der Azure Information Protection-Client folgenden Einschränkun
 
 ## <a name="rms-enlightened-solutions"></a>RMS-aktivierte Lösungen
 
-Die folgende Tabelle zeigt RMS-aktivierte Lösungen von Softwareherstellern.
-
-Wenn Sie Softwarehersteller sind und über eine Lösung verfügen, die nicht in dieser Tabelle aufgeführt ist, registrieren Sie Ihre Anwendung bei Azure AD. Weitere Informationen finden Sie unter [Vorgehensweise: Registrieren Ihrer App für Azure AD und Aktivieren der App für RMS](./develop/authentication-integration.md).
-
-
-|Produkt|Hersteller|Description|
-|-------------------------------|---------------------------|-----------------|
-|Absolut|Absolut|Verhinderung von Datenverlust (Data Loss Prevention, DLP) zum Schutz von Inhalten.|
-|Content Locker|VMware|Speichert, nutzt und erstellt geschützte Inhalte.|
-|Controle|TakeControle|eDiscovery mithilfe von Bezeichnung und Schutz.|
-|Forcepoint|Forcepoint DLP|Endpunktlösung zur Verhinderung von Datenverlust, die die Sicherheitsrichtlinien für die Daten einer Organisation verstärken sollen.|
-|Halocore|Secude|Schützt aus SAP-Umgebungen exportierte Dateien.|
-|MaaS 360|IBM|Integration zum Nutzen und Schützen von Dokumenten.|
-|Mobiliya|Mobiliya|Sichert Dokumente aus Documentum-Repositorys von EMC.
-|Ramessys|Ramessys|Integration für Chemcart und Documentum.
-|Sealpath|Sealpath Technologies|Integration in CAD-Entwurfstools wie AutoCAD und Siemens Jt2GO.
-|SecRMM|Sqaudra Technologies |Dokumentschutz für Wechselmedien.
-|Security Sheriff|CryptZone |Zugriffsverwaltung auf SharePoint und Schutz für Dokumente basierend auf deren Klassifizierung und Zugriffsberechtigungen.
-|Symantec DLP|Symantec |Erkennung und Überwachung für geschützte Dateien.
+Die neuesten Informationen zu Lösungen, die den Azure Rights Management-Dienst und Azure Information Protection unterstützen, finden Sie im Blogbeitrag [Microsoft Ignite 2019 – Microsoft Information Protection Solutions Partner Ecosystem Showcase](https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/Microsoft-Ignite-2019-Microsoft-Information-Protection-solutions/ba-p/967024).
 
 ## <a name="next-steps"></a>Nächste Schritte
 Weitere Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
-Weitere Informationen dazu, wie die gängigsten Anwendungen Azure RMS unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Diensts durch Anwendungen](./applications-support.md).
+Weitere Informationen dazu, wie die am häufigsten verwendeten Anwendungen den Azure Rights Management-Dienst unterstützen, finden Sie unter [Unterstützung des Azure Rights Management-Dienstanbieter durch Anwendungen](./applications-support.md).
 
-Informationen dazu, wie die gängigsten Anwendungen für Azure RMS konfiguriert werden, finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
+Informationen zum Konfigurieren der am häufigsten verwendeten Anwendungen für den Azure Rights Management-Dienst finden Sie unter [Konfigurieren von Anwendungen für Azure Rights Management](configure-applications.md).
 
