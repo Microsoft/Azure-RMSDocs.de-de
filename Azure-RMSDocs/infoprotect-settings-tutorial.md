@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712581"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559202"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -44,7 +44,7 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das diesen Plan enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Das Blatt „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
+2. Der Bereich „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
     Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
@@ -80,7 +80,7 @@ Im Azure-Portal wird die globale Richtlinie bearbeitet, um Richtlinieneinstellun
 
 1. Öffnen Sie ein neues Browserfenster, und melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zu **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -103,7 +103,7 @@ Im Azure-Portal wird die globale Richtlinie bearbeitet, um Richtlinieneinstellun
     
     ![Azure Information Protection-Tutorial: Geänderte Standardeinstellungen](./media/defaultsettings-aip-changed.png)
 
-5. Wählen Sie **Speichern** auf diesem Blatt **Richtlinie: Global** aus, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, wählen Sie **OK** aus. 
+5. Wählen Sie **Speichern** auf diesem Blatt **Richtlinie: Global** aus, und klicken Sie auf **OK**, wenn Sie zum Bestätigen der Aktion aufgefordert werden. 
 
 ## <a name="see-your-policy-settings-in-action"></a>Testen Ihrer Richtlinieneinstellungen 
 

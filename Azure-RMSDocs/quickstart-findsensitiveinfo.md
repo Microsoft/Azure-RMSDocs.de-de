@@ -4,18 +4,18 @@ description: Verwenden Sie den Azure Information Protection-Scanner, um nach ver
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 9e4899d918701d59f5fc14db9264d1f983c9df60
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: c00aebd2af57dfbb7d9897d200ef3601ebf26ed3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447690"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559943"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
@@ -24,7 +24,7 @@ ms.locfileid: "72447690"
 In dieser Schnellstartanleitung installieren und konfigurieren Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden. Beispiel: Ein lokaler Ordner, eine Netzwerkfreigabe oder SharePoint Server.
 
 > [!NOTE]
-> Sie können diese Schnellstartanleitung mit der aktuellen allgemein verfügbaren Version des Azure Information Protection-Clients (klassisch) oder der aktuellen Vorschauversion des Azure Information Protection-Clients für einheitliche Bezeichnungen verwenden.
+> Sie können diese Schnellstartanleitung mit der aktuellen allgemein verfügbaren Version des Azure Information Protection-Clients (klassisch) oder des Azure Information Protection-Clients für einheitliche Bezeichnungen verwenden, der eine Vorschauversion des Scanners enthält.
 >  
 > Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 
@@ -64,41 +64,41 @@ Führen Sie als ersten Test, um zu bestätigen, dass der Scanner ausgeführt wir
 
 Bevor Sie den Scanner installieren, erstellen Sie im Azure-Portal ein Profil dafür. Dieses Profil enthält Scannereinstellungen sowie Speicherorte der zu scannenden Datenrepositorys.
 
-1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster, und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal). Navigieren Sie anschließend zum Bereich **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
-2. Suchen Sie auf dem linken Blatt nach den **Scanneroptionen**, und wählen Sie **Profile** aus.
+2. Suchen Sie im linken Bereich die **Scanneroptionen**, und klicken Sie auf **Profile**.
 
-3. Wählen Sie auf dem Blatt **Azure Information Protection – Profile** die Option **Hinzufügen** aus:
+3. Klicken Sie im Bereich **Azure Information Protection – Profile** auf die Option **Hinzufügen**:
     
     ![Hinzufügen eines Profils für den Azure Information Protection-Scanner](./media/scanner-add-profile.png)
 
-4. Geben Sie auf dem Blatt **Neues Profil hinzufügen** einen Namen für den Scanner ein, der zum Erkennen der Konfigurationseinstellungen und der Datenrepositorys verwendet wird, die überprüft werden sollen. Für diese Schnellstartanleitung können Sie z.B. **Schnellstart** eingeben. Diesen Profilnamen müssen Sie angeben, wenn Sie den Scanner später installieren.
+4. Geben Sie im Bereich **Neues Profil hinzufügen** einen Namen für den Scanner ein, der zum Erkennen der Konfigurationseinstellungen und der Datenrepositorys verwendet wird, die überprüft werden sollen. Für diese Schnellstartanleitung können Sie z.B. **Schnellstart** eingeben. Diesen Profilnamen müssen Sie angeben, wenn Sie den Scanner später installieren.
     
     Optional können Sie eine Beschreibung für administrative Zwecke eingeben, damit Sie den Profilnamen des Scanners leichter erkennen.
 
-5. Suchen Sie den Abschnitt **Richtlinienerzwingung**, und wählen Sie für diese Schnellstartanleitung nur eine Einstellung aus: Wählen Sie für **Erzwingen** die Option **Aus**. Klicken Sie dann auf **Speichern**, aber schließen Sie das Blatt nicht.
+5. Suchen Sie den Abschnitt **Richtlinienerzwingung**, und wählen Sie für diese Schnellstartanleitung nur eine Einstellung aus: Wählen Sie für **Erzwingen** die Option **Aus**. Klicken Sie dann auf **Speichern**, aber schließen Sie den Bereich nicht.
     
     Die Einstellungen konfigurieren den Scanner so, dass eine einmalige Ermittlung aller Dateien in Ihrem angegebenen Datenrepository durchgeführt wird. Bei dieser Überprüfung wird nach allen bekannten vertraulichen Informationstypen gesucht. Sie müssen dabei nicht zuerst Ihre Azure Information Protection-Bezeichnungen oder Einstellungen konfigurieren.
 
 6. Nachdem Sie das Profil erstellt und gespeichert haben, können Sie zur Option **Repositorys konfigurieren** zurückkehren, um Ihren lokalen Ordner als den Datenspeicher anzugeben, der überprüft werden soll.
     
-    Wählen Sie auf dem Blatt **Neues Profil hinzufügen** die Option **Repositorys konfigurieren** aus, um das Blatt **Repositorys** zu öffnen:
+    Klicken Sie im Bereich **Neues Profil hinzufügen** auf die Option **Repositorys konfigurieren**, um das den Bereich **Repositorys** zu öffnen:
     
     ![Konfigurieren von Datenrepositorys für den Azure Information Protection-Scanner](./media/scanner-repositories-bar.png)
 
-7. Wählen Sie auf dem Blatt **Repositorys** die Option **Hinzufügen** aus:
+7. Klicken Sie im Bereich **Repositorys** auf die Option **Hinzufügen**:
     
     ![Hinzufügen eines Datenrepositorys für den Azure Information Protection-Scanner](./media/scanner-repository-add.png)
 
-8. Geben Sie auf dem Blatt **Repository** Ihren lokalen Ordner an, den Sie im ersten Schritt erstellt haben. Beispiel: `C:\TestScanner`
+8. Geben Sie im Bereich **Repository** Ihren lokalen Ordner an, den Sie im ersten Schritt erstellt haben. Beispiel: `C:\TestScanner`
     
-    Nehmen Sie keine Änderungen an den restlichen Einstellungen auf diesem Blatt vor, sondern behalten Sie diese als **Profilstandard** bei. So werden die Einstellungen vom Datenrepository aus dem Scannerprofil übernommen. 
+    Nehmen Sie keine Änderungen an den restlichen Einstellungen in diesem Bereich vor, sondern behalten Sie diese als **Profilstandard** bei. So werden die Einstellungen vom Datenrepository aus dem Scannerprofil übernommen. 
     
     Wählen Sie **Speichern** aus.
 
-9. Wenn Sie zum Blatt **Azure Information Protection – Profile** zurückkehren, werden dort jetzt Ihr Profilname sowie die Spalte **ZEITPLAN** mit der Einstellung **Manuell** und die leere Spalte **ERZWINGEN** angezeigt. 
+9. Wenn Sie zum Bereich **Azure Information Protection – Profile** zurückkehren, werden dort jetzt Ihr Profilname sowie die Spalte **ZEITPLAN** mit der Einstellung **Manuell** und die leere Spalte **ERZWINGEN** angezeigt. 
     
     Die Spalte **KNOTEN** zeigt **0** an, weil Sie die Überprüfung für dieses Profil noch nicht installiert haben.
 
@@ -116,7 +116,7 @@ Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben ers
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Starten der Überprüfung und Überprüfen des erfolgreichen Abschlusses
 
-1. Im Azure-Portal aktualisieren Sie das Blatt **Azure Information Protection – Profile**. In der Spalte **KNOTEN** wird jetzt **1** angezeigt.
+1. Im Azure-Portal aktualisieren Sie den Bereich **Azure Information Protection – Profile**. In der Spalte **KNOTEN** wird jetzt **1** angezeigt.
 
 2. Wählen Sie Ihren Profilnamen und dann die Option **Jetzt überprüfen** aus:
     
@@ -128,7 +128,7 @@ Nun können Sie den Scanner mit dem Scannerprofil installieren, das Sie eben ers
     
     Warten Sie, bis die Werte für die Spalten **LETZTE ÜBERPRÜFUNGSERGEBNISSE** und **LETZTE ÜBERPRÜFUNG (ENDZEIT)** angezeigt werden.
     
-    Überprüfen Sie alternativ dazu das lokale Windows-Ereignisprotokoll **Anwendungen und Dienste** – **Azure Information Protection**. Bestätigen Sie die ID **911** des Informationsereignisses für den Prozess **MSIP.Scanner**. Der Ereignisprotokolleintrag enthält darüber hinaus eine Zusammenfassung der Ergebnisse der Überprüfung.
+    Alternativ gilt für den Scanner des klassischen Clients Folgendes: Überprüfen Sie das lokale Ereignisprotokoll **Anwendungen und Dienste**, **Azure Information Protection**. Bestätigen Sie die ID **911** des Informationsereignisses für den Prozess **MSIP.Scanner**. Der Ereignisprotokolleintrag enthält darüber hinaus eine Zusammenfassung der Ergebnisse der Überprüfung.
 
 ## <a name="see-detailed-results"></a>Anzeigen detaillierter Ergebnisse
 
@@ -153,7 +153,7 @@ In Excel zeigen die ersten beiden Spalten Ihr Datenspeicherrepository und den Da
         
             http://sp2016/Shared Documents
 
-2. Starten Sie den Scanner erneut: Stellen Sie auf dem Blatt **Azure Information Protection – Profile** sicher, dass Ihr Profil ausgewählt ist, und wählen Sie dann die Option **Jetzt scannen** aus:
+2. Starten Sie den Scanner erneut: Stellen Sie im Bereich **Azure Information Protection – Profile** sicher, dass Ihr Profil ausgewählt ist, und klicken Sie dann auf die Option **Jetzt scannen**:
     
     ![Initiieren des Scanvorgangs für den Azure Information Protection-Scanner](./media/scanner-scan-now.png)
 

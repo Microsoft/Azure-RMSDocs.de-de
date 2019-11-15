@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e3960a2e4e0204fb879e55704f68ed8071d31e3b
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: fa0278f0171faee18594ea40f7ac6fee2d238eb9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674126"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559123"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Schnellstart: Erstellen einer neuen Azure Information Protection-Bezeichnung für bestimmte Benutzer
 
@@ -37,7 +37,7 @@ Voraussetzungen für diesen Schnellstart:
     
     Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
+2. Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
 
     Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).
 
@@ -57,15 +57,15 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 Erstellen Sie zunächst Ihre neue Bezeichnung.
 
-1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich beim [Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) an. Navigieren Sie anschließend zum Blatt **Azure Information Protection**.
+1. Sofern nicht bereits geschehen, öffnen Sie ein neues Browserfenster, und melden Sie sich beim [Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) an. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Klicken Sie auf dem Blatt **Azure Information Protection – Bezeichnungen** auf **Neue Bezeichnung hinzufügen**.
+2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Klicken Sie im Bereich **Azure Information Protection – Bezeichnungen** auf **Neue Bezeichnung hinzufügen**.
 
-3. Geben Sie auf dem Blatt **Bezeichnung** mindestens Folgendes an:
+3. Geben Sie im Bereich **Bezeichnung** mindestens Folgendes an:
     
     - **Anzeigename der Bezeichnung**: Ein Name für die neue Bezeichnung, die Benutzern angezeigt wird und die Klassifizierung für den Inhalt identifiziert. Beispiel: `Sales - Restricted`.
     
@@ -77,19 +77,19 @@ Erstellen Sie zunächst Ihre neue Bezeichnung.
 
 Fügen Sie nun Ihre neu erstellte Bezeichnung zu einer neuen bereichsbezogenen Richtlinie hinzu.
 
-1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** die Option **Neue Richtlinie hinzufügen** aus. 
+1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf die Option **Neue Richtlinie hinzufügen**. 
 
-2. Geben Sie auf dem Blatt **Richtlinie** für das Feld **Richtlinienname** einen Namen ein, der die Gruppe von Benutzern bezeichnet, die die neue erstellte Bezeichnung sehen können. Beispiel: `Sales`.
+2. Geben Sie im Bereich **Richtlinie** für das Feld **Richtlinienname** einen Namen ein, der die Gruppe von Benutzern bezeichnet, die die neue erstellte Bezeichnung sehen können. Beispiel: `Sales`.
 
 3. Klicken Sie auf die Option **Auswählen, für welche Benutzer oder Gruppen diese Richtlinie gilt**.
 
-4. Klicken Sie auf dem Blatt **AAD-Benutzer und -Gruppen** auf **Benutzer/Gruppen**. Suchen Sie dann auf dem neuen Blatt **Benutzer/Gruppen** die Gruppe, die Sie im Rahmen der Vorbereitung angegeben haben, und wählen Sie sie aus. Beispiel: **Vertriebsteam**. Klicken Sie auf diesem Blatt auf **Auswählen** und dann auf **OK**.
+4. Klicken Sie im Bereich **AAD-Benutzer und -Gruppen** auf **Benutzer/Gruppen**. Suchen Sie dann im Bereich **Benutzer/Gruppen** die Gruppe, die Sie im Rahmen der Vorbereitung angegeben haben, und wählen Sie sie aus. Beispiel: **Vertriebsteam**. Klicken Sie in diesem Bereich auf **Auswählen** und dann auf **OK**.
 
-5. Wählen Sie wieder auf dem Blatt **Richtlinie** den Eintrag **Bezeichnungen hinzufügen oder entfernen** aus.
+5. Klicken Sie dann im Bereich **Richtlinie** auf den Eintrag **Bezeichnungen hinzufügen oder entfernen**.
 
-6. Auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** wählen Sie die Bezeichnung aus, die Sie erstellt haben, z.B. **Vertrieb – Eingeschränkt**, und wählen Sie dann **OK** aus.
+6. Auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** wählen Sie die Bezeichnung aus, die Sie erstellt haben (z. B. **Vertrieb – Eingeschränkt**), und klicken Sie dann auf **OK**.
 
-7. Klicken Sie auf **Speichern**, wenn Sie das Blatt **Richtlinie** wieder aufgerufen haben. 
+7. Klicken Sie dann im Bereich **Richtlinie** auf **Speichern**. 
 
 Ihre neue Bezeichnung wird jetzt nur für die Mitglieder der Gruppe veröffentlicht, die Sie angegeben haben. 
 
@@ -105,11 +105,11 @@ Um diese Bezeichnung testen zu können, benötigen Sie mindestens zwei Computer,
 
 Führen Sie die folgenden Schritte durch, wenn Sie diese Bezeichnung und die bereichsbezogene Richtlinie nicht beibehalten möchten:
 
-1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie auf dem Blatt **Azure Information Protection – Richtlinien** das Kontextmenü ( **...** ) für die bereichsbezogene Richtlinie aus, die Sie zuvor erstellt haben. Beispiel: **Vertrieb**.
+1. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Klicken Sie im Bereich **Azure Information Protection – Richtlinien** auf das Kontextmenü ( **...** ) für die bereichsbezogene Richtlinie, die Sie zuvor erstellt haben. Beispiel: **Vertrieb**.
 
 2. Klicken Sie auf **Richtlinie löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 
-3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection – Bezeichnung** das Kontextmenü ( **...** ) für die Bezeichnung aus, die Sie zuvor erstellt haben.  Beispiel: **Vertrieb – Eingeschränkt**.
+3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Klicken Sie im Bereich **Azure Information Protection – Bezeichnungen** auf das Kontextmenü ( **...** ) für die Bezeichnung, die Sie zuvor erstellt haben.  Beispiel: **Vertrieb – Eingeschränkt**.
 
 4.  Klicken Sie auf **Diese Bezeichnung löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 

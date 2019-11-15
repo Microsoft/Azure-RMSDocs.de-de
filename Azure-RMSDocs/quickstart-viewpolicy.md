@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d48061cda0d13ad04dc05dbd5d260a56dec60166
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712570"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561393"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -43,9 +43,9 @@ Azure Information Protection wird nicht automatisch im Azure-Portal zur Verfügu
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Wählen Sie im Hubmenü die Option **Ressource erstellen** aus, und geben Sie dann im Suchfeld für den Marketplace **Azure Information Protection** ein. 
+2. Klicken Sie auf die Option **+ Ressource erstellen**, und geben Sie dann im Suchfeld für den Marketplace **Azure Information Protection** ein. 
     
-3. Wählen Sie aus den Ergebnisliste **Azure Information Protection** aus. Klicken Sie dann auf dem Blatt **Azure Information Protection** auf **Erstellen**.
+3. Wählen Sie aus den Ergebnisliste **Azure Information Protection** aus. Klicken Sie dann im Bereich **Azure Information Protection** auf **Erstellen**.
     
     > [!TIP] 
     > Wählen Sie optional **An Dashboard anheften** aus, um eine **Azure Information Protection**-Kachel auf Ihrem Dashboard zu erstellen, damit Sie bei der nächsten Anmeldung beim Portal nicht erneut nach dem Dienst suchen müssen können.
@@ -56,7 +56,7 @@ Azure Information Protection wird nicht automatisch im Azure-Portal zur Verfügu
 
 Der Schutzdienst ist jetzt automatisch für Neukunden aktiviert. Sie sollten sich jedoch vergewissern, dass er nicht manuell aktiviert werden muss. 
 
-1. Wählen Sie auf dem Blatt **Azure Information Protection** die Optionen **Verwalten** > **Schutzaktivierung** aus.
+1. Klicken Sie im Bereich **Azure Information Protection** auf die Optionen **Verwalten** > **Schutzaktivierung**.
 
 2. Überprüfen Sie, ob der Schutz für Ihren Mandanten aktiviert ist: 
     
@@ -90,9 +90,9 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
 
 4. Um die Bezeichnungen für alle Benutzer zu veröffentlichen, wählen Sie **Klassifizierungen** > **Richtlinien** > **Global** aus:
     
-    ein. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
+    a. Wählen Sie **Bezeichnungen hinzufügen oder entfernen** aus.
     
-    b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** und anschließend alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
+    b. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** alle Bezeichnungen aus, und klicken Sie dann auf **OK**.
     
     c. Wählen Sie auf dem Blatt **Richtlinie: Global** die Option **Speichern** aus.
 
@@ -100,15 +100,15 @@ Durch Veröffentlichen der Bezeichnungen im Azure-Portal werden diese für den A
 
 ## <a name="view-your-labels"></a>Anzeigen von Bezeichnungen
 
-Wählen Sie **Klassifizierungen** > **Bezeichnungen** aus, und nehmen Sie sich einige Minuten Zeit, um sich mit den Bezeichnungen auf dem Blatt **Azure Information Protection – Bezeichnungen** vertraut zu machen.
+Wählen Sie **Klassifizierungen** > **Bezeichnungen** aus, und nehmen Sie sich einige Minuten Zeit, um sich mit den Bezeichnungen im Bereich **Azure Information Protection – Bezeichnungen** vertraut zu machen.
 
 Wenn die Bezeichnungen nicht den Bezeichnungen in der Abbildung des vorigen Abschnitts ähneln, verwenden Sie keine Azure Information Protection-Standardbezeichnungen, sondern Bezeichnungen, die möglicherweise aus dem Office 365 Security & Compliance Center, dem Microsoft 365 Security Center oder dem Microsoft 365 Compliance Center stammen.
 
 > [!TIP]
 > So gehen Sie vor, um anstelle von benutzerdefinierten Bezeichnungen Azure Information Protection-Standardbezeichnungen zu verwenden: 
-> - Löschen Sie die benutzerdefinierten Bezeichnungen, damit auf dem Blatt **Bezeichnungen** die Option zum Generieren von Standardbezeichnungen angezeigt wird, wie im [vorangehenden Abschnitt](#create-and-publish-labels) beschrieben. 
+> - Löschen Sie die benutzerdefinierten Bezeichnungen, damit im Bereich **Bezeichnungen** die Option zum Generieren von Standardbezeichnungen angezeigt wird, wie im [vorangehenden Abschnitt](#create-and-publish-labels) beschrieben. 
 
-Das Blatt **Azure Information Protection – Bezeichnungen**:
+Bereich **Azure Information Protection – Bezeichnungen**:
 
 - Die Standardbezeichnungen für die Klassifizierung sind **Persönlich**, **Öffentlich**, **Allgemein**, **Vertraulich** und **Streng vertraulich**. Die beiden letzten Bezeichnungen können erweitert werden, um untergeordnete Bezeichnungen anzuzeigen, die Beispiele für eine Klassifizierung mit Unterkategorien bereitstellen.
 
@@ -118,7 +118,7 @@ Beispiel:
 
 ![Azure Information Protection-Schnellstart – Übersicht über Standardbezeichnungen](./media/info-protect-policy-default-labelsv2.png)
 
-Wenn Sie eine Bezeichnung auswählen, werden auf einem neuen Blatt Details zur Bezeichnungskonfiguration angezeigt.
+Wenn Sie eine Bezeichnung auswählen, werden in einem neuen Bereich Details zur Bezeichnungskonfiguration angezeigt.
 
 ## <a name="view-your-policy-settings"></a>Anzeigen von Richtlinieneinstellungen
 
@@ -134,7 +134,7 @@ So zeigen Sie die Standardrichtlinieneinstellungen für Azure Information Protec
     
     ![Globale Richtlinieneinstellungen für Azure Information Protection](./media/defaultsettings-aip.png)
 
-3. Sie können jetzt alle geöffneten Blätter im Portal schließen.
+3. Sie können jetzt alle geöffneten Bereiche im Portal schließen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: c425fcc71f8400b945ec684f45f5c1622fedbbef
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712608"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559225"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -42,7 +42,7 @@ Voraussetzungen für dieses Tutorial:
     
     Wenn Sie kein Abonnement besitzen, das Azure Information Protection-Plan 2 enthält, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Das Blatt „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, der Schutzdienst ist aktiviert, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
+2. Der Bereich „Azure Information Protection“ wurde zum Azure-Portal hinzugefügt, der Schutzdienst ist aktiviert, und Sie haben mindestens eine Bezeichnung in der globalen Azure Information Protection-Richtlinie veröffentlicht.
     
     Diese Schritte werden hier beschrieben: [Schnellstart: Hinzufügen von Azure Information Protection zum Azure-Portal und Anzeigen der Richtlinie](quickstart-viewpolicy.md).
 
@@ -76,7 +76,7 @@ Los geht’s!
 
 1. Öffnen Sie ein neues Browserfenster, und melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zu **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -98,7 +98,7 @@ Los geht’s!
 
 6. Stellen Sie außerdem sicher, dass **Die Information Protection-Leiste in Office-Apps anzeigen** auf **Ein** festgelegt ist.
 
-7. Wählen Sie **Speichern** auf diesem Blatt **Richtlinie: Global** aus, und wenn Sie zum Bestätigen der Aktion aufgefordert werden, wählen Sie **OK** aus. Schließen Sie dieses Blatt.
+7. Wählen Sie **Speichern** auf diesem Blatt **Richtlinie: Global** aus, und klicken Sie auf **OK**, wenn Sie zum Bestätigen der Aktion aufgefordert werden. Schließen Sie diesen Bereich.
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Erstellen einer neuen Bezeichnung für Schutz, optische Kennzeichnungen und einer Bedingung für die Aufforderung zur Eingabe einer Klassifizierung.
 
@@ -108,17 +108,17 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Wenn Sie nicht über eine Bezeichnung namens **Vertraulich** verfügen, können Sie eine andere Bezeichnung auswählen oder stattdessen eine neue Bezeichnung erstellen und das Tutorial mit geringfügigen Unterschieden weiterhin befolgen.
 
-2. Geben Sie auf dem Blatt **Sub-label** (Unterbezeichnung) den Bezeichnungsnamen **Finance** (Finanzen) ein, und fügen Sie die folgende Beschreibung hinzu: **Vertrauliche Daten, die Finanzinformationen enthalten, die nur Mitarbeitern zugänglich sind**.
+2. Geben Sie im Bereich **Untergeordnete Bezeichnung** den Bezeichnungsnamen **Finanzen** ein, und fügen Sie die folgende Beschreibung hinzu: **Vertrauliche Daten, die Finanzinformationen enthalten, die nur Mitarbeitern zugänglich sind**.
     
     In diesem Text wird beschrieben, wie die ausgewählte Bezeichnung verwendet werden soll; er wird Benutzern als QuickInfo angezeigt, um ihnen bei der Auswahl der Bezeichnung zu helfen.
 
-3. Wählen Sie bei **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Option **Schützen** aus. Damit wird automatisch das Blatt **Schutz** geöffnet, indem die Option **Schutz** für Sie ausgewählt wird:
+3. Wählen Sie bei **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen** die Option **Schützen** aus. Damit wird automatisch der Bereich **Schutz** geöffnet, indem die Option **Schutz** für Sie ausgewählt wird:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png) 
     
-4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
+4. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist. Diese Option verwendet den Azure Rights Management-Dienst zum Schützen von Dokumenten und E-Mails. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist. Klicken Sie dann auf **Berechtigungen hinzufügen**.
 
-5. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
+5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **Hinzufügen\<Organisationsname> – Alle Mitglieder**. Wenn Ihr Organisationsname z.B. VanArsdel Ltd ist, wird Ihnen die folgende Auswahloption angezeigt:
     
     ![Allen Mitgliedern Berechtigungen für den Schutz einer Azure Information Protection-Bezeichnung erteilen.](./media/info-protect-protection-all-members.png) 
     
@@ -130,15 +130,15 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     Sie können unterschiedliche Berechtigungsstufen auswählen oder einzelne Nutzungsrechte mithilfe der Option **Benutzerdefiniert** angeben. Behalten Sie jedoch für dieses Tutorial die Option **Prüfer** bei. Sie können später mit unterschiedlichen Berechtigungen experimentieren und sich einlesen, wie diese das Verwenden der geschützten Dokumente oder E-Mails durch die angegebenen Benutzer einschränken können.
 
-7. Klicken Sie auf **OK**, um das Blatt **Berechtigungen hinzufügen** zu schließen und Ihnen wird angezeigt, wie das Blatt **Schutz** entsprechend Ihrer Konfiguration aktualisiert wird. Beispiel:
+7. Klicken Sie auf **OK**, um den Bereich **Berechtigungen hinzufügen** zu schließen, und Ihnen wird angezeigt, wie der Bereich **Schutz** entsprechend Ihrer Konfiguration aktualisiert wird. Beispiel:
     
-     ![Anzeige der Berechtigungskonfigurationen für eine Azure Information Protection-Bezeichnung auf dem Blatt „Schutz“](./media/info-protect-protection-configured.png)
+     ![Anzeige der Berechtigungskonfigurationen für eine Azure Information Protection-Bezeichnung im Bereich„Schutz“](./media/info-protect-protection-configured.png)
     
-    Wenn Sie auf **Berechtigungen hinzufügen** klicken, wird durch diese Aktion das Blatt **Berechtigungen hinzufügen** erneut geöffnet, sodass Sie weitere Benutzer hinzufügen und diesen unterschiedliche Berechtigungen erteilen können. Sie können einer bestimmten Gruppe beispielsweise nur eine Anzeigeberechtigung erteilen. In diesem Tutorial bleiben wir jedoch bei einem Berechtigungssatz für alle Benutzer.
+    Wenn Sie auf **Berechtigungen hinzufügen** klicken, wird durch diese Aktion der Bereich **Berechtigungen hinzufügen** erneut geöffnet, sodass Sie weitere Benutzer hinzufügen und diesen unterschiedliche Berechtigungen erteilen können. Sie können einer bestimmten Gruppe beispielsweise nur eine Anzeigeberechtigung erteilen. In diesem Tutorial bleiben wir jedoch bei einem Berechtigungssatz für alle Benutzer.
 
-8. Überprüfen Sie die Standards für den Inhaltsablauf und den Offlinezugriff, und behalten Sie diese bei. Klicken Sie dann auf **OK**, um das Blatt **Schutz** zu speichern und zu schließen.
+8. Überprüfen Sie die Standards für den Inhaltsablauf und den Offlinezugriff, und behalten Sie diese bei. Klicken Sie dann auf **OK**, um den Bereich **Schutz** zu speichern und zu schließen.
 
-8. Kehren Sie zum Blatt **Untergeordnete Bezeichnung**, und suchen Sie den Abschnitt **Optische Kennzeichnung festlegen**:
+8. Navigieren Sie zurück zum Bereich **Untergeordnete Bezeichnung**, und suchen Sie den Abschnitt **Optische Kennzeichnung festlegen**:
     
     Klicken Sie für die Einstellung **Dokumente mit dieser Bezeichnung besitzen eine Fußzeile** auf **Ein**, und geben Sie dann **Als vertraulich klassifiziert** im **Textfeld** ein. 
     
@@ -148,9 +148,9 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
 9. Suchen Sie den Abschnitt **Configure conditions for automatically applying this label** (Bedingungen konfigurieren, um diese Bezeichnung automatisch anzuwenden):
     
-    Klicken Sie auf **Neue Bedingung hinzufügen**, und wählen Sie anschließend auf dem Blatt **Bedingung** Folgendes aus:
+    Klicken Sie auf **Neue Bedingung hinzufügen**, und im Bereich **Bedingung** anschließend auf Folgendes:
     
-    ein. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
+    a. **Choose the type of condition** (Bedingungstyp auswählen): Behalten Sie die Standardeinstellung **Information Types** (Informationstypen) bei.
     
     b. For **Choose an industry** (Branche auswählen): Behalten Sie die Standardeinstellung **All** (Alle) bei.
     
@@ -162,9 +162,9 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
     
     ![Azure Information Protection-Tutorial: Konfigurieren der Bedingung für Kreditkarten](./media/step2-configure-condition.png)
     
-    Klicken Sie auf **Save** (Speichern), um wieder auf das Blatt **Untergeordnete Bezeichnung** zurückzukehren.
+    Klicken Sie auf **Speichern**, um wieder zum Bereich **Untergeordnete Bezeichnung** zurückzukehren.
 
-10. Auf dem Blatt **Untergeordnete Bezeichnung** können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** angezeigt wird, mit **1** **VORKOMMEN**:
+10. Im Bereich **Untergeordnete Bezeichnung** können Sie sehen, dass **Kreditkartennummer** als **BEDINGUNGSNAME** mit **1** **VORKOMMEN** angezeigt wird:
     
     ![Azure Information Protection-Tutorial: Zusammenfassung der Bedingungen für Kreditkarten](./media/step2-see-condition.png)
 
@@ -172,11 +172,11 @@ Wir erstellen nun eine neue untergeordnete Bezeichnung für **Vertraulich**.
 
 12. Geben Sie in das Feld **Hinweise zur Verwendung durch den Administrator hinzufügen** den Text **Nur für Testzwecke** ein.
 
-13. Klicken Sie auf dem Blatt **Untergeordnete Bezeichnung** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**. Die neue Bezeichnung wird erstellt und gespeichert, aber noch keiner Richtlinie hinzugefügt.
+13. Klicken Sie im Bereich **Untergeordnete Bezeichnung** auf **Speichern**. Wenn Sie zur Bestätigung dieser Aktion aufgefordert werden, klicken Sie auf **OK**. Die neue Bezeichnung wird erstellt und gespeichert, aber noch keiner Richtlinie hinzugefügt.
 
 14. Über die Menüoption **Klassifizierungen** > **Richtlinien**: Wählen Sie erneut **Global** und dann den Link **Add or remove labels** (Bezeichnungen hinzufügen oder entfernen) hinter den Bezeichnungen aus.
 
-15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finance** (Finanzen) aus, und klicken Sie auf **OK**.
+15. Wählen Sie auf dem Blatt **Richtlinie: Bezeichnungen hinzufügen oder entfernen** die gerade erstellte Bezeichnung und die untergeordnete Bezeichnung namens **Finanzen** aus, und klicken Sie auf **OK**.
 
 16. Auf dem Blatt **Richtlinie: Global** wird die neue untergeordnete Bezeichnung jetzt in Ihrer globalen Richtlinie angezeigt, die für optische Kennzeichnungen und Schutz konfiguriert ist. Beispiel:
 
@@ -265,7 +265,7 @@ Führen Sie die folgenden Schritte durch, wenn Sie die Änderungen, die Sie in d
 
 2. Setzen Sie die Richtlinieneinstellungen auf die ursprünglichen Werte zurück, die Sie zuvor notiert haben, und klicken Sie dann auf **Speichern**. 
 
-3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Rufen Sie auf dem Blatt **Azure Information Protection: Bezeichnung** das Kontextmenü ( **...** ) für die Bezeichnung **Finanzen** auf, die Sie erstellt haben.
+3. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Rufen Sie im Bereich **Azure Information Protection – Bezeichnungen** das Kontextmenü ( **...** ) für die Bezeichnung **Finanzen** auf, die Sie erstellt haben.
 
 4. Klicken Sie auf **Diese Bezeichnung löschen**, und wenn Sie aufgefordert werden, klicken Sie auf **OK**.
 

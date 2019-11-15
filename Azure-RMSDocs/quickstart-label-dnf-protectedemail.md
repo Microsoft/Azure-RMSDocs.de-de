@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 02a036a3ab72cc0dcd16d2d3d7e9edaa4c0338ad
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674169"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559135"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten
 
@@ -43,7 +43,7 @@ Voraussetzungen für diesen Schnellstart:
     
     Wenn Sie keines dieser Abonnements besitzen, können Sie ein [kostenloses](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) Konto für Ihre Organisation erstellen.
 
-2. Sie haben das Azure Information Protection-Blatt zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
+2. Sie haben den Azure Information Protection-Bereich zum Azure-Portal hinzugefügt und sich vergewissert, dass der Schutzdienst aktiviert ist.
 
     Wenn Sie Hilfe bei diesen Aktionen benötigen, lesen Sie [Schnellstart: Erste Schritte im Azure-Portal](quickstart-viewpolicy.md).
 
@@ -77,19 +77,19 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 1. Öffnen Sie ein neues Browserfenster, und melden Sie sich als globaler Administrator beim [Azure-Portal](https://portal.azure.com) an. Navigieren Sie anschließend zu **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
     
     Wenn Sie nicht der globale Administrator sind, verwenden Sie den folgenden Link für andere Rollen: [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die für die Anwendung des Schutzes konfiguriert werden soll. 
+2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie im Bereich **Azure Information Protection – Bezeichnungen** die Bezeichnung aus, die für die Anwendung des Schutzes konfiguriert werden soll. 
 
-3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**. Wählen Sie **Schützen** aus. Das Blatt **Schutz** wird automatisch geöffnet, wenn zuvor **Nicht konfiguriert** oder **Schutz entfernen** ausgewählt wurde.
+3. Suchen Sie im Bereich **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**. Klicken Sie auf **Schützen**. Der Bereich **Schutz** wird automatisch geöffnet, wenn zuvor **Nicht konfiguriert** oder **Schutz entfernen** ausgewählt wurde.
     
-    Wenn das Blatt **Schutz** nicht automatisch geöffnet wird, wählen Sie **Schutz** aus:
+    Klicken Sie auf **Schutz**, wenn der Bereich **Schutz** nicht automatisch geöffnet wird:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png).
 
-4. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+4. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 5. Wählen Sie die Option **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** aus.
 
@@ -97,7 +97,7 @@ Die vollständige Liste der Voraussetzungen an Azure Information Protection find
 
 7. Wenn die Option ausgewählt ist, deaktivieren Sie die folgende Option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions** (Vom Benutzer in Word, Excel, PowerPoint und dem Datei-Explorer benutzerdefinierte Berechtigungen verlangen).
 
-8. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+8. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
 Ihre Bezeichnung ist nun für die ausschließliche Anzeige in Outlook konfiguriert, und der Schutz „Nicht weiterleiten“ wird auf E-Mails angewendet.
 
@@ -119,9 +119,9 @@ Dadurch können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus 
 
 Führen Sie die folgenden Schritte durch, wenn Sie diese Konfiguration nicht beibehalten möchten und kein Schutz auf Ihre Bezeichnung angewendet werden soll:
 
-1. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die konfigurierte Bezeichnung aus. 
+1. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie im Bereich **Azure Information Protection – Bezeichnungen** die konfigurierte Bezeichnung aus. 
 
-3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und klicken Sie auf **Nicht konfiguriert** und dann auf **Speichern**.
+3. Suchen Sie im Bereich **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und klicken Sie auf **Nicht konfiguriert** und dann auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

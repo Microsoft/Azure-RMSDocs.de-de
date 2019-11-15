@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 81ddb553a8ba075b52adf9ecddbb690d64352f96
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 48e20547f0c3974e6d2ef2fd71aa391c4cecb828
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673631"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73556503"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -50,7 +50,10 @@ Weitere Informationen zum Azure Rights Management-Schutz und dessen Funktionswei
 > [!IMPORTANT]
 > Um eine Bezeichnung zur Anwendung dieses Schutzes zu konfigurieren, muss der Azure Rights Management-Dienst für Ihre Organisation aktiviert sein. Weitere Informationen finden Sie unter [Aktivieren des Schutzdiensts von Azure Information Protection](activate-service.md).
 
-Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office für das Web, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP). 
+Wenn die Bezeichnung Schutz anwendet, ist ein geschütztes Dokument nicht für die Speicherung auf SharePoint oder OneDrive geeignet. Folgende Features für geschützte Dateien werden von diesen Speicherorten nicht unterstützt: gemeinsame Dokumenterstellung, Office für das Web, Suche, Dokumentvorschau, Miniaturansicht, eDiscovery und Verhinderung von Datenverlust (Data Loss Prevention, DLP).
+
+> [!TIP]
+> Wenn Sie Ihre [Bezeichnungen zu vereinheitlichten Vertraulichkeitsbezeichnungen migrieren](configure-policy-migrate-labels.md) und diese von einem der Admin Center für Bezeichnungen (wie beispielsweise dem Microsoft 365 Compliance Center) aus veröffentlichen, werden Bezeichnungen, die Schutz anwenden, für diese Speicherorte unterstützt. Weitere Informationen finden Sie unter [Aktivieren von Vertraulichkeitsbezeichnungen für Office-Dateien in SharePoint und OneDrive (öffentliche Vorschauversion)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Exchange muss für Azure Information Protection nicht konfiguriert werden, damit Benutzer in Outlook Bezeichnungen zum Schutz ihrer E-Mails verwenden können. Sie können jedoch den vollen Funktionsumfang des Azure Rights Management-Schutzes mit Exchange erst nutzen, wenn für Azure Information Protection Exchange konfiguriert wird. Ohne diese Konfiguration können Benutzer beispielsweise geschützte E-Mails nicht auf Mobiltelefonen oder in Outlook im Web anzeigen, derartige E-Mails können nicht für die Suche indiziert werden, und Sie können für Exchange Online DLP nicht den Rights Management-Schutz konfigurieren. In den folgenden Artikeln erhalten Sie Informationen, mit denen Sie sicherstellen können, dass Exchange diese zusätzlichen Szenarios unterstützt:
 
@@ -60,13 +63,13 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
 
 ## <a name="to-configure-a-label-for-protection-settings"></a>So konfigurieren Sie eine Bezeichnung für Schutzeinstellungen
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Blatt **Azure Information Protection**. 
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**. 
     
-    Klicken Sie z.B. im Hubmenü auf **Alle Dienste**, und geben Sie im Filterfeld den Begriff **Information** ein. Wählen Sie **Azure Information Protection** aus.
+    Geben Sie im Suchfeld für Ressourcen, Dienste und Dokumente zunächst **Information** ein, und klicken Sie dann auf **Azure Information Protection**.
 
-2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie auf dem Blatt **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten. 
+2. Über die Menüoptionen **Klassifizierungen** > **Bezeichnungen**: Wählen Sie im Bereich **Azure Information Protection: Bezeichnungen** die Bezeichnung aus, die Sie ändern möchten. 
 
-3. Suchen Sie auf dem Blatt **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus:
+3. Suchen Sie im Bereich **Bezeichnung** die Option **Berechtigungen für Dokumente und E-Mails mit dieser Bezeichnung festlegen**, und wählen Sie eine der folgenden Optionen aus:
     
     - **Nicht konfiguriert:** Wählen Sie diese Option aus, wenn die Bezeichnung derzeit zum Anwenden von Schutz konfiguriert ist und die ausgewählte Bezeichnung keinen Schutz mehr anwenden soll. Fahren Sie dann mit Schritt 11 fort.
         
@@ -90,11 +93,11 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
         
         Wenn der Benutzer, der die Bezeichnung mit dieser Einstellung anwendet, keine Berechtigung zum Entfernen des Rights Management-Schutzes hat, kann die Bezeichnung nicht angewendet werden, und die folgende Meldung wird angezeigt: **Azure Information Protection kann diese Bezeichnung nicht anwenden. Falls dieses Problem weiterhin besteht, wenden Sie sich an den Administrator.**
 
-4. Wenn Sie **Schützen** ausgewählt haben, wird das Blatt **Schutz** automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. Wenn Sie dieses neue Blatt nicht automatisch geöffnet wird, wählen Sie **Schutz**:
+4. Wenn Sie **Schützen** ausgewählt haben, wird der Bereich **Schutz** automatisch geöffnet, wenn zuvor eine der anderen Optionen ausgewählt wurde. Klicken Sie auf **Schutz**, wenn dieser neue Bereich nicht automatisch geöffnet wird:
     
     ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
-5. Wählen Sie auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) oder **HYOK (AD RMS)** aus.
+5. Klicken Sie im Bereich **Schutz** auf die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) oder **HYOK (AD RMS)** .
     
     In den meisten Fällen wählen Sie **Azure (cloud key)** (Azure (Cloud-Schlüssel)) für Ihre Berechtigungseinstellungen aus. Wählen Sie nicht **HYOK (AD RMS)** aus, es sei denn, Sie haben die Voraussetzungen und Einschränkungen verstanden, die mit dieser „*Hold-your-own-key*“-Konfiguration (HYOK) einhergehen. Weitere Informationen finden Sie unter [Hold your own key (HYOK) requirements and restrictions for AD RMS protection](configure-adrms-restrictions.md) (Anforderungen an Hold Your Own Key (HYOK) und Einschränkungen für AD RMS-Schutz). Um die Konfiguration für HYOK (AD RMS) fortzufahren, gehen Sie zu Schritt 9.
     
@@ -116,9 +119,9 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
 
 7. Wenn Sie **Berechtigungen festlegen** für **Azure (Cloudschlüssel)** ausgewählt haben, können Sie über diese Option Benutzer und Nutzungsrechte auswählen. 
     
-    Wenn Sie keine Benutzer auswählen und in diesem Blatt auf **OK** und dann im Blatt **Bezeichnung** auf **Speichern** klicken, geschieht Folgendes: Die Bezeichnung wird so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail uneingeschränkt öffnen kann. Diese Konfiguration wird gelegentlich als „Nur für mich“ bezeichnet und ist möglicherweise erforderlich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, wählen Sie nicht **Berechtigungen hinzufügen** aus. Nach dem Speichern der Bezeichnung wird Ihnen beim nächsten Öffnen des Blatts **Schutz** für **Benutzer** die Option **IPC_USER_ID_OWNER** und für **Berechtigungen** die Option **Mitbesitzer** angezeigt, um diese Konfiguration widerzuspiegeln.
+    Wenn Sie keine Benutzer auswählen und in diesem Bereich auf **OK** und dann im Bereich **Bezeichnung** auf **Speichern** klicken, geschieht Folgendes: Die Bezeichnung wird so konfiguriert, dass nur die Person, die sie anwendet, das Dokument oder die E-Mail uneingeschränkt öffnen kann. Diese Konfiguration wird gelegentlich als „Nur für mich“ bezeichnet und ist möglicherweise erforderlich, um sicherzustellen, dass das Dokument an einem beliebigen Ort gespeichert, aber nur von dieser Person geöffnet werden kann. Wenn dies genau das gewünschte Ergebnis ist und keine anderen Personen Zugriff auf den geschützten Inhalt benötigen, wählen Sie nicht **Berechtigungen hinzufügen** aus. Nach dem Speichern der Bezeichnung wird Ihnen beim nächsten Öffnen des Bereichs **Schutz** für **Benutzer** die Option **IPC_USER_ID_OWNER** und für **Berechtigungen** die Option **Mitbesitzer** angezeigt, um diese Konfiguration widerzuspiegeln.
     
-    Um die Benutzer anzugeben, die geschützte Dokumente und E-Mails öffnen können sollen, wählen Sie **Berechtigungen hinzufügen**. Wählen Sie dann auf dem Blatt **Berechtigungen hinzufügen** den ersten Satz von Benutzern und Gruppen aus, die die Rechte besitzen sollen, den von der ausgewählten Bezeichnung geschützten Inhalt zu nutzen:
+    Um die Benutzer anzugeben, die geschützte Dokumente und E-Mails öffnen können sollen, wählen Sie **Berechtigungen hinzufügen**. Wählen Sie dann im Bereich **Berechtigungen hinzufügen** die ersten Benutzer und Gruppen aus, die die Rechte besitzen sollen, den von der ausgewählten Bezeichnung geschützten Inhalt nutzen zu können:
     
    - Wählen Sie **Aus der Liste auswählen**, wo Sie dann **Hinzufügen \<Organisationsname> – Alle Mitglieder** auswählen können, um alle Benutzer Ihrer Organisation hinzuzufügen. Diese Einstellung schließt Gastkonten aus. Sie können auch **Alle authentifizierten Benutzer hinzufügen** auswählen oder das Verzeichnis durchsuchen.
         
@@ -146,14 +149,14 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
      >[!TIP]
      >Fügen Sie ggf. die benutzerdefinierte Berechtigung **Speichern unter, Exportieren** hinzu, und gewähren Sie diese Administratoren für Datenwiederherstellung oder Mitarbeitern in anderen Rollen, die für die Informationswiederherstellung verantwortlich sind. Falls nötig können diese Benutzer dann den Schutz für Dateien und E-Mails entfernen, die mithilfe dieser Bezeichnung oder Vorlage geschützt werden. Diese Fähigkeit zum Entfernen des Schutzes auf Berechtigungsebene für ein Dokument oder eine E-Mail bietet eine präzisere Kontrolle als die [Administratorfunktion](configure-super-users.md).
     
-     Überprüfen Sie nun auf dem Blatt **Schutz** für alle Benutzer und Gruppen, die Sie angegeben haben, ob Sie Änderungen an folgenden Einstellungen vornehmen möchten. Beachten Sie, dass diese Einstellungen wie bei den Berechtigungen nicht für den [Rights Management-Aussteller oder Rights Management-Besitzer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) oder einen beliebigen zugewiesenen [Administrator](configure-super-users.md) gelten.
+     Überprüfen Sie nun im Bereich **Schutz** für alle Benutzer und Gruppen, die Sie angegeben haben, ob Sie Änderungen an den folgenden Einstellungen vornehmen möchten. Beachten Sie, dass diese Einstellungen wie bei den Berechtigungen nicht für den [Rights Management-Aussteller oder Rights Management-Besitzer](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) oder einen beliebigen zugewiesenen [Administrator](configure-super-users.md) gelten.
     
      ###### <a name="information-about-the-protection-settings"></a>Informationen zu Schutzeinstellungen
     
      |Einstellung|Weitere Informationen|Empfohlene Einstellung
      |-----------|--------------------|--------------------|
      |**Ablauf des Dateiinhalts**|Definieren Sie ein Datum oder eine Anzahl von Tagen, nach deren Ablauf Dokumente, die durch diese Einstellungen geschützt sind, nicht mehr von ausgewählten Benutzern geöffnet werden sollen. Bei E-Mails wird dieses Ablaufdatum aufgrund von Cachemechanismen, die von manchen E-Mail-Clients verwendet werden, nicht immer erzwungen.<br /><br />Sie können ein Datum oder eine Anzahl von Tagen beginnend ab dem Zeitpunkt angeben, an dem der Schutz auf den Inhalt angewendet wird.<br /><br />Wenn Sie ein Datum angeben, wird der Schutz ab Mitternacht in Ihrer aktuellen Zeitzone wirksam.|**Inhalt läuft nie ab**, sofern für den Inhalt keine bestimmten zeitgebundenen Anforderungen vorliegen.|
-     |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf) mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht.<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
+     |**Offlinezugriff zulassen**|Mit dieser Einstellung können Sie mit der Möglichkeit für ausgewählte Benutzer, geschützte Inhalte zu öffnen, wenn keine Internetverbindung besteht, Ihre bestehenden Sicherheitsanforderungen abstimmen (einschließlich des Zugriffs nach einem Widerruf).<br /><br />Wenn Sie angeben, dass Inhalte ohne Internetverbindung nicht verfügbar oder nur für eine bestimmte Anzahl von Tagen verfügbar sind, müssen sich diese Benutzer bei Erreichen dieses Schwellenwerts erneut authentifizieren, und ihre Zugriffe werden protokolliert. Wenn ihre Anmeldeinformationen nicht zwischengespeichert wurden, werden Benutzer in diesem Fall aufgefordert, sich anzumelden, bevor sie das Dokument oder die E-Mail öffnen können.<br /><br />Zusätzlich zur erneuten Authentifizierung werden die Richtlinie und die Benutzergruppenmitgliedschaft erneut ausgewertet. Dies bedeutet, dass es bei Benutzern für dasselbe Dokument oder dieselbe E-Mail zu unterschiedlichen Zugriffsergebnissen kommen kann, wenn sich seit ihrem letzten Zugriff auf den Inhalt Änderungen an der Richtlinie oder ihrer Gruppenmitgliedschaft ereignet haben. Dies könnte dazu führen, dass der Zugriff verweigert wird, wenn das Dokument [widerrufen](./rms-client/client-track-revoke.md) wurde.|Je nach Wichtigkeit des Inhalts:<br /><br />- **Anzahl der Tage, die der Inhalt ohne Internetverbindung verfügbar ist** = **7** für sensible Geschäftsdaten, die dem Unternehmen schaden können, wenn sie an unbefugte Personen weitergegeben werden. Diese Empfehlung bietet einen ausgewogenen Kompromiss zwischen Flexibilität und Sicherheit. Beispiele hierfür sind Verträge, Sicherheitsberichte, Prognosen und Vertriebsdaten.<br /><br />- **Nie** bei sehr sensiblen Geschäftsdaten, die dem Unternehmen schaden würden, wenn sie an Unbefugte weitergegeben werden. Diese Empfehlung räumt der Sicherheit Vorrang gegenüber Flexibilität ein und stellt sicher, dass unmittelbar nach einem Widerruf des Dokument keine der autorisierten Benutzer das Dokument öffnen können. Beispiele hierfür sind Mitarbeiter- und Kundeninformationen, Kennwörter, Quellcode und vorangekündigte Finanzberichte.|
     
      Wenn Sie das Konfigurieren der Berechtigungen und Einstellungen abgeschlossen haben, klicken Sie auf **OK**. 
     
@@ -177,11 +180,11 @@ Exchange muss für Azure Information Protection nicht konfiguriert werden, damit
     
     Wenn Sie die Option für Word, Excel, PowerPoint und den Datei-Explorer auswählen: Wenn diese Option festgelegt ist, wird die Bezeichnung in diesen Anwendungen angezeigt. Das resultierende Verhalten, wenn Benutzer die Bezeichnung anwenden, ist das Anzeigen des Dialogfelds, in dem die Benutzer die benutzerdefinierten Berechtigungen auswählen können. In diesem Dialogfeld wählen Benutzer eine der [vordefinierten Berechtigungsstufen](configure-usage-rights.md#rights-included-in-permissions-levels) aus, navigieren dann zu dem Benutzer oder der Gruppe (bzw. geben diese an) und legen optional ein Ablaufdatum fest. Versichern Sie sich, dass die Benutzer über die Anweisungen und den Leitfaden zum Bereitstellen dieser Werte verfügen.
 
-10. Klicken Sie auf **OK**, um das Blatt **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** auf dem Blatt **Bezeichnung** anzuzeigen.
+10. Klicken Sie auf **OK**, um den Bereich **Schutz** zu schließen und die Auswahl für **Benutzerdefiniert** bzw. die ausgewählte Vorlage für die Option **Schutz** im Bereich **Bezeichnung** anzuzeigen.
 
-11. Klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+11. Klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
 
-12. Verwenden Sie auf dem Blatt **Azure Information Protection** die Spalte **PROTECTION** (Schutz), um zu bestätigen, dass Ihre Bezeichnung nun die gewünschten Schutzeinstellungen darstellt:
+12. Verwenden Sie im Bereich **Azure Information Protection** die Spalte **PROTECTION** (Schutz), um zu bestätigen, dass Ihre Bezeichnung nun die gewünschten Schutzeinstellungen darstellt:
     
     - Ein Häkchen, falls Sie den Schutz konfiguriert haben. 
     
@@ -196,7 +199,7 @@ Sobald Sie auf **Speichern** klicken, werden Ihre vorgenommenen Änderungen auto
 
 Die untergeordneten Bezeichnungen **Alle Mitarbeiter** und **Nur Empfänger** der Bezeichnungen **Vertraulich** und **Streng vertraulich** aus der [Standardrichtlinie](configure-policy-default.md) stellen Beispiele für das Konfigurieren von Bezeichnungen, die Schutz anwenden, dar. Die folgenden Beispiele sollten Ihnen ebenfalls beim Konfigurieren von Schutz für verschiedene Szenarios helfen. 
 
-Wählen Sie für jedes folgende Beispiel auf dem Blatt \<*Bezeichnungsname*> die Option **Schützen**. Wenn das Blatt **Schutz** nicht automatisch geöffnet wird, wählen Sie **Schutz**, um dieses Blatt zu öffnen. Dort können Sie die Konfigurationsoptionen für den Schutz auswählen:
+Wählen Sie für jedes folgende Beispiel im Bereich \<*Bezeichnungsname*> die Option **Schützen** aus. Klicken Sie auf **Schutz**, um diesen Bereich zu öffnen, wenn der Bereich **Schutz** nicht automatisch geöffnet wird. Dort können Sie die Konfigurationsoptionen für den Schutz auswählen:
 
 ![Konfigurieren des Schutzes für eine Azure Information Protection-Bezeichnung](./media/info-protect-protection-bar-configured.png)
 
@@ -206,7 +209,7 @@ Diese Bezeichnung ist nur in Outlook verfügbar und geeignet, wenn Exchange Onli
 
 Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  Sie wählen anschließend die Bezeichnung aus, und die Option „Nicht weiterleiten“ wird der E-Mail automatisch hinzugefügt. Dadurch können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus kopieren, Anhänge speichern oder die E-Mail unter einem anderem Namen speichern. 
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Wählen Sie die Option **Benutzerdefinierte Berechtigungen festlegen (Vorschau)** aus.
 
@@ -214,7 +217,7 @@ Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  S
 
 4. Wenn die Option ausgewählt ist, deaktivieren Sie die folgende Option: **In Word, Excel, PowerPoint and File Explorer prompt user for custom permissions** (Vom Benutzer in Word, Excel, PowerPoint und dem Datei-Explorer benutzerdefinierte Berechtigungen verlangen).
 
-5. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+5. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Beispiel 2: Bezeichnung, die schreibgeschützte Berechtigungen für alle Benutzer in einer anderen Organisation einschränkt und sofortiges Sperren unterstützt
@@ -223,30 +226,30 @@ Diese Bezeichnung eignet sich für die (schreibgeschützte) Freigabe von streng 
 
 Diese Bezeichnung ist für E-Mails nicht geeignet.
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Stellen Sie sicher, dass die Option **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Klicken Sie auf der Seite **Berechtigungen hinzufügen** auf **Details eingeben**.
+3. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **Details eingeben**.
 
 4. Geben Sie den Namen einer Domäne aus der anderen Organisation, z.B. **fabrikam.com**, ein. Wählen Sie **Hinzufügen** aus.
 
 5. Wählen Sie zunächst **Viewer**aus **Berechtigungen aus Voreinstellung auswählen** und anschließend **OK** aus.
 
-6. Wählen Sie erneut auf der Seite **Schutz** für die Einstellung **Allow offline access setting** (Offlinezugang zulassen) **Nie** aus.
+6. Wählen Sie im Bereich **Schutz** für die Einstellung **Offlinezugriff zulassen** erneut **Nie** aus.
 
-7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+7. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Beispiel 3: Hinzufügen von externen Benutzern zu einer bestehenden Bezeichnung, die Inhalte schützt
 
 Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen, die bereits durch diese Bezeichnung geschützt sind. Die Berechtigungen, die Sie diesen Benutzern erteilen, können von den Berechtigungen der bestehenden Benutzer abweichen.
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Gehen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Klicken Sie auf der Seite **Berechtigungen hinzufügen** auf **Details eingeben**.
+3. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **Details eingeben**.
 
 4. Geben Sie die E-Mail-Adresse des ersten hinzuzufügenden Benutzers (oder der Gruppe) ein, und wählen Sie **Hinzufügen** aus.
 
@@ -254,7 +257,7 @@ Die neu von Ihnen hinzugefügten Benutzer können Dokumente und E-Mails öffnen,
 
 6. Wiederholen Sie die Schritte 4 und 5 für jeden Benutzer (oder jede Gruppe), den (oder die) Sie dieser Bezeichnung hinzufügen wollen. Klicken Sie dann auf **OK**.
 
-7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+7. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Beispiel 4: Bezeichnung für geschützte E-Mails, die weniger einschränkende Berechtigungen als „Nicht weiterleiten“ unterstützt
 
@@ -272,11 +275,11 @@ Wenn Sie externe Benutzer angeben, die kein Azure AD-Konto haben, gilt Folgendes
 
 Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese Adressen für dieselben Benutzer sein, die Sie für diese Bezeichnung festgelegt haben. Da Benutzer zu Gruppen gehören und mehr als eine E-Mail-Adresse haben können, muss die von ihnen angegebene E-Mail-Adresse nicht mit der von Ihnen für die Berechtigung angegebenen E-Mail-Adresse übereinstimmen. Die Angabe derselben E-Mail-Adresse ist allerdings der einfachste Weg, um sicherzustellen, dass der Empfänger erfolgreich autorisiert wird. Weitere Informationen zur Vorgehensweise bei der Autorisierung von Benutzern für Berechtigungen finden Sie unter [Vorbereiten von Benutzern und Gruppen für Azure Information Protection](prepare.md). 
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Gehen Sie auf dem Blatt **Berechtigungen hinzufügen** wie folgt vor: Wählen Sie die Option **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um sämtliche Benutzer in Ihrem Mandanten auszuwählen und ihnen Berechtigungen zu erteilen. Diese Einstellung schließt Gastkonten aus. Alternativ dazu klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
+3. Gehen Sie im Bereich **Berechtigungen hinzufügen** wie folgt vor: Wählen Sie die Option **Hinzufügen \<Organisationsname> – Alle Mitglieder** aus, um sämtliche Benutzer in Ihrem Mandanten auszuwählen und ihnen Berechtigungen zu erteilen. Diese Einstellung schließt Gastkonten aus. Alternativ dazu klicken Sie auf **Verzeichnis durchsuchen**, um eine bestimmte Gruppe auszuwählen. Klicken Sie auf **Details eingeben**, und geben Sie die E-Mail-Adresse des Benutzers oder die Azure AD-Gruppe oder einen Domänennamen ein, um externen Benutzern Berechtigungen zu erteilen oder wenn Sie die E-Mail-Adresse lieber manuell eingeben möchten.
     
     Wiederholen Sie diesen Schritt, um zusätzliche Benutzer anzugeben, die über dieselben Berechtigungen verfügen sollen.
 
@@ -288,26 +291,26 @@ Wenn Ihre Benutzer die E-Mail-Adressen in dem Feld **An** angeben, müssen diese
 
 5. Wiederholen Sie die Schritte 3 und 4, um zusätzliche Benutzer anzugeben, die über andere Berechtigungen verfügen sollen.
 
-6. Klicken Sie auf dem Blatt **Berechtigungen hinzufügen** auf **OK**.
+6. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **OK**.
 
-7. Klicken Sie auf dem Blatt **Schutz** auf **OK**, und klicken Sie auf dem Blatt **Bezeichnung** auf **Speichern**.
+7. Klicken Sie im Bereich **Schutz** auf **OK** und im Bereich **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it"></a>Beispiel 5: Bezeichnung, die Inhalt verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann
 
 Diese Konfiguration hat den Vorteil, dass Sie keine Benutzer, Gruppen oder Domänen angeben müssen, um eine E-Mail oder ein Dokument zu schützen. Der Inhalt wird weiterhin verschlüsselt, und Sie können weiterhin Nutzungsrechte, ein Ablaufdatum und einen Offlinezugriff festlegen. Verwenden Sie diese Konfiguration nur, wenn Sie nicht einschränken müssen, wer das geschützte Dokument oder die E-Mail öffnen darf. [Weitere Informationen zu dieser Einstellung](#more-information-about-add-any-authenticated-users)
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Achten Sie darauf, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Wählen Sie auf dem Blatt **Berechtigungen hinzufügen** auf der Registerkarte **Aus Liste auswählen** die Option **Alle authentifizierten Benutzer hinzufügen** aus.
+3. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf der Registerkarte **Aus Liste auswählen** auf die Option **Alle authentifizierten Benutzer hinzufügen**.
 
 4. Wählen Sie die gewünschten Berechtigungen aus, und klicken Sie auf **OK**.
 
-5. Wechseln Sie zum Blatt **Schutz**, und konfigurieren Sie die Einstellungen für **Ablauf des Dateiinhalts** und **Offlinezugriff zulassen**, falls erforderlich, und klicken Sie dann auf **OK**.
+5. Konfigurieren Sie im Bereich **Schutz** bei Bedarf die Einstellungen für **Ablauf des Dateiinhalts** und **Offlinezugriff zulassen**, und klicken Sie dann auf **OK**.
 
-6. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
+6. Klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
 
 
 ### <a name="example-6-label-that-applies-just-for-me-protection"></a>Beispiel 6: Bezeichnung, die den Schutz „Nur für mich“ anwendet
@@ -316,13 +319,13 @@ Diese Konfiguration bildet das Gegenstück zur sicheren Kollaboration an Dokumen
 
 Die Bezeichnungskonfiguration wirkt zunächst einfach:
 
-1. Stellen Sie sicher, dass auf dem Blatt **Schutz** die Option **Azure (cloud key)** (Azure (Cloud-Schlüssel)) ausgewählt ist.
+1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
-2. Klicken Sie auf **OK**, ohne dabei Benutzer auszuwählen, oder Einstellungen auf diesem Blatt zu konfigurieren.
+2. Klicken Sie auf **OK**, ohne dabei Benutzer auszuwählen oder Einstellungen in diesem Bereich zu konfigurieren.
     
     Obwohl Sie Einstellungen für **Ablauf des Dateiinhalts** und **Offlinezugriff zulassen** konfigurieren können, können diese Zugriffseinstellungen nicht angewendet werden, wenn Sie keine Benutzer und deren Berechtigungen angeben. Das liegt daran, dass die Person, die den Schutz anwendet, der [Rights Management-Aussteller](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) für den Inhalt ist. Diese Rolle bildet eine Ausnahme für diese Zugriffseinschränkungen.
 
-3. Wählen Sie auf dem Blatt **Bezeichnung** die Option **Speichern** aus.
+3. Klicken Sie im Bereich **Bezeichnung** auf **Speichern**.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

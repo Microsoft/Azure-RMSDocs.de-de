@@ -4,7 +4,7 @@ description: Eine technische Übersicht über den Azure Information Protection-D
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/18/2019
+ms.date: 11/04/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0659abcb6211bc05a6db435db759eed8f6c44cea
-ms.sourcegitcommit: 2f092b395e31ce64df8b9148433032be5702217e
+ms.openlocfilehash: 08360f357acd10d8f832f7aa5efcfb271539c8fe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72589608"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561156"
 ---
 # <a name="what-is-azure-information-protection"></a>Was ist Azure Information Protection?
 
@@ -145,7 +145,7 @@ Weitere Ressourcen: [Informationen zu und Unterstützung von Azure Information P
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Die Microsoft Ignite 2019 in Orlando startet bald! Dort erhalten Sie viele nützliche Informationen zu Azure Information Protection und den neuesten Updates und Verbesserungen. Wir hoffen, Sie dort begrüßen zu dürfen. Falls Sie jedoch nicht teilnehmen können, können Sie sich später eine Aufzeichnung der Sitzungen ansehen.
+Die Microsoft Ignite 2019 findet in Orlando statt. Dort erhalten Sie viele nützliche Informationen zu Azure Information Protection und den neuesten Updates und Verbesserungen. Wir hoffen, Sie dort begrüßen zu dürfen. Falls Sie jedoch nicht teilnehmen können, können Sie sich später eine Aufzeichnung der Sitzungen ansehen.
 
 Im Folgenden finden Sie die fünf Sitzungen, die wir Ihnen empfehlen. Links werden hinzugefügt, sobald die Aufzeichnungen verfügbar sind:
 
@@ -158,6 +158,9 @@ Im Folgenden finden Sie die fünf Sitzungen, die wir Ihnen empfehlen. Links werd
 - BRK2120: „Got Azure Information Protection?“ (Haben Sie Azure Information Protection schon?) Sicherer Umgang mit einheitlichen Bezeichnungen, Richtlinienkonfiguration, Clients und Analysen
 
 - BRK2121: Extend the power of sensitivity labeling and protection to your own apps and ISV solutions with the Microsoft Information Protection SDK. (Nutzen Sie mit dem Microsoft Information Protection SDK leistungsstarke Vertraulichkeitsbezeichnungen und Schutzfunktionen für Ihre eigenen Apps und ISV-Lösungen.)
+
+Letzter Blogbeitrag: [Grundlegende Informationen zum Speicherort sensibler Daten und dem intelligenten Schutz mit Microsoft 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Understand-where-your-sensitive-data-is-located-and/ba-p/960465)
+
 
 ## <a name="next-steps"></a>Nächste Schritte
 
