@@ -4,7 +4,7 @@ description: Einige häufig gestellte Fragen, die Ihnen beim Verwenden der Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: user
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fcd764187379fdfcb8dd1cc13c60ae9dad2069dd
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: a8f6871f322765abf07087ce3c7bd629bfc9748f
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301149"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160820"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Häufig gestellte Fragen zur Microsoft Azure Information Protection-App für iOS und Android
 
@@ -39,7 +39,7 @@ Diese App kann auch PDF-Dateien öffnen, die außerhalb von SharePoint und OneDr
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>Kann die Azure Information Protection-App auf meinem Gerät ausgeführt werden?
 
-Die Azure Information Protection-App erfordert eine Mindestversion von **IOS 11** oder **Android 4,4**.
+Die Azure Information Protection-App erfordert eine Mindestversion von **IOS 11** oder **Android 6,0**.
 
 Wenn Sie über diese oder höhere Versionen verfügen, können Sie die App zur Ausführung auf Ihrem mobilen Gerät installieren:
 
@@ -51,7 +51,7 @@ Wenn Sie über diese oder höhere Versionen verfügen, können Sie die App zur A
 
 Nachdem Sie die App installiert haben, müssen Sie zu diesem Zeitpunkt nichts weiter tun. Warten Sie, bis Sie eine geschützte E-Mail oder Datei erhalten, die Sie anzeigen möchten, und wählen Sie dann **AIP Viewer** aus, um sie zu öffnen. Anschließend werden Sie gebeten, sich mit Ihrem Arbeits- oder Schulkonto anzumelden oder aufgefordert, ein Zertifikat auszuwählen. Nachdem diese Anmeldeinformationen authentifiziert wurden, können Sie den Inhalt lesen.
 
-Wenn Sie jedoch nicht warten möchten, können Sie mithilfe der folgenden Anweisungen selbst eine geschützte E-Mail oder Datei zum Anzeigen senden: [Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android](mobile-app-get-started.md) 
+Wenn Sie nicht warten möchten, können Sie die folgenden Anweisungen verwenden, um sich selbst eine geschützte E-Mail oder Datei zum Anzeigen zu senden: [Get started with the Microsoft Azure Information Protection app for iOS and Android (Erste Schritte mit der Microsoft Azure Information Protection-App für iOS und Android)](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Welche Anmeldeinformationen sollte ich bei dieser App verwenden?
 

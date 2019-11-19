@@ -1,6 +1,6 @@
 ---
 title: PowerShell für Schutzvorlagen (Azure Information Protection)
-description: Alle Vorgänge, die Sie im Azure-Portal zum Erstellen und Verwalten von Schutzvorlagen ausführen können, lassen sich auch mithilfe von PowerShell über die Befehlszeile starten. Außerdem können Sie Vorlagen zwischen Mandanten kopieren oder eine Massenbearbeitung komplexer Eigenschaften in Vorlagen, z. b. mehrsprachige Namen und Beschreibungen, ausführen.
+description: Verwenden Sie PowerShell, um Schutz Vorlagen für Azure Information Protection zu erstellen und zu verwalten.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cd34533f1042668b79f540dd6066f600be445f2
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b75242487f3a32d0e6ea0f912d9bc75f8109e0fe
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683584"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160883"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>PowerShell-Referenz für Schutzvorlagen
 
@@ -38,20 +38,20 @@ Die folgenden Cmdlets unterstützen das Erstellen und Verwalten von Schutzvorlag
 
 - [Export-aipservicetemplate](/powershell/module/aipservice/export-aipservicetemplate)
 
-- [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)
+- [Get-aipservicetemplate](/powershell/module/aipservice/get-aipservicetemplate)
 
-- [Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
+- [Get-aipservicetemplateproperty](/powershell/module/aipservice/get-aipservicetemplateproperty)
 
-- [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd)
+- [Import-aipservicetemplate](/powershell/module/aipservice/import-aipservicetpd)
 
-- [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
+- [New-aipservicerighzdefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)
 
 - [Remove-aipservicetemplate](/powershell/module/aipservice/remove-aipservicetemplate)
 
-- [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
+- [Set-aipservicetemplateproperty](/powershell/module/aipservice/set-aipservicetemplateproperty)
 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
