@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/04/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b07c2e6ffe7e9eae6b1a9130890c33d033264474
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 08c5571399e9a77e2d28cc2c6b3f25e9ffc0235a
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559573"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160869"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -44,7 +44,7 @@ Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie m�
 
 Wenn Sie Administrator Rollen für die delegierte Administration in Ihrer Organisation verwenden, müssen Sie möglicherweise einige Änderungen an der Unified-Bezeichnung-Plattform vornehmen:
 
-Die [Azure AD Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) und des **globalen Readers** werden von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn eine dieser Administrator Rollen in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators**oder der Sicherheit hinzu.  **Administrator**. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
+Die [Azure AD Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) und des **globalen Readers** werden von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn eine dieser Administrator Rollen in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer, die diese Rolle besitzen, den Azure AD Rollen von Kompatibilitäts **Administrator**, Kompatibilitäts **Daten Administrator**oder **Sicherheitsadministrator**hinzu. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
 Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
 
@@ -71,7 +71,7 @@ Die Bezeichnung "Bezeichnung" hat viele Vorteile, ist jedoch nicht rückgängig.
     
     - Wenn Sie über Bezeichnungen verfügen, die für eine vordefinierte Vorlage konfiguriert sind, können Sie diese Bezeichnungen bearbeiten und die Option **Berechtigungen festlegen** auswählen, um die gleichen Schutzeinstellungen wie in Ihrer Vorlage zu konfigurieren. Bezeichnungen mit vordefinierten Vorlagen verhindern die Bezeichnungsmigration nicht, diese Bezeichnungskonfiguration wird jedoch in den Admin-Centers nicht unterstützt.
         
-        Tipp: um Sie bei der Neukonfiguration dieser Bezeichnungen zu unterstützen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie Wählen Sie **Berechtigungen festlegen**aus.
+        Tipp: um Sie bei der Neukonfiguration dieser Bezeichnungen zu unterstützen, ist es möglicherweise hilfreich, zwei Browserfenster zu verwenden: ein Fenster, in dem Sie die Schaltfläche **Vorlage bearbeiten** für die Bezeichnung auswählen, um die Schutzeinstellungen anzuzeigen, und das andere Fenster, in dem Sie die gleichen Einstellungen konfigurieren, wenn Sie **Berechtigungen festlegen**auswählen.
     
     - Nachdem eine Bezeichnung mit cloudbasierten Schutzeinstellungen migriert wurde, ist der sich ergebende Bereich der Schutz Vorlage der Bereich, der in der Azure-Portal definiert ist (oder mithilfe des PowerShell-Moduls aipservice), und der Bereich, der in den Admin Centers definiert ist. 
 
@@ -158,7 +158,7 @@ Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und
 ### <a name="copy-policies"></a>Richtlinien kopieren
 
 > [!NOTE]
-> Diese Option wird nach dem Rollout für Mandanten eingeführt. Sie befindet sich auch in der Vorschau Phase und kann geändert werden.
+> Diese Option befindet sich in der Vorschau Phase und kann geändert werden.
 
 Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center.
 

@@ -4,7 +4,7 @@ description: Stellen Sie fest, welche Geräte den Azure Rights Management-Dienst
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 872a398df33491b815947ad86db70cdbdf922596
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: bd88649f5e66358a97bb446e4e3d7c9f43c78500
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301141"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160844"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Clientgeräte mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -37,16 +37,16 @@ Folgende Computerbetriebssysteme unterstützen den Azure Rights Management-Diens
 
 -   **Windows 10** (x86, x64)
 
--   **macOS**: Mindestversion von macOS 10.8 (Mountain Lion)
+-   **MacOS**: Mindestversion von MacOS 10,8 (Mountain Lion)
 
 ## <a name="mobile-devices"></a>Mobile Geräte
 Folgende Mobilbetriebssysteme unterstützen den Azure Rights Management-Dienst:
 
--   **Android-Smartphones und -Tablets**: Mindestversion von Android 4.4
+-   **Android-Telefone und-Tablets**: Mindestversion von Android 6,0
 
 -   **iPhone und iPad**: Mindestversion von IOS 11,0
 
--   **Windows-Smartphones und -Tablets**: Windows 10 Mobile
+-   **Windows-Telefone und-Tablets**: Windows 10 Mobile
 
 
 ## <a name="next-steps"></a>Nächste Schritte
