@@ -4,18 +4,18 @@ description: Verwenden Sie den Azure Information Protection-Scanner, um nach ver
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/01/2019
+ms.date: 11/12/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: c00aebd2af57dfbb7d9897d200ef3601ebf26ed3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
+ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559943"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73979979"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
@@ -42,7 +42,7 @@ Voraussetzungen für diesen Schnellstart:
     
     - Der klassische Client: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection.exe** herunter.
     
-    - Der Client für einheitliche Bezeichnungen: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection_UL_Preview.exe** herunter.
+    - Der Client für einheitliche Bezeichnungen: Um diesen Client zu installieren, navigieren Sie auf der Azure Information Protection-Seite zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018), und laden Sie **AzInfoProtection_UL.exe** herunter.
     
 3. SQL Server Express ist ebenfalls auf Ihrem Computer installiert.
     
