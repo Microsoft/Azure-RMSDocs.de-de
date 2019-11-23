@@ -1,10 +1,10 @@
 ---
-title: Der Client für Azure Information Protection-aip
+title: The client for Azure Information Protection - AIP
 description: Microsoft Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Daten einer Organisation bereit. Der Client (Azure Information Protection-Client oder Rights Management-Client) ist in Anwendungen integriert, die auf Computern und mobilen Geräten ausgeführt werden.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/04/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,165 +12,165 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: abe085b36bd940dd69c2cc5f0f7a564fd6707548
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 17ab9c36de6fded89ee685574a6e5d87cddcc3e0
+ms.sourcegitcommit: 16431c5c5b353a91b10ba27022133582b966df6e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561129"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412888"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Applies to: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
 
-- Der Client kann der integrierte Bezeichnungs Client für Office, der Azure Information Protection Unified-Bezeichnungs Client für Windows, der Azure Information Protection-Client (klassisch) für Windows oder der Rights Management-Client sein.
+- The client can be the built-in labeling client for Office, the Azure Information Protection unified labeling client for Windows, the Azure Information Protection client (classic) for Windows, or the Rights Management client.
     
-    Diese Clients werden oft als **integrierter Office-Bezeichnungs Client, einheitlicher Bezeichnungs** **Client**, **klassischer Client**und **RMS-Client**bezeichnet. Je nachdem, welchen Client Sie verwenden, kann er in Anwendungen integriert werden, die Sie auf Computern und mobilen Geräten ausführen.
+    These clients are often referred to as the **Office built-in labeling client**, the **unified labeling client**, the **classic client**, and the **RMS client**, respectively. Whichever client you use, it integrates with applications that you run on computers and mobile devices.
 
-- Der Dienst befindet sich in der Cloud oder lokal. Der clouddienst ist Azure Information Protection, der den Azure Rights Management-Dienst für den Datenschutz verwendet. Der lokale Dienst wird Active Directory Rights Management Services, die üblicherweise als AD RMS bezeichnet wird. 
+- The service resides in the cloud or on-premises. The cloud service is Azure Information Protection, which uses the Azure Rights Management service for the data protection. The on-premises service is Active Directory Rights Management Services, more commonly known as AD RMS. 
 
-Alle diese Clients können in Office-Anwendungen integriert werden, aber der Unified-Bezeichnungs Client und der klassische Client müssen separat installiert werden und zusätzliche Features und Komponenten unterstützen. Diese Clients enthalten beispielsweise Unterstützung für den Datei-Explorer, sodass Sie Dateien außerhalb von Office klassifizieren und schützen können. Zu den zusätzlichen Komponenten gehören ein Viewer für geschützte PDF-Dokumente und geschützte Images sowie ein Scanner für lokale Datenspeicher.
+All these clients integrate with Office applications but the unified labeling client and the classic client must be installed separately and support additional features and components. For example, these clients include support for File Explorer, so you can classify and protect files outside Office. Additional components include a viewer for protected PDF documents and protected images, and a scanner for on-premises data stores.
 
-Der RMS-Client bietet nur Schutz. Dieser Client wird automatisch mit einigen Anwendungen installiert, z. b. Office-Anwendungen, den Azure Information Protection Clients und RMS-fähigen Anwendungen von Softwareanbietern. Er kann jedoch auch [eigenständig installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396) werden, um das [Synchronisieren von Dateien von IRM-geschützten Bibliotheken und OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) zu unterstützen sowie für Entwickler, die den Rights Management-Schutz in branchenspezifische Anwendungen integrieren möchten.
+The RMS client provides protection only. This client is automatically installed with some applications, such as Office applications, the Azure Information Protection clients, and RMS-enlightened applications from software vendors. Er kann jedoch auch [eigenständig installiert](https://www.microsoft.com/en-us/download/details.aspx?id=38396) werden, um das [Synchronisieren von Dateien von IRM-geschützten Bibliotheken und OneDrive for Business](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668) zu unterstützen sowie für Entwickler, die den Rights Management-Schutz in branchenspezifische Anwendungen integrieren möchten.
 
-## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Wählen Sie aus, welche Bezeichnung für Windows-Computer verwendet werden soll.
+## <a name="choose-which-labeling-client-to-use-for-windows-computers"></a>Choose which labeling client to use for Windows computers
 
-Verwenden Sie nach Möglichkeit einen der Bezeichnungs enden Clients, da Bezeichnungen die Komplexität der Anwendung des Schutzes für Benutzer abstrahieren und Bezeichnungen auch Klassifizierungen bieten, sodass Sie Ihre Daten nachverfolgen und verwalten können.
+Where possible, use one of the labeling clients because labels abstract the complexity of applying protection for users, and labels also provide classification so you can track and manage your data.
 
-Die Auswahl der Bezeichnung Client für Ihre Windows-Computer kann von dem verwendeten Verwaltungs Portal beeinflusst werden:
+Your choice of labeling client for your Windows computers might be influenced by which management portal you use:
 
-- Der integrierte Office-Beschriftungs Client und der Azure Information Protection Unified Label-Client laden Bezeichnungen und Richtlinien Einstellungen aus den folgenden admin Centers herunter: 
+- The Office built-in labeling client and the Azure Information Protection unified labeling client download labels and policy settings from the following admin centers: 
     - Office 365 Security & Compliance Center
-    - Microsoft 365 Security Center
-    - Microsoft 365 Compliance Center
+    - Microsoft 365 security center
+    - Microsoft 365 compliance center
 
-- Der Azure Information Protection-Client (klassisch) lädt die Bezeichnung und die Richtlinien Einstellungen aus dem Azure-Portal herunter.
+- The Azure Information Protection client (classic) downloads label and policy settings from the Azure portal.
 
-Da der Unified-Bezeichnungs Client und der klassische Client eine separate Installation für Office erfordern, müssen Sie diese Clients aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen und installieren. 
+Because the unified labeling client and the classic client require a separate installation to Office, you must download and install these clients from the [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-Welchen Client sollten Sie verwenden?
+Which client should you use?
 
-- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens eine Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in.  Ihre Office-Apps, für die der einheitliche Bezeichnungs Client oder der klassische Client erforderlich ist. Diese Features enthalten die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients.
+- Use the **labeling client built in to Office** for your Windows computers when you have Office 365 apps that are a minimum version 1910, you want to use the same labels and policy settings that can also be used by MacOS, iOS, and Android, and you don't need features in your Office apps that require the unified labeling client or classic client. These features include the Information Protection bar under the ribbon for easier label selection and visibility. This client supports switching accounts, and because it doesn't use an Office add-in, it has better performance in Office apps than using either of the Azure Information Protection clients.
 
-- Verwenden Sie den **Azure Information Protection Unified** Label-Client auf Windows-Computern für Bezeichnungen und Richtlinien Einstellungen, die auch von MacOS, IOS und Android verwendet werden können. Sie möchten Dateien unabhängig von Office 365-apps bezeichnen, und Sie benötigen keine Features, die werden nur vom klassischen Client unterstützt. Diese Features umfassen derzeit den Schutz von Inhalten mit einem lokalen Schlüssel (Hyok) und eine allgemein verfügbare Version des Scanners für lokale Datenspeicher.
+- Use the **Azure Information Protection unified labeling client** on Windows computers for labels and policy settings that can also be used by MacOS, iOS, and Android, you want to label files independently from Office 365 apps, and you don’t need features that are only supported by the classic client. These features currently include protecting content with an on-premises key (HYOK) and a general availability version of the scanner for on-premises data stores.
 
-- Installieren Sie den **Azure Information Protection-Client (klassisch)** auf Windows-Computern, wenn Sie eine Version des Clients benötigen, die über Features verfügt, die noch nicht mit dem Unified-Bezeichnungs Client verfügbar sind. Obwohl dieser Client die gleichen Bezeichnungen wie die von MacOS, IOS und Android verwenden kann, verfügt er über unterschiedliche Richtlinien Einstellungen. Der Kompromiss besteht also in der Verwaltung mithilfe eines anderen Verwaltungs Portals und einer anderen Benutzer Darstellung für Benutzer.
+- Install the **Azure Information Protection client (classic)** on Windows computers if you need a version of the client that has features that are not yet available with the unified labeling client. Although this client can use the same labels as those used by MacOS, iOS, and Android, it has different policy settings. So your tradeoff is administration using another management portal and a different user experience for users.
 
-Mit der neuesten Version des Unified-Bezeichnungs Clients wird die Parität der Features mit dem klassischen Client geschlossen. Wenn diese Lücke geschlossen wird, können Sie davon ausgehen, dass neue Features nur dem Unified-Beschriftungs Client hinzugefügt werden. Aus diesem Grund wird empfohlen, den Unified-Bezeichnungs Client bereitzustellen, wenn der aktuelle Funktionsumfang und seine Funktionalität ihren Geschäftsanforderungen entsprechen. Falls nicht, oder wenn Sie Bezeichnungen in der Azure-Portal konfiguriert haben, die Sie noch nicht [zum vereinheitlichten Bezeichnungs Speicher migriert](../configure-policy-migrate-labels.md)haben, verwenden Sie den klassischen Client.
+The latest version of the unified labeling client brings it to close parity in features with the classic client. As this gap closes, you can expect new features to be added only to the unified labeling client. For this reason, we recommend you deploy the unified labeling client if its current feature set and functionality meet your business requirements. If not, or if you have configured labels in the Azure portal that you haven't yet [migrated to the unified labeling store](../configure-policy-migrate-labels.md), use the classic client.
 
-Sie können verschiedene Clients in derselben Umgebung verwenden, um unterschiedliche Geschäftsanforderungen zu unterstützen, wie im folgenden Beispiel für die Bereitstellung veranschaulicht. In einer gemischten Client Umgebung empfiehlt es sich, einheitliche Bezeichnungen zu verwenden, damit Clients denselben Satz von Bezeichnungen für die einfache Verwaltung verwenden. Neue Kunden haben standardmäßig einheitliche Bezeichnungen, da sich Ihre Mandanten auf der vereinheitlichten Beschriftungs Plattform befinden. Weitere Informationen finden Sie unter [wie kann ich feststellen, ob mein Mandant auf der Unified-Beschriftungs Plattform ist?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
+You can use different clients in the same environment to support different business requirements, as demonstrated in the following deployment example. In a mixed client environment, we recommend you use unified labels so that clients share the same set of labels for ease of administration. New customers have unified labels by default because their tenants are on the unified labeling platform. For more information, see [How can I determine if my tenant is on the unified labeling platform?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgeführt werden, die mindestens eine Version 1910 haben und einer der Azure Information Protection Clients installiert ist, wird der integrierte Bezeichnungs Client standardmäßig in Office-Apps deaktiviert. Sie können dieses Verhalten jedoch ändern, um den integrierten Bezeichnungs Client nur für Ihre Office-Apps zu verwenden. Mit dieser Konfiguration bleibt der Azure Information Protection Client (klassisch oder vereinheitlichte Bezeichnung) für die Bezeichnung im Datei-Explorer, PowerShell und Scanner verfügbar. Anweisungen zum Deaktivieren des Azure Information Protection Clients in Office 365-apps finden Sie in der Office-Dokumentation im Abschnitt über das [Ausführen von Vertraulichkeits Bezeichnungen neben dem Azure Information Protection-Client in Office für Windows](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#can-sensitivity-labels-run-alongside-the-azure-information-protection-client-in-office-for-windows) .
+When you have a Windows computer that runs Office 365 apps that are a minimum version 1910 and one of the Azure Information Protection clients is installed, by default the built-in labeling client is disabled in Office apps. However, you can change this behavior to use the built-in labeling client for just your Office apps. With this configuration, the Azure Information Protection client (classic or unified labeling) remains available for labeling in File Explorer, PowerShell, and the scanner. For instructions to disable the Azure Information Protection client in Office 365 apps, see the section [Can sensitivity labels run alongside the Azure Information Protection client in Office for Windows?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#can-sensitivity-labels-run-alongside-the-azure-information-protection-client-in-office-for-windows) from the Office documentation.
 
-##### <a name="example-deployment-strategy"></a>Beispiel für eine Bereitstellungs Strategie:
+##### <a name="example-deployment-strategy"></a>Example deployment strategy:
 
-- Für die Mehrheit der Benutzer stellen Sie den Azure Information Protection Unified-Bezeichnungs Client bereit, da dieser Client die geschäftlichen Anforderungen für diese Benutzer erfüllt. 
+- For the majority of users, you deploy the Azure Information Protection unified labeling client because this client meets the business needs for these users. 
     
-    Für diese Benutzer ist Ihre Bezeichnung in Windows, Mac, IOS und Android sehr ähnlich, da Ihnen dieselben Bezeichnungen und die gleichen Richtlinien Einstellungen zur Verfügung stehen. Als Administrator verwalten Sie diese Bezeichnungen und Richtlinien Einstellungen im selben Verwaltungs Center.
+    For these users, their labeling experience is very similar across Windows, Mac, iOS, and Android because they have the same labels published to them and the same policy settings. As an admin, you manage these labels and policy settings in the same management center.
 
-- Außerdem installieren Sie den Unified-Bezeichnung-Client für sich selbst, um die Vorschauversion des Azure Information Protection Scanners zu testen.
+- You also install the unified labeling client for yourself, to test the preview version of the Azure Information Protection scanner.
 
-- Für eine Teilmenge der Benutzer stellen Sie den klassischen Client bereit, da diese Benutzer Bezeichnungen benötigen, die den Hyok-Schutz (Hold Your Own Key) anwenden.
+- For a subset of users, you deploy the classic client because these users require labels that apply hold your own key (HYOK) protection.
     
-    Diese Benutzer haben bei der Verwendung dieses Clients eine etwas andere Bezeichnung. Beispielsweise wird eine Schaltfläche **schützen** anstelle einer **Vertraulichkeits** Schaltfläche in Office-Apps angezeigt. Als Administrator müssen Sie Ihre Bezeichnungen für Hyok-Einstellungen und Richtlinien Einstellungen in einem anderen Verwaltungs Center mit den Bezeichnungen und Einstellungen für die anderen Client Plattformen verwalten.
+    For these users, they have a slightly different labeling experience when they use this client. For example, they see a **Protect** button rather than a **Sensitivity** button in Office apps. As an admin, you need to manage their labels for HYOK settings and policy settings in a different management center to the labels and settings for the other client platforms.
 
-- Sie verfügen über lokale Datenspeicher mit Dokumenten, die auf sensible Informationen überprüft oder klassifiziert und geschützt werden müssen. Zur Verwendung in der Produktion stellen Sie den klassischen-Client auf Servern bereit, um den Azure Information Protection Scanner auszuführen.
+- You have on-premises data stores with documents that need to be scanned for sensitive information, or classified and protected. For production use, you deploy the classic client on servers to run the Azure Information Protection scanner.
 
-## <a name="compare-the-labeling-clients-for-windows-computers"></a>Vergleichen der Beschriftungs Clients für Windows-Computer
+## <a name="compare-the-labeling-clients-for-windows-computers"></a>Compare the labeling clients for Windows computers
 
-Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs enden Clients für Windows-Computer unterstützt werden.
+Use the following table to help compare which features are supported by the three labeling clients for Windows computers.
 
-In der Office-Dokumentation finden Sie Informationen dazu, welche Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web unter [stützt werden](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
+To compare the Office built-in sensitivity labeling features across different operating system platforms (Windows, MacOS, iOS, and Android) and for the web, see the Office documentation, [What sensitivity label capabilities are supported in Office today?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)
 
-|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Komponente|Classic client|Unified labeling client|Office built-in labeling client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
-|Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
-|Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
-|Empfohlene oder automatische Bezeichnung:| **Ja** | **Ja** | Nein |
-|Obligatorische Bezeichnung:| **Ja** | **Ja** | Nein |
-|Benutzerdefinierte Berechtigungen für eine Bezeichnung:<br />-Nicht weiterleiten für e-Mails<br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | Nein |
-|Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
+|Manual labeling:| **Ja** | **Ja** |**Ja** |
+|Default label:| **Ja** | **Ja** | **Ja** |
+|Recommended or automatic labeling:| **Ja** | **Ja** | Nein |
+|Mandatory labeling:| **Ja** | **Ja** | Nein |
+|User-defined permissions for a label:<br />- Do Not Forward for emails<br />- Custom permissions for Word, Excel, PowerPoint, File Explorer| **Ja** | **Ja** | Nein |
+|Multilanguage support for labels:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
-|Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
-|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />(Vorschau)** | Nein |
+|Customizations that include:<br />– Standardbezeichnung für E-Mails<br />- Pop-up messages in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Yes** <sup>1</sup> | **Yes** <sup>2</sup> | Nein |
+|Überprüfung für lokale Datenspeicher:| **Ja** | **Yes <br />(preview)** | Nein |
 |Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
-|Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
+|Custom permissions set independently from a label:| **Ja** | **Yes** <sup>3</sup>| Nein |
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
-|Visuelle Kennzeichnungen als Bezeichnungs Aktion (Kopfzeile, Fußzeile, Wasserzeichen):| **Ja** | **Ja** | **Ja**|
-|Visuelle Kennzeichnungen pro App:| **Ja** | Nein | Nein |
-|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | Nein | Nein |
-|Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
-|Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
-|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
-|PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
-|Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja** <sup>6</sup>| Nein |
-|Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
+|Visual markings as a label action (header, footer, watermark):| **Ja** | **Ja** | **Ja**|
+|Per app visual markings:| **Ja** | Nein | Nein |
+|Dynamic visual markings with variables:| **Ja** | Nein | Nein |
+|Label with File Explorer:| **Ja** | **Ja** | Nein |
+|A viewer for protected files (text, images, PDF, .pfile):| **Ja** | **Ja** | Nein|
+|PPDF support for applying labels:| **Ja** | Nein | Nein |
+|PowerShell labeling cmdlets:| **Ja** | **Yes** <sup>4</sup> | Nein |
+|Offlineunterstützung für Schutzaktionen:| **Ja** | **Yes** <sup>5</sup> | **Ja** |
+|Manual policy file management for disconnected computers:| **Ja** |**Yes** <sup>6</sup>| Nein |
 |HYOK-Unterstützung:| **Ja** | Nein | Nein |
-|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein |
-|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein |
-|Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>7</sup> | Nein |
-|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
+|Usage logging in Event Viewer:| **Ja** | Nein |Nein |
+|Display the Do Not Forward button in Outlook:| **Ja** | Nein | Nein |
+|Track protected documented:| **Ja** | **Yes** <sup>7</sup> | Nein |
+|Revoke protected documents:| **Ja** | Nein | Nein |
 |Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
-|Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
-|Unterstützung für AD RMS:| **Ja** | Nein <sup>8</sup> | Nein |
+|Support for account switching:| Nein | Nein | **Ja** |
+|Unterstützung für AD RMS:| **Ja** | No <sup>8</sup> | Nein |
 
 Fußnoten:
 
-<sup>1</sup> diese Einstellungen und viele weitere werden als [Erweiterte Client Einstellungen unterstützt, die Sie im Azure-Portal konfigurieren](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal).
+<sup>1</sup> These settings, and many more are supported as [advanced client settings that you configure in the Azure portal](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal).
 
-<sup>2</sup> diese Einstellungen und viele weitere werden als erweiterte Einstellungen unterstützt, [die Sie mit PowerShell konfigurieren](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
+<sup>2</sup> These settings, and many more are supported as [advanced settings that you configure with PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
 
-<sup>3</sup> wird vom Datei-Explorer und PowerShell unterstützt. In Office-Apps können Benutzer **Dateiinformationen** >  > **schützen** auswählen, um den **Zugriff einzuschränken**.
+<sup>3</sup> Supported by File Explorer and PowerShell. In Office apps, users can select **File Info** > **Protect Document** > **Restrict Access**.
 
-<sup>4</sup> es wird nicht unterstützt, den Schutz von Container Dateien (ZIP, rar, 7z,. msg und. PST) zu entfernen.
+<sup>4</sup> No support to remove protection from container files (zip, .rar, .7z, .msg, and .pst).
 
-<sup>5</sup> für den Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen.
+<sup>5</sup> For File Explorer and PowerShell commands, the user must be connected to the internet to protect files.
 
-<sup>6</sup> unterstützt für die Bezeichnung mit dem Datei-Explorer, PowerShell und dem Scanner. Wird für die Bezeichnung in Office-Apps nicht unterstützt.
+<sup>6</sup> Supported for labeling with File Explorer, PowerShell, and the scanner. Not supported for labeling in Office apps.
 
-<sup>7</sup> die Website zum Nachverfolgen von Dokumenten, die vom klassischen Client unterstützt wird, wird vom Unified-Bezeichnung-Client nicht unterstützt. Allerdings können Administratoren die [zentrale Bericht](../reports-aip.md) Erstellung verwenden, um zu ermitteln, ob der Zugriff auf geschützte Dokumente von Windows-Computern aus erfolgt und ob der Zugriff gewährt oder verweigert wurde, ohne dass Sie zuerst das Dokument für die Nachverfolgung registrieren müssen. 
+<sup>7</sup> The document tracking site that's supported by the classic client isn't supported by the unified labeling client. However, without the need to first register the document for tracking, administrators can use [central reporting](../reports-aip.md) to identify whether protected documented are accessed from Windows computers, and whether access was granted or denied. 
 
-<sup>8</sup> Bezeichnungs-und Schutz Aktionen werden nicht unterstützt. Allerdings kann der Viewer bei einer AD RMS Bereitstellung geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))verwenden.
+<sup>8</sup> Labeling and protection actions aren't supported. However, for an AD RMS deployment, the viewer can open protected documents when you use the [Active Directory Rights Management Services Mobile Device Extension](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
-### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Ausführliche Vergleiche der Azure Information Protection Clients
+### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Detailed comparisons for the Azure Information Protection clients
 
-Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azure Information Protection Unified-Bezeichnungs Client dieselbe Funktion unterstützen, verwenden Sie die folgende Tabelle, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren.
+When the Azure Information Protection client (classic) and the Azure Information Protection unified labeling client both support the same feature, use the following table to help identify some functional differences between the two clients.
 
-|Funktion |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktion |Classic client|Unified labeling client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
-|Verwalten der Information Protection-Leiste in Office-Apps:|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Schützen** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App ausgeblendet, aber in neu geöffneten Apps weiterhin automatisch angezeigt <br /><br /> Für Administratoren: <br /><br />– Richtlinieneinstellungen zum automatischen Anzeigen oder Ausblenden der Leiste beim ersten Öffnen einer App sowie zum Steuern, ob die Leiste bei neu geöffneten Apps automatisch ausgeblendet wird, nachdem ein Benutzer die Leiste in einer App ausgeblendet hat|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App und in neu geöffneten Apps ausgeblendet <br /><br />Für Administratoren: <br /><br />-PowerShell-Einstellung zum Verwalten des Balkens |
-|Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Nach der Bezeichnungs Migration beibehalten und mit [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label) konfigurierbar|
-|Bezeichnungen unterstützen verschiedene Sprachen:| Konfigurieren im Azure-Portal | Konfigurieren mithilfe von Office 365 Security & Compliance PowerShell und des Parameters *localesettings* für [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) und [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
+|Verwalten der Information Protection-Leiste in Office-Apps:|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Schützen** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App ausgeblendet, aber in neu geöffneten Apps weiterhin automatisch angezeigt <br /><br /> Für Administratoren: <br /><br />– Richtlinieneinstellungen zum automatischen Anzeigen oder Ausblenden der Leiste beim ersten Öffnen einer App sowie zum Steuern, ob die Leiste bei neu geöffneten Apps automatisch ausgeblendet wird, nachdem ein Benutzer die Leiste in einer App ausgeblendet hat|Für Benutzer: <br /><br />– Option zum Anzeigen oder Ausblenden der Leiste über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br />– Wenn ein Benutzer die Leiste ausblendet, wird sie standardmäßig in dieser App und in neu geöffneten Apps ausgeblendet <br /><br />Für Administratoren: <br /><br />- PowerShell setting to manage the bar |
+|Bezeichnungsfarbe: | Konfigurieren im Azure-Portal | Retained after label migration and configurable with [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Labels support different languages:| Konfigurieren im Azure-Portal | Configure by using Office 365 Security & Compliance PowerShell and the *LocaleSettings* parameter for [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
 |Richtlinienaktualisierung: | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 24 Stunden | Beim Öffnen einer Office-App <br /><br /> Beim Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen <br /><br />Beim Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz<br /><br />Alle 4 Stunden|
 |Unterstützte Formate für PDF:| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung (Standardeinstellung) <br /><br /> – PPDF <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz| Schutz: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br /> <br /><br /> Verbrauch: <br /><br /> – ISO-Standard für die PDF-Verschlüsselung <br /><br />– PPDF<br /><br />– SharePoint-IRM-Schutz|
-|Generisch geschützte Dateien (Pfile-Dateien), die mit dem Viewer geöffnet wurden:| Die Datei wird in der ursprünglichen app geöffnet, in der Sie angezeigt, geändert und ohne Schutz gespeichert werden kann. | Die Datei wird in der ursprünglichen app geöffnet, in der Sie angezeigt und geändert, jedoch nicht gespeichert werden kann.|
-|Unterstützte Cmdlets:| Cmdlets für Bezeichnungen und Cmdlets für den reinen Schutz | Cmdlets für die Bezeichnung:<br /><br /> "Set-aipfileclassification" und "Set-aipfilelabel" unterstützen den *Owner* -Parameter nicht. <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> "Set-aipfileclassification" unterstützt den Parameter " *WhatIf* ", damit er im Ermittlungs Modus ausgeführt werden kann. <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />Außerdem zeigt der Parameter " *labelingmethod* " für "Get-aipfilestatus" den Wert " **privilegiert** " oder " **Standard** " anstelle von **manuell** oder **automatisch**an Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
-|Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
+|Generically protected files (.pfile) opened with the viewer:| File opens in the original app where it can then be viewed, modified, and saved without protection | File opens in the original app where it can then be viewed and modified, but not saved|
+|Unterstützte Cmdlets:| Cmdlets for labeling and cmdlets for protection-only | Cmdlets for labeling:<br /><br /> Set-AIPFileClassification and Set-AIPFileLabel don't support the *Owner* parameter <br /><br /> Darüber hinaus gibt es einen einzelnen Kommentar „Keine anzuwendende Bezeichnung“ für alle Szenarien, in denen keine Bezeichnung angewendet wird <br /><br /> Set-AIPFileClassification supports the *WhatIf* parameter, so it can be run in discovery mode <br /><br /> Set-AIPFileLabel unterstützt den Parameter *EnableTracking* nicht <br /><br /> Get-AIPFileStatus gibt keine Bezeichnungsinformationen aus anderen Mandanten zurück und zeigt den Parameter *RMSIssuedTime* nicht an<br /><br />In addition, the *LabelingMethod* parameter for Get-AIPFileStatus displays **Privileged** or **Standard** instead of **Manual** or **Automatic**. Weitere Informationen finden Sie in der [Onlinedokumentation](/powershell/module/azureinformationprotection/get-aipfilestatus).|
+|Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Frequency: Per file <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Frequency: Per session <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
-|Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
-|Anpassbarer richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie die Azure-Portal, um die Standardmeldung an Benutzer zu ersetzen. | Nein <br /><br /> Obwohl die Admin Center über eine Option zum Bereitstellen eines angepassten Richtlinien Tipps verfügen, wird diese Option vom Unified-Bezeichnungs Client derzeit nicht unterstützt.|
-|Ändern Sie das standardmäßige Schutzverhalten für Dateitypen: | Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Sie können [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) verwenden, um zu ändern, welche Dateitypen geschützt werden.|
+|Automatic and recommended labels: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
+|Customizable policy tip for automatic and recommended labels: | Ja <br /><br />Use the Azure portal to replace the default message to users | Nein <br /><br /> Although the admin centers have an option to supply a customized policy tip, this option is not currently supported by the unified labeling client|
+|Change the default protection behavior for file types: | You can use [registry edits](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) to override the defaults of native and generic protection | You can use [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) to change which file types get protected|
 
-Einen ausführlichen Vergleich der Verhaltensunterschiede für bestimmte Schutzeinstellungen finden Sie unter [Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
+For a detailed comparison of behavior differences for specific protection settings, see [Comparing the behavior of protection settings for a label](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
-### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Features, die im Azure Information Protection Unified-Bezeichnungs Client nicht geplant sind
+### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Features not planned to be in the Azure Information Protection unified labeling client
 
-Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in der Entwicklungsphase befindet, sind die folgenden Features und Verhaltensunterschiede vom klassischen Client derzeit nicht für die Verfügbarkeit in zukünftigen Versionen des Unified-Bezeichnungs Clients geplant: 
+Although the Azure Information Protection unified labeling client is still under development, the following features and behavior differences from the classic client are not currently planned to be available in future releases for the unified labeling client: 
 
-- Unterstützung von Office-Apps für nicht verbundene Computer mit manueller Richtlinien Dateiverwaltung
+- Support Office apps for disconnected computers with manual policy file management
 
-- Benutzerdefinierte Berechtigungen als separate Option, die Benutzer in Office-Apps auswählen können: Word, Excel und PowerPoint
+- Custom permissions as a separate option that users can select in Office apps: Word, Excel, and PowerPoint
 
 - Nachverfolgen und widerrufen von Office-Apps und dem Datei-Explorer
 
 - Titel und QuickInfo der Information Protection-Leiste
 
-- Nur Schutzmodus (keine Bezeichnungen) mithilfe von Vorlagen
+- Protection-only mode (no labels) using templates
 
 - Schutz von PDF-Dokumenten im .ppdf-Format
 
@@ -180,23 +180,23 @@ Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in 
 
 - Begründung für das Entfernen eines Schutzes
 
-- Bestätigungsaufforderung möchten **Sie diese Bezeichnung löschen?** für Benutzer, wenn Sie die Richtlinien Einstellung nicht zur Begründung verwenden
+- Confirmation prompt **Do you want to delete this label?** for users when you don't use the policy setting for justification
 
 - Unabhängige PowerShell-Cmdlets zur Verbindung mit einem Rights Management-Dienst
 
 
 ### <a name="parent-labels-and-their-sublabels"></a>Übergeordnete und untergeordnete Bezeichnungen 
 
-Der Azure Information Protection-Client (klassisch) unterstützt keine Konfigurationen, die eine übergeordnete Bezeichnung angeben, die über untergeordnete Bezeichnungen verfügt. Diese Konfigurationen umfassen die Angabe einer Standardbezeichnung sowie einer Bezeichnung für die empfohlene oder automatische Klassifizierung. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, können Sie eine der untergeordneten Bezeichnungen angeben, aber nicht die übergeordnete Bezeichnung.
+The Azure Information Protection client (classic) doesn't support configurations that specify a parent label that has sublabels. Diese Konfigurationen umfassen die Angabe einer Standardbezeichnung sowie einer Bezeichnung für die empfohlene oder automatische Klassifizierung. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, können Sie eine der untergeordneten Bezeichnungen angeben, aber nicht die übergeordnete Bezeichnung.
 
 Aus Paritätsgründen unterstützt der Azure Information Protection-Client für einheitliche Bezeichnungen die Anwendung von übergeordneten Bezeichnungen mit untergeordneten Bezeichnungen ebenfalls nicht, auch wenn Sie diese Bezeichnungen in den Admin-Centers auswählen können. In diesem Szenario wendet der Azure Information Protection-Client für einheitliche Bezeichnungen die übergeordnete Bezeichnung nicht an.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Verwenden Sie die folgende Dokumentation, um die Azure Information Protection Clients zu installieren und zu konfigurieren:
+To install and configure the Azure Information Protection clients, use the following documentation:
 
 - [Azure Information Protection-Client](AIP-client.md)
 
 - [Azure Information Protection-Client für einheitliche Bezeichnungen](unifiedlabelingclient-version-release-history.md)
 
-Weitere Informationen zur Verwendung des integrierten Bezeichnungs Clients für Office 365-apps finden Sie unter [Vertraulichkeits Bezeichnungen in Office-Apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
+For more information about using the built-in labeling client for Office 365 apps, see [Sensitivity labels in Office apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps).
