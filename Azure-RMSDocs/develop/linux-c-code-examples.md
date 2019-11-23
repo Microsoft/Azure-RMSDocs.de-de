@@ -21,7 +21,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/05/2019
 ms.locfileid: "73632275"
 ---
-# <a name="linux-code-examples"></a>Codebeispiele für Linux
+# <a name="linux-code-examples"></a>Linux-Codebeispiele
 
 In diesem Thema werden wichtige Szenarien Codeelemente der Linux-Version des RMS SDK vorgestellt.
 
