@@ -1,10 +1,10 @@
 ---
 title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
-description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection-Client (klassisch) müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
+description: To configure classification, labeling, and protection for the Azure Information Protection client (classic), you must configure the Azure Information Protection policy.
 author: cabailey
 ms.author: cabailey
-ms.date: 10/04/2019
-manager: barbkess
+ms.date: 11/25/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,25 +13,25 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e5d81b5437fef69438fac5d8729b4beb8c9641a9
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 498028d071e2af3a908518020b142cc1dea39a4d
+ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559458"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74479142"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
+> The Azure Information Protection policy applies to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 > 
-> Informationen zum Konfigurieren von Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen für den Unified Label-Client finden Sie unter [Overview of Sensitivität Labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) in der Office-Dokumentation.
+> If you are looking for information to configure sensitivity labels and policy settings for the unified labeling client, see [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
 
-Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den klassischen Client müssen Sie die Azure Information Protection Richtlinie konfigurieren. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist.
+To configure classification, labeling, and protection for the classic client, you must configure the Azure Information Protection policy. Diese Richtlinie wird dann auf Computer heruntergeladen, auf denen der [Azure Information Protection-Client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) installiert ist.
 
 Die Richtlinie enthält Bezeichnungen und Einstellungen:
 
@@ -65,34 +65,34 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 - Verwenden Sie den folgenden Link: https://portal.azure.com
 
-- Verwenden Sie ein Azure AD Konto mit einer der folgenden [Administrator Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+- Use an Azure AD account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Azure Information Protection-Administrator**
+    - **Azure Information Protection administrator**
     
   - **Complianceadministrator**
     
-  - **Kompatibilitäts Daten Administrator**
+  - **Compliance data administrator**
     
   - **Sicherheitsadministrator**
     
-    **Sicherheits Leser** - [Azure Information Protection Analytics](reports-aip.md)
+    **Security reader** - [Azure Information Protection analytics](reports-aip.md) only
     
-    **Globaler Reader** - [Azure Information Protection Analytics](reports-aip.md)
+    **Global reader** - [Azure Information Protection analytics](reports-aip.md) only
     
   - **Globaler Administrator**
     
     > [!NOTE] 
-    > Wenn sich Ihr Mandant auf der Unified-Bezeichnung-Plattform befindet, werden die Azure Information Protection-Administrator Rolle (ehemals "Information Protection Administrator") und die globale readerrolle für das Azure-Portal nicht unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > If your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), the Azure Information Protection administrator role (formerly "Information Protection administrator"), the Security reader role, and the Global reader role are not supported for the Azure portal. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
-    Microsoft-Konten können Azure Information Protection nicht verwalten.
+    Microsoft accounts cannot manage Azure Information Protection.
 
-## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>So greifen Sie zum ersten Mal auf den Azure Information Protection Bereich zu
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>To access the Azure Information Protection pane for the first time
 
 1. Melden Sie sich im Azure-Portal an.
 
-2. Wählen Sie **+ Ressource erstellen**aus, und geben Sie dann in das Suchfeld für den Marketplace **Azure Information Protection**ein. 
+2. Klicken Sie auf die Option **+ Ressource erstellen**, und geben Sie dann im Suchfeld für den Marketplace **Azure Information Protection** ein. 
     
-3. Wählen Sie aus den Ergebnisliste **Azure Information Protection** aus. Klicken Sie im Bereich **Azure Information Protection** auf **Erstellen**.
+3. Wählen Sie aus den Ergebnisliste **Azure Information Protection** aus. On the **Azure Information Protection** pane, click **Create**.
     
     > [!TIP] 
     > Wählen Sie optional **An Dashboard anheften** aus, um eine **Azure Information Protection**-Kachel auf Ihrem Dashboard zu erstellen, damit Sie bei der nächsten Anmeldung beim Portal nicht erneut nach dem Dienst suchen müssen können.
@@ -101,15 +101,15 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
 
 4. Beachten Sie die Seite **Schnellstart**, die automatisch geöffnet wird, wenn Sie zum ersten Mal eine Verbindung mit dem Dienst herstellen. Durchsuchen Sie die empfohlenen Ressourcen, oder verwenden Sie andere Menüoptionen. Verwenden Sie das folgende Verfahren, um Bezeichnungen, die Benutzer auswählen können, zu konfigurieren.
 
-Wenn Sie das nächste Mal auf den **Azure Information Protection** Bereich zugreifen, wird automatisch die Option **Labels** ausgewählt, damit Sie Bezeichnungen für alle Benutzer anzeigen und konfigurieren können. Über das Menü **Allgemein** können Sie zur **Schnellstart**-Seite zurückkehren.
+Next time you access the **Azure Information Protection** pane, it automatically selects the **Labels** option so that you can view and configure labels for all users. Über das Menü **Allgemein** können Sie zur **Schnellstart**-Seite zurückkehren.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Informationen zum Konfigurieren der Azure Information Protection-Richtlinie
 
-1. Stellen Sie sicher, dass Sie beim Azure-Portal angemeldet sind, indem Sie eine dieser administrativen Rollen verwenden: Azure Information Protection Administrator, Sicherheitsadministrator oder globale Verwaltung. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
+1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Azure Information Protection administrator, Security administrator, or Global administration. Im [vorherigen Abschnitt](#signing-in-to-the-azure-portal) finden Sie weitere Informationen zu diesen Administratorrollen.
 
-2. Navigieren Sie ggf. zum **Azure Information Protection** Bereich: Klicken Sie beispielsweise im hubmenü auf **alle Dienste** , und beginnen Sie mit der Eingabe **Information Protection** im Filter Feld. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
+2. If necessary, navigate to the **Azure Information Protection** pane: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. Wählen Sie aus den Ergebnissen **Azure Information Protection** aus. 
     
-    Der Bereich **Azure Information Protection-Bezeichnungen** wird automatisch geöffnet, damit Sie die verfügbaren Bezeichnungen anzeigen und bearbeiten können. Die Bezeichnungen können allen Benutzern, ausgewählten Benutzern oder keinem Benutzer zur Verfügung gestellt werden, indem diese zu einer Richtlinie hinzugefügt oder daraus entfernt werden.
+    The **Azure Information Protection - Labels** pane automatically opens for you to view and edit the available labels. Die Bezeichnungen können allen Benutzern, ausgewählten Benutzern oder keinem Benutzer zur Verfügung gestellt werden, indem diese zu einer Richtlinie hinzugefügt oder daraus entfernt werden.
 
 3. Wählen Sie aus den Menüoptionen die Option **Richtlinien** aus, um die Richtlinien anzuzeigen und zu bearbeiten. Wählen Sie die Richtlinie **Global** aus, um die Richtlinie anzuzeigen und zu bearbeiten, die von sämtlichen Benutzern abgerufen werden kann. Klicken Sie auf **Neue Richtlinie hinzufügen**, um eine benutzerdefinierte Richtlinie für ausgewählte Benutzer zu erstellen.
     
@@ -118,7 +118,7 @@ Wenn Sie das nächste Mal auf den **Azure Information Protection** Bereich zugre
 
 Sie können eine beliebige Anzahl von Bezeichnungen erstellen. Wenn jedoch so viele Bezeichnungen vorhanden sind, dass Benutzer nur schwer die richtige auswählen können, sollten Sie bereichsbezogene Richtlinien erstellen, damit Benutzern nur relevante Bezeichnungen angezeigt werden. Die Höchstgrenze für Bezeichnungen, die Schutz anwenden, beträgt 500.
 
-Wenn Sie Änderungen an einem Azure Information Protection Bereich vornehmen, klicken Sie auf **Speichern** , um die Änderungen zu speichern, oder auf **verwerfen** , um die zuletzt gespeicherten Einstellungen wiederherzustellen. Wenn Sie Änderungen in einer Richtlinie speichern oder Änderungen an Bezeichnungen vornehmen, die zu Richtlinien hinzugefügt werden, werden diese Änderungen automatisch veröffentlicht. Es gibt keine gesonderte Veröffentlichungsoption.
+When you make any changes on an Azure Information Protection pane, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. Es gibt keine gesonderte Veröffentlichungsoption.
 
 Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Protection-Client, ob Änderungen vorgenommen wurden. Gegebenenfalls lädt der Client diese Änderungen dann als neueste Azure Information Protection-Richtlinie herunter. Folgende zusätzliche Trigger aktualisieren die Richtlinie im Client ebenfalls:
 
@@ -168,13 +168,13 @@ Beim Start einer unterstützten Office-Anwendung prüft der Azure Information Pr
 
 Wenn eine Bezeichnung auf ein Dokument oder eine E-Mail angewendet wird, wird die Bezeichnung hinter den Kulissen in den Metadaten gespeichert, so dass Anwendungen und Dienste die Bezeichnung lesen können:
 
-- In E-Mails werden diese Informationen im X-Header gespeichert: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** . 
+- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True** 
 
-- Für Word-Dokumente (. doc und. docx), Excel-Kalkulations Tabellen (. xls und. xlsx), PowerPoint-Präsentationen (. ppt und. pptx) und PDF-Dokumente werden diese Metadaten in der folgenden benutzerdefinierten Eigenschaft gespeichert: **MSIP_Label_\<GUID > _Enabled = true**  
+- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents, this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**
 
-Bei e-Mails werden die Bezeichnungs Informationen gespeichert, wenn die e-Mail gesendet wird. Bei Dokumenten werden die Bezeichnungs Informationen gespeichert, wenn die Datei gespeichert wird. 
+For emails, the label information is stored when the email is sent. For documents, the label information is stored when the file is saved. 
 
-Um die GUID für eine Bezeichnung zu identifizieren, suchen Sie den Bezeichnungs-ID-Wert im Bereich **Bezeichnung** im Azure-Portal, wenn Sie die Azure Information Protection Richtlinie anzeigen oder konfigurieren. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
+To identify the GUID for a label, locate the Label ID value on the **Label** pane in the Azure portal, when you view or configure the Azure Information Protection policy. Bei Dateien, auf die Bezeichnungen angewendet wurden, können Sie auch das PowerShell-Cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) ausführen, um die GUID (MainLabelId oder SubLabelId) zu identifizieren. Wenn eine Bezeichnung über untergeordnete Bezeichnungen verfügt, geben Sie immer die GUID einer untergeordneten Bezeichnung an, nicht die der übergeordneten Bezeichnung.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
@@ -184,5 +184,5 @@ Beispiele zum Anpassen der Azure Information Protection-Richtlinie und das resul
 
 - [Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
 
-Informationen zur Leistung Ihrer Richtlinie finden Sie unter [Zentrale Berichterstellung für Azure Information Protection](reports-aip.md).
+To see how your policy is performing, see [Central reporting for Azure Information Protection](reports-aip.md).
 
