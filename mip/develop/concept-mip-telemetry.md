@@ -1,6 +1,6 @@
 ---
-title: Concepts - The core concepts in the MIP SDK - Telemetry Control
-description: This article will help you understand how to opt out of telemetry and which events are still sent when opted out.
+title: 'Konzepte: die grundlegenden Konzepte im MIP SDK-Telemetrie-Steuerelement'
+description: In diesem Artikel erfahren Sie, wie Sie die Telemetrie abonnieren und welche Ereignisse weiterhin gesendet werden, wenn Sie sich abmelden.
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
@@ -14,139 +14,139 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74484852"
 ---
-# <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK - Telemetry Configuration
+# <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-telemetriekonfiguration
 
 ## <a name="telemetry"></a>Telemetrie
 
-By default, the Microsoft Information Protection SDK sends telemetry data to Microsoft. This telemetry data is useful for troubleshooting bugs, quality, and performance issues across the SDK install base that we may not capture in our internal testing. When implementing your application with the SDK, it's important to give users and admins the ability to opt out of telemetry if required.
+Standardmäßig sendet das Microsoft Information Protection SDK Telemetriedaten an Microsoft. Diese Telemetriedaten sind nützlich für die Behandlung von Fehlern, Qualitäts-und Leistungsproblemen in der SDK-Installationsbasis, die bei unseren internen Tests möglicherweise nicht erfasst werden. Wenn Sie Ihre Anwendung mit dem SDK implementieren, ist es wichtig, Benutzern und Administratoren die Möglichkeit zu einräumen, die Telemetriedaten bei Bedarf zu entscheiden.
 
-## <a name="telemetry-configuration"></a>Telemetry Configuration
+## <a name="telemetry-configuration"></a>Telemetriekonfiguration
 
-Telemetry options in the MIP SDK can be controlled via [TelemetryConfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet). Create an instance of this class, then set **IsTelemetryOptedOut** to true. Provide the object of class **TelemetryConfiguration** to the function used to create **MipContext**. This doesn't completely eliminate telemetry data, but reduces to a minimum set with all end-user identifiable information scrubbed.
+Telemetrieoptionen im MIP SDK können über [telemetryconfiguration](https://docs.microsoft.com/dotnet/api/microsoft.informationprotection.telemetryconfiguration?view=mipsdk-dotnet)gesteuert werden. Erstellen Sie eine Instanz dieser Klasse, und legen Sie dann **istelemetryoptedout** auf true fest. Geben Sie das Objekt der Klasse **telemetryconfiguration** der Funktion an, die zum Erstellen von **mipcontext**verwendet wird. Dadurch werden Telemetriedaten nicht vollständig eliminiert, aber auf einen minimalen Satz reduziert, bei dem alle identifizierbaren Endbenutzer Informationen bereinigt werden.
 
-### <a name="minimum-telemetry-events"></a>Minimum Telemetry Events
+### <a name="minimum-telemetry-events"></a>Minimale telemetrieereignisse
 
-When telemetry is set to *opted out*, a minimum set of data is sent to Microsoft. All personally identifiable information is scrubbed from this information. This data includes heartbeat information to understand that the SDK is being used, and system metadata. **No user content or end user identifiable information is set to the service.**
+Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Microsoft*gesendet. Alle persönlich identifizierbaren Informationen werden anhand dieser Informationen bereinigt. Diese Daten enthalten Takt Informationen, um zu verstehen, dass das SDK verwendet wird, und System Metadaten. **Es sind keine Benutzerinhalte oder Endbenutzer identifizierbaren Informationen auf den Dienst festgelegt.**
 
-Review the tables below to see exactly what events and data are sent with minimum telemetry set.
+Überprüfen Sie die folgenden Tabellen, um genau zu sehen, welche Ereignisse und Daten mit dem minimalen telemetriesatz gesendet werden.
 
-#### <a name="event-heartbeat"></a>Event: Heartbeat
+#### <a name="event-heartbeat"></a>Ereignis: Takt
 
-| Name                                 | Description                                                                            | Scrubbed |
+| Name                                 | Description                                                                            | Bereinigt |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | Nein       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | Nein       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | Nein       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| CreationTime                         | Time event was generated.                                                              | Nein       |
-| DefaultLabel.Id                      | Tenant default label ID.                                                               | Nein       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Engine.UserObjectId                  | User object ID in Azure Active Directory.                                              | Nein       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | Nein       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | Nein       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | Nein       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | Nein       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | Nein       |
-| MachineName                          | Name of the system that generated the event.                                           | **Ja**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | Nein       |
-| Vorgang                            | Takt                                                                              | Nein       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Plattform                             | Operating system version.                                                              | Nein       |
-| ProcessName                          | Name of the process using the SDK.                                                     | Nein       |
-| ProductVersion                       | Same as “App.ApplicationVersion”.                                                      | Nein       |
-| SDKVersion                           | Same as MIP.Version.                                                                   | Nein       |
+| App. ApplicationId                    | Der Anwendungs Bezeichner, der über MIP:: ApplicationInfo bereitgestellt wird.                          | nein       |
+| App. ApplicationName                  | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| App. applicationVersion               | Die Anwendungs Version, die über MIP:: ApplicationInfo profitet wird.                             | nein       |
+| ApplicationId                        | Die Anwendungs Version, die über MIP:: ApplicationInfo profitet wird.                             | nein       |
+| ApplicationName                      | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| CreationTime                         | Das Zeit Ereignis wurde generiert.                                                              | nein       |
+| DefaultLabel.Id                      | Standard-ID der Mandanten Bezeichnung.                                                               | nein       |
+| Engine. tenantid                      | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Engine. userobjectid                  | Benutzerobjekt-ID in Azure Active Directory.                                              | nein       |
+| Event. CorrelationId                  | Generierte eindeutige ID, die dem Objekt zugeordnet ist, das das Ereignis ausgelöst hat.                   | nein       |
+| Event. correlationiddescription       | C++der Klassenname des Objekts, das das Ereignis ausgelöst hat.                                     | nein       |
+| Event. parametricorrelationid            | Korrelation-ID des übergeordneten Ereignisses.                                                           | nein       |
+| Event. parametricorrelationiddescription | Es wurde eine eindeutige ID generiert, die dem übergeordneten Objekt zugeordnet ist, das das Ereignis ausgelöst hat. | nein       |
+| Event. UniqueId                       | Generierte eindeutige ID, die dem Ereignis zugewiesen ist.                                             | nein       |
+| MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
+| MIP. Version                          | Version des MIP SDK.                                                                | nein       |
+| Vorgang                            | Takt                                                                              | nein       |
+| OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Platform                             | Betriebssystemversion.                                                              | nein       |
+| ProcessName                          | Der Name des Prozesses mit dem SDK.                                                     | nein       |
+| ProductVersion                       | Identisch mit "App. applicationVersion".                                                      | nein       |
+| SDKVersion                           | Identisch mit MIP. Version.                                                                   | nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | Nein       |
-| Version                              | Audit version schema (“1.1”).                                                          | Nein       |
+| UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | nein       |
+| Version                              | Audit Version Schema ("1,1").                                                          | nein       |
 
-#### <a name="event-discovery"></a>Event: Discovery
+#### <a name="event-discovery"></a>Ereignis: Ermittlung
 
-| Name                                 | Description                                                                            | Scrubbed |
+| Name                                 | Description                                                                            | Bereinigt |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| ActionId                             | Unique action ID for this event, used for event correlation.                           | Nein       |
-| App.ApplicationId                    | The application identifier provided via mip::ApplicationInfo.                          | Nein       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | Nein       |
-| ApplicationId                        | The application version profided via mip::ApplicationInfo.                             | Nein       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| CreationTime                         | Time event was generated.                                                              | Nein       |
-| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | Nein       |
-| DefaultLabel.Id                      | Tenant default label identifier.                                                       | Nein       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | Nein       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | Nein       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | Nein       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | Nein       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | Nein       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | Nein       |
-| LabelId                              | Content label identifier on the opened file or data.                                   | Nein       |
-| MachineName                          | Name of the system that generated the event.                                           | **Ja**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | Nein       |
-| ObjectId                             | File path/description of the file or data.                                             | **Ja**  |
-| Vorgang                            | "Discovery".                                                                           | Nein       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Plattform                             | Operating system version.                                                              | Nein       |
-| ProcessName                          | Name of the process using the SDK.                                                     | Nein       |
-| Geschützt                            | Bool indicating if the file is protected or not.                                       | Nein       |
-| Protection                           | The protection template identifier.                                                    | **Ja**  |
-| ProtectionOwner                      | Email address of the protection owner.                                                 | **Ja**  |
-| SDKVersion                           | Same as MIP.Version.                                                                   | Nein       |
+| ActionID                             | Eindeutige Aktions-ID für dieses Ereignis, die für die Ereignis Korrelation verwendet wird.                           | nein       |
+| App. ApplicationId                    | Der Anwendungs Bezeichner, der über MIP:: ApplicationInfo bereitgestellt wird.                          | nein       |
+| App. ApplicationName                  | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| App. applicationVersion               | Die Anwendungs Version, die über MIP:: ApplicationInfo profitet wird.                             | nein       |
+| ApplicationId                        | Die Anwendungs Version, die über MIP:: ApplicationInfo profitet wird.                             | nein       |
+| ApplicationName                      | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| CreationTime                         | Das Zeit Ereignis wurde generiert.                                                              | nein       |
+| datastate                            | Der Zustand der Daten, während die Anwendung auf "Rest", "Motion", "Use" agiert.           | nein       |
+| DefaultLabel.Id                      | Standard Bezeichner der Mandanten Bezeichnung.                                                       | nein       |
+| Engine. tenantid                      | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Engine. userobjectid                  | Benutzerobjekt Bezeichner in Azure Active Directory.                                      | nein       |
+| Event. CorrelationId                  | Generierte eindeutige ID, die dem Objekt zugeordnet ist, das das Ereignis ausgelöst hat.                   | nein       |
+| Event. correlationiddescription       | C++der Klassenname des Objekts, das das Ereignis ausgelöst hat.                                     | nein       |
+| Event. parametricorrelationid            | Korrelation-ID des übergeordneten Ereignisses.                                                           | nein       |
+| Event. parametricorrelationiddescription | Es wurde eine eindeutige ID generiert, die dem übergeordneten Objekt zugeordnet ist, das das Ereignis ausgelöst hat. | nein       |
+| Event. UniqueId                       | Generierte eindeutige ID, die dem Ereignis zugewiesen ist.                                             | nein       |
+| LabelId                              | Der Bezeichner für die Inhalts Bezeichnung der geöffneten Datei oder der geöffneten Daten.                                   | nein       |
+| MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
+| MIP. Version                          | Version des MIP SDK.                                                                | nein       |
+| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| Vorgang                            | "Ermittlung".                                                                           | nein       |
+| OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Platform                             | Betriebssystemversion.                                                              | nein       |
+| ProcessName                          | Der Name des Prozesses mit dem SDK.                                                     | nein       |
+| Geschützt                            | Boolescher Wert, der angibt, ob die Datei geschützt ist.                                       | nein       |
+| Schutz                           | Der Schutz Vorlagen Bezeichner.                                                    | **Ja**  |
+| Schutz Besitzer                      | E-Mail-Adresse des Schutz Besitzers.                                                 | **Ja**  |
+| SDKVersion                           | Identisch mit MIP. Version.                                                                   | nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | Nein       |
-| Version                              | Audit version schema (“1.1”).                                                          | Nein       |
+| UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | nein       |
+| Version                              | Audit Version Schema ("1,1").                                                          | nein       |
 
-#### <a name="event-label-change"></a>Event: Label Change
+#### <a name="event-label-change"></a>Ereignis: Bezeichnungs Änderung
 
-| Name                                 | Description                                                                            | Scrubbed |
+| Name                                 | Description                                                                            | Bereinigt |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
-| ActionId                             | Unique action ID for this event, used for event correlation.                           | Nein       |
-| ActionIdBefore                       | Previous action ID. Used to chain to new action ID.                                    | Nein       |
-| ActionSource                         | Value of MIP::ActionSource.                                                            | Nein       |
-| App.ApplicationId                    | The application ID provided via mip::ApplicationInfo.                                  | Nein       |
-| App.ApplicationName                  | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| App.ApplicationVersion               | The application version profided via mip::ApplicationInfo.                             | Nein       |
-| ApplicationId                        | The application ID provided via mip::ApplicationInfo.                                  | Nein       |
-| ApplicationName                      | The application name provided via mip::ApplicationInfo.                                | Nein       |
-| CreationTime                         | Time the event was generated.                                                          | Nein       |
-| DataState                            | The state of the data as the application acts on it “REST”, “MOTION”, “USE”.           | Nein       |
-| DefaultLabel.Id                      | Tenant default label identifier.                                                       | Nein       |
-| Engine.TenantId                      | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Engine.UserObjectId                  | User object identifier in Azure Active Directory.                                      | Nein       |
-| Event.CorrelationId                  | Generated unique ID associated with object that triggered the event.                   | Nein       |
-| Event.CorrelationIdDescription       | C++ class name of object that triggered the event.                                     | Nein       |
-| Event.ParentCorrelationId            | Parent event correlation ID.                                                           | Nein       |
-| Event.ParentCorrelationIdDescription | Generated Unique ID associated with the parent of the object that triggered the event. | Nein       |
-| Event.UniqueId                       | Generated unique ID assigned to the event.                                             | Nein       |
-| IsLabelChanged                       | Bool indicating if the label changed.                                                  | Nein       |
-| IsProtectionChanged                  | Bool indicating if protection changed.                                                 | Nein       |
-| LabelId                              | Label ID that is to be applied to the file or data.                                    | Nein       |
-| LabelIdBefore                        | Previous label ID that was on the file or data.                                        | Nein       |
-| MachineName                          | Name of the system that generated the event.                                           | **Ja**  |
-| MIP.Version                          | Version of the MIP SDK.                                                                | Nein       |
-| ObjectId                             | File path/description of the file or data.                                             | **Ja**  |
-| Vorgang                            | "Change".                                                                              | Nein       |
-| OrganizationId                       | Home tenant GUID of the authenticated user.                                            | Nein       |
-| Plattform                             | Operating system version.                                                              | Nein       |
-| ProcessName                          | Name of the process using the SDK.                                                     | Nein       |
-| Produktversion                      |                                                                                        | Nein       |
-| Geschützt                            | Bool indicating if the file is protected or not.                                       | Nein       |
-| Protected Before                     | Bool indicating if the file was previously protected or not.                           | Nein       |
-| Protection                           | The protection template identifier.                                                    | Nein       |
-| Protection Before                    | The previous protection template identifier.                                           | Nein       |
-| ProtectionContentId                  | The new content identifier (GUID).                                                     | Nein       |
-| ProtectionContentIdBefore            | The previous content identifier (GUID).                                                | Nein       |
-| ProtectionOwner                      | Email address of the protection owner.                                                 | **Ja**  |
-| ProtectionOwnerBefore                | Previous email address of the protection owner.                                        | **Ja**  |
-| SDKVersion                           | Same as MIP.Version.                                                                   | Nein       |
+| ActionID                             | Eindeutige Aktions-ID für dieses Ereignis, die für die Ereignis Korrelation verwendet wird.                           | nein       |
+| "Aktionidbefore"                       | Vorherige Aktions-ID. Wird zum Verketten zur neuen Aktions-ID verwendet.                                    | nein       |
+| Aktions Quelle                         | Der Wert MIP:: aktionsource.                                                            | nein       |
+| App. ApplicationId                    | Die Anwendungs-ID, die über MIP:: ApplicationInfo bereitgestellt wird.                                  | nein       |
+| App. ApplicationName                  | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| App. applicationVersion               | Die Anwendungs Version, die über MIP:: ApplicationInfo profitet wird.                             | nein       |
+| ApplicationId                        | Die Anwendungs-ID, die über MIP:: ApplicationInfo bereitgestellt wird.                                  | nein       |
+| ApplicationName                      | Der über MIP:: ApplicationInfo bereitgestellte Anwendungsname.                                | nein       |
+| CreationTime                         | Uhrzeit, zu der das Ereignis generiert wurde.                                                          | nein       |
+| datastate                            | Der Zustand der Daten, während die Anwendung auf "Rest", "Motion", "Use" agiert.           | nein       |
+| DefaultLabel.Id                      | Standard Bezeichner der Mandanten Bezeichnung.                                                       | nein       |
+| Engine. tenantid                      | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Engine. userobjectid                  | Benutzerobjekt Bezeichner in Azure Active Directory.                                      | nein       |
+| Event. CorrelationId                  | Generierte eindeutige ID, die dem Objekt zugeordnet ist, das das Ereignis ausgelöst hat.                   | nein       |
+| Event. correlationiddescription       | C++der Klassenname des Objekts, das das Ereignis ausgelöst hat.                                     | nein       |
+| Event. parametricorrelationid            | Korrelation-ID des übergeordneten Ereignisses.                                                           | nein       |
+| Event. parametricorrelationiddescription | Es wurde eine eindeutige ID generiert, die dem übergeordneten Objekt zugeordnet ist, das das Ereignis ausgelöst hat. | nein       |
+| Event. UniqueId                       | Generierte eindeutige ID, die dem Ereignis zugewiesen ist.                                             | nein       |
+| Islabelchanged                       | Boolescher Wert, der angibt, ob die Bezeichnung geändert                                                  | nein       |
+| Isprotectionchanged                  | Bool, das angibt, ob der Schutz geändert wurde.                                                 | nein       |
+| LabelId                              | Bezeichnungs-ID, die auf die Datei oder die Daten angewendet werden soll.                                    | nein       |
+| LabelIdBefore                        | ID der vorherigen Bezeichnung, die in der Datei oder den Daten gespeichert war.                                        | nein       |
+| MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
+| MIP. Version                          | Version des MIP SDK.                                                                | nein       |
+| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| Vorgang                            | "Ändern".                                                                              | nein       |
+| OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | nein       |
+| Platform                             | Betriebssystemversion.                                                              | nein       |
+| ProcessName                          | Der Name des Prozesses mit dem SDK.                                                     | nein       |
+| Produktversion                      |                                                                                        | nein       |
+| Geschützt                            | Boolescher Wert, der angibt, ob die Datei geschützt ist.                                       | nein       |
+| Geschützt vor                     | Boolescher Wert, der angibt, ob die Datei zuvor geschützt war.                           | nein       |
+| Schutz                           | Der Schutz Vorlagen Bezeichner.                                                    | nein       |
+| Schutz vor                    | Der vorherige Schutz Vorlagen Bezeichner.                                           | nein       |
+| Schutzcontentid                  | Der neue Inhalts Bezeichner (GUID).                                                     | nein       |
+| Schutzcontentidbefore            | Der vorherige Inhalts Bezeichner (GUID).                                                | nein       |
+| Schutz Besitzer                      | E-Mail-Adresse des Schutz Besitzers.                                                 | **Ja**  |
+| ProtectionOwnerBefore                | Vorherige e-Mail-Adresse des Schutz Besitzers.                                        | **Ja**  |
+| SDKVersion                           | Identisch mit MIP. Version.                                                                   | nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
-| UserObjectId                         | Azure AD object ID of the user.                                                        | Nein       |
-| Version                              | Audit version schema (“1.1”).                                                          | Nein       |
+| UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | nein       |
+| Version                              | Audit Version Schema ("1,1").                                                          | nein       |
 
 
-### <a name="opting-out-in-c"></a>Opting out in C++
+### <a name="opting-out-in-c"></a>Opt out inC++
 
-To set telemetry to minimum only, create a shared pointer of **mip::TelemetryConfiguration()** and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MipContent::Create()** .
+Um nur die Telemetrie auf minimal festzulegen, erstellen Sie einen freigegebenen Zeiger von **MIP:: telemetryconfiguration ()** , und legen Sie **istelemetryoptedout** auf true fest. Übergeben Sie das Konfigurationsobjekt in an **mipcontent:: Create ()** .
 
 ```cpp
 auto telemetryConfig = std::make_shared<mip::TelemetryConfiguration>();                                     
@@ -163,9 +163,9 @@ mMipContext = mip::MipContext::Create(
 );
 ```
 
-### <a name="opting-out-in-net"></a>Opting out in .NET
+### <a name="opting-out-in-net"></a>Ablehnen in .net
 
-To set telemetry to minimum only, create a **TelemetryConfiguration()** object and set **isTelemetryOptedOut** to true. Pass the configuration object in to **MIP.CreateMipContext()** .
+Um nur die Telemetrie auf minimal festzulegen, erstellen Sie ein **telemetryconfiguration ()** -Objekt, und legen Sie **istelemetryoptedout** auf true fest. Übergeben Sie das Konfigurationsobjekt in **MIP. "Kreatemipcontext ()** ".
 
 ```csharp
 TelemetryConfiguration telemetryConfiguration = new TelemetryConfiguration();
