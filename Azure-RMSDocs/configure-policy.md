@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 498028d071e2af3a908518020b142cc1dea39a4d
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.openlocfilehash: 2c34ed49b9a88373de514a44ebadf2800c23c298
+ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74479142"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564500"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
@@ -82,7 +82,7 @@ So melden Sie sich beim Azure-Portal an, um Azure Information Protection zu konf
   - **Globaler Administrator**
     
     > [!NOTE] 
-    > Wenn sich Ihr Mandant auf der [Unified-Beschriftungs Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet, werden die Azure Information Protection Administrator-Rolle (ehemals "Information Protection Administrator"), die Rolle "Sicherheits Leser" und die Rolle "globaler Leser" für die Azure-Portal nicht unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Wenn sich Ihr Mandant auf der [Unified-Bezeichnung-Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet, wird die Azure Information Protection Administrator Rolle (ehemals "Information Protection Administrator") für die Azure-Portal nicht unterstützt. [Weitere Informationen](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Microsoft-Konten können Azure Information Protection nicht verwalten.
 

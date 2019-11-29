@@ -3,7 +3,7 @@ title: Zentrale Berichterstellung für Azure Information Protection
 description: Erfahren Sie, wie Sie mithilfe der zentralen Berichterstellung die Übernahme Ihrer Azure Information Protection-Bezeichnungen nachverfolgen und Dateien mit vertraulichen Daten erkennen.
 author: cabailey
 ms.author: cabailey
-ms.date: 11/25/2019
+ms.date: 11/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7c310122ac72bc7312fe0bd8d41bd3dc80715d76
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
+ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74474292"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564544"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
 
@@ -144,7 +144,7 @@ Standardmäßig werden von Azure Information Protection Clients keine Inhalts Ü
 
 - Konfigurieren Sie für den Unified Label-Client eine [Erweiterte Einstellung](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in einer Bezeichnungs Richtlinie.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 Damit Sie Azure Information Protection-Berichte anzeigen und eigene Berichte erstellen können, müssen die folgenden Voraussetzungen erfüllt sein.
 
 |Anforderungen|Weitere Informationen|
@@ -177,9 +177,6 @@ Details:
     
         - **Sicherheitsleseberechtigter**
         - **Globaler Reader**
-    
-    > [!NOTE] 
-    > Sie können die Azure Information Protection Administrator-Rolle, die Rolle "Sicherheits Leser" oder die Rolle "globaler Leser" nicht verwenden, wenn sich Ihr Mandant auf der [Unified-Bezeichnung-Plattform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)befindet.
 
 2. Darüber hinaus benötigen Sie eine der folgenden [Azure Log Analytics-Rollen](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) oder standardmäßige [Azure-Rollen](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles), um auf Ihren Azure Log Analytics-Arbeitsbereich zuzugreifen:
     
@@ -225,7 +222,7 @@ Azure Monitor Protokolle verfügt über die Funktion " **Nutzung und geschätzte
     
 2. Navigieren Sie zu den Menüoptionen **Verwalten**, und wählen Sie **Analyse konfigurieren (Vorschau)** aus.
 
-3. Im Bereich **Azure Information Protection Log Analytics** wird eine Liste aller Log Analytics Arbeitsbereiche angezeigt, die sich im Besitz Ihres Mandanten befinden. Führen Sie eines der folgenden Verfahren aus:
+3. Im Bereich **Azure Information Protection Log Analytics** wird eine Liste aller Log Analytics Arbeitsbereiche angezeigt, die sich im Besitz Ihres Mandanten befinden. Nehmen Sie eine der folgenden Aktionen vor:
     
     - So erstellen Sie einen neuen Log Analytics Arbeitsbereich: Wählen Sie **neuen Arbeitsbereich erstellen**aus, und geben Sie im **Bereich Log Analytics-Arbeitsbereich** die angeforderten Informationen an.
     
@@ -278,39 +275,39 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 
 |Spaltenname|Description|
 |-----------|-----------|
-|Uhrzeit|Ereignis Zeit: UTC im Format yyyy-mm-ddThh: mm: SS|
+|Zeit|Ereignis Zeit: UTC im Format yyyy-mm-ddThh: mm: SS|
 |Benutzer|Benutzer: UPN oder Domäne \ Benutzer formatieren|
 |ItemPath|Vollständiger Element Pfad oder e-Mail-Betreff|
 |ItemName|Datei Name oder e-Mail-Betreff |
 |Methode|Zugewiesene Methode für Bezeichnung: manuell, automatisch, empfohlen, Standard oder obligatorisch|
 |Aktivität|Audit Activity: downgradelta Abel, upgradelta Abel, removelabel, newlabel, Discover, Access, removecustomprotection, changecustomprotection oder newcustomprotection |
 |Bezeichnungsname|Name der Bezeichnung (nicht lokalisiert)|
-|LabelNameBefore |Name der Bezeichnung vor der Änderung (nicht lokalisiert) |
+|Labelnamebefore |Name der Bezeichnung vor der Änderung (nicht lokalisiert) |
 |ProtectionType|Schutztyp [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |Schutz vor|Schutztyp vor Änderung [JSON] |
 |MachineName |Vollständig verfügbarer voll qualifizierter Name Andernfalls Hostname|
-|DeviceRisk|Geräte Risikobewertung aus wdatp, wenn verfügbar|
-|Platform|Geräteplattform (Win, OSX, Android, IOS) |
+|Devicerisk|Geräte Risikobewertung aus wdatp, wenn verfügbar|
+|Plattform|Geräteplattform (Win, OSX, Android, IOS) |
 |ApplicationName|Anzeige Name der Anwendung|
 |Aipversion|Die Version des Azure Information Protection Clients, der die Überwachungsaktion ausgeführt hat. |
 |TenantId|Azure AD-Mandanten-ID |
-|AzureApplicationId|Azure AD registrierte Anwendungs-ID (GUID)|
+|Azureapplicationid|Azure AD registrierte Anwendungs-ID (GUID)|
 |ProcessName|Prozess, der MIP SDK hostet|
 |LabelId|GUID der Bezeichnung oder NULL|
 |Isprotehiert|Ob geschützt: Ja/Nein |
 |Schutz Besitzer |Rights Management Besitzer im UPN-Format|
-|LabelIdBefore|GUID der Bezeichnung oder NULL vor der Änderung|
+|Labelidbefore|GUID der Bezeichnung oder NULL vor der Änderung|
 |InformationTypesAbove55|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 55 oder höher |
 |InformationTypesAbove65|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 65 oder höher |
 |InformationTypesAbove75|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 75 oder höher |
 |InformationTypesAbove85|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 85 oder höher |
 |InformationTypesAbove95|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 95 oder höher|
-|DiscoveredInformationTypes |JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) , das in Daten und dem zugehörigen Inhalt gefunden wurde (sofern aktiviert). ein leeres Array bedeutet, dass keine Informationstypen gefunden werden, und NULL bedeutet, dass keine Informationen verfügbar sind. |
+|Discoveredinformationtypes |JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) , das in Daten und dem zugehörigen Inhalt gefunden wurde (sofern aktiviert). ein leeres Array bedeutet, dass keine Informationstypen gefunden werden, und NULL bedeutet, dass keine Informationen verfügbar sind. |
 |Protectedbefore|Ob der Inhalt vor der Änderung geschützt wurde: Ja/Nein |
-|ProtectionOwnerBefore|Rights Management Besitzer vor der Änderung |
+|Schutz Eigentümer vor|Rights Management Besitzer vor der Änderung |
 |Userbegrün dung|Begründung beim Herabstufen oder Entfernen der Bezeichnung|
 |LastModifiedBy|Benutzer im UPN-Format, von dem die Datei zuletzt geändert wurde. Nur für Office und SharePoint Online verfügbar|
-|LastModifiedDate|UTC im Format yyyy-mm-ddThh: mm: SS: verfügbar für Office & nur SharePoint Online |
+|LastModifiedDate & gt|UTC im Format yyyy-mm-ddThh: mm: SS: verfügbar für Office & nur SharePoint Online |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Beispiele für InformationProtectionEvents
