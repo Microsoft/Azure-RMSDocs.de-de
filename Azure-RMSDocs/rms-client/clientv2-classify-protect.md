@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 00ad46e033116b1a39421cbfbc04a316ee2d7da7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
+ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561177"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74661837"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: klassifizieren und schützen mit dem Azure Information Protection Unified-Beschriftungs Client
 
@@ -54,7 +54,7 @@ Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewäh
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
-Um eine Bezeichnung festzulegen, z. b. "**Confidential** \ **alle Mitarbeiter**", wählen Sie **vertraulich** und dann **alle Mitarbeiter**aus. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten.
+Wählen Sie zum Festlegen einer Bezeichnung, z. b. "**vertrauliche** \ **alle Mitarbeiter**", **vertraulich** und dann **alle Mitarbeiter**aus. Wenn Sie nicht sicher sind, welche Bezeichnung auf das aktuelle Dokument oder die E-Mail angewendet werden soll, verwenden Sie die QuickInfos für Bezeichnungen, um weitere Informationen zu den einzelnen Bezeichnungen und ihrer Anwendung zu erhalten.
 
 Wenn auf das Dokument bereits eine Bezeichnung angewendet wurde und Sie diese ändern möchten, können Sie eine andere Bezeichnung auswählen. Wenn Sie die Azure Information Protection Leiste angezeigt haben und die Bezeichnungen nicht auf der Leiste angezeigt werden, die Sie auswählen können, klicken Sie zuerst auf das Symbol " **Bezeichnung bearbeiten** " neben dem Wert der aktuellen Bezeichnung.
 
@@ -91,9 +91,7 @@ Mögliche Gründe:
 
 Wenn Sie ein Office-Dokument per E-Mail freigeben, können Sie dieses an eine geschützte E-Mail anfügen. Das Dokument wird in diesem Fall automatisch mit denselben Einschränkungen geschützt, die auf die E-Mail angewendet werden. 
 
-Sie sollten das Dokument jedoch zuerst schützen und dann an die e-Mail anfügen. Sie sollten die E-Mail auch schützen, wenn diese vertrauliche Informationen enthält. Dies hat den Vorteil, dass das Dokument vor dem Anfügen an eine e-Mail geschützt wird:
-
-- Sie können für das Dokument und die E-Mail unterschiedliche Berechtigungen festlegen.
+Sie sollten das Dokument jedoch zuerst schützen und dann an die e-Mail anfügen. Sie sollten die E-Mail auch schützen, wenn diese vertrauliche Informationen enthält. Ein Vorteil beim Schützen des Dokuments, bevor Sie es an eine e-Mail anfügen, besteht darin, dass Sie unterschiedliche Berechtigungen auf das Dokument anwenden können als auf die e-Mail-Nachricht.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Verwenden des Datei-Explorer zum Klassifizieren und Schützen von Dateien
 
