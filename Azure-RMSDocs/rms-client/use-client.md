@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/24/2019
+ms.date: 12/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a5139eed7bccb8a7a57fda0a3b346a1965f7ea50
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.openlocfilehash: fdc74c7c1366afe17c6c7b6ac02ec63c973b0bce
+ms.sourcegitcommit: 488a941642f82e49503b4c2c4216a003be4db054
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74474326"
+ms.lasthandoff: 12/01/2019
+ms.locfileid: "74666836"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -84,37 +84,37 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 
 In der Office-Dokumentation finden Sie Informationen dazu, welche Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web unter [stützt werden](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
 
-|Feature|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
-|Empfohlene oder automatische Bezeichnung:| **Ja** | **Ja** | nein |
-|Obligatorische Bezeichnung:| **Ja** | **Ja** | nein |
-|Benutzerdefinierte Berechtigungen für eine Bezeichnung:<br />-Nicht weiterleiten für e-Mails<br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | nein |
+|Empfohlene oder automatische Bezeichnung:| **Ja** | **Ja** | Nein |
+|Obligatorische Bezeichnung:| **Ja** | **Ja** | Nein |
+|Benutzerdefinierte Berechtigungen für eine Bezeichnung:<br />-Nicht weiterleiten für e-Mails<br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | Nein |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
-|Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |nein |
-|Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | nein |
-|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />(Vorschau)** | nein |
-|Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | nein |
-|Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| nein |
-|Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| nein |
+|Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
+|Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
+|Überprüfung für lokale Datenspeicher:| **Ja** | **Ja <br />(Vorschau)** | Nein |
+|Zentrale Berichterstellung (Analysen):| **Ja** | **Ja** | Nein |
+|Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
+|Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
 |Visuelle Kennzeichnungen als Bezeichnungs Aktion (Kopfzeile, Fußzeile, Wasserzeichen):| **Ja** | **Ja** | **Ja**|
-|Visuelle Kennzeichnungen pro App:| **Ja** | nein | nein |
-|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | nein | nein |
-|Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | nein |
-|Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | nein|
-|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | nein | nein |
-|PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | nein |
+|Visuelle Kennzeichnungen pro App:| **Ja** | Nein | Nein |
+|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | Nein | Nein |
+|Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
+|Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
+|Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
+|PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
-|Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja** <sup>6</sup>| nein |
-|HYOK-Unterstützung:| **Ja** | nein | nein |
-|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | nein |nein |
-|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | nein | nein |
-|Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>7</sup> | nein |
-|Geschützte Dokumente widerrufen:| **Ja** | nein | nein |
-|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | nein | nein |
-|Unterstützung für Kontowechsel:| nein | nein | **Ja** |
-|Unterstützung für AD RMS:| **Ja** | Nein <sup>8</sup> | nein |
+|Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja** <sup>6</sup>| Nein |
+|HYOK-Unterstützung:| **Ja** | Nein | Nein |
+|Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein |
+|Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein |
+|Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>7</sup> | Nein |
+|Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
+|Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
+|Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
+|Unterstützung für AD RMS:| **Ja** | Nein <sup>8</sup> | Nein |
 
 Fußnoten:
 
@@ -139,7 +139,7 @@ Fußnoten:
 
 Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azure Information Protection Unified-Bezeichnungs Client dieselbe Funktion unterstützen, verwenden Sie die folgende Tabelle, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren.
 
-|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktion |Klassischer Client|Einheitlicher Bezeichnungs Client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|
@@ -153,7 +153,8 @@ Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azu
 |Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
 |Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
-|Anpassbarer richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie die Azure-Portal, um die Standardmeldung an Benutzer zu ersetzen. | nein <br /><br /> Obwohl die Admin Center über eine Option zum Bereitstellen eines angepassten Richtlinien Tipps verfügen, wird diese Option vom Unified-Bezeichnungs Client derzeit nicht unterstützt.|
+|Anpassbarer richtlinientipp für automatische und empfohlene Bezeichnungen: | Ja <br /><br />Verwenden Sie die Azure-Portal, um die Standardmeldung an Benutzer zu ersetzen. | Nein <br /><br /> Obwohl die Admin Center über eine Option zum Bereitstellen eines angepassten Richtlinien Tipps verfügen, wird diese Option vom Unified-Bezeichnungs Client derzeit nicht unterstützt.|
+|Bestell Unterstützung für untergeordnete Bezeichnungen auf Anlagen: | Aktiviert mit einer [erweiterten Client Einstellung](client-admin-guide-customizations.md##enable-order-support-for-sublabels-on-attachments) | Standardmäßig aktiviert, keine Konfiguration erforderlich|
 |Ändern Sie das standardmäßige Schutzverhalten für Dateitypen: | Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Sie können [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) verwenden, um zu ändern, welche Dateitypen geschützt werden.|
 
 Einen ausführlichen Vergleich der Verhaltensunterschiede für bestimmte Schutzeinstellungen finden Sie unter [Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
