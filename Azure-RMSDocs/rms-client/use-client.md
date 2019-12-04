@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/01/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fdc74c7c1366afe17c6c7b6ac02ec63c973b0bce
-ms.sourcegitcommit: 488a941642f82e49503b4c2c4216a003be4db054
+ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
+ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/01/2019
-ms.locfileid: "74666836"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74780914"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -162,8 +162,6 @@ Einen ausführlichen Vergleich der Verhaltensunterschiede für bestimmte Schutze
 ### <a name="features-not-planned-to-be-in-the-azure-information-protection-unified-labeling-client"></a>Features, die im Azure Information Protection Unified-Bezeichnungs Client nicht geplant sind
 
 Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in der Entwicklungsphase befindet, sind die folgenden Features und Verhaltensunterschiede vom klassischen Client derzeit nicht für die Verfügbarkeit in zukünftigen Versionen des Unified-Bezeichnungs Clients geplant: 
-
-- Unterstützung von Office-Apps für nicht verbundene Computer mit manueller Richtlinien Dateiverwaltung
 
 - Benutzerdefinierte Berechtigungen als separate Option, die Benutzer in Office-Apps auswählen können: Word, Excel und PowerPoint
 
