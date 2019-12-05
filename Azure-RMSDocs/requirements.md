@@ -4,7 +4,7 @@ description: Voraussetzungen für die Bereitstellung von Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923662"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74831703"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -28,9 +28,9 @@ Damit Sie Azure Information Protection für Ihre Organisation bereitstellen kön
 
 ## <a name="subscription-for-azure-information-protection"></a>Abonnement für Azure Information Protection
 
-**Für Klassifizierung, Bezeichnung und Schutz**: Sie benötigen einen [Azure Information Protection-Plan](https://azure.microsoft.com/pricing/details/information-protection/). 
+**Für Klassifizierung, Bezeichnung und Schutz mit dem Azure Information Protection Client (klassisch oder vereinheitlichte Bezeichnung) oder Scanner**: Sie müssen über einen [Azure Information Protection Plan](https://azure.microsoft.com/pricing/details/information-protection/)verfügen. 
 
-**Für die reine Schutzfunktion**: Sie benötigen einen [Office 365-Plan, der Azure Information Protection einschließt](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**Für die reine Schutzfunktion:** Sie müssen über einen [Office 365-Plan verfügen, der Azure Information Protection einschließt](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 Überprüfen Sie anhand der Abonnementinformationen auf der [Preisseite](https://azure.microsoft.com/pricing/details/information-protection) für Azure Information Protection, ob das Abonnement Ihrer Organisation die gewünschten Azure Information Protection-Features umfasst.
 
@@ -55,7 +55,7 @@ Das einmalige Anmelden (Single Sign-On, SSO) wird für Azure Information Protect
 
 Multi-Factor Authentication (MFA) wird mit Azure Information Protection unterstützt, wenn die erforderliche Clientsoftware installiert ist und Sie die für MFA erforderliche unterstützende Infrastruktur richtig konfiguriert haben.
 
-Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die mithilfe von Azure Information Protection geschützt sind. Weitere Informationen finden Sie unter den folgenden FAQ: [Azure Information Protection wird als verfügbare Cloud App für den bedingten Zugriff genannt. Wie funktioniert das?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+Bedingter Zugriff wird in der Vorschauversion für Dokumente unterstützt, die mithilfe von Azure Information Protection geschützt sind. Weitere Informationen finden Sie in den folgenden häufig gestellten Fragen (FAQ): [Azure Information Protection wird als verfügbare Cloud App für den bedingten Zugriff genannt. Wie funktioniert das?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 Weitere Informationen zu Authentifizierungsanforderungen finden Sie unter [Azure Active Directory-Anforderungen für Azure Information Protection](requirements-azure-ad.md). 
 
@@ -83,9 +83,9 @@ Die folgenden Geräte unterstützen den Azure Information Protection Unified-Bez
 
 - Windows Server 2012 R2 und Windows Server 2012
 
-- Windows Server 2008 R2 
+- Windows Server 2008 R2 
 
-Zusätzlich zur Installation des-Clients auf physischen Computern können Sie ihn auch auf virtuellen Computern installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktop Lösung über zusätzliche Konfigurationsfunktionen verfügt, die möglicherweise erforderlich sind, um den Azure Information Protection Unified Bezeichnung-Client oder den Azure Information Protection-Client auszuführen. Beispielsweise müssen Sie für Citrix-Lösungen möglicherweise [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office (Winword. exe, Excel. exe, Outlook. exe, POWERPNT. exe) und die ausführbare Datei für die Azure Information Protection Unified bezeichnen von Client-oder Azure Information Protection Client (MSIP. app. exe, MSIP. Viewer. exe).
+Zusätzlich zur Installation des-Clients auf physischen Computern können Sie ihn auch auf virtuellen Computern installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktop Lösung über zusätzliche Konfigurationsfunktionen verfügt, die möglicherweise erforderlich sind, um den Azure Information Protection Unified Bezeichnung-Client oder den Azure Information Protection-Client auszuführen. Beispielsweise müssen Sie für Citrix-Lösungen ggf. [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office (Winword. exe, Excel. exe, Outlook. exe, POWERPNT. exe) und die ausführbare Datei für den Azure Information Protection Unified-Bezeichnungs Client oder Azure Information Protection Client (MSIP. app. exe, MSIP. Viewer. exe) deaktivieren.
 
 Für die aufgelisteten Serverversionen:
 
@@ -97,7 +97,7 @@ Wenn die Azure Information Protection-Clients die Daten mithilfe des Azure Right
 
 Die Azure Information Protection Clients verfügen über zusätzliche erforderliche Komponenten, die in den jeweiligen Administrator Handbüchern aufgeführt sind:
 
-- Azure Information Protection-Client für einheitliche Bezeichnungen: [Voraussetzungen](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Azure Information Protection Unified-Bezeichnungs Client: [Voraussetzungen](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
 - Azure Information Protection-Client: [Voraussetzungen](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
@@ -133,7 +133,7 @@ Wenn Sie eine Firewall oder ähnliche Interventionsnetzwerkgeräte verwenden, di
 
 Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Information Protection:
 
-- Damit der Unified Label-Client Bezeichnungen und Bezeichnungs Richtlinien herunterlädt: Lassen Sie die URL * **. Protection.Outlook.com** über HTTPS zu.
+- Damit der Unified Label-Client Bezeichnungen und Bezeichnungs Richtlinien herunterlädt: lassen Sie die URL * **. Protection.Outlook.com** über HTTPS zu.
 
 - Wenn Sie einen Webproxy verwenden, der eine Authentifizierung erfordert, müssen Sie ihn so konfigurieren, dass er die integrierte Windows-Authentifizierung mit den Active Directory-Anmeldeinformationen des Benutzers verwendet.
 
@@ -145,7 +145,7 @@ Zusätzlich zu den Informationen im Office-Artikel, spezifisch für Azure Inform
         $request.GetResponse()
         $request.ServicePoint.Certificate.Issuer
     
-    Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungs `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`Stelle aus ist, beispielsweise:. Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
+    Das Ergebnis sollte anzeigen, dass die ausstellende Zertifizierungsstelle von einer Microsoft-Zertifizierungsstelle aus ist, beispielsweise: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. Wenn Sie einen ausstellenden Zertifizierungsstellen Namen sehen, der nicht von Microsoft abhängt, ist es sehr wahrscheinlich, dass Ihre sichere Client-zu-Dienst-Verbindung beendet wird und eine Neukonfiguration der Firewall erforderlich ist.
 
 ### <a name="on-premises-servers"></a>Lokale Server
 
