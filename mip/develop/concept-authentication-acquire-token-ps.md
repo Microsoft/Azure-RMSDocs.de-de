@@ -8,27 +8,27 @@ ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175308"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Abrufen eines Zugriffstoken (PowerShell)
 
-Das Beispiel veranschaulicht rufen Sie ein externes Powershellskript, um eine OAuth2-Token zu erhalten. Ein gültiger OAuth2-Zugriffstoken ist durch die Implementierung von der authentifizierungsdelegat erforderlich.
+Im gezeigten Beispiel wird veranschaulicht, wie ein externes PowerShell-Skript aufgerufen wird, um ein OAuth2-Token abzurufen. Ein gültiges OAuth2-Zugriffs Token ist für die Implementierung des Authentifizierungs Delegaten erforderlich.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
-- Vollständige [(MIP) SDK-Setup und Konfiguration](setup-configure-mip.md). U.a. müssen Sie Ihre Client-Anwendung in Ihrem Mandanten für Azure Active Directory (Azure AD) registrieren. Azure AD bietet eine Anwendungs-ID, auch bekannt als Client-ID, die in Ihrer Logik tokenabruf verwendet wird.
+- Complete [(MIP) SDK-Setup und-Konfiguration](setup-configure-mip.md). Neben anderen Aufgaben registrieren Sie Ihre Client Anwendung in Ihrem Azure Active Directory-Mandanten (Azure AD). Azure AD geben eine Anwendungs-ID (auch als Client-ID bezeichnet) an, die in der tokenerwerbs-Logik verwendet wird.
 
-Dieser Code ist nicht für Produktionszwecke vorgesehen. Es kann nur für Entwicklungs- und Grundlegendes zu Auth Konzepten verwendet werden. 
+Dieser Code ist nicht für die Verwendung in der Produktion bestimmt. Sie kann nur für die Entwicklung und das Verständnis von Authentifizierungs Konzepten verwendet werden. 
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
 ### <a name="authh"></a>auth.h
 
-In diesem Beispiel wird deine einfache Funktion mit dem Namen AcquireToken erstellt. Da der Rückgabewert hartcodierte für dieses Tutorial ist, werden wir keine Parameter annehmen und Zurückgeben einer Zeichenfolge (das Token).
+In diesem Beispiel wird deine einfache Funktion mit dem Namen AcquireToken erstellt. Da der Rückgabewert für dieses Tutorial hart codiert wird, akzeptieren wir keine Parameter und geben eine Zeichenfolge (das Token) zurück.
 
 ```cpp
 //auth.h
@@ -43,7 +43,7 @@ namespace sample {
 
 ### <a name="authcpp"></a>auth.cpp
 
-Die Quelldatei gibt einen Tokenwert, der in einem späteren Schritt hartcodiert werden.
+Unsere Quelldatei gibt einen Tokenwert zurück, der in einem späteren Schritt hart codiert wird.
 
 ```cpp
 //auth.cpp
@@ -66,7 +66,7 @@ Erstellen Sie zuletzt ein Token, das der mToken-Variablen hinzugefügt werden so
 
 ### <a name="install-adalpshttpswwwpowershellgallerycompackagesadalps31942-from-ps-gallery"></a>Installieren von [ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2) über den PS-Katalog
 
-Sie können diesen Schritt überspringen, wenn Sie diese zuvor im abgeschlossen [(MIP) SDK-Setup und Konfiguration](setup-configure-mip.md).
+Sie können diesen Schritt überspringen, wenn Sie ihn zuvor in der [(MIP) SDK-Einrichtung und-Konfiguration](setup-configure-mip.md)abgeschlossen haben.
 
 ```PowerShell
 Install-Module -Name ADAL.PS

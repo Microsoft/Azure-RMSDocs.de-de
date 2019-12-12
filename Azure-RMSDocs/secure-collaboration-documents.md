@@ -4,7 +4,7 @@ description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561113"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934465"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -47,11 +47,11 @@ In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichn
 
 Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es keine Einstellungen für authentifizierte Benutzer. Ein Beispiel, wie Sie eine Bezeichnung mit dieser Einstellung konfigurieren können, finden Sie in [Beispiel 5: Bezeichnung, die Inhalte verschlüsselt, aber nicht einschränkt, wer darauf zugreifen kann](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Vergewissern Sie sich im Bereich **Schutz** , dass **Azure (cloudschlüssel)** ausgewählt ist.
+1. Wählen Sie die Bezeichnung aus, die bereits in der globalen oder einer bereichsbezogenen Richtlinie enthalten ist. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
 2. Stellen Sie sicher, dass **Berechtigungen festlegen** ausgewählt ist, und klicken Sie anschließend auf **Berechtigungen hinzufügen**.
 
-3. Im Bereich **Berechtigungen hinzufügen** : 
+3. Gehen Sie im Bereich **Berechtigungen hinzufügen** wie folgt vor: 
     
    - Für die interne Gruppe: Klicken Sie auf **Browse directory** (Verzeichnis durchsuchen), um die Gruppe auszuwählen, für die die E-Mail-Funktion aktiviert sein muss.
     
@@ -67,11 +67,11 @@ Da das Szenario den Zugriff auf bestimmte Personen einschränkt, enthält es kei
         
     ![Konfigurieren von Berechtigungen für eine sichere Zusammenarbeit](./media/collaboration-permissions.png)
 
-5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **OK** .
+5. Klicken Sie im Bereich **Berechtigungen hinzufügen** auf **OK**.
 
 6. Klicken Sie im Bereich **Schutz** auf **OK**.
 
-7. Wählen Sie im Bereich **Bezeichnung** die Option **Speichern**aus. 
+7. Klicken Sie im Bereich **Bezeichnung** auf **Speichern**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Anwenden der Bezeichnung, die die sichere Zusammenarbeit unterstützt
 

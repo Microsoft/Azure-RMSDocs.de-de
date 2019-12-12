@@ -4,7 +4,7 @@ description: Verstehen und implementieren Sie die Administrator Funktion des Azu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446992"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934958"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder die Datenwiederherstellung
 
@@ -42,7 +42,7 @@ Ein Administrator verfügt immer über das Rights Management-[Nutzungsrecht](con
 
 In der Standardeinstellung ist die Administratorfunktion nicht aktiviert, und der Rolle sind keine Benutzer zugewiesen. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
 
-Wenn Sie die Administrator Funktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [enable-aipservicesuperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), und weisen Sie dann Benutzer (oder Dienst Konten) nach Bedarf mithilfe des Cmdlets [Add-aipservicesuperuser](/powershell/module/aipservice/add-aipservicesuperuser) oder der [ Cmdlet "Set-aipservicesuperusergroup](/powershell/module/aipservice/set-aipservicesuperusergroup) ", und fügen Sie der Gruppe nach Bedarf Benutzer (oder andere Gruppen) hinzu. 
+Wenn Sie die Administrator Funktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [enable-aipservicesuperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), und weisen Sie dann Benutzer (oder Dienst Konten) nach Bedarf mithilfe des Cmdlets [Add-aipservicesuperuser](/powershell/module/aipservice/add-aipservicesuperuser) oder des Cmdlets [Set-aipservicesuperusergroup](/powershell/module/aipservice/set-aipservicesuperusergroup) zu, und fügen Sie dieser Gruppe ggf. Benutzer (oder andere Gruppen) hinzu. 
 
 Obwohl das Verwenden einer Gruppe für Ihren Administrator einfacher zu verwalten ist, seien Sie sich bewusst, dass Azure Rights Management aus Leistungsgründen [die Gruppenmitgliedschaft zwischenspeichert](prepare.md#group-membership-caching-by-azure-information-protection). Wenn Sie also einen neuen Benutzer als Administrator zuweisen müssen, um Inhalt sofort zu entschlüsseln, fügen Sie diesen Benutzer mithilfe von Add-aipservicesuperuser hinzu, anstatt ihn zu einer vorhandenen Gruppe hinzuzufügen, die Sie mithilfe von Set-aipservicesuperusergroup konfiguriert haben.
 

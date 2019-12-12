@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/03/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
-ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
+ms.openlocfilehash: 024e785faf06abde45177fe8049ae8c7c24294fd
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74780914"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933292"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -52,7 +52,9 @@ Da der Unified-Bezeichnungs Client und der klassische Client eine separate Insta
 
 Welchen Client sollten Sie verwenden?
 
-- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in Ihren Office-Apps, für die der Unified Label-Client oder der klassische Client erforderlich ist. Diese Features enthalten die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients.
+- Verwenden Sie den **Bezeichnungs Client, der in Office** für Ihre Windows-Computer integriert ist, wenn Sie über Office 365-apps verfügen, die mindestens Version 1910 haben. Sie möchten dieselben Bezeichnungen und Richtlinien Einstellungen verwenden, die auch von MacOS, IOS und Android verwendet werden können, und Sie benötigen keine Features in Ihren Office-Apps, für die der Unified Label-Client oder der klassische Client erforderlich ist. Diese Features enthalten die Information Protection Leiste unter dem Menüband zur einfacheren Auswahl und Sichtbarkeit von Bezeichnungen. 
+    
+    Dieser Client unterstützt das Wechseln von Konten, und da er kein Office-Add-in verwendet, hat er eine bessere Leistung in Office-Apps als die Verwendung eines der Azure Information Protection Clients. Da die Bezeichnung in Office integriert ist, gibt es keine separate Installation und Wartung für diesen Bezeichnungs Client. Außerdem kann es im Gegensatz zu einem Office-Add-in nicht deaktiviert werden.
 
 - Verwenden Sie den **Azure Information Protection Unified** Label-Client auf Windows-Computern für Bezeichnungen und Richtlinien Einstellungen, die auch von MacOS, IOS und Android verwendet werden können. Sie möchten Dateien unabhängig von Office 365-apps bezeichnen, und Sie benötigen keine Features, die nur vom klassischen Client unterstützt werden. Diese Features umfassen derzeit den Schutz von Inhalten mit einem lokalen Schlüssel (Hyok) und eine allgemein verfügbare Version des Scanners für lokale Datenspeicher.
 

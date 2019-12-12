@@ -4,7 +4,7 @@ description: Informationen, anhand derer Sie Unterstützung für Benutzer, Admin
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 669764881af477e19ffcf9d63266fe19e1f26f92
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683573"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933360"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Unterstützen von Benutzern beim Schützen von Dateien mit dem Azure Rights Management-Dienst
 
@@ -43,7 +43,7 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt u
     
 -   **Helpdesk-Informationen**
     
-    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installieren von Überprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting)
+    Wenn Benutzer über den Azure Information Protection-Client verfügen, können sie von Helpdesk-Betreibern darum gebeten werden, die Option **Hilfe und Feedback** zum Übermitteln von Informationen zu verwenden. Dabei kann es sich um Informationen dazu handeln, ob die Edition von Office den Schutz nicht unterstützen kann, sowie zum derzeit angemeldeten Benutzerkonto. Sie können diese Option auch dazu verwenden, Protokolldateien zu sammeln und den Client zurückzusetzen. Weitere Informationen finden Sie im Administratorhandbuch: [Installationsüberprüfungen und Problembehandlung](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
     Wenn legitime Anforderungen vorhanden sind, die über uneingeschränkten Zugriff auf geschützte Dokumente verfügen, stellen Sie sicher, dass der Helpdesk über Prozesse verfügt, um diesen Zugriff mithilfe der Azure Information Protection Administrator [Funktion](configure-super-users.md)anzufordern. Diese Anforderungen können beispielsweise von der Rechtsabteilung oder einem Vorgesetzten stammen, nachdem ein Mitarbeiter die Organisation verlassen hat.
     
@@ -86,7 +86,7 @@ Wenn Sie den Azure Rights Management-Dienst verwenden und den Azure Information 
 
 1.  Erstellen Sie in Microsoft Word ein Dokument.
 
-2.  Klicken Sie im Menü **Datei** auf **Info** > **Dokument schützen** >  **Zugriff beschränken**.
+2.  Über das Menü **Datei** : **Info** > **Dokument schützen** >  den **Zugriff beschränken**.
 
 3. Wählen Sie dann eine Vorlage aus, um schnell die entsprechenden Nutzungsrechte anzuwenden, oder klicken Sie auf **Zugriff beschränken**, und wählen Sie die Nutzungsrechte selbst aus.
 
@@ -105,7 +105,7 @@ Die Nutzungsrechte werden am oberen Rand des Dokuments in einem Einschränkungsb
 
 1.  Erstellen Sie in Outlook eine E-Mail, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2.  Wählen Sie auf der Registerkarte **OPTIONEN** unter **Berechtigung** eine Option aus. Zum Beispiel: **Nicht weiterleiten**, **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
+2.  Auf der Registerkarte **Optionen** : **Berechtigung** > Wählen Sie eine Option aus. Beispiel: **Nicht weiterleiten** oder **\<Unternehmensname> – Vertraulich** oder **\<Unternehmensname> – Nur vertrauliche Ansicht**.
 
 3.  Senden Sie die Nachricht.
 
@@ -117,7 +117,7 @@ Wenn die E-Mail-Nachricht beispielsweise mit der Option **Nicht weiterleiten** g
 
 1. Erstellen Sie in Outlook im Web eine E-Mail-Nachricht, die an einen Empfänger in Ihrer Organisation adressiert ist.
 
-2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Zum Beispiel: **Verschlüsseln** oder  **\<Unternehmensname> – Vertraulich**.
+2. Wählen Sie **Schützen** aus. Die Option **Nicht weiterleiten** ist automatisch aktiviert, sofern die Standardeinstellung nicht von einem Administrator geändert wurde. Wenn Sie die Standardeinstellung ändern möchten, klicken Sie auf **Berechtigungen ändern** , und wählen Sie dann eine Option aus der Dropdown-Dropdown Beispiel: **verschlüsseln** oder **\<Firmen Name >-Confidential**.
 
 3. Senden Sie die Nachricht.
 

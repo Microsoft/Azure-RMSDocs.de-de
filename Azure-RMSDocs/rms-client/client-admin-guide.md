@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren in einem Unterne
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 9169da03c020f07f2ad031efff80364658aa6b24
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561280"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935264"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -69,7 +69,7 @@ Wenn Sie über AD RMS verfügen und zu Azure Information Protection migrieren m�
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>Sollten Sie den Azure Information Protection-Client bereitstellen?
 
-Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden gelten
+Stellen Sie den Azure Information Protection Client bereit, wenn Sie [in Office 365 Security & Compliance Center keine Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) verwenden, sondern stattdessen Azure Information Protection Bezeichnungen verwenden, die Sie aus Azure herunterladen, und eine der folgenden Aktionen:
 
 - Sie möchten Dokumente und E-Mails durch Auswählen von Bezeichnungen innerhalb Ihrer Office-Anwendungen (Word, Excel, PowerPoint, Outlook) klassifizieren (und optional schützen).
 
@@ -146,7 +146,7 @@ Die Option **Einstellungen zurücksetzen** meldet den Benutzer ab, löscht die d
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local settings\software\microsoft\msipc    
+    - HKEY_CURRENT_USER \software\classes\local settings\software\microsoft\msipc    
 
 - Der derzeit angemeldete Benutzer wird abgemeldet.
 

@@ -4,7 +4,7 @@ description: Informationen zur Unterstützung bei der Installation und Konfigura
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/26/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559690"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882041"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installieren und Konfigurieren des Azure Rights Management-Verbindungsdiensts
 
@@ -46,9 +46,9 @@ Lesen und erfüllen Sie vor Beginn unbedingt die [Voraussetzungen](deploy-rms-co
 
     -   Wenn Sie das Serverkonfigurationstool für den RMS-Connector verwenden möchten, um die Konfiguration von Registrierungseinstellungen auf Ihren lokalen Servern zu automatisieren, laden Sie außerdem „GenConnectorConfig.ps1“ herunter.
 
-3.  Führen Sie auf dem Computer, auf dem Sie den RMS-Verbindungsdienst installieren möchten, **RMSConnectorSetup.exe** mit Administratorrechten aus.
+3.  Führen Sie auf dem Computer, auf dem Sie den RMS-Connector installieren möchten, **rmsconnector Setup. exe** mit Administratorrechten aus.
 
-4.  Wählen Sie auf der Willkommensseite der Installation vom Microsoft Rights Management-Connector **Install Microsoft Rights Management connector on the computer** (Microsoft Rights Management-Connector auf dem Computer installieren) aus, und klicken Sie dann auf **Weiter**.
+4.  Wählen Sie auf der Willkommensseite von Microsoft Rights Management Connector-Setup **die Option Microsoft Rights Management Connector auf dem Computer installieren**aus, und klicken Sie dann auf **weiter**.
 
 5.  Lesen und akzeptieren Sie die Lizenzbedingungen des RMS-Verbindungsdiensts, und klicken Sie dann auf **Weiter**.
 
@@ -57,9 +57,9 @@ Geben Sie zum Fortfahren ein Konto und ein Kennwort zum Konfigurieren des RMS-Ve
 ## <a name="entering-credentials"></a>Eingeben von Anmeldeinformationen
 Bevor Sie den RMS-Verbindungsdienst konfigurieren können, müssen Sie Anmeldeinformationen für ein Konto eingeben, das über ausreichende Rechte zum Konfigurieren des RMS-Verbindungsdiensts verfügt. Beispielsweise könnten Sie <strong>admin@contoso.com</strong> eingeben und dann das Kennwort für dieses Konto angeben.
 
-Für dieses Konto darf keine mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) erforderlich sein, da das Microsoft Rights Management-Verwaltungstool MFA für diese Konto nicht unterstützt. Wenn Sie Azure AD bedingten Zugriff verwenden, sollten Sie außerdem die [Legacy Authentifizierung](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) für dieses Konto nicht blockieren.
+Für dieses Konto ist die mehrstufige Authentifizierung (Multi-Factor Authentication, MFA) nicht erforderlich, da die Microsoft Rights Management Connector-Einrichtung MFA nicht unterstützt. Wenn Sie Azure AD bedingten Zugriff verwenden, sollten Sie außerdem die [Legacy Authentifizierung](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) für dieses Konto nicht blockieren.
 
-Der Connector besitzt auch einige Zeicheneinschränkungen für dieses Kennwort. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Enthält Ihr Passwort eines dieser Zeichen, schlägt die Authentifizierung für den RMS-Connector fehl, und es wird die Fehlermeldung **Die Kombination aus Benutzername und Kennwort ist nicht korrekt** angezeigt, auch wenn Sie sich in anderen Zusammenhängen erfolgreich mit diesem Konto und Kennwort anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
+Das Connector-Setup weist auch einige Zeichen Einschränkungen für dieses Kennwort auf. Kennwörter dürfen keines der folgenden Zeichen enthalten: kaufmännisches Und-Zeichen ( **&** ), öffnende eckige Klammer ( **[** ), schließende eckige Klammer ( **]** ), gerade Anführungszeichen ( **"** ) und Apostroph ( **'** ). Wenn Ihr Kennwort eines dieser Zeichen aufweist, schlägt die Authentifizierung für den RMS-Verbindungs Dienst fehl, und es wird die Fehlermeldung angezeigt, **dass die Kombination aus Benutzername und Kennwort nicht korrekt ist**, auch wenn Sie sich mit diesem Konto und Kennwort für andere Szenarien erfolgreich anmelden können. Trifft dieses Szenario auf Ihr Kennwort zu, verwenden Sie entweder ein anderes Konto mit einem Kennwort, das keines dieser Sonderzeichen enthält, oder setzen Sie Ihr Kennwort zurück, sodass es keines dieser Sonderzeichen enthält.
 
 Außerdem müssen Sie, wenn Sie [Onboarding-Steuerelemente](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) implementiert haben, sicherstellen, dass das von Ihnen angegebene Konto Inhalte schützen kann. Wenn Sie beispielsweise die Fähigkeit, Inhalte zu schützen, auf die Gruppe „IT-Abteilung“ beschränkt haben, muss das hier angegebene Konto ein Mitglied dieser Gruppe sein. Andernfalls wird die folgende Fehlermeldung angezeigt: Fehler **beim Versuch, den Speicherort des Verwaltungs Dienstanbieter und der Organisation zu ermitteln. Stellen Sie sicher, dass Microsoft Rights Management Service für Ihre Organisation aktiviert ist.**
 
@@ -76,7 +76,7 @@ Sie können ein Konto verwenden, das eins der folgenden Rechte besitzt:
     > 
     > Erstellen Sie zum Ausführen des RMS-Connectors mit geringstmöglichen Berechtigungen ein dediziertes Konto für diesen Zweck, dem Sie anschließend wie folgt die Azure RMS-Rolle „ConnectorAdministrator“ zuweisen:
     >
-    > 1.  Wenn Sie dies noch nicht getan haben, laden Sie das PowerShell-Modul aipservice herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).
+    > 1. Wenn Sie dies noch nicht getan haben, laden Sie das PowerShell-Modul aipservice herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Installieren des aipservice-PowerShell-Moduls](install-powershell.md).
     >
     >     Starten Sie Windows PowerShell mit dem Befehl **als Administrator ausführen** , und stellen Sie mithilfe des Befehls [Connect-aipservice](/powershell/module/aipservice/connect-aipservice) eine Verbindung mit dem Schutzdienst her:
     >

@@ -4,25 +4,25 @@ description: Anweisungen zum Anzeigen einer geschützten Datei, die erfordert, d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6186c4ec5cfa52b1022a8dab416a24efd822aae2
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: d4c7ba70ab09c1fa4033babdf3dd5f5664e284ce
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690059"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935536"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Leitfaden: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: Anzeigen geschützter Dateien mit dem Azure Information Protection Unified Bezeichnung-Client
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection Unified Bezeichnung-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Sie können eine geschützte Datei häufig anzeigen, indem Sie sie einfach öffnen. Sie können z. B. einfach auf eine Anlage einer E-Mail klicken oder im Datei-Explorer auf eine Datei doppelklicken. Alternativ können Sie auch auf den Link zu einer Datei klicken.
 
@@ -57,7 +57,7 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
 
 1. Öffnen Sie die geschützte Datei (indem Sie z. B. auf die Datei doppelklicken oder auf den Link zur Datei klicken). Wenn Sie zum Auswählen einer App aufgefordert werden, wählen Sie **Azure Information Protection-Viewer** aus. 
 
-2. Wenn Sie eine Seite **Anmelden** oder **Registrieren** sehen: Klicken Sie auf **Anmelden**, und geben Sie Ihre Anmeldeinformationen ein. Wenn Ihnen die geschützte Datei als Anlage gesendet wurde, müssen Sie die gleiche E-Mail-Adresse angeben, die zum Senden der Datei verwendet wurde.
+2. Wenn eine Seite zum **Anmelden** oder **Registrieren** angezeigt wird: Klicken Sie auf **Anmelden**, und geben Sie Ihre Anmeldeinformationen ein. Wenn Ihnen die geschützte Datei als Anlage gesendet wurde, müssen Sie die gleiche E-Mail-Adresse angeben, die zum Senden der Datei verwendet wurde.
     
     Wenn Sie nicht über ein akzeptiertes Konto verfügen, finden Sie weitere Informationen auf dieser Seite im Abschnitt [Aufforderung zur Authentifizierung](#prompts-for-authentication).
 
@@ -66,7 +66,7 @@ Wenn Ihre Organisation Ihnen kein cloudbasiertes Konto für Office 365 oder Azur
 4. Wenn Sie weitere geschützte Dateien öffnen müssen, können Sie über den Viewer direkt zu ihnen navigieren, indem Sie die Option **Öffnen** verwenden. Ihre ausgewählte Datei ersetzt die ursprüngliche Datei im Viewer. 
 
 > [!TIP]
-> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um auf diese Option zuzugreifen, wählen Sie in einer Office-App die Schaltfläche **Sensitivität** aus, > Einstellungen für **Hilfe und Feedback** > **Zurücksetzen**. 
+> Wenn die geschützte Datei nicht geöffnet wird und der vollständige Azure Information Protection Client installiert ist, versuchen Sie es mit der Option **Einstellungen zurücksetzen**. Um auf diese Option zuzugreifen, wählen Sie in einer Office-App die **Vertraulichkeits** Schaltfläche > **Hilfe und Feedback** > **Einstellungen zurücksetzen**aus. 
 > 
 > [Weitere Informationen zur Option „Einstellungen zurücksetzen“](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

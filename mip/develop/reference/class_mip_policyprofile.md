@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 8feb0b93982a00c4843ea914f969ef27cf8e5ca2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560913"
 ---
 # <a name="class-mippolicyprofile"></a>mip::PolicyProfile-Klasse 
@@ -20,16 +20,16 @@ Die policyprofile-Klasse ist die Stamm Klasse für die Verwendung von Microsoft 
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
-öffentliches void listenginesasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+öffentliches void listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Die Liste der Module.
 öffentliches void unloadengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 öffentliches void unloadengine (Konstante Std:: String & ID)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 öffentliches void addengineasync (Konstanten policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
 Public Std:: shared_ptr\<policyengine\> addengine (Konstanten policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
-öffentliches void deleteengineasync (Konstante Std:: String & ID, Konst Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+öffentliches void deleteengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
-public static MIP_API void __CDECL MIP::P olicyprofile:: LoadAsync | Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
-public static konstant MIP_API char * __CDECL MIP::P olicyprofile:: GetVersion | Bibliotheksversion erhalten
+öffentliches statisches MIP_API void __CDECL MIP::P olicyprofile:: LoadAsync | Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
+public static Konstanten MIP_API char * __CDECL MIP::P olicyprofile:: GetVersion | Bibliotheksversion erhalten
 
 ## <a name="members"></a>Member
   

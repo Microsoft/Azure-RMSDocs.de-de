@@ -14,11 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-TableVsFlatList-20160805
 ms.openlocfilehash: 83dbafe17b5ef68735b404fdc819f485d8008c7f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791235"
 ---
 # <a name="how-to-use-built-in-rights"></a>Vorgehensweise: Verwenden integrierter Rechte

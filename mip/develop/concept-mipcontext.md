@@ -8,32 +8,32 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: aac40c5ba5f06e705aaf5c6d42c6963d851d2764
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69893734"
 ---
 # <a name="microsoft-information-protection-sdk---mipcontext-object-concepts"></a>Microsoft Information Protection SDK-mipcontext-Objekt Konzepte
 
-## <a name="mipcontext"></a>Mipcontext
+## <a name="mipcontext"></a>MipContext
 
-`MipContext`ist das Objekt der höchsten Ebene im SDK. Er ist verantwortlich für die Verwaltung des Zustands über alle Profile hinweg, die als Teil einer Anwendung oder eines Dienstanbieter erstellt werden können. Außerdem wird die Freigabe von MIP SDK-Ressourcen verarbeitet, sobald das mipcontext-Objekt zerstört wurde.
+`MipContext` ist das Objekt der höchsten Ebene im SDK. Er ist verantwortlich für die Verwaltung des Zustands über alle Profile hinweg, die als Teil einer Anwendung oder eines Dienstanbieter erstellt werden können. Außerdem wird die Freigabe von MIP SDK-Ressourcen verarbeitet, sobald das mipcontext-Objekt zerstört wurde.
 
-Insbesondere wird `MipContext` Folgendes festgelegt:
+`MipContext` legt insbesondere Folgendes fest:
 
-- `mip::ApplicationInfo`im gesamten SDK, verwendet für die Anwendungs-ID, die Version und den Anwendungsnamen.
+- `mip::ApplicationInfo` im gesamten SDK, das für die Anwendungs-ID, die Version und den Anwendungsnamen verwendet wird.
 - Der Pfad, in dem die MIP-Zustandsinformationen gespeichert werden sollen, sofern aktiviert.
 - Protokolliergrad.
 - Ein benutzerdefinierter Protokollierungs Delegat, wenn gewünscht.
 - Überschreiben der telemetriekonfiguration.
 - Aktivieren Sie die Vorschau Features im SDK, die sich hinter Merkmals Flags befinden.
 
-Nachdem ein Objekt von `mip::MipContext` erstellt wurde, kann das `MipContext` -Objekt zum Erstellen `mip::FileProfile` von-Objekten (oder `PolicyProfile` / `ProtectionProfile`) verwendet werden.
+Nachdem ein Objekt `mip::MipContext` erstellt wurde, kann das `MipContext` Objekt verwendet werden, um `mip::FileProfile` Objekte (oder `PolicyProfile`/`ProtectionProfile`) zu erstellen.
 
 ### <a name="mipcontext-functions"></a>Mipcontext-Funktionen
 
-`mip::MipContext`macht drei wichtige statische Funktionen verfügbar, mit denen- `MipContext` Objekte erstellt und zerstört werden.
+`mip::MipContext` macht drei wichtige statische Funktionen verfügbar, mit denen `MipContext` Objekte erstellt und zerstört werden.
 
 #### `mip::MipContext::Create()`
 
@@ -58,7 +58,7 @@ Erstellt eine neue mipcontext-Instanz, die beim Initialisieren von Profilen mit 
 
 #### `mip::mipContext::Shutdown()`
 
-Gibt alle MIP-Ressourcen frei. Sollte vor dem Herunterfahren der app aufgerufen werden. Der `MipContext` Dekonstruktor ruft diese auch auf, `MipContext` wenn das Objekt zerstört wird.
+Gibt alle MIP-Ressourcen frei. Sollte vor dem Herunterfahren der app aufgerufen werden. Der `MipContext` Dekonstruktor ruft diese auch auf, wenn das `MipContext` Objekt zerstört wird.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

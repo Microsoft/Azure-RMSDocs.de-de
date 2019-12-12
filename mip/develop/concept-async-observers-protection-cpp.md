@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: 2d1cf81e20a317ecb1eb9e71b5b4e0ab32482877
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175546"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Microsoft Information Protection SDK: Observer-Objekte der Protection-API
@@ -24,15 +24,15 @@ Die Protection-API enthält drei Observer-Klassen. Die Member der Observer-Klass
 
 Wenn ein asynchroner Vorgang abgeschlossen wird, wird die `OnXxx()`-Memberfunktion aufgerufen, die dem Ergebnis entspricht. Z.B.: `OnLoadSuccess()`, `OnLoadFailure()` und `OnAddEngineSuccess()` für `mip::ProtectionProfile::Observer`.
 
-Im nachfolgenden Beispiel wird das Promise-Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
+Im nachfolgenden Beispiel wird das Promise/Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
 
 ## <a name="protectionprofile-observer-implementation"></a>Implementierung des ProtectionProfile-Beobachters
 
-Im folgenden Beispiel wurde eine Klasse (`ProtectionProfileObserverImpl`) erstellt, die von `mip::ProtectionProfile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-/Future-Muster zu verwenden, das in allen Beispielen verwendet wird.
+Im folgenden Beispiel wurde die Klasse `ProtectionProfileObserverImpl` erstellt, die von `mip::ProtectionProfile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-/Future-Muster zu verwenden, das in allen Beispielen verwendet wird.
 
 ### <a name="protectionprofileobserverimpl-class-declaration"></a>ProtectionProfileObserverImpl-Klassendeklaration
 
-Im Header wird zunächst die `ProtectionProfileObserverImpl`-Klasse definiert, die von `mip::ProtectionProfile::Observer` abgeleitet ist, und anschließend werden die einzelnen Memberfunktionen überschrieben.
+Im Header wird zunächst die `ProtectionProfileObserverImpl`-Klasse definiert, die von `mip::ProtectionProfile::Observer` abgeleitet wird, und anschließend werden die einzelnen Memberfunktionen überschrieben.
 
 ```cpp
 //ProtectionProfileObserverImpl.h
@@ -52,9 +52,9 @@ In der eigentlichen Implementierung wird einfach eine Aktion definiert, die für
 
 Jeder Member akzeptiert zwei Parameter. Bei dem ersten Parameter handelt es sich um einen gemeinsamen Zeiger auf die Klasse, die in der Funktion verarbeitet wird. `ProtectionObserver::OnLoadSuccess` erwartet dabei den Empfang einer `mip::ProtectionProtection`-Klasse, `ProtectionObserver::OnAddEngineSuccess` erwartet `mip::ProtectionEngine`.
 
-Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *Kontext*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Element dar, das als `shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in `std::promise` um. Dieses Element wird dann in einem Objekt mit dem Namen `promise` gespeichert.
+Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *context*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Element dar, das als `shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in das `std::promise` um, das dann in einem Objekt mit dem Namen `promise` gespeichert wird.
 
-Letztendlich wird das Future des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::ProtectionProtection`-Objekt übergeben wird.
+Schließlich wird der Future-Aspekt des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::ProtectionProtection`-Objekt übergeben wird.
 
 ```cpp
 //protection_observers.cpp

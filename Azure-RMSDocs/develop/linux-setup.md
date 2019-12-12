@@ -14,10 +14,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 7a7019e72e4d8d2b66c81fbc69542e140992467b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60176821"
 ---
 # <a name="linux-setup"></a>Linux-Setup
@@ -41,7 +41,7 @@ Bibliotheken und Beispiele wurden unter Windows und auch unter OS X erfolgreich 
 - [Vorgehensweise: Erstellen von Bibliotheken und Beispiel-Apps (in englischer Sprache)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Build)
 - [Vorgehensweise: Installieren und Verwenden von Apps auf Benutzersystemen (in englischer Sprache)](https://github.com/AzureAD/rms-sdk-for-cpp/wiki/How-to-Use)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Erste Schritte](get-started.md)
 - [Neuerungen](release-notes.md)

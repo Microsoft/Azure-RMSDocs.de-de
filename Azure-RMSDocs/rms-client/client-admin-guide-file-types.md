@@ -4,7 +4,7 @@ description: Technische Details zu den unterstützten Dateitypen, Dateierweiteru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 350f687a61899046346f26b5beb2944b9f3caf13
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 02f1e21b73f1d800e5e50918e6a5694402840474
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984871"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935315"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
@@ -165,7 +165,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
     - Für 32-Bit-Versionen von Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - Für 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    - Für 64-Bit-Version von Windows: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** und **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
 
 2. Erstellen Sie im neu hinzugefügten Schlüssel (zum Beispiel HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*) einen neuen Zeichenfolgenwert (REG_SZ) mit dem Namen **Encryption** und dem Datenwert **Pfile**.
 
@@ -173,7 +173,7 @@ Bearbeiten Sie die folgenden Registrierungseinträge, um den Azure Information P
 
 Diese beiden Einstellungen führen dazu, dass der Azure Information Protection-Client generischen Schutz auf alle Dateien mit einer Dateinamenerweiterung anwendet. Wenn Sie damit Ihr Ziel erreicht haben, ist keine weitere Konfiguration erforderlich. Sie können jedoch Ausnahmen für bestimmte Dateitypen definieren, so dass diese weiterhin systemintern geschützt werden. Zu diesem Zweck müssen Sie drei (für Windows 32-Bit) oder 6 (für Windows 64-Bit) zusätzliche Registrierungseinträge für jeden Dateityp bearbeiten:
 
-1. Für **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** und **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (falls zutreffend): Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung hinzu (ohne das Vorheriger Zeitraum).
+1. Für **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection** und **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (falls zutreffend): Fügen Sie einen neuen Schlüssel mit dem Namen der Dateinamenerweiterung (ohne vorangehenden Punkt) hinzu.
 
     Für Dateien mit der Erweiterung „.docx“ erstellen Sie beispielsweise einen Schlüssel namens **DOCX**.
 
@@ -271,7 +271,7 @@ Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileC
 
 1. Installieren Sie [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2) auf dem Computer, auf dem die Überprüfung ausgeführt wird.
 
-2. Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die ZIP-Datei mit einer Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungs Eintrag für diese Dateinamenerweiterung hinzu, um einen generischen Schutz (Pfile) zu erhalten, wie in [Registrierungs Änderungen zum Ändern der Dateitypen beschrieben. sind](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) vor den Überprüfungs Anweisungen für die Scanner geschützt.
+2. Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die ZIP-Datei mit einer Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungs Eintrag für diese Dateinamenerweiterung hinzu, um einen generischen Schutz (Pfile) zu erhalten, wie in [Registrierungs Änderungen beschrieben, um zu ändern, welche Dateitypen](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) vor den Überprüfungs Anweisungen für die Scanner geschützt sind.
 
 Beispielszenario nach dem Ausführen dieser Schritte: 
 
@@ -283,7 +283,7 @@ Nach dem Überprüfen der Datei klassifiziert die Überprüfung diese Datei als 
 
 Der Azure Information Protection-Scanner und der PowerShell-Befehl [Set-AIPFileClassiciation](/powershell/module/azureinformationprotection/set-aipfileclassification) können die optische Zeichenerkennung (OCR) verwenden, um TIFF-Bilder zu überprüfen, wenn Sie das Windows-TIFF-IFilter-Feature installieren und anschließend die [Windows-TIFF-IFilter-Einstellungen](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) auf dem Computer konfigurieren, auf dem der Scanner oder die PowerShell-Sitzung ausgeführt wird.
 
-Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben und die TIFF-Datei mit einer Bezeichnung klassifiziert und geschützt werden soll, fügen Sie einen Registrierungs Eintrag für diese Dateinamenerweiterung hinzu, um systemeigenen Schutz zu erhalten, wie in [Registrierungs Änderungen zum Ändern der Dateitypen beschrieben. geschützt](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) vor den Anweisungen zur Überprüfung der Bereitstellung.
+Für den Scanner: Nachdem Sie vertrauliche Informationen gefunden haben, wenn die TIFF-Datei klassifiziert und durch eine Bezeichnung geschützt werden soll, fügen Sie einen Registrierungs Eintrag für diese Dateinamenerweiterung hinzu, um systemeigenen Schutz zu erhalten, wie in [Registrierungs Änderungen beschrieben, um zu ändern, welche Dateitypen](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) vor den Überprüfungs Anweisungen für die Scanner geschützt sind.
 
 ## <a name="next-steps"></a>Nächste Schritte
 Nachdem Sie alle Dateitypen ermittelt haben, die vom Azure Information Protection-Client unterstützt werden, helfen Ihnen die folgenden zusätzlichen Ressourcen möglicherweise bei der Unterstützung dieses Clients:

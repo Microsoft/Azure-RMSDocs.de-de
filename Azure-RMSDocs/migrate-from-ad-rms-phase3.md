@@ -3,8 +3,8 @@ title: Migrieren von AD RMS-Azure Information Protection – Phase 3
 description: Phase 3 der Migration von AD RMS zu Azure Information Protection deckt den Schritt 7 der Migration von AD RMS zu Azure Information Protection ab.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+manager: rkarlin
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 613dcf3e6b35ed801fafc7718dbb0db8b664483c
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684557"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898921"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Migrationsphase 3: Clientseitige Konfiguration
 
@@ -64,27 +64,29 @@ Diese Methode eignet sich nur für Windows-Clients, auf denen Klick-und-Los-Desk
     |-----------|-----------|  
     |**Domäne**|_tcp.rmscluster.contoso.com|  
     |**Dienst**|_rmsredir|  
-    |**Spezifische**|_http|  
+    |**Protocol**|_http|  
     |**Priorität**|0|  
     |**Gewichtung**|0|  
-    |**Port Nummer**|80|  
+    |**Portnummer**|80|  
     |**Host, der diesen Dienst anbietet**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Legen Sie auf dem AD RMS-Veröffentlichungsendpunkt für Benutzer, die Office 365-Apps oder Office 2016 (oder höher) ausführen, eine Ablehnungsberechtigung fest:
 
     ein. Starten Sie die IIS-Manager-Konsole auf einem der AD RMS-Server im Cluster.
 
-    b. Navigieren Sie zur **Standardwebsite** >  **_wmcs** > **licensing** > **licensing.asmx**
+    b. Navigieren Sie zur **Standard Website** , und erweitern Sie **_wmcs**.
 
-    c. Klicken Sie mit der rechten Maustaste auf **licensing.asmx** > **Eigenschaften** > **Bearbeiten**
+    c. Klicken Sie mit der rechten Maustaste auf **Lizenzierung** , und wählen Sie **zur Inhaltsansicht wechseln**
 
-    d. Im Dialogfeld **Berechtigungen für licensing.asmx** wählen Sie entweder **Benutzer**, wenn Sie die Umleitung für alle Benutzer festlegen möchten, oder Sie klicken auf **Hinzufügen**, und geben dann eine Gruppe mit den Benutzern an, die Sie umleiten möchten.
+    d. Klicken Sie im Detailfenster mit der rechten Maustaste auf **License. asmx** > **Eigenschaften** > **Bearbeiten** .
+
+    e. Wählen Sie im Dialogfeld **Berechtigungen für Lizenz. asmx** entweder **Benutzer** aus, wenn Sie die Umleitung für alle Benutzer festlegen möchten, oder klicken Sie auf **Hinzufügen** , und geben Sie dann eine Gruppe an, die die Benutzer enthält, die Sie umleiten möchten.
     
     Auch wenn alle Ihre Benutzer eine Version von Office verwenden, die DNS-Umleitung unterstützt, kann es sinnvoll sein, zunächst nur einen Teil der Benutzer festzulegen und eine phasenweise Migration durchzuführen.
     
-    e. Wählen Sie für die ausgewählte Gruppe **Verweigern** für die Berechtigungen **Lesen & Ausführen** und **Lesen** aus, und klicken Sie anschließend zweimal auf **OK**.
+    f. Wählen Sie für die ausgewählte Gruppe **Verweigern** für die Berechtigungen **Lesen & Ausführen** und **Lesen** aus, und klicken Sie anschließend zweimal auf **OK**.
 
-    f. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 365-Apps, Office 2019 oder Office 2016 ausführt, nach dem SRV-Eintrag sucht:
+    g. Um zu überprüfen, ob die Konfiguration ordnungsgemäß funktioniert, versuchen Sie, eine Verbindung mit der Datei „licencing.asmx“ direkt über einen Browser herzustellen. Sie sollten die folgende Fehlermeldung erhalten, wodurch der Client, der Office 365-Apps, Office 2019 oder Office 2016 ausführt, nach dem SRV-Eintrag sucht:
     
     **Fehlermeldung 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists)** (Mit den bereitgestellten Anmeldeinformationen haben Sie keine Berechtigung zum Anzeigen dieses Verzeichnisses oder dieser Seite (Zugriff aufgrund von Zugriffssteuerungslisten verweigert)).
 

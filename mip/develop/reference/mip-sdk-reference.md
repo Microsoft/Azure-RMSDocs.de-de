@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560437"
 ---
 # <a name="mip-sdk-for-c-reference"></a>MIP SDK für C++ Referenz
@@ -91,7 +91,7 @@ Das MIP SDK für C++ enthält:
 [MIP:: nopermissionserror-Klasse](class_mip_nopermissionserror.md)  |  Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.
 [MIP:: nopolicyerror-Klasse](class_mip_nopolicyerror.md)  |  Die Mandanten Richtlinie ist nicht für Klassifizierung/Bezeichnungen konfiguriert.
 [MIP:: notsupportederror-Klasse](class_mip_notsupportederror.md)  |  Der von der Anwendung angeforderte Vorgang wird vom SDK nicht unterstützt.
-[MIP:: operationcancellederror-Klasse](class_mip_operationcancellederror.md)  |  Der Vorgang wurde abgebrochen.
+[MIP:: operationcancellederror-Klasse](class_mip_operationcancellederror.md)  |  Vorgang wurde abgebrochen.
 [MIP::P olicyengine-Klasse](class_mip_policyengine.md)  |  Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
 [MIP::P olicyengine:: Settings-Klasse](class_mip_policyengine_settings.md)  |  Definiert die einem policyengine zugeordneten Einstellungen.
 [MIP::P olicyhandler-Klasse](class_mip_policyhandler.md)  |  Diese Klasse stellt eine Schnittstelle für alle Funktionen des Richtlinienhandler bereit.

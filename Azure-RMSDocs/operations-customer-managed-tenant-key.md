@@ -4,7 +4,7 @@ description: Informationen zu den Lebenszyklusvorgängen, die relevant sind, wen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/28/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445048"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898905"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Vom Kunden verwaltet: Lebenszyklusvorgänge für Mandantenschlüssel
 
@@ -27,7 +27,10 @@ ms.locfileid: "73445048"
 Wenn Ihr Mandantenschlüssel für Azure Information Protection von Ihnen verwaltet wird (BYOK-Szenario), finden Sie in den folgenden Abschnitten weitere Informationen zu den Lebenszyklusvorgängen, die für diese Topologie relevant sind.
 
 ## <a name="revoke-your-tenant-key"></a>Widerrufen Ihres Mandantenschlüssels
-In Azure Key Vault können Sie die Berechtigungen für den Schlüsseltresor mit Ihrem Azure Information Protection-Mandantenschlüssel ändern, sodass der Azure Rights Management-Dienst nicht mehr auf den Schlüssel zugreifen kann. In diesem Fall kann jedoch niemand Dokumente und E-Mails öffnen, die Sie zuvor mit dem Azure Rights Management-Dienst geschützt haben.
+
+Es gibt nur wenige Szenarios, in denen Sie ggf. ihren Schlüssel widerrufen müssen, anstatt Sie neu zu konfigurieren. Wenn Sie Ihren Schlüssel widerrufen, können alle Inhalte, die mit diesem Schlüssel von Ihrem Mandanten geschützt wurden, nicht für alle Benutzer (einschließlich Microsoft, ihre globalen Administratoren und Administratoren) zugänglich sein, es sei denn, Sie haben eine Sicherung des Schlüssels, den Sie wiederherstellen können. Nachdem Sie Ihren Schlüssel widerrufen haben, können Sie erst dann neue Inhalte schützen, wenn Sie einen neuen Mandanten Schlüssel für Azure Information Protection erstellt und konfiguriert haben. 
+
+Um Ihren vom Kunden verwalteten Mandanten Schlüssel zu widerrufen, ändern Sie in Azure Key Vault die Berechtigungen für den Schlüssel Tresor, der Ihren Azure Information Protection Mandanten Schlüssel enthält, sodass der Azure Rights Management-Dienst nicht mehr auf den Schlüssel zugreifen kann. Durch diese Aktion wird der Mandanten Schlüssel für Azure Information Protection wirksam widerrufen.
 
 Wenn Sie Ihr Abonnement für Azure Information Protection kündigen, wird Ihr Mandantenschlüssel in Azure Information Protection nicht mehr verwendet. Es ist keine weitere Aktion erforderlich.
 

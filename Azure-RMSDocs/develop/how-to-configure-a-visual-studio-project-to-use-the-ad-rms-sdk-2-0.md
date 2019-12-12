@@ -15,23 +15,23 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792404"
 ---
 # <a name="configure-visual-studio"></a>Konfigurieren von Visual Studio
 
 Dieser Artikel enthält Informationen zum Konfigurieren eines Visual Studio-Projekts für die Verwendung des Rights Management Services SDK 2.1.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 -   [Installieren des SDK](install-the-rms-sdk.md)
 
 **Anweisungen**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Schritt 1: Konfigurieren eines Visual Studio-Projekts für die Verwendung des RMS SDK 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Schritt 1: Konfigurieren eines Visual Studio-Projekts für die Verwendung von RMS SDK 2,1
 
 Diese Schritte sind spezifisch für Microsoft Visual Studio 2010. Wenn Sie eine andere Version von Microsoft Visual Studio verwenden, kann das Dialogfeld für Einstellungen bei Ihnen etwas anders aussehen.
 
@@ -70,6 +70,6 @@ Diese Anweisungen gelten für die Erstellung einer systemeigenen 32-Bit-Anwendun
 
     ![Feld „Ressourcendateien“ im Projektmappen-Explorer](../media/original_file_name.png)
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 * [Installieren des SDK](install-the-rms-sdk.md)

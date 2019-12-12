@@ -4,7 +4,7 @@ description: Informationen zu den Clientdateien und zur Verwendungsprotokollieru
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9edd0e3bcfda2d50da70e29bc807745d263f30bb
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 9011a6b7fc282c1e170959c31ce1e01bc22aa9c5
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314238"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935298"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Administratorhandbuch: Azure Information Protection-Clientdateien und Clientverwendungsprotokollierung
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Nachdem Sie den Azure Information Protection-Client installiert haben, müssen Sie möglicherweise wissen, wo die Dateien gespeichert sind und zudem überwachen, wie der Client verwendet wird.
 
@@ -54,13 +54,13 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
 
     - Bezeichnung festlegen: Informations-ID 101
     
-    - Bezeichnung festlegen (niedriger): Informations-ID 101
+    - Bezeichnung festlegen (unten): Informations-ID 101
     
     - Bezeichnung festlegen (höher): Informations-ID 101
     
     - Bezeichnung entfernen: Informations-ID 104
     
-    - Empfohlene Bezeichnungs-QuickInfo: Information 105
+    - Empfohlene QuickInfo für die Bezeichnung: Informationen 105
     
     - Benutzerdefinierten Schutz anwenden: Informations-ID 201
     
@@ -68,9 +68,9 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     
     - Outlook-Warnmeldung: Informations-ID 301
     
-    - Outlook-Legitimationsmeldung: Informations-ID 302
+    - Outlook-rechtfertigen Nachricht: Informations-ID 302
     
-    - Outlook-Blockiermeldung: Informations-ID 303
+    - Outlook-Block Meldung: Informations-ID 303
     
     - Anmelden (betriebsbereit): Informations-ID 902
     
@@ -86,7 +86,7 @@ Der Client protokolliert die Benutzeraktivität im lokalen Windows-Ereignisproto
     
     - System (zum Anmelden und Herunterladen der Richtlinie)
     
-    - Default
+    - Standardwert
     
 - Bezeichnung vor und nach Aktion 
     

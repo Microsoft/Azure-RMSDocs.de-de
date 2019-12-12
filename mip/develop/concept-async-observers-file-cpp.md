@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175444"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK: Beobachter von Datei-APIs
@@ -21,17 +21,17 @@ Die Datei-API enthält zwei Observer-Klassen. Die Member der Observer-Klasse bef
 - [`mip::FileProfile::Observer`](reference/class_mip_fileprofile_observer.md)
 - [`mip::FileHandler::Observer`](reference/class_mip_filehandler_observer.md)
 
-Wenn ein asynchroner Vorgang abgeschlossen wird, wird die Memberfunktion `OnXxx()` aufgerufen, die dem Ergebnis entspricht. Z.B.: `OnLoadSuccess()`, `OnLoadFailure()` und `OnAddEngineSuccess()` für `mip::FileProfile::Observer`.
+Wenn ein asynchroner Vorgang abgeschlossen wird, wird die `OnXxx()`-Memberfunktion aufgerufen, die dem Ergebnis entspricht. Z.B.: `OnLoadSuccess()`, `OnLoadFailure()` und `OnAddEngineSuccess()` für `mip::FileProfile::Observer`.
 
-Im nachfolgenden Beispiel wird das Promise-Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
+Im nachfolgenden Beispiel wird das Promise/Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
 
 ## <a name="file-profile-observer-implementation"></a>Implementieren des Dateiprofilbeobachters
 
 Im folgenden Beispiel wurde die Klasse `ProfileObserver` erstellt, die von `mip::FileProfile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
 
-**Hinweis**: Die folgenden Beispiele werden nur teilweise implementiert und enthalten keine Außerkraftsetzungen für die `mip::FileEngine` Observer-Objekte beziehen.
+**Hinweis:** Die nachfolgenden Beispiele wurden nur teilweise implementiert und beinhalten keine Überschreibungen der mit `mip::FileEngine` in Verbindung stehenden Beobachter.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Im Header wird zunächst die `ProfileObserver`-Klasse definiert, die von `mip::FileProfile::Observer` abgeleitet wird, und anschließend werden die einzelnen Memberfunktionen überschrieben.
 
@@ -45,7 +45,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 In der eigentlichen Implementierung wird eine Aktion definiert, die für jede Memberfunktion der Observer-Klasse ausgeführt werden soll.
 
@@ -53,7 +53,7 @@ Jeder Member akzeptiert zwei Parameter. Bei dem ersten Parameter handelt es sich
 
 Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *context*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Objekt dar, das je nach Verweis als `std::shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in das `std::promise` um, das dann in einem Objekt mit dem Namen `promise` gespeichert wird.
 
-Letztendlich wird das Future des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::FileProfile`-Objekt übergeben wird.
+Schließlich wird der Future-Aspekt des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::FileProfile`-Objekt übergeben wird.
 
 ```cpp
 #include "profile_observer.h"
@@ -83,7 +83,7 @@ Wenn eine SDK-Klasse instanziiert oder eine Funktion verwendet wird, die asynchr
 
 Ähnlich wie der Profilbeobachter implementiert auch `mip::FileHandler` eine `mip::FileHandler::Observers`-Klasse zum Verarbeiten von asynchronen Ereignisbenachrichtigungen im Rahmen von Dateivorgängen. Die Implementierung ist der oben beschriebenen Implementierung ähnlich. `FileHandlerObserver` wird nachfolgend teilweise definiert. 
 
-### <a name="filehandlerobserverh"></a>file_handler_observer.h
+### <a name="file_handler_observerh"></a>file_handler_observer.h
 
 ```cpp
 #include "mip/file/file_handler.h"
@@ -102,7 +102,7 @@ public:
 };
 ```
 
-### <a name="filehandlerobservercpp"></a>file_handler_observer.cpp
+### <a name="file_handler_observercpp"></a>file_handler_observer.cpp
 
 In diesem Beispiel werden zwar nur die ersten beiden Funktionen dargestellt, aber die übrigen Funktionen verwenden ein ähnliches Muster, auch für `ProfileObserver`.
 

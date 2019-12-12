@@ -14,10 +14,10 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 1fcab238281326ff8e885f655a936392e1519eb1
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74474376"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
@@ -32,7 +32,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiele:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -243,7 +243,7 @@ Sie können dieses Standardverhalten für eine ausgewählte Bezeichnungs Richtli
 
 Verwenden Sie die folgende Tabelle, um den angegebenen Zeichen folgen Wert zu identifizieren:
 
-| Zeichenfolgenwert| client| Gen|
+| Zeichenfolgenwert| client| Scanner|
 |-------------|-------|--------|
 |\*|Standardwert: Schutz auf alle Dateitypen anwenden|Anwenden von Schutz auf alle Dateitypen|
 |\<NULL-Wert >| Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien| Standardwert: Anwenden von Schutz auf Office-Dateitypen und PDF-Dateien|
@@ -702,7 +702,7 @@ Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom 
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Zum Beispiel:
+Beispiele:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -777,7 +777,7 @@ Beachten Sie, dass durch diese Einstellung keine ursprüngliche Bezeichnung aus 
 
 Anforderung: Dokumente mit der Bezeichnung "vertraulich" der sicheren Insel sollten von Azure Information Protection als "vertraulich" neu berechnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Secure Islands-Bezeichnung lautet **Vertraulich** und ist in der benutzerdefinierten Eigenschaft **Classification** (Klassifizierung) gespeichert.
 
@@ -795,7 +795,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnung "vertraulich" heißt:
 
 Anforderung: Dokumente, die von Secure Islands als "vertraulich" bezeichnet werden, sollten durch Azure Information Protection als "streng vertraulich" neu zugeordnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Secure Islands-Bezeichnung lautet **Sensitive** (Sensibel) und ist in der benutzerdefinierten Eigenschaft **Classification** (Klassifizierung) gespeichert.
 
@@ -813,7 +813,7 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnung "streng vertraulich" lautet
 
 Anforderung: Sie verfügen über zwei sichere Inseln-Bezeichnungen, die das Wort "Internal" enthalten, und Sie möchten, dass Dokumente, die eine dieser sicheren Inseln-Bezeichnungen aufweisen, vom Azure Information Protection Unified Label-Client als "Allgemein" neu berechnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Secure Islands-Bezeichnungen enthalten den Begriff **Internal** (intern) und sind in der benutzerdefinierten Eigenschaft namens **Classification** (Klassifizierung) gespeichert.
 
@@ -871,7 +871,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Zum Beispiel:
+Beispiele:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -897,7 +897,7 @@ Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, 
 
 Anforderung: Dokumente, die vom Azure Information Protection Unified Label-Client als "vertraulich" bezeichnet werden, sollten über die zusätzliche benutzerdefinierte Eigenschaft "Klassifizierung" mit dem Wert "Secret" verfügen.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die **Vertraulichkeits** Bezeichnung heißt vertraulich und erstellt eine benutzerdefinierte Eigenschaft mit dem Namen **Classification** mit dem Wert **Secret**.
 
@@ -1034,7 +1034,7 @@ Anweisungen:
 
 7. Wenn Ihr ausgewähltes Benutzerkonto in der Regel eine Verbindung mit dem Internet herstellt, aktivieren Sie das Senden von Überwachungsdaten erneut, indem Sie den **EnableAudit** -Wert auf " **true**" festlegen.
 
-8. Führen Sie auf dem nicht verbundenen Computer das Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit dem Parameter " *delegateduser* " aus, und geben Sie das Benutzerkonto aus Schritt 1 an, um den Benutzer Kontext festzulegen, um Dateien zu schützen. Zum Beispiel:
+8. Führen Sie auf dem nicht verbundenen Computer das Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit dem Parameter " *delegateduser* " aus, und geben Sie das Benutzerkonto aus Schritt 1 an, um den Benutzer Kontext festzulegen, um Dateien zu schützen. Beispiele:
     
         Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
 
@@ -1048,7 +1048,7 @@ Standardmäßig schreibt der Azure Information Protection Unified Bezeichnung-Cl
  
 Um den Protokolliergrad für diese Dateien zu ändern, suchen Sie in der Registrierung nach dem folgenden Wertnamen, und legen Sie die Wertdaten auf den erforderlichen Protokolliergrad fest:
 
-**HKEY_CURRENT_USER \software\microsoft\msip\loglevel**
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Legen Sie den Protokolliergrad auf einen der folgenden Werte fest:
 

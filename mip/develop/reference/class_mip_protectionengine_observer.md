@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560762"
 ---
 # <a name="class-mipprotectionengineobserver"></a>mip::ProtectionEngine::Observer-Klasse 
@@ -21,7 +21,7 @@ Diese Schnittstelle muss von Anwendungen mit dem Schutz-SDK implementiert werden
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void ongettemplatessuccess (Konstante Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& templateids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
-public virtual void ongettemplatesfailure (konstant Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
+public virtual void ongettemplatesfailure (Konstante Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
 public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& Rechte, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
 öffentliches virtuelles void-OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
   

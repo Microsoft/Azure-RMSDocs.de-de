@@ -15,10 +15,10 @@ ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 5150c9f3339f442f7898f273d2275cd267e8d6b8
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791159"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Bereitstellen einer Dienstanwendung in einen anderen Mandanten
@@ -48,6 +48,6 @@ Der IT-Administrator von *ABC* startet daraufhin die *CoolApp*-Anwendung als Die
 
 Wenn dem IT-Administrator von *ABC* kein Benutzeroberflächendialogfeld für die Dienstprizipalinformation bereitgestellt wird, dann ist **Fluss 2** die Methode, die ausgewählt werden sollte.
 
-## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluss 2: Der *ABC*-IT-Administrator stellt den Schlüssel für das *CoolApp*-Team bereit.
+## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Fluss 2: Der *ABC*-IT-Administrator stellt den Schlüssel für das *CoolApp*-Team bereit
 
 Sobald der IT-Administrator von *ABC* den Dienstprinzipal erstellt, so wie in **Bild 1** gezeigt, stellt *ABC* die Informationen für das *CoolApp*-Team bereit. Das *CoolApp*-Team bettet dann weiterhin die Informationen in die *CoolApp*-Anwendung ein, um sie im *ABC*-Mandanten zu verwenden.

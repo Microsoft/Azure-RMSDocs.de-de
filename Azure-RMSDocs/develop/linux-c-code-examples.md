@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: dec0a095b84d265d3594112b24beba8aae923959
-ms.sourcegitcommit: e8c3def412267905871928448f3810731b5c0443
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73632275"
 ---
-# <a name="linux-code-examples"></a>Linux-Codebeispiele
+# <a name="linux-code-examples"></a>Codebeispiele für Linux
 
 In diesem Thema werden wichtige Szenarien Codeelemente der Linux-Version des RMS SDK vorgestellt.
 

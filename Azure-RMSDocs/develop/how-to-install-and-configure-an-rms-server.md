@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 59aa02318a0c6d7ee5e9857bead4c79248546320
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68794117"
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Exemplarische Vorgehensweise: Installieren, Konfigurieren und Testen mit einem RMS-Server
@@ -79,7 +79,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
                 ServiceLocation
                   EnterpriseCertification
 
-   **Wert**: (Standard:) [**http|https**]://RMSClusterName/ **_wmcs/Certification**
+   **Value**: (Default): [**http|https**]://RMSClusterName/ **_wmcs/Certification**
 
 5. **EnterprisePublishing**
 
@@ -90,7 +90,7 @@ Die folgenden Schritte führen Sie durch die Einrichtung eines RMS-Servers und u
                 ServiceLocation
                   EnterprisePublishing
                   
-   **Wert**: (Standard:) [**http|https**]://RMSClusterName/ **_wmcs/Licensing**
+   **Value**: (Default): [**http|https**]://RMSClusterName/ **_wmcs/Licensing**
 
 > [!NOTE]
 > Standardmäßig sind diese Schlüssel nicht in der Registrierung vorhanden, und sie müssen erstellt werden.

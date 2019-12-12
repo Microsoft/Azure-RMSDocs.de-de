@@ -13,10 +13,10 @@ ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561300"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
@@ -527,10 +527,10 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 12. Wählen Sie im Bereich **aiponbehalfof-API verfügbar** machen die Option **+ Bereich hinzufügen**aus.
 
 13. Geben Sie im **Bereich Bereich hinzufügen** Folgendes an, und verwenden Sie die vorgeschlagenen Zeichen folgen als Beispiele, und wählen Sie dann **Bereich hinzufügen**aus:
-    - **Bereichs Name**: `user-impersonation`
+    - **Bereichsname**: `user-impersonation`
     - **Wer kann zustimmen?** : **Administratoren und Benutzer**
-    - **Anzeige Name der Administrator Zustimmung**: `Access Azure Information Protection scanner`
-    - **Beschreibung der Administrator Zustimmung**: `Allow the application to access the scanner for the signed-in user`
+    - **Anzeigename der Administratoreinwilligung**: `Access Azure Information Protection scanner`
+    - **Beschreibung der Administratoreinwilligung**: `Allow the application to access the scanner for the signed-in user`
     - **Anzeige Name der Benutzer Zustimmung**: `Access Azure Information Protection scanner`
     - **Beschreibung der Benutzer Zustimmung**: `Allow the application to access the scanner for the signed-in user`
     - **Status**: **aktiviert** (Standard)
@@ -560,7 +560,7 @@ Nachdem Sie dieses Cmdlet ausgeführt haben, können Sie die Bezeichnungs-Cmdlet
 
 22. Wählen Sie im Bereich **API-Berechtigungen anfordern** die Option **meine APIs**aus.
 
-23. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen**aus. 
+23. Wählen Sie im Abschnitt **API auswählen** die Option **apionbehalfof**aus, und aktivieren Sie dann das Kontrollkästchen für den **Benutzer**Identitätswechsel als Berechtigung. Wählen Sie **Berechtigungen hinzufügen** aus. 
 
 24. Wählen Sie im **Bereich API-Berechtigungen** im Bereich **Zustimmung erteilen** die Option **Administrator Zustimmung für \<Ihres Mandanten *namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
 

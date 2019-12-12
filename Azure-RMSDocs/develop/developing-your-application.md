@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791299"
 ---
 # <a name="developing-your-application"></a>Entwickeln Ihrer Anwendung
@@ -26,9 +26,9 @@ ms.locfileid: "68791299"
 In diesem Beispiel erstellen Sie eine einfache Konsolenanwendung, die mit dem AIP-Dienst (Azure Information Protection-Dienst) interagiert.  Sie übernimmt als Eingabe den Pfad eines zu schützenden Dokuments und schützt es anschließend mit einer Ad-hoc-Richtlinie oder einer Azure-Vorlage. Die Anwendung wendet dann die richtigen Richtlinien entsprechend den Eingaben an, um ein geschütztes Dokument zu erstellen. Der zu verwendende Beispielcode ist eine [Azure IP-Testanwendung](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test), die sich auf Github befindet.
 
 ## <a name="sample-app-prerequisites"></a>Voraussetzungen für die Beispiel-App
-- **Betriebssystem:** Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 oder Windows Server 2012
-- **Programmiersprache:** C# (.NET Framework 3.0 und höher)
-- **Entwicklungsumgebung:** Visual Studio 2015 (und höher)
+- **Betriebssystem**: Windows 10, Windows 8, Windows 7, Windows Server 2008, Windows Server 2008 R2 oder Windows Server 2012
+- **Programmiersprache**: C# (.NET Framework 3.0 und höher)
+- **Entwicklungsumgebung**: Visual Studio 2015 (und höher)
 
 ## <a name="setting-up-your-azure-configuration"></a>Einrichten der Azure-Konfiguration
 

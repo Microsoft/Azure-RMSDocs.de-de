@@ -8,23 +8,23 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5fac6b39cb3770748336fac7264134acf2627a02
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886069"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Richtlinien-API
 
 `mip::PolicyEngine` implementiert alle Vorgänge, die die Richtlinien-API ausführen kann, mit Ausnahme des Ladens des Profils.
 
-## <a name="implementation-add-a-policy-engine"></a>Ausführungs Hinzufügen einer Richtlinie-Engine
+## <a name="implementation-add-a-policy-engine"></a>Implementierung: Hinzufügen einer Richtlinien-Engine
 
-### <a name="implementation-create-policy-engine-settings"></a>Ausführungs Erstellen von Richtlinien Moduleinstellungen
+### <a name="implementation-create-policy-engine-settings"></a>Implementierung: Erstellen von Einstellungen für die Richtlinien-Engine
 
-Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::PolicyEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
-Hier erstellen wir ein `FileEngine::Settings` -Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers:
+Hier erstellen wir ein `FileEngine::Settings` Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers:
 
 ```cpp
 PolicyEngine::Settings engineSettings(
@@ -46,7 +46,7 @@ PolicyEngine::Settings engineSettings(
 
 Als bewährte Methode sollte der erste Parameter (**id**) erlauben, dass ganz einfach eine Verbindung zwischen der Engine und dem zugewiesenen Benutzer (am besten dem Benutzerprinzipalnamen) hergestellt werden kann.
 
-### <a name="implementation-add-the-policy-engine"></a>Ausführungs Hinzufügen der Richtlinien-Engine
+### <a name="implementation-add-the-policy-engine"></a>Implementierung: Hinzufügen der Richtlinien-Engine
 
 Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-Muster berücksichtigen, das zum Laden des Profils verwendet wurde. In diesem Beispiel wird nicht das Promise für `mip::Profile` erstellt, sondern `mip::PolicyEngine` verwendet.
 
@@ -73,19 +73,19 @@ Damit Sie die Engine hinzufügen können, müssen Sie erneut das Promise-Future-
 
 Mithilfe des obenstehenden Codes wurde erfolgreich eine Engine für den authentifizierten Benutzer zum Profil hinzugefügt.
 
-## <a name="implementation-list-sensitivity-labels"></a>Ausführungs Auflisten der Vertraulichkeitsbezeichnungen
+## <a name="implementation-list-sensitivity-labels"></a>Implementierung: Auflisten von Vertraulichkeitsbezeichnungen
 
 Unter Verwendung der hinzugefügten Engine ist es jetzt möglich, sämtliche Vertraulichkeitsbezeichnungen aufzulisten, die dem authentifizierten Benutzer zur Verfügung stehen, indem `engine->ListSensitivityLabels()` aufgerufen wird.
 
 `ListSensitivityLabels()` ruft die Liste mit Bezeichnungen und Attributen dieser Bezeichnungen für einen bestimmten Benutzer aus dem Dienst ab. Das Ergebnis wird in einem Vektor von `std::shared_ptr<mip::Label>` gespeichert.
 
-### <a name="implementation-listsensitivitylabels"></a>Ausführungs ListSensitivityLabels()
+### <a name="implementation-listsensitivitylabels"></a>Implementierung: ListSensitivityLabels()
 
 ```cpp
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>Ausführungs Bezeichnungen drucken
+### <a name="implementation-print-the-labels"></a>Implementierung: Ausgeben der Bezeichnungen
 
 ```cpp
 //Iterate through all labels in the vector
@@ -114,4 +114,4 @@ for (const auto& label : labels) {
 }
 ```
 
-Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und um anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.
+Die Sammlung von `mip::Label`, die von `GetSensitivityLabels()` zurückgegeben wird, kann verwendet werden, um zuerst alle verfügbaren Bezeichnungen an den Benutzer zurückzugeben und anschließend ggf. die ID zu verwenden, wenn Bezeichnungen auf eine Datei angewendet werden sollen.

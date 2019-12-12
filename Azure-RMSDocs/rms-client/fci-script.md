@@ -4,7 +4,7 @@ description: Beispielskript zum Kopieren und Bearbeiten, wie in den Anweisungen 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,24 +13,24 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 22db2bd08d97b13ad69d9805a39c174698561eef
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: c8f82db12bc4de61b526426e8e05652cfac8db48
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689989"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935247"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Windows PowerShell-Skript für Azure RMS-Schutz mithilfe der Ressourcen-Manager für Dateiserver-FCI
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Diese Seite enthält das Beispielskript zum Kopieren und Bearbeiten, wie unter [RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure)](configure-fci.md) beschrieben.
 
 Dieses Skript verwendet die Mindestversion **1.3.155.2** für das Modul „AzureInformationProtection“. Führen Sie zum Überprüfen der Version den folgenden Befehl aus: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Haftungsausschluss&#42;&#42;: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird OHNE jede Gewährleistung bereitgestellt.*
+*&#42;&#42;Haftungs&#42;&#42;Ausschluss: Dieses Beispielskript wird unter keinem Microsoft-Standard Support Programm oder-Dienst unterstützt. Dieses Beispielskript wird ohne jegliche Gewährleistung bereitgestellt.*
 
 ```
 <#

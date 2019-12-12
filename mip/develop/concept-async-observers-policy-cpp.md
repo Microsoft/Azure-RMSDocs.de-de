@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175495"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK: Beobachter von Richtlinien-APIs
@@ -20,17 +20,17 @@ Das SDK für die Richtlinien-API enthält eine Observer-Klasse. Die Member der O
 
 - [`mip::PolicyProfile::Observer`](reference/class_mip_policyprofile_observer.md)
 
-Wenn ein asynchroner Vorgang abgeschlossen wird, wird die Memberfunktion `OnXxx()` aufgerufen, die dem Ergebnis entspricht. Z.B.: `OnLoadSuccess()`, `OnLoadFailure()` und `OnAddEngineSuccess()` für `mip::Profile::Observer`.
+Wenn ein asynchroner Vorgang abgeschlossen wird, wird die `OnXxx()`-Memberfunktion aufgerufen, die dem Ergebnis entspricht. Z.B.: `OnLoadSuccess()`, `OnLoadFailure()` und `OnAddEngineSuccess()` für `mip::Profile::Observer`.
 
-Im nachfolgenden Beispiel wird das Promise-Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
+Im nachfolgenden Beispiel wird das Promise/Future-Muster dargestellt. Dieses wird ebenfalls von SDK-Beispielen verwendet und kann erweitert werden, sodass das gewünschte Rückrufverhalten implementieren werden kann. 
 
 ## <a name="profile-observer-implementation"></a>Implementieren des Profilbeobachters
 
-Im folgenden Beispiel wurde eine Klasse (`ProfileObserver`) erstellt, die von `mip::Profile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
+Im folgenden Beispiel wurde die Klasse `ProfileObserver` erstellt, die von `mip::Profile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
 
-**Hinweis**: Die folgenden Beispiele werden nur teilweise implementiert und enthalten keine Außerkraftsetzungen für die `mip::ProfileEngine` Observer-Objekte beziehen.
+**Hinweis:** Die nachfolgenden Beispiele wurden nur teilweise implementiert und beinhalten keine Überschreibungen der mit `mip::ProfileEngine` in Verbindung stehenden Beobachter.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Im Header wird zunächst die `ProfileObserver`-Klasse definiert, die von `mip::Profile::Observer` abgeleitet wird, und anschließend werden die einzelnen Memberfunktionen überschrieben.
 
@@ -44,13 +44,13 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 In der eigentlichen Implementierung wird eine Aktion definiert, die für jede Memberfunktion der Observer-Klasse ausgeführt werden soll.
 
 Jeder Member akzeptiert zwei Parameter. Bei dem ersten Parameter handelt es sich um einen gemeinsamen Zeiger auf die Klasse, die von der Funktion verarbeitet wird. `ProfileObserver::OnLoadSuccess` erwartet dabei den Empfang einer `mip::Profile`-Klasse. `ProfileObserver::OnAddEngineSuccess` erwartet hingegen den Empfang einer `mip::ProfileEngine`-Klasse.
 
-Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *context*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Element dar, das als `shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in `std::promise` um. Dieses Element wird dann in einem Objekt mit dem Namen `promise` gespeichert.
+Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *context*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Element dar, das als `shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in das `std::promise` um, das dann in einem Objekt mit dem Namen `promise` gespeichert wird.
 
 Schließlich wird der Future-Aspekt des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::Profile`-Objekt übergeben wird.
 

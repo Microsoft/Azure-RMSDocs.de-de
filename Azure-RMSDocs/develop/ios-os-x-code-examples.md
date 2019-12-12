@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792218"
 ---
 # <a name="iosos-x-code-examples"></a>Codebeispiele für iOS/OS X
@@ -34,10 +34,10 @@ In diesem Thema werden wichtige Codeelemente der iOS/OS X-Version des RMS SDK vo
 
 Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwendung, die für die Einführung in dieses SDK wichtig sind. Diese veranschaulichen die Verwendung des Microsoft Protected File-Dateiformats (geschützte Datei), benutzerdefinierter geschützter Dateiformate und benutzerdefinierter Benutzeroberflächen-Steuerelemente.
 
-### <a name="scenario-consume-an-rms-protected-file"></a>En Nutzen einer RMS-geschützten Datei
+### <a name="scenario-consume-an-rms-protected-file"></a>Szenario: Nutzen einer RMS-geschützten Datei
 
 
-- **Schritt 1**: Erstellen Sie ein [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekt.
+- **Schritt 1**: Erstellen eines [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekts
 
   **Beschreibung**: Instanziieren Sie ein [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)-Objekt mit dessen create-Methode. Diese Methode implementiert die Dienstauthentifizierung mit [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx), um durch die Übergabe einer Instanz von **MSAuthenticationCallback** als Parameter *authenticationCallback* an die MSIPC-API ein Token abzurufen. Den Aufruf von [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) finden Sie im folgenden Beispielcodeabschnitt.
 
@@ -55,7 +55,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
             }];
         }
 
-- **Schritt 2**: Richten Sie die Authentifizierung mit der Active Directory-Authentifizierungsbibliothek (ADAL) ein.
+- **Schritt 2**: Einrichten der Authentifizierung mit der Active Directory-Authentifizierungsbibliothek (ADAL).
 
   **Beschreibung**: In diesem Schritt erfahren Sie, wie ADAL zum Implementieren von [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) mit Beispielauthentifizierungsparametern verwendet wird. Weitere Informationen zur Verwendung von ADAL finden Sie in der Azure AD-Authentifizierungsbibliothek (ADAL).
 
@@ -96,7 +96,7 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
                           }];
        }
 
-- **Schritt 3:** Überprüfen Sie mithilfe der [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx)-Methode eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts, ob die Bearbeitungsrechte dieses Benutzers mit diesem Inhalt vorhanden sind.
+- **Schritt 3**: Überprüfen der Bearbeitungsrechte dieses Benutzers mit diesem Inhalt mithilfe der [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx)-Methode eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts
 
       - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
       {
@@ -110,11 +110,11 @@ Es folgen Codebeispiele für **Objective C** aus einer größeren Beispielanwend
           }
       }
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>En Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Szenario: Erstellen einer neuen geschützten Datei mithilfe einer Vorlage
 
 In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx)) abgerufen. Dabei wird die erste Vorlage zum Erstellen einer Richtlinie ausgewählt und anschließend die neue geschützte Datei erstellt und in diese geschrieben.
 
--   **Schritt 1**: Rufen Sie die Liste mit Vorlagen ab.
+-   **Schritt 1**: Abrufen der Liste der Vorlagen
 
         + (void)templateListUsageWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -126,7 +126,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
                                    }];
         }
 
--   **Schritt 2**: Erstellen Sie ein [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt mit der ersten Vorlage in der Liste.
+-   **Schritt 2**: Erstellen eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts mit der ersten Vorlage in der Liste
 
         + (void)userPolicyCreationFromTemplateWithAuthenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -141,7 +141,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
--   **Schritt 3:** Erstellen Sie ein [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx)-Objekt, und fügen Sie diesem Inhalt hinzu.
+-   **Schritt 3**: Erstellen eines [MSMutableProtectedData](https://msdn.microsoft.com/library/dn758325.aspx)-Objekts und Füllen des Objekts mit Inhalt
 
         + (void)createPtxtWithUserPolicy:(MSUserPolicy *)userPolicy contentToProtect:(NSData *)contentToProtect
         {
@@ -155,10 +155,10 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
-### <a name="scenario-open-a-custom-protected-file"></a>En Öffnen einer benutzerdefinierten geschützten Datei
+### <a name="scenario-open-a-custom-protected-file"></a>Szenario: Öffnen einer benutzerdefinierten geschützten Datei
 
 
--   **Schritt 1**: Erstellen Sie ein [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt aus einem *serializedContentPolicy*-Objekt.
+-   **Schritt 1**: Erstellen eines [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts aus einem *serializedContentPolicy*-Objekt
 
         + (void)userPolicyWith:(NSData *)protectedData
         authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
@@ -213,7 +213,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
          }
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>En Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Szenario: Erstellen einer benutzerdefinierten geschützten Datei mit einer benutzerdefinierten (Ad-Hoc)-Richtlinie
 
 
 -   **Schritt 1**: Erstellen einer Richtlinienbeschreibung mit einer vom Benutzer angegebenen E-Mail-Adresse.
@@ -229,7 +229,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             policyDescriptor.offlineCacheLifetimeInDays = 10;
         }
 
--   **Schritt 2**: Erstellen Sie ein benutzerdefiniertes [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekt über den Richtliniendeskriptor *selectedDescriptor*.
+-   **Schritt 2**: Erstellen eines benutzerdefinierten [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx)-Objekts aus der Richtlinienbeschreibung *selectedDescriptor*
 
         + (void)userPolicyWithPolicyDescriptor:(MSPolicyDescriptor *)policyDescriptor
         {
@@ -243,7 +243,7 @@ In diesem Szenario wird zunächst eine Liste mit Vorlagen ([MSTemplateDescriptor
             }];
         }
 
--   **Schritt 3:** Erstellen Sie das [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx)-Objekt, fügen Sie Inhalt zu diesem hinzu, und schließen Sie es anschließend.
+-   **Schritt 3**: Erstellen und Füllen des [MSMutableCustomProtectedData](https://msdn.microsoft.com/library/dn758321.aspx)-Objekts mit Inhalt und anschließendes Schließen des Objekts
 
         + (void)mutableCustomProtectedData:(NSMutableData *)backingData policy:(MSUserPolicy *)policy contentToProtect:(NSString *)contentToProtect
         {

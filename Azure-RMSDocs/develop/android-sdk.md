@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792667"
 ---
 # <a name="android-setup"></a>Android-Setup
@@ -27,12 +27,12 @@ Android-Apps können das Microsoft Rights Management SDK 4.2 verwenden, um den i
 
 Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener neuer Apps.
 
--   [Erforderliche Komponenten](#prerequisites)
+-   [Voraussetzungen](#prerequisites)
 -   [Optional](#optional)
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
@@ -47,7 +47,7 @@ Die folgende Software wird auf Ihrem Entwicklungssystem empfohlen:
 
     Dieses SDK kann zur Anwendungsentwicklung für Android 4.0.3 (API-Ebene 15) und höher eingesetzt werden.
 
--   Authentifizierungsbibliothek: Es wird empfohlen, die [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx) zu verwenden. Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Es können jedoch auch andere Authentifizierungsbibliotheken verwendet werden, die OAuth 2.0 unterstützen.
 
     Weitere Informationen finden Sie unter [ADAL für Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android).
 
@@ -63,7 +63,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 ## <a name="configuring-your-development-environment"></a>Konfigurieren der Entwicklungsumgebung
 
-**Hinweis**  MS RMS SDK 4.2-Vorschauversion: In dieser Vorschauversion wurden die Screenshots nicht aktualisiert, um die Änderung des Pfads von com/microsoft/protection in com/microsoft/rightsmanagment widerzuspiegeln. Der Text wurde allerdings aktualisiert.
+**Hinweis**  MS RMS SDK 4,2 Preview-Version: in dieser Vorschauversion wurden die Screenshots nicht aktualisiert, um die Änderung des Namens der Paare von com/Microsoft/Protection zu com/Microsoft/righungmanagment anzuzeigen. Der Text wurde allerdings aktualisiert.
 
  
 -   Öffnen Sie die Eclipse-Entwicklungsumgebung.
@@ -140,7 +140,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte UI 
 
 -   Sie können jetzt Ihre eigenen neuen Android-Apps erstellen.
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen:
 
 [Erste Schritte](get-started.md)
 

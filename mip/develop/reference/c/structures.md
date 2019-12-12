@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: aa544dfbd046ae8c3137cbc115d9af6ea219bc07
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591605"
 ---
 # <a name="structures"></a>Strukturen
@@ -41,8 +41,8 @@ Von einem Server bereitgestellte Informationen zum Generieren eines OAuth2-Token
 
 | Feld | Description |
 |---|---|
-| Herrschaft | OAuth2 Authority  |
-| Ressource | OAuth2-Ressource  |
+| authority | OAuth2 Authority  |
+| resource | OAuth2-Ressource  |
 | scope | OAuth2 Bereich  |
 
 
@@ -91,7 +91,7 @@ HTTP-Anforderungs-/Antwortheader
 | Feld | Description |
 |---|---|
 | name | Header Name/-Schlüssel  |
-| value | Header Wert  |
+| value | Headerwert  |
 
 
 ```c
@@ -110,11 +110,11 @@ HTTP-Anforderung
 |---|---|
 | id | Eindeutige Anforderungs-ID: korreliert mit derselben Eigenschaft in mip_cc_http_response  |
 | Typ | HTTP-Anforderungstyp (z. b. Get vs. Post)  |
-| Urne | HTTP-Anforderungs-URL  |
+| URL | HTTP-Anforderungs-URL  |
 | bodysize | Größe des HTTP-Anforderungs Texts in Bytes  |
-| Instanz | Puffer Verbindungs Text für HTTP-Anforderung  |
+| Textkörper | Puffer Verbindungs Text für HTTP-Anforderung  |
 | Header Anzahl | Anzahl von HTTP-Anforderungs Headern  |
-| Kopf | Puffer mit HTTP-Anforderungs Headern  |
+| Kopfzeilen | Puffer mit HTTP-Anforderungs Headern  |
 
 
 ```c
@@ -137,11 +137,11 @@ HTTP-Antwort
 | Feld | Description |
 |---|---|
 | id | Eindeutige Anforderungs-ID: korreliert mit derselben Eigenschaft in mip_cc_http_request  |
-| Statuscode | Statuscode der HTTP-Antwort  |
+| statusCode | Statuscode der HTTP-Antwort  |
 | bodysize | Größe des HTTP-Antwort Texts in Bytes  |
-| Instanz | Puffer Verbindung mit HTTP-Antworttext  |
+| Textkörper | Puffer Verbindung mit HTTP-Antworttext  |
 | Header Anzahl | Anzahl von HTTP-Antwort Headern  |
-| Kopf | Puffer mit HTTP-Antwort Headern  |
+| Kopfzeilen | Puffer mit HTTP-Antwort Headern  |
 
 
 ```c
@@ -162,7 +162,7 @@ Eine Struktur, die anwendungsspezifische Informationen enthält.
 
 | Feld | Description |
 |---|---|
-| E-Mail | E-Mail-Adresse  |
+| E-Mail | E-Mail-Adresse des Benutzers  |
 
 
 ```c
@@ -178,7 +178,7 @@ Definiert einen aktivierten/deaktivierten Status eines einzelnen Features.
 
 | Feld | Description |
 |---|---|
-| -Feature | Funktionsname  |
+| -Feature | Feature name  |
 | value | Aktivierter/deaktivierter Zustand  |
 
 
@@ -198,7 +198,7 @@ Eine Gruppe von Benutzern und die Ihnen zugeordneten Rechte
 |---|---|
 | Benutzer | Liste der Benutzer  |
 | userscount | Anzahl von Benutzern  |
-| Ansprüchen | Liste der Rechte  |
+| Rechte | Liste der Rechte  |
 | righungscount | Anzahl der Rechte  |
 
 

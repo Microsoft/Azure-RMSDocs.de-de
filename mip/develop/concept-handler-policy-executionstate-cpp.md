@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886166"
 ---
 # <a name="implement-executionstate"></a>Implementieren von ExecutionState
@@ -28,7 +28,7 @@ Die Übergabe von Informationen an das MIP SDK zum Berechnen einer Aktion, die b
 
 `ExecutionState` macht die folgenden virtuellen Member verfügbar. Jedes stellt einen Kontext für die Richtlinien-Engine bereit, um Informationen darüber zurückzugeben, welche Aktionen von der Anwendung ausgeführt werden sollten. Darüber hinaus können diese Informationen verwendet werden, um Überwachungsinformationen für die Berichterstellungsfunktion von Azure Information Protection Reporting bereitzustellen.
 
-| Member                                                                             | Rückgabewert                                                                                                              |
+| Mitglied                                                                             | Rückgabe                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Gibt die Bezeichnung zurück, die auf das-Objekt angewendet werden soll.                                                                       |
 | `mip::DataState GetDataState()`                                                    | Gibt den MIP::D atastate des-Objekts zurück.                                                                            |

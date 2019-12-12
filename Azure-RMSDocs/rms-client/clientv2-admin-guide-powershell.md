@@ -12,10 +12,10 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561247"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Administrator Handbuch: Verwenden von PowerShell mit dem Azure Information Protection Unified Client
@@ -137,7 +137,7 @@ Für das Delegierte Benutzerkonto:
     -  **Content. delegatedreader** 
     -  **Content. delegatedwriter**
 
-13. Wählen Sie **Berechtigungen hinzufügen**aus.
+13. Wählen Sie **Berechtigungen hinzufügen** aus.
 
 14. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **+ Berechtigung erneut hinzufügen** aus.
 
@@ -149,7 +149,7 @@ Für das Delegierte Benutzerkonto:
     
     -  **Unifedpolicy. Tenant. Read**
 
-18. Wählen Sie **Berechtigungen hinzufügen**aus.
+18. Wählen Sie **Berechtigungen hinzufügen** aus.
 
 19. Wählen Sie im Bereich **AIP-delegateduser-API-Berechtigungen** die Option **Administrator Zustimmung für \<*Ihres Mandanten namens* gewähren aus>** und klicken Sie für die Bestätigungsaufforderung auf **Ja** .
     

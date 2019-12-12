@@ -4,19 +4,19 @@ description: Installieren Sie einen Reader unter Windows für PDF-Dokumente, die
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 4f51ccb9bf11f6d692978cb24cf5b9bad186c690
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 3fbf6b04f6c9b67e8b0b3a9f679428c4af0a6505
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445112"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907456"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installieren eines PDF-Readers für Windows
 
@@ -34,7 +34,9 @@ Anweisungen:
 
 3. Installieren Sie das [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Windows.
 
-4. Wenn Sie dazu aufgefordert werden, bitten Sie den Administrator, [das Plug-in zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+4. Wenn Sie zur Administrator Genehmigung aufgefordert werden, bitten Sie den Administrator, das Plug-in zu autorisieren.
+    
+    Die Administrator Anweisungen für diesen Schritt sind in der Veröffentlichungs Ankündigung enthalten: [allgemeine Verfügbarkeit der Integration von Adobe Acrobat Reader in Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 Alternative Leser, die geschützte PDF-Dokumente öffnen, die dem ISO-Standard für die PDF-Verschlüsselung entsprechen:
 

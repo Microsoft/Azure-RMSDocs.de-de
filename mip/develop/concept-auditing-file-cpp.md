@@ -9,17 +9,17 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884746"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Überwachung mit der Datei-API im MIP SDK
 
 Über das Administrationsportal von Azure Information Protection können Sie auf Administratorberichte zugreifen. Diese Berichte bieten Aufschluss darüber, welche Bezeichnungen Benutzer, manuell oder automatisch, über alle Anwendungen oder Dienste, die das MIP SDK integriert haben, anwenden. Entwicklungspartner, die das SDK verwenden, können diese Funktion aktivieren, um Informationen aus Ihren Anwendungen in Kunden berichten zu erhalten.
 
-## <a name="event-types"></a>Ereignis Typen
+## <a name="event-types"></a>Ereignistypen
 
 Es gibt drei Typen von Ereignissen, die über das SDK an die Azure Informationen Protection-Analyse übermittelt werden können. **Taktereignisse**, **Ermittlungsereignisse** und **Änderungsereignisse**
 
@@ -29,10 +29,10 @@ Taktereignisse werden für jede Anwendung, in der die Datei-API integriert ist, 
 
 * TenantId
 * Erstellungszeit
-* Benutzerprinzipalname
+* User Principal Name (Benutzerprinzipalname)
 * Name des Computers, auf dem die Überwachung generiert wurde
 * Prozessname
-* Platform
+* Plattform
 * Die Anwendungs-ID entspricht der Azure AD-Anwendungs-ID.
 
 Diese Ereignisse sind hilfreich, um Anwendungen in Ihrem Unternehmen zu erkennen, die das Microsoft Information Protection SDK verwenden.

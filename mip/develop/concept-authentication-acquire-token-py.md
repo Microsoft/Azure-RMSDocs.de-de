@@ -1,6 +1,6 @@
 ---
 title: 'Konzepte: Verwenden von Python zum Abrufen eines Zugriffstokens'
-description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Python ein OAuth2-Zugriffstoken abrufen. Dieser Abruf ist für die Implementierung des Authentifizierungsdelegaten erforderlich.
+description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Python ein OAuth2-Zugriffstoken abrufen. Dieser Aufruf ist für die Implementierung des Authentifizierungsdelegaten erforderlich.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
@@ -8,17 +8,17 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884741"
 ---
 # <a name="acquire-an-access-token-python"></a>Abrufen eines Zugriffstokens (Python)
 
 Dieses Beispiel veranschaulicht den Abruf eines OAuth2-Tokens mithilfe des Aufrufs eines externen Python-Skripts. Ein gültiges OAuth2-Zugriffs Token ist für die Implementierung des Authentifizierungs Delegaten erforderlich.
 
-## <a name="prerequisites"></a>Erforderliche Komponenten
+## <a name="prerequisites"></a>Voraussetzungen
 
 So führen Sie das folgende Beispiel aus:
 
@@ -31,7 +31,7 @@ Dieser Code ist nicht für die Verwendung in der Produktion bestimmt. Sie kann n
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Im Beispiel für die einfache Authentifizierung haben wir eine einfache `AcquireToken()` Funktion veranschaulicht, die keine Parameter hat und einen hart codierten Tokenwert zurückgegeben hat. In diesem Beispiel überladen wir AcquireToken(), um Authentifizierungsparameter anzunehmen und ein externes Python-Skript aufzurufen, um das Token zurückzugeben.
+Im Beispiel für die einfache Authentifizierung haben wir eine einfache `AcquireToken()` Funktion veranschaulicht, die keine Parameter angenommen hat und einen hart codierten Tokenwert zurückgegeben hat. In diesem Beispiel überladen wir AcquireToken(), um Authentifizierungsparameter anzunehmen und ein externes Python-Skript aufzurufen, um das Token zurückzugeben.
 
 ### <a name="authh"></a>auth.h
 

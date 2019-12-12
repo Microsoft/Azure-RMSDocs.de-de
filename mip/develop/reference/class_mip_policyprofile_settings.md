@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560870"
 ---
 # <a name="class-mippolicyprofilesettings"></a>mip::PolicyProfile::Settings-Klasse 
@@ -19,15 +19,15 @@ Einstellungen, die von policyprofile während der Erstellung und während der ge
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, SST Std:: shared_ptr\<authdelegat\>& authdelegat, Konstante Std:: shared_ptr\<policyprofile:: O bServer-\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
+öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: shared_ptr\<policyprofile:: Observer\>& Observer)  |  Eine Schnittstelle für die Konfiguration des Profils
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
 Public Konstanten Std:: shared_ptr\<authdelegat\>& getauthdelegat () Konstanten  |  Ruft den Authentifizierungsdelegaten ab.
-Public konstant Std:: shared_ptr\<policyprofile:: Observer\>& getobserver ()-Konstante  |  Ruft den Ereignisbeobachter ab.
+Public Konstante Std:: shared_ptr\<policyprofile:: Observer\>& getobserver () konstant  |  Ruft den Ereignisbeobachter ab.
 Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
 Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
 Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
-öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr\<taskdispatcherdelegat\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
+öffentliches void settaskdispatcherdelegat (Konstanten Std:: shared_ptr\<taskdispatcherdelegaten\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 public void SetSessionId(const std::string& sessionId)  | Noch nicht dokumentiert.
 public const std::string& GetSessionId() const  | Noch nicht dokumentiert.
 öffentliches void setcustomsettings (Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& CustomSettings)  |  Legt die benutzerdefinierten Einstellungen fest, wird für Gating und Tests von Features verwendet.

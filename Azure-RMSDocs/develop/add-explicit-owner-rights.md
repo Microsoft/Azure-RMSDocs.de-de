@@ -15,17 +15,17 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 24b94676e5a64de96b90a71422ea9405c2129de7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792443"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Exemplarische Vorgehensweise: Hinzufügen expliziter Besitzerrechte
 
 In Ihrer Anwendung sollten explizit Berechtigungen vom Typ „Besitzer“ hinzugefügt werden, wenn eine Lizenz von Grund auf mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) neu erstellt wird.
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 Wenn Ihre Anwendung ein Lizenzhandle mit [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx) erstellt, muss sie dem Besitzer auch explizit einen Vollzugriff (Berechtigungen) gewähren.
 
@@ -106,7 +106,7 @@ Den Benutzern werden die folgenden beiden Rechte hinzugefügt:
 
 
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 - [Hinweise für Entwickler](developer-notes.md)
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)

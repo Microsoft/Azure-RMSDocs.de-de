@@ -8,15 +8,15 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886191"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Microsoft Information Protection SDK: Konzepte für Richtlinienhandler
 
-In der Richtlinien- `mip::PolicyHandler` API macht Vorgänge verfügbar, die zum Berechnen von Richtlinien Aktionen und zum Übermitteln von Überwachungs Ereignissen verwendet werden.
+In der Richtlinien-API macht `mip::PolicyHandler` Vorgänge verfügbar, die zum Berechnen von Richtlinien Aktionen und zum Übermitteln von Überwachungs Ereignissen verwendet werden.
 
 ## <a name="policy-handler-functions"></a>Richtlinienhandlerfunktionen
 
@@ -33,8 +33,8 @@ Das Erstellen eines `PolicyHandler`-Elements erfordert:
 
 - Ein `mip::MipContext`-Element.
 - Ein `mip::PolicyProfile`-Element.
-- Ein `mip::PolicyEngine`-Element, dass `mip::PolicyProfile` hinzugefügt wurde.
-- Eine Klasse, die implementiert.`mip::PolicyHandler::Observer`
+- Ein `mip::PolicyEngine`-Element, dass `mip::PolicyProfile` hinzugefügt wurde
+- Eine Klasse, die implementiert `mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>Erstellen eines Richtlinienhandlers
 

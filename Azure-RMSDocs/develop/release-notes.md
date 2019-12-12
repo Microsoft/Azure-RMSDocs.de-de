@@ -13,15 +13,15 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60176016"
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
-## <a name="whats-new"></a>Neuheiten
+## <a name="whats-new"></a>Neues
 
 In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK v4.x beschrieben.
 
@@ -41,7 +41,7 @@ In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version 
 
 Das Update für unser Juli-Release enthält Version 4.2.5 des überarbeiteten SDK.
 
-- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK: Ihre App kann ab sofort mit dem Android SDK **die Protokollierungsstufe ad hoc festlegen**. Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](https://docs.microsoft.com/information-protection/develop/enabling-logging).
 - Das iOS SDK unterstützt keine Protokollierungsstufen. 
 - Das SDK gibt nun einen Fehler bei einem NULL-Zugriffstoken zurück.
 
@@ -65,7 +65,7 @@ Mit dieser Version liegt das RMS SDK für Geräte jetzt in Version 4.2 mit folge
 
     Details und Nutzungshinweise für iOS/OS X sind in der [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx)-Klasse enthalten. Hier finden Sie Nachverfolgungsinformationen sowie die zusätzliche Registrierungsmethode für die Dokumentnachverfolgung mit [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx). Ähnliche Ergänzungen sind für Android für [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) und [UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) vorhanden.
 
-    Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden der Dokumentenverfolgung](how-to-use-document-tracking.md).
+    Eine ausführliche Beschreibung der Dokumentnachverfolgungsfunktion finden Sie unter [Vorgehensweise: Verwenden von Dokumentenverfolgung](how-to-use-document-tracking.md).
 
 -   Eine Reihe synchroner Methoden, die parallel zu den asynchronen Versionen für die Android-API verwendet werden:
 
@@ -109,7 +109,7 @@ Mit diesem Release wird Unterstützung für folgende Updates bereitgestellt:
 
     Aktivierte Steuerungseinstellungen auf Protokollebene.
 
-    Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren der Fehler- und Leistungsprotokollierung](enabling-logging.md)
+    Weitere Informationen finden Sie unter [Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung](enabling-logging.md).
 
     Unterstützung zum Löschen des Caches hinzugefügt.
 
@@ -143,7 +143,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   **AD RMS-Unterstützung**: IT-Administratoren können RMS-fähige Apps auf mobilen Geräten mit den neuen Erweiterungen für mobile Geräte des AD RMS-Servers verwenden.
 -   **Offlineverarbeitung**: Endbenutzer können auf RMS-geschützte Daten offline zugreifen.
--   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (Azure AD Authentication Library; ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
+-   **Getrennte Authentifizierung**: Entwickler können ihre eigene Authentifizierungsbibliothek für Azure RMS und AD RMS (oder die empfohlene [Azure AD-Authentifizierungsbibliothek (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx)) verwenden.
 -   **Getrennte Benutzeroberfläche**: Entwickler können ihre Benutzeroberfläche zum Schutz und zur Nutzung von RMS-geschützten Dokumenten konfigurieren.
 -   **Überarbeitete API**: Entwickler können ab sofort eine einfache und transparente Verschlüsselungs- und Entschlüsselungs-API verwenden, die mit minimalem Aufwand ein konsistentes RMS-Verhalten bietet.
 
@@ -163,7 +163,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Bei Verwendung der Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]*-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]* -Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
 **iOS und OS X**
 
@@ -200,15 +200,15 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **Alle Plattformen**
 
-**F**: Ich sehe im Schutz-Workflow keine Benutzeroberfläche zur Auswahl von **benutzerdefinierten Berechtigungen**. Warum?
+**F**: Ich sehe im Schutz-Workflow keine Benutzeroberfläche zur Auswahl von **benutzerdefinierten Berechtigungen**. Weshalb?
 
 **A**: Dies ist ein bekanntes Problem, auf das später noch eingegangen wird.
 
-**F**: Wie erhalte ich neue Organisationsmandanten, um das SDK und Beispielanwendungen zu testen?
+**F**: Wie erhalte ich die neue Organisationsmandanten, um das SDK und Beispielanwendungen zu testen?
 
 **A**: Um Anmeldeinformationen für Azure AD RMS-Testorganisationen anzufordern, senden Sie eine E-Mail an <rmcstbeta@microsoft.com>.
 
-**F**: Ich sehe hier in der Dokumentation keine Erörterung der Testhierarchie. Warum?
+**F**: Ich sehe hier in der Dokumentation keine Erörterung der Testhierarchie. Weshalb?
 
 **A**: Es gibt bei den neuen AD RMS SDKs kein Testhierarchiekonzept. Sie arbeiten immer mit der Produktionshierarchie.
 
@@ -231,7 +231,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 **A**: Xcode 5.0 mit iOS 7 und höher.
 
-**F**: Ich habe die cancel()-Methode für einen Vorgang aufgerufen, erhalte jedoch immer noch die Benachrichtigung, dass der Vorgang abgeschlossen wurde. Warum?
+**F**: Ich habe die cancel()-Methode für einen Vorgang aufgerufen, erhalte jedoch immer noch die Benachrichtigung, dass der Vorgang abgeschlossen wurde. Weshalb?
 
 **A**: Nicht alle Vorgänge können abgebrochen werden, weshalb ein Abbruchvorgang so gut wie möglich ausgeführt wird.
 

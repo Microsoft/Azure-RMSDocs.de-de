@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792366"
 ---
 # <a name="get-started"></a>Erste Schritte
@@ -50,7 +50,7 @@ Bei dieser Version des Microsoft Rights Management SDK 4.2 ermöglichen die Leit
 3. Sehen Sie sich die [Karte mit der SDK-Übersicht](api-reference-4-2.md) an.
 4. Wichtige **Versionsinformationen** und **Entwicklerleitfäden** finden Sie im Thema [Neuheiten](release-notes.md).
 
-   |Thema|Beschreibung|
+   |Thema|Description|
    |-----|-----------|
    |[Neuerungen](release-notes.md)|Das MS RMS SDK 4.2 ermöglicht eine noch einfachere und flexiblere Aktivierung der RMS-Anwendung.|
    |[Einrichten der Entwicklerumgebung](setup-developer-environment.md)|In den folgenden Themen wird gezeigt, wie Sie die Entwicklungsumgebung für die AD RMS SDK-APIs für Ihr jeweiliges Betriebssystem einrichten.|

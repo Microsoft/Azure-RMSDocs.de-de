@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175467"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Microsoft Information Protection (MIP) SDK: Häufig gestellte Fragen und Probleme
@@ -20,13 +20,13 @@ Dieser Artikel enthält Antworten auf häufig gestellte Fragen (FAQs) und Anleit
 
 ## <a name="frequently-asked-questions"></a>Häufig gestellte Fragen 
 
-### <a name="sdk-string-handling"></a>Behandlung von SDK-Zeichenfolgen
+### <a name="sdk-string-handling"></a>SDK-Zeichen folgen Behandlung
 
-**Frage**: Wie werden die Zeichenfolgen für das SDK behandelt und welche Art von Zeichenfolge sollte ich in meinem Code verwenden?
+**Frage**: wie verarbeitet das SDK Zeichen folgen und welchen Zeichen Folgentyp sollte ich in meinem Code verwenden?
 
 Das SDK ist für die plattformübergreifende Verwendung konzipiert und nutzt [UTF-8](https://wikipedia.org/wiki/UTF-8) (8-Bit Unicode Transformation Format) für die Zeichenfolgenverarbeitung. Die genaue Verarbeitung hängt von der verwendeten Plattform ab:
 
-| Platform | Leitlinien |
+| Plattform | Leitlinien |
 |-|-|
 | Windows-systemeigen | Für SDK-Clients für C++ wird der C++-Standardbibliothektyp [`std::string`](https://wikipedia.org/wiki/C%2B%2B_string_handling) für die Übergabe von Zeichenfolgen an/aus API-Funktionen verwendet. Die Konvertierung von/in UTF-8 wird intern vom MSIP SDK verwaltet. Wenn eine API `std::string` zurückgibt, müssen Sie die UTF-8-Codierung erwarten und diese beim Konvertieren der Zeichenfolge entsprechend verwalten. In einigen Fällen wird eine Zeichenfolge als Teil eines `uint8_t`-Vektors zurückgegeben (z.B. eine Veröffentlichungslizenz), sollte aber wie ein undurchsichtiger Blob behandelt werden.<br><br>Weitere Informationen und Beispiele finden Sie hier:<ul><li>[WideCharToMultiByte-Funktion](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte) zur Unterstützung beim Konvertieren von Breitzeichen-Zeichenfolgen in Multibyte, z.B. UTF-8.<li>Die folgenden Beispieldateien sind im [SDK-Download](setup-configure-mip.md#configure-your-client-workstation) enthalten:<ul><li>Beispielhafte Zeichenfolgen-Hilfsprogrammfunktionen in `file\samples\common\string_utils.cpp` zum Konvertieren in/aus UTF-8-Breitzeichen-Zeichenfolgen.<li>Eine Implementierung von `wmain(int argc, wchar_t *argv[])` in `file\samples\file\main.cpp`, die die vorhergehenden Zeichenfolgen-Konvertierungsfunktionen verwendet.</li></ul></ul>|
 | .NET | Für SDK-Clients für .NET verwenden alle Zeichenfolgen die standardmäßige UTF-16-Codierung und ist keine spezielle Konvertierung erforderlich. Die Konvertierung von/in UTF-16 wird intern vom MSIP SDK verwaltet. |
@@ -34,34 +34,34 @@ Das SDK ist für die plattformübergreifende Verwendung konzipiert und nutzt [UT
 
 ## <a name="issues-and-errors-reference"></a>Referenz zu Problemen und Fehlern
 
-### <a name="error-file-format-not-supported"></a>Fehler: "File-Format nicht unterstützt"  
+### <a name="error-file-format-not-supported"></a>Fehler: „Nicht unterstütztes Dateiformat“  
 
-**Frage**: Warum erhalte ich den folgenden Fehler beim Schützen oder eine PDF-Datei zu bezeichnen?
+**Frage**: Warum erhalte ich die folgende Fehlermeldung, wenn ich versuche, eine PDF-Datei zu schützen oder zu bezeichnen?
 
-> Nicht unterstütztes Dateiformat
+> Dateiformat wird nicht unterstützt.
 
-Diese Ausnahme resultiert aus der Versuch, schützen oder Bezeichnung eine PDF-Datei, die digital signiert wurde oder ein Kennwort geschützt. Weitere Informationen zum Schützen und Bezeichnen von PDF-Dateien finden Sie unter [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
+Diese Ausnahme tritt beim Versuch auf, eine PDF-Datei zu schützen oder zu bezeichnen, die digital signiert oder mit einem Kennwort geschützt ist. Weitere Informationen zum Schützen und Bezeichnen von PDF-Dateien finden Sie unter [Neue Unterstützung für die PDF-Verschlüsselung mit Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757).
 
-### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Fehler: "Fehler beim Analysieren der abgerufenen Konformitätsrichtlinie"  
+### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Fehlermeldung: Die abgerufene Konformitätsrichtlinie konnte nicht analysiert werden.  
 
-**Frage**: Warum erhalte ich den folgenden Fehler, nach dem das MIP SDK herunterladen und es wird versucht, das Beispiel zu verwenden, um alle Bezeichnungen aufzulisten?
+**Frage**: Warum erhalte ich nach dem Herunterladen des MIP SDK den folgenden Fehler, und es wird versucht, das Datei Beispiel zum Auflisten aller Bezeichnungen zu verwenden?
 
-> Ein Fehler ist aufgetreten: Fehler beim Analysieren der Konformitätsrichtlinie abgerufen. Fehler bei der: [Klasse mip::CompliancePolicyParserException] das Tag nicht gefunden: NodeType-Richtlinie: 15, Name: Kein Name gefunden, Wert:, Vorgänger: <SyncFile> <Content>, CorrelationId: [34668a40-Blll-4ef8-b2af-00005aa674z9]
+> Es ist ein Fehler aufgetreten: Fehler beim Analysieren der erworbenen Konformitäts Richtlinie. Fehler mit: [Class MIP:: compliancepolicyparameterexception] Tag nicht gefunden: Policy, NodeType: 15, Name: kein Name gefunden, Wert:, Vorgänger: <SyncFile><Content>, CorrelationId: [34668a40-BLLL-4ef8-b2af-00005aa674z9]
 
-Dies gibt an, dass Sie Ihre Bezeichnungen von Azure Information Protection, das einheitliche Funktionen für Bezeichnung noch nicht migriert. Unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) erfahren Sie, wie Sie Bezeichnungen migrieren und dann eine Bezeichnungsrichtlinie in Office 365 Security & Compliance Center erstellen. 
+Dies bedeutet, dass Sie Ihre Bezeichnungen nicht von Azure Information Protection zur vereinheitlichten Bezeichnung migriert haben. Unter [Migrieren von Azure Information Protection-Bezeichnungen zum Office 365 Security & Compliance Center](/azure/information-protection/configure-policy-migrate-labels) erfahren Sie, wie Sie Bezeichnungen migrieren und dann eine Bezeichnungsrichtlinie in Office 365 Security & Compliance Center erstellen. 
 
-### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Fehler: "System.ComponentModel.Win32Exception: LoadLibrary konnte"
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Fehler: "System. ComponentModel. Win32Exception: Fehler bei LoadLibrary"
 
-**Frage**: Warum erhalte ich die Fehlermeldung bei Verwendung der MIP SDK .NET Wrapper?
+**Frage**: Warum erhalte ich bei Verwendung des MIP SDK .NET-Wrappers den folgenden Fehler:
 
-> System.ComponentModel.Win32Exception: LoadLibrary konnte für: [sdk_wrapper_dotnet.dll] beim MIP aufrufen. Initialize().
+> System. ComponentModel. Win32Exception: Fehler bei LoadLibrary für: [sdk_wrapper_dotnet. dll], wenn MIP aufgerufen wird. Initialisieren ().
 
-Ihre Anwendung verfügt nicht über die erforderliche Laufzeit, oder nicht als Version erstellt wurde. Finden Sie unter [stellen Sie sicher, Ihre app verfügt über die erforderliche Laufzeit](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) für Weitere Informationen. 
+Die Anwendung verfügt nicht über die erforderliche Laufzeit oder wurde nicht als Release erstellt. Weitere Informationen finden [Sie unter sicherstellen, dass Ihre APP über die erforderliche Laufzeit verfügt](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) . 
 
-### <a name="error-proxyautherror-exception"></a>Fehler: "ProxyAuthError Exception"
+### <a name="error-proxyautherror-exception"></a>Fehler: "proxyautherror Exception"
 
-**Frage**: Warum erhalte ich den folgenden Fehler, wenn Sie das MIP SDK verwenden?
+**Frage**: Warum erhalte ich bei Verwendung des MIP SDK den folgenden Fehler:
 
-> "ProxyAuthenticatonError: Proxy-Authentifizierung wird nicht unterstützt"
+> "Proxyauthentieronerror: die Proxy Authentifizierung wird nicht unterstützt."
 
-Das MIP SDK unterstützt nicht die Verwendung von authentifizierte Proxys. Um diese Meldung zu beheben, sollte die Proxy-Administratoren die Microsoft Information Protection-Dienst-Endpunkte zur Umgehung des Proxys festgelegt. Eine Liste mit diesen Endpunkten finden Sie unter den [Office 365-URLs und IP-Adressbereiche](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) Seite. MIP SDK erfordert, dass `*.protection.outlook.com` (Zeile 9) und die Azure Information Protection-Dienst-Endpunkten (Zeile 73) Proxy-Authentifizierung zu umgehen.
+Das MIP SDK unterstützt nicht die Verwendung von authentifizierten Proxys. Um diese Meldung zu beheben, sollten Proxy Administratoren die Microsoft Information Protection-Dienst Endpunkte festlegen, um den Proxy zu umgehen. Eine Liste mit diesen Endpunkten finden Sie auf der Seite [URLs und IP-Adressbereiche von Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) . MIP SDK erfordert, dass `*.protection.outlook.com` (Zeile 9) und die Azure Information Protection Dienst Endpunkte (Zeile 73) die Proxy Authentifizierung umgehen.

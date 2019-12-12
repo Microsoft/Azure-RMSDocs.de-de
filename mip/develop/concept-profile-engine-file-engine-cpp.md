@@ -8,21 +8,21 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886101"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Engine-Objekt der File-API
 
 Die `mip::FileEngine` in der File-API des MIP SDK stellt eine Schnittstelle für alle Vorgänge bereit, die im Auftrag einer bestimmten Identität ausgeführt werden. Für jeden Benutzer, der sich bei der Anwendung anmeldet, wird eine Engine hinzugefügt, und alle Vorgänge, die die Engine ausführt, werden im Kontext dieser Identität ausgeführt.
 
-`FileEngine` Besteht aus zwei Hauptaufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer und Erstellen von Datei Handlern zum Ausführen von Datei Vorgängen im Auftrag des Benutzers. 
+Die `FileEngine` hat zwei Hauptaufgaben: Auflisten von Bezeichnungen für einen authentifizierten Benutzer und Erstellen von Dateihandlern, um Dateivorgänge im Auftrag des Benutzers auszuführen. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
 - `ListSensitivityLabels()`: Ruft die Liste der Bezeichnungen für die geladene Engine ab.
-- `CreateFileHandler()`: Erstellt eine `mip::FileHandler` für eine bestimmte Datei oder einen Stream.
+- `CreateFileHandler()`: Erstellt einen `mip::FileHandler` für eine bestimmte Datei oder einen Datenstrom.
 
 ## <a name="add-a-file-engine"></a>Hinzufügen einer Dateiengine
 
@@ -30,9 +30,9 @@ Wie unter [Profile- und Engine-Objekte](concept-profile-engine-cpp.md) beschrieb
 
 ### <a name="create-file-engine-settings"></a>Erstellen der Dateiengineeinstellungen
 
-Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
-Hier erstellen wir ein `FileEngine::Settings` -Objekt namens *EngineSettings* mit der Identität des Anwendungs Benutzers.
+Hier erstellen wir mit der Identität des Anwendungs Benutzers ein `FileEngine::Settings` Objekt namens *EngineSettings* .
 
 ```cpp
 FileEngine::Settings engineSettings(
@@ -102,7 +102,7 @@ auto labels = engine->ListSensitivityLabels();
 
 ### <a name="print-the-labels-and-ids"></a>Ausgeben der Bezeichnungen und IDs
 
-Die Ausgabe der Namen stellt eine einfache Möglichkeit dar, um zu zeigen, dass dem Dienst erfolgreich eine Richtlinie entnommen wurde und die Bezeichnungen abgerufen werden konnten. Um die Bezeichnung anzuwenden, ist die Bezeichnungs-ID erforderlich. Der folgende Code durchläuft alle Bezeichnungen und zeigt die Angaben `name` und `id` für jede übergeordnete und untergeordnete Bezeichnung an.
+Die Ausgabe der Namen stellt eine einfache Möglichkeit dar, um zu zeigen, dass dem Dienst eine Richtlinie entnommen wurde und die Bezeichnungen abgerufen werden konnten. Sie benötigen einen Bezeichner, um eine Bezeichnung anzuwenden. Der folgende Code durchläuft alle Bezeichnungen und zeigt die Angaben `name` und `id` für jede übergeordnete und untergeordnete Bezeichnung an.
 
 ```cpp
 //Iterate through all labels in the vector

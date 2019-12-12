@@ -4,7 +4,7 @@ description: Phase 4 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 17975a4a36ccb69a6cfa4ed945ee9fa0cdf9f839
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 61a17f9d4b80dcc5ada82adeab4e215fc17b0963
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684377"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934669"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Migrationsphase 4: Unterstützung der Dienstekonfiguration
 
@@ -38,7 +38,7 @@ Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Inform
     
     Wenn dieser DNS-Eintrag vorhanden ist, können Benutzer, die Outlook im Web und mobile E-Mail-Clients verwenden, AD RMS-geschützte E-Mails in diesen Apps anzeigen. Zudem kann Exchange den von AD RMS importierten Schlüssel zum Entschlüsseln, Indizieren, Erfassen und Schützen von Inhalten verwenden, die durch AD RMS geschützt wurden.  
 
-2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, lesen Sie die Schrittanleitungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration).
+2. Führen Sie den Exchange Online-Befehl [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160).aspx) aus. Wenn Sie beim Ausführen dieses Befehls Hilfe benötigen, sehen Sie sich die ausführlichen Anweisungen unter [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration) an.
     
     Überprüfen Sie mithilfe der Ausgabe, ob **AzureRMSLicensingEnabled** auf **TRUE** festlegt ist:
     
@@ -46,7 +46,7 @@ Gehen Sie unabhängig von der Topologie des von Ihnen ausgewählten Azure Inform
     
     - Wenn AzureRMSLicensingEnabled auf **FALSE** festgelegt ist, führen Sie `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` aus, führen Sie anschließend die Überprüfungsschritte vom Artikel [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection (Einrichten von neuen Funktionen der Office 365-Nachrichtenverschlüsselung, die auf Azure Information Protection aufgebaut sind)](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) durch, um sicherzustellen, dass Exchange Online nun zur Verwendung des Azure Rights Management-Diensts bereit ist. 
 
-## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9: Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Schritt 9: Konfigurieren der IRM-Integration für Exchange Server und SharePoint Server
 
 Wenn Sie die Information Rights Management-Funktion (IRM) von Exchange Server oder SharePoint Server mit AD RMS verwendet haben, müssen Sie den Rights Management-Connector (RMS) bereitstellen, der als Kommunikationsschnittstelle (Relais) zwischen Ihren lokalen Servern und dem Schutzdienst für Azure Information Protection fungiert.
 
@@ -113,7 +113,7 @@ Verwenden Sie die Anweisungen im Artikel [Bereitstellen des Azure Rights Managem
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Konfigurieren von Exchange und SharePoint zur Verwendung des Connectors
 
-1. Kehren Sie zu den Anweisungen zum Bereitstellen des RMS-Connectors zurück: [Schritt 5: Konfigurieren von Servern für die Verwendung des RMS-Connectors](./configure-servers-rms-connector.md)
+1. Wechseln Sie zurück zu den Anweisungen für die Bereitstellung des RMS-Connectors: [Schritt 5: Konfigurieren von Servern für die Verwendung des RMS-Connectors](./configure-servers-rms-connector.md).
 
     Wenn Sie nur über SharePoint Server verfügen, gehen Sie direkt zu [Nächste Schritte](#next-steps), um die Migration fortzusetzen. 
 

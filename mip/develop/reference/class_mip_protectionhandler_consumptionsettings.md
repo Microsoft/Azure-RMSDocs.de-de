@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 63a7f3c377a40a5faf82afe332a12efed0d646c4
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560722"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP::P rotectionhandler:: consumptionsettings-Klasse 
@@ -20,10 +20,10 @@ Einstellungen zum Erstellen eines Schutz Handlers, um vorhandenen Inhalt zu nutz
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public consumptionsettings (Konstante Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
-Public consumptionsettings (Konst Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+Public consumptionsettings (Konstante Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public Std:: shared_ptr\<publishinglicenseinfo\> getpublishinglicenseinfo () konstant  |  Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.
 public bool getisofflineonly () const  |  Ruft ab, ob die erstellungshandlererstellung http-Online Vorgänge zulässt.
-öffentliches void "* tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die schutzhandlererstellung http-Online Vorgänge zulässt.
+öffentliches void "tisofflineonly" (bool isofflineonly)  |  Legt fest, ob die schutzhandlererstellung http-Online Vorgänge zulässt.
 öffentliches void setdelegateduseremail (konstant Std:: String & delegateduseremail)  |  Legt den Delegierten Benutzer fest.
 Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
   

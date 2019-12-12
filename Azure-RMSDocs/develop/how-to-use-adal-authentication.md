@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: ddbccdb25a654fe7ac5d8618303ac1af7221cd56
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68794091"
 ---
 # <a name="how-to-use-adal-authentication"></a>Exemplarische Vorgehensweise: Verwenden der ADAL-Authentifizierung
@@ -110,7 +110,7 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
           return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
       }
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 - [Data Types (Datentypen)](https://msdn.microsoft.com/library/hh535288.aspx)
 - [Environment properties (Umgebungseigenschaften)](https://msdn.microsoft.com/library/hh535247.aspx)

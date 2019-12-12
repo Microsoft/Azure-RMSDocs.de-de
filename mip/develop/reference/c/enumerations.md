@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: f1ad15819d10bcded670fe519db07667b7e7331e
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591612"
 ---
 # <a name="enumerations"></a>Enumerationen
@@ -140,7 +140,7 @@ Definiert neue Features anhand des Namens.
 |  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0      | Verlassen Sie sich auf separaten http-Aufrufe, um RMS-Dienst Endpunkte zu bestimmen (Standardwert false) |
 |  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1        | Cache OAuth2 Anforderungen pro Domäne/Mandant, um unnötige 401-Antworten zu verringern. Deaktivieren für Apps/Dienste, die ihre eigene HTTP-Authentifizierung verwalten (Standardwert: true)  |
 |  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2  | Verschlüsseltes Zwischenspeichern für Linux-Plattformen aktivieren (Standardwert false)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Aktivieren Sie den einzelnen Firmennamen für die DNS-Suche. z. b. https://corprights  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Aktivieren Sie den einzelnen Firmennamen für die DNS-Suche. Beispiel: https://corprights  |
 |  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4            | Aktivieren Sie die automatische HTTP-Authentifizierung für an den Richtlinien Dienst gesendete Anforderungen. Deaktivieren für Apps/Dienste, die ihre eigene HTTP-Authentifizierung verwalten (Standardwert: true)  |
 
 
@@ -157,11 +157,11 @@ typedef enum {
 
 ## <a name="mip_cc_http_request_type"></a>mip_cc_http_request_type
 
-Typ der HTTP-Anforderung
+HTTP-Anforderungstyp
 
 | Feld | Description |
 |---|---|
-|  HTTP_REQUEST_TYPE_GET = 0   | HTTP Get  |
+|  HTTP_REQUEST_TYPE_GET = 0   | HTTP-GET  |
 |  HTTP_REQUEST_TYPE_POST = 1  | HTTP Post  |
 
 
@@ -193,7 +193,7 @@ typedef enum {
 
 ## <a name="mip_cc_log_level"></a>mip_cc_log_level
 
-Protokollebene
+Protokollstufe
 
 | Feld | Description |
 |---|---|
@@ -237,7 +237,7 @@ Ergebnis der API-Erfolg/-Fehler
 
 | Feld | Description |
 |---|---|
-|  MIP_RESULT_ERROR_UNKNOWN                    | Unbekannter Fehler.  |
+|  MIP_RESULT_ERROR_UNKNOWN                    | Unbekannter Fehler  |
 |  MIP_RESULT_ERROR_INSUFFICIENT_BUFFER        | Der von der Anwendung bereitgestellte Puffer ist zu klein.  |
 |  MIP_RESULT_ERROR_BAD_INPUT                  | Anwendung hat ungültige Eingabe überschritten  |
 |  MIP_RESULT_ERROR_FILE_IO_ERROR              | Allgemeiner Datei-e/a-Fehler  |
@@ -255,7 +255,7 @@ Ergebnis der API-Erfolg/-Fehler
 |  MIP_RESULT_ERROR_SERVICE_DISABLED           | Der Benutzer konnte aufgrund deaktiviertem Dienst keinen Zugriff auf den Inhalt erhalten.  |
 |  MIP_RESULT_ERROR_PROXY_AUTH                 | Fehler bei der Proxy Authentifizierung  |
 |  MIP_RESULT_ERROR_NO_POLICY                  | Es ist keine Richtlinie für den Benutzer/Mandanten konfiguriert.  |
-|  MIP_RESULT_ERROR_OPERATION_CANCELLED        | Vorgang abgebrochen  |
+|  MIP_RESULT_ERROR_OPERATION_CANCELLED        | Vorgang abgebrochen.  |
 |  MIP_RESULT_ERROR_ADHOC_PROTECTION_REQUIRED  | Der Ad-hoc-Schutz sollte festgelegt werden, um die Aktion für die Datei abzuschließen.  |
 |  MIP_RESULT_ERROR_DEPRECATED_API             | Aufrufer hat eine veraltete API aufgerufen  |
 |  MIP_RESULT_ERROR_TEMPLATE_NOT_FOUND         | Die Vorlagen-ID wurde nicht erkannt.  |

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560767"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>mip::ProtectionDescriptorBuilder-Klasse 
@@ -19,7 +19,7 @@ Erstellt einen Schutz Deskriptor, der den dem Inhalt zugeordneten Schutz beschre
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public MIP_API Std:: shared_ptr\<Schutz Deskriptor\> Build ()  |  Erstellt einen Schutz Deskriptor, dessen Zugriffsberechtigungen von dieser schutzdescriptorbuilder-Instanz definiert werden.
+öffentliches MIP_API Std:: shared_ptr\<Schutz Deskriptor\> Build ()  |  Erstellt einen Schutz Deskriptor, dessen Zugriffsberechtigungen von dieser schutzdescriptorbuilder-Instanz definiert werden.
 public void SetName(const std::string& value)  |  Legt den Namen für eine Schutzrichtlinie fest.
 public void SetDescription(const std::string& value)  |  Legt die Beschreibung der Schutzrichtlinie fest.
 öffentliches void setcontentvaliduntil (Konstante Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\>& Wert)  |  Legt den Ablaufzeitpunkt der Schutzrichtlinie fest.
@@ -28,9 +28,9 @@ public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der
 public void "stencryptedappdata" (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
 öffentliches void setsignetdappdata (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
 public virtual ~ProtectionDescriptorBuilder()  | Noch nicht dokumentiert.
-public static MIP_API Std:: shared_ptr&lt;schützdeskriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrights | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und rechten definiert werden.
-public static MIP_API Std:: shared_ptr&lt;schützdeskriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrollen | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und Rollen definiert werden.
-public static MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromtemplate | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von der Schutz Vorlage definiert werden. 
+public static MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrights | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und rechten definiert werden.
+public static MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrollen | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und Rollen definiert werden.
+öffentliches statisches MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromtemplate | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von der Schutz Vorlage definiert werden. 
 
 ## <a name="members"></a>Member
   

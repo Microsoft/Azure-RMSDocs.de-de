@@ -4,7 +4,7 @@ description: Informationen für Administratoren zum Bereitstellen der Azure Info
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 17b15050ce012b5c81cece5537a34fb3a7402213
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f91052c45a3246d3ed63ab9945e09a3dd7ab3789
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684188"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935162"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Azure Information Protection-Client: Installation und Konfiguration für Clients
 
@@ -35,13 +35,13 @@ Der klassische Client unterstützt auch eine Website zum Nachverfolgen von Dokum
 
 Informationen zu einer Unternehmens Installation und-Konfiguration des Clients für Windows finden Sie in den folgenden Administrator Handbüchern:
 
-- Einheitlicher Bezeichnungs Client: [Azure Information Protection Unified Bezeichnung-Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
+- Einheitlicher Bezeichnungs Client: [Azure Information Protection Unified-Bezeichnung Client Administrator Handbuch](./rms-client/clientv2-admin-guide.md)] (./RMS-Client/Client-Admin-Guide.MD)
 
-- Klassischer Client: [Azure Information Protection-Client – Administratorhandbuch](./rms-client/client-admin-guide.md)
+- Klassischer Client: [Azure Information Protection-Client Administrator Handbuch](./rms-client/client-admin-guide.md)
 
 Wenn Sie diese Clients jedoch schnell für einen einzelnen Computer installieren und testen möchten, finden Sie die folgenden Anweisungen in den Benutzerhandbüchern:
 
-- Einheitlicher Bezeichnungs Client: [Herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client](./rms-client/install-unifiedlabelingclient-app.md)
+- Einheitlicher Bezeichnungs Client: [herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client](./rms-client/install-unifiedlabelingclient-app.md)
 
 - Klassischer Client: [Laden Sie den Azure Information Protection Client](./rms-client/install-client-app.md) aus dem [Azure Information Protection Client-Benutzerhandbuch](./rms-client/client-user-guide.md)herunter, und installieren Sie ihn.
 
@@ -66,9 +66,9 @@ Da die Azure Information Protection Viewer-APP das Microsoft InTune App Software
 
 Zusätzliche Informationen zum Hinzufügen der Azure Information Protection-App zu Intune:
 
-- Für ios: Suchen Sie nach der App, und fügen Sie die App von Intune zu.
+- Für ios: Suchen Sie die app in InTune, und fügen Sie Sie hinzu.
 
-- Für Android: Verwenden Sie die folgende **App Store-URL**, wenn Sie die App hinzufügen:
+- Für Android: Verwenden Sie beim Hinzufügen der APP die folgende **AppStore-URL**:
         
         https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 

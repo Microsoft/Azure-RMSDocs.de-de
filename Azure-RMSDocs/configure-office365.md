@@ -4,7 +4,7 @@ description: Informationen und Anweisungen für Administratoren zum Konfiguriere
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 625a838039edb3d1bdcc8a7f4c68b5ce9f5ba9dd
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 73e087934d6858bf7ce3644ac47b8c7f6e2327f9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446984"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935111"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für Onlinedienste die Verwendung des Azure Rights Management-Dienstanbieter
 
@@ -527,7 +527,7 @@ Zwar können Sie IRM nicht mithilfe das SharePoint Admin Centers für OneDrive f
 > [!TIP]
 > Sie können dieses Skript auch verwenden, um IRM für eine SharePoint Online-Bibliothek zu konfigurieren. Für diese Konfiguration möchte Sie vermutlich die zusätzliche Option **Benutzer dürfen keine Dokumente hochladen, die IRM nicht unterstützen** aktivieren, um sicherzustellen, dass die Bibliothek nur geschützte Dokumente enthält.    Fügen Sie hierzu dem Befehl "Set-IrmConfiguration" im Skript den `-IrmReject`-Parameter hinzu.
 >
-> Außerdem müssen Sie die Variable "`$webUrls`" (z. b. " **https: \//TSO. SharePoint. com**") und die Variable "`$listTitle`" (z. b. **$Reports**) ändern.
+> Außerdem müssen Sie die `$webUrls` Variable (z. b. **https:\//contoso.SharePoint.com**) und `$listTitle` Variable (z. b. **$Reports**) ändern.
 
 Wenn Sie IRM für OneDrive for Business-Bibliotheken eines Benutzers deaktivieren müssen, finden Sie Informationen im Abschnitt [Skript zum Deaktivieren von IRM für OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 

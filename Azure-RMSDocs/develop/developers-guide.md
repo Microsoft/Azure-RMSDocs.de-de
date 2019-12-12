@@ -12,10 +12,10 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60179114"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Azure Information Protection-Entwicklerhandbuch
@@ -139,7 +139,7 @@ Jedes der folgenden Themen enthält spezifische Anleitungen für einen Aspekt de
 - Das [AD RMS-SDK](https://msdn.microsoft.com/library/cc530379.aspx) ist die erste Version des RMS-SDKs.
 - Das [AD RMS-Skripttool](https://msdn.microsoft.com/library/bb968797.aspx) ist ein Verwaltungstool für eine AD RMS-Installation.
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen:
 
 - [Entwicklerterminologie](terms.md)
 - [Terminologie zu Azure Information Protection – ITPro](../terminology.md)

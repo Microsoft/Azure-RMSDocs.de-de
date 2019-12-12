@@ -1,16 +1,16 @@
 ---
 title: Funktionen
-description: Funktionen.
+description: Funktionen
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: cfc80ab9e4704c9efa5d3105f36c668bce26a6b9
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591642"
 ---
 # <a name="functions"></a>Funktionen
@@ -19,13 +19,13 @@ ms.locfileid: "73591642"
 
 Rückruf Funktionsdefinition zum Abrufen des OAuth2-Tokens
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Identität | Die e-Mail-Adresse, für die das Token abgerufen wird. |
 | challenge | OAuth2 Challenge |
-| Kontext | Nicht transparenter Anwendungskontext, der an die MIP-API übermittelt wurde, die zu diesem Authentifizierungs Rückruf geführt hat. |
+| context | Nicht transparenter Anwendungskontext, der an die MIP-API übermittelt wurde, die zu diesem Authentifizierungs Rückruf geführt hat. |
 | zu "-Puffer" | Ausgeben Puffer, in den das Token kopiert wird. Wenn der Wert NULL ist, wird "actualbykensize" aufgefüllt, aber |
 | "-pukenbuffersize" | Größe des Ausgabepuffers (in Bytes) |
 | actualbykensize | Ausgeben Tatsächliche Größe (in Bytes) des Tokens |
@@ -47,11 +47,11 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 Definition der Rückruffunktion für Zustimmung vom Benutzer für den Zugriff auf einen externen Dienst Endpunkt
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Urne | Die URL, für die das SDK Benutzer Zustimmung erfordert |
+| URL | Die URL, für die das SDK Benutzer Zustimmung erfordert |
 
 **Rückgabe**: Antwort auf Benutzer Zustimmung
 
@@ -65,17 +65,17 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 Erstellen eines Wörterbuchs mit Zeichen folgen Schlüsseln/-Werten
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Gewinner | Array von Schlüssel-Wert-Paaren |
+| entries | Array von Schlüssel-Wert-Paaren |
 | count | Anzahl von Schlüssel-Wert-Paaren |
-| Buch | Ausgeben Neu erstelltes Wörterbuch |
+| dictionary | Ausgeben Neu erstelltes Wörterbuch |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: ein mip_cc_dictionary muss durch Aufrufen von MIP_CC_ReleaseDictionary freigegeben werden. 
+**Hinweis**: ein mip_cc_dictionary muss durch Aufrufen von freigegeben werden MIP_CC_ReleaseDictionary 
 
 ```c
 mip_cc_result MIP_CC_CreateDictionary(
@@ -88,17 +88,17 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 Schlüssel-Wert-Paare zum Verfassen eines Wörterbuchs erhalten
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Buch | Quell Wörterbuch |
-| Gewinner | Ausgeben Array von Schlüssel-Wert-Paaren, Arbeitsspeicher im Besitz des mip_cc_dictionary-Objekts |
+| dictionary | Quell Wörterbuch |
+| entries | Ausgeben Array von Schlüssel-Wert-Paaren, Arbeitsspeicher im Besitz mip_cc_dictionary Objekts |
 | count | Ausgeben Anzahl von Schlüssel-Wert-Paaren |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: der Speicher für ' Entries ' liegt im Besitz des mip_cc_dictionary-Objekts und sollte daher nicht unabhängig freigegeben werden. 
+**Hinweis**: der Speicher für ' Entries ' liegt im Besitz des mip_cc_dictionary Objekts und sollte daher nicht unabhängig freigegeben werden. 
 
 ```c
 mip_cc_result MIP_CC_Dictionary_GetEntries(
@@ -111,11 +111,11 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 Freigeben von Ressourcen, die einem Wörterbuch zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Buch | Das zu veröffentlichende Wörterbuch. |
+| dictionary | Das zu veröffentlichende Wörterbuch. |
 
 ```c
 void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
@@ -125,12 +125,12 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 Rückruf Funktionsdefinition zum Ausgeben einer HTTP-Anforderung
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Anforderung | Die HTTP-Anforderung, die von der Anwendung ausgeführt werden soll. |
-| Kontext | Der gleiche nicht transparente Kontext wurde an den MIP-API-Befehl, der diese HTTP-Anforderung verursacht hat, |
+| context | Der gleiche nicht transparente Kontext wurde an den MIP-API-Befehl, der diese HTTP-Anforderung verursacht hat, |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
@@ -143,7 +143,7 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 Rückruf Funktionsdefinition für das Abbrechen einer HTTP-Anforderung
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -159,7 +159,7 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 Erstellt einen HTTP-Delegaten, der zum Überschreiben des HTTP-Standard Stapels verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -180,7 +180,7 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Benachrichtigt einen HTTP-Delegaten, dass eine HTTP-Antwort bereit ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -203,7 +203,7 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 Freigabe Ressourcen, die einem http-delegathandle zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -217,7 +217,7 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Rückruf Funktionsdefinition für die Initialisierung der Protokollierung
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -233,15 +233,15 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Rückruf Funktionsdefinition zum Schreiben einer Log-Anweisung
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Geringen | die Protokollebene für die Log-Anweisung. |
-| Nachricht | die Meldung für die Log-Anweisung. |
+| level | die Protokollebene für die Log-Anweisung. |
+| message | die Meldung für die Log-Anweisung. |
 | Funktion | der Funktionsname der Log-Anweisung. |
 | Datei | der Dateiname, in dem die Log-Anweisung generiert wurde. |
-| Stimmen | die Zeilennummer, in der die Log-Anweisung generiert wurde. |
+| Zeile | die Zeilennummer, in der die Log-Anweisung generiert wurde. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
@@ -257,7 +257,7 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Erstellt einen Logger-Delegaten, der zum Überschreiben der Standard Protokollierung von MIP verwendet werden kann
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -280,7 +280,7 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Freigabe Ressourcen, die einem Protokollierungs delegathandle zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -294,13 +294,13 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 Erstellen eines MIP-Kontexts zum Verwalten des Zustands, der für alle Profil Instanzen verwendet wird
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | applicationInfo | Informationen über die Anwendung, die das Schutz-SDK nutzt |
-| ADS | Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden |
-| LogLevel | Mindestprotokolliergrad für. miplog |
+| path | Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden |
+| logLevel | Mindestprotokolliergrad für. miplog |
 | isofflineonly | Netzwerk Vorgänge aktivieren/deaktivieren (nicht alle Aktionen, die offline unterstützt werden) |
 | loggerdelegateoverride | Optionale Protokollierungs Überschreibungs Implementierung |
 | telemetryoverride | Optionale Überschriebene telemetrieeinstellungen. Wenn der Wert NULL ist, werden die Standardeinstellungen verwendet. |
@@ -323,13 +323,13 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 Erstellen eines MIP-Kontexts zum Verwalten des Zustands, der für alle Profil Instanzen verwendet wird
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | applicationInfo | Informationen über die Anwendung, die das Schutz-SDK nutzt |
-| ADS | Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden |
-| LogLevel | Mindestprotokolliergrad für. miplog |
+| path | Dateipfad, unter dem Protokollierung, Telemetrie und andere Schutz-Begleitelemente gespeichert werden |
+| logLevel | Mindestprotokolliergrad für. miplog |
 | isofflineonly | Netzwerk Vorgänge aktivieren/deaktivieren (nicht alle Aktionen, die offline unterstützt werden) |
 | loggerdelegateoverride | Optionale Protokollierungs Überschreibungs Implementierung |
 | telemetryoverride | Optionale Überschriebene telemetrieeinstellungen. Wenn der Wert NULL ist, werden die Standardeinstellungen verwendet. |
@@ -356,7 +356,7 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Freigeben von Ressourcen, die einem MIP-Kontext zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -370,7 +370,7 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 Ruft den Typ des Schutzes ab, unabhängig davon, ob er durch eine RMS-Vorlage definiert ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -389,7 +389,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 Ruft die Größe des zum Speichern des Besitzers erforderlichen Puffers ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -408,7 +408,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 Ruft den Schutz Besitzer ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -433,7 +433,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 Ruft die Größe des zum Speichern des Namens erforderlichen Puffers ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -452,7 +452,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 Ruft den Schutz Namen ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -463,7 +463,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
@@ -477,7 +477,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 Ruft die Größe des Puffers zum Speichern der Beschreibung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -496,7 +496,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 Ruft die Schutz Beschreibung ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -507,7 +507,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn descriptionbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualdescriptionsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn descriptionbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualdescriptionsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
@@ -521,7 +521,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 Ruft Vorlagen-ID ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -540,7 +540,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 Bezeichnungs-ID abrufen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -559,7 +559,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 Ruft Inhalts-ID ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -578,7 +578,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 Ruft ab, ob der Inhalt eine Ablaufzeit aufweist oder nicht.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -597,7 +597,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 Ruft die Ablaufzeit des Schutzes ab (in Sekunden seit der Epoche).
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -616,7 +616,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 Ruft ab, ob der Offline Zugriff zulässig ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -635,7 +635,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 Ruft die Größe des für die Speicher Verweise erforderlichen Puffers ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -654,7 +654,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 Ruft Schutz Verweise ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -679,7 +679,7 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 Freigeben von Ressourcen, die einer Schutz Beschreibung zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -693,17 +693,17 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 Zeichen folgen Liste erstellen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Folgen | Array von Zeichen folgen |
+| Zeichenfolgen | Ein Array von Zeichenfolgen |
 | count | Anzahl von Zeichen folgen |
 | stringlist | Ausgeben Neu erstellte Zeichen folgen Liste |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: ein mip_cc_string_list muss durch Aufrufen von MIP_CC_ReleaseStringList freigegeben werden. 
+**Hinweis**: ein mip_cc_string_list muss durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_CreateStringList(
@@ -716,17 +716,17 @@ mip_cc_result MIP_CC_CreateStringList(
 
 Zeichen folgen, die eine Zeichen folgen Liste bilden, erhalten
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | stringlist | Quell Zeichen folgen Liste |
-| Folgen | Ausgeben Array von Zeichen folgen, Arbeitsspeicher im Besitz des mip_cc_string_list-Objekts |
+| Zeichenfolgen | Ausgeben Array von Zeichen folgen, Arbeitsspeicher im Besitz mip_cc_string_list Objekts |
 | count | Ausgeben Anzahl von Zeichen folgen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: der Speicher für ' Strings ' ist im Besitz des mip_cc_string_list-Objekts und sollte daher nicht unabhängig freigegeben werden. 
+**Hinweis**: der Speicher für ' Strings ' liegt im Besitz des mip_cc_string_list Objekts und sollte daher nicht unabhängig freigegeben werden. 
 
 ```c
 mip_cc_result MIP_CC_StringList_GetStrings(
@@ -739,7 +739,7 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 Freigeben von Ressourcen, die einer Zeichen folgen Liste zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -753,11 +753,11 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 Rückruf Funktionsdefinition für das Senden einer asynchronen Aufgabe
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| TaskID | Bezeichner für eindeutige Aufgabe |
+| taskId | Bezeichner für eindeutige Aufgabe |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
@@ -769,11 +769,11 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 Rückruffunktion zum Abbrechen von Hintergrundaufgaben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| TaskID | Bezeichner für eindeutige Aufgabe |
+| taskId | Bezeichner für eindeutige Aufgabe |
 
 **Return**: true, wenn die Aufgabe erfolgreich abgebrochen wurde, andernfalls false.
 
@@ -787,7 +787,7 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 Erstellt einen Aufgaben Verteiler Delegaten, der zum Überschreiben der standardmäßigen asynchronen Task Verarbeitung von MIP verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -810,12 +810,12 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 Benachrichtigt einen taskdispatcher-Delegaten, dass eine Aufgabe jetzt für die Ausführung im aktuellen Thread geplant ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | taskdispatcher | Handle für taskdispatcher-Delegatobjekt |
-| TaskID | ID des Async-Tasks, der diesem Vorgang zugeordnet ist. |
+| taskId | ID des Async-Tasks, der diesem Vorgang zugeordnet ist. |
 
 **Hinweis**: Diese Funktion muss von der Anwendung aufgerufen werden, wenn eine Aufgabe für die Ausführung geplant ist. Dies führt dazu, dass die Aufgabe sofort im aktuellen Thread ausgeführt wird. Die ID sollte mit der einer zuvor verteilten, nicht abgebrochenen Aufgabe identisch sein. 
 
@@ -827,7 +827,7 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 Freigeben von Ressourcen, die einem Aufgaben Verteiler-delegathandle zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -841,12 +841,12 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 Festlegen eines telemetriehostnamens, der interne telemetrieeinstellungen außer Kraft setzt
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | telemetryConfig | Telemetriekonfiguration |
-| Hostname | Hostname |
+| hostName | Hostname |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -862,7 +862,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 Überschreiben einer freigegebenen telemetriebibliothek festlegen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -883,7 +883,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 Standard-Telemetrie-HTTP-Stapel mit eigenem Client überschreiben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -904,7 +904,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 Legt fest, ob für die telemetriekomponente ein Ping-Netzwerkstatus in einem Hintergrund Thread zulässig ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -925,7 +925,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 Legt fest, ob die telemetriekomponente Caches auf den Datenträger schreiben darf.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -946,7 +946,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 Legt fest, ob die telemetriekomponente Protokolle auf den Datenträger schreiben darf.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -967,7 +967,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 Legt fest, ob eine Anwendung bzw. ein Benutzer die optionale Telemetrie deaktiviert hat.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -988,7 +988,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 Legt benutzerdefinierte telemetrieeinstellungen fest
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1007,7 +1007,7 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 Freigeben von Ressourcen, die mit einer Schutzprofil Einstellung verknüpft sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1021,11 +1021,11 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 Freigeben von Ressourcen, die einer Schutz-Engine zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Zu veröffentlichensendem Schutz Modul |
+| Engine | Zu veröffentlichensendem Schutz Modul |
 
 ```c
 void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
@@ -1035,14 +1035,14 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 
 Erstellt einen Schutz Handler zum Veröffentlichen von neuem Inhalt.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Engine, unter der ein Handler erstellt wird |
+| Engine | Engine, unter der ein Handler erstellt wird |
 | Einstellungen | Einstellungen für den Schutz Handler |
-| Kontext | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
-| Lers | Ausgeben Neu erstellte schutzhandlerinstanz |
+| context | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
+| Handler | Ausgeben Neu erstellte schutzhandlerinstanz |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -1058,14 +1058,14 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 Erstellt einen Schutz Handler für die Verwendung von vorhandenem Inhalt.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Engine, unter der ein Handler erstellt wird |
+| Engine | Engine, unter der ein Handler erstellt wird |
 | Einstellungen | Einstellungen für den Schutz Handler |
-| Kontext | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
-| Lers | Ausgeben Neu erstellte schutzhandlerinstanz |
+| context | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
+| Handler | Ausgeben Neu erstellte schutzhandlerinstanz |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -1081,11 +1081,11 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 Ruft die Größe des für Engine-ID erforderlichen Puffers ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
+| Engine | Schutz-Engine |
 | idsize | Ausgeben Größe des Puffers für die Engine-ID (als Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1100,11 +1100,11 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 
 Ruft Engine-ID ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
+| Engine | Schutz-Engine |
 | idbuffer | Ausgeben Puffer, in den die ID kopiert wird. |
 | idbuffersize | Größe (in Anzahl der Zeichen) des idbuffer. |
 | actualidsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -1125,12 +1125,12 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 Ruft die Anzahl von RMS-Vorlagen ab, die einer Schutz-Engine zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
-| Kontext | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
+| Engine | Schutz-Engine |
+| context | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
 | templatessize | Ausgeben Anzahl der Vorlagen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1148,12 +1148,12 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 
 Sammlung von Vorlagen für Benutzer verfügbar machen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
-| Kontext | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
+| Engine | Schutz-Engine |
+| context | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
 | templatebuffer | Ausgeben Puffer, in den die Vorlagen kopiert werden. |
 | templatebuffersize | Größe (in Anzahl der Elemente) des templatebuffer. |
 | actualtemplatessize | Ausgeben Anzahl der in den Puffer geschriebenen Vorlagen-IDs |
@@ -1175,21 +1175,21 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 
 Liste der Rechte, die einem Benutzer für eine Bezeichnungs-ID erteilt werden
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
-| Kontext | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
+| Engine | Schutz-Engine |
+| context | Client Kontext, der an httpdelegaten und authdelegat übergeben wird |
 | documentId | Dokument-ID, die dem Dokument zugewiesen ist |
 | LabelId | Bezeichnungs-ID auf das Dokument angewendet |
 | ownerEmail | Besitzer des Dokuments |
 | Delta-e-Mail | E-Mail-Adresse des Benutzers, wenn der authentifizier Ende Benutzer/die Anwendung im Auftrag eines anderen Benutzers agiert, leer, wenn keine |
-| Ansprüchen | Ausgeben Liste der Rechte, die einem Benutzer gewährt wurden, Arbeitsspeicher im Besitz des Aufrufers |
+| Rechte | Ausgeben Liste der Rechte, die einem Benutzer gewährt wurden, Arbeitsspeicher im Besitz des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die Rights-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseStringList aufgerufen wird. 
+**Hinweis**: die Rights-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
@@ -1206,11 +1206,11 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 Ruft die Größe der Client Daten ab, die einer Schutz-Engine zugeordnet sind.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
+| Engine | Schutz-Engine |
 | clientdatasize | Ausgeben Größe der Client Daten (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1225,11 +1225,11 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 
 Client Daten erhalten, die einer Schutz-Engine zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Schutz-Engine |
+| Engine | Schutz-Engine |
 | clientdatabuffer | Ausgeben Puffer, in den die Client Daten kopiert werden |
 | clientdatabuffersize | Größe (in Anzahl von Zeichen) von clientdatabuffer. |
 | actualclientdatasize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -1250,13 +1250,13 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 Erstellen Sie ein Einstellungs Objekt, das zum Erstellen einer neuen Schutz-Engine verwendet wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Identität | Identität, die Schutz-Engine zugeordnet wird |
 | clientData | Anpassbare Client Daten, die neben der Engine gespeichert werden |
-| Konfigurations | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
+| Gebietsschema | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
 | EngineSettings | Ausgeben Neu erstellte Einstellungs Instanz |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1273,7 +1273,7 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 Legt die Client Daten fest, die mit dieser Engine verdeckt gespeichert werden und Sitzungs übergreifend beibehalten werden
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1292,7 +1292,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1311,12 +1311,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Einstellungen | Engine-Einstellungen |
-| SessionID | Sitzungs-ID, die die Lebensdauer einer Schutz-Engine darstellt |
+| sessionID | Sitzungs-ID, die die Lebensdauer einer Schutz-Engine darstellt |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -1330,7 +1330,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 
 Legt die Basis-URL für alle Service Requests fest.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1349,7 +1349,7 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 Freigeben von Ressourcen, die den Einstellungen der Schutz-Engine zugeordnet
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1363,11 +1363,11 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 
 Erstellen Sie ein Einstellungs Objekt, das zum Erstellen eines Schutz Handlers zum Veröffentlichen neuer Inhalte verwendet wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Deskriptor | Details zum Schutz |
+| descriptor | Details zum Schutz |
 | Einstellungen | Ausgeben Neu erstellte Einstellungs Instanz |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1382,7 +1382,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 Legt fest, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1401,7 +1401,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 
 Legt fest, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1420,7 +1420,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 Legt fest, ob pl im JSON-Format vorliegt (Standardwert ist XML).
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1439,7 +1439,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 
 Legt Delegierten Benutzer fest.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1460,7 +1460,7 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 
 Erstellen eines Einstellungs Objekts, das zum Erstellen eines Schutz Handlers zum Verarbeiten vorhandener Inhalte verwendet wird
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1483,7 +1483,7 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 Legt fest, ob die Erstellung von Schutz Handlern Online-http-Vorgänge zulässt
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1492,7 +1492,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn diese Eigenschaft auf "true" festgelegt ist, wird die Erstellung des Schutz Handlers nur erfolgreich ausgeführt, wenn der Inhalt bereits zuvor entschlüsselt und seine nicht abgelaufene Lizenz zwischengespeichert wird. Wenn zwischen gespeicherter Inhalt nicht gefunden wird, wird ein MIP_RESULT_ERROR_NETWORK-Ergebnis zurückgegeben. 
+**Hinweis**: Wenn diese Eigenschaft auf "true" festgelegt ist, wird die Erstellung des Schutz Handlers nur erfolgreich ausgeführt, wenn der Inhalt bereits zuvor entschlüsselt und seine nicht abgelaufene Lizenz zwischengespeichert wird. Wenn zwischen gespeicherter Inhalt nicht gefunden wird, wird ein MIP_RESULT_ERROR_NETWORK Ergebnis zurückgegeben. 
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
@@ -1504,7 +1504,7 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 
 Legt Delegierten Benutzer fest.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1525,11 +1525,11 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 Ruft die Größe der Veröffentlichungs Lizenz ab (in Bytes).
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | publishinglicenabbuffersize | Ausgeben Größe der Veröffentlichungs Lizenz (in Bytes) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1544,11 +1544,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 
 Ruft die Veröffentlichungs Lizenz ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | publishinglicenabbuffer | Ausgeben Puffer, in den die Veröffentlichungs Lizenz geschrieben wird |
 | publishinglicenabbuffersize | Größe des Veröffentlichungs Lizenz Puffers |
 | actualpublishinglicen\size | Ausgeben Tatsächliche Größe der Veröffentlichungs Lizenz (in Bytes) |
@@ -1569,12 +1569,12 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 Ruft den Schutz Deskriptor ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
-| Deskriptor | Ausgeben Schutz Beschreibung |
+| Handler | Handler, der geschützte Inhalte darstellt |
+| descriptor | Ausgeben Schutz Beschreibung |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -1588,16 +1588,16 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 
 Ruft eine Liste der dem Benutzer gewährten Rechte ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
-| Ansprüchen | Ausgeben Liste der Rechte, die einem Benutzer gewährt wurden, Arbeitsspeicher im Besitz des Aufrufers |
+| Handler | Handler, der geschützte Inhalte darstellt |
+| Rechte | Ausgeben Liste der Rechte, die einem Benutzer gewährt wurden, Arbeitsspeicher im Besitz des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die Rights-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseStringList aufgerufen wird. 
+**Hinweis**: die Rights-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_ProtectionHandler_GetRights(
@@ -1609,11 +1609,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 
 Berechnet die Größe geschützter Inhalte, Factoring in Auffüll Zeichen usw.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | unprotectedsize | Größe des ungeschützten/Klartext-Inhalts (in Bytes) |
 | includesfinalblock | Beschreibt, ob der fragliche ungeschützte Inhalt den Endblock enthält oder nicht. |
 | protectedsize | Ausgeben Größe geschützter Inhalte |
@@ -1632,11 +1632,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 Ruft die Blockgröße (in Bytes) für den Verschlüsselungs Modus ab, der von einem Schutz Handler verwendet wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | BlockSize | Ausgeben Block Größe (in Bytes) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1651,11 +1651,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzers benötigt wird, dem Zugriff auf geschützte Inhalte gewährt wurde
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | issuedusersize | Ausgeben Größe des Puffers für den ausgestellten Benutzer (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1670,11 +1670,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 
 Ruft den Benutzer ab, dem Zugriff auf geschützte Inhalte gewährt wurde.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | issueduserbuffer | Ausgeben Puffer, in den der ausgegebene Benutzer kopiert wird. |
 | issueduserbuffersize | Die Größe (in Anzahl der Zeichen) des issueduserbuffer. |
 | actualissuedusersize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -1695,11 +1695,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Besitzers geschützter Inhalte benötigt wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | Besitzer Größe | Ausgeben Größe des Puffers für den ausgestellten Benutzer (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1714,11 +1714,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 
 Ruft den Besitzer geschützter Inhalte ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | Besitzer Puffer | Ausgeben Puffer, in den der ausgegebene Benutzer kopiert wird. |
 | Besitzer Puffergröße | Größe (in Anzahl der Zeichen) des Besitzer Puffers. |
 | actualownersize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -1739,11 +1739,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 Ruft den Inhalt des geschützten Inhalts ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | contentId | Ausgeben Inhalts-ID |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1758,11 +1758,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 Ruft ab, ob der Schutz Handler den veralteten Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität verwendet.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Handler, der geschützte Inhalte darstellt |
+| Handler | Handler, der geschützte Inhalte darstellt |
 | doesusedeprealisiedalgorithmus | Ausgeben Gibt an, ob der Schutz Handler einen veralteten Kryptografiealgorithmus verwendet. |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -1777,7 +1777,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 
 Entschlüsseln eines Puffers
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1807,7 +1807,7 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 Freigeben von Ressourcen, die den Einstellungen eines Schutz Handlers zugeordnet
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1821,7 +1821,7 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 
 Freigeben von Ressourcen, die den Einstellungen eines Schutz Handlers zugeordnet
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1835,11 +1835,11 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 Freigeben von Ressourcen, die einem Schutz Handler zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Der zu veröffentlichende Schutz Handler. |
+| Handler | Der zu veröffentlichende Schutz Handler. |
 
 ```c
 void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
@@ -1849,7 +1849,7 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 
 Profil laden
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1868,7 +1868,7 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 Freigeben von Ressourcen, die einem Schutzprofil zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1882,12 +1882,12 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Einstellungen | Profileinstellungen |
-| SessionID | Die Sitzungs-ID, die die Lebensdauer eines Schutz Profils darstellt. |
+| sessionID | Die Sitzungs-ID, die die Lebensdauer eines Schutz Profils darstellt. |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -1901,7 +1901,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 Hiermit wird konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1920,7 +1920,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 
 Standard-HTTP-Stapel mit eigenem Client überschreiben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1939,7 +1939,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 Standardmäßiger asynchroner Aufgaben Verteiler mit eigenem Client überschreiben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1958,7 +1958,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1977,7 +1977,7 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 Freigeben von Ressourcen, die mit einer Schutzprofil Einstellung verknüpft sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -1991,7 +1991,7 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 
 Ruft den Typ der Aktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2010,7 +2010,7 @@ mip_cc_result MIP_CC_Action_GetType(
 
 Ruft die ID einer Aktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2029,17 +2029,17 @@ mip_cc_result MIP_CC_Action_GetId(
 
 Aktionen zum Erstellen eines Aktions Ergebnisses
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | actionResult | Ergebnis der Quell Aktion |
-| Handlungs | Ausgeben Array von Aktionen, Arbeitsspeicher im Besitz des mip_cc_action_result-Objekts |
+| Aktionen | Ausgeben Array von Aktionen, Arbeitsspeicher im Besitz mip_cc_action_result Objekts |
 | count | Ausgeben Anzahl von Schlüssel-Wert-Paaren |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: der Arbeitsspeicher für "Actions" liegt im Besitz des mip_cc_action_result-Objekts und sollte daher nicht unabhängig freigegeben werden. 
+**Hinweis**: der Arbeitsspeicher für "Actions" liegt im Besitz des mip_cc_action_result Objekts und sollte daher nicht unabhängig freigegeben werden. 
 
 ```c
 mip_cc_result MIP_CC_ActionResult_GetActions(
@@ -2052,7 +2052,7 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 Freigeben von Ressourcen, die einem Aktions Ergebnis zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2066,7 +2066,7 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen-Element namens für die Aktion "Content Footer" erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2085,7 +2085,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen der Aktion "Content Footer hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2096,7 +2096,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
@@ -2110,7 +2110,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Aktions Texts "Content Footer hinzufügen" erforderlich ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2129,7 +2129,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 Ruft den Text der Aktion "Content Footer hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2140,7 +2140,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualtextsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualtextsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetText(
@@ -2154,7 +2154,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens der Aktion "Content Footer" hinzugefügt wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2173,7 +2173,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Content Footer hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2184,7 +2184,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
@@ -2198,7 +2198,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2217,7 +2217,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftfarbe der Aktion "Content Footer" hinzugefügt wird.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2236,7 +2236,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 Ruft die Schriftfarbe für die Aktion "Inhalts Fußzeile hinzufügen" (z. b. "#000000") ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2261,12 +2261,12 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 Ruft die Ausrichtung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Content Footer hinzufügen" |
-| Richt | Ausgeben Richt |
+| Ausrichtung | Ausgeben Richt |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -2280,7 +2280,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 Ruft die Rand Größe ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2299,7 +2299,7 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen Element namens für die Aktion "Content Header hinzufügen"
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2318,7 +2318,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen für die Aktion "Content Header hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2329,7 +2329,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
@@ -2343,7 +2343,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 Ruft die Größe des Puffers ab, der zum Speichern eines Aktions Texts für "Inhalts Header hinzufügen" erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2362,7 +2362,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 Ruft den Text der Aktion "Content Header hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2373,7 +2373,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualtextsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualtextsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
@@ -2387,7 +2387,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens der Aktion "Inhalts Header hinzufügen" erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2406,7 +2406,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Content-Header hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2417,7 +2417,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
@@ -2431,7 +2431,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2450,7 +2450,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftfarbe der Aktion "Inhalts Header hinzufügen" erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2469,7 +2469,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 Ruft die Schriftfarbe für die Aktion "Content-Header hinzufügen" (z. b. "#000000") ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2494,12 +2494,12 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 Ruft die Ausrichtung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Content-Header hinzufügen" |
-| Richt | Ausgeben Richt |
+| Ausrichtung | Ausgeben Richt |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -2513,7 +2513,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 Ruft die Rand Größe ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2532,7 +2532,7 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Benutzeroberflächen Element namens der Aktion "Wasserzeichen hinzufügen" erforderlich
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2551,7 +2551,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 Ruft den Benutzeroberflächen Elementnamen der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2562,7 +2562,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
@@ -2576,12 +2576,12 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 Ruft das Wasserzeichen Layout ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Wasserzeichen hinzufügen" |
-| Struktur | Ausgeben Wasserzeichen Layout |
+| layout | Ausgeben Wasserzeichen Layout |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -2595,7 +2595,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Texts der Aktion "Wasserzeichen hinzufügen" erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2614,7 +2614,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 Ruft den Text der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2625,7 +2625,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualtextsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn TextBuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualtextsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetText(
@@ -2639,7 +2639,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Schriftart namens "Wasserzeichen hinzufügen" erforderlich ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2658,7 +2658,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 Ruft den Schriftart Namen der Aktion "Wasserzeichen hinzufügen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2669,7 +2669,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
@@ -2683,7 +2683,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 Ruft den Schrift Grad der ganzen Zahl ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2702,7 +2702,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 Ruft die Größe des Puffers ab, der zum Speichern der Schriftart Farbe für "Wasserzeichen hinzufügen" erforderlich ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2721,7 +2721,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 Ruft die Schriftfarbe der Aktion "Wasserzeichen hinzufügen" (z. b. "#000000") ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2746,7 +2746,7 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 Freigeben von Ressourcen, die einer Inhalts Bezeichnung zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2760,7 +2760,7 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 Ruft die Zeit ab, zu der Bezeichnung angewendet wurde
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2779,7 +2779,7 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 Ruft die Bezeichnung für die Bezeichnung ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2798,7 +2798,7 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 Ruft erweiterte Eigenschaften ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2807,7 +2807,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Properties"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseDictionary aufgerufen wird. 
+**Hinweis**: die "Properties"-Variable muss vom Aufrufer freigegeben werden, indem aufgerufen wird MIP_CC_ReleaseDictionary 
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
@@ -2819,7 +2819,7 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 Ruft ab, ob ein Schutz durch eine Bezeichnung angewendet wurde.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2838,7 +2838,7 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 Ruft generische Bezeichnungs Eigenschaften aus einer Instanz der Inhalts Bezeichnung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2847,7 +2847,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Label"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseLabel aufgerufen wird. 
+**Hinweis**: die "Label"-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseLabel 
 
 ```c
 mip_cc_result MIP_CC_ContentLabel_GetLabel(
@@ -2859,7 +2859,7 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Namens einer benutzerdefinierten Aktion erforderlich ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2878,7 +2878,7 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 Ruft den Namen der benutzerdefinierten Aktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2889,7 +2889,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_CustomAction_GetName(
@@ -2903,7 +2903,7 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 Ruft die Eigenschaften der benutzerdefinierten Aktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2912,7 +2912,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Properties"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseDictionary aufgerufen wird. 
+**Hinweis**: die "Properties"-Variable muss vom Aufrufer freigegeben werden, indem aufgerufen wird MIP_CC_ReleaseDictionary 
 
 ```c
 mip_cc_result MIP_CC_CustomAction_GetProperties(
@@ -2924,16 +2924,16 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 
 Rückruf Funktionsdefinition zum Abrufen von Dokument Metatdaten, gefiltert nach Name/Präfix
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Zeichen | Array von metadatenschlüsselnamen, die im Ergebnis enthalten sein sollen |
+| -Namen | Array von metadatenschlüsselnamen, die im Ergebnis enthalten sein sollen |
 | namessize | Anzahl von Werten im Array "Names" |
 | nameprefixes | Array von Metadaten-Schlüsselnamen Präfixen, die im Ergebnis enthalten sein sollen |
 | nameprefixessize | Anzahl von Werten im Array "namesprefixes" |
-| Kontext | Der Anwendungskontext wurde vom API-Rückruf an den Rückruf übermittelt. |
-| Benötigten | Ausgeben Wörterbuch mit metadatenschlüsseln/-Werten, die von der Client Anwendung erstellt wurden. Dieses Wörterbuch wird von MIP freigegeben. |
+| context | Der Anwendungskontext wurde vom API-Rückruf an den Rückruf übermittelt. |
+| Metadaten | Ausgeben Wörterbuch mit metadatenschlüsseln/-Werten, die von der Client Anwendung erstellt wurden. Dieses Wörterbuch wird von MIP freigegeben. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_metadata_callback,
@@ -2950,7 +2950,7 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 Freigeben von Ressourcen, die einer Bezeichnung zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2964,7 +2964,7 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 Bezeichnungs-ID abrufen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -2983,7 +2983,7 @@ mip_cc_result MIP_CC_Label_GetId(
 
 Ruft die Größe des zum Speichern des Namens erforderlichen Puffers ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3002,7 +3002,7 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 Ruft den Bezeichnung
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3013,7 +3013,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "namebuffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualnamesize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn namebuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualnamesize wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_Label_GetName(
@@ -3027,7 +3027,7 @@ mip_cc_result MIP_CC_Label_GetName(
 
 Ruft die Größe des Puffers zum Speichern der Beschreibung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3046,7 +3046,7 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 Beschreibung der Bezeichnung wird abgerufen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3057,7 +3057,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn descriptionbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualdescriptionsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn descriptionbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualdescriptionsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_Label_GetDescription(
@@ -3071,7 +3071,7 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 Ruft die Größe des Puffers zum Speichern der Farbe ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3090,7 +3090,7 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 Ruft die Bezeichnung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3115,12 +3115,12 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 Ruft die Vertraulichkeits Stufe der Bezeichnung ab. Ein höherer Wert bedeutet mehr sensitiv.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | label | Label |
-| /Kleinschreibung | Ausgeben Empfindlichkeitsstufe |
+| sensitivity | Ausgeben Empfindlichkeitsstufe |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -3134,7 +3134,7 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 Ruft die Größe des Puffers zum Speichern der QuickInfo ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3153,7 +3153,7 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 QuickInfo für Bezeichnung abrufen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3164,7 +3164,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn tooltipbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualtooltipsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn tooltipbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualtooltipsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_Label_GetTooltip(
@@ -3178,7 +3178,7 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 Ruft die Größe des Puffers zum Speichern der QuickInfo für die automatische Klassifizierung ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3197,7 +3197,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 Ruft die Bezeichnung für die automatische Klassifizierung der Bezeichnung ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3208,7 +3208,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn tooltipbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualtooltipsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn tooltipbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualtooltipsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_Label_GetAutoTooltip(
@@ -3222,7 +3222,7 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 Ruft ab, ob eine Bezeichnung aktiv ist.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3243,12 +3243,12 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 Ruft die übergeordnete Bezeichnung ab, sofern vorhanden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | label | Label |
-| übergeordneten | Ausgeben Übergeordnete Bezeichnung, falls vorhanden, andernfalls NULL |
+| parent (parent) | Ausgeben Übergeordnete Bezeichnung, falls vorhanden, andernfalls NULL |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -3262,7 +3262,7 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 Ruft die Anzahl der untergeordneten Bezeichnungen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3281,7 +3281,7 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 Ruft die untergeordneten Bezeichnungen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3292,7 +3292,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn "Kinder Puffer" NULL oder unzureichend ist, wird "MIP_RESULT_ERROR_INSUFFICIENT_BUFFER" zurückgegeben, und "actualchildren ensize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn "Kinder Puffer" NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und "actualchildren ensize" wird auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_Label_GetChildren(
@@ -3306,7 +3306,7 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 Ruft Richtlinien definierte benutzerdefinierte Einstellungen einer Bezeichnung ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3315,7 +3315,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Settings"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseDictionary aufgerufen wird. 
+**Hinweis**: die "Settings"-Variable muss vom Aufrufer freigegeben werden, indem aufgerufen wird MIP_CC_ReleaseDictionary 
 
 ```c
 mip_cc_result MIP_CC_Label_GetCustomSettings(
@@ -3327,7 +3327,7 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 Ruft die zu entfern aus den Metadaten der metadatenaktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3336,7 +3336,7 @@ Parameter | Description
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "metadataNames"-Variable muss vom Aufrufer durch Aufrufen von MIP_CC_ReleaseStringList freigegeben werden, @note Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen muss. 
+**Hinweis**: die Variable "metadataNames" muss vom Aufrufer freigegeben werden, indem aufgerufen wird, MIP_CC_ReleaseStringList @note Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
@@ -3348,16 +3348,16 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 Ruft die hinzu zufügenden Metadaten der metadatenaktion ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Metadata" |
-| Benötigten | Ausgeben Schlüssel-Wert-Paare von Metadaten, die hinzugefügt werden sollen |
+| Metadaten | Ausgeben Schlüssel-Wert-Paare von Metadaten, die hinzugefügt werden sollen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die Variablen "Metadata" muss vom Aufrufer durch Aufrufen von MIP_CC_ReleaseDictionary freigegeben werden, @note das Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
+**Hinweis**: die Variablen "Metadata" muss vom Aufrufer freigegeben werden, indem aufgerufen wird, MIP_CC_ReleaseDictionary @note Entfernen von Metadaten vor dem Hinzufügen von Metadaten erfolgen soll. 
 
 ```c
 mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
@@ -3369,11 +3369,11 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 Freigeben von Ressourcen, die einer Richtlinie-Engine zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Zu veröffentlichendem Richtlinien Modul |
+| Engine | Zu veröffentlichendem Richtlinien Modul |
 
 ```c
 void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
@@ -3383,11 +3383,11 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 
 Ruft die Größe des für Engine-ID erforderlichen Puffers ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | idsize | Ausgeben Größe des Puffers für die Engine-ID (als Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3402,11 +3402,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 
 Ruft Engine-ID ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | idbuffer | Ausgeben Puffer, in den die ID kopiert wird. |
 | idbuffersize | Größe (in Anzahl der Zeichen) des idbuffer. |
 | actualidsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -3427,11 +3427,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | moreinfourlsize | Ausgeben Größe der Client Daten (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3446,11 +3446,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | morumfourlbuffer | Ausgeben Puffer, in den die Client Daten kopiert werden |
 | moreinfourlbuffersize | Größe (in Anzahl von Zeichen) von moreinfourlbuffer. |
 | actualmoreinfourlsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -3471,11 +3471,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 Ruft ab, ob die Richtlinie festlegt, dass ein Dokument mit einer Bezeichnung versehen werden muss.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | islabelingrequired | Ausgeben Ob die Richtlinie festlegt, dass ein Dokument mit einer Bezeichnung versehen werden muss |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3490,11 +3490,11 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | policymeleidsize | Ausgeben Größe der Client Daten (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3509,11 +3509,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | policyfleidbuffer | Ausgeben Puffer, in den die Client Daten kopiert werden |
 | policyfleidbuffersize | Größe (in Anzahl von Zeichen) von policyfleidbuffer. |
 | actualpolicyfleidsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -3534,11 +3534,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | sensitivityfleidsize | Ausgeben Größe der Client Daten (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3553,11 +3553,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | sensitivityfleid-Puffer | Ausgeben Puffer, in den die Client Daten kopiert werden |
 | sensitivityfleidbuffersize | Größe (in Anzahl von Zeichen) von sensitivityfleidbuffer. |
 | actualsensitivityfleidsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -3578,11 +3578,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | hasclassificationrules | Ausgeben Gibt an, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt. |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3597,11 +3597,11 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 
 Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | lastpolicyfetchtime | Ausgeben Uhrzeit, zu der die Richtlinie zuletzt abgerufen wurde (in Sekunden seit der Epoche) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3616,11 +3616,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 Ruft die Anzahl der der Richtlinien-Engine zugeordneten Vertraulichkeits Bezeichnungen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | labelssize | Ausgeben Anzahl von Bezeichnungen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3635,11 +3635,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 
 Ruft die der Richtlinien-Engine zugeordneten Vertraulichkeits Bezeichnungen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | labelbuffer | Ausgeben Puffer, in den die Bezeichnungen kopiert werden. Bezeichnungen befinden sich im Besitz des Clients |
 | LabelBufferSize | Größe (in Anzahl der Bezeichnungen) des labelbuffer. |
 | actuallabelssize | Ausgeben Anzahl der Bezeichnungen, die in den Puffer geschrieben werden |
@@ -3660,11 +3660,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 Ruft die Vertraulichkeits Bezeichnung nach ID ab
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | LabelId | Bezeichnungs-ID |
 | label | Ausgeben Vertraulichkeits Bezeichnung. Dieser Wert befindet sich im Besitz des Aufrufers und muss mit MIP_CC_ReleaseLabel freigegeben werden. |
 
@@ -3681,11 +3681,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 Ruft die Anzahl der Empfindlichkeits Typen ab, die der Richtlinien-Engine zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | sensitivitytypessize | Ausgeben Anzahl der Empfindlichkeits Typen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3700,11 +3700,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 
 Ruft die der Richtlinien-Engine zugeordneten Empfindlichkeits Typen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | sensitivitytypebuffer | Ausgeben Puffer, in den die Empfindlichkeits Typen kopiert werden. Sensitivität |
 | sensitivitytypebuffersize | Größe (in Anzahl der Empfindlichkeits Typen) von sensitivitytypebuffer. |
 | actualsensitivitytypessize | Ausgeben Anzahl der in den Puffer geschriebenen Vertraulichkeits Typen |
@@ -3725,13 +3725,13 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 Erstellen eines Richtlinien Handlers zum Ausführen von Richtlinien bezogenen Funktionen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | isauditdiscoveryaktivierte | Gibt an, ob die Überwachungs Ermittlung aktiviert ist. |
-| Lers | Ausgeben Neu erstellte richtlinienhandlerinstanz |
+| Handler | Ausgeben Neu erstellte richtlinienhandlerinstanz |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -3746,12 +3746,12 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 
 Protokolliert ein anwendungsspezifisches Ereignis in der Überwachungs Pipeline.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Geringen | Ereignis Ebene: info/Fehler/Warnung |
-| EventType | Eine Beschreibung des Ereignis Typs. |
+| level | Ereignis Ebene: info/Fehler/Warnung |
+| eventType | Eine Beschreibung des Ereignis Typs. |
 | eventData | Die Daten, die dem Ereignis zugeordnet sind. |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3768,11 +3768,11 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 Ruft die Größe der Richtlinien Daten-XML ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | xmlsize | Ausgeben Größe von Richtlinien Daten-XML (als Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3787,18 +3787,18 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 
 Ruft Richtlinien Daten-XML ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | xmlbuffer | Ausgeben Der Puffer, in den das XML kopiert wird. |
 | xmlbuffersize | Größe (in Anzahl der Zeichen) des xmlbuffer. |
 | actualxmlsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn xmlbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualxmlsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn xmlbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualxmlsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
@@ -3812,11 +3812,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 Ruft die Größe der Vertraulichkeits Typen Daten-XML ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | xmlsize | Ausgeben Größe von Richtlinien Daten-XML (als Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3831,18 +3831,18 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 
 Ruft Daten der Vertraulichkeits Typen ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | xmlbuffer | Ausgeben Der Puffer, in den das XML kopiert wird. |
 | xmlbuffersize | Größe (in Anzahl der Zeichen) des xmlbuffer. |
 | actualxmlsize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: Wenn xmlbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben, und actualxmlsize wird auf die mindestens erforderliche Puffergröße festgelegt. 
+**Hinweis**: Wenn xmlbuffer NULL oder unzureichend ist, wird MIP_RESULT_ERROR_INSUFFICIENT_BUFFER zurückgegeben und actualxmlsize auf die mindestens erforderliche Puffergröße festgelegt. 
 
 ```c
 mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
@@ -3856,11 +3856,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 Ruft die Größe der der Richtlinien-Engine zugeordneten Client Daten ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | clientdatasize | Ausgeben Größe der Client Daten (in Anzahl von Zeichen) |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -3875,11 +3875,11 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 
 Client Daten mit einer Richtlinien-Engine
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Ge | Richtlinien-Engine |
+| Engine | Richtlinien-Engine |
 | clientdatabuffer | Ausgeben Puffer, in den die Client Daten kopiert werden |
 | clientdatabuffersize | Größe (in Anzahl von Zeichen) von clientdatabuffer. |
 | actualclientdatasize | Ausgeben Anzahl der in den Puffer geschriebenen Zeichen |
@@ -3900,13 +3900,13 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 
 Erstellen eines Einstellungs Objekts, das zum Erstellen einer neuen Richtlinien-Engine verwendet wird
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Identität | Identität, die policyengine zugeordnet wird |
 | clientData | Anpassbare Client Daten, die neben der Engine gespeichert werden |
-| Konfigurations | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
+| Gebietsschema | Das Gebiets Schema, in dem Text Ergebnisse ausgegeben werden. |
 | loadsensitivitytypes | Gibt an, ob Daten der Vertraulichkeits Typen (für die Klassifizierung) ebenfalls geladen werden sollen. |
 | Einstellungen | Ausgeben Neu erstellte Einstellungs Instanz |
 
@@ -3927,7 +3927,7 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 Legt die Client Daten fest, die mit dieser Engine verdeckt gespeichert werden und Sitzungs übergreifend beibehalten werden
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3946,7 +3946,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -3965,12 +3965,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Einstellungen | Engine-Einstellungen |
-| SessionID | Sitzungs-ID, die die Lebensdauer einer Richtlinie-Engine darstellt |
+| sessionID | Sitzungs-ID, die die Lebensdauer einer Richtlinie-Engine darstellt |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -3984,7 +3984,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 Legt die Basis-URL für alle Service Requests fest.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4003,7 +4003,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 
 Legt Delegierten Benutzer fest.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4024,7 +4024,7 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 Freigeben von Ressourcen, die einem Richtlinien Modul-Einstellungen zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4038,11 +4038,11 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 Freigeben von Ressourcen, die einem Richtlinien Handler zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Richtlinien Handler für Freigabe |
+| Handler | Richtlinien Handler für Freigabe |
 
 ```c
 void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
@@ -4052,13 +4052,13 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 Ruft die aktuelle Bezeichnung eines Dokuments ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Richtlinien Handler |
+| Handler | Richtlinien Handler |
 | DocumentState | Dokument Status |
-| Kontext | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
+| context | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
 | contentLabel | Bezeichnung, die zurzeit auf ein Dokument angewendet wird |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
@@ -4075,19 +4075,19 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 Führt Richtlinien Regeln basierend auf dem angegebenen Status aus und bestimmt die entsprechenden Aktionen.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Richtlinien Handler |
+| Handler | Richtlinien Handler |
 | DocumentState | Dokument Status |
 | ApplicationState | Anwendungs Aktions Status |
-| Kontext | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
+| context | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
 | actionResult | Ausgeben Aktionen, die von der Anwendung ausgeführt werden sollen, Arbeitsspeicher im Besitz des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "aktionresult"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseActionResult aufgerufen wird. 
+**Hinweis**: die "aktionresult"-Variable muss vom Aufrufer freigegeben werden, indem aufgerufen wird MIP_CC_ReleaseActionResult 
 
 ```c
 mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
@@ -4102,14 +4102,14 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 Wird von der Anwendung nach dem Anwenden berechneter Aktionen und dem Commit der Daten auf den Datenträger aufgerufen
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
-| Lers | Richtlinien Handler |
+| Handler | Richtlinien Handler |
 | DocumentState | Dokument Status |
 | ApplicationState | Anwendungs Aktions Status |
-| Kontext | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
+| context | Anwendungskontext, der an alle Rückrufe weitergeleitet wird |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -4127,7 +4127,7 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 Profil laden
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4146,7 +4146,7 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 Freigeben von Ressourcen, die einem Richtlinien Profil zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4160,12 +4160,12 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 
 Legt die Sitzungs-ID fest, die zum Korrelieren von Protokollen und Telemetriedaten verwendet werden kann.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Einstellungen | Profileinstellungen |
-| SessionID | Die Sitzungs-ID, die die Lebensdauer eines Richtlinien Profils darstellt. |
+| sessionID | Die Sitzungs-ID, die die Lebensdauer eines Richtlinien Profils darstellt. |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
@@ -4179,7 +4179,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 Standard-HTTP-Stapel mit eigenem Client überschreiben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4198,7 +4198,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 
 Standardmäßiger asynchroner Aufgaben Verteiler mit eigenem Client überschreiben
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4217,7 +4217,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 Konfiguriert benutzerdefinierte Einstellungen, die zum Gating und Testen von Features verwendet werden.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4236,7 +4236,7 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 Freigeben von Ressourcen, die mit Richtlinien Profileinstellungen verknüpft sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4250,7 +4250,7 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilse
 
 Ruft die Vorlagen-ID "Schutz nach Vorlage" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4269,16 +4269,16 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Inhalts Fußzeile entfernen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Inhalts Fußzeile entfernen" |
-| Zeichen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
+| -Namen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Names"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseStringList aufgerufen wird. 
+**Hinweis**: die "Names"-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
@@ -4290,16 +4290,16 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Inhalts Header entfernen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Inhalts Header entfernen" |
-| Zeichen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
+| -Namen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Names"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseStringList aufgerufen wird. 
+**Hinweis**: die "Names"-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
@@ -4311,16 +4311,16 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 Ruft die zu entfern Endes UI-Elementnamen der Aktion "Wasserzeichen entfernen" ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
 | Aktion | Aktion "Wasserzeichen entfernen" |
-| Zeichen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
+| -Namen | Ausgeben Namen der zu entfernenden Benutzeroberflächen Elemente, Arbeitsspeicher des Aufrufers |
 
 **Return**: Ergebniscode, der einen Erfolg oder Fehler angibt
 
-**Hinweis**: die "Names"-Variable muss vom Aufrufer freigegeben werden, indem MIP_CC_ReleaseStringList aufgerufen wird. 
+**Hinweis**: die "Names"-Variable muss vom Aufrufer durch Aufrufen von freigegeben werden MIP_CC_ReleaseStringList 
 
 ```c
 mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
@@ -4332,7 +4332,7 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 Freigeben von Ressourcen, die einem Vertraulichkeits Typ zugeordnet sind
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4346,7 +4346,7 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 Ruft die Größe des Puffers ab, der zum Speichern der Regelpaket-ID eines Vertraulichkeits Typs
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4365,7 +4365,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 Ruft die Regelpaket-ID eines Vertraulichkeits Typs ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4390,7 +4390,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 Ruft die Größe des Puffers ab, der zum Speichern des Regel Pakets für sensible Typen erforderlich ist
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|
@@ -4409,7 +4409,7 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 Ruft das Regelpaket eines Vertraulichkeits Typs ab.
 
-**Metern**
+**Parameters**
 
 Parameter | Description
 |---|---|

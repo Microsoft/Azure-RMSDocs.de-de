@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560451"
 ---
 # <a name="enumerations-and-structures"></a>Enumerationen und Strukturen
@@ -67,33 +67,33 @@ Ausrichtung für Inhalts Markierungen (Content Header oder Content Footer).
 #### <a name="assignmentmethod-enum"></a>Zutragmethod-Aufzählung
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Norm            | Bezeichnungs Zuweisungs Methode ist Standard
+STANDARD            | Bezeichnungs Zuweisungs Methode ist Standard
 Privilegierten            | Bezeichnungs Zuweisungs Methode ist privilegiert
-Auto            | Bezeichnungs Zuweisungs Methode ist automatisch
+AUTO            | Bezeichnungs Zuweisungs Methode ist automatisch
 Die Zuweisungs Methode der Bezeichnung im Dokument. Gibt an, ob die Zuweisung der Bezeichnung automatisch durchgeführt wurde, Standard oder als privilegierter Vorgang (entspricht einem Administrator Vorgang).
   
 #### <a name="actionsource-enum"></a>Aktions Quellen-Enumeration
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Manuell            | Manuell vom Benutzer ausgewählt
-Automatisch            | Durch Richtlinien Bedingungen festlegen
-Empfohlen            | Vom Benutzer festgelegt, nachdem die Bezeichnung von Richtlinien Bedingungen empfohlen wurde
+MANUAL            | Manuell vom Benutzer ausgewählt
+AUTOMATIC            | Durch Richtlinien Bedingungen festlegen
+EMPFOHLEN            | Vom Benutzer festgelegt, nachdem die Bezeichnung von Richtlinien Bedingungen empfohlen wurde
 DEFAULT            | Standardmäßig in Richtlinie festlegen
 definiert, was das Ereignis "setlabel" ausgelöst hat.
   
 #### <a name="datastate-enum"></a>Datastate-Aufzählung
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Stütze            | Inaktive Daten, die physisch in Datenbanken/Dateien/Lager speichern gespeichert
+REST            | Inaktive Daten, die physisch in Datenbanken/Dateien/Lager speichern gespeichert
 Entschließungs            | Daten, die ein Netzwerk durchlaufen oder sich vorübergehend im zu lesenden oder zu aktualisierenden Computerspeicher befinden
-Konsum            | Aktive Daten unter konstanter Änderung werden physisch in Datenbanken/Dateien/Lagerhäusern gespeichert usw.
+USE            | Aktive Daten unter konstanter Änderung werden physisch in Datenbanken/Dateien/Lagerhäusern gespeichert usw.
 Definiert den Zustand der Daten, auf den die Anwendung angewendet wird.
   
 #### <a name="contentformat-enum"></a>Contentformat-Enumeration
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Inhalts Format ist Standarddatei Format
-E-Mail            | Inhalts Format ist e-Mail-Format
+E-MAIL            | Inhalts Format ist e-Mail-Format
 Inhalts Format.
   
 #### <a name="labelfiltertype-enum"></a>Labelfiltertype-Aufzählung
@@ -149,9 +149,9 @@ POLICY_SYNC_ERROR            | Ein fehlgeschlagener Versuch, Richtliniendaten zu
 NO_PERMISSIONS            | Der Benutzer konnte nicht auf den Inhalt zugreifen. Beispielsweise keine Berechtigungen, der Inhalt wurde widerrufen.
 NO_AUTH_TOKEN            | Der Benutzer konnte aufgrund eines leeren Authentifizierungs Tokens keinen Zugriff auf den Inhalt erhalten.
 DISABLED_SERVICE            | Der Benutzer konnte aufgrund deaktiviertem Dienst keinen Zugriff auf den Inhalt erhalten.
-PROXY_AUTH_ERROR            | Fehler bei der Proxy Authentifizierung.
+PROXY_AUTH_ERROR            | Fehler bei der Proxyauthentifizierung.
 NO_POLICY            | Es ist keine Richtlinie für den Benutzer/Mandanten konfiguriert.
-OPERATION_CANCELLED            | Vorgang abgebrochen
+OPERATION_CANCELLED            | Vorgang abgebrochen.
 ADHOC_PROTECTION_REQUIRED            | Der Ad-hoc-Schutz sollte festgelegt werden, um die Aktion für die Datei abzuschließen.
 DEPRECATED_API            | Aufrufer hat eine veraltete API aufgerufen
 TEMPLATE_NOT_FOUND            | Die Vorlagen-ID wurde nicht erkannt.
@@ -162,7 +162,7 @@ LABEL_DISABLED            | Die Bezeichnung ist deaktiviert oder inaktiv.
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Unbekannt            | Unkown-Datei Inspektor.
-Meldung            | Datei Inspektor im Nachrichten Stil, rpmsg/msg-basiert.
+Nachricht            | Datei Inspektor im Nachrichten Stil, rpmsg/msg-basiert.
 Der Inspektortyp korreliert die unterstützten Dateitypen.
   
 #### <a name="bodytype-enum"></a>BodyType-Aufzählung
@@ -215,7 +215,7 @@ ADD_CONTENT_HEADER            | Fügt einen Header mit Inhalt zum Aktionstyp fü
 ADD_WATERMARK            | Fügt ein Wasserzeichen zum Aktionstyp für das gesamte Dokument hinzu.
 BENUTZERDEFINIERT            | Ein benutzerdefinierter Aktionstyp
 JUSTIFY            | Ein Aktionstyp für die Legitimierung
-Benötigten            | Ein Aktionstyp zum Ändern von Metadaten
+METADATA            | Ein Aktionstyp zum Ändern von Metadaten
 PROTECT_ADHOC            | Ein Aktionstyp zum Schutz anhand von benutzerdefinierten Richtlinien
 PROTECT_BY_TEMPLATE            | Ein Aktionstyp zum Schutz anhand von Vorlagen
 PROTECT_DO_NOT_FORWARD            | Ein Aktionstyp zum Schutz durch Verhinderung einer Weiterleitung
@@ -259,7 +259,7 @@ Fußzeile            |
 #### <a name="labelactiondatatype-enum"></a>Labelaktiondatatype-Aufzählung
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Empfehlen            | 
+Recommend            | 
 Übernehmen            | 
   
 #### <a name="protectionactiontype-enum"></a>Schutzaktionstyp-Aufzählung
@@ -303,7 +303,7 @@ Member                        | Beschreibungen
 Public Std:: String hostnameoverride  |  Der hosttelemetrie-Instanzname. Wenn nicht festgelegt, fungiert MIP als eigener Host.
 Public Std:: String librarynameoverride  |  Dateiname der alternativen telemetriebibliothek (dll).
 Public Std:: shared_ptr\<httpdelegat\> httpdelegateoverride  |  Wenn festgelegt, wird die HTTP-Behandlung von dieser Instanz verwaltet.
-Public Std:: shared_ptr\<taskdispatcherdelegat\> taskdispatcherdelegateoverride  |  Wenn festgelegt, wird die asynchrone Task Verarbeitung von dieser Instanz verwaltet. taskdispatcherdelegateoverides sollten nicht freigegeben werden, da Sie telemetrieobjekte enthalten können, und ihre Freigabe verhindern, bis taskdispatcher freigegeben wurde.
+Public Std:: shared_ptr\<taskdispatcherdelegaten\> taskdispatcherdelegateoverride  |  Wenn festgelegt, wird die asynchrone Task Verarbeitung von dieser Instanz verwaltet. taskdispatcherdelegateoverides sollten nicht freigegeben werden, da Sie telemetrieobjekte enthalten können, und ihre Freigabe verhindern, bis taskdispatcher freigegeben wurde.
 public bool isnetworkdetectionaktivierte  |  Wenn festgelegt, Pingt die telemetriekomponente den Netzwerkstatus im Hintergrund Thread.
 public bool islocalcachingenabled  |  Wenn festgelegt, verwendet die telemetriekomponente das Zwischenspeichern auf dem Datenträger.
 public bool istraceloggingenabled  |  Wenn festgelegt, schreibt die telemetriekomponente Warn-/Fehlerprotokolle auf den Datenträger.

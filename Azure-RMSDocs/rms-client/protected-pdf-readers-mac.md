@@ -4,19 +4,19 @@ description: Installieren eines Readers auf Macintosh-Computern für PDF-Dokumen
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9701b11720d9683f4d2af1d9bbbd2cfb63944dd3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 1eb186053241fe86b70eeff82286d3e62801b015
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445031"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907418"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installieren eines PDF-Readers für MacOS
 
@@ -34,7 +34,9 @@ Anweisungen:
 
 3. Installieren Sie das [Adobe-Plug-in](https://go.microsoft.com/fwlink/?linkid=2050049) für Mac.
 
-4. Wenn Sie dazu aufgefordert werden, bitten Sie den Administrator, [das Plug-in zu autorisieren](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
+4. Wenn Sie zur Administrator Genehmigung aufgefordert werden, bitten Sie den Administrator, das Plug-in zu autorisieren.
+    
+    Die Administrator Anweisungen für diesen Schritt sind in der Veröffentlichungs Ankündigung enthalten: [allgemeine Verfügbarkeit der Integration von Adobe Acrobat Reader in Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

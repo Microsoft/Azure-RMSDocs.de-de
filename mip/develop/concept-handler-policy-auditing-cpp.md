@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
 ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175223"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>Überwachung im MIP SDK
@@ -29,10 +29,10 @@ Taktereignisse werden für jede Anwendung, in der die Richtlinien-API integriert
 
 * TenantId
 * Erstellungszeit
-* Benutzerprinzipalname
+* User Principal Name (Benutzerprinzipalname)
 * Name des Computers, auf dem die Überwachung generiert wurde
 * Prozessname
-* Platform
+* Plattform
 * Die Anwendungs-ID entspricht der Azure AD-Anwendungs-ID.
 
 Diese Ereignisse sind hilfreich, um Anwendungen in Ihrem Unternehmen zu erkennen, die das Microsoft Information Protection SDK verwenden.
@@ -41,7 +41,7 @@ Diese Ereignisse sind hilfreich, um Anwendungen in Ihrem Unternehmen zu erkennen
 
 Ermittlungsereignisse liefern Informationen über Daten mit Bezeichnungen, die von der Richtlinien-API gelesen oder verwendet werden. Diese Ereignisse sind hilfreich, da sie die Geräte, den Standort und die Benutzer erfassen, die auf Informationen in einer Organisation zugreifen.
 
-Discovery-Ereignisse werden in der API-Richtlinie generiert, durch ein Flag festlegen, beim Erstellen der `mip::PolicyHandler` Objekt. Im folgenden Beispiel wird der Wert für **IsAuditDiscoveryEnabled** nastaven NA hodnotu `true`. Wenn `mip::ExecutionState` übergeben wird, um `ComputeActions()` oder `GetSensitivityLabel()` (mit vorhandenen Informationen und Inhalte Metadatenbezeichner), wird Azure Informationen Protection Analytics Ermittlungsinformationen gesendet werden.
+Ermittlungs Ereignisse werden in der Richtlinien-API generiert, indem beim Erstellen des `mip::PolicyHandler` Objekts ein Flag festgelegt wird. Im folgenden Beispiel ist der Wert für **isauditdiscoveryaktivierte** auf `true`festgelegt. Wenn `mip::ExecutionState` an `ComputeActions()` oder `GetSensitivityLabel()` übergeben wird (mit vorhandenen Metadateninformationen und Inhalts Bezeichner), werden Ermittlungs Informationen an Azure Information Protection Analytics übermittelt.
 
 Die Ermittlungsüberwachung erfolgt, sobald die Anwendung `ComputeActions()` oder `GetSensitivityLabel()` aufruft und `mip::ExecutionState` bereitstellt. Dieses Ereignis wird nur einmal pro Handler generiert.
 
@@ -72,10 +72,10 @@ handler->NotifyCommittedActions(*state);
 
 ## <a name="audit-dashboard"></a>Überwachungsdashboard
 
-An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Azure Informationen Protection Analytics ist in der öffentlichen Vorschau und Features und Funktionen kann sich ändern.
+An die Überwachungspipeline von Azure Information Protection übermittelte Ereignisse werden in Berichten unter https://portal.azure.com angezeigt. Azure Information Protection Analytics befindet sich in der öffentlichen Vorschau, und Features/Funktionen können sich ändern.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-- Ausführliche Informationen zu den überwachungsmöglichkeiten in Azure Information Protection, finden Sie unter der [Vorschau ankündigungs-Blog auf Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
-- Herunterladen der [API API Management-Richtlinienbeispiele aus GitHub, und versuchen Sie die Richtlinie-API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Ausführliche Informationen zur Überwachungsfunktion in Azure Information Protection finden Sie im [Vorschau Ankündigungs Blog in der Tech Community](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+- Laden Sie die [Richtlinien-API-Beispiele von GitHub herunter, und testen Sie die Richtlinien-API](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

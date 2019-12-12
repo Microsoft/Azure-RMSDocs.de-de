@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886227"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK: Konzepte für Dateihandler
@@ -42,7 +42,7 @@ In diesem Artikel werden die folgenden Methoden behandelt:
 Folgende Voraussetzungen gelten für das Erstellen eines `FileHandler`-Elements für eine bestimmte Datei:
 
 - Ein `FileProfile`-Element.
-- Ein `FileEngine`-Element, dass `FileProfile` hinzugefügt wurde.
+- Ein `FileEngine`-Element, dass `FileProfile` hinzugefügt wurde
 - Eine Klasse, die `mip::FileHandler::Observer` erbt.
 
 ## <a name="create-a-file-handler"></a>Erstellen eines Dateihandlers
@@ -51,9 +51,9 @@ Der erste Schritt bei der Verwaltung von Dateien in der File-API ist das Erstell
 
 Das Erstellen des `FileHandler` ist so einfach wie das Aufrufen der `CreateFileHandlerAsync`-Funktion von `FileEngine` mithilfe des Promise-/Future-Musters.
 
-`CreateFileHandlerAsync`akzeptiert drei Parameter: Der Pfad zu der Datei, die gelesen oder geändert werden soll, `mip::FileHandler::Observer` die für asynchrone Ereignis Benachrichtigungen und die Zusicherung für den `FileHandler`.
+`CreateFileHandlerAsync` nimmt drei Parameter an: den Pfad zu der Datei, die gelesen oder geändert werden soll, das `mip::FileHandler::Observer`-Element für asynchrone Ereignisbenachrichtigungen und das Versprechen für den `FileHandler`.
 
-**Hinweis**: Die `mip::FileHandler::Observer`-Klasse muss in einer abgeleiteten Klasse implementiert werden, da `CreateFileHandler` das `Observer`-Objekt erfordert. 
+**Hinweis:** Die `mip::FileHandler::Observer`-Klasse muss in einer abgeleiteten Klasse implementiert werden, da `CreateFileHandler` das `Observer`-Objekt erfordert. 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -62,7 +62,7 @@ fileEngine->CreateFileHandlerAsync(filePath, std::make_shared<FileHandlerObserve
 auto handler = createFileHandlerFuture.get();
 ```
 
-Nachdem das `FileHandler`-Objekt erfolgreich erstellt wurde, können Vorgänge (get/set/delete/commit) ausgeführt werden.
+Wenn das `FileHandler`-Objekt erfolgreich erstellt wurde, können Dateivorgänge („Get“/„Set“/„Delete“/„Commit“) ausgeführt werden.
 
 ## <a name="read-a-label"></a>Lesen einer Bezeichnung
 
@@ -94,11 +94,11 @@ Bezeichnungsdaten können aus dem `label`-Objekt gelesen und an jede andere Komp
 
 ## <a name="set-a-label"></a>Festlegen einer Bezeichnung
 
-Das Festlegen einer Bezeichnung ist ein zweiteiliger Vorgang. Zuerst, wenn Sie einen Handler erstellt haben, der auf die betreffende Datei verweist, kann die Bezeichnung durch Aufrufen `FileHandler->SetLabel()` von mit einigen para `mip::Label`Metern festgelegt `mip::ProtectionOptions`werden:, `mip::LabelingOptions`und. Zuerst müssen wir die Bezeichnungs-ID in eine Bezeichnung auflösen und dann die Beschriftungs Optionen definieren. 
+Das Festlegen einer Bezeichnung ist ein zweiteiliger Vorgang. Zuerst, wenn Sie einen Handler erstellt haben, der auf die betreffende Datei verweist, kann die Bezeichnung durch Aufrufen von `FileHandler->SetLabel()` mit einigen Parametern festgelegt werden: `mip::Label`, `mip::LabelingOptions`und `mip::ProtectionOptions`. Zuerst müssen wir die Bezeichnungs-ID in eine Bezeichnung auflösen und dann die Beschriftungs Optionen definieren. 
 
 ### <a name="resolve-label-id-to-miplabel"></a>Bezeichnungs-ID in MIP:: Label auflösen
 
-Der erste Parameter der **setlabel** -Funktion ist `mip::Label`ein-Wert. Häufig arbeitet die Anwendung mit Bezeichnungs Bezeichnern anstelle von Bezeichnungen. Der Bezeichnungs Bezeichner kann `mip::Label` durch Aufrufen von **getlabelbyid** für die Datei oder das Richtlinien Modul aufgelöst werden:
+Der erste Parameter der **setlabel** -Funktion ist eine `mip::Label`. Häufig arbeitet die Anwendung mit Bezeichnungs Bezeichnern anstelle von Bezeichnungen. Der Bezeichnungs Bezeichner kann in den `mip::Label` aufgelöst werden, indem **getlabelbyid** für die Datei oder das Richtlinien Modul aufgerufen wird:
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -106,14 +106,14 @@ mip::Label label = mEngine->GetLabelById(labelId);
 
 ### <a name="labeling-options"></a>Bezeichnungsoptionen
 
-Der zweite Parameter, der zum Festlegen der Bezeichnung `mip::LabelingOptions`erforderlich ist, ist. 
+Der zweite Parameter, der zum Festlegen der Bezeichnung erforderlich ist, ist `mip::LabelingOptions`. 
 
 `LabelingOptions` gibt zusätzliche Informationen zur Bezeichnung an, z.B. die `AssignmentMethod` und eine Begründung für eine Aktion.
 
 - `mip::AssignmentMethod` ist einfach ein Enumerator, der drei Werte aufweisen kann: `STANDARD`, `PRIVILEGED` oder `AUTO`. Weitere Informationen finden Sie in der Referenz zu `mip::AssignmentMethod`.
 - Eine Begründung ist nur erforderlich, wenn die Dienstrichtlinie dies erfordert *und* wenn die *vorhandene* Vertraulichkeit einer Datei herabgesetzt wird.
 
-Dieser Ausschnitt veranschaulicht das Erstellen `mip::LabelingOptions` des Objekts und das Festlegen der herstellungsmeldung und der Nachricht.
+Dieser Ausschnitt veranschaulicht das Erstellen des `mip::LabelingOptions` Objekts und das Festlegen der Grundausrichtung und der Nachricht.
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -122,9 +122,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>Schutzeinstellungen
 
-Einige Anwendungen müssen möglicherweise Vorgänge im Namen einer Delegierten Benutzeridentität ausführen. Die `mip::ProtectionSettings` -Klasse ermöglicht der Anwendung die Definition der Delegierten Identität *pro Handler*. Zuvor wurde die Delegierung von den Engine-Klassen ausgeführt. Dies hat erhebliche Nachteile beim Anwendungs Aufwand und bei der Dienst Roundtrips. Indem die Delegierten Benutzereinstellungen in `mip::ProtectionSettings` verschoben werden und dieser Teil der Handlerklasse ist, entfällt dieser mehr Aufwand. Dies führt zu einer besseren Leistung für Anwendungen, die viele Vorgänge im Auftrag verschiedener Benutzer Identitäten durchführen. 
+Einige Anwendungen müssen möglicherweise Vorgänge im Namen einer Delegierten Benutzeridentität ausführen. Die `mip::ProtectionSettings`-Klasse ermöglicht der Anwendung die Definition der Delegierten Identität *pro Handler*. Zuvor wurde die Delegierung von den Engine-Klassen ausgeführt. Dies hat erhebliche Nachteile beim Anwendungs Aufwand und bei der Dienst Roundtrips. Indem die Delegierten Benutzereinstellungen auf `mip::ProtectionSettings` verschoben und dieser Teil der Handlerklasse gemacht werden, entfällt dieser mehr Aufwand. Dies führt zu einer besseren Leistung für Anwendungen, die viele Vorgänge im Namen verschiedener Gruppen von Benutzer Identitäten durchführen. 
 
-Wenn eine Delegierung nicht erforderlich ist, `mip::ProtectionSettings()` übergeben Sie einfach an die Funktion " **setlabel** ". Wenn eine Delegierung erforderlich ist, kann dies erreicht werden, `mip::ProtectionSettings` indem ein-Objekt erstellt und die Delegierte Mailadresse festgelegt wird:
+Wenn eine Delegierung nicht erforderlich ist, übergeben Sie einfach `mip::ProtectionSettings()` an die Funktion " **setlabel** ". Wenn eine Delegierung erforderlich ist, kann dies erreicht werden, indem ein `mip::ProtectionSettings` Objekt erstellt und die Delegierte e-Mail-Adresse festgelegt wird:
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -135,7 +135,7 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 Nachdem Sie die `mip::Label` aus der ID abgerufen, die Beschriftungs Optionen festgelegt und optional die Schutzeinstellungen festgelegt haben, kann die Bezeichnung jetzt festgelegt werden.
 
-Wenn Sie keine Schutzeinstellungen festgelegt haben, legen Sie die `SetLabel` Bezeichnung fest, indem Sie für den Handler aufrufen:
+Wenn Sie keine Schutzeinstellungen festgelegt haben, legen Sie die Bezeichnung fest, indem Sie `SetLabel` für den Handler aufrufen:
 
 ```cpp
 handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
@@ -155,7 +155,7 @@ Der letzte Schritt beim Committen einer Änderung in eine Datei im MIP SDK beste
 
 Um die Commitfunktion zu implementieren, kehren wir zu Promise/Future zurück und erstellen ein Versprechen für ein `bool`-Element. Die `CommitAsync()` Funktion gibt TRUE zurück, wenn der Vorgang erfolgreich war, oder FALSE, wenn er aus irgendeinem Grund fehlgeschlagen ist. 
 
-Nach dem `promise` Erstellen von `future`und `CommitAsync()` wird aufgerufen, und es werden zwei Parameter bereitgestellt: Der Pfad der Ausgabedatei`std::string`() und die Zusage. Abschließend wird das Ergebnis abgerufen, indem der Wert des `future`-Objekts abgerufen wird.
+Nach dem Erstellen von `promise` und `future` wird `CommitAsync()` aufgerufen, und es werden zwei Parameter angegeben: der Pfad der Ausgabedatei (`std::string`) und das Versprechen. Abschließend wird das Ergebnis abgerufen, indem der Wert des `future`-Objekts abgerufen wird.
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -164,7 +164,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Wichtig:** Die `FileHandler` vorhandenen Dateien werden von nicht aktualisiert oder überschrieben. Es bleibt dem Entwickler überlassen, **das Ersetzen** der Datei zu implementieren, die mit einer Bezeichnung versehen wurde. 
+**Wichtig:** Der `FileHandler` aktualisiert oder überschreibt keine vorhandenen Dateien. Es bleibt dem Entwickler überlassen, **das Ersetzen** der Datei zu implementieren, die mit einer Bezeichnung versehen wurde. 
 
 Wenn Sie eine Bezeichnung in **FileA.docx** schreiben, wird eine Kopie der Datei (**FileB.docx**) mit der angewendeten Bezeichnung erstellt. Code muss geschrieben werden, um **FileA.docx** zu entfernen/umzubenennen und **FileB.docx** umzubenennen.
 

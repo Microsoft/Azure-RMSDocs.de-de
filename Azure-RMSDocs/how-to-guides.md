@@ -4,25 +4,25 @@ description: Identifizieren Sie Anwendungsfälle, in denen die Daten Ihrer Organ
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: f3bc3064aa4a3a723197dcb171eaba018bca6b3e
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689353"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933326"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Schrittanleitungen für häufige Szenarien, in denen Azure Information Protection verwendet wird
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Es gibt viele Möglichkeiten, wie Sie mit Azure Information Protection Dokumente und E-Mails Ihrer Organisation klassifizieren und optional schützen können. 
 
@@ -30,7 +30,7 @@ Die erfolgreichsten Bereitstellungen sind diejenigen, bei denen spezielle Anwend
 
 ## <a name="common-scenarios"></a>Häufige Szenarien
 
-|En Ziel ...|Anweisungen|
+|Szenario: Gewünschter Vorgang|Anweisungen|
 |----------------|---------------|
 |Nach vertraulichen Informationen suchen, die meine Organisation lokal speichert|[Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien](quickstart-findsensitiveinfo.md)|
 |Es Benutzern einfacher machen, E-Mails, die vertrauliche Informationen enthalten, zu schützen|[Schnellstart: Konfigurieren einer Bezeichnung für Benutzer zum einfachen Schützen von E-Mails, die vertrauliche Informationen enthalten](quickstart-label-dnf-protectedemail.md)|

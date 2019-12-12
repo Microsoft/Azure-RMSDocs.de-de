@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561033"
 ---
 # <a name="class-mipmipcontext"></a>MIP:: mipcontext-Klasse 
@@ -26,8 +26,8 @@ Public Konstanten Std:: String & getmippath () Konstanten  |  Dateipfad für Pro
 public bool isofflineonly ()  |  Nur offline-Einstellung erhalten.
 Public Std:: shared_ptr\<loggerdelegat\> getloggerdelegat ()  |  Get Logger-Implementierung.
 öffentliches loggerdelegat * getrawloggerdelegat ()  |  Get Logger-Implementierung.
-public static MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: Create | Erstellen Sie eine neue mipcontext-Instanz, die beim Initialisieren von Profilen verwendet werden soll.
-public static MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: kreatewithcustomfeaturesettings | Erstellen Sie eine neue mipcontext-Instanz mit benutzerdefinierten Funktionseinstellungen.
+öffentliches statisches MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: Create | Erstellen Sie eine neue mipcontext-Instanz, die beim Initialisieren von Profilen verwendet werden soll.
+öffentliches statisches MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: kreatewithcustomfeaturesettings | Erstellen Sie eine neue mipcontext-Instanz mit benutzerdefinierten Funktionseinstellungen.
 
 ## <a name="members"></a>Member
   

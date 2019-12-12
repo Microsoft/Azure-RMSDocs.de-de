@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 9b3b32464cae35560c74a05b28506ca60dc963d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886053"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Richtlinien-API
@@ -22,16 +22,16 @@ Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokale
 
 ## <a name="load-a-profile"></a>Laden eines Profils
 
-Nachdem Sie `ProfileObserver` `mip::PolicyProfile`, und `AuthDelegateImpl` definiert haben, verwenden wir diese, um zu instanziieren. `MipContext` Zum Erstellen `mip::PolicyProfile` des- [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) Objekts `mip::MipContext`sind und erforderlich.
+Nun, da die `MipContext`, `ProfileObserver`und `AuthDelegateImpl` definiert sind, verwenden wir diese, um `mip::PolicyProfile`zu instanziieren. Zum Erstellen des `mip::PolicyProfile` Objekts sind [`mip::PolicyProfile::Settings`](reference/class_mip_PolicyProfile_settings.md) und `mip::MipContext`erforderlich.
 
 ### <a name="profilesettings-parameters"></a>Profile::Settings-Parameter
 
-Der `PolicyProfile::Settings` Konstruktor akzeptiert vier Parameter, die unten aufgeführt sind:
+Der `PolicyProfile::Settings`-Konstruktor akzeptiert vier Parameter, die unten aufgeführt sind:
 
-- `const std::shared_ptr<MipContext>`: Das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
-- `mip::CacheStorageType`: Definiert, wie der Zustand gespeichert wird: Im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger gespeichert und verschlüsselt. Weitere Informationen finden Sie in den [Konzepten des Cache Speichers](concept-cache-storage.md).
-- `std::shared_ptr<mip::AuthDelegate>`: Ein frei gegebener Zeiger der `mip::AuthDelegate`-Klasse.
-- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: Ein frei gegebener Zeiger auf die `Observer` Profil Implementierung ( [`PolicyProfile`](reference/class_mip_policyprofile_observer.md)in [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md), und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `const std::shared_ptr<MipContext>`: das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
+- `mip::CacheStorageType`: definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt. Weitere Informationen finden Sie in den [Konzepten des Cache Speichers](concept-cache-storage.md).
+- `std::shared_ptr<mip::AuthDelegate>`: Ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`.
+- `std::shared_ptr<mip::PolicyProfile::Observer> observer`: ein frei gegebener Zeiger auf das Profil `Observer` Implementierung (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 Anhand der beiden nachfolgenden Beispiele sehen Sie, wie Sie mithilfe des lokalen Speichers für den Zustandsspeicher oder ausschließlich für den Arbeitsspeicher das profileSettings-Objekt erstellen können. Es wird in beiden Beispielen davon ausgegangen, dass das `authDelegateImpl`-Objekt bereits erstellt wurde.
 

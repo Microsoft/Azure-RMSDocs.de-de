@@ -12,10 +12,10 @@ ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67521189"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Best Practices zu Sicherheitsthemen für Information Protection
@@ -51,7 +51,7 @@ Bei diesen Themen geht es hauptsächlich um Probleme mit Lecks. Die Integrität 
 
 Microsoft führt keine Tests bezüglich der Einhaltung des Mindeststandards durch und prüft auch nicht die Ergebnisse derartiger Tests. Es obliegt dem Partner sicherzustellen, dass die Mindeststandards erfüllt werden. Microsoft stellt zwei zusätzliche Empfehlungsstufen zur Verfügung, um häufige Bedrohungen zu minimieren. Hierbei handelt es sich im Allgemeinen um ergänzende Vorschläge. Bei den bevorzugten Empfehlungen wird beispielsweise davon ausgegangen, dass die Mindeststandards erfüllt wurden – sofern anwendbar und nicht anderweitig spezifiziert.
 
-|Standardstufe|Beschreibung|
+|Standardstufe|Description|
 |---|---|
 |Mindeststandard| Eine Anwendung, die geschützte Informationen verarbeitet, muss vor dem Signieren des von Microsoft zur Verfügung gestellten Produktionszertifikats den Mindeststandard erfüllen. Partner verwenden im Allgemeinen das Produktionshierarchiezertifikat zum Zeitpunkt des letzten Releases der Software. Mit den eigenen internen Tests eines Partners wird überprüft, ob die Anwendung diesen Mindeststandard erfüllt. Das Erfüllen des Mindeststandards stellt keine von Microsoft bestätigte Sicherheitsgarantie dar und darf auch nicht als solche ausgelegt werden. Microsoft führt keine Tests bezüglich der Einhaltung des Mindeststandards durch und prüft auch nicht die Ergebnisse derartiger Tests. Es obliegt dem Partner sicherzustellen, dass die Mindeststandards erfüllt werden.|
 |Empfohlener Standard| Die empfohlenen Richtlinien sind richtungsweisend für erhöhte Anwendungssicherheit und lassen darauf schließen, wie sich das SDK möglicherweise entwickelt, wenn mehr Sicherheitskriterien implementiert werden. Anbieter können ihre Anwendungen durch Einhalten dieser strikteren Richtlinien mit erhöhter Sicherheit auf dem Markt differenzieren.|
@@ -81,7 +81,7 @@ Wenn Ihre Anwendung die in der SDK-Veröffentlichungslizenz aufgeführten Rechte
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Die Informationen Protection-System fasst Rechte einigen Gruppierungen zusammen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](../configure-usage-rights.md).
+Das Informationsschutz System organisiert Rechte in einigen Gruppierungen. Weitere Informationen finden Sie unter [Konfigurieren von Nutzungsrechten für Azure Information Protection](../configure-usage-rights.md).
 
 Mit AIP kann ein Benutzer Informationen auf Wunsch verschlüsseln. Die Informationen haben keinen eigenen Schutz. Wenn ein Benutzer das Recht zur Entschlüsselung hat, gestattet die API diese Entschlüsselung. Die Anwendung ist verantwortlich für die Verwaltung bzw. den Schutz dieser Informationen, nachdem sie unverschlüsselt vorliegen. Eine Anwendung ist für die Verwaltung ihrer Umgebung und Schnittstelle verantwortlich, um eine nicht autorisierte Nutzung von Informationen zu verhindern. Beispiel: Deaktivieren der Schaltflächen **Drucken** und **Kopieren**, wenn eine Lizenz nur das Recht zum ANZEIGEN gewährt. Ihre Testsuite sollte überprüfen, ob sich Ihre Anwendung im Hinblick auf alle von ihr erkannten Lizenzrechte ordnungsgemäß verhält.
 

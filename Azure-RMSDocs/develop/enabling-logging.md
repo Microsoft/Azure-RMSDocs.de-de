@@ -15,16 +15,16 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792423"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Ausführung Aktivieren der Fehler- und Leistungsprotokollierung
+# <a name="how-to-enable-error-and-performance-logging"></a>Gewusst wie: Aktivieren der Fehler- und Leistungsprotokollierung
 Mit dem Microsoft Rights Management SDK 4.2 wird das Hochladen von Diagnose- und Leistungsprotokollen über eine einzelne Geräteeigenschaft verwaltet.
 
-## <a name="overview"></a>Übersicht ##
+## <a name="overview"></a>Overview ##
 Sie können die Benutzerfreundlichkeit und Problembehandlung für Benutzer verbessern, indem Sie automatische Uploads von Diagnose-, Leistungs- und Telemetrieprotokolldaten auf Server von Microsoft aktivieren. 
 
 > [!IMPORTANT] 
@@ -33,7 +33,7 @@ Sie können die Benutzerfreundlichkeit und Problembehandlung für Benutzer verbe
 > [!NOTE]
 > Hier ist als Beispiel eine Standardnachricht, die Microsoft zur Protokollierungsbenachrichtigung nutzt: 
 >
-> *Durch Aktivieren der Fehler- und Leistungsprotokollierung stimmen Sie dem Senden von Fehler- und Leistungsdaten an Microsoft zu.  Microsoft erfasst Fehler- und Leistungsdaten automatisch über das Internet („Daten“).  Microsoft verwendet diese Daten, um die Qualität, Sicherheit und Integrität von Microsoft-Produkten und -Diensten sicherzustellen und zu verbessern.  Beispielsweise analysieren wir die Leistung und Zuverlässigkeit, die von Ihnen verwendeten Features, die Reaktionsschnelligkeit der Features, die Geräteleistung, Interaktionen mit der Benutzeroberfläche und etwaige Probleme, die bei der Nutzung des Produkts auftreten.  Zu den Daten gehören auch Informationen zur Konfiguration Ihrer Software, z. B. der Software, die derzeit ausgeführt wird, und die IP-Adresse.*  
+> *Durch Aktivieren der Fehler-und Leistungs Protokollierung Stimmen Sie zu, Fehler-und Leistungsdaten an Microsoft zu senden.  Microsoft sammelt Fehler-und Leistungsdaten über das Internet ("Daten").  Microsoft verwendet diese Daten, um die Qualität, Sicherheit und Integrität von Microsoft-Produkten und-Diensten sicherzustellen und zu verbessern.  Beispielsweise analysieren wir die Leistung und Zuverlässigkeit, wie z. b. welche Features Sie verwenden, wie schnell die Features Antworten, die Geräteleistung, Interaktionen mit der Benutzeroberfläche und alle Probleme, die mit dem Produkt auftreten können.  Zu den Daten gehören auch Informationen zur Konfiguration Ihrer Software, wie z. b. die Software, die Sie gerade ausführen, und die IP-Adresse.*  
 
 Sie verwalten die Protokollierung mit zwei Eigenschaften.
 

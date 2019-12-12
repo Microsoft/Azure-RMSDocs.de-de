@@ -14,11 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-test-20160729
 ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792017"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Exemplarische Vorgehensweise: Aktivieren von Dokumentenverfolgung und -widerruf
@@ -35,7 +37,7 @@ In den Schritten 1 und 2 wird die Nachverfolgung des Dokuments aktiviert. In Sch
 
 Die Implementierungsdetails für diese Schritte folgen.
 
-## <a name="1-add-document-tracking-metadata"></a>1. Hinzufügen von Metadaten für die Dokumentnachverfolgung
+## <a name="1-add-document-tracking-metadata"></a>1. Hinzufügen von Dokumenten nach Verfolgungs Metadaten
 
 Dokumentnachverfolgung ist ein Feature des Rights Management-Systems. Durch das Hinzufügen bestimmter Metadaten während des Dokumentschutzprozesses kann ein Dokument beim Nachverfolgungsdienstportal registriert werden, das dann mehrere Optionen für die Nachverfolgung bereitstellt.
 
@@ -88,7 +90,7 @@ Verwenden Sie schließlich diese API, um das nachverfolgte Dokument beim Nachver
 - [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## <a name="2-register-the-document-with-the-rms-service"></a>2. Registrieren des Dokuments beim RMS-Dienst
+## <a name="2-register-the-document-with-the-rms-service"></a>2. registrieren Sie das Dokument beim RMS-Dienst.
 
 Es folgt ein Codeausschnitt, der ein Beispiel für das Festlegen der Metadaten für die Dokumentnachverfolgung und das Aufrufen für die Registrierung beim Nachverfolgungssystem zeigt.
 
@@ -147,7 +149,7 @@ Das Hinzufügen einer Schaltfläche **Verwendung nachverfolgen** zur App ist gen
 
 Der Client muss lediglich einen Browser mit der entsprechenden URL öffnen. Im Portal für die RMS-Dokumentnachverfolgung werden die Authentifizierung und alle erforderlichen Umleitungen verarbeitet.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 * [License metadata property types (Lizenzmetadaten-Eigenschaftstypen)](https://msdn.microsoft.com/library/dn974062.aspx)
 * [Notification preference (Benachrichtigungseinstellung)](https://msdn.microsoft.com/library/dn974063.aspx)

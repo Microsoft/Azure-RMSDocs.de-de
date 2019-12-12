@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/25/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24cf337ac84155485d11c3822f6207b11f5b04e5
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564485"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935026"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -44,7 +44,7 @@ Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie m�
 
 Wenn Sie Administrator Rollen für die delegierte Administration in Ihrer Organisation verwenden, müssen Sie möglicherweise einige Änderungen an der Unified-Bezeichnung-Plattform vornehmen:
 
-Die [Azure AD Rollen](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) und des **globalen Readers** werden von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn eine dieser Administrator Rollen in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer, die diese Rolle besitzen, den Azure AD Rollen von Kompatibilitäts **Administrator**, Kompatibilitäts **Daten Administrator**oder **Sicherheitsadministrator**hinzu. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
+Die [Azure AD Rolle](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) **Azure Information Protection Administrators** (ehemals **Information Protection Administrator**) wird von der Unified-Beschriftungs Plattform nicht unterstützt. Wenn diese administrative Rolle in Ihrer Organisation für die Verwaltung von Azure Information Protection verwendet wird, fügen Sie die Benutzer mit dieser Rolle den Azure AD Rollen des Kompatibilitäts **Administrators**, des Kompatibilitäts **Daten Administrators**oder des **Sicherheits Administrators**hinzu. Eine Anleitung zu diesem Schritt finden Sie unter [Gewähren von Benutzerzugriff auf das Office 365 Security & Compliance Center](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). Diese Rollen können auch im Azure AD-Portal, Microsoft 365 Security Center und Microsoft 365 Compliance Center zugewiesen werden.
 
 Statt Rollen zu verwenden, können Sie auch im jeweiligen Admin Center eine neue Rollengruppe für diese Benutzer erstellen und dieser Gruppe die Rolle **Administrator für Vertraulichkeitsbezeichnungen** oder **Organisationskonfiguration** zuweisen.
 
@@ -160,19 +160,29 @@ Die Bezeichnungen, die erfolgreich migriert wurden, können nun von [Clients und
 > [!NOTE]
 > Diese Option befindet sich in der Vorschau Phase und kann geändert werden.
 
-Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center.
+Nachdem Sie Ihre Bezeichnungen migriert haben, können Sie eine Option zum Kopieren von Richtlinien auswählen. Wenn Sie diese Option auswählen, wird eine einmalige Kopie Ihrer Richtlinien mit Ihren [Richtlinien Einstellungen](configure-policy-settings.md) und [erweiterten Client Einstellungen](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) an das Admin Center gesendet, in dem Sie Ihre Bezeichnungen verwalten: Office 365 Security & Compliance Center, Microsoft 365 Security Center, Microsoft 365 Compliance Center. 
+
+Die Richtlinien wurden mit Ihren Einstellungen erfolgreich kopiert und dann automatisch für die Benutzer und Gruppen veröffentlicht, die den Richtlinien in der Azure-Portal zugewiesen wurden. Beachten Sie, dass dies für die globale Richtlinie alle Benutzer bedeutet. Wenn Sie nicht bereit sind, die migrierten Bezeichnungen in den kopierten Richtlinien zu veröffentlichen, können Sie nach dem Kopieren der Richtlinien die Bezeichnungen aus den Bezeichnungs Richtlinien in Ihrem Admin-Beschriftungs Center entfernen.
 
 Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)** im Bereich **Azure Information Protection vereinheitlichte Bezeichnung** auswählen:
 
-- Richtlinien und Einstellungen können nicht selektiv zum Kopieren ausgewählt werden. Alle Richtlinien (die **globale** Richtlinie und alle Bereichs bezogenen Richtlinien) werden kopiert, und alle Einstellungen, die als Bezeichnungs Richtlinien Einstellungen unterstützt werden, werden kopiert. Wenn Sie bereits über eine Bezeichnungs Richtlinie mit demselben Namen verfügen, wird Sie mit den Richtlinien Einstellungen in der Azure-Portal überschrieben.
+- Die Option zum **Kopieren von Richtlinien (Vorschau)** ist erst verfügbar, wenn die einheitliche Bezeichnung für Ihren Mandanten aktiviert ist.
+
+- Richtlinien und Einstellungen können nicht selektiv zum Kopieren ausgewählt werden. Alle Richtlinien (die **globale** Richtlinie und alle Bereichs bezogenen Richtlinien) werden automatisch zum Kopieren ausgewählt, und alle Einstellungen, die als Bezeichnungs Richtlinien Einstellungen unterstützt werden, werden kopiert. Wenn Sie bereits über eine Bezeichnungs Richtlinie mit demselben Namen verfügen, wird Sie mit den Richtlinien Einstellungen in der Azure-Portal überschrieben.
 
 - Einige erweiterte Client Einstellungen werden nicht kopiert, da Sie für den Azure Information Protection Unified Label-Client als *Erweiterte Einstellungen* für die Bezeichnung anstelle von Richtlinien Einstellungen unterstützt werden. Sie können diese Bezeichnung Erweiterte Einstellungen mit [Office 365 Security & Compliance Center PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell)konfigurieren. Die erweiterten Client Einstellungen, die nicht kopiert werden:
-    - [Labelbycustomproperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Labeldesmime](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Anders als bei der Bezeichnung Migration, bei der nachfolgende Änderungen an Bezeichnungen synchronisiert werden, werden bei der Aktion Richtlinien kopieren keine nachfolgenden Änderungen an Ihren Richtlinien oder Richtlinien Einstellungen synchronisiert Sie können die Aktion "Richtlinie kopieren" wiederholen, nachdem Sie Änderungen an der Azure-Portal vorgenommen haben, und alle vorhandenen Richtlinien und deren Einstellungen werden erneut überschrieben. Oder verwenden Sie die Cmdlets Set-labelpolicy oder Set-Label mit dem Parameter *advancedsettings* aus Office 365 Security & Compliance Center PowerShell.
+- Anders als bei der Bezeichnung Migration, bei der nachfolgende Änderungen an Bezeichnungen synchronisiert werden, werden bei der Aktion **Richtlinien kopieren** keine nachfolgenden Änderungen an Ihren Richtlinien oder Richtlinien Einstellungen synchronisiert Sie können die Aktion "Richtlinie kopieren" wiederholen, nachdem Sie Änderungen an der Azure-Portal vorgenommen haben, und alle vorhandenen Richtlinien und deren Einstellungen werden erneut überschrieben. Oder verwenden Sie die Cmdlets Set-labelpolicy oder Set-Label mit dem Parameter *advancedsettings* aus Office 365 Security & Compliance Center PowerShell.
 
-- Die Option zum **Kopieren von Richtlinien (Vorschau)** ist erst verfügbar, wenn die einheitliche Bezeichnung für Ihren Mandanten aktiviert ist.
+- Die Aktion **Richtlinien kopieren** überprüft vor dem Kopieren Folgendes für jede Richtlinie:
+    
+    - Benutzer und Gruppen, die der Richtlinie zugewiesen sind, befinden sich zurzeit in Azure AD. Wenn mindestens ein Konto fehlt, wird die Richtlinie nicht kopiert. Die Gruppenmitgliedschaft ist nicht aktiviert.
+    
+    - Die globale Richtlinie enthält mindestens eine Bezeichnung. Da die Administrator Bezeichnungen keine Bezeichnungs Richtlinien ohne Bezeichnungen unterstützen, wird eine globale Richtlinie ohne Bezeichnungen nicht kopiert.
+
+- Wenn Sie Richtlinien kopieren und Sie dann von Ihrem Administrator bezeichnen Center löschen, warten Sie mindestens zwei Stunden, bevor Sie die Aktion **Richtlinien kopieren** erneut verwenden, um ausreichend Zeit für die Replikation des Löschvorgangs sicherzustellen.
 
 Weitere Informationen zum Konfigurieren der Richtlinien Einstellungen, der erweiterten Client Einstellungen und der Bezeichnungs Einstellungen für den Azure Information Protection Unified Label-Client finden Sie im Administrator Handbuch unter [benutzerdefinierte Konfigurationen für den Azure Information Protection Unified](./rms-client/clientv2-admin-guide-customizations.md) Label-Client.
 

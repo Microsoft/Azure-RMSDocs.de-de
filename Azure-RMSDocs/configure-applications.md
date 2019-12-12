@@ -4,7 +4,7 @@ description: Hier finden Sie Anleitung für Administratoren zum Konfigurieren vo
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f361c96b3b1143b59d431124988eca84f66d8ec9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684233"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933547"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Konfigurieren von Anwendungen für Azure Rights Management
 
@@ -34,11 +34,11 @@ Nachdem Sie Azure Information Protection für Ihre Organisation bereitgestellt h
 > [!IMPORTANT]
 > Informationen zu unterstützten Versionen und anderen Anforderungen finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
--   [Office 365: Konfiguration für Onlinedienste](configure-office365.md)
+-   [Office 365: Konfiguration für Onlinedienste](configure-office365.md)
 
-    -   [Exchange Online: IRM-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
+    -   [Exchange Online: unm-Konfiguration](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online und OneDrive for Business: IRM-Konfiguration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online und onedrive for Business: unm-Konfiguration](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
 
 - [Office-Anwendungen: Konfiguration für Clients](configure-office-apps.md)
 

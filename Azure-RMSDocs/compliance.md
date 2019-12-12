@@ -4,7 +4,7 @@ description: Ergänzende Informationen zu Azure Information Protection, darunter
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d311a1055dc0973dee4b4e0f6b10c4ffcd0e537
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 06ffea8f623e55eaa482020a9bc8d7583f8c84f7
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684260"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935230"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Konformitätsinformationen und ergänzende Informationen zu Azure Information Protection
 
@@ -41,17 +41,17 @@ Hier finden Sie einige relevante Informationen, die Ihrem Rechtsberater bei der 
 
 ## <a name="legal-and-privacy"></a>Rechtliche Hinweise und Datenschutz
 
-- Informationen zur Microsoft Azure Vereinbarung: [Microsoft Azure-Vereinbarung](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Informationen zum Microsoft Azure-Vertrag: [Microsoft Azure-Vertrag](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Informationen zum Microsoft Azure Datenschutz: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Informationen zum Datenschutz bei Microsoft Azure: [Datenschutzerklärung zu Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicherheit, Konformität und Überwachung
 
-Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Zusätzlich:
+Weitere Informationen über spezifische Zertifizierungen für den Azure Rights Management-Dienst finden Sie im Artikel [Welche Probleme werden von Azure RMS gelöst?](./azure-rms-problems-it-solves.md) im Abschnitt [Sicherheits-, Compliance- und gesetzliche Anforderungen](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements). Beachten Sie auch Folgendes:
 
 - Informationen zu externen Zertifizierungen für Azure Information Protection: [Microsoft Azure Trust Center](https://azure.microsoft.com/support/trust-center/)
 
-- Informationen zu "fps 140": [FIPS 140-Validierung](https://technet.microsoft.com/library/security/cc750357.aspx)
+- FIPS 140-Informationen: [FIPS 140-Überprüfung](https://technet.microsoft.com/library/security/cc750357.aspx)
 
 Weitere ausführliche technische Informationen über die Funktionsweise der Schutztechnologie finden Sie unter [Funktionsweise von Azure RMS](./how-does-it-work.md). 
 
@@ -65,7 +65,7 @@ Weitere ausführliche technische Informationen über die Funktionsweise der Schu
 
 ## <a name="documentation"></a>Dokumentation
 
-- Dokumentation zu Azure Active Directory: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
+- Dokumentation zu Azure Active Directory: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Office 365 Enterprise-Dokumentation: [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
+- Office 365 Enterprise-Dokumentation: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
 

@@ -4,7 +4,7 @@ description: Lokale Serverprodukte, die den Azure Rights Management-Dienst von A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1cff4a483d8e8d8e14dc6c8159d70655b7b71009
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 313d99a4d0d68417da7d18947a4e81278aca2fef
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684472"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935339"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Lokale Server mit Unterstützung für den Azure Rights Management-Schutz von Daten
 
@@ -50,7 +50,7 @@ Für die Verwendung des Connectors müssen Sie die Verzeichnissynchronisierung z
 
     -   Windows Server 2012 R2
 
-    -   Windows Server 2012
+    -   Windows Server 2012 R2
 
     > [!NOTE]
     > Da Dateiserver, auf denen Windows Server 2008 R2 ausgeführt wird, über keine integrierte Taskaktion zum Anwenden des Rights Management-Schutzes verfügen, können Sie den Rights Management-Connector für dieses Szenario nicht verwenden. Sie können jedoch die Dateiklassifizierungsinfrastruktur und Azure RMS auf diesen Betriebssystemen verwenden, wenn Sie einen benutzerdefinierten Dateiverwaltungstask konfigurieren, über den eine Datei oder ein Skript ausgeführt wird, um die Dateien mithilfe von Azure RMS zu schützen. Beispielsweise ein Windows PowerShell-Skript, in dem die [AzureInformationProtection-Cmdlets](/powershell/azureinformationprotection/vlatest/aip) verwendet werden.

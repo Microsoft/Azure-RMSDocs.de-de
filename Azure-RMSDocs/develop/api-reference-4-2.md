@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 883dc9375e3e862726dd4f0ccf55985b3c8ddd61
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792798"
 ---
 # <a name="api-sdk-42-reference"></a>API SDK 4.2-Referenz
@@ -37,6 +37,6 @@ Azure Information Protection SDK 4.2 unterstützt mehrere Betriebssysteme. Weite
 ### <a name="microsoft"></a>Microsoft
 - [Windows-API-Referenz](https://msdn.microsoft.com/library/dn891914.aspx): API-Referenz für die Windows Phone- und Windows Store-Anwendungs-SDKs.
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 * [Erste Schritte](get-started.md)

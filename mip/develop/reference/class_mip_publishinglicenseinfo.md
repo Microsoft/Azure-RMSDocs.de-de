@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d95edcf9fd08296392e44a77a49c900c3b1b4d4f
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560648"
 ---
 # <a name="class-mippublishinglicenseinfo"></a>MIP::P ublishinglicenseingefo-Klasse 
@@ -19,7 +19,7 @@ Enthält die Details einer Veröffentlichungslizenz, die zum Erstellen eines Sch
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public publishinglicenseinfo (konstant Std:: Vector\<uint8_t\>& serializedpublishinglicense)  | Noch nicht dokumentiert.
+öffentliches publishinglicenseinfo (konstant Std:: Vector\<uint8_t\>& serializedpublishinglicense)  | Noch nicht dokumentiert.
 öffentliches void setParser (Konstante Std:: Vector\<Std:: String\>& Domains, Konstante Std:: String & serverpubliccert, Konstanten Std:: String & contentid, Konstanten Std:: String & issuerid)  | Noch nicht dokumentiert.
 Public Konstanten Std:: Vector\<uint8_t\>& getserializedpublishinglicense () Konstanten  | Noch nicht dokumentiert.
 Public Konstanten Std:: Vector\<Std:: String\>& getdomains () Konstanten  | Noch nicht dokumentiert.
