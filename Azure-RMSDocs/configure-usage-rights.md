@@ -14,10 +14,10 @@ ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559739"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Konfigurieren von Nutzungsrechten für Azure Information Protection
@@ -191,4 +191,4 @@ Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandan
 ## <a name="see-also"></a>Weitere Informationen:
 [Konfigurieren und Verwalten von Vorlagen für Azure Information Protection](configure-policy-templates.md)
 
-[Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder die Datenwiederherstellung](configure-super-users.md)
+[Configuring super users for Azure Information Protection and discovery services or data recovery](configure-super-users.md) (Konfigurieren von Administratoren für Azure Information Protection und Ermittlungsdienste oder Wiederherstellung von Daten)

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 063f1b0227415dc413e0c56d26f60fc39274a817
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560238"
 ---
 # <a name="class-mipfileexecutionstate"></a>MIP:: fileexecutionstate-Klasse 
@@ -19,7 +19,7 @@ ms.locfileid: "73560238"
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus ab, während die Anwendung mit diesem interagiert
-public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konst Std:: shared_ptr\<fileHandler\> &, Konstanten Std:: Vector\<Std:: shared_ptr\<classificationrequest\>\> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
+public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konstante Std:: shared_ptr\<fileHandler\> &, Konstanten Std:: Vector\<Std:: shared_ptr\<classificationrequest\>\> &) konstant  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
 public virtual Std:: Map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
   
 ## <a name="members"></a>Member
@@ -48,4 +48,4 @@ Parameter:
 Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
 
   
-**Gibt Folgendes zurück**: eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: e-Mail-ID für Absender Empfänger: stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy: e-Mail-ID für den Benutzer dar, der den Inhalt zuletzt geändert hat. LastModifiedDate: Datum, an dem der Inhalt zuletzt geändert wurde
+**Gibt Folgendes zurück**: eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: e-Mail-ID für Absender Empfänger: stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy: e-Mail-ID für den Benutzer dar, der den Inhalt zuletzt geändert hat: Datum, an dem der Inhalt zuletzt geändert wurde.

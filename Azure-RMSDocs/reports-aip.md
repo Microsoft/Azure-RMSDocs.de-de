@@ -14,10 +14,10 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564544"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Zentrale Berichterstellung für Azure Information Protection
@@ -278,36 +278,36 @@ In der folgenden Tabelle finden Sie die Anzeigenamen der Ereignisfunktionen, die
 |Zeit|Ereignis Zeit: UTC im Format yyyy-mm-ddThh: mm: SS|
 |Benutzer|Benutzer: UPN oder Domäne \ Benutzer formatieren|
 |ItemPath|Vollständiger Element Pfad oder e-Mail-Betreff|
-|ItemName|Datei Name oder e-Mail-Betreff |
+|Artikelname|Datei Name oder e-Mail-Betreff |
 |Methode|Zugewiesene Methode für Bezeichnung: manuell, automatisch, empfohlen, Standard oder obligatorisch|
 |Aktivität|Audit Activity: downgradelta Abel, upgradelta Abel, removelabel, newlabel, Discover, Access, removecustomprotection, changecustomprotection oder newcustomprotection |
 |Bezeichnungsname|Name der Bezeichnung (nicht lokalisiert)|
-|Labelnamebefore |Name der Bezeichnung vor der Änderung (nicht lokalisiert) |
+|LabelNameBefore |Name der Bezeichnung vor der Änderung (nicht lokalisiert) |
 |ProtectionType|Schutztyp [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |Schutz vor|Schutztyp vor Änderung [JSON] |
 |MachineName |Vollständig verfügbarer voll qualifizierter Name Andernfalls Hostname|
-|Devicerisk|Geräte Risikobewertung aus wdatp, wenn verfügbar|
+|DeviceRisk|Geräte Risikobewertung aus wdatp, wenn verfügbar|
 |Plattform|Geräteplattform (Win, OSX, Android, IOS) |
 |ApplicationName|Anzeige Name der Anwendung|
 |Aipversion|Die Version des Azure Information Protection Clients, der die Überwachungsaktion ausgeführt hat. |
 |TenantId|Azure AD-Mandanten-ID |
-|Azureapplicationid|Azure AD registrierte Anwendungs-ID (GUID)|
+|AzureApplicationId|Azure AD registrierte Anwendungs-ID (GUID)|
 |ProcessName|Prozess, der MIP SDK hostet|
 |LabelId|GUID der Bezeichnung oder NULL|
 |Isprotehiert|Ob geschützt: Ja/Nein |
 |Schutz Besitzer |Rights Management Besitzer im UPN-Format|
-|Labelidbefore|GUID der Bezeichnung oder NULL vor der Änderung|
+|LabelIdBefore|GUID der Bezeichnung oder NULL vor der Änderung|
 |InformationTypesAbove55|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 55 oder höher |
 |InformationTypesAbove65|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 65 oder höher |
 |InformationTypesAbove75|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 75 oder höher |
 |InformationTypesAbove85|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 85 oder höher |
 |InformationTypesAbove95|JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) in Daten mit Vertrauensgrad 95 oder höher|
-|Discoveredinformationtypes |JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) , das in Daten und dem zugehörigen Inhalt gefunden wurde (sofern aktiviert). ein leeres Array bedeutet, dass keine Informationstypen gefunden werden, und NULL bedeutet, dass keine Informationen verfügbar sind. |
+|DiscoveredInformationTypes |JSON-Array von [sensitiveinformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) , das in Daten und dem zugehörigen Inhalt gefunden wurde (sofern aktiviert). ein leeres Array bedeutet, dass keine Informationstypen gefunden werden, und NULL bedeutet, dass keine Informationen verfügbar sind. |
 |Protectedbefore|Ob der Inhalt vor der Änderung geschützt wurde: Ja/Nein |
-|Schutz Eigentümer vor|Rights Management Besitzer vor der Änderung |
+|ProtectionOwnerBefore|Rights Management Besitzer vor der Änderung |
 |Userbegrün dung|Begründung beim Herabstufen oder Entfernen der Bezeichnung|
 |LastModifiedBy|Benutzer im UPN-Format, von dem die Datei zuletzt geändert wurde. Nur für Office und SharePoint Online verfügbar|
-|LastModifiedDate & gt|UTC im Format yyyy-mm-ddThh: mm: SS: verfügbar für Office & nur SharePoint Online |
+|LastModifiedDate|UTC im Format yyyy-mm-ddThh: mm: SS: verfügbar für Office & nur SharePoint Online |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Beispiele für InformationProtectionEvents

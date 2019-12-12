@@ -13,10 +13,10 @@ ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
-ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73446017"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
@@ -29,7 +29,7 @@ Das Azure Information Protection-Team aktualisiert den Azure Information Protect
 
 Sie können das neueste allgemein verfügbare Release und die aktuelle Vorschauversion (sofern verfügbar) im [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. 
 
-Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection**  > **Microsoft Azure Informationen enthalten. Schutz Client**und die Klassifizierung von **Updates**. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Client**und der Klassifizierung der **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
 
 Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Information Protection-Clients](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -44,7 +44,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemein verfügbare Versionen, die nicht mehr unterstützt werden:
 
-|Client Version|Datum der Veröffentlichung|
+|Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
 |1.41.51.0|27.11.2018|
 |1.37.19.0|17.9.2018|
@@ -53,9 +53,9 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 |1.26.6.0|04/17/2018|
 |1.10.56.0|09/18/2017|
 |1.7.210.0|06/06/2017|
-|1.4.21.0|03/15/2017|
+|1.4.21.0|15.03.2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0.0|10/27/2016|
+|1.2.4.0.0|27.10.2016|
 |1.1.23.0|10/01/2016|
 
 Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.

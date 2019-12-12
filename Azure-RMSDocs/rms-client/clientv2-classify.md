@@ -4,19 +4,19 @@ description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails bei Verw
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: c7ae1a038ab3b499767cc892bd1b99ae27c8dbdc
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 922d803237edde7950798a9bc9c538f2bcf6b538
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447339"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935587"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Benutzerhandbuch: klassifizieren einer Datei oder e-Mail mit dem Azure Information Protection Unified Bezeichnung-Client für Windows
 

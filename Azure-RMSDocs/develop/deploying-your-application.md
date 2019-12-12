@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788539"
 ---
 # <a name="deploy-into-production"></a>Bereitstellen in der Produktion
@@ -103,13 +103,13 @@ Wenn der Client vorhanden ist wird die Anwendungsinstallation fortgesetzt.
 
 > [!NOTE]
 > Wenn Sie zum neuen ADAL-Modell für die Authentifizierung migriert haben, müssen Sie **SIA** nicht installieren. Weitere Informationen finden Sie unter [ADAL-Authentifizierung für Ihre RMS-fähige Anwendung](adal-auth.md).
-> **Zertifizieren Ihrer Anwendung für Windows 10**: Durch die Aktualisierung der Anwendung zur Verwendung der ADAL-Authentifizierung anstelle des Microsoft Online-Anmelde-Assistenten haben Sie und Ihre Kunden folgende Möglichkeiten: Verwenden der mehrstufigen Authentifizierung zum Installieren von RMS Client 2.1 ohne Administratorrechte auf dem Computer
+> Außerdem können Sie **Ihre Anwendung für Windows 10 zertifizieren**: Durch Aktualisieren der Anwendung für die Verwendung der ADAL-Authentifizierung anstelle des Microsoft Online-Anmelde-Assistenten verfügen Sie und Ihre Kunden über folgende Möglichkeiten: Nutzen der Multi-Factor Authentication, Installieren des RMS Client 2.1 ohne Administratorrechte auf dem Computer
 
 Damit Endbenutzer Information Protection-Dienste nutzen können, müssen Sie den *Online Services-Anmelde-Assistenten* bereitstellen. Als Entwickler einer Anwendung wissen Sie nicht, ob Endbenutzer Information Protection über RMS (lokal) oder über Azure Information Protection verwenden werden.
 
 
 > [!IMPORTANT]
-> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloud-Abonnements, die Azure RMS unterstützen](../requirements.md).
+> Wenn Sie Ihre Clientanwendung mit einem auf Azure basierenden RMS ausführen, müssen Sie eigene Mandanten erstellen. Weitere Informationen finden Sie unter [Azure RMS-Anforderungen: Cloudabonnements, die Azure RMS unterstützen](../requirements.md).
 > Weitere Informationen zur Ausführung mit Azure RMS finden Sie unter [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Laden Sie den [Microsoft Online Services-Anmeldeassistenten](https://www.microsoft.com/download/details.aspx?id=28177) aus dem Microsoft Download Center herunter.
@@ -120,7 +120,7 @@ Sie benötigen auch dieses Handbuch zum Konfigurieren Ihrer App: [Konfigurieren 
 
 Weitere Informationen zum Ermöglichen der Verwendung von RMS für Azure Rights Management Services durch Ihre Anwendung finden Sie im Thema zum [Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Anwendung](how-to-use-file-api-with-aadrm-cloud.md).
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 * [Microsoft Online Services-Anmeldeassistent](https://www.microsoft.com/download/details.aspx?id=28177)
 * [Konfigurieren von Rights Management](https://TechNet.Microsoft.Com/library/jj585002.aspx)

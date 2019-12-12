@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a436024aefe58a73ea03747fce5c5f2f4b4fc4b1
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558800"
 ---
 # <a name="class-mipfileprofile"></a>mip::FileProfile-Klasse 
@@ -21,12 +21,12 @@ Eine gewöhnliche Anwendung benötigt nur ein Profil.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Gibt die Profileinstellungen zurück
-öffentliches void listenginesasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+öffentliches void listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 öffentliches void unloadengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu entladen.
 öffentliches void addengineasync (Konstante fileengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Datei-Engine zu dem Profil hinzuzufügen.
-öffentliches void deleteengineasync (Konstante Std:: String & ID, Konst Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
-public static FILE_API void __CDECL MIP:: fileprofile:: LoadAsync | Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
-public static konstant FILE_API char * __CDECL MIP:: fileprofile:: GetVersion | Ruft die Bibliotheksversion ab.
+öffentliches void deleteengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Datei-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+öffentliches statisches FILE_API void __CDECL MIP:: fileprofile:: LoadAsync | Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
+public static Konstanten FILE_API char * __CDECL MIP:: fileprofile:: GetVersion | Ruft die Bibliotheksversion ab.
 
 ## <a name="members"></a>Member
   

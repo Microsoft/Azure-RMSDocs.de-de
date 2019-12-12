@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: b2a6e3cd6de886c3e3983442a1ec7185b688b662
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558839"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
@@ -21,22 +21,22 @@ Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.
 --------------------------------|---------------------------------------------
 Public Std:: shared_ptr\<contentlabel\> GetLabel ()  |  Startet das Abrufen der Vertraulichkeitsbezeichnung der Datei.
 Public Std:: shared_ptr\<schutzhandler\> getprotection ()  |  Startet das Abrufen der Schutzrichtlinie der Datei.
-öffentliches void classifyasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Führt die Regeln im-Handler aus und gibt die Liste der auszuführenden Aktionen zurück.
-public void inspectasync (Konstante Std:: shared_ptr\<void\>& Kontext)  |  Erstellen Sie ein Datei Inspektor-Objekt, das zum Abrufen von Dateiinhalten aus kompatiblen Dateiformaten verwendet wird.
+öffentliches void classifyasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Führt die Regeln im-Handler aus und gibt die Liste der auszuführenden Aktionen zurück.
+public void inspectasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Erstellen Sie ein Datei Inspektor-Objekt, das zum Abrufen von Dateiinhalten aus kompatiblen Dateiformaten verwendet wird.
 öffentliches void setlabel (Konstante Std:: shared_ptr\<Bezeichnung\>& Bezeichnung, Konstanten labelingoptions & labelingoptions, Konstante Schutzeinstellungen & Schutzeinstellungen)  |  Legt die Vertraulichkeitsbezeichnung für die Datei fest.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Löscht die Vertraulichkeitsbezeichnung aus der Datei.
-öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzdescriptor\>& Schutz Deskriptor, Konstanten Schutzeinstellungen & Schutzeinstellungen)  |  Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
-öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzhandler\>& Schutz Handler)  |  Legt den Schutz für ein Dokument mithilfe eines vorhandenen Schutz Handlers fest.
+öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzdescriptor\>& schutzdescriptor, Konstanten Schutzeinstellungen & Schutzeinstellungen)  |  Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
+öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzhandler\>& schutzhandler)  |  Legt den Schutz für ein Dokument mithilfe eines vorhandenen Schutz Handlers fest.
 public void RemoveProtection()  |  Entfernt den Schutz von der Datei. Wenn der Datei eine Bezeichnung zugeordnet ist, geht diese verloren.
 öffentliches void commitasync (Konst Std:: String & outputfilepath, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the file specified by the \|outputFilePath\ |  übergeben.
 öffentliches void commitasync (Konstanten Std:: shared_ptr\<Stream\>& OutputStream, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the stream specified by the \|outputStream\ |  übergeben.
 public bool IsModified ()  |  Überprüft, ob Änderungen an der Datei vorgenommen wurden.
-öffentliches void getdecryptedtemporaryfileasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Pfad zu einer temporären Datei (die nach Möglichkeit gelöscht wird) zurück, die den entschlüsselten Inhalt darstellt.
-öffentliches void getdecryptedtemporarystreamasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Stream zurück, der den entschlüsselten Inhalt darstellt.
+öffentliches void getdecryptedtemporaryfileasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Pfad zu einer temporären Datei (die nach Möglichkeit gelöscht wird) zurück, die den entschlüsselten Inhalt darstellt.
+öffentliches void getdecryptedtemporarystreamasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Stream zurück, der den entschlüsselten Inhalt darstellt.
 öffentliches void notifycommiterfolgreich (Konstante Std:: String & actualfilepath)  |  Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
 public std::string GetOutputFileName()  |  Berechnet den Namen und die Erweiterung der Ausgabedatei auf Basis des ursprünglichen Dateinamens und der angefallenen Änderungen.
 öffentliches statisches bool IsProtected (Konstante Std:: String & filePath, Konstanten Std:: shared_ptr<MipContext>& mipcontext) | Überprüft, ob eine Datei geschützt ist oder nicht.
-public static FILE_API Std:: Vector&lt;uint8_t&gt; __CDECL MIP:: fileHandler:: getserializedpublishinglicense | Rückgabe der Veröffentlichungs Lizenz, wenn Sie in der Datei gespeichert ist
+öffentliches statisches FILE_API Std:: Vector&lt;uint8_t&gt; __CDECL MIP:: fileHandler:: getserializedpublishinglicense | Rückgabe der Veröffentlichungs Lizenz, wenn Sie in der Datei gespeichert ist
 
 ## <a name="members"></a>Member
   

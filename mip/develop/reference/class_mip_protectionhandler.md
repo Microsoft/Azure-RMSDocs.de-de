@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560114"
 ---
 # <a name="class-mipprotectionhandler"></a>mip::ProtectionHandler-Klasse 
@@ -19,7 +19,7 @@ Verwaltet schutzbezogene Aktionen für eine bestimmte Schutzkonfiguration.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Std:: shared_ptr\<Stream\>-Stream-Datenstrom (Konstanten Std:: shared_ptr\<Stream\>& backingstream, int64_t contentstartposition, int64_t contentsize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
+Public Std:: shared_ptr\<Stream\> kreateprotectedstream (konstant Std:: shared_ptr\<Stream\>& backingstream, int64_t contentstartposition, int64_t contentsize)  |  Erstellt einen geschützten Stream für die Verschlüsselung bzw. Entschlüsselung von Inhalten.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Verschlüsselt einen Puffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Entschlüsselt einen Puffer.
 public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Berechnet die Größe des Inhalts (in Bytes), wenn er mit diesem Schutz Handler verschlüsselt werden soll.

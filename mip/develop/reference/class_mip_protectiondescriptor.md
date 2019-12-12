@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557734"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
@@ -29,7 +29,7 @@ Public Std:: String getContentID () Konstanten  |  Ruft ggf. die Inhalts-ID ab.
 Public Std:: Vector\<Userrights\> getuserrights () Konstanten  |  Ruft die Auflistung von Benutzerrechtszuordnungen ab.
 Public Std:: Vector\<userrollen\> getuserrollen () konstant.  |  Ruft die Auflistung von Benutzerrollenzuordnungen ab.
 öffentliches bool doescontentexpire () konstant  |  Überprüft, ob der Inhalt eine Ablaufzeit hat.
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getcontentvaliduntil () Konstanten  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getcontentvaliduntil () konstant.  |  Ruft den Ablaufzeitpunkt des Schutzes ab.
 public bool DoesAllowOfflineAccess() const  |  Ruft ab, ob der Schutz den Zugriff auf Offlineinhalte erlaubt.
 public std::string GetReferrer() const  |  Ruft die Verweiseradresse des Schutzes ab.
 Public Std:: Map\<Std:: String, Std:: String\> getencryptedappdata () konstant.  |  Ruft anwendungsspezifische Daten ab, die verschlüsselt waren.

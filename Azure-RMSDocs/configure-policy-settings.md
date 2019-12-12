@@ -12,10 +12,10 @@ ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: c4a889c021d6a66a5cde7e071137d9f13dcc0ab1
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559512"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Konfigurieren der Richtlinieneinstellungen für Azure Information Protection
@@ -37,7 +37,7 @@ Beachten Sie, dass Ihre Richtlinieneinstellungen möglicherweise unterschiedlich
 
 ## <a name="to-configure-the-policy-settings"></a>So konfigurieren Sie die Richtlinien Einstellungen
 
-1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie dann zum Bereich **Azure Information Protection** .
+1. Öffnen Sie ein neues Browserfenster und [melden Sie sich beim Azure-Portal an](configure-policy.md#signing-in-to-the-azure-portal), falls Sie dies noch nicht getan haben. Navigieren Sie anschließend zum Bereich **Azure Information Protection**.
     
     Beispielsweise im Suchfeld für Ressourcen, Dienste und Dokumente: beginnen Sie mit der Eingabe von **Informationen** , und wählen Sie **Azure Information Protection**aus.
 
@@ -95,7 +95,7 @@ Beachten Sie, dass Ihre Richtlinieneinstellungen möglicherweise unterschiedlich
     
    - **Geben Sie eine benutzerdefinierte URL für die „Weitere Infos“-Webseite des Azure Information Protection-Clients an**: Benutzer sehen diesen Link im Dialogfeld **Microsoft Azure Information Protection** im Abschnitt **Hilfe und Feedback**, wenn sie in ihren Office-Clientanwendungen auf der Registerkarte **Startseite** die Option **Schützen** > **Hilfe und Feedback** auswählen. Standardmäßig gelangen Sie über diesen Link zur [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)-Website. Sie können eine HTTP- oder HTTPS-URL (empfohlen) eingeben, wenn dieser Link auf eine andere Webseite verweisen soll. Es wird nicht überprüft, ob die eingegebene benutzerdefinierte URL erreichbar ist oder auf allen Geräten ordnungsgemäß angezeigt wird.
         
-       Beispielsweise können Sie für den Helpdesk die Microsoft-Dokumentationsseite eingeben, die Informationen zum Installieren und Verwenden des Clients enthält: `https://docs.microsoft.com/information-protection/rms-client/info-protect-client`. Oder Versionsinformationen der Version: `https://docs.microsoft.com/information-protection/rms-client/client-version-release-history`. Alternativ können Sie eine eigene Webseite veröffentlichen, die Benutzern Informationen zur Kontaktaufnahme mit Ihrem Helpdesk bereitstellt oder ein Video enthält, das Benutzern zeigt, wie die konfigurierten Bezeichnungen verwendet werden.
+       Beispielsweise können Sie für Ihren Helpdesk die Microsoft-Dokumentationsseite eingeben, die Informationen zum Installieren und Verwenden des-Clients enthält: `https://docs.microsoft.com/information-protection/rms-client/info-protect-client`. Oder releaseversionsinformationen: `https://docs.microsoft.com/information-protection/rms-client/client-version-release-history`. Alternativ können Sie eine eigene Webseite veröffentlichen, die Benutzern Informationen zur Kontaktaufnahme mit Ihrem Helpdesk bereitstellt oder ein Video enthält, das Benutzern zeigt, wie die konfigurierten Bezeichnungen verwendet werden.
 
 4. Klicken Sie auf **Speichern**, um Ihre Änderungen zu speichern und diese für Benutzer verfügbar zu machen.
 

@@ -12,10 +12,10 @@ ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
 ms.openlocfilehash: 6157f321b04a4c0b755b1d8e17a663f8f58d281f
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73444816"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
@@ -181,7 +181,7 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
         
             http://<cluster_name>/_wmcs/certification/certification.asmx
 
-2. Starten Sie IIS neu.
+2. Starten Sie die IIS neu.
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 

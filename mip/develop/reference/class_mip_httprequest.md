@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: bfe55f09caaa20687750b055e10828f8cc6df2bd
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560174"
 ---
 # <a name="class-miphttprequest"></a>class mip::HttpRequest 
@@ -22,7 +22,7 @@ Schnittstelle, die eine einfache HTTP-Anforderung beschreibt.
 public const std::string& GetId() const  |  Ruft die Anforderungs-ID ab.
 public HttpRequestType GetRequestType() const  |  Ruft den Anforderungstyp ab.
 public const std::string& GetUrl() const  |  Ruft die Anforderungs-URL ab.
-Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
+öffentliche Konstante Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
 Public Konstanten Std:: Map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () konstant.  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member

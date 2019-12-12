@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790724"
 ---
 # <a name="windows-store-setup"></a>Windows Store-Setup
@@ -32,18 +32,18 @@ Dieses Thema führt Sie durch das Einrichten der Umgebung zum Erstellen eigener 
 -   [Konfigurieren der Entwicklungsumgebung](#configuring-your-development-environment)
 -   [Siehe auch](#see-also)
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 
-Sie benötigen auf Ihrem Entwicklungssystem die folgende Software:
+Sie benötigen die folgende Software auf Ihrem Entwicklungssystem:
 
 -   [Windows 8.1](https://windows.microsoft.com/windows-8/meet)-Betriebssystem
 -   [Windows SDK für Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) oder höher oder Visual Studio Express 2012, das im Windows SDK für Windows 8.0/8.1 enthalten ist
 -   Das MS RMS SDK 4.2-Paket für Windows Store-Anwendungen Weitere Informationen finden Sie unter [Erste Schritte](get-started.md).
--   Authentifizierungsbibliothek: Die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx) wird empfohlen. Auch andere Authentifizierungsbibliotheken können verwendet werden.
+-   Authentifizierungsbibliothek: Wir empfehlen die Verwendung der [Azure AD-Authentifizierungsbibliothek](https://msdn.microsoft.com/library/jj573266.aspx). Auch andere Authentifizierungsbibliotheken können verwendet werden.
 
-Im Thema zu den [Neuheiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
+Im Thema zu den [Neuigkeiten](release-notes.md) finden Sie Informationen zu API-Updates, Geräte- und Umgebungsinformationen, Versionshinweise und häufig gestellte Fragen (FAQ).
 
 ## <a name="optional"></a>Optional
 
@@ -53,7 +53,7 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
 
 
 -   Öffnen Sie Visual Studio.
--   Klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.
+-   Klicken Sie auf **Datei**, auf **Neu**und anschließend auf **Projekt**.
 -   Klicken Sie im Dialogfeld **Neues Projekt** auf **Visual C\#** , und wählen Sie **Leere App (Windows)** aus. Klicken Sie anschließend auf **OK**.
 
     ![Erstellen eines neuen Projekts](../media/winrtsetup-newproj.png)
@@ -63,15 +63,15 @@ Unsere UI-Bibliothek bietet Entwicklern, die keine eigene benutzerdefinierte Ben
     ![Hinzufügen eines Verweises](../media/winrtsetup-addref.png)
 
 -   Klicken Sie im Dialogfeld **Verweis hinzufügen** auf **Durchsuchen**, und wählen Sie die Datei *Microsoft.RightsManagment.dll* aus, die sich in dem Ordner befindet, in den Sie das SDK-Paket extrahiert haben.
--   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für das **Windows Visual C++-Laufzeitpaket für Windows**.
+-   **Verwaltete Apps**: Zum Erstellen einer verwalteten App müssen Sie diesen Verweis hinzufügen. Wählen Sie **Windows 8.1**-&gt;**Erweiterungen** aus, und aktivieren Sie das Kontrollkästchen für **das Windows Visual C++-Laufzeitpaket für Windows**.
 
     ![Hinzufügen von Erweiterungen](../media/winrtsetup-refmngr.png)
 
--   **Hinzufügen von Funktionen**: Ihre Anwendung benötigt die Funktion „Internet (Client & Server)“, um das SDK verwenden zu können. Um diese Funktion Ihrer App hinzuzufügen, öffnen Sie die Datei *Package.appxmanifest* im Projekt, und navigieren Sie zur Registerkarte **Funktionen**.
+-   **Hinzufügen von Funktionen**: Ihre Anwendung benötigt die Funktion „Internet (Client & Server)“, um das SDK verwenden zu können. Um diese Funktion zu Ihrer App hinzuzufügen, öffnen Sie die Datei *Package.appxmanifest* im Projekt, und navigieren Sie zur Registerkarte **Funktionen**.
 
 Sie können jetzt Ihre eigenen neuen Windows Store-Apps erstellen.
 
-### <a name="see-also"></a>Siehe auch
+### <a name="see-also"></a>Weitere Informationen:
 
 [Erste Schritte](get-started.md)
 

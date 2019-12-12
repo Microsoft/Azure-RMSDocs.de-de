@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 876de8047abc4e2f13ee8e103cdfa1648738aa84
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558744"
 ---
 # <a name="class-miphttpresponse"></a>class mip::HttpResponse 
@@ -21,7 +21,7 @@ Schnittstelle, die eine einzelne HTTP-Antwort beschreibt, die von der Client-App
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ruft die Antwort-ID ab.
 public int32_t GetStatusCode() const  |  Ruft den Antwortstatuscode ab.
-Public Konstanten Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
+öffentliche Konstante Std:: Vector\<uint8_t\>& GetBody () Konstanten  |  Ruft den Text der Anforderung ab.
 Public Konstanten Std:: Map\<Std:: String, Std:: String, caseinsensitivecomparator\>& gezeige Aders () konstant.  |  Ruft Anforderungsheader ab.
   
 ## <a name="members"></a>Member

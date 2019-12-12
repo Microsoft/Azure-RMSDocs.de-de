@@ -4,7 +4,7 @@ description: Phase 5 der Migration von AD RMS zu Azure Information Protection de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6be761f99415f3f8e2bfa9de6f27a924316de448
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: ee5ecddb5ba3c5c1add15b7e75fd2fe6f53a2271
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684485"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935485"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Migrationsphase 5: Aufgaben nach der Migration
 
@@ -66,7 +66,7 @@ Umleitung über DNS:
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Schritt 11: Durchführen der Clientmigrationstasks
 
-Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574.aspx)bereitgestellt haben.
+Für Clients für mobile Geräte und Mac-Computer: Entfernen Sie die DNS-SRV-Einträge, die Sie bei der Bereitstellung der [AD RMS-Erweiterung für mobile Geräte](https://technet.microsoft.com/library/dn673574.aspx) erstellt haben.
 
 Wenn die DNS-Änderungen weitergegeben wurden, ermitteln und verwenden diese Clients den Azure Rights Management-Dienst automatisch. Mac-Computer, die Office Mac ausführen, speichern jedoch die Informationen von AD RMS zwischen. Für diese Computer kann der Vorgang bis zu 30 Tage dauern. 
 
@@ -112,7 +112,7 @@ So entfernen Sie die Onboarding-Steuerelemente:
 
     In der Ausgabe sollte **Lizenz** nun **FALSE** sein, und es wird keine GUID für die **SecurityGroupOjbectId** angezeigt.
 
-Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden diesen Task an folgendem Speicherort: **Microsoft** > **Windows** > **Active Directory Rights Management Services-Client**
+Wenn Sie Office 2010 verwenden, und Sie den Task **Verwaltung der AD RMS-Vorlagen für Benutzerrechterichtlinien (Automatisiert)** in der Windows-Taskplanerbibliothek aktiviert haben, deaktivieren Sie diesen Task, da er nicht vom Azure Information Protection-Client verwendet wird. Dieser Task wird in der Regel mit der Gruppenrichtlinie aktiviert und unterstützt eine AD RMS-Bereitstellung. Sie finden den Task an folgendem Speicherort: **Microsoft** > **Windows** > **Active Directory Rights Management Services-Client**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Schritt 12: Neuerstellen Ihres Azure Information Protection-Mandantenschlüssels
 
@@ -128,11 +128,11 @@ Der Übergang von einem Schlüssel zum anderen geschieht nicht sofort, sondern �
 
 So erstellen Sie Ihren Azure Information Protection-Mandantenschlüssel neu:
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Microsoft verwaltet wird**: Führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
+- **Wenn Ihr Mandanten Schlüssel von Microsoft verwaltet wird**: führen Sie das PowerShell-Cmdlet [Set-aipservicekeyproperties](/powershell/module/aipservice/set-aipservicekeyproperties) aus, und geben Sie den Schlüssel Bezeichner für den Schlüssel an, der automatisch für Ihren Mandanten erstellt wurde. Sie können den Wert angeben, der angegeben werden soll, indem Sie das Cmdlet [Get-aipservicekeys](/powershell/module/aipservice/get-aipservicekeys) ausführen. Der Schlüssel, der automatisch für Ihren Mandanten erstellt wurde, hat das am weitesten zurückliegende Erstellungsdatum, damit Sie ihn mithilfe des folgenden Befehls identifizieren können:
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Wenn Ihr RMS-Mandantenschlüssel von Ihnen (BYOK) verwaltet wird**: Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
+- **Wenn Ihr Mandanten Schlüssel von Ihnen verwaltet wird (Byok)** : Wiederholen Sie in Azure Key Vault den Schlüssel Erstellungs Vorgang für Ihren Azure Information Protection-Mandanten, und führen Sie dann das Cmdlet " [use-aipservicekeyvaultkey](/powershell/module/aipservice/use-aipservicekeyvaultkey) " erneut aus, um den URI für diesen neuen Schlüssel anzugeben. 
 
 Weitere Informationen zum Verwalten des Azure Information Protection-Mandantenschlüssels finden Sie unter [Vorgänge für Ihren Azure Information Protection-Mandantenschlüssel](./operations-tenant-key.md).
 

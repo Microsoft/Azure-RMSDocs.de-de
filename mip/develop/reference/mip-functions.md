@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557996"
 ---
 # <a name="functions"></a>Funktionen
@@ -33,10 +33,10 @@ Public Konstanten Std:: String & getcustomsettingsensitivitytypesdatafile ()    
 Public Konstanten Std:: String & getcustomsettinglabelcustompropertiessyncenabled ()       |  Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
 Public Konstanten Std:: Map\<flightingfeature, bool\>& getdefaultfeaturesettings ()       |  Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
 Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: IStream\>& stdistream)       |  Erstellt einen Stream aus einer Std:: IStream-Klasse.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "kreatestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: ostream\>& stdostream)       |  Erstellt einen Stream aus einer Std:: ostream-Klasse.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: ostream\>& stdostream)       |  Erstellt einen Stream aus einer Std:: ostream-Klasse.
 Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: iostream\>& stdiostream)       |  Erstellt einen Stream aus einer Std:: iostream-Klasse.
-Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "", "upatestreamfrombuffer" (uint8_t *, Konstante int64_t       |  Erstellt einen Stream aus einem Puffer.
-Public MIP_API Std:: Vector\<uint8_t\> Read FromStream (konstant Std:: shared_ptr\<MIP:: Stream\>& Stream)       |  Liest alle Bytes des Streams.
+Public MIP_API Std:: shared_ptr\<MIP:: Stream\> featestreamfrombuffer (uint8_t * Puffer, Konstante int64_t Größe)       |  Erstellt einen Stream aus einem Puffer.
+öffentliches MIP_API Std:: Vector\<uint8_t\> Read FromStream (Konstante Std:: shared_ptr\<MIP:: Stream\>& Stream)       |  Liest alle Bytes des Streams.
 öffentlicher Aktionstyp-Operator & (Aktionstyp a, Aktionstyp b)       |  Und (&)-Operator für Aktionstyp-Enum.
 Public-Aktionstyp Operator ^ (Aktionstyp a, Aktionstyp b)       |  XOR (^)-Operator für Aktionstyp-Enum.
 

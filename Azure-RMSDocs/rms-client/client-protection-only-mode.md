@@ -4,7 +4,7 @@ description: Informationen für Benutzer, die den Azure Information Protection-C
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2b604593dfaf72b20e68d09fbd1928849b83ae9d
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: f7a2a84e6a6b180685594deb6b7ea455454dd161
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690212"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935689"
 ---
-# <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Leitfaden: Reiner Schutzmodus für den Azure Information Protection-Client
+# <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Benutzerhandbuch: Reiner Schutzmodus für den Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Wenn der Azure Information Protection-Client keine Bezeichnungen aufweist, um Ihre Dokumente und E-Mails zu klassifizieren, wird er im **reinen Schutzmodus** ausgeführt. Wenn Sie in diesem Modus z.B. den Windows-Explorer verwenden und mit der rechten Maustaste auf **Klassifizieren und schützen** klicken, wird Folgendes angezeigt:
 
@@ -59,9 +59,9 @@ Der reine Schutzmodus wird in den folgenden Szenarien ausgeführt:
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Unterstützte Aufgaben für den reinen Schutzmodus
 
-- Dokumente und E-Mails mithilfe des Office Information Rights Management (IRM)-Features innerhalb von Office-Apps schützen (und den Schutz aufheben): Zum Beispiel: Klicken Sie auf **Datei** > **Info** > **Dokument schützen** > **Zugriff beschränken**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
+- Dokumente und E-Mails mithilfe des Office Information Rights Management (IRM)-Features innerhalb von Office-Apps schützen (und den Schutz aufheben): Beispiel: Klicken Sie auf **Datei** > **Info** > **Dokument schützen** > **Zugriff einschränken**. Weitere Informationen finden Sie unter [Verwenden von Informationsschutz mit Office 365, Office 2019, Office 2016 oder Office 2013](../help-users.md#using-information-protection-with-Office-365-Office 2019-Office-2016-or-Office-2013).
 
-- Dateien mithilfe von Windows-Datei-Explorer schützen (und deren Schutz aufheben): Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu **klassifizieren und zu schützen**. Klicken Sie zum Anwenden von Schutz, der von Ihrem Administrator konfiguriert wurde, im Dialogfeld **Klassifizieren und schützen - Azure Information Protection** auf **Vorlage auswählen**, und wählen Sie dann eine der verfügbaren Vorlagen aus.
+- Dateien mithilfe des Windows-Datei-Explorer schützen (und den Schutz aufheben): Klicken Sie mit der rechten Maustaste auf die Datei, Dateien oder den Ordner, und wählen Sie dann **Klassifizieren und schützen** aus. Klicken Sie zum Anwenden von Schutz, der von Ihrem Administrator konfiguriert wurde, im Dialogfeld **Klassifizieren und schützen - Azure Information Protection** auf **Vorlage auswählen**, und wählen Sie dann eine der verfügbaren Vorlagen aus.
 
 - Zeigen Sie geschützte Dateien mit dem Azure Information Protection-Viewer an.
 

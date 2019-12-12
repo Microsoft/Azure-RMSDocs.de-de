@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560202"
 ---
 # <a name="class-miphttpdelegate"></a>class mip::HttpDelegate 
@@ -20,7 +20,7 @@ Schnittstelle zum Überschreiben der HTTP-Verarbeitung.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: shared_ptr\<httpoperation\> Send (Konstanten Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Sendet die HTTP-Anforderung.
-Public Std:: shared_ptr\<httpoperation\> SendAsync (konstant Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context, Konstante Std:: function\<void (Std) :: shared_ptr\<httpoperation\>)  |  HTTP-Anforderung asynchron senden.
+Public Std:: shared_ptr\<httpoperation\> SendAsync (Konstante Std:: shared_ptr\<HttpRequest\>& Request, Konstanten Std:: shared_ptr\<void\>& context, Konstanten Std:: function\<void (Std:: shared_ptr\<httpoperation\>)  |  HTTP-Anforderung asynchron senden.
 öffentliches void CancelOperation (Konstante Std:: String & RequestId)  |  Abbrechen eines bestimmten http-Vorgangs.
 öffentliches void cancelalloperations ()  |  Abbrechen fortlaufender HTTP-Anforderungen.
   

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 5bdc88746a8921f306d9d52dbe75f3c2b826a5b6
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560139"
 ---
 # <a name="class-miplabel"></a>mip::Label-Klasse 
@@ -28,7 +28,7 @@ public const std::string& GetTooltip() const  |  Ruft die QuickInfo-Beschreibung
 Public Konstanten Std:: String & getautotooltip () Konstanten  |  Hiermit wird die QuickInfo-Beschreibung der Klassifizierung angezeigt, die dazu führt, dass diese Bezeichnung angewendet wird.
 public bool IsActive() const  |  Ruft einen booleschen Wert ab, der angibt, ob die Bezeichnung aktiv ist
 Public Std:: weak_ptr\<Bezeichnung\> GetParent () Konstanten  |  Ruft die übergeordnete Bezeichnung ab
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<Label\>\>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
+Public Konstanten Std:: Vector\<Std:: shared_ptr\<Bezeichnung\>\>& GetChildren () Konstanten  |  Ruft die untergeordneten Bezeichnungen der aktuellen Bezeichnung ab
 Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Die benutzerdefinierten Einstellungen einer Bezeichnung werden angezeigt.
 public ActionSource GetActionSource() const  |  Ruft die Aktions Quelle der Bezeichnung ab.
   

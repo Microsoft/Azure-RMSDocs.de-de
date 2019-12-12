@@ -4,7 +4,7 @@ description: Sofort erkennbare Administratoraufgaben, die Sie bisher im klassisc
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5018e69cf1798592d07b053eaeaccef234f71561
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b4e4e093eacd7903a382ba779d0a4b5b7a2aa7ec
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559864"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935451"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Aufgaben, die Sie bisher über das klassische Azure-Portal ausgeführt haben
 
@@ -57,7 +57,7 @@ Neue Funktionen im Azure-Portal:
 
 - Sie können Vorlagen in Bezeichnungen konvertieren, sodass Sie ein einzelnes Objekt verwalten, anstatt eine Vorlage und eine Bezeichnung unabhängig zu verwalten. Anweisungen finden Sie unter [Konvertieren von Vorlagen in Bezeichnungen](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Unterstützung für andere Administrator Rollen: während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection mit vielen anderen Administrator Rollen zu verwalten. Dazu gehören Kompatibilitäts **Administrator** und Kompatibilitäts **Daten Administrator**. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
+- Unterstützung für andere Administrator Rollen: während Sie sich beim klassischen Azure-Portal als globaler Administrator anmelden mussten, um Azure Rights Management zu konfigurieren, können Sie sich beim Azure-Portal anmelden, um Azure Information Protection zu verwalten, indem Sie viele andere Administrator Rollen verwenden, die **complianceadministrator** und Kompatibilitäts **Daten Administrator**einschließen. Die vollständige Liste der unterstützten Rollen finden Sie im Abschnitt " [Anmelden beim Azure-Portal](configure-policy.md#signing-in-to-the-azure-portal) ".
 
 Die PowerShell-Cmdlets zum Erstellen und Verwalten von Vorlagen und zum Aktivieren oder Deaktivieren des Diensts werden weiterhin ohne Änderungen unterstützt.
 

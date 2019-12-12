@@ -13,10 +13,10 @@ ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
-ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73446037"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
@@ -28,7 +28,7 @@ ms.locfileid: "73446037"
 
 Sie können den Azure Information Protection Unified Bezeichnung-Client aus dem [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018)herunterladen.
 
-Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Informationen enthalten. Schutz einheitlicher**Bezeichnungs Client und die Klassifizierung von **Updates**. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
+Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Version der allgemeinen Verfügbarkeit auch im Microsoft Update Katalog mit dem Produktnamen **Microsoft Azure Information Protection** > **Microsoft Azure Information Protection Unified**-Bezeichnungs Client und der Klassifizierung von **Updates**enthalten. Diese Aufnahme in den Katalog bedeutet, dass Sie den Client mithilfe von WSUS oder Configuration Manager oder anderen Softwarebereitstellungsmechanismen, die Microsoft Update verwenden, aktualisieren können.
 
 Weitere Informationen finden Sie unter [aktualisieren und Verwalten des Azure Information Protection Unified Bezeichnung-Clients](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
@@ -40,7 +40,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Allgemein verfügbare Versionen, die nicht mehr unterstützt werden:
 
-|Client Version|Datum der Veröffentlichung|
+|Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
 |2.0.778.0|04/16/2019|
 
@@ -81,7 +81,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
     
     - Ereignis-IDs für die Start-und Beendigungs Zyklen der Scanner werden nicht in das Windows-Ereignisprotokoll geschrieben. Verwenden Sie stattdessen die Azure-Portal für diese Informationen.
     
-    - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
+    - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problemumgehungen:
         - Für neue Bezeichnungen: Fügen Sie im Azure-Portal [die Bezeichnung](../configure-policy-add-remove-label.md) , die Sie verwenden möchten, der globalen Richtlinie oder einer Bereichs bezogenen Richtlinie hinzu.
         - Umbenannte Bezeichnungen: Schließen Sie die Azure-Portal, und öffnen Sie Sie erneut.
     
@@ -107,7 +107,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 - Neues Cmdlet " [Export-aiplogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)", um alle Protokolldateien aus "%LocalAppData%\microsoft\msip\logs" zu erfassen und Sie in einer einzelnen komprimierten Datei mit dem ZIP-Format zu speichern. Diese Datei kann dann an Microsoft-Support gesendet werden, wenn Sie zum Untersuchen eines gemeldeten Problems aufgefordert werden, Protokolldateien zu senden.
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - Sie können mit dem Datei-Explorer erfolgreich Änderungen an einer geschützten Datei vornehmen und mit der rechten Maustaste klicken, nachdem ein Kennwort für die Datei entfernt wurde.
 
@@ -117,7 +117,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 **Weitere Änderungen**
 
-- Wenn Sie [Einstellungen zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) , werden die\>Ordner%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName. exe* anstelle von%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip gelöscht. Pfalz.
+- Durch [Zurücksetzen](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) werden nun die\>Ordner%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName. exe* anstelle des Ordners%LocalAppData%\microsoft\msip\mip\\ *\<ProcessName\>* \mip gelöscht.
 
 - " [Get-aipfilestatus](/powershell/module/azureinformationprotection/get-aipfilestatus) " enthält jetzt die Inhalts-ID für ein geschütztes Dokument.
 
@@ -127,7 +127,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 Unterstützt durch 04/23/2020
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - Wenn Sie die erweiterte Einstellung [outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) verwenden, um eine andere Standard Bezeichnung für Outlook festzulegen, und die angegebene Bezeichnung keine Unterbezeichnungen für die Bezeichnungs Richtlinie hat, wird die Bezeichnung ordnungsgemäß angewendet.
 
@@ -139,7 +139,7 @@ Unterstützt durch 04/23/2020
 
 Unterstützt durch 03/03/2020
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - Der Client kann seine Richtlinie herunterladen und die aktuellen Vertraulichkeits Bezeichnungen anzeigen. Diese Korrektur ist nach dem Upgrade von einer früheren Version erforderlich, und Sie haben keine benutzerdefinierten Informationstypen in Ihrem Beschriftungs Center konfiguriert.
 
@@ -186,7 +186,7 @@ Unterstützt durch 02/06/2020
     - Als veraltet markierte Cmdlets, die eine direkte Verbindung mit einem Schutzdienst herstellen: Clear-rmsauthentication, Get-rmsfilestatus, Get-rmsserver, Get-rmsserverauthentication, Get-RMSTemplate, Protect-rmsfile, Set-rmsserverauthentication, Unprotect-rmsfile
 
 
-**Fixes**
+**Fehlerbehebungen:**
 
 - Unterstützung für [Inhalts Übereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
 

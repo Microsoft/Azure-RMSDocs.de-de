@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: dd357e74e71b9e5b296825b395ecd54b14c332d5
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788693"
 ---
 # <a name="rights-management-sdk42"></a>Rights Management SDK 4.2

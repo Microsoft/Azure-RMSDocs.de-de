@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: bc27cae6020034029712e96fa5ae500d7afebf9b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559371"
 ---
 # <a name="class-mipcomputeenginesettings"></a>MIP:: computeengine:: Settings-Klasse 
@@ -18,7 +18,7 @@ ms.locfileid: "73559371"
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante ApplicationInfo & ApplicationInfo, Konstante Std:: shared_ptr\<telemetrydelegat\>& telemetrydelegat, Konstante Std:: shared_ptr\<loggerdelegat\>& loggerdelegat, Konstanten Std:: String & Hostname, Konst Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& CustomProperties, Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  | Noch nicht dokumentiert.
+öffentliche Einstellungen (Konstante ApplicationInfo & ApplicationInfo, Konstante Std:: shared_ptr\<telemetrydelegat\>& telemetrydelegat, Konstante Std:: shared_ptr\<loggerdelegat\>& loggerdelegat, Konstante Std:: String & Hostname, Konstante Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& CustomProperties, Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  | Noch nicht dokumentiert.
 public const ApplicationInfo& GetApplicationInfo() const  | Noch nicht dokumentiert.
 Public Std:: shared_ptr\<telemetrydelegat\> gettelemetrydelegat () konstant  | Noch nicht dokumentiert.
 Public Std:: shared_ptr\<loggerdelegat\> getloggerdeleg() Konstanten  | Noch nicht dokumentiert.

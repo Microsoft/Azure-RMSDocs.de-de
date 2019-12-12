@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a1938601e036f7fb4d84a9a5815016dbda4509b7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558506"
 ---
 # <a name="class-mippolicyengine"></a>mip::PolicyEngine-Klasse 
@@ -20,12 +20,12 @@ Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Die Einstellungen der Richtlinien-Engine werden angezeigt.
-Public Konstanten Std:: Vector\<Std:: shared_ptr\<Label\>\>& listsensitivitylabels ()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
+Public Konstanten Std:: Vector\<Std:: shared_ptr\<Bezeichnung\>\>& listsensitivitylabels ()  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeitsbezeichnungen auf.
 Public Konstanten Std:: Vector\<Std:: shared_ptr\<sensitivitytypesrulepackage\>\>& listsensitivitytypes () Konstanten  |  Listet die mit der Richtlinien-Engine verknüpften Vertraulichkeits Typen auf.
 public const std::string& GetMoreInfoUrl() const  |  Geben Sie eine URL an, um weitere Informationen zur Richtlinie bzw. zu den Bezeichnungen zu suchen.
 public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss oder nicht.
 Public Std:: shared_ptr\<Bezeichnung\> getdefaultsensitivitylabel ()  |  Ruft die Standardvertraulichkeitsbezeichnung ab.
-Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstante Std:: String & ID) konstant  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
+Public Std:: shared_ptr\<Bezeichnung\> getlabelbyid (Konstante Std:: String & ID) Konstanten  |  Ruft die Bezeichnung entsprechend der angegebenen ID ab.
 Public Std:: shared_ptr\<policyhandler\> kreatepolicyhandler (bool isauditdiscoveryaktivierte)  |  Erstellt einen Richtlinienhandler, um Funktionen für den Ausführungszustand einer Datei auszuführen, die im Zusammenhang mit einer Richtlinie stehen.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
 Public Konstanten Std:: String & getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
@@ -34,7 +34,7 @@ Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getc
 Public Konstanten Std:: String & getpolicyfleid () Konstanten  |  Ruft die ID der Richtlinien Datei ab.
 Public Konstanten Std:: String & getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
 public bool hasclassificationrules () konstant  |  Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
-Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () Konstanten  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
+Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () konstant.  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
   
 ## <a name="members"></a>Member
   

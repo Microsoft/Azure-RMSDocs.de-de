@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: bef08b98e09f9c6802ac9e39de293e9ec25bd380
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558633"
 ---
 # <a name="class-mipmsgattachmentdata"></a>MIP:: msgattachmentdata-Klasse 
@@ -18,7 +18,7 @@ ms.locfileid: "73558633"
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
+öffentliche Konstante Std:: Vector\<uint8_t\>& GetBytes ()  |  Anlage als binären Byte Vektor erhalten.
 Public Std:: shared_ptr\<Stream\> GetStream () Konstanten  |  Anlage als binären Stream erhalten.
 public const std::string& GetName() const  |  Der Name der Anlage wird als Zeichenfolge angezeigt.
 Public Konstanten Std:: String & getlongname () Konstanten  |  Langen Namen der Anlage als Zeichenfolge erhalten.

@@ -7,17 +7,17 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9eb44a39f32c2997729e6d77ddace96c580328cd
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557739"
 ---
 # <a name="class-mipprotectionengine"></a>mip::ProtectionEngine-Klasse 
 Verwaltet schutzbezogene Aktionen, die sich auf eine bestimmte Identität beziehen.
   
 ## <a name="summary"></a>Zusammenfassung
- Mitglieder                        | Beschreibungen                                
+ Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die Engine-Einstellungen ab.
 öffentliches void gettemplatesasync (Konst Std:: shared_ptr\<schutzengine:: Observer\>& Observer, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Ruft die Sammlung von Vorlagen ab, die einem Benutzer zur Verfügung stehen.
@@ -29,7 +29,7 @@ Public Std:: shared_ptr\<schutzhandler\> \| ateschutzhandlerforpublishing (konst
 öffentliches void-Ereignis erstellungshandlerforconsumptionasync (Konstante Schutz Handler:: consumptionsettings & Einstellungen, Konstante Std:: shared_ptr\<Schutz Handler:: Observer\>& Observer, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Erstellt einen Schutzhandler, in dem bestimmten Benutzern Rechte bzw. Rollen zugewiesen werden.
 Public Std:: shared_ptr\<schutzhandler\> \| ateschutzhandlerforverbrauch (Konstante Schutz Handler:: consumptionsettings & Einstellungen, Konstante Std:: shared_ptr\<void\>& Kontext )  |  Erstellt einen Schutzhandler, in dem bestimmten Benutzern Rechte bzw. Rollen zugewiesen werden.
   
-## <a name="members"></a>Mitglieder
+## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
 Ruft die Engine-Einstellungen ab.

@@ -12,10 +12,10 @@ ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
 ms.custom: dev
 ms.openlocfilehash: 61eda99c43493ad4221b470781f4a8ea319ce5fc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788462"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Vorgehensweise: Erneuern eines symmetrischen Schlüssels in Azure Information Protection
@@ -26,7 +26,7 @@ Wenn Sie in Azure Active Directory (Azure AD) ein Dienstprinzipalobjekt erstelle
 
 In den folgenden Schritten wird das Erneuern eines symmetrischen Schlüssels veranschaulicht. 
 
-## <a name="prerequisites"></a>Vorraussetzungen
+## <a name="prerequisites"></a>Voraussetzungen
 
 * Das Azure AD PowerShell-Modul (Azure Active Directory) muss wie in der [Azure AD Powershell Reference (Azure AD PowerShell-Referenz)](https://docs.microsoft.com/powershell/msonline/) beschrieben installiert werden.
 
@@ -100,7 +100,7 @@ Sie können anschließend den alten symmetrischen Schlüssel mit dem [`Remove-Ms
 Remove-MsolServicePrincipalCredential -KeyId acb9ad1b-36ce-4a7d-956c-40e5ac29dcbe -ObjectId 0ee53770-ec86-409e-8939-6d8239880518
 ```
 
-## <a name="related-topics"></a>Verwandte Themen
+## <a name="related-topics"></a>Zugehörige Themen
 
 * [How-to: enable your service application to work with cloud-based RMS (Vorgehensweise: Ermöglichen der Verwendung von cloudbasiertem RMS für Ihre Dienstanwendung)](how-to-use-file-api-with-aadrm-cloud.md)
 * [Azure Active Directory MSOnline Powershell reference (MSOnline-PowerShell-Referenz für Azure Active Directory)](https://docs.microsoft.com/powershell/msonline/)

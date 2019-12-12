@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d1c1a66ce3821bf3d552ee0daa0648940b645fcb
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560263"
 ---
 # <a name="class-mipfilehandlerobserver"></a>mip::FileHandler::Observer-Klasse 
@@ -21,17 +21,17 @@ Alle Fehler erben von MIP:: Error. Der Client sollte die Engine nicht in dem Thr
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public virtual void onkreatefilehandlersuccess (Konstante Std:: shared_ptr\<fileHandler\>& fileHandler, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der Handler erfolgreich erstellt wurde.
-public virtual void onkreatefilehandlerfailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der Handler einen Fehler ausgelöst hat
+public virtual void onkreatefilehandlerfailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der Handler einen Fehler ausgelöst hat
 public virtual void onclassifysuccess (konstant Std:: Vector\<Std:: shared_ptr\<Action\>\>& Actions, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird beim Klassifizieren von Erfolg aufgerufen.
 public virtual void onclassifyfailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn eine Klassifizierung fehlgeschlagen
-public virtual void ongetdecryptedtemporaryfilesuccess (Konstante Std:: String & decryptedfilepath, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei erfolgreich abgerufen wird.
-public virtual void ongetdecryptedtemporaryfilefailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei nicht abgerufen werden konnte.
+public virtual void ongetdecryptedtemporaryfilesuccess (Konstanten Std:: String & decryptedfilepath, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei erfolgreich abgerufen wird.
+öffentliches virtuelles void-ongetdecryptedtemporaryfilefailure (konstant Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die entschlüsselte temporäre Datei nicht abgerufen werden konnte.
 public virtual void ongetdecryptedtemporarystreamsuccess (konstant Std:: shared_ptr\<Stream\>& decryptedstream, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream erfolgreich abgerufen wurde.
-public virtual void ongetdecryptedtemporarystreamfailure (konstant Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream abgerufen wurde.
+public virtual void ongetdecryptedtemporarystreamfailure (Konstanten Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn der entschlüsselte temporäre Stream abgerufen wurde.
 öffentliches virtuelles void-oncommitsuccess (boolcommit, Konst Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen erfolgreich ist und diese erfolgreich in der Datei übernommen werden
 public virtual void oncommitfailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn die Ausführung des Commits für die Änderungen fehlschlägt
 public virtual void oninspectsuccess (konstant Std:: shared_ptr\<fileinspector\>& fileinspector, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Erfolg überprüfen.
-public virtual void oninspectfailure (konstant Std:: exception_ptr & Error, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn bei der Überprüfung
+public virtual void oninspectfailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn bei der Überprüfung
   
 ## <a name="members"></a>Member
   

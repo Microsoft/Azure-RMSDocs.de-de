@@ -14,10 +14,10 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479190"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
@@ -592,7 +592,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiele:
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +604,11 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort, oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiele: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiele:
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -670,7 +670,7 @@ Geben Sie einen Namen für die Migrationsregel an. Verwenden Sie einen aussagekr
 
 Anforderung: Dokumente mit der Bezeichnung "vertraulich" der sicheren Insel sollten von Azure Information Protection als "vertraulich" neu berechnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Vertraulich**. Sie hat die Bezeichnungs-ID **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -679,7 +679,7 @@ Für dieses Beispiel gilt Folgendes:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c,"Secure Islands label is Confidential",Classification,Confidential|
 
@@ -687,7 +687,7 @@ Erweiterte Clienteinstellung:
 
 Anforderung: Dokumente, die von Secure Islands als "vertraulich" bezeichnet werden, sollten durch Azure Information Protection als "streng vertraulich" neu zugeordnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Streng vertraulich** und hat die Bezeichnungs-ID **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -696,7 +696,7 @@ Für dieses Beispiel gilt Folgendes:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f,"Secure Islands label is Sensitive",Classification,Sensitive|
 
@@ -705,7 +705,7 @@ Erweiterte Clienteinstellung:
 
 Anforderung: Sie verfügen über zwei sichere Inseln-Bezeichnungen, die das Wort "Internal" enthalten, und Sie möchten, dass Dokumente, die eine dieser sicheren Inseln-Bezeichnungen aufweisen, von Azure Information Protection als "Allgemein" neu berechnet werden.
 
-Für dieses Beispiel gilt Folgendes:
+In diesem Beispiel:
 
 - Die Azure Information Protection-Bezeichnung, die Sie verwenden werden, lautet **Allgemein** und hat die Bezeichnungs-ID **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -714,7 +714,7 @@ Für dieses Beispiel gilt Folgendes:
 Erweiterte Clienteinstellung:
 
     
-|Name|Wert|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"Secure Islands label contains Internal",Classification,.\*Internal.\*|
 
@@ -859,7 +859,7 @@ Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet,
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Zum Beispiel:
+Beispiele:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -982,11 +982,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Zum Beispiel:
+     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Beispiele:
     
     **msip_labels: MSIP_Label_0e421e6d-EA17-4f DB-8F 01-93a3e71333b8_Enabled = true**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiele:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

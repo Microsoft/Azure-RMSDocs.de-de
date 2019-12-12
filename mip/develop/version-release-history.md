@@ -9,15 +9,15 @@ ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479111"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
 
-## <a name="servicing"></a>Deten 
+## <a name="servicing"></a>Unterstützung 
 
 Jede allgemein verfügbare Version (General Availability, GA) wird sechs Monate lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
 
@@ -214,7 +214,7 @@ Mit dieser Version wird die Unterstützung für die folgenden Plattformen eingef
 - Die serialisierte Veröffentlichungs Lizenz kann jetzt direkt aus einer Datei ohne http-Vorgänge über MIP:: fileHandler:: getserializedpublishinglicense abgerufen werden.
 - Anwendungen werden benachrichtigt, ob ein HTTP-Vorgang erforderlich ist, um die Erstellung eines MIP:: fileengine/MIP::P olicyengine über MIP:: fileprofile:: Observer:: onaddpolicyenginestarting/MIP::P olicyprofile:: Observer:: onaddenginestarting abzuschließen.
 - Die Erkennung, ob geschützte Inhalte ein Ablaufdatum aufweisen oder nicht, wurde mit der Hilfsmethode "MIP::P rotectiondescriptor::D oescontentexpire" vereinfacht.
-- Ordnung
+- Klassifizierung:
   - Empfindlichkeits Typen (Regex-Ausdrücke für CC-, Passport # s usw.) können vom SCC-Dienst abgerufen werden.
     - Aktivieren Sie das Feature, indem Sie MIP:: fileengine:: Settings/MIP::P olicyengine:: Settings-Flag festlegen.
     - Lese Typen über MIP:: fileengine:: listsensitivitytypes/MIP::P olicyengine:: listsensitivitytypes

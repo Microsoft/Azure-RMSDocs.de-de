@@ -4,7 +4,7 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 39fa96ed1c355e0cef12dfd87950b9ab0c495c29
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 537318bd21ec27d91fc1868d4c9e4ef4b6a8fa35
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690262"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935672"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
 >
-> *Anweisungen für: [Azure Information Protection-Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Nachdem Sie Ihre Dokumente mithilfe von Azure Information Protection geschützt haben, können Sie nachverfolgen, wie andere mit Ihren geschützten Dokumenten verfahren. Bei Bedarf können Sie auch den Zugriff auf diese Dokumente widerrufen, wenn Benutzer nicht mehr in der Lage sein sollen, sie zu lesen. Hierfür verwenden Sie die **Website zum Nachverfolgen von Dokumenten**. Auf diese Website können Sie über Windows-Computer, Mac-Computer und sogar Tablets und Smartphones zugreifen.
 
@@ -38,7 +38,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
         
         ![Symbol zum Widerrufen des Zugriffs auf der Website für die Dokumentenverfolgung](../media/tracking-site-revoke-access-icon.png)
         
-- Wenn Sie nach Excel exportieren möchten: 
+- Wenn Sie das Dokument nach Excel exportieren möchten: 
     
     - Klicken Sie auf **Nach CSV exportieren**, sodass Sie dann die Daten ändern und eigene Ansichten und Diagramme erstellen können:
          
@@ -61,7 +61,7 @@ Folgende Aktionen können Sie auf der Website zum Nachverfolgen von Dokumenten a
 Sie können nur die von Ihnen geschützten Dokumente nachverfolgen und widerrufen, es sei denn, Sie sind ein Administrator. Sie können nicht Ihre geschützten E-Mails mithilfe der Website für die Dokumentnachverfolgung nachverfolgen.
 
 > [!NOTE] 
-> Wenn Ihr Administrator Datenschutzkontrollen für die Website für die Dokumentnachverfolgung konfiguriert hat, können Sie möglicherweise nicht sehen, wenn Benutzer in Ihrer Organisation auf ein von Ihnen nachverfolgtes Dokument zugegriffen haben. Administratoren können alle Benutzer oder nur bestimmte Benutzer ausschließen. Sie können jedoch den Zugriff auf die nachverfolgten Dokumente jederzeit widerrufen.
+> Wenn Ihr Administrator Datenschutz Kontrollen für die Website zum Nachverfolgen von Dokumenten konfiguriert hat, werden Sie möglicherweise nicht festzustellen, wann Benutzer aus Ihrer Organisation auf ein von Ihnen überwachtes Dokument zugegriffen haben. Ein Administrator kann alle Benutzer oder nur einige Benutzer ausschließen. Sie können jedoch den Zugriff auf die nachverfolgten Dokumente jederzeit widerrufen.
 
 Um ein von Ihnen geschütztes Dokument nachzuverfolgen, müssen Sie es mit Ihrem Windows-Computer bei der Website für die Dokumentnachverfolgung registrieren. Zu diesem Zweck verwenden Sie entweder den Datei-Explorer oder die Office-Apps.
 
@@ -69,7 +69,7 @@ Wenn Sie über die aktuelle allgemein verfügbare Version des Azure Information 
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Verwenden von Office zum Nachverfolgen oder Widerrufen des Dokuments
 
-Bei den Office-Anwendungen wie Word, Excel und PowerPoint: 
+In den Office-Anwendungen, Word, Excel und PowerPoint: 
 
 1. Öffnen Sie das geschützte Dokument, das Sie nachverfolgen oder widerrufen möchten.
 
@@ -102,17 +102,17 @@ Nachdem Sie das geschützte Dokument mithilfe der Office-Apps oder des Datei-Exp
 
 - Besuchen Sie die [Website für die Dokumentverfolgung](https://go.microsoft.com/fwlink/?LinkId=529562) über Ihren Windows-PC, Macintosh-Computer oder Ihr mobiles Gerät.
 
-    **Unterstützte Browser**: Es wird empfohlen, Internet Explorer mit mindestens Version 10 zu verwenden. Sie können jedoch einen der folgenden Browser verwenden, um die Website für die Dokument Nachverfolgung zu verwenden:
+    **Unterstützte Browser**: Wir empfehlen die Verwendung von Internet Explorer, mindestens Version 10. Sie können jedoch einen der folgenden Browser verwenden, um die Website für die Dokument Nachverfolgung zu verwenden:
 
-    - Internet Explorer: Mindestens Version 10
+    - Internet Explorer: mindestens Version 10
 
-    - Internet Explorer 9 mit mindestens MS12-037: Kumulatives Sicherheits Update für Internet Explorer: 12. Juni 2012
+    - Internet Explorer 9 mindestens mit MS12-037: Kumulatives Sicherheitsupdate für Internet Explorer: 12. Juni 2012
 
-    - Mozilla Firefox: Mindestens Version 12
+    - Mozilla Firefox: mindestens Version 12
 
-    - Apple Safari 5: Mindestens Version 5
+    - Apple Safari 5: mindestens Version 5
 
-    - Google Chrome: Mindestens Version 18
+    - Google Chrome: mindestens Version 18
 
 
 ## <a name="other-instructions"></a>Sonstige Anweisungen

@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a6c78e7311f3af3920df19d7a3a6ca92bb09e819
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560055"
 ---
 # <a name="class-mipprotectionprofile"></a>mip::ProtectionProfile-Klasse 
@@ -21,16 +21,16 @@ Eine Anwendung muss ein Schutzprofil erstellen, bevor Sie Schutz Vorgänge ausf�
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft Einstellungen ab, die von Schutzprofile während der Initialisierung und während der gesamten Lebensdauer verwendet werden.
-öffentliches void listenginesasync (Konst Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+öffentliches void listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Listet Engines auf
 öffentliches void addengineasync (Konstante Schutz-Engine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Schutz-Engine zu dem Profil hinzuzufügen.
 Public Std:: shared_ptr\<schutzengine\> addengine (Konstante Schutz-Engine:: Settings & Settings)  |  Fügt eine neue Schutz-Engine zum Profil hinzu
-öffentliches void deleteengineasync (Konstanten Std:: String & EngineID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
+öffentliches void deleteengineasync (Konst Std:: String & EngineID, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Schutz-Engine mit der angegebenen ID zu löschen. Alle Daten für die angegebene Engine werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löscht die Schutz-Engine mit der angegebenen ID Alle Daten für die angegebene Engine werden gelöscht.
-public static MIP_API void __CDECL MIP::P rotectionprofile:: LoadAsync | Von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendete Einstellungen
-public static MIP_API Std:: shared_ptr&lt;Schutzprofile&gt; __CDECL MIP::P rotectionprofile:: Load | Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
-public static konstant MIP_API char * __CDECL MIP::P rotectionprofile:: GetVersion | Ruft die Bibliotheksversion ab.
-public static MIP_API Std:: shared_ptr&lt;publishinglicenseingefo&gt; __CDECL MIP::P rotectionprofile:: getpublishinglicenseingefo | Erstellt einen Halter für Details einer Veröffentlichungs Lizenz und kann zum Erstellen eines Schutz Handlers verwendet werden. 
+öffentliches statisches MIP_API void __CDECL MIP::P rotectionprofile:: LoadAsync | Von Protection Profile während der Initialisierung und während der gesamten Lebensdauer verwendete Einstellungen
+öffentliches statisches MIP_API Std:: shared_ptr&lt;Schutzprofil&gt; __CDECL MIP::P rotectionprofile:: Load | Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
+public static Konstanten MIP_API char * __CDECL MIP::P rotectionprofile:: GetVersion | Ruft die Bibliotheksversion ab.
+öffentliches statisches MIP_API Std:: shared_ptr&lt;publishinglicenseingefo&gt; __CDECL MIP::P rotectionprofile:: getpublishinglicenseingefo | Erstellt einen Halter für Details einer Veröffentlichungs Lizenz und kann zum Erstellen eines Schutz Handlers verwendet werden. 
 
 ## <a name="members"></a>Member
   

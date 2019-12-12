@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 0087255c3028ed28f6b4729445d6c224344f0dde
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558882"
 ---
 # <a name="class-mipexecutionstate"></a>mip::ExecutionState-Klasse 
@@ -26,7 +26,7 @@ public virtual datastate getdatastate () Konstanten  |  Ruft den Inhaltsstatus a
 Public Std::p Air\<bool, Std:: String\> isdowngradebug () Konstanten  |  Bei der Implementierung sollte übergeben werden, ob eine vorhandene Bezeichnung herabgestuft wurde.
 public AssignmentMethod GetNewLabelAssignmentMethod() const  |  Ruft die Zuweisungsmethode für die neue Bezeichnung ab.
 public virtual Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getnewlabelextendedproperties () konstant.  |  Gibt erweiterte Eigenschaften einer neuen Bezeichnung zurück.
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getcontentmetadata (Konst Std:: Vector\<Std:: String\>& Names, Konstanten Std:: Vector\<Std:: String\>& nameprefixes) const  |  Ruft die Metadatenelemente aus dem Inhalt ab.
+Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getcontentmetadata (Konst Std:: Vector\<Std:: String\>& Names, Konstanten Std:: Vector\<Std:: String\>& nameprefixes) konstant  |  Ruft die Metadatenelemente aus dem Inhalt ab.
 Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  |  Ruft den Deskriptor für den Schutz ab
 public ContentFormat GetContentFormat() const  |  Ruft das Inhaltsformat ab.
 public ActionType GetSupportedActions() const  |  Ruft eine maskierte Enumeration ab, die alle unterstützten Aktionstypen beschreibt
@@ -118,4 +118,4 @@ Parameter:
 Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
 
   
-**Gibt Folgendes zurück**: eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: e-Mail-ID für Absender Empfänger: stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy: e-Mail-ID für den Benutzer dar, der den Inhalt zuletzt geändert hat. LastModifiedDate: Datum, an dem der Inhalt zuletzt geändert wurde
+**Gibt Folgendes zurück**: eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: e-Mail-ID für Absender Empfänger: stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy: e-Mail-ID für den Benutzer dar, der den Inhalt zuletzt geändert hat: Datum, an dem der Inhalt zuletzt geändert wurde.

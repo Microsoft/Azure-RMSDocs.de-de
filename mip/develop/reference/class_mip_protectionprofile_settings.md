@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560077"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings-Klasse 
@@ -19,8 +19,8 @@ Einstellungen, die von Protection Profile während der Erstellung und während d
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konst Std:: shared_ptr\<genehmigende Delegat\>& zugenehmifdelegaten, Konstante Std:: shared_ptr\<Schutzprofile:: Observer\>& Observer)  |  Schutzprofile:: Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
-öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konst Std:: shared_ptr\<genehmigende Delegat\>& genehmifdelegaten)  |  Schutzprofile:: Settings-Konstruktor, der für synchrone Vorgänge verwendet wird.
+öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstante Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: shared_ptr\<genehmidelegat\>& genehmigenden Delegaten, Konstante Std:: shared_ptr\<Schutzprofile:: Observer\>& Observer)  |  Schutzprofile:: Settings-Konstruktor, der einen Beobachter angibt, der für asynchrone Vorgänge verwendet werden soll.
+öffentliche Einstellungen (Konstante Std:: shared_ptr\<mipcontext\>& mipcontext, cachestoragetype cachestoragetype, Konstanten Std:: shared_ptr\<authdelegat\>& authdelegat, Konstanten Std:: shared_ptr\<genehmidelegaten\>& genehmigenden Delegaten)  |  Schutzprofile:: Settings-Konstruktor, der für synchrone Vorgänge verwendet wird.
 Public cachestoragetype getcachestoragetype () Konstanten  |  Gibt an, ob Caches im Arbeitsspeicher oder auf dem Datenträger gespeichert werden.
 Public Std:: shared_ptr\<authdelegat\> getauthdelegat () Konstanten  |  Ruft den Authentifizierungsdelegaten ab, der für die Beschaffung von Authentifizierungstoken verwendet wird.
 Public Std:: shared_ptr\<genehmidelegat\> getgenehmidelegat () Konstanten  |  Ruft den Zustimmungsdelegaten ab, der für die Verbindung mit Diensten verwendet wird.
@@ -29,7 +29,7 @@ Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontex
 Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
 Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
-öffentliches void settaskdispatcherdelegat (konstant Std:: shared_ptr\<taskdispatcherdelegat\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
+öffentliches void settaskdispatcherdelegat (Konstanten Std:: shared_ptr\<taskdispatcherdelegaten\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
 public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest.
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab
 öffentliches void setcancachelicenses (bool-abfrageelicenses)  |  Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
