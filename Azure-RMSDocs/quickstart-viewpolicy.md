@@ -4,18 +4,18 @@ description: Wenn Ihre Organisation keine Erfahrungswerte mit Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: d1734b5102b1305077ce3b84fb95521daeb69c23
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561393"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882083"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Schnellstart: Erste Schritte mit Azure Information Protection im Azure-Portal
 
@@ -82,9 +82,11 @@ Ihre Organisation verfügt möglicherweise bereits über Bezeichnungen, die auto
     
      ![Azure Information Protection – keine Standardbezeichnungen](./media/info-protect-nodefaultlabels.png)
     
-    Wenn die Option zum Generieren von Standardbezeichnungen nicht angezeigt wird, verfügen Sie bereits über Bezeichnungen. Diese ähneln wahrscheinlich den Standardbezeichnungen für Azure Information Protection in der folgenden Abbildung:
+    Wenn die Option zum Generieren von Standardbezeichnungen nicht angezeigt wird, verfügen Sie möglicherweise bereits über Bezeichnungen. Diese ähneln wahrscheinlich den Standardbezeichnungen für Azure Information Protection in der folgenden Abbildung:
     
     ![Azure Information Protection – Standardbezeichnungen](./media/info-protect-defaultlabels.png)
+    
+    Wenn die Option zum Generieren von Standardbezeichnungen und auch keine Bezeichnungen angezeigt werden, navigieren Sie zu **Verwalten** > **Einheitliche Bezeichnungen**, und sehen Sie sich den Status von **Einheitliche Bezeichnungen** an. Wenn **Nicht aktiviert** angezeigt wird, wählen Sie **Aktivieren** aus, und kehren Sie dann zum Bereich **Klassifizierungen** > **Bezeichnungen** zurück.
 
 2. Wenn Sie noch nicht über Bezeichnungen verfügen, wählen Sie die Option **Standardbezeichnungen generieren** aus.
 
