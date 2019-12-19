@@ -20,7 +20,7 @@ ms.locfileid: "74907456"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installieren eines PDF-Readers für Windows
 
-[Symbol "![Windows"](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+[![Windows Symbol](../media/develop/windows-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
 Wenn Sie auf Ihrem Windows-Computer ein geschütztes PDF-Dokument öffnen müssen, installieren Sie das Adobe-Plug-in für den Adobe Acrobat Reader.
 
