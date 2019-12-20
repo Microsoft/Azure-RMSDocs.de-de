@@ -1,5 +1,5 @@
 ---
-title: Neuheiten und Versionshinweise
+title: Anmerkungen zu dieser Version von Rights Management Services SDK v4. x
 description: Beschreibt wichtige Änderungen und Funktionen in dieser Version und in vorherigen Versionen.
 author: msmbaldwin
 ms.author: mbaldwin
@@ -12,18 +12,18 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
+ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60176016"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303629"
 ---
 # <a name="whats-new-and-release-notes"></a>Neuheiten und Anmerkungen zu dieser Version
 
 ## <a name="whats-new"></a>Neues
 
-In diesem Thema werden wichtige Änderungen und Funktionen in der neuen Version des RMS SDK v4.x beschrieben.
+In diesem Thema werden wichtige Änderungen und Funktionen in dieser neuen Version von RMS SDK v4. x beschrieben.
 
 -   [Neu ab Juli 2017](#new-for-july-2017)
 -   [Oktober 2016 – Update](#october-2016-update)
@@ -163,7 +163,7 @@ Dieser Abschnitt enthält Informationen über die aktuelle und die vorherigen Ve
 
 -   Bei Verwendung der Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array, int offset, int length) mit einer vom Wert *array.length* abweichenden Länge kann der Inhalt später nicht mit dem SDK verwendet werden.
 
-    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]* -Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
+    **Lösung**: Dies ist ein bekanntes Problem. Übergeben Sie zur Vermeidung dessen entweder ein *byte \[\]*-Array mit einem Längenwert gleich dem length-Parameter, oder verwenden Sie die Methode [ProtectedFileOutputStream](https://msdn.microsoft.com/library/dn790855.aspx).write(byte\[\] array).
 
 **iOS und OS X**
 
