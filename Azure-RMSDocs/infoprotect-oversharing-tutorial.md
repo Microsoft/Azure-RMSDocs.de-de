@@ -92,7 +92,7 @@ Sie erstellen eine neue bereichsbezogene Richtlinie, damit die neuen erweiterten
 
 2. Geben Sie den Richtliniennamen von **Oversharing tutorial** (Tutorial zur Vermeidung übermäßiger Informationsfreigaben) an und optional eine Beschreibung von **Advanced client settings to control oversharing using Outlook** (Erweiterte Clienteinstellungen zur Vermeidung übermäßiger Informationsfreigaben mit Outlook).
 
-3. Klicken Sie auf **Specify which users/groups get this policy** (Benutzer/Gruppen angeben, die diese Richtlinie abrufen) aus, und geben Sie in den folgenden Bereichen Ihr eigenes Benutzerkonto an.
+3. Wählen Sie **Specify which users/groups get this policy** (Benutzer/Gruppen angeben, die diese Richtlinie abrufen), und geben Sie in den folgenden Bereichen Ihr eigenes Benutzerkonto an.
 
 4. Klicken Sie, wenn Ihr Kontoname nun im Bereich **Richtlinie** angezeigt wird, auf **Speichern**, ohne weitere Änderungen an den Bezeichnungen oder Einstellungen in diesem Bereich vorzunehmen. Möglicherweise werden Sie zur Bestätigung Ihrer Auswahl aufgefordert. 
 
