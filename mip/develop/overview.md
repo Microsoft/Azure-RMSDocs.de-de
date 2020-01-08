@@ -4,15 +4,14 @@ description: Microsoft Information Protection (MIP) stellt die Vereinheitlichung
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
-ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d8efb7ceef890d0c2a0ea72f64d3047e0cfb25a5
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184942"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556060"
 ---
 # <a name="overview"></a>Übersicht
 
