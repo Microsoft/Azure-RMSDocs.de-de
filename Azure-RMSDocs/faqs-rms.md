@@ -1,27 +1,30 @@
 ---
 title: Häufig gestellte Fragen zu Azure RMS – AIP
 description: Hier finden Sie einige häufig gestellte Fragen zum Azure Rights Management-Dienst (Azure RMS) von Azure Information Protection für den Schutz von Daten.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 170e171ba3eb57e568762bc4745d613934c6af53
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
-ms.translationtype: MT
+ms.custom: admin
+ms.openlocfilehash: 56f8a89753660db66581822b5928f5340328918a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445108"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674223"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Häufig gestellte Fragen zum Schutz von Daten in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Haben Sie eine Frage zum Azure Rights Management-Dienst von Azure Information Protection für den Schutz von Daten? Vielleicht finden Sie hier eine Antwort darauf.
 
@@ -110,7 +113,7 @@ Andere Authentifizierungsmethoden:
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>Kann ich externe Benutzer (die nicht zu meinem Unternehmen gehören) zu benutzerdefinierten Vorlagen hinzufügen?
 
-Ja. Über die [Schutzeinstellungen](configure-policy-protection.md), die Sie im Azure-Portal konfigurieren können, können Sie Berechtigungen für Benutzer und Gruppen, die nicht Ihrer Organisation angehören, sowie sogar für sämtliche Benutzer einer anderen Organisation hinzufügen. Das ausführliche Beispiel [Secure document collaboration by using Azure Information Protection (Sichere Dokumentenzusammenarbeit durch Azure Information Protection)](secure-collaboration-documents.md) ist womöglich nützlich für Sie. 
+Ja Über die [Schutzeinstellungen](configure-policy-protection.md), die Sie im Azure-Portal konfigurieren können, können Sie Berechtigungen für Benutzer und Gruppen, die nicht Ihrer Organisation angehören, sowie sogar für sämtliche Benutzer einer anderen Organisation hinzufügen. Das ausführliche Beispiel [Secure document collaboration by using Azure Information Protection (Sichere Dokumentenzusammenarbeit durch Azure Information Protection)](secure-collaboration-documents.md) ist womöglich nützlich für Sie. 
 
 Beachten Sie, dass Sie erst ihre benutzerdefinierte Vorlage in eine Bezeichnung konvertieren müssen, wenn Azure Information Protection-Bezeichnungen vorhanden sind, bevor Sie diese Schutzeinstellungen im Azure-Portal konfigurieren können. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Vorlagen in der Azure Information Protection-Richtlinie](configure-policy-templates.md).
 
@@ -182,7 +185,7 @@ Verwenden Sie die [Administratorfunktion](configure-super-users.md). Mit dieser 
 
 ## <a name="when-i-test-revocation-in-the-document-tracking-site-i-see-a-message-that-says-people-can-still-access-the-document-for-up-to-30-daysis-this-time-period-configurable"></a>Wenn ich die Sperrung in der Website zur Dokumentnachverfolgung teste, erhalte ich eine Meldung, die angibt, dass Personen für bis zu 30 Tage auf das Dokument zugreifen können. Kann ich diesen Zeitraum konfigurieren?
 
-Ja. Diese Meldung gibt die [Nutzungslizenz](configure-usage-rights.md#rights-management-use-license) für diese bestimmte Datei wieder.
+Ja Diese Meldung gibt die [Nutzungslizenz](configure-usage-rights.md#rights-management-use-license) für diese bestimmte Datei wieder.
 
 Wenn Sie eine Datei widerrufen, kann diese Aktion nur erzwungen werden, wenn der Benutzer sich beim Azure Rights Management-Dienst authentifiziert. Wenn eine Datei über eine gültige Nutzungslizenz von 30 Tagen verfügt, und der Benutzer das Dokument bereits geöffnet hat, erhält dieser Benutzer weiterhin Zugriff auf das Dokument, solange die Nutzungslizenz gültig ist. Wenn die Nutzungslizenz ausläuft, muss sich der Benutzer erneut authentifizieren. Zu diesem Zeitpunkt wird der Zugriff für den Benutzer verweigert, da das Dokument nun gesperrt ist.
 
@@ -191,7 +194,7 @@ Der Benutzer, der das Dokument geschützt hat, der [Rights Management-Aussteller
 Der Standardwert für die Gültigkeitsdauer der Nutzungslizenz für einen Mandanten beträgt 30 Tage. Diese Einstellung kann nicht von einer restriktiveren Einstellung in einer Bezeichnung oder Vorlage überschrieben werden. Weitere Informationen zur Nutzungslizenz und deren Konfiguration finden Sie in der Dokumentation [Rights Management-Nutzungslizenz](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Kann Rights Management Bildschirmaufnahmen verhindern?
-Rights Management kann durch Verweigerung des [Nutzungsrechts](configure-usage-rights.md) **Kopieren** für viele Bildschirmaufnahmetools, die häufig auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und unter Android verwendet werden, das Erstellen von Bildschirmaufnahmen verhindern. iOS- und Mac-Geräte erlauben Apps jedoch das Verhindern von Bildschirmaufnahmen nicht. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browser Verwendung umfasst Outlook im Web und Office für das Web.
+Wenn Sie das [Nutzungsrecht](configure-usage-rights.md)" **Kopieren** " nicht gewähren, können Rights Management Bildschirmaufnahmen von vielen der häufig verwendeten Bildschirm Erfassungs Tools auf Windows-Plattformen (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) und Android verhindern. iOS- und Mac-Geräte erlauben Apps jedoch das Verhindern von Bildschirmaufnahmen nicht. Ferner können Browser auf Geräten, gleich welchen, keine Bildschirmaufnahmen verhindern. Die Browser Verwendung umfasst Outlook im Web und Office für das Web.
 
 Das Verhindern von Bildschirmaufnahmen kann dabei helfen, versehentliche oder fahrlässige Offenlegung von vertraulichen oder sensiblen Informationen zu vermeiden. Es gibt jedoch viele Möglichkeiten, wie ein Benutzerdaten freigeben kann, die auf einem Bildschirm angezeigt werden, und ein Screenshot ist nur eine Methode. Beispielsweise kann ein Benutzer, der die angezeigten Informationen vorsätzlich weitergeben möchte, sie mit der Kamera seines Handys abfotografieren, sie abtippen oder einfach mündlich einer anderen Person mitteilen.
 
