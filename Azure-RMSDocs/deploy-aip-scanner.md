@@ -1,10 +1,10 @@
 ---
 title: Bereitstellen der Azure Information Protection Scanner-aip
 description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktuellen Version des Azure Information Protection Scanners zum ermitteln, klassifizieren und schützen von Dateien in Daten speichern.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/24/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,20 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0b53c721725f83b8e197552d4c1fa502583fc2f9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3bca84f202917082212fec65973dd6666a07e9a9
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474358"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674580"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2*
->
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
+
 > [!NOTE]
 > Dieser Artikel ist für die aktuelle Version der allgemeinen Verfügbarkeit des Azure Information Protection Scanners mit dem Azure Information Protection Client (klassisch) und der Vorschauversion des Scanners für die aktuelle allgemein verfügbare Version von Azure Information Protection Unified-Bezeichnungs Client.
 > 
@@ -620,7 +623,7 @@ Weitere Faktoren, die sich auf die Überprüfungsleistung auswirken:
 
 - Die Erstellung von regulären Ausdrücken für benutzerdefinierte Bedingungen
     
-    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Beispiele:
+    Überprüfen Sie Ihre regulären Ausdrücke für einen effizienten Musterabgleich, um eine hohe Arbeitsspeichernutzung und das Risiko von Timeouts (15 Minuten pro Datei) zu vermeiden. Zum Beispiel:
     
     - Vermeiden Sie [gierige Quantifizierer](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     

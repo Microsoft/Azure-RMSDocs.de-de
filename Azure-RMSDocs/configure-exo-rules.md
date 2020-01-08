@@ -1,10 +1,10 @@
 ---
 title: Exchange Online-e-Mail-Fluss Regeln für Azure Information Protection Bezeichnungen
 description: Anweisungen und Beispiele zum Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/07/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,21 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0e07754dd7b8197883ab7a71fbe48e4cb142534c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: fe1d7ee0d1deb14c294014c3542e02808aa5def7
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73750485"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675073"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Konfigurieren von Exchange Online-Regeln für den Nachrichtenfluss für Azure Information Protection-Bezeichnungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Beispiele:
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset), und befolgen Sie die [Anweisungen in Microsoft 365 Security and Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , um diese Schritte auszuführen.
+
+Verwenden Sie die folgenden Informationen, um die Regeln für den Nachrichtenfluss in Exchange Online für die Verwendung von Azure Information Protection-Bezeichnungen zu konfigurieren und zusätzlichen Schutz für bestimmte Szenarien anzuwenden. Zum Beispiel:
 
 - Die Standardbezeichnung **Allgemein** bietet keinen Schutz. Für E-Mails mit dieser Bezeichnung, die extern versendet werden, wenden Sie die zusätzliche Schutzaktion „Nicht weiterleiten“ an.
 
@@ -105,9 +108,9 @@ Diese Bezeichnung wird zum Klassifizieren und Schützen von Dokumenten bei der Z
      
     ein. Wählen Sie **+**  > **Benutzerdefinierte Anlageeigenschaft festlegen** aus.
   
-    b. Geben Sie für **Eigenschaft** `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` ein.
+    b. Geben Sie für **Eigenschaft**`MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled` ein.
     
-    c. Geben Sie für **Wert** `True` ein.
+    c. Geben Sie für **Wert**`True` ein.
     
     d. Wählen Sie **Speichern** und dann **OK** aus.
 

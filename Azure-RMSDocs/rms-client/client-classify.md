@@ -1,9 +1,9 @@
 ---
 title: Klassifizieren-Azure Information Protection Client
 description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails, wenn Sie den Azure Information Protection Client für Windows verwenden.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 37857281f618957ebd9ef4d71e777adc8019b5f3
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: ece0812499467cdfe86005e94f6b345781435524
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935723"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675770"
 ---
 # <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Benutzerhandbuch: klassifizieren einer Datei oder e-Mail mit dem Azure Information Protection Client
 
@@ -79,13 +79,13 @@ Das Administratorhandbuch enthält eine vollständige Liste der Dateitypen, die 
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>So klassifizieren Sie eine Datei mithilfe des Datei-Explorers
 
-1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiele:
+1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Zum Beispiel:
     
     ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](../media/right-click-classify-protect-folder.png)
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung gemäß der Definition Ihres Administrators festgelegt wird. 
     
-    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Beispiele:
+    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Zum Beispiel:
     
     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/info-protect-dialog-labels-dimmed.png)
 

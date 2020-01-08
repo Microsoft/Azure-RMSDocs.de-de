@@ -1,10 +1,10 @@
 ---
 title: Unterstützte Dateitypen-Azure Information Protection Client
 description: Technische Details zu den unterstützten Dateitypen, Dateierweiterungen und Schutzebenen für Administratoren, die für den Azure Information Protection-Client für Windows verantwortlich sind.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/26/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 02f1e21b73f1d800e5e50918e6a5694402840474
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 58a050891e1435288f441dac3ead28f434813f97
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935315"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675821"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Administratorhandbuch: Vom Azure Information Protection-Client unterstützte Dateitypen
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Der Azure Information Protection-Client kann Folgendes auf Dokumente und E-Mails anwenden:
 
@@ -78,7 +81,7 @@ In der aktuellen Standardrichtlinie werden Klassifizierung und Schutz durch **Ve
 
 Der Azure Information Protection-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben wird.
 
-|Art des Schutzes|Systemeigenes Format|Generisch|
+|Art des Schutzes|Native|Generisch|
 |----------------------|----------|-----------|
 |Description|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Sicherheitsebene, zu der Dateikapselung mithilfe des Dateityps PFILE und Authentifizierung gehören, um zu überprüfen, ob ein Benutzer berechtigt ist, die Datei zu öffnen.|
 |Protection|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
@@ -218,7 +221,7 @@ Bei der Überprüfung werden standardmäßig dieselben Dateitypen wie vom Azure 
 
 Sie können die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien durch den Scanner ändern:
 
-- Konfigurieren Sie [mithilfe des Azure-Portals](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) **zu überprüfende Dateitypen** im Scannerprofil.
+- Konfigurieren Sie [mithilfe des Azure-Portals](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)**zu überprüfende Dateitypen** im Scannerprofil.
 
 > [!NOTE]
 > Überwachen Sie die Überprüfung sorgfältig,wenn Sie RTF-Dateien in der Überprüfung miteinbeziehen. Einige RTF-Dateien können nicht erfolgreich überprüft werden. Die Überprüfung wird nicht abgeschlossen, und Sie müssen den Dienst neustarten. 

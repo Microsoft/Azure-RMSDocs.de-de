@@ -1,9 +1,9 @@
 ---
 title: Benutzerdefinierte Konfigurationen-Azure Information Protection Unified-Beschriftungs Client
 description: Informationen zum Anpassen des Azure Information Protection Unified Bezeichnung-Clients für Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1fcab238281326ff8e885f655a936392e1519eb1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474376"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675617"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -32,7 +32,7 @@ Für diese Einstellungen müssen Sie die Registrierung bearbeiten oder erweitert
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Konfigurieren erweiterter Einstellungen für den Client mithilfe von Office 365 Security & Compliance Center PowerShell
 
-Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Beispiele:
+Wenn Sie Office 365 Security & Compliance Center PowerShell verwenden, können Sie erweiterte Einstellungen konfigurieren, die Anpassungen für Bezeichnungs Richtlinien und Bezeichnungen unterstützen. Zum Beispiel:
 
 - Die Einstellung zum Anzeigen der Information Protection Leiste in Office-Apps ist eine ***Erweiterte Einstellung der Bezeichnung "Bezeichnung***".
 - Die Einstellung zum Angeben einer Bezeichnungs Farbe ist eine ***Erweiterte Einstellung***für die Bezeichnung.
@@ -125,7 +125,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |Enablelabelbysharepointproperties|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-|Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](##display-the-information-protection-bar-in-office-apps)|
+|Hidebarbydefault|[Information Protection-Leiste in Office-Apps anzeigen](#display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -702,7 +702,7 @@ Um dieses Verhalten so zu ändern, dass vertrauliche Informationstypen, die vom 
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden. die Informationen sind jedoch auf die Berichterstattung beschränkt, wenn ein Benutzer auf den gekennzeichneten Inhalt zugegriffen hat.
 
-Beispiele:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -871,7 +871,7 @@ Diese Konfiguration verwendet eine [Erweiterte Einstellung](#how-to-configure-ad
 
 Es gibt möglicherweise einige Szenarios, in denen Sie zusätzlich zu den Metadaten, die durch eine Vertraulichkeits Bezeichnung angewendet werden, eine oder mehrere benutzerdefinierte Eigenschaften auf ein Dokument oder eine e-Mail-Nachricht anwenden möchten.
 
-Beispiele:
+Zum Beispiel:
 
 - Sie sind gerade dabei, [von einer anderen Bezeichnungs Lösung zu migrieren](#migrate-labels-from-secure-islands-and-other-labeling-solutions), z. b. sichere Inseln. Für die Interoperabilität während der Migration sollten Vertraulichkeits Bezeichnungen auch eine benutzerdefinierte Eigenschaft anwenden, die von der anderen Bezeichnungs Lösung verwendet wird.
 
@@ -1034,7 +1034,7 @@ Anweisungen:
 
 7. Wenn Ihr ausgewähltes Benutzerkonto in der Regel eine Verbindung mit dem Internet herstellt, aktivieren Sie das Senden von Überwachungsdaten erneut, indem Sie den **EnableAudit** -Wert auf " **true**" festlegen.
 
-8. Führen Sie auf dem nicht verbundenen Computer das Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit dem Parameter " *delegateduser* " aus, und geben Sie das Benutzerkonto aus Schritt 1 an, um den Benutzer Kontext festzulegen, um Dateien zu schützen. Beispiele:
+8. Führen Sie auf dem nicht verbundenen Computer das Cmdlet " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication) " mit dem Parameter " *delegateduser* " aus, und geben Sie das Benutzerkonto aus Schritt 1 an, um den Benutzer Kontext festzulegen, um Dateien zu schützen. Zum Beispiel:
     
         Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
 

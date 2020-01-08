@@ -1,9 +1,9 @@
 ---
 title: Konfigurieren der Azure Information Protection-Richtlinie – AIP
 description: Zum Konfigurieren von Klassifizierung, Bezeichnung und Schutz für den Azure Information Protection-Client (klassisch) müssen Sie die Azure Information Protection-Richtlinie konfigurieren.
-author: cabailey
-ms.author: cabailey
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+ms.date: 1/06/2020
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,18 +13,21 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2c34ed49b9a88373de514a44ebadf2800c23c298
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: a43059d0df56673955ebdfb2dd2890e0dba20c10
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74564500"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675328"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Konfigurieren der Azure Information Protection-Richtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
@@ -180,7 +183,7 @@ Um die GUID für eine Bezeichnung zu identifizieren, suchen Sie den Bezeichnungs
 
 Beispiele zum Anpassen der Azure Information Protection-Richtlinie und das resultierende Verhalten für Benutzer finden Sie in den folgenden Tutorials:
 
-- [Tutorial: Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
+- [Bearbeiten der Azure Information Protection-Richtlinie und Erstellen einer neuen Bezeichnung](infoprotect-quick-start-tutorial.md)
 
 - [Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren](infoprotect-settings-tutorial.md)
 

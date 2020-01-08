@@ -1,27 +1,30 @@
 ---
 title: Die Standardrichtlinie für Azure Information Protection – AIP
 description: Erfahren Sie, wie die Standardrichtlinie für Azure Information Protection konfiguriert wird. Wenn Sie die Standardrichtlinie ändern, können Sie mithilfe dieser Werte die Standardeinstellungen wiederherstellen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/05/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cc690668d602105c9c8c48461e6d4014cd2e59ff
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: 7f35d22aacfead3756517dc34b51c5395095d25b
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882057"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674920"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Die Azure Information Protection-Standardrichtlinie
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Die Azure Information Protection-Richtlinie gilt für den Azure Information Protection Client (klassisch) und nicht für den Azure Information Protection Unified-Bezeichnungs Client. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
@@ -73,7 +76,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -84,7 +87,7 @@ Wenn Benutzer diese Bezeichnung auswählen, wird die Outlook-Version „Nicht we
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Azure (Cloud-Schlüssel) [[1]](#footnote-1)|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -104,11 +107,11 @@ Die Berechtigungen für den Schutz stimmen mit denen in der [Standardvorlage](co
 
 |Einstellung|Value|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Anrede|Vertraulichkeit|
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
 Einige Einstellungen wurden nach dem 31. Juli 2017 hinzugefügt.
 
@@ -131,7 +134,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Keine Geschäftsdaten, nur zur persönlichen Verwendung.|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Geschäftsdaten, die zur öffentlichen Nutzung speziell vorbereitet und genehmigt werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -142,7 +145,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Vertraulich\Alle Mitarbeiter|Vertrauliche Daten, die Schutz erfordern, der allen Mitarbeitern volle Berechtigungen gewährt. Besitzer der Daten können Inhalte nachverfolgen und widerrufen.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Vertraulich\Jeder (nicht geschützt)|Daten, die keinen Schutz erfordern. Verwenden Sie diese Option mit Vorsicht und mit einer entsprechenden geschäftlichen Begründung.|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Fußzeile (Dokument und E-Mail)<br /><br />Als vertraulich eingestuft <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -153,11 +156,11 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 |Einstellung|Value|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Anrede|Vertraulichkeit|
 |QuickInfo|Die aktuelle Bezeichnung für diesen Inhalt. Mit dieser Einstellung wird das Risiko für das Unternehmen angegeben, wenn dieser Inhalt für nicht autorisierte Personen innerhalb oder außerhalb der Organisation freigegeben wird.|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
 |Einstellung|Value|
 |-------------------------------|---------------------------|
@@ -171,7 +174,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="labels"></a>Bezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Personal (Persönlich)|Nur zur privaten Verwendung. This data will not be monitored by the organization. Personal information must not include any business-related data (Persönliche Informationen dürfen keine geschäftlichen Daten enthalten).|**Aktiviert**: Ein <br /><br />**Farbe**: Hellgrün<br /><br />**Visuelle Kennzeichnung**: Aus <br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Public (Öffentlich)|Diese internen Informationen können von beliebigen Benutzern innerhalb oder außerhalb des Unternehmens verwendet werden.|**Aktiviert**: Ein <br /><br />**Farbe**: Grün<br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -182,7 +185,7 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 ### <a name="sublabels"></a>Unterbezeichnungen
 
-|Label|QuickInfo|Einstellung|
+|Label|QuickInfo|Settings|
 |-------------------------------|---------------------------|-----------------|
 |Secret > All Company (Geheim > Gesamtes Unternehmen)|This data includes sensitive business information - permitted for all company employees. (Diese Daten umfassen sensible Geschäftsinformationen, die für alle Mitarbeiter des Unternehmens zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
 |Secret \ My Group (Geheim > Meine Gruppe)|This data includes sensitive business information - permitted for employee groups only (Diese Daten umfassen sensible Geschäftsinformationen, die nur für bestimmte Mitarbeitergruppen zulässig sind.)|**Aktiviert**: Ein <br /><br />**Visuelle Kennzeichnung**: Aus<br /><br />**Bedingungen**: Keine<br /><br />**Schutz**: Keiner|
@@ -191,11 +194,11 @@ Beachten Sie, dass Beschreibungen in dieser Richtlinie auf Daten verweisen, die 
 
 |Einstellung|Value|
 |-------------------------------|---------------------------|
-|Anrede|Sensitivität|
+|Anrede|Vertraulichkeit|
 |QuickInfo|Information Sensitivity consists of four distinct levels (Public, Internal, Confidential, Secret), allowing the user to identify the risk of exposing the information to unauthorized users inside or outside the business. (Für die Vertraulichkeit von Informationen sind vier Einstellungen verfügbar („Öffentlich“, „Intern“, „Vertraulich“ und „Geheim“). Anhand dieser Einstellungen erkennt der Benutzer, mit welchem Risiko die Offenlegung der Informationen gegenüber nicht autorisierten Benutzern innerhalb oder außerhalb des Unternehmens einhergeht.)|
 
 
-### <a name="settings"></a>Einstellung
+### <a name="settings"></a>Settings
 
 |Einstellung|Value|
 |-------------------------------|---------------------------|

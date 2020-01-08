@@ -1,28 +1,31 @@
 ---
 title: HYOK-Schutz für Azure Information Protection
 description: Übersicht über den HYOK-Schutz (AD RMS) mit Azure Information Protection und die dazugehörigen Szenarios, Einschränkungen, Voraussetzungen und Empfehlungen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 6157f321b04a4c0b755b1d8e17a663f8f58d281f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2481911194864eaf4642cf4455d4c1c98b70f957
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73444816"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675228"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Anhand der folgenden Informationen erfahren Sie, was der HYOK-Schutz für Azure Information Protection ist, und wie er sich vom cloudbasierten Standardschutz unterscheidet. Stellen Sie sicher, dass Sie verstehen, wann der HYOK-Schutz, die unterstützten Szenarios, die Einschränkungen und die Voraussetzungen geeignet sind, bevor Sie ihn verwenden. 
 
@@ -181,7 +184,7 @@ Weitere Informationen zur Bereitstellung sowie Anweisungen für AD RMS finden Si
         
             http://<cluster_name>/_wmcs/certification/certification.asmx
 
-2. Starten Sie die IIS neu.
+2. Starten Sie IIS neu.
 
 ### <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Suchen von Informationen zum Angeben des AD RMS-Schutzes mit einer Azure Information Protection-Bezeichnung
 

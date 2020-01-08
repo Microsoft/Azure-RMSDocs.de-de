@@ -1,9 +1,9 @@
 ---
 title: Azure RMS-Schutz mit Windows Server FCI – AIP
 description: Anweisungen zum Verwenden des RMS-Clients (Rights Management) mit dem Azure Information Protection-Client, um den Ressourcen-Manager für Dateiserver und die Dateiklassifizierungsinfrastruktur zu konfigurieren.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 265f6ee9fcf5e3fb3a4e658ab1c114a8e3ce7d4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5d03aa523c22e66c79748cd378b67d7124686972
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935519"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326512"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>RMS-Schutz mit Windows Server-Dateiklassifizierungsinfrastruktur (File Classification Infrastructure, FCI)
 
@@ -251,7 +251,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
 1.  Führen Sie die Klassifizierungsregel aus:
 
-    1.  Klicken Sie auf **Klassifizierungsregeln** &gt; **Klassifizierung mit allen Regeln jetzt ausführen**.
+    1.  Klicken Sie auf **Klassifizierungsregeln** , &gt; **Klassifizierung mit allen Regeln jetzt ausführen**
 
     2.  Klicken Sie auf **Warten, bis die Klassifizierung abgeschlossen ist**, und klicken Sie dann auf **OK**.
 
@@ -259,7 +259,7 @@ Nachdem Sie die Klassifizierungskonfiguration abgeschlossen haben, können Sie e
 
 3.  Führen Sie die Dateiverwaltungsaufgabe aus:
 
-    1.  Klicken Sie auf **Dateiverwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Dateiverwaltungsaufgabe jetzt ausführen**.
+    1.  Klicken Sie auf **Datei Verwaltungsaufgaben** &gt; **Dateien mit RMS schützen** &gt; **Datei Verwaltungsaufgabe jetzt ausführen**
 
     2.  Klicken Sie auf **Warten, bis die Aufgabe abgeschlossen ist**, und klicken Sie dann auf **OK**.
 

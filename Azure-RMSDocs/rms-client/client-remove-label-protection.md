@@ -1,9 +1,9 @@
 ---
 title: Entfernen von Azure Information Protection-Bezeichnungen
 description: Anweisungen zum Entfernen von Klassifizierungsbezeichnungen und des Schutzes von Dateien, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 06b5e447b776f046fba4a6a563213783b3931db4
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bff6d0afe190353221074297dbd5976edf36b54e
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933479"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675430"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Benutzerhandbuch: Entfernen der Bezeichnungen und des Schutzes von Dateien und E-Mails, die von Azure Information Protection bezeichnet oder durch Rights Management geschützt wurden
 

@@ -1,10 +1,10 @@
 ---
 title: Benutzerdefinierte Konfigurationen-Azure Information Protection Client
 description: Informationen zum Anpassen des Azure Information Protection-Clients für Windows
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 70b9cd8abb01aae2654127a4e9b1c4424cd18e82
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479190"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675804"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Administratorhandbuch: Benutzerdefinierte Konfigurationen für den Azure Information Protection-Client
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie die folgenden Informationen für erweiterte Konfigurationen, die Sie bei der Verwaltung des Azure Information Protection-Clients möglicherweise für spezifische Szenarien oder eine Teilmenge der Benutzer benötigen.
 
@@ -201,7 +204,7 @@ Wenn auf dem Computer, auf dem der Computer ausgeführt wird, die aktuelle GA-Ve
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Ausblenden oder Anzeigen der Schaltfläche „Nicht weiterleiten“ in Outlook
 
-Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Die Schaltfläche „Nicht weiterleiten“ dem Outlook-Menüband hinzufügen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen.
+Die empfohlene Methode zum Konfigurieren dieser Option ist die Verwendung der [Richtlinien Einstellung](../configure-policy-settings.md) "nicht **weiterleiten" auf dem Outlook-Menüband hinzufügen**. Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen.
 
 Wenn Sie diese Einstellung konfigurieren, wird die Schaltfläche **Nicht weiterleiten** auf dem Menüband in Outlook ausgeblendet oder angezeigt. Diese Einstellung hat keine Auswirkung auf die Option „Nicht weiterleiten“ der Office-Menüs.
 
@@ -213,7 +216,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Verfügbar- oder Nicht-Verfügbarmachen der Optionen für benutzerdefinierte Berechtigungen für Benutzer
 
-Das empfohlene Vorgehen zum Konfigurieren dieser Option ist die Verwendung der [Richtlinieneinstellung](../configure-policy-settings.md) **Make the custom permissions option available for users** (Die benutzerdefinierte Berechtigungsoption für Benutzer verfügbar machen). Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen. 
+Die empfohlene Methode zum Konfigurieren dieser Option ist die Verwendung der [Richtlinien Einstellung](../configure-policy-settings.md) **benutzerdefinierte Berechtigungen für Benutzer verfügbar machen**. Allerdings können Sie diese Option auch mithilfe einer [erweiterten Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal) konfigurieren. Dies können Sie über das Azure-Portal durchführen. 
 
 Wenn Sie diese Einstellung konfigurieren und die Richtlinie für Benutzer veröffentlichen, werden die benutzerdefinierten Berechtigungsoptionen für Benutzer sichtbar, woraufhin diese ihre eigenen Schutzeinstellungen auswählen können. Alternativ werden die Optionen ausgeblendet, damit Benutzer ihre Schutzeinstellungen nicht auswählen können, es sei denn, sie werden dazu aufgefordert.
 
@@ -227,7 +230,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Diese Einstellung befindet sich in der Vorschauversion und kann sich ändern.
 
-Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Option für benutzerdefinierte Berechtigungen für Benutzer verfügbar machen** oder die entsprechende Clienteinstellung im vorherigen Abschnitt konfigurieren, können Benutzer benutzerdefinierte Berechtigungen nicht sehen oder ändern, die für ein geschütztes Dokument bereits festgelegt wurden. 
+Wenn Sie die [Richtlinien Einstellung](../configure-policy-settings.md) "Benutzer **definierte Berechtigungen festlegen" für Benutzer** oder die entsprechende erweiterte Client Einstellung im vorherigen Abschnitt konfigurieren, können Benutzer keine benutzerdefinierten Berechtigungen anzeigen oder ändern, die bereits in einem geschützten Dokument festgelegt sind. 
 
 Wenn Sie diese erweiterte Clienteinstellung erstellen und konfigurieren, können Benutzer Berechtigungen für ein geschütztes Dokument sehen und ändern, wenn sie den Dateiexplorer verwenden, und mit der rechten Maustaste auf die Datei klicken. Die Option **Benutzerdefinierte Berechtigungen** über die Schaltfläche **Schützen** auf dem Office-Menüband bleibt ausgeblendet.
 
@@ -239,7 +242,7 @@ Um diese erweiterte Einstellung zu konfigurieren, geben Sie die folgenden Zeiche
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Azure Information Protection-Leiste dauerhaft ausblenden
 
-Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Verwenden Sie diese nur, wenn die [Richtlinieneinstellung](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Die Information Protection-Leiste in Office-Apps anzeigen) auf **Ein** festgelegt ist.
+Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. Verwenden Sie diese Einstellung **nur, wenn**die [Richtlinien Einstellung](../configure-policy-settings.md) **die Information Protection Leiste in Office-Apps anzeigen** auf ein festgelegt ist.
 
 Wenn ein Benutzer standardmäßig die Option **Leiste anzeigen** von der Registerkarte **Start** entfernt, werden die **Schutzgruppe**, die Schaltfläche **Schützen** und die Leiste „Information Protection“ nicht länger in der Office-App angezeigt. Die Leiste wird jedoch automatisch wieder beim nächsten Öffnen der Office-App angezeigt.
 
@@ -532,7 +535,7 @@ Wenn die Bezeichnung nur in Outlook sichtbar sein soll, konfigurieren Sie die Be
 
 Diese Konfiguration verwendet eine [erweiterte Clienteinstellung](#how-to-configure-advanced-client-configuration-settings-in-the-portal), die Sie im Azure-Portal konfigurieren müssen. 
 
-Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) verwenden, werden die Benutzer beim ersten Speichern eines Offices-Dokuments und beim Senden einer E-Mail dazu aufgefordert, eine Bezeichnung zu wählen. Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
+Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md)**All documents and emails must have a label** (Alle Dokumente und E-Mails müssen eine Bezeichnung haben) verwenden, werden die Benutzer beim ersten Speichern eines Offices-Dokuments und beim Senden einer E-Mail dazu aufgefordert, eine Bezeichnung zu wählen. Bei Office-Dokumenten können Benutzer **Not now** (nicht jetzt) wählen, um die Aufforderung zum Auswählen einer Bezeichnung vorübergehend zu schließen und zum Dokument zurückzukehren. Sie können das gespeicherte Dokument jedoch nicht schließen, ohne es zu bezeichnen. 
 
 Wenn Sie diese Einstellung konfigurieren, wird die Option **Not now** (nicht jetzt) entfernt, sodass die Benutzer eine Bezeichnung wählen müssen, wenn das Dokument zum ersten Mal gespeichert wird.
 
@@ -592,7 +595,7 @@ Außerdem werden Sie zum [RMS-Aussteller](../configure-usage-rights.md#rights-ma
 
 So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in geschützte PDF-Dateien, die den ISO-Standard für die PDF-Verschlüsselung verwenden:
 
-1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Beispiele:
+1. Verwenden Sie den Befehl [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) für die PPDF-Datei. Zum Beispiel:
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +607,11 @@ So verwenden Sie PowerShell-Befehle zum Konvertieren vorhandener PPDF-Dateien in
     
    - Den Wert für **RMSTemplateId**. Wenn dieser Wert **Eingeschränkter Zugriff** lautet, hat ein Benutzer die Datei mit benutzerdefinierten Berechtigungen und nicht mit Schutzeinstellungen, die für die Bezeichnung konfiguriert wurden, geschützt. Wenn Sie fortfahren, werden diese benutzerdefinierten Berechtigungen durch die Schutzeinstellungen der Bezeichnung überschrieben. Fahren Sie fort, oder bitten Sie den Benutzer (angezeigter Wert für **RMSIssuer**), die Bezeichnung zu entfernen und mit den ursprünglichen benutzerdefinierten Berechtigungen erneut anzuwenden.
 
-3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Beispiele: 
+3. Entfernen Sie die Bezeichnung mithilfe von [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) mit dem Parameter *RemoveLabel*. Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) für **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** verwenden, müssen Sie für den Parameter *Begründung* den Grund angeben. Zum Beispiel: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Beispiele:
+4. Übernehmen Sie erneut die ursprüngliche Bezeichnung, indem Sie den Wert für die Bezeichnung angeben, den Sie in Schritt 1 identifiziert haben. Zum Beispiel:
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -859,7 +862,7 @@ Die Konfiguration, die steuert, ob der Client Überwachungsinformationen sendet,
 
 Wenn Sie diese erweiterte Client Einstellung festlegen, können Überwachungsinformationen weiterhin vom Client gesendet werden, die Informationen sind jedoch auf die Bezeichnungs Aktivität beschränkt.
 
-Beispiele:
+Zum Beispiel:
 
 - Mit dieser Einstellung können Sie sehen, dass ein Benutzer auf "Financial. docx" mit der Bezeichnung " **vertraulich \ Sales**" zugegriffen hat.
 
@@ -982,11 +985,11 @@ So erreichen Sie diese Lösung
 
 2. Erstellen Sie für jede Bezeichnung eine Regel für den Exchange-E-Mail-Verkehr. Wenden Sie die Regel an, wenn Nachrichteneigenschaften die von Ihnen konfigurierte Klassifizierung enthalten, und ändern Sie dann die Nachrichteneigenschaften, um einen Nachrichtenheader festzulegen. 
 
-     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Beispiele:
+     Für den Nachrichten Header finden Sie die Informationen, die Sie angeben können, indem Sie die Internet Header einer e-Mail untersuchen, die Sie mithilfe ihrer Azure Information Protection Bezeichnung gesendet und klassifiziert haben. Suchen Sie nach dem Header **msip_labels** und der unmittelbar folgenden Zeichenfolge, bis zum Semikolon. Zum Beispiel:
     
     **msip_labels: MSIP_Label_0e421e6d-EA17-4f DB-8F 01-93a3e71333b8_Enabled = true**
     
-    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Beispiele:
+    Geben Sie dann für den Nachrichtenheader in der Regel **msip_labels** für den Header und den Rest der Zeichenfolge für den Headerwert an. Zum Beispiel:
     
     ![Beispielregel für den E-Mail-Verkehr von Exchange Online, die den Nachrichtenheader für eine bestimmte Azure Information Protection-Bezeichnung festlegt](../media/exchange-rule-for-message-header.png)
     

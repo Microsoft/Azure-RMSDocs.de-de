@@ -1,9 +1,9 @@
 ---
 title: Klassifizieren mithilfe des Azure Information Protection Unified Bezeichnung-Clients
-description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails bei Verwendung des Azure Information Protection Unified-Bezeichnung Client für Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Anweisungen zum Klassifizieren Ihrer Dokumente und e-Mails, wenn Sie den Azure Information Protection Unified-Bezeichnungs Client für Windows verwenden.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 922d803237edde7950798a9bc9c538f2bcf6b538
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 975332c439530697d6460d2348531488d2b83e15
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935587"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326591"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Benutzerhandbuch: klassifizieren einer Datei oder e-Mail mit dem Azure Information Protection Unified Bezeichnung-Client für Windows
 
@@ -33,11 +33,11 @@ Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren.
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren Ihrer Dokumente und E-Mails
 
-Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Beispiele:
+Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Zum Beispiel:
 
 ![Beispiel für sensible Schaltfläche](../media/sensitivity-not-set-callout.png)
 
-Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Beispiele:
+Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Zum Beispiel:
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
@@ -80,13 +80,13 @@ Das Administratorhandbuch enthält eine vollständige Liste der Dateitypen, die 
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>So klassifizieren Sie eine Datei mithilfe des Datei-Explorers
 
-1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiele:
+1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Zum Beispiel:
     
     ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](../media/right-click-classify-protect-folder.png)
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung gemäß der Definition Ihres Administrators festgelegt wird. 
     
-    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Beispiele:
+    Wenn keine der Bezeichnungen ausgewählt werden kann, weil sie abgeblendet angezeigt werden: Die ausgewählte Datei unterstützt die Klassifizierung nicht. Zum Beispiel:
     
     ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/v2info-protect-dialog-labels-dimmed.png)
 

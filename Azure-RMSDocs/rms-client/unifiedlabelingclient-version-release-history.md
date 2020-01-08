@@ -1,8 +1,8 @@
 ---
 title: Azure Information Protection vereinheitlichte Bezeichnung für den Client Versionsverlauf & Unterstützungs Richtlinie
 description: Weitere Informationen zum Release des Azure Information Protection-Clients für einheitliche Bezeichnungen für Windows.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
 ms.date: 11/02/2019
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0ee20b6063dffd18b5067663de05c2d7a25cabd4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c7291b63971d34e7dd7e3e369cd13dfca7e44729
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73446037"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326379"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -56,7 +56,7 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
-Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md##compare-the-labeling-clients-for-windows-computers).
+Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 ## <a name="version-25330"></a>Version 2.5.33.0
 
@@ -123,7 +123,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 ## <a name="version-22210"></a>Version 2.2.21.0
 
-**Veröffentlicht**: 09/03/2020
+**Veröffentlicht**: 09/03/2019
 
 Unterstützt durch 04/23/2020
 

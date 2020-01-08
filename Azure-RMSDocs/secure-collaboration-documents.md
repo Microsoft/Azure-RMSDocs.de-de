@@ -1,10 +1,10 @@
 ---
 title: Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mit Azure Information Protection
 description: End-to-End-Workflow für das Zusammenarbeiten an Dokumenten, die mit Azure Information Protection geschützt werden
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d62c2946fed73c3f7ac69182b9558ee233935b4a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934465"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675583"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -42,6 +42,9 @@ Als Administrator können Sie eine Azure Information Protection-Bezeichnung konf
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Beispielkonfiguration für eine Schutzbezeichnung, mit der die interne und externe Zusammenarbeit unterstützt wird
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset), und befolgen Sie die [Anweisungen in Microsoft 365 Security and Compliance Center](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) , um diese Schritte auszuführen. 
 
 In diesem Beispiel werden Sie durch die Konfiguration einer vorhandenen Bezeichnung geführt, mit der Schutz angewendet wird, damit Benutzer in Ihrer Organisation gemeinsam mit Benutzern oder Gruppen aus einer anderen Organisation, in der Office 365 oder Azure AD genutzt wird, und mit Benutzern, die kein Azure AD-Konto haben und stattdessen ihre Gmail-Adresse verwenden, an Dokumenten arbeiten können.
 
@@ -95,7 +98,7 @@ Geben Sie das geschützte Dokument frei, indem Sie es an eine E-Mail anfügen, u
 
 ## <a name="opening-and-editing-the-protected-document"></a>Öffnen und Bearbeiten des geschützten Dokuments
 
-Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Beispiele:
+Wenn von Ihnen autorisierte Benutzer das Dokument zum Bearbeiten öffnen, wird ein Banner angezeigt, das auf eingeschränkte Berechtigungen hinweist. Zum Beispiel:
 
 ![Beispielbanner zu Azure Information Protection-Berechtigungen](./media/example-restricted-access-banner.png)
 

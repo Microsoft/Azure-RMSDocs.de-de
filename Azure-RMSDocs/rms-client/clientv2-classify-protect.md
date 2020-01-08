@@ -1,9 +1,9 @@
 ---
 title: Klassifizieren von & Protect-Azure Information Protection Unified-Bezeichnungs Client
-description: Anweisungen zum klassifizieren und Schützen Ihrer Dokumente und e-Mails bei Verwendung des Azure Information Protection Unified Bezeichnung-Clients für Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Anleitungen zur Klassifizierung und zum Schutz Ihrer Dokumente und e-Mails bei Verwendung des Azure Information Protection Unified Bezeichnung-Clients für Windows.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3181144a6bf8f36b2be8297d7371db2f079a2c9c
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74661837"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326608"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: klassifizieren und schützen mit dem Azure Information Protection Unified-Beschriftungs Client
 
@@ -46,11 +46,11 @@ Wenn für die externen Benutzer [B2B-Konten (Business-to-Business](/azure/active
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Verwenden von Office-Apps zum Klassifizieren und Schützen Ihrer Dokumente und E-Mails
 
-Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Beispiele:
+Wählen Sie auf der Registerkarte **Startseite** die **Vertraulichkeits** Schaltfläche im Menüband aus, und wählen Sie dann eine der Bezeichnungen aus, die für Sie konfiguriert wurde. Zum Beispiel:
 
 ![Beispiel für sensible Schaltfläche](../media/sensitivity-not-set-callout.png)
 
-Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Beispiele:
+Wenn Sie in der **Vertraulichkeits** Schaltfläche **Leiste anzeigen** ausgewählt haben, können Sie auf der Azure Information Protection Leiste eine Bezeichnung auswählen. Zum Beispiel:
 
 ![Beispiel zur Azure Information Protection-Leiste](../media/info-protect-barv2-not-set-callout.png)
 
@@ -108,13 +108,13 @@ Das Administrator Handbuch enthält eine vollständige Liste der unterstützten 
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>So klassifizieren und schützen Sie eine Datei mithilfe des Datei-Explorer
 
-1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Beispiele:
+1. Wählen Sie im Datei-Explorer die Datei, mehrere Dateien oder einen Ordner aus. Klicken Sie mit der rechten Maustaste auf **Klassifizieren und schützen**. Zum Beispiel:
     
     ![Klassifizieren und Schützen über das Kontextmenü des Datei-Explorer mithilfe von Azure Informationen Protection](../media/right-click-classify-protect-folder.png)
 
 2. Verwenden Sie im Dialogfeld **Klassifizieren und schützen – Azure Information Protection** die Bezeichnungen wie in einer Office-Anwendung, wodurch die Klassifizierung und der Schutz gemäß der Definition Ihres Administrators festgelegt werden. 
 
-   - Wenn keine der Bezeichnungen ausgewählt werden kann (abgeblendet): Die ausgewählte Datei unterstützt die Klassifizierung nicht, aber Sie können sie mit benutzerdefinierten Berechtigungen (Schritt 3) schützen. Beispiele:
+   - Wenn keine der Bezeichnungen ausgewählt werden kann (abgeblendet): Die ausgewählte Datei unterstützt die Klassifizierung nicht, aber Sie können sie mit benutzerdefinierten Berechtigungen (Schritt 3) schützen. Zum Beispiel:
 
      ![Keine Bezeichnungen im Dialogfeld „Klassifizieren und schützen – Azure Information Protection“** verfügbar](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -136,7 +136,7 @@ Das Administrator Handbuch enthält eine vollständige Liste der unterstützten 
 
 5. Klicken Sie auf **Übernehmen** und warten Sie auf die Nachricht **Work finished** (Vorgang abgeschlossen), um die Ergebnisse zu sehen. Klicken Sie anschließend auf **Schließen**.
 
-Die ausgewählte(n) Datei(en) werden jetzt gemäß Ihrer Auswahl klassifiziert und geschützt. In einigen Fällen (wenn die Dateinamenerweiterung durch Hinzufügen des Schutzes geändert wird) wird die ursprüngliche Datei im Datei-Explorer durch eine neue Datei mit dem Schlosssymbol für Azure Information Protection ersetzt. Beispiele:
+Die ausgewählte(n) Datei(en) werden jetzt gemäß Ihrer Auswahl klassifiziert und geschützt. In einigen Fällen (wenn die Dateinamenerweiterung durch Hinzufügen des Schutzes geändert wird) wird die ursprüngliche Datei im Datei-Explorer durch eine neue Datei mit dem Schlosssymbol für Azure Information Protection ersetzt. Zum Beispiel:
 
 ![Geschützte Datei mit Schlosssymbol für Azure Information Protection](../media/Pfile.png)
 

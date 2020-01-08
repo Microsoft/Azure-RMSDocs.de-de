@@ -1,9 +1,9 @@
 ---
 title: Unterstützte Dateitypen-Azure Information Protection Unified-Bezeichnungs Client
 description: Technische Details zu unterstützten Dateitypen, Dateinamen Erweiterungen und Schutz Ebenen für Administratoren, die für den Azure Information Protection Unified Bezeichnung-Client für Windows verantwortlich sind.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9574d9e2089169878c44cb4827ac58e94f177f88
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e27e89e2a4763eefa16abe3cc107279152528b16
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74666853"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675600"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: vom Azure Information Protection Unified Bezeichnung-Client unterstützte Dateitypen
 
@@ -78,7 +78,7 @@ Beispiele:
 
 Der Azure Information Protection Unified Bezeichnung-Client unterstützt den Schutz auf zwei unterschiedlichen Ebenen, wie in der folgenden Tabelle beschrieben.
 
-|Art des Schutzes|Systemeigenes Format|Generisch|
+|Art des Schutzes|Native|Generisch|
 |----------------------|----------|-----------|
 |Description|Für Text-, Bild-, Microsoft Office- (Word, Excel, PowerPoint), PDF-Dateien und einige andere Anwendungsdateitypen, die einen Rights Management-Dienst unterstützen, stellt der native Schutz eine starke Schutzebene bereit, die Verschlüsselung und Durchsetzung von Rechten (Berechtigungen) umfasst.|Für alle anderen Anwendungen und Dateitypen bietet der generische Schutz eine Sicherheitsebene, zu der Dateikapselung mithilfe des Dateityps PFILE und Authentifizierung gehören, um zu überprüfen, ob ein Benutzer berechtigt ist, die Datei zu öffnen.|
 |Protection|Der Dateischutz wird folgendermaßen erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für diejenigen stattfinden, die die Datei per E-Mail oder Zugriffsberechtigung über Datei- oder Freigabeberechtigungen erhalten<br /><br />– Außerdem werden Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts beim Schützen der Dateien festgelegt wurden, erzwungen, wenn der Inhalt im Azure Information Protection-Viewer (für geschützte Text- und Bilddateien) oder in der zugeordneten Anwendung (für alle anderen unterstützten Dateitypen) gerendert wird|Der Schutz der Dateien wird auf folgende Weise erzwungen:<br /><br />– Bevor geschützter Inhalt gerendert wird, muss eine erfolgreiche Authentifizierung für Personen stattfinden, die die Datei öffnen dürfen und Zugriff darauf haben. Wenn die Autorisierung fehlschlägt, wird die Datei nicht geöffnet.<br /><br />– Die Nutzungsrechte und Richtlinien, die vom Besitzer des Inhalts festgelegt werden, werden angezeigt, um autorisierte Benutzer über die Richtlinie für die vorgesehene Verwendung zu informieren<br /><br />– Die Überwachungsprotokollierung von autorisierten Benutzern, die Dateien öffnen und auf diese zugreifen kommt vor. Nutzungsrechte werden jedoch nicht erzwungen.|
@@ -166,7 +166,7 @@ Standardmäßig schließt der Scanner auch dieselben Dateitypen wie der Azure In
 
 Sie können die enthaltenen oder ausgeschlossenen Dateitypen für die Überprüfung der Dateien durch den Scanner ändern:
 
-- Konfigurieren Sie [mithilfe des Azure-Portals](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) **zu überprüfende Dateitypen** im Scannerprofil.
+- Konfigurieren Sie [mithilfe des Azure-Portals](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal)**zu überprüfende Dateitypen** im Scannerprofil.
     
     > [!NOTE]
     > Aufgrund des bekannten Problems für MSG-Dateien, die im vorherigen Abschnitt ausführlich erläutert wurden, empfiehlt es sich, die. msg-Dateien als ausgeschlossen beizubehalten.

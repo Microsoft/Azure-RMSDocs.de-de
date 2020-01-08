@@ -1,10 +1,10 @@
 ---
 title: Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen-aip
 description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified Sensitivität-Bezeichnungen für Clients und Dienste, die Microsoft Information Protection Framework unterstützen.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 12/08/2019
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,21 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: d094070b3f7c2973b99c9ca212b8b25873026faa
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935026"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674614"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Migrieren Sie Azure Information Protection Bezeichnungen zur vereinheitlichten Bezeichnung, sodass Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
 
@@ -91,17 +94,17 @@ Azure Information Protection Clients (klassisch) können alle Bezeichnungs Einst
 
 |Bezeichnungskonfiguration|Unterstützt von Clients für einheitliche Bezeichnungen| Leitfaden für die Admin-Centers|
 |-------------------|---------------------------------------------|-------------------------|
-|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Nicht verfügbar|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
-|Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Ja|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
+|Statusangabe „Aktiviert“/„Deaktiviert“<br /><br />Dieser Status wird nicht mit den Admin Centers synchronisiert. |Not applicable|Das Äquivalent ist, ob die Bezeichnung veröffentlicht wurde oder nicht. |
+|Die Bezeichnungsfarbe, die Sie aus der Liste auswählen oder mit einem RGB-Code angeben |Yes|Keine Konfigurationsoption für Bezeichnungsfarben. Stattdessen können Sie Bezeichnungs Farben im Azure-Portal konfigurieren oder [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)verwenden.|
 |Cloudbasierter Schutz oder HYOK-Schutz (Hold Your Own Key) mit vordefinierter Vorlage |Nein|Keine Konfigurationsoption für vordefinierte Vorlagen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.|
-|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Ja|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Cloudbasierter Schutz mit benutzerdefinierten Berechtigungen für Word, Excel und PowerPoint |Yes|Die Admin Center verfügen jetzt über eine Konfigurationsoption für benutzerdefinierte Berechtigungen. <br /><br /> Wenn Sie eine Bezeichnung mit dieser Konfiguration veröffentlichen, überprüfen Sie die Ergebnisse der Anwendung der Bezeichnung aus der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |HYOK-Schutz mit benutzerdefinierten Berechtigungen für Outlook („Nicht weiterleiten“) |Nein|Keine Konfigurationsoption für HYOK. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen. Wenn Sie dies tun, finden Sie die Ergebnisse der Anwendung der Bezeichnung in der [folgenden Tabelle](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Entfernen von Schutz |Nein|Keine Konfigurationsoption, um Schutz zu entfernen. Wir empfehlen nicht, eine Bezeichnung ohne diese Konfiguration zu veröffentlichen.<br /><br /> Wenn Sie bei dieser Konfiguration eine Bezeichnung veröffentlichen, wird der Schutz immer entfernt, unabhängig davon, ob der Schutz zuvor durch eine Bezeichnung oder unabhängig von einer Bezeichnung angewendet wurde.|
-|Alle authentifizierten Benutzer Schutzeinstellungen |Ja|Keine Konfigurationsoption zum Auswählen dieser Schutz Einstellung. Veröffentlichen Sie eine Bezeichnung mit dieser Konfiguration, wenn diese Einstellung migriert wurde, oder konfigurieren Sie Sie in der Azure-Portal.|
-|Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Ja|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
+|Alle authentifizierten Benutzer Schutzeinstellungen |Yes|Keine Konfigurationsoption zum Auswählen dieser Schutz Einstellung. Veröffentlichen Sie eine Bezeichnung mit dieser Konfiguration, wenn diese Einstellung migriert wurde, oder konfigurieren Sie Sie in der Azure-Portal.|
+|Benutzerdefinierte Schriftart und -farbe (RGB-Code) für optische Kennzeichnungen (Kopfzeile, Fußzeile, Wasserzeichen)|Yes|Die Konfiguration für optische Kennzeichnungen ist begrenzt auf eine Farb- und Schriftgradliste. Sie können diese Bezeichnung ohne Änderungen veröffentlichen, obwohl Sie sich die konfigurierten Werte in den Admin-Centers nicht ansehen können. <br /><br />Wenn Sie diese Optionen ändern möchten, verwenden Sie dazu das Azure-Portal. Sie sollten jedoch in Betracht ziehen, die Farbe in eine der in den Admin-Centers aufgelisteten Optionen zu ändern, um die Verwaltung zu vereinfachen.|
 |Visuelle Kennzeichnungsvariablen (Kopfzeile, Fußzeile)|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden Variablen auf Clients als Text und nicht als dynamische Werte angezeigt. Bearbeiten Sie die Zeichenfolgen, um die Variablen zu entfernen, bevor Sie die Bezeichnung veröffentlichen.|
 |Visuelle Kennzeichnungen pro App|Nein|Wenn Sie diese Bezeichnung ohne Änderungen veröffentlichen, werden die Anwendungsvariablen auf Clients in allen Anwendungen als Text angezeigt und zeigen nicht Ihre Textzeichenfolgen auf ausgewählten Anwendungen an. Veröffentlichen Sie diese Bezeichnung nur, wenn Sie sich für alle Anwendungen eignet, und bearbeiten Sie die Zeichenfolgen, um die Anwendungsvariablen zu entfernen.|
-|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Nicht verfügbar|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
+|Bedingungen und entsprechende Einstellungen <br /><br /> Einschließlich automatischer und empfohlener Bezeichnungen samt QuickInfos|Not applicable|Konfigurieren Sie Ihre Bedingungen neu, indem Sie die automatische Bezeichnung als eine von den Bezeichnungseinstellungen eigenständige Konfiguration verwenden.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Vergleichen des Verhaltens von Schutzeinstellungen für eine Bezeichnung
 

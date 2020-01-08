@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection von Client Versionsverlauf & Unterstützungs Richtlinie
 description: Erfahren Sie, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde, und erhalten Sie Informationen zum Support der Lifecycle-Richtlinie.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 10/23/2019
+ms.date: 1/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: feaffa2397a016d8284075a2ab5bf38f468f5ae7
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73446017"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675413"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
+
+> [!NOTE] 
+>Beachten Sie, dass für **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** in Azure-Portal ein Produkt veraltet ist.<br>
+>Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Durch die Umstellung auf Unified-Bezeichnungen können Azure Information Protection Kunden eine umfassende Strategie zum Schutz von Daten in Office-Anwendungen auf allen Plattformen und auch nicht von Microsoft aus produktive Anwendungen umsetzen. Weitere Informationen zu allen geplanten Änderungen finden Sie im offiziellen [Hinweis](https://aka.ms/aipclassicsunset).
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Das Azure Information Protection-Team aktualisiert den Azure Information Protection-Client regelmäßig, um Korrekturen und neue Funktionen zu implementieren. 
+
 
 Sie können das neueste allgemein verfügbare Release und die aktuelle Vorschauversion (sofern verfügbar) im [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) herunterladen. 
 
@@ -34,7 +38,7 @@ Nach einer kurzen Verzögerung von in der Regel einige Wochen ist die neueste Ve
 Weitere Informationen finden Sie unter [Upgraden und Verwalten des Azure Information Protection-Clients](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Sie sind daran interessiert, den Azure Information Protection Unified Label-Client zu verwenden, da ihre Bezeichnungen aus Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center veröffentlicht werden? Wenn Sie den Unified-Bezeichnungs Client aus dem Microsoft Download Center herunterladen und anschließend installieren, können Sie Ihren Azure Information Protection-Client auf diesen Unified-Bezeichnungs [Client](unifiedlabelingclient-version-release-history.md)aktualisieren.
+> Sie sind daran interessiert, den Azure Information Protection Unified Label-Client zu verwenden, da ihre Bezeichnungen aus Office 365 Security & Compliance Center, Microsoft 365 Security Center oder Microsoft 365 Compliance Center veröffentlicht werden? Wenn Sie den Unified-Bezeichnungs Client aus dem Microsoft Download Center herunterladen und anschließend installieren, können Sie das Upgrade Ihres Azure Information Protection-Clients auf den Unified-Bezeichnungs [Client](unifiedlabelingclient-version-release-history.md)durchführen.
 
 ### <a name="servicing-information-and-timelines"></a>Wartungsinformationen und Zeitachsen
 
@@ -73,6 +77,7 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
+
 ## <a name="version-154330"></a>Version 1.54.33.0
 
 **Veröffentlicht**: 10/23/2019
@@ -95,7 +100,7 @@ Diese Version umfasst die msipc-Version 1.0.3889.0419 des RMS-Clients.
 
 - Neue erweiterte Client Einstellung zur weiteren Anpassung der Einstellungen, mit denen Popup Meldungen in Outlook implementiert werden, die gesendete e-Mails warnen, rechtfertigen oder blockieren. Mit dieser neuen erweiterten Einstellung können Sie eine andere Aktion für e-Mail-Nachrichten ohne Anlagen festlegen. [Weitere Informationen](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
 
-**Korrekturen**:
+**Fixes**:
 
 - Wenn Sie den Datei-Explorer verwenden, klicken Sie mit der rechten Maustaste auf die Bezeichnung einer Datei, für die der Schutz unabhängig von einer Bezeichnung angewendet wurde. dieser Schutz wird beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
 
@@ -149,7 +154,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 - Neue erweiterte Client Einstellung, die nur anwendbar ist, wenn Sie die Richtlinien Einstellung so konfigurieren, dass benutzerdefinierte Berechtigungen nicht angezeigt werden: Wenn eine Datei vorhanden ist, die mit benutzerdefinierten Berechtigungen geschützt ist, können Sie die Option benutzerdefinierte Berechtigungen im Datei-Explorer anzeigen, damit Benutzer Folgendes sehen: und ändern Sie diese (wenn Sie über Berechtigungen zum Ändern der Schutzeinstellungen verfügen). [Weitere Informationen](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
-**Korrekturen**:
+**Fixes**:
 
 - In Pfaden und Dateinamen werden in der Azure Information Protection-Analyse anstelle von Nicht-ASCII-Zeichen keine Fragezeichen ( **?** ) angezeigt, wenn das Gebietsschema des Ausgangsbetriebssystems Englisch ist.
 
@@ -165,7 +170,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Wenn Sie die erweiterte Clienteinstellung verwenden, um eine [Standardbezeichnung für Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook) festzulegen, können Sie eine übergeordnete Bezeichnung anwenden, die Unterbezeichnungen hat, wenn alle diese Unterbezeichnungen für den Benutzer deaktiviert sind.
 
-- Wenn Sie die [Richtlinieneinstellung](../configure-policy-settings.md) **Wenden Sie für E-Mails mit Anlagen eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht.** verwenden und die Bezeichnung mit der höchsten Klassifizierung für benutzerdefinierte Berechtigungen konfiguriert ist, war das Ergebnis bisher, dass die Bezeichnung auf die E-Mail angewendet wurde, der Schutz jedoch nicht. Jetzt:
+- Wenn Sie die [Richtlinien Einstellung](../configure-policy-settings.md) **für e-Mail-Nachrichten mit Anlagen verwenden, wenden Sie eine Bezeichnung an, die der höchsten Klassifizierung dieser Anlagen entspricht** , und die Bezeichnung mit der höchsten Klassifizierung ist für benutzerdefinierte Berechtigungen konfiguriert. das Ergebnis war zuvor, dass die Bezeichnung auf die e-Mail angewendet wurde, der Schutz jedoch nicht war. Jetzt:
     - Wenn die benutzerdefinierten Berechtigungen der Bezeichnung Outlook einschließen (nicht weiterleiten): wenden Sie diese Bezeichnung und deren nicht weiterleiten-Schutz auf die e-Mail an.
     - Wenn die benutzerdefinierten Berechtigungen der Bezeichnung nur für Word, Excel, PowerPoint und den Datei-Explorer gelten: wenden Sie die Bezeichnung nicht an, und wenden Sie keinen Schutz auf die e-Mail an.
 
@@ -188,7 +193,7 @@ Diese Version umfasst die MSIPC-Version 1.0.3592.627 des RMS-Clients.
 
 - Vom Azure Information Protection-Scanner werden ZIP-Dateien nicht mehr standardmäßig ausgeschlossen. Informationen zum Überprüfen und Bezeichnen von ZIP-Dateien finden Sie im Abschnitt [Überprüfen von ZIP-Dateien](client-admin-guide-file-types.md#to-inspect-zip-files) des Administratorhandbuchs.
 
-- Die [Richtlinieneinstellung](../configure-policy-settings.md) **Benutzer müssen eine Begründung angeben, wenn sie eine niedrigere Klassifizierungsbezeichnung festlegen, eine Bezeichnung oder den Schutz entfernen möchten** gilt für den Scanner nicht mehr. Die Überprüfung führt diese Aktionen aus, wenn Sie die Einstellung neu bezeichnen **von** **Dateien** im Überprüfungs Profil auf ein festlegen, und aktivieren Sie dann das Kontrollkästchen Herabstufung der **Bezeichnung zulassen** .
+- Die [Richtlinien Einstellung](../configure-policy-settings.md) **Benutzer müssen eine Begründung angeben, um eine niedrigere Klassifizierungs Bezeichnung festzulegen, eine Bezeichnung zu entfernen oder den Schutz zu entfernen** , gilt nicht mehr für den Scanner. Die Überprüfung führt diese Aktionen aus, wenn Sie die Einstellung neu bezeichnen **von** **Dateien** im Überprüfungs Profil auf ein festlegen, und aktivieren Sie dann das Kontrollkästchen Herabstufung der **Bezeichnung zulassen** .
 
 ## <a name="next-steps"></a>Nächste Schritte
 

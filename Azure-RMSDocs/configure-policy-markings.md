@@ -1,28 +1,31 @@
 ---
 title: Konfigurieren optischer Kennzeichnungen für eine Azure Information Protection-Bezeichnung – AIP
 description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/24/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 472bf634c1eb43e000b26fa1bb11387442ff91c1
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 11156154ebdd269b903e53bda3c81afd88e0baf3
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935043"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674495"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen. 
@@ -37,7 +40,7 @@ Weitere Informationen zu diesen optische Kennzeichnungen finden Sie hier:
     
     - PowerPoint: Wasserzeichen werden als Hintergrundbild auf den Folienmaster angewendet. Stellen Sie sicher, dass auf der Registerkarte **Ansicht** im **Folienmaster** die Option **Hintergrundbilder ausblenden** aktiviert ist.
 
-- Mehrere Zeilen werden für Wasserzeichen und für Kopf- und Fußzeilen in Word, Excel und PowerPoint unterstützt. Wenn Sie mehrere Zeilen für die Kopf- oder Fußzeile einer Bezeichnung angeben, die in Outlook angewendet wird, werden die Zeilen verkettet. Ziehen Sie in diesem Szenario die Verwendung der Konfiguration zum [Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) in Betracht.
+- Mehrere Zeilen werden für Wasserzeichen und für Kopf- und Fußzeilen in Word, Excel und PowerPoint unterstützt. Wenn Sie mehrere Zeilen für die Kopf- oder Fußzeile einer Bezeichnung angeben, die in Outlook angewendet wird, werden die Zeilen verkettet. Ziehen Sie in diesem Szenario die Verwendung der Konfiguration zum [Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook](#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook) in Betracht.
 
 - Maximale Zeichenfolgenlänge:
     

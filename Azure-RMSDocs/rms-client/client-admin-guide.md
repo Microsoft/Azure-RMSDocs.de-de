@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection-Client – Administratorhandbuch
 description: Anweisungen und Informationen für Administratoren in einem Unternehmensnetzwerk, die für die Bereitstellung des Azure Information Protection-Clients für Windows zuständig sind.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/26/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9169da03c020f07f2ad031efff80364658aa6b24
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 83396b2d499d9cbc718524961c21252ea87e8be3
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935264"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675685"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Azure Information Protection-Client – Administratorhandbuch
 
@@ -26,9 +26,12 @@ ms.locfileid: "74935264"
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
+
 Verwenden Sie die Informationen in diesem Handbuch, wenn Sie für den Azure Information Protection-Client in einem Unternehmensnetzwerk verantwortlich sind oder wenn Sie mehr technische Informationen erhalten möchten als im [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md) vorhanden sind. 
 
-Beispiele:
+Zum Beispiel:
 
 - Überblick über die verschiedenen Komponenten dieses Clients und Informationen darüber, in welchen Fällen dieser installiert werden soll
 
@@ -172,7 +175,7 @@ Die Namen und Beschreibungen von Bezeichnungen, die Sie angeben, werden jedoch n
 
 ## <a name="post-installation-tasks"></a>Aufgaben nach der Installation
 
-Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Beispiele:
+Nachdem Sie den Azure Information Protection-Client installiert haben, stellen Sie sicher, dass Sie Benutzern Anweisungen zur Bezeichnung ihrer Dokumente und E-Mails und Anleitungen dazu geben, welche Bezeichnungen für bestimmte Szenarien ausgewählt werden müssen. Zum Beispiel:
 
 - Anweisungen für Onlinebenutzer: [Azure Information Protection-Client – Benutzerhandbuch](client-user-guide.md)
 

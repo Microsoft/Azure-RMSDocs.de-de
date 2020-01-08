@@ -1,10 +1,10 @@
 ---
 title: Verwenden von PowerShell mit dem Azure Information Protection-Client
 description: Anweisungen und Informationen für Administratoren zum Verwalten des Azure Information Protection-Clients mithilfe von PowerShell.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/24/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3773996803d99aada5ccda2b3fd785ab475f0fa6
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561300"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675702"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Administratorhandbuch: Verwenden von PowerShell mit dem Azure Information Protection-Client
 
@@ -25,9 +25,12 @@ ms.locfileid: "73561300"
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
+
 Wenn Sie den Azure Information Protection-Client installieren, werden PowerShell-Befehle automatisch installiert. Dadurch können Sie den Client durch Ausführen von Befehlen, die Sie in Skripts zur Automatisierung einfügen können, verwalten.
 
-Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Beispiele:
+Die Cmdlets werden mit dem PowerShell-Modul **AzureInformationProtection** installiert. Dieses Modul umfasst alle Rights Management-Cmdlets aus dem RMS Protection-Tool (wird nicht mehr unterstützt). Es gibt auch Cmdlets, die Azure Information Protection für die Bezeichnung verwenden. Zum Beispiel:
 
 |Cmdlet für die Bezeichnung|Beispielsyntax|
 |----------------|---------------|
@@ -74,7 +77,7 @@ Bevor Sie mit der Verwendung dieser Cmdlets beginnen, betrachten Sie die zusätz
 Lesen Sie diesen Abschnitt, bevor Sie die PowerShell-Befehle verwenden, wenn Ihre Organisation Azure Information Protection für die Klassifizierung und den Schutz oder nur den Azure Rights Management-Dienst für den Datenschutz verwendet.
 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Prerequisites
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ sind weitere Komponenten für die Azure Information Protection-Bezeichnung und den Azure Rights Management-Datenschutzdienst erforderlich:
 
@@ -313,7 +316,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiele:
+Verwenden Sie den Parameter **-Folder** mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -326,7 +329,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiele:
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet `Get-RMSFileStatus` verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel:
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -336,7 +339,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiele:
+Sie müssen die Rechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, um den Schutz einer Datei aufheben zu können. Oder Sie müssen Die Cmdlets als Administrator ausführen. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -353,7 +356,7 @@ Beachten Sie: Wenn die Rights Management-Vorlagen geändert werden, müssen Sie 
 Lesen Sie diesen Abschnitt, bevor Sie damit beginnen, Dateien mithilfe der PowerShell-Befehle zu schützen bzw. deren Schutz aufzuheben, wenn in Ihrer Organisation nur Active Directory Rights Management Services verwendet werden.
 
 
-### <a name="prerequisites"></a>Voraussetzungen
+### <a name="prerequisites"></a>Prerequisites
 
 Zusätzlich zu den Voraussetzungen für die Installation des Moduls „AzureInformationProtection“ muss das für den Schutz bzw. die Aufhebung des Schutzes verwendete Konto über die Berechtigungen zum Lesen und Ausführen verfügen, um auf „ServerCertification.asmx“ zugreifen zu können:
 
@@ -429,7 +432,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     ---------             -------------
     C:\Test.docx          C:\Test.docx   
 
-Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Beispiele:
+Verwenden Sie den Parameter „-Folder“ mit einem Laufwerkbuchstaben und Pfad oder UNC-Pfad, um alle Dateien in einem Ordner zu schützen. Zum Beispiel:
 
     Protect-RMSFile -Folder \\Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -442,7 +445,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Beispiele: 
+Wenn die Dateierweiterung nicht geändert wird, nachdem der Schutz angewendet wurde, können Sie später immer das Cmdlet „Get-RMSFileStatus“ verwenden, um zu prüfen, ob die Datei geschützt ist. Zum Beispiel: 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -452,7 +455,7 @@ Ihre Ausgabe sieht etwa wie folgt aus:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Beispiele:
+Sie müssen die Nutzungsrechte „Besitzer“ oder „Extrahieren“ für das Konto besitzen, mit dem die Datei geschützt wurde, oder Sie müssen Administrator für AD RMS sein, um den Schutz einer Datei aufheben zu können. Verwenden Sie anschließend das Cmdlet zum Aufheben des Schutzes. Zum Beispiel:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -643,7 +646,7 @@ Allgemeine Schritte:
     Löschen Sie optional den Task. Wenn das Token abläuft, müssen Sie diese Schritte wiederholen. Daher ist es unter Umständen praktischer, den konfigurierten Task zu behalten, damit er einfacher erneut ausgeführt werden kann, wenn Sie das neue PowerShell-Skript mit dem neuen Tokenwert kopieren.
 
 ## <a name="next-steps"></a>Nächste Schritte
-Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Beispiele: 
+Wenn Sie in einer PowerShell-Sitzung Hilfe zum Cmdlet benötigen, geben Sie `Get-Help <cmdlet name> cmdlet` ein, und verwenden Sie dann den Parameter „-online“, um die neuesten Informationen abzurufen. Zum Beispiel: 
 
     Get-Help Get-RMSTemplate -online
 

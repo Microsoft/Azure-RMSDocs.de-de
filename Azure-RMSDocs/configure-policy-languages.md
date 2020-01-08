@@ -1,28 +1,31 @@
 ---
 title: Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 description: Sie können die Unterstützung für verschiedene Sprachen für die Bezeichnungen und Vorlagen erweitern, die in der Information Protection-Leiste für Benutzer angezeigt werden, indem Sie die Sprachen in der Azure Information Protection-Richtlinie angeben und Ihre Übersetzungen importieren.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 1cfbe6bbf89f5abaa62e40802df9780ca0e4de48
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: ec1a84b934b4e4c54108e7af645b87611ae6da56
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935128"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75674597"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.

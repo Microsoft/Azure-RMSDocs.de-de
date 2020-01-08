@@ -1,9 +1,9 @@
 ---
 title: 'Azure Information Protection Benutzerhandbuch: einheitliche Bezeichnung'
-description: Der Azure Information Protection Unified Bezeichnung-Client für Windows hilft Ihnen dabei, wichtige Dokumente und e-Mails vor Personen zu schützen, die Sie nicht sehen dürfen, auch wenn Ihre e-Mail weitergeleitet wird oder Ihr Dokument an einem anderen Speicherort gespeichert wird.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Azure Information Protection Unified Bezeichnung-Client für Windows hilft Ihnen dabei, wichtige Dokumente und e-Mails vor Personen zu schützen, die Sie nicht sehen dürfen, auch wenn Ihre e-Mail weitergeleitet wird oder Ihr Dokument an einem anderen Speicherort gespeichert wird.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9223087642653b304a719a8f0cbe0125d5b3a741
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 8e4851da21542985c89ef22c50b9d6015e5a6835
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935553"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326513"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch) 
 
