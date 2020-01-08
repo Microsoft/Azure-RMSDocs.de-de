@@ -4,15 +4,14 @@ description: Dieser Artikel hilft Ihnen dabei, die Konzepte im Zusammenhang mit 
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: a72ae5169e4a7ee9a201876afbef0f5d33fc9b89
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ed6407e99677bbed293959e15720c4c7d418aa54
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69893751"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555822"
 ---
 # <a name="microsoft-information-protection-sdk---cache-storage"></a>Microsoft Information Protection SDK-Cache Speicher
 
@@ -26,7 +25,7 @@ Die Anwendung definiert den Cachetyp beim Laden des Profils als Teil der Objekte
 
 Ab MIP SDK Release 1,3 sind die folgenden Speicher Cache Typen verfügbar.
 
-| Type            | Zweck                                                                                                                         |
+| Geben Sie            | Zweck                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | InMemory        | Verwaltet den Speicher Cache im Arbeitsspeicher in der Anwendung.                                                                       |
 | OnDisk          | Speichert die Datenbank auf dem Datenträger in dem Verzeichnis, das im Einstellungs Objekt bereitgestellt wird. Die Datenbank wird als Klartext gespeichert.              |
@@ -54,7 +53,7 @@ Der Cache Speicher ist wichtig für die Verwaltung des Offline Zugriffs auf zuvo
 
 ## <a name="supported-platforms-for-encryption"></a>Unterstützte Plattformen für die Verschlüsselung
 
-| Plattform          | Version                | Anmerkungen                                                                                                                               |
+| Plattform          | -Version                | Anmerkungen                                                                                                                               |
 | ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Microsoft Windows | Windows 8 und höher    | Windows 7 unterstützt nur cachestoragetype:: ondisk.                                                                                    |
 | macOS             | High Sierra oder höher  |                                                                                                                                     |
@@ -79,18 +78,18 @@ Das MIP SDK verwaltet zwei Datenbanken für den Cache. Eine ist für die Schutz-
 | Genehmistore  | Speichert Zustimmungs Ergebnisse für die einzelnen Engines.                        | Nein        |
 | Dnsinfostore  | Speichert Ergebnisse der DNS-Suche für SDK-Schutz Vorgänge.        | Nein        |
 | Enginestore   | Speichert Engine-Details, zugeordnete Benutzer und benutzerdefinierte Client Daten. | Nein        |
-| KeyStore      | Speichert symmetrische Verschlüsselungsschlüssel für jede Engine.              | Ja       |
-| Lizenz Speicher  | Speichert Lizenzinformationen für zuvor entschlüsselte Daten.  | Ja       |
+| KeyStore      | Speichert symmetrische Verschlüsselungsschlüssel für jede Engine.              | Yes       |
+| Lizenz Speicher  | Speichert Lizenzinformationen für zuvor entschlüsselte Daten.  | Yes       |
 | Sdinfostore   | Speichert Dienst Ermittlungsergebnisse.                              | Nein        |
 
 ### <a name="policy-database"></a>Richtlinien Datenbank
 
 | Tabelle           | Zweck                                                          | Verschlüsselt |
 | --------------- | ---------------------------------------------------------------- | --------- |
-| KeyStore        | Speichert symmetrische Verschlüsselungsschlüssel für jede Engine.                | Ja       |
-| Richtlinien        | Speichert Bezeichnungs Richtlinien Informationen für jeden Benutzer.                   | Ja       |
+| KeyStore        | Speichert symmetrische Verschlüsselungsschlüssel für jede Engine.                | Yes       |
+| Richtlinien        | Speichert Bezeichnungs Richtlinien Informationen für jeden Benutzer.                   | Yes       |
 | Richtlinienurl     | Speichert die URL des Back-End-Richtlinien diensdienstanders             | Nein        |
-| Sensitivität     | Speichert Klassifizierungsregeln für eine bestimmte Benutzer Richtlinie.          | Ja       |
+| Vertraulichkeit     | Speichert Klassifizierungsregeln für eine bestimmte Benutzer Richtlinie.          | Yes       |
 | Sensitivityurls | Speichert die Dienst-URL der Back-End-vertraulichkeitsrichtlinie für bestimmte | Nein        |
 
 ## <a name="database-size-considerations"></a>Aspekte der Datenbankgröße

@@ -4,15 +4,14 @@ description: In diesem Artikel werden die Konzepte des Engine-Objekts für den S
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 1ccfc81e4b45c6ec4e4316b748d9ccc0f73561a4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 116bd67298195e66de26ab278802e93644a095dd
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886027"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556094"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK: Engine-Konzepte für die Schutz-API
 
@@ -24,7 +23,7 @@ Im nachfolgenden Beispiel wird die Verwendung einer einzelnen Engine für einen 
 
 ### <a name="implementation-create-protection-engine-settings"></a>Implementierung: Erstellen von Einstellungen für die Schutz-Engine
 
-Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::ProtectionEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::ProtectionEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
 Im folgenden Beispiel wird ein `ProtectionEngine::Settings`-Objekt mit dem Namen *engineSettings* erstellt. 
 

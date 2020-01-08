@@ -4,15 +4,14 @@ description: MIP SDK für C++ Referenz
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 69896e60fcf8aa33b2181fd22aeda803ab35b1cf
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560437"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555992"
 ---
 # <a name="mip-sdk-for-c-reference"></a>MIP SDK für C++ Referenz
 
@@ -24,7 +23,7 @@ Das MIP SDK für C++ enthält:
 - [Functions (Funktionen)](mip-functions.md)
 - Die folgenden Klassen:
 
- Klasse                         | Description                                
+ Class                         | Description                                
 --------------------------------|---------------------------------------------
 [MIP:: accessdeniederror-Klasse](class_mip_accessdeniederror.md)  |  Der Benutzer konnte nicht auf den Inhalt zugreifen. Das ist ggf. darauf zurückzuführen, dass ihm Berechtigungen fehlen oder Inhalte widerrufen wurden.
 [MIP:: Action-Klasse](class_mip_action.md)  |  Schnittstelle für eine Aktion. Jede Aktion bedeutet einen Schritt, der von der Anwendung ausgeführt werden muss, um die Bezeichnung (wie in der Richtlinie definiert) anzuwenden.
@@ -48,7 +47,7 @@ Das MIP SDK für C++ enthält:
 [MIP:: computeengine:: Settings-Klasse](class_mip_computeengine_settings.md)  | Noch nicht dokumentiert.
 [MIP:: computeenginecontext-Klasse](class_mip_computeenginecontext.md)  | Noch nicht dokumentiert.
 [MIP:: conditiondata-Klasse](class_mip_conditiondata.md)  | Noch nicht dokumentiert.
-[MIP:: einvernehmdelegat-Klasse](class_mip_consentdelegate.md)  |  Delegat für Vorgänge, die eine Zustimmung erfordern.
+[MIP:: einvernehmdelegat-Klasse](class_mip_consentdelegate.md)  |  Delegat für Vorgänge, die eine Zustimmung erfordern
 [MIP:: genehmideniederror-Klasse](class_mip_consentdeniederror.md)  |  Einem Vorgang, der die Einwilligung vom Benutzer erfordert, wurde keine Einwilligung erteilt.
 [MIP:: contentlabel-Klasse](class_mip_contentlabel.md)  |  Abstraktion für eine Microsoft Information Protection-Bezeichnung, die für einen Teil des Inhalts, in der Regel ein Dokument, gilt.
 [MIP:: contentmarkingaktiondata-Klasse](class_mip_contentmarkingactiondata.md)  | Noch nicht dokumentiert.

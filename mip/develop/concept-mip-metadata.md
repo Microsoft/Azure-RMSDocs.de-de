@@ -4,15 +4,14 @@ description: Dieser Artikel hilft Ihnen, die Metadaten zu verstehen, die vom Mic
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886131"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555686"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-Metadaten
 
@@ -36,9 +35,9 @@ Das MIP SDK wendet den folgenden Satz von Metadaten an.
 
 | Attribut | Typ oder Wert                 | Description                                                                                                                                                                                                                                        | Verbindlich |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Enabled**   | „Wahr“ oder „Falsch“                 | Dieses Attribut gibt an, ob die Klassifizierung, die durch diesen Satz von Schlüssel-Wert-Paaren dargestellt wird, für das Datenelement aktiviert ist. DLP-Produkte überprüfen in der Regel, ob dieser Schlüssel vorhanden ist, um die Klassifizierungs Bezeichnung zu identifizieren. | Ja       |
-| **SiteId**    | GUID                          | Azure Active Directory Mandanten-ID                                                                                                                                                                                                                   | Ja       |
-| **ActionId**  | GUID                          | Die Aktions-ID wird jedes Mal geändert, wenn eine Bezeichnung festgelegt wird. Überwachungs Protokolle enthalten sowohl alte als auch neue Aktions-IDs, um das Verketten von Bezeichnungs Aktivitäten mit dem Datenelement zuzulassen.                                                                                 | Ja       |
+| **Enabled**   | „true“ oder „false“.                 | Dieses Attribut gibt an, ob die Klassifizierung, die durch diesen Satz von Schlüssel-Wert-Paaren dargestellt wird, für das Datenelement aktiviert ist. DLP-Produkte überprüfen in der Regel, ob dieser Schlüssel vorhanden ist, um die Klassifizierungs Bezeichnung zu identifizieren. | Yes       |
+| **SiteId**    | GUID                          | Azure Active Directory Mandanten-ID                                                                                                                                                                                                                   | Yes       |
+| **ActionId**  | GUID                          | Die Aktions-ID wird jedes Mal geändert, wenn eine Bezeichnung festgelegt wird. Überwachungs Protokolle enthalten sowohl alte als auch neue Aktions-IDs, um das Verketten von Bezeichnungs Aktivitäten mit dem Datenelement zuzulassen.                                                                                 | Yes       |
 | **Methode**    | Standard oder privilegiert        | Wird über [MIP:: zutragmethode](reference/mip-enums-and-structs.md#assignmentmethod-enum)festgelegt. Standard impliziert, dass die Bezeichnung standardmäßig oder automatisch angewendet wird. Privilegiert impliziert, dass die Bezeichnung manuell ausgewählt wurde.                                                                                                                                                                                                                 | Nein        |
 | **SetDate**   | Erweitertes ISO 8601-Datums Format | Der Zeitstempel, zu dem die Bezeichnung festgelegt wurde.                                                                                                                                                                                                              | Nein        |
 | **Name**      | string                        | Bezeichnungs eindeutiger Name innerhalb des Mandanten. Sie entspricht nicht notwendigerweise dem anzeigen Amen.                                                                                                                                                              | Nein      |
@@ -47,11 +46,11 @@ Das MIP SDK wendet den folgenden Satz von Metadaten an.
 
 Das Ergebnis ähnelt der folgenden Tabelle, wenn es auf eine Datei angewendet wird.
 
-| Key                                                         | Value                                |
+| Schlüssel                                                         | Value                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | wahr                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08t21:13:16-0800             |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Privilegierte                           |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Privilegiert                           |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidential (Vertraulich)                         |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |

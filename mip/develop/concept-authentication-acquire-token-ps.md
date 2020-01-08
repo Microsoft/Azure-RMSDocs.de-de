@@ -4,21 +4,20 @@ description: In diesem Artikel erfahren Sie, wie Sie mithilfe von PowerShell ein
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175308"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555856"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Abrufen eines Zugriffstoken (PowerShell)
 
 Im gezeigten Beispiel wird veranschaulicht, wie ein externes PowerShell-Skript aufgerufen wird, um ein OAuth2-Token abzurufen. Ein gültiges OAuth2-Zugriffs Token ist für die Implementierung des Authentifizierungs Delegaten erforderlich.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Prerequisites
 
 - Complete [(MIP) SDK-Setup und-Konfiguration](setup-configure-mip.md). Neben anderen Aufgaben registrieren Sie Ihre Client Anwendung in Ihrem Azure Active Directory-Mandanten (Azure AD). Azure AD geben eine Anwendungs-ID (auch als Client-ID bezeichnet) an, die in der tokenerwerbs-Logik verwendet wird.
 

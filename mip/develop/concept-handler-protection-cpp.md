@@ -4,15 +4,14 @@ description: Dieser Artikel erläutert, wie Schutz-API-Handler erstellt und für
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 892e492351d3779667629ff4522891bb527fd782
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886148"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556162"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK – ProtectionHandler-Konzepte
 
@@ -24,7 +23,7 @@ Folgende Voraussetzungen gelten für das Erstellen eines `ProtectionHandler`-Ele
 
 - Ein `mip::MipContext`-Element.
 - Ein `mip::ProtectionProfile`-Element.
-- Ein `mip::ProtectionEngine`-Element, dass `ProtectionProfile` hinzugefügt wurde
+- Ein `mip::ProtectionEngine`-Element, dass `ProtectionProfile` hinzugefügt wurde.
 - Eine Klasse, die `mip::ProtectionHandler::Observer`erbt.
 - Ein `mip::ProtectionDescriptor`-Element oder eine Veröffentlichungslizenz
 

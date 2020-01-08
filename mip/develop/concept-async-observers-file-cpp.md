@@ -4,15 +4,14 @@ description: Das MIP SDK ist so konzipiert, dass es beinahe vollständig asynchr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 16bd0824d1dd572041c4f64ed395704a2a9187f5
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175444"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555907"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK: Beobachter von Datei-APIs
 
@@ -27,13 +26,13 @@ Im nachfolgenden Beispiel wird das Promise/Future-Muster dargestellt. Dieses wir
 
 ## <a name="file-profile-observer-implementation"></a>Implementieren des Dateiprofilbeobachters
 
-Im folgenden Beispiel wurde die Klasse `ProfileObserver` erstellt, die von `mip::FileProfile::Observer` abgeleitet wurde. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
+Im folgenden Beispiel wurde eine Klasse (`ProfileObserver`) erstellt, die von `mip::FileProfile::Observer` abgeleitet ist. Die Memberfunktionen wurden überschrieben, um das Promise-Future-Muster anzuwenden, das in allen Beispielen verwendet wird.
 
 **Hinweis:** Die nachfolgenden Beispiele wurden nur teilweise implementiert und beinhalten keine Überschreibungen der mit `mip::FileEngine` in Verbindung stehenden Beobachter.
 
 ### <a name="profile_observerh"></a>profile_observer.h
 
-Im Header wird zunächst die `ProfileObserver`-Klasse definiert, die von `mip::FileProfile::Observer` abgeleitet wird, und anschließend werden die einzelnen Memberfunktionen überschrieben.
+Im Header wird zunächst die `ProfileObserver`-Klasse definiert, die von `mip::FileProfile::Observer` abgeleitet ist, und anschließend werden die einzelnen Memberfunktionen überschrieben.
 
 ```cpp
 class ProfileObserver final : public mip::FileProfile::Observer {
@@ -51,9 +50,9 @@ In der eigentlichen Implementierung wird eine Aktion definiert, die für jede Me
 
 Jeder Member akzeptiert zwei Parameter. Bei dem ersten Parameter handelt es sich um einen gemeinsamen Zeiger auf die Klasse, die in der Funktion verarbeitet wird. `ProfileObserver::OnLoadSuccess` erwartet dabei den Empfang einer `mip::FileProfile`-Klasse. `ProfileObserver::OnAddEngineSuccess` erwartet hingegen den Empfang einer `mip::FileEngine`-Klasse.
 
-Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *context*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Objekt dar, das je nach Verweis als `std::shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in das `std::promise` um, das dann in einem Objekt mit dem Namen `promise` gespeichert wird.
+Bei dem zweiten Parameter handelt es sich um einen gemeinsamen Zeiger auf den *Kontext*. In diesem Beispiel stellt der Kontext einen Verweis auf ein `std::promise`-Objekt dar, das je nach Verweis als `std::shared_ptr<void>` übergeben wird. Die erste Zeile der Funktion wandelt dies in `std::promise` um. Dieses Element wird dann in einem Objekt mit dem Namen `promise` gespeichert.
 
-Schließlich wird der Future-Aspekt des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::FileProfile`-Objekt übergeben wird.
+Letztendlich wird das Future des Promise-Future-Musters bereitgestellt, indem der Wert `promise->set_value()` festgelegt und das `mip::FileProfile`-Objekt übergeben wird.
 
 ```cpp
 #include "profile_observer.h"

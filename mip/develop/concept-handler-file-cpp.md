@@ -4,15 +4,14 @@ description: Dieser Artikel wird Ihnen helfen zu verstehen, wie File-API-Handler
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886227"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555805"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK: Konzepte für Dateihandler
 
@@ -42,7 +41,7 @@ In diesem Artikel werden die folgenden Methoden behandelt:
 Folgende Voraussetzungen gelten für das Erstellen eines `FileHandler`-Elements für eine bestimmte Datei:
 
 - Ein `FileProfile`-Element.
-- Ein `FileEngine`-Element, dass `FileProfile` hinzugefügt wurde
+- Ein `FileEngine`-Element, dass `FileProfile` hinzugefügt wurde.
 - Eine Klasse, die `mip::FileHandler::Observer` erbt.
 
 ## <a name="create-a-file-handler"></a>Erstellen eines Dateihandlers

@@ -4,15 +4,14 @@ description: In diesem Artikel erfahren Sie, wie Sie die Telemetrie abonnieren u
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74484852"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556145"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-telemetriekonfiguration
 
@@ -58,7 +57,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | SDKVersion                           | Identisch mit MIP. Version.                                                                   | Nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
 | UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | Nein       |
-| Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
+| -Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
 
 #### <a name="event-discovery"></a>Ereignis: Ermittlung
 
@@ -83,7 +82,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | LabelId                              | Der Bezeichner für die Inhalts Bezeichnung der geöffneten Datei oder der geöffneten Daten.                                   | Nein       |
 | MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
 | MIP. Version                          | Version des MIP SDK.                                                                | Nein       |
-| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| ObjectId                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
 | Vorgang                            | "Ermittlung".                                                                           | Nein       |
 | OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | Nein       |
 | Plattform                             | Betriebssystemversion.                                                              | Nein       |
@@ -94,7 +93,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | SDKVersion                           | Identisch mit MIP. Version.                                                                   | Nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
 | UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | Nein       |
-| Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
+| -Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
 
 #### <a name="event-label-change"></a>Ereignis: Bezeichnungs Änderung
 
@@ -124,7 +123,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | LabelIdBefore                        | ID der vorherigen Bezeichnung, die in der Datei oder den Daten gespeichert war.                                        | Nein       |
 | MachineName                          | Der Name des Systems, das das Ereignis generiert hat.                                           | **Ja**  |
 | MIP. Version                          | Version des MIP SDK.                                                                | Nein       |
-| ObjectID                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
+| ObjectId                             | Dateipfad/Beschreibung der Datei oder der Daten.                                             | **Ja**  |
 | Vorgang                            | "Ändern".                                                                              | Nein       |
 | OrganizationId                       | Privat Mandanten-GUID des authentifizierten Benutzers.                                            | Nein       |
 | Plattform                             | Betriebssystemversion.                                                              | Nein       |
@@ -141,7 +140,7 @@ Wenn für die Telemetrie festgelegt ist, wird ein minimal Satz an *Daten an Micr
 | SDKVersion                           | Identisch mit MIP. Version.                                                                   | Nein       |
 | UserId                               | E-Mail-Adresse des Benutzers                                                             | **Ja**  |
 | UserObjectId                         | Azure AD Objekt-ID des Benutzers.                                                        | Nein       |
-| Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
+| -Version                              | Audit Version Schema ("1,1").                                                          | Nein       |
 
 
 ### <a name="opting-out-in-c"></a>Opt out inC++

@@ -4,21 +4,20 @@ description: In diesem Artikel erfahren Sie, wie Sie mithilfe von Python ein OAu
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69884741"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556247"
 ---
 # <a name="acquire-an-access-token-python"></a>Abrufen eines Zugriffstokens (Python)
 
 Dieses Beispiel veranschaulicht den Abruf eines OAuth2-Tokens mithilfe des Aufrufs eines externen Python-Skripts. Ein gültiges OAuth2-Zugriffs Token ist für die Implementierung des Authentifizierungs Delegaten erforderlich.
 
-## <a name="prerequisites"></a>Voraussetzungen
+## <a name="prerequisites"></a>Prerequisites
 
 So führen Sie das folgende Beispiel aus:
 

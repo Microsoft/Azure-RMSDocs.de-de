@@ -4,15 +4,14 @@ description: In diesem Artikel werden die Konzepte des Engine-Objekts der File-A
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 35caf958f2da92e624018d5ad7e57e734ec66904
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886101"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555210"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Engine-Objekt der File-API
 
@@ -30,7 +29,7 @@ Wie unter [Profile- und Engine-Objekte](concept-profile-engine-cpp.md) beschrieb
 
 ### <a name="create-file-engine-settings"></a>Erstellen der Dateiengineeinstellungen
 
-Ähnlich wie bei einem Profil erfordert die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
+Ähnlich wie bei einem Profil erfordert auch die Engine ein Einstellungsobjekt (`mip::FileEngine::Settings`). In diesem Objekt werden der eindeutige Bezeichner der Engine, anpassbare Clientdaten, die zum Debuggen oder für die Telemetrie verwendet werden können, und optional auch das Gebietsschema gespeichert.
 
 Hier erstellen wir mit der Identität des Anwendungs Benutzers ein `FileEngine::Settings` Objekt namens *EngineSettings* .
 

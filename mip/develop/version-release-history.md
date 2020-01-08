@@ -1,19 +1,18 @@
 ---
 title: Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
-description: Verison-releaseverlauf und Änderungs Hinweise für das MIP SDK.
+description: Versions Veröffentlichungs Verlauf und Änderungs Hinweise für das MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479111"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555941"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
 

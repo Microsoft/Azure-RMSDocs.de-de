@@ -4,15 +4,14 @@ description: Referenz Dokumentation für MIP C++ SDK-Strukturen und-aufblendaten
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a641ace68d6999e3d452fa7f5c014ec1215556a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560451"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556009"
 ---
 # <a name="enumerations-and-structures"></a>Enumerationen und Strukturen
 
@@ -197,7 +196,7 @@ Typ der HTTP-Anforderung
 Ablaufverfolgung            | 
 Info            | 
 Warning            | 
-Fehler            | 
+Error            | 
 Verschiedene Protokollebenen, die vom MIP SDK verwendet werden
   
 #### <a name="protectiontype-enum"></a>Schutztyp-Aufzählung
@@ -232,7 +231,7 @@ CUSTOM ist ein allgemeiner Aktionstyp. Bei jedem anderen Aktionstyp handelt es s
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 NoChange            | 
-Entfernen            | 
+Remove            | 
 Update/Aktualisieren            | 
   
 #### <a name="actiondatatype-enum"></a>Aktiondatatype-Aufzählung
@@ -248,7 +247,7 @@ Label            |
  Werte                         | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Standardwert            | 
-Sensitivität            | 
+Vertraulichkeit            | 
   
 #### <a name="contentmarkplacement-enum"></a>Contentmarkplacement-Aufzählung
  Werte                         | Beschreibungen                                

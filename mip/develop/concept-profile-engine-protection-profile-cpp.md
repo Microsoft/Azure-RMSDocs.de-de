@@ -4,15 +4,14 @@ description: In diesem Artikel werden die Konzepte des Profilobjekts für den Sc
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: fc25c35c1aea9690c0ec696a41c2f7346b4d6b8a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 45234963d7401107dca26a4c461e92818226465b
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886003"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555227"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK: Konzepte für das Profil der Schutz-API
 
@@ -26,7 +25,7 @@ Da die Objekte `ProtectionProfileObserverImpl` und `AuthDelegateImpl` bereits de
 
 - `std::shared_ptr<MipContext>`: das `mip::MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
 - `mip::CacheStorageType`: definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt.
-- `std::shared_ptr<mip::AuthDelegate>`: Ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`.
+- `std::shared_ptr<mip::AuthDelegate>`: ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`
 - `std::shared_ptr<mip::ConsentDelegate>`: ein gemeinsam genutzter Zeiger der-Klasse [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: ein frei gegebener Zeiger auf das Profil `Observer` Implementierung (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 

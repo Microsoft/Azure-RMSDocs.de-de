@@ -4,15 +4,14 @@ description: Dieser Artikel wird Ihnen dabei helfen, die grundlegenden SDK-Konze
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a1112b3c35539654ac71b6c8c686f93e676ac5f3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: de78ed0e5b3dfe7f9f5c1e2efa7edd77a0719986
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886123"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556128"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK: Konzepte der Profile- und Engine-Objekte
 
@@ -39,7 +38,7 @@ Das Profil selbst bietet die folgenden Funktionen:
 
 - `MipContext`: das `MipContext` Objekt, das zum Speichern von Anwendungsinformationen, Zustands Pfad usw. initialisiert wurde.
 - `CacheStorageType`: definiert, wie der Zustand gespeichert wird: im Arbeitsspeicher, auf dem Datenträger oder auf dem Datenträger und verschlüsselt.
-- `authDelegate`: Ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`.
+- `authDelegate`: ein gemeinsamer Zeiger der Klasse `mip::AuthDelegate`
 - `consentDelegate`: ein gemeinsam genutzter Zeiger der-Klasse [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
 - `observer`: ein frei gegebener Zeiger auf das Profil `Observer` Implementierung (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)und [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 - `applicationInfo`: ein [`mip::ApplicationInfo`](reference/mip-enums-and-structs.md#structures) -Objekt. Informationen über die Anwendung, die das SDK nutzt, das Ihren Azure Active Directory Anwendungs Registrierungs-ID und-Namen entspricht.

@@ -4,15 +4,14 @@ description: Das MIP SDK ist so konzipiert, dass es beinahe vollständig asynchr
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: bd709b75c5b98c4241bc80f4a8542de30f48ff66
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175138"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555873"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Microsoft Information Protection SDK: Beobachterkonzepte
 
@@ -31,7 +30,7 @@ Beispielsweise unterstützt das `FileProfile` die folgenden Vorgänge:
 - Es kann über `FileProfile::AddEngineAsync` eine neue Engine zu dem Profil hinzufügen. 
 - Es kann über `FileProfile::UnloadEngineAsync` eine neue Engine aus dem Profil entladen.
 
-Da zwei `Observer`-Funktionen über einen asynchronen Vorgang implementiert werden, kann davon ausgegangen werden, dass dem `FileProfile` **vier** `Observer`-Methoden zugeordnet sind: 
+Da zwei `Observer` Funktionen pro asynchronem Vorgang implementiert werden, kann davon ausgegangen werden, dass **vier** `Observer` Methoden mit `FileProfile`verknüpft sind: 
 
 - `FileProfileObserver::OnAddEngineSuccess()`
 - `FileProfileObserver::OnAddEngineError()`

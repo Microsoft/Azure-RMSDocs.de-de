@@ -4,15 +4,14 @@ description: Eine kurze Übersicht über die ersten Schritte mit dem MIP SDK .ne
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 21fc590388615b2917ca62fdd848b3a63ce26912
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175203"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556111"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Einstieg in den Microsoft Information Protection .net-Wrapper
 
@@ -43,7 +42,7 @@ Der .net-Wrapper ist ein von [swig](https://swig.org/) generierter verwalteter W
 
 Es gibt einige grundlegende Unterschiede zwischen C++ der SDK-Version und dem verwalteten Wrapper.
 
-* Der .net-Wrapper erfordert nicht die Verwendung von Beobachtern für asynchrone Vorgänge. Alle asynchronen Vorgänge werden über das [aufgabenbasierte asynchrone Muster](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)implementiert.
+* Der .net-Wrapper erfordert nicht die Verwendung von Beobachtern für asynchrone Vorgänge. Alle asynchronen Vorgänge werden über das [aufgabenbasierte asynchrone Muster](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)implementiert.
 * Der .net-Wrapper erfordert die Delegaten, die Teil des C++ SDK sind: authdelegat und genehmidelegat. Diese Delegaten werden über die Schnittstellen implementiert `IAuthDelegate` und `IConsentDelegate`
 
 ## <a name="next-steps"></a>Nächste Schritte
