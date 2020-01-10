@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,19 +12,17 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 46db497777f0a8435b3badaedaee83f386c0fd29
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
+ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675481"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827552"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-> [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
 
@@ -87,7 +85,7 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs enden Clients für Windows-Computer unterstützt werden.
 
-In der Office-Dokumentation finden Sie Informationen dazu, welche Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web unter [stützt werden](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
+In der Office-Dokumentation finden Sie Informationen zur [Unterstützung von Sensitivität-Funktionen in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Features für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen.
 
 |Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
@@ -119,6 +117,7 @@ In der Office-Dokumentation finden Sie Informationen dazu, welche Funktionen fü
 |Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
 |Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
 |Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
+|Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
 |Unterstützung für AD RMS:| **Ja** | Nein <sup>8</sup> | Nein |
 
 Fußnoten:
@@ -158,7 +157,6 @@ Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azu
 |Aufforderungen zur Angabe einer Begründung (sofern konfiguriert) für Aktionen in Office: | Häufigkeit: pro Datei <br /><br /> Herabsetzen der Vertraulichkeitsstufe <br /><br /> Entfernen einer Bezeichnung<br /><br /> Entfernen des Schutzes | Häufigkeit: pro Sitzung <br /><br /> Herabsetzen der Vertraulichkeitsstufe<br /><br /> Entfernen einer Bezeichnung|
 |Angewendete Bezeichnungsaktionen entfernen: | Benutzer wird zur Bestätigung aufgefordert <br /><br />Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App nicht automatisch angewendet  <br /><br />| Benutzer wird nicht zur Bestätigung aufgefordert<br /><br /> Standardbezeichnung oder automatische Bezeichnung (sofern konfiguriert) wird beim nächsten Öffnen der Datei durch die Office-App automatisch angewendet|
 |Automatische und empfohlene Bezeichnungen: | Wird im Azure-Portal als [Bezeichnungsbedingungen](../configure-policy-classification.md) mit integrierten Informationstypen und benutzerdefinierten Bedingungen konfiguriert, die Begriffe oder reguläre Ausdrücke verwenden <br /><br />Zu den Konfigurationsoptionen gehören: <br /><br />– Anzahl eindeutiger und nicht eindeutiger Vorkommnisse <br /><br /> – Mindestanzahl| Konfiguration in den Admin-Centers mit integrierten vertraulichen Informationstypen und [benutzerdefinierten Informationstypen](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Zu den Konfigurationsoptionen gehören:  <br /><br />– Nur Anzahl eindeutiger Vorkommnisse <br /><br />– Mindest- und Höchstanzahl <br /><br />– Unterstützung von AND und OR bei Informationstypen <br /><br />– Wörterbuch mit Schlüsselwörtern<br /><br />– Anpassbare Vertraulichkeitsstufe und Zeichennähe|
-|Anpassbarer richtlinientipp für automatische und empfohlene Bezeichnungen: | Yes <br /><br />Verwenden Sie die Azure-Portal, um die Standardmeldung an Benutzer zu ersetzen. | Nein <br /><br /> Obwohl die Admin Center über eine Option zum Bereitstellen eines angepassten Richtlinien Tipps verfügen, wird diese Option vom Unified-Bezeichnungs Client derzeit nicht unterstützt.|
 |Bestell Unterstützung für untergeordnete Bezeichnungen auf Anlagen: | Aktiviert mit einer [erweiterten Client Einstellung](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Standardmäßig aktiviert, keine Konfiguration erforderlich|
 |Ändern Sie das standardmäßige Schutzverhalten für Dateitypen: | Sie können [Registrierungs Änderungen](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) verwenden, um die Standardwerte für systemeigenen und generischen Schutz zu überschreiben. | Sie können [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) verwenden, um zu ändern, welche Dateitypen geschützt werden.|
 

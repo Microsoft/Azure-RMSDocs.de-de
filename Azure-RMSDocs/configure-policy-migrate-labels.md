@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d094070b3f7c2973b99c9ca212b8b25873026faa
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 60f1ea855d2ec666f2d22bb53d8856a6461157dc
+ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75674614"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827535"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -25,8 +25,6 @@ ms.locfileid: "75674614"
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!NOTE] 
-> Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Weitere Informationen finden Sie in der offiziellen [veralteten Notiz](https://aka.ms/aipclassicsunset).
 
 Migrieren Sie Azure Information Protection Bezeichnungen zur vereinheitlichten Bezeichnung, sodass Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
 
@@ -197,7 +195,7 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 - Der [Azure Information Protection Unified-Bezeichnungs Client für Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Einen Vergleich dieses Clients mit dem Azure Information Protection-Client (klassisch) finden Sie unter [vergleichen der Bezeichnung Clients für Windows-Computer](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie in der Office-Dokumentation [unter welche Sensitivität-Funktionen werden in Office heute unterstützt?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) .
+- Apps von Office, die sich in verschiedenen Stadien der Verfügbarkeit befinden. Weitere Informationen finden Sie [unter Unterstützung für Funktionen zur Vertraulichkeits Bezeichnung in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps) aus der Office-Dokumentation.
     
 - Apps von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) verwenden.
 
@@ -225,8 +223,12 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie im folgenden Blogbeitrag: Grundlegendes zur [Migration vereinheitlichter](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)Bezeichnungen.
+Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie in den folgenden Ressourcen:
 
-Weitere Informationen zu Ihren migrierten Bezeichnungen, die nun in einem der Admin-Centers konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
+- Blog Beitrag: Grundlegendes zur [Migration der vereinheitlichten Bezeichnung](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
+
+- Webinar: [AIP Unified-Bezeichnung-Webinar-Aufzeichnung](https://aka.ms/AIP-UL-Webinar-Join1)
+
+Weitere Informationen zu ihren migrierten Bezeichnungen, die nun in einem der Beschriftungs-Admin Center konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 Wenn Sie dies nicht bereits getan haben, installieren Sie den Azure Information Protection Unified-Bezeichnungs Client. Versionsinformationen, ein Administrator Handbuch und ein Benutzerhandbuch finden Sie unter [Azure Information Protection Unified Bezeichnung Client for Windows](./rms-client/aip-clientv2.md).
