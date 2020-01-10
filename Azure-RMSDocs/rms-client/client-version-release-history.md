@@ -12,18 +12,15 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: feaffa2397a016d8284075a2ab5bf38f468f5ae7
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: e9fc95f47273b6d604ba6a1151106ae64298fce0
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675413"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743639"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
-> [!NOTE] 
->Beachten Sie, dass für **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** in Azure-Portal ein Produkt veraltet ist.<br>
->Um eine einheitliche und optimierte Kundenfreundlichkeit zu gewährleisten, werden **Azure Information Protection Client (klassisch)** und die Bezeichnungs **Verwaltung** im Azure- **Portal ab dem** **31. März 2021**eingestellt. Dieser Zeitrahmen ermöglicht es allen aktuellen Azure Information Protection Kunden, mithilfe der Microsoft Information Protection Unified-Beschriftungs Plattform zu unserer vereinheitlichten Bezeichnungs Lösung zu wechseln. Durch die Umstellung auf Unified-Bezeichnungen können Azure Information Protection Kunden eine umfassende Strategie zum Schutz von Daten in Office-Anwendungen auf allen Plattformen und auch nicht von Microsoft aus produktive Anwendungen umsetzen. Weitere Informationen zu allen geplanten Änderungen finden Sie im offiziellen [Hinweis](https://aka.ms/aipclassicsunset).
 
 >*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
