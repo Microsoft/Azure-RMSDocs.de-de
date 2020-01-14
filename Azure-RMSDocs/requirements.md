@@ -1,10 +1,10 @@
 ---
 title: Anforderungen an Azure Information Protection – AIP
 description: Voraussetzungen für die Bereitstellung von Azure Information Protection für Ihre Organisation.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/04/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ecde2ec34dd27cb3bd2a176e8d205de6ee865421
+ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74831703"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913278"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Anforderungen an Azure Information Protection
 
@@ -75,8 +75,6 @@ Die folgenden Geräte unterstützen den Azure Information Protection Unified-Bez
 
 - Windows 8 (x86, x64)
 
-- Windows 7 Service Pack 1 (x86, x64)
-
 - Windows Server 2019
 
 - Windows Server 2016
@@ -85,6 +83,7 @@ Die folgenden Geräte unterstützen den Azure Information Protection Unified-Bez
 
 - Windows Server 2008 R2 
 
+Informationen zu den Supportoptionen für frühere Versionen von Windows erhalten Sie von Ihrem Microsoft-Konto oder Supportmitarbeiter.   
 Zusätzlich zur Installation des-Clients auf physischen Computern können Sie ihn auch auf virtuellen Computern installieren. Überprüfen Sie, ob der Softwareanbieter für die virtuelle Desktop Lösung über zusätzliche Konfigurationsfunktionen verfügt, die möglicherweise erforderlich sind, um den Azure Information Protection Unified Bezeichnung-Client oder den Azure Information Protection-Client auszuführen. Beispielsweise müssen Sie für Citrix-Lösungen ggf. [Citrix Application Programming Interface (API) Hooks](https://support.citrix.com/article/CTX107825) für Office (Winword. exe, Excel. exe, Outlook. exe, POWERPNT. exe) und die ausführbare Datei für den Azure Information Protection Unified-Bezeichnungs Client oder Azure Information Protection Client (MSIP. app. exe, MSIP. Viewer. exe) deaktivieren.
 
 Für die aufgelisteten Serverversionen:
@@ -166,4 +165,18 @@ Das folgende Bereitstellungsszenario wird nur unterstützt, wenn Sie AD RMS für
 - Parallele Ausführung von AD RMS und Azure RMS in derselben Organisation (mit Ausnahme der Migration), wie unter [Migrieren von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) beschrieben.
 
 Es gibt einen unterstützten Migrationspfad [von AD RMS zu Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) und [von Azure Information Protection zu AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Wenn Sie Azure Information Protection bereitstellen und dann beschließen, diesen Clouddienst nicht mehr zu verwenden, finden Sie weitere Informationen unter [Außerbetriebsetzen und Deaktivieren von Azure Information Protection](decommission-deactivate.md).
+
+### <a name="service-tags"></a>Diensttags
+
+Stellen Sie sicher, dass Sie den Zugriff auf alle Ports für die folgenden Dienst Tags zulassen:
+
+- **AzureInformationProtection**
+- **AzureActiveDirectory**
+- **Azurefrontdoor. Frontend**
+
+Der Azure Information Protection-Dienst ist auch von zwei bestimmten IP-Adressen abhängig:
+ - **13.107.6.181** 
+ - **13.107.9.181**
+
+Stellen Sie sicher, dass Sie Regeln erstellen, die den ausgehenden Zugriff auf diese spezifischen IP-Adressen zulassen. 
 
