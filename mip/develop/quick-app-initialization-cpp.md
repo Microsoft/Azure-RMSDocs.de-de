@@ -4,15 +4,14 @@ description: Ein Schnellstart zum Schreiben der Initialisierungslogik für Clien
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884808"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556077"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Schnellstart: Initialisierung der Clientanwendung (C++)
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 7f4ed4ba4962246bc6466807f492c8ac18f18cc2
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675362"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743563"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -29,8 +29,6 @@ In diesem Tutorial wird Folgendes vermittelt:
 > * Testen Ihrer Einstellungen
 > * Überprüfen der protokollierten Benutzernachrichten und Benutzeraktionen im Ereignisprotokoll 
 
-> [!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Durch das Senden von E-Mails durch die Benutzer werden am häufigsten unbeabsichtigt Informationen freigeben, sei es in der E-Mail-Nachricht selbst oder in Anhängen. Möglicherweise verwenden Sie Lösungen zur Verhinderung von Datenverlust (DLP), die bekannte vertrauliche Informationen identifizieren können und verhindern, dass diese Ihre Organisation verlassen. Sie können jedoch auch den Azure Information Protection-Client mit einigen erweiterten Clienteinstellungen verwenden, um übermäßige Informationsfreigaben zu vermeiden und Ihre Benutzer mit interaktiven Nachrichten zu sensibilisieren, die Feedback in Echtzeit bereitstellen.
 

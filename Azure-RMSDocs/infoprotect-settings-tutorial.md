@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: edc6fe02c5b11624e88e393dbaff20bb8ed1a620
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675498"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743523"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -28,8 +28,6 @@ In diesem Tutorial wird Folgendes vermittelt:
 > * Konfigurieren von Richtlinieneinstellungen, die nahtlos funktionieren
 > * Testen Ihrer Einstellungen
 
-> [!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Statt sich darauf zu verlassen, dass Benutzer ihre Dokumente und E-Mails manuell bezeichnen, können Sie mithilfe von Azure Information Protection-Richtlinieneinstellungen Folgendes erreichen:
 

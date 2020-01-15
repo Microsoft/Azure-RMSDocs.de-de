@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675515"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743681"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -30,8 +30,6 @@ In diesem Tutorial wird Folgendes vermittelt:
 > * Konfigurieren der Bezeichnung für optische Kennzeichnungen, empfohlene Klassifizierung und Schutz
 > * Testen Ihrer Einstellungen und Bezeichnungen
 
-> [!NOTE] 
-> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Bei dieser Konfiguration sehen Benutzer, wie eine Standardbezeichnung angewendet wird, wenn sie ein neues Dokument erstellen oder eine neue E-Mail verfassen. Allerdings werden sie aufgefordert, die neue Bezeichnung anzuwenden, wenn Kreditkarteninformationen erkannt werden. Wenn die neue Bezeichnung angewendet wird, wird der Inhalt neu klassifiziert und durch eine entsprechende Fußzeile und ein Wasserzeichen geschützt. 
 
