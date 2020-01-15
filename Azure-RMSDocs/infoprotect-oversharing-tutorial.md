@@ -1,21 +1,21 @@
 ---
 title: 'Tutorial: Verwenden von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben – AIP'
 description: Ein Einführungstutorial zum Konfigurieren und Anzeigen von erweiterten Clienteinstellungen für den Azure Information Protection-Client zum Ausgeben von Warnungen – zur Legitimierungsaufforderung oder zum Blockieren von Popupmeldungen –, die über Outlook gesendet werden.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559366"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675362"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Tutorial: Konfigurieren von Azure Information Protection zur Vermeidung übermäßiger Informationsfreigaben mit Outlook
 
@@ -23,11 +23,14 @@ ms.locfileid: "73559366"
 >
 > *Anweisungen für: [Azure Information Protection-Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In diesem Tutorial lernen Sie Folgendes:
+In diesem Tutorial wird Folgendes vermittelt:
 > [!div class="checklist"]
 > * Konfigurieren von Einstellungen, über die Warn-, Legitimierungs- oder Blockierungsmeldungen in Outlook implementiert werden
 > * Testen Ihrer Einstellungen
 > * Überprüfen der protokollierten Benutzernachrichten und Benutzeraktionen im Ereignisprotokoll 
+
+> [!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Durch das Senden von E-Mails durch die Benutzer werden am häufigsten unbeabsichtigt Informationen freigeben, sei es in der E-Mail-Nachricht selbst oder in Anhängen. Möglicherweise verwenden Sie Lösungen zur Verhinderung von Datenverlust (DLP), die bekannte vertrauliche Informationen identifizieren können und verhindern, dass diese Ihre Organisation verlassen. Sie können jedoch auch den Azure Information Protection-Client mit einigen erweiterten Clienteinstellungen verwenden, um übermäßige Informationsfreigaben zu vermeiden und Ihre Benutzer mit interaktiven Nachrichten zu sensibilisieren, die Feedback in Echtzeit bereitstellen.
 
