@@ -4,7 +4,7 @@ description: Nachdem Sie Ihre Dokumente geschützt haben, können Sie verfolgen,
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2fa57c099bcbc6730e649e9aef3adb7fa4176b03
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 7eb260815def6727fcdbd393fd9453ac89cb8baf
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675668"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960732"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Benutzerhandbuch: Nachverfolgen und Widerrufen Ihrer Dokumente bei Verwendung von Azure Information Protection
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

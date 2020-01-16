@@ -4,23 +4,23 @@ description: Anweisungen für Benutzer zum Installieren des Azure Information Pr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 10/13/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 949ba86c0f0327c3a6674c85f680a6a5c48aa970
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 535f7dde9f8dd0fd6fc709b4fe8bd0d2bc0f1fbf
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326433"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960870"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: herunterladen und Installieren des Azure Information Protection Unified Bezeichnung-Client
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 

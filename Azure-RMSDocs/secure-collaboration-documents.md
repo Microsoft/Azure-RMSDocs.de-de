@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743780"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960880"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Konfigurieren einer sicheren Zusammenarbeit an Dokumenten mithilfe von Azure Information Protection
 
@@ -38,7 +38,7 @@ Wenn Sie diese Berechtigungen konfigurieren, können Sie angeben, für welche Be
 
 - **Für alle authentifizierten Benutzer**: Diese Option ist geeignet, wenn Sie nicht steuern müssen, wer auf das geschützte Dokument zugreift, solange der Benutzer authentifiziert werden kann. Die Authentifizierung kann durch Azure AD, durch die Verwendung eines Microsoft-Kontos oder sogar durch einen Verbundanbieter sozialer Netzwerke oder eine Einmalkennung erfolgen, wenn der Inhalt durch die neuen Funktionen der Office 365-Nachrichtenverschlüsselung geschützt ist. 
 
-Als Administrator können Sie eine Azure Information Protection-Bezeichnung konfigurieren, die auf die Berechtigungen und auf die autorisierten Benutzer angewendet werden soll. Diese Konfiguration erleichtert es Benutzern und anderen Administratoren, die richtigen Schutzeinstellungen anzuwenden, denn sie können einfach die Bezeichnung nutzen, ohne Details angeben zu müssen. In den folgenden Abschnitten finden Sie eine exemplarische Vorgehensweise, die eine sichere Zusammenarbeit mit internen und externen Benutzern unterstützt. Damit können Sie ein Dokument schützen.
+Als Administrator können Sie eine Azure Information Protection-Bezeichnung konfigurieren, die auf die Berechtigungen und auf die autorisierten Benutzer angewendet werden soll. Diese Konfiguration erleichtert es Benutzern und anderen Administratoren, die richtigen Schutzeinstellungen anzuwenden, denn sie können einfach die Bezeichnung nutzen, ohne Details angeben zu müssen. In den folgenden Abschnitten finden Sie ein Beispiel für die Vorgehensweise zum Schützen eines Dokuments, das eine sichere Zusammenarbeit mit internen und externen Benutzern unterstützt.
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Beispielkonfiguration für eine Schutzbezeichnung, mit der die interne und externe Zusammenarbeit unterstützt wird

@@ -4,7 +4,7 @@ description: Anweisungen für Benutzer zum Installieren des Azure Information Pr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/30/2019
+ms.date: 1/13/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2a4242bf87b5cb1ab461fdd7bf4a79231c8cb7f6
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 65ce454504be04d7f3e5881dbefad3053d8a082c
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326359"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960765"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Benutzerhandbuch: Herunterladen und Installieren des Azure Information Protection-Clients
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -43,7 +43,7 @@ Beachten Sie auch Folgendes:
 
 2. Suchen Sie den Abschnitt **Azure Information Protection-Client**, und klicken Sie auf das Windows-Symbol. Klicken Sie auf **Herunterladen**, und speichern Sie die Datei **AzInfoProtection.exe**.     
 
-3. Führen Sie die EXE-Datei aus, die heruntergeladen wurde. Wenn Sie aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
+3. Führen Sie die EXE-Datei aus, die heruntergeladen wurde. Wenn Sie dazu aufgefordert werden, den Vorgang fortzusetzen, klicken Sie auf **Ja**.    
 
 4. Auf der Seite **Installieren des Azure Information Protection-Clients**:     
     - Wenn Sie sich nicht mit der Cloud verbinden können, jedoch die clientseitige Darstellung von Azure Information Protection testen möchten, wählen Sie die Option zum Installieren einer Demorichtlinie, bei der zu Demonstrationszwecken eine lokale Richtlinie verwendet wird. Wenn Ihr Client sich mit einem Azure Information Protection-Dienst verbindet, wird diese Demorichtlinie durch die Azure Information Protection-Richtlinie Ihrer Organisation ersetzt.    

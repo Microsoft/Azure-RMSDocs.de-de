@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/02/2019
+ms.date: 1/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c7291b63971d34e7dd7e3e369cd13dfca7e44729
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 9298022feecc4be60b3e528e5195fcec485502b2
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326379"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960820"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -42,6 +42,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
 Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
@@ -57,6 +58,42 @@ Verwenden Sie die folgenden Informationen, um zu erfahren, was für eine unterst
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
 Dieser Client ersetzt den Azure Information Protection Client (klassisch). Informationen zum Vergleichen von Features und Funktionen mit dem klassischen Client finden Sie unter [vergleichen der Bezeichnung für Clients für Windows-Computer](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-261010"></a>Version 2.6.101.0
+
+**Veröffentlicht** 1/15/2020
+
+**Neue Funktionen:**
+
+- Die Änderung des [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlets **Set-aipfilelabel** auf ermöglicht das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien. 
+
+- Die Möglichkeit, Azure Information Protection Administratoren zu steuern, wann die Pfile-Erweiterungen für Dateien verwendet werden. Erfahren Sie mehr über das [ändern geschützter Dateitypen](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+
+- Unterstützung für dynamisches visuelles Element für Anwendungen und Variablen hinzugefügt. Weitere Informationen zum Konfigurieren von [Bezeichnungen für visuelle Kennzeichnungen](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+
+- Verbesserungen an [anpassbaren Richtlinien Tipps für automatische und empfohlene Bezeichnungen](use-client.md).   
+
+- Unterstützung für [Offline Beschriftungs Funktionen](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) mit Office-Apps im Unified-Bezeichnungs Client hinzugefügt.
+
+- Die neue **wordshapenametoremove** Advanced-Eigenschaft ermöglicht das Entfernen von Inhalts Markierungen in Word-Dokumenten, die von Anwendungen von Drittanbietern erstellt wurden. Erfahren Sie mehr darüber, wie [Sie vorhandene Shape-Namen identifizieren und mithilfe von **wordshapenametoremove**zum Entfernen definieren](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+
+- Funktionen für [Scanner](../deploy-aip-scanner.md) :
+    - [Einfachere lokale und untergeordnete SharePoint-](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)Ermittlung. Das Festlegen der einzelnen Standorte ist nicht mehr erforderlich. 
+    - Erweiterte Eigenschaft für die SQL-Segment [Größen](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) Änderung hinzugefügt.
+    - Administratoren haben jetzt die Möglichkeit, [vorhandene Scans anzuhalten und eine erneute Überprüfung durchzuführen](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) , wenn die Standard Bezeichnung geändert wurde.
+    - Standardmäßig legt Scanner jetzt minimale Telemetrie für schnellere Scans und eine reduzierte Protokoll Größe fest, und Informationstypen werden nun in der Datenbank zwischengespeichert. Erfahren Sie mehr über die [Scanner-Optimierung](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+**Fehlerbehebungen:**
+
+- Scanner unterstützt jetzt separate bereit Stellungen für die Datenbank und den Dienst, während **sysadmin** -Rechte nur für die Daten Bank Bereitstellung erforderlich sind. 
+- In Fällen, in denen Benutzer erfolglos versuchten, geschützte TIFF-Dateien und TIFF-Dateien zu öffnen, die von RightFax erstellt wurden, werden die TIFF-Dateien nun geöffnet und bleiben erwartungsgemäß stabil.  
+- Vorherige Beschädigungen geschützter txt-und PDF-Dateien werden aufgelöst.
+- In Log Analytics wurde eine inkonsistente Bezeichnung zwischen **automatischen** und **manuellen** Bezeichnungen korrigiert. 
+- Unerwartete Vererbungs Probleme, die zwischen neuen e-Mails und der zuletzt geöffneten e-Mail eines Benutzers erkannt wurden, sind nun behoben.  
+- Der Schutz von. msg-Dateien als. msg. pfiles funktioniert jetzt erwartungsgemäß. 
+- Die von den benutzerdefinierten Office-Einstellungen hinzugefügten Berechtigungen für Mitbesitzer werden nun wie erwartet angewendet. 
+- Wenn Sie die Berechtigungs Herabstufung eingeben, kann Text nicht mehr eingegeben werden, wenn bereits andere Optionen ausgewählt sind. 
+
 
 ## <a name="version-25330"></a>Version 2.5.33.0
 
@@ -197,14 +234,6 @@ Unterstützt durch 02/06/2020
 - Wenn die automatische Bezeichnung konfiguriert ist, wird die Bezeichnung beim ersten Speichern eines Dokuments angewendet.
 
 - Die Standard Bezeichnung unterstützt untergeordnete Bezeichnungen.
-
-## <a name="version-207790"></a>Version 2.0.779.0
-
-**Veröffentlicht**: 05/01/2019
-
-Unterstützt durch 02/15/2020
-
-Diese Version bietet eine einzige Lösung zum Beheben eines racebedingungs Problems, bei dem manchmal keine Bezeichnungen in Office-Apps oder im Datei-Explorer angezeigt werden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b061ac3e067184d1af8b55756a7b3ac3fc0c8a35
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743548"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960560"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -156,9 +156,19 @@ Wenn Sie die sysadmin-Rolle nicht auch vorübergehend erhalten können, müssen 
 
 In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu installieren und zu konfigurieren. Wenn Sie jedoch unterschiedliche Konten verwenden, benötigen beide die db_owner-Rolle für die Konfigurationsdatenbank des Scanners.
 
-- Wenn Sie keinen eigenen Profilnamen für den Scanner angeben (nur klassischer Client), wird die Konfigurations Datenbank **AIPScanner_\<computer_name >** benannt. 
+- Für den klassischen Client:
 
-- Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScanner_\<profile_name >** (klassischer Client) oder **AIPScannerUL_\<** profile_name (einheitlicher Bezeichnungs Client) benannt.
+    Wenn Sie keinen eigenen Profilnamen für den Scanner angeben, wird die Konfigurations Datenbank **AIPScanner_\<computer_name >** (nur klassischer Client) benannt. Fahren Sie mit dem folgenden Schritt fort, um einen Benutzer zu erstellen und db_owner Rechte für die Datenbank zu erteilen. 
+
+- Für den Client für einheitliche Bezeichnungen:
+    
+    Wenn Sie Ihren eigenen Profilnamen angeben, wird die Konfigurations Datenbank **AIPScannerUL_ < profile_name >** (einheitlicher Bezeichnungs Client) benannt.
+    
+    Füllen Sie die Datenbank mit dem folgenden Skript auf: 
+
+
+
+    Wenn nicht vorhanden (Select * from Master. sys. server_principals WHERE sid = SUSER_SID ("domain\user")) BEGIN DECLARE @T nvarchar (500) Set @T = ' Create Login ' + QUOTENAME (' domain\user ') + ' from Windows ' exec (@T) End 
 
 Um einen Benutzer zu erstellen und db_owner Rechte für diese Datenbank zu erteilen, bitten Sie den sysadmin, das folgende SQL-Skript zweimal auszuführen. Beim ersten Mal für das Dienst Konto, mit dem die Überprüfung ausgeführt wird, und das zweite Mal zum Installieren und Verwalten des Scanners. Vor dem Ausführen des Skripts:
 1. Ersetzen Sie Domäne *\ Benutzer* durch den Domänen Namen und den Benutzerkonto Namen des Dienst Kontos bzw. des Benutzerkontos.
@@ -404,6 +414,16 @@ Wenn Sie diese Anweisungen befolgen, wird der Scanner einmal und nur im Modus f�
     Überprüfen Sie die Berichte, um festzustellen, welche Dateien eine Bezeichnung erhalten haben, welche Klassifizierung für die einzelnen Dateien vergeben wurde und ob Schutz angewendet wurde. Oder verwenden Sie das Azure-Portal, um diese Informationen einfacher anzuzeigen.
 
 Da der Zeitplan als fortlaufend konfiguriert wurde, startet der Scanner automatisch einen neuen Zyklus, sobald der alte abgeschlossen wurde, damit neue und geänderte Dateien gefunden werden.
+
+## <a name="stop-a-scan"></a>Einen Scanvorgang abbrechen 
+
+Wenn Sie eine Überprüfung beenden möchten, die Sie zuvor gestartet haben, verwenden Sie die Option **Scan beenden** der-Schnittstelle, oder
+ 
+![Beendet eine Überprüfung für den Azure Information Protection Scanner.](./media/scanner-stop-scan.png)
+    
+Alternativ können Sie den folgenden Befehl in der PowerShell-Sitzung ausführen:
+    
+        Stop-AIPScan 
 
 ## <a name="how-files-are-scanned"></a>So werden Dateien überprüft
 

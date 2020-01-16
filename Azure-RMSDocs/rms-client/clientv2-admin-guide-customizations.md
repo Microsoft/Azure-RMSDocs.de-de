@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/24/2019
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 74ff92fd76ca12fd77e0eb29d4e22c1dfacde084
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675617"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960004"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Anweisungen für: [Azure Information Protection Unified-Bezeichnungs Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -285,7 +285,43 @@ PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Glob
 
 Diese Konfiguration verwendet [Erweiterte Richtlinien Einstellungen](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
 
-Mit diesen Einstellungen können Sie textbasierte Kopf- und Fußzeilen in Dokumenten entfernen oder ersetzen, wenn diese optischen Kennzeichnungen von einer anderen Bezeichnungslösung angewendet wurden. Beispielsweise enthält die alte Fußzeile den Namen einer alten Bezeichnung, die Sie nun zu den Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Fußzeile zu verwenden.
+Es gibt zwei Methoden, mit denen Klassifizierungen aus anderen Bezeichnungs Lösungen entfernt werden können. Die erste Methode entfernt alle Formen aus Word-Dokumenten, bei denen der Shape-Name mit dem Namen übereinstimmt, der in der erweiterten Eigenschaft **wordshapenametoremove**definiert wurde. mit der zweiten Methode können Sie textbasierte Kopf-oder Fußzeilen aus Word-, Excel-und PowerPoint-Dokumenten entfernen oder ersetzen, wie in der erweiterten Eigenschaft **removeexternalcontentmarkinginapp** 
+
+### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>Verwenden der erweiterten Eigenschaft wordshapenametoremove (Vorschau)
+
+*Die Eigenschaft **wordshapenametoremove** Advanced wird von Version 2.6.101.0 und höher unterstützt.*
+
+Mit dieser Einstellung können Sie formbasierte Bezeichnungen aus Word-Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen von einer anderen Bezeichnungs Lösung angewendet wurden. Die Form enthält z. b. den Namen einer alten Bezeichnung, die Sie nun zu Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Form zu verwenden.
+
+Um diese erweiterte Eigenschaft verwenden zu können, müssen Sie den Namen der Form im Word-Dokument suchen und diese dann in der erweiterten Eigenschaften Liste von **wordshapenametoremove** definieren. Der Dienst entfernt eine beliebige Form in Word, die mit einem Namen beginnt, der in der Liste der Formen in dieser erweiterten Eigenschaft definiert ist.
+
+Vermeiden Sie das Entfernen von Formen, die den zu ignorierenden Text enthalten, indem Sie den Namen aller zu entfernenden Formen definieren und das Überprüfen des Texts in allen Formen vermeiden, bei dem es sich um einen ressourcenintensiven Prozess handelt.
+
+Wenn Sie in dieser zusätzlichen erweiterten Eigenschaften Einstellung keine Wortformen angeben und Word im Schlüsselwert **removeexternalcontentmarkinginapp** enthalten ist, werden alle Formen auf den Text überprüft, den Sie im Wert von **externalcontentmarkingtoremove** angeben. 
+
+So finden Sie den Namen der von Ihnen verwendeten Form und möchten Sie ausschließen:
+
+1. Zeigen Sie in Word den **Auswahl** Bereich an: Registerkarte " **Home** " > **Bearbeitungs** Gruppe > **Wählen Sie** die Option > **Auswahl**Bereich aus.
+
+2. Wählen Sie die Form auf der Seite aus, die Sie zum Entfernen markieren möchten. Der Name der von Ihnen markierten Form ist nun im Bereich **Auswahl** hervorgehoben.
+
+Verwenden Sie den Namen der Form, um einen Zeichen folgen Wert für den Schlüssel * * * * wordshapenametoremove * * * * anzugeben. 
+
+Beispiel: der Name der Form ist **DC**. Geben Sie den Wert `dc` an, um die Form mit diesem Namen zu entfernen.
+
+- Schlüssel: **wordshapenametoremove**
+
+- Wert: \<**Word-FormName**> 
+
+PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+Wenn Sie mehr als eine Wort Form entfernen möchten, geben Sie so viele Werte an, wie die zu entfernenden Formen vorhanden sind.
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Verwenden der erweiterten removeexternalcontentmarkinginapp-Eigenschaft
+Mit dieser Einstellung können Sie textbasierte Kopf-oder Fußzeilen aus Dokumenten entfernen oder ersetzen, wenn diese visuellen Kennzeichnungen durch eine andere Bezeichnungs Lösung angewendet wurden. Beispielsweise enthält die alte Fußzeile den Namen einer alten Bezeichnung, die Sie nun zu den Vertraulichkeits Bezeichnungen migriert haben, um einen neuen Bezeichnungs Namen und eine eigene Fußzeile zu verwenden.
 
 Wenn der Unified Label-Client diese Konfiguration in der Richtlinie abruft, werden die alten Kopf-und Fußzeilen entfernt oder ersetzt, wenn das Dokument in der Office-App geöffnet wird und jede Vertraulichkeits Bezeichnung auf das Dokument angewendet wird.
 
@@ -1008,7 +1044,7 @@ Weiterhin gilt:
 ## <a name="support-for-disconnected-computers"></a>Unterstützung für getrennte Computer
 
 > [!IMPORTANT]
-> Getrennte Computer werden nur für die folgenden Bezeichnungs Szenarien unterstützt: Datei-Explorer, PowerShell und Scanner. Zum bezeichnen von Dokumenten in Ihren Office-Apps müssen Sie über eine Internetverbindung verfügen.
+> Getrennte Computer werden für die folgenden Bezeichnungs Szenarien unterstützt: Datei-Explorer, PowerShell, Office-Apps und Scanner.
 
 Standardmäßig versucht der Azure Information Protection Unified Label-Client automatisch, eine Verbindung mit dem Internet herzustellen, um die Bezeichnungen und die Beschriftungs Richtlinien Einstellungen aus Ihrem Bezeichnungs Verwaltungs Center herunterzuladen: Office 365 Security & Compliance Center, das Microsoft 365 Security Center oder das Microsoft 365 Compliance Center. Wenn Sie über Computer verfügen, die für einen bestimmten Zeitraum keine Verbindung mit dem Internet herstellen können, können Sie Dateien exportieren und kopieren, die die Richtlinie für den Unified-Bezeichnungs Client manuell verwalten.
 

@@ -12,16 +12,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 221623101c75a5834947c7f29a4f4df4f8d68a35
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827552"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960750"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
->*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 mit SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 
 Azure Information Protection stellt eine Client/Server-Lösung zum Schutz der Dokumente und E-Mails einer Organisation bereit:
@@ -102,23 +102,23 @@ In der Office-Dokumentation finden Sie Informationen zur [Unterstützung von Sen
 |Benutzerdefinierte Berechtigungen werden unabhängig von einer Bezeichnung festgelegt:| **Ja** | **Ja** <sup>3</sup>| Nein |
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
 |Visuelle Kennzeichnungen als Bezeichnungs Aktion (Kopfzeile, Fußzeile, Wasserzeichen):| **Ja** | **Ja** | **Ja**|
-|Visuelle Kennzeichnungen pro App:| **Ja** | Nein | Nein |
-|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | Nein | Nein |
+|Visuelle Kennzeichnungen pro App:| **Ja** | **Ja* | Nein |
+|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **** | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
 |Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |
 |PowerShell-Cmdlets für die Bezeichnung:| **Ja** | **Ja** <sup>4</sup> | Nein |
 |Offlineunterstützung für Schutzaktionen:| **Ja** | **Ja** <sup>5</sup> | **Ja** |
-|Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja** <sup>6</sup>| Nein |
+|Manuelle Richtlinien Dateiverwaltung für getrennte Computer:| **Ja** |**Ja**| Nein |
 |HYOK-Unterstützung:| **Ja** | Nein | Nein |
 |Verwendungs Protokollierung in Ereignisanzeige:| **Ja** | Nein |Nein |
 |Anzeigen der Schaltfläche "nicht weiterleiten" in Outlook:| **Ja** | Nein | Nein |
-|Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>7</sup> | Nein |
+|Nachverfolgung geschützt dokumentiert:| **Ja** | **Ja** <sup>6</sup> | Nein |
 |Geschützte Dokumente widerrufen:| **Ja** | Nein | Nein |
 |Reiner Schutzmodus (keine Bezeichnungen):| **Ja** | Nein | Nein |
 |Unterstützung für Kontowechsel:| Nein | Nein | **Ja** |
 |Unterstützung für Remotedesktopdienste:| **Ja** | **Ja** | **Ja** |
-|Unterstützung für AD RMS:| **Ja** | Nein <sup>8</sup> | Nein |
+|Unterstützung für AD RMS:| **Ja** | Nein <sup>7</sup> | Nein |
 
 Fußnoten:
 
@@ -128,15 +128,13 @@ Fußnoten:
 
 <sup>3</sup> wird vom Datei-Explorer und PowerShell unterstützt. In Office-Apps können Benutzer **Dateiinformationen** >  > **schützen** auswählen, um den **Zugriff einzuschränken**.
 
-<sup>4</sup> es wird nicht unterstützt, den Schutz von Container Dateien (ZIP, rar, 7z,. msg und. PST) zu entfernen.
+<sup>4</sup> es wird nicht unterstützt, den Schutz von Container Dateien (zip) zu entfernen.
 
 <sup>5</sup> für den Datei-Explorer und PowerShell-Befehlen muss der Benutzer mit dem Internet verbunden sein, um Dateien zu schützen.
 
-<sup>6</sup> unterstützt für die Bezeichnung mit dem Datei-Explorer, PowerShell und dem Scanner. Wird für die Bezeichnung in Office-Apps nicht unterstützt.
+<sup>6</sup> die Website zum Nachverfolgen von Dokumenten, die vom klassischen Client unterstützt wird, wird vom Unified-Bezeichnungs Client nicht unterstützt. Allerdings können Administratoren die [zentrale Bericht](../reports-aip.md) Erstellung verwenden, um zu ermitteln, ob der Zugriff auf geschützte Dokumente von Windows-Computern aus erfolgt und ob der Zugriff gewährt oder verweigert wurde, ohne dass Sie zuerst das Dokument für die Nachverfolgung registrieren müssen. 
 
-<sup>7</sup> die Website zum Nachverfolgen von Dokumenten, die vom klassischen Client unterstützt wird, wird vom Unified-Bezeichnung-Client nicht unterstützt. Allerdings können Administratoren die [zentrale Bericht](../reports-aip.md) Erstellung verwenden, um zu ermitteln, ob der Zugriff auf geschützte Dokumente von Windows-Computern aus erfolgt und ob der Zugriff gewährt oder verweigert wurde, ohne dass Sie zuerst das Dokument für die Nachverfolgung registrieren müssen. 
-
-<sup>8</sup> Bezeichnungs-und Schutz Aktionen werden nicht unterstützt. Allerdings kann der Viewer bei einer AD RMS Bereitstellung geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))verwenden.
+<sup>7</sup> Bezeichnungen und Schutz Aktionen werden nicht unterstützt. Allerdings kann der Viewer bei einer AD RMS Bereitstellung geschützte Dokumente öffnen, wenn Sie die [Active Directory Rights Management Services-Erweiterung für mobile Geräte](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))verwenden.
 
 
 ### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Ausführliche Vergleiche der Azure Information Protection Clients

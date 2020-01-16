@@ -4,7 +4,7 @@ description: Wenn Sie den Azure Rights Management-Dienst verwenden, werden Vorla
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
-ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
+ms.openlocfilehash: 52d00883b19c2c595dd098a9be6d79d3b3183355
+ms.sourcegitcommit: 800339fed1c516d627dbb91ed804a7c7d5b892a4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952980"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031459"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aktualisieren von Vorlagen für Benutzer und Dienste
 
@@ -31,7 +31,7 @@ Wenn Sie den Azure Rights Management-Dienst von Azure Information Protection ver
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Gilt für Transportregeln und Outlook Web App |Automatische Aktualisierung innerhalb einer Stunde. Weitere Schritte sind nicht erforderlich.|
 |Azure Information Protection-Client|Automatische Aktualisierung, wenn die Azure Information Protection-Richtlinie auf dem Client aktualisiert wird:<br /><br /> – Öffnen einer Office-Anwendung, die die Azure Information Protection-Leiste unterstützt. <br /><br /> – Klicken mit der rechten Maustaste, um eine Datei oder einen Ordner zu klassifizieren und zu schützen. <br /><br /> – Ausführen der PowerShell-Cmdlets für Bezeichnung und Schutz (Get-AIPFileStatus und Set-AIPFileLabel).<br /><br /> – Wenn der Microsoft Azure Information Protection-Überprüfungsdienst gestartet wird und die lokale Richtlinie älter als eine Stunde ist. Zusätzlich sucht der Überprüfungsdienst einmal pro Stunde nach Veränderungen und verwendet diese Änderungen beim nächsten Überprüfungszyklus.<br /><br /> – Alle 24 Stunden.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client aktualisiert.|
-|Azure Information Protection-Client für einheitliche Bezeichnungen|Automatische Aktualisierung alle 4 Stunden, pro Office-App.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client für einheitliche Bezeichnung aktualisiert.|
+|Azure Information Protection-Client für einheitliche Bezeichnungen|Bei Office-Apps werden die Vorlagen automatisch aktualisiert, wenn die APP geöffnet wird.<br /><br /> Da dieser Client eng in Office integriert ist, werden alle aktualisierten Vorlagen für Office 365-Apps, Office 2019, Office 2016 oder Office 2013 auch für den Azure Information Protection-Client für einheitliche Bezeichnung aktualisiert.<br /><br /> Für den Datei-Explorer, PowerShell und den Scanner lädt der Client keine Vorlagen herunter, sondern greift auf diese online zu. es sind keine zusätzlichen Schritte erforderlich.|
 |Office 365-Apps, Office 2019, Office 2016 und Office 2013|Automatische Aktualisierung nach einem Zeitplan:<br /><br />– Für diese neueren Office-Versionen: Das Standardaktualisierungsintervall ist alle 7 Tage.<br /><br />Weitere Informationen zum Erzwingen einer Aktualisierung vor dem Zeitplan finden Sie im folgenden Abschnitt [: Office 365-apps, Office 2019, Office 2016 und Office 2013: Erzwingen einer Aktualisierung für Vorlagen](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|Automatische Aktualisierung, wenn Benutzer sich von Windows ab- und wieder anmelden und bis zu einer Stunde warten.|
 |Lokales Exchange mit dem Rights Management-Connector<br /><br />Gilt für Transportregeln und Outlook Web App|Automatische Aktualisierung, es sind keine weiteren Schritte erforderlich. Outlook Web App speichert allerdings die UI für einen Tag zwischen.|
