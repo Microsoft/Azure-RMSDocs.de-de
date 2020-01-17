@@ -1,10 +1,10 @@
 ---
 title: Migrieren von AD RMS-Azure Information Protection
 description: Anweisungen zum Migrieren Ihrer AD RMS-Bereitstellung (Active Directory Rights Management Services) zu Azure Information Protection. Nach der Migration haben Benutzer weiterhin Zugriff auf Dokumente und e-Mail-Nachrichten, die Ihre Organisation mithilfe von AD RMS geschützt hat.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 978feb26639a3c8f05ac2576a2e922c744cae9cf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474311"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117968"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -53,9 +53,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
 - **Unterstützte RMS-Bereitstellung:**
     
   - Die folgenden AD RMS-Versionen unterstützen die Migration zu Azure Information Protection:
-    
-      - Windows Server 2008 R2 (x64)
-        
+           
       - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
@@ -110,8 +108,6 @@ So bestätigen Sie den AD RMS-Kryptografiemodus:
  
 - Für Windows Server 2012 R2 und Windows 2012: AD RMS-Clustereigenschaften > Registerkarte **Allgemein**. 
 
-- Für Windows Server 2008 R2: Prüfen Sie, ob der Hotfix unter [RSA key length is increased to 2048 bits for AD RMS in Windows Server 2008 R2 and in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ) (RSA-Schlüssellänge für AD RMS wurde in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht) installiert wurde. Andernfalls wird Ihr AD RMS-Cluster im Kryptografiemodus 1 ausgeführt.
-
 ### <a name="migration-limitations"></a>Einschränkungen bei der Migration
 
 - Wenn Sie Softwareanwendungen und Clients verwenden, die nicht vom Rights Management-Dienst von Azure Information Protection unterstützt werden, können diese die Inhalte, die durch Azure Rights Management geschützt sind, weder schützen noch nutzen. Überprüfen Sie die Abschnitte unterstützte Anwendungen und Clients unter [Anforderungen für Azure Information Protection](./requirements.md).
@@ -150,7 +146,7 @@ Die Migrationsschritte können in fünf Phasen unterteilt werden, die zu untersc
 
     Wenn Sie nicht alle Clients auf einmal migrieren können, sondern die Migration in Batches ausführen werden, verwenden Sie Onboardingsteuerelemente, und stellen Sie ein Skript zur Ausführung vor der Migration bereit. Wenn Sie allerdings alles gleichzeitig migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie diesen Schritt überspringen.
 
-- **Schritt 3: Vorbereiten Ihrer Exchange-Bereitstellung für die Migration**
+- **Schritt 3:Vorbereiten Ihrer Exchange-Bereitstellung für die Migration vor**
 
     Dieser Schritt ist erforderlich, wenn Sie derzeit die IRM-Funktion von Exchange Online oder Exchange lokal zum Schutz von E-Mails nutzen. Wenn Sie allerdings alles gleichzeitig migrieren, anstatt die Migration in Phasen abzuwickeln, können Sie diesen Schritt überspringen.
 

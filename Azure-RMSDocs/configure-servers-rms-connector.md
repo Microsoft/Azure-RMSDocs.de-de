@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86c908f2c53ed66853b7f3b16e02a406748055be
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934975"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117619"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
->*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 
 Verwenden Sie die folgenden Informationen, um Ihre lokale Server für die Verwendung des Azure Rights Management (RMS)-Verbindungsdiensts zu konfigurieren. Diese Verfahren beziehen sich auf Schritt 5 aus [Bereitstellen des Azure Rights Management-Verbindungsdiensts](deploy-rms-connector.md).
@@ -65,7 +65,7 @@ Nachteile:
 
 - Vorteile:
 
-    - Es ist keine Verbindung mit einem Server erforderlich, auf dem der RMS-Verbindungsdienst ausgeführt wird.
+    - Es ist keine Verbindung mit einem Server erforderlich, der den RMS-Verbindungsdienst ausführt.
 
 - Nachteile:
 
@@ -145,14 +145,9 @@ Damit diese Server, auf denen Exchange ausgeführt wird, den RMS-Verbindungsdien
 
 Auf diesen Servern muss außerdem eine Version 1 des RMS-Clients (auch als MSDRM bezeichnet) installiert sein, die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Alle Windows-Betriebssysteme enthalten den MSRDM-Client, in frühen Versionen des Clients wurde jedoch der Kryptografiemodus 2 nicht unterstützt. Wenn auf Ihren Exchange-Servern mindestens Windows Server 2012 ausgeführt wird, ist keine weitere Aktion erforderlich, weil der mit diesen Betriebssystemen installierte RMS-Client systemeigene Unterstützung für den Kryptografiemodus 2 bietet. 
 
-Wenn auf Ihren Exchange-Servern eine frühere Version des Betriebssystems ausgeführt wird, vergewissern Sie sich, dass die installierte Version des RMS-Clients den Kryptografiemodus 2 unterstützt. Vergleichen Sie hierzu die installierte Version der Datei „Windows\System32\Msdrm.dll“ mit den in den folgenden Knowledge Base-Artikeln aufgeführten Versionsnummern. Ist die Versionsnummer der installierten Datei gleich oder höher als die aufgeführten Versionsnummern, ist keine weitere Aktion erforderlich. Ist die Versionsnummer der installierten Datei niedriger, laden Sie den Hotfix aus dem Artikel herunter, und installieren Sie ihn.
-
-- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
-
-- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
-> Wenn diese Versionen oder höhere Versionen von Exchange und der MSDRM-Client nicht installiert sind, können Sie Exchange nicht für die Verwendung des Connectors konfigurieren. Überprüfen Sie, ob diese Versionen installiert sind, bevor Sie fortfahren.
+> Wenn diese Versionen oder höhere Versionen von Exchange und der MSDRM-Client nicht installiert sind, können Sie Exchange nicht für die Verwendung des Connectors konfigurieren. Bevor Sie die nächsten Schritte ausführen, vergewissern Sie sich, dass diese Versionen installiert sind.
 
 ### <a name="to-configure-exchange-servers-to-use-the-connector"></a>So konfigurieren Sie Exchange-Server für die Verwendung des Verbindungsdiensts
 
@@ -193,7 +188,7 @@ Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird,
 >
 > Sie können die Clientversion überprüfen, indem Sie die Versionsnummer der Datei „MSIPC.dll“ prüfen, die sich in **\Programme\Active Directory Rights Management Services Client 2.1** befindet. Das Dialogfeld „Eigenschaften“ zeigt die Versionsnummer des MSIPC 2.1-Clients.
 
-Auf Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert sein, die die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Die Mindestversion, die in Windows Server 2008 unterstützt wird, ist in dem Hotfix enthalten, das Sie herunterladen können von [RSA-Schlüssellänge wurde für AD RMS in Windows Server 2008 R2 und Windows Server 2008 auf 2048 Bits erhöht](https://support.microsoft.com/kb/2627272), und die Mindestversion für Windows Server 2008 R2 kann heruntergeladen werden von [RSA-Schlüssellänge für AD RMS in Windows 7 oder Windows Server 2008 R2 wurde auf 2048 Bits erhöht](https://support.microsoft.com/kb/2627273). Windows Server 2012 und Windows Server 2012 R2 verfügen über systemeigene Unterstützung für Kryptografiemodus 2.
+Auf Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert sein, die die Unterstützung für den RMS-Kryptografiemodus 2 enthält. Windows Server 2012 und Windows Server 2012 R2 verfügen über systemeigene Unterstützung für Kryptografiemodus 2.
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>So konfigurieren Sie SharePoint-Server für die Verwendung des Verbindungsdiensts
 
