@@ -4,19 +4,19 @@ description: Sie können die Unterstützung für verschiedene Sprachen für die 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ceb0a7d86be6816d3120182f42510f94c2d11473
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 3ffb6b844d73d1b2b7f21651123f10599aeef562
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742951"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281631"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Vorgehensweise beim Konfigurieren von Bezeichnungen für verschiedene Sprachen in Azure Information Protection
 
@@ -46,7 +46,7 @@ Sie können auch Vorlagen für verschiedene Sprachen konfigurieren, wenn eine de
 
 - Sie verfügen nicht über ein Abonnement, das Bezeichnungen unterstützt, deshalb können Sie Vorlagen nur im Azure-Portal erstellen und verwalten.
 
-Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Office und Windows entsprechen. Diese Bezeichnungsnamen und Beschreibungen werden dann in Office-Apps in der Azure Information Protection-Leiste bzw. im Dialogfeld **Klassifizierung und Schutz – Azure Information Protection** angezeigt. Weitere Informationen über die gewählte Sprache finden Sie auf dieser Seite im Abschnitt [Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client](#how-the-azure-information-protection-client-determines-the-language-to- display). 
+Wählen Sie die Sprachen aus, die der Spracheinstellung Ihrer Benutzer für Office und Windows entsprechen. Diese Bezeichnungsnamen und Beschreibungen werden dann in Office-Apps in der Azure Information Protection-Leiste bzw. im Dialogfeld **Klassifizierung und Schutz – Azure Information Protection** angezeigt. Weitere Informationen über die gewählte Sprache finden Sie auf dieser Seite im Abschnitt [Informationen zu den Kriterien für die Auswahl der Anzeigesprache durch den Azure Information Protection-Client](#how-the-azure-information-protection-client-determines-the-language-to-display). 
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Konfigurieren von Bezeichnungen und Vorlagen für verschiedene Sprachen
 
