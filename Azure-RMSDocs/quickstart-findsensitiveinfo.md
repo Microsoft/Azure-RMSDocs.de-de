@@ -1,34 +1,34 @@
 ---
 title: 'Schnellstart: Suchen nach vertraulichen Informationen mit dem Azure Information Protection-Scanner'
 description: Verwenden Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in lokal gespeicherten Dateien zu suchen.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/12/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73979979"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960452"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Schnellstart: Suchen nach vertraulichen Informationen in lokal gespeicherten Dateien
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In dieser Schnellstartanleitung installieren und konfigurieren Sie den Azure Information Protection-Scanner, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden. Beispiel: Ein lokaler Ordner, eine Netzwerkfreigabe oder SharePoint Server.
+In dieser Schnellstartanleitung erteilen Sie SharePoint die Berechtigung, Überprüfungen zu erlauben, und Sie installieren und konfigurieren den Azure Information Protection-Scanner, um nach vertraulichen Informationen in Dateien zu suchen, die sich in einem lokalen Datenspeicher befinden. Beispiel: Ein lokaler Ordner, eine Netzwerkfreigabe oder SharePoint Server.
 
 > [!NOTE]
 > Sie können diese Schnellstartanleitung mit der aktuellen allgemein verfügbaren Version des Azure Information Protection-Clients (klassisch) oder des Azure Information Protection-Clients für einheitliche Bezeichnungen verwenden, der eine Vorschauversion des Scanners enthält.
 >  
 > Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 
-Für diese Konfiguration benötigen Sie maximal 10 Minuten.
+Für diese Konfiguration benötigen Sie maximal 15 Minuten.
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
@@ -52,6 +52,8 @@ Voraussetzungen für diesen Schnellstart:
 
 Die vollständige Liste der Voraussetzungen an Azure Information Protection finden Sie unter [Anforderungen für Azure Information Protection](requirements.md).
 
+5. Die SharePoint-Richtlinie berechtigt zum Zugriff, wenn Sie die Berechtigung für eine SharePoint-Überprüfung erteilen.
+
 ## <a name="prepare-a-test-folder-and-file"></a>Vorbereiten eines Testordners und einer Testdatei
 
 Führen Sie als ersten Test, um zu bestätigen, dass der Scanner ausgeführt wird, folgende Schritte durch:
@@ -59,6 +61,29 @@ Führen Sie als ersten Test, um zu bestätigen, dass der Scanner ausgeführt wir
 1. Erstellen Sie auf Ihrem Computer einen lokalen Ordner. Beispiel: **TestScanner** auf Ihrem lokalen C-Laufwerk.
 
 2. Erstellen und speichern Sie ein Word-Dokument in diesem Ordner, das den Text **Credit card: 4242-4242-4242-4242** enthält.
+
+## <a name="permission-users-to-scan-sharepoint-repositories"></a>Berechtigung für Benutzer zum Überprüfen von SharePoint-Repositorys
+
+Sie können den Scanner für mehrere SharePoint-Repositorys verwenden, indem Sie die Website-URL angeben. Azure Information Protection ermittelt alle Websites, die zu dieser URL gehören, und führt eine Überprüfung durch.
+
+Um repositoryübergreifende Überprüfungen zu ermöglichen, fügen Sie die folgenden SharePoint-Berechtigungen dem Benutzer hinzu, der die Überprüfung durchführen soll:
+
+1. Öffnen Sie SharePoint, und wählen Sie nacheinander **Berechtigungsrichtlinie** und **Richtlinienstufe für Berechtigungen hinzufügen** aus. 
+
+    ![Erstellen einer neuen Richtlinienstufe für Berechtigungen für einen bestimmten Benutzer](./media/aip-quick-set-sp-permissions.png)
+
+
+2. Wählen Sie unter **Berechtigungen der Websitesammlung** die Option **Websitesammlungsauditor** aus.   
+
+3. Wählen Sie unter **Berechtigungen** die Option **Erteilen** für **Anwendungsseiten anzeigen** aus, und **speichern** Sie Ihre Änderungen.  
+
+    ![Auswählen von Websitesammlungsauditor und Berechtigungsoptionen für einen bestimmten Benutzer](./media/aip-quick-set-site-permissions.png)
+
+4. Klicken Sie nach dem Bestätigen Ihrer Änderungen im Hinweis **Richtlinie für Webanwendung** auf **OK**.   
+
+5. Fügen Sie auf der Seite **Benutzer hinzufügen** im Feld **Benutzer auswählen** den Benutzer hinzu, der die Überprüfung ausführen soll. Wählen Sie unter **Berechtigungen auswählen** die Option **Websitesammlung** aus, und klicken Sie dann auf **Fertig stellen**, um dem hinzugefügten oder ausgewählten Benutzer die erstellten Berechtigungen zu erteilen. 
+
+    ![Optionen beim Hinzufügen eines Benutzers zu neuen Berechtigungen](./media/aip-quick-set-user-permissions.png)
 
 ## <a name="configure-a-profile-for-the-scanner"></a>Konfigurieren eines Profils für den Scanner
 
