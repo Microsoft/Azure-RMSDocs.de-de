@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/18/2020
+ms.date: 1/21/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 45802279809a73c7338ff622fcd545e6e9eab7e7
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
+ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281580"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517642"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -227,7 +227,7 @@ Weitere Anleitungen und Tipps von unserem kundenfreundlichen Team finden Sie in 
 
 - Blog Beitrag: Grundlegendes zur [Migration der vereinheitlichten Bezeichnung](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185)
 
-- Webinar: [AIP Unified-Bezeichnung-Webinar-Aufzeichnung](https://aka.ms/AIP-UL-Webinar-Join1)
+- Webinar: [einheitliche Bezeichnung für Aufzeichnung, Karten und FAQs](https://github.com/nihendle/MIP-Comp/tree/master/MIP/Webinars/Unified%20Labeling%20Migration)
 
 Weitere Informationen zu ihren migrierten Bezeichnungen, die nun in einem der Bezeichnungs enden admin Centers konfiguriert und veröffentlicht werden können, finden Sie unter [Übersicht über Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels) und [Erstellen und Konfigurieren von Vertraulichkeits Bezeichnungen und deren Richtlinien](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).
 
