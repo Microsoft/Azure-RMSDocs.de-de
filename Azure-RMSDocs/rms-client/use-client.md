@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 1/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b452dcd3e212316d73c75e4075b471c5e363a86a
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
+ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281614"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755798"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -85,15 +85,17 @@ Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgef�
 
 Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den drei Bezeichnungs enden Clients für Windows-Computer unterstützt werden.
 
-In der Office-Dokumentation finden Sie Informationen zur [Unterstützung von Sensitivität-Funktionen in apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Features für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen.
+In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
 |Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
-|Empfohlene oder automatische Bezeichnung:| **Ja** | **Ja** | Nein |
+|Empfohlene oder automatische Bezeichnung: <br />-Für Word, Excel, PowerPoint| **Ja** | **Ja** | **Ja** |
+|Empfohlene oder automatische Bezeichnung:<br />-Für Outlook| **Ja** | **Ja** | Nein |
 |Obligatorische Bezeichnung:| **Ja** | **Ja** | Nein |
-|Benutzerdefinierte Berechtigungen für eine Bezeichnung:<br />-Nicht weiterleiten für e-Mails<br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | Nein |
+|Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Nicht weiterleiten für e-Mails| **Ja** | **Ja** | **Ja** |
+|Benutzerdefinierte Berechtigungen für eine Bezeichnung: <br />-Benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint, Datei-Explorer| **Ja** | **Ja** | Nein |
 |Unterstützung mehrerer Sprachen für Bezeichnungen:| **Ja** | **Ja** |**Ja** |
 |Vererbung von Bezeichnungen aus E-Mail-Anhängen:| **Ja** | **Ja**  |Nein |
 |Anpassungen, die Folgendes umfassen:<br />– Standardbezeichnung für E-Mails<br />-Popup Meldungen in Outlook <br />– S/MIME-Unterstützung<br />– Option zum Melden eines Problems| **Ja** <sup>1</sup> | **Ja** <sup>2</sup> | Nein |
