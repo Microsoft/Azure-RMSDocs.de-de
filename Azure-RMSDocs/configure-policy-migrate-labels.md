@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/21/2020
+ms.date: 1/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
-ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
+ms.openlocfilehash: a62fbe465eda5dec253da938878f343bb00b8173
+ms.sourcegitcommit: 200c710a675180cc0488defff299f2cc3c66922f
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517642"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812584"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -215,9 +215,9 @@ Um zu überprüfen, ob die von Ihnen verwendeten Clients und Dienste die einheit
     
     Dieser Dienst unterstützt Bezeichnungen sowohl vor der Migration in den einheitlichen Bezeichnungsspeicher, als auch nach der Migration, und verwendet dabei die folgende Logik:
     
-    - Wenn die Admin Center dieselben Bezeichnungen wie die des Azure-Portal haben: einheitliche Bezeichnungen werden aus den Admin Centers abgerufen. Wenn Sie diese Bezeichnungen in Cloud App Security auswählen möchten, muss mindestens eine Bezeichnung für mindestens einen Benutzer veröffentlicht worden sein.
+    - Wenn die Admin Center über Vertraulichkeits Bezeichnungen verfügen, werden diese Bezeichnungen aus den Admin Centers abgerufen. Wenn Sie diese Bezeichnungen in Cloud App Security auswählen möchten, muss mindestens eine Bezeichnung für mindestens einen Benutzer veröffentlicht worden sein.
     
-    - Wenn die Admin Center nicht die gleichen Bezeichnungen wie die im Azure-Portal haben: einheitliche Bezeichnungen werden nicht in den Admin Centers verwendet, sondern Bezeichnungen werden aus der Azure-Portal abgerufen.
+    - Wenn die Admin Center keine Empfindlichkeits Bezeichnungen aufweisen, werden Azure Information Protection Bezeichnungen aus dem Azure-Portal abgerufen.
 
 - Dienste von Softwarevertreibern und -herstellern, die das [Microsoft Azure Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview) verwenden.
 
