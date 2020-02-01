@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
-ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
+ms.openlocfilehash: 93cc71a60c1037e5e59338b1bde096b8d74ae2e4
+ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755798"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912977"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -166,15 +166,15 @@ Einen ausführlichen Vergleich der Verhaltensunterschiede für bestimmte Schutze
 
 Obwohl sich der Azure Information Protection Unified Bezeichnung-Client noch in der Entwicklungsphase befindet, sind die folgenden Features und Verhaltensunterschiede vom klassischen Client derzeit nicht für die Verfügbarkeit in zukünftigen Versionen des Unified-Bezeichnungs Clients geplant: 
 
-- Benutzerdefinierte Berechtigungen als separate Option, die Benutzer in Office-Apps auswählen können: Word, Excel und PowerPoint
+- Benutzerdefinierte Berechtigungen als [separate Option, die Benutzer in Office-Apps auswählen können: Word, Excel und PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- Nachverfolgen und widerrufen von Office-Apps und dem Datei-Explorer
+- Nach [verfolgen und widerrufen](client-track-revoke.md) von Optionen aus Office-Apps und Datei-Explorer
 
 - Titel und QuickInfo der Information Protection-Leiste
 
-- Nur Schutzmodus (keine Bezeichnungen) mithilfe von Vorlagen
+- [Nur Schutzmodus](client-protection-only-mode.md) (keine Bezeichnungen) mithilfe von Vorlagen
 
-- Schutz von PDF-Dokumenten im .ppdf-Format
+- PDF-Dokument als [ppdf-Datei (älteres Format)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) schützen
 
 - Schaltfläche „Nicht weiterleiten“ in Outlook anzeigen
 
