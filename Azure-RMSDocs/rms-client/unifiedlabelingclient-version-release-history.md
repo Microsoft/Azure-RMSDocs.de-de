@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 127d3c2e80f586e69255378eaf7422899c3a325f
-ms.sourcegitcommit: 4b13f8f04e3f2c37cfe512fd9a5ea4019e9c1dec
+ms.openlocfilehash: 01852416ece6046ad5132e8dd36ff2ee931ae393
+ms.sourcegitcommit: eb04292842a97c6813dbd9e5310db2e1652da011
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001555"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034296"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -78,7 +78,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 - Die neue **wordshapenametoremove** Advanced-Eigenschaft ermöglicht das Entfernen von Inhalts Markierungen in Word-Dokumenten, die von Anwendungen von Drittanbietern erstellt wurden. Erfahren Sie mehr darüber, wie [Sie vorhandene Shape-Namen identifizieren und mithilfe von **wordshapenametoremove**zum Entfernen definieren](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
 
 - Funktionen für [Scanner](../deploy-aip-scanner.md) :
-    - [Einfachere lokale und untergeordnete SharePoint-](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories)Ermittlung. Das Festlegen der einzelnen Standorte ist nicht mehr erforderlich. 
+    - [Einfachere lokale und untergeordnete SharePoint-](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo#permission-users-to-scan-sharepoint-repositories)Ermittlung. Das Festlegen der einzelnen Standorte ist nicht mehr erforderlich. 
     - Erweiterte Eigenschaft für die SQL-Segment [Größen](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) Änderung hinzugefügt.
     - Administratoren haben jetzt die Möglichkeit, [vorhandene Scans anzuhalten und eine erneute Überprüfung durchzuführen](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) , wenn die Standard Bezeichnung geändert wurde.
     - Standardmäßig legt Scanner jetzt minimale Telemetrie für schnellere Scans und eine reduzierte Protokoll Größe fest, und Informationstypen werden nun in der Datenbank zwischengespeichert. Erfahren Sie mehr über die [Scanner-Optimierung](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
@@ -118,7 +118,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
     
     - Ereignis-IDs für die Start-und Beendigungs Zyklen der Scanner werden nicht in das Windows-Ereignisprotokoll geschrieben. Verwenden Sie stattdessen die Azure-Portal für diese Informationen.
     
-    - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problem Umgehungen
+    - Bekanntes Problem: neue und umbenannte Bezeichnungen können nicht als Standard Bezeichnung für das Scanner-Profil oder die Repository-Einstellungen ausgewählt werden. Problemumgehungen:
         - Für neue Bezeichnungen: Fügen Sie im Azure-Portal [die Bezeichnung](../configure-policy-add-remove-label.md) , die Sie verwenden möchten, der globalen Richtlinie oder einer Bereichs bezogenen Richtlinie hinzu.
         - Umbenannte Bezeichnungen: Schließen Sie die Azure-Portal, und öffnen Sie Sie erneut.
     
