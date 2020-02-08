@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/04/2020
+ms.date: 02/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 01852416ece6046ad5132e8dd36ff2ee931ae393
-ms.sourcegitcommit: eb04292842a97c6813dbd9e5310db2e1652da011
+ms.openlocfilehash: 3f30cd7aea2498c101937aacc8f3cbf3ffdc6364
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034296"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77044965"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -42,6 +42,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
@@ -181,59 +182,6 @@ Unterstützt durch 03/03/2020
 - Der Client kann seine Richtlinie herunterladen und die aktuellen Vertraulichkeits Bezeichnungen anzeigen. Diese Korrektur ist nach dem Upgrade von einer früheren Version erforderlich, und Sie haben keine benutzerdefinierten Informationstypen in Ihrem Beschriftungs Center konfiguriert.
 
 - Allgemeine Verbesserungen der Leistung und Stabilität.
-
-## <a name="version-22140"></a>Version 2.2.14.0
-
-**Veröffentlicht**: 07/15/2019
-
-Unterstützt durch 02/06/2020
-
-**Neue Funktionen:**
-
-- Unterstützung für [Erweiterte Einstellungen](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mit PowerShell für die Security & Compliance Center konfigurieren.
-    
-    Diese erweiterten Einstellungen unterstützen die folgenden Anpassungen:
-     - [Information Protection-Leiste in Office-Apps anzeigen](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
-    - [Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
-    - [Die empfohlene Klassifizierung in Outlook aktivieren](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
-    - [Festlegen einer anderen Standardbezeichnung für Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
-    - [Deaktivieren der Option „Nicht jetzt“ für Dokumente bei Verwendung der obligatorischen Bezeichnung](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
-    - [Entfernen von Kopf- und Fußzeilen aus anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
-    - [Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
-    - [Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-    - [Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
-    - [Add "Report an Issue" for users](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users) ("Problem melden" für Benutzer hinzufügen)
-    - [Implementieren von Popupmeldungen in Outlook, die E-Mails während des Sendens legitimieren, blockieren oder Warnungen für sie ausgeben](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - [Hiermit wird das Senden von ermittelten sensiblen Informationen in Dokumenten an Azure Information Protection Analytics deaktiviert.](clientv2-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)
-    - [Senden von Informationstypen Übereinstimmungen an Azure Information Protection Analytics](clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics)
-    - [Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [Anwenden einer benutzerdefinierten Eigenschaft, wenn eine Bezeichnung angewendet wird](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
-    - [Konfigurieren einer Bezeichnung, um die S/MIME-Schutz in Outlook anzuwenden](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-    - [Festlegen einer Standard untergeordneten Bezeichnung für eine übergeordnete Bezeichnung](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
-    - [Farbe für die Bezeichnung angeben](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
-
-- Unterstützung für Bezeichnungen, die für benutzerdefinierte Berechtigungen für Word, Excel, PowerPoint und den Datei-Explorer konfiguriert sind. Weitere Informationen finden Sie im Abschnitt [erlauben Sie Benutzern das Zuweisen von Berechtigungen](/microsoft-365/compliance/encryption-sensitivity-labels#let-users-assign-permissions) in der Office-Dokumentation.
-
-- PowerShell-Änderungen im azureinformationprotection-Modul:
-    - Neues Cmdlet: [New-aipcustomberechti-](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) ersetzt New-rmsprotectionlicense zum Erstellen einer Ad-hoc-Richtlinie für benutzerdefinierte Berechtigungen
-    - Neue Parameter:
-        -  " *Custom-Berechtigungen* " und " *removeprotection* ": " [Set-aipfilelabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel) " hinzugefügt
-        -  " *Onbehalfof* ": " [Set-aipauthentication](/powershell/module/azureinformationprotection/set-aipauthentication)" wurde hinzugefügt und anstelle des *tokenparameters* für nicht interaktive Sitzungen verwendet.
-        -  " *WhatIf* " und " *discoveryinfotypes* ": " [Set-aipfileclassification](/powershell/module/azureinformationprotection/set-aipfileclassification)" wurde hinzugefügt, sodass dieses Cmdlet im Ermittlungs Modus ohne Anwenden von Bezeichnungen ausgeführt werden kann.
-    - Als veraltet markierte Cmdlets, die eine direkte Verbindung mit einem Schutzdienst herstellen: Clear-rmsauthentication, Get-rmsfilestatus, Get-rmsserver, Get-rmsserverauthentication, Get-RMSTemplate, Protect-rmsfile, Set-rmsserverauthentication, Unprotect-rmsfile
-
-
-**Fixes**
-
-- Unterstützung für [Inhalts Übereinstimmungen](../reports-aip.md#content-matches-for-deeper-analysis) für Analytics und [Set-aipfileclassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) mit dem *discoveryinfotypes* -Parameter.
-
-- Nachdem Sie zu einem alternativen Gebiets Schema in Windows gewechselt haben, können Sie trotzdem eine Bezeichnung mit Schutz auf ein PDF-Dokument anwenden.
-
-- Wenn eine Bezeichnung aus dem Inhalt entfernt wird, wird der Schutz auch nur dann entfernt, wenn er als Teil der Bezeichnung konfiguriert wurde. Wenn der Schutz unabhängig von der Bezeichnung angewendet wurde, wird dieser Schutz beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
-
-- Wenn die automatische Bezeichnung konfiguriert ist, wird die Bezeichnung beim ersten Speichern eines Dokuments angewendet.
-
-- Die Standard Bezeichnung unterstützt untergeordnete Bezeichnungen.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
