@@ -4,7 +4,7 @@ description: Erfahren Sie, was in einem Release des Azure Information Protection
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/08/2020
+ms.date: 02/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3babbe6a0470df498567f6614362e87c14a24cf
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: abb96a7d86bddea671230fbd033d9c940cf982a3
+ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281597"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155924"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Der Azure Information Protection-Client: Verlauf der Releases und Supportrichtlinie
 
@@ -55,9 +55,9 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 |1.26.6.0|04/17/2018|
 |1.10.56.0|09/18/2017|
 |1.7.210.0|06/06/2017|
-|1.4.21.0|15.03.2017|
+|1.4.21.0|03/15/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0.0|27.10.2016|
+|1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
 Das Datumsformat, das auf dieser Seite verwendet wird, ist *Monat/Tag/Jahr*.
@@ -66,7 +66,7 @@ Ab 6/2/2019 ist für den Bezeichnungs Dienst für Azure Information Protection V
 
 Alle Client Versionen von 1.4.21.0 veröffentlicht 03/15/2017 unterstützen TLS 1,2. Client Versionen **1.3.155.2**, **1.2.4.0**und **1.1.23.0** verwenden nicht TLS 1,2 und können daher die Azure Information Protection Richtlinie nicht mehr herunterladen.
 
-### <a name="release-history"></a>Verlauf der Releases
+### <a name="release-history"></a>Releaseverlauf
 
 Im Folgenden wird erläutert, was in einem Release des Azure Information Protection-Clients für Windows neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt.
 
@@ -75,10 +75,27 @@ Im Folgenden wird erläutert, was in einem Release des Azure Information Protect
 >  
 > Technischen Support finden Sie in den Informationen unter [Supportoptionen und Communityressourcen](../information-support.md#support-options-and-community-resources). Wir laden Sie auch dazu ein, sich mit dem Azure Information Protection-Team auf seiner [Yammer-Website](https://www.yammer.com/askipteam/) in Verbindung zu setzen.
 
+## <a name="version-154590"></a>Version 1.54.59.0
+
+**Veröffentlicht**: 12/02/2020
+
+Diese Version enthält nur Korrekturen. 
+
+**Korrekturen**:
+
+- Das Problem ist behoben, wenn die durch iqp geschützten Dateien **Wiederherstellen** und/oder **Speichern** unter-Optionen nach dem Entfernen des Schutzes angezeigt werden. 
+
+- Viele QuickInfo-Texte zu Produkt Features wurden aus Gründen der Übersichtlichkeit verbessert. 
+
+- Probleme im Zusammenhang mit der Client Stabilität beim Arbeiten mit geschützten PDF-Dateien werden gelöst. 
+
+- Schutz Bezeichnungen werden nun erwartungsgemäß entfernt, wenn die Bezeichnung während des e-Mail-Erstellungs Prozesses auf der e-Mail gelöscht wird. 
 
 ## <a name="version-154330"></a>Version 1.54.33.0
 
 **Veröffentlicht**: 10/23/2019
+
+Unterstützt durch 08/12/2020
 
 Diese Version umfasst die msipc-Version 1.0.4008.0813 des RMS-Clients.
 
@@ -98,7 +115,7 @@ Diese Version umfasst die msipc-Version 1.0.3889.0419 des RMS-Clients.
 
 - Neue erweiterte Client Einstellung zur weiteren Anpassung der Einstellungen, mit denen Popup Meldungen in Outlook implementiert werden, die gesendete e-Mails warnen, rechtfertigen oder blockieren. Mit dieser neuen erweiterten Einstellung können Sie eine andere Aktion für e-Mail-Nachrichten ohne Anlagen festlegen. [Weitere Informationen](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
 
-**Fixes**:
+**Korrekturen**:
 
 - Wenn Sie den Datei-Explorer verwenden, klicken Sie mit der rechten Maustaste auf die Bezeichnung einer Datei, für die der Schutz unabhängig von einer Bezeichnung angewendet wurde. dieser Schutz wird beibehalten. Ein Benutzer hat z. b. benutzerdefinierte Berechtigungen auf eine Datei angewendet.
 

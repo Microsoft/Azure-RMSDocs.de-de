@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 272e5898859efd29033b8dc3430bb4a2d193fa75
-ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
+ms.openlocfilehash: 977dca2ab04071e0f58847d3a1d045e95a6c3a4f
+ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77044985"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155941"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -132,7 +132,7 @@ Befolgen Sie die Anweisungen in den Administrator Handbüchern, um einen getrenn
 
 - Für den Unified-Bezeichnungs Client: der Unified-Bezeichnungs Client kann keinen Schutz ohne Onlineverbindung anwenden. 
     
-    Die Überprüfung des Unified Label-Clients kann Bezeichnungen auf der Grundlage von Richtlinien Richtlinien anwenden, die mithilfe des Cmdlets [Import-aipscannerconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) importiert wurden.
+    Der Scanner vom Unified Label-Client kann Bezeichnungen auf der Grundlage von Richtlinien anwenden, die mithilfe des Cmdlets [Import-aipscannerconfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) importiert wurden.
 
 Führen Sie anschließend Folgendes aus:
 
