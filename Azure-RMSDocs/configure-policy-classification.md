@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cb5bd910d69b85feae4c96b9bc8deb34369ccedb
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 919a31bfbc4d173aa9658eaf8725b1dd3da5f5d1
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959829"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422766"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Konfigurieren von Bedingungen für die automatische und die empfohlene Klassifizierung für Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "75959829"
 > [!NOTE]
 > Diese Anweisungen gelten für den Azure Information Protection-Client (klassisch) und nicht für den Azure Information Protection-Client für einheitliche Bezeichnungen. Wenn Sie nicht sicher sind, was der Unterschied zwischen diesen Clients ist, sehen Sie sich diese [FAQ](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) an.
 > 
-> Informationen zum Konfigurieren der automatischen und empfohlenen Klassifizierung für den Unified-Bezeichnungs Client finden Sie in der Office-Dokumentation. Wenden Sie z. b. [eine Vertraulichkeits Bezeichnung automatisch auf Inhalt an](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+> Informationen zum Konfigurieren der automatischen und empfohlenen Klassifizierung für den Unified-Bezeichnungs Client finden Sie in der Dokumentation zur Microsoft 365 Konformität. Wenden Sie z. b. [eine Vertraulichkeits Bezeichnung automatisch auf Inhalt an](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 Beim Konfigurieren von Bedingungen für eine Bezeichnung können Sie automatisch eine Bezeichnung für ein Dokument oder eine E-Mail zuweisen. Alternativ können Sie Benutzer auffordern, die von Ihnen empfohlene Bezeichnung auszuwählen. 
 

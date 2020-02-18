@@ -12,12 +12,12 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dd65c04165b125df6239792e528f28586a75e78f
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 0c6d9de295be95fde6459849d4e9abb5161cf998
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959866"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422833"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Benutzerhandbuch: Entfernen von Bezeichnungen und des Schutzes von Dateien und e-Mails, die von Azure Information Protection
 
@@ -74,5 +74,5 @@ Weitere Anweisungen zur Vorgehensweise finden Sie im Azure Information Protectio
 
 ## <a name="additional-information-for-administrators"></a>Weitere Informationen für Administratoren    
 
-Siehe [Übersicht über Vertraulichkeits Bezeichnungen](/microsoft-365/compliance/sensitivity-labels).
+Weitere [Informationen finden Sie unter Informationen zu Sensitivität](/microsoft-365/compliance/sensitivity-labels).
 

@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/06/2020
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 977dca2ab04071e0f58847d3a1d045e95a6c3a4f
-ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
+ms.openlocfilehash: 03ec95f3e53bd522c1d1775e54dfae7305a578e3
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155941"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423183"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -166,19 +166,27 @@ In der Regel verwenden Sie dasselbe Benutzerkonto, um die Überprüfung zu insta
     
     Füllen Sie die Datenbank mit dem folgenden Skript auf: 
 
-
-
     Wenn nicht vorhanden (Select * from Master. sys. server_principals WHERE sid = SUSER_SID ("domain\user")) BEGIN DECLARE @T nvarchar (500) Set @T = ' Create Login ' + QUOTENAME (' domain\user ') + ' from Windows ' exec (@T) End 
 
-Um einen Benutzer zu erstellen und db_owner Rechte für diese Datenbank zu erteilen, bitten Sie den sysadmin, das folgende SQL-Skript zweimal auszuführen. Beim ersten Mal für das Dienst Konto, mit dem die Überprüfung ausgeführt wird, und das zweite Mal zum Installieren und Verwalten des Scanners. Vor dem Ausführen des Skripts:
-1. Ersetzen Sie Domäne *\ Benutzer* durch den Domänen Namen und den Benutzerkonto Namen des Dienst Kontos bzw. des Benutzerkontos.
-2. Ersetzen Sie *dbname* durch den Namen der Überprüfungs Konfigurationsdatenbank.
+Um einen Benutzer zu erstellen und db_owner Berechtigungen für diese Datenbank zu erteilen, bitten Sie den sysadmin, folgende Aufgaben durchzuführen:
+
+1. Erstellen Sie eine Datenbank für Scanner: <br>
+    **Create Database AIPScannerUL_ [Profile Name]** **ALTER DATABASE AIPScannerUL_ [Profile Name] Set vertrauenswürdig für**
+    - Dieser Schritt ist optional, bietet jedoch Unterstützung für eine einfachere Problembehandlung.
+
+2. Erteilen Sie die Rechte für den Benutzer, der den Installations Befehl ausführt und der zum Ausführen von Überprüfungs Verwaltungs Befehlen verwendet wird:
 
 SQL-Skript:
 
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
+3. Erteilen von Berechtigungen für das Scanner-Dienst Konto:
+
+SQL-Skript:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    
 Darüber hinaus gilt:
 
 - Sie müssen ein lokaler Administrator auf dem Server sein, auf dem die Überprüfung ausgeführt wird.

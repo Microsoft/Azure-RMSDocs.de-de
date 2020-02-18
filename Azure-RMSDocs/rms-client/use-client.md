@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 93cc71a60c1037e5e59338b1bde096b8d74ae2e4
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912977"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422846"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -65,7 +65,7 @@ Mit der neuesten Version des Unified-Bezeichnungs Clients wird die Parität der 
 
 Sie können verschiedene Clients in derselben Umgebung verwenden, um unterschiedliche Geschäftsanforderungen zu unterstützen, wie im folgenden Beispiel für die Bereitstellung veranschaulicht. In einer gemischten Client Umgebung empfiehlt es sich, einheitliche Bezeichnungen zu verwenden, damit Clients denselben Satz von Bezeichnungen für die einfache Verwaltung verwenden. Neue Kunden haben standardmäßig einheitliche Bezeichnungen, da sich Ihre Mandanten auf der vereinheitlichten Beschriftungs Plattform befinden. Weitere Informationen finden Sie unter [wie kann ich feststellen, ob mein Mandant auf der Unified-Beschriftungs Plattform ist?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgeführt werden, die mindestens eine Version 1910 haben und einer der Azure Information Protection Clients installiert ist, wird der integrierte Bezeichnungs Client standardmäßig in Office-Apps deaktiviert. Sie können dieses Verhalten jedoch ändern, um den integrierten Bezeichnungs Client nur für Ihre Office-Apps zu verwenden. Mit dieser Konfiguration bleibt der Azure Information Protection Client (klassisch oder vereinheitlichte Bezeichnung) für die Bezeichnung im Datei-Explorer, PowerShell und Scanner verfügbar. Anweisungen zum Deaktivieren des Azure Information Protection Clients in Office 365-apps finden Sie in der Office-Dokumentation im Abschnitt über das [Ausführen von Vertraulichkeits Bezeichnungen neben dem Azure Information Protection-Client in Office für Windows](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#can-sensitivity-labels-run-alongside-the-azure-information-protection-client-in-office-for-windows) .
+Wenn Sie über einen Windows-Computer verfügen, auf dem Office 365-apps ausgeführt werden, die mindestens eine Version 1910 haben und einer der Azure Information Protection Clients installiert ist, wird der integrierte Bezeichnungs Client standardmäßig in Office-Apps deaktiviert. Sie können dieses Verhalten jedoch ändern, um den integrierten Bezeichnungs Client nur für Ihre Office-Apps zu verwenden. Mit dieser Konfiguration bleibt der Azure Information Protection Client (klassisch oder vereinheitlichte Bezeichnung) für die Bezeichnung im Datei-Explorer, PowerShell und Scanner verfügbar. Anweisungen zum Deaktivieren des Azure Information Protection Clients in Office 365-apps finden Sie im Abschnitt " [Office Built-in-Bezeichnung Client" und "Azure Information Protection Client](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) " aus der Dokumentation zur Microsoft 365 Konformität.
 
 ##### <a name="example-deployment-strategy"></a>Beispiel für eine Bereitstellungs Strategie:
 
@@ -143,7 +143,7 @@ Fußnoten:
 
 Wenn sowohl der Azure Information Protection Client (klassisch) als auch der Azure Information Protection Unified-Bezeichnungs Client dieselbe Funktion unterstützen, verwenden Sie die folgende Tabelle, um einige funktionale Unterschiede zwischen den beiden Clients zu identifizieren.
 
-|Funktion |Klassischer Client|Einheitlicher Bezeichnungs Client|
+|Funktionalität |Klassischer Client|Einheitlicher Bezeichnungs Client|
 |--------------|-----------------------------------|-----------------------------------------------------------|
 |Setup:| Option zum Installieren der lokalen Demorichtlinie | Keine lokale Demorichtlinie|
 |Auswahl und Anzeige von Bezeichnungen, wenn diese in Office-Apps angewendet werden:|Über die Schaltfläche **Schützen** im Menüband <br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|Über die Schaltfläche **Vertraulichkeit** im Menüband<br /><br /> Über die Information Protection-Navigationsleiste (horizontale Leiste unter dem Menüband)|

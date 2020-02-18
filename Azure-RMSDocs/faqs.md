@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c690329492732cbc446575335f57e9dae83979f5
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 09c83a38d08efa6be464124ae1bfdae45d4fdbdc
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912989"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423180"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Häufig gestellte Fragen zu Azure Information Protection
 
@@ -66,7 +66,7 @@ Sie können auch überprüfen, ob Sie **Azure Information Protection** >  > **Un
 
 Der **Azure Information Protection Client (klassisch)** ist verfügbar, seit Azure Information Protection erstmals als neuer Dienst für die Klassifizierung und den Schutz von Dateien und e-Mails angekündigt wurde. Dieser Client lädt Bezeichnungen und Richtlinien Einstellungen von Azure herunter und konfiguriert die Azure Information Protection Richtlinie aus der Azure-Portal. Weitere Informationen finden Sie unter [Übersicht über die Azure Information Protection-Richtlinie](overview-policy.md). 
 
-Der **Azure Information Protection Unified Bezeichnung-Client** ist eine neuere Ergänzung, um den einheitlichen Bezeichnungs Speicher zu unterstützen, der von mehreren Anwendungen und Diensten unterstützt wird. Dieser Client lädt Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen von den folgenden admin Centers herunter: Office 365 Security & Compliance Center, Microsoft 365 Security Center und Microsoft 365 Compliance Center. Weitere Informationen finden Sie unter [Übersicht über Vertraulichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+Der **Azure Information Protection Unified Bezeichnung-Client** ist eine neuere Ergänzung, um den einheitlichen Bezeichnungs Speicher zu unterstützen, der von mehreren Anwendungen und Diensten unterstützt wird. Dieser Client lädt Vertraulichkeits Bezeichnungen und Richtlinien Einstellungen von den folgenden admin Centers herunter: Office 365 Security & Compliance Center, Microsoft 365 Security Center und Microsoft 365 Compliance Center. Weitere Informationen finden Sie unter Informationen [zu Empfindlichkeits Bezeichnungen](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Wenn Sie nicht sicher sind, welcher Client verwendet werden soll, finden Sie unter [auswählen des zu verwendenden Azure Information Protection Clients](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers)Weitere Informationen.
 
@@ -120,7 +120,7 @@ Haben Sie noch Fragen zur Lizenzierung? Möglicherweise finden Sie passende Antw
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Ist der Azure Information Protection-Client nur für Abonnements geeignet, die Funktionen für Klassifizierung und Bezeichnung umfassen?
 
-Nein Der Azure Information Protection-Client (klassisch) kann auch mit Abonnements verwendet werden, die nur den Azure Rights Management-Dienst zum Schutz von Daten enthalten.
+Nein. Der Azure Information Protection-Client (klassisch) kann auch mit Abonnements verwendet werden, die nur den Azure Rights Management-Dienst zum Schutz von Daten enthalten.
 
 Wenn der klassische Client installiert ist und keine Azure Information Protection Richtlinie vorhanden ist, wird dieser Client automatisch im reinen [Schutzmodus](./rms-client/client-protection-only-mode.md)ausgeführt. In diesem Modus können Benutzer problemlos Rights Management-Vorlagen und benutzerdefinierte Berechtigungen anwenden. Wenn Sie zu einem späteren Zeitpunkt ein Abonnement erwerben, das Klassifizierungen und Bezeichnungen umfasst, wechselt der Client beim Herunterladen der Azure Informationen Protection-Richtlinie automatisch in den Standardmodus.
 
@@ -161,7 +161,7 @@ Einige Dinge sind zu beachten:
 
 ## <a name="does-azure-information-protection-support-on-premises-and-hybrid-scenarios"></a>Unterstützt Azure Information Protection lokale und hybride Szenarios?
 
-Ja Obwohl Azure Information Protection eine cloudbasierte Lösung ist, können damit Dokumente und E-Mails, die sowohl lokal als auch in der Cloud gespeichert sind, klassifiziert, bezeichnet und geschützt werden.
+Ja. Obwohl Azure Information Protection eine cloudbasierte Lösung ist, können damit Dokumente und E-Mails, die sowohl lokal als auch in der Cloud gespeichert sind, klassifiziert, bezeichnet und geschützt werden.
 
 Wenn Sie über Exchange Server, SharePoint Server und Windows-Dateiserver verfügen, können Sie den [Rights Management-Connector](deploy-rms-connector.md) bereitstellen, damit diese lokalen Server den Azure Rights Management-Dienst verwenden können, um Ihre E-Mails und Dokumente zu schützen. Sie können Ihre Active Directory-Domänencontroller auch mit Azure AD synchronisieren und zusammenführen, um eine nahtlosere Authentifizierung für Benutzer zu erreichen. Dazu können Sie beispielsweise [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect) verwenden.
 
