@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionDescriptorBuilder-Klasse
 description: Dokumentiert die MIP::p rotectiondescriptorbuilder-Klasse des MIP-SDKs (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ed9d7085f7406e5c921843d32069f2f6af9f5807
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560767"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489689"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>mip::ProtectionDescriptorBuilder-Klasse 
 Erstellt einen Schutz Deskriptor, der den dem Inhalt zugeordneten Schutz beschreibt.
@@ -27,11 +27,8 @@ public void SetAllowOfflineAccess(bool value)  |  Legt fest, ob die Schutzrichtl
 public void SetReferrer(const std::string& uri)  |  Legt die Referreradresse der Schutzrichtlinie fest.
 public void "stencryptedappdata" (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die verschlüsselt werden sollten.
 öffentliches void setsignetdappdata (Konstanten Std:: Map\<Std:: String, Std:: String\>& Wert)  |  Legt anwendungsspezifische Daten fest, die signiert werden sollten.
-public virtual ~ProtectionDescriptorBuilder()  | Noch nicht dokumentiert.
-public static MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrights | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und rechten definiert werden.
-public static MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromuserrollen | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und Rollen definiert werden.
-öffentliches statisches MIP_API Std:: shared_ptr&lt;schutzdescriptor Builder&gt; MIP::P rotectiondescriptor Builder:: | atefromtemplate | Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von der Schutz Vorlage definiert werden. 
-
+public virtual ~ProtectionDescriptorBuilder()  | _Noch nicht dokumentiert._
+  
 ## <a name="members"></a>Member
   
 ### <a name="build-function"></a>Build-Funktion
@@ -101,27 +98,3 @@ Eine Anwendung kann ein Wörterbuch von anwendungsspezifischen Daten angeben, da
   
 ### <a name="protectiondescriptorbuilder-function"></a>~ Schutzdescriptorbuilder-Funktion
 _Noch nicht dokumentiert._
-
-### <a name="createfromuserrights-function"></a>Funktion "kreatefromuserrights"
-Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und rechten definiert werden.
-
-Parameter:
-* **usersandrights**: Sammlung von Benutzer-zu-Rechte-Zuordnungen.
-
-**Rückgabe**: neue [ProtectionDescriptor](class_mip_protectiondescriptor.md)-Instanz 
-
-### <a name="createfromuserroles-function"></a>Funktion "kreatefromuserrollen"
-Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von Benutzern und Rollen definiert werden.
-
-Parameter:
-* **usersandrollen**: Sammlung von Benutzer-zu-Rollen-Zuordnungen.
-
-**Returns**: erstellt einen Schutz [Deskriptor](class_mip_protectiondescriptor.md) , dessen Zugriffsberechtigungen von Benutzern und Rollen definiert werden.
-
-### <a name="createfromtemplate-function"></a>Funktion "kreatefromtemplate"
-Erstellt einen Schutz Deskriptor Builder, dessen Zugriffsberechtigungen von der Schutz Vorlage definiert werden. 
-
-Parameter:
-* **TemplateID**: eine Schutz Vorlagen-ID.
-
-**Gibt Folgendes zurück**: eine neue Schutz [Deskriptor](class_mip_protectiondescriptor.md) -Instanz.

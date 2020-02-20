@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 4f816190cd240fb4dee90c67167de791b3a46d52
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743681"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423233"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Tutorial: Konfigurieren der Azure Information Protection-Richtlinieneinstellungen und Erstellen einer neuen Bezeichnung
 
@@ -49,7 +49,7 @@ Voraussetzungen für dieses Tutorial:
 
 3. Der Azure Information Protection-Client (klassisch) ist auf Ihrem Windows-Computer installiert (mindestens Windows 7 mit Service Pack 1). 
     
-    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Office-Dokumentation](/microsoft-365/compliance/sensitivity-labels).
+    Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie entsprechende Anweisungen für dieses Tutorial in der [Dokumentation zur Microsoft 365-Compliance](/microsoft-365/compliance/sensitivity-labels).
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     

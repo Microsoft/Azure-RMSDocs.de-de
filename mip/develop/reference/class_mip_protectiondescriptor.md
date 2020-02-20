@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionDescriptor-Klasse
 description: Dokumentiert die MIP::p rotectiondescriptor-Klasse des MIP-SDKs (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557734"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487037"
 ---
 # <a name="class-mipprotectiondescriptor"></a>mip::ProtectionDescriptor-Klasse 
 Beschreibung des Schutzes, der einem Inhaltselement zugeordnet ist.

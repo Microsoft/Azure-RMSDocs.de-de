@@ -1,17 +1,17 @@
 ---
 title: MIP::P rotectionhandler::P ublishingsettings
 description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 358c96b15b4e9eeb10a42937602487ec4d59b050
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e61eb300cbc787ecbb7fd14ec5dcb060d4f47d0a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560746"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490760"
 ---
 # <a name="class-mipprotectionhandlerpublishingsettings"></a>MIP::P rotectionhandler::P ublishingsettings 
 Einstellungen zum Erstellen eines Schutz Handlers zum Schutz neuer Inhalte.
@@ -20,7 +20,7 @@ Einstellungen zum Erstellen eines Schutz Handlers zum Schutz neuer Inhalte.
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public publishingsettings (Konstante Std:: shared_ptr\<schutzdescriptor\>& schutzdescriptor)  |  Schutzhandler:: Settings-Konstruktor zum Erstellen einer neuen Engine.
-Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  | Noch nicht dokumentiert.
+Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  | _Noch nicht dokumentiert._
 public bool getisauditedextractionallowed () konstant  |  Ruft ab, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 öffentliches void setisauditedextractionallowed (bool isauditedextractionallowed)  |  Legt fest, ob nicht-MIP-fähige Anwendungen den geschützten Inhalt öffnen dürfen oder nicht.
 public bool getisdepretoredalgorithmpreferred () konstant  |  Ruft ab, ob der als veraltet markierte Kryptografiealgorithmus (ECB) für die Abwärtskompatibilität bevorzugt wird oder nicht.

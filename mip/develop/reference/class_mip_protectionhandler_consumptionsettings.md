@@ -1,17 +1,17 @@
 ---
 title: 'MIP::P rotectionhandler:: consumptionsettings-Klasse'
 description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 63a7f3c377a40a5faf82afe332a12efed0d646c4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0f505d919f36819ce77285c77d6eebf7156d481c
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560722"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486782"
 ---
 # <a name="class-mipprotectionhandlerconsumptionsettings"></a>MIP::P rotectionhandler:: consumptionsettings-Klasse 
 Einstellungen zum Erstellen eines Schutz Handlers, um vorhandenen Inhalt zu nutzen.
@@ -20,6 +20,7 @@ Einstellungen zum Erstellen eines Schutz Handlers, um vorhandenen Inhalt zu nutz
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public consumptionsettings (Konstante Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+Public consumptionsettings (Konstanten Std:: Vector\<uint8_t\>& serializedprelicense, Konstanten Std:: Vector\<uint8_t\>& serializedpublishinglicense)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public consumptionsettings (Konstante Std:: shared_ptr\<publishinglicenseinfo\>& LicenseInfo)  |  Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 Public Std:: shared_ptr\<publishinglicenseinfo\> getpublishinglicenseinfo () konstant  |  Holen Sie sich die Veröffentlichungs Lizenz, die dem geschützten Inhalt zugeordnet ist.
 public bool getisofflineonly () const  |  Ruft ab, ob die erstellungshandlererstellung http-Online Vorgänge zulässt.
@@ -33,6 +34,17 @@ Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft de
 Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
 
 Parameter:  
+* **serializedpublishinglicense**: serialisierte Veröffentlichungs Lizenz aus geschütztem Inhalt
+
+
+  
+### <a name="consumptionsettings-function"></a>Consumptionsettings-Funktion
+Schutzhandler:: consumptionsettings-Konstruktor zum Erstellen eines neuen Handlers.
+
+Parameter:  
+* **serializedprelicense**: die vorab Lizenz, die an den Inhalt angehängt ist, wurde serialisiert. 
+
+
 * **serializedpublishinglicense**: serialisierte Veröffentlichungs Lizenz aus geschütztem Inhalt
 
 

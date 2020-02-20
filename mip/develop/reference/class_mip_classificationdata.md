@@ -1,30 +1,30 @@
 ---
 title: 'MIP:: classificationdata-Klasse'
 description: 'Dokumentiert die MIP:: classificationdata-Klasse des MIP-SDKs (Microsoft Information Protection).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 273b095ca0d6dc97ce440c4645bc2d07e6e760d4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: d609dbbfc86e58b172e4cd5ee4d532be65ee0a8d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840291"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490420"
 ---
 # <a name="class-mipclassificationdata"></a>MIP:: classificationdata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: String & getclassificationid () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std:: String & getrulepackageid () Konstanten  | Noch nicht dokumentiert.
-public int getmaxcount () konstant  | Noch nicht dokumentiert.
-public int getmincount () konstant  | Noch nicht dokumentiert.
-public int getminconfidence () konstant  | Noch nicht dokumentiert.
-public int getmaxconfidence () konstant  | Noch nicht dokumentiert.
-public virtual ~ classificationdata ()  | Noch nicht dokumentiert.
+Public Konstanten Std:: String & getclassificationid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getrulepackageid () Konstanten  | _Noch nicht dokumentiert._
+public int getmaxcount () konstant  | _Noch nicht dokumentiert._
+public int getmincount () konstant  | _Noch nicht dokumentiert._
+public int getminconfidence () konstant  | _Noch nicht dokumentiert._
+public int getmaxconfidence () konstant  | _Noch nicht dokumentiert._
+public virtual ~ classificationdata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

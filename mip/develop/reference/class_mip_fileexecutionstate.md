@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: fileexecutionstate-Klasse'
 description: 'Dokumentiert die MIP:: fileexecutionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 063f1b0227415dc413e0c56d26f60fc39274a817
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a55ad7b5d28a3115ea4f17f36a846011e82d7827
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560238"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490046"
 ---
 # <a name="class-mipfileexecutionstate"></a>MIP:: fileexecutionstate-Klasse 
   

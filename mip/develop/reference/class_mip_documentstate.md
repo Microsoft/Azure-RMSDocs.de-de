@@ -1,17 +1,17 @@
 ---
 title: MIP::D ocenumentstate-Klasse
 description: Dokumentiert die MIP::d ocenumentstate-Klasse des Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5cdcf04a68269581dc032f753247ba88e9f118d7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a49683730f120b3d43e2c8f9381a86f0df1a400d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558870"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490131"
 ---
 # <a name="class-mipdocumentstate"></a>MIP::D ocenumentstate-Klasse 
   
@@ -25,6 +25,7 @@ Public Std:: shared_ptr\<schutzdescriptor\> getschutzdescriptor () konstant  |  
 public ContentFormat GetContentFormat() const  |  Ruft das Inhaltsformat ab.
 public virtual Std:: shared_ptr\<classificationresults\> getclassificationresults (Konstanten Std:: Vector\<Std:: shared_ptr\<classificationrequest\>\> &) Konstanten  |  Gibt eine Zuordnung der Klassifizierungsergebnisse zurück.
 public virtual Std:: Map\<Std:: String, Std:: String\> getauditmetadata () Konstanten  |  Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paaren zurück.
+public virtual Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastmodifiedtime () konstant.  |  Rückgabe eines Zeitpunkts auf den Zeitpunkt der letzten Änderung des Dokuments.
   
 ## <a name="members"></a>Member
   
@@ -77,3 +78,9 @@ Gibt eine Zuordnung von anwendungsspezifischen Überwachungs Schlüssel-Wert-Paa
 
   
 **Gibt Folgendes zurück**: eine Liste von anwendungsspezifischen Überwachungs Metadaten registrierter Schlüssel: Wert Paare Absender: e-Mail-ID für Absender Empfänger: stellt ein JSON-Array von Empfängern für eine e-Mail LastModifiedBy: e-Mail-ID für den Benutzer dar, der den Inhalt zuletzt geändert hat: Datum, an dem der Inhalt zuletzt geändert wurde.
+  
+### <a name="getlastmodifiedtime-function"></a>Getlastmodifiedtime-Funktion
+Rückgabe eines Zeitpunkts auf den Zeitpunkt der letzten Änderung des Dokuments.
+
+  
+**Gibt Folgendes zurück**: der Zeitpunkt der letzten Änderung des Dokument Zeitpunkts.

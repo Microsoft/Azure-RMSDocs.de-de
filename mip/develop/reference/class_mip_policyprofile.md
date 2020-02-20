@@ -1,17 +1,17 @@
 ---
 title: mip::PolicyProfile-Klasse
 description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8feb0b93982a00c4843ea914f969ef27cf8e5ca2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 515f780c269025175e99caed72e8da381ef88104
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560913"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489774"
 ---
 # <a name="class-mippolicyprofile"></a>mip::PolicyProfile-Klasse 
 Die policyprofile-Klasse ist die Stamm Klasse für die Verwendung von Microsoft Information Protection-Vorgängen. Eine typische Anwendung benötigt nur ein policyprofile, aber Sie kann bei Bedarf mehrere Profile erstellen.
@@ -20,17 +20,15 @@ Die policyprofile-Klasse ist die Stamm Klasse für die Verwendung von Microsoft 
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ruft die auf dem Profil festgelegten Einstellungen ab.
-öffentliches void listenginesasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
+Public Std:: shared_ptr\<AsyncControl\> listenginesasync (konstant Std:: shared_ptr\<void\>& Kontext)  |  Startet den Vorgang zum Auflisten von Engines
 Public Std:: Vector\<Std:: String\> listengines ()  |  Die Liste der Module.
-öffentliches void unloadengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
+Public Std:: shared_ptr\<AsyncControl\> unloadengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
 öffentliches void unloadengine (Konstante Std:: String & ID)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu entladen.
-öffentliches void addengineasync (Konstanten policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
+Public Std:: shared_ptr\<AsyncControl\> addengineasync (konstant policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, eine neue Richtlinien-Engine zu dem Profil hinzuzufügen.
 Public Std:: shared_ptr\<policyengine\> addengine (Konstanten policyengine:: Settings & Settings, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Fügen Sie dem Profil eine neue Richtlinien-Engine hinzu.
-öffentliches void deleteengineasync (Konstanten Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
+Public Std:: shared_ptr\<AsyncControl\> deleteengineasync (konstant Std:: String & ID, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Beginnt damit, die Richtlinien-Engine mit der angegebenen ID zu löschen. Alle Daten für das angegebene Profil werden gelöscht.
 public void DeleteEngine(const std::string& engineId)  |  Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die angegebene Engine werden gelöscht.
-öffentliches statisches MIP_API void __CDECL MIP::P olicyprofile:: LoadAsync | Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
-public static Konstanten MIP_API char * __CDECL MIP::P olicyprofile:: GetVersion | Bibliotheksversion erhalten
-
+  
 ## <a name="members"></a>Member
   
 ### <a name="getsettings-function"></a>GetSettings-Funktion
@@ -81,7 +79,7 @@ Parameter:
 * **Einstellungen**: das MIP::P olicyengine:: Settings-Objekt, das die Einstellungen der Engine angibt. 
 
 
-* **context**: ein Parameter, der für den Observer-Funktionsumfang und optional httpdelegat als nicht verwendend angezeigt wird. 
+* **context**: ein Parameter, der an die Observer-Funktionen und optional httpdelegat weitergeleitet wird. 
 
 
 Policyprofile:: Observer wird bei Erfolg oder Fehler aufgerufen.
@@ -118,14 +116,3 @@ Löschen Sie die Richtlinien-Engine mit der angegebenen ID. Alle Daten für die 
 Parameter:  
 * **id**: die eindeutige Engine-ID
 
-### <a name="loadasync-function"></a>LoadAsync-Funktion
-Startet das Laden eines Profils auf der Grundlage der bereitgestellten Einstellungen.
-
-Parameter:  
-* **Einstellungen**: die Profileinstellungen, mit denen das Profil Objekt geladen wird. </para>
-* **context**: ein Kontext Parameter, der an die Observer-Funktionen übergeben wird.
-
-### <a name="getversion-function"></a>GetVersion-Funktion
-Bibliotheksversion erhalten
-
-**Gibt Folgendes zurück**: eine Versions Zeichenfolge.

@@ -1,17 +1,17 @@
 ---
 title: mip::AddContentFooterAction-Klasse
 description: 'Dokumentiert die MIP:: addcontentfooteraction-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 83452da929250dac907dd53868733c77eb26b877
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 7313976d8856a3aa807245a5c48ac22bf16b469a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560393"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490743"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>mip::AddContentFooterAction-Klasse 
 Eine Aktionsklasse, die angibt, dass dem Dokument Fußzeileninhalt hinzugefügt wird.

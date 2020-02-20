@@ -1,17 +1,17 @@
 ---
 title: mip::FileEngine-Klasse
 description: 'Dokumentiert die MIP:: fileengine-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8f1ef9e1ca46037243e170a59717be74954d4cb1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 60be23f1cda4403936ba1e334ae437f6d82d3e20
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560280"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490063"
 ---
 # <a name="class-mipfileengine"></a>mip::FileEngine-Klasse 
 Diese Klasse stellt eine Schnittstelle für alle Engine-Funktionen bereit.
@@ -29,8 +29,9 @@ Public Konstanten Std:: String & getpolicyfleid () Konstanten  |  Ruft die ID de
 Public Konstanten Std:: String & getsensitivityfleid () Konstanten  |  Ruft die ID der Vertraulichkeits Datei ab.
 public bool IsLabelingRequired() const  |  Überprüft, ob die Richtlinie festlegt, dass ein Dokument eine Bezeichnung erhalten muss.
 Public Std:: Chrono:: time_point\<Std:: Chrono:: system_clock\> getlastpolicyfetchtime () konstant.  |  Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
-öffentliches void-Ereignis "kreatefilehandlerasync" (Konstante Std:: String & inputfilepath, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konstante Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& Kontext, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateipfad.
-öffentliches void-Objekt "deatefilehandlerasync" (Konstante Std:: shared_ptr\<Stream\>& InputStream, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konst Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& context, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateidatenstrom.
+Public Konstanten Std:: String & getpolicydataxml ()-Konstanten  |  Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
+Public Std:: shared_ptr\<AsyncControl\> kreatefilehandlerasync (Konstante Std:: String & inputfilepath, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konstante Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& Kontext, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateipfad.
+Public Std:: shared_ptr\<AsyncControl\> kreatefilehandlerasync (Konstante Std:: shared_ptr\<Stream\>& InputStream, Konstante Std:: String & actualfilepath, bool isauditdiscoveryaktivierte, Konst Std:: shared_ptr\<fileHandler:: Observer\>& filehandlerobserver, Konstanten Std:: shared_ptr\<void\>& context, Konstante Std:: shared_ptr\<fileexecutionstate\>& fileexecutionstate)  |  Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateidatenstrom.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.
 Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  |  Ruft eine Liste benutzerdefinierter Einstellungen ab.
 public bool hasclassificationrules () konstant  |  Ruft ab, ob die Richtlinie über automatische oder Empfehlungs Regeln verfügt.
@@ -90,6 +91,12 @@ Ruft den Zeitpunkt ab, zu dem die Richtlinie zuletzt abgerufen wurde.
   
 **Returns**: die Uhrzeit, zu der die Richtlinie zuletzt abgerufen wurde.
   
+### <a name="getpolicydataxml-function"></a>Getpolicydataxml-Funktion
+Ruft Richtlinien Daten-XML ab, die die Einstellungen, Bezeichnungen und Regeln beschreibt, die dieser Richtlinie zugeordnet sind.
+
+  
+**Gibt Folgendes zurück**: Richtlinien Daten-XML.
+  
 ### <a name="createfilehandlerasync-function"></a>Funktion "kreatefilehandlerasync"
 Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateipfad.
 
@@ -106,9 +113,12 @@ Parameter:
 * **filehandlerobserver**: eine Klasse, die die fileHandler:: Observer-Schnittstelle implementiert. 
 
 
-* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird.
+* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird. 
 
 
+
+  
+**Gibt Folgendes zurück**: Async-Steuerelement Objekt.
   
 ### <a name="createfilehandlerasync-function"></a>Funktion "kreatefilehandlerasync"
 Beginnt mit der Erstellung eines Dateihandlers für den angegebenen Dateidatenstrom.
@@ -126,9 +136,12 @@ Parameter:
 * **filehandlerobserver**: eine Klasse, die die fileHandler:: Observer-Schnittstelle implementiert. 
 
 
-* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird.
+* **context**: Clientkontext, der verdeckt an den Beobachter zurückgegeben wird. 
 
 
+
+  
+**Gibt Folgendes zurück**: Async-Steuerelement Objekt.
   
 ### <a name="sendapplicationauditevent-function"></a>Sendapplicationauditevent-Funktion
 Protokolliert ein anwendungsspezifisches Ereignis in der Überprüfungspipeline.

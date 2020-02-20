@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: taskdispatcherdelegat-Klasse'
 description: 'Dokumentiert die MIP:: taskdispatcherdelegatklasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e73a03b842b1216bcc4ef71941ca4bc0b0233945
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: dca6a5fa04b62abf23f0116f63fd4a91c6081da0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559960"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489332"
 ---
 # <a name="class-miptaskdispatcherdelegate"></a>MIP:: taskdispatcherdelegat-Klasse 
 Eine Klasse, die die Schnittstelle zum MIP SDK-Aufgaben Verteiler definiert.
@@ -19,9 +19,9 @@ Eine Klasse, die die Schnittstelle zum MIP SDK-Aufgaben Verteiler definiert.
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Ausführen einer Aufgabe in einem Hintergrund Thread.
+öffentliches void dispatchtask (konstant Std:: String & taskId, Std:: function\<void ()\> Aufgabe)  |  Ausführen einer Aufgabe in einem Hintergrund Thread.
 öffentliches void dispatchtask (Konstanten Std:: String & taskId, Std:: function\<void ()\> Task, int64_t Delta seconds)  |  Führt eine Aufgabe in einem Hintergrund Thread mit der angegebenen Verzögerung aus.
-public void ExecuteTaskOnIndependentThread(const std::string& taskId, std::function\<void()\> task)  |  Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
+öffentliches void executetaskonindependentthread (konstant Std:: String & taskId, Std:: function\<void ()\> Aufgabe)  |  Sofortiges Ausführen einer Aufgabe in einem unabhängigen Thread.
 public bool canceltask (Konstante Std:: String & taskId)  |  Abbrechen einer Hintergrundaufgabe
 öffentliches void cancelalltasks ()  |  Alle Hintergrundaufgaben abbrechen.
   

@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionProfile::Observer-Klasse
 description: Dokumentiert die MIP::p rotectionprofile-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a9138e497655dfa939a9ac9b15d7ed228331e9e0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a88819b27a0453c3264360021b21354fa18f9d07
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560700"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489587"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>mip::ProtectionProfile::Observer-Klasse 
 Eine Schnittstelle, die mit dem Schutzprofil verbundene Benachrichtigungen empfängt.
@@ -59,7 +59,7 @@ Eine Anwendung kann beliebige Kontext Typen (z. b. Std::p romise, Std:: function
 Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
 
 Parameter:  
-* **engineIds**: Liste der verfügbaren Engine-IDs 
+* **engineIds**: Liste der verfügbaren Engine-IDs. 
 
 
 * **Kontext**: derselbe Kontext, der an "schützprofile:: listenginesasync" übermittelt wurde.
@@ -92,7 +92,7 @@ Parameter:
 Wird aufgerufen, wenn das Hinzufügen einer neuen Engine zu einem Fehler geführt hat.
 
 Parameter:  
-* **error**: der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
+* **error**: Der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
 
 
 * **Kontext**: derselbe Kontext, der an "Schutzprofile:: addengineasync" übermittelt wurde.

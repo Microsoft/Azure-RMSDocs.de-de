@@ -1,17 +1,17 @@
 ---
 title: mip::RecommendLabelAction-Klasse
 description: 'Dokumentiert die MIP:: recommendlabelaction-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 629e6410657fcb799e3f71c0ccb3752b82437428
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 2038c8eb1a6baa52dc696be998853ca6774edccf
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560026"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489536"
 ---
 # <a name="class-miprecommendlabelaction"></a>mip::RecommendLabelAction-Klasse 
 Durch Aktionen zum Empfehlen einer Bezeichnung erhalten Benutzer einen Vorschlag für eine Bezeichnung. Die Unterdrückung dieses Aufrufs, nachdem ein Benutzer die empfohlene Bezeichnung ignoriert hat, sollte durch die unterstützten Aktionen im Ausführungsstatus erfolgen.

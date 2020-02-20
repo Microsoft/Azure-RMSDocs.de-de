@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: mipcontext-Klasse'
 description: 'Dokumentiert die MIP:: mipcontext-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 82c39cd6f716bde9232f6a5a461b2ffbfbae1dd0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561033"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489910"
 ---
 # <a name="class-mipmipcontext"></a>MIP:: mipcontext-Klasse 
 Mipcontext stellt den Status dar, der von allen Profilen, Engines und Handlern gemeinsam genutzt wird.
@@ -24,11 +24,10 @@ public bool isfeatureaktivierte (flightingfeature-Funktion) konstant  |  Ruft ab
 public const ApplicationInfo& GetApplicationInfo() const  |  Anwendungsbeschreibung erhalten.
 Public Konstanten Std:: String & getmippath () Konstanten  |  Dateipfad für Protokolle, Caches usw. erhalten
 public bool isofflineonly ()  |  Nur offline-Einstellung erhalten.
+öffentliches LogLevel getmarkoldloglevel () konstant  |  Schwellenwert Protokollebene erhalten.
 Public Std:: shared_ptr\<loggerdelegat\> getloggerdelegat ()  |  Get Logger-Implementierung.
 öffentliches loggerdelegat * getrawloggerdelegat ()  |  Get Logger-Implementierung.
-öffentliches statisches MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: Create | Erstellen Sie eine neue mipcontext-Instanz, die beim Initialisieren von Profilen verwendet werden soll.
-öffentliches statisches MIP_API Std:: shared_ptr&lt;mipcontext&gt; __CDECL MIP:: mipcontext:: kreatewithcustomfeaturesettings | Erstellen Sie eine neue mipcontext-Instanz mit benutzerdefinierten Funktionseinstellungen.
-
+  
 ## <a name="members"></a>Member
   
 ### <a name="shutdown-function"></a>Shutdown-Funktion
@@ -64,6 +63,12 @@ Nur offline-Einstellung erhalten.
   
 **Gibt Folgendes zurück: gibt**an, ob die Anwendung im reinen Offline Modus ausgeführt wird.
   
+### <a name="getthresholdloglevel-function"></a>Getder oldloglevel-Funktion
+Schwellenwert Protokollebene erhalten.
+
+  
+**Gibt Folgendes zurück**: Schwellenwert Protokollebene
+  
 ### <a name="getloggerdelegate-function"></a>Getloggerdelegatfunktion
 Get Logger-Implementierung.
 
@@ -75,13 +80,3 @@ Get Logger-Implementierung.
 
   
 **Rückgabe**: Protokollierung.
-
-### <a name="create-function"></a>Create-Funktion
-Erstellen Sie eine neue mipcontext-Instanz, die beim Initialisieren von Profilen verwendet werden soll.
-
-**Gibt Folgendes zurück**: mipcontext-Instanz.
-
-### <a name="createwithcustomfeaturesettings-function"></a>Funktion "kreatewithcustomfeaturesettings"
-Erstellen Sie eine neue mipcontext-Instanz mit benutzerdefinierten Funktionseinstellungen.
-
-**Gibt Folgendes zurück**: mipcontext-Instanz.

@@ -1,17 +1,17 @@
 ---
 title: mip::Action-Klasse
 description: 'Dokumentiert die MIP:: Action-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d3cc1aecfb5ca8bf2d78dd9d6c8c280b5541389d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0f95ec9d4b89a8efdc118d584f7f73ec2128ef8a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560417"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489162"
 ---
 # <a name="class-mipaction"></a>mip::Action-Klasse 
 Schnittstelle für eine Aktion. Jede Aktion bedeutet einen Schritt, der von der Anwendung ausgeführt werden muss, um die Bezeichnung (wie in der Richtlinie definiert) anzuwenden.
@@ -19,12 +19,6 @@ Schnittstelle für eine Aktion. Jede Aktion bedeutet einen Schritt, der von der 
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Gibt den Typ der Aktion an.
   
 ## <a name="members"></a>Member
-  
-### <a name="gettype-function"></a>GetType-Funktion
-Gibt den Typ der Aktion an.
-
-  
-**Rückgabe**: ActionType, der Typ der abgeleiteten Aktion, in den diese Basisklasse umgewandelt werden kann.
+_Noch nicht dokumentiert._

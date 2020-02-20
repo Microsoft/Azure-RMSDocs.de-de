@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionProfile::Settings-Klasse
 description: Dokumentiert die MIP::p rotectionprofile-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0622f4db00c2f4baca7845aa0ca061bf2ccf294b
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560077"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489604"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>mip::ProtectionProfile::Settings-Klasse 
 Einstellungen, die von Protection Profile während der Erstellung und während der gesamten Lebensdauer verwendet werden.
@@ -27,10 +27,10 @@ Public Std:: shared_ptr\<genehmidelegat\> getgenehmidelegat () Konstanten  |  Ru
 Public Std:: shared_ptr\<Schutzprofile:: Observer\> getobserver () konstant  |  Ruft den Observer ab, der Benachrichtigungen über Ereignisse empfängt, die sich auf das Schutzprofil beziehen.
 Public Std:: shared_ptr\<mipcontext\> getmipcontext () Konstanten  |  MIP-Kontext, der den gemeinsamen Zustand für alle Profile darstellt.
 Public Std:: shared_ptr\<httpdelegat\> gethttpdeleg() Konstanten  |  Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
-öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
+öffentliches void-Setup Delegat (Konstante Std:: shared_ptr\<httpdelegat\>& httpdelegat)  |  Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
 Public Std:: shared_ptr\<taskdispatcherdelegat\> gettaskdispatcherdelegat () Konstanten  |  Sie erhalten den von der Anwendung bereitgestellten taskdispatcher-Delegaten (sofern vorhanden).
 öffentliches void settaskdispatcherdelegat (Konstanten Std:: shared_ptr\<taskdispatcherdelegaten\>& taskdispatcherdelegat)  |  Überschreiben Sie die standardmäßige asynchrone Aufgabenverteilung mit dem Client.
-public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest.
+public void SetSessionId(const std::string& sessionId)  |  Legt die Sitzungs-ID fest
 public const std::string& GetSessionId() const  |  Ruft die Sitzungs-ID ab
 öffentliches void setcancachelicenses (bool-abfrageelicenses)  |  Konfiguriert, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
 public bool abgebrochen () konstant  |  Ruft ab, ob Endbenutzer Lizenzen (Euls) lokal zwischengespeichert werden.
@@ -119,10 +119,10 @@ Ruft den von der Anwendung bereitgestellten HTTP-Delegaten ab (falls vorhanden).
 **Rückgabe**: Der HTTP-Delegat, der für HTTP-Vorgänge verwendet werden soll
   
 ### <a name="sethttpdelegate-function"></a>Setup-Delegatfunktion
-Überschreibt den HTTP-Standardstapel mit dem Stapel des Clients.
+Überschreibt den Standard-HTTP-Stapel mit dem des Clients.
 
 Parameter:  
-* **httpDelegate**: HTTP-Rückrufschnittstelle, die von Clientanwendungen implementiert wird.
+* **httpDelegate**: HTTP-Rückrufschnittstelle, die von Clientanwendungen implementiert wird
 
 
   
@@ -142,7 +142,7 @@ Parameter:
 Tasks können auf Profil Objekte verweisen, die ihre Zerstörung verhindern, weil taskdispatcher-Warteschlangen nicht freigegeben werden sollten.
   
 ### <a name="setsessionid-function"></a>Funktion "-essionid"
-Legt die Sitzungs-ID fest.
+Legt die Sitzungs-ID fest
 
 Parameter:  
 * **sessionId**: die Sitzungs-ID, die zum Korrelieren von Protokollen bzw. Telemetriedaten verwendet wird

@@ -1,17 +1,17 @@
 ---
 title: mip::FileHandler-Klasse
 description: 'Dokumentiert die MIP:: fileHandler-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: b2a6e3cd6de886c3e3983442a1ec7185b688b662
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 52c28c1763fc3e7513f98a23a18cb6c91e0ed508
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558839"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488737"
 ---
 # <a name="class-mipfilehandler"></a>mip::FileHandler-Klasse 
 Eine Schnittstelle für alle Funktionen für die Dateiverarbeitung.
@@ -28,16 +28,14 @@ public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Löscht die 
 öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzdescriptor\>& schutzdescriptor, Konstanten Schutzeinstellungen & Schutzeinstellungen)  |  Legt benutzerdefinierte oder vorlagenbasierte Berechtigungen (entsprechend „protectionDescriptor->GetProtectionType“) für die Datei fest.
 öffentliches void setprotection (Konstante Std:: shared_ptr\<schutzhandler\>& schutzhandler)  |  Legt den Schutz für ein Dokument mithilfe eines vorhandenen Schutz Handlers fest.
 public void RemoveProtection()  |  Entfernt den Schutz von der Datei. Wenn der Datei eine Bezeichnung zugeordnet ist, geht diese verloren.
-öffentliches void commitasync (Konst Std:: String & outputfilepath, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the file specified by the \|outputFilePath\ |  übergeben.
-öffentliches void commitasync (Konstanten Std:: shared_ptr\<Stream\>& OutputStream, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the stream specified by the \|outputStream\ |  übergeben.
+öffentliches void commitasync (Konst Std:: String & outputfilepath, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the file specified by the \|outputFilePath\ |  -Parameter.
+öffentliches void commitasync (Konstanten Std:: shared_ptr\<Stream\>& OutputStream, Konstanten Std:: shared_ptr\<void\>& Kontext) | Writes the changes to the stream specified by the \|outputStream\ |  -Parameter.
 public bool IsModified ()  |  Überprüft, ob Änderungen an der Datei vorgenommen wurden.
 öffentliches void getdecryptedtemporaryfileasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Pfad zu einer temporären Datei (die nach Möglichkeit gelöscht wird) zurück, die den entschlüsselten Inhalt darstellt.
 öffentliches void getdecryptedtemporarystreamasync (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Gibt einen Stream zurück, der den entschlüsselten Inhalt darstellt.
 öffentliches void notifycommiterfolgreich (Konstante Std:: String & actualfilepath)  |  Soll aufgerufen werden, wenn die Änderungen auf den Datenträger committet wurden.
 public std::string GetOutputFileName()  |  Berechnet den Namen und die Erweiterung der Ausgabedatei auf Basis des ursprünglichen Dateinamens und der angefallenen Änderungen.
-öffentliches statisches bool IsProtected (Konstante Std:: String & filePath, Konstanten Std:: shared_ptr<MipContext>& mipcontext) | Überprüft, ob eine Datei geschützt ist oder nicht.
-öffentliches statisches FILE_API Std:: Vector&lt;uint8_t&gt; __CDECL MIP:: fileHandler:: getserializedpublishinglicense | Rückgabe der Veröffentlichungs Lizenz, wenn Sie in der Datei gespeichert ist
-
+  
 ## <a name="members"></a>Member
   
 ### <a name="getlabel-function"></a>GetLabel-Funktion
@@ -109,9 +107,3 @@ Löst ein Überprüfungsereignis aus
   
 ### <a name="getoutputfilename-function"></a>Getoutputfilename-Funktion
 Berechnet den Namen und die Erweiterung der Ausgabedatei auf Basis des ursprünglichen Dateinamens und der angefallenen Änderungen.
-
-### <a name="isprotected-function"></a>IsProtected-Funktion
-Überprüft, ob eine Datei geschützt ist oder nicht.
-
-### <a name="getserializedpublishinglicense-function"></a>Getserializedpublishinglicense-Funktion
-Rückgabe der Veröffentlichungs Lizenz, wenn Sie in der Datei gespeichert ist

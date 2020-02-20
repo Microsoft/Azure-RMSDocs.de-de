@@ -1,29 +1,29 @@
 ---
 title: 'MIP:: syncfilepolicydata-Klasse'
 description: 'Dokumentiert die MIP:: syncfilepolicydata-Klasse des MIP-SDKs (Microsoft Information Protection).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: c4464c4705af082c8c5f1e63fde217b083a24d7e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a9e08fa2f734f40e4a99aae4a6e141cec4eff6c0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560519"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489349"
 ---
 # <a name="class-mipsyncfilepolicydata"></a>MIP:: syncfilepolicydata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten labelgroupdata * getlabelgroupdata () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<policypackagedata\>\>& getpoliciespackagedata () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std:: String & getupn () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std:: unordered_map\<Std:: String, Std:: String\>& getclassificationlist () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std:: String & getuserobjectid () Konstanten  | Noch nicht dokumentiert.
-public virtual ~ syncfilepolicydata ()  | Noch nicht dokumentiert.
+Public Konstanten labelgroupdata * getlabelgroupdata () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<policypackagedata\>\>& getpoliciespackagedata () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getupn () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: unordered_map\<Std:: String, Std:: String\>& getclassificationlist () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getuserobjectid () Konstanten  | _Noch nicht dokumentiert._
+public virtual ~ syncfilepolicydata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

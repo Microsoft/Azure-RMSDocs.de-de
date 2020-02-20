@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: msgattachmentdata-Klasse'
 description: 'Dokumentiert die MIP:: msgattachmentdata-Klasse des MIP-SDKs (Microsoft Information Protection).'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: bef08b98e09f9c6802ac9e39de293e9ec25bd380
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f9f47ca1503c912840fe1ed43542b5a4b4f2d0ec
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558633"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487666"
 ---
 # <a name="class-mipmsgattachmentdata"></a>MIP:: msgattachmentdata-Klasse 
   

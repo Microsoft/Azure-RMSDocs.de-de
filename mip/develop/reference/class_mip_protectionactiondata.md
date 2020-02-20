@@ -1,26 +1,32 @@
 ---
 title: MIP::P rotectionaktiondata
 description: Dokumentiert die MIP::p rotectionaktiondata-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 45a3c37acf9137f7e8f3567ce8b1d44c637d2402
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6643efcd65996a251991dae2b359b361f6a8ad60
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560793"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489706"
 ---
 # <a name="class-mipprotectionactiondata"></a>MIP::P rotectionaktiondata 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public schutzaktionstyp getschutztype () Konstanten  | Noch nicht dokumentiert.
-public const std::string& GetTemplateId() const  | Noch nicht dokumentiert.
-public virtual ~ schutzaktiondata ()  | Noch nicht dokumentiert.
+Public schutzaktionstyp getschutztype () Konstanten  | _Noch nicht dokumentiert._
+public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getdoublekeyverschlüsseltionurl () Konstanten  | _Noch nicht dokumentiert._
+public virtual ~ schutzaktiondata ()  | _Noch nicht dokumentiert._
+öffentlicher Aktions DataType GetType () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | _Noch nicht dokumentiert._
+Public Std:: String getargumentvalue (Konstanten Std:: String & Key) konstant  | _Noch nicht dokumentiert._
+public const std::string& GetName() const  | _Noch nicht dokumentiert._
+Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> GetArguments () konstant.  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
@@ -32,5 +38,29 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
+### <a name="getdoublekeyencryptionurl-function"></a>Getdoublekeyverschlüsseltionurl-Funktion
+_Noch nicht dokumentiert._
+
+  
 ### <a name="protectionactiondata-function"></a>~ Schutzaktiondata-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="gettype-function"></a>GetType-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getproperties-function"></a>GetProperties-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getargumentvalue-function"></a>Getargumentvalue-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getname-function"></a>GetName-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getarguments-function"></a>GetArguments-Funktion
 _Noch nicht dokumentiert._

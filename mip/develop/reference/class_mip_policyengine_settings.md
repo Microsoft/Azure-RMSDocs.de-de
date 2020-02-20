@@ -1,17 +1,17 @@
 ---
 title: mip::PolicyEngine::Settings-Klasse
 description: Dokumentiert die MIP::p olicyengine-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 620775649ee0fa593f141b1a4f983ad8b52caafe
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560979"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487615"
 ---
 # <a name="class-mippolicyenginesettings"></a>mip::PolicyEngine::Settings-Klasse 
 Definiert die einem policyengine zugeordneten Einstellungen.
@@ -39,6 +39,8 @@ public const std::string& GetCloudEndpointBaseUrl() const  |  Ruft ggf. die Basi
 Public Konstanten Std:: String & getdelegateduseremail () Konstanten  |  Ruft den Delegierten Benutzer ab.
 öffentliches void setlabelfilter (Konstanten Std:: Vector\<labelfiltertype\>& labelfilter)  |  Legt den Bezeichnungs Filter fest.
 Public Konstanten Std:: Vector\<labelfiltertype\>& getlabelfilter () konstant.  |  Ruft den Bezeichnungs Filter ab.
+öffentliches void setvariabletextmarkingtype (variabletextmarkingtype variabletextmarkingtype)  |  Legt den Typ der Variablen Textmarkierung fest.
+Public variabletextmarkingtype getvariabletextmarkingtype () Konstanten  |  Ruft den Typ der Variablen Textmarkierung ab.
   
 ## <a name="members"></a>Member
   
@@ -166,7 +168,7 @@ Das Flag zum angeben, ob die Bezeichnungen für die Last Sensitivität aktiviert
 Legt optional die Basis-URL für den Cloudendpunkt fest.
 
 Parameter:  
-* **cloudEndpointBaseUrl**: die Basis-URL, die von allen Service Requests verwendet wird (z.B. https://dataservice.protection.outlook.com )
+* **cloudEndpointBaseUrl**: die Basis-URL, die von allen Service Requests verwendet wird (z.B. https://dataservice.protection.outlook.com)
 
 
   
@@ -206,3 +208,17 @@ Ruft den Bezeichnungs Filter ab.
   
 **Gibt Folgendes zurück**: der Bezeichnungs Filter.
 Bezeichnungen werden standardmäßig für den Bereich gefiltert. diese API ermöglicht das Filtern nach möglichen Aktionen.
+  
+### <a name="setvariabletextmarkingtype-function"></a>Setvariabletextmarkingtype-Funktion
+Legt den Typ der Variablen Textmarkierung fest.
+
+Parameter:  
+* **variabletextmarkingtype**: der Typ der Variablen Textmarkierung.
+
+
+  
+### <a name="getvariabletextmarkingtype-function"></a>Getvariabletextmarkingtype-Funktion
+Ruft den Typ der Variablen Textmarkierung ab.
+
+  
+**Gibt**folgenden Wert zurück: den Typ der Variablen Textmarkierung.

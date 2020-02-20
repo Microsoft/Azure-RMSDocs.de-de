@@ -1,27 +1,27 @@
 ---
 title: 'MIP:: rulepackagedata-Klasse'
 description: 'Dokumentiert die MIP:: rulepackagedata-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ace2e5c8eb1b5d72c8d9410ba9b5e7fd3f008049
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560574"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489468"
 ---
 # <a name="class-miprulepackagedata"></a>MIP:: rulepackagedata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public konstant policyruledata * getruledata () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getlabelretemplateid () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, schutzaktionstyp\>& getlabeltoprotectiontype () Konstanten  | Noch nicht dokumentiert.
-public virtual ~ rulepackagedata ()  | Noch nicht dokumentiert.
+Public konstant policyruledata * getruledata () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getlabelretemplateid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: shared_ptr\<schutzaktiondata\>\>& getlabeltoprotectiontype () konstant  | _Noch nicht dokumentiert._
+public virtual ~ rulepackagedata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

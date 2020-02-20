@@ -1,51 +1,26 @@
 ---
 title: 'MIP:: aktiondata-Klasse'
 description: 'Dokumentiert die MIP:: aktiondata-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d0bd4fc28eaee1544a2c7334e8fcc8f06151b9b6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: bb74866f0a4d7396265869b2039594a7dd22ee13
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559073"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489196"
 ---
 # <a name="class-mipactiondata"></a>MIP:: aktiondata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-öffentlicher Aktions DataType GetType () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std:: Map\<Std:: String, Std:: String\>& GetProperties () Konstanten  | Noch nicht dokumentiert.
-Public Std:: String getargumentvalue (Konstanten Std:: String & Key) konstant  | Noch nicht dokumentiert.
-public const std::string& GetName() const  | Noch nicht dokumentiert.
-Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> GetArguments () konstant.  | Noch nicht dokumentiert.
-public virtual ~ aktiondata ()  | Noch nicht dokumentiert.
+public virtual ~ aktiondata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
-  
-### <a name="gettype-function"></a>GetType-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getproperties-function"></a>GetProperties-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getargumentvalue-function"></a>Getargumentvalue-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getname-function"></a>GetName-Funktion
-_Noch nicht dokumentiert._
-
-  
-### <a name="getarguments-function"></a>GetArguments-Funktion
-_Noch nicht dokumentiert._
-
   
 ### <a name="actiondata-function"></a>~ Aktiondata-Funktion
 _Noch nicht dokumentiert._

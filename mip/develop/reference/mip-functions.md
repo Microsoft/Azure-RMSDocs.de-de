@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555975"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489247"
 ---
 # <a name="functions"></a>Funktionen
 
@@ -30,6 +30,8 @@ Public Konstanten Std:: String & getcustomsettingsensitivitytypesdataname ()    
 public const std::string& GetCustomSettingPolicyDataFile()       |  Name der Einstellung, mit der explizit der Pfad für Richtliniendatendateien angegeben wird.
 Public Konstanten Std:: String & getcustomsettingsensitivitytypesdatafile ()       |  Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit anzugeben.
 Public Konstanten Std:: String & getcustomsettinglabelcustompropertiessyncenabled ()       |  Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
+Public Konstanten Std:: String & getcustomsettingpolicyttldays ()       |  Der Name der Einstellung, die das Überschreiben der Richtlinie für die Gültigkeitsdauer der Gültigkeitsdauer in Tagen aktiviert. Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
+Public Konstanten Std:: String & getcustomsettingsensitivitypolicyttldays ()       |  Der Name der Einstellung, die das außer Kraft setzen der Gültigkeitsdauer Gültigkeitsdauer der Gültigkeitsdauer der Gültigkeitsdauer (TTL) Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
 Public Konstanten Std:: Map\<flightingfeature, bool\>& getdefaultfeaturesettings ()       |  Ruft ab, ob eine Funktion standardmäßig aktiviert ist.
 Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: IStream\>& stdistream)       |  Erstellt einen Stream aus einer Std:: IStream-Klasse.
 Public MIP_API Std:: shared_ptr\<MIP:: Stream\> "deestreamfromstdstream" (konstant Std:: shared_ptr\<Std:: ostream\>& stdostream)       |  Erstellt einen Stream aus einer Std:: ostream-Klasse.
@@ -46,8 +48,6 @@ Parameter:
 * **method**: eine Zuweisungs Methode. 
 
 
-
-  
 **Returns**: eine Zeichen folgen Beschreibung der Zuweisungs Methode.
   
 ### <a name="getactionsourcestring-function"></a>Getaktionsourcestring-Funktion
@@ -56,9 +56,6 @@ Der Name der Aktions Quelle wird angezeigt.
 Parameter:  
 * **Action Source**: die Aktions Quelle. 
 
-
-
-  
 **Returns**: eine Zeichen folgen Darstellung der Aktions Quelle.
   
 ### <a name="getdatastatestring-function"></a>Getdatastatestring-Funktion
@@ -104,6 +101,18 @@ Der Name der Einstellung, um den Datendatei Pfad für sensible Typen explizit an
   
 ### <a name="getcustomsettinglabelcustompropertiessyncenabled-function"></a>Getcustomsettinglabelcustompropertiessyncenabled-Funktion
 Der Name der Einstellung, die das Aktivieren der Bezeichnung durch benutzerdefinierte Eigenschaften und benutzerdefinierte Eigenschaften durch Bezeichnungs Features ermöglicht.
+
+  
+**Rückgabe**: der benutzerdefinierte Einstellungsschlüssel
+  
+### <a name="getcustomsettingpolicyttldays-function"></a>Getcustomsettingpolicyttldays-Funktion
+Der Name der Einstellung, die das Überschreiben der Richtlinie für die Gültigkeitsdauer der Gültigkeitsdauer in Tagen aktiviert. Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
+
+  
+**Rückgabe**: der benutzerdefinierte Einstellungsschlüssel
+  
+### <a name="getcustomsettingsensitivitypolicyttldays-function"></a>Getcustomsettingsensitivitypolicyttldays-Funktion
+Der Name der Einstellung, die das außer Kraft setzen der Gültigkeitsdauer Gültigkeitsdauer der Gültigkeitsdauer der Gültigkeitsdauer (TTL) Werte sollten als Zeichen folgen Integer festgelegt werden, < 0 bedeutet unbegrenzte Gültigkeitsdauer.
 
   
 **Rückgabe**: der benutzerdefinierte Einstellungsschlüssel
@@ -180,12 +189,12 @@ XOR (^)-Operator für Aktionstyp-Enum.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>Namespace MIP:: auditmetadatakeys
 
- Member                        | Beschreibungen                                
+Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 Public Std:: String Sender ()       |  Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
-Public Std:: String-Empfänger ()       | Noch nicht dokumentiert.
-Public Std:: String LastModifiedBy ()       | Noch nicht dokumentiert.
-Public Std:: String LastModifiedDate ()       | Noch nicht dokumentiert.
+Public Std:: String-Empfänger ()       | _Noch nicht dokumentiert._
+Public Std:: String LastModifiedBy ()       | _Noch nicht dokumentiert._
+Public Std:: String LastModifiedDate ()       | _Noch nicht dokumentiert._
   
 ### <a name="sender-function"></a>Sender-Funktion
 Überwachen von metadatenschlüsseln in der Zeichen folgen Darstellung.
@@ -204,7 +213,7 @@ _Noch nicht dokumentiert._
 
 ## <a name="namespace-miprights"></a>Namespace `mip::rights` 
   
- Member                        | Beschreibungen                                
+Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „owner“ (Besitzer) ab.
 public std::string View()       |  Ruft den Zeichenfolgenbezeichner für die Berechtigung „view“ (Anzeigen) ab.
@@ -221,7 +230,6 @@ Public Std:: Vector\<Std:: String\> emailrights ()       |  Ruft eine Liste der 
 Public Std:: Vector\<Std:: String\> editabledocumentrights ()       |  Ruft eine Liste der Berechtigungen ab, die für Dokumente gelten.
 Public Std:: Vector\<Std:: String\> commonrights ()       |  Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
   
-
 ### <a name="owner-function"></a>Owner-Funktion
 Ruft den Zeichenfolgenbezeichner für die Berechtigung „owner“ (Besitzer) ab.
 
@@ -306,9 +314,9 @@ Ruft eine Liste der Berechtigungen ab, die für alle Szenarien gelten.
   
 **Rückgabe**: eine Liste der Berechtigungen, die für alle Szenarien gelten
 
-## <a name="namespace-miproles"></a>Namespace MIP:: Rollen
+## <a name="namespace-miproles"></a>Namespace `mip::roles` 
   
- Member                        | Beschreibungen                                
+Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „viewer“ (Anzeigen) ab.
 public std::string Reviewer()       |  Ruft den Zeichenfolgenbezeichner für die Rolle „reviewer“ (Prüfer) ab.
@@ -338,4 +346,3 @@ Ruft den Zeichenfolgenbezeichner für die Rolle „co-owner“ (Mitbesitzer) ab.
 
   
 **Rückgabe**: Zeichenfolgenbezeichner für die Rolle „Mitbesitzer“. Ein Mitbesitzer verfügt über alle Berechtigungen.
-

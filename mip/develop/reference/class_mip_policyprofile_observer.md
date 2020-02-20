@@ -1,17 +1,17 @@
 ---
 title: mip::PolicyProfile::Observer-Klasse
 description: Dokumentiert die MIP::p olicyprofile-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: b2b1fd7e2462f9544f7f3d1110d25e2b88a89dc0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 89411740e807bba1554da175d8c978601a45a7b6
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560887"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487530"
 ---
 # <a name="class-mippolicyprofileobserver"></a>mip::PolicyProfile::Observer-Klasse 
 Beobachter Schnittstelle für Clients, um Benachrichtigungen für Profil bezogene Ereignisse zu erhalten.
@@ -61,7 +61,7 @@ Parameter:
 Wird aufgerufen, wenn die Liste der Engines erfolgreich generiert wurde.
 
 Parameter:  
-* **engineIds**: Liste der verfügbaren Engine-IDs 
+* **engineIds**: Liste der verfügbaren Engine-IDs. 
 
 
 * **context**: der an den listenginesasync-Vorgang über gegebene Kontext.
@@ -122,7 +122,7 @@ Dieser optionale Rückruf kann von einer Anwendung verwendet werden, um darüber
 Wird aufgerufen, wenn das Hinzufügen einer neuen Engine einen Fehler verursacht hat.
 
 Parameter:  
-* **error**: der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
+* **error**: Der Fehler, durch den das Hinzufügen der Engine fehlgeschlagen ist. 
 
 
 * **context**: der an den addengineasync-Vorgang über gegebene Kontext.

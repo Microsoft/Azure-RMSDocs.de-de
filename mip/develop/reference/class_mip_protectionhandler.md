@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionHandler-Klasse
 description: Dokumentiert die MIP::p rotectionhandler-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4b245ea2a579aa3d9a0fddfb503830d75577c2b7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560114"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489655"
 ---
 # <a name="class-mipprotectionhandler"></a>mip::ProtectionHandler-Klasse 
 Verwaltet schutzbezogene Aktionen für eine bestimmte Schutzkonfiguration.

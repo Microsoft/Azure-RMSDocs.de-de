@@ -1,17 +1,17 @@
 ---
 title: mip::ProtectionEngine::Observer-Klasse
 description: Dokumentiert die MIP::p rotectionengine-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 688bc59b992e885b2b9724111c19f69f860badd9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560762"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489672"
 ---
 # <a name="class-mipprotectionengineobserver"></a>mip::ProtectionEngine::Observer-Klasse 
 Eine Schnittstelle, die mit der Schutz-Engine verbundene Benachrichtigungen empfängt.
@@ -20,10 +20,12 @@ Diese Schnittstelle muss von Anwendungen mit dem Schutz-SDK implementiert werden
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public virtual void ongettemplatessuccess (Konstante Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& templateids, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
+public virtual void ongettemplatessuccess (Konstante Std:: Vector\<Std:: shared_ptr\<templateDescriptor\>\>& templatedescriptors, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
 public virtual void ongettemplatesfailure (Konstante Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn beim Abrufen von Vorlagen ein Fehler aufgetreten ist.
 public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: Vector\<Std:: String\>\>& Rechte, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte erfolgreich abgerufen wurden.
 öffentliches virtuelles void-OnGetRightsForLabelIdFailure (konstant Std:: exception_ptr & Fehler, Konstante Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn Rechte für eine Bezeichnungs-ID für den Benutzer abgerufen werden
+public virtual void onloadusercertsuccess (Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Benutzerzertifikat erfolgreich geladen wurde.
+public virtual void onloadusercertfailure (Konstante Std:: exception_ptr & Error, Konstanten Std:: shared_ptr\<void\>& Kontext)  |  Wird aufgerufen, wenn das Benutzerzertifikat geladen wurde.
   
 ## <a name="members"></a>Member
   
@@ -31,7 +33,7 @@ public virtual void OnGetRightsForLabelIdSuccess (Konst Std:: shared_ptr\<Std:: 
 Wird aufgerufen, wenn Vorlagen erfolgreich abgerufen wurden.
 
 Parameter:  
-* **templateIds**: Verweis auf die Liste der abzurufenden Vorlagen 
+* **templatedescriptors**: ein Verweis auf die Liste der Vorlagen Deskriptoren 
 
 
 * **Kontext**: derselbe Kontext, der an "Schutz Modul:: gettemplatesasync" übergeben wurde.
@@ -74,3 +76,24 @@ Parameter:
 
 
 Eine Anwendung kann einen beliebigen Kontexttyp (z. b. "Std::p romise, Std:: function)" an "schutzengine:: GetRightsForLabelIdAsync" übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: OnGetRightsForLabelIdSuccess oder weitergeleitet. Schutz-Engine:: Observer:: OnGetRightsForLabelIdFailure
+  
+### <a name="onloadusercertsuccess-function"></a>Onloadusercertsuccess-Funktion
+Wird aufgerufen, wenn das Benutzerzertifikat erfolgreich geladen wurde.
+
+Parameter:  
+* **Kontext**: der gleiche Kontext, der an die Schutz-Engine:: loadusercert übermittelt wurde.
+
+
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: function) an schutzengine:: loadusercertasync übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onloadusercertsuccess oder schutzengine:: O weitergeleitet. bServer:: onloadusercertfailure
+  
+### <a name="onloadusercertfailure-function"></a>Onloadusercertfailure-Funktion
+Wird aufgerufen, wenn das Benutzerzertifikat geladen wurde.
+
+Parameter:  
+* **Fehler**: Fehler beim Abrufen der Rechte. 
+
+
+* **Kontext**: der gleiche Kontext, der an die Schutz-Engine:: loadusercert übermittelt wurde.
+
+
+Eine Anwendung kann einen beliebigen Kontexttyp (z. b. Std::p romise, Std:: function) an schutzengine:: loadusercertasync übergeben, und derselbe Kontext wird unverändert an Schutz-Engine:: Observer:: onloadusercertsuccess oder schutzengine:: O weitergeleitet. bServer:: onloadusercertfailure

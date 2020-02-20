@@ -1,44 +1,46 @@
 ---
 title: 'MIP:: labelgroupdata-Klasse'
 description: 'Dokumentiert die MIP:: labelgroupdata-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a780ac706b547049a6b1de9adce237b405fea711
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558700"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489944"
 ---
 # <a name="class-miplabelgroupdata"></a>MIP:: labelgroupdata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<labelgroupdata\>\>& getlabelgroupdata () Konstanten  | Noch nicht dokumentiert.
-public int getor der () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetColor () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetName () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetDescription () Konstanten  | Noch nicht dokumentiert.
-public const std::string& GetTemplateId() const  | Noch nicht dokumentiert.
-Public Konstanten Std:: String & getinvariantname () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetToolTip () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getautotooltip () Konstanten  | Noch nicht dokumentiert.
-public bool isaktivierte () Konstante  | Noch nicht dokumentiert.
-public bool isdowngraderecht cationrequired () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std:: String & getdefaultlabelid () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getmoreinfourl () Konstanten  | Noch nicht dokumentiert.
-public bool ismandatory () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<schutzaktionstyp\>& getschutzaktiontypes () Konstanten  | Noch nicht dokumentiert.
-public bool isauditenabled () konstant  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<Std:: String\>& getlabelbycustomproperties () Konstanten  | Noch nicht dokumentiert.
-Public Konstanten Std:: Vector\<Std:: String\>& getcustompropertiesbylabel () Konstanten  | Noch nicht dokumentiert.
-public virtual ~ labelgroupdata ()  | Noch nicht dokumentiert.
+public const std::string& GetLabelId() const  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<labelgroupdata\>\>& getlabelgroupdata () Konstanten  | _Noch nicht dokumentiert._
+public int getor der () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetColor () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetName () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetDescription () Konstanten  | _Noch nicht dokumentiert._
+public const std::string& GetTemplateId() const  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getinvariantname () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& GetToolTip () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getautotooltip () Konstanten  | _Noch nicht dokumentiert._
+public bool isaktivierte () Konstante  | _Noch nicht dokumentiert._
+public bool isdowngraderecht cationrequired () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: String & getdefaultlabelid () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std::p Air\<Std:: String, Std:: String\>& getmoreinfourl () Konstanten  | _Noch nicht dokumentiert._
+public bool ismandatory () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: shared_ptr\<schutzaktiondata\>\>& getschutzaktiondata () Konstanten  | _Noch nicht dokumentiert._
+public bool isauditenabled () konstant  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\>& getcustomsettings () konstant.  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: String\>& getlabelbycustomproperties () Konstanten  | _Noch nicht dokumentiert._
+Public Konstanten Std:: Vector\<Std:: String\>& getcustompropertiesbylabel () Konstanten  | _Noch nicht dokumentiert._
+Public Std:: Vector\<Std::p Air\<Std:: String, Std:: String\>\> getparamesedcustompropertiesbylabel () Konstanten.  | _Noch nicht dokumentiert._
+Public Std:: Vector\<Std:: Tuple\<Std:: String, Std:: String, Std:: String\>\> getlabelbycustompropertiessettings () Konstanten.  | _Noch nicht dokumentiert._
+public virtual ~ labelgroupdata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   
@@ -102,7 +104,7 @@ _Noch nicht dokumentiert._
 _Noch nicht dokumentiert._
 
   
-### <a name="getprotectionactiontypes-function"></a>Getschutzaktiontypes-Funktion
+### <a name="getprotectionactiondata-function"></a>Getschutzaktiondata-Funktion
 _Noch nicht dokumentiert._
 
   
@@ -119,6 +121,14 @@ _Noch nicht dokumentiert._
 
   
 ### <a name="getcustompropertiesbylabel-function"></a>Getcustompropertiesbylabel-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getparsedcustompropertiesbylabel-function"></a>Getparamesedcustompropertiesbylabel-Funktion
+_Noch nicht dokumentiert._
+
+  
+### <a name="getlabelbycustompropertiessettings-function"></a>Getlabelbycustompropertiessettings-Funktion
 _Noch nicht dokumentiert._
 
   

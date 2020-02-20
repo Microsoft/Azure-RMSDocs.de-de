@@ -1,25 +1,25 @@
 ---
 title: MIP::P olicypackagedata-Klasse
 description: Dokumentiert die MIP::p olicypackagedata-Klasse des MIP-SDK (Microsoft Information Protection).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5c65cbaaed77cfee3b06eadb9b72de634d26bbdf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: b12b853bca9017189388b6b1a5f32a563243d82d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560939"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487564"
 ---
 # <a name="class-mippolicypackagedata"></a>MIP::P olicypackagedata-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Konstanten Std:: Vector\<Std:: unique_ptr\<rulepackagedata\>\>& getrules () Konstanten  | Noch nicht dokumentiert.
-public virtual ~ policypackagedata ()  | Noch nicht dokumentiert.
+Public Konstanten Std:: Vector\<Std:: unique_ptr\<rulepackagedata\>\>& getrules () Konstanten  | _Noch nicht dokumentiert._
+public virtual ~ policypackagedata ()  | _Noch nicht dokumentiert._
   
 ## <a name="members"></a>Member
   

@@ -1,17 +1,17 @@
 ---
 title: 'MIP:: applicationaktionstate-Klasse'
 description: 'Dokumentiert die MIP:: applicationaktionstate-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559449"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490641"
 ---
 # <a name="class-mipapplicationactionstate"></a>MIP:: applicationaktionstate-Klasse 
   

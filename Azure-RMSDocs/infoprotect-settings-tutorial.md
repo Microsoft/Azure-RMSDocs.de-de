@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 266f796d6d3abc594a1447995d09687eaabb1ad7
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743523"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423205"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Tutorial: Konfigurieren von Azure Information Protection-Richtlinieneinstellungen, die nahtlos funktionieren
 
@@ -53,7 +53,7 @@ Voraussetzungen für dieses Tutorial:
     
     Sie installieren den Client, indem Sie zum [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018) navigieren und auf der Azure Information Protection-Seite **AzInfoProtection.exe** herunterladen. 
     
-    Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie Informationen zu Richtlinieneinstellungen für Vertraulichkeitsbezeichnungen in der Office-Dokumentation. Beispielsweise hier: [Übersicht über Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
+    Wenn Sie einen anderen Bezeichnungsclient als den klassischen Client verwenden, finden Sie Informationen zu Richtlinieneinstellungen für Vertraulichkeitsbezeichnungen in der Dokumentation zur Microsoft 365-Compliance. Weitere Informationen finden Sie unter [Vertraulichkeitsbezeichnungen](/microsoft-365/compliance/sensitivity-labels).
 
 4. Sie sind bei Office-Apps einer der folgenden Kategorien angemeldet:
     
