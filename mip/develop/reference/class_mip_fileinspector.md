@@ -1,36 +1,23 @@
 ---
 title: 'MIP:: filinput Spector-Klasse'
 description: 'Dokumentiert die MIP:: filinput Spector-Klasse des Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8ae396cc529cbeb17afa8ad0c4617e4bfcfbed3a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: c9fb9f6e6ea27a698f53a8e81de55606eb01ba42
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558814"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488720"
 ---
 # <a name="class-mipfileinspector"></a>MIP:: filinput Spector-Klasse 
   
 ## <a name="summary"></a>Zusammenfassung
  Member                        | Beschreibungen                                
 --------------------------------|---------------------------------------------
-Public Inspector Type GetInspector Type () Konstanten  |  Dateitypen erhalten.
-Public Std:: shared_ptr\<Stream\> GetFileStream () konstant  |  Den Dateistream erhalten.
   
 ## <a name="members"></a>Member
-  
-### <a name="getinspectortype-function"></a>Getinspectortype-Funktion
-Dateitypen erhalten.
-
-  
-**Gibt Folgendes zurück**: Inspector Type.
-  
-### <a name="getfilestream-function"></a>GetFileStream-Funktion
-Den Dateistream erhalten.
-
-  
-**Gibt Folgendes zurück**: einen freigegebenen PTR für den Dateistream.
+_Noch nicht dokumentiert._
