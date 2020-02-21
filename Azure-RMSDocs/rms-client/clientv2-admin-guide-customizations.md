@@ -4,7 +4,7 @@ description: Informationen zum Anpassen des Azure Information Protection Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8e91257484ccb148475d16e3fd5de2905b8691c3
-ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
+ms.openlocfilehash: b4ddfa8a7746de36030cb38b726949a19eebf73d
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77045016"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507704"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Administrator Handbuch: benutzerdefinierte Konfigurationen für den Azure Information Protection Unified-Bezeichnungs Client
 
@@ -57,6 +57,8 @@ Für Bezeichnungs Einstellungen werden mehrere Zeichen folgen Werte für denselb
 
 Verwenden Sie die gleiche Syntax, und geben Sie einen NULL-Zeichen folgen Wert an, um eine erweiterte Einstellung zu entfernen.
 
+> [!IMPORTANT]
+> Durch die Verwendung von Leerzeichen in der Zeichenfolge wird die Anwendung der Bezeichnungen verhindert. 
 
 #### <a name="examples-for-setting-advanced-settings"></a>Beispiele für das Festlegen von erweiterten Einstellungen
 
@@ -111,6 +113,7 @@ Erweiterte Einstellungen für Bezeichnung befolgen die gleiche Logik für Vorran
 
 Die erweiterten Einstellungen für die Bezeichnungs Richtlinie werden in umgekehrter Reihenfolge angewendet: mit einer Ausnahme werden die erweiterten Einstellungen der ersten Richtlinie entsprechend der Reihenfolge der Richtlinien im Admin Center angewendet. Bei der Ausnahme handelt es sich um die erweiterte Einstellung *outlookdefaultlabel*, mit der eine andere Standard Bezeichnung für Outlook festgelegt wird. Bei dieser Einstellung für die erweiterte Bezeichnung "Bezeichnung" wird die letzte Einstellung gemäß der Reihenfolge der Richtlinien im Admin Center angewendet.
 
+
 #### <a name="available-advanced-settings-for-label-policies"></a>Verfügbare erweiterte Einstellungen für Bezeichnungs Richtlinien
 
 Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) und [Set-labelpolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
@@ -121,6 +124,7 @@ Verwenden Sie den *advancedsettings* -Parameter mit [New-labelpolicy](https://do
 |Attachmentaktiontip|[Für E-Mail-Nachrichten mit Anlagen eine Bezeichnung anwenden, die der höchsten Einstufung dieser Anlagen entspricht](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
 |Disablemandatoryinoutlook|[Ausschließen von Outlook-Nachrichten von der obligatorischen Bezeichnung](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableAudit|[Deaktivieren des Sendens von Überwachungsdaten an Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|Enablecontainersupport|[Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien aktivieren](#enable-removal-of-protection-from-compressed-files)
 |EnableCustomPermissions|[Deaktivieren von benutzerdefinierten Berechtigungen im Datei-Explorer](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Ständiges Anzeigen von benutzerdefinierten Berechtigungen für Benutzer im Dateiexplorer für mit benutzerdefinierten Berechtigungen geschützte Dateien](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Migrieren von Bezeichnungen von Secure Islands und anderen Bezeichnungslösungen](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -212,6 +216,20 @@ Geben Sie für die ausgewählte Bezeichnungs Richtlinie die folgenden Zeichen fo
 PowerShell-Beispiel Befehl, bei dem Ihre Bezeichnungs Richtlinie den Namen "Global" hat:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
+
+## <a name="enable-removal-of-protection-from-compressed-files"></a>Entfernen des Schutzes von komprimierten Dateien aktivieren
+
+Diese Konfiguration verwendet eine [Erweiterte Richtlinien Einstellung](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) , die Sie mithilfe von Office 365 Security & Compliance Center PowerShell konfigurieren müssen.
+
+Wenn Sie diese Einstellung konfigurieren, wird das [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlet **Set-aipfilelabel** aktiviert, um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen.
+
+- Schlüssel: **Set-labelpolicy**
+
+- Wert: **TRUE**
+
+Beispiel-PowerShell-Befehl, bei dem Ihre Richtlinie aktiviert ist:
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableContainerSupport="True"}
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Festlegen anderer Standardbezeichnung für Outlook
 
@@ -364,7 +382,7 @@ Wenn Sie den Zeichenfolgenwert für den Schlüssel **ExternalContentMarkingToRem
     Beispiel: Kopf- oder Fußzeilen enthalten die Zeichenfolge **TEXT TO REMOVE**. Sie möchten die Kopf- oder Fußzeilen entfernen, die genau diese Zeichenfolge enthalten. Geben Sie den Wert `^TEXT TO REMOVE$` an.
     
 
-Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichenfolgenlänge beträgt 255 Zeichen.
+Der Musterabgleich für die angegebene Zeichenfolge berücksichtigt keine Groß- und Kleinschreibung. Die maximale Zeichen folgen Länge beträgt 255 Zeichen und darf keine Leerzeichen enthalten. 
 
 Da einige Dokumente unsichtbare Zeichen oder andere Arten von Leerzeichen oder Tabstopps enthalten können, wird die Zeichenfolge, die Sie für einen Begriff oder einen Satz angeben, möglicherweise nicht erkannt. Geben Sie nach Möglichkeit immer ein einzelnes unterscheidendes Wort für den Wert an, und testen Sie die Ergebnisse, bevor Sie diese für die Produktion bereitstellen.
 
@@ -928,6 +946,9 @@ Als Ergebnis dieser Konfigurationsoption werden alle weiteren benutzerdefinierte
 Diese Konfiguration erfordert, dass Sie für jede Vertraulichkeits Bezeichnung, die die zusätzlichen benutzerdefinierten Eigenschaften anwenden soll, eine erweiterte Einstellung mit dem Namen " **custompropertiesbylabel** " angeben. Geben Sie dann für jeden Eintrag mithilfe der folgenden Syntax den Wert an:
 
 `[custom property name],[custom property value]`
+
+> [!IMPORTANT]
+> Durch die Verwendung von Leerzeichen in der Zeichenfolge wird die Anwendung der Bezeichnungen verhindert.
 
 #### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Beispiel 1: Hinzufügen einer einzelnen benutzerdefinierten Eigenschaft für eine Bezeichnung
 

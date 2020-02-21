@@ -7,22 +7,22 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 89536031de20349e070c2577d958868b33a33b09
+ms.sourcegitcommit: df503528b19351a5257a8c72ac3fcb2674494d29
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555941"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521089"
 ---
-# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Unterstützungs Richtlinie für das Microsoft Information Protection (MIP) SDK
+# <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Versions Veröffentlichungs Verlauf und Support Richtlinie für Microsoft Information Protection (MIP) Software Development Kit (SDK)
 
-## <a name="servicing"></a>Unterstützung 
+## <a name="servicing"></a>Deten 
 
 Jede allgemein verfügbare Version (General Availability, GA) wird sechs Monate lang unterstützt, nachdem die nächste GA-Version veröffentlicht wurde. In der Dokumentation sind möglicherweise keine Informationen zu nicht unterstützten Versionen enthalten. Korrekturen und neue Funktionen werden nur auf die neueste Version der allgemeinen Verfügbarkeit angewendet.
 
 Vorschau Versionen sollten nicht in der Produktionsumgebung bereitgestellt werden. Verwenden Sie stattdessen die neueste Vorschauversion, um neue Funktionen oder Korrekturen zu testen, die in der nächsten GA-Version verfügbar sind. Nur die aktuelle Vorschauversion wird unterstützt.
 
-## <a name="release-history"></a>Verlauf der Releases
+## <a name="release-history"></a>Releaseverlauf
 
 Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstützte Version neu ist oder geändert wurde. Die neueste Version ist zuerst aufgeführt. 
 
@@ -31,17 +31,118 @@ Verwenden Sie die folgenden Informationen, um zu sehen, was für eine unterstüt
 >  
 > Technische Unterstützung finden Sie im [Stack Overflow Microsoft Information Protection-Forum](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+## <a name="version-15117"></a>Version 1.5.117
+
+**Veröffentlichungsdatum**: 20. Februar 2020
+
+### <a name="general-sdk-changes"></a>Allgemeine SDK-Änderungen
+
+- Java-API (nur Windows)
+- Abbruch von asynchronen MIP-Tasks
+  - Alle Async-Aufrufe geben MIP:: AsyncControl-Objekt mit einer Cancel ()-Methode zurück.
+- Verzögerte Laden abhängiger Binärdateien
+- Wahlweise bestimmte Telemetrie-/Überwachungseigenschaften maskieren
+   - Konfigurierbar über MIP:: telemetryconfiguration:: maskedproperties
+- Verbesserte Ausnahmen:
+  - Alle Fehler enthalten Handlungs abhängige Korrelations-IDs in der Beschreibungs Zeichen
+  - Netzwerkfehler enthält Felder "Category", "BaseURL", "RequestId" und "Statuscode".
+- Verbessertes Ergebnis/Fehlerdetails der C-API
+
+### <a name="file-sdk"></a>Datei-SDK
+
+- Netzwerkfreie Überprüfung, ob die Datei gekennzeichnet oder geschützt ist
+  - MIP:: fileHandler:: islabeledorprotected ()
+  - Geringfügige Gefahr von falsch positiven Ergebnissen (z. b. wenn die Datei Zombie-Bezeichnungs Metadaten enthält)
+- Filtern von Bezeichnungen, die bestimmten Schutz Typen zugeordnet sind
+  - Konfigurierbar über MIP:: fileengine:: Settings:: setlabelfilter ()
+- Verfügbar machen von Richtlinien Daten für die Datei-API
+  - MIP:: fileengine:: getpolicydataxml ()
+
+### <a name="policy-sdk"></a>Richtlinien-SDK
+
+- Markierung dynamischer Inhalte für Wasserzeichen/Kopfzeile/Footer-Aktionen:
+  - Felder wie "$ {Item. Label}", "$ {Item.Name}", "$ {User.Name}", "$ {Event. DateTime}" werden automatisch durch MIP aufgefüllt.
+  - MIP:: Identity kann mit einem benutzerfreundlichen Namensfeld erstellt werden, das von der Markierung dynamischer Inhalte verwendet wird.
+  - Konfigurierbar über MIP::P olicyengine:: Settings:: setvariabletextmarkingtype ()
+- Netzwerkfreie Überprüfung, wenn der Inhalt gekennzeichnet ist
+  - MIP::P olicyhandler:: isbezeichnung ()
+  - Geringes Risiko von falsch positiven Ergebnissen (z. b. wenn Inhalt Zombie-Bezeichnungs Metadaten enthält)
+- Gültigkeitsdauer Cache-TTL
+  - Standardwert: 30 Tage
+  - Konfigurierbar über MIP::P olicyprofile:: setcustomsettings ()
+- **Wichtige Änderung**
+  - "Policyengine. Settings. labelfilter" wurde aus der Liste der Enumerationen in das Bitfeld "Werte zulässt" aktualisiert.
+
+### <a name="protection-sdk"></a>Schutz-SDK
+
+- Pre-License
+  - Das vorhanden sein einer vorab Lizenz neben verschlüsseltem Inhalt ermöglicht die Offline Entschlüsselung von Inhalten, zusammen mit einem zuvor abgerufenen Benutzerzertifikat.
+  - MIP::P rotectionhandler:: consumptionsettings kann mit einer Pre-License erstellt werden.
+  - MIP::P rotectionengine:: loadusercert | Async () Ruft das Benutzerzertifikat ab, das gemäß MIP::P rotectionprofile-Cache Richtlinie gespeichert wird.
+- Server spezifische Funktionsüberprüfung
+  - Überprüft, ob der Mandant des Benutzers "nur verschlüsseln" (nur in Azure RMS verfügbar) unterstützt.
+  - MIP::P rotectionengine:: isfeaturesupported ()
+- Umfangreichere Details beim Abrufen von RMS-Vorlagen
+- **Wichtige Änderungen**
+  - MIP::P rotectionengine:: gettemplates () Vector < shared_ptr<string>> Rückgabewert ersetzt durch Vector < shared_ptr < MIP:: templateDescriptor > > (C++)
+  - MIP::P rotectionengine:: Observer:: ongettemplatessuccess () Callback shared_ptr < Vector<string>>
+    Parameter ersetzt durch Vector < shared_ptr < MIP:: templateDescriptor > > (C++)
+  - Ischutzengine. gettemplates | Die Async ()-Rückgabewert Liste<string> durch Listen<TemplateDescriptor>ersetzt. (C#)
+  - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param ersetzt durch mip_cc_template_descriptor * (C-API)
+
+### <a name="c-api"></a>C-API
+
+- Wichtige **Änderungen**: die meisten Funktionen wurden aktualisiert, sodass Sie mip_cc_error *-Parameter enthalten, kann NULL sein.
+  
+
+### <a name="errorexception-updates"></a>Fehler-/Ausnahme-Updates
+
+- Zusammenfassung der Fehlerbehandlung:
+  - Accessdeniederror: dem Benutzer wurden keine Zugriffsrechte für den Inhalt erteilt.
+      - Noauthtokenerror: die APP hat kein Authentifizierungs Token bereitgestellt.
+      - Nopermissionserror: dem Benutzer wurden keine Rechte für bestimmte Inhalte erteilt, aber Referrer/owner ist verfügbar.
+      - Servicedisablederror: der Dienst ist für Benutzer/Gerät/Plattform/Mandant deaktiviert.
+  - Adhucschutzrequirements derror: Ad-hoc-Schutz muss festgelegt werden, bevor eine Bezeichnung festgelegt wird.
+  - Badinputerror: Ungültige Eingabe von Benutzer/App
+      - Insuffizientbuffererror: Ungültige Puffer Eingabe von Benutzer/App
+      - Labeldisablederror: die Bezeichnungs-ID wurde erkannt, aber für die Verwendung deaktiviert.
+      - Labelnotfounderror: Unbekannte Bezeichnungs-ID
+      - Templatenotfounderror: Unbekannte Vorlagen-ID
+  - Genehmideniederror: für einen Vorgang, der Zustimmung von Benutzer/App erforderte, wurde keine Zustimmung erteilt.
+  - Deprecatedapierror: Diese API ist veraltet.
+  - Fehler beim Lesen/Schreiben der Datei.
+  - InternalError: Unerwarteter interner Fehler.
+  - NetworkError
+      - Proxyauthenticationerror: Proxy Authentifizierung ist erforderlich.
+    - Category = badresponse: der Server hat eine nicht lesbare HTTP-Antwort zurückgegeben (Wiederholung ist möglicherweise erfolgreich)
+    - Category = abgebrochen: Es konnte keine HTTP-Verbindung hergestellt werden, da der Vorgang vom Benutzer/der APP abgebrochen wurde (die Wiederholung ist wahrscheinlich erfolgreich).
+    - Category = failureresponsecode: der Server hat eine generische Fehler Antwort zurückgegeben (Wiederholungsversuch ist möglicherweise erfolgreich).
+    - Category = NOCONNECTION: Fehler beim Herstellen einer HTTP-Verbindung (Wiederholungsversuch ist möglicherweise erfolgreich)
+    - Category = offline: Fehler beim Herstellen einer HTTP-Verbindung, weil sich die Anwendung im Offline Modus befindet (Wiederholung nicht erfolgreich).
+    - Kategorie = Proxy: Fehler beim Herstellen einer HTTP-Verbindung aufgrund eines Proxy Problems (Wiederholungsversuch ist wahrscheinlich nicht erfolgreich).
+    - Kategorie = SSL: Fehler beim Herstellen einer HTTP-Verbindung aufgrund eines SSL-Problems (Wiederholungsversuch ist wahrscheinlich nicht erfolgreich).
+    - Category = Throttled: der Server hat die Antwort "gedrosselt" zurückgegeben (Backoff/Wiederholung wird wahrscheinlich erfolgreich ausgeführt).
+    - Category = Timeout: Fehler beim Herstellen einer HTTP-Verbindung nach einem Timeout (die Wiederholung wird wahrscheinlich erfolgreich ausgeführt)
+    - Category = unexpectedresponse: der Server hat unerwartete Daten zurückgegeben (Wiederholungsversuch ist möglicherweise erfolgreich).
+  - Nopolicyerror: Mandant oder Benutzer ist nicht für Bezeichnungen konfiguriert.
+  - Notsupportederror: Vorgang wird im aktuellen Zustand nicht unterstützt.
+  - Operationcancellederror: der Vorgang wurde abgebrochen.
+  - Privilegedrequirederror: Bezeichnung kann nur geändert werden, wenn die Zuweisungs Methode = privilegierter ist.
+- Änderungen
+  - Nicht verwendeter policysyncerror wurde entfernt. Ersetzt durch Network Error
+  - Nicht verwendeter transientnetworkerror wurde entfernt. Ersetzt durch Network error-Kategorien
+
 ## <a name="version-140"></a>Version 1.4.0 
 
 **Veröffentlichungsdatum**: 6. November 2019
 
-Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Microsoft. informationprotection. File) eingeführt.
+Mit dieser Version wird die Unterstützung für das Schutz-SDK im .net-Paket (Microsoft. informationprotection. File) eingeführt.
 
 ### <a name="sdk-changes"></a>SDK-Änderungen
 - Leistungsverbesserungen und Fehlerbehebungen
 - Umbenannte StorageType-Aufzählung in cachestoragetype
 - Android Links zu libc + + anstelle von gnustl
-- Zuvor als veraltet markierte APIs entfernt
+- Previouslydeprecated-APIs entfernt
   - File/Policy/profile:: Settings muss mit einem mipcontext initialisiert werden.
   - Datei/Richtlinie/Profil:: Einstellungs Pfad, Anwendungsinformationen, Protokollierungs Delegat, Telemetrie und Protokollierungsebene: Getters/Setter wurden entfernt. Diese Eigenschaften werden von mipcontext verwaltet.
 - Bessere Unterstützung statischer Bibliotheken auf Apple-Plattformen
@@ -55,7 +156,7 @@ Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Mi
     - libssl. a
 - Mip_telemetry. dll (zusammengeführt in mip_core. dll) wurde entfernt.
 
-### <a name="file-api"></a>File-API
+### <a name="file-sdk"></a>Datei-SDK
 
 - RPMSG
   - Verschlüsselung
@@ -63,15 +164,15 @@ Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Mi
 - Konfigurierbares Pfile-Erweiterungs Verhalten (Standard, <EXT>. Pfile oder P<EXT>)
   - Schutz Settings:: setpfileextensionbehavior
 
-### <a name="policy-api"></a>Policy-API
+### <a name="policy-sdk"></a>Richtlinien-SDK
 
 - Complete-C-API
 - Konfigurieren der Filterung von mit dem Schutz verknüpften Bezeichnungen
   - Policyengine:: settigns:: setlabelfilter ()
 
-### <a name="protection-api"></a>Protection-API
+### <a name="protection-sdk"></a>Schutz-SDK
 
-- Zuvor als veraltet markierte APIs entfernt
+- Previouslydeprecated-APIs entfernt
   - Entfernen von Schutz-Engine:: forateschutzhandlerfromdescriptor [Async] (Verwenden von schutzengine:: forateschutzhandlerforpublishing [Async])
   - Entfernen von Schutz-Engine:: forateschutzhandlerfrompublishinglicense [Async] (Verwenden von schutzengine:: forateschutzhandlerforverbrauch [Async])
 - Complete C# API
@@ -107,16 +208,16 @@ Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Mi
 
 **Veröffentlichungsdatum**: 22. August 2019
 
-### <a name="new-features"></a>Neue Funktionen
+### <a name="new-features"></a>Neue Features
 
 - `mip::MipContext` ist das neue Objekt der höchsten Ebene.
 - Das Entschlüsseln geschützter Nachrichten Dateien wird jetzt unterstützt.
 - Die Überprüfung von Message. rpmsg-Dateien wird über `mip::FileInspector` und `mip::FileHandler::InspectAsync()`unterstützt.
 - Der Cache auf dem Datenträger kann jetzt optional verschlüsselt werden.
-- Die Schutz-API unterstützt jetzt China-Sovereign Cloud.
+- Das Schutz-SDK unterstützt jetzt China-Sovereign Cloud.
 - Arm64-Unterstützung unter Android.
 - Arm64e-Unterstützung unter IOS.
-- Der Eul-Cache (End User License) kann jetzt deaktiviert werden.
+- Der Eul-Cache (Endbenutzer Lizenz) kann jetzt deaktiviert werden.
 - die Pfile-Verschlüsselung kann über `mip::FileEngine::EnablePFile` deaktiviert werden.
 - Verbesserte Leistung für Schutz Vorgänge durch Reduzieren der Anzahl von HTTP-aufrufen
 - Die Details der Delegierten Identität wurden aus `mip::Identity` entfernt, und stattdessen wurden `DelegatedUserEmail` zu `mip::FileEngine::Settings`, `mip::ProtectionSettings`, `mip::PolicyEngine::Settings`und `mip::ProtectionHandler``PublishingSettings` und `ConsumptionSettings`hinzugefügt.
@@ -138,7 +239,7 @@ Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Mi
 
 **Veröffentlichungsdatum**: 15. April 2019
 
-### <a name="new-features"></a>Neue Funktionen
+### <a name="new-features"></a>Neue Features
 
  - Die telemetriekomponente verwendet jetzt denselben HTTP-Stapel wie der restliche MIP, auch wenn Sie von der Client Anwendung mit httpdelegaten überschrieben wurde.
  - Client Anwendungen können das Threading Verhalten von asynchronen Aufgaben steuern, indem Sie taskdispatcherdelegat in Profilen überschreiben.
@@ -194,20 +295,20 @@ Mit dieser Version wird die Unterstützung für die Schutz-API im .net-Paket (Mi
  - MIP::P olicyhandler:: notifycommitedactions umbenannt in MIP::P olicyhandler:: notifycommittedactions
 
 
-## <a name="version-110"></a>Version 1.1.0
+## <a name="version-110"></a>Version 1.1.0 
 
 **Veröffentlichungsdatum**: 15. Januar 2019
 
 Mit dieser Version wird die Unterstützung für die folgenden Plattformen eingeführt:
 
   - .NET
-  - IOS SDK (Richtlinien-API)
-  - Android SDK (Richtlinien-API und Schutz-API)
+  - IOS SDK (Policy SDK)
+  - Android SDK (Richtlinien-SDK und Schutz-SDK)
 
-### <a name="new-features"></a>Neue Funktionen
+### <a name="new-features"></a>Neue Features
 
 - ADRMS-Unterstützung
-- Schutz-API-Vorgänge sind tatsächlich asynchron (auf Win32) und ermöglichen gleichzeitige, nicht blockierende Verschlüsselungs-/Entschlüsselungs Vorgänge.
+- Schutz-SDK-Vorgänge sind tatsächlich asynchron (auf Win32) und ermöglichen gleichzeitige, nicht blockierende Verschlüsselungs-/Entschlüsselungs Vorgänge.
   - Anwendungs Rückrufe (authdelegat, httpdelegat usw.) können jetzt für einen beliebigen Hintergrund Thread aufgerufen werden.
 - Von IT-Administratoren festgelegte benutzerdefinierte Bezeichnungs Eigenschaften können jetzt über MIP:: Label:: getcustomsettings gelesen werden.
 - Die serialisierte Veröffentlichungs Lizenz kann jetzt direkt aus einer Datei ohne http-Vorgänge über MIP:: fileHandler:: getserializedpublishinglicense abgerufen werden.

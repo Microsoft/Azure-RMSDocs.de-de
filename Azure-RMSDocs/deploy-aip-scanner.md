@@ -4,7 +4,7 @@ description: Anweisungen zum Installieren, konfigurieren und Ausführen der aktu
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/14/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03ec95f3e53bd522c1d1775e54dfae7305a578e3
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 770096621ecffe8e2f557fa7df92e2bd028dd1e4
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423183"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507721"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Bereitstellen der Azure Information Protection-Überprüfung zum automatischen Klassifizieren und Schützen von Dateien
 
@@ -345,9 +345,18 @@ Das Azure AD Token ermöglicht es dem Scanner, sich beim Azure Information Prote
     ```
 
     Wenn Sie dazu aufgefordert werden, geben Sie das Kennwort für Ihr Azure AD-Dienstkonto an, und klicken Sie dann auf **Akzeptieren**.
-    
+
+        
     Wenn Ihr Überprüfungs Dienst Konto nicht über die Berechtigung **Lokal anmelden** für die Installation verfügen kann, finden Sie im Administrator Handbuch dieses Clients unter [angeben und Verwenden des Token-Parameters für "Set-aipauthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) " Weitere Informationen.
-    
+
+
+    **Beispiel für einen klassischen Client:**
+
+    ```
+    Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip
+    Acquired application access token on behalf of the user
+    ```
+       
     **Für den Unified-Bezeichnungs Client:**
     
     ```
@@ -355,6 +364,14 @@ Das Azure AD Token ermöglicht es dem Scanner, sich beim Azure Information Prote
     ```
     
     Wenn Ihrem Überprüfungs Dienst Konto die Berechtigung " **Lokal anmelden** " für die Installation nicht gewährt werden kann, verwenden Sie den *onbehalfof* -Parameter mit "Set-aipauthentication", wie unter [How to Label files Non-interaktiv for Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) aus dem Administrator Handbuch dieses Clients beschrieben.
+
+    **Beispiel für Unified Bezeichnung-Client:**
+
+    ```
+    $pscreds = Get-Credential CONTOSO\scanner
+    Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -DelegatedUser scanner@contoso.com -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+    Acquired application access token on behalf of CONTOSO\scanner.
+    ```
 
 Der Scanner verfügt jetzt über ein Token zum Authentifizieren bei Azure AD, das ein Jahr, zwei Jahre oder nie abläuft, gemäß ihrer Konfiguration der **Web-App/API** (klassischer Client) oder des geheimen Client Schlüssels (einheitlicher Bezeichnungs Client) in Azure AD. Wenn das Token abgelaufen ist, müssen Sie die Schritte 1 und 2 wiederholen.
 

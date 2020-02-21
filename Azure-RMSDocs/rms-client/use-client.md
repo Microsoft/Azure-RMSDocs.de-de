@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection stellt eine Client/Server-L�
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422846"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494888"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Die Clientseite von Azure Information Protection
 
@@ -87,7 +87,7 @@ Verwenden Sie die folgende Tabelle, um zu vergleichen, welche Funktionen von den
 
 In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu den Funktionen [zur Vertraulichkeits Bezeichnung in-apps](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps), um die integrierten Funktionen für die Vertraulichkeits Bezeichnung von Office auf verschiedenen Betriebssystemplattformen (Windows, MacOS, IOS und Android) und für das Web zu vergleichen. Diese Dokumentation enthält auch die Office-Buildnummern oder Informationen zum Office-Update Kanal für die unterstützten Funktionen.
 
-|Komponente|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
+|Feature|Klassischer Client|Einheitlicher Bezeichnungs Client|Integrierter Office-Beschriftungs Client|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Manuelle Bezeichnung:| **Ja** | **Ja** |**Ja** |
 |Standard Bezeichnung:| **Ja** | **Ja** | **Ja** |
@@ -105,7 +105,7 @@ In der Dokumentation zur Microsoft 365 Konformität finden Sie Informationen zu 
 |Information Protection-Leiste in Office-Apps:| **Ja** | **Ja**| Nein |
 |Visuelle Kennzeichnungen als Bezeichnungs Aktion (Kopfzeile, Fußzeile, Wasserzeichen):| **Ja** | **Ja** | **Ja**|
 |Visuelle Kennzeichnungen pro App:| **Ja** | **Ja* | Nein |
-|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **** | Nein |
+|Dynamische visuelle Kennzeichnungen mit Variablen:| **Ja** | **Ja** (Vorschau) | Nein |
 |Bezeichnung mit dem Datei-Explorer:| **Ja** | **Ja** | Nein |
 |Ein Viewer für geschützte Dateien (Text, Bilder, PDF, Pfile):| **Ja** | **Ja** | Nein|
 |Ppdf-Unterstützung für das Anwenden von Bezeichnungen:| **Ja** | Nein | Nein |

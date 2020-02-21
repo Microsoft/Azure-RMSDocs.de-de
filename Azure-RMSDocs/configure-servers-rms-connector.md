@@ -1,10 +1,10 @@
 ---
 title: Konfigurieren von Servern für den Rights Management-Connector – AIP
 description: Informationen, die Sie beim Konfigurieren Ihrer lokalen Server unterstützen, die den RMS-Connector (Azure Rights Management) verwenden sollen. Diese Verfahren beziehen sich auf Schritt 5 aus „Bereitstellen des Azure Rights Management-Verbindungsdiensts“.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117619"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494864"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
@@ -169,13 +169,15 @@ Auf diesen Servern muss außerdem eine Version 1 des RMS-Clients (auch als MSDRM
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Konfigurieren eines SharePoint-Servers für die Verwendung des Verbindungsdiensts
-Die folgenden SharePoint-Rollen kommunizieren mit dem RMS-Connector:
+Die folgenden SharePoint-Rollen kommunizieren mit dem RMS-Verbindungsdienst:
 
 -   Front-End-SharePoint-Webserver, einschließlich der Server, die den zentralen Verwaltungsserver hosten
 
 Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdienst verwenden, müssen sie eine der folgenden Softwareversionen ausführen:
 
--   SharePoint-Server 2016
+-   SharePoint Server 2019
+
+-   SharePoint Server 2016
 
 -   SharePoint Server 2013
 
@@ -220,9 +222,9 @@ Damit ein Dateiserver den RMS-Connector und die Dateiklassifizierungsinfrastrukt
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
-
 - Windows Server 2012 R2
+
+- Windows Server 2012
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>So konfigurieren Sie Dateiserver für die Verwendung des Verbindungsdiensts
 

@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 7e1ec5241cfedf89b33258115afbc1ee86eae3b3
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117968"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507636"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrieren von AD RMS zu Azure Information Protection
 
@@ -44,7 +44,7 @@ Die folgende Dokumentation ist zwar nicht zwingend erforderlich – es empfiehlt
 
 - [Übersicht über den Microsoft Rights Management-Connector](./deploy-rms-connector.md#overview-of-the-microsoft-rights-management-connector): In diesem Abschnitt der Dokumentation zum RMS-Connector wird erläutert, wie Ihre lokalen Server sich mit dem Azure Rights Management-Dienst verbinden können, um Dokumente und E-Mails zu schützen.
 
-Wenn Sie mit der Funktionsweise von AD RMS vertraut sind, ist es möglicherweise hilfreich, zu erfahren, [wie Azure RMS funktioniert? Im](./how-does-it-work.md) Hintergrund können Sie ermitteln, welche Technologie Prozesse für die cloudversion identisch oder unterschiedlich sind.
+Wenn Sie nicht mit der Funktionsweise von AD RMS vertraut sind, ist es möglicherweise hilfreich, zu erfahren, [wie Azure RMS funktioniert? Im](./how-does-it-work.md) Hintergrund können Sie ermitteln, welche Technologie Prozesse für die cloudversion identisch oder unterschiedlich sind.
 
 ## <a name="prerequisites-for-migrating-ad-rms-to-azure-information-protection"></a>Voraussetzungen für die Migration von AD RMS zu Azure Information Protection
 
@@ -54,7 +54,7 @@ Stellen Sie vor der Migration zu Azure Information Protection sicher, dass die f
     
   - Die folgenden AD RMS-Versionen unterstützen die Migration zu Azure Information Protection:
            
-      - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
         

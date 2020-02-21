@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3f30cd7aea2498c101937aacc8f3cbf3ffdc6364
-ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
+ms.openlocfilehash: 82e8f2a4462897bc26609db76658742aeec73e51
+ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77044965"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77507687"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -66,7 +66,7 @@ Dieser Client ersetzt den Azure Information Protection Client (klassisch). Infor
 
 **Neue Funktionen:**
 
-- Die Änderung des [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlets **Set-aipfilelabel** auf ermöglicht das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien. 
+- Änderung des [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) -Cmdlets **Set-aipfilelabel** , um das Entfernen des Schutzes von PST-, rar-, 7zip-und MSG-Dateien zu ermöglichen. Diese Funktion ist standardmäßig deaktiviert und muss mithilfe des [Set-labelpolicy](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations) -Cmdlets aktiviert werden, wie [hier](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#available-advanced-settings-for-label-policies)beschrieben.  
 
 - Die Möglichkeit, Azure Information Protection Administratoren zu steuern, wann die Pfile-Erweiterungen für Dateien verwendet werden. Erfahren Sie mehr über das [ändern geschützter Dateitypen](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
 
