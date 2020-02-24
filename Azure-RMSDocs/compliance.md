@@ -23,7 +23,7 @@ ms.locfileid: "74935230"
 
 Azure Information Protection unterstützt weitere Dienste und verwendet zusätzliche Dienste. Wenn Sie Informationen zu Azure Information Protection suchen, jedoch nicht zur Verwendung des Azure Information Protection-Diensts, sehen Sie sich folgende Ressourcen an:
 
-## <a name="suitability-for-different-countries"></a>Eignung für verschiedene Länder
+## <a name="suitability-for-different-countries"></a>Eignung für verschiedene Länder/Regionen
 
 Aufgrund der Unterschiede zwischen Gesetzen und Bestimmungen in verschiedenen Ländern, zwischen Anwendungsfällen und-szenarios und aufgrund der verschiedenen Anforderungen in unterschiedlichen Geschäftssektoren müssen Sie mit Ihrem Rechtsberater sprechen, um zu bestimmen, ob Azure Information Protection für Ihr Land geeignet ist.
 

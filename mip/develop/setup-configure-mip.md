@@ -196,7 +196,7 @@ Bevor Sie eine mit MSIP entwickelte Anwendung veröffentlichen können, müssen 
 2. Nach Erhalt Ihrer IPIA-Anforderung senden wir Ihnen ein Formular (als Word-Dokument). Überprüfen Sie die Vertragsbedingungen der IPIA, und senden Sie das Formular mit folgenden Informationen an [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) zurück:
 
    - Offizieller Name des Unternehmens
-   - Bundesstaat/Provinz (USA/Kanada) oder Land der Gründung oder Hauptverwaltung des Unternehmens
+   - Bundesstaat/Provinz (USA/Kanada) oder Land/Region der Gründung oder Hauptverwaltung des Unternehmens
    - URL des Unternehmens
    - E-Mail-Adresse der Kontaktperson
    - Weitere Unternehmensanschriften (optional)

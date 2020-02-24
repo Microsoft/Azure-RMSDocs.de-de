@@ -42,7 +42,7 @@ Geben Sie im E-Mail-Text folgende Informationen ein:
 Nach Erhalt Ihrer IPIA-Anforderung senden wir Ihnen ein Formular (als Word-Dokument).
 Überprüfen Sie die Vertragsbedingungen der IPIA, und senden Sie das Formular mit folgenden Informationen an <strong>IPIA@microsoft.com</strong> zurück:
 - Offizieller Name des Unternehmens
-- Bundesstaat/Provinz (USA/Kanada) oder Land der Gründung oder Hauptverwaltung des Unternehmens
+- Bundesstaat/Provinz (USA/Kanada) oder Land/Region der Gründung oder Hauptverwaltung des Unternehmens
 - URL des Unternehmens
 - E-Mail-Adresse der Kontaktperson
 - Weitere Unternehmensanschriften (optional)
