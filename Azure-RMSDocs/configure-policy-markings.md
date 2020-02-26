@@ -4,19 +4,19 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0b38d57c17fd9025135cc7edd15fa69973b9cd70
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
+ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959939"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600679"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -84,6 +84,8 @@ Nachdem Sie auf **Speichern** geklickt haben, sind Ihre vorgenommenen Änderunge
 
 ## <a name="using-variables-in-the-text-string"></a>Verwenden von Variablen in der Textzeichenfolge
 
+Die folgenden Variablen sind allgemein verfügbar, wenn Azure Information Protection klassischen Client verwendet wird und die öffentliche Vorschau verfügbar ist, wenn der Azure Information Protection Unified-Beschriftungs Client verwendet wird.  
+
 Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, die Fußzeile oder das Wasserzeichen verwenden:
 
 - `${Item.Label}` für die ausgewählte Bezeichnung. Beispiel: Allgemein
@@ -92,13 +94,16 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 
 - `${Item.Location}` für den Pfad und den Dateinamen bei Dokumenten und für den Betreff bei E-Mails. Beispiel: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` für den Besitzer des Dokuments oder der E-Mail, gemäß dem Namen des angemeldeten Windows-Benutzers. Beispiel: rsimone
+- `${User.Name}` für den Besitzer des Dokuments oder der E-Mail, gemäß dem Namen des angemeldeten Windows-Benutzers. Beispiel: rsimone 
 
 - `${User.PrincipalName}` für den Besitzer des Dokuments oder der E-Mail, gemäß der E-Mail-Adresse des angemeldeten Azure Information Protection-Clients (UPN). Beispiel: rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${item.name}  Classification: ${item.label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
+
+> [!NOTE]
+> Die Verwendung der Variablen `${User.Name}` und/oder `${User.PrincipalName}` wird vom Azure Information Protection Unified-Bezeichnungs Client derzeit nicht unterstützt. 
 
 >[!TIP]
 > Außerdem verwenden Sie einen [Feldcode zum Einfügen des Bezeichnungsnamens](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in ein Dokument oder eine Vorlage.
@@ -132,6 +137,9 @@ Beispiele:
     `${If.App.WP}This content is ${If.End}Confidential`
     
     In Word und PowerPoint wendet die Bezeichnung den Wasserzeichentext „This content is Confidential“ an. In Excel wird der Wasserzeichentext „Confidential“ angewendet. In Outlook wird kein Wasserzeichentext angewendet, da Wasserzeichen als optische Kennzeichnungen in Outlook nicht unterstützt werden.
+
+> [!NOTE]
+> Wenn Sie den Azure Information Protection Unified Bezeichnung-Client verwenden, ist das Festlegen von Werten für den **Schriftart Namen** und/oder die **Schriftart Farbe** nur über das Azure Information Protection-Portal möglich. 
 
 ### <a name="setting-the-font-name"></a>Festlegen des Schriftartnamens
 

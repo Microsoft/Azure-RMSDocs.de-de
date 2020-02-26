@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/12/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7dcb133d2c5089bc543c392434af1e5f7e8db4b9
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: da214b424227d63636c4d216f640568dca8d14f1
+ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422792"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600708"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -182,6 +182,8 @@ Beachten Sie Folgendes, bevor Sie die Option **Richtlinien kopieren (Vorschau)**
     - Die globale Richtlinie enthält mindestens eine Bezeichnung. Da die Administrator Bezeichnungen keine Bezeichnungs Richtlinien ohne Bezeichnungen unterstützen, wird eine globale Richtlinie ohne Bezeichnungen nicht kopiert.
 
 - Wenn Sie Richtlinien kopieren und Sie dann von Ihrem Administrator bezeichnen Center löschen, warten Sie mindestens zwei Stunden, bevor Sie die Aktion **Richtlinien kopieren** erneut verwenden, um ausreichend Zeit für die Replikation des Löschvorgangs sicherzustellen.
+
+- Aus Azure Information Protection kopierte Richtlinien haben nicht denselben Namen, Sie werden stattdessen mit einem Präfix **AIP_** benannt. Richtlinien Namen können später nicht geändert werden. 
 
 Weitere Informationen zum Konfigurieren der Richtlinien Einstellungen, der erweiterten Client Einstellungen und der Bezeichnungs Einstellungen für den Azure Information Protection Unified Label-Client finden Sie im Administrator Handbuch unter [benutzerdefinierte Konfigurationen für den Azure Information Protection Unified](./rms-client/clientv2-admin-guide-customizations.md) Label-Client.
 
