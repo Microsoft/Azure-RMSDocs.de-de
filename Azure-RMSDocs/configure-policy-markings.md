@@ -4,19 +4,19 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/25/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
-ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
+ms.openlocfilehash: 33bb27b5b1d79236d1a1c65bdb109b9697a73302
+ms.sourcegitcommit: 2964d0c06033a0933ea569c11475de5abf95cf92
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600679"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629452"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
@@ -139,7 +139,7 @@ Beispiele:
     In Word und PowerPoint wendet die Bezeichnung den Wasserzeichentext „This content is Confidential“ an. In Excel wird der Wasserzeichentext „Confidential“ angewendet. In Outlook wird kein Wasserzeichentext angewendet, da Wasserzeichen als optische Kennzeichnungen in Outlook nicht unterstützt werden.
 
 > [!NOTE]
-> Wenn Sie den Azure Information Protection Unified Bezeichnung-Client verwenden, ist das Festlegen von Werten für den **Schriftart Namen** und/oder die **Schriftart Farbe** nur über das Azure Information Protection-Portal möglich. 
+> Wenn Sie den Azure Information Protection Unified Bezeichnung-Client verwenden, ist das Festlegen von Werten für den **Schriftart Namen** nur über das Azure Information Protection-Portal möglich. Wenn Sie Werte für die **Schriftfarbe** über einen der fünf Standardwerte hinaus festlegen, ist auch nur über das Azure Information Protection-Portal möglich.
 
 ### <a name="setting-the-font-name"></a>Festlegen des Schriftartnamens
 
