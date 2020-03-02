@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422560"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778550"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Konfigurieren einer Bezeichnung für Rights Management-Schutz
 
@@ -208,7 +208,7 @@ Wählen Sie für jedes folgende Beispiel im Bereich \<*Bezeichnungsname*> die Op
 
 Diese Bezeichnung ist nur in Outlook verfügbar und geeignet, wenn Exchange Online für die [neuen Funktionen der Office 365-Nachrichtenverschlüsselung](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) konfiguriert ist. Weisen Sie die Benutzer an, diesen Bezeichner auszuwählen, wenn sie eine geschützte E-Mail an ein Gmail-Konto (bzw. jedes andere E-Mail-Konto, das nicht zu ihrer Organisation gehört) senden müssen. 
 
-Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  Sie wählen anschließend die Bezeichnung aus, und die Option „Nicht weiterleiten“ wird der E-Mail automatisch hinzugefügt. Dadurch können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus kopieren, Anhänge speichern oder die E-Mail unter einem anderem Namen speichern. 
+Ihre Benutzer geben dann die E-Mail-Adresse von Gmail in das Feld **An** ein.  Sie wählen anschließend die Bezeichnung aus, und die Option „Nicht weiterleiten“ wird der E-Mail automatisch hinzugefügt. Auf diese Weise können Empfänger die E-Mail nicht weiterleiten, drucken, etwas daraus kopieren oder die E-Mail über die Option **Speichern unter** außerhalb des Postfachs speichern. 
 
 1. Stellen Sie sicher, dass im Bereich **Schutz** die Option **Azure (cloud key)** (Azure (Cloudschlüssel)) ausgewählt ist.
     
