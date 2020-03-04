@@ -4,7 +4,7 @@ description: Weitere Informationen zum Release des Azure Information Protection-
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3960ab26aabd89c41707c6cf96917253174f8cab
-ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
+ms.openlocfilehash: 543fd7af43dc235fbe8faca2f0dae332b0b493f1
+ms.sourcegitcommit: 1eed9a57596b67255c45a604595cc77a56350557
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77599844"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238629"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection Unified Bezeichnungs Verlauf des Client Versions Verlaufs und der Support Richtlinie
 
@@ -42,6 +42,7 @@ Vorschauversionen sollten nicht für Endbenutzer in Produktionsnetzwerken bereit
 
 |Clientversion|Datum der Veröffentlichung|
 |--------------|-------------|
+|2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
@@ -170,18 +171,6 @@ Unterstützt durch 04/23/2020
 - Wenn Sie die erweiterte Einstellung [outlookdefaultlabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) verwenden, um eine andere Standard Bezeichnung für Outlook festzulegen, und die angegebene Bezeichnung keine Unterbezeichnungen für die Bezeichnungs Richtlinie hat, wird die Bezeichnung ordnungsgemäß angewendet.
 
 - Wenn der Azure Information Protection-Client in einer Office-App verwendet wird, wird ein Benutzer mit einem Active Directory Konto, das nicht für Single Sign-On konfiguriert ist, aufgefordert, sich für Azure Information Protection zu authentifizieren. Nach der erfolgreichen Authentifizierung wird der Client Status ordnungsgemäß in Online geändert, wodurch Bezeichnungs Funktionen aktiviert werden.
-
-## <a name="version-22190"></a>Version 2.2.19.0
-
-**Veröffentlicht**: 08/06/2019
-
-Unterstützt durch 03/03/2020
-
-**Fixes**
-
-- Der Client kann seine Richtlinie herunterladen und die aktuellen Vertraulichkeits Bezeichnungen anzeigen. Diese Korrektur ist nach dem Upgrade von einer früheren Version erforderlich, und Sie haben keine benutzerdefinierten Informationstypen in Ihrem Beschriftungs Center konfiguriert.
-
-- Allgemeine Verbesserungen der Leistung und Stabilität.
 
 ## <a name="next-steps"></a>Nächste Schritte
 
