@@ -29,7 +29,7 @@
       href: quickstart-label-dnf-protectedemail.md
     - name: Erstellen einer neuen Bezeichnung für bestimmte Benutzer – klassischer Client
       href: quickstart-label-specificusers.md
-- name: Lernprogramme
+- name: Tutorials
   items:
     - name: Bearbeiten der Richtlinie und Erstellen einer neuen Bezeichnung – klassischer Client
       href: infoprotect-quick-start-tutorial.md
@@ -45,7 +45,7 @@
       items:
         - name: Übersicht
           href: what-is-azure-rms.md
-        - name: Wie funktioniert es?
+        - name: So funktioniert es
           href: how-does-it-work.md
         - name: Unterstützung des Azure Rights Management-Schutzes durch Anwendungen
           items:
@@ -61,7 +61,7 @@
       href: rms-for-individuals.md
     - name: Auch bezeichnet als...
       href: aka.md
-- name: Schrittanleitungen
+- name: Anleitungen
   items:
     - name: Schrittanleitungen für häufige Szenarios
       href: how-to-guides.md
@@ -139,7 +139,7 @@
               href: configure-policy-delete-reorder.md
             - name: Ändern einer Bezeichnung
               href: configure-policy-change-label.md
-            - name: Schutz konfigurieren
+            - name: Konfigurieren des Schutzes
               items:
                 - name: Übersicht
                   href: configure-policy-protection.md
@@ -323,12 +323,14 @@
         - name: Rights Management SDK 4.2
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
+            - name: Hinweis zur Einstellung
+              href: ./develop/deprecation-notice.md
             - name: Übersicht
               href: ./develop/overview.md
             - name: Erste Schritte
               href: ./develop/get-started.md
               items:
-                - name: Neuheiten
+                - name: Neuerungen
                   href: ./develop/release-notes.md
                 - name: Einrichten der Entwicklerumgebung
                   href: ./develop/setup-Developer-environment.md
@@ -450,7 +452,7 @@
                   href: 'https://msdn.microsoft.com/library/hh535294.aspx'
                 - name: Fehlercodes
                   href: 'https://msdn.microsoft.com/library/hh535248.aspx'
-        - name: Nutzungsbedingungen
+        - name: Bestimmungen
 - name: Ressourcen
   items:
     - name: Häufig gestellte Fragen
