@@ -4,7 +4,7 @@ description: Migrieren Sie Azure Information Protection Bezeichnungen zu Unified
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/04/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96f80806d87ea4acae1e3f1343e815dc42573408
-ms.sourcegitcommit: 9fcac73287781cd9cc47298740be0a5f8f54a6c7
+ms.openlocfilehash: c61254aba161724bc780ec2e0bd3b169134790de
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2020
-ms.locfileid: "78932545"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972784"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Vorgehensweise beim Migrieren von Azure Information Protection Bezeichnungen zu vereinheitlichten Vertraulichkeits Bezeichnungen
 
@@ -25,6 +25,8 @@ ms.locfileid: "78932545"
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Migrieren Sie Azure Information Protection Bezeichnungen zur vereinheitlichten Bezeichnung, sodass Sie Sie als Vertraulichkeits Bezeichnungen von [Clients und Diensten verwenden können, die vereinheitlichte Bezeichnungen unterstützen](#clients-and-services-that-support-unified-labeling).
 
@@ -35,7 +37,7 @@ Nachdem Sie Ihre Bezeichnungen migriert haben, wird kein Unterschied mit dem Azu
 
 Bevor Sie die Anweisungen zum Migrieren ihrer Bezeichnungen lesen, finden Sie möglicherweise die folgenden häufig gestellten Fragen:
 
-- [Was ist der Unterschied zwischen Bezeichnungen in Azure Information Protection und Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
+- [Worin besteht der Unterschied zwischen Bezeichnungen in Azure Information Protection und Bezeichnungen in Office 365?](faqs.md#whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365)
 
 - [Wann ist der richtige Zeitpunkt für die Migration meiner Bezeichnungen?](faqs.md#when-is-the-right-time-to-migrate-my-labels)
 

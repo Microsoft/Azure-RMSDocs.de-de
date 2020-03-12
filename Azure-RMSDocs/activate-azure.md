@@ -4,7 +4,7 @@ description: Anweisungen für die Aktivierung von Schutz im Azure-Portal, damit 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 003/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,17 +13,19 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6e34c0127645db9d4dee9dc61c5b2a331a27c9f6
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 990f65adea28711f9c90382197be3f4730cbef09
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742793"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972753"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Aktivieren des Rights Management Protection Service über die Azure-Portal
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Verwenden Sie diese Anweisungen, wenn Sie den Rights Management Protection Service (Azure RMS) mithilfe der Azure-Portal aus Azure Information Protection aktivieren möchten.
 

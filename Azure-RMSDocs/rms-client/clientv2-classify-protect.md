@@ -4,19 +4,19 @@ description: Anleitungen zur Klassifizierung und zum Schutz Ihrer Dokumente und 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f51d3a901808a4689e651c6736c6ac8294e1e602
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 06ac8dd5923fb4275aeaa833bf40f0ac660e1c26
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423070"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973074"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Benutzerhandbuch: klassifizieren und schützen mit dem Azure Information Protection Unified-Beschriftungs Client
 
@@ -31,7 +31,7 @@ Die einfachste Möglichkeit zum Klassifizieren und Schützen Ihrer Dokumente und
 
 Sie können jedoch auch Dateien mithilfe des **Datei-Explorers** klassifizieren und schützen. Diese Methode unterstützt weitere Dateitypen und ist ein bequemer Weg zum Klassifizieren und Schützen mehrerer Dateien gleichzeitig. Diese Methode unterstützt den Schutz von Office-Dokumenten, PDF-Dateien, Text- und Bilddateien sowie einer Vielzahl anderer Dateien. 
 
-Wenn Ihre Bezeichnung den Schutz für ein Dokument anwendet, ist das geschützte Dokument möglicherweise nicht für die Speicherung auf SharePoint oder onedrive geeignet. Überprüfen Sie, ob Ihr Administrator [Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive (öffentliche Vorschau) aktiviert](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)hat.
+Wenn Ihre Bezeichnung den Schutz für ein Dokument anwendet, ist das geschützte Dokument möglicherweise nicht für die Speicherung auf SharePoint oder onedrive geeignet. Überprüfen Sie, ob der Administrator [Vertraulichkeits Bezeichnungen für Office-Dateien in SharePoint und onedrive aktiviert](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files)hat.
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Sichere Freigabe einer Datei für Personen außerhalb Ihrer Organisation
 

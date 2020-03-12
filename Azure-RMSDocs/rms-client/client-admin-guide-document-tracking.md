@@ -4,7 +4,7 @@ description: Anweisungen und Informationen für Administratoren zum Konfiguriere
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a04156d41bd062f4f182fd4133d938c189157e5
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: e4537e9a84f83eaf3865e01dbf4c5b702a8bbc50
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117832"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973094"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Administratorhandbuch: Konfigurieren und Verwenden der Dokumentenverfolgung für Azure Information Protection
 
@@ -26,8 +26,10 @@ ms.locfileid: "76117832"
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
-Wenn Sie ein [Abonnement haben, das die Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentnachverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Durch die Dokumentkontrolle erhalten Benutzer und Administratoren Informationen darüber, wann auf ein geschütztes Dokument zugegriffen wird und ob ein nachverfolgtes Dokument ggf. gesperrt werden kann.
+Wenn Sie ein [Abonnement haben, das Dokumentenverfolgung unterstützt](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), ist die Website für die Dokumentenverfolgung standardmäßig für alle Benutzer in Ihrer Organisation aktiviert. Durch die Dokumentkontrolle erhalten Benutzer und Administratoren Informationen darüber, wann auf ein geschütztes Dokument zugegriffen wird und ob ein nachverfolgtes Dokument ggf. gesperrt werden kann.
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Verwalten der Website für die Dokumentnachverfolgung mithilfe von PowerShell
 
@@ -56,11 +58,11 @@ Diese Einstellung gilt nur für Endbenutzer. Administratoren für Azure Informat
 
 Sie können die folgenden Cmdlets verwenden, um Protokollierungs Informationen von der Website für die Dokument Nachverfolgung herunterzuladen:
 
-- [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
+- [Get-aipservicetrackinglog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
     Dieses Cmdlet gibt Informationen zu geschützten Dokumenten für einen angegebenen Benutzer zurück, der Dokumente geschützt hat (Rights Management-Aussteller) oder der auf geschützte Dokumente zugegriffen hat. Mithilfe dieses Cmdlets können Sie die Frage beantworten, auf welche geschützten Dokumente ein bestimmter Benutzer zugegriffen und welche er nachverfolgt hat.
 
-- [Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
+- [Get-aipservicedocumentlog](/powershell/module/aipservice/Get-AipServiceDocumentLog)
     
     Dieses Cmdlet gibt Informationen zum Schutz der nachverfolgten Dokumente für einen bestimmten Benutzer zurück (Rights Management-Aussteller), falls dieser Benutzer Dokumente geschützt hat, Rights Management-Besitzer von Dokumenten war oder Dokumente geschützt hat, die so konfiguriert waren, dass dem Benutzer direkter Zugriff gewährt werden sollte. Mithilfe dieses Cmdlets können Sie die Frage beantworten, wie Dokumente für einen bestimmten Benutzer geschützt werden.
 
@@ -105,7 +107,7 @@ Eine Anleitung zur Verwendung der Website zur Dokumentnachverfolgung finden Sie 
 
 Zum Nachverfolgen und Widerrufen eines Dokuments muss es zunächst bei der Website zur Dokumentnachverfolgung registriert werden. Diese Aktion wird ausgeführt, wenn Benutzer bei Verwendung des Azure Information Protection-Clients im Datei-Explorer oder über ihre Office-Apps die Option **Track and revoke** (Verfolgen und widerrufen) auswählen.
 
-Wenn Sie Dateien für Benutzer mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. Zum Beispiel:
+Wenn Sie Dateien für Benutzer mit dem Cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) bezeichnen und schützen, können Sie den Parameter *EnableTracking* verwenden, um die Dateien bei der Website zur Dokumentnachverfolgung zu registrieren. Beispiel:
 
     Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
 

@@ -4,25 +4,28 @@ description: Übersicht über den HYOK-Schutz (AD RMS) mit Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 8ae21a207dd122066fc4dac659bd1e2e9e7c243f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742764"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972693"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>HYOK-Schutz (Hold Your Own Key) für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Anweisungen für: [Azure Information Protection Client für Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 
 Anhand der folgenden Informationen erfahren Sie, was der HYOK-Schutz für Azure Information Protection ist, und wie er sich vom cloudbasierten Standardschutz unterscheidet. Stellen Sie sicher, dass Sie verstehen, wann der HYOK-Schutz, die unterstützten Szenarios, die Einschränkungen und die Voraussetzungen geeignet sind, bevor Sie ihn verwenden. 

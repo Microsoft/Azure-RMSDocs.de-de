@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b61fba6a678ec625ac2dc7d78c2550cfba87bb60
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b7cac0f97c40aa760d7f38d6a190be39f14bae24
+ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792121"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084764"
 ---
-# <a name="overview"></a>Overview
+# <a name="overview"></a>Übersicht
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Das Microsoft Rights Management SDK 4.2 ist eine Technologie, die dem Schutz von Informationen dient und für mehrere Plattformen zur Verfügung steht.  Sie stellt ein Software Development Kit (SDK) bzw. ein Framework bereit, das für Clientcomputer und Geräte entwickelt wurde, um den Zugriff auf und die Verwendung von Informationen zu schützen, die rechtlich geschützte Anwendungen durchlaufen. Die SDKs für diese Plattformen bieten eine einfache API, mit der Anwendungsentwickler digitale Inhalte schützen oder nutzen, Vorlagen und Richtlinien von einem Server abrufen und andere relevante Aufgaben zur Rechteverwaltung ausführen können.
 
@@ -50,7 +52,7 @@ Das MS RMS SDK 4.2 bietet unter anderem die folgenden praktischen neuen Funktion
 
 Befolgen Sie die [Ersten Schritte](get-started.md), um mit dem Erstellen einer Geräte-App für geschützte Daten zu beginnen.
 
-## <a name="related-topics"></a>Zugehörige Themen
+## <a name="related-topics"></a>Verwandte Themen
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Erste Schritte](get-started.md)

@@ -4,7 +4,7 @@ description: Informationen, die Sie beim Konfigurieren Ihrer lokalen Server unte
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
-ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
+ms.openlocfilehash: 0411b0360607da80dcabf5dfb8117957a5c67cf6
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77494864"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973274"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Konfigurieren von Servern für den Azure Rights Management-Verbindungsdienst
 
@@ -87,7 +87,7 @@ Nachdem Sie die Konfigurationsänderungen auf diesen Servern vorgenommen haben, 
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst
 
-1.  Wenn Sie das Skript für das Serverkonfigurationstool für den Microsoft RMS-Connector (GenConnectorConfig.ps1) noch nicht heruntergeladen haben, tun Sie dies im [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Wenn Sie das Skript für das Server Konfigurationstool für Microsoft RMS Connector (genconnector config. ps1) noch nicht heruntergeladen haben, laden Sie es aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=314106)herunter.
 
 2.  Speichern Sie die Datei „GenConnectorConfig.ps1“ auf dem Computer, auf dem Sie das Tool ausführen möchten. Wenn Sie das Tool lokal ausführen, muss dies der Server sein, den Sie für die Kommunikation mit dem RMS-Verbindungsdienst konfigurieren möchten. Andernfalls können Sie sie auf einem beliebigen Computer speichern.
 
@@ -124,7 +124,7 @@ In den folgenden Abschnitten finden Sie spezifische Informationen für jeden Die
 > [!NOTE]
 > Nachdem diese Server zur Verwendung des Verbindungsdiensts konfiguriert sind, funktionieren Anwendungen, die lokal auf diesen Servern installiert sind, möglicherweise nicht mit RMS. Wenn dies eintritt, liegt das daran, dass die Anwendungen versuchen, den Verbindungsdienst zu verwenden, statt RMS direkt zu verwenden – dies wird aber nicht unterstützt.
 >
-> Darüber hinaus, wenn Office 2010 lokal auf einem Exchange-Server installiert ist, funktionieren die IRM-Features der Client-App möglicherweise von diesem Computer aus, nachdem der Server für die Verwendung des Verbindungsdiensts konfiguriert ist – dies wird aber nicht unterstützt.
+> Wenn Office 2010 lokal auf einem Exchange-Server installiert ist, können die unm-Features der Client-App außerdem von diesem Computer aus funktionieren, nachdem der Server für die Verwendung des Verbindungs Diensts konfiguriert wurde. Dies wird jedoch nicht unterstützt.
 >
 > In beiden Szenarios müssen Sie die Clientanwendungen auf getrennten Computern installieren, die nicht für die Verwendung des Verbindungsdiensts konfiguriert sind. Sie verwenden dann korrekt RMS direkt.
 
@@ -183,7 +183,7 @@ Damit diese Server, auf denen SharePoint ausgeführt wird, den RMS-Verbindungsdi
 
 -   SharePoint Server 2010
 
-Auf einem Server, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des MSIPC-Clients 2.1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396) herunter.
+Auf einem Server, auf dem SharePoint 2019, 2016 oder SharePoint 2013 ausgeführt wird, muss außerdem eine Version des msipc-Clients 2,1 ausgeführt werden, die mit dem RMS-Connector unterstützt wird. Damit sichergestellt ist, dass Sie eine unterstützte Version haben, laden Sie den aktuellen Client aus dem [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396) herunter.
 
 > [!WARNING]
 > Es gibt mehrere Versionen des MSIPC 2.1-Clients, achten Sie also darauf, dass Sie Version 1.0.2004.0 oder höher haben.
@@ -200,13 +200,13 @@ Auf Servern mit SharePoint 2010 muss eine Version des MSDRM-Clients installiert 
 
     -   Führen Sie das Serverkonfigurationstool für den Microsoft RMS-Verbindungsdienst aus. Weitere Informationen finden Sie unter [Verwenden des Serverkonfigurationstools für den Microsoft RMS-Verbindungsdienst](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in diesem Artikel.
 
-        Um beispielsweise das Tool lokal zum Konfigurieren eines Servers auszuführen, auf dem SharePoint 2016 oder SharePoint 2013 ausgeführt wird:
+        Um das Tool beispielsweise lokal auszuführen, um einen Server zu konfigurieren, auf dem SharePoint 2019, 2016 oder SharePoint 2013 ausgeführt wird:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   Wenn Sie SharePoint 2016 oder SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungsänderungen mithilfe der Informationen unter [Registrierungseinstellungen für den RMS-Connector](rms-connector-registry-settings.md) vor, um Registrierungseinstellungen den Servern manuell hinzuzufügen. 
+    -   Wenn Sie SharePoint 2019, 2016 oder SharePoint 2013 verwenden, nehmen Sie manuelle Registrierungs Änderungen vor, indem Sie die Informationen unter [Registrierungs Einstellungen für den RMS-Connector](rms-connector-registry-settings.md) verwenden, um Registrierungs Einstellungen auf den Servern manuell hinzuzufügen. 
 
 3.  Aktivieren Sie IRM in SharePoint. Weitere Informationen finden Sie unter [Verfahren zur Verwaltung von Informationsrechten](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) in der SharePoint-Bibliothek.
 

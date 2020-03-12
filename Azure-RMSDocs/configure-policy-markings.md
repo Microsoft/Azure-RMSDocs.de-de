@@ -4,24 +4,27 @@ description: Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnun
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: 6492c4dcbe9ba408d2d4efd9c751933a6eefe6b4
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238499"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972807"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Konfigurieren einer Bezeichnung für visuelle Kennzeichnungen für Azure Information Protection
 
 >*Gilt für: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
+
+>[!NOTE] 
+> Um eine einheitliche und optimierte Kundenumgebung zu gewährleisten, werden **Azure Information Protection-Client (klassisch)** und **Bezeichnungsverwaltung** im Azure-Portal zum **31. März 2021** **eingestellt**. Dieser Zeitrahmen ermöglicht allen aktuellen Azure Information Protection-Kunden den Umstieg auf die Microsoft Information Protection-Plattform für einheitliche Bezeichnungen. Weitere Informationen erhalten Sie im offiziellen [Hinweis zu veralteten Funktionen](https://aka.ms/aipclassicsunset).
 
 Wenn Sie einem Dokument oder einer E-Mail-Nachricht eine Bezeichnung zuweisen, können Sie verschiedene Optionen auswählen, damit die gewählte Klassifizierung gut sichtbar ist. Bei diesen visuellen Kennzeichnungen handelt es sich um eine Kopfzeile, eine Fußzeile und ein Wasserzeichen. 
 
@@ -100,13 +103,16 @@ Sie können die folgenden Variablen in der Textzeichenfolge für die Kopfzeile, 
 
 - `${Event.DateTime}` für Datum und Uhrzeit, zu denen die ausgewählte Bezeichnung festgelegt wurde. Beispiel: 16.08.2016 13:30 Uhr
 
+> [!NOTE]
+>Bei dieser Syntax wird die Groß-/Kleinschreibung beachtet.
+
 Beispiel: Wenn Sie die Zeichenfolge `Document: ${Item.Name}  Classification: ${Item.Label}` für die Fußzeile der Bezeichnung **General** (Allgemein) angeben, so lautet der Text in der Fußzeile, der auf ein Dokument namens „project.docx“ angewendet wird, **Dokument: project.docx Klassifizierung: Allgemein**.
 
 > [!NOTE]
 > Die Verwendung der Variablen `${User.Name}` und/oder `${User.PrincipalName}` wird vom Azure Information Protection Unified-Bezeichnungs Client derzeit nicht unterstützt. 
 
 >[!TIP]
-> Außerdem verwenden Sie einen [Feldcode zum Einfügen des Bezeichnungsnamens](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in ein Dokument oder eine Vorlage.
+> Sie können auch einen [Feldcode verwenden, um den](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) Bezeichnungs Namen in ein Dokument oder eine Vorlage einzufügen.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Festlegen verschiedener optischer Kennzeichnungen für Word, Excel, PowerPoint und Outlook
 
@@ -116,7 +122,8 @@ Verwenden Sie die folgende Syntax:
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
-Bei der Syntax in dieser Anweisung muss die Groß-/Kleinschreibung beachtet werden.
+> [!NOTE]
+>Bei der Syntax in dieser Anweisung muss die Groß-/Kleinschreibung beachtet werden.
 
 Beispiele:
 

@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: dd357e74e71b9e5b296825b395ecd54b14c332d5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 76bd7d42a00780520bd77c93c9e751d10bed5518
+ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68788693"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084715"
 ---
 # <a name="rights-management-sdk42"></a>Rights Management SDK 4.2
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## <a name="purpose"></a>Zweck
 
