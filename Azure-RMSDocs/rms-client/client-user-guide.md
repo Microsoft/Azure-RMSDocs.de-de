@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
 ms.openlocfilehash: 99127a66ffc062308d915d701f6f1d8b8f521753
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960701"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403840"
 ---
 # <a name="azure-information-protection-user-guide"></a>Azure Information Protection-Benutzerhandbuch
 
@@ -28,7 +28,7 @@ ms.locfileid: "75960701"
 
 Der Azure Information Protection-Client für Windows hilft Ihnen dabei, wichtige Dokumente und E-Mails vor Personen zu schützen, die nicht berechtigt sind, diese zu sehen. Dies gilt auch, wenn die E-Mail weitergeleitet oder das Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 
-Sie benötigen lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 läuft. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
+Sie benötigen dafür lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 ausgeführt wird. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
 
 
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun?

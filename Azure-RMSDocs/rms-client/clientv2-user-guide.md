@@ -13,11 +13,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
 ms.openlocfilehash: 5e8cf81bc2f9f4de76bdc868603af0cf7e6a76a3
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960766"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403517"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Azure Information Protection Unified-Bezeichnung (Benutzerhandbuch) 
 
@@ -27,7 +27,7 @@ ms.locfileid: "75960766"
 
 Der Azure Information Protection Unified Bezeichnung-Client für Windows hilft Ihnen dabei, wichtige Dokumente und e-Mails vor Personen zu schützen, die Sie nicht sehen dürfen, auch wenn Ihre e-Mail weitergeleitet wird oder Ihr Dokument an einem anderen Speicherort gespeichert wird. Sie können mit diesem Client auch Dokumente öffnen, die von anderen Personen mithilfe der Rights Management-Schutztechnologie von Azure Information Protection geschützt wurden.
 
-Sie benötigen lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 läuft. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
+Sie benötigen dafür lediglich einen Computer, auf dem mindestens Windows 7 mit Service Pack 1 ausgeführt wird. Anschließend können Sie diesen kostenlosen Client von Microsoft herunterladen und installieren.
 
 
 ## <a name="what-do-you-want-to-do"></a>Was möchten Sie tun?

@@ -13,11 +13,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 56a61e558f72812517d21201aa6e4215624d903d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934584"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404979"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Vorbereiten von Benutzern und Gruppen für Azure Information Protection
 
@@ -150,7 +150,7 @@ Ihre erste Überprüfung besteht jetzt darin, sicherzustellen, dass die Benutzer
 
 Wenn die Spalte **ProxyAddresses** nicht aufgefüllt wurde, wird der Wert von **UserPrincipalName** verwendet, um den Benutzer für den Azure Rights Management-Dienst zu autorisieren.
 
-Beispiele:
+Beispiel:
 
 
 |  Anzeigename   |     UserPrincipalName      |                            ProxyAddresses                             |

@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934958"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404605"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Konfigurieren von Administratoren für Azure Information Protection-und Ermittlungsdienste oder die Datenwiederherstellung
 
@@ -40,7 +40,7 @@ Ein Administrator verfügt immer über das Rights Management-[Nutzungsrecht](con
 
 ## <a name="configuration-for-the-super-user-feature"></a>Konfiguration für das Administratorfeature
 
-In der Standardeinstellung ist die Administratorfunktion nicht aktiviert, und der Rolle sind keine Benutzer zugewiesen. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
+Standardmäßig ist die Administratorfunktion nicht aktiviert, und dieser Rolle sind keine Benutzer zugeordnet. Sie wird jedoch automatisch aktiviert, wenn Sie den Rights Management-Connector für Exchange konfigurieren; für Standarddienste, die unter Exchange Online, SharePoint Online oder SharePoint Server ausgeführt werden, ist sie nicht erforderlich.
 
 Wenn Sie die Administrator Funktion manuell aktivieren müssen, verwenden Sie das PowerShell-Cmdlet [enable-aipservicesuperuserfeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature), und weisen Sie dann Benutzer (oder Dienst Konten) nach Bedarf mithilfe des Cmdlets [Add-aipservicesuperuser](/powershell/module/aipservice/add-aipservicesuperuser) oder des Cmdlets [Set-aipservicesuperusergroup](/powershell/module/aipservice/set-aipservicesuperusergroup) zu, und fügen Sie dieser Gruppe ggf. Benutzer (oder andere Gruppen) hinzu. 
 

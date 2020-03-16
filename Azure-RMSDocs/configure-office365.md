@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 73e087934d6858bf7ce3644ac47b8c7f6e2327f9
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935111"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404333"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Konfiguration für Onlinedienste die Verwendung des Azure Rights Management-Dienstanbieter
 
@@ -31,7 +31,7 @@ Informationen zur Funktionsweise von Exchange Online mit dem Azure Rights Manage
 
 Möglicherweise ist Azure Rights Management schon für Exchange Online aktiviert. Sie können dies herausfinden, indem Sie die folgenden Befehle ausführen:
 
-1. Wenn Sie Windows PowerShell für Exchange Online zum ersten Mal auf Ihrem Computer verwenden, müssen Sie Windows PowerShell zum Ausführen von signierten Skripts konfigurieren. Starten Sie Ihre Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen** , und geben Sie dann Folgendes ein:
+1. Wenn Sie Windows PowerShell für Exchange Online zum ersten Mal auf Ihrem Computer verwenden, müssen Sie Windows PowerShell zum Ausführen von signierten Skripts konfigurieren. Starten Sie Ihre Windows PowerShell-Sitzung mit der Option **Als Administrator ausführen**, und geben Sie dann Folgendes ein:
     
         Set-ExecutionPolicy RemoteSigned
     
@@ -84,7 +84,7 @@ Um SharePoint Online und OneDrive for Business für die Unterstützung des Azure
 
 Um den IRM-Dienst für SharePoint Online zu aktivieren, lesen Sie die folgenden Anweisungen in der Office-Dokumentation:
 
-- [Einrichten von Information Rights Management (IRM) im SharePoint Admin Center](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
+- [Einrichten der Verwaltung von Informationsrechten (IRM) im SharePoint Admin Center](https://docs.microsoft.com/microsoft-365/compliance/set-up-irm-in-sp-admin-center)
 
 Diese Konfiguration erfolgt durch den Office 365-Administrator.
 

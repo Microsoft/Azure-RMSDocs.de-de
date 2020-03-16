@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 2ee3c660a14df74f432870d364002cee86a5ce27
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489264"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405013"
 ---
 # <a name="enumerations-and-structures"></a>Enumerationen und Strukturen
 
@@ -22,7 +22,7 @@ Member                        | Beschreibungen
 Wasserzeichen Layout für Aufzählung       |  Layout für Wasserzeichen.
 "contentmarkalignment" aufzählen       |  Ausrichtung für Inhalts Markierungen (Content Header oder Content Footer).
 "ZUUM Zustellungs Methode"       |  Die Zuweisungs Methode der Bezeichnung im Dokument. Gibt an, ob die Zuweisung der Bezeichnung automatisch durchgeführt wurde, Standard oder als privilegierter Vorgang (entspricht einem Administrator Vorgang).
-Enumeration-Aktions Quelle       |  definiert, was das Ereignis "setlabel" ausgelöst hat.
+Enumeration-Aktions Quelle       |  Definiert, was das Ereignis "setlabel" ausgelöst hat.
 datastate aufzählen       |  Definiert den Zustand der Daten, auf den die Anwendung angewendet wird.
 Enumeration-contentformat       |  Inhalts Format.
 "labelfiltertype"-Klasse       |  Bezeichnungs Filtertypen, optionaler Satz von Eigenschaften, der zum Filtern von Bezeichnungen beim Aufrufen von Listen Vertraulichkeits Bezeichnungen verwendet werden kann.
@@ -172,7 +172,7 @@ JUSTIFICATION_REQUIRED            | Eine Legitimierung ist erforderlich, um die 
 NOT_SUPPORTED_OPERATION            | Der angeforderte Vorgang wird noch nicht unterstützt.
 PRIVILEGED_REQUIRED            | Privilegierte Bezeichnung kann nicht außer Kraft gesetzt werden, wenn standardmäßig die neue Bezeichnungsmethode verwendet wird.
 ACCESS_DENIED            | Der Benutzer konnte keinen Zugriff auf die Dienste erhalten.
-CONSENT_DENIED            | Einem Vorgang, der die Einwilligung vom Benutzer erfordert, wurde keine Einwilligung erteilt.
+CONSENT_DENIED            | Ein Vorgang, der die Einwilligung vom Benutzer erfordert, wurde nicht genehmigt.
 NO_PERMISSIONS            | Der Benutzer konnte nicht auf den Inhalt zugreifen. Beispielsweise keine Berechtigungen, der Inhalt wurde widerrufen.
 NO_AUTH_TOKEN            | Der Benutzer konnte aufgrund eines leeren Authentifizierungs Tokens keinen Zugriff auf den Inhalt erhalten.
 DISABLED_SERVICE            | Der Benutzer konnte aufgrund deaktiviertem Dienst keinen Zugriff auf den Inhalt erhalten.
